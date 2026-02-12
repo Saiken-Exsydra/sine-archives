@@ -1,5 +1,5 @@
 ---
-status: private
+status: public
 title: TEST
 type: character
 summary: TYESTTGEGSDTA
