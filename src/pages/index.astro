@@ -62,7 +62,7 @@ const lastHref = lastUpdated
         <div class="last">
           <div class="last__title">{lastUpdated.entry.data.title}</div>
           <div class="last__meta">
-            {lastUpdated.sectionLabel} · Updated: {lastUpdated.entry.data.updated}
+            {lastUpdated.sectionLabel} · Updated: {String(lastUpdated.entry.data.updated).slice(0, 10)}
           </div>
           <a class="btn" href={lastHref}>Open Entry</a>
         </div>

@@ -7,11 +7,11 @@ const entrySchema = z.object({
   tags: z.array(z.string().min(1)).min(1),
   status: z.enum(["public", "private"]),
   created: z.preprocess(
-  (v) => (v instanceof Date ? v.toISOString() : v),
+  (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v),
   z.string()
 ),
 updated: z.preprocess(
-  (v) => (v instanceof Date ? v.toISOString() : v),
+  (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v),
   z.string()
 ),
 
