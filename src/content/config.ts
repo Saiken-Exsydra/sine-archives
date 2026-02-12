@@ -4,10 +4,17 @@ const entrySchema = z.object({
   title: z.string(),
   type: z.string(),
   summary: z.string(),
-  tags: z.array(z.string()).default([]),
+  tags: z.array(z.string().min(1)).min(1),
   status: z.enum(["public", "private"]),
-  created: z.string(),
-  updated: z.string(),
+  created: z.preprocess(
+  (v) => (v instanceof Date ? v.toISOString() : v),
+  z.string()
+),
+updated: z.preprocess(
+  (v) => (v instanceof Date ? v.toISOString() : v),
+  z.string()
+),
+
   image: z.string().optional(),
 });
 
