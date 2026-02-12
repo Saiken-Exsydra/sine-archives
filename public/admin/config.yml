@@ -1,0 +1,98 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+publish_mode: simple
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: "characters"
+    label: "Characters"
+    folder: "src/content/characters"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Updated", name: "updated", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false, hint: "Example: noble, alchemy, exile" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "organizations"
+    label: "Organizations"
+    folder: "src/content/organizations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Updated", name: "updated", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "places"
+    label: "Places"
+    folder: "src/content/places"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Updated", name: "updated", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "artifacts"
+    label: "Artifacts"
+    folder: "src/content/artifacts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Updated", name: "updated", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "redactory"
+    label: "Redactory"
+    folder: "src/content/redactory"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Updated", name: "updated", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "sigillums"
+    label: "Sigillums"
+    folder: "src/content/sigillums"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Updated", name: "updated", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
