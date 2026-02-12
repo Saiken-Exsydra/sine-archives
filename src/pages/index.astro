@@ -1,15 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
+import { SECTIONS } from "../sections";
 
-const sections = [
-  { key: "characters", label: "Characters" },
-  { key: "places", label: "Places" },
-  { key: "redactory", label: "Redactory" },
-  { key: "organizations", label: "Organizations" },
-  { key: "artifacts", label: "Artifacts" },
-  { key: "sigillums", label: "Sigillums" },
-] as const;
+const sections = SECTIONS.map(s => ({ key: s.key, label: s.label })) as const;
 
 type SectionKey = (typeof sections)[number]["key"];
 
