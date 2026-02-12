@@ -1,0 +1,166 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const sections = [
+  { key: "characters", label: "Characters" },
+  { key: "places", label: "Places" },
+  { key: "redactory", label: "Redactory" },
+  { key: "organizations", label: "Organizations" },
+  { key: "artifacts", label: "Artifacts" },
+  { key: "sigillums", label: "Sigillums" },
+] as const;
+
+type SectionKey = (typeof sections)[number]["key"];
+
+async function getPublic(key: SectionKey) {
+  const all = await getCollection(key);
+  return all.filter((e) => e.data.status === "public");
+}
+
+const bySection = await Promise.all(
+  sections.map(async (s) => {
+    const entries = await getPublic(s.key);
+    return { ...s, entries, count: entries.length };
+  })
+);
+
+const totalPublic = bySection.reduce((sum, s) => sum + s.count, 0);
+
+const allPublic = bySection.flatMap((s) =>
+  s.entries.map((e) => ({ section: s.key, sectionLabel: s.label, entry: e }))
+);
+
+const lastUpdated =
+  allPublic
+    .slice()
+    .sort((a, b) => (a.entry.data.updated < b.entry.data.updated ? 1 : -1))[0] ?? null;
+
+const lastHref = lastUpdated
+  ? `/${lastUpdated.section}/${lastUpdated.entry.slug}/`
+  : "/search/";
+---
+
+<MainLayout active="home" pageTitle="SiNE Archives">
+  <section class="cards" aria-label="Dashboard stats">
+    <article class="card">
+      <div class="card__label">Total Public Entries</div>
+      <div class="card__value">{totalPublic}</div>
+    </article>
+
+    {bySection.map((s) => (
+      <article class="card">
+        <div class="card__label">{s.label}</div>
+        <div class="card__value">{s.count}</div>
+      </article>
+    ))}
+
+    <article class="card card--wide">
+      <div class="card__label">Last Updated Entry</div>
+
+      {lastUpdated ? (
+        <div class="last">
+          <div class="last__title">{lastUpdated.entry.data.title}</div>
+          <div class="last__meta">
+            {lastUpdated.sectionLabel} · Updated: {lastUpdated.entry.data.updated}
+          </div>
+          <a class="btn" href={lastHref}>Open Entry</a>
+        </div>
+      ) : (
+        <div class="last">
+          <div class="last__title">No public entries yet</div>
+          <div class="last__meta">—</div>
+          <a class="btn" href="/search/">Open Search</a>
+        </div>
+      )}
+    </article>
+  </section>
+
+  <style>
+    .cards{
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card{
+  padding: 18px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(176,141,60,0.18);
+  background: rgba(11,11,16,0.55);
+  box-shadow: var(--shadow);
+  min-height: 120px;
+
+  /* center the label + number */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card__label{
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 850;
+  opacity: 0.95;
+}
+
+.card__value{
+  margin-top: 12px;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+
+    .card--wide{
+      grid-column: span 6;
+      min-height: 140px;
+      background: linear-gradient(135deg, rgba(122,13,20,0.22), rgba(11,11,16,0.62));
+      border-color: rgba(122,13,20,0.55);
+        align-items: stretch;
+  text-align: left;
+    }
+
+    .last{
+      margin-top: 10px;
+      display: grid;
+      gap: 10px;
+    }
+    .last__title{
+      font-weight: 850;
+      letter-spacing: 0.02em;
+      font-size: 18px;
+    }
+    .last__meta{
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      opacity: 0.9;
+    }
+
+    .btn{
+      display: inline-flex;
+      width: fit-content;
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(122,13,20,0.55);
+      border: 1px solid rgba(122,13,20,0.85);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+    }
+    .btn:hover{
+      background: rgba(122,13,20,0.7);
+    }
+
+    @media (max-width: 980px){
+      .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .card--wide{ grid-column: span 2; }
+    }
+  </style>
+</MainLayout>

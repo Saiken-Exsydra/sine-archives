@@ -1,0 +1,14 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import SectionList from "../../components/SectionList.astro";
+---
+
+<MainLayout active="characters" pageTitle="Characters — SiNE Archives">
+  <SectionList
+    section="characters"
+    active="characters"
+    title="Characters"
+    searchLabel="Search characters…"
+    emptyLabel="No public character entries yet."
+  />
+</MainLayout>

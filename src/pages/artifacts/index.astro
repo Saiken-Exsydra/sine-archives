@@ -1,0 +1,14 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import SectionList from "../../components/SectionList.astro";
+---
+
+<MainLayout active="artifacts" pageTitle="Artifacts — SiNE Archives">
+  <SectionList
+    section="artifacts"
+    active="artifacts"
+    title="Artifacts"
+    searchLabel="Search artifacts..."
+    emptyLabel="No public artifact entries yet."
+  />
+</MainLayout>

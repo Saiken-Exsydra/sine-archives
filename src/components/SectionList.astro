@@ -1,0 +1,52 @@
+---
+import EntryCard from "./EntryCard.astro";
+import { getCollection } from "astro:content";
+
+const { section, active, title, searchLabel, emptyLabel } = Astro.props;
+
+const all = await getCollection(section);
+const publicEntries = all
+  .filter((e) => e.data.status === "public")
+  .sort((a, b) => (a.data.updated < b.data.updated ? 1 : -1));
+---
+
+<section class="section">
+  <div class="section__head">
+    <h2 class="section__title">{title}</h2>
+
+    <label class="section__search" aria-label={searchLabel}>
+      <span class="section__icon" aria-hidden="true">⌕</span>
+      <input class="section__input" type="search" placeholder={searchLabel} />
+    </label>
+  </div>
+
+  <div class="grid" aria-label={`${title} entries`}>
+    {publicEntries.length === 0 ? (
+      <div class="empty">{emptyLabel}</div>
+    ) : (
+      publicEntries.map((entry) => <EntryCard section={section} entry={entry} />)
+    )}
+  </div>
+</section>
+
+<style>
+  .section{ margin-top:18px; padding:18px; border-radius:18px; border:1px solid rgba(176,141,60,0.16); background:rgba(0,0,0,0.25); }
+  .section__head{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .section__title{ margin:0; font-size:18px; font-weight:750; letter-spacing:0.12em; text-transform:uppercase; }
+  .section__search{ display:grid; grid-template-columns:20px 1fr; align-items:center; gap:10px; padding:10px 12px; border-radius:999px; border:1px solid rgba(176,141,60,0.16); background:rgba(0,0,0,0.20); }
+  .section__icon{ opacity:0.95; font-size:14px; }
+  .section__input{ appearance:none; border:none; outline:none; background:transparent; color:rgba(255,255,255,0.92); min-width:240px; }
+  .section__input::placeholder{ color: rgba(255,255,255,0.78); }
+  .grid{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+@media (max-width: 980px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+  .empty{ padding:16px; border-radius:16px; border:1px solid rgba(176,141,60,0.16); background:rgba(255,255,255,0.03); }
+</style>

@@ -1,0 +1,119 @@
+---
+const { entry, section } = Astro.props;
+
+const href = `/${section}/${entry.slug}/`;
+const tags = entry.data.tags ?? [];
+const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toLowerCase();
+---
+
+<a class="card entryCard" href={href} data-search={search}>
+  <div class="card__media" aria-hidden="true">
+    {entry.data.image ? (
+      <img class="thumb" src={entry.data.image} alt="" loading="lazy" />
+    ) : (
+      <div class="thumb thumb--empty"></div>
+    )}
+  </div>
+
+  <div class="card__body">
+    <div class="card__title">{entry.data.title}</div>
+    <div class="card__summary">{entry.data.summary}</div>
+
+    <div class="meta">
+      <div class="tags">
+  {tags.slice(0, 4).map((t) => (
+    <span class="tag">{String(t).toUpperCase()}</span>
+  ))}
+</div>
+
+      <div class="updated">Updated: {entry.data.updated}</div>
+    </div>
+  </div>
+</a>
+
+<style>
+  .card{
+    text-decoration: none;
+    color: var(--text);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(176,141,60,0.16);
+    background: rgba(15,15,22,0.45);
+    align-items: center;
+    min-height: 190px;
+
+  }
+
+  .card:hover{
+    border-color: rgba(176,141,60,0.32);
+    background: rgba(15,15,22,0.55);
+  }
+
+  .thumb{
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 1px solid rgba(176,141,60,0.22);
+    background: rgba(11,11,16,0.6);
+    display: block;
+  }
+
+  .thumb--empty{
+    background: radial-gradient(circle at 30% 30%, rgba(176,141,60,0.35), rgba(122,13,20,0.25));
+  }
+
+  .card__title{
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.card__summary{
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 80ch;
+}
+
+
+  .meta{
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tags{
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag{
+    padding: 6px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(176,141,60,0.22);
+    background: rgba(11,11,16,0.45);
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  .updated{
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+</style>

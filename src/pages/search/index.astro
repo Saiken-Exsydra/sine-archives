@@ -1,0 +1,641 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout active="search" pageTitle="Search — SiNE Archives">
+  <section class="section searchPage">
+    <div class="section__head">
+      <h2 class="section__title">Search</h2>
+
+      <div class="controls">
+        <label class="section__search" aria-label="Search all entries">
+          <span class="section__icon" aria-hidden="true">⌕</span>
+          <input id="q" class="section__input" type="search" placeholder="Search title, summary, tags, body…" />
+        </label>
+
+        <button id="toggleFilters" class="filter" type="button">
+          Filter
+        </button>
+      </div>
+    </div>
+
+    <div id="filters" class="filters" hidden>
+      <div class="filters__head">
+      <div id="activeTags" class="activeTags" aria-live="polite"></div>
+        <div class="filters__title">Tags</div>
+        <button id="clearTags" class="filters__clear" type="button">Clear</button>
+      </div>
+      <div id="tagList" class="taglist" aria-label="Tag filters"></div>
+    </div>
+
+    <div id="status" class="status" aria-live="polite">Loading index…</div>
+    <noscript>
+  <div class="status">Search requires JavaScript to run.</div>
+</noscript>
+
+
+    <div id="results" class="results" aria-label="Search results"></div>
+  </section>
+
+  <script type="module">
+    const $q = document.querySelector("#q");
+    const $results = document.querySelector("#results");
+    const $status = document.querySelector("#status");
+    const $filters = document.querySelector("#filters");
+    const $tagList = document.querySelector("#tagList");
+    const $toggleFilters = document.querySelector("#toggleFilters");
+    const $clearTags = document.querySelector("#clearTags");
+
+    const params = new URLSearchParams(location.search);
+    const initialQ = params.get("q") || "";
+    $q.value = initialQ;
+    if (initialQ) $q.focus();
+
+
+    let indexItems = [];
+    let selectedTags = new Set();
+    // Waits a tiny moment after typing stops before running run()
+function debounce(fn, delay = 120) {
+  let t;
+  return () => {
+    clearTimeout(t);
+    t = setTimeout(fn, delay);
+  };
+}
+
+
+    function norm(s){ return (s || "").toString().toLowerCase(); }
+    function scoreItem(item, query){
+  const q = (query || "").trim().toLowerCase();
+  if (!q) return 0;
+
+  const terms = q.split(/\s+/).filter(Boolean);
+
+  const title = norm(item.title);
+  const summary = norm(item.summary);
+  const tags = norm((item.tags || []).join(" "));
+  const body = norm(item.body || "");
+
+  let score = 0;
+
+  // Bonus if the whole query phrase appears
+  const phrase = q;
+  if (phrase.length >= 3){
+    if (title.includes(phrase)) score += 60;
+    if (tags.includes(phrase)) score += 35;
+    if (summary.includes(phrase)) score += 20;
+    if (body.includes(phrase)) score += 10;
+  }
+
+  // Per-term scoring (AND query is still enforced by matchesQuery)
+  for (const t of terms){
+    if (title.includes(t)) score += 25;
+    if (tags.includes(t)) score += 14;
+    if (summary.includes(t)) score += 10;
+    if (body.includes(t)) score += 4;
+  }
+
+  return score;
+}
+
+
+    function matchesQuery(item, query){
+  const q = (query || "").trim();
+  if (!q) return true;
+
+  const terms = q
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  const hay = [
+    item.title,
+    item.summary,
+    (item.tags || []).join(" "),
+    item.body || "",
+  ].map(norm).join(" | ");
+
+  // every word must be present (AND search)
+  return terms.every(t => hay.includes(t));
+}
+
+
+    function matchesTags(item){
+      if (selectedTags.size === 0) return true;
+      const tags = new Set((item.tags || []).map(t => norm(t)));
+      for (const t of selectedTags){
+        if (!tags.has(t)) return false;
+      }
+      return true;
+    }
+
+    function renderResults(items){
+      $results.innerHTML = "";
+      if (items.length === 0){
+        $status.textContent = "No results.";
+        return;
+      }
+
+      $status.textContent = `${items.length} result${items.length === 1 ? "" : "s"}.`;
+
+      for (const item of items){
+        const a = document.createElement("a");
+a.className = "card card--search";
+a.href = item.href;
+
+
+        const img = item.image
+          ? `<img class="thumb" src="${item.image}" alt="" loading="lazy">`
+          : `<div class="thumb thumb--empty" aria-hidden="true"></div>`;
+
+        const tags = (item.tags || []).slice(0, 4)
+  .map(t => `<span class="tag">${String(t).toUpperCase()}</span>`)
+  .join("");
+
+
+        a.innerHTML = `
+  <div class="card__media" aria-hidden="true">${img}</div>
+  <div class="card__body">
+    <div class="card__title">${item.title}</div>
+    <div class="card__summary">${item.summary}</div>
+    <div class="meta">
+      <div class="tags">${tags}</div>
+      <div class="updated">Updated: ${item.updated}</div>
+    </div>
+  </div>
+`;
+
+        $results.appendChild(a);
+      }
+    }
+
+    function buildTagFilters(items){
+      const counts = new Map();
+      for (const it of items){
+        for (const t of (it.tags || [])){
+          const key = norm(t);
+          counts.set(key, (counts.get(key) || 0) + 1);
+        }
+      }
+
+      const tags = [...counts.entries()]
+        .sort((a,b) => b[1] - a[1])
+        .slice(0, 60); // keep UI tidy
+
+      $tagList.innerHTML = "";
+      for (const [key, count] of tags){
+        const label = document.createElement("label");
+        label.className = "tagcheck";
+        label.innerHTML = `
+          <input type="checkbox" value="${key}">
+          <span class="tagcheck__pill">${key.toUpperCase()}</span>
+          <span class="tagcheck__count">${count}</span>
+        `;
+        const input = label.querySelector("input");
+        input.addEventListener("change", () => {
+  if (input.checked) selectedTags.add(key);
+  else selectedTags.delete(key);
+
+  // Firefox-friendly active styling fallback
+  label.classList.toggle("is-active", input.checked);
+
+  run();
+});
+
+        $tagList.appendChild(label);
+      }
+    }
+
+    function run(){
+      const query = $q.value.trim();
+      const filtered = indexItems
+  .filter(it => matchesQuery(it, query))
+  .filter(it => matchesTags(it))
+  .map(it => ({ it, score: scoreItem(it, query) }))
+  .sort((a, b) => {
+    // Higher score first
+    if (b.score !== a.score) return b.score - a.score;
+
+    // Tie-breaker: newer updated first
+    return (a.it.updated < b.it.updated ? 1 : -1);
+  })
+  .map(x => x.it);
+
+
+      renderResults(filtered);
+      const $activeTags = document.querySelector("#activeTags");
+if ($activeTags){
+  const list = [...selectedTags].map(t => t.toUpperCase());
+  $activeTags.textContent = list.length ? `Active: ${list.join(" · ")}` : "No tag filters.";
+}
+
+
+      // keep URL in sync (so header search can link here)
+      const next = new URL(location.href);
+      if (query) next.searchParams.set("q", query);
+      else next.searchParams.delete("q");
+      history.replaceState({}, "", next);
+    }
+
+    $q.addEventListener("input", debounce(run, 120));
+
+    $toggleFilters.addEventListener("click", () => {
+      $filters.hidden = !$filters.hidden;
+    });
+
+    $clearTags.addEventListener("click", () => {
+  selectedTags.clear();
+  $tagList.querySelectorAll("input[type=checkbox]").forEach(cb => {
+    cb.checked = false;
+    cb.closest(".tagcheck")?.classList.remove("is-active");
+  });
+  run();
+});
+
+    // Keyboard shortcut: press "/" to focus the search input
+window.addEventListener("keydown", (e) => {
+  if (e.key !== "/") return;
+
+  const el = document.activeElement;
+  const typing =
+    el &&
+    (el.tagName === "INPUT" ||
+     el.tagName === "TEXTAREA" ||
+     el.isContentEditable);
+
+  // If you're already typing somewhere, don't steal the "/" key
+  if (typing) return;
+
+  e.preventDefault();
+  $q.focus();
+});
+
+
+    // load index
+    fetch("/search-index.json")
+      .then(r => r.json())
+      .then(({ items }) => {
+        indexItems = items || [];
+        buildTagFilters(indexItems);
+        run();
+      })
+      .catch(() => {
+  $status.textContent = "Could not load search. Please refresh or try again later.";
+  $results.innerHTML = "";
+});
+
+  </script>
+
+  <style>
+    /* keep these scoped - they exist in the Astro template */
+.section{ /* ... */ }
+.section__head{ /* ... */ }
+.section__title{ /* ... */ }
+.controls{ /* ... */ }
+.section__search{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(176,141,60,0.22);
+  background: rgba(15,15,22,0.55);
+
+  min-width: 360px;
+}
+.section__icon{
+  opacity: 0.9;
+  font-size: 14px;
+  line-height: 1;
+}
+.section__input{
+  flex: 1;
+  width: 100%;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 0;
+  outline: none;
+  background: transparent;
+
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  padding: 0;          /* kill default padding */
+  margin: 0;
+  line-height: 1.2;
+}
+.section__search:focus-within{
+  border-color: rgba(176,141,60,0.45);
+  background: rgba(15,15,22,0.65);
+}
+.section__input::placeholder{
+  color: rgba(253,252,255,0.72);
+}
+.section__input::-webkit-search-decoration,
+.section__input::-webkit-search-cancel-button,
+.section__input::-webkit-search-results-button,
+.section__input::-webkit-search-results-decoration{
+  -webkit-appearance: none;
+}
+.filter{
+  appearance:none;
+  -webkit-appearance:none;
+
+  cursor:pointer;
+  color: var(--text);
+  background: rgba(176,141,60,0.12);
+  border: 1px solid rgba(176,141,60,0.35);
+  border-radius: 999px;
+    margin-top: 6px;
+
+
+  padding: 10px 14px;
+  font: inherit;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.filters{ /* ... */ }
+.filters__head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(176,141,60,0.14);
+  margin-bottom: 12px;
+}
+
+/* Make the Clear button match the site style */
+.filters__clear{
+  appearance:none;
+  -webkit-appearance:none;
+
+  cursor:pointer;
+  color: var(--text);
+  background: rgba(176,141,60,0.10);
+  border: 1px solid rgba(176,141,60,0.28);
+  border-radius: 999px;
+
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 850;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-size: 11px;
+
+  transition: background .12s ease, border-color .12s ease, transform .12s ease;
+}
+
+.filters__clear:hover{
+  border-color: rgba(176,141,60,0.40);
+  background: rgba(176,141,60,0.16);
+}
+
+.filters__clear:active{
+  transform: translateY(1px);
+}
+
+.filters__clear:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(122,13,20,0.35);
+  border-color: rgba(122,13,20,0.65);
+}
+
+
+.searchPage :global(.activeTags){
+  margin: 10px 0 12px;
+  color: rgba(253,252,255,0.78);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+}
+
+.searchPage :global(.taglist){
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+
+  max-height: 156px;
+  overflow: auto;
+  padding: 2px;
+}
+
+.searchPage :global(.taglist::-webkit-scrollbar){ height: 10px; width: 10px; }
+.searchPage :global(.taglist::-webkit-scrollbar-thumb){
+  background: rgba(176,141,60,0.20);
+  border-radius: 999px;
+}
+
+.searchPage :global(.tagcheck){
+  position: relative;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(176,141,60,0.22);
+  background: rgba(11,11,16,0.45);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: background .12s ease, border-color .12s ease, transform .12s ease;
+}
+
+.searchPage :global(.tagcheck:hover){
+  border-color: rgba(176,141,60,0.38);
+  background: rgba(15,15,22,0.55);
+}
+
+.searchPage :global(.tagcheck:active){
+  transform: translateY(1px);
+}
+
+.searchPage :global(.tagcheck input){
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.searchPage :global(.tagcheck:focus-within){
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(122,13,20,0.35);
+  border-color: rgba(122,13,20,0.65);
+}
+
+.searchPage :global(.tagcheck__pill){
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 10px;
+  opacity: 0.92;
+}
+
+.searchPage :global(.tagcheck__count){
+  font-weight: 850;
+  border: 1px solid rgba(176,141,60,0.22);
+  background: rgba(176,141,60,0.10);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+.searchPage :global(.tagcheck:has(input:checked)){
+  border-color: rgba(122,13,20,0.70);
+  background: rgba(122,13,20,0.18);
+}
+/* Fallback for browsers that don't support :has() well (e.g. some Firefox setups) */
+.searchPage :global(.tagcheck.is-active){
+  border-color: rgba(122,13,20,0.70);
+  background: rgba(122,13,20,0.18);
+}
+.searchPage :global(.tagcheck.is-active .tagcheck__pill){
+  opacity: 1;
+}
+.searchPage :global(.tagcheck.is-active .tagcheck__count){
+  border-color: rgba(122,13,20,0.55);
+  background: rgba(122,13,20,0.25);
+}
+
+
+.searchPage :global(.tagcheck:has(input:checked) .tagcheck__pill){
+  opacity: 1;
+}
+
+.searchPage :global(.tagcheck:has(input:checked) .tagcheck__count){
+  border-color: rgba(122,13,20,0.55);
+  background: rgba(122,13,20,0.25);
+}
+
+
+
+
+/* 🔧 these must be global because JS creates them */
+.searchPage :global(.status){
+  margin-top: 14px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.searchPage :global(.results){
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.searchPage :global(.card){
+  text-decoration:none;
+  color: var(--text);
+  display:grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(176,141,60,0.16);
+  background: rgba(15,15,22,0.45);
+  align-items: center;
+}
+
+.searchPage :global(.card:hover){
+  border-color: rgba(176,141,60,0.32);
+  background: rgba(15,15,22,0.55);
+}
+
+.searchPage :global(.thumb){
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid rgba(176,141,60,0.22);
+  background: rgba(11,11,16,0.6);
+  display:block;
+}
+
+.searchPage :global(.thumb--empty){
+  background: radial-gradient(circle at 30% 30%, rgba(176,141,60,0.35), rgba(122,13,20,0.25));
+}
+
+.searchPage :global(.card__top){
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.searchPage :global(.card__title){
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.searchPage :global(.card__section){
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: 0.95;
+}
+
+.searchPage :global(.card__summary){
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.searchPage :global(.meta){
+  margin-top: 10px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.searchPage :global(.tags){
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.searchPage :global(.tag){
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(176,141,60,0.22);
+  background: rgba(11,11,16,0.45);
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.searchPage :global(.updated){
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+@media (max-width: 980px){
+  .searchPage :global(.results){ grid-template-columns: 1fr; }
+  .section__search{ min-width: 260px; } /* this one is still scoped */
+  .searchPage :global(.card){ grid-template-columns: 100px 1fr; }
+  .searchPage :global(.thumb){ width: 100px; height: 100px; }
+}
+
+  </style>
+</MainLayout>
