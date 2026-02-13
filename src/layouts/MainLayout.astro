@@ -79,8 +79,7 @@ const {
   </div>
 
   <h1 class="title">
-    <span class="title__sine">SiNE</span>
-    <span class="title__archives">Archives</span>
+    <img class="title__logo" src="/uploads/SLOGOHOME.png" alt="SINE ARCHIVES" />
   </h1>
 
           <p class="tagline">{tagline}</p>
@@ -223,15 +222,16 @@ const {
 
       .title{
         margin:0;
-        display:flex;
-        gap:14px;
+        display:block;
         justify-content:center;
-        font-family:"Playfair Display", Georgia, serif;
-        text-transform:uppercase;
-        letter-spacing:.09em;
-        font-size:3.1rem;
       }
-      .title__sine,.title__archives{ font-weight:600; color:#ebe6df; }
+
+      .title__logo{
+        display:block;
+        width:min(680px, 92vw);
+        height:auto;
+        margin:0 auto;
+      }
 
       .tagline{
         margin:8px 0 0;
