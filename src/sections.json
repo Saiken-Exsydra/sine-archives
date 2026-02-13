@@ -4,7 +4,6 @@
   { "key": "places", "label": "Places", "typeDefault": "place" },
   { "key": "artifacts", "label": "Artifacts", "typeDefault": "artifact" },
   { "key": "redactory", "label": "Redactory", "typeDefault": "redactory" },
-  { "key": "sigillums", "label": "Sigillums", "typeDefault": "sigillum" },
-  { "key": "test-section", "label": "Test Section", "typeDefault": "test" }
+  { "key": "sigillums", "label": "Sigillums", "typeDefault": "sigillum" }
 
 ]

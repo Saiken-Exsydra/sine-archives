@@ -21,20 +21,11 @@ const entrySchema = z.object({
   image: z.string().optional(),
 });
 
-const characters = defineCollection({ schema: entrySchema });
-const organizations = defineCollection({ schema: entrySchema });
-const places = defineCollection({ schema: entrySchema });
-const artifacts = defineCollection({ schema: entrySchema });
-const redactory = defineCollection({ schema: entrySchema });
-const sigillums = defineCollection({ schema: entrySchema });
-const test-section = defineCollection({ schema: entrySchema });
-
 export const collections = {
-  characters,
-  organizations,
-  places,
-  artifacts,
-  redactory,
-  sigillums,
-  test-section
+  "characters": defineCollection({ schema: entrySchema }),
+  "organizations": defineCollection({ schema: entrySchema }),
+  "places": defineCollection({ schema: entrySchema }),
+  "artifacts": defineCollection({ schema: entrySchema }),
+  "redactory": defineCollection({ schema: entrySchema }),
+  "sigillums": defineCollection({ schema: entrySchema }),
 };
