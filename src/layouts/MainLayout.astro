@@ -5,7 +5,7 @@ import "../styles/cards.css";
 
 const {
   pageTitle = "SiNE Archives",
-  tagline = "A repository of all history from Vesperia.",
+  tagline = "Authorized Historical Index — Vesperia",
   active = "home",
 } = Astro.props;
 
@@ -46,6 +46,13 @@ const lastHref = lastUpdated ? `/${lastUpdated.section}/${lastUpdated.entry.slug
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
   </head>
@@ -77,38 +84,46 @@ const lastHref = lastUpdated ? `/${lastUpdated.section}/${lastUpdated.entry.slug
         </nav>
 
         <div class="sidebar__bottom">
-          <div class="note">
-            <span class="note__dot" aria-hidden="true"></span>
-            <span class="note__text">Public Archive</span>
-          </div>
-        </div>
-      </aside>
+  <div class="note">
+    <span class="note__dot" aria-hidden="true"></span>
+    <span class="note__text">Access Tier: Public</span>
+  </div>
+
+  <div class="sidebar__sys" aria-label="System status">
+    <div>Public Access Node: 01</div>
+    <div>Oversight Status: Active</div>
+  </div>
+</div>
+</aside>
+
 
       <!-- Main -->
       <main class="main">
         <header class="header">
-          <div>
-            <h1 class="title">
-              <span class="title__sine">SiNE</span>
-              <span class="title__archives">Archives</span>
-            </h1>
-            <p class="tagline">{tagline}</p>
-          </div>
+          <div class="header__left">
+  <div class="header__meta" aria-label="Index status">
+    <span class="meta__item">PUBLIC ACCESS NODE: 01</span>
+    <span class="meta__sep" aria-hidden="true"></span>
+    <span class="meta__item">OVERSIGHT: ACTIVE</span>
+    <span class="meta__sep" aria-hidden="true"></span>
+    <span class="meta__item">TIER: PUBLIC</span>
+  </div>
+
+  <h1 class="title">
+    <span class="title__sine">SiNE</span>
+    <span class="title__archives">Archives</span>
+  </h1>
+
+  <p class="tagline">{tagline}</p>
+</div>
 
           <div class="header__right">
             <form class="search" action="/search/" role="search" aria-label="Global search">
-  <span class="search__icon" aria-hidden="true">⌕</span>
+  <span class="search__icon" aria-hidden="true">🔎</span>
   <input class="search__input" type="search" name="q" placeholder="Search all public entries…" />
 </form>
 
 
-            <a class="updated" href={lastHref} aria-label="Open last updated entry">
-  <div class="updated__label">Last Updated Entry</div>
-  <div class="updated__value">
-    <span class="updated__title">{lastTitle}</span>
-    <span class="updated__date">{lastDate}</span>
-  </div>
-</a>
 
           </div>
         </header>
@@ -130,11 +145,56 @@ const lastHref = lastUpdated ? `/${lastUpdated.section}/${lastUpdated.entry.slug
         --shadow: 0 10px 30px rgba(0,0,0,0.45);
       }
 
+      /* Search layout fix */
+.search{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar__sys {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-size: 0.72rem;
+  color: #9a9a9a;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  line-height: 1.5;
+}
+
+.sidebar__sys div {
+  opacity: 0.85;
+}
+
+
+/* Make icon larger and aligned */
+.search__icon{
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Improve input alignment */
+.search__input{
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+
       *{ box-sizing: border-box; }
       html, body{ height: 100%; }
       body{
         margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
         background: var(--bg);
         color: var(--text);
       }
@@ -264,20 +324,20 @@ const lastHref = lastUpdated ? `/${lastUpdated.section}/${lastUpdated.entry.slug
         font-size: 32px;
         font-weight: 650;
         letter-spacing: 0.14em;
-        text-transform: uppercase;
         line-height: 1.1;
         display: flex;
         gap: 14px;
         align-items: baseline;
+        font-family: "Cinzel", ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 500;
       }
 
       .title__sine{
-        background: linear-gradient(90deg, #7a0d14 0%, #b08d3c 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-      }
+  color: #b08d3c; /* controlled gold */
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
 
       .title__archives{
         color: var(--text);
@@ -373,6 +433,113 @@ cursor: pointer;
       .updated__date{
         opacity: 0.9;
       }
+
+      /* ===== Header Monument Upgrade ===== */
+
+.header{
+  position: relative;
+  overflow: hidden;
+}
+
+/* faint “sigil” watermark (subtle geometry, no glow) */
+.header::before{
+  content: "";
+  position: absolute;
+  inset: -80px -120px -80px -120px;
+  pointer-events: none;
+  opacity: 0.20;
+
+  background:
+    radial-gradient(circle at 26% 40%, rgba(253,252,255,0.18) 0 1px, transparent 2px),
+    radial-gradient(circle at 26% 40%, transparent 0 140px, rgba(253,252,255,0.12) 141px 142px, transparent 143px),
+    repeating-linear-gradient(115deg, rgba(253,252,255,0.10) 0 1px, transparent 1px 14px);
+
+  filter: blur(0.2px);
+}
+
+.header__left{
+  position: relative;
+  z-index: 1; /* keeps text above watermark */
+}
+
+.header__meta{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(176,141,60,0.18);
+  background: rgba(15,15,22,0.35);
+
+  font-size: 0.70rem;
+  color: #9a9a9a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.meta__sep{
+  width: 18px;
+  height: 1px;
+  background: rgba(176,141,60,0.40);
+  border-radius: 999px;
+}
+
+.title{
+  margin: 14px 0 0;
+  font-size: 56px;        /* BIG */
+  font-weight: 650;
+  letter-spacing: 0.18em; /* ceremonial */
+  line-height: 1.02;
+
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.title__sine{
+  color: #b08d3c;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.title__archives{
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.tagline{
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+
+  position: relative;
+  padding-top: 12px;
+  color: rgba(253,252,255,0.86);
+}
+
+/* structural gold rule */
+.tagline::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 1px;
+  background: rgba(176,141,60,0.75);
+}
+
+
+
 
       /* Responsive */
       @media (max-width: 980px){

@@ -30,14 +30,57 @@ const lastUpdated =
     .slice()
     .sort((a, b) => (a.entry.data.updated < b.entry.data.updated ? 1 : -1))[0] ?? null;
 
+const recent = allPublic
+  .slice()
+  .sort((a, b) => (a.entry.data.updated < b.entry.data.updated ? 1 : -1))
+  .slice(0, 5);
+
+
 const lastHref = lastUpdated
   ? `/${lastUpdated.section}/${lastUpdated.entry.slug}/`
   : "/search/";
 ---
 
-<MainLayout active="home" pageTitle="SiNE Archives">
+<MainLayout active="home" pageTitle="SINE ARCHIVES">
   <section class="cards" aria-label="Dashboard stats">
-    <article class="card">
+  <article class="card card--wide">
+      <div class="card__label">Latest Authorized Revision</div>
+
+      {lastUpdated ? (
+        <div class="last">
+          <div class="last__title">{lastUpdated.entry.data.title}</div>
+          <div class="last__meta">
+            {lastUpdated.sectionLabel} · Updated: {String(lastUpdated.entry.data.updated).slice(0, 10)}
+          </div>
+          <a class="btn" href={lastHref}>Access Record</a>
+        </div>
+      ) : (
+        <div class="last">
+          <div class="last__title">No public entries yet</div>
+          <div class="last__meta">—</div>
+          <a class="btn" href="/search/">Open Search</a>
+        </div>
+      )}
+    </article>
+    <article class="card card--wide card--recent">
+  <div class="card__label">Recent Record Activity</div>
+
+  <div class="recent">
+    {recent.map((r) => (
+      <a class="recent__row" href={`/${r.section}/${r.entry.slug}/`}>
+        <div class="recent__main">
+          <div class="recent__title">{r.entry.data.title}</div>
+          <div class="recent__meta">
+            {r.sectionLabel} • {String(r.entry.data.updated).slice(0, 10)}
+          </div>
+        </div>
+        <div class="recent__arrow" aria-hidden="true">→</div>
+      </a>
+    ))}
+  </div>
+</article>
+
+    <article class="card card--primary">
       <div class="card__label">Total Public Entries</div>
       <div class="card__value">{totalPublic}</div>
     </article>
@@ -49,25 +92,7 @@ const lastHref = lastUpdated
       </article>
     ))}
 
-    <article class="card card--wide">
-      <div class="card__label">Last Updated Entry</div>
-
-      {lastUpdated ? (
-        <div class="last">
-          <div class="last__title">{lastUpdated.entry.data.title}</div>
-          <div class="last__meta">
-            {lastUpdated.sectionLabel} · Updated: {String(lastUpdated.entry.data.updated).slice(0, 10)}
-          </div>
-          <a class="btn" href={lastHref}>Open Entry</a>
-        </div>
-      ) : (
-        <div class="last">
-          <div class="last__title">No public entries yet</div>
-          <div class="last__meta">—</div>
-          <a class="btn" href="/search/">Open Search</a>
-        </div>
-      )}
-    </article>
+    
   </section>
 
   <style>
@@ -79,12 +104,33 @@ const lastHref = lastUpdated
     }
 
     .card{
-  padding: 18px 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(176,141,60,0.18);
-  background: rgba(11,11,16,0.55);
-  box-shadow: var(--shadow);
+  padding: 20px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(176,141,60,0.12);
+  background: linear-gradient(
+    180deg,
+    rgba(18,18,26,0.75),
+    rgba(10,10,15,0.65)
+  );
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
   min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(176,141,60,0.35);
+}
+
+
 
   /* center the label + number */
   display: flex;
@@ -95,12 +141,13 @@ const lastHref = lastUpdated
 }
 
 .card__label{
-  font-size: 13px;
-  letter-spacing: 0.14em;
+  font-size: 11px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  font-weight: 850;
-  opacity: 0.95;
+  font-weight: 700;
+  opacity: 0.65;
 }
+
 
 .card__value{
   margin-top: 12px;
@@ -110,47 +157,164 @@ const lastHref = lastUpdated
   line-height: 1;
 }
 
+.card--primary{
+  background: linear-gradient(
+    135deg,
+    rgba(122,13,20,0.35),
+    rgba(18,18,26,0.8)
+  );
+  border-color: rgba(122,13,20,0.65);
+}
+
+.card--primary .card__value{
+  font-size: 52px;
+}
+
 
     .card--wide{
-      grid-column: span 6;
-      min-height: 140px;
-      background: linear-gradient(135deg, rgba(122,13,20,0.22), rgba(11,11,16,0.62));
-      border-color: rgba(122,13,20,0.55);
-        align-items: stretch;
-  text-align: left;
-    }
+  grid-column: span 6;
+  max-width: 100%;
+  min-height: 160px;
+  padding: 22px 18px;
+
+  background: radial-gradient(
+      900px 200px at 20% 0%,
+      rgba(122,13,20,0.35),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(18,18,26,0.85),
+      rgba(10,10,15,0.65)
+    );
 
     .last{
-      margin-top: 10px;
-      display: grid;
-      gap: 10px;
-    }
-    .last__title{
-      font-weight: 850;
-      letter-spacing: 0.02em;
-      font-size: 18px;
-    }
-    .last__meta{
-      font-weight: 650;
-      letter-spacing: 0.02em;
-      opacity: 0.9;
-    }
+  max-width: 72ch;
+}
+
+
+  border-color: rgba(122,13,20,0.55);
+  align-items: stretch;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.card--wide::after{
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    90deg,
+    rgba(122,13,20,0.18),
+    transparent 40%,
+    rgba(176,141,60,0.10)
+  );
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Last Updated panel typography */
+.last{
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.last__title{
+  font-size: 36px;
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+
+.last__meta{
+  font-size: 13px;
+  font-weight: 550;
+  opacity: 0.68;
+  letter-spacing: 0.02em;
+}
+
+.last .btn{
+  margin-top: 4px;
+}
+
+.card--recent{
+  min-height: unset;
+}
+
+
 
     .btn{
-      display: inline-flex;
-      width: fit-content;
-      text-decoration: none;
-      color: var(--text);
-      background: rgba(122,13,20,0.55);
-      border: 1px solid rgba(122,13,20,0.85);
-      padding: 10px 12px;
-      border-radius: 14px;
-      font-weight: 750;
-      letter-spacing: 0.02em;
-    }
-    .btn:hover{
-      background: rgba(122,13,20,0.7);
-    }
+  display: inline-flex;
+  width: fit-content;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(122,13,20,0.55);
+  border: 1px solid rgba(122,13,20,0.75);
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover{
+  background: rgba(122,13,20,0.75);
+  border-color: rgba(122,13,20,0.95);
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible{
+  outline: 2px solid rgba(176,141,60,0.55);
+  outline-offset: 3px;
+}
+
+.recent{
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.recent__row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(176,141,60,0.10);
+  background: rgba(8,8,12,0.35);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.recent__row:hover{
+  transform: translateY(-2px);
+  border-color: rgba(176,141,60,0.25);
+  background: rgba(8,8,12,0.55);
+}
+
+.recent__title{
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.recent__meta{
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.65;
+  letter-spacing: 0.02em;
+}
+
+.recent__arrow{
+  opacity: 0.6;
+  font-weight: 800;
+}
 
     @media (max-width: 980px){
       .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
