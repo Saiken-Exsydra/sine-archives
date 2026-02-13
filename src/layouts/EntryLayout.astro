@@ -1,7 +1,7 @@
 ---
 import MainLayout from "./MainLayout.astro";
 import { getCollection } from "astro:content";
-
+import { CONTENT_KEYS } from "../content-keys";
 
 const { entry, active } = Astro.props;
 const { Content, headings } = await entry.render();
@@ -11,12 +11,12 @@ const sectionLabel =
   (active || "").charAt(0).toUpperCase() + (active || "").slice(1);
 const sectionHref = `/${active}/`;
 // ---- Related Entries (public-only) ----
-function normalizeTags(tags) {
+function normalizeTags(tags: unknown): string[] {
   if (!Array.isArray(tags)) return [];
   return tags.map((t) => String(t).trim().toLowerCase()).filter(Boolean);
 }
 
-function sharedCount(a, b) {
+function sharedCount(a: string[], b: string[]): number {
   const setB = new Set(b);
   let n = 0;
   for (const t of a) if (setB.has(t)) n++;
@@ -26,26 +26,9 @@ function sharedCount(a, b) {
 const currentSlug = entry.slug;
 const currentTags = normalizeTags(entry.data?.tags);
 
-// List the collections you want to include in "related"
-const collections = [
-  "artifacts",
-  "characters",
-  "organizations",
-  "places",
-  "redactory",
-  "sigillums",
-];
-
-
 const allPublic = (
   await Promise.all(
-    collections.map(async (c) => {
-      try {
-        return await getCollection(c, (e) => e.data.status === "public");
-      } catch {
-        return [];
-      }
-    })
+    CONTENT_KEYS.map((c) => getCollection(c, (e) => e.data.status === "public"))
   )
 ).flat();
 
@@ -85,7 +68,7 @@ const related = allPublic
 
       {(entry.data.tags ?? []).length ? (
         <div class="tags" aria-label="Tags">
-          {(entry.data.tags ?? []).map((t) => (
+          {(entry.data.tags ?? []).map((t: string) => (
             <span class="tag">{String(t).toUpperCase()}</span>
           ))}
         </div>
@@ -105,7 +88,7 @@ const related = allPublic
 
       <nav class="toc__nav">
         <ul class="toc__list">
-          {headings
+          {(headings as { depth: number; slug: string; text: string }[])
             .filter((h) => h.depth === 2 || h.depth === 3)
             .map((h) => (
               <li class={`toc__item toc__item--d${h.depth}`}>
@@ -469,23 +452,25 @@ const related = allPublic
 
   <script>
   // Detect portrait images and switch styling so they don't get cropped
-  function setMediaFit(img) {
-    const w = img.naturalWidth;
-    const h = img.naturalHeight;
-    if (!w || !h) return;
+  const mediaImages = document.querySelectorAll(".media__img");
 
-    const wrap = img.closest(".media");
-    if (!wrap) return;
+  mediaImages.forEach((node) => {
+    if (!(node instanceof HTMLImageElement)) return;
 
-    // If it's taller than it is wide, treat it as portrait
-    const isPortrait = h > w;
-    wrap.classList.toggle("media--portrait", isPortrait);
-  }
+    const setMediaFit = () => {
+      const w = node.naturalWidth;
+      const h = node.naturalHeight;
+      if (!w || !h) return;
 
-  document.querySelectorAll(".media__img").forEach((img) => {
-    // If the image is already loaded (cached), natural sizes are ready
-    if (img.complete) setMediaFit(img);
-    else img.addEventListener("load", () => setMediaFit(img), { once: true });
+      const wrap = node.closest(".media");
+      if (!wrap) return;
+
+      const isPortrait = h > w;
+      wrap.classList.toggle("media--portrait", isPortrait);
+    };
+
+    if (node.complete) setMediaFit();
+    else node.addEventListener("load", setMediaFit, { once: true });
   });
 </script>
 

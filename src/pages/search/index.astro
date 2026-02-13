@@ -37,7 +37,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
     <div id="results" class="results" aria-label="Search results"></div>
   </section>
 
-  <script type="module">
+  <script is:inline type="module">
     const $q = document.querySelector("#q");
     const $results = document.querySelector("#results");
     const $status = document.querySelector("#status");

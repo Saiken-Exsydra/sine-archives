@@ -1,8 +1,17 @@
 ---
 import EntryCard from "./EntryCard.astro";
 import { getCollection } from "astro:content";
+import type { ContentKey } from "../content-keys";
 
-const { section, active, title, searchLabel, emptyLabel } = Astro.props;
+type Props = {
+  section: ContentKey;
+  active?: string;
+  title: string;
+  searchLabel: string;
+  emptyLabel: string;
+};
+
+const { section, title, searchLabel, emptyLabel } = Astro.props as Props;
 
 const all = await getCollection(section);
 const publicEntries = all

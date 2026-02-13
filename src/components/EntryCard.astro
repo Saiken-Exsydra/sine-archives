@@ -1,5 +1,13 @@
 ---
-const { entry, section } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+import type { ContentKey } from "../content-keys";
+
+type Props = {
+  section: ContentKey;
+  entry: CollectionEntry<ContentKey>;
+};
+
+const { entry, section } = Astro.props as Props;
 
 const href = `/${section}/${entry.slug}/`;
 const tags = entry.data.tags ?? [];
@@ -21,10 +29,10 @@ const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toL
 
     <div class="meta">
       <div class="tags">
-  {tags.slice(0, 4).map((t) => (
-    <span class="tag">{String(t).toUpperCase()}</span>
-  ))}
-</div>
+        {tags.slice(0, 4).map((t: string) => (
+          <span class="tag">{String(t).toUpperCase()}</span>
+        ))}
+      </div>
 
       <div class="updated">Updated: {entry.data.updated}</div>
     </div>

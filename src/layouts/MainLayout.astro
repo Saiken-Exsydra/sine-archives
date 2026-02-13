@@ -1,5 +1,4 @@
 ---
-import { getCollection } from "astro:content";
 import "../styles/cards.css";
 
 
@@ -9,36 +8,6 @@ const {
   active = "home",
 } = Astro.props;
 
-const sections = [
-  { key: "characters", label: "Characters" },
-  { key: "places", label: "Places" },
-  { key: "redactory", label: "Redactory" },
-  { key: "organizations", label: "Organizations" },
-  { key: "artifacts", label: "Artifacts" },
-  { key: "sigillums", label: "Sigillums" },
-] as const;
-
-type SectionKey = (typeof sections)[number]["key"];
-
-const allPublic = (
-  await Promise.all(
-    sections.map(async (s) => {
-      const entries = await getCollection(s.key as SectionKey);
-      return entries
-        .filter((e) => e.data.status === "public")
-        .map((e) => ({ section: s.key, sectionLabel: s.label, entry: e }));
-    })
-  )
-).flat();
-
-const lastUpdated =
-  allPublic
-    .slice()
-    .sort((a, b) => (a.entry.data.updated < b.entry.data.updated ? 1 : -1))[0] ?? null;
-
-const lastTitle = lastUpdated?.entry.data.title ?? "—";
-const lastDate = lastUpdated?.entry.data.updated ?? "—";
-const lastHref = lastUpdated ? `/${lastUpdated.section}/${lastUpdated.entry.slug}/` : "/search/";
 ---
 
 

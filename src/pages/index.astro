@@ -2,12 +2,12 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import { SECTIONS } from "../sections";
+import { CONTENT_KEYS, type ContentKey } from "../content-keys";
 
-const sections = SECTIONS.map(s => ({ key: s.key, label: s.label })) as const;
+const labelByKey = Object.fromEntries(SECTIONS.map((s) => [s.key, s.label])) as Record<string, string>;
+const sections = CONTENT_KEYS.map((key) => ({ key, label: labelByKey[key] ?? key }));
 
-type SectionKey = (typeof sections)[number]["key"];
-
-async function getPublic(key: SectionKey) {
+async function getPublic(key: ContentKey) {
   const all = await getCollection(key);
   return all.filter((e) => e.data.status === "public");
 }
@@ -34,7 +34,6 @@ const recent = allPublic
   .slice()
   .sort((a, b) => (a.entry.data.updated < b.entry.data.updated ? 1 : -1))
   .slice(0, 5);
-
 
 const lastHref = lastUpdated
   ? `/${lastUpdated.section}/${lastUpdated.entry.slug}/`
@@ -188,20 +187,13 @@ const lastHref = lastUpdated
 .card--wide::after{
   content: "";
   position: absolute;
-  inset: -1px;
-  background: linear-gradient(
-    90deg,
-    rgba(122,13,20,0.18),
-    transparent 40%,
-    rgba(176,141,60,0.10)
-  );
+  inset: 0;
   pointer-events: none;
-  opacity: 0.6;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 45%);
 }
 
-/* Last Updated panel typography */
+
 .last{
-  max-width: 72ch;
   margin-top: 14px;
   display: flex;
   flex-direction: column;

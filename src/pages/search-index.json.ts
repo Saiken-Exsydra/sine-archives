@@ -1,15 +1,15 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { SECTIONS } from "../sections";
+import { CONTENT_KEYS } from "../content-keys";
 
-const sections = SECTIONS.map((s) => ({ key: s.key, label: s.label })) as const;
-
-type SectionKey = (typeof sections)[number]["key"];
+const labelByKey = Object.fromEntries(SECTIONS.map((s) => [s.key, s.label])) as Record<string, string>;
+const sections = CONTENT_KEYS.map((key) => ({ key, label: labelByKey[key] ?? key }));
 
 export const GET: APIRoute = async () => {
   const itemsNested = await Promise.all(
     sections.map(async (s) => {
-      const entries = await getCollection(s.key as SectionKey);
+      const entries = await getCollection(s.key);
 
       return entries
         .filter((e) => e.data.status === "public")
@@ -24,8 +24,7 @@ export const GET: APIRoute = async () => {
           created: e.data.created,
           updated: e.data.updated,
           image: e.data.image ?? null,
-          // include body for search (raw markdown text)
-          body: (e as any).body ?? "",
+          body: e.body ?? "",
         }));
     })
   );
