@@ -96,23 +96,20 @@ const lastHref = lastUpdated
 
   <style>
     .cards{
-      margin-top: 18px;
+      margin-top: 0;
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 14px;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .card{
-  padding: 20px 16px;
-  border-radius: 20px;
-  border: 1px solid rgba(176,141,60,0.12);
-  background: linear-gradient(
-    180deg,
-    rgba(18,18,26,0.75),
-    rgba(10,10,15,0.65)
-  );
-  backdrop-filter: blur(6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  padding: 18px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: linear-gradient(180deg, rgba(9,12,20,0.82), rgba(7,8,13,0.82));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 14px 30px rgba(0,0,0,0.24);
   min-height: 120px;
 
   display: flex;
@@ -125,34 +122,30 @@ const lastHref = lastUpdated
 }
 
 .card:hover{
-  transform: translateY(-4px);
-  border-color: rgba(176,141,60,0.35);
+  transform: translateY(-2px);
+  border-color: rgba(181, 58, 51, 0.52);
 }
 
 .card__label{
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 10px;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   font-weight: 700;
-  opacity: 0.65;
+  opacity: 0.76;
 }
 
 
 .card__value{
   margin-top: 12px;
-  font-size: 44px;
+  font-size: 50px;
   font-weight: 900;
   letter-spacing: 0.02em;
   line-height: 1;
 }
 
 .card--primary{
-  background: linear-gradient(
-    135deg,
-    rgba(122,13,20,0.35),
-    rgba(18,18,26,0.8)
-  );
-  border-color: rgba(122,13,20,0.65);
+  background: linear-gradient(145deg, rgba(112,17,20,0.6), rgba(12,14,23,0.95));
+  border-color: rgba(185,62,56,0.74);
 }
 
 .card--primary .card__value{
@@ -163,21 +156,13 @@ const lastHref = lastUpdated
     .card--wide{
   grid-column: span 6;
   max-width: 100%;
-  min-height: 160px;
+  min-height: 130px;
   padding: 22px 18px;
 
-  background: radial-gradient(
-      900px 200px at 20% 0%,
-      rgba(122,13,20,0.35),
-      transparent 60%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(18,18,26,0.85),
-      rgba(10,10,15,0.65)
-    );
+  background: radial-gradient(1100px 220px at 45% 0%, rgba(180,82,50,0.2), transparent 66%),
+    linear-gradient(180deg, rgba(12,15,24,0.9), rgba(8,9,13,0.92));
 
-  border-color: rgba(122,13,20,0.55);
+  border-color: rgba(255,255,255,0.13);
   align-items: stretch;
   text-align: left;
   position: relative;
@@ -201,10 +186,12 @@ const lastHref = lastUpdated
 }
 
 .last__title{
-  font-size: 36px;
+  font-size: 48px;
   line-height: 1.08;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 
@@ -225,17 +212,18 @@ const lastHref = lastUpdated
 
 
 
-    .btn{
+.btn{
   display: inline-flex;
   width: fit-content;
   text-decoration: none;
   color: var(--text);
-  background: rgba(122,13,20,0.55);
-  border: 1px solid rgba(122,13,20,0.75);
-  padding: 10px 14px;
-  border-radius: 14px;
-  font-weight: 750;
-  letter-spacing: 0.02em;
+  background: linear-gradient(180deg,#941d1d,#6f1114);
+  border: 1px solid rgba(185,58,54,0.8);
+  padding: 9px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
@@ -262,11 +250,11 @@ const lastHref = lastUpdated
   justify-content: space-between;
   gap: 12px;
   padding: 12px 12px;
-  border-radius: 14px;
+  border-radius: 3px;
   text-decoration: none;
   color: inherit;
-  border: 1px solid rgba(176,141,60,0.10);
-  background: rgba(8,8,12,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(6,8,14,0.42);
   transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 
