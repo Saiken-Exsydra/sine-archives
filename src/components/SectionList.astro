@@ -15,6 +15,16 @@ const { section, title, searchLabel, emptyLabel } = Astro.props as Props;
 
 const all = await getCollection(section);
 
+function collectDuplicates(entries: { key: string; id: string }[]) {
+  const idsByKey = new Map<string, string[]>();
+  for (const { key, id } of entries) {
+    const ids = idsByKey.get(key) ?? [];
+    ids.push(id);
+    idsByKey.set(key, ids);
+  }
+  return Array.from(idsByKey.entries()).filter(([, ids]) => ids.length > 1);
+}
+
 const entriesByTitle = new Map<string, string[]>();
 for (const entry of all) {
   const ids = entriesByTitle.get(entry.data.title) ?? [];
@@ -31,6 +41,29 @@ if (duplicateTitles.length > 0) {
     `[content:${section}] Duplicate frontmatter titles detected: ${details}. ` +
       `Update copied markdown frontmatter so each entry title is unique.`
   );
+}
+
+const duplicateSlugs = collectDuplicates(
+  all.map((entry) => ({ key: entry.slug, id: entry.id }))
+);
+if (duplicateSlugs.length > 0) {
+  const details = duplicateSlugs
+    .map(([slug, ids]) => `"${slug}" in ${ids.join(", ")}`)
+    .join("; ");
+  throw new Error(
+    `[content:${section}] Duplicate slugs detected: ${details}. ` +
+      `Each entry needs a unique slug/path to avoid body/title mismatches.`
+  );
+}
+
+const duplicateIds = collectDuplicates(
+  all.map((entry) => ({ key: entry.id, id: entry.id }))
+);
+if (duplicateIds.length > 0) {
+  const details = duplicateIds
+    .map(([id, ids]) => `"${id}" repeated ${ids.length} times`)
+    .join("; ");
+  throw new Error(`[content:${section}] Duplicate ids detected: ${details}.`);
 }
 
 const publicEntries = all

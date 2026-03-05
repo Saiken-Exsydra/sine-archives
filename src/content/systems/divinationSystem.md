@@ -1,7 +1,7 @@
 ---
 title: Divination
 type: systems
-summary: The structured practice of reading possible futures.
+summary: Faith incarnate.
 tags: ["systems", "magic"]
 status: public
 created: "2026-02-12"
@@ -11,98 +11,134 @@ image: "/uploads/divination.png"
 
 ## Summary
 
-**Redactory** is a rare human ability that allows certain individuals—known as **Redactors**—to influence the physical world in unusual ways. By entering a focused mental state called the **Dive**, a Redactor can briefly guide reality to behave differently from how it normally would.
+**Divination** is a supernatural phenomenon in which a human individual becomes aligned with a powerful external entity—commonly described as a **god, saint, spirit, or other higher being**. Through this alignment, the individual may manifest abilities or effects that appear miraculous, destructive, or otherwise beyond ordinary human capability.
 
-Researchers generally believe Redactory does not create matter or energy out of nothing. Instead, it appears to push the world toward **possible states that reality could already take**, but usually does not.
+Unlike **Redactory**, which is understood as a disciplined human ability to influence reality through training and mental control, Divination is generally believed to involve **power mediated through external beings** acting upon or through a human vessel.
 
-In practice this can produce effects that resemble magic: shaping materials, generating heat or force, or temporarily manifesting objects. However, Redactory is limited, mentally demanding, and often dangerous to misuse. Exactly *why* it works remains one of the major open questions in modern Redactory research.
+Because the source of this power lies outside the practitioner, Divination is usually considered less predictable and less controllable than Redactory. Nevertheless, it can produce dramatic effects such as healing, destructive forces, prophetic visions, or unusual physical transformations.
+
+Divination has been documented throughout recorded history across many cultures of the world. Despite centuries of study, its deeper mechanism remains a subject of ongoing debate among scholars, theologians, and arcane researchers.
 
 ---
 
 ## Overview
 
-Redactory is a structured system through which certain people, known as **Redactors**, can influence the local behavior of physical reality.
+Divination refers to a class of supernatural phenomena in which a human vessel becomes linked to a non-human power. This connection allows the entity's influence to manifest through the individual.
 
-To outside observers these actions often resemble magic. Objects may appear suddenly, heat may form without fuel, or materials may reshape themselves in seconds. Despite these dramatic effects, most researchers do not believe Redactory breaks the laws of nature. Instead, the current understanding is that Redactors **redirect how those laws express themselves in a particular place**.
+In most documented cases, the human involved serves as a **host or intermediary**, through which the external power can act within the physical world. The degree of influence varies widely. Some vessels retain clear autonomy, while others appear strongly guided—or temporarily overtaken—by the entity associated with them.
 
-According to the most widely accepted theories, reality may allow many possible outcomes in any given situation. Normally, the world settles into whichever outcome is most stable under its natural conditions. Redactory appears to interfere with this process, temporarily pushing reality toward a different possible outcome.
+Religious institutions traditionally interpret this phenomenon as a form of divine favor or spiritual calling. The **Church**, which is the most influential authority on Divination in many regions, teaches that such abilities arise when a person is chosen or blessed by a divine authority such as a god or saint.
 
-This idea remains a theory, but it helps explain why some Redactory effects disappear quickly while others produce permanent results.
+Outside religious doctrine, academic scholars tend to describe Divination more cautiously. Many researchers suggest that the phenomenon represents a form of **alignment between a human mind and a powerful external intelligence**, allowing that intelligence to partially express itself through a compatible host.
 
----
-
-## How Redactory Works
-
-Although the exact mechanism is still debated, researchers generally describe Redactory as a process with several stages.
-
-### 1. The Normal State
-
-Under ordinary conditions, physical systems settle into their most stable state. For example, heat spreads outward, materials keep their shape, and objects remain where gravity places them.
-
-### 2. Entering the Dive
-
-To perform Redactory, a practitioner enters an intense mental state known as **the Dive**. During this state, the Redactor focuses their mind to an extreme degree, narrowing attention and reducing outside distractions.
-
-Many Redactors describe the Dive as a feeling of mental compression or clarity, where their thoughts become unusually precise.
-
-### 3. Guiding Reality
-
-While in the Dive, the Redactor attempts to guide reality toward a different possible state. For example, instead of heat dispersing, it might be concentrated into a small area, or a material might shift into a new shape.
-
-Observers often describe this step as "forcing" reality to behave differently. In practice, it seems more accurate to say that the Redactor is **nudging the world toward a different outcome that was already possible**.
-
-### 4. Stabilizing the Effect
-
-Some effects require the Redactor to maintain concentration in order to continue. When focus ends, the effect fades and the environment returns to normal.
-
-Other changes become stable once they occur. For example, if a Redactor reshapes a piece of metal into a tool, the tool may remain even after the Redactor stops concentrating.
-
-Why some changes persist while others collapse is still an area of active research.
+Regardless of interpretation, Divination is widely recognized as a real phenomenon and has been recorded in many parts of the world.
 
 ---
 
-## The Dive
+## Distinction from Redactory
 
-The **Dive** is the mental state required for all Redactory.
+Divination is fundamentally different from **Redactory**.
 
-It is not a physical location, but rather a condition of intense mental focus. During the Dive, Redactors often experience reduced awareness of their surroundings while their internal concentration becomes extremely sharp.
+Redactory is a **human discipline**. A trained Redactor enters a mental state known as the Dive and deliberately guides reality toward different possible outcomes through skill, concentration, and experience. The process is internally driven and relies on the Redactor's own mental capacity.
 
-Because the Dive places heavy strain on the mind, it cannot be maintained indefinitely. Attempting to remain in this state for too long can lead to exhaustion, confusion, or more serious psychological harm.
+Divination, by contrast, is not generated by the practitioner alone. Instead, the abilities associated with Divination appear to arise from the **presence or influence of an external entity** acting through the individual.
 
-For this reason, most Redactors learn to enter and exit the Dive carefully during training.
+Because of this dependence on external forces, Divination is generally considered less stable and less predictable than Redactory. A Redactor's abilities grow through training and discipline, while a Diviner's abilities depend heavily on the nature and intentions of the entity involved.
 
----
-
-## Anchors
-
-Every Redactor develops what scholars call an **Anchor**.
-
-An Anchor is the conceptual theme through which a Redactor most easily performs their abilities. Some Redactors work most naturally with ideas like flame, motion, growth, or reflection. Others develop more unusual anchors based on personal experiences or early training.
-
-The Anchor does not limit what a Redactor can do completely, but it strongly influences which effects feel natural and which require greater effort.
-
-With practice, a Redactor usually becomes faster and more precise when working within their Anchor domain.
+For this reason, most scholars classify Divination and Redactory as **separate supernatural systems**, even when their outward effects may occasionally resemble one another.
 
 ---
 
-## Limits and Risks
+## Sources of Divination
 
-Redactory is powerful, but it is far from limitless.
+Different cultures attribute Divination to a variety of supernatural entities.
 
-The more dramatically a Redactor attempts to alter reality, the greater the mental strain involved. Large effects, complex changes, or actions far outside a Redactor's Anchor are especially difficult to maintain.
+### Divine Sources
 
-When a Redactor pushes too far, the effect may collapse suddenly. In severe cases the strain can damage the Redactor's memory, identity, or mental stability.
+The most widely recognized interpretation comes from organized religion. The Church teaches that Divination occurs when a person is chosen by a divine authority such as a god or saint. In these cases, the vessel may perform acts regarded as miracles, receive visions, or channel sacred forces.
 
-There are also reports of environmental disturbances during extreme Redactory events, though researchers continue to debate how and why these occur.
+Individuals believed to possess such blessings are often elevated within religious institutions and may serve as healers, prophets, or spiritual leaders.
 
-Because of these risks, many societies regulate Redactor training or require practitioners to work within supervised institutions.
+### Spiritual or Unknown Sources
+
+Some scholars argue that not all Divination originates from recognized deities. Historical records describe vessels linked to ancient spirits, obscure supernatural beings, or unidentified intelligences.
+
+These cases are the subject of ongoing debate in arcane research.
+
+### Infernal Manifestations
+
+Phenomena resembling Divination have also been observed among hostile cults and dangerous entities. Religious authorities generally classify these manifestations separately from true Divination, describing them instead as **infernal corruption or possession**.
+
+Some researchers argue that the underlying process may be similar, while others insist the two phenomena should remain distinct categories.
+
+---
+
+## Manifestations
+
+The abilities associated with Divination vary widely depending on the nature of the entity involved.
+
+Commonly reported manifestations include:
+
+* Healing or restoration of injuries
+* Destructive forces such as fire, light, or shadow
+* Heightened perception or prophetic visions
+* Unusual endurance or strength
+* Alterations to the vessel's physical form
+
+In many cases the individual retains partial control of their actions. In others, the external influence becomes dominant for brief periods.
+
+Because each entity possesses different characteristics, there is no universal set of abilities shared by all Diviners.
+
+---
+
+## Transformation Phenomena
+
+In rare but well-documented cases, prolonged exposure to supernatural influence can lead to **permanent transformation of the vessel**.
+
+These transformations typically occur when the influence of the external entity becomes deeply integrated with the host's body and instincts over long periods of time.
+
+Historical and modern records associate several known supernatural entities with such transformations, including:
+
+* **Vampires**, often linked to predatory or vitality-draining influences
+* **Ghouls**, associated with decay and death-related forces
+* **Werewolves**, typically connected to bestial or instinct-driven transformations
+
+These beings are rare but widely acknowledged to exist. Most citizens will never encounter one directly, though reports occasionally appear in news or official records when incidents occur.
+
+When such cases are identified, they are typically addressed by specialized Church authorities or trained response units.
+
+Scholars continue to study these transformations in order to understand the conditions that allow them to occur and whether they can be prevented.
+
+---
+
+## Regulation and Religious Authorities
+
+Divination is most commonly regulated by religious institutions.
+
+In many regions of the world, the **Church** serves as the primary authority responsible for identifying, training, or containing individuals affected by Divination. Church organizations often investigate supernatural incidents, provide guidance to vessels believed to be divinely chosen, and respond to dangerous manifestations when they occur.
+
+However, the Church is not the only institution involved in Divination. Other religions across the world maintain their own traditions involving divine vessels, spirit mediums, or sacred channels. These practices vary widely in their interpretation of the phenomenon.
+
+Because of these differences, the global understanding of Divination remains shaped by a combination of theology, cultural belief, and ongoing academic research.
+
+---
+
+## Risks and Consequences
+
+Divination carries significant risks.
+
+Because the phenomenon involves interaction with powerful external forces, vessels may experience psychological strain, shifts in personality, or gradual loss of autonomy over time.
+
+In extreme situations, the influence of the external entity may overwhelm the host entirely, leading to dangerous behavioral changes or transformation events.
+
+For this reason, both religious institutions and secular authorities maintain systems for monitoring and responding to Divination-related incidents.
 
 ---
 
 ## Current Understanding
 
-Despite centuries of study, Redactory remains only partially understood.
+Despite centuries of observation and documentation, the deeper mechanisms behind Divination remain uncertain.
 
-Most scholars agree that it involves an unusual interaction between human cognition and the structure of physical reality. However, the deeper principles behind this interaction remain unclear.
+Some scholars consider it primarily a spiritual phenomenon rooted in divine will and faith. Others suspect it reflects a complex interaction between human consciousness and powerful external intelligences.
 
-As research continues, new theories regularly emerge. What is certain is that Redactory represents one of the most unusual and influential abilities ever observed in human history.
+What is certain is that Divination continues to influence religion, politics, and culture throughout the world. Whether regarded as a sacred gift or a dangerous supernatural influence, it remains one of the most mysterious forces known to humanity.

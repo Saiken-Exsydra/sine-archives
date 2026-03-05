@@ -4,9 +4,27 @@ import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const entries = await getCollection("systems");
-  return entries
-    .filter((e) => e.data.status === "public")
-    .map((entry) => ({
+  const publicEntries = entries.filter((e) => e.data.status === "public");
+
+  const idsBySlug = new Map<string, string[]>();
+  for (const entry of publicEntries) {
+    const ids = idsBySlug.get(entry.slug) ?? [];
+    ids.push(entry.id);
+    idsBySlug.set(entry.slug, ids);
+  }
+
+  const duplicateSlugs = Array.from(idsBySlug.entries()).filter(([, ids]) => ids.length > 1);
+  if (duplicateSlugs.length > 0) {
+    const details = duplicateSlugs
+      .map(([slug, ids]) => `"${slug}" in ${ids.join(", ")}`)
+      .join("; ");
+    throw new Error(
+      `[content:systems] Duplicate public slugs detected: ${details}. ` +
+        `Each system entry must have a unique slug/path.`
+    );
+  }
+
+  return publicEntries.map((entry) => ({
       params: { slug: entry.slug },
       props: { entry },
     }));
