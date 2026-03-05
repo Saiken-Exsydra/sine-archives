@@ -1,12 +1,12 @@
 ---
-title: Redactory
+title: Divination
 type: systems
-summary: The art of redacting reality.
+summary: The structured practice of reading possible futures.
 tags: ["systems", "magic"]
 status: public
 created: "2026-02-12"
-updated: "2026-02-20"
-image: "/uploads/Redactory.png"
+updated: "2026-03-05"
+image: "/uploads/divination.png"
 ---
 
 ## Summary

@@ -14,6 +14,25 @@ type Props = {
 const { section, title, searchLabel, emptyLabel } = Astro.props as Props;
 
 const all = await getCollection(section);
+
+const entriesByTitle = new Map<string, string[]>();
+for (const entry of all) {
+  const ids = entriesByTitle.get(entry.data.title) ?? [];
+  ids.push(entry.id);
+  entriesByTitle.set(entry.data.title, ids);
+}
+
+const duplicateTitles = Array.from(entriesByTitle.entries()).filter(([, ids]) => ids.length > 1);
+if (duplicateTitles.length > 0) {
+  const details = duplicateTitles
+    .map(([entryTitle, ids]) => `"${entryTitle}" in ${ids.join(", ")}`)
+    .join("; ");
+  throw new Error(
+    `[content:${section}] Duplicate frontmatter titles detected: ${details}. ` +
+      `Update copied markdown frontmatter so each entry title is unique.`
+  );
+}
+
 const publicEntries = all
   .filter((e) => e.data.status === "public")
   .sort((a, b) => (a.data.updated < b.data.updated ? 1 : -1));
