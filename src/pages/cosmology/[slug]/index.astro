@@ -3,7 +3,7 @@ import EntryLayout from "../../../layouts/EntryLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const entries = await getCollection("sigillums");
+  const entries = await getCollection("cosmology");
   return entries
     .filter((e) => e.data.status === "public")
     .map((entry) => ({
@@ -15,4 +15,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<EntryLayout active="sigillums" entry={entry} />
+<EntryLayout active="cosmology" entry={entry} />

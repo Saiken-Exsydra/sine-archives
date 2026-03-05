@@ -79,6 +79,10 @@ const entrySchema = z.object({
   title: z.string(),
   type: z.string(),
   summary: z.string(),
+  affiliation: z.string().optional(),
+  age: z.union([z.string(), z.number()]).optional(),
+  height: z.union([z.string(), z.number()]).optional(),
+  designation: z.string().optional(),
   tags: z.array(z.string().min(1)).min(1),
   status: z.enum(["public", "private"]),
   created: z.preprocess(

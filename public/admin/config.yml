@@ -101,7 +101,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "artifacts"
-    label: "Artifacts"
+    label: "Apparatus"
     folder: "src/content/artifacts"
     create: true
     slug: "{{slug}}"
@@ -129,15 +129,15 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "redactory"
-    label: "Redactory"
-    folder: "src/content/redactory"
+  - name: "systems"
+    label: "Systems"
+    folder: "src/content/systems"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Type", name: "type", widget: "hidden", default: "redactory" }
+      - { label: "Type", name: "type", widget: "hidden", default: "systems" }
       - { label: "Summary", name: "summary", widget: "text", required: false, default: "" }
 
       - { label: "Created", name: "created", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
@@ -158,15 +158,15 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "sigillums"
-    label: "Sigillums"
-    folder: "src/content/sigillums"
+  - name: "cosmology"
+    label: "Cosmology"
+    folder: "src/content/cosmology"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Type", name: "type", widget: "hidden", default: "sigillum" }
+      - { label: "Type", name: "type", widget: "hidden", default: "cosmology" }
       - { label: "Summary", name: "summary", widget: "text", required: false, default: "" }
 
       - { label: "Created", name: "created", widget: "datetime", format: "YYYY-MM-DD", time_format: false }

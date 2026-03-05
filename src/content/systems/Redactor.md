@@ -1,16 +1,13 @@
 ---
 title: Redactor
-type: redactory
+type: systems
 summary: The Pen.
-tags: ["redactory", "magic"]
+tags: ["systems", "magic"]
 status: public
 created: "2026-02-12"
 updated: "2026-02-20"
 image: "/uploads/Redactor.png"
 ---
-
-# Redactor — Public Library Entry
-
 ## Summary
 
 A **Redactor** is a rare individual capable of performing **Redactory**—the practice of influencing how reality behaves in a specific place. Through intense mental focus, Redactors can guide the physical world toward outcomes that would normally be unlikely or difficult to occur.

@@ -2,13 +2,21 @@
 import MainLayout from "./MainLayout.astro";
 import { getCollection } from "astro:content";
 import { CONTENT_KEYS } from "../content-keys";
+import { SECTIONS } from "../sections";
 
 const { entry, active } = Astro.props;
 const { Content, headings } = await entry.render();
+const isCharacterEntry = active === "characters";
+const characterAffiliation = String(entry.data?.affiliation ?? "").trim();
+const characterAge = entry.data?.age;
+const characterHeight = entry.data?.height;
+const characterDesignation = String(entry.data?.designation ?? "").trim();
+const characterSummary = String(entry.data?.summary ?? "").trim();
 
 
 const sectionLabel =
-  (active || "").charAt(0).toUpperCase() + (active || "").slice(1);
+  SECTIONS.find((s) => s.key === active)?.label ??
+  ((active || "").charAt(0).toUpperCase() + (active || "").slice(1));
 const sectionHref = `/${active}/`;
 // ---- Related Entries (public-only) ----
 function normalizeTags(tags: unknown): string[] {
@@ -58,28 +66,79 @@ const related = allPublic
       <span class="crumbs__current">{entry.data.title}</span>
     </nav>
 
-    <header class="head">
-      <div class="head__top">
-        <h1 class="head__title">{entry.data.title}</h1>
-        <div class="head__updated">Updated: {entry.data.updated}</div>
-      </div>
+    {isCharacterEntry ? (
+      <header class="head head--character">
+        <div class="identity">
+          {entry.data.image ? (
+            <div class="identity__portraitWrap">
+              <img
+                class="identity__portrait"
+                src={entry.data.image}
+                alt={`${entry.data.title} portrait`}
+                loading="lazy"
+              />
+            </div>
+          ) : null}
 
-      <p class="head__summary">{entry.data.summary}</p>
+          <div class="identity__info">
+            <h1 class="head__title">{entry.data.title}</h1>
 
-      {(entry.data.tags ?? []).length ? (
-        <div class="tags" aria-label="Tags">
-          {(entry.data.tags ?? []).map((t: string) => (
-            <span class="tag">{String(t).toUpperCase()}</span>
-          ))}
+            {characterAffiliation ? (
+              <div class="identity__meta">
+                <span class="identity__label">Affiliation</span>
+                <span class="identity__value">{characterAffiliation}</span>
+              </div>
+            ) : null}
+
+            {characterAge !== undefined && characterAge !== null && String(characterAge).trim() ? (
+              <div class="identity__meta">
+                <span class="identity__label">Age</span>
+                <span class="identity__value">{String(characterAge)}</span>
+              </div>
+            ) : null}
+
+            {characterHeight !== undefined && characterHeight !== null && String(characterHeight).trim() ? (
+              <div class="identity__meta">
+                <span class="identity__label">Height</span>
+                <span class="identity__value">{String(characterHeight)}</span>
+              </div>
+            ) : null}
+
+            {characterDesignation ? (
+              <div class="identity__meta">
+                <span class="identity__label">Designation</span>
+                <span class="identity__value">{characterDesignation}</span>
+              </div>
+            ) : null}
+
+            {characterSummary ? <p class="head__summary">{characterSummary}</p> : null}
+          </div>
         </div>
-      ) : null}
-
-      {entry.data.image ? (
-        <div class="media">
-          <img class="media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
+      </header>
+    ) : (
+      <header class="head">
+        <div class="head__top">
+          <h1 class="head__title">{entry.data.title}</h1>
+          <div class="head__updated">Updated: {entry.data.updated}</div>
         </div>
-      ) : null}
-    </header>
+
+        <p class="head__summary">{entry.data.summary}</p>
+
+        {(entry.data.tags ?? []).length ? (
+          <div class="tags" aria-label="Tags">
+            {(entry.data.tags ?? []).map((t: string) => (
+              <span class="tag">{String(t).toUpperCase()}</span>
+            ))}
+          </div>
+        ) : null}
+
+        {entry.data.image ? (
+          <div class="media">
+            <img class="media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
+          </div>
+        ) : null}
+      </header>
+    )}
 
 {(headings?.length ?? 0) >= 3 ? (
   <aside class="toc" aria-label="Table of contents">
@@ -168,6 +227,61 @@ const related = allPublic
       border: 1px solid rgba(176,141,60,0.18);
       background: rgba(11,11,16,0.55);
       box-shadow: var(--shadow);
+    }
+
+    .head--character{
+      padding: 16px;
+    }
+
+    .identity{
+      display: grid;
+      grid-template-columns: minmax(160px, 210px) minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .identity__portraitWrap{
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(176,141,60,0.22);
+      background: rgba(11,11,16,0.65);
+      max-width: 210px;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+    }
+
+    .identity__portrait{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .identity__info{
+      min-width: 0;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .identity__meta{
+      display: grid;
+      gap: 4px;
+    }
+
+    .identity__label{
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.75;
+      font-weight: 750;
+    }
+
+    .identity__value{
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+      font-weight: 650;
     }
 
     .head__top{
@@ -260,7 +374,7 @@ const related = allPublic
 }
 
     .body{
-      padding: 18px;
+      padding: 22px;
       border-radius: 18px;
       border: 1px solid rgba(176,141,60,0.18);
       background: rgba(11,11,16,0.55);
@@ -273,23 +387,56 @@ const related = allPublic
       text-transform: uppercase;
     }
 
+    .body :global(h2){
+      margin: 2rem 0 0.9rem;
+      font-size: 1.12rem;
+      border-top: 1px solid rgba(176,141,60,0.18);
+      padding-top: 1.15rem;
+    }
+
+    .body :global(h3){
+      margin: 1.5rem 0 0.8rem;
+      font-size: 1rem;
+    }
+
     .body :global(p),
     .body :global(li){
-      font-size: 15px;
-      font-weight: 650;
+      font-size: 17px;
+      font-weight: 580;
       letter-spacing: 0.02em;
-      line-height: 1.75;
+      line-height: 1.85;
       color: var(--text);
     }
 
+    .body :global(p){
+      margin: 0 0 1.05rem;
+    }
+
+    .body :global(li){
+      margin-bottom: 0.35rem;
+    }
+
+    .body :global(strong){
+      color: #d36a60;
+      font-weight: 780;
+    }
+
     .body :global(ul){
-      padding-left: 18px;
+      padding-left: 24px;
+      margin: 0 0 1.1rem;
     }
 
     .body :global(hr){
       border: none;
-      border-top: 1px solid rgba(176,141,60,0.18);
-      margin: 18px 0;
+      border-top: 1px solid rgba(176,141,60,0.34);
+      margin: 2rem 0;
+    }
+
+    .body :global(hr + h2),
+    .body :global(hr + h3){
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
     }
     .related{
   padding: 18px;
@@ -317,6 +464,17 @@ const related = allPublic
 @media (min-width: 720px){
   .related__grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px){
+  .identity{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .identity__portraitWrap{
+    max-width: 260px;
   }
 }
 

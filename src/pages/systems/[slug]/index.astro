@@ -3,7 +3,7 @@ import EntryLayout from "../../../layouts/EntryLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const entries = await getCollection("redactory");
+  const entries = await getCollection("systems");
   return entries
     .filter((e) => e.data.status === "public")
     .map((entry) => ({
@@ -15,4 +15,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<EntryLayout active="redactory" entry={entry} />
+<EntryLayout active="systems" entry={entry} />

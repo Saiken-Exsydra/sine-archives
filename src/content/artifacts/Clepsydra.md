@@ -2,7 +2,7 @@
 title: "Clepsydra"
 type: "Artifact"
 summary: "A sword of glass"
-tags: ["weapon", "time", "redactory"]
+tags: ["weapon", "time", "systems"]
 status: "public"
 created: "2026-02-11"
 updated: "2026-02-11"

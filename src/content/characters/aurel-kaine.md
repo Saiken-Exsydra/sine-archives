@@ -1,8 +1,12 @@
 ---
 title: "Aurel Kaine"
 type: "Character"
+age: "26 Years Old"
+affiliation: "SiNE Expeditionary Forces"
+height: "1,71 cm"
+designation: "Redactor"
 summary: "A ranked emissary bound to the Redactory, known for disciplined restraint and forbidden sigillum studies."
-tags: ["vesperia", "emissary", "redactory"]
+tags: ["vesperia", "emissary", "systems"]
 status: "public"
 created: "2026-02-11"
 updated: "2026-02-11"

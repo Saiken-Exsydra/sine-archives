@@ -1,8 +1,8 @@
 ---
 title: Redactory
-type: redactory
+type: systems
 summary: The art of redacting reality.
-tags: ["redactory", "magic"]
+tags: ["systems", "magic"]
 status: public
 created: "2026-02-12"
 updated: "2026-02-20"

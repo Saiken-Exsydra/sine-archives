@@ -3,8 +3,8 @@ export const CONTENT_KEYS = [
   "organizations",
   "places",
   "artifacts",
-  "redactory",
-  "sigillums",
+  "systems",
+  "cosmology",
 ] as const;
 
 export type ContentKey = (typeof CONTENT_KEYS)[number];

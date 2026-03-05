@@ -2,8 +2,8 @@
   { "key": "characters", "label": "Characters", "typeDefault": "character" },
   { "key": "organizations", "label": "Organizations", "typeDefault": "organization" },
   { "key": "places", "label": "Places", "typeDefault": "place" },
-  { "key": "artifacts", "label": "Artifacts", "typeDefault": "artifact" },
-  { "key": "redactory", "label": "Redactory", "typeDefault": "redactory" },
-  { "key": "sigillums", "label": "Sigillums", "typeDefault": "sigillum" }
+  { "key": "artifacts", "label": "Apparatus", "typeDefault": "artifact" },
+  { "key": "systems", "label": "Systems", "typeDefault": "systems" },
+  { "key": "cosmology", "label": "Cosmology", "typeDefault": "cosmology" }
 
 ]
