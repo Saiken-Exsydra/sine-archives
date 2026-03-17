@@ -7,21 +7,31 @@ import { SECTIONS } from "../sections";
 const { entry, active } = Astro.props;
 const { Content, headings } = await entry.render();
 const isCharacterEntry = active === "characters";
+const isApparatusEntry = active === "apparatus";
+const isSkyphon = isCharacterEntry && String(entry.data?.type ?? "").trim() === "Skyphon";
 const characterAffiliation = String(entry.data?.affiliation ?? "").trim();
 const characterAge = entry.data?.age;
 const characterHeight = entry.data?.height;
 const characterDesignation = String(entry.data?.designation ?? "").trim();
 const characterSummary = String(entry.data?.summary ?? "").trim();
+// org fields
+const orgHeadquarters = String(entry.data?.headquarters ?? "").trim();
+const orgFounded = String(entry.data?.founded ?? "").trim();
+const orgJurisdiction = String(entry.data?.jurisdiction ?? "").trim();
+const orgStatusLabel = String(entry.data?.status_label ?? "").trim();
+
+// apparatus fields
+const apparatusSealingStatus = String(entry.data?.sealing_status ?? "").trim();
+const apparatusCustody = String(entry.data?.custody ?? "").trim();
+const apparatusKnownPrinciple = String(entry.data?.known_principle ?? "").trim();
+const apparatusUserStatus = String(entry.data?.user_status ?? "").trim();
+
 const characterBirthYear = entry.data?.birth_year !== undefined && entry.data?.birth_year !== null ? String(entry.data.birth_year).trim() : "";
 const characterBirthplace = String(entry.data?.birthplace ?? "").trim();
 const characterRank = String(entry.data?.rank ?? "").trim();
 const characterHouse = String(entry.data?.house ?? "").trim();
 const characterRegistryStatus = String(entry.data?.registry_status ?? "").trim();
 const characterBuild = String(entry.data?.build ?? "").trim();
-const characterComplexion = String(entry.data?.complexion ?? "").trim();
-const characterHair = String(entry.data?.hair ?? "").trim();
-const characterEyes = String(entry.data?.eyes ?? "").trim();
-const characterDress = String(entry.data?.dress ?? "").trim();
 const characterResidence = String(entry.data?.residence ?? "").trim();
 const characterOccupation = String(entry.data?.occupation ?? "").trim();
 
@@ -78,7 +88,127 @@ const related = allPublic
       <span class="crumbs__current">{entry.data.title}</span>
     </nav>
 
-    {isCharacterEntry ? (
+    {isSkyphon ? (
+      <header class="head head--skyphon">
+        <div class="sk__eyebrow">
+          <span class="sk__type">{entry.data.type}</span>
+          <span class="sk__sep" aria-hidden="true">·</span>
+          <span class="sk__sub">First Bearer</span>
+          <span class="sk__badge">Concluded</span>
+        </div>
+
+        <h1 class="sk__title">{entry.data.title}</h1>
+
+        {characterRank ? (
+          <div class="sk__directive">{characterRank}</div>
+        ) : null}
+
+        {characterDesignation ? (
+          <div class="sk__instrument">{characterDesignation}</div>
+        ) : null}
+
+        <div class="sk__rule" aria-hidden="true"></div>
+
+        <div class="sk__grid">
+          {characterOccupation ? (
+            <div class="sk__field">
+              <span class="sk__label">Jurisdiction</span>
+              <span class="sk__val">{characterOccupation}</span>
+            </div>
+          ) : null}
+          {characterAffiliation ? (
+            <div class="sk__field">
+              <span class="sk__label">Classification</span>
+              <span class="sk__val">{characterAffiliation}</span>
+            </div>
+          ) : null}
+          {characterRegistryStatus ? (
+            <div class="sk__field sk__field--wide">
+              <span class="sk__label">Post-Fracture Status</span>
+              <span class="sk__val">{characterRegistryStatus}</span>
+            </div>
+          ) : null}
+        </div>
+
+        {characterSummary ? (
+          <>
+            <div class="sk__rule" aria-hidden="true"></div>
+            <p class="sk__summary">{characterSummary}</p>
+          </>
+        ) : null}
+      </header>
+    ) : isApparatusEntry ? (
+      <header class="head head--character">
+        <div class="identity">
+          {entry.data.image ? (
+            <div class="identity__portraitWrap identity__portraitWrap--apparatus">
+              <img
+                class="identity__portrait identity__portrait--apparatus"
+                src={entry.data.image}
+                alt={`${entry.data.title} illustration`}
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <div class="identity__portraitWrap identity__portraitWrap--apparatus identity__portrait-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="identity__placeholder-icon">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="identity__placeholder-text">Illustration Pending</span>
+            </div>
+          )}
+
+          <div class="identity__info">
+            <h1 class="head__title">{entry.data.title}</h1>
+
+            {(entry.data.type || characterDesignation) ? (
+              <div class="identity__strip">
+                {[entry.data.type, characterDesignation].filter(Boolean).join("  ·  ")}
+              </div>
+            ) : null}
+
+            <div class="identity__divider" aria-hidden="true"></div>
+
+            <div class="identity__table">
+              {apparatusSealingStatus ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Sealing Status</span>
+                  <span class="identity__row-value">{apparatusSealingStatus}</span>
+                </div>
+              ) : null}
+              {characterAffiliation ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Origin</span>
+                  <span class="identity__row-value">{characterAffiliation}</span>
+                </div>
+              ) : null}
+              {apparatusCustody ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Custody</span>
+                  <span class="identity__row-value">{apparatusCustody}</span>
+                </div>
+              ) : null}
+              {apparatusKnownPrinciple ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Known Principle</span>
+                  <span class="identity__row-value" set:html={apparatusKnownPrinciple} />
+                </div>
+              ) : null}
+              {apparatusUserStatus ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">User Status</span>
+                  <span class="identity__row-value">{apparatusUserStatus}</span>
+                </div>
+              ) : null}
+            </div>
+
+            {characterSummary ? <p class="head__summary">{characterSummary}</p> : null}
+          </div>
+        </div>
+      </header>
+    ) : isCharacterEntry ? (
       <header class="head head--character">
         <div class="identity">
           {entry.data.image ? (
@@ -178,14 +308,63 @@ const related = allPublic
         </div>
       </header>
     ) : (
-      <header class="head">
-        <div class="head__top">
-          <h1 class="head__title">{entry.data.title}</h1>
-          <div class="head__updated">Updated: {entry.data.updated}</div>
+      <header class="head head--entry">
+
+        {/* ── Title row ── */}
+        <div class="entry-head__top">
+          <div>
+            <h1 class="head__title">{entry.data.title}</h1>
+            {characterDesignation ? (
+              <div class="entry-head__designation">{characterDesignation}</div>
+            ) : null}
+          </div>
+          <div class="entry-head__type-badge">{entry.data.type}</div>
         </div>
 
-        <p class="head__summary">{entry.data.summary}</p>
+        <div class="identity__divider" aria-hidden="true"></div>
 
+        {/* ── Facts grid ── */}
+        {(orgHeadquarters || orgFounded || orgStatusLabel || characterAffiliation || orgJurisdiction) ? (
+          <div class="entry-head__facts">
+            {orgStatusLabel ? (
+              <div class="entry-head__fact entry-head__fact--wide">
+                <span class="entry-head__fact-label">Status</span>
+                <span class="entry-head__fact-value">{orgStatusLabel}</span>
+              </div>
+            ) : null}
+            {orgHeadquarters ? (
+              <div class="entry-head__fact">
+                <span class="entry-head__fact-label">Headquarters</span>
+                <span class="entry-head__fact-value">{orgHeadquarters}</span>
+              </div>
+            ) : null}
+            {orgFounded ? (
+              <div class="entry-head__fact">
+                <span class="entry-head__fact-label">Founded</span>
+                <span class="entry-head__fact-value">{orgFounded}</span>
+              </div>
+            ) : null}
+            {characterAffiliation ? (
+              <div class="entry-head__fact">
+                <span class="entry-head__fact-label">Affiliation</span>
+                <span class="entry-head__fact-value">{characterAffiliation}</span>
+              </div>
+            ) : null}
+            {orgJurisdiction ? (
+              <div class="entry-head__fact entry-head__fact--wide">
+                <span class="entry-head__fact-label">Jurisdiction</span>
+                <span class="entry-head__fact-value">{orgJurisdiction}</span>
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {/* ── Summary ── */}
+        {(entry.data.summary ?? "").trim() ? (
+          <p class="head__summary">{entry.data.summary}</p>
+        ) : null}
+
+        {/* ── Tags ── */}
         {(entry.data.tags ?? []).length ? (
           <div class="tags" aria-label="Tags">
             {(entry.data.tags ?? []).map((t: string) => (
@@ -194,11 +373,22 @@ const related = allPublic
           </div>
         ) : null}
 
+        {/* ── Image or placeholder ── */}
         {entry.data.image ? (
           <div class="media">
             <img class="media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
           </div>
-        ) : null}
+        ) : (
+          <div class="media media--placeholder" aria-hidden="true">
+            <svg class="media__placeholder-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="media__placeholder-text">Illustration Pending</span>
+          </div>
+        )}
+
       </header>
     )}
 
@@ -281,6 +471,131 @@ const related = allPublic
       font-weight: 750;
       letter-spacing: 0.02em;
       font-size: 13px;
+    }
+
+    /* ── Skyphon header ── */
+    .head--skyphon{
+      padding: 24px 26px 22px;
+      border-radius: 18px;
+      border: 1px solid rgba(176,141,60,0.26);
+      background: linear-gradient(160deg, rgba(22,17,10,0.92) 0%, rgba(11,11,16,0.72) 100%);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(176,141,60,0.10);
+      display: grid;
+      gap: 0;
+    }
+
+    .sk__eyebrow{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .sk__type{
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(176,141,60,0.9);
+    }
+
+    .sk__sep{
+      font-size: 10px;
+      opacity: 0.35;
+    }
+
+    .sk__sub{
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.45;
+    }
+
+    .sk__badge{
+      margin-left: auto;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(176,141,60,0.65);
+      border: 1px solid rgba(176,141,60,0.22);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+
+    .sk__title{
+      margin: 0 0 6px;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .sk__directive{
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 4px;
+    }
+
+    .sk__instrument{
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: 0.03em;
+      line-height: 1.5;
+      opacity: 0.85;
+      margin-bottom: 4px;
+    }
+
+    .sk__rule{
+      height: 1px;
+      background: linear-gradient(90deg, rgba(176,141,60,0.40), rgba(176,141,60,0.06));
+      margin: 18px 0;
+    }
+
+    .sk__grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px 28px;
+    }
+
+    .sk__field{
+      display: grid;
+      gap: 5px;
+    }
+
+    .sk__field--wide{
+      grid-column: 1 / -1;
+    }
+
+    .sk__label{
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: rgba(176,141,60,0.65);
+    }
+
+    .sk__val{
+      font-size: 13px;
+      font-weight: 620;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .sk__summary{
+      margin: 0;
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      line-height: 1.65;
+      opacity: 0.85;
+      font-style: italic;
     }
 
     .head{
@@ -376,6 +691,47 @@ const related = allPublic
       display: none;
     }
 
+    .identity__portraitWrap--apparatus{
+      aspect-ratio: unset;
+      background: transparent;
+    }
+
+    .identity__portrait--apparatus{
+      height: auto;
+      object-fit: unset;
+      object-position: unset;
+    }
+
+    .identity__portrait-placeholder{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(176,141,60,0.03),
+        rgba(176,141,60,0.03) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      border: 1px dashed rgba(176,141,60,0.22);
+    }
+
+    .identity__placeholder-icon{
+      width: 32px;
+      height: 32px;
+      color: rgba(176,141,60,0.35);
+    }
+
+    .identity__placeholder-text{
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.20em;
+      font-weight: 800;
+      opacity: 0.35;
+    }
+
     .head__top{
       display: flex;
       align-items: baseline;
@@ -396,6 +752,105 @@ const related = allPublic
       font-weight: 650;
       letter-spacing: 0.02em;
       opacity: 0.92;
+    }
+
+    /* ── Non-character entry header ── */
+    .head--entry{
+      display: grid;
+      gap: 14px;
+    }
+
+    .entry-head__top{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .entry-head__designation{
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      font-weight: 700;
+      opacity: 0.65;
+      margin-top: 4px;
+    }
+
+    .entry-head__type-badge{
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 850;
+      color: rgba(176,141,60,0.85);
+      border: 1px solid rgba(176,141,60,0.28);
+      border-radius: 999px;
+      padding: 4px 10px;
+      white-space: nowrap;
+      margin-top: 4px;
+    }
+
+    .entry-head__facts{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 10px 20px;
+    }
+
+    .entry-head__fact{
+      display: grid;
+      gap: 4px;
+    }
+
+    .entry-head__fact--wide{
+      grid-column: 1 / -1;
+    }
+
+    .entry-head__fact-label{
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 800;
+      opacity: 0.5;
+    }
+
+    .entry-head__fact-value{
+      font-size: 13px;
+      font-weight: 620;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Placeholder ── */
+    .media--placeholder{
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(176,141,60,0.03),
+        rgba(176,141,60,0.03) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+      border: 1px dashed rgba(176,141,60,0.22);
+      border-radius: 14px;
+    }
+
+    .media__placeholder-icon{
+      width: 28px;
+      height: 28px;
+      color: rgba(176,141,60,0.35);
+    }
+
+    .media__placeholder-text{
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.20em;
+      font-weight: 800;
+      opacity: 0.35;
     }
 
     .head__summary{
@@ -425,45 +880,17 @@ const related = allPublic
     }
 
     .media{
-      margin-top: 14px;
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid rgba(176,141,60,0.18);
       background: rgba(11,11,16,0.6);
     }
 
-    /* ✅ This prevents the “giant stretched banner” feeling */
-    .media{
-  margin-top: 14px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(176,141,60,0.18);
-  background: rgba(11,11,16,0.6);
-}
-
-/* Default (landscape): banner look, crops nicely */
-.media__img{
-  display: block;
-  width: 100%;
-  max-height: 260px;
-  object-fit: cover;
-}
-
-/* Portrait: show the whole image (no cropping), centered */
-.media.media--portrait{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;          /* gives breathing room */
-}
-
-.media.media--portrait .media__img{
-  width: auto;            /* don't force full width */
-  max-width: 100%;
-  max-height: 680px;      /* allow taller portraits */
-  object-fit: contain;    /* show the whole image */
-  border-radius: 14px;    /* optional: softer inside */
-}
+    .media__img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     .body{
       padding: 22px;

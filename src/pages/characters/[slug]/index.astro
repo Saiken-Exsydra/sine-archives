@@ -5,7 +5,6 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths() {
   const entries = await getCollection("characters");
   return entries
-    .filter((e) => e.data.status === "public")
     .map((entry) => ({
       params: { slug: entry.slug },
       props: { entry },

@@ -2,7 +2,7 @@ export const CONTENT_KEYS = [
   "characters",
   "organizations",
   "places",
-  "artifacts",
+  "apparatus",
   "systems",
   "cosmology",
 ] as const;

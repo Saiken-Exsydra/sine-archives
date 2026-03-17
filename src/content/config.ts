@@ -24,6 +24,14 @@ const entrySchema = z.object({
   dress: z.string().optional(),
   residence: z.string().optional(),
   occupation: z.string().optional(),
+  headquarters: z.string().optional(),
+  founded: z.string().optional(),
+  jurisdiction: z.string().optional(),
+  status_label: z.string().optional(),
+  sealing_status: z.string().optional(),
+  custody: z.string().optional(),
+  known_principle: z.string().optional(),
+  user_status: z.string().optional(),
   tags: z.array(z.string().min(1)).min(1),
   status: z.enum(["public", "private"]),
   created: z.preprocess(
@@ -41,7 +49,7 @@ export const collections = {
   "characters": defineCollection({ schema: entrySchema }),
   "organizations": defineCollection({ schema: entrySchema }),
   "places": defineCollection({ schema: entrySchema }),
-  "artifacts": defineCollection({ schema: entrySchema }),
+  "apparatus": defineCollection({ schema: entrySchema }),
   "systems": defineCollection({ schema: entrySchema }),
   "cosmology": defineCollection({ schema: entrySchema }),
 };
