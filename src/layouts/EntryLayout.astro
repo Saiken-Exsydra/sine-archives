@@ -12,6 +12,18 @@ const characterAge = entry.data?.age;
 const characterHeight = entry.data?.height;
 const characterDesignation = String(entry.data?.designation ?? "").trim();
 const characterSummary = String(entry.data?.summary ?? "").trim();
+const characterBirthYear = entry.data?.birth_year !== undefined && entry.data?.birth_year !== null ? String(entry.data.birth_year).trim() : "";
+const characterBirthplace = String(entry.data?.birthplace ?? "").trim();
+const characterRank = String(entry.data?.rank ?? "").trim();
+const characterHouse = String(entry.data?.house ?? "").trim();
+const characterRegistryStatus = String(entry.data?.registry_status ?? "").trim();
+const characterBuild = String(entry.data?.build ?? "").trim();
+const characterComplexion = String(entry.data?.complexion ?? "").trim();
+const characterHair = String(entry.data?.hair ?? "").trim();
+const characterEyes = String(entry.data?.eyes ?? "").trim();
+const characterDress = String(entry.data?.dress ?? "").trim();
+const characterResidence = String(entry.data?.residence ?? "").trim();
+const characterOccupation = String(entry.data?.occupation ?? "").trim();
 
 
 const sectionLabel =
@@ -83,33 +95,83 @@ const related = allPublic
           <div class="identity__info">
             <h1 class="head__title">{entry.data.title}</h1>
 
-            {characterAffiliation ? (
-              <div class="identity__meta">
-                <span class="identity__label">Affiliation</span>
-                <span class="identity__value">{characterAffiliation}</span>
+            {/* Identity strip: rank · designation */}
+            {(characterRank || characterDesignation) ? (
+              <div class="identity__strip">
+                {[characterRank, characterDesignation].filter(Boolean).join("  ·  ")}
               </div>
             ) : null}
 
-            {characterAge !== undefined && characterAge !== null && String(characterAge).trim() ? (
-              <div class="identity__meta">
-                <span class="identity__label">Age</span>
-                <span class="identity__value">{String(characterAge)}</span>
-              </div>
-            ) : null}
+            <div class="identity__divider" aria-hidden="true"></div>
 
-            {characterHeight !== undefined && characterHeight !== null && String(characterHeight).trim() ? (
-              <div class="identity__meta">
-                <span class="identity__label">Height</span>
-                <span class="identity__value">{String(characterHeight)}</span>
-              </div>
-            ) : null}
+            {/* 2-column dossier table */}
+            <div class="identity__table">
 
-            {characterDesignation ? (
-              <div class="identity__meta">
-                <span class="identity__label">Designation</span>
-                <span class="identity__value">{characterDesignation}</span>
-              </div>
-            ) : null}
+              {/* ── Registry rows ── */}
+              {characterRegistryStatus ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Registry Status</span>
+                  <span class="identity__row-value">{characterRegistryStatus}</span>
+                </div>
+              ) : null}
+              {characterAffiliation ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Affiliation</span>
+                  <span class="identity__row-value">{characterAffiliation}</span>
+                </div>
+              ) : null}
+              {characterHouse ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">House</span>
+                  <span class="identity__row-value">{characterHouse}</span>
+                </div>
+              ) : null}
+
+              {/* ── Section break ── */}
+              {(characterBirthYear || characterBirthplace || characterAge || (characterHeight !== undefined && characterHeight !== null && String(characterHeight).trim()) || characterResidence || characterOccupation) ? (
+                <div class="identity__sep" aria-hidden="true"></div>
+              ) : null}
+
+              {/* ── Vital rows ── */}
+              {characterBirthYear ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Year of Birth</span>
+                  <span class="identity__row-value">{characterBirthYear}</span>
+                </div>
+              ) : null}
+              {(characterAge !== undefined && characterAge !== null && String(characterAge).trim()) ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Age</span>
+                  <span class="identity__row-value">{String(characterAge)}</span>
+                </div>
+              ) : null}
+              {(characterHeight !== undefined && characterHeight !== null && String(characterHeight).trim()) ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Height / Build</span>
+                  <span class="identity__row-value">
+                    {[String(characterHeight).trim(), characterBuild].filter(Boolean).join("  ·  ")}
+                  </span>
+                </div>
+              ) : null}
+              {characterBirthplace ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Birthplace</span>
+                  <span class="identity__row-value">{characterBirthplace}</span>
+                </div>
+              ) : null}
+              {characterResidence ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Residence</span>
+                  <span class="identity__row-value">{characterResidence}</span>
+                </div>
+              ) : null}
+              {characterOccupation ? (
+                <div class="identity__row">
+                  <span class="identity__row-label">Occupation</span>
+                  <span class="identity__row-value">{characterOccupation}</span>
+                </div>
+              ) : null}
+            </div>
 
             {characterSummary ? <p class="head__summary">{characterSummary}</p> : null}
           </div>
@@ -264,24 +326,54 @@ const related = allPublic
       align-content: start;
     }
 
-    .identity__meta{
-      display: grid;
-      gap: 4px;
-    }
-
-    .identity__label{
+    .identity__strip{
       font-size: 11px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      opacity: 0.75;
-      font-weight: 750;
+      font-weight: 700;
+      opacity: 0.7;
+      margin-top: -4px;
     }
 
-    .identity__value{
-      font-size: 15px;
+    .identity__divider{
+      height: 1px;
+      background: linear-gradient(90deg, rgba(176,141,60,0.45), rgba(176,141,60,0.08));
+      margin: 4px 0 2px;
+    }
+
+    /* ── Dossier ledger table ── */
+    .identity__table{
+      display: grid;
+      gap: 0;
+    }
+
+    .identity__row{
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 14px;
+      padding: 5px 0;
+      align-items: baseline;
+    }
+
+    .identity__row-label{
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 800;
+      opacity: 0.5;
+      white-space: nowrap;
+      padding-top: 1px;
+    }
+
+    .identity__row-value{
+      font-size: 13px;
       letter-spacing: 0.02em;
-      line-height: 1.5;
-      font-weight: 650;
+      line-height: 1.45;
+      font-weight: 620;
+    }
+
+    .identity__sep{
+      display: none;
     }
 
     .head__top{
