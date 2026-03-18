@@ -8,7 +8,6 @@ created: "2026-02-12"
 updated: "2026-02-20"
 image: "/uploads/Redactor.png"
 ---
-## Summary
 
 A **Redactor** is a rare individual capable of performing **Redactory**—the practice of influencing how reality behaves in a specific place. Through intense mental focus, Redactors can guide the physical world toward outcomes that would normally be unlikely or difficult to occur.
 
@@ -52,7 +51,7 @@ As a result, new Redactors can appear almost anywhere in the population, even in
 
 ## The Dive
 
-All Redactory begins with the **Dive**.
+> The **Dive** is the gateway to all Redactory — a state of extreme mental compression in which the Redactor narrows their awareness to a single point and, from there, reaches into how reality might otherwise behave.
 
 The Dive is a mental state of extreme concentration. When entering this state, a Redactor narrows their awareness and focuses their thoughts with unusual precision.
 
@@ -68,13 +67,11 @@ Experienced Redactors learn to enter and exit the Dive quickly in order to reduc
 
 ## Anchors
 
-Most Redactors develop a preferred conceptual focus known as an **Anchor**.
-
-An Anchor represents the type of effects a Redactor finds easiest to perform. Some Redactors naturally work with ideas like flame, motion, pressure, reflection, or growth.
+> An **Anchor** is a Redactor's natural domain of influence — the conceptual lens through which their abilities feel most instinctive, most stable, and most controlled.
 
 Anchors often emerge early in a Redactor's training or during their first successful use of Redactory. Personal experience, emotion, and repeated practice appear to shape how an Anchor develops.
 
-Working within an Anchor usually requires less concentration and produces more stable results. Attempting effects far outside one's Anchor is possible, but it typically demands far greater effort.
+Some Redactors naturally work with ideas like flame, motion, pressure, reflection, or growth. Working within an Anchor usually requires less concentration and produces more stable results. Attempting effects far outside one's Anchor is possible, but it typically demands far greater effort.
 
 ---
 
@@ -127,4 +124,3 @@ Despite centuries of observation, the deeper principles behind Redactors and the
 Most scholars agree that Redactors possess an unusual interaction between human cognition and the structure of physical reality. Exactly how this interaction works, and why only certain individuals develop it, remains one of the major unanswered questions in Redactory research.
 
 What is clear is that Redactors have played a significant role in shaping history, technology, and warfare wherever their abilities have appeared.
-

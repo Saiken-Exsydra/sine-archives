@@ -9,8 +9,6 @@ updated: "2026-03-05"
 image: "/uploads/divination.png"
 ---
 
-## Summary
-
 **Divination** is a supernatural phenomenon in which a human individual becomes aligned with a powerful external entity—commonly described as a **god, saint, spirit, or other higher being**. Through this alignment, the individual may manifest abilities or effects that appear miraculous, destructive, or otherwise beyond ordinary human capability.
 
 Unlike **Redactory**, which is understood as a disciplined human ability to influence reality through training and mental control, Divination is generally believed to involve **power mediated through external beings** acting upon or through a human vessel.
@@ -31,13 +29,11 @@ Religious institutions traditionally interpret this phenomenon as a form of divi
 
 Outside religious doctrine, academic scholars tend to describe Divination more cautiously. Many researchers suggest that the phenomenon represents a form of **alignment between a human mind and a powerful external intelligence**, allowing that intelligence to partially express itself through a compatible host.
 
-Regardless of interpretation, Divination is widely recognized as a real phenomenon and has been recorded in many parts of the world.
-
 ---
 
 ## Distinction from Redactory
 
-Divination is fundamentally different from **Redactory**.
+> Where **Redactory** is a discipline of the self — internal, trained, and bounded by the practitioner's own mind — **Divination** is a relationship with something greater. The power is not grown within. It is granted from without.
 
 Redactory is a **human discipline**. A trained Redactor enters a mental state known as the Dive and deliberately guides reality toward different possible outcomes through skill, concentration, and experience. The process is internally driven and relies on the Redactor's own mental capacity.
 
@@ -93,9 +89,7 @@ Because each entity possesses different characteristics, there is no universal s
 
 ## Transformation Phenomena
 
-In rare but well-documented cases, prolonged exposure to supernatural influence can lead to **permanent transformation of the vessel**.
-
-These transformations typically occur when the influence of the external entity becomes deeply integrated with the host's body and instincts over long periods of time.
+> In rare but well-documented cases, prolonged exposure to supernatural influence can lead to **permanent transformation of the vessel** — when the external entity's presence becomes so deeply integrated with the host's body that the distinction between vessel and power begins to dissolve.
 
 Historical and modern records associate several known supernatural entities with such transformations, including:
 

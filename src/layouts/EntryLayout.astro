@@ -8,6 +8,7 @@ const { entry, active } = Astro.props;
 const { Content, headings } = await entry.render();
 const isCharacterEntry = active === "characters";
 const isApparatusEntry = active === "apparatus";
+const isSystemEntry = active === "systems";
 const isSkyphon = isCharacterEntry && String(entry.data?.type ?? "").trim() === "Skyphon";
 const characterAffiliation = String(entry.data?.affiliation ?? "").trim();
 const characterAge = entry.data?.age;
@@ -373,8 +374,8 @@ const related = allPublic
           </div>
         ) : null}
 
-        {/* ── Image or placeholder ── */}
-        {entry.data.image ? (
+        {/* ── Image or placeholder (hidden for system entries) ── */}
+        {!isSystemEntry && (entry.data.image ? (
           <div class="media">
             <img class="media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
           </div>
@@ -387,7 +388,7 @@ const related = allPublic
             </svg>
             <span class="media__placeholder-text">Illustration Pending</span>
           </div>
-        )}
+        ))}
 
       </header>
     )}
@@ -956,6 +957,31 @@ const related = allPublic
       margin-top: 0;
       padding-top: 0;
       border-top: none;
+    }
+
+    .body :global(blockquote){
+      margin: 0.25rem 0 1.4rem;
+      padding: 14px 18px;
+      border-left: 3px solid rgba(176,141,60,0.65);
+      background: rgba(176,141,60,0.07);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .body :global(blockquote p){
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+      color: rgba(220,200,155,0.92);
+      line-height: 1.7;
+    }
+
+    .body :global(blockquote strong){
+      color: rgba(220,200,155,1);
+      font-style: normal;
+    }
+
+    .body :global(em){
+      color: rgba(187,165,122,0.95);
     }
     .related{
   padding: 18px;

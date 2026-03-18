@@ -173,13 +173,14 @@ import MainLayout from "../../layouts/MainLayout.astro";
       margin: 1.35rem auto 1.6rem;
     }
 
-    .cosmology-body :global(img[src="/uploads/TwilightDG.png"]) {
-      width: 36%;
-      max-width: 100%;
+    .cosmology-body :global(p > img[src="/uploads/TwilightDG.png"]) {
+      float: right;
+      width: 45%;
+      max-width: 45%;
+      min-width: 180px;
       height: auto;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0.25rem 0 1.25rem 1.75rem;
+      border-radius: 8px;
     }
 
     .body :global(hr) {
@@ -204,8 +205,10 @@ import MainLayout from "../../layouts/MainLayout.astro";
         min-height: 360px;
       }
 
-      .cosmology-body :global(img[src="/uploads/TwilightDG.png"]) {
-        width: 52%;
+      .cosmology-body :global(p > img[src="/uploads/TwilightDG.png"]) {
+        width: 30%;
+        max-width: 220px;
+        min-width: 160px;
       }
 
       .cosmology-copy {
@@ -222,8 +225,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         min-height: 320px;
       }
 
-      .cosmology-body :global(img[src="/uploads/TwilightDG.png"]) {
-        width: 68%;
+      .cosmology-body :global(p > img[src="/uploads/TwilightDG.png"]) {
+        float: none;
+        display: block;
+        width: 60%;
+        max-width: 100%;
+        margin: 1rem auto 1.25rem;
       }
 
       .cosmology-copy {
