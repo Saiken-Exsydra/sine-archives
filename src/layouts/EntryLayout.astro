@@ -9,6 +9,7 @@ const { Content, headings } = await entry.render();
 const isCharacterEntry = active === "characters";
 const isApparatusEntry = active === "apparatus";
 const isSystemEntry = active === "systems";
+const isSineEntry = active === "sine";
 const isSkyphon = isCharacterEntry && String(entry.data?.type ?? "").trim() === "Skyphon";
 const characterAffiliation = String(entry.data?.affiliation ?? "").trim();
 const characterAge = entry.data?.age;
@@ -35,6 +36,10 @@ const characterRegistryStatus = String(entry.data?.registry_status ?? "").trim()
 const characterBuild = String(entry.data?.build ?? "").trim();
 const characterResidence = String(entry.data?.residence ?? "").trim();
 const characterOccupation = String(entry.data?.occupation ?? "").trim();
+const skyphonDomain = String(entry.data?.domain ?? "").trim();
+const skyphonChurchName = String(entry.data?.church_name ?? "").trim();
+const skyphonPrinciple = String(entry.data?.principle ?? "").trim();
+const skyphonKeeperName = String(entry.data?.keeper_name ?? "").trim();
 
 
 const sectionLabel =
@@ -127,6 +132,30 @@ const related = allPublic
             <div class="sk__field sk__field--wide">
               <span class="sk__label">Post-Fracture Status</span>
               <span class="sk__val">{characterRegistryStatus}</span>
+            </div>
+          ) : null}
+          {skyphonDomain ? (
+            <div class="sk__field">
+              <span class="sk__label">Domain</span>
+              <span class="sk__val">{skyphonDomain}</span>
+            </div>
+          ) : null}
+          {skyphonChurchName ? (
+            <div class="sk__field">
+              <span class="sk__label">Church Name</span>
+              <span class="sk__val">{skyphonChurchName}</span>
+            </div>
+          ) : null}
+          {skyphonPrinciple ? (
+            <div class="sk__field">
+              <span class="sk__label">Principle</span>
+              <span class="sk__val sk__val--italic">{skyphonPrinciple}</span>
+            </div>
+          ) : null}
+          {skyphonKeeperName ? (
+            <div class="sk__field sk__field--wide">
+              <span class="sk__label">Keeper Name</span>
+              <span class="sk__val sk__val--italic">{skyphonKeeperName}</span>
             </div>
           ) : null}
         </div>
@@ -374,8 +403,8 @@ const related = allPublic
           </div>
         ) : null}
 
-        {/* ── Image or placeholder (hidden for system entries) ── */}
-        {!isSystemEntry && (entry.data.image ? (
+        {/* ── Image or placeholder (hidden for system and sine entries) ── */}
+        {!isSystemEntry && !isSineEntry && (entry.data.image ? (
           <div class="media">
             <img class="media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
           </div>
@@ -587,6 +616,10 @@ const related = allPublic
       letter-spacing: 0.02em;
       line-height: 1.5;
       opacity: 0.9;
+    }
+
+    .sk__val--italic{
+      font-style: italic;
     }
 
     .sk__summary{

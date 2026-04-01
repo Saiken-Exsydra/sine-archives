@@ -6,9 +6,13 @@ designation: "The Instrument of Mortality — Law of Natural Death and Collectiv
 affiliation: "First Bearer — Intact Seal (Concluded)"
 registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
 occupation: "Mortality Spectrum"
+domain: "Death"
+church_name: "The Instrument of Death"
+principle: "Endegemearc"
+keeper_name: "That Which Gave Chase"
 summary: "Skyphon of Death. Bearer of the Instrument of Mortality — the law governing the natural end of biological life and the principle that makes individual endings serve collective continuation."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Mortality", "Death", "Keepers of Before"]
-status: "private"
+status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

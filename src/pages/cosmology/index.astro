@@ -1,10 +1,11 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import SectionList from "../../components/SectionList.astro";
 ---
 
 <MainLayout active="cosmology" pageTitle="Cosmology — SiNE Archives">
   <section class="cosmology-page">
-    <div class="cosmology-hero" id="cosmologyHero" aria-label="Cosmology space scene">
+    <div class="cosmology-hero" aria-label="Cosmology space scene">
       <img
         class="cosmology-hero-image"
         src="/uploads/COSMOLOGY.png"
@@ -19,16 +20,14 @@ import MainLayout from "../../layouts/MainLayout.astro";
       </div>
     </div>
 
-    <section class="cosmology-intro" aria-label="Cosmology introduction">
-      <article class="body cosmology-body" data-entry-body>
-        <div class="cosmology-overview-content" data-cosmology-overview>
-          <p>Cosmology overview could not be loaded.</p>
-        </div>
-      </article>
-    </section>
+    <SectionList
+      section="cosmology"
+      active="cosmology"
+      title="Cosmological Records"
+      searchLabel="Search cosmology entries…"
+      emptyLabel="No public cosmology entries yet."
+    />
   </section>
-
-  <script src="../../scripts/cosmology-overview.ts"></script>
 
   <style>
     .cosmology-page {
@@ -92,123 +91,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
       color: rgba(238, 235, 232, 0.96);
     }
 
-    .cosmology-intro {
-      margin-top: 0;
-    }
-
-    .body {
-      padding: 16px 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(176, 141, 60, 0.18);
-      background: rgba(11, 11, 16, 0.55);
-      box-shadow: var(--shadow);
-    }
-
-    .body :global(h2),
-    .body :global(h3) {
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .body :global(h2) {
-      margin: 2rem 0 0.9rem;
-      font-size: 1.12rem;
-      border-top: 1px solid rgba(176, 141, 60, 0.18);
-      padding-top: 1.15rem;
-    }
-
-    .body :global(h2:first-child) {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-
-    .body :global(h3) {
-      margin: 1.5rem 0 0.8rem;
-      font-size: 1rem;
-    }
-
-    .body :global(p),
-    .body :global(li) {
-      font-size: 17px;
-      font-weight: 580;
-      letter-spacing: 0.02em;
-      line-height: 1.85;
-      color: var(--text);
-    }
-
-    .body :global(p) {
-      margin: 0 0 1.05rem;
-    }
-
-    .body :global(li) {
-      margin-bottom: 0.35rem;
-    }
-
-    .body :global(ul),
-    .body :global(ol) {
-      padding-left: 24px;
-      margin: 0 0 1.1rem;
-    }
-
-    .body :global(strong) {
-      color: #d36a60;
-      font-weight: 780;
-    }
-
-    .body :global(a) {
-      color: #d8b473;
-      text-underline-offset: 0.18em;
-    }
-
-    .body :global(a:hover) {
-      color: #e3c58f;
-    }
-
-    .cosmology-body :global(p > img:only-child) {
-      display: block;
-      width: auto;
-      max-width: 100%;
-      height: auto;
-      margin: 1.35rem auto 1.6rem;
-    }
-
-    .cosmology-body :global(p > img[src="/uploads/TwilightDG.png"]) {
-      float: right;
-      width: 45%;
-      max-width: 45%;
-      min-width: 180px;
-      height: auto;
-      margin: 0.25rem 0 1.25rem 1.75rem;
-      border-radius: 8px;
-    }
-
-    .body :global(hr) {
-      border: none;
-      border-top: 1px solid rgba(176, 141, 60, 0.34);
-      margin: 2rem 0;
-    }
-
-    .body :global(hr + h2),
-    .body :global(hr + h3) {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-
-    .cosmology-body :global(p:last-child) {
-      margin: 0;
-    }
-
     @media (max-width: 900px) {
       .cosmology-hero {
         min-height: 360px;
-      }
-
-      .cosmology-body :global(p > img[src="/uploads/TwilightDG.png"]) {
-        width: 30%;
-        max-width: 220px;
-        min-width: 160px;
       }
 
       .cosmology-copy {
@@ -223,14 +108,6 @@ import MainLayout from "../../layouts/MainLayout.astro";
     @media (max-width: 640px) {
       .cosmology-hero {
         min-height: 320px;
-      }
-
-      .cosmology-body :global(p > img[src="/uploads/TwilightDG.png"]) {
-        float: none;
-        display: block;
-        width: 60%;
-        max-width: 100%;
-        margin: 1rem auto 1.25rem;
       }
 
       .cosmology-copy {

@@ -14,7 +14,7 @@ complexion: "Pale olive"
 hair: "Black, straight, shoulder-length; typically bound back during operations"
 eyes: "Dark brown (passive); layered reflection under dual-routing state"
 dress: "Close-fitting dark garments, layered protective paneling; long-bladed artifact instrument in back-worn sheath"
-residence: "Hora'veil, Southern Region — no fixed address on file"
+residence: "Vrenne, Southern Region — no fixed address on file"
 occupation: "Independent contractor — licensed for operational engagement under conditional terms"
 summary: "Gemini"
 tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"]
@@ -25,7 +25,7 @@ image: "/uploads/Rouxinol-Kaise.png"
 ---
 
 > *"She does not carry ghosts. She carries what ghosts are made of — the shape of a person after the person is gone."*
-> — Annotation in a Pager field report, Hora'veil District, source designation redacted
+> — Annotation in a Pager field report, Vrenne District, source designation redacted
 
 ---
 
@@ -135,15 +135,15 @@ Over four years he provided operational discipline, threat assessment and contra
 
 ### Compelled Intake and Training — 1119 to 1124
 
-A field Pager operating in the lower industrial district of Hora'veil filed an incident report following an operation in which a grey-space contractor had produced Redactory outputs consistent with simultaneous dual-Anchor Dive activity at a Depth that exceeded anything a Quill-level practitioner should have demonstrated — without registration in the imperial system. The dual-signature observation elevated the report to internal review.
+A field Pager operating in the lower industrial district of Vrenne filed an incident report following an operation in which a grey-space contractor had produced Redactory outputs consistent with simultaneous dual-Anchor Dive activity at a Depth that exceeded anything a Quill-level practitioner should have demonstrated — without registration in the imperial system. The dual-signature observation elevated the report to internal review.
 
-Forty-one days in the Hora'veil holding facility. She cooperated from the second day. She disclosed the blade and its retention function voluntarily in the first week — before the assessors had independently identified the impression-retention mechanism.
+Forty-one days in the Vrenne holding facility. She cooperated from the second day. She disclosed the blade and its retention function voluntarily in the first week — before the assessors had independently identified the impression-retention mechanism.
 
 Five years of structured training followed under a programme developed specifically for this case. Stylus certification in the Mirror Anchor and Quill certification in the Threshold Anchor were issued concurrently in 1124. The conditional operational license followed within the month.
 
 ### Present Condition — 1125 to 1127
 
-Rouxinol operates out of Hora'veil under her conditional license. She takes assignments. She completes them. She does not take assignments she has assessed as requiring her to function as an instrument for an institution she does not trust. She has declined two formal recruitment overtures since her license was issued — one from a Founding House militia, one from a private contractor operating under SiNE's indirect corporate structure. The refusals were not hostile. They were precise.
+Rouxinol operates out of Vrenne under her conditional license. She takes assignments. She completes them. She does not take assignments she has assessed as requiring her to function as an instrument for an institution she does not trust. She has declined two formal recruitment overtures since her license was issued — one from a Founding House militia, one from a private contractor operating under SiNE's indirect corporate structure. The refusals were not hostile. They were precise.
 
 The secondary loop's impression count has not changed since 1124.
 
@@ -171,6 +171,6 @@ The secondary loop's impression count has not changed since 1124.
 
 **The Apocachynthion** — She registers her contracts. She maintains her license. She attends scheduled Depth assessments. She does not volunteer information beyond what the institution requires. The relationship is functional and carries the specific quality that attaches to any arrangement that began with someone being taken somewhere they did not choose to go.
 
-**The Church — Hora'veil Diocese** — A pastoral intelligence report flagged Rouxinol to the Hora'veil Arch-Deacon in 1117, prior to Apocachynthion intake. The Church's classification at that time was vessel-abomination — two presences in one body, interpreted as advanced multi-fragment demonic cohabitation. No revision of the Church's internal classification has been communicated to this office. Whether the Condemned designation remains active in the Hora'veil Diocese's restricted pastoral record is not confirmed. She is aware that it may be.
+**The Church — Vrenne Diocese** — A pastoral intelligence report flagged Rouxinol to the Vrenne Arch-Deacon in 1117, prior to Apocachynthion intake. The Church's classification at that time was vessel-abomination — two presences in one body, interpreted as advanced multi-fragment demonic cohabitation. No revision of the Church's internal classification has been communicated to this office. Whether the Condemned designation remains active in the Vrenne Diocese's restricted pastoral record is not confirmed. She is aware that it may be.
 
 **Ec'lesia Wonderwall** — One documented contact, in the Kalt'sen outer transit district approximately four months before the date of this filing. Both parties survived. The Pager assessor reviewing the structural disturbance record noted that the coherence signatures produced during the encounter do not match the expected output of either subject operating independently, and that the interaction produced a combined routing pattern the assessor did not have a prior account of. The notation ends there.

@@ -71,6 +71,35 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "sine"
+    label: "SiNE"
+    folder: "src/content/sine"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Type", name: "type", widget: "hidden", default: "organization" }
+      - { label: "Summary", name: "summary", widget: "text", required: false, default: "" }
+
+      - { label: "Created", name: "created", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+      - { label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: true
+        min: 1
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "string"
+          required: true
+          pattern: ["\\S+", "Tag cannot be blank"]
+
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "places"
     label: "Places"
     folder: "src/content/places"
@@ -100,15 +129,15 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "artifacts"
+  - name: "apparatus"
     label: "Apparatus"
-    folder: "src/content/artifacts"
+    folder: "src/content/apparatus"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Status", name: "status", widget: "select", options: ["public", "private"], default: "private" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Type", name: "type", widget: "hidden", default: "artifact" }
+      - { label: "Type", name: "type", widget: "hidden", default: "apparatus" }
       - { label: "Summary", name: "summary", widget: "text", required: false, default: "" }
 
       - { label: "Created", name: "created", widget: "datetime", format: "YYYY-MM-DD", time_format: false }

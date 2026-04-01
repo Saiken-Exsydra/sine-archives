@@ -149,7 +149,7 @@ And yet.
 
 If *Sôðcwide* is operating here — if the principle carried in this Instrument is in some sense active, even sealed — then what we are documenting is not the weapon removing resistance. We are documenting the weapon briefly showing users the absence *beneath* resistance. Showing them what resistance is covering.
 
-What is beneath resistance, in the Theorem's own terms, is the Archive's baseline state: the condition in which nothing has been expressed yet. In which all configurations are equally unrealised.
+What is beneath resistance, in the Theorem's own terms, is the structural substrate's baseline state: the condition in which nothing has been expressed yet. In which all configurations are equally unrealised.
 
 The inscription does not say *nothingness destroys*. It says *nothingness is*. As much as everything.
 

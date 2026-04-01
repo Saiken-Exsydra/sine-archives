@@ -6,9 +6,13 @@ designation: "The Instrument of Elysium — Law of Sentient Development and Comp
 affiliation: "First Bearer — Intact Seal (Concluded)"
 registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
 occupation: "Elysium"
+domain: "Ascension"
+church_name: "The Instrument of Ascension"
+principle: "Weaxanfæðm"
+keeper_name: "That Which Already Had Them"
 summary: "Skyphon of Ascendancy. Bearer of the Instrument of Elysium — the law governing the conditions under which sentient beings develop toward their fullest expression, orienting sentient life toward its own completion rather than stagnation."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Elysium", "Ascendancy", "Apocachynthion", "Keepers of Before"]
-status: "private"
+status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

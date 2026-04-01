@@ -6,9 +6,13 @@ designation: "The Instrument of Luminescent Aria — Law of Light and Diurnal Rh
 affiliation: "First Bearer — Intact Seal (Concluded)"
 registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
 occupation: "Luminescent Aria"
+domain: "Light"
+church_name: "The Instrument of Light"
+principle: "Leóhtmæl"
+keeper_name: "That Which Filled What Was Dark"
 summary: "Skyphon of Luminance. Bearer of the Instrument of Luminescent Aria — the law governing light in all its forms and its role in organizing the diurnal rhythm upon which all biological time on Terra depends."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Luminescent Aria", "Light", "Luminance", "Keepers of Before"]
-status: "private"
+status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

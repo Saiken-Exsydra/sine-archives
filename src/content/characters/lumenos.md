@@ -6,9 +6,13 @@ designation: "The Instrument of Constraint — Law of Gravity and Physical Coher
 affiliation: "First Bearer — Intact Seal (Concluded)"
 registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
 occupation: "Gravity and Conceptual Binding"
+domain: "Binding / Gravity"
+church_name: "The Instrument of Binding"
+principle: "Healdsweord"
+keeper_name: "That Which Held the World to Itself"
 summary: "Skyphon of Binding. Bearer of the Instrument of Constraint — the law governing gravity and physical coherence, holding the world together as a single structure rather than a collection of parts with nothing to keep them adjacent."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Constraint", "Binding", "Gravity", "Keepers of Before"]
-status: "private"
+status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

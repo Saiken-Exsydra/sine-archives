@@ -31,6 +31,10 @@ const entrySchema = z.object({
   sealing_status: z.string().optional(),
   custody: z.string().optional(),
   known_principle: z.string().optional(),
+  domain: z.string().optional(),
+  church_name: z.string().optional(),
+  principle: z.string().optional(),
+  keeper_name: z.string().optional(),
   user_status: z.string().optional(),
   tags: z.array(z.string().min(1)).min(1),
   status: z.enum(["public", "private"]),
@@ -48,6 +52,7 @@ const entrySchema = z.object({
 export const collections = {
   "characters": defineCollection({ schema: entrySchema }),
   "organizations": defineCollection({ schema: entrySchema }),
+  "sine": defineCollection({ schema: entrySchema }),
   "places": defineCollection({ schema: entrySchema }),
   "apparatus": defineCollection({ schema: entrySchema }),
   "systems": defineCollection({ schema: entrySchema }),

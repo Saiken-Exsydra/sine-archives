@@ -6,9 +6,13 @@ designation: "The Instrument of Blazehaven — Law of Fire and Transformative He
 affiliation: "First Bearer — Intact Seal (Concluded)"
 registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
 occupation: "Blazehaven"
+domain: "Fire / Heat"
+church_name: "The Instrument of Fire"
+principle: "Blazehaven"
+keeper_name: "That Which Changed Without Being Asked"
 summary: "Skyphon of Incalescence. Bearer of the Instrument of Blazehaven — the law governing fire and heat as transformative forces within the natural world, and their relationship to the processes of material change they enable."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Blazehaven", "Fire", "Incalescence", "Keepers of Before"]
-status: "private"
+status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---
