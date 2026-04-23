@@ -22,7 +22,7 @@ tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregi
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: ""
+image: "/uploads/Hisui.png"
 ---
 
 > *"The flower should have killed her. It does not kill her. What it does instead is something the Index Theorem has no vocabulary for and the Church would call an abomination. I am not certain either of them is wrong. I am certain that she has been in my household for two years and no one in it sleeps less safely for her presence."*

@@ -12,7 +12,7 @@ principle: "Blazehaven"
 keeper_name: "That Which Changed Without Being Asked"
 summary: "Skyphon of Incalescence. Bearer of the Instrument of Blazehaven — the law governing fire and heat as transformative forces within the natural world, and their relationship to the processes of material change they enable."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Blazehaven", "Fire", "Incalescence", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

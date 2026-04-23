@@ -12,7 +12,7 @@ principle: "Weaxanfæðm"
 keeper_name: "That Which Already Had Them"
 summary: "Skyphon of Ascendancy. Bearer of the Instrument of Elysium — the law governing the conditions under which sentient beings develop toward their fullest expression, orienting sentient life toward its own completion rather than stagnation."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Elysium", "Ascendancy", "Apocachynthion", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

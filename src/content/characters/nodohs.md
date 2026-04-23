@@ -12,7 +12,7 @@ principle: "Endegemearc"
 keeper_name: "That Which Gave Chase"
 summary: "Skyphon of Death. Bearer of the Instrument of Mortality — the law governing the natural end of biological life and the principle that makes individual endings serve collective continuation."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Mortality", "Death", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

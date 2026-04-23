@@ -12,7 +12,7 @@ principle: "Leóhtmæl"
 keeper_name: "That Which Filled What Was Dark"
 summary: "Skyphon of Luminance. Bearer of the Instrument of Luminescent Aria — the law governing light in all its forms and its role in organizing the diurnal rhythm upon which all biological time on Terra depends."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Luminescent Aria", "Light", "Luminance", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

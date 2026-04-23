@@ -12,7 +12,7 @@ principle: "Dómweard"
 keeper_name: "That Which Remembered Everything"
 summary: "Skyphon of Vigilance. Bearer of the Instrument of Aegis — the law governing whether the coexistence of many different things in a shared world tends toward coherence or dissolution."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Aegis", "Justice", "Vigilance", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

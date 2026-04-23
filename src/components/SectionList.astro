@@ -9,9 +9,11 @@ type Props = {
   title: string;
   searchLabel: string;
   emptyLabel: string;
+  image?: string;
+  desc?: string;
 };
 
-const { section, title, searchLabel, emptyLabel } = Astro.props as Props;
+const { section, title, searchLabel, emptyLabel, image, desc } = Astro.props as Props;
 
 const all = await getCollection(section);
 
@@ -69,45 +71,240 @@ if (duplicateIds.length > 0) {
 const publicEntries = all
   .filter((e) => e.data.status === "public")
   .sort((a, b) => (a.data.updated < b.data.updated ? 1 : -1));
+
+const count = publicEntries.length;
 ---
 
-<section class="section">
-  <div class="section__head">
-    <h2 class="section__title">{title}</h2>
+<!-- Section header -->
+<div class="sec-header" data-has-image={image ? "true" : "false"}>
+  {image && (
+    <>
+      <img class="sec-header__bg" src={image} alt="" aria-hidden="true" />
+      <div class="sec-header__overlay"></div>
+    </>
+  )}
+  <div class="sec-header__content">
+    <div class="sec-header__meta">SECTION</div>
+    <h1 class="sec-header__title">{title}</h1>
+    {desc && <p class="sec-header__desc">{desc}</p>}
+  </div>
+</div>
 
-    <label class="section__search" aria-label={searchLabel}>
-      <span class="section__icon" aria-hidden="true">⌕</span>
-      <input class="section__input" type="search" placeholder={searchLabel} />
+<!-- Search + list -->
+<div class="sec-body">
+  <div class="sec-bar">
+    <div class="sec-count" id="sec-count">
+      {count} {count === 1 ? "entry" : "entries"}
+    </div>
+    <label class="sec-search" aria-label={searchLabel}>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <input
+        class="sec-search__input"
+        type="search"
+        placeholder={searchLabel}
+        id="sec-search-input"
+        autocomplete="off"
+      />
     </label>
   </div>
 
-  <div class="grid" aria-label={`${title} entries`}>
+  <div class="sec-list" id="sec-list" aria-label={`${title} entries`}>
     {publicEntries.length === 0 ? (
-      <div class="empty">{emptyLabel}</div>
+      <div class="sec-empty">{emptyLabel}</div>
     ) : (
       publicEntries.map((entry) => <EntryCard section={section} entry={entry} />)
     )}
   </div>
-</section>
+
+  <div class="sec-no-results" id="sec-no-results" aria-live="polite" style="display:none">
+    No entries match this query.
+  </div>
+</div>
 
 <style>
-  .section{ margin-top:18px; padding:18px; border-radius:18px; border:1px solid rgba(176,141,60,0.16); background:rgba(0,0,0,0.25); }
-  .section__head{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
-  .section__title{ margin:0; font-size:18px; font-weight:750; letter-spacing:0.12em; text-transform:uppercase; }
-  .section__search{ display:grid; grid-template-columns:20px 1fr; align-items:center; gap:10px; padding:10px 12px; border-radius:999px; border:1px solid rgba(176,141,60,0.16); background:rgba(0,0,0,0.20); }
-  .section__icon{ opacity:0.95; font-size:14px; }
-  .section__input{ appearance:none; border:none; outline:none; background:transparent; color:rgba(255,255,255,0.92); min-width:240px; }
-  .section__input::placeholder{ color: rgba(255,255,255,0.78); }
-  .grid{
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 12px;
-}
+  .sec-header {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
 
-@media (max-width: 980px){
-  .grid{ grid-template-columns: 1fr; }
-}
+  .sec-header__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: saturate(0.5) brightness(0.25);
+  }
 
-  .empty{ padding:16px; border-radius:16px; border:1px solid rgba(176,141,60,0.16); background:rgba(255,255,255,0.03); }
+  .sec-header__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(6, 6, 11, 0.4), var(--bg));
+  }
+
+  .sec-header__content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 48px;
+    max-width: 900px;
+  }
+
+  .sec-header__meta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--crimson);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .sec-header__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px;
+    letter-spacing: 0.01em;
+    line-height: 1;
+  }
+
+  .sec-header__desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  /* no-image fallback */
+  .sec-header[data-has-image="false"] {
+    min-height: 200px;
+    background: linear-gradient(135deg, rgba(177, 58, 52, 0.08), rgba(6, 6, 11, 0.8));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .sec-body {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 36px 32px 100px;
+  }
+
+  .sec-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .sec-count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  .sec-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--text-muted);
+    cursor: text;
+    transition: border-color 0.2s;
+  }
+
+  .sec-search:focus-within {
+    border-color: rgba(177, 58, 52, 0.4);
+    color: var(--text);
+  }
+
+  .sec-search__input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    min-width: 200px;
+  }
+
+  .sec-search__input::placeholder {
+    color: rgba(232, 228, 220, 0.35);
+  }
+
+  .sec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sec-empty, .sec-no-results {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .sec-header__content { padding: 30px 20px; }
+    .sec-header__title { font-size: 36px; }
+    .sec-body { padding: 24px 16px 80px; }
+    .sec-search__input { min-width: 140px; }
+  }
 </style>
+
+<script>
+  const input = document.getElementById("sec-search-input") as HTMLInputElement | null;
+  const list = document.getElementById("sec-list");
+  const noResults = document.getElementById("sec-no-results");
+  const countEl = document.getElementById("sec-count");
+
+  if (input && list) {
+    const cards = Array.from(list.querySelectorAll<HTMLElement>("[data-search]"));
+    const totalCount = cards.length;
+
+    input.addEventListener("input", () => {
+      const q = input.value.trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const match = !q || (card.dataset.search ?? "").includes(q);
+        card.style.display = match ? "" : "none";
+        if (match) visible++;
+      });
+
+      if (countEl) {
+        if (q) {
+          countEl.textContent = `${visible} ${visible === 1 ? "entry" : "entries"} matching "${input.value.trim()}"`;
+        } else {
+          countEl.textContent = `${totalCount} ${totalCount === 1 ? "entry" : "entries"}`;
+        }
+      }
+
+      if (noResults) {
+        noResults.style.display = visible === 0 && q ? "flex" : "none";
+      }
+    });
+  }
+</script>

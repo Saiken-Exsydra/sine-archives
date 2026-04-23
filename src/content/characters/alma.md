@@ -12,7 +12,7 @@ principle: "Ingehygdcræft"
 keeper_name: "That Which Was Already Watching"
 summary: "Skyphon of Sentience. Bearer of the Instrument of Mindscape — the law governing the arising, coherence, and development of sentient recursive structures."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Mindscape", "Sentience", "Keepers of Before", "Index Theorem"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

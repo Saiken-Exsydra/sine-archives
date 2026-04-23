@@ -6,52 +6,52 @@ import { SECTIONS } from "../sections";
 
 const { entry, active } = Astro.props;
 const { Content, headings } = await entry.render();
+
 const isCharacterEntry = active === "characters";
 const isApparatusEntry = active === "apparatus";
-const isSystemEntry = active === "systems";
-const isSineEntry = active === "sine";
-const isSkyphon = isCharacterEntry && String(entry.data?.type ?? "").trim() === "Skyphon";
-const characterAffiliation = String(entry.data?.affiliation ?? "").trim();
-const characterAge = entry.data?.age;
-const characterHeight = entry.data?.height;
-const characterDesignation = String(entry.data?.designation ?? "").trim();
-const characterSummary = String(entry.data?.summary ?? "").trim();
-// org fields
-const orgHeadquarters = String(entry.data?.headquarters ?? "").trim();
-const orgFounded = String(entry.data?.founded ?? "").trim();
-const orgJurisdiction = String(entry.data?.jurisdiction ?? "").trim();
-const orgStatusLabel = String(entry.data?.status_label ?? "").trim();
+const isSystemEntry    = active === "systems";
+const isSineEntry      = active === "sine";
+const isSkyphon        = isCharacterEntry && String(entry.data?.type ?? "").trim() === "Skyphon";
 
-// apparatus fields
-const apparatusSealingStatus = String(entry.data?.sealing_status ?? "").trim();
-const apparatusCustody = String(entry.data?.custody ?? "").trim();
-const apparatusKnownPrinciple = String(entry.data?.known_principle ?? "").trim();
-const apparatusUserStatus = String(entry.data?.user_status ?? "").trim();
+// ── field helpers ──
+const str = (v: unknown) => String(v ?? "").trim();
 
-const characterBirthYear = entry.data?.birth_year !== undefined && entry.data?.birth_year !== null ? String(entry.data.birth_year).trim() : "";
-const characterBirthplace = String(entry.data?.birthplace ?? "").trim();
-const characterRank = String(entry.data?.rank ?? "").trim();
-const characterHouse = String(entry.data?.house ?? "").trim();
-const characterRegistryStatus = String(entry.data?.registry_status ?? "").trim();
-const characterBuild = String(entry.data?.build ?? "").trim();
-const characterResidence = String(entry.data?.residence ?? "").trim();
-const characterOccupation = String(entry.data?.occupation ?? "").trim();
-const skyphonDomain = String(entry.data?.domain ?? "").trim();
-const skyphonChurchName = String(entry.data?.church_name ?? "").trim();
-const skyphonPrinciple = String(entry.data?.principle ?? "").trim();
-const skyphonKeeperName = String(entry.data?.keeper_name ?? "").trim();
-
+const designation       = str(entry.data?.designation);
+const summary           = str(entry.data?.summary);
+const affiliation       = str(entry.data?.affiliation);
+const age               = entry.data?.age;
+const height            = entry.data?.height;
+const birthYear         = entry.data?.birth_year !== undefined ? str(entry.data.birth_year) : "";
+const birthplace        = str(entry.data?.birthplace);
+const rank              = str(entry.data?.rank);
+const house             = str(entry.data?.house);
+const registryStatus    = str(entry.data?.registry_status);
+const build             = str(entry.data?.build);
+const residence         = str(entry.data?.residence);
+const occupation        = str(entry.data?.occupation);
+const orgHQ             = str(entry.data?.headquarters);
+const orgFounded        = str(entry.data?.founded);
+const orgJurisdiction   = str(entry.data?.jurisdiction);
+const orgStatusLabel    = str(entry.data?.status_label);
+const appSealingStatus  = str(entry.data?.sealing_status);
+const appCustody        = str(entry.data?.custody);
+const appKnownPrinciple = str(entry.data?.known_principle);
+const appUserStatus     = str(entry.data?.user_status);
+const skyphonDomain     = str(entry.data?.domain);
+const skyphonChurchName = str(entry.data?.church_name);
+const skyphonPrinciple  = str(entry.data?.principle);
+const skyphonKeeperName = str(entry.data?.keeper_name);
 
 const sectionLabel =
   SECTIONS.find((s) => s.key === active)?.label ??
   ((active || "").charAt(0).toUpperCase() + (active || "").slice(1));
 const sectionHref = `/${active}/`;
-// ---- Related Entries (public-only) ----
+
+// ── Related entries ──
 function normalizeTags(tags: unknown): string[] {
   if (!Array.isArray(tags)) return [];
   return tags.map((t) => String(t).trim().toLowerCase()).filter(Boolean);
 }
-
 function sharedCount(a: string[], b: string[]): number {
   const setB = new Set(b);
   let n = 0;
@@ -84,1141 +84,722 @@ const related = allPublic
   })
   .slice(0, 6);
 
+// ── Build sidebar fields list ──
+type Field = { label: string; value: string; wide?: boolean };
+const fields: Field[] = [];
+
+if (isSkyphon) {
+  if (occupation)      fields.push({ label: "Jurisdiction",        value: occupation });
+  if (affiliation)     fields.push({ label: "Classification",      value: affiliation });
+  if (registryStatus)  fields.push({ label: "Post-Fracture Status",value: registryStatus, wide: true });
+  if (skyphonDomain)   fields.push({ label: "Domain",              value: skyphonDomain });
+  if (skyphonChurchName) fields.push({ label: "Church Name",       value: skyphonChurchName });
+  if (skyphonPrinciple)  fields.push({ label: "Principle",         value: skyphonPrinciple });
+  if (skyphonKeeperName) fields.push({ label: "Keeper Name",       value: skyphonKeeperName, wide: true });
+} else if (isApparatusEntry) {
+  if (appSealingStatus)  fields.push({ label: "Sealing Status",    value: appSealingStatus });
+  if (affiliation)       fields.push({ label: "Origin",            value: affiliation });
+  if (appCustody)        fields.push({ label: "Custody",           value: appCustody });
+  if (appKnownPrinciple) fields.push({ label: "Known Principle",   value: appKnownPrinciple });
+  if (appUserStatus)     fields.push({ label: "User Status",       value: appUserStatus });
+} else if (isCharacterEntry) {
+  if (registryStatus)  fields.push({ label: "Registry Status",     value: registryStatus });
+  if (affiliation)     fields.push({ label: "Affiliation",         value: affiliation });
+  if (house)           fields.push({ label: "House",               value: house });
+  if (birthYear)       fields.push({ label: "Year of Birth",       value: birthYear });
+  if (age !== undefined && age !== null && String(age).trim())
+                       fields.push({ label: "Age",                  value: String(age) });
+  if (height !== undefined && height !== null && String(height).trim()) {
+    const hv = [String(height).trim(), build].filter(Boolean).join(" · ");
+    fields.push({ label: "Height / Build", value: hv });
+  }
+  if (birthplace)      fields.push({ label: "Birthplace",          value: birthplace });
+  if (residence)       fields.push({ label: "Residence",           value: residence });
+  if (occupation)      fields.push({ label: "Occupation",          value: occupation });
+} else {
+  if (orgStatusLabel)  fields.push({ label: "Status",              value: orgStatusLabel, wide: true });
+  if (orgHQ)           fields.push({ label: "Headquarters",        value: orgHQ });
+  if (orgFounded)      fields.push({ label: "Founded",             value: orgFounded });
+  if (affiliation)     fields.push({ label: "Affiliation",         value: affiliation });
+  if (orgJurisdiction) fields.push({ label: "Jurisdiction",        value: orgJurisdiction, wide: true });
+}
 ---
 
 <MainLayout active={active} pageTitle={`${entry.data.title} — ${sectionLabel} — SiNE Archives`}>
-  <section class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <a class="crumbs__link" href={sectionHref}>{sectionLabel}</a>
-      <span class="crumbs__sep" aria-hidden="true">›</span>
-      <span class="crumbs__current">{entry.data.title}</span>
-    </nav>
 
-    {isSkyphon ? (
-      <header class="head head--skyphon">
-        <div class="sk__eyebrow">
-          <span class="sk__type">{entry.data.type}</span>
-          <span class="sk__sep" aria-hidden="true">·</span>
-          <span class="sk__sub">First Bearer</span>
-          <span class="sk__badge">Concluded</span>
-        </div>
-
-        <h1 class="sk__title">{entry.data.title}</h1>
-
-        {characterRank ? (
-          <div class="sk__directive">{characterRank}</div>
-        ) : null}
-
-        {characterDesignation ? (
-          <div class="sk__instrument">{characterDesignation}</div>
-        ) : null}
-
-        <div class="sk__rule" aria-hidden="true"></div>
-
-        <div class="sk__grid">
-          {characterOccupation ? (
-            <div class="sk__field">
-              <span class="sk__label">Jurisdiction</span>
-              <span class="sk__val">{characterOccupation}</span>
-            </div>
-          ) : null}
-          {characterAffiliation ? (
-            <div class="sk__field">
-              <span class="sk__label">Classification</span>
-              <span class="sk__val">{characterAffiliation}</span>
-            </div>
-          ) : null}
-          {characterRegistryStatus ? (
-            <div class="sk__field sk__field--wide">
-              <span class="sk__label">Post-Fracture Status</span>
-              <span class="sk__val">{characterRegistryStatus}</span>
-            </div>
-          ) : null}
-          {skyphonDomain ? (
-            <div class="sk__field">
-              <span class="sk__label">Domain</span>
-              <span class="sk__val">{skyphonDomain}</span>
-            </div>
-          ) : null}
-          {skyphonChurchName ? (
-            <div class="sk__field">
-              <span class="sk__label">Church Name</span>
-              <span class="sk__val">{skyphonChurchName}</span>
-            </div>
-          ) : null}
-          {skyphonPrinciple ? (
-            <div class="sk__field">
-              <span class="sk__label">Principle</span>
-              <span class="sk__val sk__val--italic">{skyphonPrinciple}</span>
-            </div>
-          ) : null}
-          {skyphonKeeperName ? (
-            <div class="sk__field sk__field--wide">
-              <span class="sk__label">Keeper Name</span>
-              <span class="sk__val sk__val--italic">{skyphonKeeperName}</span>
-            </div>
-          ) : null}
-        </div>
-
-        {characterSummary ? (
-          <>
-            <div class="sk__rule" aria-hidden="true"></div>
-            <p class="sk__summary">{characterSummary}</p>
-          </>
-        ) : null}
-      </header>
-    ) : isApparatusEntry ? (
-      <header class="head head--character">
-        <div class="identity">
-          {entry.data.image ? (
-            <div class="identity__portraitWrap identity__portraitWrap--apparatus">
-              <img
-                class="identity__portrait identity__portrait--apparatus"
-                src={entry.data.image}
-                alt={`${entry.data.title} illustration`}
-                loading="lazy"
-              />
-            </div>
-          ) : (
-            <div class="identity__portraitWrap identity__portraitWrap--apparatus identity__portrait-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="identity__placeholder-icon">
-                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.2"/>
-                <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span class="identity__placeholder-text">Illustration Pending</span>
-            </div>
-          )}
-
-          <div class="identity__info">
-            <h1 class="head__title">{entry.data.title}</h1>
-
-            {(entry.data.type || characterDesignation) ? (
-              <div class="identity__strip">
-                {[entry.data.type, characterDesignation].filter(Boolean).join("  ·  ")}
-              </div>
-            ) : null}
-
-            <div class="identity__divider" aria-hidden="true"></div>
-
-            <div class="identity__table">
-              {apparatusSealingStatus ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Sealing Status</span>
-                  <span class="identity__row-value">{apparatusSealingStatus}</span>
-                </div>
-              ) : null}
-              {characterAffiliation ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Origin</span>
-                  <span class="identity__row-value">{characterAffiliation}</span>
-                </div>
-              ) : null}
-              {apparatusCustody ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Custody</span>
-                  <span class="identity__row-value">{apparatusCustody}</span>
-                </div>
-              ) : null}
-              {apparatusKnownPrinciple ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Known Principle</span>
-                  <span class="identity__row-value" set:html={apparatusKnownPrinciple} />
-                </div>
-              ) : null}
-              {apparatusUserStatus ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">User Status</span>
-                  <span class="identity__row-value">{apparatusUserStatus}</span>
-                </div>
-              ) : null}
-            </div>
-
-            {characterSummary ? <p class="head__summary">{characterSummary}</p> : null}
-          </div>
-        </div>
-      </header>
-    ) : isCharacterEntry ? (
-      <header class="head head--character">
-        <div class="identity">
-          {entry.data.image ? (
-            <div class="identity__portraitWrap">
-              <img
-                class="identity__portrait"
-                src={entry.data.image}
-                alt={`${entry.data.title} portrait`}
-                loading="lazy"
-              />
-            </div>
-          ) : null}
-
-          <div class="identity__info">
-            <h1 class="head__title">{entry.data.title}</h1>
-
-            {/* Identity strip: rank · designation */}
-            {(characterRank || characterDesignation) ? (
-              <div class="identity__strip">
-                {[characterRank, characterDesignation].filter(Boolean).join("  ·  ")}
-              </div>
-            ) : null}
-
-            <div class="identity__divider" aria-hidden="true"></div>
-
-            {/* 2-column dossier table */}
-            <div class="identity__table">
-
-              {/* ── Registry rows ── */}
-              {characterRegistryStatus ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Registry Status</span>
-                  <span class="identity__row-value">{characterRegistryStatus}</span>
-                </div>
-              ) : null}
-              {characterAffiliation ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Affiliation</span>
-                  <span class="identity__row-value">{characterAffiliation}</span>
-                </div>
-              ) : null}
-              {characterHouse ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">House</span>
-                  <span class="identity__row-value">{characterHouse}</span>
-                </div>
-              ) : null}
-
-              {/* ── Section break ── */}
-              {(characterBirthYear || characterBirthplace || characterAge || (characterHeight !== undefined && characterHeight !== null && String(characterHeight).trim()) || characterResidence || characterOccupation) ? (
-                <div class="identity__sep" aria-hidden="true"></div>
-              ) : null}
-
-              {/* ── Vital rows ── */}
-              {characterBirthYear ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Year of Birth</span>
-                  <span class="identity__row-value">{characterBirthYear}</span>
-                </div>
-              ) : null}
-              {(characterAge !== undefined && characterAge !== null && String(characterAge).trim()) ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Age</span>
-                  <span class="identity__row-value">{String(characterAge)}</span>
-                </div>
-              ) : null}
-              {(characterHeight !== undefined && characterHeight !== null && String(characterHeight).trim()) ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Height / Build</span>
-                  <span class="identity__row-value">
-                    {[String(characterHeight).trim(), characterBuild].filter(Boolean).join("  ·  ")}
-                  </span>
-                </div>
-              ) : null}
-              {characterBirthplace ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Birthplace</span>
-                  <span class="identity__row-value">{characterBirthplace}</span>
-                </div>
-              ) : null}
-              {characterResidence ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Residence</span>
-                  <span class="identity__row-value">{characterResidence}</span>
-                </div>
-              ) : null}
-              {characterOccupation ? (
-                <div class="identity__row">
-                  <span class="identity__row-label">Occupation</span>
-                  <span class="identity__row-value">{characterOccupation}</span>
-                </div>
-              ) : null}
-            </div>
-
-            {characterSummary ? <p class="head__summary">{characterSummary}</p> : null}
-          </div>
-        </div>
-      </header>
+  <!-- ── HERO ── -->
+  <div class="ent-hero">
+    {!isCharacterEntry && entry.data.image ? (
+      <>
+        <img class="ent-hero__img" src={entry.data.image} alt="" aria-hidden="true" />
+        <div class="ent-hero__overlay"></div>
+      </>
     ) : (
-      <header class="head head--entry">
-
-        {/* ── Title row ── */}
-        <div class="entry-head__top">
-          <div>
-            <h1 class="head__title">{entry.data.title}</h1>
-            {characterDesignation ? (
-              <div class="entry-head__designation">{characterDesignation}</div>
-            ) : null}
-          </div>
-          <div class="entry-head__type-badge">{entry.data.type}</div>
-        </div>
-
-        <div class="identity__divider" aria-hidden="true"></div>
-
-        {/* ── Facts grid ── */}
-        {(orgHeadquarters || orgFounded || orgStatusLabel || characterAffiliation || orgJurisdiction) ? (
-          <div class="entry-head__facts">
-            {orgStatusLabel ? (
-              <div class="entry-head__fact entry-head__fact--wide">
-                <span class="entry-head__fact-label">Status</span>
-                <span class="entry-head__fact-value">{orgStatusLabel}</span>
-              </div>
-            ) : null}
-            {orgHeadquarters ? (
-              <div class="entry-head__fact">
-                <span class="entry-head__fact-label">Headquarters</span>
-                <span class="entry-head__fact-value">{orgHeadquarters}</span>
-              </div>
-            ) : null}
-            {orgFounded ? (
-              <div class="entry-head__fact">
-                <span class="entry-head__fact-label">Founded</span>
-                <span class="entry-head__fact-value">{orgFounded}</span>
-              </div>
-            ) : null}
-            {characterAffiliation ? (
-              <div class="entry-head__fact">
-                <span class="entry-head__fact-label">Affiliation</span>
-                <span class="entry-head__fact-value">{characterAffiliation}</span>
-              </div>
-            ) : null}
-            {orgJurisdiction ? (
-              <div class="entry-head__fact entry-head__fact--wide">
-                <span class="entry-head__fact-label">Jurisdiction</span>
-                <span class="entry-head__fact-value">{orgJurisdiction}</span>
-              </div>
-            ) : null}
-          </div>
-        ) : null}
-
-        {/* ── Summary ── */}
-        {(entry.data.summary ?? "").trim() ? (
-          <p class="head__summary">{entry.data.summary}</p>
-        ) : null}
-
-        {/* ── Tags ── */}
-        {(entry.data.tags ?? []).length ? (
-          <div class="tags" aria-label="Tags">
-            {(entry.data.tags ?? []).map((t: string) => (
-              <span class="tag">{String(t).toUpperCase()}</span>
-            ))}
-          </div>
-        ) : null}
-
-        {/* ── Image or placeholder (hidden for system and sine entries) ── */}
-        {!isSystemEntry && !isSineEntry && (entry.data.image ? (
-          <div class="media">
-            <img class="media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
-          </div>
-        ) : (
-          <div class="media media--placeholder" aria-hidden="true">
-            <svg class="media__placeholder-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.2"/>
-              <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="media__placeholder-text">Illustration Pending</span>
-          </div>
-        ))}
-
-      </header>
+      <div class="ent-hero__fallback"></div>
     )}
-
-{(headings?.length ?? 0) >= 3 ? (
-  <aside class="toc" aria-label="Table of contents">
-    <details class="toc__details">
-      <summary class="toc__summary">On this page</summary>
-
-      <nav class="toc__nav">
-        <ul class="toc__list">
-          {(headings as { depth: number; slug: string; text: string }[])
-            .filter((h) => h.depth === 2 || h.depth === 3)
-            .map((h) => (
-              <li class={`toc__item toc__item--d${h.depth}`}>
-                <a class="toc__link" href={`#${h.slug}`}>{h.text}</a>
-              </li>
-            ))}
-        </ul>
+    <div class="ent-hero__content">
+      <!-- breadcrumb -->
+      <nav class="ent-crumbs" aria-label="Breadcrumb">
+        <a class="ent-crumbs__link" href={sectionHref}>{sectionLabel}</a>
+        <span class="ent-crumbs__sep" aria-hidden="true">›</span>
+        <span class="ent-crumbs__cur">{entry.data.title}</span>
       </nav>
-    </details>
-  </aside>
-) : null}
 
-    <article class="body" data-entry-body>
-  <Content />
-</article>
+      <div class="ent-hero__type">{entry.data.type ?? sectionLabel}</div>
+      <h1 class="ent-hero__title">{entry.data.title}</h1>
+      {designation && <div class="ent-hero__designation">{designation}</div>}
+      {isSkyphon && rank && <div class="ent-hero__rank">{rank}</div>}
 
-    {related.length ? (
-  <section class="related" aria-label="Related entries">
-    <h2 class="related__title">Related entries</h2>
-
-    <div class="related__grid">
-      {related.map(({ e, score }) => (
-        <a class="related__item" href={`/${e.collection}/${e.slug}/`}>
-          <div class="related__name">{e.data.title}</div>
-          {e.data.summary ? (
-            <div class="related__summary">{e.data.summary}</div>
-          ) : null}
-          <div class="related__meta">
-            {score} shared tag{score === 1 ? "" : "s"}
-          </div>
-        </a>
-      ))}
+      {(entry.data.tags ?? []).length ? (
+        <div class="ent-hero__tags">
+          {(entry.data.tags ?? []).map((t: string) => (
+            <span class="ent-hero__tag">{String(t).toUpperCase()}</span>
+          ))}
+        </div>
+      ) : null}
     </div>
-  </section>
-) : null}
-
-  </section>
-
-  <style>
-    .wrap{
-      margin-top: 18px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .crumbs{
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(176,141,60,0.16);
-      background: rgba(15,15,22,0.35);
-      width: fit-content;
-    }
-
-    .crumbs__link{
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 750;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-
-    .crumbs__link:hover{ text-decoration: underline; }
-    .crumbs__sep{ opacity: 0.85; }
-    .crumbs__current{
-      font-weight: 750;
-      letter-spacing: 0.02em;
-      font-size: 13px;
-    }
-
-    /* ── Skyphon header ── */
-    .head--skyphon{
-      padding: 24px 26px 22px;
-      border-radius: 18px;
-      border: 1px solid rgba(176,141,60,0.26);
-      background: linear-gradient(160deg, rgba(22,17,10,0.92) 0%, rgba(11,11,16,0.72) 100%);
-      box-shadow: var(--shadow), inset 0 1px 0 rgba(176,141,60,0.10);
-      display: grid;
-      gap: 0;
-    }
-
-    .sk__eyebrow{
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .sk__type{
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(176,141,60,0.9);
-    }
-
-    .sk__sep{
-      font-size: 10px;
-      opacity: 0.35;
-    }
-
-    .sk__sub{
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      opacity: 0.45;
-    }
-
-    .sk__badge{
-      margin-left: auto;
-      font-size: 9px;
-      font-weight: 900;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(176,141,60,0.65);
-      border: 1px solid rgba(176,141,60,0.22);
-      border-radius: 999px;
-      padding: 3px 10px;
-    }
-
-    .sk__title{
-      margin: 0 0 6px;
-      font-size: 32px;
-      font-weight: 900;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      line-height: 1;
-    }
-
-    .sk__directive{
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      opacity: 0.6;
-      margin-bottom: 4px;
-    }
-
-    .sk__instrument{
-      font-size: 15px;
-      font-weight: 650;
-      letter-spacing: 0.03em;
-      line-height: 1.5;
-      opacity: 0.85;
-      margin-bottom: 4px;
-    }
-
-    .sk__rule{
-      height: 1px;
-      background: linear-gradient(90deg, rgba(176,141,60,0.40), rgba(176,141,60,0.06));
-      margin: 18px 0;
-    }
-
-    .sk__grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 14px 28px;
-    }
-
-    .sk__field{
-      display: grid;
-      gap: 5px;
-    }
-
-    .sk__field--wide{
-      grid-column: 1 / -1;
-    }
-
-    .sk__label{
-      font-size: 9px;
-      font-weight: 900;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      color: rgba(176,141,60,0.65);
-    }
-
-    .sk__val{
-      font-size: 13px;
-      font-weight: 620;
-      letter-spacing: 0.02em;
-      line-height: 1.5;
-      opacity: 0.9;
-    }
-
-    .sk__val--italic{
-      font-style: italic;
-    }
-
-    .sk__summary{
-      margin: 0;
-      font-size: 15px;
-      font-weight: 650;
-      letter-spacing: 0.02em;
-      line-height: 1.65;
-      opacity: 0.85;
-      font-style: italic;
-    }
-
-    .head{
-      padding: 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(176,141,60,0.18);
-      background: rgba(11,11,16,0.55);
-      box-shadow: var(--shadow);
-    }
-
-    .head--character{
-      padding: 16px;
-    }
-
-    .identity{
-      display: grid;
-      grid-template-columns: minmax(160px, 210px) minmax(0, 1fr);
-      gap: 16px;
-      align-items: start;
-    }
-
-    .identity__portraitWrap{
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(176,141,60,0.22);
-      background: rgba(11,11,16,0.65);
-      max-width: 210px;
-      width: 100%;
-      aspect-ratio: 3 / 4;
-    }
-
-    .identity__portrait{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .identity__info{
-      min-width: 0;
-      display: grid;
-      gap: 10px;
-      align-content: start;
-    }
-
-    .identity__strip{
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 700;
-      opacity: 0.7;
-      margin-top: -4px;
-    }
-
-    .identity__divider{
-      height: 1px;
-      background: linear-gradient(90deg, rgba(176,141,60,0.45), rgba(176,141,60,0.08));
-      margin: 4px 0 2px;
-    }
-
-    /* ── Dossier ledger table ── */
-    .identity__table{
-      display: grid;
-      gap: 0;
-    }
-
-    .identity__row{
-      display: grid;
-      grid-template-columns: max-content 1fr;
-      gap: 14px;
-      padding: 5px 0;
-      align-items: baseline;
-    }
-
-    .identity__row-label{
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      font-weight: 800;
-      opacity: 0.5;
-      white-space: nowrap;
-      padding-top: 1px;
-    }
-
-    .identity__row-value{
-      font-size: 13px;
-      letter-spacing: 0.02em;
-      line-height: 1.45;
-      font-weight: 620;
-    }
-
-    .identity__sep{
-      display: none;
-    }
-
-    .identity__portraitWrap--apparatus{
-      aspect-ratio: unset;
-      background: transparent;
-    }
-
-    .identity__portrait--apparatus{
-      height: auto;
-      object-fit: unset;
-      object-position: unset;
-    }
-
-    .identity__portrait-placeholder{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(176,141,60,0.03),
-        rgba(176,141,60,0.03) 10px,
-        transparent 10px,
-        transparent 20px
-      );
-      border: 1px dashed rgba(176,141,60,0.22);
-    }
-
-    .identity__placeholder-icon{
-      width: 32px;
-      height: 32px;
-      color: rgba(176,141,60,0.35);
-    }
-
-    .identity__placeholder-text{
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.20em;
-      font-weight: 800;
-      opacity: 0.35;
-    }
-
-    .head__top{
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .head__title{
-      margin: 0;
-      font-size: 22px;
-      font-weight: 850;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .head__updated{
-      font-weight: 650;
-      letter-spacing: 0.02em;
-      opacity: 0.92;
-    }
-
-    /* ── Non-character entry header ── */
-    .head--entry{
-      display: grid;
-      gap: 14px;
-    }
-
-    .entry-head__top{
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .entry-head__designation{
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.10em;
-      font-weight: 700;
-      opacity: 0.65;
-      margin-top: 4px;
-    }
-
-    .entry-head__type-badge{
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 850;
-      color: rgba(176,141,60,0.85);
-      border: 1px solid rgba(176,141,60,0.28);
-      border-radius: 999px;
-      padding: 4px 10px;
-      white-space: nowrap;
-      margin-top: 4px;
-    }
-
-    .entry-head__facts{
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 10px 20px;
-    }
-
-    .entry-head__fact{
-      display: grid;
-      gap: 4px;
-    }
-
-    .entry-head__fact--wide{
-      grid-column: 1 / -1;
-    }
-
-    .entry-head__fact-label{
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      font-weight: 800;
-      opacity: 0.5;
-    }
-
-    .entry-head__fact-value{
-      font-size: 13px;
-      font-weight: 620;
-      line-height: 1.45;
-      letter-spacing: 0.02em;
-    }
-
-    /* ── Placeholder ── */
-    .media--placeholder{
-      min-height: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(176,141,60,0.03),
-        rgba(176,141,60,0.03) 10px,
-        transparent 10px,
-        transparent 20px
-      );
-      border: 1px dashed rgba(176,141,60,0.22);
-      border-radius: 14px;
-    }
-
-    .media__placeholder-icon{
-      width: 28px;
-      height: 28px;
-      color: rgba(176,141,60,0.35);
-    }
-
-    .media__placeholder-text{
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.20em;
-      font-weight: 800;
-      opacity: 0.35;
-    }
-
-    .head__summary{
-      margin: 12px 0 0;
-      font-size: 15px;
-      font-weight: 650;
-      letter-spacing: 0.02em;
-      line-height: 1.6;
-    }
-
-    .tags{
-      margin-top: 12px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .tag{
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(176,141,60,0.22);
-      background: rgba(11,11,16,0.45);
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-size: 11px;
-    }
-
-    .media{
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(176,141,60,0.18);
-      background: rgba(11,11,16,0.6);
-    }
-
-    .media__img{
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .body{
-      padding: 22px;
-      border-radius: 18px;
-      border: 1px solid rgba(176,141,60,0.18);
-      background: rgba(11,11,16,0.55);
-      box-shadow: var(--shadow);
-    }
-
-    .body :global(h2),
-    .body :global(h3){
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .body :global(h2){
-      margin: 2rem 0 0.9rem;
-      font-size: 1.12rem;
-      border-top: 1px solid rgba(176,141,60,0.18);
-      padding-top: 1.15rem;
-    }
-
-    .body :global(h3){
-      margin: 1.5rem 0 0.8rem;
-      font-size: 1rem;
-    }
-
-    .body :global(p),
-    .body :global(li){
-      font-size: 17px;
-      font-weight: 580;
-      letter-spacing: 0.02em;
-      line-height: 1.85;
-      color: var(--text);
-    }
-
-    .body :global(p){
-      margin: 0 0 1.05rem;
-    }
-
-    .body :global(li){
-      margin-bottom: 0.35rem;
-    }
-
-    .body :global(strong){
-      color: #d36a60;
-      font-weight: 780;
-    }
-
-    .body :global(ul){
-      padding-left: 24px;
-      margin: 0 0 1.1rem;
-    }
-
-    .body :global(hr){
-      border: none;
-      border-top: 1px solid rgba(176,141,60,0.34);
-      margin: 2rem 0;
-    }
-
-    .body :global(hr + h2),
-    .body :global(hr + h3){
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-
-    .body :global(blockquote){
-      margin: 0.25rem 0 1.4rem;
-      padding: 14px 18px;
-      border-left: 3px solid rgba(176,141,60,0.65);
-      background: rgba(176,141,60,0.07);
-      border-radius: 0 12px 12px 0;
-    }
-
-    .body :global(blockquote p){
-      margin: 0;
-      font-size: 16px;
-      font-style: italic;
-      color: rgba(220,200,155,0.92);
-      line-height: 1.7;
-    }
-
-    .body :global(blockquote strong){
-      color: rgba(220,200,155,1);
-      font-style: normal;
-    }
-
-    .body :global(em){
-      color: rgba(187,165,122,0.95);
-    }
-    .related{
-  padding: 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(176,141,60,0.18);
-  background: rgba(11,11,16,0.55);
-  box-shadow: var(--shadow);
-}
-
-.related__title{
-  margin: 0 0 12px 0;
-  font-size: 12px;
-  font-weight: 850;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-
-.related__grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-@media (min-width: 720px){
-  .related__grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 760px){
-  .identity{
-    grid-template-columns: 1fr;
-    gap: 14px;
+  </div>
+
+  <!-- ── BODY ── -->
+  <div class="ent-body">
+
+    <!-- SIDEBAR -->
+    <aside class="ent-sidebar">
+      {fields.length ? (
+        <details class="ent-sidebar__card" open>
+          <summary class="ent-sidebar__card-title">
+            File Data
+            <svg class="ent-sidebar__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          {fields.map(f => (
+            <div class={`ent-sidebar__row${f.wide ? " ent-sidebar__row--wide" : ""}`}>
+              <span class="ent-sidebar__label">{f.label}</span>
+              <span class="ent-sidebar__value" set:html={f.value} />
+            </div>
+          ))}
+        </details>
+      ) : null}
+
+      <div class="ent-sidebar__updated">Filed: {entry.data.updated}</div>
+
+      {/* TOC — only shown in sidebar when headings >= 3 */}
+      {(headings?.length ?? 0) >= 3 ? (
+        <details class="ent-toc" open>
+          <summary class="ent-toc__summary">On this page</summary>
+          <nav class="ent-toc__nav">
+            <ul class="ent-toc__list">
+              {(headings as { depth: number; slug: string; text: string }[])
+                .filter((h) => h.depth === 2 || h.depth === 3)
+                .map((h) => (
+                  <li class={`ent-toc__item ent-toc__item--d${h.depth}`}>
+                    <a class="ent-toc__link" href={`#${h.slug}`}>{h.text}</a>
+                  </li>
+                ))}
+            </ul>
+          </nav>
+        </details>
+      ) : null}
+    </aside>
+
+    <!-- MAIN PROSE -->
+    <main class="ent-main">
+      {summary ? (
+        <p class="ent-lead">{summary}</p>
+      ) : null}
+      <div class="ent-divider"></div>
+
+      {/* Character portrait in prose area when no hero image */}
+      {isCharacterEntry && !entry.data.image && (
+        <div class="ent-portrait-placeholder">
+          <svg class="ent-portrait-placeholder__icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span class="ent-portrait-placeholder__text">Portrait Pending</span>
+        </div>
+      )}
+
+      {/* Apparatus / cosmology / org image in main area when not character */}
+      {!isCharacterEntry && !isSystemEntry && !isSineEntry && entry.data.image ? (
+        <div class="ent-media">
+          <img class="ent-media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
+        </div>
+      ) : null}
+
+      <article class="ent-prose" data-entry-body>
+        <Content />
+      </article>
+    </main>
+  </div>
+
+  <!-- ── RELATED ── -->
+  {related.length ? (
+    <section class="ent-related" aria-label="Related entries">
+      <div class="ent-related__inner">
+        <div class="ent-related__header">
+          <div class="ent-related__line"></div>
+          <span class="ent-related__label">Related entries</span>
+          <div class="ent-related__line"></div>
+        </div>
+        <div class="ent-related__grid">
+          {related.map(({ e, score }) => (
+            <a class="ent-related__item" href={`/${e.collection}/${e.slug}/`}>
+              <div class="ent-related__name">{e.data.title}</div>
+              {e.data.summary ? (
+                <div class="ent-related__summary">{e.data.summary}</div>
+              ) : null}
+              <div class="ent-related__meta">{score} shared tag{score === 1 ? "" : "s"}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : null}
+
+</MainLayout>
+
+<style>
+  /* ── Hero ── */
+  .ent-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
   }
 
-  .identity__portraitWrap{
-    max-width: 260px;
+  .ent-hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    filter: saturate(0.6) brightness(0.35);
   }
-}
 
-.related__item{
-  display: block;
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(176,141,60,0.18);
-  background: rgba(15,15,22,0.35);
-  text-decoration: none;
-  color: var(--text);
-  transition: transform 120ms ease, border-color 120ms ease;
-}
+  .ent-hero__fallback {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(177, 58, 52, 0.15), rgba(6, 6, 11, 0.8));
+  }
 
-.related__item:hover{
-  transform: translateY(-1px);
-  border-color: rgba(176,141,60,0.35);
-}
+  .ent-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 6, 11, 0.2) 0%,
+      rgba(6, 6, 11, 0.5) 50%,
+      var(--bg) 100%
+    );
+  }
 
-.related__name{
-  font-weight: 850;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 12px;
-  margin-bottom: 6px;
-}
+  .ent-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 48px;
+    max-width: 1000px;
+  }
 
-.related__summary{
-  font-size: 14px;
-  font-weight: 650;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  opacity: 0.9;
-  margin-bottom: 8px;
-}
+  /* breadcrumb */
+  .ent-crumbs {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
-.related__meta{
-  font-size: 12px;
-  font-weight: 650;
-  letter-spacing: 0.02em;
-  opacity: 0.75;
-}
-.toc{
-  position: relative;
-  padding: 16px 16px 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(176,141,60,0.22);
-  background: linear-gradient(
-    180deg,
-    rgba(176,141,60,0.10),
-    rgba(11,11,16,0.55) 40%,
-    rgba(11,11,16,0.55)
-  );
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
+  .ent-crumbs__link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .ent-crumbs__link:hover { color: var(--text); }
+  .ent-crumbs__sep { color: var(--crimson); opacity: 0.7; }
+  .ent-crumbs__cur { color: var(--text-dim); }
 
-/* subtle gold accent bar */
-.toc::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 12px;
-  bottom: 12px;
-  width: 3px;
-  border-radius: 999px;
-  background: rgba(176,141,60,0.55);
-}
+  .ent-hero__type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 10px;
+  }
 
-.toc__top{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding-left: 10px; /* room for accent bar */
-}
+  .ent-hero__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 62px);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 10px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
 
-.toc__title{
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 12px;
-  opacity: 0.95;
-}
+  .ent-hero__designation {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
+    opacity: 0.85;
+  }
 
-.toc__nav{
-  margin-top: 10px;
-  padding-left: 10px; /* align with title */
-}
+  .ent-hero__rank {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 8px;
+  }
 
-.toc__list{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 6px;
-}
+  .ent-hero__tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
 
-.toc__item{
-  position: relative;
-}
+  .ent-hero__tag {
+    padding: 4px 10px;
+    background: rgba(177, 58, 52, 0.18);
+    border: 1px solid rgba(177, 58, 52, 0.3);
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.7);
+  }
 
-.toc__link{
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--text);
-  opacity: 0.92;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.35;
-  padding: 4px 6px;
-  border-radius: 10px;
-  transition: background 120ms ease, opacity 120ms ease, transform 120ms ease;
-}
+  /* ── Body layout ── */
+  .ent-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
 
-.toc__link:hover{
-  background: rgba(176,141,60,0.12);
-  opacity: 1;
-  transform: translateY(-1px);
-}
+  /* ── Sidebar ── */
+  .ent-sidebar {
+    position: sticky;
+    top: 76px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
-/* depth styling */
-.toc__item--d3 .toc__link{
-  font-weight: 650;
-  font-size: 13px;
-  opacity: 0.85;
-  margin-left: 12px;
-}
+  .ent-sidebar__card {
+    background: rgba(10, 10, 18, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    overflow: hidden;
+  }
 
+  .ent-sidebar__card-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
 
-  </style>
+  .ent-sidebar__card-title::-webkit-details-marker { display: none; }
 
-  <script>
-  // Detect portrait images and switch styling so they don't get cropped
-  const mediaImages = document.querySelectorAll(".media__img");
+  .ent-sidebar__chevron {
+    color: var(--crimson);
+    opacity: 0.6;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
 
-  mediaImages.forEach((node) => {
-    if (!(node instanceof HTMLImageElement)) return;
+  .ent-sidebar__card[open] .ent-sidebar__chevron {
+    transform: rotate(180deg);
+  }
 
-    const setMediaFit = () => {
-      const w = node.naturalWidth;
-      const h = node.naturalHeight;
-      if (!w || !h) return;
+  .ent-sidebar__card:not([open]) .ent-sidebar__card-title {
+    border-bottom: none;
+  }
 
-      const wrap = node.closest(".media");
-      if (!wrap) return;
+  .ent-sidebar__row {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
 
-      const isPortrait = h > w;
-      wrap.classList.toggle("media--portrait", isPortrait);
-    };
+  .ent-sidebar__row:last-child { border-bottom: none; }
 
-    if (node.complete) setMediaFit();
-    else node.addEventListener("load", setMediaFit, { once: true });
-  });
-</script>
+  .ent-sidebar__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .ent-sidebar__value {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .ent-sidebar__updated {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    padding: 0 4px;
+  }
+
+  /* TOC */
+  .ent-toc {
+    background: rgba(10, 10, 18, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    overflow: hidden;
+    border-left: 2px solid rgba(177, 58, 52, 0.4);
+  }
+
+  .ent-toc__summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    padding: 14px 16px;
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .ent-toc__summary::-webkit-details-marker { display: none; }
+
+  .ent-toc__nav { padding: 8px 0; }
+
+  .ent-toc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ent-toc__item { padding: 0 8px; }
+  .ent-toc__item--d3 { padding-left: 20px; }
+
+  .ent-toc__link {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: background 0.15s, color 0.15s;
+    line-height: 1.4;
+  }
+
+  .ent-toc__item--d3 .ent-toc__link {
+    font-size: 11px;
+    opacity: 0.8;
+  }
+
+  .ent-toc__link:hover {
+    background: rgba(177, 58, 52, 0.12);
+    color: var(--text);
+  }
+
+  /* ── Main prose area ── */
+  .ent-main { min-width: 0; }
+
+  .ent-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: rgba(232, 228, 220, 0.75);
+    line-height: 1.75;
+    font-style: italic;
+    margin: 0 0 24px;
+    letter-spacing: 0.01em;
+  }
+
+  .ent-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+    margin: 0 0 32px;
+  }
+
+  .ent-portrait-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 100px;
+    margin-bottom: 24px;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(177, 58, 52, 0.03),
+      rgba(177, 58, 52, 0.03) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    border: 1px dashed rgba(177, 58, 52, 0.2);
+    border-radius: 6px;
+  }
+
+  .ent-portrait-placeholder__icon {
+    width: 28px; height: 28px;
+    color: rgba(177, 58, 52, 0.35);
+  }
+
+  .ent-portrait-placeholder__text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .ent-media {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    margin-bottom: 32px;
+    background: rgba(10, 10, 18, 0.6);
+  }
+
+  .ent-media__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ── Prose styles ── */
+  .ent-prose {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .ent-prose :global(h2) {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 40px 0 12px;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .ent-prose :global(h3) {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: rgba(232, 228, 220, 0.85);
+    margin: 28px 0 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .ent-prose :global(p) {
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--text-muted);
+  }
+
+  .ent-prose :global(li) {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .ent-prose :global(ul),
+  .ent-prose :global(ol) {
+    padding-left: 24px;
+    margin: 0 0 16px;
+  }
+
+  .ent-prose :global(strong) {
+    color: rgba(232, 228, 220, 0.9);
+    font-weight: 650;
+  }
+
+  .ent-prose :global(em) {
+    color: rgba(176, 141, 60, 0.9);
+  }
+
+  .ent-prose :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    margin: 32px 0;
+  }
+
+  .ent-prose :global(blockquote) {
+    margin: 24px 0;
+    padding: 16px 24px;
+    border-left: 2px solid var(--crimson);
+    background: rgba(177, 58, 52, 0.06);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .ent-prose :global(blockquote p) {
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(232, 228, 220, 0.65);
+    line-height: 1.8;
+  }
+
+  .ent-prose :global(hr + h2),
+  .ent-prose :global(hr + h3) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  /* ── Related ── */
+  .ent-related {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 60px 0 80px;
+  }
+
+  .ent-related__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .ent-related__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .ent-related__line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .ent-related__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: rgba(232, 228, 220, 0.3);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .ent-related__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+  .ent-related__item {
+    display: block;
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    background: rgba(10, 10, 18, 0.7);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .ent-related__item:hover {
+    border-color: rgba(177, 58, 52, 0.35);
+    background: rgba(12, 12, 20, 0.9);
+  }
+
+  .ent-related__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+
+  .ent-related__summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+
+  .ent-related__meta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 860px) {
+    .ent-body {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 32px 20px 60px;
+    }
+    .ent-sidebar {
+      position: static;
+    }
+    .ent-hero__content { padding: 40px 24px; }
+    .ent-hero { min-height: 320px; }
+  }
+
+  @media (max-width: 520px) {
+    .ent-hero__content { padding: 30px 16px; }
+    .ent-related__inner { padding: 0 16px; }
+  }
+</style>
 
 <script>
-  // Add ids to headings inside the entry body so TOC links can jump correctly
+  // Assign IDs to headings inside prose for TOC links
   const body = document.querySelector("[data-entry-body]");
   if (body) {
-    const hs = body.querySelectorAll("h2, h3");
-    hs.forEach((h) => {
+    body.querySelectorAll("h2, h3").forEach((h) => {
       if (!h.id) {
-        const text = (h.textContent || "").trim().toLowerCase();
-        const slug = text
+        const slug = (h.textContent || "")
+          .trim().toLowerCase()
           .replace(/[^a-z0-9\s-]/g, "")
           .replace(/\s+/g, "-")
           .replace(/-+/g, "-");
@@ -1226,7 +807,5 @@ const related = allPublic
       }
     });
   }
+
 </script>
-
-
-</MainLayout>

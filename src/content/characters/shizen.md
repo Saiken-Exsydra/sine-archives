@@ -12,7 +12,7 @@ principle: "Cweornríse"
 keeper_name: "That Which Came Uninvited"
 summary: "Skyphon of Life. Bearer of the Instrument of Emergence — the law governing the arising, development, and continuation of non-sentient life as a category of the world."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Emergence", "Life", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

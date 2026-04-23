@@ -12,7 +12,7 @@ principle: "Tídmeltan"
 keeper_name: "That Which Was Already There"
 summary: "Skyphon of Entropy. Bearer of the Instrument of Dissolution — the law governing the rate and pattern of structural decay within the natural world, ensuring dissolution serves renewal rather than simply accumulating."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Dissolution", "Entropy", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

@@ -12,7 +12,7 @@ principle: "Lyftweard"
 keeper_name: "That Which Stood Between All Things and Nothing"
 summary: "Skyphon of Ambience. Bearer of the Instrument of Skywatch — the law governing atmospheric coherence and the conditions under which Terra's surface remained capable of sustaining biospheric life."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Skywatch", "Atmosphere", "Ambience", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

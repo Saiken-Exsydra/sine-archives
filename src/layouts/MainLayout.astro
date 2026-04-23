@@ -1,318 +1,185 @@
 ---
-import "../styles/cards.css";
-
+import "../styles/global.css";
 
 const {
   pageTitle = "SiNE Archives",
-  tagline = "Authorized Historical Index — Vesperia",
   active = "home",
 } = Astro.props;
 
+const navLinks = [
+  { key: "home",          label: "Home",          href: "/" },
+  { key: "characters",    label: "Characters",    href: "/characters/" },
+  { key: "organizations", label: "Organizations", href: "/organizations/" },
+  { key: "sine",          label: "SiNE",          href: "/sine/" },
+  { key: "places",        label: "Places",        href: "/places/" },
+  { key: "apparatus",     label: "Apparatus",     href: "/apparatus/" },
+  { key: "systems",       label: "Systems",       href: "/systems/" },
+  { key: "cosmology",     label: "Cosmology",     href: "/cosmology/" },
+  { key: "search",        label: "Search",        href: "/search/" },
+];
 ---
-
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <div class="app">
-      <!-- Sidebar -->
-      <aside class="sidebar" aria-label="Primary navigation">
-        <div class="sidebar__top">
-          <div class="brand">
-            <div class="brand__mark" aria-hidden="true"></div>
+    <!-- ── NAV ── -->
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__logo" href="/">
+        <img src="/uploads/SLOGO.png" alt="SiNE" class="nav__logo-img" />
+        <span class="nav__logo-text">ARCHIVES</span>
+      </a>
 
-            <div class="brand__text">
-              <div class="brand__title">SiNE</div>
-              <div class="brand__sub">Archives</div>
-            </div>
-          </div>
-        </div>
+      <a class="nav__search-btn" href="/search/" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </nav>
 
-        <nav class="nav">
-          <a class={`nav__item ${active === "home" ? "is-active" : ""}`} href="/">Home</a>
+    <!-- ── MAIN ── -->
+    <main class="main">
+      <slot />
+    </main>
 
-          <div class="nav__group-label">World</div>
-          <a class={`nav__item ${active === "cosmology" ? "is-active" : ""}`} href="/cosmology/">Cosmology</a>
-          <a class={`nav__item ${active === "places" ? "is-active" : ""}`} href="/places/">Places</a>
-          <a class={`nav__item ${active === "systems" ? "is-active" : ""}`} href="/systems/">Systems</a>
-
-          <div class="nav__group-label">People &amp; Factions</div>
-          <a class={`nav__item ${active === "characters" ? "is-active" : ""}`} href="/characters/">Characters</a>
-          <a class={`nav__item ${active === "organizations" ? "is-active" : ""}`} href="/organizations/">Organizations</a>
-          <a class={`nav__item ${active === "sine" ? "is-active" : ""}`} href="/sine/">SiNE Network</a>
-
-          <div class="nav__group-label">Records</div>
-          <a class={`nav__item ${active === "apparatus" ? "is-active" : ""}`} href="/apparatus/">Apparatus</a>
-          <a class={`nav__item ${active === "search" ? "is-active" : ""}`} href="/search/">Search</a>
-        </nav>
-
-        <div class="sidebar__bottom">
-  <div class="note">
-    <span class="note__dot" aria-hidden="true"></span>
-    <span class="note__text">Access Tier: Public</span>
-  </div>
-
-  <div class="sidebar__sys" aria-label="System status">
-    <div>Public Access Node: 01</div>
-    <div>Oversight Status: Active</div>
-  </div>
-</div>
-</aside>
-
-
-      <!-- Main -->
-      <main class="main">
-        {active === "home" && (
-        <header class="header">
-          <div class="header__left">
-  <div class="header__meta" aria-label="Index status">
-    <span class="meta__item">PUBLIC ACCESS NODE: 01</span>
-    <span class="meta__sep" aria-hidden="true"></span>
-    <span class="meta__item">OVERSIGHT: ACTIVE</span>
-    <span class="meta__sep" aria-hidden="true"></span>
-    <span class="meta__item">TIER: PUBLIC</span>
-  </div>
-
-  <h1 class="title">
-    <img class="title__logo" src="/uploads/SLOGOHOME.png" alt="SINE ARCHIVES" />
-  </h1>
-
-          <p class="tagline">{tagline}</p>
-          <p class="motto">“Knowledge persists beyond collapse.”</p>
-</div>
-
-          <div class="header__right">
-<form class="search" action="/search/" role="search" aria-label="Global search">
-  <input class="search__input" type="search" name="q" placeholder="Search all public entries…" />
-  <button class="search__button" type="submit">Search</button>
-</form>
-
-
-
-          </div>
-        </header>
-        )}
-
-        <!-- Page content goes here -->
-        <slot />
-      </main>
-    </div>
-
-    <style>
-      :root{
-        --bg:#07080d;
-        --text:#ebe8e6;
-        --gold:#bba57a;
-        --red:#7c1114;
-        --line:rgba(255,255,255,0.14);
-        --logo-url:url('/uploads/SLOGO.png');
-      }
-
-      *{ box-sizing:border-box; }
-      html,body{ height:100%; }
-      body{
-        margin:0;
-        color:var(--text);
-        font-family:Inter,ui-sans-serif,system-ui;
-        background:
-          radial-gradient(1200px 540px at 50% -180px, rgba(148,44,33,.10), transparent 70%),
-          linear-gradient(180deg, #090b11 0%, #07080d 48%, #06070b 100%);
-        background-color:#06070b;
-      }
-
-      .app{
-        min-height:100vh;
-        display:grid;
-        grid-template-columns: 280px minmax(0,1fr);
-      }
-
-      .sidebar{
-        position:sticky;
-        top:0;
-        height:100vh;
-        padding:22px 18px;
-        display:grid;
-        grid-template-rows:auto 1fr auto;
-        gap:22px;
-        border-right:1px solid var(--line);
-        background:linear-gradient(180deg, rgba(8,9,14,.9), rgba(5,5,10,.93));
-      }
-
-      .brand{
-        display:flex;
-        align-items:center;
-        gap:12px;
-        padding:10px;
-        border:1px solid rgba(255,255,255,.1);
-        border-radius:14px;
-        background:rgba(9,11,19,.6);
-      }
-
-      .brand__mark{
-        width:42px;
-        height:42px;
-        border-radius:50%;
-        border:1px solid rgba(255,255,255,.25);
-        background: var(--logo-url) center/cover no-repeat, radial-gradient(circle at 40% 35%, #39455d, #111722 74%);
-      }
-
-      .brand__title,
-      .brand__sub{
-        font-family:"Playfair Display", Georgia, serif;
-        letter-spacing:.12em;
-      }
-
-      .nav{ display:grid; gap:4px; align-content:start; }
-      .nav__group-label{ margin-top:10px; padding:0 12px 4px; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(187,165,122,.55); font-family:Inter,ui-sans-serif,system-ui; }
-
-      .nav__item{
-        text-decoration:none;
-        color:rgba(236,236,236,.88);
-        font-family:"Playfair Display", Georgia, serif;
-        font-size:1.35rem;
-        padding:11px 12px;
-        border:1px solid transparent;
-        border-radius:12px;
-        background:transparent;
-      }
-
-      .nav__item:hover{ border-color:rgba(255,255,255,.18); background:rgba(255,255,255,.03); }
-      .nav__item.is-active{
-        border-color:rgba(171,48,46,.8);
-        background:linear-gradient(90deg, rgba(171,48,46,.34), rgba(171,48,46,0));
-      }
-
-      .note{ display:flex; align-items:center; gap:9px; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; color:#b8b8b8; }
-      .note__dot{ width:8px; height:8px; border-radius:50%; background:#cc9f66; box-shadow:0 0 18px rgba(204,159,102,.45); }
-      .sidebar__sys{ margin-top:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,.08); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:#9d9d9d; line-height:1.5; }
-
-      .main{ padding:18px 22px 36px; }
-
-      .header{
-        position:relative;
-        min-height:520px;
-        padding:30px 0 46px;
-        display:grid;
-        align-content:center;
-        justify-items:center;
-        text-align:center;
-        gap:20px;
-        border:1px solid rgba(255,255,255,.14);
-        border-radius:0;
-        overflow:hidden;
-        background:
-          linear-gradient(180deg, rgba(8,10,18,.45), rgba(8,10,18,.86)),
-          radial-gradient(900px 360px at 50% 0%, rgba(255,199,143,.2), transparent 58%),
-          url('/uploads/BANNER.png') center/cover no-repeat;
-      }
-
-      .header::before{
-        content:"";
-        position:absolute;
-        inset:0;
-        background:linear-gradient(180deg, rgba(8,10,18,0) 58%, rgba(7,8,13,.92) 100%);
-        pointer-events:none;
-      }
-
-      .header::after{
-        content:"";
-        position:absolute;
-        left:0; right:0; bottom:0;
-        height:2px;
-        background:linear-gradient(90deg, transparent, rgba(255,85,70,.95), transparent);
-        box-shadow:0 0 22px rgba(255,72,52,.7);
-      }
-
-      .header__left,.header__right{ position:relative; z-index:1; }
-      .header__meta{ display:none; }
-
-      .title{
-        margin:0;
-        display:block;
-        justify-content:center;
-      }
-
-      .title__logo{
-        display:block;
-        width:min(680px, 92vw);
-        height:auto;
-        margin:0 auto;
-      }
-
-      .tagline{
-        margin:8px 0 0;
-        font-family:"Playfair Display", Georgia, serif;
-        font-size:2rem;
-        color:#d6cdc3;
-      }
-      .tagline::before{ display:none; }
-
-      .motto{
-        margin:10px 0 0;
-        font-family:"Playfair Display", Georgia, serif;
-        font-style:italic;
-        letter-spacing:.02em;
-        color:rgba(236,231,224,.76);
-      }
-
-      .header__right{ width:min(560px, 94%); }
-
-      .search{
-        display:grid;
-        grid-template-columns:1fr auto;
-        gap:0;
-        border:1px solid rgba(255,255,255,.22);
-        background:rgba(10,11,18,.7);
-        border-radius:8px;
-        overflow:hidden;
-      }
-      .search__input{
-        min-width:0;
-        padding:16px 18px;
-        border:0;
-        background:transparent;
-        color:var(--text);
-        font-family:"Playfair Display", Georgia, serif;
-        font-size:1.1rem;
-      }
-      .search__input::placeholder{ color:rgba(242,236,228,.7); }
-      .search__button{
-        border:0;
-        padding:0 26px;
-        color:#efe6da;
-        background:linear-gradient(180deg, #8f1b1a, #6d0f13);
-        font-family:"Playfair Display", Georgia, serif;
-        text-transform:uppercase;
-        letter-spacing:.08em;
-        font-size:1.65rem;
-        cursor:pointer;
-      }
-
-      @media (max-width: 1024px){
-        .app{ grid-template-columns:1fr; }
-        .sidebar{ position:relative; height:auto; }
-        .main{ padding:12px; }
-        .header{ min-height:440px; }
-      }
-
-      @media (max-width: 720px){
-        .title{ font-size:2.1rem; }
-        .tagline{ font-size:1.3rem; }
-        .search__button{ font-size:1.1rem; padding:0 16px; }
-      }
-    </style>
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+      <img src="/uploads/SLOGO.png" alt="SiNE" class="footer__logo" />
+      <span class="footer__text">SiNE ARCHIVES · RESTRICTED DISTRIBUTION · ALL RECORDS SUBJECT TO REVISION</span>
+    </footer>
   </body>
 </html>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    background: rgba(6, 6, 11, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav__logo-img {
+    height: 26px;
+    opacity: 0.9;
+  }
+
+  .nav__logo-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: rgba(232, 228, 220, 0.45);
+    text-transform: uppercase;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav__link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.55);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .nav__link:hover {
+    color: rgba(232, 228, 220, 0.9);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav__link.is-active {
+    color: var(--crimson);
+    background: rgba(177, 58, 52, 0.12);
+  }
+
+  .nav__search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    color: rgba(232, 228, 220, 0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .nav__search-btn:hover {
+    color: rgba(232, 228, 220, 0.9);
+  }
+
+  .main {
+    padding-top: 56px;
+    min-height: 100vh;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 60px 32px 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .footer__logo {
+    height: 18px;
+    opacity: 0.18;
+  }
+
+  .footer__text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: rgba(232, 228, 220, 0.15);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .nav { padding: 0 16px; }
+    .nav__links { gap: 0; }
+    .nav__link { font-size: 10px; padding: 5px 7px; letter-spacing: 0.06em; }
+    .nav__logo-text { display: none; }
+  }
+</style>

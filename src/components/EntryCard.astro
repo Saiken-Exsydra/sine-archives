@@ -14,114 +14,188 @@ const tags = entry.data.tags ?? [];
 const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toLowerCase();
 ---
 
-<a class="card entryCard" href={href} data-search={search}>
-  <div class="card__media" aria-hidden="true">
+<a class="ecard" href={href} data-search={search}>
+  <div class="ecard__thumb">
     {entry.data.image ? (
-      <img class="thumb" src={entry.data.image} alt="" loading="lazy" />
+      <img class="ecard__img" src={entry.data.image} alt="" loading="lazy" />
     ) : (
-      <div class="thumb thumb--empty"></div>
+      <div class="ecard__img-empty">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" opacity="0.3">
+          <rect x="4" y="4" width="24" height="24" rx="2" stroke="white" stroke-width="1.2"/>
+          <circle cx="16" cy="13" r="4" stroke="white" stroke-width="1.2"/>
+          <path d="M6 28c0-5.5 4-9 10-9s10 3.5 10 9" stroke="white" stroke-width="1.2"/>
+        </svg>
+      </div>
     )}
   </div>
 
-  <div class="card__body">
-    <div class="card__title">{entry.data.title}</div>
-    <div class="card__summary">{entry.data.summary}</div>
+  <div class="ecard__body">
+    <div class="ecard__type">{entry.data.type ?? section}</div>
+    <div class="ecard__title">{entry.data.title}</div>
+    {(entry.data as any).designation ? (
+      <div class="ecard__designation">{(entry.data as any).designation}</div>
+    ) : null}
+    <div class="ecard__summary">{entry.data.summary}</div>
 
-    <div class="meta">
-      <div class="tags">
+    <div class="ecard__footer">
+      <div class="ecard__tags">
         {tags.slice(0, 4).map((t: string) => (
-          <span class="tag">{String(t).toUpperCase()}</span>
+          <span class="ecard__tag">{String(t).toUpperCase()}</span>
         ))}
       </div>
-
-      <div class="updated">Updated: {entry.data.updated}</div>
+      <span class="ecard__updated">Updated {entry.data.updated}</span>
     </div>
   </div>
+
+  <div class="ecard__accent"></div>
 </a>
 
 <style>
-  .card{
+  .ecard {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 130px 1fr;
     text-decoration: none;
     color: var(--text);
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 16px;
-    padding: 18px;
-    border-radius: 18px;
-    border: 1px solid rgba(176,141,60,0.16);
-    background: rgba(15,15,22,0.45);
-    align-items: center;
-    min-height: 190px;
-
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    background: linear-gradient(135deg, rgba(10, 10, 18, 0.9), rgba(8, 8, 14, 0.95));
+    transition: border-color 0.25s, background 0.25s;
+    min-height: 160px;
   }
 
-  .card:hover{
-    border-color: rgba(176,141,60,0.32);
-    background: rgba(15,15,22,0.55);
+  .ecard:hover {
+    border-color: rgba(177, 58, 52, 0.4);
+    background: linear-gradient(135deg, rgba(12, 12, 20, 0.95), rgba(10, 10, 18, 0.98));
   }
 
-  .thumb{
-    width: 150px;
-    height: 150px;
-    border-radius: 16px;
+  .ecard:hover .ecard__accent {
+    opacity: 1;
+  }
+
+  .ecard__thumb {
+    width: 130px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .ecard__img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 1px solid rgba(176,141,60,0.22);
-    background: rgba(11,11,16,0.6);
     display: block;
+    min-height: 160px;
   }
 
-  .thumb--empty{
-    background: radial-gradient(circle at 30% 30%, rgba(176,141,60,0.35), rgba(122,13,20,0.25));
+  .ecard__img-empty {
+    width: 100%;
+    min-height: 160px;
+    background: linear-gradient(135deg, rgba(177, 58, 52, 0.12), rgba(176, 141, 60, 0.08));
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .card__title{
-  font-weight: 900;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  font-size: 22px;
-  margin-bottom: 8px;
-  line-height: 1.1;
-}
+  .ecard__body {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
 
-.card__summary{
-  font-weight: 750;
-  letter-spacing: 0.01em;
-  font-size: 18px;
-  line-height: 1.5;
-  max-width: 80ch;
-}
+  .ecard__type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 2px;
+  }
 
+  .ecard__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
 
-  .meta{
-    margin-top: 10px;
+  .ecard__designation {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+    opacity: 0.8;
+  }
+
+  .ecard__summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 8px;
+    flex: 1;
+  }
+
+  .ecard__footer {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 10px;
+    gap: 8px;
+    margin-top: 12px;
     flex-wrap: wrap;
   }
 
-  .tags{
+  .ecard__tags {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     flex-wrap: wrap;
   }
 
-  .tag{
-    padding: 6px 8px;
-    border-radius: 999px;
-    border: 1px solid rgba(176,141,60,0.22);
-    background: rgba(11,11,16,0.45);
-    font-weight: 750;
-    letter-spacing: 0.06em;
+  .ecard__tag {
+    padding: 3px 7px;
+    background: rgba(177, 58, 52, 0.15);
+    border: 1px solid rgba(177, 58, 52, 0.25);
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: 11px;
+    color: rgba(232, 228, 220, 0.7);
   }
 
-  .updated{
-    font-weight: 650;
-    letter-spacing: 0.02em;
-    font-size: 13px;
-    opacity: 0.9;
+  .ecard__updated {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .ecard__accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--crimson), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  @media (max-width: 520px) {
+    .ecard { grid-template-columns: 90px 1fr; }
+    .ecard__thumb { width: 90px; }
+    .ecard__img { min-height: 120px; }
+    .ecard__img-empty { min-height: 120px; }
+    .ecard__title { font-size: 20px; }
+    .ecard__body { padding: 14px 16px; }
   }
 </style>

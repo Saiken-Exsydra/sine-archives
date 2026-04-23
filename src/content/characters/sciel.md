@@ -12,7 +12,7 @@ principle: "Sôðcwide"
 keeper_name: "That Which Will Not Be Otherwise"
 summary: "Skyphon of Truth. Bearer of the Instrument of Verum — the law that underwrites all other laws by establishing what is real."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Verum", "Truth", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

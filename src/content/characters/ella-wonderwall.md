@@ -17,12 +17,12 @@ eyes: "Dark amber — the same colour as her father's, in a face that reads as c
 dress: "Practical by habit; occasions requiring more are handled correctly but without enthusiasm"
 residence: "Pluribus Hill, Kalt'sen — SiNE residential quarters"
 occupation: "SiNE operational trainee — Meridian Council succession track (unofficial designation)"
+image: "/uploads/Ella-Wonderwall.png"
 summary: "Twenty-five years old. Light-domain. Being prepared for something she doesn't yet fully know the shape of."
 tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Archtype", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Successor"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: ""
 ---
 
 > *"She corrected my analysis in the third briefing session. Not aggressively — she was very polite about it. The correction was right. I've been watching her since."*

@@ -25,266 +25,456 @@ const allPublic = bySection.flatMap((s) =>
   s.entries.map((e) => ({ section: s.key, sectionLabel: s.label, entry: e }))
 );
 
-const lastUpdated =
-  allPublic
-    .slice()
-    .sort((a, b) => (a.entry.data.updated < b.entry.data.updated ? 1 : -1))[0] ?? null;
-
 const recent = allPublic
   .slice()
   .sort((a, b) => (a.entry.data.updated < b.entry.data.updated ? 1 : -1))
   .slice(0, 5);
 
-const lastHref = lastUpdated
-  ? `/${lastUpdated.section}/${lastUpdated.entry.slug}/`
-  : "/search/";
+// Section display config
+const sectionMeta: Record<string, { image: string; desc: string }> = {
+  characters:    { image: "/uploads/CharaBG.png",  desc: "Individuals of note within the Twilight Band and beyond." },
+  organizations: { image: "/uploads/Apocachynthion.png",      desc: "Institutions and houses that structure the Empire of Synus." },
+  sine:          { image: "/uploads/SiNELG.png",              desc: "The Seam Division and all that falls under the Wonderwall Seat." },
+  places:        { image: "/uploads/PLACESMAP.png",           desc: "Territories, cities, and the geographies of the known world." },
+  apparatus:     { image: "/uploads/Clepsydra.png",           desc: "Classified instruments, constructions, and mechanisms." },
+  systems:       { image: "/uploads/Redactory.png",           desc: "Structural and institutional frameworks that underpin the world." },
+  cosmology:     { image: "/uploads/CosmologyBG.png",         desc: "The nature of the Archive, the Dive, and existence itself." },
+};
 ---
 
-<MainLayout active="home" pageTitle="SINE ARCHIVES">
-  <section class="cards" aria-label="Dashboard stats">
-  <article class="card card--wide">
-      <div class="card__label">Latest Authorized Revision</div>
+<MainLayout active="home" pageTitle="SiNE Archives">
 
-      {lastUpdated ? (
-        <div class="last">
-          <div class="last__title">{lastUpdated.entry.data.title}</div>
-          <div class="last__meta">
-            {lastUpdated.sectionLabel} · Updated: {String(lastUpdated.entry.data.updated).slice(0, 10)}
-          </div>
-          <a class="btn" href={lastHref}>Access Record</a>
-        </div>
-      ) : (
-        <div class="last">
-          <div class="last__title">No public entries yet</div>
-          <div class="last__meta">—</div>
-          <a class="btn" href="/search/">Open Search</a>
-        </div>
-      )}
-    </article>
-    <article class="card card--wide card--recent">
-  <div class="card__label">Recent Record Activity</div>
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <img
+        src="/uploads/SLOGOHOME.png"
+        alt="SiNE Archives"
+        class="hero__logo"
+      />
+      <p class="hero__sub">
+        A compendium of classified records, field assessments, and theoretical frameworks
+        originating from within the Empire of Synus and its adjacent cosmological structures.
+      </p>
+      <div class="hero__divider"></div>
+      <p class="hero__meta">FILING YEAR 1127 · ACCESS LEVEL: PUBLIC · {totalPublic} RECORDS</p>
 
-  <div class="recent">
-    {recent.map((r) => (
-      <a class="recent__row" href={`/${r.section}/${r.entry.slug}/`}>
-        <div class="recent__main">
-          <div class="recent__title">{r.entry.data.title}</div>
-          <div class="recent__meta">
-            {r.sectionLabel} • {String(r.entry.data.updated).slice(0, 10)}
-          </div>
-        </div>
-        <div class="recent__arrow" aria-hidden="true">→</div>
-      </a>
-    ))}
+    </div>
+    <div class="hero__scroll-hint">
+      <span class="hero__scroll-text">Index</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+        <line x1="7" y1="0" x2="7" y2="16" stroke="rgba(232,228,220,0.3)" stroke-width="1"/>
+        <path d="M2 11 L7 17 L12 11" stroke="rgba(232,228,220,0.3)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
   </div>
-</article>
 
-    <article class="card card--primary">
-      <div class="card__label">Total Public Entries</div>
-      <div class="card__value">{totalPublic}</div>
-    </article>
+  <!-- ── SECTION GRID ── -->
+  <div class="index">
+    <div class="index__header">
+      <div class="index__line"></div>
+      <span class="index__label">CLASSIFIED SECTIONS</span>
+      <div class="index__line"></div>
+    </div>
 
-    {bySection.map((s) => (
-      <article class="card">
-        <div class="card__label">{s.label}</div>
-        <div class="card__value">{s.count}</div>
-      </article>
-    ))}
+    <div class="grid">
+      {bySection.map((s) => {
+        const meta = sectionMeta[s.key] ?? { image: "", desc: "" };
+        return (
+          <a class="sec-card" href={`/${s.key}/`}>
+            {meta.image && (
+              <div class="sec-card__img-wrap">
+                <img class="sec-card__img" src={meta.image} alt="" aria-hidden="true" />
+              </div>
+            )}
+            {!meta.image && <div class="sec-card__img-wrap sec-card__img-wrap--empty"></div>}
+            <div class="sec-card__body">
+              <div class="sec-card__count">{s.count} {s.count === 1 ? "entry" : "entries"}</div>
+              <div class="sec-card__label">{s.label}</div>
+              <div class="sec-card__desc">{meta.desc}</div>
+            </div>
+            <div class="sec-card__arrow">›</div>
+          </a>
+        );
+      })}
+    </div>
 
-    
-  </section>
+    <!-- Recent activity -->
+    {recent.length ? (
+      <div class="recent">
+        <div class="index__header" style="margin-bottom: 20px;">
+          <div class="index__line"></div>
+          <span class="index__label">RECENT ACTIVITY</span>
+          <div class="index__line"></div>
+        </div>
+        <div class="recent__list">
+          {recent.map((r) => (
+            <a class="recent__row" href={`/${r.section}/${r.entry.slug}/`}>
+              <div class="recent__main">
+                <div class="recent__title">{r.entry.data.title}</div>
+                <div class="recent__meta">{r.sectionLabel} · {String(r.entry.data.updated).slice(0, 10)}</div>
+              </div>
+              <span class="recent__arrow">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    ) : null}
+  </div>
 
-  <style>
-    .cards{
-      margin-top: 0;
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 12px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .card{
-  padding: 18px 14px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: linear-gradient(180deg, rgba(9,12,20,0.82), rgba(7,8,13,0.82));
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 14px 30px rgba(0,0,0,0.24);
-  min-height: 120px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.card:hover{
-  transform: translateY(-2px);
-  border-color: rgba(181, 58, 51, 0.52);
-}
-
-.card__label{
-  font-size: 10px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  font-weight: 700;
-  opacity: 0.76;
-}
-
-
-.card__value{
-  margin-top: 12px;
-  font-size: 50px;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-
-.card--primary{
-  background: linear-gradient(145deg, rgba(112,17,20,0.6), rgba(12,14,23,0.95));
-  border-color: rgba(185,62,56,0.74);
-}
-
-.card--primary .card__value{
-  font-size: 52px;
-}
-
-
-    .card--wide{
-  grid-column: span 6;
-  max-width: 100%;
-  min-height: 130px;
-  padding: 22px 18px;
-
-  background: radial-gradient(1100px 220px at 45% 0%, rgba(180,82,50,0.2), transparent 66%),
-    linear-gradient(180deg, rgba(12,15,24,0.9), rgba(8,9,13,0.92));
-
-  border-color: rgba(255,255,255,0.13);
-  align-items: stretch;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-}
-
-.card--wide::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 45%);
-}
-
-
-.last{
-  margin-top: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.last__title{
-  font-size: 48px;
-  line-height: 1.08;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-family: "Playfair Display", Georgia, serif;
-}
-
-
-.last__meta{
-  font-size: 13px;
-  font-weight: 550;
-  opacity: 0.68;
-  letter-spacing: 0.02em;
-}
-
-.last .btn{
-  margin-top: 4px;
-}
-
-.card--recent{
-  min-height: unset;
-}
-
-
-
-.btn{
-  display: inline-flex;
-  width: fit-content;
-  text-decoration: none;
-  color: var(--text);
-  background: linear-gradient(180deg,#941d1d,#6f1114);
-  border: 1px solid rgba(185,58,54,0.8);
-  padding: 9px 20px;
-  border-radius: 4px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
-}
-
-.btn:hover{
-  background: rgba(122,13,20,0.75);
-  border-color: rgba(122,13,20,0.95);
-  transform: translateY(-2px);
-}
-
-.btn:focus-visible{
-  outline: 2px solid rgba(176,141,60,0.55);
-  outline-offset: 3px;
-}
-
-.recent{
-  margin-top: 14px;
-  display: grid;
-  gap: 10px;
-}
-
-.recent__row{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 12px;
-  border-radius: 3px;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(6,8,14,0.42);
-  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-}
-
-.recent__row:hover{
-  transform: translateY(-2px);
-  border-color: rgba(176,141,60,0.25);
-  background: rgba(8,8,12,0.55);
-}
-
-.recent__title{
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-}
-
-.recent__meta{
-  margin-top: 4px;
-  font-size: 12px;
-  opacity: 0.65;
-  letter-spacing: 0.02em;
-}
-
-.recent__arrow{
-  opacity: 0.6;
-  font-weight: 800;
-}
-
-    @media (max-width: 980px){
-      .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .card--wide{ grid-column: span 2; }
-    }
-  </style>
 </MainLayout>
+
+<style>
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/uploads/CosmologyBG.png');
+    background-size: cover;
+    background-position: center 30%;
+    filter: saturate(0.7) brightness(0.35);
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 6, 11, 0.3) 0%,
+      rgba(6, 6, 11, 0.1) 40%,
+      rgba(6, 6, 11, 0.8) 80%,
+      var(--bg) 100%
+    );
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 640px;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero__logo {
+    width: 380px;
+    max-width: 80vw;
+    filter: drop-shadow(0 0 40px rgba(177, 58, 52, 0.3));
+  }
+
+  .hero__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: rgba(232, 228, 220, 0.55);
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    margin: 0;
+    max-width: 500px;
+  }
+
+  .hero__divider {
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--crimson), transparent);
+  }
+
+  .hero__meta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: rgba(232, 228, 220, 0.25);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .hero__search {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(10, 10, 18, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 480px;
+    color: var(--text-dim);
+    padding-left: 14px;
+    transition: border-color 0.2s;
+  }
+
+  .hero__search:focus-within {
+    border-color: rgba(177, 58, 52, 0.5);
+  }
+
+  .hero__search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 13px 12px;
+    outline: none;
+    min-width: 0;
+  }
+
+  .hero__search-input::placeholder {
+    color: rgba(232, 228, 220, 0.3);
+  }
+
+  .hero__search-btn {
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(177, 58, 52, 0.2);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0 20px;
+    cursor: pointer;
+    height: 100%;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+
+  .hero__search-btn:hover {
+    background: rgba(177, 58, 52, 0.4);
+  }
+
+  .hero__scroll-hint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero__scroll-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: rgba(232, 228, 220, 0.25);
+    text-transform: uppercase;
+  }
+
+  /* ── Index / grid ── */
+  .index {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  .index__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .index__line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .index__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: rgba(232, 228, 220, 0.3);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  /* ── Section card ── */
+  .sec-card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(10, 10, 18, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    transition: border-color 0.25s;
+  }
+
+  .sec-card:hover {
+    border-color: rgba(177, 58, 52, 0.5);
+  }
+
+  .sec-card:hover .sec-card__img {
+    opacity: 0.45;
+    transform: scale(1.05);
+  }
+
+  .sec-card:hover .sec-card__arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .sec-card__img-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .sec-card__img-wrap--empty {
+    background: rgba(177, 58, 52, 0.06);
+  }
+
+  .sec-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.38;
+    transition: opacity 0.4s, transform 0.6s;
+  }
+
+  .sec-card__body {
+    position: relative;
+    z-index: 2;
+    padding: 24px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: linear-gradient(
+      to top,
+      rgba(6, 6, 11, 0.95) 0%,
+      rgba(6, 6, 11, 0.7) 60%,
+      rgba(6, 6, 11, 0.3) 100%
+    );
+    justify-content: flex-end;
+  }
+
+  .sec-card__count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--crimson);
+    text-transform: uppercase;
+  }
+
+  .sec-card__label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+
+  .sec-card__desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .sec-card__arrow {
+    position: absolute;
+    right: 16px;
+    bottom: 20px;
+    color: var(--crimson);
+    font-size: 22px;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 3;
+  }
+
+  /* ── Recent ── */
+  .recent {
+    margin-top: 72px;
+  }
+
+  .recent__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .recent__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    background: rgba(10, 10, 18, 0.6);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .recent__row:hover {
+    border-color: rgba(176, 141, 60, 0.25);
+    background: rgba(12, 12, 20, 0.8);
+  }
+
+  .recent__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .recent__meta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.03em;
+    margin-top: 3px;
+  }
+
+  .recent__arrow {
+    font-size: 16px;
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: color 0.2s;
+  }
+
+  .recent__row:hover .recent__arrow {
+    color: var(--gold);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .index { padding: 60px 16px 80px; }
+    .grid { grid-template-columns: 1fr; }
+    .hero__content { padding: 0 16px; }
+  }
+</style>

@@ -12,7 +12,7 @@ principle: "Healdsweord"
 keeper_name: "That Which Held the World to Itself"
 summary: "Skyphon of Binding. Bearer of the Instrument of Constraint — the law governing gravity and physical coherence, holding the world together as a single structure rather than a collection of parts with nothing to keep them adjacent."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Constraint", "Binding", "Gravity", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---

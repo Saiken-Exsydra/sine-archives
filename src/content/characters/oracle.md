@@ -12,7 +12,7 @@ principle: "Forðgesceaft"
 keeper_name: "That Which Knew Before It Was Asked"
 summary: "Skyphon of Clairvoyance. Bearer of the Instrument of Foresight — the law governing the relationship between the world's present configuration and the configurations toward which present conditions tend."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Foresight", "Clairvoyance", "Divination", "Choir Penitent", "Keepers of Before"]
-status: "public"
+status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
 ---
