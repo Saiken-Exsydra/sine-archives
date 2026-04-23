@@ -6,7 +6,7 @@ tags: ["Places", "Twilight Band", "Terra", "Twilight", "Geography", "Climate", "
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/TwilightDG.png"
+image: "/uploads/TWdiagram.png"
 ---
 
 > *"Two thousand kilometres wide. Eighty thousand kilometres around. Every city you have ever heard of is in it. Every war in recorded history was fought inside it. Everything else is either the light that would kill you slowly or the dark that would kill you fast."*
