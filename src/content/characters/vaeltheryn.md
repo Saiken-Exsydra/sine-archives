@@ -11,7 +11,7 @@ tags: ["Vael'Theryn", "Page Primordial", "Time", "Terra", "Archtype War", "Const
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: ""
+image: "/uploads/Vael.png"
 ---
 
 > *"The constraint is not a cage. It is a decision. The distinction matters more than it might seem."*

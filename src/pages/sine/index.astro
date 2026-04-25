@@ -1,15 +1,817 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import SectionList from "../../components/SectionList.astro";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("sine");
+const publicEntries = all.filter((e) => e.data.status === "public");
+
+// Build panel data from content entries, mapping to the prototype's structure
+const panelOrder = ["sine", "hourglass", "stasis", "clockwork"];
+
+const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+
+const ACCENT_COLORS: Record<string, string> = {
+  sine:      "#b13a34",
+  hourglass: "#b08d3c",
+  stasis:    "#4a7fa5",
+  clockwork: "#6a4a9a",
+};
+
+const TAGLINES: Record<string, string> = {
+  sine:      "Six branches. One organization. Older than its peers.",
+  hourglass: "When the Empire cannot deploy, HourGlass fills the gap.",
+  stasis:    "The branch that doesn't officially exist.",
+  clockwork: "Zero institutional footprint. One hundred percent deniability.",
+};
+
+type SineEntry = {
+  slug: string;
+  label: string;
+  subtitle: string;
+  tagline: string;
+  image: string;
+  accentColor: string;
+  numeral: string;
+  fields: Record<string, string>;
+};
+
+const panels: SineEntry[] = panelOrder
+  .map((slug, i) => {
+    const entry = publicEntries.find((e) => e.slug === slug);
+    if (!entry) return null;
+    const d = entry.data as any;
+    const fields: Record<string, string> = {};
+    if (d.designation)   fields["Designation"]   = d.designation;
+    if (d.headquarters)  fields["Headquarters"]  = d.headquarters;
+    if (d.founded)       fields["Founded"]        = d.founded;
+    if (d.jurisdiction)  fields["Jurisdiction"]   = d.jurisdiction;
+    if (d.status_label)  fields["Status"]         = d.status_label;
+    if (d.affiliation)   fields["Affiliation"]    = d.affiliation;
+    return {
+      slug,
+      label:       d.title,
+      subtitle:    d.type,
+      tagline:     TAGLINES[slug] ?? d.summary,
+      image:       d.image ?? "",
+      accentColor: ACCENT_COLORS[slug] ?? "#b13a34",
+      numeral:     ROMAN[i],
+      fields,
+    };
+  })
+  .filter(Boolean) as SineEntry[];
 ---
 
 <MainLayout active="sine" pageTitle="SiNE Network — SiNE Archives">
-  <SectionList
-    section="sine"
-    title="SiNE Network"
-    searchLabel="Search SiNE entries…"
-    emptyLabel="No public SiNE entries yet."
-    image="/uploads/SiNELG.png"
-    desc="The Seam Division and all that falls under the Wonderwall Seat."
-  />
+
+  <div class="sine-root">
+
+    <!-- Identity bar -->
+    <div class="sine-identity">
+      <div class="sine-rule"></div>
+      <div class="sine-identity__center">
+        <img src="/uploads/SiNELG.png" alt="SiNE" class="sine-identity__logo" />
+        <div class="sine-identity__meta">
+          <span class="sine-identity__tag">SYNUS INTEGRATED NETWORK OF EQUILIBRIUM</span>
+          <span class="sine-identity__year">EST. YEAR 340</span>
+        </div>
+      </div>
+      <div class="sine-rule"></div>
+    </div>
+
+    <!-- Panels -->
+    <div class="sine-panels" id="sine-panels">
+      {panels.map((branch, i) => (
+        <button
+          class="sine-panel"
+          data-slug={branch.slug}
+          data-accent={branch.accentColor}
+          style={`--accent: ${branch.accentColor};`}
+          aria-label={`Open ${branch.label}`}
+          type="button"
+        >
+          <!-- BG image -->
+          <div class="sine-panel__bg">
+            {branch.image && (
+              <img class="sine-panel__bg-img" src={branch.image} alt="" />
+            )}
+            <div class="sine-panel__accent-grad"></div>
+          </div>
+
+          <!-- Roman numeral -->
+          <div class="sine-panel__numeral">{branch.numeral}</div>
+
+          <!-- Bottom content -->
+          <div class="sine-panel__content">
+            <div class="sine-panel__subtitle">{branch.subtitle}</div>
+            <div class="sine-panel__label">{branch.label}</div>
+            <div class="sine-panel__tagline">{branch.tagline}</div>
+            <div class="sine-panel__cta">Open File ›</div>
+          </div>
+
+          <!-- Left accent bar -->
+          <div class="sine-panel__bar"></div>
+        </button>
+      ))}
+    </div>
+
+    <!-- Caption -->
+    <div class="sine-caption">
+      <span>THE SEAM DIVISION AND ALL THAT FALLS UNDER THE WONDERWALL SEAT</span>
+      <span class="sine-caption__dot">·</span>
+      <span>SELECT A DIVISION</span>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="sine-overlay" id="sine-overlay" aria-hidden="true">
+    <div class="sine-modal" id="sine-modal" role="dialog" aria-modal="true">
+
+      <div class="sine-modal__hero" id="sine-modal-hero">
+        <img class="sine-modal__hero-bg" id="sine-modal-img" src="" alt="" />
+        <div class="sine-modal__hero-overlay"></div>
+        <div class="sine-modal__hero-accent" id="sine-modal-accent"></div>
+        <div class="sine-modal__hero-content">
+          <div class="sine-modal__subtitle" id="sine-modal-subtitle"></div>
+          <h2 class="sine-modal__title" id="sine-modal-title"></h2>
+          <p class="sine-modal__tagline" id="sine-modal-tagline"></p>
+        </div>
+        <button class="sine-modal__close" id="sine-modal-close" aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="sine-modal__body">
+        <aside class="sine-modal__sidebar">
+          <div class="sine-modal__sidebar-card">
+            <div class="sine-modal__sidebar-title" id="sine-modal-sidebar-title">Division Data</div>
+            <div id="sine-modal-fields"></div>
+          </div>
+          <div class="sine-modal__divider" id="sine-modal-divider"></div>
+          <div class="sine-modal__stamp">
+            <img src="/uploads/SiNELG.png" alt="SiNE" class="sine-modal__stamp-logo" />
+            <span class="sine-modal__stamp-text">SiNE INTERNAL CLASSIFICATION</span>
+          </div>
+        </aside>
+        <main class="sine-modal__main" id="sine-modal-main"></main>
+      </div>
+
+    </div>
+  </div>
+
 </MainLayout>
+
+<!-- Pass panel data to client script -->
+<script define:vars={{ panels }} is:inline>
+  const PANELS = panels;
+
+  const panelsEl  = document.getElementById("sine-panels");
+  const overlay   = document.getElementById("sine-overlay");
+  const modal     = document.getElementById("sine-modal");
+  const modalImg  = document.getElementById("sine-modal-img");
+  const modalAccent    = document.getElementById("sine-modal-accent");
+  const modalSubtitle  = document.getElementById("sine-modal-subtitle");
+  const modalTitle     = document.getElementById("sine-modal-title");
+  const modalTagline   = document.getElementById("sine-modal-tagline");
+  const modalSideTitle = document.getElementById("sine-modal-sidebar-title");
+  const modalFields    = document.getElementById("sine-modal-fields");
+  const modalDivider   = document.getElementById("sine-modal-divider");
+  const modalMain      = document.getElementById("sine-modal-main");
+  const closeBtn       = document.getElementById("sine-modal-close");
+
+  let closing = false;
+
+  function openModal(branch) {
+    if (!branch) return;
+
+    // Populate hero
+    modalImg.src = branch.image || "";
+    modalImg.style.display = branch.image ? "" : "none";
+    modalAccent.style.background = `linear-gradient(135deg, ${branch.accentColor}33, transparent)`;
+    modalSubtitle.textContent = branch.subtitle;
+    modalSubtitle.style.color = branch.accentColor;
+    modalTitle.textContent = branch.label;
+    modalTagline.textContent = `"${branch.tagline}"`;
+
+    // Sidebar
+    modalSideTitle.style.color = branch.accentColor;
+    modalDivider.style.background = branch.accentColor;
+    modalFields.innerHTML = Object.entries(branch.fields || {}).map(([k, v]) => `
+      <div class="sine-field-row">
+        <div class="sine-field-key">${k}</div>
+        <div class="sine-field-val">${v}</div>
+      </div>
+    `).join("");
+
+    // Main body — fetch rendered entry content via slug
+    modalMain.innerHTML = `<p class="sine-modal__loading">Loading…</p>`;
+    fetch(`/sine/${branch.slug}/`)
+      .then(r => r.text())
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        // Extract the entry body content
+        const content = doc.querySelector(".entry-body") || doc.querySelector("article") || doc.querySelector("main");
+        if (content) {
+          modalMain.innerHTML = content.innerHTML;
+        } else {
+          // Fallback: show summary
+          modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
+        }
+      })
+      .catch(() => {
+        modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
+      });
+
+    overlay.setAttribute("aria-hidden", "false");
+    overlay.classList.add("is-open");
+    modal.classList.remove("is-closing");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (closing) return;
+    closing = true;
+    modal.classList.add("is-closing");
+    setTimeout(() => {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      modal.classList.remove("is-closing");
+      document.body.style.overflow = "";
+      closing = false;
+    }, 380);
+  }
+
+  // Panel buttons
+  document.querySelectorAll(".sine-panel").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const slug = btn.dataset.slug;
+      const branch = PANELS.find(p => p.slug === slug);
+      openModal(branch);
+    });
+  });
+
+  // Close
+  closeBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal(); });
+</script>
+
+<style>
+  /* ── Root: full-viewport, flex column ── */
+  .sine-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 600px;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  /* ── Identity bar ── */
+  .sine-identity {
+    display: flex;
+    align-items: center;
+    padding: 22px 48px;
+    flex-shrink: 0;
+  }
+
+  .sine-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  }
+
+  .sine-identity__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0 48px;
+  }
+
+  .sine-identity__logo {
+    height: 32px;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 20px rgba(177,58,52,0.2));
+  }
+
+  .sine-identity__meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .sine-identity__tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    color: rgba(232,228,220,0.2);
+    text-transform: uppercase;
+  }
+
+  .sine-identity__year {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    color: rgba(177,58,52,0.4);
+    text-transform: uppercase;
+  }
+
+  /* ── Panel row ── */
+  .sine-panels {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ── Individual panel ── */
+  .sine-panel {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    border: none;
+    background: #07070e;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    outline: none;
+    border-right: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .sine-panel:last-child {
+    border-right: none;
+  }
+
+  .sine-panel:hover {
+    flex: 2.4;
+  }
+
+  /* BG image */
+  .sine-panel__bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .sine-panel__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.08;
+    filter: saturate(0.3) brightness(0.5);
+    transition: opacity 0.6s ease, transform 0.8s ease, filter 0.6s ease;
+  }
+
+  .sine-panel:hover .sine-panel__bg-img {
+    opacity: 0.28;
+    transform: scale(1.08);
+    filter: saturate(0.7) brightness(0.8);
+  }
+
+  .sine-panel__accent-grad {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, color-mix(in srgb, var(--accent) 13%, transparent) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .sine-panel:hover .sine-panel__accent-grad {
+    opacity: 1;
+  }
+
+  /* Roman numeral */
+  .sine-panel__numeral {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    color: rgba(255,255,255,0.08);
+    transition: color 0.5s;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .sine-panel:hover .sine-panel__numeral {
+    color: var(--accent);
+    opacity: 0.7;
+  }
+
+  /* Bottom content */
+  .sine-panel__content {
+    position: relative;
+    z-index: 2;
+    padding: 56px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: linear-gradient(to top, rgba(6,6,11,1) 0%, rgba(6,6,11,0.85) 50%, transparent 100%);
+  }
+
+  .sine-panel__subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    opacity: 0.5;
+    transition: opacity 0.4s;
+  }
+
+  .sine-panel:hover .sine-panel__subtitle {
+    opacity: 1;
+  }
+
+  .sine-panel__label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    white-space: nowrap;
+    letter-spacing: 0.12em;
+    transition: letter-spacing 0.5s ease;
+  }
+
+  .sine-panel:hover .sine-panel__label {
+    letter-spacing: 0.18em;
+  }
+
+  .sine-panel__tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: rgba(232,228,220,0.5);
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+  }
+
+  .sine-panel:hover .sine-panel__tagline {
+    max-height: 40px;
+    opacity: 0.65;
+    transform: translateY(0);
+  }
+
+  .sine-panel__cta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    padding: 6px 12px;
+    align-self: flex-start;
+    margin-top: 4px;
+    color: var(--accent);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  .sine-panel:hover .sine-panel__cta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Left accent bar */
+  .sine-panel__bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .sine-panel:hover .sine-panel__bar {
+    opacity: 1;
+  }
+
+  /* ── Caption ── */
+  .sine-caption {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    padding: 14px 32px;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: rgba(232,228,220,0.18);
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .sine-caption__dot {
+    color: rgba(255,255,255,0.15);
+  }
+
+  /* ── Overlay ── */
+  .sine-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(4,4,8,0.88);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  .sine-overlay.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* ── Modal ── */
+  .sine-modal {
+    width: 100%;
+    max-width: 900px;
+    max-height: calc(100vh - 80px);
+    background: rgba(9,9,15,0.98);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+    transform: translateY(24px);
+    transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.38s ease;
+    opacity: 0;
+  }
+
+  .sine-overlay.is-open .sine-modal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .sine-modal.is-closing {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+
+  /* Modal hero */
+  .sine-modal__hero {
+    position: relative;
+    height: 220px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .sine-modal__hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.5) brightness(0.25);
+  }
+
+  .sine-modal__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(6,6,11,0.1), rgba(6,6,11,0.85));
+  }
+
+  .sine-modal__hero-accent {
+    position: absolute;
+    inset: 0;
+  }
+
+  .sine-modal__hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  .sine-modal__subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .sine-modal__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .sine-modal__tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(232,228,220,0.5);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .sine-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgba(232,228,220,0.6);
+    transition: background 0.2s;
+  }
+
+  .sine-modal__close:hover {
+    background: rgba(255,255,255,0.13);
+  }
+
+  /* Modal body */
+  .sine-modal__body {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    overflow: auto;
+    flex: 1;
+  }
+
+  .sine-modal__sidebar {
+    padding: 28px 24px;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .sine-modal__sidebar-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .sine-modal__sidebar-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  :global(.sine-field-row) {
+    padding: 9px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  :global(.sine-field-key) {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  :global(.sine-field-val) {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .sine-modal__divider {
+    height: 1px;
+    opacity: 0.25;
+  }
+
+  .sine-modal__stamp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sine-modal__stamp-logo {
+    height: 16px;
+    opacity: 0.3;
+  }
+
+  .sine-modal__stamp-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.14em;
+    color: rgba(232,228,220,0.15);
+    text-transform: uppercase;
+  }
+
+  .sine-modal__main {
+    padding: 32px 36px;
+    overflow: auto;
+  }
+
+  .sine-modal__loading {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  /* Prose styles injected into modal main */
+  :global(.sine-modal__main p),
+  :global(.sine-modal__main .sine-modal__para) {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin: 0 0 18px;
+  }
+
+  :global(.sine-modal__main h2),
+  :global(.sine-modal__main h3) {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: var(--text);
+    margin: 24px 0 10px;
+    letter-spacing: 0.02em;
+  }
+
+  :global(.sine-modal__main h2) { font-size: 26px; }
+  :global(.sine-modal__main h3) { font-size: 20px; }
+
+  :global(.sine-modal__main blockquote) {
+    border-left: 2px solid var(--crimson);
+    padding-left: 16px;
+    margin: 0 0 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(232,228,220,0.6);
+  }
+
+  :global(.sine-modal__main strong) {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  :global(.sine-modal__main hr) {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin: 24px 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .sine-identity { padding: 16px 20px; }
+    .sine-identity__center { padding: 0 16px; }
+    .sine-identity__tag,
+    .sine-identity__year { font-size: 7px; letter-spacing: 0.14em; }
+    .sine-panel__label { font-size: 16px; }
+    .sine-panel__numeral { font-size: 40px; }
+    .sine-modal__body { grid-template-columns: 1fr; }
+    .sine-modal__sidebar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .sine-modal__title { font-size: 32px; }
+    .sine-overlay { padding: 16px; }
+  }
+</style>

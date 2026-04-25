@@ -1,8 +1,9 @@
 ---
-title: "The Bright Margin"
+title: "The Brightmargin"
 type: "Place"
 summary: "The southern frontier. Where the Twilight Band ends and the burning begins. Also called the Scorch Margin — the edge where the habitable world gives way to the irradiated silence of the Bright Side."
-tags: ["Places", "Bright Margin", "Scorch Margin", "Bright Side", "Twilight Band", "Vael'Khar", "BrightCrystal", "Callings", "Extraction", "Empire of Synus", "Scorch Escarpment"]
+tags: ["Places", "Brightmargin", "Scorch Margin", "Bright Side", "Twilight Band", "Vael'Khar", "BrightCrystal", "Callings", "Extraction", "Empire of Synus", "Scorch Escarpment"]
+priority: 1
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"

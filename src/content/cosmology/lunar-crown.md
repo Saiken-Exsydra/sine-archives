@@ -2,7 +2,7 @@
 title: "The Lunar Crown"
 type: "Cosmology"
 summary: "The fractured moon. A wound in the sky that does not heal — and the reason the world is the way it is."
-tags: ["Cosmology", "Lunar Crown", "Fracture", "Callings", "Syrâlene", "Moon", "Intact Seal", "Precursors"]
+tags: ["Cosmology", "Lunar Crown", "Fracture", "Callings", "Syr'lene", "Moon", "Intact Seal", "Precursors"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
@@ -20,7 +20,7 @@ The Lunar Crown is Terra's primary moon. It is fractured. The debris field surro
 
 The fracture is not the result of natural impact events. It is the permanent mark of an assault. Something of enormous power, from outside the Page boundary, pressed against the threshold of Terra's reality with sufficient force that the moon — then functioning as the **Intact Seal**, the Precursor-anchored expression of the world's threshold integrity — shattered under the contact.
 
-The assault was repelled. The would-be intruder did not enter. A fragment of whatever made that attempt was captured inside the Crown's structure, contained there by the Precursor Syrâlene at the cost of her own freedom of action ever since. The world survived. The moon did not survive intact. The fragment is still there.
+The assault was repelled. The would-be intruder did not enter. A fragment of whatever made that attempt was captured inside the Crown's structure, contained there by the Precursor Syr'lene at the cost of her own freedom of action ever since. The world survived. The moon did not survive intact. The fragment is still there.
 
 This is the event the Church calls **the Fracture** — or, in older liturgy, the Severance of the Crown.
 
@@ -36,7 +36,7 @@ The Intact Seal was not infinite. The assault against it was sufficient to fract
 
 ---
 
-## The Fragment and Syrâlene
+## The Fragment and Syr'lene
 
 The fragment in the Lunar Crown was not the Fracture's product. It predated the event.
 
@@ -44,11 +44,11 @@ In the era of the active Seal, the Skyphons governed the translation barrier as 
 
 When the assault shattered the Seal, the active governance maintaining that containment ended.
 
-**Syrâlene**, one of the five Precursors who built and inhabited Terra's stabilization infrastructure, chose to contain it. She transferred her own Anchor — the domain of her structural identity — into the lunar lattice permanently, embedding herself in the Crown's architecture to hold the fragment in place.
+**Syr'lene**, one of the five Precursors who built and inhabited Terra's stabilization infrastructure, chose to contain it. She transferred her own Anchor — the domain of her structural identity — into the lunar lattice permanently, embedding herself in the Crown's architecture to hold the fragment in place.
 
 She is still there. She has been there since the Fracture.
 
-The containment is active. The fragment presses outward continuously. Syrâlene holds inward continuously. This is not a completed act. It is an ongoing one, conducted over the entire span of recorded history, in silence, without institutional acknowledgment, by someone who gave up her mobility and her freedom of action so that the fragment would not advance.
+The containment is active. The fragment presses outward continuously. Syr'lene holds inward continuously. This is not a completed act. It is an ongoing one, conducted over the entire span of recorded history, in silence, without institutional acknowledgment, by someone who gave up her mobility and her freedom of action so that the fragment would not advance.
 
 She retains limited capacity to act outside the Crown — small resonance modulations, subtle interventions that arrive through existing probability structures rather than as direct force. What the northern frontier's military calls miraculous timing in engagements it could not have survived otherwise. The Church calls it the Sovereign's grace. She does not correct either interpretation.
 
@@ -84,4 +84,4 @@ The Fracture is the event from which almost everything about the world's current
 
 All of it traces back to the night the Moon shattered.
 
-The Church is correct that the world is not as it was. The threshold is compromised. The fragment is still there. Syrâlene is still holding it. These are facts of the world's current structure, not theological positions. They happen to be things the Church has been saying for its entire institutional existence, and they happen to be accurate.
+The Church is correct that the world is not as it was. The threshold is compromised. The fragment is still there. Syr'lene is still holding it. These are facts of the world's current structure, not theological positions. They happen to be things the Church has been saying for its entire institutional existence, and they happen to be accurate.

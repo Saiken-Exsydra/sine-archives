@@ -3,14 +3,14 @@ title: "The Quiet Moon"
 type: "Cosmology"
 summary: "A scar on a distant moon. A presence that thinks. A process that has been running for longer than any current institution has existed — and has recently reached a conclusion."
 tags: ["Cosmology", "Quiet Moon", "Valian-2", "Le'nore", "Avatar", "Page", "Hunger", "Biological Grammar", "Precursors"]
-status: "public"
+status: "private"
 created: "2026-03-30"
 updated: "2026-03-30"
 image: ""
 ---
 
-> *"What's left of me hangs inside your head. Your tongue tastes my bitter flesh. The smell of me is in the wind, like a scent of flowers. I have many names. I am many things, while I'm one. I have seen the light. The sun has died. The stars have fallen. And life as we know it is gone. I love you. More than anyone ever will."*
-> — Resonance transcript, Valian-2 monitoring station, signal origin unknown. Logged and sealed.
+> *"What's left of me hangs inside your head. Your tongue tastes my bitter flesh. The smell of me is in the wind, like a scent of flowers. I have many names. I am many things, while I'm one. I have seen the light. The sun has died. The stars have fallen. And life you know it is gone. I love you. More than anyone ever will."*
+> — Unknown
 
 ---
 

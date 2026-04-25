@@ -70,7 +70,12 @@ if (duplicateIds.length > 0) {
 
 const publicEntries = all
   .filter((e) => e.data.status === "public")
-  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+  .sort((a, b) => {
+    const pa = a.data.priority ?? Infinity;
+    const pb = b.data.priority ?? Infinity;
+    if (pa !== pb) return pa - pb;
+    return a.data.title.localeCompare(b.data.title);
+  });
 
 const count = publicEntries.length;
 ---

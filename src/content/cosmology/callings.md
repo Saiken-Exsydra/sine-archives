@@ -78,4 +78,4 @@ The Church interprets Callings as the voice of the fractured Seal, a residue of 
 
 The Apocachynthion interprets Callings as resonance events with identifiable origins and predictable structural properties. This is also accurate. The two interpretations are not incompatible except where institutions insist on exclusivity of explanation.
 
-What the Callings actually are, at the level of mechanism, is the containment struggle inside the Lunar Crown — the friction between the fragment's pressure outward and Syrâlene's containment — made audible to the world at a distance. The world hears the effort. It does not hear either side of it clearly. It hears the sound of something that has been happening for a very long time and is still happening right now.
+What the Callings actually are, at the level of mechanism, is the containment struggle inside the Lunar Crown — the friction between the fragment's pressure outward and Syr'lene's containment — made audible to the world at a distance. The world hears the effort. It does not hear either side of it clearly. It hears the sound of something that has been happening for a very long time and is still happening right now.

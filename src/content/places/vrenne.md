@@ -1,8 +1,9 @@
 ---
 title: "Vrenne"
 type: "Place"
-summary: "The academy city. Home of the Academy of Syr'lene — the oldest and largest Redactor training center in the Empire — and a city whose identity was shaped by the institution before the institution was fully aware of what it was doing."
-tags: ["Places", "Vrenne", "Apocachynthion", "Academy of Syr'lene", "Redactory", "Training", "Education"]
+summary: "The Apocachynthion's primary training city. Home of the Academy of Syr'lene — the oldest and largest Redactor training center in the Empire — a city whose identity was shaped by the institution before the institution was fully aware of what it was doing."
+tags: ["Places", "Vrenne", "Central", "Apocachynthion", "Academy of Syr'lene", "Redactory", "Training", "Education"]
+priority: 1
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-31"

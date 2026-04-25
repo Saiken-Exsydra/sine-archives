@@ -2,7 +2,7 @@
 title: "The Precursors"
 type: "Cosmology"
 summary: "The builders. An ancient civilization of Archtypes who engineered Terra, seeded its biosphere, and did not entirely leave — and who carry knowledge of the world's structure that no current institution fully shares."
-tags: ["Cosmology", "Precursors", "Archtypes", "Terra", "Fracture", "Syrâlene", "Skyphons", "Page", "Book of Humanity", "Keepers of Before"]
+tags: ["Cosmology", "Precursors", "Archtypes", "Terra", "Fracture", "Syr'lene", "Skyphons", "Page", "Book of Humanity", "Keepers of Before"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
@@ -66,7 +66,7 @@ The Instruments governed the world. The governance *was* the barrier maintenance
 
 The Fracture — the assault on the Lunar Crown, the shattering of the Intact Seal, the intrusion of an external fragment into the world's threshold — was not something the Precursors anticipated as an immediate threat to an ongoing project. It came from outside. It came with sufficient force to break what they had built to hold.
 
-**Syrâlene** contained the fragment at the cost of her freedom of movement. She is still in the Lunar Crown. She has been there since.
+**Syr'lene** contained the fragment at the cost of her freedom of movement. She is still in the Lunar Crown. She has been there since.
 
 The others changed how they were present in the world after the Fracture. Some withdrew from active involvement in Terra's management, leaving the stabilization infrastructure to maintain the world in their absence. Some embedded themselves in Terra's structure in forms that no current institution has the framework to identify. The Precursors did not simply leave the world they built. They changed how they were present in it.
 

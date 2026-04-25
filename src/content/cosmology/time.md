@@ -64,7 +64,7 @@ Whether the world currently has Time Fragment activity within it is not informat
 
 ## Time and the Callings
 
-The Callings — the resonance surges Terra experiences on its orbital cycle — are not, in the deepest structural sense, simply the friction of Syrâlene's containment conflict, though they are that too. They propagate through the resonance substrate along the same ordered pathways that Time's traversal establishes. Their periodicity reflects the orbital geometry that determines how Terra's world is positioned relative to the Lunar Crown's resonance architecture.
+The Callings — the resonance surges Terra experiences on its orbital cycle — are not, in the deepest structural sense, simply the friction of Syr'lene's containment conflict, though they are that too. They propagate through the resonance substrate along the same ordered pathways that Time's traversal establishes. Their periodicity reflects the orbital geometry that determines how Terra's world is positioned relative to the Lunar Crown's resonance architecture.
 
 In the experience of Redactors, a strong Calling shifts the traversal conditions that the Dive accesses — altering the configurations that are locally available to be indexed, making some pathways easier and others temporarily inaccessible. This is what "coherence instability" during a Calling feels like from inside: the traversal order being temporarily reorganized in the vicinity of a resonance surge, such that configurations the practitioner relies on are briefly in different positions in the traversal sequence.
 

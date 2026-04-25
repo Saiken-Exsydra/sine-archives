@@ -22,7 +22,7 @@ tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hu
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/LenoreEngel.png"
+image: "/uploads/Lenore.png"
 ---
 
 > *"She sat across from me for forty minutes. She was polite, cooperative, answered every question with what I can only describe as genuine warmth. Halfway through the third assessment battery, I looked up from my notes and she was looking at me. And I had the very clear, very specific, very irrational sense that she was deciding something. I wrote that in my notes and then I crossed it out. I have thought about that crossing-out ever since."*

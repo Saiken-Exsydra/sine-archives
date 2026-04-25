@@ -3,6 +3,7 @@ title: "The Darkmargin"
 type: "Place"
 summary: "The northern frontier. Where the Twilight Band ends, the dark begins, and the War of the Threshold is fought."
 tags: ["Places", "Darkmargin", "War of the Threshold", "Cold Fleet", "Dark Ends", "SOE", "Northern Front", "Victorian Rite", "HourGlass", "Black Shores", "Drowned Shelf"]
+priority: 1
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"

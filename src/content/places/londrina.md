@@ -1,8 +1,8 @@
 ---
 title: "Lon'drina"
 type: "Place"
-summary: "The academy city. A mid-sized city in the temperate heart of the Central Region, known throughout the Empire as the home of one of the oldest and most prestigious Imperial Redactor Academies."
-tags: ["Places", "Lon'drina", "Central Region", "Empire", "Redactor", "Academy", "Apocachynthion", "Scholarship"]
+summary: "The Empire's oldest academy city. Lon'drina's prestige is built on centuries of imperial continuity — a scholarly city whose credential carries weight no newer institution can replicate, and whose pace reflects a culture organized around the long work of understanding."
+tags: ["Places", "Lon'drina", "Central Region", "Empire", "Redactor", "Academy of Lon'drina", "Apocachynthion", "Scholarship", "Prestige"]
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
@@ -14,11 +14,11 @@ image: "/uploads/Londrina.png"
 
 ---
 
-## The Academy City
+## The Imperial Academy City
 
-Lon'drina is a mid-sized city in the temperate heart of the Central Region, known throughout the Empire primarily as the location of one of the oldest and most prestigious of the **Imperial Redactor Academies** outside of Kalt'sen. The Academy of Lon'drina was established in the early centuries of the Empire's formation and retains its primacy through tradition and political inertia as much as ongoing institutional excellence.
+Lon'drina is a mid-sized city in the temperate heart of the Central Region. Its identity is not built around operational scale or specialist capability — it is built around age and continuity. The **Academy of Lon'drina** was established in the early centuries of the Empire's formation, predating most of the Apocachynthion's current institutional architecture, and it retains a prestige that newer institutions do not possess and cannot acquire.
 
-Where the Academy of Syr'lene at Vrenne is the Apocachynthion's largest training institution — handling the broadest volume of assessment, certification, and specialist research — the Academy of Lon'drina holds a different kind of weight. It is older in the specific sense of institutional continuity within the imperial framework, and its reputation is built on prestige rather than scale. Scholars trained at Lon'drina carry a particular kind of credential that the academic world recognizes.
+The distinction matters: the Academy of Syr'lene at Vrenne is where the Apocachynthion does its work — assessment volume, specialist panels, advanced research, certification infrastructure. The Academy of Lon'drina is where the Empire educated its practitioners before that infrastructure existed. It does not compete with Vrenne on operational terms. It does not need to. Scholars trained at Lon'drina carry a credential whose weight is entirely about what the institution has been, not what it currently does at scale.
 
 Population: approximately **600,000**.
 

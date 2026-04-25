@@ -36,6 +36,7 @@ const entrySchema = z.object({
   principle: z.string().optional(),
   keeper_name: z.string().optional(),
   user_status: z.string().optional(),
+  priority: z.number().optional(),
   tags: z.array(z.string().min(1)).min(1),
   status: z.enum(["public", "private"]),
   created: z.preprocess(

@@ -22,7 +22,7 @@ tags: ["Synus", "Wonderwall", "Redactor", "Radiance", "Inkless"]
 status: "public"
 created: "2026-02-12"
 updated: "2026-03-17"
-image: "/uploads/E'clesia Wonderwall FINAL.png"
+image: "/uploads/Ec'lesia-Wonderwall2.png"
 ---
 
 > *"Light does not experience time. Light is not the antithesis of darkness. Light is, was, and always will be. The ligament of the cosmos. A wonder of infinity. A wall of contemplation. An eternal affirmation of the undying denial."*
