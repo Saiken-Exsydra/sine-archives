@@ -1,5 +1,5 @@
 ---
-import EntryLayout from "../../../layouts/EntryLayout.astro";
+import CharacterEntryLayout from "../../../layouts/CharacterEntryLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -14,4 +14,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<EntryLayout active="characters" entry={entry} />
+<CharacterEntryLayout entry={entry} />

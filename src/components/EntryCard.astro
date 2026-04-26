@@ -17,7 +17,7 @@ const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toL
 <a class="ecard" href={href} data-search={search}>
   <div class="ecard__thumb">
     {entry.data.image ? (
-      <img class="ecard__img" src={entry.data.image} alt="" loading="lazy" />
+      <img class="ecard__img" src={entry.data.image} alt="" loading="lazy" style={(entry.data as any).image_position ? `object-position: ${(entry.data as any).image_position}` : undefined} />
     ) : (
       <div class="ecard__img-empty">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" opacity="0.3">
@@ -75,23 +75,26 @@ const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toL
   }
 
   .ecard__thumb {
+    position: relative;
     width: 130px;
+    align-self: stretch;
     border-right: 1px solid rgba(255, 255, 255, 0.06);
     overflow: hidden;
     flex-shrink: 0;
   }
 
   .ecard__img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    min-height: 160px;
   }
 
   .ecard__img-empty {
-    width: 100%;
-    min-height: 160px;
+    position: absolute;
+    inset: 0;
     background: linear-gradient(135deg, rgba(177, 58, 52, 0.12), rgba(176, 141, 60, 0.08));
     display: flex;
     align-items: center;
@@ -193,8 +196,6 @@ const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toL
   @media (max-width: 520px) {
     .ecard { grid-template-columns: 90px 1fr; }
     .ecard__thumb { width: 90px; }
-    .ecard__img { min-height: 120px; }
-    .ecard__img-empty { min-height: 120px; }
     .ecard__title { font-size: 20px; }
     .ecard__body { padding: 14px 16px; }
   }

@@ -8,7 +8,7 @@ affiliation: "Independent contractor (Apocachynthion-licensed)"
 house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
 registry_status: "Registered — compelled intake 1119; dual certification 1124; conditional license active"
-designation: "Bifurcated Architecture — no prior registry precedent"
+designation: "Gemini · Mirror and Threshold · No prior precedent"
 build: "Compact; tensile"
 complexion: "Pale olive"
 hair: "Black, straight, shoulder-length; typically bound back during operations"
@@ -22,6 +22,7 @@ status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
 image: "/uploads/Rouxinol-Kaise.png"
+hero_image: "/uploads/Rouxinol-HERO.png"
 ---
 
 > *"She does not carry ghosts. She carries what ghosts are made of — the shape of a person after the person is gone."*

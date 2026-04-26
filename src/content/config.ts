@@ -48,6 +48,7 @@ const entrySchema = z.object({
     z.string()
   ),
   image: z.string().optional(),
+  hero_image: z.string().optional(),
 });
 
 export const collections = {

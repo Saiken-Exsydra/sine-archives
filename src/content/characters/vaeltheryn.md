@@ -3,7 +3,7 @@ title: "Vael'Theryn"
 type: "Character"
 affiliation: "Page Primordial (Terra) — not a mortal or Archtype-class entity"
 rank: "Page Primordial"
-designation: "Embedded — Terra's substrate; omniscient within the Page; self-constrained"
+designation: "Page Primordial · Constrained by choice, not by force"
 registry_status: "Not registered — predates the concept of registration"
 occupation: "Witness — constrained observation and bounded intervention"
 summary: "The world's oldest inhabitant. Constrained to watch. Permitted to act, rarely, and within very specific limits."
@@ -12,6 +12,7 @@ status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
 image: "/uploads/Vael.png"
+hero_image: "/uploads/Vael-HERO2.png"
 ---
 
 > *"The constraint is not a cage. It is a decision. The distinction matters more than it might seem."*

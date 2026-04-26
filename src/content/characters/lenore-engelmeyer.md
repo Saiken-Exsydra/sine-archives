@@ -8,7 +8,7 @@ affiliation: "Apocachynthion (licensed); House Engelmeyer (reintegrated main lin
 house: "Engelmeyer (main line, reintegrated 1126 — formerly cadet Voren branch)"
 rank: "Quill"
 registry_status: "Registered — intake 1120; Quill certification issued 1122; conditional operational license active"
-designation: "Deception-Anchor (confirmed classification — classification is incomplete)"
+designation: "Deception-Anchor · Quiet Moon"
 height: "169 cm"
 build: "Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy"
 complexion: "Fair; even — no surface coherence tells during ability expression. The absence of tells is itself a tell, to anyone looking for it."
@@ -23,6 +23,7 @@ status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
 image: "/uploads/Lenore.png"
+hero_image: "/uploads/Lenore-HERO.png"
 ---
 
 > *"She sat across from me for forty minutes. She was polite, cooperative, answered every question with what I can only describe as genuine warmth. Halfway through the third assessment battery, I looked up from my notes and she was looking at me. And I had the very clear, very specific, very irrational sense that she was deciding something. I wrote that in my notes and then I crossed it out. I have thought about that crossing-out ever since."*

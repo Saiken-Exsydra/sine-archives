@@ -1,5 +1,5 @@
 ---
-title: "Ec'lesia Wonderwall"
+title: "Ec'lesia Yalara Wonderwall"
 type: "Character"
 age: "24 (at time of filing, 1127)"
 birth_year: "1105"
@@ -8,7 +8,7 @@ affiliation: "Apocachynthion (provisional)"
 house: "Wonderwall (cadet branch, maternal line)"
 rank: "Quill (Provisional)"
 registry_status: "Registered — intake suspended, file open"
-designation: "Inkless · Radiance-class Redactor"
+designation: "Inkless · What the Pale was building toward"
 height: "164cm"
 build: "Slight"
 complexion: "Very pale"
@@ -23,6 +23,7 @@ status: "public"
 created: "2026-02-12"
 updated: "2026-03-17"
 image: "/uploads/Ec'lesia-Wonderwall2.png"
+image_position: "center top"
 ---
 
 > *"Light does not experience time. Light is not the antithesis of darkness. Light is, was, and always will be. The ligament of the cosmos. A wonder of infinity. A wall of contemplation. An eternal affirmation of the undying denial."*

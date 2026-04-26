@@ -23,6 +23,7 @@ status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
 image: "/uploads/saiken-exsydra.png"
+hero_image: "/uploads/Saiken-Exsydra-HERO.png"
 ---
 
 > *"He is not a Redactor. He is not a Divined vessel. He is not a standard-trained operative. He is what happens when the Dive is approached from outside its own logic — not climbed down into, but built around. The Index Theorem has no clause for this. We wrote one ourselves."*

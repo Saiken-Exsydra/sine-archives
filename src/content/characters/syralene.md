@@ -3,7 +3,7 @@ title: "Syr'lene"
 type: "Character"
 affiliation: "Precursors (original); Lunar Crown (current — permanent embedding)"
 rank: "Precursor"
-designation: "Embedded — Lunar Crown lattice integration; Anchor transferred to lunar architecture"
+designation: "Precursor · The rainbow in the night"
 registry_status: "Not registered — predates the Apocachynthion by a margin that makes the question inapplicable"
 occupation: "Containment — the fragment within the Crown"
 summary: "The Precursor in the Moon. She has been holding it since the Fracture. She is still holding it now."
@@ -12,6 +12,7 @@ status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
 image: "/uploads/Syr'lene.png"
+hero_image: "/uploads/Syr'lene-HERO.png"
 ---
 
 > *"Ask what performs the miracles at the northern front — the ones that cannot be explained by doctrine or deployment. The Church says: the Sovereign's grace. The answer is not wrong. It is not complete."*

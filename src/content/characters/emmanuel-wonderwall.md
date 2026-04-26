@@ -8,7 +8,7 @@ affiliation: "SiNE (founder and principal); Apocachynthion (registered — Archt
 house: "Wonderwall (founding figure, primary line)"
 rank: "Archtype"
 registry_status: "Registered — Archtype classification; no certification ceiling; operational license unconditional"
-designation: "Light-domain Anchor (confirmed) — full Archtype classification. Pale-bearer, eight hundred years continuous. Pale-bearer status does not appear in any institutional document."
+designation: "Archtype · Twelve centuries. One question he hasn't answered yet."
 height: "185 cm"
 build: "Broad, unhurried; the bearing of someone who has not found a room they couldn't wait in"
 complexion: "Brown, even — the particular evenness of someone whose biological processes have been stable for a very long time"

@@ -8,7 +8,7 @@ affiliation: "Wonderwall estate (domestic staff, Kalt'sen)"
 house: ""
 rank: ""
 registry_status: "Unregistered — not known to the Apocachynthion in any capacity"
-designation: "Resonance-symbiote vessel · Abyssal Flower host · Kirasagi far bloom"
+designation: "Abyssal Flower · Kirasagi far bloom"
 height: "1.65 m"
 build: "Compact, precise — built by a lifetime of service discipline"
 complexion: "Pale with faint warmth; fine crimson vein-marbling surfaces at the forearms under physical strain or Flower activation"
@@ -23,6 +23,7 @@ status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
 image: "/uploads/Hisui.png"
+hero_image: "/uploads/Hisui-HERO.png"
 ---
 
 > *"The flower should have killed her. It does not kill her. What it does instead is something the Index Theorem has no vocabulary for and the Church would call an abomination. I am not certain either of them is wrong. I am certain that she has been in my household for two years and no one in it sleeps less safely for her presence."*
