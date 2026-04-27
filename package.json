@@ -7,14 +7,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-
-    "gen:decap": "node scripts/generate-decap-config.mjs",
     "gen:astro": "node scripts/generate-astro-collections.mjs",
-    "gen:sections": "npm run gen:decap && npm run gen:astro",
-
-    "prebuild": "npm run gen:sections"
+    "prebuild": "npm run gen:astro"
   },
   "dependencies": {
-    "astro": "^5.17.1"
+    "astro": "^5.18.1"
   }
 }

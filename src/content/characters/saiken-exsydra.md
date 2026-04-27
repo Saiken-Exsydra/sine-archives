@@ -1,158 +1,190 @@
 ---
 title: "Sai'ken Ex'sydra"
 type: "Character"
-age: "23 (estimated, at time of filing 1127)"
-birth_year: "1122 (year of activation)"
-birthplace: "Unrecorded — no civilian birth registry"
-affiliation: "SiNE Seam Division"
-house: ""
+age: "25 (at time of filing, 1127)"
+birth_year: "1102"
+birthplace: "Ael'keth, Northern Region, Empire of Synus"
+affiliation: "SiNE Integrated Forces (cover); Wonderwall Seat (actual)"
+house: "Ex'sydra (minor scholarly lineage, Northern Region — struck from institutional rolls post-Sundering of Selia)"
 rank: ""
-registry_status: "Active — Wonderwall estate detail, assigned 1124"
-designation: "Ex'sydra-01 · Senior Sigilant Operative"
+registry_status: "Active — Wonderwall cadet-branch estate detail, assigned 1124"
+designation: "KT-Exs · Non-Redactory structural anomaly"
 height: "1.80 m"
-build: "Lean, defined — proportioned for speed and sustained engagement"
-complexion: "Deep brown; void-pale tracing lines surface beneath skin under high-stress activation"
-hair: "Black, long, bound back in a low tail"
-eyes: "Amber-dark at rest; flat mirror-surface threaded with configuration marks under activation"
-dress: "Modular close-fitted coats in black, grey, and deep blue; passive dampening sigils woven at seam and joint"
-residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
-occupation: "Personal security — Wonderwall estate; assigned principal: Ec'lesia Yal'ara Wonderwall"
-summary: "Project Seam"
-tags: ["SiNE", "Seam Division", "Wonderwall", "Vector Index"]
+build: "Lean — proportioned for speed of action over force of impact"
+complexion: "Northern lineage; void-pale lines surface beneath skin under high-stress activation"
+hair: "Black, long, bound back"
+eyes: "Pale grey, reading as silver in certain light"
+dress: "Close-fitted coats in black, grey, and deep blue; nothing that draws attention"
+residence: "Wonderwall cadet-branch estate, eastern residential quarter, Kalt'sen"
+occupation: "Physical security specialist — SiNE protective-services contract (public); Wonderwall Seat direct report (actual)"
+summary: "The Interval"
+tags: ["SiNE", "Wonderwall", "Non-Redactor Anomaly", "Traversal-Phase Displacement", "Northern Region"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-04-26"
 image: "/uploads/saiken-exsydra.png"
 hero_image: "/uploads/Saiken-Exsydra-HERO.png"
 ---
 
-> *"He is not a Redactor. He is not a Divined vessel. He is not a standard-trained operative. He is what happens when the Dive is approached from outside its own logic — not climbed down into, but built around. The Index Theorem has no clause for this. We wrote one ourselves."*
-> — Seam Division founding brief, author unrecorded
+> *"He does not move fast. The world moves slowly around him. The distinction is not semantic. It is structural."*
+> — Em'manuel Kael Wonderwall, private notation, undated
 
 ---
 
-## Origin — The Seam Division and Project Seam
+## Origin — The Ex'sydra Name
 
-The Seam Division is the body within SiNE that concerns itself with a specific structural problem: what happens when a Redactor's output cannot be contained by standard institutional means, and how does SiNE prepare for the most extreme version of that problem before it occurs.
+The name does not appear in the Founding House registries. It was struck from institutional rolls during the administrative consolidation following the Sundering of Selia — not as punishment, not as the erasure of a threat, but as the casual collateral of an empire rationalising its own record-keeping. The Ex'sydra line was a minor scholarly lineage. They were witnesses to thinness phenomena. They were not politically significant enough to survive the administrative reconstruction in any form the new architecture would recognise.
 
-The Division was established following internal analysis of anomalous-profile Redactors whose potential instability was assessed as exceeding the response capacity of any conventional containment approach. The Apocachynthion's containment authority is predicated on the ability to physically restrain, suppress, or isolate — on the assumption that output occurs at a scale human-built systems can address. The Seam Division's founding brief begins with the observation that this assumption does not always hold.
+What survived was the family itself, absorbed into the Northern Region's refugee population, carrying a name that meant nothing to anyone who encountered it and a recursive architectural inheritance the individuals carrying it had no language to describe.
 
-Project Seam was the Division's first attempt to produce an active-response asset engineered to operate against a specific anomalous profile — one whose output, under uncontrolled escalation, had been assessed as capable of producing events no standard operative could be positioned to address. The Division had been tracking Ec'lesia Wonderwall's case since her first detection by monitoring instruments in 1121, a year before the Apocachynthion sent her its formal letter. What the Division's analysts saw in the preliminary coherence data was a Redactor of Depth so far in advance of her training that the structural gap between what she was and what she could control was not a question of further development but an active and intensifying liability.
+The lineage's ancestral settlement sits in proximity to structures in the deep northern reaches — ruins near the Darkmargin at a location surveyed by the Wonderwall Seat personally. The ruins are unlike others found along the Twilight Band. They do not feel like habitation. They feel like somewhere something was done. The Ex'sydra family spent generations living adjacent to them.
 
-Project Seam attempted dozens of candidate constructions across two years. Of all candidates processed through the full synthesis protocol, one stabilised.
-
-That candidate was designated Ex'sydra-01.
+The nature of the connection — between the lineage's geographic history and what Sai'ken carries in his architecture — is the oldest open question in his file.
 
 ---
 
-## Assignment — Wonderwall Estate Detail
+## Lineage and Settlement
 
-Sai'ken was placed within the Wonderwall estate in the third quarter of 1124 under a standard SiNE contract for personal security staffing. Al'yana Wonderwall-Kjackter engaged the contract after a brief formal process. She was not informed of its actual terms.
+**Tae'ven Ex'sydra** — structural engineer, Northern Spine Authority. Non-Redactor. Northern lineage, thinness-adjacent background consistent with Class III zone residency. No anomalous structural indicators.
 
-His public role is consistent and functional: a skilled, unusually competent security operative assigned primary close-coverage responsibility for Ec'lesia. He attends to her movements. He accompanies her on the rare occasions she leaves the estate. He occupies a room two floors below hers. He is, in the household's social texture, quiet and capable and apparently devoted to his work.
+**Cor'ren Ex'sydra** — schoolteacher, Ael'keth settlement. Non-Redactor. The same background as her husband in all structurally relevant respects.
 
-He is all of these things.
+Neither of them knows what their son is. They receive correspondence from him. They believe he works in physical security for a large company in the Central Region. This is true. They are proud of him.
 
-His assignment operates on two simultaneous directives, of which he is fully aware. The first is protective: to monitor Ec'lesia's condition on an ongoing basis, intervene against any external threat to her safety, and apply his faculty to dampen or redirect uncontrolled coherence output before it causes harm. He has performed this function on three documented occasions since placement, and an undocumented number of minor incidents he elected not to log.
-
-The second is terminal: in the event of an uncontrolled escalation beyond recoverable threshold, Sai'ken is directed to apply lethal force to end it at its source.
-
-He knows what he is for. He has not found a way to be something simpler.
+**Ael'keth** is a Class III thinness zone — nine thousand people, a BrightCrystal relay station, and the specific quality of structural environment that makes the Northern Region's folk traditions look, to a careful observer, less like superstition and more like empirical observation expressed in the only vocabulary available to people who lack the Index Theorem's language. Class III thinness does not produce Redactors. It makes recursive singularities structurally lighter — more permeable to ambient resonance disturbance. Sai'ken was born into this and grew up inside it for the first eleven years of his life. The thinness signature is in his architecture.
 
 ---
 
-## The Vector Index
+## Discovery — The First Manifestation (Year 1109)
 
-The faculty the Seam Division designates the **Vector Index** is not Redactory in any sense the Index Theorem recognises. Sai'ken does not enter the Dive. He does not have an Anchor. He does not produce coherence output of any kind that standard instruments can detect.
+The first documented anomaly occurred when Sai'ken was seven years old. A minor Calling event produced a few hours of Dive turbulence across the Northern Region. Sai'ken vanished from his seat. Not moved — vanished. For approximately four seconds, the chair was empty. He reappeared in the same position, same posture, holding the same pencil.
 
-What he does, under activation, is perceive — with complete and instantaneous accuracy — the trajectory of any physical or coherence-propagating force within his immediate perceptual field, and apply precise mechanical intervention to redirect that trajectory before it resolves. The redirection does not require matching force. It requires only the correct counter-vector at the correct moment.
+What he reported, when he was calm enough to speak: *Everything stopped. Everyone stopped. I got up and walked around and nobody was moving. Then it came back.*
 
-The Seam Division's approach required solving a structural problem first: a standard Redactor attempting to counter or suppress uncontrolled coherence output encounters it from within the same structural layer it originates in, which produces interference rather than resolution. The answer was not to produce a better Redactor. It was to produce something that does not operate through the Dive at all — something that reads the expression of coherence as it propagates through physical space, from outside that layer, and redirects its consequences before they arrive.
+A Pager — Dae'rath Khorin, Stylus-rank, Perception Anchor, Field Branch — was in Ael'keth on unrelated circuit work when her Anchor registered a fold in local traversal: a place where something was not advancing at the rate the surrounding configurations indicated it should. Centred on a child at a market stall. She spent six weeks observing him. Her eventual assessment contained the following: *There is no Anchor. There is no Dive signature. What there is, intermittently and with increasing voluntary control, is a traversal anomaly — a momentary discontinuity in local traversal rate that produces, from the subject's apparent perspective, a brief interval of independent temporal advance. I am aware of how this reads. I am filing it anyway.*
 
-Against conventional threats, this produces a combatant whose reflexes are structurally impossible to account for by any standard assessment of human capability. To a trained Redactor watching him work, it looks like something that has no category.
-
-### Secondary Applications
-
-**Physical interception** — Against ranged or close-quarters attack, his read of incoming trajectories allows intervention at a threshold that appears to involve implausible anticipation. He does not dodge; he is already positioned for the parry before the attack completes.
-
-**Anchoring** — Under conditions requiring absolute positional stability, his perceptual architecture allows him to read and counteract displacement vectors in real time, maintaining stance and footing in circumstances that would destabilise conventional balance.
-
-**Impact redirection** — Force absorbed through physical contact is read and cycled into directional output rather than dissipating through the body, translating incoming kinetic impact into controlled reorientation.
-
-**Reaction surge** — Under high-demand conditions, his perceptual and motor architecture undergoes a brief and costly acceleration — his read of incoming vectors extends forward by a fraction of a second beyond normal function, producing a window of exceptional precision. What follows is a period of reduced function, perception latency, and sharp pain behind the eyes.
-
-### Activation State
-
-At rest, the Vector Index operates at a persistent background level that is largely invisible — a low-grade awareness of trajectory and force that produces the quality of stillness observers consistently note. He is not inattentive. He is attending to things no one else can see.
-
-Under activation, the amber-dark iris surface flattens to a mirror finish, and beneath it, visible to careful observation, shifting marks appear — not legible in any classification catalogue the Empire's institutions currently maintain. Under extreme activation or sustained high-stress deployment, pale lines beneath his skin surface briefly at jaw, shoulder, forearm, and the ridge of the sternum, and subside. This has been observed twice in documented record. Neither occasion is described by observers in neutral terms.
+The Council of Volumes received the report, could not accommodate it within existing framework, and transmitted it through the confidential institutional liaison channel to SiNE's Entropy division. From Entropy, it reached the Wonderwall Seat.
 
 ---
 
-## Limitations
+## Capacities
 
-**Feedback strain** — Sustained activation produces accumulated perceptual strain — intensifying pain behind the eyes, blurring of non-tactical visual processing, degraded short-term memory encoding. Extended high-demand deployment degrades precision.
+### Primary — Traversal-Phase Displacement
 
-**Reaction-surge cost** — The acceleration state resolves in near-complete function suspension proportionate to the demand made. At full extension: perception continues, output ceases. He is aware and unable to act.
+**Sai'ken's terminology:** *The Interval.*
+**Index Theorem classification:** None.
 
-**Synthetic conflict** — Sai'ken's structural composition includes elements whose compatibility with sustained consciousness was not confirmed prior to activation. His psychological stability is dependent in part on relational anchoring — on the presence of individuals whose reality is sufficiently consistent to provide an external ground for his own. Without this, the synthesis destabilises. What destabilisation produces is not documented.
+Voluntary activation. Controlled. Sustained intervals of up to approximately twenty seconds of internal subjective time per activation. During activation, the subject appears, from all external perspectives, to have moved instantaneously. From his own perspective: the environment pauses. Everything around him enters apparent stillness. He can move, perceive, and act freely. His subjective time continues advancing. When the state releases, the world catches up — and whatever he did during the interval is simply already done.
 
-**Perceptual anomaly** — Individuals with coherence sensitivity who interact with him for the first time consistently report a dissonance they have difficulty articulating. The phrasing recurs: *present, but slightly late.* His timing in interaction carries a fractional offset from ambient expectation that most people register as something merely unusual about his manner, and that trained Redactors register as something they cannot classify.
+No Dive signature. No Anchor. No resonance disturbance detectable by standard Apocachynthion instruments. To every Redactory-based detection system currently available, Sai'ken Ex'sydra reads as an ordinary non-Redactor civilian. This is his most operationally significant property.
+
+Activation is physically and cognitively exhausting. Recovery scales with duration used and exertion during the interval. The current ceiling of approximately twenty seconds is a practical estimate, not a confirmed structural limit.
+
+He describes it as *falling into a space that shouldn't be there and then falling back out.*
+
+---
+
+### Secondary — Coherence Severance
+
+**Sai'ken's terminology:** *The Cut* (for the act of severance; he has no name for the reading that precedes it).
+**Index Theorem classification:** None.
+
+Accessible only during Traversal-Phase Displacement — only during the structural silence of an untraversed moment. During displacement, when configurations are exposed as static structural relationships rather than dynamically traversed states, Sai'ken can perceive what might be called the resonance gradient of a configuration: the mutual coherence pressure sustaining that configuration in its current expression.
+
+With deliberate effort, he can interrupt that gradient. He inserts a structural discontinuity into the coherence pressure holding the configuration in its active state, causing it to collapse toward default. A flame he applies this to does not go out the way a flame goes out when fuel is removed. It goes out because whatever structural relationship sustains the expression called *flame* has been briefly severed. The fuel remains. The heat remains. The expression is absent until the gradient restores itself — because he has not removed anything, only interrupted the coherence of it.
+
+Three confirmed operational uses, all against simple inorganic configurations. Silent, instantaneous, with none of the structural disturbance that Redactory produces.
+
+**Current limit:** Living recursive singularities cannot currently be approached. When Sai'ken attempts to read a living configuration at the depth required for severance, his own recursive architecture receives a structural information load exceeding its current processing capacity — his recursion attempting to process incoming structural complexity while simultaneously maintaining the coherent pattern that keeps him functional. At sufficient load, this produces cascade risk.
+
+He has approached the threshold twice on sub-human targets of intermediate complexity. Both times he released before cascade. His architecture produces a warning response he describes as *the read going thick* — a specific internal signal that functions as an effective operational limit when he respects it.
+
+---
+
+## Training — The Cloister of Applied Structure
+
+Placed at age eleven following the CLOCKWORK identification sequence. Official file: anomalous structural sensitivity case, non-Redactor, assessment track for potential Anchor development. The file is accurate in its factual statements and entirely wrong in its framing.
+
+The mandate given to Kel'rath Haels was to build a person who could think with his capacities rather than simply activate them — not a weapon, but a practitioner. The distinction determines the operational range in every situation that exceeds the original briefing.
+
+Sai'ken graduated at eighteen. No Anchor. No Dive. No Redactory certification. Physical conditioning exceptional, perceptual discipline exceptional, intelligence methodology at the high end of the Cloister's documented range.
+
+The Traversal-Phase Displacement capacity arrived with him. Training produced the methodology to use displacement intervals purposefully — to see, in twenty seconds of frozen time, what matters, where everything is, and what the next several states of the situation look like if the current trajectory holds.
+
+The Coherence Severance capacity emerged during the Cloister years. Training produced the framework for the limit: active threshold management, the capacity used with the limit known, and the knowledge precise enough to be reliable. He has not exceeded his current limit. He knows it exists and, in all probability, knows it is not fixed. He has not raised this in any debrief.
+
+---
+
+## Assignment — Wonderwall Cadet-Branch Estate (Year 1124)
+
+Cover: physical security specialist, standard SiNE protective-services contract. True, unremarkable, background-appropriate for a cadet-branch household of the Wonderwall name. The Apocachynthion's Field Branch monitoring apparatus registers him as a non-Redactor civilian. To their assessment framework, he is the least interesting person in the building.
+
+He received what he needed to function: he was placed directly by the Wonderwall Seat; his mandate is observation and protection; Ec'lesia's condition involves something the Apocachynthion cannot adequately classify.
+
+What he was not given: what the Pale is, or that it has been in the Wonderwall bloodline for eight centuries. The full nature of his own capacity or why he has it. The ruins near his family's ancestral Darkmargin location. The entities StaSis studies and their theoretical structural relationship to what he can do.
+
+He is twenty-five years old and he carries two extraordinary capacities and no cosmological account of either.
+
+---
+
+## Operational Profile
+
+**Traversal-Phase Displacement:** Up to ~20 seconds internal time per activation. No Dive signature. No detectable structural output. Invisible to Redactory assessment instruments. Physically and cognitively exhausting over repeated use.
+
+**Coherence Severance:** Accessible only during displacement. Functional against inorganic and low-complexity configurations. Living recursive singularities currently outside safe operational range. Theoretically applicable against active Redactory outputs and Divination alignment — unconfirmed. Silent — no structural disturbance of the kind Redactory produces.
+
+**Combat:** Advanced certification, blade and close-quarters specialist. Advantage derives entirely from displacement-based assessment and positioning, not enhanced physical capability. Against active Redactors, his decisive advantage is complete invisibility to their detection systems — he can assess their position and routing in frozen time before they know he is present.
+
+**Detection profile:** To every available instrument: ordinary non-Redactor civilian.
 
 ---
 
 ## Physical Description
 
-He reads as a man of lean, precise construction — deliberate in every posture, economical in every movement. Nothing he does physically is without purpose. An observer watching him at rest has the persistent impression that the stillness costs him nothing and maintains everything.
+Lean — functional muscle over a frame built for speed of action rather than force of impact. Northern lineage in his bone structure: sharper, lighter, with the particular quality of stillness that the Threshold regions produce. His eyes are pale grey reading as silver in certain light. The Northern Region's folk traditions associate this colouring with what they call *thinness-touch.*
 
-His eyes, at rest, are the kind of amber that sits close to dark — not bright, not warm, but calm in a way that produces, in most people's experience, the immediate impression that he has already assessed the situation and formed a view he has not yet chosen to share.
+He does not stand out. This is deliberate and trained and, at this point in his life, no longer distinguishable from natural disposition. He occupies rooms without filling them. He listens considerably more than he speaks. When he speaks, nothing is wasted.
 
-The bracelet on his left wrist is plain braided textile — natural-coloured, worn smooth by contact. He does not discuss it. He does not remove it. The notation recording its presence in the Division's file was added three months after his activation, in a handwriting that does not match the filing officer's standard script.
+In three years of operational proximity to Ec'lesia's household, no Pager observer, no Apocachynthion monitoring sweep, and no SiNE institutional audit has flagged him as anything other than a competent, unremarkable physical security specialist who is quiet and good at his job.
 
 ---
 
 ## Psychology
 
-Surface presentation is consistent and uncomplicated to a casual observer: quiet, attentive, precise in action and careful in speech. He does not volunteer conversation. He does not fill silence as though it required filling. He responds directly to direct address and does not, under most conditions, say more than is necessary.
+Surface presentation: quiet, attentive, precise in action and careful in speech. He does not volunteer conversation. He does not fill silence as though it required filling. He responds directly to direct address and does not, under most conditions, say more than is necessary.
 
-This surface is accurate as far as it reaches.
+Underneath it is a person of dry, sparse wit that appears rarely and without announcement. A persistent warmth that his professional conduct contains without extinguishing. An ethical framework that is specific, operative, and not contingent on instruction.
 
-Underneath it is a person of dry, sparse wit that appears rarely and without announcement. A persistent warmth that his professional conduct contains without extinguishing. An ethical framework that is specific, operative, and not contingent on instruction — he has declined, on two documented occasions, to follow guidance he assessed as extending the assignment's authority beyond its legitimate scope. Neither produced formal sanction.
+He has noticed things he has not reported. He has formed an assessment of Ec'lesia's condition that diverges from the Apocachynthion's interpretation in a direction his commissioning authority considers more accurate. He is holding it and waiting for what he considers sufficient data before he says anything.
 
-His relationship to the question of what he is — made, not born; functional, not incidental; positioned to perform a role his principal does not know she is the object of — has produced in him not existential dissociation but a particular quality of precision about what he values and why. He values kindness with a consistency that suggests experience of its absence. He refuses, with a firmness that has surprised several people who attempted to circumvent it, to be treated as a tool whose preferences do not register.
-
-He does not discuss what happened to the others. He has been asked. He does not discuss it.
+He is doing exactly what someone who has been alive twelve centuries would do. Observed from the outside, this is slightly disconcerting.
 
 ---
 
 ## Relationships
 
-**Ec'lesia Yal'ara Wonderwall** — His principal, his assignment, the person whose coherence events he has already redirected and whose coherence event he may, at an unspecified future date, be required to terminate. He holds all three of these facts simultaneously. He has not found a way to put them in order of importance.
+**Ec'lesia Yal'ara Wonderwall** — His principal and his mandate. He has watched her across three years with the particular quality of attention he was trained to apply to operationally significant subjects. What that attention has produced is not recorded in any operational file.
 
-She does not know what he is. What she has observed across three years is that the estate is quieter when he is in it — that her rare and effortful journeys outside its walls produce less incident than they previously did, and that he is, without announcement or apparent strategy, the only person currently present in her daily life who does not treat her condition as either a problem to be managed at arm's length or a subject to avoid entirely.
+During displacement intervals in her vicinity, his Coherence Severance perception encounters a different ambient environment — the configurations around her read as more navigable, as though something has redistributed the ambient structural texture of the space in a way that makes his reading function work more clearly rather than less. He has not reported this. He is, in all likelihood, waiting to understand it.
 
-When her coherence output begins to build beyond threshold — the slow darkening of the surrounding space, the propagation distortion, or the sharper discharge that has twice damaged fixed structures in the estate — he does not attempt to enter the Dive to oppose it from within. He reads the vectors of the output as it forms and redirects them: downward into the earth, outward into open space, or in the most extreme cases inward, collapsing the coherence event against itself. It is not suppression. The coherence is not cancelled — it goes somewhere else, or in a way that does not cause harm. He can redirect the expression. He cannot resolve what is producing it. This is a distinction he is precise about, and one she does not yet know he is making.
+She does not know what he is. What she has observed is that the estate is quieter when he is in it, that her rare journeys outside produce less incident than they previously did, and that he is, without announcement or apparent strategy, the only person currently present in her daily life who does not treat her condition as either a problem to be managed at arm's length or a subject to avoid entirely.
 
-She finds his steadiness simultaneously the most comfortable and the most troubling quality he possesses. She does not know why it does not feel like surveillance.
+**Kel'rath Haels** — His trainer across seven years at the Cloister. Sent a note — not a quarterly report, just a note — in year 1127: *"He is steady."*
 
-He finds her — and this is not recorded anywhere in the Division's documentation — to be the most straightforwardly admirable person he has encountered since activation. He considers this fact structurally significant in ways that do not simplify his situation.
+**Tae'ven and Cor'ren Ex'sydra** — His parents. He goes home when he can. He stays the full duration each time. Whatever the Cloister years produced in him, they did not produce a person who treats his parents as cover infrastructure.
 
-**Al'yana Wonderwall-Kjackter** — Interacts with him as a professional employee — with the particular blend of courtesy and mild curiosity that a private household typically extends to effective staff. She has noted in the household accounts that material incident costs in the east wing have declined markedly since his arrival. She attributes this to competence. She has not asked for more detail.
+**The Wonderwall Seat** — His commissioning authority. Has been alive for approximately twelve centuries. Has not communicated with Sai'ken directly. Has been building this arrangement for considerably longer than Sai'ken has been alive, and is watching it with the specific attention of someone who has made a choice they are not entirely comfortable with and cannot take back.
 
-**The Wonderwall Seat** — His commissioning authority at the ultimate remove. Aware of Sai'ken's existence and assignment. Not involved in ongoing operations. His interest is structural. He has not communicated with Sai'ken directly.
-
-**The Apocachynthion** — Sai'ken produces no Dive signature. He holds no classification. He appears in no registry. He is, institutionally, a skilled civilian operative on a private security contract. Vel'kara, who attends to Ec'lesia's open file, has noted him in peripheral observations as present but structurally unreadable. Her instruments produce the same result they always do: *present, but slightly late.*
-
-**The Caretaker — Unverified** — In the months immediately following his activation, before formal assignment was completed, an individual of unconfirmed identity provided what the Division's record designates as post-synthesis orientation support. The bracelet is the only material trace of this period. Whether this was an authorised interaction or an undocumented one has not been determined. The filing officer who made the handwritten notation about the bracelet has since been reassigned.
+**The Apocachynthion** — Sai'ken produces no Dive signature, holds no classification, appears in no registry. Vel'kara, who attends to Ec'lesia's open file, has noted him in peripheral observations as present but structurally unreadable. Her instruments produce the same result they always do: *present, but slightly late.*
 
 ---
 
 ## Present Condition — 1127
 
-Sai'ken has been in position at the Wonderwall estate for three years. His stability has remained consistent throughout — the relational anchoring his construction requires is functioning, and the Division's assessment is that Ec'lesia's consistent presence constitutes the primary component of this.
+Three years at the Wonderwall cadet-branch estate. Stable. His family visited last month. He returned on time, filed a brief operational summary, resumed his posting without comment.
 
-This is an irony the Division's records note without comment.
+He carries two capacities whose mechanism his commissioning authority cannot fully explain, in proximity to a condition whose mechanism that same authority cannot fully explain. Three years of that arrangement have produced something that was constructed but cannot be predicted, and that the Wonderwall Seat is not attempting to control.
 
-He is the only completely successful output of the most methodologically costly project the Division has undertaken. He is also, by every metric the Division has never formally tracked, a person who did not ask to be built for the purpose he serves and who has spent three years being, with quiet persistence, something more than his construction required.
+The open question is not structural. It is what Sai'ken has concluded, in three years of proximity, about who Ec'lesia is and what she deserves. He has an opinion. Its specific character was not predicted. What is known from observation is that it exists, that it is not the opinion of someone who treats their assignment as a function to execute, and that it will be operative in any situation that exceeds the original briefing's parameters.
 
-The bracelet is still on his wrist.
+He was placed knowing this is how it works. He was placed because the only assets that hold in the worst scenarios are those who have a reason of their own.

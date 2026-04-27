@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import { CONTENT_KEYS } from "../content-keys";
-import { SECTIONS } from "../sections";
 
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
@@ -15,17 +14,6 @@ const updated        = str(entry.data?.updated);
 const type           = str(entry.data?.type ?? "Character");
 const heroImage      = str(entry.data?.image ?? "");
 const tags: string[] = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
-
-// ── All characters for the switcher sidebar ──────────────────────────────
-const allChars = (await getCollection("characters", (e) => e.data.status === "public"))
-  .sort((a, b) => {
-    const pa = (a.data as any).priority ?? Infinity;
-    const pb = (b.data as any).priority ?? Infinity;
-    if (pa !== pb) return pa - pb;
-    return a.data.title.localeCompare(b.data.title);
-  });
-
-const currentIdx = allChars.findIndex((c) => c.slug === entry.slug);
 
 // ── Field grid ────────────────────────────────────────────────────────────
 type Field = { label: string; value: string };
@@ -148,28 +136,6 @@ const related = allPublic
     .nav__crumb-link:hover { color: var(--text); }
     .nav__crumb-sep { color: var(--crimson); font-size: 13px; }
     .nav__crumb-cur { color: rgba(232,228,220,0.35); }
-    .nav__pills {
-      display: flex; align-items: center; gap: 6px;
-    }
-    .nav__pill {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 3px; padding: 4px 10px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 9px; letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      cursor: pointer; transition: all 0.2s;
-      white-space: nowrap; max-width: 100px;
-      overflow: hidden; text-overflow: ellipsis;
-      text-decoration: none;
-    }
-    .nav__pill:hover,
-    .nav__pill.is-active {
-      background: rgba(177,58,52,0.22);
-      border-color: rgba(177,58,52,0.45);
-      color: var(--text);
-    }
 
     /* ── ROOT LAYOUT ── */
     .dos-root {
@@ -194,8 +160,8 @@ const related = allPublic
     }
     .dos-portrait__img {
       width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center 15%;
+      object-fit: contain;
+      object-position: center top;
       filter: saturate(0.85) brightness(0.88);
     }
     .dos-portrait__placeholder {
@@ -292,25 +258,6 @@ const related = allPublic
       backdrop-filter: blur(8px);
     }
 
-    /* vertical dot nav */
-    .dos-dots {
-      position: absolute; right: 14px; top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      display: flex; flex-direction: column; gap: 8px;
-      align-items: center;
-    }
-    .dos-dot {
-      border: none; padding: 0; cursor: pointer;
-      background: rgba(255,255,255,0.16);
-      border-radius: 2px; width: 3px; height: 12px;
-      transition: height 0.35s cubic-bezier(0.16,1,0.3,1), background 0.3s;
-      text-decoration: none;
-      display: block;
-    }
-    .dos-dot.is-active {
-      background: var(--crimson); height: 28px;
-    }
 
     /* ── RIGHT DOSSIER PANEL ── */
     .dos-right {
@@ -582,17 +529,6 @@ const related = allPublic
     <span class="nav__crumb-cur">{title}</span>
   </div>
 
-  <div class="nav__pills">
-    {allChars.map((c) => (
-      <a
-        href={`/characters/${c.slug}/`}
-        class={`nav__pill${c.slug === entry.slug ? " is-active" : ""}`}
-        title={c.data.title}
-      >
-        {c.data.title.split(" ")[0]}
-      </a>
-    ))}
-  </div>
 </nav>
 
 <div class="dos-root">
@@ -679,17 +615,6 @@ const related = allPublic
       </div>
     </div>
 
-    <!-- Vertical dot nav -->
-    <div class="dos-dots" aria-label="Character navigation">
-      {allChars.map((c) => (
-        <a
-          href={`/characters/${c.slug}/`}
-          class={`dos-dot${c.slug === entry.slug ? " is-active" : ""}`}
-          title={c.data.title}
-          aria-label={c.data.title}
-        ></a>
-      ))}
-    </div>
   </div>
 
   <!-- ── RIGHT DOSSIER PANEL ── -->
@@ -782,21 +707,6 @@ const related = allPublic
 </div>
 
 <script>
-  // Mouse parallax on portrait
-  const left = document.getElementById("dos-left");
-  const img  = document.getElementById("dos-portrait-img") as HTMLImageElement | null;
-  if (left && img) {
-    left.addEventListener("mousemove", (e: MouseEvent) => {
-      const r = left.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      img.style.transform = `scale(1.08) translate(${x * -4}%, ${y * -2.5}%)`;
-    });
-    left.addEventListener("mouseleave", () => {
-      img.style.transform = "scale(1.08) translate(0%, 0%)";
-    });
-  }
-
   // Assign IDs to headings for potential in-page anchors
   const body = document.querySelector("[data-dos-body]");
   if (body) {

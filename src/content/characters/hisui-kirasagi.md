@@ -21,7 +21,7 @@ summary: "Far Bloom"
 tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregistered"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-04-26"
 image: "/uploads/Hisui.png"
 hero_image: "/uploads/Hisui-HERO.png"
 ---
@@ -37,15 +37,17 @@ hero_image: "/uploads/Hisui-HERO.png"
 
 Hi'sui Kirasagi was born in Tsukimiya, a harbor city on the Darkmargin coast of Hikari — a nation to the west of Aurora, smaller than the Empire, built into a compressed corridor of habitable terrain where the Bright-Side and Dark-Side gradients press unusually close together. Tsukimiya is a maritime city of steep vertical architecture, cold water, and centuries of continuous trade. Its culture is dense and insular in the way of port cities: open to the world's commerce, deeply skeptical of the world itself.
 
-Hikari has no Apocachynthion equivalent. Redactory exists there, but is governed through independent schools and hereditary lineage traditions rather than any centralised body. The Empire holds no treaty authority. The One Church maintains a mission presence without operational power.
+Hikari has no Apocachynthion equivalent. Redactory exists there, but is governed through independent schools and hereditary lineage traditions rather than any centralised body. The Empire holds no treaty authority. The One Church maintains a mission presence alongside Hikari's indigenous religious practice — a complex tradition centered on the concept of *continuity through indebtedness* — and neither has resolved the theological disagreement between them.
+
+Hikari's geography is compressed. The central corridor narrows significantly in this segment of the Twilight Band — the Bright-Side and Dark-Side gradients press closer together than they do elsewhere, producing a habitable zone that is fertile but shallow. The population has concentrated along the Darkmargin coast and in steep river valleys, producing a civilization that is dense, maritime, and acutely aware of its borders. This compression is directly relevant to what the Flower is and where it may have come from.
 
 The **Kirasagi** are a retainer family of five hundred years' standing, bound to the **House of Shinzui** — one of Hikari's seven hereditary high houses, historically associated with maritime commerce and the administration of Tsukimiya's harbor district. Their service is total and generational: domestic staff, advisors, bodyguards, and — in the family's oldest and most structurally significant responsibility — bearers of the Abyssal Flower.
 
 ### The Far Bloom
 
-Hi'sui is the second child of the Kirasagi lineage's primary branch. Her older brother Ren'ya was seeded with the Flower first; she was seeded nine months after her birth, per the family's standard protocol. She survived.
+Hi'sui is the second child of the Kirasagi lineage's primary branch. Her older brother Ren'ya was seeded with the Flower first; she was seeded in infancy, per the family's standard protocol. She survived.
 
-In the Kirasagi tradition, the child who can leave does. When Ren'ya suffered a severe Overbloom crisis in year 1122 that left him in sustained coherence deficit, the succession architecture resolved itself: he remained in Tsukimiya to serve the Shinzui, and Hi'sui became the *far bloom* — the heir who carries the Flower outward to serve where the house cannot reach. A placement chain arranged by her aunt Masa'ko brought her abroad in year 1123. She arrived in the Empire in early 1125 and has been employed at the Wonderwall estate since.
+In the Kirasagi tradition, the child who can leave does. When Ren'ya suffered a sustained Overbloom condition that made extended travel medically imprudent, the succession architecture resolved itself: he remained in Tsukimiya to serve the Shinzui, and Hi'sui became the *far bloom* — the heir who carries the Flower outward to serve where the house cannot reach. She entered the Empire through Kalt'sen's northern immigration processing center in the autumn of 1124, registered with a placement agency the following month, and was recommended to the Wonderwall cadet-branch household administrator in early 1125.
 
 She did not choose this path in any meaningful sense of the word. She understood it completely. The Kirasagi do not ask what the far bloom prefers. They note which child can go.
 
@@ -56,6 +58,12 @@ She did not choose this path in any meaningful sense of the word. She understood
 The Abyssal Flower is not a metaphor. It is a resonance-active biological organism — old, possibly older than Hikari's civilization, integrated into the Kirasagi bloodline over five centuries through a practice the family calls *seeding*. Each generation inherits it through deliberate exposure of the newborn to the previous host's resonance signature at a specific window of developmental vulnerability. Compatible children survive. Approximately three in ten do not.
 
 The organism is not Redactory in origin and does not operate through the Dive. It is not a divine fragment. It is biological — or was, at some point in its origin, before sustained resonance integration complicated that description. Standard Apocachynthion screening instruments, calibrated to detect the Dive's coherence loop, do not register it. Hi'sui has been assessed as a non-practitioner. The assessment is technically correct.
+
+### Origin
+
+The Abyssal Flower is not indigenous to Hikari. Its resonance signature carries structural characteristics inconsistent with any native biological profile catalogued within the Twilight Band. It is old — older than the Kirasagi, and possibly older than Hikari as a civilization. The Company has catalogued ancient-site ruins concentrated in regions of extreme gradient proximity across the Twilight Band; Hikari's compressed corridor places habitable terrain closer to both gradients than any other segment. The structural match between the Flower's signature and biological-research artifacts recovered from ancient sites is plausible as a working theory.
+
+The Kirasagi believe the Flower is ancestral — a gift from a figure their tradition names *the Gardener*, a semi-mythological benefactor said to have visited the family in its earliest years and planted something in their blood that would bloom forever. The Gardener, in more rigorous assessment, was almost certainly a contact event with a biological-resonance artifact of the ancient civilization, experienced through the cultural lens of a family that had no framework for what it actually was and built one that served.
 
 The Flower expresses through its host's resonance signature as a set of coherence-pressure effects, manifesting externally as crimson-black fractal structures the Kirasagi call **petals**.
 
@@ -105,15 +113,19 @@ She carries a lacquered black hairpin of Hikari manufacture — a narrow spike o
 
 ## Biography
 
-### Tsukimiya — 1103 to 1123
+### Tsukimiya — 1103 to 1124
 
 Hi'sui's childhood in the Kirasagi compound adjacent to the Shinzui estate was structured around two parallel tracks that the family does not separate: domestic-service training — cooking, cleaning, protocol, household management, the arts of maintaining a high-house residence at the standard five centuries of tradition demands — and the Bloom discipline. By age twelve she could project petals with sufficient control to cut paper at arm's length. By fifteen, she had stabilised the Bloom Field to an operational radius. The Renewal Weave came later; she did not demonstrate reliable weaving until nineteen.
 
-In year 1118, a Calling event of moderate intensity propagated through the Twilight Band's western segment. Within Hi'sui, the interaction was not standard. The Flower's petal manifestation expanded involuntarily, filling the storage chamber she occupied with a dense field of uncontrolled crimson-black fractal structures. The chamber sustained significant structural damage. She sustained deep lacerations along both forearms and a coherence deficit that took three weeks to resolve. No one was present. She did not report it through institutional channels, because there were no institutional channels to report it to.
+She was told about the Flower before she could fully understand what she was being told. The Kirasagi do not conceal the inheritance from their children — the Murmuring begins at birth, and a child who hears voices no one else hears will ask eventually. She was told young, in the manner the Kirasagi give their children information: as fact, not as warning. Warnings are for people who have a choice.
 
-Ren'ya's Overbloom crisis in year 1122 determined the rest. He could not leave. She could. Her aunt arranged a placement chain through legitimate commercial intermediaries, each step documented and genuine. She spent eleven months in Aurora completing a cultural-integration programme and arrived in the Empire in early 1125.
+In year 1118, a Calling event of unusual intensity struck Hikari's compressed corridor. Hi'sui was fifteen. What the Kirasagi household records describe as a severe Bloom instability event was a structural amplification crisis: the Flower's resonance-conductive properties interacting with the Calling's gradient fluctuation and producing output the host's body could not contain. The petals erupted from her forearms involuntarily, lacerating the surface tissue in their emergence. She did not lose consciousness. She was in controlled confinement within the Kirasagi compound for eleven days afterward. The scars remain.
 
-### Kalt'sen — 1125 to Present
+The Kirasagi's explanation — Flower displeasure at confinement — is culturally coherent and mechanically wrong. The mechanism is structural, not emotional.
+
+Ren'ya's sustained Overbloom condition made the designation clear. He could not travel. She could. The placement chain was arranged through legitimate commercial intermediaries, each step documented and genuine.
+
+### Kalt'sen — 1125 to 1127
 
 She has been at the Wonderwall estate since her first month in the Empire. Her assigned duties are general household maintenance, meal preparation, wardrobe management, and personal attendance to Ec'lesia Yal'ara Wonderwall. She performs all of them to a standard the household administrator has noted in the estate accounts as exceptional. She took on the ceremonial linen maintenance voluntarily, having noticed the existing storage arrangement was inadequate to preserve the embroidered Wonderwall crests. No one asked her to. She noticed, and she did it.
 
@@ -144,6 +156,16 @@ The Flower has not manifested externally — not once — since her placement. I
 **Ren'ya Kirasagi** — Her older brother, still in Tsukimiya, still recovering from the Overbloom crisis that made her departure necessary. She does not know his current condition beyond what the placement correspondence transmitted before she left.
 
 **Em'manuel Kael Wonderwall** — Known to her only as the name of the primary line's distant patriarch, a figure she has never met and has no reason to think about. She does not know he arranged her placement. She does not know he has been using her Flower's behavioural shifts as diagnostic data for two years. She does not know she is being watched. She is, by every observable measure, simply doing her job very well.
+
+---
+
+## Institutional Status
+
+The Apocachynthion does not know she exists as anything other than a foreign domestic worker with a minor circulatory irregularity noted on her immigration intake. Their screening instruments do not register the Flower. She is not in any registry.
+
+The Church would classify her as a Bloom Heretic under the doctrine of the Crowning if the symbiosis were identified — communion with a non-divine resonance organism constituting unsanctioned fusion pressure on a mortal vessel. The Church's Heralds detect fragment-class presences; the Flower is not a fragment. The classification risk exists only if a visible activation event occurs in the presence of someone who knows what they are looking at.
+
+StaSis would detect the anomaly under close-range scan, which they have no reason to conduct.
 
 ---
 
