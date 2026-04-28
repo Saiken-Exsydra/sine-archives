@@ -1,15 +1,916 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import SectionList from "../../components/SectionList.astro";
+import { getCollection } from "astro:content";
+
+// ── Static system definitions ──
+const DIV_COLOR = "#4a62c4";
+const RED_COLOR = "#b13a34";
+
+type SystemDef = {
+  key: "divination" | "redactory";
+  slug: string;
+  name: string;
+  subtitle: string;
+  tagline: string;
+  color: string;
+  darkBg: string;
+  image: string;
+  imageFilter: string;
+  related: { slug: string; section: string }[];
+  lore: string[];
+  fields: Record<string, string>;
+};
+
+const SYSTEMS: SystemDef[] = [
+  {
+    key: "divination",
+    slug: "divinationSystem",
+    name: "Divination",
+    subtitle: "Structural Reading",
+    tagline: "Body, Mind and Soul • Vessel, Conduit and Faith.",
+    color: DIV_COLOR,
+    darkBg: "#05050e",
+    image: "/uploads/DivinationPANEL.png",
+    imageFilter: "saturate(0.25) brightness(0.22) hue-rotate(190deg)",
+    related: [
+      { slug: "the-church",  section: "organizations" },
+      { slug: "terra",       section: "cosmology" },
+      { slug: "precursors",  section: "cosmology" },
+    ],
+    lore: [
+      "Divination is the fusion of a human individual with a powerful non-human entity — a god, or a fragment of one. The entity does not grant the vessel its power. It presses its nature through them until that nature begins to express itself as capability. What looks from the outside like a person who has become more than human is, in a meaningful sense, exactly what has happened.",
+      "The domain of the entity is the domain of the vessel. A fragment of flame produces a vessel who can shape fire. A fragment of decay, one whose touch unmakes. A fragment of mercy, one who can pull the dying back from where no healer's training reaches. There is no fixed ceiling on what is possible within an entity's domain — only on what the vessel can hold before the pressure begins to rewrite who they are.",
+      "The limit is not the entity. The limit is the vessel, and the vessel can break. A small fragment in a compatible mind produces modest gifts. A deep fusion produces effects that belong to a different category of human capability entirely — and a person whose values, priorities, and sense of self are slowly being reshaped by the thing pressing through them. At the extreme end, the original person is no longer there. What remains wears their shape, and is something else.",
+    ],
+    fields: {
+      "Institutional Body": "Church of the Luminant Threshold",
+      "Practitioner Title": "Divined / Vessel",
+      "Entry State": "The Threshold",
+      "Measured Cost": "Unconfirmed — no biological signature detected",
+      "Orientation": "Receptive — the Archive initiates contact",
+      "Senate Classification": "Religious practice — outside Apocachynthion jurisdiction",
+    },
+  },
+  {
+    key: "redactory",
+    slug: "redactorySystem",
+    name: "Redactory",
+    subtitle: "Coherence Manipulation",
+    tagline: "Human, Mind and Reality • Pen, Ink and Paper.",
+    color: RED_COLOR,
+    darkBg: "#090303",
+    image: "/uploads/RedactoryPANEL.png",
+    imageFilter: "saturate(0.45) brightness(0.16)",
+    related: [
+      { slug: "eclesia-wonderwall", section: "characters" },
+      { slug: "saiken-exsydra",     section: "characters" },
+      { slug: "lenore-engelmeyer",  section: "characters" },
+      { slug: "apocachynthion",     section: "organizations" },
+      { slug: "clepsydra",          section: "apparatus" },
+    ],
+    lore: [
+      "Redactory is a rare human ability that allows certain individuals — Redactors — to alter the behavior of physical reality directly. By entering a focused mental state called the Dive, a Redactor guides the world to express itself differently than it normally would: reshaping matter, redirecting energy, manifesting objects, healing wounds. They do not invent. They redirect what is already there into a different shape.",
+      "Every Redactor has an Anchor — a conceptual domain through which their ability flows most naturally. Flame, metal, motion, light, blood, shadow, silence. The Anchor is not a container. It is a path. Everything is accessible in principle, but what lies inside the Anchor costs almost nothing, while what lies outside it costs enormously. Training is the slow work of widening that path without crossing the line.",
+      "The system itself is not limited. The practitioner is, and the limit is their life. Depth measures how far a Redactor has pushed into their work — and Depth kills. The deeper the Dive, the larger the effect, and the closer the practitioner moves to a threshold they cannot cross and survive. Overreach does not produce a near-death experience. It produces death, or something worse: a self that no longer reliably belongs to the person it used to be.",
+    ],
+    fields: {
+      "Institutional Body": "The Apocachynthion",
+      "Practitioner Title": "Redactor",
+      "Entry State": "The Dive",
+      "Classification System": "Index Theorem — 11th revision",
+      "Measured Cost": "Biological — progressive, measurable, potentially terminal",
+      "Orientation": "Active — the practitioner initiates contact",
+    },
+  },
+];
+
+// ── Resolve related entries from collections ──
+type RelatedEntry = {
+  slug: string;
+  section: string;
+  title: string;
+  type: string;
+  summary: string;
+  href: string;
+};
+
+const collectionsToScan = ["characters", "organizations", "cosmology", "apparatus", "places", "sine"] as const;
+const allEntries: Array<{ slug: string; section: string; data: any }> = [];
+for (const sec of collectionsToScan) {
+  const list = await getCollection(sec as any);
+  for (const e of list as Array<{ slug: string; data: any }>) {
+    allEntries.push({ slug: e.slug, section: sec, data: e.data });
+  }
+}
+
+const relatedFor = (sys: SystemDef): RelatedEntry[] =>
+  sys.related
+    .map(({ slug, section }) => {
+      const found = allEntries.find((e) => e.slug === slug && e.section === section);
+      if (!found) return null;
+      return {
+        slug,
+        section,
+        title:   found.data.title,
+        type:    found.data.type,
+        summary: found.data.summary ?? "",
+        href:    `/${section}/${slug}/`,
+      } satisfies RelatedEntry;
+    })
+    .filter(Boolean) as RelatedEntry[];
+
+const SYSTEMS_PUBLIC = SYSTEMS.map((sys) => ({
+  ...sys,
+  entries: relatedFor(sys),
+}));
+
+// ── Addendums: entries from `systems` collection bucketed by tag ──
+const EXCLUDED_ADDENDUM_SLUGS = new Set(["divinationsystem", "redactorysystem", "redactor"]);
+const ADDENDUM_PRIORITY: Record<string, number> = { resonance: 1 };
+const systemsCollection = await getCollection("systems");
+const lower = (arr: string[] | undefined) => (arr ?? []).map((t) => t.toLowerCase());
+
+type AddendumBucket = "divination" | "redactory" | "shared";
+type Addendum = RelatedEntry & { bucket: AddendumBucket; priority: number };
+
+const ADDENDUMS: Addendum[] = systemsCollection
+  .filter((e) => e.data.status === "public" && !EXCLUDED_ADDENDUM_SLUGS.has(e.slug.toLowerCase()))
+  .map((e): Addendum => {
+    const tags = lower(e.data.tags);
+    const hasDiv = tags.includes("divination");
+    const hasRed = tags.includes("redactory");
+    let bucket: AddendumBucket;
+    if (hasDiv && hasRed) bucket = "shared";
+    else if (hasRed) bucket = "redactory";
+    else if (hasDiv) bucket = "divination";
+    else bucket = "shared";
+    return {
+      slug: e.slug,
+      section: "systems",
+      title: e.data.title,
+      type: e.data.type,
+      summary: e.data.summary ?? "",
+      href: `/systems/${e.slug}/`,
+      bucket,
+      priority: ADDENDUM_PRIORITY[e.slug.toLowerCase()] ?? 99,
+    };
+  })
+  .sort((a, b) => a.priority - b.priority || a.title.localeCompare(b.title));
+
+const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries: Addendum[] }[] = [
+  { key: "divination", name: "Divination", color: DIV_COLOR, entries: ADDENDUMS.filter((a) => a.bucket === "divination") },
+  { key: "shared",     name: "Shared",     color: "#9aa0c4", entries: ADDENDUMS.filter((a) => a.bucket === "shared") },
+  { key: "redactory",  name: "Redactory",  color: RED_COLOR, entries: ADDENDUMS.filter((a) => a.bucket === "redactory") },
+];
 ---
 
 <MainLayout active="systems" pageTitle="Systems — SiNE Archives">
-  <SectionList
-    section="systems"
-    title="Systems"
-    searchLabel="Search systems…"
-    emptyLabel="No public system entries yet."
-    image="/uploads/Redactory.png"
-    desc="Structural and institutional frameworks that underpin the world."
-  />
+
+  <div class="sys-root">
+
+    <!-- Identity bar -->
+    <div class="sys-identity">
+      <div class="sys-rule"></div>
+      <div class="sys-identity__center">
+        <div class="sys-identity__tag">Fundamental Systems</div>
+        <div class="sys-identity__sub">Two sides of the same Archive</div>
+      </div>
+
+      <button class="sys-entries-btn" id="sys-entries-open" type="button">
+        Addendums
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" opacity="0.6">
+          <path d="M2 8 L8 2 M4 2 L8 2 L8 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="sys-rule sys-rule--right"></div>
+    </div>
+
+    <!-- Split -->
+    <div class="sys-split" id="sys-split" data-active="" data-hover="">
+      {SYSTEMS_PUBLIC.map((sys, i) => (
+        <div
+          class={`sys-panel sys-panel--${sys.key}`}
+          data-key={sys.key}
+          data-side={i === 0 ? "left" : "right"}
+          style={`--accent: ${sys.color}; --darkBg: ${sys.darkBg};`}
+        >
+          {/* IDLE STATE */}
+          <div class="sys-idle">
+            <div class="sys-idle__bg">
+              <img src={sys.image} alt="" style={`filter: ${sys.imageFilter};`} />
+            </div>
+            <div class="sys-idle__radial"></div>
+            <div class="sys-idle__sweep"></div>
+            <div class="sys-idle__bottomFade"></div>
+
+            <div class="sys-idle__content">
+              <div class="sys-idle__subtitle">{sys.subtitle}</div>
+              <div class="sys-idle__name">{sys.name}</div>
+              <div class="sys-idle__tagline">{sys.tagline}</div>
+              <div class="sys-idle__cta">Examine System ›</div>
+            </div>
+          </div>
+
+          {/* COLLAPSED STATE */}
+          <div class="sys-collapsed">
+            <div class="sys-collapsed__radial"></div>
+            <div class="sys-collapsed__hint">Switch</div>
+            <div class="sys-collapsed__name">{sys.name}</div>
+          </div>
+
+          {/* EXPANDED STATE */}
+          <div class="sys-expanded">
+            <div class="sys-expanded__topbar">
+              <button class="sys-back" data-key={sys.key} type="button">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M5 1 L1 5 L5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="1" y1="5" x2="11" y2="5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+                All Systems
+              </button>
+              <div class="sys-expanded__topbarTag">{sys.subtitle}</div>
+            </div>
+
+            <div class="sys-expanded__hero">
+              <img src={sys.image} alt="" style={`filter: ${sys.imageFilter};`} />
+              <div class="sys-expanded__heroRadial"></div>
+              <div class="sys-expanded__heroOverlay"></div>
+              <div class="sys-expanded__heroBar"></div>
+              <div class="sys-expanded__heroContent">
+                <h2>{sys.name}</h2>
+                <p>&ldquo;{sys.tagline}&rdquo;</p>
+              </div>
+            </div>
+
+            <div class="sys-expanded__body">
+              <div class="sys-expanded__lore">
+                {sys.lore.map((para) => <p>{para}</p>)}
+                <a class="sys-expanded__entryLink" href={`/systems/${sys.slug.toLowerCase()}/`} style={`--accent: ${sys.color};`}>
+                  Read full entry
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M2 8 L8 2 M4 2 L8 2 L8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <!-- Decorative seam -->
+      <div class="sys-seam"></div>
+    </div>
+
+    <!-- Idle caption -->
+    <div class="sys-caption" id="sys-caption">
+      <span>Select a system to examine</span>
+      <span class="sys-caption__dot">·</span>
+      <span>Click the collapsed panel to switch</span>
+    </div>
+
+  </div>
+
+  <!-- Addendums overlay -->
+  <div class="sys-overlay" id="sys-overlay" aria-hidden="true">
+    <div class="sys-overlay__head">
+      <div>
+        <div class="sys-overlay__eyebrow">Systems · Addendums</div>
+        <h2 class="sys-overlay__title">Addendums</h2>
+      </div>
+      <button class="sys-overlay__close" id="sys-entries-close" aria-label="Close">×</button>
+    </div>
+
+    <div class="sys-overlay__cols">
+      {ADDENDUM_COLS.map((col, i) => (
+        <div class="sys-overlay__col" style={`--accent: ${col.color};`} data-no-border={i === ADDENDUM_COLS.length - 1}>
+          <div class="sys-overlay__colHead">
+            <div class="sys-overlay__bar"></div>
+            <div class="sys-overlay__colName">{col.name}</div>
+            <div class="sys-overlay__colCount">
+              {col.entries.length} {col.entries.length === 1 ? "entry" : "entries"}
+            </div>
+          </div>
+
+          {col.entries.length === 0 && (
+            <div class="sys-overlay__empty">No entries filed.</div>
+          )}
+
+          <div class="sys-overlay__list">
+            {col.entries.map((e) => (
+              <a class="sys-chip" href={e.href}>
+                <div>
+                  <div class="sys-chip__type">{e.type}</div>
+                  <div class="sys-chip__title">{e.title}</div>
+                  <div class="sys-chip__summary">
+                    {e.summary.length > 110 ? e.summary.slice(0, 110) + "…" : e.summary}
+                  </div>
+                </div>
+                <span class="sys-chip__arrow">›</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
 </MainLayout>
+
+<script is:inline>
+  (() => {
+    const split    = document.getElementById("sys-split");
+    const caption  = document.getElementById("sys-caption");
+    const overlay  = document.getElementById("sys-overlay");
+    const openBtn  = document.getElementById("sys-entries-open");
+    const closeBtn = document.getElementById("sys-entries-close");
+    if (!split) return;
+
+    const panels = split.querySelectorAll(".sys-panel");
+
+    const setActive = (key) => {
+      split.dataset.active = key || "";
+      split.dataset.hover  = "";
+      caption.style.display = key ? "none" : "";
+    };
+
+    panels.forEach((panel) => {
+      const key = panel.dataset.key;
+
+      panel.addEventListener("mouseenter", () => {
+        if (split.dataset.active) return;
+        split.dataset.hover = key;
+      });
+      panel.addEventListener("mouseleave", () => {
+        if (split.dataset.active) return;
+        split.dataset.hover = "";
+      });
+      panel.addEventListener("click", (e) => {
+        // Don't re-trigger when clicking inside expanded body
+        if (split.dataset.active === key) return;
+        // Ignore clicks on back button (handled separately)
+        if (e.target.closest(".sys-back")) return;
+        setActive(key);
+      });
+    });
+
+    split.querySelectorAll(".sys-back").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        setActive("");
+      });
+    });
+
+    // Entries overlay
+    const openOverlay = () => {
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    const closeOverlay = () => {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    openBtn?.addEventListener("click", openOverlay);
+    closeBtn?.addEventListener("click", closeOverlay);
+    overlay?.addEventListener("click", (e) => { if (e.target === overlay) closeOverlay(); });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      if (overlay.classList.contains("is-open")) { closeOverlay(); return; }
+      if (split.dataset.active) setActive("");
+    });
+  })();
+</script>
+
+<style>
+  /* ── Root ── */
+  .sys-root {
+    height: 100vh;
+    min-height: 600px;
+    background: var(--bg);
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── Identity bar ── */
+  .sys-identity {
+    display: flex;
+    align-items: center;
+    padding: 18px 48px;
+    flex-shrink: 0;
+    gap: 36px;
+  }
+  .sys-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  }
+  .sys-identity__center {
+    text-align: center;
+    padding: 0 36px;
+  }
+  .sys-identity__tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(232,228,220,0.2);
+  }
+  .sys-identity__sub {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: rgba(232,228,220,0.28);
+    margin-top: 3px;
+  }
+  .sys-entries-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(232,228,220,0.38);
+    background: none;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 7px 14px;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 7px;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .sys-entries-btn:hover {
+    border-color: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.06);
+    color: rgba(232,228,220,0.7);
+  }
+
+  /* ── Split + panels ── */
+  .sys-split {
+    position: relative;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .sys-panel {
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.78s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .sys-panel--divination { flex: 5; }
+  .sys-panel--redactory  { flex: 5; cursor: pointer; }
+  .sys-panel--divination { cursor: pointer; }
+
+  /* Hover ratios (idle only) */
+  .sys-split[data-active=""][data-hover="divination"] .sys-panel--divination { flex: 5.6; }
+  .sys-split[data-active=""][data-hover="divination"] .sys-panel--redactory  { flex: 4.4; }
+  .sys-split[data-active=""][data-hover="redactory"]  .sys-panel--redactory  { flex: 5.6; }
+  .sys-split[data-active=""][data-hover="redactory"]  .sys-panel--divination { flex: 4.4; }
+
+  /* Active ratios */
+  .sys-split[data-active="divination"] .sys-panel--divination { flex: 7; cursor: default; overflow-y: auto; overflow-x: hidden; }
+  .sys-split[data-active="divination"] .sys-panel--redactory  { flex: 3; }
+  .sys-split[data-active="redactory"]  .sys-panel--redactory  { flex: 7; cursor: default; overflow-y: auto; overflow-x: hidden; }
+  .sys-split[data-active="redactory"]  .sys-panel--divination { flex: 3; }
+
+  .sys-panel::-webkit-scrollbar { width: 4px; }
+  .sys-panel::-webkit-scrollbar-track { background: transparent; }
+  .sys-panel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+  /* State visibility */
+  .sys-idle, .sys-collapsed, .sys-expanded {
+    position: absolute; inset: 0;
+  }
+  .sys-expanded { display: none; }
+  .sys-collapsed { display: none; }
+
+  /* When this panel is the active one */
+  .sys-split[data-active="divination"] .sys-panel--divination .sys-idle,
+  .sys-split[data-active="divination"] .sys-panel--divination .sys-collapsed,
+  .sys-split[data-active="redactory"]  .sys-panel--redactory  .sys-idle,
+  .sys-split[data-active="redactory"]  .sys-panel--redactory  .sys-collapsed {
+    display: none;
+  }
+  .sys-split[data-active="divination"] .sys-panel--divination .sys-expanded,
+  .sys-split[data-active="redactory"]  .sys-panel--redactory  .sys-expanded {
+    display: block; position: relative; min-height: 100%;
+    animation: sysEnter 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  /* When other panel is active → this panel collapsed */
+  .sys-split[data-active="redactory"]  .sys-panel--divination .sys-idle,
+  .sys-split[data-active="divination"] .sys-panel--redactory  .sys-idle {
+    display: none;
+  }
+  .sys-split[data-active="redactory"]  .sys-panel--divination .sys-collapsed,
+  .sys-split[data-active="divination"] .sys-panel--redactory  .sys-collapsed {
+    display: flex;
+  }
+
+  @keyframes sysEnter {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* ── IDLE state ── */
+  .sys-idle {
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sys-idle__bg {
+    position: absolute; inset: 0; overflow: hidden;
+  }
+  .sys-idle__bg img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    transform: scale(1.02); opacity: 0.65;
+    transition: transform 1s cubic-bezier(0.16,1,0.3,1), opacity 0.7s ease;
+  }
+  .sys-panel:hover .sys-idle__bg img,
+  .sys-split[data-hover="divination"] .sys-panel--divination .sys-idle__bg img,
+  .sys-split[data-hover="redactory"]  .sys-panel--redactory  .sys-idle__bg img {
+    transform: scale(1.07); opacity: 1;
+  }
+  .sys-idle__radial {
+    position: absolute; inset: 0; pointer-events: none;
+    opacity: 0.45; transition: opacity 0.7s ease;
+  }
+  .sys-panel[data-side="left"] .sys-idle__radial {
+    background: radial-gradient(ellipse at 75% 55%, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 65%);
+  }
+  .sys-panel[data-side="right"] .sys-idle__radial {
+    background: radial-gradient(ellipse at 25% 55%, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 65%);
+  }
+  .sys-split[data-hover="divination"] .sys-panel--divination .sys-idle__radial,
+  .sys-split[data-hover="redactory"]  .sys-panel--redactory  .sys-idle__radial {
+    opacity: 1;
+  }
+  .sys-idle__sweep {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .sys-panel[data-side="left"] .sys-idle__sweep {
+    background: linear-gradient(to right, rgba(5,5,14,0.8) 0%, rgba(5,5,14,0.25) 55%, rgba(5,5,14,0.5) 100%);
+  }
+  .sys-panel[data-side="right"] .sys-idle__sweep {
+    background: linear-gradient(to left, rgba(5,5,14,0.8) 0%, rgba(5,5,14,0.25) 55%, rgba(5,5,14,0.5) 100%);
+  }
+  .sys-idle__bottomFade {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 140px; pointer-events: none;
+    background: linear-gradient(to top, var(--darkBg) 0%, transparent 100%);
+  }
+  .sys-idle__content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    padding: 0 48px; text-align: center;
+  }
+  .sys-idle__subtitle {
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.55; transition: opacity 0.4s;
+  }
+  .sys-idle__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(56px, 8vw, 104px);
+    font-weight: 700; color: var(--text); line-height: 1;
+    letter-spacing: 0.05em;
+    transition: letter-spacing 0.7s cubic-bezier(0.16,1,0.3,1), text-shadow 0.5s ease;
+    white-space: nowrap;
+  }
+  .sys-idle__tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: rgba(232,228,220,0.55);
+    max-width: 280px; line-height: 1.55;
+    opacity: 0; transform: translateY(10px);
+    transition: opacity 0.45s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .sys-idle__cta {
+    font-family: 'DM Sans', sans-serif; font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    border-radius: 2px; padding: 8px 18px;
+    color: var(--accent); background: rgba(0,0,0,0.3);
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  }
+  .sys-panel:hover .sys-idle__subtitle,
+  .sys-split[data-hover="divination"] .sys-panel--divination .sys-idle__subtitle,
+  .sys-split[data-hover="redactory"]  .sys-panel--redactory  .sys-idle__subtitle { opacity: 1; }
+
+  .sys-panel:hover .sys-idle__name,
+  .sys-split[data-hover="divination"] .sys-panel--divination .sys-idle__name,
+  .sys-split[data-hover="redactory"]  .sys-panel--redactory  .sys-idle__name {
+    letter-spacing: 0.14em;
+    text-shadow: 0 0 60px color-mix(in srgb, var(--accent) 33%, transparent);
+  }
+  .sys-panel:hover .sys-idle__tagline,
+  .sys-split[data-hover="divination"] .sys-panel--divination .sys-idle__tagline,
+  .sys-split[data-hover="redactory"]  .sys-panel--redactory  .sys-idle__tagline,
+  .sys-panel:hover .sys-idle__cta,
+  .sys-split[data-hover="divination"] .sys-panel--divination .sys-idle__cta,
+  .sys-split[data-hover="redactory"]  .sys-panel--redactory  .sys-idle__cta {
+    opacity: 1; transform: translateY(0);
+  }
+
+  /* ── COLLAPSED state ── */
+  .sys-collapsed {
+    flex-direction: column;
+    align-items: center; justify-content: center; gap: 16px;
+    background: var(--darkBg);
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  .sys-collapsed:hover { background: rgba(255,255,255,0.015); }
+  .sys-collapsed__radial {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at 50% 50%, color-mix(in srgb, var(--accent) 5%, transparent) 0%, transparent 70%);
+  }
+  .sys-collapsed__hint {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); opacity: 0.4;
+    writing-mode: vertical-rl; text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  .sys-collapsed__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px; font-weight: 700;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--accent); opacity: 0.35;
+    writing-mode: vertical-rl; text-orientation: mixed;
+    transform: rotate(180deg); user-select: none;
+    transition: opacity 0.2s;
+  }
+  .sys-collapsed:hover .sys-collapsed__name { opacity: 0.65; }
+
+  /* ── EXPANDED state ── */
+  .sys-expanded__topbar {
+    position: sticky; top: 0; z-index: 10;
+    padding: 0 28px; height: 44px;
+    background: rgba(5,5,12,0.82);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center;
+  }
+  .sys-back {
+    background: none; border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; font-size: 11px;
+    letter-spacing: 0.1em; font-weight: 500;
+    color: var(--accent); opacity: 0.65; padding: 0;
+    display: flex; align-items: center; gap: 6px;
+    transition: opacity 0.2s;
+  }
+  .sys-back:hover { opacity: 1; }
+  .sys-expanded__topbarTag {
+    margin-left: auto;
+    font-family: 'DM Sans', sans-serif; font-size: 9px;
+    letter-spacing: 0.2em; color: rgba(232,228,220,0.18);
+    text-transform: uppercase;
+  }
+
+  .sys-expanded__hero {
+    position: relative; height: 260px; flex-shrink: 0; overflow: hidden;
+  }
+  .sys-expanded__hero img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    opacity: 0.9;
+  }
+  .sys-expanded__heroRadial {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 60%, color-mix(in srgb, var(--accent) 13%, transparent) 0%, transparent 55%);
+  }
+  .sys-expanded__heroOverlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(5,5,12,0.15) 0%, rgba(5,5,12,0.92) 100%);
+  }
+  .sys-expanded__heroBar {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, transparent, var(--accent), transparent);
+    opacity: 0.7;
+  }
+  .sys-expanded__heroContent {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 0 52px 40px; z-index: 2;
+  }
+  .sys-expanded__heroContent h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 76px; font-weight: 700;
+    color: var(--text); margin: 0 0 10px;
+    line-height: 1; letter-spacing: 0.03em;
+  }
+  .sys-expanded__heroContent p {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: rgba(232,228,220,0.5); margin: 0;
+  }
+
+  .sys-expanded__body {
+    display: block;
+  }
+  .sys-expanded__lore {
+    padding: 36px 44px 64px;
+  }
+  .sys-expanded__lore p {
+    font-family: 'DM Sans', sans-serif; font-size: 14.5px;
+    line-height: 1.87; color: var(--text-muted);
+    margin: 0 0 22px;
+  }
+  .sys-expanded__lore p:nth-child(1) { animation: sysEnter 0.5s 0.15s cubic-bezier(0.16,1,0.3,1) both; }
+  .sys-expanded__lore p:nth-child(2) { animation: sysEnter 0.5s 0.27s cubic-bezier(0.16,1,0.3,1) both; }
+  .sys-expanded__lore p:nth-child(3) { animation: sysEnter 0.5s 0.39s cubic-bezier(0.16,1,0.3,1) both; }
+  .sys-expanded__entryLink {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 8px; padding: 10px 18px;
+    font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent); text-decoration: none;
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: 2px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    animation: sysEnter 0.5s 0.51s cubic-bezier(0.16,1,0.3,1) both;
+  }
+  .sys-expanded__entryLink:hover {
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border-color: var(--accent);
+    color: var(--text);
+  }
+  .sys-expanded__side { padding: 28px 22px; }
+  .sys-expanded__card {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 4px; overflow: hidden;
+  }
+  .sys-expanded__cardTitle {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .sys-fieldRow {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .sys-fieldRow:last-child { border-bottom: none; }
+  .sys-fieldKey {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-dim); margin-bottom: 3px;
+  }
+  .sys-fieldVal {
+    font-family: 'DM Sans', sans-serif; font-size: 12px;
+    color: var(--text-muted); line-height: 1.5;
+  }
+
+  /* ── Seam ── */
+  .sys-seam {
+    position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 3px; transform: translateX(-50%);
+    z-index: 5; pointer-events: none;
+    background: linear-gradient(180deg,
+      color-mix(in srgb, #4a62c4 53%, transparent) 0%,
+      rgba(255,255,255,0.12) 48%,
+      rgba(255,255,255,0.12) 52%,
+      color-mix(in srgb, #b13a34 53%, transparent) 100%);
+    transition: opacity 0.5s ease, left 0.78s cubic-bezier(0.16,1,0.3,1);
+  }
+  .sys-split[data-active=""][data-hover="divination"] .sys-seam { left: 56%; }
+  .sys-split[data-active=""][data-hover="redactory"]  .sys-seam { left: 44%; }
+  .sys-split[data-active="divination"] .sys-seam { left: 70%; opacity: 0.3; }
+  .sys-split[data-active="redactory"]  .sys-seam { left: 30%; opacity: 0.3; }
+
+  /* ── Caption ── */
+  .sys-caption {
+    display: flex; align-items: center; gap: 14px;
+    justify-content: center; flex-shrink: 0;
+    padding: 13px 32px;
+    font-family: 'DM Sans', sans-serif; font-size: 9px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(232,228,220,0.15);
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .sys-caption__dot { color: rgba(255,255,255,0.1); }
+
+  /* ── Entries overlay ── */
+  .sys-overlay {
+    position: fixed; inset: 0; z-index: 300;
+    background: rgba(3,3,8,0.94);
+    backdrop-filter: blur(20px);
+    display: none; flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .sys-overlay.is-open {
+    display: flex; opacity: 1;
+    animation: sysOverlayIn 0.45s cubic-bezier(0.16,1,0.3,1);
+  }
+  @keyframes sysOverlayIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .sys-overlay__head {
+    padding: 32px 52px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex; align-items: flex-end; justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .sys-overlay__eyebrow {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(232,228,220,0.28); margin-bottom: 8px;
+  }
+  .sys-overlay__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 700;
+    color: var(--text); margin: 0; line-height: 1;
+  }
+  .sys-overlay__close {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px; width: 36px; height: 36px;
+    cursor: pointer; color: rgba(232,228,220,0.5);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; line-height: 1;
+  }
+  .sys-overlay__close:hover { background: rgba(255,255,255,0.12); color: var(--text); }
+  .sys-overlay__cols {
+    flex: 1; overflow: auto;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+  }
+  .sys-overlay__col {
+    padding: 32px 48px 60px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .sys-overlay__col[data-no-border="true"] { border-right: none; }
+  .sys-overlay__colHead {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 24px;
+  }
+  .sys-overlay__bar { width: 3px; height: 20px; background: var(--accent); border-radius: 1px; }
+  .sys-overlay__colName {
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent);
+  }
+  .sys-overlay__colCount {
+    font-family: 'DM Sans', sans-serif; font-size: 9px;
+    color: rgba(232,228,220,0.25); letter-spacing: 0.1em;
+  }
+  .sys-overlay__empty {
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
+    color: var(--text-dim); font-style: italic;
+  }
+  .sys-overlay__list {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .sys-chip {
+    display: grid; grid-template-columns: 1fr 22px;
+    align-items: center; gap: 12px;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-left: 2px solid color-mix(in srgb, var(--accent) 53%, transparent);
+    border-radius: 0 4px 4px 0;
+    padding: 14px 18px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .sys-chip:hover {
+    border-color: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+    border-left-color: var(--accent);
+  }
+  .sys-chip__type {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 4px;
+  }
+  .sys-chip__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--text); line-height: 1.1; margin-bottom: 5px;
+  }
+  .sys-chip__summary {
+    font-family: 'DM Sans', sans-serif; font-size: 12px;
+    color: var(--text-muted); line-height: 1.5;
+  }
+  .sys-chip__arrow {
+    color: var(--accent); opacity: 0.45;
+    font-size: 20px; line-height: 1;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .sys-expanded__body { grid-template-columns: 1fr; }
+    .sys-expanded__lore { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .sys-expanded__heroContent h2 { font-size: 52px; }
+    .sys-overlay__cols { grid-template-columns: 1fr; }
+    .sys-overlay__col { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  }
+  @media (max-width: 640px) {
+    .sys-identity { padding: 14px 20px; gap: 16px; }
+    .sys-identity__center { padding: 0 16px; }
+    .sys-rule { display: none; }
+    .sys-idle__name { font-size: 56px; }
+    .sys-expanded__hero { height: 200px; }
+    .sys-expanded__heroContent { padding: 0 24px 24px; }
+    .sys-expanded__heroContent h2 { font-size: 40px; }
+    .sys-overlay__head { padding: 20px 24px; }
+    .sys-overlay__title { font-size: 32px; }
+  }
+</style>

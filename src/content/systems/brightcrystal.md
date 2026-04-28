@@ -2,7 +2,7 @@
 title: "BrightCrystal"
 type: "System"
 summary: "Curvature-Compressed Radiant Silicate. The world's primary energy substrate — and the material nobody fully understands."
-tags: ["systems", "BrightCrystal", "Energy", "Resonance", "Callings", "Precursors", "Economy", "Redactory"]
+tags: ["systems", "BrightCrystal", "Energy", "Resonance", "Callings", "Precursors", "Economy", "Redactory", "Divination"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"

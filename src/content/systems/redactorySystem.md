@@ -5,57 +5,31 @@ summary: The art of redacting reality.
 tags: ["systems", "magic"]
 status: public
 created: "2026-02-12"
-updated: "2026-02-20"
+updated: "2026-04-27"
 image: "/uploads/Redactory.png"
 ---
 
-**Redactory** is a rare human ability that allows certain individuals—known as **Redactors**—to influence the physical world in unusual ways. By entering a focused mental state called the **Dive**, a Redactor can briefly guide reality to behave differently from how it normally would.
+**Redactory** is a rare human ability that allows certain individuals — known as **Redactors** — to alter the behavior of physical reality directly. By entering a focused mental state called the **Dive**, a Redactor can guide the world to express itself differently than it normally would: reshaping matter, redirecting energy, manifesting objects, healing wounds, or producing effects that most observers have no framework to explain.
 
-Researchers generally believe Redactory does not create matter or energy out of nothing. Instead, it appears to push the world toward **possible states that reality could already take**, but usually does not.
-
-In practice this can produce effects that resemble magic: shaping materials, generating heat or force, or temporarily manifesting objects. However, Redactory is limited, mentally demanding, and often dangerous to misuse.
+The system itself is not limited. The practitioner is. And the limit is their life.
 
 ---
 
-## Overview
+## What Redactors Can Do
 
-Redactory is a structured system through which certain people, known as **Redactors**, can influence the local behavior of physical reality.
+The honest answer is: **almost anything**.
 
-To outside observers these actions often resemble magic. Objects may appear suddenly, heat may form without fuel, or materials may reshape themselves in seconds. Despite these dramatic effects, most researchers do not believe Redactory breaks the laws of nature. Instead, the current understanding is that Redactors **redirect how those laws express themselves in a particular place**.
+Redactory does not create matter from nothing, but it does something that looks identical from the outside. Every piece of matter, every form of energy, already exists in the world in some configuration. A Redactor does not invent — they **redirect**. They take what is already there and guide it into a different expression.
 
-According to the most widely accepted theories, reality may allow many possible outcomes in any given situation. Normally, the world settles into whichever outcome is most stable under its natural conditions. Redactory appears to interfere with this process, temporarily pushing reality toward a different possible outcome.
+**Light** is not just what the eye sees. It is a spectrum — most of it invisible, passing through walls, through flesh, through the ground beneath a city. A Redactor whose Anchor is light can reach into that invisible spectrum and shift it. They can walk into a completely sealed room with no lamp and no fire and light it anyway, drawing on wavelengths already moving through the building's stone. They can blind without touching. They can illuminate without a source. To anyone watching, something appeared from nothing. What actually happened is that the Redactor changed which part of what was already there became visible.
 
-This idea remains a theory, but it helps explain why some Redactory effects disappear quickly while others produce permanent results.
+A highly experienced Redactor can conjure a bottle of water, fill it, drink from it — and when they stop concentrating, it vanishes. The water was real. While it existed, it was cold and wet and tasted like water. What they did was take the atoms of the air around them and redirect them into a different molecular configuration. It is extraordinarily difficult. It is not impossible. Practitioners who reach that level of experience do this. **What looks like creation is matter that was already there, briefly wearing a different shape.**
 
----
+A Redactor whose Anchor is **blood** can stop bleeding with a thought, can accelerate the repair of tissue, can push a body toward a state it would eventually reach on its own — and arrive there in seconds. At greater depth, they can redirect what a body's systems are doing in ways that have nothing to do with healing. The same Anchor that closes wounds describes what it takes to open them without touching.
 
-## How Redactory Works
+A Redactor whose Anchor is **momentum** does not need to touch something to move it. They do not need to throw anything to hit someone. Every object in a room is already in motion relative to something else. Every surface vibrates. All of that is material to work with.
 
-Although the exact mechanism is still debated, researchers generally describe Redactory as a process with several stages.
-
-### 1. The Normal State
-
-Under ordinary conditions, physical systems settle into their most stable state. For example, heat spreads outward, materials keep their shape, and objects remain where gravity places them.
-
-### 2. Entering the Dive
-
-To perform Redactory, a practitioner enters an intense mental state known as **the Dive**. During this state, the Redactor focuses their mind to an extreme degree, narrowing attention and reducing outside distractions.
-
-Many Redactors describe the Dive as a feeling of mental compression or clarity, where their thoughts become unusually precise.
-
-### 3. Guiding Reality
-
-While in the Dive, the Redactor attempts to guide reality toward a different possible state. For example, instead of heat dispersing, it might be concentrated into a small area, or a material might shift into a new shape.
-
-Observers often describe this step as "forcing" reality to behave differently. In practice, it seems more accurate to say that the Redactor is **nudging the world toward a different outcome that was already possible**.
-
-### 4. Stabilizing the Effect
-
-Some effects require the Redactor to maintain concentration in order to continue. When focus ends, the effect fades and the environment returns to normal.
-
-Other changes become stable once they occur. For example, if a Redactor reshapes a piece of metal into a tool, the tool may remain even after the Redactor stops concentrating.
-
-Why some changes persist while others collapse is still an area of active research.
+There is no category of effect that is inherently beyond Redactory's reach. The question is never *can this be done*. The question is always *can the practitioner survive doing it*.
 
 ---
 
@@ -63,42 +37,60 @@ Why some changes persist while others collapse is still an area of active resear
 
 > The **Dive** is the mental state required for all Redactory — a condition of extreme inward focus in which a Redactor's external awareness narrows while their internal concentration becomes unusually sharp.
 
-It is not a physical location, but rather a condition of intense mental focus. During the Dive, Redactors often experience reduced awareness of their surroundings while their internal concentration becomes extremely sharp.
+To perform Redactory at all, a practitioner must enter the Dive. During the Dive, sounds recede. The sensation of the body fades. What remains is a clarity that experienced practitioners describe as **architectural** — not calm, exactly, but exact. Thoughts become unusually sharp. Perception of the immediate physical environment doesn't disappear; it becomes less urgent than the interior focus.
 
-Because the Dive places heavy strain on the mind, it cannot be maintained indefinitely. Attempting to remain in this state for too long can lead to exhaustion, confusion, or more serious psychological harm.
+This state is where all the work happens. Without it, nothing.
 
-For this reason, most Redactors learn to enter and exit the Dive carefully during training.
+The Dive is also where the danger begins.
 
 ---
 
 ## Anchors
 
-> An **Anchor** is the conceptual theme through which a Redactor most naturally performs their abilities — a domain of focus that shapes both their range and ease of use.
+> An **Anchor** is the conceptual domain through which a Redactor's ability flows most naturally — a path of least resistance that shapes both what they can do effortlessly and what costs them enormously.
 
-An Anchor does not limit what a Redactor can do completely, but it strongly influences which effects feel natural and which require greater effort. Some Redactors work most naturally with ideas like flame, motion, growth, or reflection. Others develop more unusual anchors based on personal experiences or early training.
+Every Redactor has an Anchor. Common Anchors include **flame, metal, growth, motion, shadow, silence, reflection,** and **light**, but the range is broader than any list. Some Redactors develop Anchors around abstract concepts: **division, weight, correspondence, absence**.
 
-With practice, a Redactor usually becomes faster and more precise when working within their Anchor domain.
+The Anchor is not a container. It is a path. Everything is accessible in principle. What the Anchor determines is what requires almost no effort and what costs enormously.
+
+A Redactor whose Anchor is flame can concentrate fire, snuff it, reshape heat, and produce combustion from the ambient energy in a room — at shallow Depth, almost effortlessly. Another Redactor can do the same things, but it will cost them far more to achieve the same result, because they are working at a greater distance from their natural path.
+
+With years of practice, working within the Anchor becomes faster, more precise, and more powerful. The cost inside the Anchor drops. The ceiling of what is survivable inside the Anchor rises. This is the core of all Redactor training: **not learning what is possible, but learning how deep you can go without dying.**
 
 ---
 
-## Limits and Risks
+## Depth and the Limit
 
-Redactory is powerful, but it is far from limitless.
+> **Depth** is the measure of how far a Redactor has pushed into their work — and the only thing that ultimately stops them. The system allows almost anything. Depth is what kills.
 
-The more dramatically a Redactor attempts to alter reality, the greater the mental strain involved. Large effects, complex changes, or actions far outside a Redactor's Anchor are especially difficult to maintain.
+A shallow Dive produces modest effects with low cost. As the Redactor goes deeper, the effects scale dramatically — more complex, more powerful, more precise, capable of affecting larger volumes or more fundamental aspects of matter and energy. There is no fixed ceiling on what Depth can achieve.
 
-When a Redactor pushes too far, the effect may collapse suddenly. In severe cases the strain can damage the Redactor's memory, identity, or mental stability.
+But the deeper a Redactor goes, the closer they move to a threshold they cannot cross and survive.
 
-There are also reports of environmental disturbances during extreme Redactory events, though researchers continue to debate how and why these occur.
+This threshold is not the same for everyone. A well-trained Redactor with years of practice can sustain operations at Depth that would kill a novice immediately. An **Archtype** — a Redactor who has reached a state of permanent deep stabilization — operates at levels that would be instantly fatal to anyone else. But every practitioner has a threshold, and going past it does not produce a near-death experience. **It produces death.**
 
-Because of these risks, many societies regulate Redactor training or require practitioners to work within supervised institutions.
+The Anchor mediates this. Inside the Anchor's domain, a Redactor can go deeper before the cost becomes unsustainable. Outside it, the same level of effort costs more, which means the same effect demands more Depth, which means the survival margin is smaller. A Redactor attempting an effect far from their Anchor is not just working harder — they are burning faster, with less room for error.
+
+**Overreach** is what happens when a practitioner goes past their limit without dying immediately. The effect collapses. The mind pays the cost instead. Memory fragments. Concentration becomes unreliable. In severe cases, the Redactor loses parts of their identity — not metaphorically, but literally: a stable sense of who they are begins to dissolve. Repeated Overreach accelerates this. There are Redactors who have pushed past their limits enough times that something fundamental in how they think no longer works the way it once did.
+
+The danger is not the system. The system allows anything. The danger is the practitioner's own architecture — how deep they can go before the act of going deeper is the last thing they do.
+
+---
+
+## Why This Matters
+
+Redactory produces people who can, depending on their training and their willingness to push themselves, reshape metal with a thought, heal grievous wounds in seconds, reroute fire, manifest water from air, or alter the behavior of light across an entire building. An **Archtype** — a Redactor who has survived long enough and worked deeply enough to permanently stabilize at extreme Depth — is something approaching a different category of human being entirely.
+
+This is why every society that contains Redactors has eventually developed some framework for managing them. Not because the ability is modest and needs encouragement. Because the ability is not modest at all, and the people who wield it at high levels represent a force that requires serious institutional attention.
+
+The **Apocachynthion** is the Empire's answer to that question: the body that trains, certifies, and where necessary governs Redactors operating within its territory. Its most important job is not teaching practitioners what they can do. It is teaching them how to survive doing it — and ensuring that those who cannot learn that lesson do not find out the hard way in the middle of a city.
 
 ---
 
 ## Current Understanding
 
-Despite centuries of study, Redactory remains only partially understood.
+Redactory has been studied for centuries. The broad outlines are well-established. The deep mechanics remain partially understood, with active debate among researchers about the precise nature of what happens during the Dive and why Depth has the lethal threshold it does.
 
-Most scholars agree that it involves an unusual interaction between human cognition and the structure of physical reality. However, the deeper principles behind this interaction remain unclear.
+What is not debated is the scale of what experienced practitioners can accomplish, or the fact that the primary constraint is the practitioner's own survival rather than any inherent limit in the ability itself. Most people encounter Redactory as a useful profession — healers, builders, engineers, soldiers. What lies at the upper end of the range, where the Dive goes deepest and the effects become hardest to describe in ordinary terms, is a different thing entirely, and most people never see it.
 
-As research continues, new theories regularly emerge. What is certain is that Redactory represents one of the most unusual and influential abilities ever observed in human history.
+Those who do tend to remember it.

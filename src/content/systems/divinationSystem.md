@@ -5,134 +5,114 @@ summary: Faith incarnate.
 tags: ["systems", "magic"]
 status: public
 created: "2026-02-12"
-updated: "2026-03-05"
+updated: "2026-04-27"
 image: "/uploads/divination.png"
 ---
 
-**Divination** is a supernatural phenomenon in which a human individual becomes aligned with a powerful external entity—commonly described as a **god, saint, spirit, or other higher being**. Through this alignment, the individual may manifest abilities or effects that appear miraculous, destructive, or otherwise beyond ordinary human capability.
+**Divination** is the phenomenon in which a powerful non-human entity — a **god**, or a fragment of one — fuses with a human individual and expresses its nature through them. The person becomes a **vessel**. The entity presses its power into the world through that vessel's body, mind, and will.
 
-Unlike **Redactory**, which is understood as a disciplined human ability to influence reality through training and mental control, Divination is generally believed to involve **power mediated through external beings** acting upon or through a human vessel.
+The result can be staggering. A vessel carrying a fragment of sufficient power can heal wounds that should be fatal, project fire that consumes stone, survive injuries that would kill anyone else, or do things for which there is simply no available description. From the outside, it looks like a person who has become **something more than human** — because that is, in a meaningful sense, exactly what has happened.
 
-Because the source of this power lies outside the practitioner, Divination is usually considered less predictable and less controllable than Redactory. Nevertheless, it can produce dramatic effects such as healing, destructive forces, prophetic visions, or unusual physical transformations.
-
-Divination has been documented throughout recorded history across many cultures of the world. Despite centuries of study, its deeper mechanism remains a subject of ongoing debate among scholars, theologians, and arcane researchers.
+The limit is not the entity. The limit is the vessel. And the vessel can break.
 
 ---
 
-## Overview
+## What Divination Is
 
-Divination refers to a class of supernatural phenomena in which a human vessel becomes linked to a non-human power. This connection allows the entity's influence to manifest through the individual.
+> **Divination** is the gradual fusion of a human mind with a stabilized concept — a god, or a fragment of one — that presses its nature through the vessel until the vessel begins to express that nature as capability.
 
-In most documented cases, the human involved serves as a **host or intermediary**, through which the external power can act within the physical world. The degree of influence varies widely. Some vessels retain clear autonomy, while others appear strongly guided—or temporarily overtaken—by the entity associated with them.
+Every entity capable of producing Divination is, at its core, a vast stabilized concept — a god whose existence is the organized coherence of *something*: **flame, decay, mercy, war, growth, hunger, light**. These entities are real. They exist in the world in ways that are difficult to describe simply, and they have always been able to press their nature into compatible human minds.
 
-Religious institutions traditionally interpret this phenomenon as a form of divine favor or spiritual calling. The **Church**, which is the most influential authority on Divination in many regions, teaches that such abilities arise when a person is chosen or blessed by a divine authority such as a god or saint.
+This pressing is what Divination is.
 
-Outside religious doctrine, academic scholars tend to describe Divination more cautiously. Many researchers suggest that the phenomenon represents a form of **alignment between a human mind and a powerful external intelligence**, allowing that intelligence to partially express itself through a compatible host.
+The entity does not possess a person the way water fills a container. It **aligns** with them. It finds the conceptual shape of a person whose mind, history, or nature already resonates with what the entity is — and then it pushes. Over time, the boundary between where the person ends and the entity begins becomes less clear. The entity's domain starts to express itself through the vessel as capability: as power that the vessel could never have produced alone.
 
----
-
-## Distinction from Redactory
-
-> Where **Redactory** is a discipline of the self — internal, trained, and bounded by the practitioner's own mind — **Divination** is a relationship with something greater. The power is not grown within. It is granted from without.
-
-Redactory is a **human discipline**. A trained Redactor enters a mental state known as the Dive and deliberately guides reality toward different possible outcomes through skill, concentration, and experience. The process is internally driven and relies on the Redactor's own mental capacity.
-
-Divination, by contrast, is not generated by the practitioner alone. Instead, the abilities associated with Divination appear to arise from the **presence or influence of an external entity** acting through the individual.
-
-Because of this dependence on external forces, Divination is generally considered less stable and less predictable than Redactory. A Redactor's abilities grow through training and discipline, while a Diviner's abilities depend heavily on the nature and intentions of the entity involved.
-
-For this reason, most scholars classify Divination and Redactory as **separate supernatural systems**, even when their outward effects may occasionally resemble one another.
+This is not a gift in the sense of something handed over. The entity does not *give* the vessel fire. It **presses fire through the vessel**, and what comes out the other side is a person who can produce effects aligned with fire — so long as the vessel can hold it.
 
 ---
 
-## Sources of Divination
+## What a Vessel Can Actually Do
 
-Different cultures attribute Divination to a variety of supernatural entities.
+The domain of the possessing entity is the domain of the vessel's power. There are no exceptions to this, and no fixed ceiling within it.
 
-### Divine Sources
+A vessel aligned with **flame** can produce fire from nothing visible, concentrate heat into a pinpoint in the center of a room, extinguish fires that have no natural reason to stop, and — at full expression — push so much burning force through their body that everything in their immediate vicinity ignites simultaneously. There are accounts of single vessels reducing buildings to ash. There are accounts of vessels holding burning cities together by will, keeping fire away from what they chose to protect.
 
-The most widely recognized interpretation comes from organized religion. The Church teaches that Divination occurs when a person is chosen by a divine authority such as a god or saint. In these cases, the vessel may perform acts regarded as miracles, receive visions, or channel sacred forces.
+A vessel aligned with **decay** can cause living tissue to deteriorate on contact. They can accelerate rot in materials, collapse the structural coherence of organic matter, and — if the fusion has gone deep enough — simply stand in a place and let what they carry do what it does to everything around them.
 
-Individuals believed to possess such blessings are often elevated within religious institutions and may serve as healers, prophets, or spiritual leaders.
+A vessel aligned with **perception** cannot be deceived. Not practically, not with effort — *structurally*. Their senses have been extended into a domain where sensory deception is not how reality works. They know when they are being followed before the person following them has made a sound. They feel lies in conversations they are not part of. At high expression they can perceive things at distances and through obstructions that have no physical explanation.
 
-### Spiritual or Unknown Sources
+A vessel aligned with **mercy** can reach into a dying person and pull them back. Not through technique. Not through the slow work of a healer's training. Through the direct application of something that wants the person to live, and that has the coherence to push reality toward that outcome.
 
-Some scholars argue that not all Divination originates from recognized deities. Historical records describe vessels linked to ancient spirits, obscure supernatural beings, or unidentified intelligences.
-
-These cases are the subject of ongoing debate in arcane research.
-
-### Infernal Manifestations
-
-Phenomena resembling Divination have also been observed among hostile cults and dangerous entities. Religious authorities generally classify these manifestations separately from true Divination, describing them instead as **infernal corruption or possession**.
-
-Some researchers argue that the underlying process may be similar, while others insist the two phenomena should remain distinct categories.
+None of these effects are limited by the mechanism. The entity's domain encompasses the full scale of what that concept is in the world. A fragment of a fire-god is, structurally, *fire*, to the extent that fire has ever existed or can exist. The question is never whether the power can do what is being asked of it. **The question is whether the person carrying it can survive being the thing it moves through.**
 
 ---
 
-## Manifestations
+## The Vessel Is the Limit
 
-The abilities associated with Divination vary widely depending on the nature of the entity involved.
+> The **vessel** is the bottleneck of Divination. The entity wants to express itself. The vessel carries that pressure. What a vessel can sustain — and for how long — determines everything Divination can become.
 
-Commonly reported manifestations include:
+A very small amount of pressure, in a very compatible vessel, produces modest effects — unusual endurance, an instinctive understanding of the entity's domain, moments of capability that feel beyond what the person should be able to do. This is the early stage. This is manageable.
 
-* Healing or restoration of injuries
-* Destructive forces such as fire, light, or shadow
-* Heightened perception or prophetic visions
-* Unusual endurance or strength
-* Alterations to the vessel's physical form
+As the fusion deepens — as the entity presses more of itself through — the effects scale. The vessel becomes capable of things that belong to a different category of human capability entirely. And the cost scales with it.
 
-In many cases the individual retains partial control of their actions. In others, the external influence becomes dominant for brief periods.
+The coherence pressure of a powerful entity pushing through a human mind and body is not something a human being is built to sustain indefinitely. The structure of the vessel — their identity, their psychology, their sense of who they are — is under constant pressure from something that is not them, that has its own shape, and that is in some meaningful sense **stronger than they are**. Holding that at manageable levels requires ongoing effort, compatibility, and a kind of structural resilience that varies enormously between individuals.
 
-Because each entity possesses different characteristics, there is no universal set of abilities shared by all Diviners.
+When the pressure exceeds what the vessel can sustain, several things can happen. The vessel's mind begins to drift toward the entity's domain. Their values shift. Their priorities reorganize around what the entity is. A vessel carrying a fragment of war does not *choose*, over years of deep fusion, to become more interested in conflict and less interested in peace — it happens to them, gradually, structurally, because the thing inside them is war, and war is what starts to feel like the natural shape of everything.
+
+At the extreme end, the vessel's original self is overwritten entirely. The body keeps moving. The entity keeps expressing. But the person who was there before is gone — not dead, exactly, but no longer the dominant structure. What remains is something in between: neither fully human nor fully the entity, but a third thing. The Church calls these the **Consumed**. Scholars use the term **metamorphic**. They are rare, dangerous, and irreversible.
 
 ---
 
-## Transformation Phenomena
+## Angels and Demons
 
-> In rare but well-documented cases, prolonged exposure to supernatural influence can lead to **permanent transformation of the vessel** — when the external entity's presence becomes so deeply integrated with the host's body that the distinction between vessel and power begins to dissolve.
+> **Angels** and **demons** are not opposites. They are fragments of gods that approach vessels differently — one with invitation, one without. The mechanism is the same. The difference is consent.
 
-Historical and modern records associate several known supernatural entities with such transformations, including:
+The most common framework for describing the entities behind Divination comes from the Church, which uses the language of angels and demons. Most people think of these as opposites — good beings and evil ones, heaven and hell. The reality is more structural than that.
 
-* **Vampires**, often linked to predatory or vitality-draining influences
-* **Ghouls**, associated with decay and death-related forces
-* **Werewolves**, typically connected to bestial or instinct-driven transformations
+Angels and demons are **fragments of gods**. A god of sufficient complexity and scale produces many such fragments, of varying power and varying character, all carrying some portion of the parent concept. An **angel** is a fragment that tends toward consensual, purposeful alignment — it approaches compatible vessels with something like invitation, and the fusion it produces tends to run alongside the vessel's own values rather than against them. A **demon** is a fragment that approaches differently: predatorily, without asking, taking hold where it can find purchase rather than where it has been welcomed.
 
-These beings are rare but widely acknowledged to exist. Most citizens will never encounter one directly, though reports occasionally appear in news or official records when incidents occur.
+The underlying process is the same. Coherence pressure. Alignment. Gradual fusion. The difference is in the character of the entity pressing inward, and whether the vessel wanted to be found.
 
-When such cases are identified, they are typically addressed by specialized Church authorities or trained response units.
+This means that an angelic fragment of a flame-god and a demonic fragment of a flame-god produce vessels with similar powers. The vessel carrying the angelic fragment probably chose this and oriented their life toward the entity's domain long before the contact was made. The vessel carrying the demonic fragment probably didn't. Both of them can produce fire. What happens to their sense of self over time depends on how the fusion is managed, whether it was wanted, and how compatible the vessel actually is with what is pressing through them.
 
-Scholars continue to study these transformations in order to understand the conditions that allow them to occur and whether they can be prevented.
+The Church teaches this distinction in absolute moral terms, and the institutional consequences of that framing are real. But the underlying mechanism does not carry a moral valence. **The entity is a concept. The vessel is a person. What happens between them depends on the specifics of both.**
 
 ---
 
-## Regulation and Religious Authorities
+## Levels of Possession
 
-Divination is most commonly regulated by religious institutions.
+Not all Divination looks the same. The relationship between a vessel and an entity moves through stages, and each stage represents a different level of fusion, a different level of capability, and a different cost.
 
-In many regions of the world, the **Church** serves as the primary authority responsible for identifying, training, or containing individuals affected by Divination. Church organizations often investigate supernatural incidents, provide guidance to vessels believed to be divinely chosen, and respond to dangerous manifestations when they occur.
+**Early contact** is subtle. The vessel begins to feel an unusual affinity for something — fire, or the night, or the moment just before a fight. They develop an instinctive understanding of a domain that they have no training in. Their senses sharpen in ways aligned with the entity's nature. They may not know what is happening. Many early-contact vessels simply believe they have become more themselves.
 
-However, the Church is not the only institution involved in Divination. Other religions across the world maintain their own traditions involving divine vessels, spirit mediums, or sacred channels. These practices vary widely in their interpretation of the phenomenon.
+**Partial fusion** is where ability becomes unmistakable. The entity is actively present. The vessel can call on its domain with intention. Effects that were once instinctive become deliberate. The vessel is still themselves — still recognizably the person they were — but inflected, increasingly, by the entity's character. Their priorities begin to shift. Their sense of what matters starts to reorganize around the entity's domain.
 
-Because of these differences, the global understanding of Divination remains shaped by a combination of theology, cultural belief, and ongoing academic research.
+**Deep fusion** is the point at which the vessel is operating at a different scale of capability. The entity's full domain is accessible. The effects that are possible here are the ones that produce accounts other people don't believe. Identity is under real pressure. The vessel is still present, still in some sense choosing — but the choices have become increasingly shaped by what is fused with them. Returning to who they were before this point is not possible.
 
----
-
-## Risks and Consequences
-
-Divination carries significant risks.
-
-Because the phenomenon involves interaction with powerful external forces, vessels may experience psychological strain, shifts in personality, or gradual loss of autonomy over time.
-
-In extreme situations, the influence of the external entity may overwhelm the host entirely, leading to dangerous behavioral changes or transformation events.
-
-For this reason, both religious institutions and secular authorities maintain systems for monitoring and responding to Divination-related incidents.
+**Saturation** is where the vessel's original structure is no longer dominant. The entity's character has overwritten enough of the vessel's own that what remains is genuinely something other than the person who started. These individuals are extraordinarily powerful and extremely difficult to contain. They are also not, in the meaningful sense, who they used to be.
 
 ---
 
-## Current Understanding
+## What This Looks Like from the Outside
 
-Despite centuries of observation and documentation, the deeper mechanisms behind Divination remain uncertain.
+Most people encounter Divination at its modest expressions: a healer whose hands seem to do more than technique should allow, a soldier who walks out of situations that should have killed them, a prophet who knows things they cannot know.
 
-Some scholars consider it primarily a spiritual phenomenon rooted in divine will and faith. Others suspect it reflects a complex interaction between human consciousness and powerful external intelligences.
+What most people do not see, and what the institutions that manage Divination work hard to prevent from becoming ordinary public experience, is what happens at the deeper levels.
 
-What is certain is that Divination continues to influence religion, politics, and culture throughout the world. Whether regarded as a sacred gift or a dangerous supernatural influence, it remains one of the most mysterious forces known to humanity.
+A vessel at deep fusion, expressing the full weight of what is fused with them, does not look like a gifted human being. **They look like the concept that is moving through them wearing a human shape.** The effects they produce are not impressive versions of ordinary human capability. They belong to a different register entirely.
+
+The Church's specialized orders carry this. **HourGlass** maintains files on it. The **Apocachynthion** studies it at careful distance. None of these institutions are entirely comfortable with what they know, because what they know is that some of the people in the world are vessels for things that could, if those vessels chose to open fully to what is inside them and survive doing it, produce effects on the scale of catastrophes.
+
+Most don't. The cost of that kind of opening is the self. Very few people, even those who have carried a fragment for decades, are willing to pay it. And the ones who are willing tend to be exactly the kind of person that makes every other institution very concerned.
+
+---
+
+## The Relationship to Redactory
+
+Divination and Redactory are different systems, but they share an interface. Both operate through the same internal threshold that allows human minds to touch something beyond ordinary physical reality.
+
+The difference is **direction**. A Redactor enters that threshold deliberately, selects a configuration, and imposes it on reality through their own effort. A vessel in Divination is *found* by something that presses through that same threshold from the other side. The Redactor is the active party. The vessel, at least at first, is the thing being acted upon.
+
+This creates an unusual situation when the two overlap. A Redactor who is also a divine vessel carries both: their own trained capacity to navigate the internal threshold, and an entity pressing through them from outside. The results are amplified in ways that researchers describe with consistent unease. The two forms of influence do not simply add together. They interact, and the interactions are not always stable.
+
+In the Empire, such individuals are rare and tend to attract significant institutional attention from multiple directions simultaneously.

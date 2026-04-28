@@ -1,15 +1,1088 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import SectionList from "../../components/SectionList.astro";
+import { getCollection } from "astro:content";
+
+const REGIONS = [
+  {
+    key: "north",
+    label: "Northern Region",
+    short: "North",
+    numeral: "I",
+    tagline: "Frontier territories beyond the Spine",
+    accentColor: "#6a9ab5",
+    image: "/uploads/Darkmargin.png",
+    imagePosition: "center top",
+    gradient: "linear-gradient(160deg, #080f18 0%, #06060b 70%)",
+    matchTag: "northern region",
+  },
+  {
+    key: "central",
+    label: "Central Region",
+    short: "Central",
+    numeral: "II",
+    tagline: "The seat of the Empire — Kalt'sen and the Band",
+    accentColor: "#b13a34",
+    image: "/uploads/Vrenne.png",
+    imagePosition: "center center",
+    gradient: "linear-gradient(160deg, #140808 0%, #06060b 70%)",
+    matchTag: "central",
+  },
+  {
+    key: "south",
+    label: "Southern Region",
+    short: "South",
+    numeral: "III",
+    tagline: "The outer reaches and the deep interior",
+    accentColor: "#b08d3c",
+    image: "/uploads/BrightMargin.png",
+    imagePosition: "center center",
+    gradient: "linear-gradient(160deg, #120f06 0%, #06060b 70%)",
+    matchTag: "southern region",
+  },
+];
+
+const all = (await getCollection("places")).filter((e) => e.data.status === "public");
+
+function regionEntries(matchTag: string) {
+  return all
+    .filter((e) => (e.data.tags ?? []).some((t) => t.toLowerCase().includes(matchTag)))
+    .sort((a, b) => {
+      const pa = a.data.priority ?? Infinity;
+      const pb = b.data.priority ?? Infinity;
+      if (pa !== pb) return pa - pb;
+      return a.data.title.localeCompare(b.data.title);
+    });
+}
+
+const regionsData = REGIONS.map((r) => ({
+  ...r,
+  entries: regionEntries(r.matchTag).map((e) => ({
+    slug: e.slug,
+    title: e.data.title,
+    type: e.data.type,
+    designation: (e.data as any).designation ?? null,
+    summary: e.data.summary,
+    image: e.data.image ?? null,
+  })),
+}));
+
+const regionsJson = JSON.stringify(regionsData);
 ---
 
 <MainLayout active="places" pageTitle="Places — SiNE Archives">
-  <SectionList
-    section="places"
-    title="Places"
-    searchLabel="Search places…"
-    emptyLabel="No public place entries yet."
-    image="/uploads/PLACESMAP.png"
-    desc="Territories, cities, and the geographies of the known world."
-  />
+  <div class="places-root" id="places-root" data-regions={regionsJson}>
+    <div class="places-header">
+      <div class="places-header__rule"></div>
+      <div class="places-header__center">
+        <span class="places-header__label">Places</span>
+        <span class="places-header__sub">Territories, cities &amp; geographies of the known world</span>
+      </div>
+      <div class="places-header__rule places-header__rule--right"></div>
+    </div>
+
+    <div class="places-search" id="places-search">
+      <button class="places-search__btn" id="places-search-btn" aria-label="Search places" aria-expanded="false">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="places-search__panel" id="places-search-panel">
+        <label class="places-search__field">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+            <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <input
+            id="places-search-input"
+            type="search"
+            placeholder="Search places…"
+            autocomplete="off"
+          />
+        </label>
+        <ul class="places-search__results" id="places-search-results" role="listbox"></ul>
+      </div>
+    </div>
+
+    <div class="places-row" id="places-row">
+      {regionsData.map((region, idx) => (
+        <div
+          class="region-panel"
+          data-region={region.key}
+          data-accent={region.accentColor}
+          style={`background:${region.gradient}; ${idx < regionsData.length - 1 ? "border-right:1px solid rgba(255,255,255,0.04);" : ""}`}
+          role="button"
+          tabindex="0"
+          aria-label={`Open ${region.label}`}
+        >
+          {region.image && (
+            <div class="region-bgwrap">
+              <img
+                class="region-bg"
+                src={region.image}
+                alt=""
+                style={`object-position:${region.imagePosition};`}
+              />
+              <div class="region-tint" style={`background:${region.gradient}; opacity:0.4;`}></div>
+            </div>
+          )}
+
+          <svg class="region-grid" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <pattern id={`gp-${region.key}`} width="44" height="44" patternUnits="userSpaceOnUse">
+                <path d="M 44 0 L 0 0 0 44" fill="none" stroke={region.accentColor} stroke-width="0.4"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill={`url(#gp-${region.key})`} />
+          </svg>
+
+          <div class="region-bar" style={`background:${region.accentColor};`}></div>
+
+          <div class="region-numeral" style={`color:${region.accentColor};`}>{region.numeral}</div>
+
+          <div class="region-vertical">
+            <span class="region-vertical__label" style={`--accent:${region.accentColor};`}>{region.label}</span>
+            <span class="region-vertical__count" style={`color:${region.accentColor};`}>
+              {region.entries.length} {region.entries.length === 1 ? "entry" : "entries"}
+            </span>
+          </div>
+
+          <div class="region-cta" style={`color:${region.accentColor}; border-color:${region.accentColor}44;`}>
+            Open ›
+          </div>
+
+          <div class="region-expanded">
+            <div class="region-exp__header">
+              <div class="region-exp__top">
+                <div>
+                  <div class="region-exp__numtag" style={`color:${region.accentColor};`}>
+                    REGION {region.numeral}
+                  </div>
+                  <h2 class="region-exp__title">{region.label}</h2>
+                  <p class="region-exp__tagline">&ldquo;{region.tagline}&rdquo;</p>
+                </div>
+                <button class="region-exp__close" aria-label="Close" data-close>
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+                    <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="10" y1="1" x2="1" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="region-exp__divider" style={`background:${region.accentColor};`}></div>
+              <div class="region-exp__count" style={`color:${region.accentColor};`}>
+                {region.entries.length} {region.entries.length === 1 ? "ENTRY" : "ENTRIES"} FILED
+              </div>
+            </div>
+
+            <div class="region-exp__list">
+              {region.entries.length === 0 ? (
+                <div class="region-exp__empty">
+                  <div class="region-exp__empty-glyph" style={`color:${region.accentColor};`}>◇</div>
+                  <p class="region-exp__empty-text">No entries filed for this region yet.</p>
+                </div>
+              ) : (
+                region.entries.map((entry, i) => (
+                  <a
+                    class="place-card"
+                    href={`/places/${entry.slug}/`}
+                    data-accent={region.accentColor}
+                    style={`--accent:${region.accentColor}; --accent-soft:${region.accentColor}55; --accent-tint:${region.accentColor}12; --i:${i};`}
+                  >
+                    <div class="place-card__thumb">
+                      {entry.image ? (
+                        <img src={entry.image} alt="" loading="lazy" />
+                      ) : (
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" opacity="0.3">
+                          <path d="M10 2 L18 8 L18 18 L2 18 L2 8 Z" stroke="white" stroke-width="1.2" fill="none"/>
+                          <circle cx="10" cy="10" r="2" stroke="white" stroke-width="1"/>
+                        </svg>
+                      )}
+                    </div>
+                    <div class="place-card__body">
+                      <div class="place-card__type">{entry.type ?? "Place"}</div>
+                      <div class="place-card__title">{entry.title}</div>
+                      {entry.designation && (
+                        <div class="place-card__designation">{entry.designation}</div>
+                      )}
+                      <div class="place-card__summary">{entry.summary}</div>
+                    </div>
+                    <div class="place-card__arrow">›</div>
+                    <div class="place-card__accent"></div>
+                  </a>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="places-footer" id="places-footer">
+      <span class="places-footer__idle">Select a region to browse entries</span>
+      <span class="places-footer__active" hidden>
+        <span class="places-footer__active-label" id="places-footer-label"></span>
+        <span class="places-footer__sep">·</span>
+        <span>Press <kbd>Esc</kbd> or click × to close</span>
+      </span>
+    </div>
+  </div>
 </MainLayout>
+
+<style>
+  .places-root {
+    height: calc(100vh - 56px);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .places-header {
+    display: flex;
+    align-items: center;
+    padding: 22px 48px 14px;
+    flex-shrink: 0;
+  }
+  .places-header__rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06));
+  }
+  .places-header__rule--right {
+    background: linear-gradient(270deg, transparent, rgba(255, 255, 255, 0.06));
+  }
+  .places-header__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 0 40px;
+  }
+  .places-header__label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.4);
+  }
+  .places-header__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: rgba(232, 228, 220, 0.18);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .places-search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 32px 14px;
+    flex-shrink: 0;
+    z-index: 50;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .places-search__btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: rgba(232, 228, 220, 0.55);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .places-search__btn:hover,
+  .places-search__btn[aria-expanded="true"] {
+    color: var(--text);
+  }
+  .places-search__panel {
+    position: absolute;
+    top: calc(100% - 6px);
+    left: 50%;
+    width: min(440px, calc(100vw - 48px));
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transform-origin: top center;
+    transform: translate(-50%, -8px) scale(0.97);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .places-search__panel.is-open {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+    pointer-events: auto;
+  }
+  .places-search__field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: rgba(232, 228, 220, 0.55);
+  }
+  .places-search__field input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    flex: 1;
+    min-width: 0;
+  }
+  .places-search__field input::placeholder { color: rgba(232, 228, 220, 0.3); }
+  .places-search__results {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    max-height: 360px;
+    overflow-y: auto;
+  }
+  .places-search__results :global(li) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .places-search__results :global(.places-search__item) {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--text);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .places-search__results :global(.places-search__item:hover),
+  .places-search__results :global(.places-search__item.is-highlight) {
+    background: rgba(255, 255, 255, 0.04);
+    border-left-color: var(--accent, var(--crimson));
+  }
+  .places-search__results :global(.places-search__thumb) {
+    width: 56px;
+    height: 56px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--accent-tint, rgba(177, 58, 52, 0.12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .places-search__results :global(.places-search__thumb img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .places-search__results :global(.places-search__thumb svg) {
+    opacity: 0.4;
+  }
+  .places-search__results :global(.places-search__info) {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .places-search__results :global(.places-search__item-meta) {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent, var(--crimson));
+  }
+  .places-search__results :global(.places-search__item-title) {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .places-search__results :global(.places-search__item-designation) {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .places-search__results :global(.places-search__empty) {
+    padding: 18px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  .places-row {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .region-panel {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition: flex 0.72s cubic-bezier(0.16, 1, 0.3, 1);
+    outline: none;
+  }
+  .region-panel:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--crimson, #b13a34);
+  }
+  .places-row[data-active] .region-panel { flex: 0.28; }
+  .places-row[data-active] .region-panel.is-active { flex: 3.4; cursor: default; }
+
+  .region-bgwrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .region-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.32;
+    transform: scale(1);
+    filter: saturate(0.45);
+    transition: opacity 0.7s ease, transform 0.9s ease, filter 0.7s ease;
+  }
+  .region-tint {
+    position: absolute;
+    inset: 0;
+  }
+  .region-panel:hover .region-bg {
+    opacity: 0.6;
+    transform: scale(1.06);
+    filter: saturate(0.75);
+  }
+  .places-row[data-active] .region-panel:hover .region-bg {
+    opacity: 0.32;
+    transform: scale(1);
+    filter: saturate(0.45);
+  }
+  .region-panel.is-active .region-bg {
+    opacity: 0.4;
+    transform: scale(1.03);
+    filter: saturate(0.7);
+  }
+
+  .region-grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.045;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+  }
+  .region-panel:hover .region-grid { opacity: 0.12; }
+  .places-row[data-active] .region-panel:hover .region-grid { opacity: 0.045; }
+  .region-panel.is-active .region-grid { opacity: 0.07; }
+
+  .region-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    opacity: 0.15;
+    transition: opacity 0.4s;
+  }
+  .region-panel:hover .region-bar { opacity: 0.6; }
+  .places-row[data-active] .region-panel:hover .region-bar { opacity: 0.15; }
+  .region-panel.is-active .region-bar { opacity: 1; }
+
+  .region-numeral {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    opacity: 0.1;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+  .region-panel:hover .region-numeral { opacity: 0.5; }
+  .places-row[data-active] .region-panel:hover .region-numeral { opacity: 0.1; }
+  .places-row[data-active] .region-panel:not(.is-active) .region-numeral { transform: scale(0.65); }
+  .region-panel.is-active .region-numeral { opacity: 0; }
+
+  .region-vertical {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .region-panel.is-active .region-vertical { opacity: 0; }
+  .region-vertical__label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.4);
+    transition: color 0.35s, letter-spacing 0.4s;
+    white-space: nowrap;
+  }
+  .region-panel:hover .region-vertical__label {
+    letter-spacing: 0.24em;
+    color: var(--accent, rgba(232, 228, 220, 0.7));
+  }
+  .region-vertical__count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+  }
+  .region-panel:hover .region-vertical__count { opacity: 1; }
+
+  .region-cta {
+    position: absolute;
+    bottom: 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 6px 14px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  .region-panel:hover .region-cta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .places-row[data-active] .region-panel:hover .region-cta { opacity: 0; }
+
+  .region-expanded {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+  .region-panel.is-active .region-expanded {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .region-exp__header {
+    padding: 36px 36px 0;
+    flex-shrink: 0;
+  }
+  .region-exp__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .region-exp__numtag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .region-exp__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    margin: 0 0 7px 0;
+    letter-spacing: 0.01em;
+  }
+  .region-exp__tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(232, 228, 220, 0.38);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .region-exp__close {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgba(232, 228, 220, 0.5);
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .region-exp__close:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text);
+  }
+  .region-exp__divider {
+    height: 1px;
+    opacity: 0.25;
+    margin: 22px 0 14px;
+  }
+  .region-exp__count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .region-exp__list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 36px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .region-exp__empty {
+    padding: 56px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .region-exp__empty-glyph {
+    font-size: 26px;
+    opacity: 0.35;
+  }
+  .region-exp__empty-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .place-card {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 68px 1fr auto;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.015);
+    min-height: 76px;
+    align-items: stretch;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: border-color 0.25s, background 0.25s, opacity 0.45s, transform 0.45s;
+  }
+  .region-panel.is-active .place-card {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--i, 0) * 55ms + 80ms);
+  }
+  .place-card:hover {
+    border-color: var(--accent-soft);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .place-card:hover .place-card__arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .place-card:hover .place-card__accent {
+    opacity: 1;
+  }
+
+  .place-card__thumb {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-tint);
+  }
+  .place-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .place-card__body {
+    padding: 13px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .place-card__type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1px;
+  }
+  .place-card__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .place-card__designation {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+  .place-card__summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 2px;
+  }
+  .place-card__arrow {
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--accent);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .place-card__accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .places-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: rgba(232, 228, 220, 0.18);
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    flex-shrink: 0;
+    gap: 12px;
+  }
+  .places-footer__active {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .places-footer__active[hidden] { display: none; }
+  .places-footer__sep { color: rgba(255, 255, 255, 0.12); }
+  .places-footer kbd {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 2px;
+    padding: 1px 5px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+  }
+
+  @media (max-width: 720px) {
+    .places-row { flex-direction: column; }
+    .region-panel { min-height: 120px; }
+    .places-row[data-active] .region-panel { flex: 0.5; min-height: 60px; }
+    .places-row[data-active] .region-panel.is-active { flex: 6; min-height: 0; }
+    .region-vertical__label,
+    .region-vertical__count {
+      writing-mode: horizontal-tb;
+      transform: none;
+    }
+    .region-numeral { font-size: 56px; top: 14px; }
+    .region-exp__header { padding: 22px 20px 0; }
+    .region-exp__list { padding: 0 20px 20px; }
+    .region-exp__title { font-size: 26px; }
+  }
+</style>
+
+<script>
+  const root = document.getElementById("places-root");
+  const row = document.getElementById("places-row");
+  const footer = document.getElementById("places-footer");
+  const footerLabel = document.getElementById("places-footer-label");
+  const footerIdle = footer?.querySelector(".places-footer__idle") as HTMLElement | null;
+  const footerActive = footer?.querySelector(".places-footer__active") as HTMLElement | null;
+
+  if (root && row) {
+    const panels = Array.from(row.querySelectorAll<HTMLElement>(".region-panel"));
+
+    const open = (key: string) => {
+      row.setAttribute("data-active", key);
+      panels.forEach((p) => {
+        const isActive = p.dataset.region === key;
+        p.classList.toggle("is-active", isActive);
+        if (isActive) {
+          const label = p.querySelector<HTMLElement>(".region-exp__title")?.textContent ?? "";
+          const accent = p.dataset.accent ?? "";
+          if (footerLabel) {
+            footerLabel.textContent = label;
+            footerLabel.style.color = accent;
+            footerLabel.style.opacity = "0.7";
+          }
+        }
+      });
+      if (footerIdle) footerIdle.hidden = true;
+      if (footerActive) footerActive.hidden = false;
+    };
+
+    const close = () => {
+      row.removeAttribute("data-active");
+      panels.forEach((p) => p.classList.remove("is-active"));
+      if (footerIdle) footerIdle.hidden = false;
+      if (footerActive) footerActive.hidden = true;
+    };
+
+    panels.forEach((panel) => {
+      const key = panel.dataset.region!;
+      panel.addEventListener("click", (e) => {
+        if (panel.classList.contains("is-active")) return;
+        const target = e.target as HTMLElement;
+        if (target.closest("[data-close]") || target.closest(".place-card")) return;
+        open(key);
+      });
+      panel.addEventListener("keydown", (e) => {
+        if (panel.classList.contains("is-active")) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open(key);
+        }
+      });
+      panel.querySelector("[data-close]")?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        close();
+      });
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && row.hasAttribute("data-active")) close();
+    });
+  }
+
+  // ── search ────────────────────────────────────────────────
+  type SearchEntry = {
+    slug: string;
+    title: string;
+    type: string | null;
+    designation: string | null;
+    summary: string;
+    image: string | null;
+    region: string;
+    accent: string;
+  };
+
+  const searchBtn = document.getElementById("places-search-btn") as HTMLButtonElement | null;
+  const searchPanel = document.getElementById("places-search-panel") as HTMLDivElement | null;
+  const searchInput = document.getElementById("places-search-input") as HTMLInputElement | null;
+  const searchResults = document.getElementById("places-search-results") as HTMLUListElement | null;
+  const searchWrap = document.getElementById("places-search");
+
+  if (root && searchBtn && searchPanel && searchInput && searchResults && searchWrap) {
+    const regionsAttr = root.getAttribute("data-regions") ?? "[]";
+    let regionsData: any[] = [];
+    try { regionsData = JSON.parse(regionsAttr); } catch {}
+
+    const corpus: SearchEntry[] = regionsData.flatMap((r: any) =>
+      (r.entries ?? []).map((e: any) => ({
+        slug: e.slug,
+        title: e.title,
+        type: e.type ?? null,
+        designation: e.designation ?? null,
+        summary: e.summary ?? "",
+        image: e.image ?? null,
+        region: r.label,
+        accent: r.accentColor,
+      }))
+    );
+
+    let highlightIdx = -1;
+
+    const render = (q: string) => {
+      const ql = q.trim().toLowerCase();
+      const items = ql
+        ? corpus.filter((e) =>
+            e.title.toLowerCase().includes(ql) ||
+            e.summary.toLowerCase().includes(ql) ||
+            (e.designation ?? "").toLowerCase().includes(ql) ||
+            e.region.toLowerCase().includes(ql)
+          ).slice(0, 12)
+        : corpus.slice(0, 12);
+
+      searchResults.innerHTML = "";
+      highlightIdx = -1;
+
+      if (items.length === 0) {
+        const li = document.createElement("li");
+        li.className = "places-search__empty";
+        li.textContent = `No places match “${q}”.`;
+        searchResults.appendChild(li);
+        return;
+      }
+
+      items.forEach((entry, i) => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.className = "places-search__item";
+        a.href = `/places/${entry.slug}/`;
+        a.style.setProperty("--accent", entry.accent);
+        a.style.setProperty("--accent-tint", `${entry.accent}22`);
+        a.dataset.idx = String(i);
+
+        const thumb = document.createElement("div");
+        thumb.className = "places-search__thumb";
+        if (entry.image) {
+          const img = document.createElement("img");
+          img.src = entry.image;
+          img.alt = "";
+          img.loading = "lazy";
+          thumb.appendChild(img);
+        } else {
+          thumb.innerHTML = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 L18 8 L18 18 L2 18 L2 8 Z" stroke="white" stroke-width="1.2" fill="none"/><circle cx="10" cy="10" r="2" stroke="white" stroke-width="1"/></svg>';
+        }
+
+        const info = document.createElement("div");
+        info.className = "places-search__info";
+
+        const meta = document.createElement("div");
+        meta.className = "places-search__item-meta";
+        meta.textContent = entry.region;
+
+        const title = document.createElement("div");
+        title.className = "places-search__item-title";
+        title.textContent = entry.title;
+
+        info.append(meta, title);
+        if (entry.designation) {
+          const desig = document.createElement("div");
+          desig.className = "places-search__item-designation";
+          desig.textContent = entry.designation;
+          info.appendChild(desig);
+        }
+
+        a.append(thumb, info);
+        li.appendChild(a);
+        searchResults.appendChild(li);
+      });
+    };
+
+    const setHighlight = (idx: number) => {
+      const items = searchResults.querySelectorAll<HTMLElement>(".places-search__item");
+      if (items.length === 0) return;
+      highlightIdx = ((idx % items.length) + items.length) % items.length;
+      items.forEach((el, i) => el.classList.toggle("is-highlight", i === highlightIdx));
+      items[highlightIdx]?.scrollIntoView({ block: "nearest" });
+    };
+
+    const isOpen = () => searchPanel.classList.contains("is-open");
+
+    const openSearch = () => {
+      searchPanel.classList.add("is-open");
+      searchBtn.setAttribute("aria-expanded", "true");
+      render("");
+      setTimeout(() => searchInput.focus(), 0);
+    };
+
+    const closeSearch = () => {
+      searchPanel.classList.remove("is-open");
+      searchBtn.setAttribute("aria-expanded", "false");
+      searchInput.value = "";
+    };
+
+    searchBtn.addEventListener("click", () => {
+      if (isOpen()) closeSearch(); else openSearch();
+    });
+
+    searchInput.addEventListener("input", () => render(searchInput.value));
+
+    searchInput.addEventListener("keydown", (e) => {
+      const items = searchResults.querySelectorAll<HTMLElement>(".places-search__item");
+      if (e.key === "ArrowDown") { e.preventDefault(); setHighlight(highlightIdx + 1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); setHighlight(highlightIdx - 1); }
+      else if (e.key === "Enter") {
+        const target = items[highlightIdx] ?? items[0];
+        if (target) { e.preventDefault(); (target as HTMLAnchorElement).click(); }
+      } else if (e.key === "Escape") {
+        closeSearch();
+        searchBtn.focus();
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!isOpen()) return;
+      if (!searchWrap.contains(e.target as Node)) closeSearch();
+    });
+  }
+</script>
+

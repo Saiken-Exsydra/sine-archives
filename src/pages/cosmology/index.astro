@@ -1,15 +1,1017 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import SectionList from "../../components/SectionList.astro";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("cosmology");
+const publicEntries = all.filter((e) => e.data.status === "public");
+
+const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
+
+// Featured order. Anything in this list with public status + image goes top.
+const FEATURED_ORDER = [
+  "the-archive",
+  "terra",
+  "precursors",
+  "lunar-crown",
+  "the-stase",
+  "time",
+  "twilight-band",
+];
+
+// Per-slug accent colors. Defaults to crimson.
+const ACCENTS: Record<string, string> = {
+  "the-archive":     "#b13a34",
+  "terra":           "#b08d3c",
+  "precursors":      "#8fa3c0",
+  "lunar-crown":     "#c8b8d4",
+  "the-stase":       "#5a7a9a",
+  "time":            "#d4a04a",
+  "twilight-band":   "#c97a4a",
+  "book-of-humanity":"#9a8fc0",
+  "the-first-bearers":"#c0a060",
+  "callings":        "#a06a4a",
+  "quiet-moon":      "#6a8fa0",
+};
+
+// Image fallbacks (when entry frontmatter has no image, but a fitting upload exists).
+const IMAGE_FALLBACKS: Record<string, string> = {
+  "the-archive": "/uploads/Archive.png",
+  "precursors":  "/uploads/Precursors.png",
+};
+
+// Image overrides (win over frontmatter image).
+const IMAGE_OVERRIDES: Record<string, string> = {
+  "twilight-band": "/uploads/TWSection.png",
+};
+
+// Per-slug bg-image object-position fine-tune.
+const OBJECT_POSITION: Record<string, string> = {
+  "terra":         "center 35%",
+  "lunar-crown":   "center 30%",
+  "twilight-band": "center 50%",
+  "the-stase":     "center 40%",
+};
+
+type Entry = (typeof publicEntries)[number];
+
+const resolveImage = (e: Entry) => IMAGE_OVERRIDES[e.slug] || (e.data.image && e.data.image.length > 0 ? e.data.image : IMAGE_FALLBACKS[e.slug] || "");
+
+type Panel = {
+  slug: string;
+  title: string;
+  type: string;
+  designation: string;
+  summary: string;
+  image: string;
+  accent: string;
+  numeral: string;
+  objectPosition: string;
+  tags: string[];
+  fields: Record<string, string>;
+};
+
+const buildPanel = (e: Entry, idx: number): Panel => {
+  const d = e.data as any;
+  const fields: Record<string, string> = {};
+  if (d.designation)     fields["Designation"]      = d.designation;
+  if (d.domain)          fields["Domain"]           = d.domain;
+  if (d.principle)       fields["Principle"]        = d.principle;
+  if (d.known_principle) fields["Known Principle"]  = d.known_principle;
+  if (d.sealing_status)  fields["Sealing Status"]   = d.sealing_status;
+  if (d.custody)         fields["Custody"]          = d.custody;
+  if (d.keeper_name)     fields["Keeper"]           = d.keeper_name;
+  if (d.status_label)    fields["Status"]           = d.status_label;
+  fields["Filed"] = "Cosmology";
+  return {
+    slug: e.slug,
+    title: d.title,
+    type: d.type || "Cosmology",
+    designation: d.designation || d.summary?.split(".")[0] || "",
+    summary: d.summary || "",
+    image: resolveImage(e),
+    accent: ACCENTS[e.slug] || "#b13a34",
+    numeral: ROMAN[idx] || String(idx + 1),
+    objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
+    tags: Array.isArray(d.tags) ? d.tags.slice(0, 5) : [],
+    fields,
+  };
+};
+
+// Featured: in FEATURED_ORDER if present + has image (or fallback).
+const featuredEntries = FEATURED_ORDER
+  .map((slug) => publicEntries.find((e) => e.slug === slug))
+  .filter((e): e is Entry => !!e && resolveImage(e).length > 0);
+
+const featuredSlugs = new Set(featuredEntries.map((e) => e.slug));
+
+// Others: remaining public entries (regardless of image).
+const otherEntries = publicEntries
+  .filter((e) => !featuredSlugs.has(e.slug))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const featuredPanels = featuredEntries.map(buildPanel);
+const otherPanels    = otherEntries.map((e, i) => buildPanel(e, featuredPanels.length + i));
 ---
 
 <MainLayout active="cosmology" pageTitle="Cosmology — SiNE Archives">
-  <SectionList
-    section="cosmology"
-    title="Cosmology"
-    searchLabel="Search cosmology entries…"
-    emptyLabel="No public cosmology entries yet."
-    image="/uploads/CosmologyBG.png"
-    desc="The nature of the Archive, the Dive, and existence itself."
-  />
+  <div class="cosmo-root">
+
+    <!-- Identity bar -->
+    <div class="cosmo-identity">
+      <div class="cosmo-rule"></div>
+      <div class="cosmo-identity__center">
+        <span class="cosmo-identity__tag">COSMOLOGICAL RECORD</span>
+        <span class="cosmo-identity__year">RESTRICTED CIRCULATION</span>
+      </div>
+      <div class="cosmo-rule"></div>
+    </div>
+
+    <!-- Featured panels -->
+    <div class="cosmo-panels">
+      {featuredPanels.map((p, i) => (
+        <section
+          class:list={["cosmo-panel", { "is-first": i === 0 }]}
+          data-slug={p.slug}
+          style={`--accent: ${p.accent};`}
+        >
+          <div class="cosmo-panel__bg">
+            {p.image && (
+              <img
+                src={p.image}
+                alt=""
+                class="cosmo-panel__bg-img"
+                style={`object-position: ${p.objectPosition};`}
+              />
+            )}
+          </div>
+
+          <div class="cosmo-panel__overlay-top"></div>
+          <div class="cosmo-panel__overlay-left"></div>
+          <div class="cosmo-grain"></div>
+          <div class="cosmo-scanlines"></div>
+
+          <div class="cosmo-panel__bar"></div>
+
+          <div class="cosmo-panel__numeral" aria-hidden="true">{p.numeral}</div>
+
+          <div class="cosmo-panel__chapter-marker" aria-hidden="true">
+            {p.numeral} · {p.title.toUpperCase()} · COSMOLOGY
+          </div>
+
+          <div class="cosmo-panel__stamp">
+            <span>COSMOLOGICAL RECORD</span>
+          </div>
+
+          <div class="cosmo-panel__content">
+            <div class="cosmo-panel__tag">
+              <span class="cosmo-panel__tag-bar"></span>
+              <span>{p.type.toUpperCase()} · {p.numeral}</span>
+            </div>
+            <h2 class="cosmo-panel__title">{p.title}</h2>
+            {p.designation && (
+              <div class="cosmo-panel__designation">{p.designation}</div>
+            )}
+            <p class="cosmo-panel__summary">{p.summary}</p>
+            <button
+              class="cosmo-panel__cta"
+              type="button"
+              data-open-entry={p.slug}
+            >
+              Read Entry
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+                <path d="M1 5.5h9M5.5 1l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          {i === 0 && (
+            <div class="cosmo-panel__scroll-hint" aria-hidden="true">
+              <span>Scroll</span>
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+                <line x1="5" y1="0" x2="5" y2="11" stroke="currentColor" stroke-width="1"/>
+                <path d="M1 7 L5 12 L9 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+
+    <!-- Other entries -->
+    <section class="cosmo-others">
+      <div class="cosmo-others__inner">
+        <div class="cosmo-others__header">
+          <div class="cosmo-others__rule"></div>
+          <div class="cosmo-others__header-center">
+            <div class="cosmo-others__label">Additional Entries</div>
+            <div class="cosmo-others__count">{otherPanels.length} filed</div>
+          </div>
+          <div class="cosmo-others__rule"></div>
+        </div>
+
+        {otherPanels.length === 0 ? (
+          <p class="cosmo-others__empty">
+            No additional entries filed under this section.
+          </p>
+        ) : (
+          <>
+            <button class="cosmo-others__toggle" type="button" id="cosmo-others-toggle" aria-expanded="false">
+              <span class="cosmo-others__toggle-label">View All Secondary Entries</span>
+              <span class="cosmo-others__toggle-count">({otherPanels.length})</span>
+              <span class="cosmo-others__toggle-caret">▾</span>
+            </button>
+
+            <div class="cosmo-others__list" id="cosmo-others-list" hidden>
+              {otherPanels.map((p) => (
+                <button
+                  class="cosmo-other-row"
+                  type="button"
+                  data-open-entry={p.slug}
+                  style={`--accent: ${p.accent};`}
+                >
+                  <div class="cosmo-other-row__main">
+                    <div class="cosmo-other-row__type">{p.type}</div>
+                    <div class="cosmo-other-row__title">{p.title}</div>
+                    {p.designation && (
+                      <div class="cosmo-other-row__designation">{p.designation}</div>
+                    )}
+                  </div>
+                  <span class="cosmo-other-row__arrow">›</span>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+
+        <div class="cosmo-others__footer">
+          <div class="cosmo-others__footer-rule"></div>
+          <a href="/" class="cosmo-others__back">← Return to Archives Index</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <div class="cosmo-overlay" id="cosmo-overlay" aria-hidden="true">
+    <div class="cosmo-modal" id="cosmo-modal" role="dialog" aria-modal="true">
+      <button class="cosmo-modal__close" id="cosmo-modal-close" aria-label="Close">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+          <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="10" y1="1" x2="1" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <aside class="cosmo-modal__hero" id="cosmo-modal-hero">
+        <img class="cosmo-modal__hero-img" id="cosmo-modal-img" src="" alt="" />
+        <div class="cosmo-modal__hero-fade"></div>
+        <div class="cosmo-modal__hero-accent" id="cosmo-modal-accent"></div>
+        <div class="cosmo-grain"></div>
+        <div class="cosmo-modal__hero-bar" id="cosmo-modal-bar"></div>
+        <div class="cosmo-modal__hero-tags" id="cosmo-modal-tags"></div>
+        <div class="cosmo-modal__hero-content">
+          <div class="cosmo-modal__hero-type" id="cosmo-modal-type"></div>
+          <div class="cosmo-modal__hero-title" id="cosmo-modal-title"></div>
+          <div class="cosmo-modal__hero-designation" id="cosmo-modal-designation"></div>
+        </div>
+      </aside>
+
+      <div class="cosmo-modal__pane" id="cosmo-modal-pane">
+        <div class="cosmo-modal__pane-inner">
+          <div class="cosmo-modal__fields-card">
+            <div class="cosmo-modal__fields-title" id="cosmo-modal-fields-title">Classification Data</div>
+            <div id="cosmo-modal-fields"></div>
+          </div>
+
+          <p class="cosmo-modal__lead" id="cosmo-modal-lead"></p>
+
+          <div class="cosmo-modal__divider"></div>
+
+          <div class="cosmo-modal__body" id="cosmo-modal-body">
+            <p class="cosmo-modal__loading">Loading…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </MainLayout>
+
+<script define:vars={{ panels: [...featuredPanels, ...otherPanels] }} is:inline>
+  const PANELS = panels;
+  const byId = (id) => document.getElementById(id);
+
+  const overlay     = byId("cosmo-overlay");
+  const modal       = byId("cosmo-modal");
+  const modalImg    = byId("cosmo-modal-img");
+  const modalAccent = byId("cosmo-modal-accent");
+  const modalBar    = byId("cosmo-modal-bar");
+  const modalType   = byId("cosmo-modal-type");
+  const modalTitle  = byId("cosmo-modal-title");
+  const modalDes    = byId("cosmo-modal-designation");
+  const modalTags   = byId("cosmo-modal-tags");
+  const modalFieldsTitle = byId("cosmo-modal-fields-title");
+  const modalFields = byId("cosmo-modal-fields");
+  const modalLead   = byId("cosmo-modal-lead");
+  const modalBody   = byId("cosmo-modal-body");
+  const closeBtn    = byId("cosmo-modal-close");
+
+  let closing = false;
+
+  function openModal(slug) {
+    const p = PANELS.find((x) => x.slug === slug);
+    if (!p) return;
+
+    if (p.image) {
+      modalImg.src = p.image;
+      modalImg.style.display = "";
+    } else {
+      modalImg.removeAttribute("src");
+      modalImg.style.display = "none";
+    }
+    modalAccent.style.background = `linear-gradient(to top, ${p.accent}33, transparent 55%)`;
+    modalBar.style.background = `linear-gradient(to bottom, transparent, ${p.accent}aa, transparent)`;
+
+    modalType.textContent = (p.type || "Cosmology").toUpperCase();
+    modalType.style.color = p.accent;
+    modalTitle.textContent = p.title;
+    modalDes.textContent = p.designation || "";
+    modalDes.style.color = p.accent;
+
+    modalFieldsTitle.style.color = p.accent;
+    modalFields.innerHTML = Object.entries(p.fields || {}).map(([k, v]) => `
+      <div class="cosmo-field-row">
+        <div class="cosmo-field-key">${k}</div>
+        <div class="cosmo-field-val">${v}</div>
+      </div>
+    `).join("");
+
+    modalTags.innerHTML = (p.tags || []).map((t) => `
+      <span class="cosmo-modal__tag" style="border-color: ${p.accent}55">${t}</span>
+    `).join("");
+
+    modalLead.textContent = p.summary || "";
+
+    modalBody.innerHTML = `<p class="cosmo-modal__loading">Loading…</p>`;
+    fetch(`/cosmology/${p.slug}/`)
+      .then((r) => r.text())
+      .then((html) => {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const content =
+          doc.querySelector("[data-entry-body]") ||
+          doc.querySelector(".entry-body") ||
+          doc.querySelector("article");
+        if (content) {
+          modalBody.innerHTML = content.innerHTML;
+        } else {
+          modalBody.innerHTML = `<p class="cosmo-modal__para">${p.summary || ""}</p>`;
+        }
+      })
+      .catch(() => {
+        modalBody.innerHTML = `<p class="cosmo-modal__para">${p.summary || ""}</p>`;
+      });
+
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    // reset scroll
+    const pane = byId("cosmo-modal-pane");
+    if (pane) pane.scrollTop = 0;
+  }
+
+  function closeModal() {
+    if (closing) return;
+    closing = true;
+    modal.classList.add("is-closing");
+    setTimeout(() => {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      modal.classList.remove("is-closing");
+      document.body.style.overflow = "";
+      closing = false;
+    }, 380);
+  }
+
+  document.querySelectorAll("[data-open-entry]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const slug = el.getAttribute("data-open-entry");
+      openModal(slug);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal();
+  });
+
+  // Others toggle
+  const toggle = byId("cosmo-others-toggle");
+  const list   = byId("cosmo-others-list");
+  if (toggle && list) {
+    toggle.addEventListener("click", () => {
+      const open = !list.hasAttribute("hidden") && list.getAttribute("data-open") === "true";
+      if (open) {
+        list.setAttribute("data-open", "false");
+        list.setAttribute("hidden", "");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.querySelector(".cosmo-others__toggle-label").textContent = "View All Secondary Entries";
+        toggle.classList.remove("is-open");
+      } else {
+        list.removeAttribute("hidden");
+        list.setAttribute("data-open", "true");
+        toggle.setAttribute("aria-expanded", "true");
+        toggle.querySelector(".cosmo-others__toggle-label").textContent = "Collapse";
+        toggle.classList.add("is-open");
+      }
+    });
+  }
+
+  // Reveal-on-scroll for featured panels (after first)
+  const panelsEls = document.querySelectorAll(".cosmo-panel");
+  panelsEls.forEach((el, i) => {
+    if (i === 0) {
+      requestAnimationFrame(() => el.classList.add("in-view"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            el.classList.add("in-view");
+            io.disconnect();
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    io.observe(el);
+  });
+</script>
+
+<style>
+  /* ── grain + scanlines (shared) ── */
+  @keyframes cosmoGrainShift {
+    0%   { background-position: 0 0; }
+    25%  { background-position: 12% 18%; }
+    50%  { background-position: -6% 9%; }
+    75%  { background-position: 9% -6%; }
+    100% { background-position: 0 0; }
+  }
+  @keyframes cosmoPulseAccent {
+    0%, 100% { opacity: 0.32; }
+    50%      { opacity: 0.6; }
+  }
+  @keyframes cosmoScrollBounce {
+    0%, 100% { transform: translateX(50%) translateY(0); opacity: 0.3; }
+    50%      { transform: translateX(50%) translateY(6px); opacity: 0.6; }
+  }
+
+  :global(.cosmo-grain) {
+    position: absolute; inset: 0; pointer-events: none; z-index: 4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    animation: cosmoGrainShift 8s steps(1) infinite;
+  }
+  :global(.cosmo-scanlines) {
+    position: absolute; inset: 0; pointer-events: none; z-index: 5;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 3px,
+      rgba(0,0,0,0.025) 3px, rgba(0,0,0,0.025) 4px
+    );
+  }
+
+  /* ── root ── */
+  .cosmo-root {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── identity bar ── */
+  .cosmo-identity {
+    display: flex; align-items: center;
+    padding: 22px 48px;
+  }
+  .cosmo-rule {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  }
+  .cosmo-identity__center {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 0 36px;
+  }
+  .cosmo-identity__tag {
+    font-family: 'DM Sans', sans-serif; font-size: 9px;
+    letter-spacing: 0.28em; color: rgba(232,228,220,0.22);
+    text-transform: uppercase;
+  }
+  .cosmo-identity__year {
+    font-family: 'DM Sans', sans-serif; font-size: 9px;
+    letter-spacing: 0.24em; color: rgba(177,58,52,0.4);
+    text-transform: uppercase;
+  }
+
+  /* ── featured panels ── */
+  .cosmo-panels { display: block; }
+
+  .cosmo-panel {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #020206;
+  }
+
+  .cosmo-panel__bg {
+    position: absolute; inset: 0;
+    overflow: hidden;
+  }
+  .cosmo-panel__bg-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.75) brightness(0.55);
+    transform: scale(1.05);
+  }
+
+  .cosmo-panel__overlay-top {
+    position: absolute; inset: 0; z-index: 1;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(2,2,6,0.35) 0%,
+        transparent 22%,
+        transparent 50%,
+        rgba(2,2,6,0.6) 75%,
+        var(--bg) 100%
+      );
+  }
+  .cosmo-panel__overlay-left {
+    position: absolute; inset: 0; z-index: 2;
+    background: linear-gradient(to right, rgba(2,2,6,0.35) 0%, transparent 50%);
+  }
+
+  .cosmo-panel__bar {
+    position: absolute; left: 0; top: 6%; bottom: 6%; width: 1px; z-index: 6;
+    background: linear-gradient(to bottom, transparent 0%, var(--accent) 35%, var(--accent) 65%, transparent 100%);
+    opacity: 0.4;
+    animation: cosmoPulseAccent 6s ease-in-out infinite;
+  }
+
+  .cosmo-panel__numeral {
+    position: absolute; right: -3%; bottom: -8%; z-index: 2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(200px, 34vw, 420px); font-weight: 700; line-height: 1;
+    color: white; opacity: 0.022;
+    pointer-events: none; user-select: none;
+    letter-spacing: -0.05em;
+  }
+
+  .cosmo-panel__chapter-marker {
+    position: absolute; right: 22px; top: 50%; z-index: 6;
+    transform: translateY(-50%) rotate(90deg); transform-origin: 50% 50%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px; letter-spacing: 0.32em;
+    color: rgba(232,228,220,0.1); text-transform: uppercase;
+    white-space: nowrap; pointer-events: none;
+  }
+
+  .cosmo-panel__stamp {
+    position: absolute; top: 24px; right: 46px; z-index: 6;
+    padding: 5px 10px;
+    border: 1px solid rgba(255,255,255,0.06); border-radius: 2px;
+  }
+  .cosmo-panel__stamp span {
+    font-family: 'DM Sans', sans-serif; font-size: 8px;
+    letter-spacing: 0.2em; color: rgba(232,228,220,0.14);
+    text-transform: uppercase;
+  }
+
+  .cosmo-panel__content {
+    position: absolute; bottom: 0; left: 0; right: 0; z-index: 6;
+    padding: 0 clamp(36px, 6vw, 88px) clamp(52px, 7vh, 88px);
+    max-width: 100%;
+  }
+
+  /* ── per-element reveal ── */
+  .cosmo-panel .cosmo-panel__tag,
+  .cosmo-panel .cosmo-panel__title,
+  .cosmo-panel .cosmo-panel__designation,
+  .cosmo-panel .cosmo-panel__summary,
+  .cosmo-panel .cosmo-panel__cta {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 1.15s cubic-bezier(0.16,1,0.3,1),
+                transform 1.15s cubic-bezier(0.16,1,0.3,1);
+  }
+  .cosmo-panel.in-view .cosmo-panel__tag         { opacity: 1; transform: none; transition-delay: 0.06s; }
+  .cosmo-panel.in-view .cosmo-panel__title       { opacity: 1; transform: none; transition-delay: 0.20s; }
+  .cosmo-panel.in-view .cosmo-panel__designation { opacity: 1; transform: none; transition-delay: 0.33s; }
+  .cosmo-panel.in-view .cosmo-panel__summary     { opacity: 1; transform: none; transition-delay: 0.44s; }
+  .cosmo-panel.in-view .cosmo-panel__cta         { opacity: 1; transform: none; transition-delay: 0.56s; }
+
+  .cosmo-panel__tag {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 18px;
+  }
+  .cosmo-panel__tag-bar {
+    width: 20px; height: 1px; background: var(--accent); opacity: 0.8;
+  }
+  .cosmo-panel__tag span {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent);
+  }
+
+  .cosmo-panel__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(54px, 8.5vw, 104px); font-weight: 700;
+    color: var(--text); margin: 0 0 10px;
+    line-height: 0.92; letter-spacing: -0.015em;
+  }
+
+  .cosmo-panel__designation {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(15px, 1.8vw, 21px); color: var(--accent);
+    margin-bottom: 22px; letter-spacing: 0.025em; opacity: 0.85;
+    max-width: 720px;
+  }
+
+  .cosmo-panel__summary {
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    color: var(--text-muted); line-height: 1.82;
+    max-width: 520px; margin: 0 0 36px;
+  }
+
+  .cosmo-panel__cta {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: none; border: 1px solid color-mix(in srgb, var(--accent) 33%, transparent);
+    color: var(--accent);
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 12px 26px; border-radius: 2px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .cosmo-panel__cta:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 9%, transparent);
+  }
+
+  .cosmo-panel__scroll-hint {
+    position: absolute; bottom: 28px; right: 50%; z-index: 6;
+    transform: translateX(50%);
+    display: flex; flex-direction: column; align-items: center; gap: 7px;
+    color: rgba(232,228,220,0.2);
+    animation: cosmoScrollBounce 2.6s 3s ease-in-out infinite;
+  }
+  .cosmo-panel__scroll-hint span {
+    font-family: 'DM Sans', sans-serif; font-size: 8px;
+    letter-spacing: 0.28em; color: rgba(232,228,220,0.18);
+    text-transform: uppercase;
+  }
+
+  /* ── others section ── */
+  .cosmo-others {
+    background: var(--bg);
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding: 88px 0 110px;
+  }
+  .cosmo-others__inner {
+    max-width: 720px; margin: 0 auto; padding: 0 40px;
+    display: flex; flex-direction: column; align-items: center; gap: 36px;
+  }
+  .cosmo-others__header {
+    display: flex; align-items: center; gap: 22px; width: 100%;
+  }
+  .cosmo-others__rule {
+    flex: 1; height: 1px; background: rgba(255,255,255,0.06);
+  }
+  .cosmo-others__header-center {
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    flex-shrink: 0;
+  }
+  .cosmo-others__label {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(232,228,220,0.22);
+  }
+  .cosmo-others__count {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.12em;
+    color: rgba(232,228,220,0.12);
+  }
+  .cosmo-others__empty {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 17px; color: var(--text-dim); text-align: center;
+    line-height: 1.7;
+  }
+
+  .cosmo-others__toggle {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: none; border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 11px 22px; border-radius: 2px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .cosmo-others__toggle:hover {
+    border-color: rgba(255,255,255,0.2);
+    color: var(--text);
+  }
+  .cosmo-others__toggle-count { color: var(--text-dim); font-size: 10px; }
+  .cosmo-others__toggle-caret {
+    display: inline-block; line-height: 1;
+    transition: transform 0.3s;
+  }
+  .cosmo-others__toggle.is-open .cosmo-others__toggle-caret {
+    transform: rotate(180deg);
+  }
+
+  .cosmo-others__list { width: 100%; }
+
+  .cosmo-other-row {
+    display: flex; align-items: center; gap: 16px;
+    width: 100%; text-align: left;
+    background: none; border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 18px 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .cosmo-other-row:hover {
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+  }
+  .cosmo-other-row__main { flex: 1; }
+  .cosmo-other-row__type {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 4px;
+    opacity: 0.8;
+  }
+  .cosmo-other-row__title {
+    font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700;
+    color: rgba(232,228,220,0.8);
+    transition: color 0.25s;
+  }
+  .cosmo-other-row:hover .cosmo-other-row__title { color: var(--text); }
+  .cosmo-other-row__designation {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--text-dim); margin-top: 2px;
+  }
+  .cosmo-other-row__arrow {
+    color: var(--accent); font-size: 22px; line-height: 1;
+    opacity: 0; transform: translateX(-8px);
+    transition: opacity 0.25s, transform 0.35s cubic-bezier(0.16,1,0.3,1);
+  }
+  .cosmo-other-row:hover .cosmo-other-row__arrow {
+    opacity: 1; transform: translateX(0);
+  }
+
+  .cosmo-others__footer {
+    display: flex; align-items: center; gap: 14px; margin-top: 8px;
+  }
+  .cosmo-others__footer-rule {
+    width: 24px; height: 1px;
+    background: rgba(177,58,52,0.25);
+  }
+  .cosmo-others__back {
+    font-family: 'DM Sans', sans-serif; font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-dim);
+    transition: color 0.2s;
+  }
+  .cosmo-others__back:hover { color: var(--text-muted); }
+
+  /* ── modal overlay ── */
+  .cosmo-overlay {
+    position: fixed; inset: 0; z-index: 300;
+    background: rgba(2,2,6,0.93); backdrop-filter: blur(16px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px 24px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .cosmo-overlay.is-open {
+    opacity: 1; pointer-events: all;
+  }
+
+  .cosmo-modal {
+    position: relative;
+    width: 100%; max-width: 1080px;
+    height: min(82vh, 720px);
+    display: flex;
+    background: rgba(7,7,13,0.99);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 48px 120px rgba(0,0,0,0.85);
+    transform: translateY(16px) scale(0.99); opacity: 0;
+    transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+  }
+  .cosmo-overlay.is-open .cosmo-modal {
+    transform: none; opacity: 1;
+  }
+  .cosmo-modal.is-closing {
+    transform: translateY(16px) scale(0.99); opacity: 0;
+  }
+
+  .cosmo-modal__close {
+    position: absolute; top: 16px; right: 16px; z-index: 10;
+    width: 30px; height: 30px; border-radius: 3px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(232,228,220,0.5);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .cosmo-modal__close:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--text);
+  }
+
+  /* ── modal hero (left) ── */
+  .cosmo-modal__hero {
+    width: 36%; flex-shrink: 0;
+    position: relative; overflow: hidden;
+    background: #06060b;
+  }
+  .cosmo-modal__hero-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 40%;
+    filter: saturate(0.45) brightness(0.2);
+  }
+  .cosmo-modal__hero-fade {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(7,7,13,0.3) 0%, transparent 30%, rgba(7,7,13,0.75) 75%);
+  }
+  .cosmo-modal__hero-accent {
+    position: absolute; inset: 0;
+  }
+  .cosmo-modal__hero-bar {
+    position: absolute; left: 0; top: 8%; bottom: 8%; width: 1px;
+  }
+  .cosmo-modal__hero-tags {
+    position: absolute; top: 20px; left: 16px; right: 60px;
+    display: flex; gap: 4px; flex-wrap: wrap;
+    z-index: 3;
+  }
+  :global(.cosmo-modal__tag) {
+    padding: 3px 7px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(232,228,220,0.45);
+  }
+  .cosmo-modal__hero-content {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 44px 28px 28px;
+    background: linear-gradient(to top, rgba(7,7,13,0.98) 0%, rgba(7,7,13,0.7) 65%, transparent);
+    z-index: 3;
+  }
+  .cosmo-modal__hero-type {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    margin-bottom: 9px; opacity: 0.9;
+  }
+  .cosmo-modal__hero-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700;
+    color: var(--text); line-height: 1.06; margin-bottom: 7px;
+    letter-spacing: -0.01em;
+  }
+  .cosmo-modal__hero-designation {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 13px; opacity: 0.8; line-height: 1.5;
+  }
+
+  /* ── modal pane (right) ── */
+  .cosmo-modal__pane {
+    flex: 1;
+    overflow-y: auto;
+    border-left: 1px solid rgba(255,255,255,0.05);
+  }
+  .cosmo-modal__pane-inner {
+    padding: 32px 36px 48px;
+    display: flex; flex-direction: column; gap: 22px;
+  }
+
+  .cosmo-modal__fields-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .cosmo-modal__fields-title {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 11px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  :global(.cosmo-field-row) {
+    padding: 8px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    display: flex; flex-direction: column; gap: 1px;
+  }
+  :global(.cosmo-field-row:last-child) { border-bottom: none; }
+  :global(.cosmo-field-key) {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  :global(.cosmo-field-val) {
+    font-family: 'DM Sans', sans-serif; font-size: 12px;
+    color: var(--text-muted); line-height: 1.5;
+  }
+
+  .cosmo-modal__lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; color: rgba(232,228,220,0.68);
+    line-height: 1.78; font-style: italic;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+
+  .cosmo-modal__divider {
+    height: 1px; background: rgba(255,255,255,0.06);
+  }
+
+  .cosmo-modal__loading {
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  /* prose injected from /cosmology/[slug]/ */
+  :global(.cosmo-modal__body p),
+  :global(.cosmo-modal__body .cosmo-modal__para) {
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    color: var(--text-muted); line-height: 1.85;
+    margin: 0 0 18px;
+  }
+  :global(.cosmo-modal__body h1),
+  :global(.cosmo-modal__body h2),
+  :global(.cosmo-modal__body h3) {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700;
+    color: var(--text); margin: 24px 0 10px;
+    letter-spacing: 0.02em;
+  }
+  :global(.cosmo-modal__body h2) { font-size: 26px; }
+  :global(.cosmo-modal__body h3) { font-size: 20px; }
+  :global(.cosmo-modal__body blockquote) {
+    border-left: 2px solid var(--crimson);
+    padding-left: 16px; margin: 0 0 18px;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: rgba(232,228,220,0.6);
+  }
+  :global(.cosmo-modal__body strong) {
+    color: var(--text); font-weight: 600;
+  }
+  :global(.cosmo-modal__body hr) {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin: 24px 0;
+  }
+  :global(.cosmo-modal__body ul),
+  :global(.cosmo-modal__body ol) {
+    padding-left: 22px; margin: 0 0 18px;
+    color: var(--text-muted); line-height: 1.8;
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+  }
+  :global(.cosmo-modal__body li) { margin-bottom: 6px; }
+
+  /* ── responsive ── */
+  @media (max-width: 800px) {
+    .cosmo-modal {
+      flex-direction: column;
+      height: min(90vh, 760px);
+    }
+    .cosmo-modal__hero {
+      width: 100%;
+      height: 220px; flex-shrink: 0;
+    }
+    .cosmo-modal__pane { border-left: none; border-top: 1px solid rgba(255,255,255,0.05); }
+  }
+
+  @media (max-width: 640px) {
+    .cosmo-identity { padding: 16px 20px; }
+    .cosmo-identity__center { padding: 0 16px; }
+    .cosmo-identity__tag,
+    .cosmo-identity__year { font-size: 7px; letter-spacing: 0.18em; }
+
+    .cosmo-panel__chapter-marker { display: none; }
+    .cosmo-panel__stamp { right: 16px; top: 16px; }
+    .cosmo-panel__content { padding: 0 24px clamp(40px, 6vh, 64px); }
+    .cosmo-panel__title { font-size: clamp(40px, 11vw, 64px); }
+    .cosmo-panel__summary { max-width: 100%; }
+
+    .cosmo-others__inner { padding: 0 24px; }
+    .cosmo-other-row__title { font-size: 20px; }
+
+    .cosmo-overlay { padding: 12px; }
+    .cosmo-modal__pane-inner { padding: 24px 22px 36px; }
+    .cosmo-modal__hero-content { padding: 36px 22px 22px; }
+    .cosmo-modal__hero-title { font-size: 24px; }
+  }
+</style>
