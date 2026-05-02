@@ -43,14 +43,15 @@ type Panel = {
 
 const buildPanel = (e: Entry, idx: number): Panel => {
   const d = e.data as any;
-  const fields: Record<string, string> = {};
-  if (d.designation)  fields["Designation"]  = d.designation;
-  if (d.affiliation)  fields["Affiliation"]  = d.affiliation;
-  if (d.headquarters) fields["Headquarters"] = d.headquarters;
-  if (d.founded)      fields["Founded"]      = d.founded;
-  if (d.jurisdiction) fields["Jurisdiction"] = d.jurisdiction;
-  if (d.status_label) fields["Status"]       = d.status_label;
-  fields["Filed"] = "Organizations";
+  // Full fields for modal (designation + all contextual + filed)
+  const allFields: Record<string, string> = {};
+  if (d.designation)  allFields["Designation"]  = d.designation;
+  if (d.affiliation)  allFields["Affiliation"]  = d.affiliation;
+  if (d.headquarters) allFields["Headquarters"] = d.headquarters;
+  if (d.founded)      allFields["Founded"]      = d.founded;
+  if (d.jurisdiction) allFields["Jurisdiction"] = d.jurisdiction;
+  if (d.status_label) allFields["Status"]       = d.status_label;
+  allFields["Filed"] = "Organizations";
 
   return {
     slug:           e.slug,
@@ -62,154 +63,145 @@ const buildPanel = (e: Entry, idx: number): Panel => {
     accent:         ACCENTS[e.slug] || "#b13a34",
     numeral:        ROMAN[idx] || String(idx + 1),
     objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
-    tags:           Array.isArray(d.tags) ? d.tags.slice(0, 6) : [],
-    fields,
+    tags:           Array.isArray(d.tags) ? d.tags.slice(0, 5) : [],
+    fields:         allFields,
   };
 };
 
 const panels = publicEntries.map(buildPanel);
 
-// Extra meta for inline strip (not serialised into panels for JS)
-const panelMeta = publicEntries.map((e) => {
+// Spread display fields (no designation, no filed)
+const spreadFields = publicEntries.map((e) => {
   const d = e.data as any;
-  return { hq: d.headquarters || "", statusLabel: d.status_label || "" };
+  const f: Record<string, string> = {};
+  if (d.affiliation)  f["Affiliation"]  = d.affiliation;
+  if (d.headquarters) f["Headquarters"] = d.headquarters;
+  if (d.founded)      f["Founded"]      = d.founded;
+  if (d.jurisdiction) f["Jurisdiction"] = d.jurisdiction;
+  if (d.status_label) f["Status"]       = d.status_label;
+  return f;
 });
 ---
 
 <MainLayout active="organizations" pageTitle="Organizations — SiNE Archives">
-  <div class="org-root">
+  <div class="orgs-root">
 
-    <!-- Identity bar -->
-    <div class="org-identity">
-      <div class="org-rule"></div>
-      <div class="org-identity__center">
-        <span class="org-identity__tag">INSTITUTIONAL RECORD</span>
-        <span class="org-identity__year">RESTRICTED CIRCULATION</span>
+    <!-- Page header -->
+    <header class="orgs-hdr">
+      <div class="orgs-hdr__pre">
+        <span class="orgs-hdr__label">INSTITUTIONAL REGISTRY</span>
+        <span class="orgs-hdr__sep" aria-hidden="true">·</span>
+        <span class="orgs-hdr__count">{panels.length} {panels.length === 1 ? "entity" : "entities"} on file</span>
       </div>
-      <div class="org-rule"></div>
-    </div>
+      <h1 class="orgs-hdr__title">Organizations</h1>
+      <p class="orgs-hdr__desc">Active institutions, governance bodies, and faith orders operating within the SiNE</p>
+    </header>
 
-    <!-- Featured panels -->
-    <div class="org-panels">
+    <!-- Quick index strip -->
+    <nav class="orgs-index" aria-label="Organization index">
       {panels.map((p, i) => (
-        <section
-          class:list={["org-panel", { "is-first": i === 0 }]}
-          data-slug={p.slug}
+        <a href={`#org-${p.slug}`} class="orgs-index__item" style={`--accent: ${p.accent};`}>
+          <span class="orgs-index__num" aria-hidden="true">{p.numeral}</span>
+          <span class="orgs-index__name">{p.title}</span>
+          <span class="orgs-index__type">{p.type}</span>
+        </a>
+      ))}
+    </nav>
+
+    <!-- Registry spreads -->
+    <div class="orgs-registry">
+      {panels.map((p, i) => (
+        <article
+          class:list={["org-spread", { "org-spread--flip": i % 2 === 1 }]}
+          id={`org-${p.slug}`}
           style={`--accent: ${p.accent};`}
+          data-slug={p.slug}
         >
-          <!-- Background -->
-          <div class="org-panel__bg">
+          <!-- Image side -->
+          <div class="org-spread__img-wrap">
             {p.image ? (
               <img
+                class="org-spread__img"
                 src={p.image}
                 alt=""
-                class="org-panel__bg-img"
+                loading={i === 0 ? "eager" : "lazy"}
                 style={`object-position: ${p.objectPosition};`}
               />
             ) : (
-              <div class="org-panel__bg-fallback"></div>
+              <div class="org-spread__img-fallback"></div>
+            )}
+            <div class="org-spread__img-vignette"></div>
+            <div class="org-spread__img-grain" aria-hidden="true"></div>
+            <div class="org-spread__img-numeral" aria-hidden="true">{p.numeral}</div>
+            {p.tags.length > 0 && (
+              <div class="org-spread__img-tags">
+                {p.tags.map((t) => (
+                  <span class="org-spread__img-tag">{t}</span>
+                ))}
+              </div>
             )}
           </div>
 
-          <div class="org-panel__overlay-top"></div>
-          <div class="org-panel__overlay-left"></div>
-          <div class="org-grain"></div>
-          <div class="org-scanlines"></div>
+          <!-- Content side -->
+          <div class="org-spread__content">
+            <div class="org-spread__content-inner">
+              <div class="org-spread__eyebrow">
+                <span class="org-spread__eye-type">{p.type.toUpperCase()}</span>
+                <span class="org-spread__eye-dot" aria-hidden="true">·</span>
+                <span class="org-spread__eye-ord">{String(i + 1).padStart(2, "0")} / {String(panels.length).padStart(2, "0")}</span>
+              </div>
 
-          <!-- Pulsing vertical bar -->
-          <div class="org-panel__bar"></div>
+              <h2 class="org-spread__title">{p.title}</h2>
 
-          <!-- Watermark numeral -->
-          <div class="org-panel__numeral" aria-hidden="true">{p.numeral}</div>
-
-          <!-- Rotated chapter marker -->
-          <div class="org-panel__chapter-marker" aria-hidden="true">
-            {p.numeral} · {p.title.toUpperCase()} · INSTITUTIONS
-          </div>
-
-          <!-- Top-right stamp -->
-          <div class="org-panel__stamp">
-            <span>INSTITUTIONAL RECORD</span>
-          </div>
-
-          <!-- Classification number top-left -->
-          <div class="org-panel__classification" aria-hidden="true">
-            FILE — {String(i + 1).padStart(2, "0")} / {String(panels.length).padStart(2, "0")}
-          </div>
-
-          <!-- Content block (bottom) -->
-          <div class="org-panel__content">
-            <div class="org-panel__tag">
-              <span class="org-panel__tag-bar"></span>
-              <span>{p.type.toUpperCase()} · {p.numeral}</span>
-            </div>
-            <h2 class="org-panel__title">{p.title}</h2>
-            {p.designation && (
-              <div class="org-panel__designation">{p.designation}</div>
-            )}
-            <p class="org-panel__summary">{p.summary}</p>
-
-            <!-- Inline meta strip -->
-            <div class="org-panel__meta">
-              {panelMeta[i].hq && (
-                <div class="org-panel__meta-item">
-                  <span class="org-panel__meta-key">HQ</span>
-                  <span class="org-panel__meta-val">{panelMeta[i].hq}</span>
-                </div>
+              {p.designation && (
+                <div class="org-spread__designation">{p.designation}</div>
               )}
-              {panelMeta[i].statusLabel && (
-                <div class="org-panel__meta-item">
-                  <span class="org-panel__meta-key">Status</span>
-                  <span class="org-panel__meta-val">{panelMeta[i].statusLabel}</span>
-                </div>
+
+              <div class="org-spread__rule" aria-hidden="true"></div>
+
+              {Object.keys(spreadFields[i]).length > 0 && (
+                <dl class="org-spread__meta">
+                  {Object.entries(spreadFields[i]).map(([k, v]) => (
+                    <>
+                      <dt class="org-spread__meta-key">{k}</dt>
+                      <dd class="org-spread__meta-val">{v}</dd>
+                    </>
+                  ))}
+                </dl>
               )}
-            </div>
 
-            <button
-              class="org-panel__cta"
-              type="button"
-              data-open-entry={p.slug}
-            >
-              Read Entry
-              <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                <path d="M1 5.5h9M5.5 1l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
+              <p class="org-spread__summary">{p.summary}</p>
+
+              <button class="org-spread__cta" type="button" data-open-entry={p.slug}>
+                Open Dossier
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                  <path d="M1 5.5h9M5.5 1l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
           </div>
-
-          {i === 0 && (
-            <div class="org-panel__scroll-hint" aria-hidden="true">
-              <span>Scroll</span>
-              <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
-                <line x1="5" y1="0" x2="5" y2="11" stroke="currentColor" stroke-width="1"/>
-                <path d="M1 7 L5 12 L9 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"/>
-              </svg>
-            </div>
-          )}
-        </section>
+        </article>
       ))}
     </div>
 
     <!-- Footer -->
-    <section class="org-footer">
-      <div class="org-footer__inner">
-        <div class="org-footer__header">
-          <div class="org-footer__rule"></div>
-          <div class="org-footer__header-center">
-            <div class="org-footer__label">Institutional Registry</div>
-            <div class="org-footer__count">{panels.length} {panels.length === 1 ? "entry" : "entries"} on file</div>
-          </div>
-          <div class="org-footer__rule"></div>
+    <footer class="orgs-footer">
+      <div class="orgs-footer__inner">
+        <div class="orgs-footer__rule"></div>
+        <div class="orgs-footer__mid">
+          <span class="orgs-footer__label">Institutional Registry</span>
+          <span class="orgs-footer__count">{panels.length} {panels.length === 1 ? "entry" : "entries"} on file</span>
         </div>
-        <div class="org-footer__nav">
-          <div class="org-footer__nav-rule"></div>
-          <a href="/" class="org-footer__back">← Return to Archives Index</a>
-        </div>
+        <div class="orgs-footer__rule"></div>
       </div>
-    </section>
+      <div class="orgs-footer__nav">
+        <div class="orgs-footer__nav-rule"></div>
+        <a href="/" class="orgs-footer__back">← Return to Archives Index</a>
+      </div>
+    </footer>
   </div>
 
-  <!-- Modal overlay -->
+  <!-- Modal overlay (unchanged from previous implementation) -->
   <div class="org-overlay" id="org-overlay" aria-hidden="true">
     <div class="org-modal" id="org-modal" role="dialog" aria-modal="true">
       <button class="org-modal__close" id="org-modal-close" aria-label="Close entry">
@@ -361,9 +353,9 @@ const panelMeta = publicEntries.map((e) => {
     if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal();
   });
 
-  // Reveal-on-scroll
-  const panelEls = document.querySelectorAll(".org-panel");
-  panelEls.forEach((el, i) => {
+  // Reveal-on-scroll for spreads
+  const spreadEls = document.querySelectorAll(".org-spread");
+  spreadEls.forEach((el, i) => {
     if (i === 0) {
       requestAnimationFrame(() => el.classList.add("in-view"));
       return;
@@ -377,7 +369,7 @@ const panelMeta = publicEntries.map((e) => {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.08 }
     );
     io.observe(el);
   });
@@ -392,20 +384,12 @@ const panelMeta = publicEntries.map((e) => {
     75%  { background-position: 9% -6%; }
     100% { background-position: 0 0; }
   }
-  @keyframes orgPulseAccent {
-    0%, 100% { opacity: 0.28; }
-    50%      { opacity: 0.55; }
-  }
-  @keyframes orgScrollBounce {
-    0%, 100% { transform: translateX(50%) translateY(0); opacity: 0.25; }
-    50%      { transform: translateX(50%) translateY(6px); opacity: 0.5; }
-  }
-  @keyframes orgKenBurns {
-    from { transform: scale(1.07); }
-    to   { transform: scale(1.0); }
+  @keyframes orgRuleIn {
+    from { transform: scaleX(0); opacity: 0; }
+    to   { transform: scaleX(1); opacity: 1; }
   }
 
-  /* ── shared texture overlays ── */
+  /* ── shared grain ── */
   :global(.org-grain) {
     position: absolute; inset: 0; pointer-events: none; z-index: 4;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -414,288 +398,468 @@ const panelMeta = publicEntries.map((e) => {
     mix-blend-mode: overlay;
     animation: orgGrainShift 8s steps(1) infinite;
   }
-  :global(.org-scanlines) {
-    position: absolute; inset: 0; pointer-events: none; z-index: 5;
-    background: repeating-linear-gradient(
-      0deg, transparent, transparent 3px,
-      rgba(0,0,0,0.022) 3px, rgba(0,0,0,0.022) 4px
-    );
-  }
 
   /* ── root ── */
-  .org-root {
+  .orgs-root {
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
   }
 
-  /* ── identity bar ── */
-  .org-identity {
-    display: flex; align-items: center;
-    padding: 22px 48px;
+  /* ── page header ── */
+  .orgs-hdr {
+    padding: clamp(64px, 8vh, 96px) clamp(40px, 6vw, 80px) clamp(40px, 5vh, 64px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
-  .org-rule {
-    flex: 1; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  .orgs-hdr__pre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
   }
-  .org-identity__center {
-    display: flex; flex-direction: column; align-items: center; gap: 6px;
-    padding: 0 36px;
-  }
-  .org-identity__tag {
-    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
-    letter-spacing: 0.28em; color: rgba(232,228,220,0.22);
+  .orgs-hdr__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.2);
   }
-  .org-identity__year {
-    font-family: 'DM Sans', sans-serif; font-size: 9px;
-    letter-spacing: 0.24em; color: rgba(177,58,52,0.4);
+  .orgs-hdr__sep {
+    color: rgba(232, 228, 220, 0.1);
+    font-size: 8px;
+  }
+  .orgs-hdr__count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.13);
+  }
+  .orgs-hdr__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .orgs-hdr__desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-dim);
+    max-width: 460px;
+    line-height: 1.85;
   }
 
-  /* ── panels ── */
-  .org-panels { display: block; }
-
-  .org-panel {
+  /* ── quick index ── */
+  .orgs-index {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .orgs-index::-webkit-scrollbar { display: none; }
+  .orgs-index__item {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 18px clamp(24px, 3vw, 36px) 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    transition: background 0.22s ease;
     position: relative;
-    min-height: 100vh;
     overflow: hidden;
-    background: #020206;
+  }
+  .orgs-index__item:last-child { border-right: none; }
+  .orgs-index__item::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .orgs-index__item:hover { background: rgba(255, 255, 255, 0.015); }
+  .orgs-index__item:hover::after { transform: scaleX(1); }
+  .orgs-index__num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+  }
+  .orgs-index__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.75;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    transition: opacity 0.2s;
+  }
+  .orgs-index__item:hover .orgs-index__name { opacity: 1; }
+  .orgs-index__type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.2);
   }
 
-  .org-panel__bg {
-    position: absolute; inset: 0;
-    overflow: hidden;
+  /* ── registry ── */
+  .orgs-registry { display: block; }
+
+  /* ── spread ── */
+  .org-spread {
+    display: flex;
+    flex-direction: row;
+    min-height: clamp(520px, 82vh, 840px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    background: var(--bg);
+    position: relative;
   }
-  .org-panel__bg-img {
+  .org-spread--flip { flex-direction: row-reverse; }
+
+  /* image side */
+  .org-spread__img-wrap {
+    flex: 0 0 42%;
+    position: relative;
+    overflow: hidden;
+    background: #030308;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+  .org-spread.in-view .org-spread__img-wrap {
+    opacity: 1;
+  }
+  .org-spread__img {
+    position: absolute; inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    filter: saturate(0.7) brightness(0.5);
-    animation: orgKenBurns 22s ease-out both;
+    filter: saturate(0.8) brightness(0.62);
+    transition: filter 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .org-panel__bg-fallback {
+  .org-spread:hover .org-spread__img {
+    filter: saturate(0.88) brightness(0.7);
+    transform: scale(1.025);
+  }
+  .org-spread__img-fallback {
     position: absolute; inset: 0;
     background: radial-gradient(
-      ellipse 80% 60% at 65% 45%,
-      color-mix(in srgb, var(--accent) 18%, transparent),
+      ellipse 80% 60% at 55% 50%,
+      color-mix(in srgb, var(--accent) 20%, transparent),
       transparent 70%
     ), linear-gradient(155deg, #06060e 0%, #0a0a18 50%, #06060b 100%);
   }
-
-  .org-panel__overlay-top {
-    position: absolute; inset: 0; z-index: 1;
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(2,2,6,0.38) 0%,
-        transparent 20%,
-        transparent 48%,
-        rgba(2,2,6,0.58) 72%,
-        var(--bg) 100%
-      );
-  }
-  .org-panel__overlay-left {
+  .org-spread__img-vignette {
     position: absolute; inset: 0; z-index: 2;
-    background: linear-gradient(to right, rgba(2,2,6,0.42) 0%, transparent 55%);
+    pointer-events: none;
   }
-
-  .org-panel__bar {
-    position: absolute; left: 0; top: 6%; bottom: 6%; width: 1px; z-index: 6;
-    background: linear-gradient(to bottom, transparent 0%, var(--accent) 35%, var(--accent) 65%, transparent 100%);
-    opacity: 0.35;
-    animation: orgPulseAccent 6s ease-in-out infinite;
+  .org-spread:not(.org-spread--flip) .org-spread__img-vignette {
+    background:
+      linear-gradient(to right, transparent 55%, rgba(6, 6, 11, 0.55) 100%),
+      linear-gradient(to bottom, rgba(6, 6, 11, 0.2) 0%, transparent 20%, transparent 75%, rgba(6, 6, 11, 0.3) 100%);
   }
-
-  .org-panel__numeral {
-    position: absolute; right: -2%; bottom: -10%; z-index: 2;
+  .org-spread--flip .org-spread__img-vignette {
+    background:
+      linear-gradient(to left, transparent 55%, rgba(6, 6, 11, 0.55) 100%),
+      linear-gradient(to bottom, rgba(6, 6, 11, 0.2) 0%, transparent 20%, transparent 75%, rgba(6, 6, 11, 0.3) 100%);
+  }
+  .org-spread__img-grain {
+    position: absolute; inset: 0; z-index: 3;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.025;
+    mix-blend-mode: overlay;
+    animation: orgGrainShift 8s steps(1) infinite;
+  }
+  .org-spread__img-numeral {
+    position: absolute;
+    right: 18px; bottom: 18px;
+    z-index: 4;
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(180px, 30vw, 400px);
-    font-weight: 700; line-height: 1;
-    color: white; opacity: 0.018;
-    pointer-events: none; user-select: none;
-    letter-spacing: -0.05em;
+    font-size: clamp(72px, 10vw, 120px);
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.055);
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.02em;
   }
-
-  .org-panel__chapter-marker {
-    position: absolute; right: 22px; top: 50%; z-index: 6;
-    transform: translateY(-50%) rotate(90deg); transform-origin: 50% 50%;
+  .org-spread__img-tags {
+    position: absolute;
+    left: 18px; bottom: 20px;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .org-spread__img-tag {
     font-family: 'DM Sans', sans-serif;
-    font-size: 8px; letter-spacing: 0.32em;
-    color: rgba(232,228,220,0.09); text-transform: uppercase;
-    white-space: nowrap; pointer-events: none;
-  }
-
-  .org-panel__stamp {
-    position: absolute; top: 24px; right: 46px; z-index: 6;
-    padding: 5px 10px;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 2px;
-  }
-  .org-panel__stamp span {
-    font-family: 'DM Sans', sans-serif; font-size: 8px;
-    letter-spacing: 0.2em; color: rgba(232,228,220,0.13);
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.38);
+    background: rgba(6, 6, 11, 0.55);
+    border: 1px solid color-mix(in srgb, var(--accent) 22%, rgba(255, 255, 255, 0.06));
+    padding: 3px 7px;
+    border-radius: 1px;
   }
 
-  .org-panel__classification {
-    position: absolute; top: 26px; left: 20px; z-index: 6;
-    font-family: 'DM Sans', sans-serif; font-size: 8px;
-    letter-spacing: 0.18em; color: rgba(232,228,220,0.1);
-    text-transform: uppercase; pointer-events: none;
+  /* content side */
+  .org-spread__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: clamp(40px, 5vw, 72px) clamp(36px, 5vw, 72px);
+    background: color-mix(in srgb, var(--accent) 2.5%, var(--bg));
+    position: relative;
+  }
+  /* subtle vertical rule at the seam */
+  .org-spread:not(.org-spread--flip) .org-spread__content::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12%; bottom: 12%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.04), transparent);
+  }
+  .org-spread--flip .org-spread__content::before {
+    content: '';
+    position: absolute;
+    right: 0; top: 12%; bottom: 12%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.04), transparent);
+  }
+  .org-spread__content-inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    width: 100%;
   }
 
-  .org-panel__content {
-    position: absolute; bottom: 0; left: 0; right: 0; z-index: 6;
-    padding: 0 clamp(36px, 6vw, 88px) clamp(52px, 7vh, 88px);
-    max-width: 100%;
-  }
-
-  /* reveal animations */
-  .org-panel .org-panel__tag,
-  .org-panel .org-panel__title,
-  .org-panel .org-panel__designation,
-  .org-panel .org-panel__summary,
-  .org-panel .org-panel__meta,
-  .org-panel .org-panel__cta {
+  /* reveal animations for content elements */
+  .org-spread .org-spread__eyebrow,
+  .org-spread .org-spread__title,
+  .org-spread .org-spread__designation,
+  .org-spread .org-spread__rule,
+  .org-spread .org-spread__meta,
+  .org-spread .org-spread__summary,
+  .org-spread .org-spread__cta {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 1.15s cubic-bezier(0.16,1,0.3,1),
-                transform 1.15s cubic-bezier(0.16,1,0.3,1);
+    transform: translateY(18px);
+    transition: opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .org-panel.in-view .org-panel__tag         { opacity: 1; transform: none; transition-delay: 0.06s; }
-  .org-panel.in-view .org-panel__title       { opacity: 1; transform: none; transition-delay: 0.20s; }
-  .org-panel.in-view .org-panel__designation { opacity: 1; transform: none; transition-delay: 0.33s; }
-  .org-panel.in-view .org-panel__summary     { opacity: 1; transform: none; transition-delay: 0.44s; }
-  .org-panel.in-view .org-panel__meta        { opacity: 1; transform: none; transition-delay: 0.54s; }
-  .org-panel.in-view .org-panel__cta         { opacity: 1; transform: none; transition-delay: 0.64s; }
+  .org-spread .org-spread__rule {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .org-spread.in-view .org-spread__eyebrow     { opacity: 1; transform: none; transition-delay: 0.08s; }
+  .org-spread.in-view .org-spread__title       { opacity: 1; transform: none; transition-delay: 0.20s; }
+  .org-spread.in-view .org-spread__designation { opacity: 1; transform: none; transition-delay: 0.31s; }
+  .org-spread.in-view .org-spread__rule        { opacity: 1; transform: scaleX(1); transition-delay: 0.40s; transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.40s, opacity 0.4s ease 0.40s; }
+  .org-spread.in-view .org-spread__meta        { opacity: 1; transform: none; transition-delay: 0.50s; }
+  .org-spread.in-view .org-spread__summary     { opacity: 1; transform: none; transition-delay: 0.60s; }
+  .org-spread.in-view .org-spread__cta         { opacity: 1; transform: none; transition-delay: 0.72s; }
 
-  .org-panel__tag {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 18px;
+  /* eyebrow */
+  .org-spread__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
   }
-  .org-panel__tag-bar {
-    width: 20px; height: 1px; background: var(--accent); opacity: 0.8;
+  .org-spread__eye-type {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    color: var(--accent);
+    opacity: 0.85;
   }
-  .org-panel__tag span {
-    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
-    letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent);
+  .org-spread__eye-dot {
+    color: rgba(232, 228, 220, 0.15);
+    font-size: 8px;
+  }
+  .org-spread__eye-ord {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    color: rgba(232, 228, 220, 0.2);
   }
 
-  .org-panel__title {
+  /* title */
+  .org-spread__title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(54px, 8.5vw, 104px);
-    font-weight: 700; color: var(--text);
-    margin: 0 0 10px;
-    line-height: 0.92; letter-spacing: -0.015em;
+    font-size: clamp(40px, 5vw, 68px);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
   }
 
-  .org-panel__designation {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: clamp(15px, 1.8vw, 21px); color: var(--accent);
-    margin-bottom: 20px; letter-spacing: 0.025em; opacity: 0.85;
-    max-width: 720px;
+  /* designation */
+  .org-spread__designation {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(14px, 1.4vw, 17px);
+    color: var(--accent);
+    opacity: 0.82;
+    letter-spacing: 0.02em;
+    margin-bottom: 22px;
+    line-height: 1.5;
   }
 
-  .org-panel__summary {
-    font-family: 'DM Sans', sans-serif; font-size: 14px;
-    color: var(--text-muted); line-height: 1.82;
-    max-width: 480px; margin: 0 0 24px;
+  /* accent rule */
+  .org-spread__rule {
+    width: 44px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.65;
+    margin-bottom: 26px;
   }
 
-  .org-panel__meta {
-    display: flex; flex-wrap: wrap; gap: 28px;
+  /* meta grid */
+  .org-spread__meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 18px;
+    row-gap: 8px;
+    margin-bottom: 28px;
+  }
+  .org-spread__meta-key {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.25);
+    padding-top: 1px;
+    white-space: nowrap;
+  }
+  .org-spread__meta-val {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11.5px;
+    color: rgba(232, 228, 220, 0.6);
+    line-height: 1.55;
+  }
+
+  /* summary */
+  .org-spread__summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    max-width: 460px;
     margin-bottom: 32px;
   }
-  .org-panel__meta-item {
-    display: flex; flex-direction: column; gap: 2px;
-  }
-  .org-panel__meta-key {
-    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(232,228,220,0.25);
-  }
-  .org-panel__meta-val {
-    font-family: 'DM Sans', sans-serif; font-size: 11px;
-    color: rgba(232,228,220,0.55); letter-spacing: 0.04em;
-    max-width: 280px;
-  }
 
-  .org-panel__cta {
-    display: inline-flex; align-items: center; gap: 12px;
+  /* CTA */
+  .org-spread__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
     background: none;
-    border: 1px solid color-mix(in srgb, var(--accent) 33%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
     color: var(--accent);
-    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    padding: 12px 26px; border-radius: 2px;
-    cursor: pointer;
-    transition: border-color 0.3s ease, background 0.3s ease;
-  }
-  .org-panel__cta:hover {
-    border-color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 9%, transparent);
-  }
-
-  .org-panel__scroll-hint {
-    position: absolute; bottom: 28px; right: 50%; z-index: 6;
-    transform: translateX(50%);
-    display: flex; flex-direction: column; align-items: center; gap: 7px;
-    animation: orgScrollBounce 2.6s 3s ease-in-out infinite;
-  }
-  .org-panel__scroll-hint span {
-    font-family: 'DM Sans', sans-serif; font-size: 8px;
-    letter-spacing: 0.28em; color: rgba(232,228,220,0.18);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
+    padding: 11px 24px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: border-color 0.28s ease, background 0.28s ease, color 0.28s ease;
   }
-  .org-panel__scroll-hint svg { color: rgba(232,228,220,0.2); }
+  .org-spread__cta:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    color: var(--text);
+  }
 
   /* ── footer ── */
-  .org-footer {
+  .orgs-footer {
     background: var(--bg);
-    border-top: 1px solid rgba(255,255,255,0.04);
-    padding: 72px 0 96px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 64px 0 88px;
   }
-  .org-footer__inner {
-    max-width: 720px; margin: 0 auto; padding: 0 40px;
-    display: flex; flex-direction: column; align-items: center; gap: 36px;
+  .orgs-footer__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-bottom: 32px;
   }
-  .org-footer__header {
-    display: flex; align-items: center; gap: 22px; width: 100%;
+  .orgs-footer__rule {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
   }
-  .org-footer__rule {
-    flex: 1; height: 1px; background: rgba(255,255,255,0.06);
-  }
-  .org-footer__header-center {
-    display: flex; flex-direction: column; align-items: center; gap: 5px;
+  .orgs-footer__mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
     flex-shrink: 0;
   }
-  .org-footer__label {
-    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
-    letter-spacing: 0.28em; text-transform: uppercase;
-    color: rgba(232,228,220,0.22);
+  .orgs-footer__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.2);
   }
-  .org-footer__count {
-    font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.12em;
-    color: rgba(232,228,220,0.12);
+  .orgs-footer__count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: rgba(232, 228, 220, 0.1);
   }
-  .org-footer__nav {
-    display: flex; align-items: center; gap: 14px;
+  .orgs-footer__nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    padding: 0 40px;
   }
-  .org-footer__nav-rule {
-    width: 24px; height: 1px; background: rgba(177,58,52,0.25);
+  .orgs-footer__nav-rule {
+    width: 22px;
+    height: 1px;
+    background: rgba(177, 58, 52, 0.22);
   }
-  .org-footer__back {
-    font-family: 'DM Sans', sans-serif; font-size: 11px;
-    letter-spacing: 0.12em; text-transform: uppercase;
+  .orgs-footer__back {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--text-dim);
+    text-decoration: none;
     transition: color 0.2s;
   }
-  .org-footer__back:hover { color: var(--text-muted); }
+  .orgs-footer__back:hover { color: var(--text-muted); }
 
   /* ── modal overlay ── */
   .org-overlay {
     position: fixed; inset: 0; z-index: 300;
-    background: rgba(2,2,6,0.93); backdrop-filter: blur(16px);
+    background: rgba(2, 2, 6, 0.93);
+    backdrop-filter: blur(16px);
     display: flex; align-items: center; justify-content: center;
     padding: 20px 24px;
     opacity: 0; pointer-events: none;
@@ -710,13 +874,13 @@ const panelMeta = publicEntries.map((e) => {
     width: 100%; max-width: 1080px;
     height: min(82vh, 720px);
     display: flex;
-    background: rgba(7,7,13,0.99);
-    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(7, 7, 13, 0.99);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 48px 120px rgba(0,0,0,0.85);
+    box-shadow: 0 48px 120px rgba(0, 0, 0, 0.85);
     transform: translateY(16px) scale(0.99); opacity: 0;
-    transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
   }
   .org-overlay.is-open .org-modal {
     transform: none; opacity: 1;
@@ -728,15 +892,15 @@ const panelMeta = publicEntries.map((e) => {
   .org-modal__close {
     position: absolute; top: 16px; right: 16px; z-index: 10;
     width: 30px; height: 30px; border-radius: 3px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: rgba(232,228,220,0.5);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(232, 228, 220, 0.5);
     display: flex; align-items: center; justify-content: center;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
   }
   .org-modal__close:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--text);
   }
 
@@ -753,7 +917,7 @@ const panelMeta = publicEntries.map((e) => {
   }
   .org-modal__hero-fade {
     position: absolute; inset: 0;
-    background: linear-gradient(to bottom, rgba(7,7,13,0.3) 0%, transparent 30%, rgba(7,7,13,0.75) 75%);
+    background: linear-gradient(to bottom, rgba(7, 7, 13, 0.3) 0%, transparent 30%, rgba(7, 7, 13, 0.75) 75%);
   }
   .org-modal__hero-accent { position: absolute; inset: 0; }
   .org-modal__hero-bar {
@@ -765,17 +929,17 @@ const panelMeta = publicEntries.map((e) => {
   }
   :global(.org-modal__tag) {
     padding: 3px 7px;
-    background: rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 2px;
     font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
     letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(232,228,220,0.45);
+    color: rgba(232, 228, 220, 0.45);
   }
   .org-modal__hero-content {
     position: absolute; bottom: 0; left: 0; right: 0;
     padding: 44px 28px 28px;
-    background: linear-gradient(to top, rgba(7,7,13,0.98) 0%, rgba(7,7,13,0.7) 65%, transparent);
+    background: linear-gradient(to top, rgba(7, 7, 13, 0.98) 0%, rgba(7, 7, 13, 0.7) 65%, transparent);
     z-index: 3;
   }
   .org-modal__hero-type {
@@ -796,7 +960,7 @@ const panelMeta = publicEntries.map((e) => {
   .org-modal__pane {
     flex: 1;
     overflow-y: auto;
-    border-left: 1px solid rgba(255,255,255,0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
   }
   .org-modal__pane-inner {
     padding: 32px 36px 48px;
@@ -804,8 +968,8 @@ const panelMeta = publicEntries.map((e) => {
   }
 
   .org-modal__fields-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 3px;
     overflow: hidden;
   }
@@ -813,11 +977,11 @@ const panelMeta = publicEntries.map((e) => {
     font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
     letter-spacing: 0.2em; text-transform: uppercase;
     padding: 11px 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
   :global(.org-field-row) {
     padding: 8px 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     display: flex; flex-direction: column; gap: 1px;
   }
   :global(.org-field-row:last-child) { border-bottom: none; }
@@ -833,13 +997,13 @@ const panelMeta = publicEntries.map((e) => {
 
   .org-modal__lead {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px; color: rgba(232,228,220,0.68);
+    font-size: 18px; color: rgba(232, 228, 220, 0.68);
     line-height: 1.78; font-style: italic;
     letter-spacing: 0.01em; margin: 0;
   }
 
   .org-modal__divider {
-    height: 1px; background: rgba(255,255,255,0.06);
+    height: 1px; background: rgba(255, 255, 255, 0.06);
   }
 
   .org-modal__loading {
@@ -866,14 +1030,14 @@ const panelMeta = publicEntries.map((e) => {
     border-left: 2px solid var(--crimson);
     padding-left: 16px; margin: 0 0 18px;
     font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 16px; color: rgba(232,228,220,0.6);
+    font-size: 16px; color: rgba(232, 228, 220, 0.6);
   }
   :global(.org-modal__body strong) {
     color: var(--text); font-weight: 600;
   }
   :global(.org-modal__body hr) {
     border: none;
-    border-top: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
     margin: 24px 0;
   }
   :global(.org-modal__body ul),
@@ -885,7 +1049,31 @@ const panelMeta = publicEntries.map((e) => {
   :global(.org-modal__body li) { margin-bottom: 6px; }
 
   /* ── responsive ── */
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
+    .org-spread, .org-spread--flip {
+      flex-direction: column;
+    }
+    .org-spread__img-wrap {
+      flex: 0 0 auto;
+      height: min(52vw, 380px);
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+    .org-spread.in-view .org-spread__img-wrap { opacity: 1; }
+    .org-spread:not(.org-spread--flip) .org-spread__img-vignette {
+      background:
+        linear-gradient(to bottom, transparent 60%, rgba(6, 6, 11, 0.7) 100%);
+    }
+    .org-spread--flip .org-spread__img-vignette {
+      background:
+        linear-gradient(to bottom, transparent 60%, rgba(6, 6, 11, 0.7) 100%);
+    }
+    .org-spread__img-numeral { font-size: 72px; }
+    .org-spread:not(.org-spread--flip) .org-spread__content::before,
+    .org-spread--flip .org-spread__content::before { display: none; }
+    .org-spread__content { padding: 36px 32px 48px; }
+    .org-spread__content-inner { max-width: 100%; }
+
     .org-modal {
       flex-direction: column;
       height: min(90vh, 760px);
@@ -894,23 +1082,21 @@ const panelMeta = publicEntries.map((e) => {
       width: 100%;
       height: 200px; flex-shrink: 0;
     }
-    .org-modal__pane { border-left: none; border-top: 1px solid rgba(255,255,255,0.05); }
+    .org-modal__pane { border-left: none; border-top: 1px solid rgba(255, 255, 255, 0.05); }
   }
 
   @media (max-width: 640px) {
-    .org-identity { padding: 16px 20px; }
-    .org-identity__center { padding: 0 16px; }
-    .org-identity__tag,
-    .org-identity__year { font-size: 7px; letter-spacing: 0.18em; }
+    .orgs-hdr { padding: 48px 24px 32px; }
+    .orgs-hdr__title { font-size: clamp(44px, 11vw, 64px); }
 
-    .org-panel__chapter-marker { display: none; }
-    .org-panel__stamp { right: 16px; top: 16px; }
-    .org-panel__content { padding: 0 24px clamp(40px, 6vh, 64px); }
-    .org-panel__title { font-size: clamp(40px, 11vw, 64px); }
-    .org-panel__summary { max-width: 100%; }
-    .org-panel__meta { gap: 16px; }
+    .orgs-index__item { min-width: 140px; padding: 14px 18px 12px; }
 
-    .org-footer__inner { padding: 0 24px; }
+    .org-spread__img-wrap { height: min(60vw, 300px); }
+    .org-spread__content { padding: 28px 24px 40px; }
+    .org-spread__title { font-size: clamp(36px, 9vw, 52px); }
+    .org-spread__img-tags { display: none; }
+
+    .orgs-footer__inner { padding: 0 24px; }
     .org-modal__pane-inner { padding: 24px 20px 36px; }
     .org-modal__hero-content { padding: 28px 20px 20px; }
   }
