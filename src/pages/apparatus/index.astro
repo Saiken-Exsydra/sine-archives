@@ -1,15 +1,602 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import SectionList from "../../components/SectionList.astro";
+import { getCollection } from "astro:content";
+
+const rawEntries = await getCollection("apparatus");
+const publicEntries = rawEntries
+  .filter((e) => e.data.status === "public")
+  .sort((a, b) => {
+    const pa = (a.data as any).priority ?? Infinity;
+    const pb = (b.data as any).priority ?? Infinity;
+    if (pa !== pb) return pa - pb;
+    return a.data.title.localeCompare(b.data.title);
+  });
+
+type Entry = (typeof publicEntries)[number];
+
+type SealKind = "intact" | "compromised" | "unknown" | "functional";
+
+const classifySeal = (raw: string): { kind: SealKind; label: string } => {
+  const s = raw.toLowerCase();
+  if (!s) return { kind: "unknown", label: "Status Unknown" };
+  if (s.includes("intact"))      return { kind: "intact",      label: "Seal Intact" };
+  if (s.includes("compromis"))   return { kind: "compromised", label: "Seal Compromised" };
+  if (s.includes("functional"))  return { kind: "functional",  label: "Functional" };
+  if (s.includes("unknown"))     return { kind: "unknown",     label: "Status Unknown" };
+  if (s.includes("missing"))     return { kind: "unknown",     label: "Status Unknown" };
+  return { kind: "intact", label: raw };
+};
+
+// Derive a clean "kind/category" label from the type field (e.g. "Threshold Instrument · pre-fracture origin" → "Threshold Instrument")
+const deriveKind = (data: any): string => {
+  const desigPart = (data.designation || "").split("·")[0].trim();
+  if (desigPart && desigPart.toLowerCase() !== "apparatus") return desigPart;
+  if (data.type && data.type.toLowerCase() !== "apparatus") return data.type;
+  return "Apparatus";
+};
+
+const yearOf = (s: string): string => {
+  const m = (s || "").match(/(\d{3,4})/);
+  return m ? m[1] : "";
+};
+
+type Card = {
+  slug:        string;
+  href:        string;
+  title:       string;
+  kind:        string;
+  designation: string;
+  summary:     string;
+  image:       string;
+  catnum:      string;
+  seal:        { kind: SealKind; label: string };
+  tags:        string[];
+  updated:     string;
+  search:      string;
+};
+
+const cards: Card[] = publicEntries.map((e: Entry, i: number): Card => {
+  const d = e.data as any;
+  const kind = deriveKind(d);
+  const seal = classifySeal(d.sealing_status || "");
+  const tags = Array.isArray(d.tags) ? d.tags.slice(0, 3) : [];
+  const updated = yearOf(d.updated || d.created || "");
+  const search = [
+    d.title, kind, d.designation, d.summary, seal.label, ...(d.tags || []),
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  return {
+    slug:        e.slug,
+    href:        `/apparatus/${e.slug}/`,
+    title:       d.title,
+    kind,
+    designation: d.designation || "",
+    summary:     d.summary || "",
+    image:       d.image && d.image.length > 0 ? d.image : "",
+    catnum:      `REG-${String(i + 1).padStart(3, "0")}`,
+    seal,
+    tags,
+    updated,
+    search,
+  };
+});
+
+// Unique kinds for filter pills
+const kindSet = new Set<string>();
+cards.forEach((c) => kindSet.add(c.kind));
+const filters: { label: string; value: string }[] = [
+  { label: "All", value: "all" },
+  ...Array.from(kindSet).sort().map((k) => ({ label: k, value: k.toLowerCase() })),
+];
+
+const total = cards.length;
+const headerImage = cards.find((c) => c.image)?.image || "";
+const filingYear = (() => {
+  const years = cards.map((c) => parseInt(c.updated, 10)).filter((n) => !Number.isNaN(n));
+  return years.length ? String(Math.max(...years)) : "1127";
+})();
 ---
 
 <MainLayout active="apparatus" pageTitle="Apparatus — SiNE Archives">
-  <SectionList
-    section="apparatus"
-    title="Apparatus"
-    searchLabel="Search apparatus…"
-    emptyLabel="No public apparatus entries yet."
-    image="/uploads/Clepsydra.png"
-    desc="Classified instruments, constructions, and mechanisms."
-  />
+  <div class="reg-root">
+
+    <!-- ── HEADER ── -->
+    <header class="reg-header">
+      {headerImage && (
+        <img class="reg-header__bg" src={headerImage} alt="" aria-hidden="true" />
+      )}
+      <div class="reg-header__bg-fallback"></div>
+      <div class="reg-header__overlay"></div>
+      <div class="reg-header__scanlines"></div>
+      <div class="sine-grain"></div>
+      <div class="reg-header__beam"></div>
+      <div class="reg-header__content">
+        <div>
+          <div class="reg-header__eyebrow">Section 05 · Apparatus Registry</div>
+          <h1 class="reg-header__title">Apparatus</h1>
+          <p class="reg-header__desc">Classified instruments, constructions, and mechanisms of documented significance.</p>
+        </div>
+        <div class="reg-header__meta">
+          <div class="reg-header__count-num" id="header-count">{String(total).padStart(2, "0")}</div>
+          <div class="reg-header__access">Access Level: Public</div>
+          <div class="reg-header__rule"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── CONTROLS ── -->
+    <div class="reg-controls">
+      <div class="reg-filters" role="tablist" aria-label="Filter by type">
+        {filters.map((f, i) => (
+          <button
+            class:list={["reg-filter-btn", { "is-active": i === 0 }]}
+            data-filter={f.value}
+            role="tab"
+            aria-selected={i === 0 ? "true" : "false"}
+            type="button"
+          >{f.label}</button>
+        ))}
+      </div>
+      <label class="reg-search-wrap" aria-label="Search registry">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <input class="reg-search-input" type="search" id="reg-search"
+               placeholder="Search registry…" autocomplete="off" />
+      </label>
+    </div>
+
+    <!-- ── GRID ── -->
+    <div class="reg-body">
+      <div class="reg-status-bar">
+        <span class="reg-status-count" id="reg-count">{total} {total === 1 ? "entry" : "entries"}</span>
+        <div class="reg-status-line"></div>
+        <span class="reg-status-stamp">SiNE Archives · Filing Year {filingYear}</span>
+      </div>
+
+      <div class="reg-grid" id="reg-grid">
+        {cards.map((c) => (
+          <a class="reg-entry" href={c.href}
+             data-type={c.kind.toLowerCase()}
+             data-search={c.search}>
+            <div class="reg-entry__visual">
+              {c.image ? (
+                <img class="reg-entry__img" src={c.image} alt={c.title} />
+              ) : (
+                <div class="reg-entry__placeholder" aria-hidden="true">
+                  <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice"
+                       xmlns="http://www.w3.org/2000/svg"
+                       style="position:absolute;inset:0;width:100%;height:100%">
+                    <defs>
+                      <radialGradient id={`rg-${c.slug}`} cx="50%" cy="50%" r="60%">
+                        <stop offset="0%" stop-color="rgba(177,58,52,0.12)"/>
+                        <stop offset="100%" stop-color="rgba(6,6,11,0)"/>
+                      </radialGradient>
+                    </defs>
+                    <rect width="480" height="300" fill="#060610"/>
+                    <rect width="480" height="300" fill={`url(#rg-${c.slug})`}/>
+                    <circle cx="240" cy="150" r="28" fill="none" stroke="rgba(232,228,220,0.18)" stroke-width="1"/>
+                    <circle cx="240" cy="150" r="65" fill="none" stroke="rgba(232,228,220,0.1)" stroke-width="0.8"/>
+                    <line x1="240" y1="50" x2="240" y2="250" stroke="rgba(232,228,220,0.08)" stroke-width="0.6"/>
+                    <line x1="140" y1="150" x2="340" y2="150" stroke="rgba(232,228,220,0.08)" stroke-width="0.6"/>
+                    <text x="240" y="270" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" letter-spacing="5" fill="rgba(232,228,220,0.22)">{c.kind.toUpperCase()}</text>
+                  </svg>
+                </div>
+              )}
+              <div class="reg-entry__catnum">{c.catnum}</div>
+              <div class="reg-entry__brackets" aria-hidden="true">
+                <div class="reg-entry__br reg-entry__br--tl"></div>
+                <div class="reg-entry__br reg-entry__br--tr"></div>
+                <div class="reg-entry__br reg-entry__br--bl"></div>
+                <div class="reg-entry__br reg-entry__br--br"></div>
+              </div>
+              <div class="reg-entry__vgrad"></div>
+              <div class="reg-entry__seal">
+                <span class:list={["reg-entry__seal-dot", `reg-entry__seal-dot--${c.seal.kind}`]}></span>
+                {c.seal.label}
+              </div>
+            </div>
+            <div class="reg-entry__body">
+              <div class="reg-entry__type">{c.kind}</div>
+              <div class="reg-entry__name">{c.title}</div>
+              {c.designation && <div class="reg-entry__designation">{c.designation}</div>}
+              <p class="reg-entry__summary">{c.summary}</p>
+              <div class="reg-entry__footer">
+                <div class="reg-entry__tags">
+                  {c.tags.map((t) => (
+                    <span class="reg-entry__tag">{t}</span>
+                  ))}
+                </div>
+                {c.updated && <span class="reg-entry__updated">{c.updated}</span>}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="reg-empty" id="reg-empty">No entries match this query.</div>
+    </div>
+  </div>
 </MainLayout>
+
+<script is:inline>
+  const entries = Array.from(document.querySelectorAll('.reg-entry'));
+  entries.forEach((el, i) => {
+    el.style.animationDelay = (i * 0.07) + 's';
+    el.classList.add('is-visible');
+  });
+
+  const filterBtns  = document.querySelectorAll('.reg-filter-btn');
+  const countEl     = document.getElementById('reg-count');
+  const headerCount = document.getElementById('header-count');
+  const emptyEl     = document.getElementById('reg-empty');
+  const searchInput = document.getElementById('reg-search');
+
+  let activeFilter = 'all';
+  let searchQuery  = '';
+
+  function applyFilters() {
+    let visible = 0;
+    entries.forEach((el) => {
+      const type   = (el.dataset.type   || '').toLowerCase();
+      const search = (el.dataset.search || '').toLowerCase();
+      const matchType   = activeFilter === 'all' || type === activeFilter;
+      const matchSearch = !searchQuery || search.includes(searchQuery) || type.includes(searchQuery);
+      const show = matchType && matchSearch;
+      el.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    const label = visible === 1 ? 'entry' : 'entries';
+    if (countEl)     countEl.textContent = visible + ' ' + label;
+    if (headerCount) headerCount.textContent = String(visible).padStart(2, '0');
+    if (emptyEl)     emptyEl.classList.toggle('is-visible', visible === 0);
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => { b.classList.remove('is-active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      searchQuery = searchInput.value.trim().toLowerCase();
+      applyFilters();
+    });
+  }
+</script>
+
+<style>
+  @keyframes regFadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes regGrainShift {
+    0%   { background-position: 0 0; }
+    25%  { background-position: 12% 18%; }
+    50%  { background-position: -6% 9%; }
+    75%  { background-position: 9% -6%; }
+    100% { background-position: 0 0; }
+  }
+  @keyframes regScanDown {
+    from { top: -80px; opacity: 1; }
+    to   { top: 120%; opacity: 0; }
+  }
+  @keyframes regPulseRule {
+    0%, 100% { opacity: 0.4; }
+    50%      { opacity: 1; }
+  }
+
+  .reg-root { background: var(--bg); color: var(--text); }
+
+  :global(.sine-grain) {
+    position: absolute; inset: 0; pointer-events: none; z-index: 5;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.032;
+    mix-blend-mode: overlay;
+    animation: regGrainShift 8s steps(1) infinite;
+  }
+
+  /* ── HEADER ── */
+  .reg-header {
+    position: relative;
+    height: 260px;
+    display: flex; align-items: flex-end;
+    overflow: hidden;
+  }
+  .reg-header__bg {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 35%;
+    filter: saturate(0.4) brightness(0.18);
+  }
+  .reg-header__bg-fallback {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 50%, rgba(177,58,52,0.08) 0%, rgba(6,6,11,0) 70%);
+  }
+  .reg-header__overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom,
+      rgba(6,6,11,0.55) 0%,
+      rgba(6,6,11,0.15) 45%,
+      rgba(6,6,11,0.98) 100%
+    );
+  }
+  .reg-header__scanlines {
+    position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent, transparent 3px,
+      rgba(0,0,0,0.03) 3px, rgba(0,0,0,0.03) 4px
+    );
+  }
+  .reg-header__beam {
+    position: absolute; left: 0; right: 0; height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(177,58,52,0.05) 50%, transparent);
+    pointer-events: none; z-index: 4;
+    animation: regScanDown 2.6s cubic-bezier(0.4,0,0.55,1) 0.2s 1 both;
+  }
+  .reg-header__content {
+    position: relative; z-index: 6;
+    width: 100%;
+    padding: 0 48px 36px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+  }
+  .reg-header__eyebrow {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.28em;
+    color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;
+    animation: regFadeSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  }
+  .reg-header__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: 0.01em;
+    color: var(--text);
+    animation: regFadeSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.4s both;
+  }
+  .reg-header__desc {
+    margin-top: 10px;
+    font-size: 14px; color: var(--text-muted); line-height: 1.65; max-width: 460px;
+    animation: regFadeSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.5s both;
+  }
+  .reg-header__meta {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 5px;
+    padding-bottom: 4px; flex-shrink: 0;
+    animation: regFadeSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.5s both;
+  }
+  .reg-header__count-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 700; line-height: 1;
+    color: rgba(232,228,220,0.1); letter-spacing: -0.02em;
+  }
+  .reg-header__access {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(232,228,220,0.15);
+  }
+  .reg-header__rule {
+    width: 32px; height: 1px; background: var(--crimson);
+    align-self: flex-end; margin-bottom: 2px;
+    animation: regPulseRule 3s ease-in-out 1s infinite;
+  }
+
+  /* ── CONTROLS ── */
+  .reg-controls {
+    position: sticky; top: 56px; z-index: 50;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(6,6,11,0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 0 48px;
+    display: flex; align-items: stretch; justify-content: space-between; gap: 0;
+  }
+  .reg-filters {
+    display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+  }
+  .reg-filters::-webkit-scrollbar { display: none; }
+  .reg-filter-btn {
+    background: none; border: none; border-bottom: 2px solid transparent;
+    padding: 13px 18px 11px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(232,228,220,0.28); white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .reg-filter-btn:hover { color: rgba(232,228,220,0.6); }
+  .reg-filter-btn.is-active { color: var(--text); border-bottom-color: var(--crimson); }
+
+  .reg-search-wrap {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 0 10px 20px;
+    border-left: 1px solid rgba(255,255,255,0.05);
+    flex-shrink: 0;
+  }
+  .reg-search-wrap svg { color: rgba(232,228,220,0.2); flex-shrink: 0; }
+  .reg-search-input {
+    background: none; border: none; outline: none;
+    color: var(--text); font-size: 12px; letter-spacing: 0.04em;
+    width: 160px; caret-color: var(--crimson);
+    font-family: inherit;
+  }
+  .reg-search-input::placeholder {
+    color: rgba(232,228,220,0.2); font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+  }
+
+  /* ── GRID ── */
+  .reg-body { padding: 36px 48px 100px; }
+  .reg-status-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .reg-status-count {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .reg-status-line {
+    flex: 1; height: 1px; background: rgba(255,255,255,0.05); margin: 0 20px;
+  }
+  .reg-status-stamp {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(232,228,220,0.1);
+  }
+
+  .reg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 18px;
+  }
+
+  .reg-empty {
+    display: none; padding: 80px 0; text-align: center;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .reg-empty.is-visible { display: block; }
+
+  /* ── ENTRY CARD ── */
+  .reg-entry {
+    display: flex; flex-direction: column;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 2px; overflow: hidden;
+    text-decoration: none; color: inherit;
+    transition: border-color 0.25s, transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s;
+    opacity: 0;
+  }
+  .reg-entry.is-visible {
+    animation: regFadeSlideUp 0.55s cubic-bezier(0.16,1,0.3,1) both;
+  }
+  .reg-entry:hover {
+    border-color: rgba(177,58,52,0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  }
+
+  .reg-entry__visual {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg);
+    flex-shrink: 0;
+  }
+  .reg-entry__img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    filter: saturate(0.65) brightness(0.8);
+    transition: filter 0.45s, transform 0.55s cubic-bezier(0.16,1,0.3,1);
+  }
+  .reg-entry:hover .reg-entry__img {
+    filter: saturate(0.82) brightness(0.92);
+    transform: scale(1.035);
+  }
+
+  .reg-entry__placeholder { position: absolute; inset: 0; }
+
+  .reg-entry__vgrad {
+    position: absolute; inset: 0; z-index: 3; pointer-events: none;
+    background: linear-gradient(to top, rgba(6,6,11,0.75) 0%, transparent 45%);
+  }
+
+  .reg-entry__catnum {
+    position: absolute; top: 11px; left: 13px; z-index: 6;
+    font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(232,228,220,0.55);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  }
+
+  .reg-entry__brackets {
+    position: absolute; inset: 0; z-index: 6; pointer-events: none;
+    opacity: 0; transition: opacity 0.22s;
+  }
+  .reg-entry:hover .reg-entry__brackets { opacity: 1; }
+  .reg-entry__br {
+    position: absolute; width: 14px; height: 14px;
+    border-color: rgba(177,58,52,0.65); border-style: solid;
+  }
+  .reg-entry__br--tl { top: 9px; left: 9px; border-width: 1.5px 0 0 1.5px; }
+  .reg-entry__br--tr { top: 9px; right: 9px; border-width: 1.5px 1.5px 0 0; }
+  .reg-entry__br--bl { bottom: 9px; left: 9px; border-width: 0 0 1.5px 1.5px; }
+  .reg-entry__br--br { bottom: 9px; right: 9px; border-width: 0 1.5px 1.5px 0; }
+
+  .reg-entry__seal {
+    position: absolute; bottom: 9px; right: 11px; z-index: 6;
+    display: flex; align-items: center; gap: 5px;
+    padding: 3px 8px;
+    background: rgba(6,6,11,0.75);
+    backdrop-filter: blur(8px);
+    font-size: 8px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(232,228,220,0.55);
+  }
+  .reg-entry__seal-dot {
+    width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0;
+  }
+  .reg-entry__seal-dot--intact      { background: var(--gold);   box-shadow: 0 0 5px rgba(176,141,60,0.5); }
+  .reg-entry__seal-dot--compromised { background: var(--crimson); box-shadow: 0 0 5px rgba(177,58,52,0.5); }
+  .reg-entry__seal-dot--unknown     { background: rgba(232,228,220,0.3); }
+  .reg-entry__seal-dot--functional  { background: rgba(100,200,120,0.7); box-shadow: 0 0 5px rgba(100,200,120,0.3); }
+
+  .reg-entry__body {
+    padding: 16px 18px 18px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; flex-direction: column; gap: 0;
+    flex: 1;
+  }
+  .reg-entry__type {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--crimson); margin-bottom: 7px;
+  }
+  .reg-entry__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px; font-weight: 700; line-height: 1.02; letter-spacing: 0.01em;
+    color: var(--text); margin-bottom: 5px;
+  }
+  .reg-entry__designation {
+    font-size: 11px; color: rgba(176,141,60,0.78); letter-spacing: 0.04em; line-height: 1.5;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .reg-entry__summary {
+    margin-top: 10px;
+    font-size: 13px; color: var(--text-muted); line-height: 1.7;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    flex: 1;
+  }
+  .reg-entry__footer {
+    margin-top: 13px; padding-top: 11px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; align-items: flex-end; justify-content: space-between; gap: 8px;
+  }
+  .reg-entry__tags {
+    display: flex; flex-wrap: wrap; gap: 4px;
+  }
+  .reg-entry__tag {
+    padding: 2px 7px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(232,228,220,0.45);
+  }
+  .reg-entry__updated {
+    font-size: 10px; color: var(--text-dim); letter-spacing: 0.03em; white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .reg-controls, .reg-body { padding-left: 24px; padding-right: 24px; }
+    .reg-header__content { padding-left: 24px; padding-right: 24px; }
+  }
+  @media (max-width: 640px) {
+    .reg-header { height: 210px; }
+    .reg-header__title { font-size: 38px; }
+    .reg-header__meta { display: none; }
+    .reg-header__desc { display: none; }
+    .reg-grid { grid-template-columns: 1fr; }
+    .reg-body { padding: 24px 16px 80px; }
+    .reg-controls { padding: 0 16px; }
+    .reg-search-wrap { display: none; }
+  }
+</style>

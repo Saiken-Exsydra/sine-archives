@@ -1,15 +1,917 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import SectionList from "../../components/SectionList.astro";
+import { getCollection } from "astro:content";
+
+const rawEntries = await getCollection("organizations");
+const publicEntries = rawEntries
+  .filter((e) => e.data.status === "public")
+  .sort((a, b) => {
+    const pa = (a.data as any).priority ?? Infinity;
+    const pb = (b.data as any).priority ?? Infinity;
+    if (pa !== pb) return pa - pb;
+    return a.data.title.localeCompare(b.data.title);
+  });
+
+const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+
+const ACCENTS: Record<string, string> = {
+  "apocachynthion": "#b13a34",
+  "the-church":     "#b08d3c",
+  "obsidian-rite":  "#6a5a9a",
+};
+
+const OBJECT_POSITION: Record<string, string> = {
+  "apocachynthion": "center 35%",
+  "the-church":     "center 40%",
+};
+
+type Entry = (typeof publicEntries)[number];
+
+type Panel = {
+  slug:           string;
+  title:          string;
+  type:           string;
+  designation:    string;
+  summary:        string;
+  image:          string;
+  accent:         string;
+  numeral:        string;
+  objectPosition: string;
+  tags:           string[];
+  fields:         Record<string, string>;
+};
+
+const buildPanel = (e: Entry, idx: number): Panel => {
+  const d = e.data as any;
+  const fields: Record<string, string> = {};
+  if (d.designation)  fields["Designation"]  = d.designation;
+  if (d.affiliation)  fields["Affiliation"]  = d.affiliation;
+  if (d.headquarters) fields["Headquarters"] = d.headquarters;
+  if (d.founded)      fields["Founded"]      = d.founded;
+  if (d.jurisdiction) fields["Jurisdiction"] = d.jurisdiction;
+  if (d.status_label) fields["Status"]       = d.status_label;
+  fields["Filed"] = "Organizations";
+
+  return {
+    slug:           e.slug,
+    title:          d.title,
+    type:           d.type || "Organization",
+    designation:    d.designation || "",
+    summary:        d.summary || "",
+    image:          (d.image && d.image.length > 0) ? d.image : "",
+    accent:         ACCENTS[e.slug] || "#b13a34",
+    numeral:        ROMAN[idx] || String(idx + 1),
+    objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
+    tags:           Array.isArray(d.tags) ? d.tags.slice(0, 6) : [],
+    fields,
+  };
+};
+
+const panels = publicEntries.map(buildPanel);
+
+// Extra meta for inline strip (not serialised into panels for JS)
+const panelMeta = publicEntries.map((e) => {
+  const d = e.data as any;
+  return { hq: d.headquarters || "", statusLabel: d.status_label || "" };
+});
 ---
 
 <MainLayout active="organizations" pageTitle="Organizations — SiNE Archives">
-  <SectionList
-    section="organizations"
-    title="Organizations"
-    searchLabel="Search organizations…"
-    emptyLabel="No public organization entries yet."
-    image="/uploads/Apocachynthion.png"
-    desc="Institutions and houses that structure the Empire of Synus."
-  />
+  <div class="org-root">
+
+    <!-- Identity bar -->
+    <div class="org-identity">
+      <div class="org-rule"></div>
+      <div class="org-identity__center">
+        <span class="org-identity__tag">INSTITUTIONAL RECORD</span>
+        <span class="org-identity__year">RESTRICTED CIRCULATION</span>
+      </div>
+      <div class="org-rule"></div>
+    </div>
+
+    <!-- Featured panels -->
+    <div class="org-panels">
+      {panels.map((p, i) => (
+        <section
+          class:list={["org-panel", { "is-first": i === 0 }]}
+          data-slug={p.slug}
+          style={`--accent: ${p.accent};`}
+        >
+          <!-- Background -->
+          <div class="org-panel__bg">
+            {p.image ? (
+              <img
+                src={p.image}
+                alt=""
+                class="org-panel__bg-img"
+                style={`object-position: ${p.objectPosition};`}
+              />
+            ) : (
+              <div class="org-panel__bg-fallback"></div>
+            )}
+          </div>
+
+          <div class="org-panel__overlay-top"></div>
+          <div class="org-panel__overlay-left"></div>
+          <div class="org-grain"></div>
+          <div class="org-scanlines"></div>
+
+          <!-- Pulsing vertical bar -->
+          <div class="org-panel__bar"></div>
+
+          <!-- Watermark numeral -->
+          <div class="org-panel__numeral" aria-hidden="true">{p.numeral}</div>
+
+          <!-- Rotated chapter marker -->
+          <div class="org-panel__chapter-marker" aria-hidden="true">
+            {p.numeral} · {p.title.toUpperCase()} · INSTITUTIONS
+          </div>
+
+          <!-- Top-right stamp -->
+          <div class="org-panel__stamp">
+            <span>INSTITUTIONAL RECORD</span>
+          </div>
+
+          <!-- Classification number top-left -->
+          <div class="org-panel__classification" aria-hidden="true">
+            FILE — {String(i + 1).padStart(2, "0")} / {String(panels.length).padStart(2, "0")}
+          </div>
+
+          <!-- Content block (bottom) -->
+          <div class="org-panel__content">
+            <div class="org-panel__tag">
+              <span class="org-panel__tag-bar"></span>
+              <span>{p.type.toUpperCase()} · {p.numeral}</span>
+            </div>
+            <h2 class="org-panel__title">{p.title}</h2>
+            {p.designation && (
+              <div class="org-panel__designation">{p.designation}</div>
+            )}
+            <p class="org-panel__summary">{p.summary}</p>
+
+            <!-- Inline meta strip -->
+            <div class="org-panel__meta">
+              {panelMeta[i].hq && (
+                <div class="org-panel__meta-item">
+                  <span class="org-panel__meta-key">HQ</span>
+                  <span class="org-panel__meta-val">{panelMeta[i].hq}</span>
+                </div>
+              )}
+              {panelMeta[i].statusLabel && (
+                <div class="org-panel__meta-item">
+                  <span class="org-panel__meta-key">Status</span>
+                  <span class="org-panel__meta-val">{panelMeta[i].statusLabel}</span>
+                </div>
+              )}
+            </div>
+
+            <button
+              class="org-panel__cta"
+              type="button"
+              data-open-entry={p.slug}
+            >
+              Read Entry
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+                <path d="M1 5.5h9M5.5 1l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          {i === 0 && (
+            <div class="org-panel__scroll-hint" aria-hidden="true">
+              <span>Scroll</span>
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+                <line x1="5" y1="0" x2="5" y2="11" stroke="currentColor" stroke-width="1"/>
+                <path d="M1 7 L5 12 L9 7" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+
+    <!-- Footer -->
+    <section class="org-footer">
+      <div class="org-footer__inner">
+        <div class="org-footer__header">
+          <div class="org-footer__rule"></div>
+          <div class="org-footer__header-center">
+            <div class="org-footer__label">Institutional Registry</div>
+            <div class="org-footer__count">{panels.length} {panels.length === 1 ? "entry" : "entries"} on file</div>
+          </div>
+          <div class="org-footer__rule"></div>
+        </div>
+        <div class="org-footer__nav">
+          <div class="org-footer__nav-rule"></div>
+          <a href="/" class="org-footer__back">← Return to Archives Index</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal overlay -->
+  <div class="org-overlay" id="org-overlay" aria-hidden="true">
+    <div class="org-modal" id="org-modal" role="dialog" aria-modal="true">
+      <button class="org-modal__close" id="org-modal-close" aria-label="Close entry">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+          <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="10" y1="1" x2="1" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <aside class="org-modal__hero" id="org-modal-hero">
+        <img class="org-modal__hero-img" id="org-modal-img" src="" alt="" />
+        <div class="org-modal__hero-fade"></div>
+        <div class="org-modal__hero-accent" id="org-modal-accent"></div>
+        <div class="org-grain"></div>
+        <div class="org-modal__hero-bar" id="org-modal-bar"></div>
+        <div class="org-modal__hero-tags" id="org-modal-tags"></div>
+        <div class="org-modal__hero-content">
+          <div class="org-modal__hero-type" id="org-modal-type"></div>
+          <div class="org-modal__hero-title" id="org-modal-title"></div>
+          <div class="org-modal__hero-designation" id="org-modal-designation"></div>
+        </div>
+      </aside>
+
+      <div class="org-modal__pane" id="org-modal-pane">
+        <div class="org-modal__pane-inner">
+          <div class="org-modal__fields-card">
+            <div class="org-modal__fields-title" id="org-modal-fields-title">Classification Data</div>
+            <div id="org-modal-fields"></div>
+          </div>
+
+          <p class="org-modal__lead" id="org-modal-lead"></p>
+
+          <div class="org-modal__divider"></div>
+
+          <div class="org-modal__body" id="org-modal-body">
+            <p class="org-modal__loading">Loading entry…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </MainLayout>
+
+<script define:vars={{ panels }} is:inline>
+  const PANELS = panels;
+  const byId = (id) => document.getElementById(id);
+
+  const overlay          = byId("org-overlay");
+  const modal            = byId("org-modal");
+  const modalImg         = byId("org-modal-img");
+  const modalAccent      = byId("org-modal-accent");
+  const modalBar         = byId("org-modal-bar");
+  const modalType        = byId("org-modal-type");
+  const modalTitle       = byId("org-modal-title");
+  const modalDes         = byId("org-modal-designation");
+  const modalTags        = byId("org-modal-tags");
+  const modalFieldsTitle = byId("org-modal-fields-title");
+  const modalFields      = byId("org-modal-fields");
+  const modalLead        = byId("org-modal-lead");
+  const modalBody        = byId("org-modal-body");
+  const closeBtn         = byId("org-modal-close");
+
+  let closing = false;
+
+  function openModal(slug) {
+    const p = PANELS.find((x) => x.slug === slug);
+    if (!p) return;
+
+    if (p.image) {
+      modalImg.src = p.image;
+      modalImg.style.display = "";
+    } else {
+      modalImg.removeAttribute("src");
+      modalImg.style.display = "none";
+    }
+
+    modalAccent.style.background = `linear-gradient(to top, ${p.accent}33, transparent 55%)`;
+    modalBar.style.background = `linear-gradient(to bottom, transparent, ${p.accent}aa, transparent)`;
+
+    modalType.textContent = (p.type || "Organization").toUpperCase();
+    modalType.style.color = p.accent;
+    modalTitle.textContent = p.title;
+    modalDes.textContent = p.designation || "";
+    modalDes.style.color = p.accent;
+
+    modalFieldsTitle.style.color = p.accent;
+    modalFields.innerHTML = Object.entries(p.fields || {}).map(([k, v]) => `
+      <div class="org-field-row">
+        <div class="org-field-key">${k}</div>
+        <div class="org-field-val">${v}</div>
+      </div>
+    `).join("");
+
+    modalTags.innerHTML = (p.tags || []).map((t) => `
+      <span class="org-modal__tag" style="border-color: ${p.accent}55">${t}</span>
+    `).join("");
+
+    modalLead.textContent = p.summary || "";
+
+    modalBody.innerHTML = `<p class="org-modal__loading">Loading entry…</p>`;
+    fetch(`/organizations/${p.slug}/`)
+      .then((r) => r.text())
+      .then((html) => {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const content =
+          doc.querySelector("[data-entry-body]") ||
+          doc.querySelector(".entry-body") ||
+          doc.querySelector("article");
+        if (content) {
+          modalBody.innerHTML = content.innerHTML;
+        } else {
+          modalBody.innerHTML = `<p class="org-modal__para">${p.summary || ""}</p>`;
+        }
+      })
+      .catch(() => {
+        modalBody.innerHTML = `<p class="org-modal__para">${p.summary || ""}</p>`;
+      });
+
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    const pane = byId("org-modal-pane");
+    if (pane) pane.scrollTop = 0;
+  }
+
+  function closeModal() {
+    if (closing) return;
+    closing = true;
+    modal.classList.add("is-closing");
+    setTimeout(() => {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      modal.classList.remove("is-closing");
+      document.body.style.overflow = "";
+      closing = false;
+    }, 380);
+  }
+
+  document.querySelectorAll("[data-open-entry]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const slug = el.getAttribute("data-open-entry");
+      openModal(slug);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal();
+  });
+
+  // Reveal-on-scroll
+  const panelEls = document.querySelectorAll(".org-panel");
+  panelEls.forEach((el, i) => {
+    if (i === 0) {
+      requestAnimationFrame(() => el.classList.add("in-view"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            el.classList.add("in-view");
+            io.disconnect();
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    io.observe(el);
+  });
+</script>
+
+<style>
+  /* ── keyframes ── */
+  @keyframes orgGrainShift {
+    0%   { background-position: 0 0; }
+    25%  { background-position: 12% 18%; }
+    50%  { background-position: -6% 9%; }
+    75%  { background-position: 9% -6%; }
+    100% { background-position: 0 0; }
+  }
+  @keyframes orgPulseAccent {
+    0%, 100% { opacity: 0.28; }
+    50%      { opacity: 0.55; }
+  }
+  @keyframes orgScrollBounce {
+    0%, 100% { transform: translateX(50%) translateY(0); opacity: 0.25; }
+    50%      { transform: translateX(50%) translateY(6px); opacity: 0.5; }
+  }
+  @keyframes orgKenBurns {
+    from { transform: scale(1.07); }
+    to   { transform: scale(1.0); }
+  }
+
+  /* ── shared texture overlays ── */
+  :global(.org-grain) {
+    position: absolute; inset: 0; pointer-events: none; z-index: 4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    animation: orgGrainShift 8s steps(1) infinite;
+  }
+  :global(.org-scanlines) {
+    position: absolute; inset: 0; pointer-events: none; z-index: 5;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 3px,
+      rgba(0,0,0,0.022) 3px, rgba(0,0,0,0.022) 4px
+    );
+  }
+
+  /* ── root ── */
+  .org-root {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── identity bar ── */
+  .org-identity {
+    display: flex; align-items: center;
+    padding: 22px 48px;
+  }
+  .org-rule {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  }
+  .org-identity__center {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 0 36px;
+  }
+  .org-identity__tag {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.28em; color: rgba(232,228,220,0.22);
+    text-transform: uppercase;
+  }
+  .org-identity__year {
+    font-family: 'DM Sans', sans-serif; font-size: 9px;
+    letter-spacing: 0.24em; color: rgba(177,58,52,0.4);
+    text-transform: uppercase;
+  }
+
+  /* ── panels ── */
+  .org-panels { display: block; }
+
+  .org-panel {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #020206;
+  }
+
+  .org-panel__bg {
+    position: absolute; inset: 0;
+    overflow: hidden;
+  }
+  .org-panel__bg-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.7) brightness(0.5);
+    animation: orgKenBurns 22s ease-out both;
+  }
+  .org-panel__bg-fallback {
+    position: absolute; inset: 0;
+    background: radial-gradient(
+      ellipse 80% 60% at 65% 45%,
+      color-mix(in srgb, var(--accent) 18%, transparent),
+      transparent 70%
+    ), linear-gradient(155deg, #06060e 0%, #0a0a18 50%, #06060b 100%);
+  }
+
+  .org-panel__overlay-top {
+    position: absolute; inset: 0; z-index: 1;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(2,2,6,0.38) 0%,
+        transparent 20%,
+        transparent 48%,
+        rgba(2,2,6,0.58) 72%,
+        var(--bg) 100%
+      );
+  }
+  .org-panel__overlay-left {
+    position: absolute; inset: 0; z-index: 2;
+    background: linear-gradient(to right, rgba(2,2,6,0.42) 0%, transparent 55%);
+  }
+
+  .org-panel__bar {
+    position: absolute; left: 0; top: 6%; bottom: 6%; width: 1px; z-index: 6;
+    background: linear-gradient(to bottom, transparent 0%, var(--accent) 35%, var(--accent) 65%, transparent 100%);
+    opacity: 0.35;
+    animation: orgPulseAccent 6s ease-in-out infinite;
+  }
+
+  .org-panel__numeral {
+    position: absolute; right: -2%; bottom: -10%; z-index: 2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(180px, 30vw, 400px);
+    font-weight: 700; line-height: 1;
+    color: white; opacity: 0.018;
+    pointer-events: none; user-select: none;
+    letter-spacing: -0.05em;
+  }
+
+  .org-panel__chapter-marker {
+    position: absolute; right: 22px; top: 50%; z-index: 6;
+    transform: translateY(-50%) rotate(90deg); transform-origin: 50% 50%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px; letter-spacing: 0.32em;
+    color: rgba(232,228,220,0.09); text-transform: uppercase;
+    white-space: nowrap; pointer-events: none;
+  }
+
+  .org-panel__stamp {
+    position: absolute; top: 24px; right: 46px; z-index: 6;
+    padding: 5px 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+  }
+  .org-panel__stamp span {
+    font-family: 'DM Sans', sans-serif; font-size: 8px;
+    letter-spacing: 0.2em; color: rgba(232,228,220,0.13);
+    text-transform: uppercase;
+  }
+
+  .org-panel__classification {
+    position: absolute; top: 26px; left: 20px; z-index: 6;
+    font-family: 'DM Sans', sans-serif; font-size: 8px;
+    letter-spacing: 0.18em; color: rgba(232,228,220,0.1);
+    text-transform: uppercase; pointer-events: none;
+  }
+
+  .org-panel__content {
+    position: absolute; bottom: 0; left: 0; right: 0; z-index: 6;
+    padding: 0 clamp(36px, 6vw, 88px) clamp(52px, 7vh, 88px);
+    max-width: 100%;
+  }
+
+  /* reveal animations */
+  .org-panel .org-panel__tag,
+  .org-panel .org-panel__title,
+  .org-panel .org-panel__designation,
+  .org-panel .org-panel__summary,
+  .org-panel .org-panel__meta,
+  .org-panel .org-panel__cta {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 1.15s cubic-bezier(0.16,1,0.3,1),
+                transform 1.15s cubic-bezier(0.16,1,0.3,1);
+  }
+  .org-panel.in-view .org-panel__tag         { opacity: 1; transform: none; transition-delay: 0.06s; }
+  .org-panel.in-view .org-panel__title       { opacity: 1; transform: none; transition-delay: 0.20s; }
+  .org-panel.in-view .org-panel__designation { opacity: 1; transform: none; transition-delay: 0.33s; }
+  .org-panel.in-view .org-panel__summary     { opacity: 1; transform: none; transition-delay: 0.44s; }
+  .org-panel.in-view .org-panel__meta        { opacity: 1; transform: none; transition-delay: 0.54s; }
+  .org-panel.in-view .org-panel__cta         { opacity: 1; transform: none; transition-delay: 0.64s; }
+
+  .org-panel__tag {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 18px;
+  }
+  .org-panel__tag-bar {
+    width: 20px; height: 1px; background: var(--accent); opacity: 0.8;
+  }
+  .org-panel__tag span {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent);
+  }
+
+  .org-panel__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(54px, 8.5vw, 104px);
+    font-weight: 700; color: var(--text);
+    margin: 0 0 10px;
+    line-height: 0.92; letter-spacing: -0.015em;
+  }
+
+  .org-panel__designation {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: clamp(15px, 1.8vw, 21px); color: var(--accent);
+    margin-bottom: 20px; letter-spacing: 0.025em; opacity: 0.85;
+    max-width: 720px;
+  }
+
+  .org-panel__summary {
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    color: var(--text-muted); line-height: 1.82;
+    max-width: 480px; margin: 0 0 24px;
+  }
+
+  .org-panel__meta {
+    display: flex; flex-wrap: wrap; gap: 28px;
+    margin-bottom: 32px;
+  }
+  .org-panel__meta-item {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .org-panel__meta-key {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(232,228,220,0.25);
+  }
+  .org-panel__meta-val {
+    font-family: 'DM Sans', sans-serif; font-size: 11px;
+    color: rgba(232,228,220,0.55); letter-spacing: 0.04em;
+    max-width: 280px;
+  }
+
+  .org-panel__cta {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: none;
+    border: 1px solid color-mix(in srgb, var(--accent) 33%, transparent);
+    color: var(--accent);
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 12px 26px; border-radius: 2px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .org-panel__cta:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 9%, transparent);
+  }
+
+  .org-panel__scroll-hint {
+    position: absolute; bottom: 28px; right: 50%; z-index: 6;
+    transform: translateX(50%);
+    display: flex; flex-direction: column; align-items: center; gap: 7px;
+    animation: orgScrollBounce 2.6s 3s ease-in-out infinite;
+  }
+  .org-panel__scroll-hint span {
+    font-family: 'DM Sans', sans-serif; font-size: 8px;
+    letter-spacing: 0.28em; color: rgba(232,228,220,0.18);
+    text-transform: uppercase;
+  }
+  .org-panel__scroll-hint svg { color: rgba(232,228,220,0.2); }
+
+  /* ── footer ── */
+  .org-footer {
+    background: var(--bg);
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding: 72px 0 96px;
+  }
+  .org-footer__inner {
+    max-width: 720px; margin: 0 auto; padding: 0 40px;
+    display: flex; flex-direction: column; align-items: center; gap: 36px;
+  }
+  .org-footer__header {
+    display: flex; align-items: center; gap: 22px; width: 100%;
+  }
+  .org-footer__rule {
+    flex: 1; height: 1px; background: rgba(255,255,255,0.06);
+  }
+  .org-footer__header-center {
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    flex-shrink: 0;
+  }
+  .org-footer__label {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(232,228,220,0.22);
+  }
+  .org-footer__count {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.12em;
+    color: rgba(232,228,220,0.12);
+  }
+  .org-footer__nav {
+    display: flex; align-items: center; gap: 14px;
+  }
+  .org-footer__nav-rule {
+    width: 24px; height: 1px; background: rgba(177,58,52,0.25);
+  }
+  .org-footer__back {
+    font-family: 'DM Sans', sans-serif; font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-dim);
+    transition: color 0.2s;
+  }
+  .org-footer__back:hover { color: var(--text-muted); }
+
+  /* ── modal overlay ── */
+  .org-overlay {
+    position: fixed; inset: 0; z-index: 300;
+    background: rgba(2,2,6,0.93); backdrop-filter: blur(16px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px 24px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .org-overlay.is-open {
+    opacity: 1; pointer-events: all;
+  }
+
+  .org-modal {
+    position: relative;
+    width: 100%; max-width: 1080px;
+    height: min(82vh, 720px);
+    display: flex;
+    background: rgba(7,7,13,0.99);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 48px 120px rgba(0,0,0,0.85);
+    transform: translateY(16px) scale(0.99); opacity: 0;
+    transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+  }
+  .org-overlay.is-open .org-modal {
+    transform: none; opacity: 1;
+  }
+  .org-modal.is-closing {
+    transform: translateY(16px) scale(0.99); opacity: 0;
+  }
+
+  .org-modal__close {
+    position: absolute; top: 16px; right: 16px; z-index: 10;
+    width: 30px; height: 30px; border-radius: 3px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(232,228,220,0.5);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .org-modal__close:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--text);
+  }
+
+  .org-modal__hero {
+    width: 36%; flex-shrink: 0;
+    position: relative; overflow: hidden;
+    background: #06060b;
+  }
+  .org-modal__hero-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 40%;
+    filter: saturate(0.45) brightness(0.22);
+  }
+  .org-modal__hero-fade {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(7,7,13,0.3) 0%, transparent 30%, rgba(7,7,13,0.75) 75%);
+  }
+  .org-modal__hero-accent { position: absolute; inset: 0; }
+  .org-modal__hero-bar {
+    position: absolute; left: 0; top: 8%; bottom: 8%; width: 1px;
+  }
+  .org-modal__hero-tags {
+    position: absolute; top: 20px; left: 16px; right: 60px;
+    display: flex; gap: 4px; flex-wrap: wrap; z-index: 3;
+  }
+  :global(.org-modal__tag) {
+    padding: 3px 7px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(232,228,220,0.45);
+  }
+  .org-modal__hero-content {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 44px 28px 28px;
+    background: linear-gradient(to top, rgba(7,7,13,0.98) 0%, rgba(7,7,13,0.7) 65%, transparent);
+    z-index: 3;
+  }
+  .org-modal__hero-type {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    margin-bottom: 9px; opacity: 0.9;
+  }
+  .org-modal__hero-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700;
+    color: var(--text); line-height: 1.06; margin-bottom: 7px;
+    letter-spacing: -0.01em;
+  }
+  .org-modal__hero-designation {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 13px; opacity: 0.8; line-height: 1.5;
+  }
+
+  .org-modal__pane {
+    flex: 1;
+    overflow-y: auto;
+    border-left: 1px solid rgba(255,255,255,0.05);
+  }
+  .org-modal__pane-inner {
+    padding: 32px 36px 48px;
+    display: flex; flex-direction: column; gap: 22px;
+  }
+
+  .org-modal__fields-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .org-modal__fields-title {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 11px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  :global(.org-field-row) {
+    padding: 8px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    display: flex; flex-direction: column; gap: 1px;
+  }
+  :global(.org-field-row:last-child) { border-bottom: none; }
+  :global(.org-field-key) {
+    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  :global(.org-field-val) {
+    font-family: 'DM Sans', sans-serif; font-size: 12px;
+    color: var(--text-muted); line-height: 1.5;
+  }
+
+  .org-modal__lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; color: rgba(232,228,220,0.68);
+    line-height: 1.78; font-style: italic;
+    letter-spacing: 0.01em; margin: 0;
+  }
+
+  .org-modal__divider {
+    height: 1px; background: rgba(255,255,255,0.06);
+  }
+
+  .org-modal__loading {
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  :global(.org-modal__body p),
+  :global(.org-modal__body .org-modal__para) {
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    color: var(--text-muted); line-height: 1.85;
+    margin: 0 0 18px;
+  }
+  :global(.org-modal__body h1),
+  :global(.org-modal__body h2),
+  :global(.org-modal__body h3) {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700;
+    color: var(--text); margin: 24px 0 10px;
+    letter-spacing: 0.02em;
+  }
+  :global(.org-modal__body h2) { font-size: 26px; }
+  :global(.org-modal__body h3) { font-size: 20px; }
+  :global(.org-modal__body blockquote) {
+    border-left: 2px solid var(--crimson);
+    padding-left: 16px; margin: 0 0 18px;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 16px; color: rgba(232,228,220,0.6);
+  }
+  :global(.org-modal__body strong) {
+    color: var(--text); font-weight: 600;
+  }
+  :global(.org-modal__body hr) {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin: 24px 0;
+  }
+  :global(.org-modal__body ul),
+  :global(.org-modal__body ol) {
+    padding-left: 22px; margin: 0 0 18px;
+    color: var(--text-muted); line-height: 1.8;
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+  }
+  :global(.org-modal__body li) { margin-bottom: 6px; }
+
+  /* ── responsive ── */
+  @media (max-width: 800px) {
+    .org-modal {
+      flex-direction: column;
+      height: min(90vh, 760px);
+    }
+    .org-modal__hero {
+      width: 100%;
+      height: 200px; flex-shrink: 0;
+    }
+    .org-modal__pane { border-left: none; border-top: 1px solid rgba(255,255,255,0.05); }
+  }
+
+  @media (max-width: 640px) {
+    .org-identity { padding: 16px 20px; }
+    .org-identity__center { padding: 0 16px; }
+    .org-identity__tag,
+    .org-identity__year { font-size: 7px; letter-spacing: 0.18em; }
+
+    .org-panel__chapter-marker { display: none; }
+    .org-panel__stamp { right: 16px; top: 16px; }
+    .org-panel__content { padding: 0 24px clamp(40px, 6vh, 64px); }
+    .org-panel__title { font-size: clamp(40px, 11vw, 64px); }
+    .org-panel__summary { max-width: 100%; }
+    .org-panel__meta { gap: 16px; }
+
+    .org-footer__inner { padding: 0 24px; }
+    .org-modal__pane-inner { padding: 24px 20px 36px; }
+    .org-modal__hero-content { padding: 28px 20px 20px; }
+  }
+</style>
