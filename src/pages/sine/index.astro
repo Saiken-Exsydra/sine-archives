@@ -801,17 +801,87 @@ const panels: SineEntry[] = panelOrder
     margin: 24px 0;
   }
 
-  /* ── Responsive ── */
-  @media (max-width: 640px) {
-    .sine-identity { padding: 16px 20px; }
-    .sine-identity__center { padding: 0 16px; }
+  /* ── Mobile: vertical-stacked panels ── */
+  @media (max-width: 768px) {
+    .sine-root { height: auto; min-height: calc(100vh - 56px); overflow: visible; }
+    .sine-identity { padding: 16px 20px; flex-wrap: wrap; gap: 8px; }
+    .sine-identity__center { padding: 0; gap: 6px; }
+    .sine-identity__logo { height: 26px; }
+    .sine-identity__meta { flex-direction: column; gap: 4px; }
     .sine-identity__tag,
-    .sine-identity__year { font-size: 7px; letter-spacing: 0.14em; }
-    .sine-panel__label { font-size: 16px; }
-    .sine-panel__numeral { font-size: 40px; }
+    .sine-identity__year { font-size: 8px; letter-spacing: 0.18em; }
+    .sine-rule { display: none; }
+
+    .sine-panels {
+      flex-direction: column;
+      flex: none;
+      overflow: visible;
+      gap: 10px;
+      padding: 8px 16px;
+    }
+    .sine-panel {
+      flex: none !important;
+      width: 100%;
+      min-height: 140px;
+      border-right: none !important;
+      border-radius: 4px;
+      overflow: hidden;
+      border-left: 2px solid transparent;
+    }
+    .sine-panel:hover {
+      flex: none !important;
+      border-left-color: var(--accent);
+    }
+    .sine-panel:hover .sine-panel__bg-img { transform: scale(1.04); }
+    .sine-panel__numeral {
+      top: 12px; left: 14px; right: auto; text-align: left;
+      font-size: 28px;
+    }
+    .sine-panel__content {
+      padding: 36px 20px 18px;
+      gap: 4px;
+    }
+    .sine-panel__label {
+      font-size: 22px; letter-spacing: 0.06em;
+      white-space: normal;
+    }
+    .sine-panel:hover .sine-panel__label { letter-spacing: 0.1em; }
+    .sine-panel__tagline {
+      max-height: 60px;
+      opacity: 0.55;
+      transform: none;
+      font-size: 12px;
+    }
+    .sine-panel__cta {
+      opacity: 1;
+      transform: none;
+      align-self: flex-start;
+      font-size: 9px;
+      padding: 5px 10px;
+    }
+
+    .sine-caption { padding: 14px 16px; flex-wrap: wrap; gap: 8px; font-size: 8px; }
+
+    /* Modal: full-screen on mobile */
+    .sine-overlay { padding: 0; }
+    .sine-modal {
+      max-width: 100%;
+      max-height: 100vh;
+      height: 100vh;
+      border-radius: 0;
+      border: none;
+    }
+    .sine-modal__hero { height: 180px; }
+    .sine-modal__hero-content { padding: 24px 20px; }
+    .sine-modal__title { font-size: 30px; }
+    .sine-modal__tagline { font-size: 13px; }
+    .sine-modal__close { top: 14px; right: 14px; }
     .sine-modal__body { grid-template-columns: 1fr; }
-    .sine-modal__sidebar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .sine-modal__title { font-size: 32px; }
-    .sine-overlay { padding: 16px; }
+    .sine-modal__sidebar {
+      padding: 18px 20px;
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .sine-modal__main { padding: 22px 20px 60px; }
   }
 </style>

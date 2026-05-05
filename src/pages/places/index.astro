@@ -851,20 +851,88 @@ const regionsJson = JSON.stringify(regionsData);
     font-size: 8px;
   }
 
-  @media (max-width: 720px) {
-    .places-row { flex-direction: column; }
-    .region-panel { min-height: 120px; }
-    .places-row[data-active] .region-panel { flex: 0.5; min-height: 60px; }
-    .places-row[data-active] .region-panel.is-active { flex: 6; min-height: 0; }
+  @media (max-width: 768px) {
+    .places-root { height: auto; min-height: calc(100vh - 56px); overflow: visible; }
+    .places-header { padding: 18px 20px 12px; }
+    .places-search { padding: 0 20px 12px; }
+
+    .places-row {
+      flex-direction: column;
+      flex: none;
+      overflow: visible;
+      gap: 10px;
+      padding: 14px 16px;
+    }
+    .region-panel {
+      flex: none !important;
+      min-height: 130px;
+      border-radius: 5px;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-right: 1px solid rgba(255,255,255,0.05) !important;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+    .region-bar { opacity: 0.85 !important; width: 3px; }
+    .places-row[data-active] .region-panel { flex: none !important; min-height: 0; }
+    .places-row[data-active] .region-panel:not(.is-active) {
+      min-height: 64px;
+    }
+    .places-row[data-active] .region-panel.is-active {
+      flex: none !important;
+      min-height: 60vh;
+    }
+
+    .region-numeral {
+      font-size: 48px;
+      top: 12px;
+      left: 14px;
+      right: auto;
+      text-align: left;
+      opacity: 0.25;
+    }
+    .region-vertical {
+      position: relative;
+      flex-direction: row;
+      gap: 8px;
+      align-items: baseline;
+      padding: 14px 18px 16px;
+    }
     .region-vertical__label,
     .region-vertical__count {
       writing-mode: horizontal-tb;
+      text-orientation: mixed;
       transform: none;
+      letter-spacing: 0.16em;
     }
-    .region-numeral { font-size: 56px; top: 14px; }
+    .region-vertical__label { font-size: 18px; }
+    .region-vertical__count { opacity: 1; font-size: 9px; }
+
+    .region-cta {
+      bottom: 14px;
+      right: 14px;
+      opacity: 1;
+      transform: none;
+      font-size: 8px;
+      padding: 5px 10px;
+    }
+
     .region-exp__header { padding: 22px 20px 0; }
-    .region-exp__list { padding: 0 20px 20px; }
+    .region-exp__list { padding: 0 16px 24px; }
     .region-exp__title { font-size: 26px; }
+    .region-exp__tagline { font-size: 13px; }
+    .region-exp__close { width: 32px; height: 32px; }
+
+    .place-card { grid-template-columns: 56px 1fr auto; min-height: 68px; }
+    .place-card__title { font-size: 17px; }
+    .place-card__summary { font-size: 12px; }
+    .place-card__arrow {
+      opacity: 1;
+      transform: none;
+      padding: 0 12px;
+      font-size: 16px;
+    }
+
+    .places-search__panel { width: calc(100vw - 32px); }
   }
 </style>
 

@@ -776,19 +776,34 @@ if (isSkyphon) {
   @media (max-width: 860px) {
     .ent-body {
       grid-template-columns: 1fr;
-      gap: 32px;
-      padding: 32px 20px 60px;
+      gap: 28px;
+      padding: 28px 20px 60px;
     }
     .ent-sidebar {
       position: static;
     }
-    .ent-hero__content { padding: 40px 24px; }
-    .ent-hero { min-height: 320px; }
+    .ent-hero__content { padding: 36px 20px; }
+    .ent-hero { min-height: 280px; }
+    .ent-hero__title { font-size: clamp(32px, 8vw, 52px); }
+    .ent-hero__designation { font-size: 12px; margin-bottom: 14px; }
+    .ent-hero__tag { font-size: 9px; }
+    .ent-crumbs { font-size: 10px; margin-bottom: 14px; }
+
+    .ent-prose :global(h2) { font-size: 22px; margin: 30px 0 10px; }
+    .ent-prose :global(h3) { font-size: 17px; margin: 22px 0 6px; }
+    .ent-prose :global(p),
+    .ent-prose :global(li) { font-size: 14px; line-height: 1.78; }
+
+    .ent-lead { font-size: 17px; margin: 0 0 18px; }
+    .ent-related { padding: 40px 0 60px; }
+    .ent-related__inner { padding: 0 20px; }
+    .ent-related__grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 520px) {
-    .ent-hero__content { padding: 30px 16px; }
+    .ent-hero__content { padding: 28px 16px; }
     .ent-related__inner { padding: 0 16px; }
+    .ent-body { padding: 24px 16px 56px; }
   }
 </style>
 
@@ -805,6 +820,13 @@ if (isSkyphon) {
           .replace(/-+/g, "-");
         if (slug) h.id = slug;
       }
+    });
+  }
+
+  // Collapse File Data + TOC on mobile by default
+  if (window.matchMedia("(max-width: 860px)").matches) {
+    document.querySelectorAll<HTMLDetailsElement>(".ent-sidebar__card, .ent-toc").forEach((d) => {
+      d.removeAttribute("open");
     });
   }
 

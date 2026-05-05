@@ -575,11 +575,103 @@ const charData = characters.map((c) => ({
         text-transform: uppercase; white-space: nowrap;
       }
 
+      /* ── Mobile filmstrip ── */
+      .filmstrip {
+        display: none;
+      }
+
       @media (max-width: 768px) {
+        html, body { overflow: auto; }
         .sidebar { display: none; }
-        .stage__bottom { left: 0; right: 40px; padding: 0 24px 40px; }
-        .stage__name { font-size: clamp(36px, 8vw, 64px); }
-        .stage__dots { right: 10px; }
+        .chars-root { flex-direction: column; height: auto; min-height: calc(100vh - 56px); }
+        .stage {
+          flex: none;
+          height: calc(100vh - 56px - 88px);
+          min-height: 480px;
+          touch-action: pan-y;
+        }
+        .stage__top { padding: 14px 18px; }
+        .stage__counter-num { font-size: 22px; }
+        .stage__bottom {
+          left: 0;
+          right: 0;
+          padding: 0 20px 24px;
+        }
+        .stage__name { font-size: clamp(38px, 9vw, 56px); }
+        .stage__designation { font-size: 11px; margin-bottom: 12px; }
+        .stage__summary {
+          font-size: 13px;
+          margin: 0 0 18px;
+          -webkit-line-clamp: 2;
+        }
+        .stage__actions { gap: 8px; flex-wrap: wrap; }
+        .stage__cta { flex: 1; padding: 11px 16px; min-width: 140px; text-align: center; }
+        .stage__nav-btn { width: 40px; height: 40px; font-size: 16px; }
+        .stage__key-hint { display: none; }
+        .stage__dots { display: none; }
+        .stage__watermark { display: none; }
+        .stage__stamp { display: none; }
+        .stage__type-label { font-size: 9px; margin-bottom: 8px; }
+
+        /* Filmstrip thumbnail row */
+        .filmstrip {
+          display: flex;
+          gap: 6px;
+          padding: 10px 12px 14px;
+          overflow-x: auto;
+          background: rgba(5,5,10,0.95);
+          border-top: 1px solid rgba(255,255,255,0.06);
+          flex-shrink: 0;
+          scrollbar-width: none;
+          -webkit-overflow-scrolling: touch;
+        }
+        .filmstrip::-webkit-scrollbar { display: none; }
+        .filmstrip__item {
+          position: relative;
+          width: 50px; height: 64px;
+          flex-shrink: 0;
+          border-radius: 3px; overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.08);
+          background: rgba(10,10,18,0.8);
+          padding: 0; cursor: pointer;
+          opacity: 0.5;
+          transform: scale(1);
+          transition: border-color 0.2s, opacity 0.2s, transform 0.2s;
+        }
+        .filmstrip__item.is-active {
+          border-color: var(--crimson);
+          opacity: 1;
+          transform: scale(1.06);
+        }
+        .filmstrip__item img {
+          width: 100%; height: 100%;
+          object-fit: cover; object-position: center 20%;
+        }
+        .filmstrip__item-fallback {
+          width: 100%; height: 100%;
+          background: rgba(177,58,52,0.12);
+          display: flex; align-items: center; justify-content: center;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 13px; font-weight: 700;
+          color: rgba(177,58,52,0.55);
+        }
+        .filmstrip__item.is-active::after {
+          content: "";
+          position: absolute; bottom: 0; left: 0; right: 0;
+          height: 2px; background: var(--crimson);
+        }
+
+        /* Hint */
+        .swipe-hint {
+          position: absolute;
+          bottom: 6px; left: 50%; transform: translateX(-50%);
+          z-index: 10;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 8px; letter-spacing: 0.16em;
+          color: rgba(232,228,220,0.18);
+          text-transform: uppercase;
+          pointer-events: none;
+        }
       }
     </style>
   </head>
@@ -779,6 +871,26 @@ const charData = characters.map((c) => ({
         <div class="stage__stamp is-in" id="stage-stamp">
           <div class="stage__stamp-inner">Dossier On File</div>
         </div>
+
+        <!-- Mobile swipe hint -->
+        <div class="swipe-hint">Swipe to navigate</div>
+      </div>
+
+      <!-- Mobile filmstrip -->
+      <div class="filmstrip" id="filmstrip">
+        {charData.map((c, i) => (
+          <button
+            class={`filmstrip__item${i === 0 ? " is-active" : ""}`}
+            data-idx={i}
+            aria-label={c.title}
+          >
+            {c.image ? (
+              <img src={c.image} alt="" loading="lazy" />
+            ) : (
+              <div class="filmstrip__item-fallback">{String(i + 1).padStart(2, "0")}</div>
+            )}
+          </button>
+        ))}
       </div>
     </div>
 
@@ -996,6 +1108,48 @@ const charData = characters.map((c) => ({
         applySearch("");
         searchInput.focus();
       });
+
+      // Filmstrip
+      const filmstrip = document.getElementById("filmstrip");
+      filmstrip?.addEventListener("click", (e) => {
+        const btn = e.target.closest(".filmstrip__item");
+        if (btn) switchTo(parseInt(btn.dataset.idx, 10));
+      });
+
+      // Sync filmstrip on every switch via observing sidebar items (cheap hook):
+      // tap into the same dot list mutation. We instead patch via a MutationObserver on dots.
+      const dotsEl = document.getElementById("stage-dots");
+      if (filmstrip && dotsEl) {
+        const obs = new MutationObserver(() => {
+          const activeDot = dotsEl.querySelector(".stage__dot.is-active");
+          const idx = activeDot ? parseInt(activeDot.dataset.idx, 10) : 0;
+          filmstrip.querySelectorAll(".filmstrip__item").forEach((el, i) => {
+            el.classList.toggle("is-active", i === idx);
+          });
+          const active = filmstrip.querySelector(".filmstrip__item.is-active");
+          active?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        });
+        obs.observe(dotsEl, { subtree: true, attributes: true, attributeFilter: ["class"] });
+      }
+
+      // Touch swipe on stage
+      let touchStartX = null;
+      let touchStartY = null;
+      stageRoot.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+      stageRoot.addEventListener("touchend", (e) => {
+        if (touchStartX === null) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0) switchTo((activeIdx + 1) % chars.length);
+          else switchTo((activeIdx - 1 + chars.length) % chars.length);
+        }
+        touchStartX = null;
+        touchStartY = null;
+      }, { passive: true });
     </script>
   </body>
 </html>
