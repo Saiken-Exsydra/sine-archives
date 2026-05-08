@@ -81,6 +81,10 @@ const regionsJson = JSON.stringify(regionsData);
     </div>
 
     <div class="places-search" id="places-search">
+      <a class="places-map-link" href="/places/map/">
+        <span class="places-map-link__icon" aria-hidden="true">◇</span>
+        <span>Empire Map</span>
+      </a>
       <button class="places-search__btn" id="places-search-btn" aria-label="Search places" aria-expanded="false">
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
           <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
@@ -278,11 +282,41 @@ const regionsJson = JSON.stringify(regionsData);
   .places-search {
     position: relative;
     display: flex;
+    align-items: center;
+    gap: 11px;
     justify-content: center;
     padding: 0 32px 14px;
     flex-shrink: 0;
     z-index: 50;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .places-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid rgba(177, 58, 52, 0.24);
+    border-radius: 3px;
+    background: rgba(177, 58, 52, 0.075);
+    color: rgba(232, 228, 220, 0.68);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .places-map-link:hover {
+    border-color: rgba(177, 58, 52, 0.48);
+    background: rgba(177, 58, 52, 0.14);
+    color: var(--text);
+  }
+  .places-map-link__icon {
+    color: var(--crimson);
+    font-size: 12px;
+    line-height: 1;
   }
   .places-search__btn {
     width: 32px;
@@ -855,6 +889,11 @@ const regionsJson = JSON.stringify(regionsData);
     .places-root { height: auto; min-height: calc(100vh - 56px); overflow: visible; }
     .places-header { padding: 18px 20px 12px; }
     .places-search { padding: 0 20px 12px; }
+    .places-map-link {
+      flex: 1;
+      justify-content: center;
+      min-width: 0;
+    }
 
     .places-row {
       flex-direction: column;
@@ -1153,4 +1192,3 @@ const regionsJson = JSON.stringify(regionsData);
     });
   }
 </script>
-
