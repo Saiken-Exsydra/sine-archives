@@ -4,7 +4,7 @@ type: "Organization"
 designation: "SiNE Integrated Forces - S-IF"
 affiliation: "SiNE (S-IF branch) - treaty standing with the Empire of Synus"
 headquarters: "Multiple command installations - primary coordination through Kalt'sen"
-founded: "Concurrent with SiNE's founding - reorganized into current three-command structure after orbital authority was transferred out"
+founded: "Concurrent with SiNE's founding - current three-command structure established over later institutional development"
 jurisdiction: "Twilight Band and frontier - full-spectrum operational authority under treaty arrangements"
 status_label: "Active"
 summary: "SiNE's military arm. Three commands, one doctrine, and a sustained presence at every front the world's current condition requires."
@@ -56,9 +56,9 @@ Margin Command's Cold Fleet role in the War of the Threshold is primarily mariti
 
 ## Relationship to Clepsydra
 
-HourGlass does not maintain its own orbital command.
+HourGlass does not maintain command over the orbital lattice.
 
-The authority that once sat inside S-IF as Glass Command was separated out long ago and reorganized into **Clepsydra**, SiNE's orbital continuity authority. That reorganization left HourGlass with military control of land, air, and sea - and dependent access to the orbital lattice rather than direct custody of it.
+Clepsydra is a separate SiNE branch with sole custody of the **GlassThreaders**, **GlassWatchers**, and **Glass Sinks**, along with the authority to approve, delay, or deny lattice use on continuity grounds. HourGlass is its closest military partner and one of its most frequent requesters, but it does not own the system and cannot treat it as campaign property.
 
 In practice, this means HourGlass requests what it needs.
 

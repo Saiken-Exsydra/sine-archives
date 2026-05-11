@@ -4,7 +4,7 @@ type: "Organization"
 designation: "SiNE Orbital Continuity Authority - S-CL"
 affiliation: "SiNE (S-CL division) - lattice authority with cross-division mandate"
 headquarters: "Kalt'sen lattice custody complex - operational presence distributed across orbital and ground sites"
-founded: "Reorganized from Glass Command at a date no public summary records precisely"
+founded: "Year 1813 - chartered from the Lattice Cradle Program's surviving core"
 jurisdiction: "Orbital lattice, Glass Sinks, Thread authorization, synchronization doctrine, and continuity-risk oversight across all SiNE operations"
 status_label: "Active"
 summary: "The institution that keeps the orbital lattice coherent, authorized, and alive."
@@ -32,17 +32,13 @@ Clepsydra holds sole custody of the **GlassWatchers**, **GlassThreaders**, and *
 
 ## Historical Evolution
 
-The institution now called Clepsydra did not begin under that name.
+Clepsydra was founded in **Year 1813**, one year after the first successful Thread opening, when SiNE's leadership concluded that the lattice could not remain inside any existing branch without becoming more dangerous.
 
-In earlier centuries, orbital operations were housed inside HourGlass under the title **Glass Command**. This was workable when the lattice was smaller, when orbital infrastructure could still be treated as a specialized strategic capability, and when the system's failures would have remained operational disasters rather than civilizational ones.
+Its earliest administrative and technical core came from the **Lattice Cradle Program** - the research and concealment effort that first brought the GlassThreaders and their associated Sink infrastructure into usable alignment. Once the system proved repeatable, it stopped being a research curiosity and became strategic infrastructure no ordinary branch was fit to own.
 
-Those conditions did not last.
+Entropy could theorize it, Evanote could hide and provision it, and HourGlass could certainly have found uses for it, but none of those institutions could be trusted to hold unrestricted custody of something so irreplaceable, so poorly understood, and so easy to normalize into routine doctrine.
 
-As the lattice expanded, as Glass Sink dependence deepened, as synchronization routed itself into logistics, communications, continuity management, and long-range strategic awareness, the old military structure became structurally inadequate. A command authority optimized for campaign logic could not also serve as reliable custodian of a system whose first duty was not victory but persistence.
-
-Glass Command was therefore dissolved. Its infrastructure, doctrine, records, and authority were reorganized over generations into **Clepsydra** - a separate SiNE division whose mandate was preservation of the lattice itself.
-
-The result does not feel recent. It feels old because it is old. Most living personnel have never known a world in which orbital continuity answered to military command.
+Clepsydra was the answer: a separate custodial branch built around refusal, measured release, and continuity discipline. The **GlassWatchers** came later than the Threaders, but once they matured into load-bearing infrastructure they were absorbed into the same branch for the same reason. Clepsydra's history is therefore not the story of an HourGlass command renamed. It is the story of the lattice being separated from ordinary branch ownership before anyone else could turn it into habit.
 
 ---
 
@@ -91,7 +87,7 @@ This vocabulary is exact. The institution does not think in battalions because b
 
 ## Relationship to HourGlass
 
-HourGlass no longer contains any orbital branch.
+HourGlass does not command the orbital lattice.
 
 Threshold Command requests Threads through Clepsydra when movement, insertion, extraction, or continuity-sensitive support requires lattice use. Corridor Command receives Watcher-derived surveillance interpretation and route-clearance support through Clepsydra. Margin Command coordinates long-range synchronization and northern maritime routing through the same authority.
 
