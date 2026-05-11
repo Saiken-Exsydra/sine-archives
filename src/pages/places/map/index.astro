@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../../layouts/MainLayout.astro";
 
+<<<<<<< HEAD
 // ═══════════════════════════════════════════════════════════════════════════
 //  MAP CONFIGURATION
 //  To swap the map image for a higher-resolution version, change MAP_IMAGE.
@@ -11,6 +12,9 @@ const MAP_ALT    = "Illustrated map of the Empire of Synus, showing the northern
 const MAP_ASPECT = 1534 / 1025; // natural image width ÷ height ≈ 1.497
 
 const dossier = {
+=======
+const DOSSIER = {
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   north: {
     eyebrow: "Region I",
     title: "Northern Region",
@@ -24,9 +28,15 @@ const dossier = {
       ["Southern break",   "Thornwall"],
     ],
     facts: [
+<<<<<<< HEAD
       { title: "Ael'rath",       text: "The northernmost major city and primary naval base of the Cold Fleet along the Dark-Side coast.", href: "/places/aelrath/" },
       { title: "Hal'vorn",       text: "Administrative capital of the north, built where highland water becomes navigable river depth.",  href: "/places/halvorn/" },
       { title: "Kor'rath",       text: "A timber city whose river access gives the region much of its resource character.",               href: "/places/korrath/" },
+=======
+      { title: "Ael'rath", text: "The northernmost major city and primary naval base of the Cold Fleet along the Dark-Side coast.", href: "/places/aelrath/" },
+      { title: "Hal'vorn", text: "Administrative capital of the north, built where highland water becomes navigable river depth.", href: "/places/halvorn/" },
+      { title: "Kor'rath", text: "A timber city whose river access gives the region much of its resource character.", href: "/places/korrath/" },
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     ],
     routes: [
       ["Coast",               "The Black Shores give the north its fleet identity and its harshest weather."],
@@ -50,9 +60,15 @@ const dossier = {
       ["Urban pattern",     "Capital satellites"],
     ],
     facts: [
+<<<<<<< HEAD
       { title: "Kalt'sen",  text: "The place where every major institution keeps a central address and consequence accumulates block by block.", href: "/places/kaltsen/" },
       { title: "Vrenne",    text: "An academy city that gives the center its intellectual and bureaucratic weight.",                            href: "/places/vrenne/" },
       { title: "Lon'drina", text: "A central city tied to education, administration, and the Empire's cultivated self-image.",                  href: "/places/londrina/" },
+=======
+      { title: "Kalt'sen", text: "The place where every major institution keeps a central address and consequence accumulates block by block.", href: "/places/kaltsen/" },
+      { title: "Vrenne", text: "An academy city that gives the center its intellectual and bureaucratic weight.", href: "/places/vrenne/" },
+      { title: "Lon'drina", text: "A central city tied to education, administration, and the Empire's cultivated self-image.", href: "/places/londrina/" },
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     ],
     routes: [
       ["Capital basin",    "Kalt'sen is placed where river access, roads, and defensible elevation overlap."],
@@ -76,9 +92,15 @@ const dossier = {
       ["Deep feature",    "Vael Mouth"],
     ],
     facts: [
+<<<<<<< HEAD
       { title: "Hora'veil", text: "Regional capital and primary military-industrial hub of the Long War effort.",             href: "/places/horaveil/" },
       { title: "Cal'thas",  text: "A weapons-production center that makes the southern region's war economy concrete.",       href: "/places/calthas/" },
       { title: "Sarn Pell", text: "The civilian and military gate near the Ardeatus frontier.",                               href: "/places/sarn-pell/" },
+=======
+      { title: "Hora'veil", text: "Regional capital and primary military-industrial hub of the Long War effort.", href: "/places/horaveil/" },
+      { title: "Cal'thas", text: "A weapons-production center that makes the southern region's war economy concrete.", href: "/places/calthas/" },
+      { title: "Sarn Pell", text: "The civilian and military gate near the Ardeatus frontier.", href: "/places/sarn-pell/" },
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     ],
     routes: [
       ["Escarpment",      "The Scorch Escarpment is the break where the map stops being temperate."],
@@ -95,16 +117,26 @@ const dossier = {
     subhead: "The western cold frontier of mountains, passes, and white desert routes.",
     accent: "#88abc5",
     summary:
+<<<<<<< HEAD
       "The western side of the map is dominated by Aurora, the White Desert, and the mountain approach into the Empire. It reads as altitude, snow, passes, and watchful distance. Greygate Pass and the fortified line around Valerie make the border legible as a controlled crossing rather than a continuous furnace front.",
+=======
+      "The western side is dominated by Aurora, the White Desert, and the mountain approach into the Empire. It reads as altitude, snow, passes, and watchful distance. Greygate Pass and the fortified line around Valerie make the border legible as a controlled crossing rather than a continuous furnace front.",
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     stats: [
       ["Counterpower", "Aurora"],
       ["Key crossing",  "Greygate Pass"],
       ["Terrain type",  "Snow desert"],
     ],
     facts: [
+<<<<<<< HEAD
       { title: "Aurora",        text: "A neighboring power whose geography is defined by snow fields, mountain roads, and guarded approaches.", href: "/places/aurora/" },
       { title: "Greygate Pass", text: "The western pass compresses travel, diplomacy, and defense into one narrow route." },
       { title: "White Desert",  text: "The silicate flats make the western approach visually open but logistically severe." },
+=======
+      { title: "Aurora", text: "A neighboring power whose geography is defined by snow fields, mountain roads, and guarded approaches.", href: "/places/aurora/" },
+      { title: "Greygate Pass", text: "The western pass compresses travel, diplomacy, and defense into one narrow route." },
+      { title: "White Desert", text: "The silicate flats make the western approach visually open but logistically severe." },
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     ],
     routes: [
       ["Mountain entry",    "The border is easiest to understand through the pass system, not through open field movement."],
@@ -128,9 +160,15 @@ const dossier = {
       ["Imperial gate",  "Sarn Pell"],
     ],
     facts: [
+<<<<<<< HEAD
       { title: "Ardeatus",      text: "A federation-state of industry and forge theology whose border presence reshapes the eastern map.", href: "/places/ardeatus/" },
       { title: "Iron Bastion",  text: "The wall reads as infrastructure, threat, and political statement at the same time." },
       { title: "Sarn Pell",     text: "The Empire's southeastern gate sits where southern logistics meet frontier risk.",                   href: "/places/sarn-pell/" },
+=======
+      { title: "Ardeatus", text: "A federation-state of industry and forge theology whose border presence reshapes the eastern map.", href: "/places/ardeatus/" },
+      { title: "Iron Bastion", text: "The wall reads as infrastructure, threat, and political statement at the same time." },
+      { title: "Sarn Pell", text: "The Empire's southeastern gate sits where southern logistics meet frontier risk.", href: "/places/sarn-pell/" },
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     ],
     routes: [
       ["Wall line",          "The eastern border is read through fortification first and settlement second."],
@@ -143,6 +181,7 @@ const dossier = {
   },
 };
 
+<<<<<<< HEAD
 // Region handle positions as % of canvas from top-left.
 // These place each label over its geographic territory on the initial empire view.
 const handles = [
@@ -151,14 +190,28 @@ const handles = [
   { key: "south",   numeral: "III", label: "Southern Region",  x: 56, y: 67 },
   { key: "west",    numeral: "W",   label: "Aurora",           x:  9, y: 31 },
   { key: "east",    numeral: "E",   label: "Ardeatus",         x: 88, y: 44 },
+=======
+const handles = [
+  { region: "north",   id: "I",   label: "Northern Region", x: "48%", y: "26%" },
+  { region: "central", id: "II",  label: "Central Region",  x: "42%", y: "51%" },
+  { region: "south",   id: "III", label: "Southern Region", x: "56%", y: "67%" },
+  { region: "west",    id: "W",   label: "Aurora",          x: "9%",  y: "31%" },
+  { region: "east",    id: "E",   label: "Ardeatus",        x: "88%", y: "44%" },
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
 ];
+
+const MAP_SRC = "/uploads/New%20Empire%20Map.png";
 ---
 
 <MainLayout active="places" pageTitle="Empire Map — SiNE Archives">
   <section class="atlas" id="atlasRoot">
 
+<<<<<<< HEAD
     <!-- Back link: floats over the map -->
     <a class="atlas-back" href="/places/" aria-label="Return to Places">
+=======
+    <a class="atlas-back" href="/places/">
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
         <path d="M7 1.5L3 5L7 8.5" stroke="currentColor" stroke-width="1.4"
               stroke-linecap="round" stroke-linejoin="round"/>
@@ -166,7 +219,10 @@ const handles = [
       <span>PLACES</span>
     </a>
 
+<<<<<<< HEAD
     <!-- ── MAP STAGE: fills viewport ─────────────────────────────────── -->
+=======
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     <div class="atlas-stage" id="atlasStage">
 
       <div class="map-frame" id="mapFrame">
@@ -175,6 +231,7 @@ const handles = [
 
             <img
               class="map-img"
+<<<<<<< HEAD
               src={MAP_IMAGE}
               alt={MAP_ALT}
               draggable="false"
@@ -190,6 +247,17 @@ const handles = [
                 aria-label={`Open dossier: ${h.label}`}
               >
                 <span class="handle__id">{h.numeral}</span>
+=======
+              id="mapImg"
+              src={MAP_SRC}
+              alt="Illustrated map of the Empire of Synus"
+              draggable="false"
+            />
+
+            {handles.map((h) => (
+              <button class="handle" data-region={h.region} type="button" style={`--hx:${h.x};--hy:${h.y}`}>
+                <span class="handle__id">{h.id}</span>
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
                 <span class="handle__label">{h.label}</span>
               </button>
             ))}
@@ -198,6 +266,7 @@ const handles = [
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- Vignette + grain (pointer-events: none, purely visual) -->
       <div class="map-vignette" aria-hidden="true"></div>
       <div class="sine-grain"   aria-hidden="true"></div>
@@ -207,20 +276,37 @@ const handles = [
         <div class="carto-compass">
           <span class="carto-compass__n">N</span>
           <svg class="carto-compass__cross" width="20" height="20" viewBox="0 0 20 20" fill="none">
+=======
+      <div class="map-vignette" aria-hidden="true"></div>
+      <div class="map-grain" aria-hidden="true"></div>
+
+      <div class="carto-chrome" aria-hidden="true">
+        <div class="carto-compass">
+          <span class="carto-compass__n">N</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+               style="color:rgba(232,228,220,0.18)">
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
             <line x1="10" y1="1" x2="10" y2="19" stroke="currentColor" stroke-width="0.7"/>
             <line x1="1"  y1="10" x2="19" y2="10" stroke="currentColor" stroke-width="0.7"/>
             <circle cx="10" cy="10" r="2" fill="none" stroke="currentColor" stroke-width="0.7"/>
           </svg>
         </div>
+<<<<<<< HEAD
         <div class="carto-ref">
           <span>IGS · REF 44·7</span>
         </div>
+=======
+        <div class="carto-ref">IGS · REF 44·7</div>
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
         <div class="carto-classification">
           IMPERIAL GEOGRAPHIC SURVEY · RESTRICTED CIRCULATION
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- Controls: bottom-left -->
+=======
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
       <div class="atlas-controls">
         <button class="ctrl-btn" id="resetBtn" type="button">RESET TO SURVEY VIEW</button>
         <button class="ctrl-btn ctrl-btn--icon" id="fullscreenBtn"
@@ -232,6 +318,7 @@ const handles = [
           </svg>
         </button>
       </div>
+<<<<<<< HEAD
 
     </div><!-- /atlas-stage -->
 
@@ -306,6 +393,69 @@ const handles = [
 
   // Focus offsets calibrated to a 1000px-wide canvas baseline.
   // Positive y = pan down (reveals top of map). Negative y = pan up (reveals bottom).
+=======
+
+    </div>
+
+    <aside class="dossier" id="dossier" aria-hidden="true">
+
+      <div class="dossier-stamp">CLASSIFIED · INTERNAL USE ONLY</div>
+
+      <button class="dossier-close" id="dossierClose" type="button" aria-label="Close">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+          <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="10" y1="1" x2="1" y2="10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <header class="dossier-head">
+        <p class="dossier-eyebrow" id="dossierEyebrow"></p>
+        <h2 id="dossierTitle"></h2>
+        <p class="dossier-subhead" id="dossierSubhead"></p>
+      </header>
+
+      <div class="dossier-body" id="dossierBody">
+        <p class="dossier-summary" id="dossierSummary"></p>
+        <div class="dossier-stats" id="dossierStats"></div>
+        <section class="dossier-section">
+          <h3 class="dossier-section-title">Anchor Places</h3>
+          <div class="dossier-facts" id="dossierFacts"></div>
+        </section>
+        <section class="dossier-section">
+          <h3 class="dossier-section-title">Reading Lines</h3>
+          <div class="dossier-routes" id="dossierRoutes"></div>
+        </section>
+        <blockquote class="dossier-quote">
+          <p id="dossierQuote"></p>
+          <cite id="dossierByline"></cite>
+        </blockquote>
+      </div>
+
+      <footer class="dossier-foot">
+        <span id="dossierRef"></span>
+        <span id="dossierStatus">Imperial Geographic Survey</span>
+      </footer>
+
+    </aside>
+
+  </section>
+</MainLayout>
+
+<script define:vars={{ DOSSIER }}>
+  const atlasRoot     = document.getElementById("atlasRoot");
+  const atlasStage    = document.getElementById("atlasStage");
+  const mapFrame      = document.getElementById("mapFrame");
+  const mapTransform  = document.getElementById("mapTransform");
+  const mapCanvas     = document.getElementById("mapCanvas");
+  const mapImgEl      = document.getElementById("mapImg");
+  const dossierEl     = document.getElementById("dossier");
+  const dossierClose  = document.getElementById("dossierClose");
+  const resetBtn      = document.getElementById("resetBtn");
+  const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+  let MAP_ASPECT = 1534 / 1025;
+
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   const FOCUS = {
     empire:  { scale: 1.00, x:    0, y:    0 },
     north:   { scale: 1.46, x:    0, y:  180 },
@@ -315,19 +465,27 @@ const handles = [
     east:    { scale: 1.60, x: -410, y:   18 },
   };
 
+<<<<<<< HEAD
   const state = {
     scale:     1,
     x:         0,
     y:         0,
     selection: null, // null = empire view
   };
+=======
+  const state = { scale: 1, x: 0, y: 0, selection: null };
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
 
   // ── Sizing ─────────────────────────────────────────────────────────────
   function syncMapSize() {
     if (!mapFrame || !mapCanvas) return;
     const frame = mapFrame.getBoundingClientRect();
     const w = Math.min(frame.width, frame.height * MAP_ASPECT);
+<<<<<<< HEAD
     mapCanvas.style.width = `${Math.floor(w)}px`;
+=======
+    mapCanvas.style.width = Math.floor(w) + "px";
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   }
 
   // ── Transform ──────────────────────────────────────────────────────────
@@ -340,23 +498,36 @@ const handles = [
   function focusMap(key) {
     const f = FOCUS[key] || FOCUS.empire;
     syncMapSize();
+<<<<<<< HEAD
     const ratio = (mapCanvas?.offsetWidth || 1000) / 1000;
+=======
+    const ratio = (mapCanvas ? mapCanvas.offsetWidth : 1000) / 1000;
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     state.scale = f.scale;
     state.x     = f.x * ratio;
     state.y     = f.y * ratio;
     applyTransform();
   }
 
+<<<<<<< HEAD
   // ── Dossier helpers ────────────────────────────────────────────────────
   function el(id)          { return document.getElementById(id); }
   function setText(id, val){ const e = el(id); if (e) e.textContent = val; }
+=======
+  function el(id) { return document.getElementById(id); }
+  function setText(id, val) { const e = el(id); if (e) e.textContent = val; }
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
 
   function openRegion(key) {
     const data = DOSSIER[key];
     if (!data) return;
     state.selection = key;
 
+<<<<<<< HEAD
     atlasRoot?.style.setProperty("--atlas-accent", data.accent);
+=======
+    atlasRoot.style.setProperty("--atlas-accent", data.accent);
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
 
     setText("dossierEyebrow", data.eyebrow);
     setText("dossierTitle",   data.title);
@@ -364,6 +535,7 @@ const handles = [
     setText("dossierSummary", data.summary);
     setText("dossierQuote",   data.quote);
     setText("dossierByline",  data.byline);
+<<<<<<< HEAD
     setText("dossierRef",     data.docRef ?? "");
     setText("dossierStatus",  `${data.eyebrow} · ${data.title}`);
 
@@ -376,35 +548,66 @@ const handles = [
         d.innerHTML =
           `<div class="dossier-stat__label">${label}</div>` +
           `<div class="dossier-stat__value">${value}</div>`;
+=======
+    setText("dossierRef",     data.docRef || "");
+    setText("dossierStatus",  data.eyebrow + " · " + data.title);
+
+    const statsEl = el("dossierStats");
+    if (statsEl) {
+      statsEl.innerHTML = "";
+      data.stats.forEach(function(s) {
+        const d = document.createElement("div");
+        d.className = "dossier-stat";
+        d.innerHTML = '<div class="dossier-stat__label">' + s[0] + '</div>' +
+                      '<div class="dossier-stat__value">' + s[1] + '</div>';
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
         statsEl.appendChild(d);
       });
     }
 
     const factsEl = el("dossierFacts");
     if (factsEl) {
+<<<<<<< HEAD
       factsEl.replaceChildren();
       data.facts.forEach(f => {
+=======
+      factsEl.innerHTML = "";
+      data.facts.forEach(function(f) {
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
         const tag = f.href ? "a" : "article";
         const item = document.createElement(tag);
         item.className = "dossier-fact";
         if (f.href) item.href = f.href;
+<<<<<<< HEAD
         item.innerHTML =
           `<span>${f.title}</span><em>${f.text}</em>`;
+=======
+        item.innerHTML = "<span>" + f.title + "</span><em>" + f.text + "</em>";
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
         factsEl.appendChild(item);
       });
     }
 
     const routesEl = el("dossierRoutes");
     if (routesEl) {
+<<<<<<< HEAD
       routesEl.replaceChildren();
       data.routes.forEach(([title, body]) => {
         const item = document.createElement("article");
         item.className = "dossier-route";
         item.innerHTML = `<h4>${title}</h4><p>${body}</p>`;
+=======
+      routesEl.innerHTML = "";
+      data.routes.forEach(function(r) {
+        const item = document.createElement("article");
+        item.className = "dossier-route";
+        item.innerHTML = "<h4>" + r[0] + "</h4><p>" + r[1] + "</p>";
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
         routesEl.appendChild(item);
       });
     }
 
+<<<<<<< HEAD
     focusMap(key);
 
     if (dossierEl) {
@@ -416,10 +619,27 @@ const handles = [
     document.querySelectorAll(".handle").forEach(h =>
       h.classList.toggle("is-active", h.dataset.region === key)
     );
+=======
+    dossierEl.style.setProperty("--atlas-accent", data.accent);
+    const quoteEl = dossierEl.querySelector(".dossier-quote");
+    if (quoteEl) quoteEl.style.borderColor = data.accent;
+
+    focusMap(key);
+
+    dossierEl.classList.add("is-open");
+    dossierEl.setAttribute("aria-hidden", "false");
+    const body = el("dossierBody");
+    if (body) body.scrollTop = 0;
+
+    document.querySelectorAll(".handle").forEach(function(h) {
+      h.classList.toggle("is-active", h.dataset.region === key);
+    });
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   }
 
   function closeRegion() {
     state.selection = null;
+<<<<<<< HEAD
     if (dossierEl) {
       dossierEl.classList.remove("is-open");
       dossierEl.setAttribute("aria-hidden", "true");
@@ -472,6 +692,68 @@ const handles = [
   // Init
   syncMapSize();
   applyTransform();
+=======
+    dossierEl.classList.remove("is-open");
+    dossierEl.setAttribute("aria-hidden", "true");
+    document.querySelectorAll(".handle.is-active").forEach(function(h) {
+      h.classList.remove("is-active");
+    });
+    atlasRoot.style.setProperty("--atlas-accent", "#b13a34");
+    focusMap("empire");
+  }
+
+  document.querySelectorAll(".handle").forEach(function(h) {
+    h.addEventListener("click", function(e) {
+      e.stopPropagation();
+      if (h.dataset.region === state.selection) {
+        closeRegion();
+      } else {
+        openRegion(h.dataset.region);
+      }
+    });
+  });
+
+  atlasStage.addEventListener("click", function() {
+    if (state.selection) closeRegion();
+  });
+  dossierEl.addEventListener("click", function(e) { e.stopPropagation(); });
+  dossierClose.addEventListener("click", closeRegion);
+  resetBtn.addEventListener("click", closeRegion);
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && state.selection) closeRegion();
+  });
+
+  fullscreenBtn.addEventListener("click", async function() {
+    try {
+      if (!document.fullscreenElement) {
+        await document.documentElement.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch(err) {}
+  });
+
+  document.addEventListener("fullscreenchange", function() {
+    requestAnimationFrame(function() { focusMap(state.selection || "empire"); });
+  });
+
+  window.addEventListener("resize", function() {
+    requestAnimationFrame(function() { focusMap(state.selection || "empire"); });
+  });
+
+  function onMapLoaded() {
+    if (mapImgEl.naturalWidth && mapImgEl.naturalHeight) {
+      MAP_ASPECT = mapImgEl.naturalWidth / mapImgEl.naturalHeight;
+      if (mapCanvas) mapCanvas.style.aspectRatio = MAP_ASPECT;
+    }
+    syncMapSize();
+    applyTransform();
+  }
+
+  mapImgEl.addEventListener("load", onMapLoaded);
+  if (mapImgEl.complete && mapImgEl.naturalWidth) onMapLoaded();
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
 </script>
 
 <!-- ══════════════════════════════════════════════════════════════════════ -->
@@ -481,16 +763,36 @@ const handles = [
 
   /* ── Shell ───────────────────────────────────────────────────────────── */
   .atlas {
+<<<<<<< HEAD
     --atlas-accent: var(--crimson);
     position: relative;
     height: calc(100vh - 56px);
+=======
+    --atlas-accent: #b13a34;
+    position: fixed;
+    top: 56px; left: 0; right: 0; bottom: 0;
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     overflow: hidden;
     background: #030305;
     color: var(--text);
   }
   .atlas:fullscreen { height: 100vh; }
 
+<<<<<<< HEAD
   /* ── Back link ───────────────────────────────────────────────────────── */
+=======
+  body:has(.atlas) .footer { display: none; }
+  body:has(.atlas) .main { padding: 0; }
+
+  @keyframes grainShift {
+    0%   { background-position: 0 0; }
+    25%  { background-position: 12% 18%; }
+    50%  { background-position: -6% 9%; }
+    75%  { background-position: 9% -6%; }
+    100% { background-position: 0 0; }
+  }
+
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .atlas-back {
     position: absolute;
     top: 20px;
@@ -504,7 +806,10 @@ const handles = [
     border: 1px solid rgba(255,255,255,0.08);
     background: rgba(6,6,11,0.72);
     backdrop-filter: blur(8px);
+<<<<<<< HEAD
     -webkit-backdrop-filter: blur(8px);
+=======
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     color: rgba(232,228,220,0.56);
     text-decoration: none;
     font-size: 9px;
@@ -519,7 +824,10 @@ const handles = [
     background: rgba(6,6,11,0.92);
   }
 
+<<<<<<< HEAD
   /* ── Stage ───────────────────────────────────────────────────────────── */
+=======
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .atlas-stage {
     position: absolute;
     inset: 0;
@@ -543,7 +851,10 @@ const handles = [
   }
   .map-canvas {
     position: relative;
+<<<<<<< HEAD
     aspect-ratio: 1534 / 1025;
+=======
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     max-width: none;
   }
   .map-img {
@@ -568,7 +879,22 @@ const handles = [
       linear-gradient(90deg,  rgba(6,6,11,0.28) 0%, transparent 12%, transparent 88%, rgba(6,6,11,0.28) 100%);
   }
 
+<<<<<<< HEAD
   /* ── Region handles ──────────────────────────────────────────────────── */
+=======
+  .map-grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    animation: grainShift 8s steps(1) infinite;
+  }
+
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .handle {
     position: absolute;
     left: var(--hx);
@@ -585,8 +911,13 @@ const handles = [
     -webkit-backdrop-filter: blur(6px);
     color: rgba(232,228,220,0.68);
     cursor: pointer;
+<<<<<<< HEAD
     font-family: inherit;
     white-space: nowrap;
+=======
+    white-space: nowrap;
+    font-family: inherit;
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     transition: border-color 200ms, background 200ms, color 200ms, box-shadow 200ms;
   }
   .handle:hover {
@@ -619,7 +950,10 @@ const handles = [
     line-height: 1;
   }
 
+<<<<<<< HEAD
   /* ── Cartographic chrome ─────────────────────────────────────────────── */
+=======
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .carto-chrome {
     position: absolute;
     inset: 0;
@@ -634,23 +968,35 @@ const handles = [
     flex-direction: column;
     align-items: center;
     gap: 3px;
+<<<<<<< HEAD
     color: rgba(232,228,220,0.24);
+=======
+    color: rgba(232,228,220,0.22);
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   }
   .carto-compass__n {
     font-size: 7px;
     font-weight: 700;
     letter-spacing: 0.14em;
+<<<<<<< HEAD
     line-height: 1;
   }
   .carto-compass__cross { color: rgba(232,228,220,0.18); }
 
+=======
+  }
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .carto-ref {
     position: absolute;
     top: 18px;
     right: 28px;
     font-size: 7px;
     letter-spacing: 0.2em;
+<<<<<<< HEAD
     color: rgba(232,228,220,0.16);
+=======
+    color: rgba(232,228,220,0.14);
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     text-transform: uppercase;
   }
   .carto-classification {
@@ -660,6 +1006,7 @@ const handles = [
     transform: translateX(-50%);
     font-size: 7px;
     font-weight: 600;
+<<<<<<< HEAD
     letter-spacing: 0.26em;
     text-transform: uppercase;
     color: rgba(232,228,220,0.14);
@@ -667,6 +1014,14 @@ const handles = [
   }
 
   /* ── Atlas controls (bottom-left) ────────────────────────────────────── */
+=======
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(232,228,220,0.13);
+    white-space: nowrap;
+  }
+
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .atlas-controls {
     position: absolute;
     bottom: 18px;
@@ -685,7 +1040,10 @@ const handles = [
     border: 1px solid rgba(255,255,255,0.07);
     background: rgba(6,6,11,0.72);
     backdrop-filter: blur(8px);
+<<<<<<< HEAD
     -webkit-backdrop-filter: blur(8px);
+=======
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     color: rgba(232,228,220,0.44);
     font-family: inherit;
     font-size: 7.5px;
@@ -702,18 +1060,29 @@ const handles = [
   }
   .ctrl-btn--icon { width: 28px; padding: 0; }
 
+<<<<<<< HEAD
   /* ── Dossier panel ───────────────────────────────────────────────────── */
   .dossier {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
+=======
+  .dossier {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     width: 376px;
     z-index: 30;
     transform: translateX(100%);
     transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+<<<<<<< HEAD
     background: color-mix(in srgb, var(--surface) 80%, #000 20%);
     border-inline-start: 1px solid rgba(255,255,255,0.06);
+=======
+    background: color-mix(in srgb, #0a0a14 80%, #000 20%);
+    border-left: 1px solid rgba(255,255,255,0.06);
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     box-shadow: -16px 0 48px rgba(0,0,0,0.56);
     display: grid;
     grid-template-rows: auto auto 1fr auto;
@@ -722,7 +1091,11 @@ const handles = [
   .dossier.is-open { transform: translateX(0); }
 
   .dossier-stamp {
+<<<<<<< HEAD
     padding: 9px 48px 8px 20px; /* right pad for close btn */
+=======
+    padding: 9px 48px 8px 20px;
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     border-bottom: 1px solid rgba(255,255,255,0.05);
     background: rgba(177,58,52,0.07);
     font-size: 7px;
@@ -734,6 +1107,7 @@ const handles = [
   }
   .dossier-close {
     position: absolute;
+<<<<<<< HEAD
     top: 6px;
     right: 14px;
     z-index: 2;
@@ -741,12 +1115,20 @@ const handles = [
     place-items: center;
     width: 26px;
     height: 26px;
+=======
+    top: 6px; right: 14px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 26px; height: 26px;
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
     border: 1px solid rgba(255,255,255,0.07);
     background: rgba(255,255,255,0.03);
     color: rgba(232,228,220,0.44);
     cursor: pointer;
     transition: color 160ms, border-color 160ms;
   }
+<<<<<<< HEAD
   .dossier-close:hover {
     color: var(--text);
     border-color: rgba(255,255,255,0.2);
@@ -777,6 +1159,35 @@ const handles = [
     line-height: 1.56;
   }
 
+=======
+  .dossier-close:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+  .dossier-head {
+    padding: 22px 20px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .dossier-eyebrow {
+    margin: 0 0 8px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--atlas-accent);
+  }
+  .dossier-head h2 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    line-height: 0.96;
+  }
+  .dossier-subhead {
+    margin: 9px 0 0;
+    color: rgba(232,228,220,0.66);
+    font-size: 13px;
+    line-height: 1.56;
+  }
+
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .dossier-body {
     min-height: 0;
     overflow-y: auto;
@@ -791,11 +1202,15 @@ const handles = [
     color: rgba(232,228,220,0.76);
   }
 
+<<<<<<< HEAD
   .dossier-stats {
     margin-top: 16px;
     display: grid;
     gap: 8px;
   }
+=======
+  .dossier-stats { margin-top: 16px; display: grid; gap: 8px; }
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .dossier-stat {
     padding: 10px 12px;
     border: 1px solid rgba(255,255,255,0.06);
@@ -822,8 +1237,12 @@ const handles = [
     letter-spacing: 0.26em;
     text-transform: uppercase;
   }
+<<<<<<< HEAD
   .dossier-facts,
   .dossier-routes { display: grid; gap: 8px; }
+=======
+  .dossier-facts, .dossier-routes { display: grid; gap: 8px; }
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
 
   .dossier-fact {
     display: block;
@@ -852,6 +1271,7 @@ const handles = [
     font-style: normal;
     line-height: 1.5;
     color: rgba(232,228,220,0.65);
+<<<<<<< HEAD
   }
 
   .dossier-route {
@@ -873,6 +1293,28 @@ const handles = [
     color: rgba(232,228,220,0.65);
   }
 
+=======
+  }
+  .dossier-route {
+    padding: 11px 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+  }
+  .dossier-route h4 {
+    margin: 0 0 4px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.05;
+  }
+  .dossier-route p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(232,228,220,0.65);
+  }
+
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   .dossier-quote {
     margin: 20px 0 0;
     padding: 0 0 0 14px;
@@ -911,6 +1353,7 @@ const handles = [
     text-transform: uppercase;
   }
 
+<<<<<<< HEAD
   /* ── Responsive ──────────────────────────────────────────────────────── */
   @media (max-width: 900px) {
     .dossier { width: 320px; }
@@ -925,10 +1368,19 @@ const handles = [
       height: 62vh;
       transform: translateY(100%);
       border-inline-start: none;
+=======
+  @media (max-width: 640px) {
+    .dossier {
+      width: 100%; top: auto;
+      height: 62vh;
+      transform: translateY(100%);
+      border-left: none;
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
       border-top: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 -10px 40px rgba(0,0,0,0.56);
     }
     .dossier.is-open { transform: translateY(0); }
+<<<<<<< HEAD
 
     /* Compact controls on mobile */
     .atlas-back        { top: 14px; left: 16px; }
@@ -937,5 +1389,9 @@ const handles = [
     .carto-classification { display: none; }
     .handle__label     { display: none; }
     .handle            { padding: 5px 8px; }
+=======
+    .handle__label { display: none; }
+    .carto-classification { display: none; }
+>>>>>>> 16dbe79c0ae1ddefecefa7693494203da2bf243e
   }
 </style>
