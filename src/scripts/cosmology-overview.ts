@@ -1,7 +1,7 @@
 import { micromark } from "micromark";
 
 const OVERVIEW_SELECTOR = "[data-cosmology-overview]";
-const OVERVIEW_PATH = "/uploads/terra_cosmology_overview.md";
+const OVERVIEW_PATH = "/data/terra_cosmology_overview.md";
 const FALLBACK_MESSAGE = "Cosmology overview could not be loaded.";
 
 async function renderCosmologyOverview() {

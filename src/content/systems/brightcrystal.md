@@ -6,7 +6,7 @@ tags: ["systems", "BrightCrystal", "Energy", "Resonance", "Callings", "Precursor
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/BrightCrystal.png"
+image: "/uploads/sys-bright-crystal.png"
 ---
 
 > *"You want to know what BrightCrystal is? It is what happens when a material that was built to work with the resonance substrate of reality finds itself in the hands of a civilization that does not fully understand the resonance substrate of reality. Most of the time this produces useful outcomes. Occasionally it produces the other kind."*

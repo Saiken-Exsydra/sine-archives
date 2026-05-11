@@ -1,118 +1,355 @@
 ---
 title: Divination
 type: systems
-summary: Faith incarnate.
-tags: ["systems", "magic"]
+summary: Divine power expressed through a human vessel.
+tags: ["systems", "magic", "Divination", "Vessel", "Fragments", "Angels", "Demons", "Sovereign"]
 status: public
 created: "2026-02-12"
-updated: "2026-04-27"
-image: "/uploads/divination.png"
+updated: "2026-05-10"
+image: "/uploads/sys-divination.png"
 ---
 
-**Divination** is the phenomenon in which a powerful non-human entity — a **god**, or a fragment of one — fuses with a human individual and expresses its nature through them. The person becomes a **vessel**. The entity presses its power into the world through that vessel's body, mind, and will.
+**Divination** is what happens when a human being becomes a vessel for divine coherence and begins expressing the domain of a god or one of that god's fragments.
 
-The result can be staggering. A vessel carrying a fragment of sufficient power can heal wounds that should be fatal, project fire that consumes stone, survive injuries that would kill anyone else, or do things for which there is simply no available description. From the outside, it looks like a person who has become **something more than human** — because that is, in a meaningful sense, exactly what has happened.
+This is not ordinary spellcraft. A diviner does not route reality the way a Redactor does. They become the point through which a non-human power presses into the world.
 
-The limit is not the entity. The limit is the vessel. And the vessel can break.
-
----
-
-## What Divination Is
-
-> **Divination** is the gradual fusion of a human mind with a stabilized concept — a god, or a fragment of one — that presses its nature through the vessel until the vessel begins to express that nature as capability.
-
-Every entity capable of producing Divination is, at its core, a vast stabilized concept — a god whose existence is the organized coherence of *something*: **flame, decay, mercy, war, growth, hunger, light**. These entities are real. They exist in the world in ways that are difficult to describe simply, and they have always been able to press their nature into compatible human minds.
-
-This pressing is what Divination is.
-
-The entity does not possess a person the way water fills a container. It **aligns** with them. It finds the conceptual shape of a person whose mind, history, or nature already resonates with what the entity is — and then it pushes. Over time, the boundary between where the person ends and the entity begins becomes less clear. The entity's domain starts to express itself through the vessel as capability: as power that the vessel could never have produced alone.
-
-This is not a gift in the sense of something handed over. The entity does not *give* the vessel fire. It **presses fire through the vessel**, and what comes out the other side is a person who can produce effects aligned with fire — so long as the vessel can hold it.
+In simple terms: Redactory changes what reality is doing. Divination changes what a person is carrying, and then reality reacts to what is moving through them.
 
 ---
 
-## What a Vessel Can Actually Do
+## Plain-Language Definition
 
-The domain of the possessing entity is the domain of the vessel's power. There are no exceptions to this, and no fixed ceiling within it.
+Divination is a **fusion system**.
 
-A vessel aligned with **flame** can produce fire from nothing visible, concentrate heat into a pinpoint in the center of a room, extinguish fires that have no natural reason to stop, and — at full expression — push so much burning force through their body that everything in their immediate vicinity ignites simultaneously. There are accounts of single vessels reducing buildings to ash. There are accounts of vessels holding burning cities together by will, keeping fire away from what they chose to protect.
+A mortal host and a divine fragment align across the Dive interface. Once that alignment holds, the fragment's domain can express itself through the host.
 
-A vessel aligned with **decay** can cause living tissue to deteriorate on contact. They can accelerate rot in materials, collapse the structural coherence of organic matter, and — if the fusion has gone deep enough — simply stand in a place and let what they carry do what it does to everything around them.
+Divination does **not**:
 
-A vessel aligned with **perception** cannot be deceived. Not practically, not with effort — *structurally*. Their senses have been extended into a domain where sensory deception is not how reality works. They know when they are being followed before the person following them has made a sound. They feel lies in conversations they are not part of. At high expression they can perceive things at distances and through obstructions that have no physical explanation.
+- create new information
+- rewrite the world's grammar
+- grant unlimited magical freedom
+- let a vessel do anything they can imagine
 
-A vessel aligned with **mercy** can reach into a dying person and pull them back. Not through technique. Not through the slow work of a healer's training. Through the direct application of something that wants the person to live, and that has the coherence to push reality toward that outcome.
+Divination **does**:
 
-None of these effects are limited by the mechanism. The entity's domain encompasses the full scale of what that concept is in the world. A fragment of a fire-god is, structurally, *fire*, to the extent that fire has ever existed or can exist. The question is never whether the power can do what is being asked of it. **The question is whether the person carrying it can survive being the thing it moves through.**
+- reweight the vessel toward a divine domain
+- let that domain manifest through the vessel
+- change the vessel over time, sometimes permanently
 
----
+If the fragment is fire-aligned, the vessel expresses fire.
+If the fragment is mercy-aligned, the vessel expresses mercy-shaped power.
+If the fragment is hunt-aligned, the vessel expresses pursuit, fear, appetite, speed, and kill-pressure.
 
-## The Vessel Is the Limit
-
-> The **vessel** is the bottleneck of Divination. The entity wants to express itself. The vessel carries that pressure. What a vessel can sustain — and for how long — determines everything Divination can become.
-
-A very small amount of pressure, in a very compatible vessel, produces modest effects — unusual endurance, an instinctive understanding of the entity's domain, moments of capability that feel beyond what the person should be able to do. This is the early stage. This is manageable.
-
-As the fusion deepens — as the entity presses more of itself through — the effects scale. The vessel becomes capable of things that belong to a different category of human capability entirely. And the cost scales with it.
-
-The coherence pressure of a powerful entity pushing through a human mind and body is not something a human being is built to sustain indefinitely. The structure of the vessel — their identity, their psychology, their sense of who they are — is under constant pressure from something that is not them, that has its own shape, and that is in some meaningful sense **stronger than they are**. Holding that at manageable levels requires ongoing effort, compatibility, and a kind of structural resilience that varies enormously between individuals.
-
-When the pressure exceeds what the vessel can sustain, several things can happen. The vessel's mind begins to drift toward the entity's domain. Their values shift. Their priorities reorganize around what the entity is. A vessel carrying a fragment of war does not *choose*, over years of deep fusion, to become more interested in conflict and less interested in peace — it happens to them, gradually, structurally, because the thing inside them is war, and war is what starts to feel like the natural shape of everything.
-
-At the extreme end, the vessel's original self is overwritten entirely. The body keeps moving. The entity keeps expressing. But the person who was there before is gone — not dead, exactly, but no longer the dominant structure. What remains is something in between: neither fully human nor fully the entity, but a third thing. The Church calls these the **Consumed**. Scholars use the term **metamorphic**. They are rare, dangerous, and irreversible.
+No vessel exceeds the domain of what is inside them.
 
 ---
 
-## Angels and Demons
+## The Core Idea: Domain Matters
 
-> **Angels** and **demons** are not opposites. They are fragments of gods that approach vessels differently — one with invitation, one without. The mechanism is the same. The difference is consent.
+Divination is always **domain-limited**.
 
-The most common framework for describing the entities behind Divination comes from the Church, which uses the language of angels and demons. Most people think of these as opposites — good beings and evil ones, heaven and hell. The reality is more structural than that.
+That means a vessel does not gain generic supernatural ability. They gain access only to the nature of the fragment fused with them.
 
-Angels and demons are **fragments of gods**. A god of sufficient complexity and scale produces many such fragments, of varying power and varying character, all carrying some portion of the parent concept. An **angel** is a fragment that tends toward consensual, purposeful alignment — it approaches compatible vessels with something like invitation, and the fusion it produces tends to run alongside the vessel's own values rather than against them. A **demon** is a fragment that approaches differently: predatorily, without asking, taking hold where it can find purchase rather than where it has been welcomed.
+Examples:
 
-The underlying process is the same. Coherence pressure. Alignment. Gradual fusion. The difference is in the character of the entity pressing inward, and whether the vessel wanted to be found.
+- A fire vessel may burn, cauterize, radiate light, or spread ruin.
+- A perception vessel may see through concealment, read residue, or track weakness.
+- A rectification vessel may detect flaws, apply corrective force, or become obsessed with order.
+- A predation vessel may gain speed, scent-tracking, fear pressure, claws, or hunger-based transformation.
 
-This means that an angelic fragment of a flame-god and a demonic fragment of a flame-god produce vessels with similar powers. The vessel carrying the angelic fragment probably chose this and oriented their life toward the entity's domain long before the contact was made. The vessel carrying the demonic fragment probably didn't. Both of them can produce fire. What happens to their sense of self over time depends on how the fusion is managed, whether it was wanted, and how compatible the vessel actually is with what is pressing through them.
+Even when two vessels appear to share a domain, the result may differ sharply depending on the fragment line.
 
-The Church teaches this distinction in absolute moral terms, and the institutional consequences of that framing are real. But the underlying mechanism does not carry a moral valence. **The entity is a concept. The vessel is a person. What happens between them depends on the specifics of both.**
-
----
-
-## Levels of Possession
-
-Not all Divination looks the same. The relationship between a vessel and an entity moves through stages, and each stage represents a different level of fusion, a different level of capability, and a different cost.
-
-**Early contact** is subtle. The vessel begins to feel an unusual affinity for something — fire, or the night, or the moment just before a fight. They develop an instinctive understanding of a domain that they have no training in. Their senses sharpen in ways aligned with the entity's nature. They may not know what is happening. Many early-contact vessels simply believe they have become more themselves.
-
-**Partial fusion** is where ability becomes unmistakable. The entity is actively present. The vessel can call on its domain with intention. Effects that were once instinctive become deliberate. The vessel is still themselves — still recognizably the person they were — but inflected, increasingly, by the entity's character. Their priorities begin to shift. Their sense of what matters starts to reorganize around the entity's domain.
-
-**Deep fusion** is the point at which the vessel is operating at a different scale of capability. The entity's full domain is accessible. The effects that are possible here are the ones that produce accounts other people don't believe. Identity is under real pressure. The vessel is still present, still in some sense choosing — but the choices have become increasingly shaped by what is fused with them. Returning to who they were before this point is not possible.
-
-**Saturation** is where the vessel's original structure is no longer dominant. The entity's character has overwritten enough of the vessel's own that what remains is genuinely something other than the person who started. These individuals are extraordinarily powerful and extremely difficult to contain. They are also not, in the meaningful sense, who they used to be.
+An angelic fire vessel and a demonic fire vessel do not simply cast "good fire" and "bad fire." They express different kinds of fire because the ontology behind the fire is different.
 
 ---
 
-## What This Looks Like from the Outside
+## Two Kinds of Divine Effects
 
-Most people encounter Divination at its modest expressions: a healer whose hands seem to do more than technique should allow, a soldier who walks out of situations that should have killed them, a prophet who knows things they cannot know.
+Most Divination appears in one of two forms.
 
-What most people do not see, and what the institutions that manage Divination work hard to prevent from becoming ordinary public experience, is what happens at the deeper levels.
+### 1. Active manifestations
 
-A vessel at deep fusion, expressing the full weight of what is fused with them, does not look like a gifted human being. **They look like the concept that is moving through them wearing a human shape.** The effects they produce are not impressive versions of ordinary human capability. They belong to a different register entirely.
+These effects last only while the fragment is actively expressing through the vessel.
 
-The Church's specialized orders carry this. **HourGlass** maintains files on it. The **Apocachynthion** studies it at careful distance. None of these institutions are entirely comfortable with what they know, because what they know is that some of the people in the world are vessels for things that could, if those vessels chose to open fully to what is inside them and survive doing it, produce effects on the scale of catastrophes.
+Examples:
 
-Most don't. The cost of that kind of opening is the self. Very few people, even those who have carried a fragment for decades, are willing to pay it. And the ones who are willing tend to be exactly the kind of person that makes every other institution very concerned.
+- flame projected from the hands
+- a temporary barrier of light
+- a burst of predatory speed
+- flaw-sight during interrogation
+- symbolic vision during prayer or crisis
+
+When the pressure stops, the effect stops.
+
+### 2. Stable reconfiguration
+
+Some divine contact changes the vessel in lasting ways.
+
+Examples:
+
+- a permanently altered body after long fusion
+- senses sharpened even at rest
+- appetite, posture, or emotional baseline permanently changed
+- a saint, living relic, ghoul, vampire, or werewolf state
+
+These are not temporary "buffs." They are structural changes to what the person has become.
 
 ---
 
-## The Relationship to Redactory
+## The Vessel
 
-Divination and Redactory are different systems, but they share an interface. Both operate through the same internal threshold that allows human minds to touch something beyond ordinary physical reality.
+The human host in Divination is called a **vessel**.
 
-The difference is **direction**. A Redactor enters that threshold deliberately, selects a configuration, and imposes it on reality through their own effort. A vessel in Divination is *found* by something that presses through that same threshold from the other side. The Redactor is the active party. The vessel, at least at first, is the thing being acted upon.
+A vessel is not simply devout, cursed, gifted, or touched by fate. A vessel is someone whose identity is actively bearing non-human coherence.
 
-This creates an unusual situation when the two overlap. A Redactor who is also a divine vessel carries both: their own trained capacity to navigate the internal threshold, and an entity pressing through them from outside. The results are amplified in ways that researchers describe with consistent unease. The two forms of influence do not simply add together. They interact, and the interactions are not always stable.
+That is why Divination is powerful and dangerous at the same time.
 
-In the Empire, such individuals are rare and tend to attract significant institutional attention from multiple directions simultaneously.
+The fragment wants to express itself.
+The vessel carries the load.
+
+Everything depends on whether the host can survive that load without being reshaped beyond recognition.
+
+---
+
+## How Someone Becomes a Vessel
+
+A vessel usually emerges when four things meet:
+
+- a coherent fragment is present
+- the host is conceptually compatible with it
+- contact across the Dive stabilizes
+- resistance either fails, permits, or is repurposed
+
+Compatibility can come from many places:
+
+- faith
+- temperament
+- obsession
+- ritual exposure
+- psychological predisposition
+- trauma or crisis-state resonance
+- institutional cultivation
+
+This is why not every person can host every fragment. The host has to "fit" the pressure being applied.
+
+---
+
+## Alignment and Compatibility
+
+Alignment is the heart of Divination.
+
+The closer a host already resembles the logic of a fragment, the easier fusion becomes.
+
+Examples:
+
+- A severe, order-driven personality may align well with a rectification line.
+- A person already drawn to sacrifice, purification, and disciplined devotion may align with an angelic fire line.
+- A person consumed by appetite, rage, or ecstatic destruction may align with a demonic fire line.
+
+Compatibility is not all-or-nothing.
+
+- Weak compatibility may produce brief contact.
+- Moderate compatibility may produce unstable power.
+- High compatibility may produce a durable vessel.
+- Extreme compatibility may destroy the person's independence quickly.
+
+Perfect compatibility is not automatically a blessing. It may simply mean the host is ideal for use.
+
+---
+
+## The Dive in Divination
+
+Divination uses the same threshold known elsewhere as the **Dive**, but not in the same way Redactory does.
+
+A Redactor descends to select and stabilize a configuration.
+A vessel does not primarily do that.
+
+Instead, the Dive becomes the point where divine coherence and mortal structure meet.
+
+During active contact, vessels often report:
+
+- narrowed perception
+- symbolic intensity
+- emotional pressure toward the fragment's domain
+- suppression of irrelevant sensation
+- unusual inner clarity, or in unstable cases, fragmentation
+
+The exact experience depends on the fragment, the domain, the vessel's resistance, and how deep the fusion has gone.
+
+---
+
+## Gods, Fragments, Angels, and Demons
+
+In current canon, gods are best understood as **stabilized attractors of domain coherence**. They are real, self-aware, and capable of fragmenting into smaller but related expressions.
+
+That fragmentation creates divine hierarchies.
+
+Broadly, a line may include:
+
+- a parent attractor
+- arch-fragments beneath it
+- major fragments
+- lesser fragments and shard-forms
+
+Lower tiers are easier to express through human vessels, but they are also narrower and less stable.
+
+### The Sovereign-class exception
+
+Most gods are local to one world's structure. The **Sovereign** is unusually dense and unusually broad, extending across multiple compatible Pages rather than existing as a simple local copy.
+
+This unusual density helps explain:
+
+- the Church's vast angelic and demonic hierarchy
+- the long continuity of Heaven, Hell, and Purgatory structures
+- why Sovereign-line Divination matters so much politically and theologically
+
+### Angels and demons
+
+The common Church distinction remains useful, even if the deeper mechanics are more structural than moralistic.
+
+In practice:
+
+- **Angelic lines** tend toward ordered, purposive, more consensual alignment.
+- **Demonic lines** tend toward predatory, coercive, or exploitative fusion.
+
+The mechanism is still fusion. The difference lies in how the fragment approaches the host and what kind of domain-pressure it applies.
+
+---
+
+## Stages of Fusion
+
+Divination is rarely static. It progresses.
+
+### Initial contact
+
+At this stage:
+
+- the presence is intermittent
+- symptoms may be subtle
+- the host remains mostly self-governing
+- powers are unreliable
+
+### Partial fusion
+
+At this stage:
+
+- the fragment has a stable foothold
+- minor abilities become dependable
+- character drift becomes visible
+- outside intervention is still plausible
+
+### Deep fusion
+
+At this stage:
+
+- the fragment is load-bearing in the vessel's identity
+- major manifestations become reliable
+- ordinary human balance begins to erode
+- the vessel may be both highly useful and highly unstable
+
+### Overwrite threshold
+
+Beyond this point, the human self is no longer the dominant structure.
+
+This is where true saturation states appear.
+
+---
+
+## Saturation States
+
+Saturation is what happens when prolonged fusion changes the vessel into a new stable condition.
+
+### Angelic saturation tends toward:
+
+- hallowed states
+- saints
+- living relics
+- severe but orderly beings shaped by one domain
+
+These figures may appear holy, calm, or elevated. That does not mean nothing was lost. A saint may be more coherent than before and less recognizably human at the same time.
+
+### Demonic saturation tends toward:
+
+- ghouls
+- vampires
+- werewolves
+- beast-forms
+- hollowed or predatory metamorphic states
+
+These outcomes are not random. They follow domain law.
+
+A corpse-rot line does not accidentally produce a werewolf.
+A hunt-beast line does not accidentally produce a saint.
+
+The fragment's nature determines the result.
+
+---
+
+## Sight-Adjacent Divination
+
+Not every divine contact produces a combat vessel.
+
+Some people instead develop:
+
+- visions
+- threshold sensitivity
+- symbolic reading
+- pressure-sense
+- occasional prophecy
+- detection of residue, possession, or spiritual disturbance
+
+The Church calls its most recognized form of this the **Gift of Sight**.
+
+In Church teaching, the Gift is receptive rather than projective. A true Herald does not seize prophecy by technique. The vision arrives through them.
+
+This is one reason the Church is wary of self-directed summoning. Something that answers a call is not always what it claims to be.
+
+The Church also maintains the **Covenant of the Open Eye**, a framework through which independent seers can submit visions for guidance, review, and protection.
+
+---
+
+## Why the Church Regulates It
+
+The Church's concern with Divination is not superstition. It is institutional experience.
+
+Divination can produce:
+
+- healers
+- saints
+- prophets
+- disciplined angelic vessels
+- unstable demonic hosts
+- full metamorphic catastrophes
+
+Because the line between miracle and disaster is often the vessel's remaining humanity, major institutions screen, cultivate, contain, or monitor likely hosts.
+
+The Church is the most developed example on Terra, but it is not the only body that studies or exploits divine indexing.
+
+---
+
+## Divination and Redactory
+
+Divination and Redactory can look similar from a distance because both may produce dramatic effects through the Dive interface. Structurally, they are different.
+
+Redactory:
+
+- routes valid configurations
+- depends on Anchor, Depth, and trained control
+- is active, deliberate, and self-driven
+
+Divination:
+
+- expresses a fragment's domain through a vessel
+- depends on compatibility, fusion pressure, and saturation
+- is relational, load-bearing, and identity-altering
+
+A Redactor changes what reality is doing.
+A vessel changes what reality is pressing through.
+
+Rare individuals may carry both. They tend to attract immediate attention from every institution that understands what that overlap can become.
+
+---
+
+## In One Sentence
+
+Divination is the expression of divine domain-pressure through a human vessel, and its true limit is not the fragment's power but how much of the vessel remains when that power settles in.

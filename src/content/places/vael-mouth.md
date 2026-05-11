@@ -6,7 +6,7 @@ tags: ["Places", "Vael Mouth", "Southern Region", "Empire", "Scorch Margin", "Br
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/Vael Mouth.png"
+image: "/uploads/place-vael-mouth.png"
 ---
 
 > *"A point where the world breathes, or where something old and vast is closest to the surface. The name is an informal reference to Vael'Khar, though most who use it do not understand the geological mechanism that makes the connection accurate."*

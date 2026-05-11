@@ -1,96 +1,383 @@
 ---
 title: Redactory
 type: systems
-summary: The art of redacting reality.
-tags: ["systems", "magic"]
+summary: The disciplined art of routing reality into allowed forms.
+tags: ["systems", "magic", "Redactory", "Redactors", "Dive", "Anchor"]
 status: public
 created: "2026-02-12"
-updated: "2026-04-27"
-image: "/uploads/Redactory.png"
+updated: "2026-05-10"
+image: "/uploads/sys-redactory.png"
 ---
 
-**Redactory** is a rare human ability that allows certain individuals — known as **Redactors** — to alter the behavior of physical reality directly. By entering a focused mental state called the **Dive**, a Redactor can guide the world to express itself differently than it normally would: reshaping matter, redirecting energy, manifesting objects, healing wounds, or producing effects that most observers have no framework to explain.
+**Redactory** is the practiced ability to force reality to express a different valid state without rewriting the world's underlying laws.
 
-The system itself is not limited. The practitioner is. And the limit is their life.
+That distinction matters. A Redactor is not "breaking the rules of reality." They are selecting from possibilities reality already allows, then forcing one of those possibilities to happen here, now, under pressure.
+
+In simple terms: Redactory is less like inventing a new rule and more like taking an existing route through the world and making the world follow it.
 
 ---
 
-## What Redactors Can Do
+## Plain-Language Definition
 
-The honest answer is: **almost anything**.
+Redactory works by entering a focused internal state called the **Dive**, finding a workable configuration, and stabilizing it long enough for the world to express that configuration locally.
 
-Redactory does not create matter from nothing, but it does something that looks identical from the outside. Every piece of matter, every form of energy, already exists in the world in some configuration. A Redactor does not invent — they **redirect**. They take what is already there and guide it into a different expression.
+What Redactory does **not** do:
 
-**Light** is not just what the eye sees. It is a spectrum — most of it invisible, passing through walls, through flesh, through the ground beneath a city. A Redactor whose Anchor is light can reach into that invisible spectrum and shift it. They can walk into a completely sealed room with no lamp and no fire and light it anyway, drawing on wavelengths already moving through the building's stone. They can blind without touching. They can illuminate without a source. To anyone watching, something appeared from nothing. What actually happened is that the Redactor changed which part of what was already there became visible.
+- It does not create matter from nothing.
+- It does not delete information from existence.
+- It does not rewrite the base grammar of the world.
+- It does not make impossible things possible in an absolute sense.
 
-A highly experienced Redactor can conjure a bottle of water, fill it, drink from it — and when they stop concentrating, it vanishes. The water was real. While it existed, it was cold and wet and tasted like water. What they did was take the atoms of the air around them and redirect them into a different molecular configuration. It is extraordinarily difficult. It is not impossible. Practitioners who reach that level of experience do this. **What looks like creation is matter that was already there, briefly wearing a different shape.**
+What it **does** do:
 
-A Redactor whose Anchor is **blood** can stop bleeding with a thought, can accelerate the repair of tissue, can push a body toward a state it would eventually reach on its own — and arrive there in seconds. At greater depth, they can redirect what a body's systems are doing in ways that have nothing to do with healing. The same Anchor that closes wounds describes what it takes to open them without touching.
+- Redirects matter, force, heat, light, motion, or living structure into a different valid arrangement.
+- Forces temporary states that collapse when the Redactor stops holding them.
+- Forces lasting changes if the new state can remain stable on its own.
 
-A Redactor whose Anchor is **momentum** does not need to touch something to move it. They do not need to throw anything to hit someone. Every object in a room is already in motion relative to something else. Every surface vibrates. All of that is material to work with.
+This is why Redactory is often described by scholars as a **routing system**, not a creation system.
 
-There is no category of effect that is inherently beyond Redactory's reach. The question is never *can this be done*. The question is always *can the practitioner survive doing it*.
+---
+
+## Two Kinds of Redactory Effects
+
+Most Redactory falls into one of two categories.
+
+### 1. Temporary instancing
+
+Some effects only exist while the Redactor actively holds them together.
+
+Examples:
+
+- A floating blade made of compressed light
+- A wall of force
+- A pocket of vacuum
+- A suspended field of heat
+- Water condensed into a usable shape, then lost when concentration ends
+
+These effects are real while they are present. They can burn, cut, block, blind, drown, or save lives. But they are not self-sustaining. When the Redactor releases them, they collapse.
+
+### 2. Stable reconfiguration
+
+Other effects remain after the Redactor stops.
+
+Examples:
+
+- Twisting raw metal into a finished tool
+- Closing a wound by restoring tissue structure
+- Shattering stone through redirected force
+- Freezing water into ice, then leaving the ice behind if conditions support it
+- Rearranging a lock so it is now genuinely open
+
+Here the Redactor is not maintaining a temporary construct. They are pushing reality into a new state that can continue existing without help.
 
 ---
 
 ## The Dive
 
-> The **Dive** is the mental state required for all Redactory — a condition of extreme inward focus in which a Redactor's external awareness narrows while their internal concentration becomes unusually sharp.
+No Redactory happens without the **Dive**.
 
-To perform Redactory at all, a practitioner must enter the Dive. During the Dive, sounds recede. The sensation of the body fades. What remains is a clarity that experienced practitioners describe as **architectural** — not calm, exactly, but exact. Thoughts become unusually sharp. Perception of the immediate physical environment doesn't disappear; it becomes less urgent than the interior focus.
+The Dive is not a place a Redactor walks into, and it is not a hallucination. It is an internal compression threshold: the mental interface through which a Redactor can access deeper configuration space.
 
-This state is where all the work happens. Without it, nothing.
+Most practitioners describe the Dive as a **descent**. That is not only metaphor. The deeper a Redactor goes, the closer they get to more foundational layers of how a concept is expressed.
 
-The Dive is also where the danger begins.
+To understand that descent, you need one more idea: **the strata**.
+
+---
+
+## The Strata
+
+Redactory does not operate on a flat surface of possibilities. The world's grammar is layered into **strata**.
+
+At the top are shallow, derived, highly specific expressions of a thing.
+Below them are broader, more foundational expressions.
+Below those are still deeper layers, where a concept stops looking like one behavior and starts looking more like a principle.
+
+Use a depth analogy literally:
+
+- **Shallow strata** are near the surface.
+- **Deep strata** are further down.
+- **The abyss** is the bottommost reachable conceptual bedrock.
+
+Example:
+
+- `Ignition` is shallow compared to `Combustion`.
+- `Combustion` is shallower than `Heat`.
+- `Heat` is shallower than a deeper thermodynamic principle beneath it.
+
+The deeper the stratum, the less local and derived the concept becomes.
+
+That is why deeper Redactory is not merely "more power." It is access to a more foundational version of what the Redactor is touching.
+
+So when scholars say the Dive is a descent, they mean the Redactor is descending through conceptual layers of reality, from surface expressions toward bedrock grammar.
+
+At shallow Dive:
+
+- effects are easier to control
+- results are narrower and more specific
+- strain is lower
+
+At deep Dive:
+
+- effects become broader, sharper, and more fundamental
+- more of the Redactor's attention leaves the ordinary world
+- danger rises quickly
+
+Different minds experience the Dive differently. One Redactor may perceive architecture, another equations, another sensation, another pattern. The mechanism is shared. The inner language is not.
 
 ---
 
 ## Anchors
 
-> An **Anchor** is the conceptual domain through which a Redactor's ability flows most naturally — a path of least resistance that shapes both what they can do effortlessly and what costs them enormously.
+Every Redactor has an **Anchor**.
 
-Every Redactor has an Anchor. Common Anchors include **flame, metal, growth, motion, shadow, silence, reflection,** and **light**, but the range is broader than any list. Some Redactors develop Anchors around abstract concepts: **division, weight, correspondence, absence**.
+An Anchor is the Redactor's most stable pathway into high-density work. It is not just a theme like "fire" or "metal." In most cases it is more specific than that.
 
-The Anchor is not a container. It is a path. Everything is accessible in principle. What the Anchor determines is what requires almost no effort and what costs enormously.
+A Redactor might be described publicly as fire-aligned, but their true Anchor may be:
 
-A Redactor whose Anchor is flame can concentrate fire, snuff it, reshape heat, and produce combustion from the ambient energy in a room — at shallow Depth, almost effortlessly. Another Redactor can do the same things, but it will cost them far more to achieve the same result, because they are working at a greater distance from their natural path.
+- `Ignition`
+- `Sustained Burn`
+- `Thermal Diffusion`
+- `Oxidative Collapse`
 
-With years of practice, working within the Anchor becomes faster, more precise, and more powerful. The cost inside the Anchor drops. The ceiling of what is survivable inside the Anchor rises. This is the core of all Redactor training: **not learning what is possible, but learning how deep you can go without dying.**
+That specificity is not a weakness. It is the structure that makes the Redactor usable at all.
 
----
+### Why Anchors matter
 
-## Depth and the Limit
+Inside the Anchor, work is cheaper, faster, and safer.
 
-> **Depth** is the measure of how far a Redactor has pushed into their work — and the only thing that ultimately stops them. The system allows almost anything. Depth is what kills.
+Outside the Anchor, work becomes more expensive and less stable.
 
-A shallow Dive produces modest effects with low cost. As the Redactor goes deeper, the effects scale dramatically — more complex, more powerful, more precise, capable of affecting larger volumes or more fundamental aspects of matter and energy. There is no fixed ceiling on what Depth can achieve.
+Example:
 
-But the deeper a Redactor goes, the closer they move to a threshold they cannot cross and survive.
+- A Redactor anchored to `Cellular Repair` can heal tissue with far less strain than they could reshape metal.
+- A Redactor anchored to `Magnetic Draw` can redirect iron tools more naturally than they could stop bleeding.
 
-This threshold is not the same for everyone. A well-trained Redactor with years of practice can sustain operations at Depth that would kill a novice immediately. An **Archtype** — a Redactor who has reached a state of permanent deep stabilization — operates at levels that would be instantly fatal to anyone else. But every practitioner has a threshold, and going past it does not produce a near-death experience. **It produces death.**
-
-The Anchor mediates this. Inside the Anchor's domain, a Redactor can go deeper before the cost becomes unsustainable. Outside it, the same level of effort costs more, which means the same effect demands more Depth, which means the survival margin is smaller. A Redactor attempting an effect far from their Anchor is not just working harder — they are burning faster, with less room for error.
-
-**Overreach** is what happens when a practitioner goes past their limit without dying immediately. The effect collapses. The mind pays the cost instead. Memory fragments. Concentration becomes unreliable. In severe cases, the Redactor loses parts of their identity — not metaphorically, but literally: a stable sense of who they are begins to dissolve. Repeated Overreach accelerates this. There are Redactors who have pushed past their limits enough times that something fundamental in how they think no longer works the way it once did.
-
-The danger is not the system. The system allows anything. The danger is the practitioner's own architecture — how deep they can go before the act of going deeper is the last thing they do.
+Almost any valid effect may be reachable in theory. In practice, the Anchor decides what the body and mind can survive.
 
 ---
 
-## Why This Matters
+## Depth
 
-Redactory produces people who can, depending on their training and their willingness to push themselves, reshape metal with a thought, heal grievous wounds in seconds, reroute fire, manifest water from air, or alter the behavior of light across an entire building. An **Archtype** — a Redactor who has survived long enough and worked deeply enough to permanently stabilize at extreme Depth — is something approaching a different category of human being entirely.
+**Depth** is the real cost system of Redactory.
 
-This is why every society that contains Redactors has eventually developed some framework for managing them. Not because the ability is modest and needs encouragement. Because the ability is not modest at all, and the people who wield it at high levels represent a force that requires serious institutional attention.
+Depth is not mana. It is not fuel. It is a measure of how far the Redactor is pushing reality away from its default state, how close they are working to foundational strata, how broad the imposed change is, and how far the work sits from their natural pathway.
 
-The **Apocachynthion** is the Empire's answer to that question: the body that trains, certifies, and where necessary governs Redactors operating within its territory. Its most important job is not teaching practitioners what they can do. It is teaching them how to survive doing it — and ensuring that those who cannot learn that lesson do not find out the hard way in the middle of a city.
+Put simply: **depth is how deep into the strata the Redactor is forcing the work, and how much instability that takes to hold.**
+
+Depth rises when a Redactor:
+
+- works closer to foundational layers of a concept
+- affects more matter, force, or living structure at once
+- attempts effects far from their Anchor
+
+This is why two effects that look similar from the outside may be wildly different in cost.
+
+Example:
+
+- A heat-aligned Redactor lighting a candle may barely register the effort.
+- The same Redactor flash-heating every weapon in a room is much deeper work.
+- Asking that same Redactor to perform fine nerve repair may be possible, but catastrophically inefficient.
+
+### Three parts of Depth
+
+Depth usually increases along three axes at once:
+
+- **Foundational proximity**: how close the work gets to deeper strata rather than surface expressions
+- **Systemic breadth**: how much matter, force, or living structure is being affected
+- **Conceptual distance**: how far the effect is from the Redactor's Anchor
+
+This means "deep" does not always mean "big."
+
+A tiny effect can be deep if it touches a foundational layer.
+A large effect can be shallower if it stays near a surface-aligned, practiced route.
+
+### Anchor depth vs Dive depth
+
+These two get confused often.
+
+- **Anchor depth** means where the Anchor itself sits in the strata.
+- **Dive depth** means how far the Redactor descends in a given act.
+
+A Redactor may have a relatively shallow Anchor but force a risky deep Dive for one session.
+A veteran Redactor may also have spent years pushing the Anchor itself downward, so every future descent starts from a deeper home position.
 
 ---
 
-## Current Understanding
+## Reach, Overreach, and Collapse
 
-Redactory has been studied for centuries. The broad outlines are well-established. The deep mechanics remain partially understood, with active debate among researchers about the precise nature of what happens during the Dive and why Depth has the lethal threshold it does.
+Redactors can push beyond their safest domain. This is called **Reach**.
 
-What is not debated is the scale of what experienced practitioners can accomplish, or the fact that the primary constraint is the practitioner's own survival rather than any inherent limit in the ability itself. Most people encounter Redactory as a useful profession — healers, builders, engineers, soldiers. What lies at the upper end of the range, where the Dive goes deepest and the effects become hardest to describe in ordinary terms, is a different thing entirely, and most people never see it.
+Reach is common. It is how experienced practitioners stay versatile.
 
-Those who do tend to remember it.
+The danger is **Overreach**: the point where that extra reach stops being controlled and starts damaging the practitioner.
+
+Common signs of Overreach include:
+
+- memory fragmentation
+- emotional flattening
+- dissociation
+- identity drift
+- unstable or collapsing effects
+
+Repeated Overreach does not simply cause fatigue. It can permanently damage a Redactor's mind and self-structure.
+
+When strain exceeds what the practitioner can sustain, the effect collapses. Temporary routing ends. Lasting consequences already caused by the effect remain.
+
+If a Redactor drops a wall of force, the wall disappears. If that wall already crushed a door, the door stays crushed.
+
+---
+
+## Deepening an Anchor
+
+Anchors are not fixed forever.
+
+Over years of dangerous practice, a Redactor can push their Anchor deeper into the strata. This does not change the Anchor into a different concept. It changes how foundationally the Redactor can access that same concept.
+
+An `Ignition` Anchor pushed deep enough does not become some unrelated power. It remains ignition, but now the Redactor is working from a much deeper layer of what ignition means in the world's structure.
+
+That makes the same Anchor:
+
+- broader in application
+- more powerful
+- harder to survive
+
+In shallow-water terms, this is like learning to work from the shoreline, then from deeper water, then from far below the surface. The concept stays the same. The depth at which the Redactor can safely meet it changes.
+
+This long, cumulative process is the usual path to true mastery.
+
+---
+
+## Abyssal Anchors
+
+Rarely, a Redactor manifests an **Abyssal Anchor**.
+
+Most Anchors begin in shallow or mid-depth strata: derived, specific, near-surface expressions of a broader thing.
+
+An Abyssal Anchor does not.
+
+An **Abyssal Anchor** is an Anchor that already sits at the bottom of the conceptual strata: at the **abyss**, the deepest reachable bedrock layer.
+
+That is why the name matters:
+
+- **shallow** Anchor = near the surface
+- **deep** Anchor = pushed downward over time
+- **abyssal** Anchor = already at the bottom
+
+An Abyssal Anchor is not "very strong fire magic." It is anchoring to a bedrock-level primitive rather than a derived surface expression.
+
+Example:
+
+- `Refraction` is a derived light expression.
+- `Directed Beam` is a derived light expression.
+- `Bioluminescence` is a derived light expression.
+- `Light` itself, at bedrock level, would be Abyssal.
+
+That sounds like an instant advantage. It is not that simple.
+
+A derived Anchor Redactor spends years pushing the Anchor downward, stratum by stratum.
+
+An Abyssal Anchor Redactor skips that part because their Anchor is already at the bottom.
+
+But they still face the hardest part: they must survive descending all the way to where that Anchor already is.
+
+The Anchor being at the bottom does not magically bring the Redactor there safely.
+
+This creates a brutal tradeoff:
+
+- their long-term ceiling is exceptional
+- their early and mid-stage practice can be unstable and uneven
+- the gap between ordinary performance and full-capacity performance is enormous
+
+At shallow Dive, an Abyssal Anchor user is often working far above their true home depth. In practical terms, that can make them feel strangely uneven: underwhelming at low expression, terrifying at high expression.
+
+An Abyssal Anchor is extraordinary potential, not automatic supremacy.
+
+---
+
+## Sovereign Depth and Archtypes
+
+At the highest end of the system sits **Sovereign Depth**.
+
+This is not the same thing as "going very deep once."
+
+It is permanent stabilization at extreme recursive density. A Redactor who reaches that state is called an **Archtype**.
+
+This is separate from Abyssal Anchors.
+
+- An **Abyssal Anchor** describes where the Anchor sits in the strata.
+- **Sovereign Depth** describes whether the Redactor has permanently stabilized extreme depth.
+
+So an Abyssal Anchor Redactor is not automatically an Archtype. They may be anchored at the bottom and still be unable to survive living there.
+
+An Archtype:
+
+- no longer treats extreme depth as a brief visit
+- operates beyond normal Anchor limitations
+- can sustain broader and more fundamental work
+- often stops aging in the ordinary mortal sense
+
+Archtypes are not gods. They are not authors of reality. They are still working within the world's laws. They are simply doing so at a level most Redactors never survive long enough to reach.
+
+---
+
+## What Redactory Looks Like in Practice
+
+For ordinary people, Redactory usually appears in practical professions before it appears as spectacle.
+
+Common roles include:
+
+- military specialists
+- healers
+- builders
+- surveyors
+- transport experts
+- industrial technicians
+
+Examples of everyday Redactory:
+
+- a transit specialist redirecting momentum to prevent a carriage crash
+- a repair-focused Redactor restoring damaged tissue after an accident
+- a metal-aligned practitioner reshaping structural supports on site
+- a sound-null specialist creating a silent chamber for sensitive work
+
+The terrifying side of Redactory is real, but most people meet it first as labor, medicine, infrastructure, or controlled violence.
+
+---
+
+## Why Institutions Regulate It
+
+The Empire's main regulatory body is the **Apocachynthion**.
+
+Its job is not only to teach Redactors what they can do. Its job is to decide who can safely Dive, how far, under what supervision, and with what consequences if they fail.
+
+That caution exists because Redactory scales badly when unmanaged.
+
+A poorly trained Redactor is dangerous.
+A desperate Redactor is worse.
+A brilliant Redactor who has learned to ignore survival limits is often the beginning of a disaster report.
+
+---
+
+## Redactory and Divination
+
+Redactory is often confused with **Divination**, but they are not the same system.
+
+Redactory:
+
+- is active rather than receptive
+- routes valid configurations
+- depends on the Redactor's own Anchor and Depth tolerance
+
+Divination:
+
+- is fusion with divine coherence
+- expresses a domain through a vessel
+- depends on compatibility between host and fragment
+
+Both use the Dive interface. What happens across that interface is different.
+
+---
+
+## In One Sentence
+
+Redactory is the disciplined art of descending through the Dive, routing reality into a valid configuration, and surviving the cost of making that configuration hold.

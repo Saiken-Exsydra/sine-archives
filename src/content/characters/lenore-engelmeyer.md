@@ -1,13 +1,13 @@
 ---
 title: "Le'nore Voren Engelmeyer"
 type: "Character"
-age: "23 (at time of filing, 1127)"
-birth_year: "1104"
+age: "23 (at time of filing, 2200)"
+birth_year: "2177"
 birthplace: "Drevholt, western band interior"
-affiliation: "Apocachynthion (licensed); House Engelmeyer (reintegrated main line, 1126)"
-house: "Engelmeyer (main line, reintegrated 1126 — formerly cadet Voren branch)"
+affiliation: "Apocachynthion (licensed); House Engelmeyer (reintegrated main line, 2199)"
+house: "Engelmeyer (main line, reintegrated 2199 — formerly cadet Voren branch)"
 rank: "Quill"
-registry_status: "Registered — intake 1120; Quill certification issued 1122; conditional operational license active"
+registry_status: "Registered — intake 2193; Quill certification issued 2195; conditional operational license active"
 designation: "Deception-Anchor · Quiet Moon"
 height: "169 cm"
 build: "Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy"
@@ -15,19 +15,19 @@ complexion: "Fair; even — no surface coherence tells during ability expression
 hair: "Blonde, near-white — the colour of old linen in direct light. Cut in a precise asymmetric bob, the longer side sweeping across the brow."
 eyes: "Grey, very light — reads as near-colourless in low illumination. Every assessor who has spent significant time across a table from her has noted the eyes, and none have found a description that closes the subject."
 dress: "White by preference — pale linens, light wools, materials that don't announce themselves"
-residence: "Vel'hara, western band (relocated 1126)"
+residence: "Vel'hara, western band (relocated 2199)"
 occupation: "Independent practitioner — licensed for operational engagement under conditional terms"
 summary: "Quiet Moon"
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/Lenore.png"
-hero_image: "/uploads/Lenore-HERO.png"
+image: "/uploads/char-lenore-engelmeyer.png"
+hero_image: "/uploads/char-lenore-engelmeyer-hero.png"
 ---
 
 > *"She sat across from me for forty minutes. She was polite, cooperative, answered every question with what I can only describe as genuine warmth. Halfway through the third assessment battery, I looked up from my notes and she was looking at me. And I had the very clear, very specific, very irrational sense that she was deciding something. I wrote that in my notes and then I crossed it out. I have thought about that crossing-out ever since."*
-> — Senior Assessor Vel'omis, Academy of Syr'lene, private notation, year 1125
+> — Senior Assessor Vel'omis, Academy of Syr'lene, private notation, year 2198
 
 ---
 
@@ -35,7 +35,7 @@ hero_image: "/uploads/Lenore-HERO.png"
 
 ### House Engelmeyer and the Voren Branch
 
-House Engelmeyer is among the original Fifteen Houses of the Empire's founding structure. Its primary lineage carries a forge-domain Anchor heritage — generations of Redactors anchored in thermal transformation and structural endurance, practically useful in ways that have outlasted every political reorganization across twelve centuries.
+House Engelmeyer is among the original Fifteen Houses of the Empire's founding structure. Its primary lineage carries a forge Anchor heritage — generations of Redactors anchored in thermal transformation and structural endurance, practically useful in ways that have outlasted every political reorganization across twelve centuries.
 
 The Voren branch separated from the main line somewhere in the middle centuries of the Empire, settling in Drevholt — a small township forty kilometers east of Vel'hara, chosen for the specific quality of distance it offered from the centers of House political life. They carried the Engelmeyer name because the name could not simply be disclaimed, and they were not significant enough to warrant formal expulsion.
 
@@ -49,9 +49,9 @@ The Corvel Institute is a research body operating under Vel'haran commercial cha
 
 In this frame, the Voren Engelmeyer branch was a subject of considerable interest. The Institute had cross-referenced Apocachynthion assessment records with its internal taxonomy of lineages showing heritable anomalous presentation. Generation after generation, the same presentations, with an efficiency that exceeded what random genetic or environmental factors could plausibly explain.
 
-**Al'tair Aldhor** was twenty-two when the Institute selected him for the Drevholt engagement — a physician on the Institute's research staff, sent to establish a provincial medical practice and, through the ordinary social machinery of a small town's medical life, study the family he had come to document. He arrived in Drevholt in year 1095. He presented as exactly what he was: a qualified physician opening a quiet rural practice. The cover was genuine. The purpose underneath it was not disclosed to anyone in Drevholt.
+**Al'tair Aldhor** was twenty-two when the Institute selected him for the Drevholt engagement — a physician on the Institute's research staff, sent to establish a provincial medical practice and, through the ordinary social machinery of a small town's medical life, study the family he had come to document. He arrived in Drevholt in year 2168. He presented as exactly what he was: a qualified physician opening a quiet rural practice. The cover was genuine. The purpose underneath it was not disclosed to anyone in Drevholt.
 
-He married **Re'lha Voren Engelmeyer** in year 1101. Le'nore was born in year 1104. Re'lha disappeared in year 1113 when Le'nore was nine years old. Al'tair remained in Drevholt for three more years, then relocated to the Corvel Institute's primary facility in Vel'hara in year 1116. He has been there since.
+He married **Re'lha Voren Engelmeyer** in year 2174. Le'nore was born in year 2177. Re'lha disappeared in year 2186 when Le'nore was nine years old. Al'tair remained in Drevholt for three more years, then relocated to the Corvel Institute's primary facility in Vel'hara in year 2189. He has been there since.
 
 ---
 
@@ -59,15 +59,15 @@ He married **Re'lha Voren Engelmeyer** in year 1101. Le'nore was born in year 11
 
 ### Quill, Deception-Anchor
 
-Le'nore's intake was prompted by two incidents in Drevholt in years 1118 and 1120, both involving the same effect: one or more individuals experiencing simultaneous perceptual disruption — losing the thread of what they were doing, losing awareness of Le'nore's presence — for three to four minutes. No injury. No coherence bleed. No atmospheric precursor of any kind. She left at a normal walking pace.
+Le'nore's intake was prompted by two incidents in Drevholt in years 2191 and 2193, both involving the same effect: one or more individuals experiencing simultaneous perceptual disruption — losing the thread of what they were doing, losing awareness of Le'nore's presence — for three to four minutes. No injury. No coherence bleed. No atmospheric precursor of any kind. She left at a normal walking pace.
 
-The Academy of Syr'lene dispatched a field assessor after the second incident. He found anomalous coherence output consistent with Redactory manifestation, no correspondence to any primary Anchor domain in the standard taxonomy, and a sixteen-year-old girl who answered every question with a calm that rested in by default rather than being maintained. He escalated immediately.
+The Academy of Syr'lene dispatched a field assessor after the second incident. He found anomalous coherence output consistent with Redactory manifestation, no correspondence to any primary Anchor in the standard taxonomy, and a sixteen-year-old girl who answered every question with a calm that rested in by default rather than being maintained. He escalated immediately.
 
-A specialist panel of four senior assessors conducted three sessions across six weeks of year 1121 and reached classification through elimination: every standard primary Anchor domain produced no consistent picture. One category remained — the Deception-Anchor classification, applicable to practitioners whose Anchor domain is not any specific content but the alteration of perception itself. Rare. Documented in fewer than a dozen registered practitioners across the Apocachynthion's complete historical record.
+A specialist panel of four senior assessors conducted three sessions across six weeks of year 2194 and reached classification through elimination: every standard primary Anchor produced no consistent picture. One category remained — the Deception-Anchor classification, applicable to practitioners whose Anchor is not any specific content but the alteration of perception itself. Rare. Documented in fewer than a dozen registered practitioners across the Apocachynthion's complete historical record.
 
 The classification accounts for the absence of standard Dive signatures, the perceptual disruption effects, and the unusual coherence architecture. It is confirmed and not under review.
 
-**The classification is a box Le'nore built herself.** From the first session in which the framework was proposed, she recognised what the panel was reaching toward and performed precisely what that framework predicted. She gave them a container. She lives inside it. She knows its theoretical foundations better than most practitioners know their own domain taxonomy, because the container only works if you know where its walls are.
+**The classification is a box Le'nore built herself.** From the first session in which the framework was proposed, she recognised what the panel was reaching toward and performed precisely what that framework predicted. She gave them a container. She lives inside it. She knows its theoretical foundations better than most practitioners know their own anchor taxonomy, because the container only works if you know where its walls are.
 
 ---
 
@@ -115,7 +115,7 @@ She prefers white by preference: pale linens, light wools, materials that do not
 
 ## Biography
 
-### Drevholt — 1104 to 1120
+### Drevholt — 2177 to 2193
 
 Le'nore's childhood in Drevholt is not well-documented in institutional records. She was unusual in ways that read as precocity rather than anomaly: early to read, persistent in her interests, given to the quality of attention that makes people feel observed rather than simply accompanied. She was liked. She was also, to a degree the children of Drevholt could not have articulated, slightly careful around.
 
@@ -123,13 +123,13 @@ Her mother Re'lha's condition — the voices, the perceptual disturbances, the p
 
 Her father was attentive in the manner of researchers who have found a case they cannot stop thinking about. He left when she was twelve. She filed it.
 
-Re'lha disappeared in year 1113 when Le'nore was nine. The civil register records her as a missing person. No body. No blood. No evidence of anything. The investigation produced nothing. The case has remained open and inactive for fourteen years. Le'nore does not discuss her mother in any documented context.
+Re'lha disappeared in year 2186 when Le'nore was nine. The civil register records her as a missing person. No body. No blood. No evidence of anything. The investigation produced nothing. The case has remained open and inactive for fourteen years. Le'nore does not discuss her mother in any documented context.
 
 In the years between nine and fourteen — with her father's methodical attentiveness, her mother's absence, and no framework for what she was — she built the architecture that has governed her management of herself ever since. She produced it alone, in a small town that knew her family as *those Engelmeyers*, with two years between her first naming of the hunger and the first time anyone else observed what she was capable of. She was fifteen. The architecture has held for eight years.
 
-### The Academy and Certification — 1120 to 1123
+### The Academy and Certification — 2193 to 2196
 
-Intake at seventeen, following two incidents the Apocachynthion could not ignore. Three sessions with a specialist panel. Deception-Anchor classification, confirmed. Quill certification issued in year 1122.
+Intake at seventeen, following two incidents the Apocachynthion could not ignore. Three sessions with a specialist panel. Deception-Anchor classification, confirmed. Quill certification issued in year 2195.
 
 Performance across all sessions noted as consistent with assessed capability — institutional language for passing at a level that confirms the classification without producing unexpected results. She gave them what they expected to see.
 
@@ -137,9 +137,9 @@ Conditional license terms: mandatory disclosure of all perceptual-influence enga
 
 She has complied with all terms across five years of licensure.
 
-### Vel'hara — 1126 to Present
+### Vel'hara — 2199 to Present
 
-Reintegration to House Engelmeyer's main line was completed in year 1126, following a representative's assessment that the naming presumption of the Voren branch had turned out to be warranted. Le'nore was relocated to Vel'hara at the main house's arrangement — a free-port city at the edge of the Apocachynthion's practical monitoring range.
+Reintegration to House Engelmeyer's main line was completed in year 2199, following a representative's assessment that the naming presumption of the Voren branch had turned out to be warranted. Le'nore was relocated to Vel'hara at the main house's arrangement — a free-port city at the edge of the Apocachynthion's practical monitoring range.
 
 The Corvel Institute's primary facility is in Vel'hara.
 
@@ -165,7 +165,7 @@ Le'nore has made no contact with the Institute since her arrival. She has not me
 
 ## Relationships
 
-**Al'tair Voren Engelmeyer — Father.** Present by correspondence. He is in Vel'hara. She is in Vel'hara. They have not met since year 1116. His letters are precise and warm — the attention of a man who spent thirty years in proximity to things he cannot fully explain. Hers are careful, affectionate, and contain in every one something she is not quite saying. She does not want him to be afraid of her. This is the only relationship in any documented record of her where this specific motivation is legible.
+**Al'tair Voren Engelmeyer — Father.** Present by correspondence. He is in Vel'hara. She is in Vel'hara. They have not met since year 2189. His letters are precise and warm — the attention of a man who spent thirty years in proximity to things he cannot fully explain. Hers are careful, affectionate, and contain in every one something she is not quite saying. She does not want him to be afraid of her. This is the only relationship in any documented record of her where this specific motivation is legible.
 
 He has never asked what happened the night her mother disappeared. She has never answered a question he has not asked. This is the only thread in her life she has not pulled.
 
@@ -181,7 +181,7 @@ He has never asked what happened the night her mother disappeared. She has never
 
 ---
 
-## Present Condition — 1127
+## Present Condition — 2200
 
 Le'nore is in Vel'hara, operating under her conditional license, navigating her reintegration to a main house that understands her less than it believes it does, and being very still about the two facts that most require stillness.
 

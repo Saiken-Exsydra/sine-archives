@@ -6,7 +6,7 @@ tags: ["Places", "Kor'rath", "Northern Region", "Empire", "Timber", "Highland", 
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/Korrath.png"
+image: "/uploads/place-korrath.png"
 ---
 
 > *"The city smells permanently of cut wood and river water. If you can tell the difference between the two, you have been here long enough."*

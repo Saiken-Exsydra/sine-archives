@@ -1,43 +1,16 @@
 ---
 import MainLayout from "../../../layouts/MainLayout.astro";
 
+// ═══════════════════════════════════════════════════════════════════════════
+//  MAP CONFIGURATION
+//  To swap the map image for a higher-resolution version, change MAP_IMAGE.
+//  Update MAP_ASPECT (width ÷ height) if the new image has different dimensions.
+// ═══════════════════════════════════════════════════════════════════════════
+const MAP_IMAGE  = "/uploads/map-empire.png";
+const MAP_ALT    = "Illustrated map of the Empire of Synus, showing the northern, central, and southern regions with Aurora to the west and Ardeatus to the east.";
+const MAP_ASPECT = 1534 / 1025; // natural image width ÷ height ≈ 1.497
+
 const dossier = {
-  empire: {
-    eyebrow: "Empire",
-    title: "The Empire of Synus",
-    subhead: "A west-to-east empire organized by climate bands, river corridors, and fortified borders.",
-    accent: "#b13a34",
-    summary:
-      "The Empire of Synus occupies the habitable band between the Black Shores and the Scorch. Its geography is easiest to read as a layered system: snow and fleet roads in the north, institutional and agricultural density through the center, extraction and war industry in the south, with Aurora and Ardeatus pressing against opposite borders.",
-    stats: [
-      ["North edge", "Black Shores"],
-      ["Central hinge", "Kalt'sen basin"],
-      ["South edge", "Scorch belts"],
-    ],
-    facts: [
-      {
-        title: "Imperial Center",
-        text: "Kalt'sen sits where the central river routes, Pluribus Hill, and the Empire's institutional core converge.",
-        href: "/places/kaltsen/",
-      },
-      {
-        title: "Northern Wall",
-        text: "The Thornwall and the northern highlands separate the cold coastal belt from the warmer central lowlands.",
-        href: "/places/thornwall/",
-      },
-      {
-        title: "Border Powers",
-        text: "Aurora holds the western cold approach; Ardeatus hardens the eastern frontier into a long industrial border.",
-      },
-    ],
-    routes: [
-      ["Climate gradient", "The map descends from the ice of the Black Shores into the green center and then the red Scorch."],
-      ["Transit spine", "Coastal fleet routes, river valleys, and extraction spurs tie distant regions into one imperial network."],
-      ["Defensive shape", "The Empire is broadest where roads and rivers cooperate, and most brittle where the borders become walls."],
-    ],
-    quote: "Synus is not a single landscape. It is a chain of climates held together by roads, rivers, and command.",
-    byline: "Geographical survey",
-  },
   north: {
     eyebrow: "Region I",
     title: "Northern Region",
@@ -47,33 +20,22 @@ const dossier = {
       "The north is the Empire's cold-facing edge. Its cities sit close to the sea, mountain passes, and timber rivers, making the region less dense than the center but strategically necessary. Ael'rath, Hal'vorn, Kor'rath, and Mire'thian Falls form the visible chain between coast, fleet, forest, and pass.",
     stats: [
       ["Dominant terrain", "Ice coast"],
-      ["Main route", "Coastal fleet road"],
-      ["Southern break", "Thornwall"],
+      ["Main route",       "Coastal fleet road"],
+      ["Southern break",   "Thornwall"],
     ],
     facts: [
-      {
-        title: "Ael'rath",
-        text: "The northernmost major city and primary naval base of the Cold Fleet along the Dark-Side coast.",
-        href: "/places/aelrath/",
-      },
-      {
-        title: "Hal'vorn",
-        text: "Administrative capital of the north, built where highland water becomes navigable river depth.",
-        href: "/places/halvorn/",
-      },
-      {
-        title: "Kor'rath",
-        text: "A timber city whose river access gives the region much of its resource character.",
-        href: "/places/korrath/",
-      },
+      { title: "Ael'rath",       text: "The northernmost major city and primary naval base of the Cold Fleet along the Dark-Side coast.", href: "/places/aelrath/" },
+      { title: "Hal'vorn",       text: "Administrative capital of the north, built where highland water becomes navigable river depth.",  href: "/places/halvorn/" },
+      { title: "Kor'rath",       text: "A timber city whose river access gives the region much of its resource character.",               href: "/places/korrath/" },
     ],
     routes: [
-      ["Coast", "The Black Shores give the north its fleet identity and its harshest weather."],
-      ["Interior", "Hal'vorn and Kor'rath mark the transition from naval edge to resource corridor."],
-      ["Southern threshold", "The Thornwall is the visual hinge between northern cold and central green."],
+      ["Coast",               "The Black Shores give the north its fleet identity and its harshest weather."],
+      ["Interior",            "Hal'vorn and Kor'rath mark the transition from naval edge to resource corridor."],
+      ["Southern threshold",  "The Thornwall is the visual hinge between northern cold and central green."],
     ],
-    quote: "The north is sparse by population, but dense with routes that the Empire cannot afford to lose.",
+    quote:  "The north is sparse by population, but dense with routes that the Empire cannot afford to lose.",
     byline: "Northern geography",
+    docRef: "IGS-I-NORTH-004",
   },
   central: {
     eyebrow: "Region II",
@@ -83,34 +45,23 @@ const dossier = {
     summary:
       "The central region is the Empire's most integrated landscape. Roads converge around Kalt'sen, the Vel'zaya River cuts across the basin, and academy cities sit close enough to the capital to feel like part of the same administrative weather. This is where Synus becomes legible as a state rather than a collection of frontiers.",
     stats: [
-      ["Capital", "Kalt'sen"],
-      ["Primary corridor", "Vel'zaya River"],
-      ["Urban pattern", "Capital satellites"],
+      ["Capital",           "Kalt'sen"],
+      ["Primary corridor",  "Vel'zaya River"],
+      ["Urban pattern",     "Capital satellites"],
     ],
     facts: [
-      {
-        title: "Kalt'sen",
-        text: "The place where every major institution keeps a central address and consequence accumulates block by block.",
-        href: "/places/kaltsen/",
-      },
-      {
-        title: "Vrenne",
-        text: "An academy city that gives the center its intellectual and bureaucratic weight.",
-        href: "/places/vrenne/",
-      },
-      {
-        title: "Lon'drina",
-        text: "A central city tied to education, administration, and the Empire's cultivated self-image.",
-        href: "/places/londrina/",
-      },
+      { title: "Kalt'sen",  text: "The place where every major institution keeps a central address and consequence accumulates block by block.", href: "/places/kaltsen/" },
+      { title: "Vrenne",    text: "An academy city that gives the center its intellectual and bureaucratic weight.",                            href: "/places/vrenne/" },
+      { title: "Lon'drina", text: "A central city tied to education, administration, and the Empire's cultivated self-image.",                  href: "/places/londrina/" },
     ],
     routes: [
-      ["Capital basin", "Kalt'sen is placed where river access, roads, and defensible elevation overlap."],
-      ["Academy arc", "Lon'drina and Vrenne show how education and administration orbit the capital."],
+      ["Capital basin",    "Kalt'sen is placed where river access, roads, and defensible elevation overlap."],
+      ["Academy arc",      "Lon'drina and Vrenne show how education and administration orbit the capital."],
       ["Eastern crossing", "Ube'lius connects the green center to the harder terrain near the Ardeatus border."],
     ],
-    quote: "The center is where distance is converted into bureaucracy, trade, and command.",
+    quote:  "The center is where distance is converted into bureaucracy, trade, and command.",
     byline: "Central geography",
+    docRef: "IGS-II-CENTRAL-011",
   },
   south: {
     eyebrow: "Region III",
@@ -120,34 +71,23 @@ const dossier = {
     summary:
       "The south is the Empire's industrial slope. It begins at the central green belt, drops through the Scorch Escarpment, and ends in cracked extraction country. Lu'mia, Hora'veil, Cal'thas, and Sarn Pell make the southern geography feel engineered around fuel, armament, and frontier supply.",
     stats: [
-      ["Northern lip", "Scorch Escarpment"],
+      ["Northern lip",    "Scorch Escarpment"],
       ["Industrial axis", "Hora'veil · Cal'thas"],
-      ["Deep feature", "Vael Mouth"],
+      ["Deep feature",    "Vael Mouth"],
     ],
     facts: [
-      {
-        title: "Hora'veil",
-        text: "Regional capital and primary military-industrial hub of the Long War effort.",
-        href: "/places/horaveil/",
-      },
-      {
-        title: "Cal'thas",
-        text: "A weapons-production center that makes the southern region's war economy concrete.",
-        href: "/places/calthas/",
-      },
-      {
-        title: "Sarn Pell",
-        text: "The civilian and military gate near the Ardeatus frontier.",
-        href: "/places/sarn-pell/",
-      },
+      { title: "Hora'veil", text: "Regional capital and primary military-industrial hub of the Long War effort.",             href: "/places/horaveil/" },
+      { title: "Cal'thas",  text: "A weapons-production center that makes the southern region's war economy concrete.",       href: "/places/calthas/" },
+      { title: "Sarn Pell", text: "The civilian and military gate near the Ardeatus frontier.",                               href: "/places/sarn-pell/" },
     ],
     routes: [
-      ["Escarpment", "The Scorch Escarpment is the break where the map stops being temperate."],
-      ["Extraction chain", "Lu'mia, Hora'veil, and Cal'thas convert the south into supply geography."],
-      ["Deep Scorch", "Vael Mouth anchors the red belt as a landmark, hazard, and mythic wound."],
+      ["Escarpment",      "The Scorch Escarpment is the break where the map stops being temperate."],
+      ["Extraction chain","Lu'mia, Hora'veil, and Cal'thas convert the south into supply geography."],
+      ["Deep Scorch",     "Vael Mouth anchors the red belt as a landmark, hazard, and mythic wound."],
     ],
-    quote: "The south is where geography becomes output: crystal, weapons, road dust, and heat.",
+    quote:  "The south is where geography becomes output: crystal, weapons, road dust, and heat.",
     byline: "Southern geography",
+    docRef: "IGS-III-SOUTH-019",
   },
   west: {
     eyebrow: "Western Border",
@@ -155,34 +95,25 @@ const dossier = {
     subhead: "The western cold frontier of mountains, passes, and white desert routes.",
     accent: "#88abc5",
     summary:
-      "The western side of the map is dominated by Aurora, the White Desert, and the mountain approach into the Empire. It is not as industrial as the eastern border; it reads as altitude, snow, passes, and watchful distance. Greygate Pass and the fortified line around Valerie make the border legible as a controlled crossing rather than a continuous furnace front.",
+      "The western side of the map is dominated by Aurora, the White Desert, and the mountain approach into the Empire. It reads as altitude, snow, passes, and watchful distance. Greygate Pass and the fortified line around Valerie make the border legible as a controlled crossing rather than a continuous furnace front.",
     stats: [
       ["Counterpower", "Aurora"],
-      ["Key crossing", "Greygate Pass"],
-      ["Terrain type", "Snow desert"],
+      ["Key crossing",  "Greygate Pass"],
+      ["Terrain type",  "Snow desert"],
     ],
     facts: [
-      {
-        title: "Aurora",
-        text: "A neighboring power whose geography is defined by snow fields, mountain roads, and guarded approaches.",
-        href: "/places/aurora/",
-      },
-      {
-        title: "Greygate Pass",
-        text: "The western pass compresses travel, diplomacy, and defense into one narrow route.",
-      },
-      {
-        title: "White Desert",
-        text: "The silicate flats make the western approach visually open but logistically severe.",
-      },
+      { title: "Aurora",        text: "A neighboring power whose geography is defined by snow fields, mountain roads, and guarded approaches.", href: "/places/aurora/" },
+      { title: "Greygate Pass", text: "The western pass compresses travel, diplomacy, and defense into one narrow route." },
+      { title: "White Desert",  text: "The silicate flats make the western approach visually open but logistically severe." },
     ],
     routes: [
-      ["Mountain entry", "The border is easiest to understand through the pass system, not through open field movement."],
-      ["Cold pressure", "The west presses on Synus through weather, elevation, and distance."],
+      ["Mountain entry",    "The border is easiest to understand through the pass system, not through open field movement."],
+      ["Cold pressure",     "The west presses on Synus through weather, elevation, and distance."],
       ["Imperial response", "Valerie and Vel'hara mark the Empire's effort to hold the approach with settlements and roads."],
     ],
-    quote: "The western frontier is quiet only from a distance; every road across it is a decision point.",
+    quote:  "The western frontier is quiet only from a distance; every road across it is a decision point.",
     byline: "Western geography",
+    docRef: "IGS-W-AURORA-007",
   },
   east: {
     eyebrow: "Eastern Border",
@@ -192,769 +123,819 @@ const dossier = {
     summary:
       "The eastern side is the map's hard border. Ardeatus rises beyond the wall, with Velitrachsen, state foundries, the Iron Bastion, and Kovansk forming an industrial frontier opposite the Empire's southern and central roads. This edge is visually warmer, harsher, and more militarized than the west.",
     stats: [
-      ["Counterpower", "Ardeatus"],
-      ["Border identity", "Iron Bastion"],
-      ["Imperial gate", "Sarn Pell"],
+      ["Counterpower",   "Ardeatus"],
+      ["Border identity","Iron Bastion"],
+      ["Imperial gate",  "Sarn Pell"],
     ],
     facts: [
-      {
-        title: "Ardeatus",
-        text: "A federation-state of industry and forge theology whose border presence reshapes the eastern map.",
-        href: "/places/ardeatus/",
-      },
-      {
-        title: "Iron Bastion",
-        text: "The wall reads as infrastructure, threat, and political statement at the same time.",
-      },
-      {
-        title: "Sarn Pell",
-        text: "The Empire's southeastern gate sits where southern logistics meet frontier risk.",
-        href: "/places/sarn-pell/",
-      },
+      { title: "Ardeatus",      text: "A federation-state of industry and forge theology whose border presence reshapes the eastern map.", href: "/places/ardeatus/" },
+      { title: "Iron Bastion",  text: "The wall reads as infrastructure, threat, and political statement at the same time." },
+      { title: "Sarn Pell",     text: "The Empire's southeastern gate sits where southern logistics meet frontier risk.",                   href: "/places/sarn-pell/" },
     ],
     routes: [
-      ["Wall line", "The eastern border is read through fortification first and settlement second."],
-      ["Industrial pressure", "Foundries and extraction roads make the edge feel active even where the map is still."],
-      ["Southern tie", "Sarn Pell links the Ardeatus frontier back into the Empire's southern supply chain."],
+      ["Wall line",          "The eastern border is read through fortification first and settlement second."],
+      ["Industrial pressure","Foundries and extraction roads make the edge feel active even where the map is still."],
+      ["Southern tie",       "Sarn Pell links the Ardeatus frontier back into the Empire's southern supply chain."],
     ],
-    quote: "The east is where the Empire's map becomes a border engine: walls, roads, foundries, and gates.",
+    quote:  "The east is where the Empire's map becomes a border engine: walls, roads, foundries, and gates.",
     byline: "Eastern geography",
+    docRef: "IGS-E-ARDEATUS-023",
   },
 };
 
-const initial = dossier.empire;
-const tabs = [
-  ["empire", "Empire"],
-  ["north", "North"],
-  ["central", "Central"],
-  ["south", "South"],
-  ["west", "West"],
-  ["east", "East"],
+// Region handle positions as % of canvas from top-left.
+// These place each label over its geographic territory on the initial empire view.
+const handles = [
+  { key: "north",   numeral: "I",   label: "Northern Region",  x: 48, y: 26 },
+  { key: "central", numeral: "II",  label: "Central Region",   x: 42, y: 51 },
+  { key: "south",   numeral: "III", label: "Southern Region",  x: 56, y: 67 },
+  { key: "west",    numeral: "W",   label: "Aurora",           x:  9, y: 31 },
+  { key: "east",    numeral: "E",   label: "Ardeatus",         x: 88, y: 44 },
 ];
 ---
 
 <MainLayout active="places" pageTitle="Empire Map — SiNE Archives">
   <section class="atlas" id="atlasRoot">
-    <header class="atlas__header">
-      <div class="atlas__identity">
-        <a class="atlas__back" href="/places/" aria-label="Back to Places">
-          <span aria-hidden="true">‹</span>
-          <span>Places</span>
-        </a>
-        <div>
-          <p class="atlas__kicker">Places · Imperial Atlas</p>
-          <h1>Empire Map</h1>
-        </div>
-      </div>
 
-      <div class="atlas__actions">
-        <button class="atlas-btn" id="resetBtn" type="button">Empire View</button>
-        <button class="atlas-btn atlas-btn--solid" id="fullscreenBtn" type="button">Fullscreen</button>
-      </div>
-    </header>
+    <!-- Back link: floats over the map -->
+    <a class="atlas-back" href="/places/" aria-label="Return to Places">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+        <path d="M7 1.5L3 5L7 8.5" stroke="currentColor" stroke-width="1.4"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>PLACES</span>
+    </a>
 
-    <div class="atlas__workspace">
-      <div class="atlas__stage">
-        <div class="map-frame" id="mapFrame" aria-label="Map of the Empire of Synus">
-          <div class="map-transform" id="mapTransform">
-            <div class="map-canvas" id="mapCanvas">
-              <img
-                class="map-image"
-                src="/uploads/New%20Empire%20Map.png"
-                alt="Illustrated map of the Empire of Synus, including northern, central, and southern regions."
-                draggable="false"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="map-vignette" aria-hidden="true"></div>
-      </div>
+    <!-- ── MAP STAGE: fills viewport ─────────────────────────────────── -->
+    <div class="atlas-stage" id="atlasStage">
 
-      <aside class="dossier" aria-live="polite">
-        <header class="dossier__head">
-          <p class="dossier__eyebrow" id="dossierEyebrow">{initial.eyebrow}</p>
-          <h2 id="dossierTitle">{initial.title}</h2>
-          <p class="dossier__subhead" id="dossierSubhead">{initial.subhead}</p>
-        </header>
+      <div class="map-frame" id="mapFrame">
+        <div class="map-transform" id="mapTransform">
+          <div class="map-canvas" id="mapCanvas">
 
-        <nav class="tabstrip" id="tabstrip" aria-label="Map focus">
-          {tabs.map(([key, label]) => (
-            <button class={key === "empire" ? "is-active" : ""} data-target={key} type="button">
-              {label}
-            </button>
-          ))}
-        </nav>
+            <img
+              class="map-img"
+              src={MAP_IMAGE}
+              alt={MAP_ALT}
+              draggable="false"
+            />
 
-        <div class="dossier__body">
-          <p class="summary" id="dossierSummary">{initial.summary}</p>
-
-          <div class="stats" id="dossierStats">
-            {initial.stats.map(([label, value]) => (
-              <div class="stat">
-                <div class="stat__label">{label}</div>
-                <div class="stat__value">{value}</div>
-              </div>
+            <!-- Handles sit inside the canvas so they pan + zoom with the map -->
+            {handles.map(h => (
+              <button
+                class={`handle${h.key === "west" || h.key === "east" ? " handle--border" : ""}`}
+                data-region={h.key}
+                style={`--hx:${h.x}%;--hy:${h.y}%`}
+                type="button"
+                aria-label={`Open dossier: ${h.label}`}
+              >
+                <span class="handle__id">{h.numeral}</span>
+                <span class="handle__label">{h.label}</span>
+              </button>
             ))}
+
           </div>
-
-          <section class="section">
-            <h3 class="section__title">Anchor Places</h3>
-            <div class="fact-list" id="dossierFacts">
-              {initial.facts.map((fact) => (
-                <a class="fact-link" href={fact.href ?? "#"}>
-                  <span>{fact.title}</span>
-                  <em>{fact.text}</em>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          <section class="section">
-            <h3 class="section__title">Reading Lines</h3>
-            <div class="route-list" id="dossierRoutes">
-              {initial.routes.map(([title, text]) => (
-                <article>
-                  <h4>{title}</h4>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <blockquote class="quote">
-            <p id="dossierQuote">{initial.quote}</p>
-            <cite id="dossierQuoteByline">{initial.byline}</cite>
-          </blockquote>
         </div>
+      </div>
 
-        <footer class="dossier__foot">
-          <span id="dossierStatus">Imperial survey overlay</span>
-        </footer>
-      </aside>
-    </div>
+      <!-- Vignette + grain (pointer-events: none, purely visual) -->
+      <div class="map-vignette" aria-hidden="true"></div>
+      <div class="sine-grain"   aria-hidden="true"></div>
+
+      <!-- Cartographic chrome: non-interactive overlays -->
+      <div class="carto-chrome" aria-hidden="true">
+        <div class="carto-compass">
+          <span class="carto-compass__n">N</span>
+          <svg class="carto-compass__cross" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <line x1="10" y1="1" x2="10" y2="19" stroke="currentColor" stroke-width="0.7"/>
+            <line x1="1"  y1="10" x2="19" y2="10" stroke="currentColor" stroke-width="0.7"/>
+            <circle cx="10" cy="10" r="2" fill="none" stroke="currentColor" stroke-width="0.7"/>
+          </svg>
+        </div>
+        <div class="carto-ref">
+          <span>IGS · REF 44·7</span>
+        </div>
+        <div class="carto-classification">
+          IMPERIAL GEOGRAPHIC SURVEY · RESTRICTED CIRCULATION
+        </div>
+      </div>
+
+      <!-- Controls: bottom-left -->
+      <div class="atlas-controls">
+        <button class="ctrl-btn" id="resetBtn" type="button">RESET TO SURVEY VIEW</button>
+        <button class="ctrl-btn ctrl-btn--icon" id="fullscreenBtn"
+                type="button" aria-label="Toggle fullscreen">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M1.5 4.5V1.5h3M8.5 1.5h3v3M11.5 8.5v3h-3M4.5 11.5h-3v-3"
+                  stroke="currentColor" stroke-width="1.3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+    </div><!-- /atlas-stage -->
+
+    <!-- ── DOSSIER PANEL: slides in from the right ───────────────────── -->
+    <aside class="dossier" id="dossier" aria-live="polite" aria-hidden="true">
+
+      <div class="dossier-stamp" aria-hidden="true">
+        CLASSIFIED · INTERNAL USE ONLY
+      </div>
+
+      <button class="dossier-close" id="dossierClose"
+              type="button" aria-label="Close dossier">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+          <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor"
+                stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="10" y1="1" x2="1" y2="10" stroke="currentColor"
+                stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <header class="dossier-head">
+        <p class="dossier-eyebrow" id="dossierEyebrow"></p>
+        <h2 id="dossierTitle"></h2>
+        <p class="dossier-subhead" id="dossierSubhead"></p>
+      </header>
+
+      <div class="dossier-body" id="dossierBody">
+        <p class="dossier-summary" id="dossierSummary"></p>
+
+        <div class="dossier-stats" id="dossierStats"></div>
+
+        <section class="dossier-section">
+          <h3 class="dossier-section-title">Anchor Places</h3>
+          <div class="dossier-facts" id="dossierFacts"></div>
+        </section>
+
+        <section class="dossier-section">
+          <h3 class="dossier-section-title">Reading Lines</h3>
+          <div class="dossier-routes" id="dossierRoutes"></div>
+        </section>
+
+        <blockquote class="dossier-quote">
+          <p id="dossierQuote"></p>
+          <cite id="dossierByline"></cite>
+        </blockquote>
+      </div>
+
+      <footer class="dossier-foot">
+        <span id="dossierRef"></span>
+        <span id="dossierStatus">Imperial Geographic Survey</span>
+      </footer>
+
+    </aside>
+
   </section>
 </MainLayout>
 
-<script define:vars={{ dossierJson: JSON.stringify(dossier) }}>
-  const DOSSIER = JSON.parse(dossierJson);
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<script define:vars={{ dossierJson: JSON.stringify(dossier), mapAspectRatio: MAP_ASPECT }}>
+  const DOSSIER    = JSON.parse(dossierJson);
+  const MAP_ASPECT = mapAspectRatio;
 
-  const root = document.getElementById("atlasRoot");
+  const atlasRoot    = document.getElementById("atlasRoot");
+  const atlasStage   = document.getElementById("atlasStage");
+  const mapFrame     = document.getElementById("mapFrame");
   const mapTransform = document.getElementById("mapTransform");
-  const mapFrame = document.getElementById("mapFrame");
-  const mapCanvas = document.getElementById("mapCanvas");
-  const resetBtn = document.getElementById("resetBtn");
-  const fullscreenBtn = document.getElementById("fullscreenBtn");
-  const tabs = Array.from(document.querySelectorAll("#tabstrip button"));
-  const mapAspect = 1534 / 1025;
+  const mapCanvas    = document.getElementById("mapCanvas");
+  const dossierEl    = document.getElementById("dossier");
+  const dossierClose = document.getElementById("dossierClose");
+  const resetBtn     = document.getElementById("resetBtn");
+  const fullscreenBtn= document.getElementById("fullscreenBtn");
 
-  const focus = {
-    empire: { scale: 1, x: 0, y: 0 },
-    north: { scale: 1.46, x: 0, y: 180 },
-    central: { scale: 1.58, x: -70, y: 10 },
-    south: { scale: 1.44, x: -120, y: -178 },
-    west: { scale: 1.58, x: 390, y: 22 },
-    east: { scale: 1.58, x: -410, y: 18 },
+  // Focus offsets calibrated to a 1000px-wide canvas baseline.
+  // Positive y = pan down (reveals top of map). Negative y = pan up (reveals bottom).
+  const FOCUS = {
+    empire:  { scale: 1.00, x:    0, y:    0 },
+    north:   { scale: 1.46, x:    0, y:  180 },
+    central: { scale: 1.58, x:  -70, y:   10 },
+    south:   { scale: 1.44, x: -120, y: -178 },
+    west:    { scale: 1.60, x:  390, y:   22 },
+    east:    { scale: 1.60, x: -410, y:   18 },
   };
 
   const state = {
-    scale: focus.empire.scale,
-    x: 0,
-    y: focus.empire.y,
-    selection: "empire",
+    scale:     1,
+    x:         0,
+    y:         0,
+    selection: null, // null = empire view
   };
 
+  // ── Sizing ─────────────────────────────────────────────────────────────
   function syncMapSize() {
     if (!mapFrame || !mapCanvas) return;
     const frame = mapFrame.getBoundingClientRect();
-    const containWidth = Math.min(frame.width, frame.height * mapAspect);
-    mapCanvas.style.width = `${Math.floor(containWidth)}px`;
+    const w = Math.min(frame.width, frame.height * MAP_ASPECT);
+    mapCanvas.style.width = `${Math.floor(w)}px`;
   }
 
-  function text(id, value) {
-    const element = document.getElementById(id);
-    if (element) element.textContent = value;
-  }
-
+  // ── Transform ──────────────────────────────────────────────────────────
   function applyTransform() {
-    if (!mapTransform || !mapFrame || !mapCanvas) return;
-    syncMapSize();
-    mapTransform.style.transform = `translate(calc(-50% + ${state.x}px), calc(-50% + ${state.y}px)) scale(${state.scale})`;
+    if (!mapTransform) return;
+    mapTransform.style.transform =
+      `translate(calc(-50% + ${state.x}px), calc(-50% + ${state.y}px)) scale(${state.scale})`;
   }
 
   function focusMap(key) {
-    const next = focus[key] || focus.empire;
+    const f = FOCUS[key] || FOCUS.empire;
     syncMapSize();
-    const offsetRatio = (mapCanvas?.offsetWidth || 1000) / 1000;
-    state.scale = next.scale;
-    state.x = next.x * offsetRatio;
-    state.y = next.y * offsetRatio;
+    const ratio = (mapCanvas?.offsetWidth || 1000) / 1000;
+    state.scale = f.scale;
+    state.x     = f.x * ratio;
+    state.y     = f.y * ratio;
     applyTransform();
   }
 
-  function renderStats(data) {
-    const stats = document.getElementById("dossierStats");
-    if (!stats) return;
-    stats.replaceChildren();
+  // ── Dossier helpers ────────────────────────────────────────────────────
+  function el(id)          { return document.getElementById(id); }
+  function setText(id, val){ const e = el(id); if (e) e.textContent = val; }
 
-    data.stats.forEach(([label, value]) => {
-      const item = document.createElement("div");
-      item.className = "stat";
-
-      const labelEl = document.createElement("div");
-      labelEl.className = "stat__label";
-      labelEl.textContent = label;
-
-      const valueEl = document.createElement("div");
-      valueEl.className = "stat__value";
-      valueEl.textContent = value;
-
-      item.append(labelEl, valueEl);
-      stats.appendChild(item);
-    });
-  }
-
-  function renderFacts(data) {
-    const facts = document.getElementById("dossierFacts");
-    if (!facts) return;
-    facts.replaceChildren();
-
-    data.facts.forEach((fact) => {
-      const item = document.createElement(fact.href ? "a" : "article");
-      item.className = "fact-link";
-      if (fact.href) item.href = fact.href;
-
-      const title = document.createElement("span");
-      title.textContent = fact.title;
-
-      const body = document.createElement("em");
-      body.textContent = fact.text;
-
-      item.append(title, body);
-      facts.appendChild(item);
-    });
-  }
-
-  function renderRoutes(data) {
-    const routes = document.getElementById("dossierRoutes");
-    if (!routes) return;
-    routes.replaceChildren();
-
-    data.routes.forEach(([title, body]) => {
-      const item = document.createElement("article");
-      const h = document.createElement("h4");
-      const p = document.createElement("p");
-      h.textContent = title;
-      p.textContent = body;
-      item.append(h, p);
-      routes.appendChild(item);
-    });
-  }
-
-  function setSelection(key) {
+  function openRegion(key) {
     const data = DOSSIER[key];
-    if (!data || !root) return;
-
+    if (!data) return;
     state.selection = key;
-    root.style.setProperty("--atlas-accent", data.accent);
+
+    atlasRoot?.style.setProperty("--atlas-accent", data.accent);
+
+    setText("dossierEyebrow", data.eyebrow);
+    setText("dossierTitle",   data.title);
+    setText("dossierSubhead", data.subhead);
+    setText("dossierSummary", data.summary);
+    setText("dossierQuote",   data.quote);
+    setText("dossierByline",  data.byline);
+    setText("dossierRef",     data.docRef ?? "");
+    setText("dossierStatus",  `${data.eyebrow} · ${data.title}`);
+
+    const statsEl = el("dossierStats");
+    if (statsEl) {
+      statsEl.replaceChildren();
+      data.stats.forEach(([label, value]) => {
+        const d = document.createElement("div");
+        d.className = "dossier-stat";
+        d.innerHTML =
+          `<div class="dossier-stat__label">${label}</div>` +
+          `<div class="dossier-stat__value">${value}</div>`;
+        statsEl.appendChild(d);
+      });
+    }
+
+    const factsEl = el("dossierFacts");
+    if (factsEl) {
+      factsEl.replaceChildren();
+      data.facts.forEach(f => {
+        const tag = f.href ? "a" : "article";
+        const item = document.createElement(tag);
+        item.className = "dossier-fact";
+        if (f.href) item.href = f.href;
+        item.innerHTML =
+          `<span>${f.title}</span><em>${f.text}</em>`;
+        factsEl.appendChild(item);
+      });
+    }
+
+    const routesEl = el("dossierRoutes");
+    if (routesEl) {
+      routesEl.replaceChildren();
+      data.routes.forEach(([title, body]) => {
+        const item = document.createElement("article");
+        item.className = "dossier-route";
+        item.innerHTML = `<h4>${title}</h4><p>${body}</p>`;
+        routesEl.appendChild(item);
+      });
+    }
+
     focusMap(key);
 
-    text("dossierEyebrow", data.eyebrow);
-    text("dossierTitle", data.title);
-    text("dossierSubhead", data.subhead);
-    text("dossierSummary", data.summary);
-    text("dossierQuote", data.quote);
-    text("dossierQuoteByline", data.byline);
-    text("dossierStatus", `${data.eyebrow} · ${data.title}`);
+    if (dossierEl) {
+      dossierEl.classList.add("is-open");
+      dossierEl.setAttribute("aria-hidden", "false");
+      el("dossierBody")?.scrollTo(0, 0);
+    }
 
-    renderStats(data);
-    renderFacts(data);
-    renderRoutes(data);
-
-    tabs.forEach((tab) => {
-      const active = tab.dataset.target === key;
-      tab.classList.toggle("is-active", active);
-      tab.setAttribute("aria-current", active ? "true" : "false");
-    });
+    document.querySelectorAll(".handle").forEach(h =>
+      h.classList.toggle("is-active", h.dataset.region === key)
+    );
   }
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => setSelection(tab.dataset.target));
+  function closeRegion() {
+    state.selection = null;
+    if (dossierEl) {
+      dossierEl.classList.remove("is-open");
+      dossierEl.setAttribute("aria-hidden", "true");
+    }
+    document.querySelectorAll(".handle.is-active").forEach(h =>
+      h.classList.remove("is-active")
+    );
+    atlasRoot?.style.setProperty("--atlas-accent", "var(--crimson)");
+    focusMap("empire");
+  }
+
+  // ── Event wiring ───────────────────────────────────────────────────────
+  document.querySelectorAll(".handle").forEach(h => {
+    h.addEventListener("click", e => {
+      e.stopPropagation();
+      h.dataset.region === state.selection ? closeRegion() : openRegion(h.dataset.region);
+    });
   });
 
-  resetBtn?.addEventListener("click", () => setSelection("empire"));
+  // Click on stage (not on a handle or dossier) → dismiss
+  atlasStage?.addEventListener("click", () => { if (state.selection) closeRegion(); });
+  dossierEl?.addEventListener("click", e => e.stopPropagation());
 
+  dossierClose?.addEventListener("click", closeRegion);
+  resetBtn?.addEventListener("click", closeRegion);
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && state.selection) closeRegion();
+  });
+
+  // Fullscreen
   fullscreenBtn?.addEventListener("click", async () => {
-    if (!root) return;
     try {
       if (!document.fullscreenElement) {
-        await root.requestFullscreen();
-        fullscreenBtn.textContent = "Exit";
+        await atlasRoot?.requestFullscreen();
       } else {
         await document.exitFullscreen();
-        fullscreenBtn.textContent = "Fullscreen";
       }
-    } catch {
-      fullscreenBtn.textContent = "Fullscreen";
-    }
+    } catch {}
   });
 
-  document.addEventListener("fullscreenchange", () => {
-    if (fullscreenBtn) fullscreenBtn.textContent = document.fullscreenElement ? "Exit" : "Fullscreen";
-    requestAnimationFrame(() => focusMap(state.selection));
-  });
+  document.addEventListener("fullscreenchange", () =>
+    requestAnimationFrame(() => focusMap(state.selection ?? "empire"))
+  );
 
-  window.addEventListener("resize", () => requestAnimationFrame(() => focusMap(state.selection)));
+  window.addEventListener("resize", () =>
+    requestAnimationFrame(() => focusMap(state.selection ?? "empire"))
+  );
 
+  // Init
+  syncMapSize();
   applyTransform();
-  setSelection("empire");
 </script>
 
+<!-- ══════════════════════════════════════════════════════════════════════ -->
 <style is:global>
+  /* Lock scroll on the map page */
+  html:has(.atlas) { overflow: hidden; }
+
+  /* ── Shell ───────────────────────────────────────────────────────────── */
   .atlas {
     --atlas-accent: var(--crimson);
-    min-height: calc(100vh - 56px);
-    background:
-      radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.045), transparent 28%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%),
-      var(--bg);
+    position: relative;
+    height: calc(100vh - 56px);
+    overflow: hidden;
+    background: #030305;
     color: var(--text);
-    display: grid;
-    grid-template-rows: auto minmax(0, 1fr);
   }
+  .atlas:fullscreen { height: 100vh; }
 
-  .atlas:fullscreen {
-    min-height: 100vh;
-  }
-
-  .atlas__header {
-    min-height: 76px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 16px 28px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(6, 6, 11, 0.72);
-  }
-
-  .atlas__identity {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    min-width: 0;
-  }
-
-  .atlas__back {
+  /* ── Back link ───────────────────────────────────────────────────────── */
+  .atlas-back {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    z-index: 20;
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    min-height: 34px;
+    height: 30px;
     padding: 0 11px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: rgba(232, 228, 220, 0.64);
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(6,6,11,0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: rgba(232,228,220,0.56);
     text-decoration: none;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.025);
-  }
-
-  .atlas__back span:first-child {
-    font-size: 18px;
-    line-height: 0;
-  }
-
-  .atlas__back:hover {
-    color: var(--text);
-    border-color: rgba(255, 255, 255, 0.16);
-  }
-
-  .atlas__kicker {
-    margin: 0 0 4px;
-    color: var(--atlas-accent);
     font-size: 9px;
     font-weight: 600;
-    letter-spacing: 0.24em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    transition: color 160ms, border-color 160ms, background 160ms;
   }
-
-  .atlas__header h1 {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 34px;
-    line-height: 0.95;
-    letter-spacing: 0.02em;
-  }
-
-  .atlas__actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-  }
-
-  .atlas-btn {
-    appearance: none;
-    height: 34px;
-    min-width: 112px;
-    padding: 0 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(4, 5, 8, 0.74);
+  .atlas-back:hover {
     color: var(--text);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 160ms ease, border-color 160ms ease;
+    border-color: rgba(255,255,255,0.2);
+    background: rgba(6,6,11,0.92);
   }
 
-  .atlas-btn:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.16);
+  /* ── Stage ───────────────────────────────────────────────────────────── */
+  .atlas-stage {
+    position: absolute;
+    inset: 0;
+    cursor: crosshair;
+    background: #030305;
   }
 
-  .atlas-btn--solid {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--atlas-accent) 32%, transparent), rgba(177, 58, 52, 0.12));
-    border-color: color-mix(in srgb, var(--atlas-accent) 58%, transparent);
-  }
-
-  .atlas__workspace {
-    min-height: 0;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 380px;
-  }
-
-  .atlas__stage {
-    min-width: 0;
-    position: relative;
-    overflow: hidden;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 12%),
-      radial-gradient(circle at 50% -10%, rgba(177, 58, 52, 0.1), transparent 28%),
-      #030305;
-  }
-
+  /* ── Map frame + transform ───────────────────────────────────────────── */
   .map-frame {
     position: absolute;
     inset: 0;
     overflow: hidden;
   }
-
   .map-transform {
     position: absolute;
     left: 50%;
     top: 50%;
     transform-origin: center center;
     will-change: transform;
-    transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
   }
-
   .map-canvas {
     position: relative;
-    width: min(100%, calc(100vh * 1.496));
     aspect-ratio: 1534 / 1025;
     max-width: none;
   }
-
-  .map-image {
+  .map-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     user-select: none;
     pointer-events: none;
-    filter: saturate(0.92) contrast(1.05) brightness(0.9);
+    filter: saturate(0.90) contrast(1.06) brightness(0.86);
   }
 
+  /* ── Vignette ────────────────────────────────────────────────────────── */
   .map-vignette {
     position: absolute;
     inset: 0;
     pointer-events: none;
+    z-index: 2;
     background:
-      linear-gradient(90deg, rgba(6, 6, 11, 0.28), transparent 18%, transparent 72%, rgba(6, 6, 11, 0.34)),
-      linear-gradient(180deg, rgba(6, 6, 11, 0.28), transparent 22%, rgba(6, 6, 11, 0.46));
+      radial-gradient(ellipse 90% 80% at 50% 50%, transparent 28%, rgba(3,3,5,0.58) 100%),
+      linear-gradient(180deg, rgba(6,6,11,0.38) 0%, transparent 12%, transparent 80%, rgba(6,6,11,0.60) 100%),
+      linear-gradient(90deg,  rgba(6,6,11,0.28) 0%, transparent 12%, transparent 88%, rgba(6,6,11,0.28) 100%);
   }
 
-  .dossier {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 16%),
-      color-mix(in srgb, var(--surface) 78%, #000);
-    display: grid;
-    grid-template-rows: auto auto minmax(0, 1fr) auto;
-    min-height: 0;
-  }
-
-  .dossier__head {
-    padding: 24px 24px 18px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .dossier__eyebrow {
-    margin: 0 0 8px;
-    color: var(--atlas-accent);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-  }
-
-  .dossier__head h2 {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 34px;
-    line-height: 0.98;
-  }
-
-  .dossier__subhead {
-    margin: 9px 0 0;
-    color: rgba(232, 228, 220, 0.7);
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  .tabstrip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(255, 255, 255, 0.04);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .tabstrip button {
-    appearance: none;
-    border: 0;
-    background: rgba(255, 255, 255, 0.02);
-    color: rgba(232, 228, 220, 0.54);
-    padding: 12px 6px;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+  /* ── Region handles ──────────────────────────────────────────────────── */
+  .handle {
+    position: absolute;
+    left: var(--hx);
+    top:  var(--hy);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 10px 5px 8px;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(6,6,11,0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: rgba(232,228,220,0.68);
     cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: border-color 200ms, background 200ms, color 200ms, box-shadow 200ms;
   }
-
-  .tabstrip button:hover,
-  .tabstrip button.is-active {
+  .handle:hover {
+    border-color: rgba(255,255,255,0.36);
+    background: rgba(6,6,11,0.92);
     color: var(--text);
-    background: color-mix(in srgb, var(--atlas-accent) 22%, rgba(255, 255, 255, 0.04));
   }
-
-  .dossier__body {
-    min-height: 0;
-    overflow: auto;
-    padding: 20px 24px 24px;
+  .handle.is-active {
+    border-color: var(--atlas-accent);
+    background: color-mix(in srgb, var(--atlas-accent) 16%, rgba(6,6,11,0.92));
+    color: var(--text);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--atlas-accent) 30%, transparent);
   }
-
-  .summary {
-    margin: 0;
-    color: rgba(232, 228, 220, 0.8);
-    font-size: 14px;
-    line-height: 1.65;
-  }
-
-  .stats {
-    margin-top: 18px;
-    display: grid;
-    gap: 10px;
-  }
-
-  .stat {
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.03);
-    padding: 12px;
-  }
-
-  .stat__label {
-    margin-bottom: 6px;
-    color: rgba(232, 228, 220, 0.48);
-    font-size: 8px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-  }
-
-  .stat__value {
+  .handle__id {
+    display: block;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 23px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--atlas-accent);
+    min-width: 10px;
+    text-align: center;
+  }
+  .handle__label {
+    display: block;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     line-height: 1;
   }
 
-  .section {
-    margin-top: 24px;
+  /* ── Cartographic chrome ─────────────────────────────────────────────── */
+  .carto-chrome {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 6;
   }
+  .carto-compass {
+    position: absolute;
+    bottom: 52px;
+    right: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    color: rgba(232,228,220,0.24);
+  }
+  .carto-compass__n {
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1;
+  }
+  .carto-compass__cross { color: rgba(232,228,220,0.18); }
 
-  .section__title {
-    margin: 0 0 10px;
-    color: rgba(232, 228, 220, 0.5);
-    font-size: 9px;
-    letter-spacing: 0.22em;
+  .carto-ref {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    font-size: 7px;
+    letter-spacing: 0.2em;
+    color: rgba(232,228,220,0.16);
     text-transform: uppercase;
   }
+  .carto-classification {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(232,228,220,0.14);
+    white-space: nowrap;
+  }
 
-  .fact-list,
-  .route-list {
+  /* ── Atlas controls (bottom-left) ────────────────────────────────────── */
+  .atlas-controls {
+    position: absolute;
+    bottom: 18px;
+    left: 24px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .ctrl-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(6,6,11,0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: rgba(232,228,220,0.44);
+    font-family: inherit;
+    font-size: 7.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 160ms, border-color 160ms, background 160ms;
+  }
+  .ctrl-btn:hover {
+    color: var(--text);
+    border-color: rgba(255,255,255,0.2);
+    background: rgba(6,6,11,0.92);
+  }
+  .ctrl-btn--icon { width: 28px; padding: 0; }
+
+  /* ── Dossier panel ───────────────────────────────────────────────────── */
+  .dossier {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 376px;
+    z-index: 30;
+    transform: translateX(100%);
+    transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+    background: color-mix(in srgb, var(--surface) 80%, #000 20%);
+    border-inline-start: 1px solid rgba(255,255,255,0.06);
+    box-shadow: -16px 0 48px rgba(0,0,0,0.56);
     display: grid;
-    gap: 10px;
+    grid-template-rows: auto auto 1fr auto;
+    overflow: hidden;
+  }
+  .dossier.is-open { transform: translateX(0); }
+
+  .dossier-stamp {
+    padding: 9px 48px 8px 20px; /* right pad for close btn */
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(177,58,52,0.07);
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--atlas-accent);
+    text-align: center;
+  }
+  .dossier-close {
+    position: absolute;
+    top: 6px;
+    right: 14px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.03);
+    color: rgba(232,228,220,0.44);
+    cursor: pointer;
+    transition: color 160ms, border-color 160ms;
+  }
+  .dossier-close:hover {
+    color: var(--text);
+    border-color: rgba(255,255,255,0.2);
   }
 
-  .fact-link,
-  .route-list article {
+  .dossier-head {
+    padding: 22px 20px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .dossier-eyebrow {
+    margin: 0 0 8px;
+    color: var(--atlas-accent);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+  }
+  .dossier-head h2 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    line-height: 0.96;
+  }
+  .dossier-subhead {
+    margin: 9px 0 0;
+    color: rgba(232,228,220,0.66);
+    font-size: 13px;
+    line-height: 1.56;
+  }
+
+  .dossier-body {
+    min-height: 0;
+    overflow-y: auto;
+    padding: 20px 20px 28px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(177,58,52,0.22) transparent;
+  }
+  .dossier-summary {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: rgba(232,228,220,0.76);
+  }
+
+  .dossier-stats {
+    margin-top: 16px;
+    display: grid;
+    gap: 8px;
+  }
+  .dossier-stat {
+    padding: 10px 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+  }
+  .dossier-stat__label {
+    margin-bottom: 5px;
+    color: rgba(232,228,220,0.42);
+    font-size: 7.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+  .dossier-stat__value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .dossier-section { margin-top: 20px; }
+  .dossier-section-title {
+    margin: 0 0 9px;
+    color: rgba(232,228,220,0.4);
+    font-size: 8px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+  }
+  .dossier-facts,
+  .dossier-routes { display: grid; gap: 8px; }
+
+  .dossier-fact {
     display: block;
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.025);
-  }
-
-  .fact-link {
+    padding: 11px 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
     color: var(--text);
     text-decoration: none;
-    transition: border-color 160ms ease, background 160ms ease;
+    transition: border-color 160ms, background 160ms;
   }
-
-  .fact-link:visited,
-  .fact-link:active {
-    color: var(--text);
+  a.dossier-fact:hover {
+    border-color: color-mix(in srgb, var(--atlas-accent) 50%, rgba(255,255,255,0.06));
+    background: rgba(255,255,255,0.04);
   }
-
-  a.fact-link:hover {
-    border-color: color-mix(in srgb, var(--atlas-accent) 55%, rgba(255, 255, 255, 0.06));
-    background: rgba(255, 255, 255, 0.045);
-  }
-
-  .fact-link span,
-  .route-list h4 {
+  .dossier-fact span {
     display: block;
-    margin: 0 0 5px;
+    margin-bottom: 4px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
     line-height: 1.05;
-    color: var(--text);
   }
-
-  .fact-link em,
-  .route-list p {
+  .dossier-fact em {
     display: block;
-    margin: 0;
-    color: rgba(232, 228, 220, 0.74);
-    font-size: 13px;
+    font-size: 12.5px;
     font-style: normal;
-    line-height: 1.55;
+    line-height: 1.5;
+    color: rgba(232,228,220,0.65);
   }
 
-  .quote {
-    margin: 24px 0 0;
+  .dossier-route {
+    padding: 11px 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+  }
+  .dossier-route h4 {
+    margin: 0 0 4px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.05;
+  }
+  .dossier-route p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(232,228,220,0.65);
+  }
+
+  .dossier-quote {
+    margin: 20px 0 0;
     padding: 0 0 0 14px;
-    border-left: 2px solid var(--atlas-accent);
+    border-inline-start: 2px solid var(--atlas-accent);
   }
-
-  .quote p {
+  .dossier-quote p {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    line-height: 1.1;
+    font-size: 23px;
+    line-height: 1.14;
   }
-
-  .quote cite {
+  .dossier-quote cite {
     display: block;
     margin-top: 8px;
-    color: rgba(232, 228, 220, 0.5);
-    font-size: 10px;
+    color: rgba(232,228,220,0.4);
+    font-size: 9px;
     font-style: normal;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-
-  .dossier__foot {
-    padding: 16px 24px 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    background: rgba(255, 255, 255, 0.02);
-  }
-
-  .dossier__foot span {
-    color: rgba(232, 228, 220, 0.42);
-    font-size: 10px;
-    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }
 
-  @media (max-width: 1100px) {
-    .atlas {
-      min-height: 0;
-      display: block;
-    }
-
-    .atlas__workspace {
-      grid-template-columns: 1fr;
-    }
-
-    .atlas__stage {
-      min-height: 74vh;
-      border-right: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .map-canvas {
-      width: 1040px;
-    }
-
-    .dossier {
-      min-height: 0;
-    }
+  .dossier-foot {
+    padding: 13px 20px 15px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.015);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .dossier-foot span {
+    color: rgba(232,228,220,0.34);
+    font-size: 8.5px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
   }
 
-  @media (max-width: 720px) {
-    .atlas__header {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 14px;
-      padding: 14px 16px;
-    }
+  /* ── Responsive ──────────────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .dossier { width: 320px; }
+  }
 
-    .atlas__identity {
+  @media (max-width: 640px) {
+    /* On mobile: panel slides up from the bottom */
+    .dossier {
       width: 100%;
-      justify-content: space-between;
-      gap: 12px;
+      top: auto;
+      bottom: 0;
+      height: 62vh;
+      transform: translateY(100%);
+      border-inline-start: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 -10px 40px rgba(0,0,0,0.56);
     }
+    .dossier.is-open { transform: translateY(0); }
 
-    .atlas__header h1 {
-      font-size: 29px;
-      text-align: right;
-    }
-
-    .atlas__kicker {
-      text-align: right;
-    }
-
-    .atlas__actions {
-      width: 100%;
-    }
-
-    .atlas-btn {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .atlas__stage {
-      min-height: 64vh;
-    }
-
-    .map-canvas {
-      width: 840px;
-    }
-
-    .tabstrip {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .dossier__head,
-    .dossier__body,
-    .dossier__foot {
-      padding-left: 18px;
-      padding-right: 18px;
-    }
+    /* Compact controls on mobile */
+    .atlas-back        { top: 14px; left: 16px; }
+    .atlas-controls    { bottom: 14px; left: 16px; }
+    .ctrl-btn          { font-size: 7px; padding: 0 8px; height: 26px; }
+    .carto-classification { display: none; }
+    .handle__label     { display: none; }
+    .handle            { padding: 5px 8px; }
   }
 </style>

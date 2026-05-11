@@ -6,7 +6,7 @@ tags: ["Cosmology", "Lunar Crown", "Fracture", "Callings", "Syr'lene", "Moon", "
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/LunarCrown.png"
+image: "/uploads/cosm-lunar-crown.png"
 ---
 
 > *"The Moon is not broken because something fell. The Moon is broken because something tried to come through — and someone was there to stop it, and the stopping cost everything except the world."*

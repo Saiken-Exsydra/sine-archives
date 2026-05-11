@@ -22,16 +22,16 @@ const bySection = await Promise.all(
 const totalPublic = bySection.reduce((sum, s) => sum + s.count, 0);
 
 const sectionMeta: Record<string, { image: string; desc: string }> = {
-  characters:    { image: "/uploads/CharaBG.png",        desc: "Individuals of note within the Twilight Band and beyond." },
-  organizations: { image: "/uploads/Apocachynthion.png", desc: "Institutions and houses that structure the Empire of Synus." },
-  sine:          { image: "/uploads/SiNELG.png",         desc: "The Seam Division and all that falls under the Wonderwall Seat." },
-  places:        { image: "/uploads/PLACESMAP.png",      desc: "Territories, cities, and the geographies of the known world." },
-  apparatus:     { image: "/uploads/Clepsydra.png",      desc: "Classified instruments, constructions, and mechanisms." },
-  systems:       { image: "/uploads/Redactory.png",      desc: "Structural and institutional frameworks that underpin the world." },
-  cosmology:     { image: "/uploads/CosmologyBG.png",    desc: "The nature of the Archive, the Dive, and existence itself." },
+  characters:    { image: "/uploads/ui-characters-bg.png",  desc: "Individuals of note within the Twilight Band and beyond." },
+  organizations: { image: "/uploads/org-apocachynthion.png", desc: "Institutions and houses that structure the Empire of Synus." },
+  sine:          { image: "/uploads/sine-logo.png",          desc: "The Seam Division and all that falls under the Wonderwall Seat." },
+  places:        { image: "/uploads/map-places-index.png",   desc: "Territories, cities, and the geographies of the known world." },
+  apparatus:     { image: "/uploads/app-clepsydra-apparatus.png", desc: "Classified instruments, constructions, and mechanisms." },
+  systems:       { image: "/uploads/sys-redactory.png",      desc: "Structural and institutional frameworks that underpin the world." },
+  cosmology:     { image: "/uploads/ui-cosmology-bg.png",    desc: "The nature of the Archive, the Dive, and existence itself." },
 };
 
-const FALLBACK_IMG = "/uploads/StarsV2.jpg";
+const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
 ---
 
 <MainLayout active="home" pageTitle="SiNE Archives">
@@ -39,14 +39,14 @@ const FALLBACK_IMG = "/uploads/StarsV2.jpg";
   <!-- ── HERO ── -->
   <div class="hero">
     <div class="hero__bg-wrap">
-      <img src="/uploads/CosmologyBG.png" alt="" class="hero__bg-img" />
+      <img src="/uploads/ui-cosmology-bg.png" alt="" class="hero__bg-img" />
     </div>
     <div class="hero__overlay"></div>
     <div class="sine-grain"></div>
     <div class="sine-scanline"></div>
 
     <div class="hero__content">
-      <img src="/uploads/SLOGOHOME.png" alt="SiNE" class="hero__logo" />
+      <img src="/uploads/ui-sine-logo-home.png" alt="SiNE" class="hero__logo" />
       <p class="hero__sub">
         A compendium of classified records, field assessments, and theoretical frameworks
         originating from within the Empire of Synus and its adjacent cosmological structures.
@@ -104,7 +104,7 @@ const FALLBACK_IMG = "/uploads/StarsV2.jpg";
     <div class="preview-panel" id="preview-panel">
       <div class="preview-sticky">
       <div class="preview-default" id="preview-default">
-        <img src="/uploads/SLOGO.png" alt="" class="preview-default__logo" />
+        <img src="/uploads/ui-sine-logo.png" alt="" class="preview-default__logo" />
       </div>
 
       {bySection.map((s) => {

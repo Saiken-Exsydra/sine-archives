@@ -6,7 +6,7 @@ tags: ["Places", "Aurora", "Federation", "Rite of Radiance", "Valerie", "White D
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/Aurora.png"
+image: "/uploads/place-aurora.png"
 ---
 
 > *"Aurora is not a place that developed a theology of light. It is a place where light was already present, and everything else — the architecture, the government, the revolution — was built in response to that fact."*
@@ -56,7 +56,7 @@ The geometry is clean and intentional. Decoration exists — tilework, inlaid st
 
 Aurora does not use mechanical cooling. Buildings are designed with **wind shafts** — vertical internal channels creating convection currents — and cross-ventilation corridors aligned with the dominant wind direction. This is a source of cultural pride: Auroran architects consider mechanical forced-air systems a sign of inadequate design.
 
-The **Spire** is Valerie's defining landmark — the tallest fixed structure on the Twilight Band's north-western segment. It serves as communication relay, aerial docking for BrightCrystal-powered dirigible-class vessels, and institutional statement. Aurora is aware that Glass Command's orbital surveillance assets watch the Twilight Band. The Spire is visible from orbital distance, and that is not a coincidence.
+The **Spire** is Valerie's defining landmark — the tallest fixed structure on the Twilight Band's north-western segment. It serves as communication relay, aerial docking for BrightCrystal-powered dirigible-class vessels, and institutional statement. Aurora is aware that Clepsydra's GlassWatcher arrays interpret the Twilight Band continuously. The Spire is visible from orbital distance, and that is not a coincidence.
 
 ---
 

@@ -1,14 +1,14 @@
 ---
 title: "Em'manuel Kael Wonderwall"
 type: "Character"
-age: "Approximately 1,200 (as of year 1127)"
+age: "Approximately 1,205 (as of year 2200)"
 birth_name: "Al'uxxios Ex'sydra"
 birth_year: "Unknown — approximately forty years before the Rite of Selia"
 birthplace: "Northern coastal region, pre-Empire — settlement no longer exists under that name"
-affiliation: "SiNE (founder and principal); Apocachynthion (registered — Archtype classification, Spatial Coherence-domain); House Wonderwall (dynastic head, primary line); Empire of Synus (hereditary Senator)"
+affiliation: "SiNE (founder and principal); Apocachynthion (registered — Archtype classification, Spatial Coherence anchor); House Wonderwall (dynastic head, primary line); Empire of Synus (hereditary Senator)"
 house: "Wonderwall (founding figure, primary line); born Ex'sydra"
 rank: "Archtype"
-registry_status: "Registered — Archtype, Spatial Coherence-domain (institutional); operational license unconditional"
+registry_status: "Registered — Archtype, Spatial Coherence anchor (institutional); operational license unconditional"
 designation: "Archtype · Twelve centuries. One question he hasn't answered yet."
 height: "185 cm"
 build: "Broad, unhurried; the bearing of someone who has not found a room they couldn't wait in"
@@ -24,8 +24,8 @@ tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "R
 status: "public"
 created: "2026-03-30"
 updated: "2026-04-28"
-image: "/uploads/Emmanuel.png"
-hero_image: "/uploads/Emmanuel-HERO.png"
+image: "/uploads/char-emmanuel-wonderwall.png"
+hero_image: "/uploads/char-emmanuel-wonderwall-hero.png"
 ---
 
 > *"I do not remember what it felt like to be uncertain whether I would survive the year. I remember everything else."*
@@ -41,9 +41,9 @@ The Wonderwall name predates the House. Before it belonged to Em'manuel, it belo
 
 Em'manuel was not born into that family. He was born into a different one entirely.
 
-The house of Ex'sydra was the pre-Imperial kingdom's foremost theoretical institution — not one of the twelve Redactor dynasties, but the framework-builders behind them. Three generations of practitioners whose Anchor-domain expressed, in each of them, as a sensitivity to what they called *the thread*: the structural relationship between a configuration's present state and the adjacent state toward which its own nature inclined it. They called what they did *sequence reading*. They believed they could perceive the shape of what was coming.
+The house of Ex'sydra was the pre-Imperial kingdom's foremost theoretical institution — not one of the twelve Redactor dynasties, but the framework-builders behind them. Three generations of practitioners whose Anchor expressed, in each of them, as a sensitivity to what they called *the thread*: the structural relationship between a configuration's present state and the adjacent state toward which its own nature inclined it. They called what they did *sequence reading*. They believed they could perceive the shape of what was coming.
 
-They were partially right. The domain they were accessing was real. It was not what they thought it was. The distinction, when the Sundering demonstrated it, killed most of them.
+They were partially right. The anchor they were accessing was real. It was not what they thought it was. The distinction, when the Sundering demonstrated it, killed most of them.
 
 Al'uxxios Ex'sydra — born into the house's younger generation, regarded internally as practically-minded rather than theoretically ambitious, occupied with BrightCrystal structural research that had more in common with the Wonderwall family's work than his own house's sequence doctrine — survived the Sundering because he was young enough and peripheral enough that no one had yet handed him the theoretical responsibility for what was coming.
 
@@ -63,11 +63,11 @@ Al'uxxios Ex'sydra married A'licia Rae Wonderwall in the reorganization period f
 
 He took the Wonderwall name and let Al'uxxios Ex'sydra become what everyone needed it to become: gone. The political climate required that the Ex'sydra connection remain invisible. He did not fight the erasure. He has not forgotten what was taken. He has not been in a position to insist on it for twelve centuries. These are not the same thing.
 
-A'licia was the surviving daughter of a scholarly family whose primary value had been technical. She had a Light-domain Anchor — clean, deep, expressing at a density the Cloister of Applied Structure would not see again in a documented assessment until E'lla's intake several centuries later. The Cloister's assessor of her wrote: *We do not have adequate framework to describe what we found. We will attempt a second session when we have developed one.* He never did. A'licia did not wait for him to.
+A'licia was the surviving daughter of a scholarly family whose primary value had been technical. She had a Light Anchor — clean, deep, expressing at a density the Cloister of Applied Structure would not see again in a documented assessment until E'lla's intake several centuries later. The Cloister's assessor of her wrote: *We do not have adequate framework to describe what we found. We will attempt a second session when we have developed one.* He never did. A'licia did not wait for him to.
 
-What she was, in Em'manuel's private assessment written five hundred years after her death: the most structurally clear practitioner he has known in twelve centuries. Not the most powerful. The most *clear* — a Light-domain Anchor operating without interference, expressing exactly what it is, without the distortion that accumulation introduces.
+What she was, in Em'manuel's private assessment written five hundred years after her death: the most structurally clear practitioner he has known in twelve centuries. Not the most powerful. The most *clear* — a Light Anchor operating without interference, expressing exactly what it is, without the distortion that accumulation introduces.
 
-**The Light-domain inheritance in the Wonderwall bloodline is entirely hers.** E'lla, Ju'llian, Ec'lesia — the Light came from A'licia. This is the part of the family's legacy that has the Wonderwall name attached to it in every institutional record, every academic study, every Apocachynthion analysis of the bloodline's Redactory profile. The Light is what everyone sees when they look at this family. It is A'licia's contribution, not his.
+**The Light Anchor inheritance in the Wonderwall bloodline is entirely hers.** E'lla, Ju'llian, Ec'lesia — the Light came from A'licia. This is the part of the family's legacy that has the Wonderwall name attached to it in every institutional record, every academic study, every Apocachynthion analysis of the bloodline's Redactory profile. The Light is what everyone sees when they look at this family. It is A'licia's contribution, not his.
 
 His contribution to the bloodline is different, and it does not appear in any institutional record.
 
@@ -77,15 +77,15 @@ His contribution to the bloodline is different, and it does not appear in any in
 
 ### The Anchor: Interval
 
-The Apocachynthion classifies Em'manuel as **Spatial Coherence-domain** — a designation encompassing Anchor expressions associated with positional and relational configuration. Spatial Coherence is accurate as a taxonomic container. What it contains, in his specific case, is something the classification was built to approximate and cannot adequately describe.
+The Apocachynthion classifies Em'manuel as **Spatial Coherence** — a designation encompassing Anchor expressions associated with positional and relational configuration. Spatial Coherence is accurate as a taxonomic container. What it contains, in his specific case, is something the classification was built to approximate and cannot adequately describe.
 
-The domain is **Interval**. His designation. Not theirs.
+The anchor is **Interval**. His designation. Not theirs.
 
 Interval is not spatial distance. It is the relational property of the gap between configurations — spatial, sequential, structural. The space between where something is and where it is not. The pause between one configuration's existence and the next one's. The structural fact that every state that has ever existed has existed in relation to adjacent states, and those relations are themselves a property of the Archive's grammar — present, quantifiable, accessible to a practitioner whose recursive architecture stabilizes around them.
 
 No other practitioner in the Apocachynthion's twelve-century record holds an Interval Anchor. The Ex'sydra house's sequence-reading tradition was the closest approach to formal articulation — three generations of practitioners whose inherited Interval sensitivity had been developed into a working methodology, however misinterpreted. They called it time-reading. They were reading trajectory: the slope governed, before the Fracture, by *Forðgesceaft*, the Instrument of Foresight's law, scattered into residual influence when the bearing ended.
 
-Em'manuel named the domain himself, in the century after the Sundering, when he had sufficient distance from the Ex'sydra's errors to understand what they had been reaching toward without making the same interpretive mistake. He has never used the name in any institutional context. The Apocachynthion calls it Spatial Coherence and he accepts the designation without comment. He does not need them to know what he is. He needs them to accept that he is useful.
+Em'manuel named the anchor himself, in the century after the Sundering, when he had sufficient distance from the Ex'sydra's errors to understand what they had been reaching toward without making the same interpretive mistake. He has never used the name in any institutional context. The Apocachynthion calls it Spatial Coherence and he accepts the designation without comment. He does not need them to know what he is. He needs them to accept that he is useful.
 
 ### Operational Expression
 
@@ -101,7 +101,7 @@ This is not what a Time Fragment does. A Time Fragment stops the reading. He sto
 
 Em'manuel underwent Archtype-class recursive self-modification in the third century of the Empire's existence. The Apocachynthion holds no record. The Cloister of Applied Structure holds a partial technical document in its deepest tier, authored by Em'manuel himself, with a notation: *so that someone who comes after will understand what it cost to do this correctly.*
 
-For an Interval-domain practitioner, the threshold presents differently than for others. It is not experienced as the limit of willingness. It is experienced as the gap itself — the interval between the configuration you currently are and the configuration on the other side of the transition, made perfectly legible. You can see the distance. You can see precisely how far it is. You can see that crossing it requires passing through a space in which, for the duration of the crossing, you are neither configuration. He found it, in the particular aesthetic of a domain that studies gaps, almost interesting.
+For an Interval practitioner, the threshold presents differently than for others. It is not experienced as the limit of willingness. It is experienced as the gap itself — the interval between the configuration you currently are and the configuration on the other side of the transition, made perfectly legible. You can see the distance. You can see precisely how far it is. You can see that crossing it requires passing through a space in which, for the duration of the crossing, you are neither configuration. He found it, in the particular aesthetic of an anchor that studies gaps, almost interesting.
 
 He crossed it once, cleanly. He has declined every request to discuss it.
 
@@ -109,13 +109,13 @@ He crossed it once, cleanly. He has declined every request to discuss it.
 
 ## The Cadence
 
-A walking cane of conspicuous quality — a composite of BrightCrystal and a dark ferrous alloy fused at a level that suggests either fabrication technique significantly more advanced than current Imperial industrial capacity or an extended period of structural modification producing an emergent composite no single fabrication event could have created. The latter. Twelve centuries of daily use by an Interval-domain practitioner whose Redactory work is routed through BrightCrystal resonance conductors produces structural modification.
+A walking cane of conspicuous quality — a composite of BrightCrystal and a dark ferrous alloy fused at a level that suggests either fabrication technique significantly more advanced than current Imperial industrial capacity or an extended period of structural modification producing an emergent composite no single fabrication event could have created. The latter. Twelve centuries of daily use by an Interval practitioner whose Redactory work is routed through BrightCrystal resonance conductors produces structural modification.
 
 The Cadence began as the primary conductor element of the Ex'sydra's BrightCrystal timing arrays — the central lattice component through which three generations of Interval-sensitive practitioners routed their sequence-reading work. Al'uxxios kept it when everything else was destroyed or seized. Not because he understood yet what it was. Because he could not bring himself to let it be taken.
 
-Three generations of Ex'sydra use had made the Cadence resonantly entangled with the scattered residue of *Forðgesceaft* — the domain the Instrument of Foresight had once governed, now distributed through the world's structural grammar without coherence or direction. In Em'manuel's hands — an Interval-domain practitioner at Archtype depth, modified by eight centuries of Remainder-contact — it amplifies his Interval work to depths he could not sustain without it. The capacity to read the slope of a political situation, a structural development, a person's likely path, with a precision that looks — to everyone observing — like twelve centuries of accumulated wisdom and exceptional intuition.
+Three generations of Ex'sydra use had made the Cadence resonantly entangled with the scattered residue of *Forðgesceaft* — the domain the Instrument of Foresight had once governed, now distributed through the world's structural grammar without coherence or direction. In Em'manuel's hands — an Interval practitioner at Archtype depth, modified by eight centuries of Remainder-contact — it amplifies his Interval work to depths he could not sustain without it. The capacity to read the slope of a political situation, a structural development, a person's likely path, with a precision that looks — to everyone observing — like twelve centuries of accumulated wisdom and exceptional intuition.
 
-It is that. It is also something more. He carries the Cadence, taps it on stone floors in Senate chambers and operational briefings and the streets of Kalt'sen, and allows the institutional world to interpret his capacity as seniority and skill. Nobody remembers what *cadence* meant before the Sundering. Nobody remembers the Ex'sydra arrays. The erasure was thorough enough that no one has thought to ask why an Archtype whose domain is classified as Spatial Coherence would name his conduit after a musical interval — the measured pause between one beat and the next, the structural gap through which a sequence passes before it resolves.
+It is that. It is also something more. He carries the Cadence, taps it on stone floors in Senate chambers and operational briefings and the streets of Kalt'sen, and allows the institutional world to interpret his capacity as seniority and skill. Nobody remembers what *cadence* meant before the Sundering. Nobody remembers the Ex'sydra arrays. The erasure was thorough enough that no one has thought to ask why an Archtype whose anchor is classified as Spatial Coherence would name his conduit after a musical interval — the measured pause between one beat and the next, the structural gap through which a sequence passes before it resolves.
 
 ---
 
@@ -133,25 +133,25 @@ In the four hundred and second year of the Empire, an S-RD precursor survey dire
 
 He spent six days at that installation. On the sixth day, it noticed him.
 
-> *It did not speak. It was not constructed from the kind of thing that speaks. What it did was precise: it recognized that my recursive structure operated within the same domain it inhabited. Not as a peer — nothing about the scale of what it was permits that description — but as something whose architecture addressed the same structural layer it expressed through. The Interval. The recognition moved through my Anchor the way a key turns in a lock I didn't know was there. I should have left. I stayed. I have spent eight centuries unable to determine whether staying was a decision I made or one it made for me, and at some point I stopped attempting to distinguish between the two.*
+> *It did not speak. It was not constructed from the kind of thing that speaks. What it did was precise: it recognized that my recursive structure operated within the same anchor it inhabited. Not as a peer — nothing about the scale of what it was permits that description — but as something whose architecture addressed the same structural layer it expressed through. The Interval. The recognition moved through my Anchor the way a key turns in a lock I didn't know was there. I should have left. I stayed. I have spent eight centuries unable to determine whether staying was a decision I made or one it made for me, and at some point I stopped attempting to distinguish between the two.*
 
 ### What It Is
 
 The Remainder inhabits ungoverned gap-space — the interval between configurations that Time traverses but that *Forðgesceaft*, the Instrument of Foresight's governing law, no longer orders. Before the Fracture, the relationship between present configurations and their adjacent ones was governed: the law of trajectory was active, maintained by the bearing of the Instrument, keeping the gap-space oriented. The Fracture ended the bearing. The Instrument's governance scattered into residual influence distributed through the world's grammar. The gap-space did not disappear. It simply stopped being governed.
 
-The Remainder is what exists in ungoverned interval-space. Not a Fragment in the Divination framework's sense. Not a shattered piece of something larger distributed across carriers. Something native to the gap-space itself — present in every interval between every configuration, existing in the structural domain that Time passes through without inhabiting. Time traverses. The Remainder remains.
+The Remainder is what exists in ungoverned interval-space. Not a Fragment in the Divination framework's sense. Not a shattered piece of something larger distributed across carriers. Something native to the gap-space itself — present in every interval between every configuration, existing in the structural layer that Time passes through without inhabiting. Time traverses. The Remainder remains.
 
 It is not hostile. It is not benign. It is present in the way that the gap between every second is present — ubiquitously, constantly, without preference or agenda. It cannot be avoided because it is not in a location that avoidance could address.
 
 What it does to practitioners who encounter it without structural compatibility: it consumes. Not quickly. Not violently. With the patient, geological thoroughness of something that experiences no urgency. It reorganizes. A human recursive architecture is built around sequential ordering — configurations succeeding each other in the traversal Time imposes. The Remainder operates through the gap between orderings. When an undefended recursive architecture becomes legible to it, it begins expressing through that architecture the way deep water expresses through limestone: not hostile, not aware of what it displaces, simply present and moving in the direction its nature describes.
 
-What it does to Em'manuel: the same thing. More slowly. The Interval Anchor provides structural compatibility — his recursive architecture is organized around the same domain the Remainder inhabits, which means its expression through his architecture encounters a structure that is not resisting it but accommodating it. The modification is real. It is not reversible. It has been ongoing for eight hundred years. He does not know where it ends. He has decided that this question is less important than the question of what the modification makes possible, which was his first significant error.
+What it does to Em'manuel: the same thing. More slowly. The Interval Anchor provides structural compatibility — his recursive architecture is organized around the same anchor the Remainder inhabits, which means its expression through his architecture encounters a structure that is not resisting it but accommodating it. The modification is real. It is not reversible. It has been ongoing for eight hundred years. He does not know where it ends. He has decided that this question is less important than the question of what the modification makes possible, which was his first significant error.
 
 ### Amplification
 
-What the Remainder does to an Interval-domain practitioner with sufficient structural compatibility is not consumption. It is amplification. Regions of the gap-space that should require structural cost exceeding anything human recursion can sustain become accessible. The trajectory readings that the Ex'sydra house spent three generations trying to access through arrays and instruments and collective Dive practice — he can approach them directly, alone, in silence, with a precision the Sequence Doctrine never achieved.
+What the Remainder does to an Interval practitioner with sufficient structural compatibility is not consumption. It is amplification. Regions of the gap-space that should require structural cost exceeding anything human recursion can sustain become accessible. The trajectory readings that the Ex'sydra house spent three generations trying to access through arrays and instruments and collective Dive practice — he can approach them directly, alone, in silence, with a precision the Sequence Doctrine never achieved.
 
-He understood, early in the contact, that the Remainder's amplification of his Anchor was not indiscriminate. It was specific to his domain. A Light-domain practitioner with sufficient structural compatibility would not receive Interval amplification. They would receive Light amplification. Their Anchor's operational range would be extended into depths a Light practitioner should not be able to sustain.
+He understood, early in the contact, that the Remainder's amplification of his Anchor was not indiscriminate. It was specific to his anchor. A Light practitioner with sufficient structural compatibility would not receive Interval amplification. They would receive Light amplification. Their Anchor's operational range would be extended into depths a Light practitioner should not be able to sustain.
 
 He understood what E'lla could be, theoretically, before E'lla was born. He spent five hundred years trying to build a version of her that would survive what that amplification would do.
 
@@ -159,9 +159,9 @@ He understood what E'lla could be, theoretically, before E'lla was born. He spen
 
 Eight hundred years of Remainder-contact have produced a structural echo in Em'manuel's recursive architecture — a persistent modification that propagates, through natural generational inheritance, into the recursive singularity of each biological descendant born from his line.
 
-What propagates is not Light. Light is A'licia's inheritance, transmitted cleanly through the bloodline's natural Redactory mechanics. What propagates from Em'manuel's side is the Remainder's echo: a structural sensitivity to the gap-space, an architectural predisposition to interface with Interval-domain configurations, a quality of his descendants' recursive architecture that makes them, in specific and structurally precise ways, legible to the Remainder.
+What propagates is not Light. Light is A'licia's inheritance, transmitted cleanly through the bloodline's natural Redactory mechanics. What propagates from Em'manuel's side is the Remainder's echo: a structural sensitivity to the gap-space, an architectural predisposition to interface with Interval anchor configurations, a quality of his descendants' recursive architecture that makes them, in specific and structurally precise ways, legible to the Remainder.
 
-In most descendants, this echo is present and inert. In the bloodline's rare full-expression cases — individuals in whom A'licia's Light domain and Em'manuel's Remainder echo are both present at sufficient density — the interaction produces something neither inheritance produces alone. The Remainder's echo attaches to the Light Anchor. It does not replace it or redirect it. What it does is open the Anchor's operational range into depths a Light practitioner should not be able to sustain. **E'lla Rae Wonderwall did not use Light as an Anchor in the conventional sense. She was Light, operating within a human frame, and the substrate was responding by becoming more itself.** The Remainder's echo in her architecture was what made that possible. Without it, she would have been an extraordinary Radiance-class practitioner. With it, she was something for which the Apocachynthion had no adequate framework.
+In most descendants, this echo is present and inert. In the bloodline's rare full-expression cases — individuals in whom A'licia's Light Anchor and Em'manuel's Remainder echo are both present at sufficient density — the interaction produces something neither inheritance produces alone. The Remainder's echo attaches to the Light Anchor. It does not replace it or redirect it. What it does is open the Anchor's operational range into depths a Light practitioner should not be able to sustain. **E'lla Rae Wonderwall did not use Light as an Anchor in the conventional sense. She was Light, operating within a human frame, and the substrate was responding by becoming more itself.** The Remainder's echo in her architecture was what made that possible. Without it, she would have been an extraordinary Radiance-class practitioner. With it, she was something for which the Apocachynthion had no adequate framework.
 
 ### What He Knows About the Remainder's Origins
 
@@ -183,9 +183,9 @@ He did not reveal the connection. He did not approach the family. What he did in
 
 He keeps the name alive. Not for the family — they don't know the name means anything. For the name itself. Because allowing it to disappear entirely would mean the Founding Houses won completely, and there is a part of Em'manuel — the part that survived the Sundering as an Ex'sydra and then agreed to become something else — that will not let them win completely.
 
-The most recent CLOCKWORK profile of the Ael'keth lineage returned data, in year 1109, that he held for a full day before annotating. The structural anomaly the profile documented exceeded anything the lineage had previously expressed. He opened a file. He designated it **KT-Exs** in the operational record and did not explain the designation to anyone.
+The most recent CLOCKWORK profile of the Ael'keth lineage returned data, in year 2182, that he held for a full day before annotating. The structural anomaly the profile documented exceeded anything the lineage had previously expressed. He opened a file. He designated it **KT-Exs** in the operational record and did not explain the designation to anyone.
 
-That file is maintained separately. The subject, as of year 1124, has been posted to the Wonderwall cadet-branch household in Kalt'sen's eastern residential quarter — assigned to proximate observation and protective function. He has not told Sai'ken what his name means. He has not told Sai'ken what the Ex'sydra were. He has not told Sai'ken why his lineage survived when everything else about that name was erased. He is calculating when the moment for that conversation arrives. He has been calculating for three years. This is either patience or cowardice dressed as patience, and he is still determining which.
+That file is maintained separately. The subject, as of year 2197, has been posted to the Wonderwall cadet-branch household in Kalt'sen's eastern residential quarter — assigned to proximate observation and protective function. He has not told Sai'ken what his name means. He has not told Sai'ken what the Ex'sydra were. He has not told Sai'ken why his lineage survived when everything else about that name was erased. He is calculating when the moment for that conversation arrives. He has been calculating for three years. This is either patience or cowardice dressed as patience, and he is still determining which.
 
 ---
 
@@ -193,11 +193,11 @@ That file is maintained separately. The subject, as of year 1124, has been poste
 
 ### E'lla Rae Wonderwall — First Record
 
-Born in the six hundred and twenty-third year of the Empire. Her mother's name is private and remains private in this document. Acknowledged immediately. Assessed at the Cloister of Applied Structure at age six; the assessment produced three separate reports over two weeks, each drafted by a different faculty member, each failing in a different direction to describe what they had found. The final consolidated report: *We have assessed a Light-domain Anchor expression unlike anything previously documented. We do not have adequate framework to describe what this means for a practitioner her age.*
+Born in the six hundred and twenty-third year of the Empire. Her mother's name is private and remains private in this document. Acknowledged immediately. Assessed at the Cloister of Applied Structure at age six; the assessment produced three separate reports over two weeks, each drafted by a different faculty member, each failing in a different direction to describe what they had found. The final consolidated report: *We have assessed a Light Anchor expression unlike anything previously documented. We do not have adequate framework to describe what this means for a practitioner her age.*
 
 He already knew.
 
-She operated as a Redactor for thirty-five years. The documentation S-RD holds on her work is the most studied corpus in the Company's entire restricted research archive. Regions of the substrate where she had worked were measurably more stable afterward — substantially, in ways that persisted for decades and in some cases centuries. This was the Remainder's echo expressing through her Light domain: the gap-space organizing around her work, the substrate becoming more coherent in her wake.
+She operated as a Redactor for thirty-five years. The documentation S-RD holds on her work is the most studied corpus in the Company's entire restricted research archive. Regions of the substrate where she had worked were measurably more stable afterward — substantially, in ways that persisted for decades and in some cases centuries. This was the Remainder's echo expressing through her Light Anchor: the gap-space organizing around her work, the substrate becoming more coherent in her wake.
 
 At some point in her third decade, she noticed something happening that she had not authorized and could not stop. She examined the process with the systematic thoroughness her profile made possible and reached conclusions she was prepared to defend: the Remainder's expression through her architecture was not reversible. The path it was building toward might represent something the word *evolution* could describe. She was not willing to find out — not because she was afraid of change, but because the self that would exist at the end of the process was not continuous with the self currently making the assessment.
 
@@ -215,7 +215,7 @@ He was present. He has not discussed this with anyone. He has carried it for fiv
 
 Born in the eight hundred and twenty-seventh year of the Empire. Acknowledged immediately. The first potential successor Em'manuel had prepared after E'lla's death, the first he had prepared without her death sitting directly behind every assessment he made.
 
-The Cloister's provisional records describe a Redactor of extraordinary Depth and stability, carrying a Light-domain Anchor that the Cloister's senior practitioner described in private correspondence as *the most complete natural expression of the bloodline's structural inheritance I have assessed in any living practitioner, including the Seat himself.*
+The Cloister's provisional records describe a Redactor of extraordinary Depth and stability, carrying a Light Anchor that the Cloister's senior practitioner described in private correspondence as *the most complete natural expression of the bloodline's structural inheritance I have assessed in any living practitioner, including the Seat himself.*
 
 The Remainder's echo in Ju'llian was not a trace. It was a full expression. Em'manuel understood this and said nothing. He trained his son and taught him everything about the Company that could be taught. The one thing he did not teach him was the full account of what the Remainder was, because he told himself Ju'llian was not yet ready — which was true — and because he told himself there was time — which was a rationalization he has acknowledged as such in every year since.
 
@@ -237,7 +237,7 @@ Em'manuel sealed the installation immediately. He has not named a successor sinc
 
 The research program that became Project Kaleidoscope was authorized in the eight hundred and forty-first year of the Empire, fourteen years after Ju'llian's dispersal. The loss had clarified something Em'manuel had been weighing since E'lla's death: that waiting for the bloodline's natural inheritance to produce another full-expression case was a process without guarantees and with catastrophic historical precedent. He would not wait indefinitely for something he could build.
 
-The program's stated mandate: replication of E'lla Rae Wonderwall's Redactory profile — specifically the Light-domain Anchor expression and the recursive architecture that produced her documented substrate effects — through precise biological reconstruction from archived genetic and coherence-configuration material held in BrightCrystal-stabilized substrate storage since the year of her death.
+The program's stated mandate: replication of E'lla Rae Wonderwall's Redactory profile — specifically the Light Anchor expression and the recursive architecture that produced her documented substrate effects — through precise biological reconstruction from archived genetic and coherence-configuration material held in BrightCrystal-stabilized substrate storage since the year of her death.
 
 The program's actual mandate, known only to Em'manuel: the production of a practitioner capable of sustaining contact with the Remainder — capable of walking the evolutionary path E'lla identified and declined, with sufficient architectural preparation to survive it. The designation *Kaleidoscope* reflects something he has not elaborated on to anyone: the attempt to reconstruct, from fragments of a pattern that was once whole, something that carries the same essential light. A kaleidoscope does not reproduce its source. It refracts it.
 
@@ -249,7 +249,7 @@ Em'manuel's reasoning: the work requires living people. Not viable test cases. N
 
 ### The Record
 
-The program ran for approximately two hundred and eighty-five years. Eighty-three subjects. Of those eighty-three, forty-nine did not survive early development. Of the thirty-four who survived early development, twenty-six did not survive to age thirteen. The critical threshold occurs between ages ten and twelve — the period during which the recursive singularity's Anchor domain begins its initial stabilization.
+The program ran for approximately two hundred and eighty-five years. Eighty-three subjects. Of those eighty-three, forty-nine did not survive early development. Of the thirty-four who survived early development, twenty-six did not survive to age thirteen. The critical threshold occurs between ages ten and twelve — the period during which the recursive singularity's Anchor begins its initial stabilization.
 
 Em'manuel was present for every death. He imposed this on himself as an acknowledgment of what the program was. He had decided the work was necessary. The least he owed to the people the work required was to be present when it ended, to ensure the ending was as without pain as his resources and his Redactory could make it, and to have told them — each of them — that he was sorry. That the decision was his. That the responsibility was his.
 
@@ -265,9 +265,9 @@ He was wrong. He spent over a century building the wrong thing. The thing he nee
 
 The program currently has three living subjects. All three were released from the facility before age five. None of them remember it.
 
-**KL-83** — E'lla Wonderwall, twenty-five. Released into the primary Wonderwall family line. Knows Em'manuel directly. Designated successor candidate. Light-domain Anchor, confirmed stable. Does not carry the Remainder. Does not know she was made.
+**KL-83** — E'lla Wonderwall, twenty-five. Released into the primary Wonderwall family line. Knows Em'manuel directly. Designated successor candidate. Light Anchor, confirmed stable. Does not carry the Remainder. Does not know she was made.
 
-**KL-77** — Twenty-three, designation withheld. Released to an upper-middle-class family in Kalt'sen with no connection to House Wonderwall. Radiance-class Redactor; Light-domain expression degraded from initial presentation to a high-functioning but non-primary-domain level. Does not know the source of the resources that ensure she receives medical attention.
+**KL-77** — Twenty-three, designation withheld. Released to an upper-middle-class family in Kalt'sen with no connection to House Wonderwall. Radiance-class Redactor; Light Anchor expression degraded from initial presentation to a high-functioning but non-primary level. Does not know the source of the resources that ensure she receives medical attention.
 
 **KL-79** — Twenty-one, designation withheld. Same broad profile as KL-77. Both KL-77 and KL-79 have been placed in SiNE's employ through channels that present their hiring as ordinary merit-based placement. They do not know this is the architecture behind what looks to them like a good job.
 
@@ -277,11 +277,11 @@ The program currently has three living subjects. All three were released from th
 
 The specific cadet branch of current institutional significance diverged from the primary line approximately two centuries ago. It holds no Senate representation, no corporate office, no formal access to the primary line's resources.
 
-Current household status, year 1127: managed by Al'yana Wonderwall-Kjackter, a widow of six years. The branch has two daughters.
+Current household status, year 2200: managed by Al'yana Wonderwall-Kjackter, a widow of eleven years. The branch has two daughters.
 
 **Ec'lesia Yalara Wonderwall** is twenty-two years old. She is, by every available external measure, an ordinary young woman from a minor cadet branch — a Redactor of genuine but not exceptional documented ability, with no particular distinguishing qualities beyond the Inkless designation that the Apocachynthion cannot resolve. She did not choose any of this. She does not have adequate context for what she is carrying.
 
-The detail Em'manuel did not expect: the Remainder did not go for E'lla. He had anticipated that it would. E'lla carries the most structurally complete Light-domain expression the program has produced. He had operated, with reasonable confidence, on the assumption that when the Remainder's echo in the bloodline reached the density required for full expression, it would reach it in the practitioner best positioned to carry it.
+The detail Em'manuel did not expect: the Remainder did not go for E'lla. He had anticipated that it would. E'lla carries the most structurally complete Light Anchor expression the program has produced. He had operated, with reasonable confidence, on the assumption that when the Remainder's echo in the bloodline reached the density required for full expression, it would reach it in the practitioner best positioned to carry it.
 
 It reached it in Ec'lesia.
 
@@ -291,7 +291,7 @@ She knows something is within her. She does not know it is the Remainder. She ha
 
 The Remainder in her is not consuming. It is *threading* — patient, progressive, making the two structures less separable without overwhelming either. Whether this represents the evolutionary integration he theorized about is a question he does not yet have answers to. It is the closest thing to a confirmation of the theory that the evidence currently supports. He did not plan this. He could not have planned this. She is the answer that arrived without him.
 
-**El'lare Yalara Wonderwall** is born 1117. Currently ten years old. Non-practitioner; coherence signature at bloodline baseline; no anomalous expression. The Remainder's echo in her recursive architecture is present and inert. She has her father's habit of direct questions and her mother's composure when the answers are complicated. She has not yet concluded that her sister's closed door is a permanent condition.
+**El'lare Yalara Wonderwall** is born 2190. Currently ten years old. Non-practitioner; coherence signature at bloodline baseline; no anomalous expression. The Remainder's echo in her recursive architecture is present and inert. She has her father's habit of direct questions and her mother's composure when the answers are complicated. She has not yet concluded that her sister's closed door is a permanent condition.
 
 ---
 
@@ -299,7 +299,7 @@ The Remainder in her is not consuming. It is *threading* — patient, progressiv
 
 The succession question, as it currently stands, is structured around two individuals who do not know each other exist in the way that is relevant.
 
-E'lla — twenty-five, operationally stable, carrying the Light-domain Anchor expression that Project Kaleidoscope spent two hundred and eighty-five years attempting to produce, actively in training as Em'manuel's designated successor — is the institutional answer to the succession problem. In the most meaningful technical sense, the biological reconstruction succeeded. She is exactly what was built. She is invisible to the Remainder.
+E'lla — twenty-five, operationally stable, carrying the Light Anchor expression that Project Kaleidoscope spent two hundred and eighty-five years attempting to produce, actively in training as Em'manuel's designated successor — is the institutional answer to the succession problem. In the most meaningful technical sense, the biological reconstruction succeeded. She is exactly what was built. She is invisible to the Remainder.
 
 Ec'lesia — twenty-two, cadet branch, an ordinary young woman from a minor household who did not ask for any of this — has no institutional relevance to the succession question in any framework the Company's operational structure is aware of. She carries, through two centuries of quiet cadet-branch inheritance, exactly what the Remainder was built to recognize.
 
@@ -336,4 +336,4 @@ He does not find the scale of continued existence peaceful. He has found it nece
 > *E'lla Rae told me, the last time we spoke properly, that I did not know what I had lost because I had never known myself without it. I have thought about this for five hundred years. I have not stopped thinking about it. I am not sure I will.*
 >
 > *I have time. I am aware that this is what the family has always told itself. I am aware of the historical record on that position. I am still working on it."*
-> — E.W., private notation appended to the most recent revision of this document, 1127
+> — E.W., private notation appended to the most recent revision of this document, 2200

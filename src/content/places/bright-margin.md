@@ -7,7 +7,7 @@ priority: 1
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/BrightMargin.png"
+image: "/uploads/place-bright-margin.png"
 ---
 
 > *"The world's edge burns. What it yields sustains everything that keeps the rest from burning too."*

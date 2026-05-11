@@ -1,8 +1,8 @@
 ---
 title: "Hi'sui Kirasagi"
 type: "Character"
-age: "24 (as of 1127)"
-birth_year: "1103"
+age: "24 (as of 2200)"
+birth_year: "2176"
 birthplace: "Tsukimiya, Hikari (Darkmargin coast)"
 affiliation: "Wonderwall estate (domestic staff, Kalt'sen)"
 house: ""
@@ -22,12 +22,12 @@ tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregi
 status: "public"
 created: "2026-03-30"
 updated: "2026-04-26"
-image: "/uploads/Hisui.png"
-hero_image: "/uploads/Hisui-HERO.png"
+image: "/uploads/char-hisui-kirasagi.png"
+hero_image: "/uploads/char-hisui-kirasagi-hero.png"
 ---
 
 > *"The flower should have killed her. It does not kill her. What it does instead is something the Index Theorem has no vocabulary for and the Church would call an abomination. I am not certain either of them is wrong. I am certain that she has been in my household for two years and no one in it sleeps less safely for her presence."*
-> — E.W., private notation, year 1126
+> — E.W., private notation, year 2199
 
 ---
 
@@ -47,7 +47,7 @@ The **Kirasagi** are a retainer family of five hundred years' standing, bound to
 
 Hi'sui is the second child of the Kirasagi lineage's primary branch. Her older brother Ren'ya was seeded with the Flower first; she was seeded in infancy, per the family's standard protocol. She survived.
 
-In the Kirasagi tradition, the child who can leave does. When Ren'ya suffered a sustained Overbloom condition that made extended travel medically imprudent, the succession architecture resolved itself: he remained in Tsukimiya to serve the Shinzui, and Hi'sui became the *far bloom* — the heir who carries the Flower outward to serve where the house cannot reach. She entered the Empire through Kalt'sen's northern immigration processing center in the autumn of 1124, registered with a placement agency the following month, and was recommended to the Wonderwall cadet-branch household administrator in early 1125.
+In the Kirasagi tradition, the child who can leave does. When Ren'ya suffered a sustained Overbloom condition that made extended travel medically imprudent, the succession architecture resolved itself: he remained in Tsukimiya to serve the Shinzui, and Hi'sui became the *far bloom* — the heir who carries the Flower outward to serve where the house cannot reach. She entered the Empire through Kalt'sen's northern immigration processing center in the autumn of 2197, registered with a placement agency the following month, and was recommended to the Wonderwall cadet-branch household administrator in early 2198.
 
 She did not choose this path in any meaningful sense of the word. She understood it completely. The Kirasagi do not ask what the far bloom prefers. They note which child can go.
 
@@ -113,19 +113,19 @@ She carries a lacquered black hairpin of Hikari manufacture — a narrow spike o
 
 ## Biography
 
-### Tsukimiya — 1103 to 1124
+### Tsukimiya — 2176 to 2197
 
 Hi'sui's childhood in the Kirasagi compound adjacent to the Shinzui estate was structured around two parallel tracks that the family does not separate: domestic-service training — cooking, cleaning, protocol, household management, the arts of maintaining a high-house residence at the standard five centuries of tradition demands — and the Bloom discipline. By age twelve she could project petals with sufficient control to cut paper at arm's length. By fifteen, she had stabilised the Bloom Field to an operational radius. The Renewal Weave came later; she did not demonstrate reliable weaving until nineteen.
 
 She was told about the Flower before she could fully understand what she was being told. The Kirasagi do not conceal the inheritance from their children — the Murmuring begins at birth, and a child who hears voices no one else hears will ask eventually. She was told young, in the manner the Kirasagi give their children information: as fact, not as warning. Warnings are for people who have a choice.
 
-In year 1118, a Calling event of unusual intensity struck Hikari's compressed corridor. Hi'sui was fifteen. What the Kirasagi household records describe as a severe Bloom instability event was a structural amplification crisis: the Flower's resonance-conductive properties interacting with the Calling's gradient fluctuation and producing output the host's body could not contain. The petals erupted from her forearms involuntarily, lacerating the surface tissue in their emergence. She did not lose consciousness. She was in controlled confinement within the Kirasagi compound for eleven days afterward. The scars remain.
+In year 2191, a Calling event of unusual intensity struck Hikari's compressed corridor. Hi'sui was fifteen. What the Kirasagi household records describe as a severe Bloom instability event was a structural amplification crisis: the Flower's resonance-conductive properties interacting with the Calling's gradient fluctuation and producing output the host's body could not contain. The petals erupted from her forearms involuntarily, lacerating the surface tissue in their emergence. She did not lose consciousness. She was in controlled confinement within the Kirasagi compound for eleven days afterward. The scars remain.
 
 The Kirasagi's explanation — Flower displeasure at confinement — is culturally coherent and mechanically wrong. The mechanism is structural, not emotional.
 
 Ren'ya's sustained Overbloom condition made the designation clear. He could not travel. She could. The placement chain was arranged through legitimate commercial intermediaries, each step documented and genuine.
 
-### Kalt'sen — 1125 to 1127
+### Kalt'sen — 2198 to 2200
 
 She has been at the Wonderwall estate since her first month in the Empire. Her assigned duties are general household maintenance, meal preparation, wardrobe management, and personal attendance to Ec'lesia Yal'ara Wonderwall. She performs all of them to a standard the household administrator has noted in the estate accounts as exceptional. She took on the ceremonial linen maintenance voluntarily, having noticed the existing storage arrangement was inadequate to preserve the embroidered Wonderwall crests. No one asked her to. She noticed, and she did it.
 
@@ -169,7 +169,7 @@ StaSis would detect the anomaly under close-range scan, which they have no reaso
 
 ---
 
-## Present Condition — 1127
+## Present Condition — 2200
 
 Hi'sui has been in Kalt'sen for two years. The Flower has not manifested externally. The Murmuring is, by her own account and by inference from her demeanour, quieter here than it has ever been. She does not know why this is. She knows it is true.
 

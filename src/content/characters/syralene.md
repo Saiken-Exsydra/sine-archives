@@ -11,8 +11,8 @@ tags: ["Precursor", "Syr'lene", "Lunar Crown", "Fracture", "Containment", "Skyph
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/Syr'lene.png"
-hero_image: "/uploads/Syr'lene-HERO.png"
+image: "/uploads/char-syralene.png"
+hero_image: "/uploads/char-syralene-hero.png"
 ---
 
 > *"Ask what performs the miracles at the northern front — the ones that cannot be explained by doctrine or deployment. The Church says: the Sovereign's grace. The answer is not wrong. It is not complete."*
@@ -44,7 +44,7 @@ Something found one of those imperfections. Something small enough to fit throug
 
 When the near-terminal attacker struck the threshold and shattered the Lunar Crown, the active governance of the Seal ended. The Skyphons were concluded. The Instruments were unmoored. And the fragment already lodged in the Crown's structure — previously held in place by the Seal's active integrity — was now in a structure that could no longer maintain the containment on its own.
 
-Syr'lene made a choice. She transferred her Anchor — the structural domain of her identity as a Precursor — into the lunar lattice permanently, embedding herself in the Crown's architecture to contain the fragment in place.
+Syr'lene made a choice. She transferred her Anchor — the structural core of her identity as a Precursor — into the lunar lattice permanently, embedding herself in the Crown's architecture to contain the fragment in place.
 
 This was not a temporary measure. There was no temporary measure available. The fragment was real, it was inside the threshold, and the mechanism that had been holding it had just been destroyed. The stabilization infrastructure the other Precursors had built was not designed for this. It had no containment function. Syr'lene's own Anchor, transferred into the lattice, could serve as one.
 
@@ -56,7 +56,7 @@ She knew what she was choosing. She chose it.
 
 She is still in the Lunar Crown. The fragment is still there. The choice she made at the Fracture has been an ongoing act ever since — not a sacrifice completed in a moment but a work that does not stop.
 
-The fragment presses outward. It always has. It is the nature of what it is to press against the boundary rather than accept containment. Syr'lene holds it in place through the continuous application of what she transferred into the lattice: the structural domain she was, now expressed as an architecture within the Crown rather than as a being moving through the world.
+The fragment presses outward. It always has. It is the nature of what it is to press against the boundary rather than accept containment. Syr'lene holds it in place through the continuous application of what she transferred into the lattice: the structural anchor she was, now expressed as an architecture within the Crown rather than as a being moving through the world.
 
 She can perceive what happens on Terra. She perceives it through the harmonic signatures that the world's activity generates — Redactory produces a distinctive signature pattern, and she has become, over the centuries of holding and perceiving, extraordinarily sensitive to what those patterns mean. She can read the resonance landscape of the Twilight Band the way a musician reads a score: quickly, accurately, with an understanding of not just what is happening but what it likely means.
 

@@ -6,7 +6,7 @@ tags: ["Places", "Lon'drina", "Central Region", "Empire", "Redactor", "Academy o
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/Londrina.png"
+image: "/uploads/place-londrina.png"
 ---
 
 > *"The surrounding countryside is gentle and green, a landscape of wide fields and slow rivers well-suited to the long walks that scholars reputedly favor for thinking."*

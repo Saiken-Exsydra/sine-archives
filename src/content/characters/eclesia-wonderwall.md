@@ -1,8 +1,8 @@
 ---
 title: "Ec'lesia Yalara Wonderwall"
 type: "Character"
-age: "22 (at time of filing, 1127)"
-birth_year: "1105"
+age: "22 (at time of filing, 2200)"
+birth_year: "2178"
 birthplace: "Kalt'sen, Central Region, Empire of Synus"
 affiliation: "Apocachynthion (provisional)"
 house: "Wonderwall (cadet branch, maternal line — two centuries diverged from primary line)"
@@ -22,9 +22,9 @@ tags: ["Synus", "Wonderwall", "Redactor", "Radiance", "Inkless", "The Pale", "Th
 status: "public"
 created: "2026-02-12"
 updated: "2026-04-26"
-image: "/uploads/Ec'lesia-Wonderwall2.png"
+image: "/uploads/char-eclesia-wonderwall.png"
 image_position: "center top"
-hero_image: "/uploads/Ec'lesia-Wonderwall-HERO.png"
+hero_image: "/uploads/char-eclesia-wonderwall-hero.png"
 ---
 
 > *"Light does not experience time. Light is not the antithesis of darkness. Light is, was, and always will be. The ligament of the cosmos. A wonder of infinity. A wall of contemplation. An eternal affirmation of the undying denial."*
@@ -34,7 +34,7 @@ hero_image: "/uploads/Ec'lesia-Wonderwall-HERO.png"
 
 ## Family & Lineage
 
-**Father:** Gal'ahad Kjackter — civil engineer, Imperial Rail Authority. Non-Redactor. Died 1116 during the Krel Tunnel expansion project (Thornwall, Northern Spine), structural collapse. He treated his daughter's unusual experiences with gentle scepticism and complete paternal devotion. His death in 1116 is the largest emotional fact of her life.
+**Father:** Gal'ahad Kjackter — civil engineer, Imperial Rail Authority. Non-Redactor. Died 2189 during the Krel Tunnel expansion project (Thornwall, Northern Spine), structural collapse. He treated his daughter's unusual experiences with gentle scepticism and complete paternal devotion. His death in 2189 is the largest emotional fact of her life.
 
 **Mother:** Al'yana Wonderwall-Kjackter — cadet branch, House Wonderwall. Practising Redactor; Anchor classification: Reflection. Moderate Depth tolerance. Employed briefly as a Nib programme instructor at the Academy of Lon'drina prior to her husband's death. Currently manages the household and a minor import trade from the Kalt'sen estate. She knows her elder daughter is unusual. She does not have framework adequate to the scale of what unusual means in this case.
 
@@ -48,7 +48,7 @@ The cadet branch Al'yana belongs to diverged from the primary line approximately
 
 The divergence was not an accident of family dynamics. It was the ordinary consequence of what bloodlines do across generations: branch, carry their inheritances forward through paths no one plans, and produce — eventually — the thing they were always going to produce when the accumulation reached the right density. Two centuries of a cadet branch living ordinary lives in Kalt'sen, producing practitioners and non-practitioners in the ordinary distribution, each generation inheriting the echo one layer deeper than the last. Ec'lesia is the convergence point.
 
-The Wonderwall Seat has been monitoring this branch for eight years. He has not made contact.
+The Wonderwall Seat has been monitoring this branch since 2192. He has not made contact.
 
 ---
 
@@ -56,17 +56,17 @@ The Wonderwall Seat has been monitoring this branch for eight years. He has not 
 
 ### Quill (Provisional)
 
-Ec'lesia holds provisional Quill certification, issued by the Council of Volumes following the conclusion of the supervised session programme at the Academy of Lon'drina in 1123. The provisional certification was not issued as a reward for progress; it was issued because the alternative — leaving a Redactor of her assessed Depth formally unranked and therefore outside the institutional framework entirely — was assessed as a greater liability than certification under conditional terms.
+Ec'lesia holds provisional Quill certification, issued by the Council of Volumes following the conclusion of the supervised session programme at the Academy of Lon'drina in 2196. The provisional certification was not issued as a reward for progress; it was issued because the alternative — leaving a Redactor of her assessed Depth formally unranked and therefore outside the institutional framework entirely — was assessed as a greater liability than certification under conditional terms.
 
 Her provisional certification does not authorise deployment. Standard Quill operational permissions are suspended for the duration of the specialist review. She is, in practical institutional terms, a ranked member of the association who is authorised to be left alone.
 
 ### Inkless
 
-The Inkless designation was applied at the time of provisional certification, on the unanimous recommendation of all Stylus-rank assessors who observed her sessions. Every Redactor has an Anchor — the stabilising conceptual pathway through which the Dive becomes sustainable and Redactory can be held at Depth without collapse. Inkless designation is applied when the coherence patterns a Redactor produces under Dive conditions cannot be mapped to any consistent conceptual domain, regardless of the instruments or assessors used.
+The Inkless designation was applied at the time of provisional certification, on the unanimous recommendation of all Stylus-rank assessors who observed her sessions. Every Redactor has an Anchor — the stabilising conceptual pathway through which the Dive becomes sustainable and Redactory can be held at Depth without collapse. Inkless designation is applied when the coherence patterns a Redactor produces under Dive conditions cannot be mapped to any consistent conceptual anchor, regardless of the instruments or assessors used.
 
-In Ec'lesia's case, all three Stylus-rank assessors independently arrived at the same conclusion: her coherence signatures do not follow the patterning the Index Theorem's standard domain models predict. They are internally consistent in ways the assessors noted but could not characterise.
+In Ec'lesia's case, all three Stylus-rank assessors independently arrived at the same conclusion: her coherence signatures do not follow the patterning the Index Theorem's standard anchor models predict. They are internally consistent in ways the assessors noted but could not characterise.
 
-The Inkless designation reflects a methodology gap, not an architectural absence. Her Anchor domain is identical to the primary Wonderwall bloodline's expression — Light, in the full sense — and the instruments were built by practitioners who have seen one active Light-domain Anchor in the last twelve centuries. The instruments were not designed for the reading. The reading is not absent. It is illegible to the instrument.
+The Inkless designation reflects a methodology gap, not an architectural absence. Her Anchor is identical to the primary Wonderwall bloodline's expression — Light, in the full sense — and the instruments were built by practitioners who have seen one active Light Anchor in the last twelve centuries. The instruments were not designed for the reading. The reading is not absent. It is illegible to the instrument.
 
 ---
 
@@ -74,7 +74,7 @@ The Inkless designation reflects a methodology gap, not an architectural absence
 
 **Primary Classification: Radiance**
 
-Radiance-class is among the rarest entries in the association's registry. The full historical span of Apocachynthion records contains fewer than a dozen confirmed cases. Under the Index Theorem, a Radiance-class classification is understood as a Redactor whose Anchor domain produces coherence effects within the behaviour of light as a physical phenomenon — how light moves, organises, and holds itself within a given space.
+Radiance-class is among the rarest entries in the association's registry. The full historical span of Apocachynthion records contains fewer than a dozen confirmed cases. Under the Index Theorem, a Radiance-class classification is understood as a Redactor whose Anchor produces coherence effects within the behaviour of light as a physical phenomenon — how light moves, organises, and holds itself within a given space.
 
 ### Light Absorption
 
@@ -116,11 +116,11 @@ The anomalous presence was first documented in Vel'kara's notes from Ec'lesia's 
 
 Vel'kara's formal conclusion: *I do not have an adequate account of what I observed. The subject's reports are consistent with the session data. I am recommending specialist review on the basis of the secondary coherence structure, not on the subject's exertion profile alone.*
 
-This is the most accurate external documentation of the Pale's presence that any institution has produced. It is accurate and it is inadequate, and both of those things are true. The specialist review was assigned to Stylus Dun'vael, who died of ordinary causes in 1124 before it could be conducted. The vacancy has not been filled.
+This is the most accurate external documentation of the Pale's presence that any institution has produced. It is accurate and it is inadequate, and both of those things are true. The specialist review was assigned to Stylus Dun'vael, who died of ordinary causes in 2197 before it could be conducted. The vacancy has not been filled.
 
-### Church Inquiry, 1127
+### Church Inquiry, 2200
 
-The Church transmitted an inquiry through the inter-institutional liaison desk in the first quarter of 1127, following the Apocachynthion's advisory notice to the Kalt'sen Diaconate. Embedded in standard theological framing, the actual question: whether the anomalous coherence presence documented at the estate bore any resemblance to what their literature describes as a *Sovereign-adjacent resonance event*. The Wonderwall Seat responded through standard channels — the matter is under review, SiNE does not currently hold an institutional position. The Church's theological literature contains, within texts governing how they describe the Sovereign's presence in the world, descriptions that are the Church's account of what the Pale looks like from the outside in practitioners with partial contact and no structural preparation. The descriptions are not wrong. They are inadequate.
+The Church transmitted an inquiry through the inter-institutional liaison desk in the first quarter of 2200, following the Apocachynthion's advisory notice to the Kalt'sen Diaconate. Embedded in standard theological framing, the actual question: whether the anomalous coherence presence documented at the estate bore any resemblance to what their literature describes as a *Sovereign-adjacent resonance event*. The Wonderwall Seat responded through standard channels — the matter is under review, SiNE does not currently hold an institutional position. The Church's theological literature contains, within texts governing how they describe the Sovereign's presence in the world, descriptions that are the Church's account of what the Pale looks like from the outside in practitioners with partial contact and no structural preparation. The descriptions are not wrong. They are inadequate.
 
 ### The Moon Effect
 
@@ -140,13 +140,13 @@ The black dress, the high collar, the darkened windows — these are adaptive, n
 
 ## Biography
 
-### Childhood — 1105 to 1116
+### Childhood — 2178 to 2189
 
-Ec'lesia was born in the eastern residential quarter of Kalt'sen during the High Radiance season of 1105. The presence she would later call the intrusion began when she was approximately three years old — light in her bedroom becoming full of words she could not understand, shapes that moved with apparent purpose. Al'yana arranged a preliminary consultation at the Academy of Lon'drina when Ec'lesia was five. Formal intake was recommended at age nine. That intake never took place.
+Ec'lesia was born in the eastern residential quarter of Kalt'sen during the High Radiance season of 2178. The presence she would later call the intrusion began when she was approximately three years old — light in her bedroom becoming full of words she could not understand, shapes that moved with apparent purpose. Al'yana arranged a preliminary consultation at the Academy of Lon'drina when Ec'lesia was five. Formal intake was recommended at age nine. That intake never took place.
 
-Gal'ahad Kjackter died in 1116. He was supervising a structural inspection in the Krel Tunnel during the final stage of the Northern Spine expansion when a miscalculated stress concentration in a reinforced lining failed under accumulated pressure. The collapse took four workers. Ec'lesia was eleven years old. She did not speak for approximately four months. When she did, the intrusion had intensified.
+Gal'ahad Kjackter died in 2189. He was supervising a structural inspection in the Krel Tunnel during the final stage of the Northern Spine expansion when a miscalculated stress concentration in a reinforced lining failed under accumulated pressure. The collapse took four workers. Ec'lesia was eleven years old. She did not speak for approximately four months. When she did, the intrusion had intensified.
 
-### Self-Education — 1116 to 1122
+### Self-Education — 2189 to 2195
 
 In the years following her father's death, Ec'lesia educated herself from the estate's library — a collection weighted toward natural philosophy, coherence theory, and the theoretical literature of Redactory accumulated across several generations of Wonderwall cadet scholars. She read all of it, systematically. Vel'kara would later describe her foundation as *the most thoroughly self-taught theoretical grounding I have assessed in a subject who has never undergone formal training.*
 
@@ -154,7 +154,7 @@ Her first uncontrolled Redactory event occurred at age fourteen. A dinner guest 
 
 After this event, Ec'lesia began wearing exclusively black, systematically reducing light levels in her wing of the estate, and keeping the theoretical notebooks that would later come to the Apocachynthion's attention.
 
-### The Academy Attempt — 1122 to 1123
+### The Academy Attempt — 2195 to 2196
 
 At seventeen, following a formal letter from the Apocachynthion — her unregistered coherence signature had been detected by routine monitoring instruments in the Kalt'sen administrative district — Ec'lesia enrolled in a six-month preliminary programme at the Academy of Lon'drina.
 
@@ -162,9 +162,9 @@ In her first session, she reached a Depth that Vel'kara assessed as *consistent 
 
 Three sessions were attempted over two months. Each followed the same pattern: uncontrolled Depth, contact with the anomalous secondary coherence structure Vel'kara documented, a recovery period measured in hours. After the third session, the Academy's senior Styluses concluded that standard methodology was not appropriate for this subject. Provisional Quill certification was recommended and issued within the month. The Inkless designation was applied simultaneously.
 
-Ec'lesia left Lon'drina before the specialist review could be scheduled. She returned to the Kalt'sen estate in 1123 and has remained there since.
+Ec'lesia left Lon'drina before the specialist review could be scheduled. She returned to the Kalt'sen estate in 2196 and has remained there since.
 
-### Present Condition — 1127
+### Present Condition — 2200
 
 Ec'lesia occupies the upper east wing of the Wonderwall estate, arranged for minimal ambient light. She reads. She writes. She does not leave the estate without preparation and rarely leaves it at all during High Radiance season.
 
@@ -196,9 +196,9 @@ Her notebooks suggest she is approaching the edge of the account she has been bu
 
 **El'ytra Wonderwall** — Her sister. Ten years old. Ec'lesia does not discuss her condition with her and arranges her movements through the estate to avoid inflicting its management on a child who is still learning what ordinary looks like.
 
-**The Wonderwall Seat** — Unknown to her as an active factor in her life. She thinks of him as an abstract institutional relative. He has been monitoring her recursive architecture since she was five years old, opened a private file on her in 1123, and has held the full account of what she is and what she carries since the uncontrolled event of 1119. He has not given any of it to her. He is aware that every additional year of that arrangement is a compounding deficit in the account he owes her. He has not yet found the moment to pay it. He has, in the same five hundred years, built a parallel answer to the same question — Project Kaleidoscope, and its eighty-third subject — and has been holding both lines of work in the same consideration without yet bringing them together into a single decision.
+**The Wonderwall Seat** — Unknown to her as an active factor in her life. She thinks of him as an abstract institutional relative. He has been monitoring her recursive architecture since she was five years old, opened a private file on her in 2196, and has held the full account of what she is and what she carries since the uncontrolled event of 2192. He has not given any of it to her. He is aware that every additional year of that arrangement is a compounding deficit in the account he owes her. He has not yet found the moment to pay it. He has, in the same five hundred years, built a parallel answer to the same question — Project Kaleidoscope, and its eighty-third subject — and has been holding both lines of work in the same consideration without yet bringing them together into a single decision.
 
-**Sai'ken Ex'sydra** — The estate's security specialist, assigned since 1124. She does not know what he is. What she does not know: he was placed by the Wonderwall Seat directly, with a mandate designed to be simple enough to survive whatever the briefing did not anticipate, and a more specific function the briefing did not state — that his anomalous structural profile would interact with the altered topology in her vicinity in ways that could be observed externally, and that his presence would constitute a functional buffer between her condition and the institutions monitoring it from the outside. He has noticed the altered topology. He is holding it and waiting. What she has observed across three years is that the estate is quieter when he is in it — that her rare journeys outside produce less incident than they previously did, and that he is, without announcement or apparent strategy, the only person currently present in her daily life who does not treat her condition as either a problem to be managed at arm's length or a subject to avoid entirely. She finds his steadiness simultaneously the most comfortable and the most troubling quality he possesses. She does not know why it does not feel like surveillance.
+**Sai'ken Ex'sydra** — The estate's security specialist, assigned since 2197. She does not know what he is. What she does not know: he was placed by the Wonderwall Seat directly, with a mandate designed to be simple enough to survive whatever the briefing did not anticipate, and a more specific function the briefing did not state — that his anomalous structural profile would interact with the altered topology in her vicinity in ways that could be observed externally, and that his presence would constitute a functional buffer between her condition and the institutions monitoring it from the outside. He has noticed the altered topology. He is holding it and waiting. What she has observed across three years is that the estate is quieter when he is in it — that her rare journeys outside produce less incident than they previously did, and that he is, without announcement or apparent strategy, the only person currently present in her daily life who does not treat her condition as either a problem to be managed at arm's length or a subject to avoid entirely. She finds his steadiness simultaneously the most comfortable and the most troubling quality he possesses. She does not know why it does not feel like surveillance.
 
 **The Apocachynthion** — Two unanswered letters. One open file. One specialist vacancy unfilled for three years. The institution has been more patient with her case than standard protocol requires. The institution has also, in a sealed annex of her file, authorized lethal termination in the event of what they have defined as autonomous manifestation by the co-presence. Their threshold is not obviously wrong. Their framework for recognizing what such an event actually looks like in a Pale-contact case is inadequate. The gap between those two facts is the most significant risk in her present situation.
 

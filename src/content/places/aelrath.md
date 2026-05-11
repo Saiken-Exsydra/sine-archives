@@ -6,7 +6,7 @@ tags: ["Places", "Ael'rath", "Northern Region", "Empire", "Cold Fleet", "Night L
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/Aelrath.png"
+image: "/uploads/place-aelrath.png"
 ---
 
 > *"The Threshold zone begins less than forty kilometers from the city's outer walls. Ael'rath has been attacked in three significant Dark End incursions over its history. It has never fallen."*

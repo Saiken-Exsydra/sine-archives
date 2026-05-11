@@ -6,20 +6,22 @@ const all = await getCollection("sine");
 const publicEntries = all.filter((e) => e.data.status === "public");
 
 // Build panel data from content entries, mapping to the prototype's structure
-const panelOrder = ["sine", "hourglass", "stasis", "clockwork"];
+const panelOrder = ["sine", "hourglass", "clepsydra", "stasis", "clockwork"];
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 
 const ACCENT_COLORS: Record<string, string> = {
   sine:      "#b13a34",
   hourglass: "#b08d3c",
+  clepsydra: "#7392a8",
   stasis:    "#4a7fa5",
   clockwork: "#6a4a9a",
 };
 
 const TAGLINES: Record<string, string> = {
-  sine:      "Six branches. One organization. Older than its peers.",
+  sine:      "Seven divisions. One organization. Older than its peers.",
   hourglass: "When the Empire cannot deploy, HourGlass fills the gap.",
+  clepsydra: "The lattice is not commanded. It is petitioned.",
   stasis:    "The branch that doesn't officially exist.",
   clockwork: "Zero institutional footprint. One hundred percent deniability.",
 };
@@ -69,7 +71,7 @@ const panels: SineEntry[] = panelOrder
     <div class="sine-identity">
       <div class="sine-rule"></div>
       <div class="sine-identity__center">
-        <img src="/uploads/SiNELG.png" alt="SiNE" class="sine-identity__logo" />
+        <img src="/uploads/sine-logo.png" alt="SiNE" class="sine-identity__logo" />
         <div class="sine-identity__meta">
           <span class="sine-identity__tag">SYNUS INTEGRATED NETWORK OF EQUILIBRIUM</span>
           <span class="sine-identity__year">EST. YEAR 340</span>
@@ -152,7 +154,7 @@ const panels: SineEntry[] = panelOrder
           </div>
           <div class="sine-modal__divider" id="sine-modal-divider"></div>
           <div class="sine-modal__stamp">
-            <img src="/uploads/SiNELG.png" alt="SiNE" class="sine-modal__stamp-logo" />
+            <img src="/uploads/sine-logo.png" alt="SiNE" class="sine-modal__stamp-logo" />
             <span class="sine-modal__stamp-text">SiNE INTERNAL CLASSIFICATION</span>
           </div>
         </aside>

@@ -6,7 +6,7 @@ tags: ["Places", "Mire'thian Falls", "Northern Region", "Empire", "Landmark", "V
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/Mirethian.png"
+image: "/uploads/place-mirethian-falls.png"
 ---
 
 > *"In Low Radiance season, the mist from the falls freezes into elaborate ice formations along the surrounding cliffs — layered ice curtains and crystalline accumulations that make the landscape look as though it was built rather than formed."*

@@ -28,7 +28,7 @@ The Instrument of Verum was the law of what is real — and the structural preco
 
 Every other Obscurial depended on the Instrument of Verum to have something to govern. The law governing entropy requires that the structures entropy governs are real. The law governing life requires that life is a genuine category rather than a description that could be revised away. Sciel underwrote all of them — not through authority, but through structural precedence.
 
-Her corresponding apparatus is **Clepsydra**, which carries the inscribed principle *Sôðcwide — The Nothingness* on the interior face of its lower blade housing. The inscription does not describe absence. It describes the condition that makes presence possible.
+Her corresponding apparatus is **the Clepsydra Apparatus**, which carries the inscribed principle *Sôðcwide — The Nothingness* on the interior face of its lower blade housing. The inscription does not describe absence. It describes the condition that makes presence possible.
 
 ---
 

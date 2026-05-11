@@ -6,7 +6,7 @@ tags: ["Places", "Sarn Pell", "Southern Region", "Empire", "Long War", "Ardeatus
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/SarnPell.png"
+image: "/uploads/place-sarn-pell.png"
 ---
 
 > *"The citizen population has coexisted with the military presence for so many generations that the distinction between civil and martial has largely dissolved in local culture."*
