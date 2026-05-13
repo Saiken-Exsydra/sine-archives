@@ -5,10 +5,48 @@ import { localizedPath, type SiteLocale } from "../../i18n/config";
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const copy = locale === "pt-br"
   ? {
+      pageTitle: "Personagens - SiNE Archives",
+      logo: "ARQUIVOS",
+      index: "Indice",
+      section: "Personagens",
+      search: "Buscar",
+      sectionDesc: "Individuos de relevancia dentro da Faixa do Crepusculo e alem.",
+      searchPlaceholder: "Buscar dossies",
+      clearSearch: "Limpar busca",
+      noResults: "Nenhum dossie encontrado",
+      filingYear: "SiNE Archives - Ano de Arquivo 1127",
+      accessLevel: "Nivel de Acesso: Publico",
+      portraitClassified: "RETRATO CLASSIFICADO",
+      fileSealed: "ARQUIVOS SINE - REGISTRO SELADO",
+      filed: "Arquivado",
       openDossier: "Abrir Dossier",
+      previousCharacter: "Personagem anterior",
+      nextCharacter: "Proximo personagem",
+      arrowKeys: "Teclas de seta",
+      dossierOnFile: "Dossie em Arquivo",
+      swipeToNavigate: "Deslize para navegar",
     }
   : {
+      pageTitle: "Characters - SiNE Archives",
+      logo: "ARCHIVES",
+      index: "Index",
+      section: "Characters",
+      search: "Search",
+      sectionDesc: "Individuals of note within the Twilight Band and beyond.",
+      searchPlaceholder: "Search dossiers",
+      clearSearch: "Clear search",
+      noResults: "No dossiers found",
+      filingYear: "SiNE Archives - Filing Year 1127",
+      accessLevel: "Access Level: Public",
+      portraitClassified: "PORTRAIT CLASSIFIED",
+      fileSealed: "SiNE ARCHIVES - FILE SEALED",
+      filed: "Filed",
       openDossier: "Open Dossier",
+      previousCharacter: "Previous character",
+      nextCharacter: "Next character",
+      arrowKeys: "Arrow keys",
+      dossierOnFile: "Dossier On File",
+      swipeToNavigate: "Swipe to navigate",
     };
 const all = await getLocalizedCollection("characters", locale);
 const characters = all
@@ -23,7 +61,7 @@ const characters = all
 const charData = characters.map((c) => ({
   slug: c.slug,
   title: c.data.title,
-  type: c.data.type ?? "Character",
+  type: c.data.type ?? (locale === "pt-br" ? "Personagem" : "Character"),
   designation: (c.data as any).designation ?? "",
   summary: c.data.summary,
   image: c.data.hero_image ?? "",
@@ -31,6 +69,9 @@ const charData = characters.map((c) => ({
   updated: c.data.updated,
   href: localizedPath(locale, `/characters/${c.slug}/?char=${encodeURIComponent(c.slug)}`),
 }));
+const sectionEyebrow = locale === "pt-br"
+  ? `Secao - ${charData.length} Dossies`
+  : `Section - ${charData.length} Dossiers`;
 ---
 
 <!doctype html>
@@ -38,7 +79,7 @@ const charData = characters.map((c) => ({
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Characters — SiNE Archives</title>
+    <title>{copy.pageTitle}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -76,7 +117,7 @@ const charData = characters.map((c) => ({
       button { font-family: inherit; }
       img { display: block; }
 
-      /* ── NAV ── */
+      /* â”€â”€ NAV â”€â”€ */
       .nav {
         position: fixed;
         top: 0; left: 0; right: 0;
@@ -133,7 +174,7 @@ const charData = characters.map((c) => ({
       }
       .nav__search-btn:hover { color: rgba(232, 228, 220, 0.9); }
 
-      /* ── LAYOUT ── */
+      /* â”€â”€ LAYOUT â”€â”€ */
       .chars-root {
         display: flex;
         height: 100vh;
@@ -143,7 +184,7 @@ const charData = characters.map((c) => ({
         position: relative;
       }
 
-      /* ── LEFT SIDEBAR ── */
+      /* â”€â”€ LEFT SIDEBAR â”€â”€ */
       .sidebar {
         width: 310px;
         flex-shrink: 0;
@@ -341,7 +382,7 @@ const charData = characters.map((c) => ({
       }
       .sidebar__stamp-accent { color: rgba(177, 58, 52, 0.3); }
 
-      /* ── STAGE ── */
+      /* â”€â”€ STAGE â”€â”€ */
       .stage {
         flex: 1;
         position: relative;
@@ -584,7 +625,7 @@ const charData = characters.map((c) => ({
         text-transform: uppercase; white-space: nowrap;
       }
 
-      /* ── Mobile filmstrip ── */
+      /* â”€â”€ Mobile filmstrip â”€â”€ */
       .filmstrip {
         display: none;
       }
@@ -689,15 +730,15 @@ const charData = characters.map((c) => ({
     <nav class="nav">
       <a class="nav__logo" href={localizedPath(locale, "/")}>
         <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="nav__logo-img" />
-        <span class="nav__logo-text">ARCHIVES</span>
+        <span class="nav__logo-text">{copy.logo}</span>
       </a>
       <div class="nav__right">
         <span class="nav__crumb">
-          <a class="nav__crumb-link" href={localizedPath(locale, "/")}>Index</a>
-          <span class="nav__crumb-sep">›</span>
-          <span class="nav__crumb-cur">Characters</span>
+          <a class="nav__crumb-link" href={localizedPath(locale, "/")}>{copy.index}</a>
+          <span class="nav__crumb-sep">></span>
+          <span class="nav__crumb-cur">{copy.section}</span>
         </span>
-        <a class="nav__search-btn" href={localizedPath(locale, "/search/")} aria-label="Search">
+        <a class="nav__search-btn" href={localizedPath(locale, "/search/")} aria-label={copy.search}>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
             <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -712,9 +753,9 @@ const charData = characters.map((c) => ({
       <!-- LEFT SIDEBAR -->
       <aside class="sidebar" id="sidebar">
         <div class="sidebar__head">
-          <div class="sidebar__eyebrow" id="sidebar-eyebrow">Section · {charData.length} Dossiers</div>
-          <div class="sidebar__title">Characters</div>
-          <div class="sidebar__desc">Individuals of note within the Twilight Band and beyond.</div>
+          <div class="sidebar__eyebrow" id="sidebar-eyebrow">{sectionEyebrow}</div>
+          <div class="sidebar__title">{copy.section}</div>
+          <div class="sidebar__desc">{copy.sectionDesc}</div>
           <div class="sidebar__search">
             <span class="sidebar__search-icon">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -726,15 +767,15 @@ const charData = characters.map((c) => ({
               class="sidebar__search-input"
               id="sidebar-search"
               type="search"
-              placeholder="Search dossiers"
+              placeholder={copy.searchPlaceholder}
               autocomplete="off"
               spellcheck="false"
             />
-            <button class="sidebar__search-clear" id="sidebar-search-clear" aria-label="Clear search">×</button>
+            <button class="sidebar__search-clear" id="sidebar-search-clear" aria-label={copy.clearSearch}>x</button>
           </div>
         </div>
         <div class="sidebar__divider"></div>
-        <div class="sidebar__no-results" id="sidebar-no-results">No dossiers found</div>
+        <div class="sidebar__no-results" id="sidebar-no-results">{copy.noResults}</div>
         <div class="sidebar__list" id="sidebar-list">
           {charData.map((c, i) => (
             <button
@@ -749,7 +790,7 @@ const charData = characters.map((c) => ({
               <div class="sidebar__item-name">{c.title}</div>
               {c.designation && (
                 <div class="sidebar__item-des">
-                  {c.designation.split("·")[0].trim()}
+                  {c.designation}
                 </div>
               )}
             </button>
@@ -757,8 +798,8 @@ const charData = characters.map((c) => ({
         </div>
         <div class="sidebar__footer">
           <div class="sidebar__stamp">
-            SiNE Archives · Filing Year 1127<br />
-            <span class="sidebar__stamp-accent">Access Level: Public</span>
+            {copy.filingYear}<br />
+            <span class="sidebar__stamp-accent">{copy.accessLevel}</span>
           </div>
         </div>
       </aside>
@@ -808,8 +849,8 @@ const charData = characters.map((c) => ({
               <path d="M590 520 L590 492 L562 492" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5" />
               <circle cx="450" cy="342" r="52" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1" />
               <path d="M338 510 Q338 456 450 456 Q562 456 562 510" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1" />
-              <text x="450" y="580" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.35)">PORTRAIT CLASSIFIED</text>
-              <text x="450" y="596" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.1)">SiNE ARCHIVES · FILE SEALED</text>
+              <text x="450" y="580" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.35)">{copy.portraitClassified}</text>
+              <text x="450" y="596" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.1)">{copy.fileSealed}</text>
             </svg>
           )}
         </div>
@@ -845,7 +886,7 @@ const charData = characters.map((c) => ({
           <div class="stage__rule is-in" id="stage-rule"></div>
 
           <div class="stage__type-label is-in" id="stage-type">
-            {charData[0].type} · Filed {charData[0].updated}
+            {charData[0].type} - {copy.filed} {charData[0].updated}
           </div>
 
           <h1 class="stage__name is-in" id="stage-name">{charData[0].title}</h1>
@@ -858,9 +899,9 @@ const charData = characters.map((c) => ({
 
           <div class="stage__actions is-in" id="stage-actions">
             <a class="stage__cta" id="stage-cta" href={charData[0].href}>{copy.openDossier}</a>
-            <button class="stage__nav-btn" id="btn-prev" aria-label="Previous character">&#8593;</button>
-            <button class="stage__nav-btn" id="btn-next" aria-label="Next character">&#8595;</button>
-            <span class="stage__key-hint">↑ ↓ Arrow keys</span>
+            <button class="stage__nav-btn" id="btn-prev" aria-label={copy.previousCharacter}>&#8593;</button>
+            <button class="stage__nav-btn" id="btn-next" aria-label={copy.nextCharacter}>&#8595;</button>
+            <span class="stage__key-hint">{copy.arrowKeys}</span>
           </div>
         </div>
 
@@ -878,11 +919,11 @@ const charData = characters.map((c) => ({
 
         <!-- Stamp -->
         <div class="stage__stamp is-in" id="stage-stamp">
-          <div class="stage__stamp-inner">Dossier On File</div>
+          <div class="stage__stamp-inner">{copy.dossierOnFile}</div>
         </div>
 
         <!-- Mobile swipe hint -->
-        <div class="swipe-hint">Swipe to navigate</div>
+        <div class="swipe-hint">{copy.swipeToNavigate}</div>
       </div>
 
       <!-- Mobile filmstrip -->
@@ -903,7 +944,7 @@ const charData = characters.map((c) => ({
       </div>
     </div>
 
-    <script define:vars={{ charData }}>
+    <script define:vars={{ charData, copy }}>
       const chars = charData;
       const storageKey = `sine:characters:active:${document.documentElement.lang === "pt-BR" ? "pt-br" : "en"}`;
       const params = new URLSearchParams(window.location.search);
@@ -987,8 +1028,8 @@ const charData = characters.map((c) => ({
           <path d="M590 520 L590 492 L562 492" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
           <circle cx="450" cy="342" r="52" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
           <path d="M338 510 Q338 456 450 456 Q562 456 562 510" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
-          <text x="450" y="580" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.35)">PORTRAIT CLASSIFIED</text>
-          <text x="450" y="596" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.1)">SiNE ARCHIVES · FILE SEALED</text>
+          <text x="450" y="580" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.35)">{copy.portraitClassified}</text>
+          <text x="450" y="596" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.1)">{copy.fileSealed}</text>
         `;
         return svg;
       }
@@ -1026,7 +1067,7 @@ const charData = characters.map((c) => ({
           .join("");
 
         // text
-        stageType.textContent = `${c.type} · Filed ${c.updated}`;
+        stageType.textContent = `${c.type} - ${copy.filed} ${c.updated}`;
         stageName.textContent = c.title;
         stageDesignation.textContent = c.designation;
         stageDesignation.style.display = c.designation ? "" : "none";
@@ -1202,3 +1243,4 @@ const charData = characters.map((c) => ({
     </script>
   </body>
 </html>
+

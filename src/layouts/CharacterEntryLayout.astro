@@ -10,26 +10,42 @@ const copy = locale === "pt-br"
   ? {
       index: "Indice",
       section: "Personagens",
+      pageTitle: "Personagens",
       onFile: "Em Arquivo",
-      dossier: "Dossie · Arquivos SiNE · Ano de Arquivo 1127",
+      dossier: "Dossie - Arquivos SiNE - Ano de Arquivo 1127",
       access: "Nivel de Acesso",
       public: "Publico",
       fileData: "Dados do Registro",
       fullRecord: "Registro Completo",
       related: "Entradas relacionadas",
+      portraitClassified: "RETRATO CLASSIFICADO",
+      fileSealed: "ARQUIVOS SINE - REGISTRO SELADO",
+      restrictedDistribution: "Distribuicao Restrita",
+      heightBuild: "Altura / Porte",
+      birthplace: "Local de Nascimento",
+      residence: "Residencia",
+      occupation: "Ocupacao",
       sharedTags: (n: number) => `${n} tag${n === 1 ? "" : "s"} em comum`,
       languageLabel: "Seletor de idioma",
     }
   : {
       index: "Index",
       section: "Characters",
+      pageTitle: "Characters",
       onFile: "On File",
-      dossier: "Dossier · SiNE Archives Filing Year 1127",
+      dossier: "Dossier - SiNE Archives Filing Year 1127",
       access: "Access Level",
       public: "Public",
       fileData: "File Data",
       fullRecord: "Full Record",
       related: "Related entries",
+      portraitClassified: "PORTRAIT CLASSIFIED",
+      fileSealed: "SiNE ARCHIVES - FILE SEALED",
+      restrictedDistribution: "Restricted Distribution",
+      heightBuild: "Height / Build",
+      birthplace: "Birthplace",
+      residence: "Residence",
+      occupation: "Occupation",
       sharedTags: (n: number) => `${n} shared tag${n === 1 ? "" : "s"}`,
       languageLabel: "Language switcher",
     };
@@ -40,11 +56,11 @@ const title          = str(entry.data.title);
 const designation    = str(entry.data?.designation);
 const summary        = str(entry.data?.summary);
 const updated        = str(entry.data?.updated);
-const type           = str(entry.data?.type ?? "Character");
+const type           = str(entry.data?.type ?? (locale === "pt-br" ? "Personagem" : "Character"));
 const heroImage      = str(entry.data?.image ?? "");
 const tags: string[] = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
 
-// ── Field grid ────────────────────────────────────────────────────────────
+// â”€â”€ Field grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 type Field = { label: string; value: string };
 const fields: Field[] = [];
 
@@ -61,13 +77,13 @@ push(locale === "pt-br" ? "Idade" : "Age", "age");
 
 const height = str(entry.data?.height);
 const build  = str(entry.data?.build);
-if (height) fields.push({ label: "Height / Build", value: [height, build].filter(Boolean).join(" · ") });
+if (height) fields.push({ label: copy.heightBuild, value: [height, build].filter(Boolean).join(" - ") });
 
-push("Birthplace",  "birthplace");
-push("Residence",   "residence");
-push("Occupation",  "occupation");
+push(copy.birthplace, "birthplace");
+push(copy.residence, "residence");
+push(copy.occupation, "occupation");
 
-// ── Related ───────────────────────────────────────────────────────────────
+// â”€â”€ Related â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function normTags(t: unknown): string[] {
   if (!Array.isArray(t)) return [];
   return t.map((x) => String(x).trim().toLowerCase()).filter(Boolean);
@@ -95,7 +111,7 @@ const related = allPublic
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title} — Characters — SiNE Archives</title>
+  <title>{title} - {copy.pageTitle} - SiNE Archives</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
@@ -131,7 +147,7 @@ const related = allPublic
     button { font-family: inherit; }
     img { display: block; }
 
-    /* ── NAV ── */
+    /* â”€â”€ NAV â”€â”€ */
     .nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -167,7 +183,7 @@ const related = allPublic
     .nav__crumb-sep { color: var(--crimson); font-size: 13px; }
     .nav__crumb-cur { color: rgba(232,228,220,0.35); }
 
-    /* ── ROOT LAYOUT ── */
+    /* â”€â”€ ROOT LAYOUT â”€â”€ */
     .dos-root {
       display: flex;
       height: 100vh;
@@ -176,7 +192,7 @@ const related = allPublic
       background: var(--bg);
     }
 
-    /* ── LEFT PORTRAIT PANEL ── */
+    /* â”€â”€ LEFT PORTRAIT PANEL â”€â”€ */
     .dos-left {
       width: 38%;
       flex-shrink: 0;
@@ -289,7 +305,7 @@ const related = allPublic
     }
 
 
-    /* ── RIGHT DOSSIER PANEL ── */
+    /* â”€â”€ RIGHT DOSSIER PANEL â”€â”€ */
     .dos-right {
       flex: 1;
       overflow: hidden auto;
@@ -475,7 +491,7 @@ const related = allPublic
       color: rgba(232,228,220,0.12); text-transform: uppercase;
     }
 
-    /* ── RELATED ── */
+    /* â”€â”€ RELATED â”€â”€ */
     .dos-related {
       padding: 0 52px 80px;
       border-top: 1px solid rgba(255,255,255,0.05);
@@ -554,14 +570,14 @@ const related = allPublic
 <nav class="nav">
   <a class="nav__logo" href={localizedPath(locale, "/")}>
     <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="nav__logo-img" />
-    <span class="nav__logo-text">ARCHIVES</span>
+    <span class="nav__logo-text">{locale === "pt-br" ? "ARQUIVOS" : "ARCHIVES"}</span>
   </a>
 
   <div class="nav__crumb">
-    <a class="nav__crumb-link" href={localizedPath(locale, "/")}>Index</a>
-    <span class="nav__crumb-sep">›</span>
-    <a class="nav__crumb-link" href={localizedPath(locale, `/characters/?char=${encodeURIComponent(entry.slug)}`)}>Characters</a>
-    <span class="nav__crumb-sep">›</span>
+    <a class="nav__crumb-link" href={localizedPath(locale, "/")}>{copy.index}</a>
+    <span class="nav__crumb-sep">></span>
+    <a class="nav__crumb-link" href={localizedPath(locale, `/characters/?char=${encodeURIComponent(entry.slug)}`)}>{copy.section}</a>
+    <span class="nav__crumb-sep">â€º</span>
     <span class="nav__crumb-cur">{title}</span>
   </div>
 
@@ -569,7 +585,7 @@ const related = allPublic
 
 <div class="dos-root">
 
-  <!-- ── LEFT PORTRAIT PANEL ── -->
+  <!-- â”€â”€ LEFT PORTRAIT PANEL â”€â”€ -->
   <div class="dos-left" id="dos-left">
 
     <!-- Portrait -->
@@ -612,8 +628,8 @@ const related = allPublic
           <path d="M600 560 L600 530 L570 530" fill="none" stroke="rgba(177,58,52,0.4)" stroke-width="1.5" />
           <circle cx="450" cy="390" r="56" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
           <path d="M328 560 Q328 500 450 500 Q572 500 572 560" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-          <text x="450" y="640" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.3)">PORTRAIT CLASSIFIED</text>
-          <text x="450" y="656" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.08)">SiNE ARCHIVES · FILE SEALED</text>
+          <text x="450" y="640" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.3)">{copy.portraitClassified}</text>
+          <text x="450" y="656" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.08)">{copy.fileSealed}</text>
         </svg>
       )}
     </div>
@@ -629,11 +645,11 @@ const related = allPublic
     <div class="dos-bracket dos-bracket--tr"></div>
 
     <!-- File index top-left -->
-    <div class="dos-file-idx">{type} · {updated}</div>
+    <div class="dos-file-idx">{type} - {updated}</div>
 
     <!-- "On File" stamp -->
     <div class="dos-stamp" aria-hidden="true">
-      <div class="dos-stamp__inner">On File</div>
+      <div class="dos-stamp__inner">{copy.onFile}</div>
     </div>
 
     <!-- Identity block (bottom) -->
@@ -653,21 +669,21 @@ const related = allPublic
 
   </div>
 
-  <!-- ── RIGHT DOSSIER PANEL ── -->
+  <!-- â”€â”€ RIGHT DOSSIER PANEL â”€â”€ -->
   <div class="dos-right">
 
     <!-- Sticky header strip -->
     <div class="dos-header">
       <div class="dos-header__inner">
         <div>
-          <div class="dos-header__file-label">Dossier · SiNE Archives Filing Year 1127</div>
+          <div class="dos-header__file-label">{copy.dossier}</div>
           {designation && (
             <div class="dos-header__designation">{designation}</div>
           )}
         </div>
         <div class="dos-access">
-          <div class="dos-access__label">Access Level</div>
-          <div class="dos-access__level">Public</div>
+          <div class="dos-access__label">{copy.access}</div>
+          <div class="dos-access__level">{copy.public}</div>
         </div>
       </div>
     </div>
@@ -683,7 +699,7 @@ const related = allPublic
     {fields.length > 0 && (
       <div class="dos-fields">
         <div class="dos-section-label">
-          <span class="dos-section-label__text">File Data</span>
+          <span class="dos-section-label__text">{copy.fileData}</span>
           <div class="dos-section-label__line"></div>
         </div>
         <div class="dos-field-grid">
@@ -700,7 +716,7 @@ const related = allPublic
     <!-- Prose body -->
     <div class="dos-body">
       <div class="dos-body-label">
-        <span class="dos-section-label__text">Full Record</span>
+        <span class="dos-section-label__text">{copy.fullRecord}</span>
         <div class="dos-section-label__line"></div>
       </div>
 
@@ -712,7 +728,7 @@ const related = allPublic
       <div class="dos-footer-stamp">
         <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="dos-footer-stamp__logo" />
         <span class="dos-footer-stamp__text">
-          SiNE Archives · Dossier · {updated} · Restricted Distribution
+          SiNE Archives - {copy.dossier} - {updated} - {copy.restrictedDistribution}
         </span>
       </div>
     </div>
@@ -722,7 +738,7 @@ const related = allPublic
       <div class="dos-related">
         <div class="dos-related__header">
           <div class="dos-related__line"></div>
-          <span class="dos-related__label">Related entries</span>
+          <span class="dos-related__label">{copy.related}</span>
           <div class="dos-related__line"></div>
         </div>
         <div class="dos-related__grid">
@@ -732,7 +748,7 @@ const related = allPublic
               {e.data.summary && (
                 <div class="dos-related__summary">{e.data.summary}</div>
               )}
-              <div class="dos-related__meta">{n} shared tag{n === 1 ? "" : "s"}</div>
+              <div class="dos-related__meta">{copy.sharedTags(n)}</div>
             </a>
           ))}
         </div>
@@ -761,3 +777,4 @@ const related = allPublic
 
 </body>
 </html>
+
