@@ -196,9 +196,40 @@ const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toL
   }
 
   @media (max-width: 520px) {
-    .ecard { grid-template-columns: 90px 1fr; }
-    .ecard__thumb { width: 90px; }
-    .ecard__title { font-size: 20px; }
-    .ecard__body { padding: 14px 16px; }
+    .ecard {
+      grid-template-columns: 1fr;
+      min-height: 0;
+      border-radius: 8px;
+    }
+
+    .ecard__thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .ecard__title {
+      font-size: 24px;
+      overflow-wrap: anywhere;
+    }
+
+    .ecard__body { padding: 16px 16px 18px; }
+
+    .ecard__summary {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .ecard__footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .ecard__updated {
+      white-space: normal;
+    }
   }
 </style>

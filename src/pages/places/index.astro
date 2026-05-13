@@ -888,7 +888,7 @@ const regionsJson = JSON.stringify(regionsData);
   }
 
   @media (max-width: 768px) {
-    .places-root { height: auto; min-height: calc(100vh - 56px); overflow: visible; }
+    .places-root { height: auto; min-height: calc(100dvh - var(--nav-height, 56px)); overflow: visible; }
     .places-header { padding: 18px 20px 12px; }
     .places-search { padding: 0 20px 12px; }
     .places-map-link {
@@ -920,7 +920,8 @@ const regionsJson = JSON.stringify(regionsData);
     }
     .places-row[data-active] .region-panel.is-active {
       flex: none !important;
-      min-height: 60vh;
+      height: min(78dvh, 720px);
+      min-height: 520px;
     }
 
     .region-numeral {
@@ -958,7 +959,11 @@ const regionsJson = JSON.stringify(regionsData);
     }
 
     .region-exp__header { padding: 22px 20px 0; }
-    .region-exp__list { padding: 0 16px 24px; }
+    .region-exp__list {
+      min-height: 0;
+      padding: 0 16px calc(24px + env(safe-area-inset-bottom));
+      -webkit-overflow-scrolling: touch;
+    }
     .region-exp__title { font-size: 26px; }
     .region-exp__tagline { font-size: 13px; }
     .region-exp__close { width: 32px; height: 32px; }
@@ -973,7 +978,10 @@ const regionsJson = JSON.stringify(regionsData);
       font-size: 16px;
     }
 
-    .places-search__panel { width: calc(100vw - 32px); }
+    .places-search__panel {
+      width: calc(100vw - 32px);
+      max-height: min(70dvh, 520px);
+    }
   }
 </style>
 

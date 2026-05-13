@@ -71,11 +71,11 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
       <img src="/uploads/ui-sine-logo-home.png" alt="SiNE" class="hero__logo" />
       <p class="hero__sub">{copy.heroSub}</p>
       <div class="hero__divider"></div>
-      <p class="hero__meta">FILING YEAR 1127 · ACCESS LEVEL: PUBLIC · {totalPublic} RECORDS</p>
+      <p class="hero__meta">{copy.heroMeta}</p>
     </div>
 
     <div class="hero__scroll">
-      <span class="hero__scroll-text">Index</span>
+      <span class="hero__scroll-text">{copy.scroll}</span>
       <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
         <line x1="6" y1="0" x2="6" y2="15" stroke="rgba(232,228,220,0.28)" stroke-width="1"/>
         <path d="M1 10 L6 16 L11 10" stroke="rgba(232,228,220,0.28)" stroke-width="1" fill="none" stroke-linecap="round"/>
@@ -90,7 +90,7 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
     <div class="list-panel">
       <div class="list-header">
         <div class="list-header__rule"></div>
-        <span class="list-header__label">Classified Sections</span>
+        <span class="list-header__label">{copy.sections}</span>
       </div>
 
       <div class="list-toprule"></div>
@@ -110,7 +110,7 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
             <div class="list-row__bar"></div>
             <span class="list-row__num">{String(i + 1).padStart(2, "0")}</span>
             <span class="list-row__label">{s.label}</span>
-            <span class="list-row__count">{s.count}&thinsp;{s.count === 1 ? "entry" : "entries"}</span>
+            <span class="list-row__count">{copy.count(s.count)}</span>
             <span class="list-row__arrow">›</span>
             <div class="list-row__rule"></div>
           </a>
@@ -134,13 +134,13 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
             <div class="preview-layer__vignette"></div>
             <div class="preview-info">
               <div class="preview-info__inner">
-                <div class="preview-info__tag">Section</div>
+                <div class="preview-info__tag">{copy.sectionTag}</div>
                 <div class="preview-info__title">{s.label}</div>
                 <div class="preview-info__desc">{meta.desc}</div>
               </div>
             </div>
             <div class="preview-stamp">
-              <span class="preview-stamp__text">CLASSIFIED · INTERNAL USE ONLY</span>
+              <span class="preview-stamp__text">{copy.stamp}</span>
             </div>
           </div>
         );
@@ -595,7 +595,7 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
   }
 
   @media (max-width: 640px) {
-    .hero { height: 88vh; min-height: 480px; }
+    .hero { height: 88svh; min-height: 480px; }
     .hero__logo { width: 280px; }
     .hero__sub { font-size: 13px; line-height: 1.7; }
     .hero__meta { font-size: 9px; letter-spacing: 0.22em; }

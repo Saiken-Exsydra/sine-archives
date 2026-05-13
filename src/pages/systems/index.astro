@@ -425,7 +425,7 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
 <style>
   /* ── Root ── */
   .sys-root {
-    height: 100vh;
+    height: calc(100svh - var(--nav-height, 56px));
     min-height: 600px;
     background: var(--bg);
     padding-top: 8px;
@@ -870,6 +870,8 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
   .sys-overlay__close:hover { background: rgba(255,255,255,0.12); color: var(--text); }
   .sys-overlay__cols {
     flex: 1; overflow: auto;
+    min-height: 0;
+    -webkit-overflow-scrolling: touch;
     display: grid; grid-template-columns: 1fr 1fr 1fr;
   }
   .sys-overlay__col {
@@ -942,7 +944,7 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
 
   /* ── Mobile: stacked panels, vertical split ── */
   @media (max-width: 768px) {
-    .sys-root { height: auto; min-height: calc(100vh - 56px); overflow: visible; padding-top: 0; }
+    .sys-root { height: auto; min-height: calc(100dvh - var(--nav-height, 56px)); overflow: visible; padding-top: 0; }
     .sys-identity { padding: 14px 20px; gap: 16px; flex-wrap: wrap; }
     .sys-identity__center { padding: 0 16px; flex: 1 1 100%; order: -1; }
     .sys-rule { display: none; }
@@ -1005,6 +1007,7 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
     .sys-overlay__head { padding: 20px 20px; }
     .sys-overlay__title { font-size: 30px; }
     .sys-overlay__col { padding: 22px 20px 28px; }
+    .sys-overlay__col:last-child { padding-bottom: calc(28px + env(safe-area-inset-bottom)); }
     .sys-chip__title { font-size: 18px; }
   }
 </style>

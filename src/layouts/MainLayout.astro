@@ -17,6 +17,8 @@ const {
 const siteLocale = locale as SiteLocale;
 const currentPath = Astro.url.pathname;
 const searchLabel = siteLocale === "pt-br" ? "Buscar" : "Search";
+const fullscreenLabel = siteLocale === "pt-br" ? "Tela cheia" : "Full screen";
+const exitFullscreenLabel = siteLocale === "pt-br" ? "Sair da tela cheia" : "Exit full screen";
 const footerText = siteLocale === "pt-br"
   ? "ARQUIVOS SiNE · DISTRIBUICAO RESTRITA · TODOS OS REGISTROS SUJEITOS A REVISAO"
   : "SiNE ARCHIVES · RESTRICTED DISTRIBUTION · ALL RECORDS SUBJECT TO REVISION";
@@ -26,7 +28,9 @@ const footerText = siteLocale === "pt-br"
 <html lang={getHtmlLang(siteLocale)}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#06060b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>{pageTitle}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,7 +60,20 @@ const footerText = siteLocale === "pt-br"
             </a>
           ))}
         </div>
-        <a class="nav__search-btn" href={localizedPath(siteLocale, "/search/")} aria-label={searchLabel}>
+        <button
+          class="nav__icon-btn nav__fullscreen-btn"
+          type="button"
+          data-fullscreen-toggle
+          data-enter-label={fullscreenLabel}
+          data-exit-label={exitFullscreenLabel}
+          aria-label={fullscreenLabel}
+          title={fullscreenLabel}
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <a class="nav__icon-btn nav__search-btn" href={localizedPath(siteLocale, "/search/")} aria-label={searchLabel}>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4" />
             <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
@@ -73,21 +90,63 @@ const footerText = siteLocale === "pt-br"
       <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="footer__logo" />
       <span class="footer__text">{footerText}</span>
     </footer>
+
+    <script>
+      const fullscreenButton = document.querySelector<HTMLButtonElement>("[data-fullscreen-toggle]");
+
+      if (fullscreenButton) {
+        const canFullscreen = !!document.documentElement.requestFullscreen;
+        const enterLabel = fullscreenButton.dataset.enterLabel || fullscreenButton.ariaLabel || "Full screen";
+        const exitLabel = fullscreenButton.dataset.exitLabel || "Exit full screen";
+
+        if (!canFullscreen) {
+          fullscreenButton.hidden = true;
+        } else {
+          const updateFullscreenState = () => {
+            const active = !!document.fullscreenElement;
+            const label = active ? exitLabel : enterLabel;
+            fullscreenButton.setAttribute("aria-label", label);
+            fullscreenButton.setAttribute("title", label);
+            fullscreenButton.classList.toggle("is-active", active);
+          };
+
+          fullscreenButton.addEventListener("click", async () => {
+            try {
+              if (document.fullscreenElement) {
+                await document.exitFullscreen();
+              } else {
+                await document.documentElement.requestFullscreen();
+              }
+            } catch {
+              updateFullscreenState();
+            }
+          });
+
+          document.addEventListener("fullscreenchange", updateFullscreenState);
+          updateFullscreenState();
+        }
+      }
+    </script>
   </body>
 </html>
 
 <style>
+  :global(:root) {
+    --nav-height: 56px;
+  }
+
   .nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    height: 56px;
+    min-height: var(--nav-height);
+    height: calc(var(--nav-height) + env(safe-area-inset-top));
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: env(safe-area-inset-top) max(32px, env(safe-area-inset-right)) 0 max(32px, env(safe-area-inset-left));
     background: rgba(6, 6, 11, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -116,20 +175,26 @@ const footerText = siteLocale === "pt-br"
     text-transform: uppercase;
   }
 
-  .nav__search-btn {
+  .nav__icon-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     color: rgba(232, 228, 220, 0.5);
     text-decoration: none;
-    transition: color 0.2s;
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
     flex-shrink: 0;
   }
 
-  .nav__search-btn:hover {
+  .nav__icon-btn:hover,
+  .nav__icon-btn.is-active {
     color: rgba(232, 228, 220, 0.9);
+    background: rgba(255, 255, 255, 0.04);
   }
 
   .nav__actions {
@@ -175,7 +240,7 @@ const footerText = siteLocale === "pt-br"
   }
 
   .main {
-    padding-top: 56px;
+    padding-top: calc(var(--nav-height) + env(safe-area-inset-top));
     min-height: 100vh;
   }
 
@@ -204,7 +269,7 @@ const footerText = siteLocale === "pt-br"
 
   @media (max-width: 768px) {
     .nav {
-      padding: 0 16px;
+      padding: env(safe-area-inset-top) max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
     }
 
     .nav__logo-text {
@@ -215,6 +280,19 @@ const footerText = siteLocale === "pt-br"
       padding: 0 8px;
       font-size: 8px;
       letter-spacing: 0.12em;
+    }
+
+    .nav__actions {
+      gap: 6px;
+    }
+
+    .nav__icon-btn {
+      width: 36px;
+      height: 36px;
+    }
+
+    .footer {
+      padding: 40px 20px calc(34px + env(safe-area-inset-bottom));
     }
   }
 </style>

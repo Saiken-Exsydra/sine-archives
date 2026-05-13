@@ -39,6 +39,12 @@ const TAGLINES: Record<string, string> = locale === "pt-br"
 const copy = {
   panelSubtitle: locale === "pt-br" ? "Organização" : "Organization",
   openFile: locale === "pt-br" ? "Abrir Arquivo" : "Open File",
+  caption: locale === "pt-br" ? "A Divisao Seam e tudo sob o Assento Wonderwall" : "The Seam Division and all that falls under the Wonderwall Seat",
+  selectDivision: locale === "pt-br" ? "Selecione uma divisao" : "Select a division",
+  close: locale === "pt-br" ? "Fechar" : "Close",
+  fullscreen: locale === "pt-br" ? "Tela cheia" : "Full screen",
+  exitFullscreen: locale === "pt-br" ? "Sair da tela cheia" : "Exit full screen",
+  divisionData: locale === "pt-br" ? "Dados da divisao" : "Division Data",
 };
 
 type SineEntry = {
@@ -105,7 +111,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
           data-slug={branch.slug}
           data-accent={branch.accentColor}
           style={`--accent: ${branch.accentColor};`}
-          aria-label={`Open ${branch.label}`}
+          aria-label={`${copy.openFile}: ${branch.label}`}
           type="button"
         >
           <!-- BG image -->
@@ -135,9 +141,9 @@ const entryBasePath = localizedPath(locale, "/sine/");
 
     <!-- Caption -->
     <div class="sine-caption">
-      <span>THE SEAM DIVISION AND ALL THAT FALLS UNDER THE WONDERWALL SEAT</span>
+      <span>{copy.caption}</span>
       <span class="sine-caption__dot">·</span>
-      <span>SELECT A DIVISION</span>
+      <span>{copy.selectDivision}</span>
     </div>
 
   </div>
@@ -155,7 +161,20 @@ const entryBasePath = localizedPath(locale, "/sine/");
           <h2 class="sine-modal__title" id="sine-modal-title"></h2>
           <p class="sine-modal__tagline" id="sine-modal-tagline"></p>
         </div>
-        <button class="sine-modal__close" id="sine-modal-close" aria-label="Close">
+        <button
+          class="sine-modal__fullscreen"
+          id="sine-modal-fullscreen"
+          type="button"
+          aria-label={copy.fullscreen}
+          title={copy.fullscreen}
+          data-enter-label={copy.fullscreen}
+          data-exit-label={copy.exitFullscreen}
+        >
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="sine-modal__close" id="sine-modal-close" aria-label={copy.close}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -166,7 +185,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
       <div class="sine-modal__body">
         <aside class="sine-modal__sidebar">
           <div class="sine-modal__sidebar-card">
-            <div class="sine-modal__sidebar-title" id="sine-modal-sidebar-title">Division Data</div>
+            <div class="sine-modal__sidebar-title" id="sine-modal-sidebar-title">{copy.divisionData}</div>
             <div id="sine-modal-fields"></div>
           </div>
           <div class="sine-modal__divider" id="sine-modal-divider"></div>
@@ -199,7 +218,9 @@ const entryBasePath = localizedPath(locale, "/sine/");
   const modalFields    = document.getElementById("sine-modal-fields");
   const modalDivider   = document.getElementById("sine-modal-divider");
   const modalMain      = document.getElementById("sine-modal-main");
+  const modalBody      = document.querySelector(".sine-modal__body");
   const closeBtn       = document.getElementById("sine-modal-close");
+  const fullscreenBtn  = document.getElementById("sine-modal-fullscreen");
 
   let closing = false;
 
@@ -227,6 +248,8 @@ const entryBasePath = localizedPath(locale, "/sine/");
 
     // Main body — fetch rendered entry content via slug
     modalMain.innerHTML = `<p class="sine-modal__loading">Loading…</p>`;
+    modalBody?.scrollTo({ top: 0 });
+    modalMain?.scrollTo({ top: 0 });
     fetch(`${entryBasePath}${branch.slug}/`)
       .then(r => r.text())
       .then(html => {
@@ -243,6 +266,8 @@ const entryBasePath = localizedPath(locale, "/sine/");
           // Fallback: show summary
           modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
         }
+        modalBody?.scrollTo({ top: 0 });
+        modalMain?.scrollTo({ top: 0 });
       })
       .catch(() => {
         modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
@@ -252,6 +277,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
     overlay.classList.add("is-open");
     modal.classList.remove("is-closing");
     document.body.style.overflow = "hidden";
+    closeBtn?.focus();
   }
 
   function closeModal() {
@@ -263,8 +289,41 @@ const entryBasePath = localizedPath(locale, "/sine/");
       overlay.setAttribute("aria-hidden", "true");
       modal.classList.remove("is-closing");
       document.body.style.overflow = "";
+      if (document.fullscreenElement === modal) document.exitFullscreen?.();
       closing = false;
     }, 380);
+  }
+
+  if (fullscreenBtn) {
+    const enterLabel = fullscreenBtn.dataset.enterLabel || "Full screen";
+    const exitLabel = fullscreenBtn.dataset.exitLabel || "Exit full screen";
+
+    if (!modal?.requestFullscreen) {
+      fullscreenBtn.hidden = true;
+    } else {
+      const syncFullscreen = () => {
+        const active = document.fullscreenElement === modal;
+        const label = active ? exitLabel : enterLabel;
+        fullscreenBtn.setAttribute("aria-label", label);
+        fullscreenBtn.setAttribute("title", label);
+        fullscreenBtn.classList.toggle("is-active", active);
+      };
+
+      fullscreenBtn.addEventListener("click", async () => {
+        try {
+          if (document.fullscreenElement === modal) {
+            await document.exitFullscreen();
+          } else {
+            await modal.requestFullscreen();
+          }
+        } catch {
+          syncFullscreen();
+        }
+      });
+
+      document.addEventListener("fullscreenchange", syncFullscreen);
+      syncFullscreen();
+    }
   }
 
   // Panel buttons
@@ -287,7 +346,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
   .sine-root {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100svh - var(--nav-height, 56px));
     min-height: 600px;
     background: var(--bg);
     overflow: hidden;
@@ -561,7 +620,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 32px;
+    padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
@@ -576,13 +635,15 @@ const entryBasePath = localizedPath(locale, "/sine/");
   .sine-modal {
     width: 100%;
     max-width: 900px;
-    max-height: calc(100vh - 80px);
+    height: min(86svh, 760px);
+    max-height: calc(100dvh - 48px);
     background: rgba(9,9,15,0.98);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 6px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    min-height: 0;
     box-shadow: 0 32px 80px rgba(0,0,0,0.7);
     transform: translateY(24px);
     transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.38s ease;
@@ -666,10 +727,10 @@ const entryBasePath = localizedPath(locale, "/sine/");
     line-height: 1.5;
   }
 
+  .sine-modal__fullscreen,
   .sine-modal__close {
     position: absolute;
     top: 20px;
-    right: 20px;
     z-index: 3;
     background: rgba(255,255,255,0.07);
     border: 1px solid rgba(255,255,255,0.1);
@@ -684,6 +745,11 @@ const entryBasePath = localizedPath(locale, "/sine/");
     transition: background 0.2s;
   }
 
+  .sine-modal__fullscreen { right: 60px; }
+  .sine-modal__close { right: 20px; }
+
+  .sine-modal__fullscreen.is-active,
+  .sine-modal__fullscreen:hover,
   .sine-modal__close:hover {
     background: rgba(255,255,255,0.13);
   }
@@ -692,8 +758,9 @@ const entryBasePath = localizedPath(locale, "/sine/");
   .sine-modal__body {
     display: grid;
     grid-template-columns: 220px 1fr;
-    overflow: auto;
     flex: 1;
+    min-height: 0;
+    overflow: hidden;
   }
 
   .sine-modal__sidebar {
@@ -703,6 +770,9 @@ const entryBasePath = localizedPath(locale, "/sine/");
     flex-direction: column;
     gap: 12px;
     flex-shrink: 0;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sine-modal__sidebar-card {
@@ -772,7 +842,10 @@ const entryBasePath = localizedPath(locale, "/sine/");
 
   .sine-modal__main {
     padding: 32px 36px;
-    overflow: auto;
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sine-modal__loading {
@@ -818,6 +891,20 @@ const entryBasePath = localizedPath(locale, "/sine/");
     font-weight: 600;
   }
 
+  :global(.sine-modal__main ul),
+  :global(.sine-modal__main ol) {
+    padding-left: 22px;
+    margin: 0 0 18px;
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  :global(.sine-modal__main li) {
+    margin-bottom: 6px;
+  }
+
   :global(.sine-modal__main hr) {
     border: none;
     border-top: 1px solid rgba(255,255,255,0.07);
@@ -826,7 +913,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
 
   /* ── Mobile: vertical-stacked panels ── */
   @media (max-width: 768px) {
-    .sine-root { height: auto; min-height: calc(100vh - 56px); overflow: visible; }
+    .sine-root { height: auto; min-height: calc(100svh - var(--nav-height, 56px)); overflow: visible; }
     .sine-identity { padding: 16px 20px; flex-wrap: wrap; gap: 8px; }
     .sine-identity__center { padding: 0; gap: 6px; }
     .sine-identity__logo { height: 26px; }
@@ -836,20 +923,28 @@ const entryBasePath = localizedPath(locale, "/sine/");
     .sine-rule { display: none; }
 
     .sine-panels {
-      flex-direction: column;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(78vw, 340px);
       flex: none;
-      overflow: visible;
-      gap: 10px;
-      padding: 8px 16px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      gap: 12px;
+      padding: 8px 16px 16px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
     }
+    .sine-panels::-webkit-scrollbar { display: none; }
     .sine-panel {
       flex: none !important;
       width: 100%;
-      min-height: 140px;
+      min-height: clamp(360px, 58svh, 520px);
       border-right: none !important;
       border-radius: 4px;
       overflow: hidden;
       border-left: 2px solid transparent;
+      scroll-snap-align: center;
     }
     .sine-panel:hover {
       flex: none !important;
@@ -885,27 +980,47 @@ const entryBasePath = localizedPath(locale, "/sine/");
 
     .sine-caption { padding: 14px 16px; flex-wrap: wrap; gap: 8px; font-size: 8px; }
 
-    /* Modal: full-screen on mobile */
-    .sine-overlay { padding: 0; }
+    /* Modal: full-screen reader on mobile */
+    .sine-overlay { padding: 0; align-items: stretch; justify-content: stretch; }
     .sine-modal {
       max-width: 100%;
-      max-height: 100vh;
-      height: 100vh;
+      max-height: none;
+      height: 100dvh;
       border-radius: 0;
       border: none;
     }
-    .sine-modal__hero { height: 180px; }
+    .sine-modal:fullscreen {
+      height: 100vh;
+    }
+    .sine-modal__hero { height: clamp(140px, 30svh, 190px); }
     .sine-modal__hero-content { padding: 24px 20px; }
     .sine-modal__title { font-size: 30px; }
     .sine-modal__tagline { font-size: 13px; }
+    .sine-modal__fullscreen { top: 14px; right: 56px; }
     .sine-modal__close { top: 14px; right: 14px; }
-    .sine-modal__body { grid-template-columns: 1fr; }
-    .sine-modal__sidebar {
-      padding: 18px 20px;
-      border-right: none;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+    .sine-modal__body {
+      display: block;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
     }
-    .sine-modal__main { padding: 22px 20px 60px; }
+    .sine-modal__sidebar {
+      padding: 16px 18px 0;
+      border-right: none;
+      border-bottom: none;
+      overflow: visible;
+    }
+    .sine-modal__stamp { display: none; }
+    .sine-modal__divider { opacity: 0.18; }
+    .sine-modal__main {
+      padding: 22px 18px calc(72px + env(safe-area-inset-bottom));
+      overflow: visible;
+    }
+    #sine-modal-fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    :global(.sine-field-row) { padding: 8px 12px; }
+    :global(.sine-field-val) { font-size: 11px; }
   }
 </style>
-

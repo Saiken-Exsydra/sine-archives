@@ -3,21 +3,56 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import type { SiteLocale } from "../../i18n/config";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const copy = locale === "pt-br"
+  ? {
+      pageTitle: "Busca - SiNE Archives",
+      title: "Busca",
+      searchAll: "Buscar em todas as entradas",
+      placeholder: "Buscar titulo, resumo, tags, corpo...",
+      filter: "Filtrar",
+      tags: "Tags",
+      clear: "Limpar",
+      loading: "Carregando indice...",
+      noscript: "A busca requer JavaScript.",
+      noResults: "Nenhum resultado.",
+      result: "resultado",
+      results: "resultados",
+      noTagFilters: "Nenhum filtro de tag.",
+      active: "Ativo",
+      error: "Nao foi possivel carregar a busca. Atualize a pagina ou tente novamente.",
+    }
+  : {
+      pageTitle: "Search - SiNE Archives",
+      title: "Search",
+      searchAll: "Search all entries",
+      placeholder: "Search title, summary, tags, body...",
+      filter: "Filter",
+      tags: "Tags",
+      clear: "Clear",
+      loading: "Loading index...",
+      noscript: "Search requires JavaScript to run.",
+      noResults: "No results.",
+      result: "result",
+      results: "results",
+      noTagFilters: "No tag filters.",
+      active: "Active",
+      error: "Could not load search. Please refresh or try again later.",
+    };
 ---
 
-<MainLayout active="search" pageTitle="Search — SiNE Archives" locale={locale}>
+<MainLayout active="search" pageTitle={copy.pageTitle} locale={locale}>
   <section class="searchPage" data-locale={locale}>
     <div class="section__head">
-      <h2 class="section__title">Search</h2>
+      <h2 class="section__title">{copy.title}</h2>
 
       <div class="controls">
-        <label class="section__search" aria-label="Search all entries">
+        <label class="section__search" aria-label={copy.searchAll}>
           <span class="section__icon" aria-hidden="true">⌕</span>
-          <input id="q" class="section__input" type="search" placeholder="Search title, summary, tags, body…" />
+          <input id="q" class="section__input" type="search" placeholder={copy.placeholder} />
         </label>
 
         <button id="toggleFilters" class="filter" type="button">
-          Filter
+          {copy.filter}
         </button>
       </div>
     </div>
@@ -25,22 +60,22 @@ const { locale = "en" } = Astro.props as { locale?: SiteLocale };
     <div id="filters" class="filters" hidden>
       <div class="filters__head">
       <div id="activeTags" class="activeTags" aria-live="polite"></div>
-        <div class="filters__title">Tags</div>
-        <button id="clearTags" class="filters__clear" type="button">Clear</button>
+        <div class="filters__title">{copy.tags}</div>
+        <button id="clearTags" class="filters__clear" type="button">{copy.clear}</button>
       </div>
       <div id="tagList" class="taglist" aria-label="Tag filters"></div>
     </div>
 
-    <div id="status" class="status" aria-live="polite">Loading index…</div>
+    <div id="status" class="status" aria-live="polite">{copy.loading}</div>
     <noscript>
-  <div class="status">Search requires JavaScript to run.</div>
+  <div class="status">{copy.noscript}</div>
 </noscript>
 
 
     <div id="results" class="results" aria-label="Search results"></div>
   </section>
 
-  <script is:inline type="module">
+  <script define:vars={{ copy }} is:inline type="module">
     const locale = document.querySelector(".searchPage")?.dataset.locale || "en";
     const $q = document.querySelector("#q");
     const $results = document.querySelector("#results");
@@ -174,11 +209,11 @@ function debounce(fn, delay = 120) {
     function renderResults(items){
       $results.innerHTML = "";
       if (items.length === 0){
-        $status.textContent = "No results.";
+        $status.textContent = copy.noResults;
         return;
       }
 
-      $status.textContent = `${items.length} result${items.length === 1 ? "" : "s"}.`;
+      $status.textContent = `${items.length} ${items.length === 1 ? copy.result : copy.results}.`;
 
       for (const item of items){
         const a = document.createElement("a");
@@ -264,7 +299,7 @@ function debounce(fn, delay = 120) {
       const $activeTags = document.querySelector("#activeTags");
 if ($activeTags){
   const list = [...selectedTags].map(t => t.toUpperCase());
-  $activeTags.textContent = list.length ? `Active: ${list.join(" · ")}` : "No tag filters.";
+  $activeTags.textContent = list.length ? `${copy.active}: ${list.join(" · ")}` : copy.noTagFilters;
 }
 
 
@@ -318,7 +353,7 @@ window.addEventListener("keydown", (e) => {
         run();
       })
       .catch(() => {
-  $status.textContent = "Could not load search. Please refresh or try again later.";
+  $status.textContent = copy.error;
   $results.innerHTML = "";
 });
 
@@ -629,6 +664,31 @@ window.addEventListener("keydown", (e) => {
     @media (max-width: 540px) {
       .searchPage :global(.results) { grid-template-columns: repeat(2, 1fr); }
       .searchPage { padding: 40px 16px 80px; }
+      .section__head { align-items: stretch; }
+      .controls {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .section__search {
+        min-width: 0;
+        width: 100%;
+        min-height: 46px;
+      }
+      .filter {
+        width: 100%;
+      }
+      .filters__head {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .searchPage :global(.taglist) {
+        max-height: 180px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .searchPage :global(.results) { grid-template-columns: 1fr; }
     }
   </style>
 </MainLayout>

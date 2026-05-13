@@ -273,10 +273,38 @@ const count = publicEntries.length;
   }
 
   @media (max-width: 640px) {
-    .sec-header__content { padding: 30px 20px; }
-    .sec-header__title { font-size: 36px; }
-    .sec-body { padding: 24px 16px 80px; }
-    .sec-search__input { min-width: 140px; }
+    .sec-header {
+      min-height: 240px;
+    }
+
+    .sec-header__content { padding: 32px 20px 28px; }
+    .sec-header__title { font-size: 38px; }
+    .sec-header__desc { font-size: 13px; }
+
+    .sec-body { padding: 18px 16px calc(80px + env(safe-area-inset-bottom)); }
+    .sec-bar {
+      position: sticky;
+      top: calc(var(--nav-height, 56px) + env(safe-area-inset-top));
+      z-index: 20;
+      gap: 10px;
+      margin: 0 -16px 18px;
+      padding: 10px 16px;
+      background: rgba(6, 6, 11, 0.92);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .sec-count { width: 100%; }
+    .sec-search {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 13px;
+    }
+    .sec-search__input {
+      min-width: 0;
+      width: 100%;
+      font-size: 14px;
+    }
   }
 </style>
 

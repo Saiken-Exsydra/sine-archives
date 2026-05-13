@@ -18,12 +18,17 @@ html, body {
   min-height: 100%;
 }
 
+html {
+  scroll-padding-top: calc(var(--nav-height, 56px) + 18px);
+}
+
 body {
   background: var(--bg);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
 }
 
 ::selection {
