@@ -1,9 +1,38 @@
 ---
-import { getCollection } from "astro:content";
 import { CONTENT_KEYS } from "../content-keys";
+import { getLocalizedCollection } from "../i18n/content";
+import { getHtmlLang, localizeCurrentPath, localizedEntryPath, localizedPath, LOCALE_LABELS, LOCALES, type SiteLocale } from "../i18n/config";
 
-const { entry } = Astro.props;
+const { entry, locale = "en" } = Astro.props as { entry: any; locale?: SiteLocale };
 const { Content, headings } = await entry.render();
+const currentPath = Astro.url.pathname;
+const copy = locale === "pt-br"
+  ? {
+      index: "Indice",
+      section: "Personagens",
+      onFile: "Em Arquivo",
+      dossier: "Dossie · Arquivos SiNE · Ano de Arquivo 1127",
+      access: "Nivel de Acesso",
+      public: "Publico",
+      fileData: "Dados do Registro",
+      fullRecord: "Registro Completo",
+      related: "Entradas relacionadas",
+      sharedTags: (n: number) => `${n} tag${n === 1 ? "" : "s"} em comum`,
+      languageLabel: "Seletor de idioma",
+    }
+  : {
+      index: "Index",
+      section: "Characters",
+      onFile: "On File",
+      dossier: "Dossier · SiNE Archives Filing Year 1127",
+      access: "Access Level",
+      public: "Public",
+      fileData: "File Data",
+      fullRecord: "Full Record",
+      related: "Related entries",
+      sharedTags: (n: number) => `${n} shared tag${n === 1 ? "" : "s"}`,
+      languageLabel: "Language switcher",
+    };
 
 const str = (v: unknown) => String(v ?? "").trim();
 
@@ -24,11 +53,11 @@ const push = (label: string, key: string) => {
   if (v) fields.push({ label, value: v });
 };
 
-push("Registry Status", "registry_status");
-push("Affiliation",     "affiliation");
-push("House",           "house");
-push("Year of Birth",   "birth_year");
-push("Age",             "age");
+push(locale === "pt-br" ? "Status de Registro" : "Registry Status", "registry_status");
+push(locale === "pt-br" ? "Afiliacao" : "Affiliation", "affiliation");
+push(locale === "pt-br" ? "Casa" : "House", "house");
+push(locale === "pt-br" ? "Ano de Nascimento" : "Year of Birth", "birth_year");
+push(locale === "pt-br" ? "Idade" : "Age", "age");
 
 const height = str(entry.data?.height);
 const build  = str(entry.data?.build);
@@ -46,10 +75,11 @@ function normTags(t: unknown): string[] {
 const curTags = normTags(entry.data?.tags);
 
 const allPublic = (
-  await Promise.all(CONTENT_KEYS.map((c) => getCollection(c, (e) => e.data.status === "public")))
+  await Promise.all(CONTENT_KEYS.map((c) => getLocalizedCollection(c, locale)))
 ).flat();
 
 const related = allPublic
+  .filter((e) => e.data.status === "public")
   .filter((e) => e.slug !== entry.slug)
   .map((e) => {
     const n = normTags(e.data?.tags).filter((t) => curTags.includes(t)).length;
@@ -61,7 +91,7 @@ const related = allPublic
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={getHtmlLang(locale)}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -522,15 +552,15 @@ const related = allPublic
 
 <!-- NAV -->
 <nav class="nav">
-  <a class="nav__logo" href="/">
+  <a class="nav__logo" href={localizedPath(locale, "/")}>
     <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="nav__logo-img" />
     <span class="nav__logo-text">ARCHIVES</span>
   </a>
 
   <div class="nav__crumb">
-    <a class="nav__crumb-link" href="/">Index</a>
+    <a class="nav__crumb-link" href={localizedPath(locale, "/")}>Index</a>
     <span class="nav__crumb-sep">›</span>
-    <a class="nav__crumb-link" href="/characters/">Characters</a>
+    <a class="nav__crumb-link" href={localizedPath(locale, `/characters/?char=${encodeURIComponent(entry.slug)}`)}>Characters</a>
     <span class="nav__crumb-sep">›</span>
     <span class="nav__crumb-cur">{title}</span>
   </div>
@@ -697,7 +727,7 @@ const related = allPublic
         </div>
         <div class="dos-related__grid">
           {related.map(({ e, n }) => (
-            <a class="dos-related__item" href={`/${e.collection}/${e.slug}/`}>
+            <a class="dos-related__item" href={localizedEntryPath(locale, e.collection as any, e.slug)}>
               <div class="dos-related__name">{e.data.title}</div>
               {e.data.summary && (
                 <div class="dos-related__summary">{e.data.summary}</div>

@@ -1,7 +1,9 @@
 ---
 import EntryCard from "./EntryCard.astro";
-import { getCollection } from "astro:content";
 import type { ContentKey } from "../content-keys";
+import { getLocalizedCollection } from "../i18n/content";
+import type { SiteLocale } from "../i18n/config";
+import { getSectionListLabels } from "../i18n/ui";
 
 type Props = {
   section: ContentKey;
@@ -11,11 +13,13 @@ type Props = {
   emptyLabel: string;
   image?: string;
   desc?: string;
+  locale?: SiteLocale;
 };
 
-const { section, title, searchLabel, emptyLabel, image, desc } = Astro.props as Props;
+const { section, title, searchLabel, emptyLabel, image, desc, locale = "en" } = Astro.props as Props;
+const labels = getSectionListLabels(locale);
 
-const all = await getCollection(section);
+const all = await getLocalizedCollection(section, locale);
 
 function collectDuplicates(entries: { key: string; id: string }[]) {
   const idsByKey = new Map<string, string[]>();
@@ -80,7 +84,6 @@ const publicEntries = all
 const count = publicEntries.length;
 ---
 
-<!-- Section header -->
 <div class="sec-header" data-has-image={image ? "true" : "false"}>
   {image && (
     <>
@@ -89,17 +92,16 @@ const count = publicEntries.length;
     </>
   )}
   <div class="sec-header__content">
-    <div class="sec-header__meta">SECTION</div>
+    <div class="sec-header__meta">{labels.section}</div>
     <h1 class="sec-header__title">{title}</h1>
     {desc && <p class="sec-header__desc">{desc}</p>}
   </div>
 </div>
 
-<!-- Search + list -->
 <div class="sec-body">
   <div class="sec-bar">
     <div class="sec-count" id="sec-count">
-      {count} {count === 1 ? "entry" : "entries"}
+      {count} {count === 1 ? labels.entry : labels.entries}
     </div>
     <label class="sec-search" aria-label={searchLabel}>
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -116,16 +118,16 @@ const count = publicEntries.length;
     </label>
   </div>
 
-  <div class="sec-list" id="sec-list" aria-label={`${title} entries`}>
+  <div class="sec-list" id="sec-list" aria-label={`${title} ${labels.entries}`}>
     {publicEntries.length === 0 ? (
       <div class="sec-empty">{emptyLabel}</div>
     ) : (
-      publicEntries.map((entry) => <EntryCard section={section} entry={entry} />)
+      publicEntries.map((entry) => <EntryCard section={section} entry={entry} locale={locale} />)
     )}
   </div>
 
   <div class="sec-no-results" id="sec-no-results" aria-live="polite" style="display:none">
-    No entries match this query.
+    {labels.noEntriesMatch}
   </div>
 </div>
 
@@ -190,7 +192,6 @@ const count = publicEntries.length;
     max-width: 600px;
   }
 
-  /* no-image fallback */
   .sec-header[data-has-image="false"] {
     min-height: 200px;
     background: linear-gradient(135deg, rgba(177, 58, 52, 0.08), rgba(6, 6, 11, 0.8));
@@ -279,7 +280,7 @@ const count = publicEntries.length;
   }
 </style>
 
-<script>
+<script define:vars={{ entryLabel: labels.entry, entriesLabel: labels.entries, matchingLabel: labels.matching }}>
   const input = document.getElementById("sec-search-input") as HTMLInputElement | null;
   const list = document.getElementById("sec-list");
   const noResults = document.getElementById("sec-no-results");
@@ -301,9 +302,10 @@ const count = publicEntries.length;
 
       if (countEl) {
         if (q) {
-          countEl.textContent = `${visible} ${visible === 1 ? "entry" : "entries"} matching "${input.value.trim()}"`;
+          const unit = visible === 1 ? entryLabel : entriesLabel;
+          countEl.textContent = `${visible} ${unit} ${matchingLabel} "${input.value.trim()}"`;
         } else {
-          countEl.textContent = `${totalCount} ${totalCount === 1 ? "entry" : "entries"}`;
+          countEl.textContent = `${totalCount} ${totalCount === 1 ? entryLabel : entriesLabel}`;
         }
       }
 

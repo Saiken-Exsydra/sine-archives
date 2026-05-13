@@ -1,0 +1,16 @@
+---
+import CharacterEntryLayout from "../../../../layouts/CharacterEntryLayout.astro";
+import { getLocalizedCollection } from "../../../../i18n/content";
+
+export async function getStaticPaths() {
+  const entries = await getLocalizedCollection("characters", "pt-br");
+  return entries.map((entry) => ({
+    params: { locale: "pt-br", slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<CharacterEntryLayout entry={entry} locale="pt-br" />

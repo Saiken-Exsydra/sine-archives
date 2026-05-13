@@ -1,7 +1,16 @@
 ---
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../i18n/content";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
 
-const all = await getCollection("characters");
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const copy = locale === "pt-br"
+  ? {
+      openDossier: "Abrir Dossier",
+    }
+  : {
+      openDossier: "Open Dossier",
+    };
+const all = await getLocalizedCollection("characters", locale);
 const characters = all
   .filter((e) => e.data.status === "public")
   .sort((a, b) => {
@@ -20,12 +29,12 @@ const charData = characters.map((c) => ({
   image: c.data.hero_image ?? "",
   tags: c.data.tags ?? [],
   updated: c.data.updated,
-  href: `/characters/${c.slug}/`,
+  href: localizedPath(locale, `/characters/${c.slug}/?char=${encodeURIComponent(c.slug)}`),
 }));
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale === "pt-br" ? "pt-BR" : "en"}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -678,17 +687,17 @@ const charData = characters.map((c) => ({
   <body>
     <!-- NAV -->
     <nav class="nav">
-      <a class="nav__logo" href="/">
+      <a class="nav__logo" href={localizedPath(locale, "/")}>
         <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="nav__logo-img" />
         <span class="nav__logo-text">ARCHIVES</span>
       </a>
       <div class="nav__right">
         <span class="nav__crumb">
-          <a class="nav__crumb-link" href="/">Index</a>
+          <a class="nav__crumb-link" href={localizedPath(locale, "/")}>Index</a>
           <span class="nav__crumb-sep">›</span>
           <span class="nav__crumb-cur">Characters</span>
         </span>
-        <a class="nav__search-btn" href="/search/" aria-label="Search">
+        <a class="nav__search-btn" href={localizedPath(locale, "/search/")} aria-label="Search">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
             <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -848,7 +857,7 @@ const charData = characters.map((c) => ({
           <p class="stage__summary is-in" id="stage-summary">{charData[0].summary}</p>
 
           <div class="stage__actions is-in" id="stage-actions">
-            <a class="stage__cta" id="stage-cta" href={charData[0].href}>Open Dossier</a>
+            <a class="stage__cta" id="stage-cta" href={charData[0].href}>{copy.openDossier}</a>
             <button class="stage__nav-btn" id="btn-prev" aria-label="Previous character">&#8593;</button>
             <button class="stage__nav-btn" id="btn-next" aria-label="Next character">&#8595;</button>
             <span class="stage__key-hint">↑ ↓ Arrow keys</span>
@@ -896,7 +905,27 @@ const charData = characters.map((c) => ({
 
     <script define:vars={{ charData }}>
       const chars = charData;
-      let activeIdx = 0;
+      const storageKey = `sine:characters:active:${document.documentElement.lang === "pt-BR" ? "pt-br" : "en"}`;
+      const params = new URLSearchParams(window.location.search);
+      const requestedSlug = params.get("char");
+      const storedSlug = sessionStorage.getItem(storageKey);
+      const initialSlug = requestedSlug || storedSlug;
+      const initialIdx = Math.max(0, chars.findIndex((char) => char.slug === initialSlug));
+      const referrerUrl = (() => {
+        try {
+          return document.referrer ? new URL(document.referrer) : null;
+        } catch {
+          return null;
+        }
+      })();
+      const cameFromCharacterEntry = !!(
+        referrerUrl &&
+        referrerUrl.origin === window.location.origin &&
+        /^\/(?:pt-br\/)?characters\/[^/]+\/?$/.test(referrerUrl.pathname) &&
+        referrerUrl.pathname.replace(/\/+$/, "/") !== window.location.pathname.replace(/\/+$/, "/")
+      );
+
+      let activeIdx = initialIdx;
       let switchTimer = null;
 
       const stagePortrait = document.getElementById("stage-portrait");
@@ -966,6 +995,7 @@ const charData = characters.map((c) => ({
 
       function updateContent(idx) {
         const c = chars[idx];
+        activeIdx = idx;
 
         // portrait
         const existing = stagePortrait.querySelector("img, svg");
@@ -1002,6 +1032,11 @@ const charData = characters.map((c) => ({
         stageDesignation.style.display = c.designation ? "" : "none";
         stageSummary.textContent = c.summary;
         stageCta.href = c.href;
+        sessionStorage.setItem(storageKey, c.slug);
+
+        const next = new URL(window.location.href);
+        next.searchParams.set("char", c.slug);
+        history.replaceState({}, "", next);
 
         // sidebar items
         document.querySelectorAll(".sidebar__item").forEach((el, i) => {
@@ -1029,10 +1064,24 @@ const charData = characters.map((c) => ({
         clearTimeout(switchTimer);
         setPhase("out");
         switchTimer = setTimeout(() => {
-          activeIdx = idx;
           updateContent(idx);
           setTimeout(() => setPhase("in"), 60);
         }, 360);
+      }
+
+      if (initialIdx !== 0) {
+        updateContent(initialIdx);
+      } else if (chars[0]) {
+        sessionStorage.setItem(storageKey, chars[0].slug);
+      }
+
+      if (cameFromCharacterEntry && referrerUrl) {
+        const returnHref = `${referrerUrl.pathname}${referrerUrl.search}${referrerUrl.hash}`;
+        history.pushState({ characterReturnGuard: true }, "", window.location.href);
+        window.addEventListener("popstate", (event) => {
+          if (event.state?.characterReturnGuard) return;
+          window.location.replace(returnHref);
+        });
       }
 
       // Mouse parallax

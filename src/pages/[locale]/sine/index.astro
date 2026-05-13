@@ -1,0 +1,9 @@
+---
+import SinePage from "../../sine/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<SinePage locale="pt-br" />

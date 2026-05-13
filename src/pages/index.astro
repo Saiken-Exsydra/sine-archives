@@ -1,14 +1,17 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
 import { SECTIONS } from "../sections";
 import { CONTENT_KEYS, type ContentKey } from "../content-keys";
+import { getLocalizedCollection } from "../i18n/content";
+import { localizedPath, type SiteLocale } from "../i18n/config";
+import { sectionLabel as getSectionLabel } from "../i18n/ui";
 
-const labelByKey = Object.fromEntries(SECTIONS.map((s) => [s.key, s.label])) as Record<string, string>;
-const sections = CONTENT_KEYS.map((key) => ({ key, label: labelByKey[key] ?? key }));
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+
+const sections = CONTENT_KEYS.map((key) => ({ key, label: getSectionLabel(locale, key) }));
 
 async function getPublic(key: ContentKey) {
-  const all = await getCollection(key);
+  const all = await getLocalizedCollection(key, locale);
   return all.filter((e) => e.data.status === "public");
 }
 
@@ -20,21 +23,40 @@ const bySection = await Promise.all(
 );
 
 const totalPublic = bySection.reduce((sum, s) => sum + s.count, 0);
+const copy = locale === "pt-br"
+  ? {
+      heroSub: "Compêndio de registros classificados, avaliações de campo e estruturas teóricas originadas no Império de Synus e em suas estruturas cosmológicas adjacentes.",
+      heroMeta: `ANO DE ARQUIVO 1127 · NÍVEL DE ACESSO: PÚBLICO · ${totalPublic} REGISTROS`,
+      scroll: "Índice",
+      sections: "Seções Classificadas",
+      sectionTag: "Seção",
+      count: (n: number) => `${n} ${n === 1 ? "entrada" : "entradas"}`,
+      stamp: "CLASSIFICADO · USO INTERNO",
+    }
+  : {
+      heroSub: "A compendium of classified records, field assessments, and theoretical frameworks originating from within the Empire of Synus and its adjacent cosmological structures.",
+      heroMeta: `FILING YEAR 1127 · ACCESS LEVEL: PUBLIC · ${totalPublic} RECORDS`,
+      scroll: "Index",
+      sections: "Classified Sections",
+      sectionTag: "Section",
+      count: (n: number) => `${n} ${n === 1 ? "entry" : "entries"}`,
+      stamp: "CLASSIFIED · INTERNAL USE ONLY",
+    };
 
 const sectionMeta: Record<string, { image: string; desc: string }> = {
-  characters:    { image: "/uploads/ui-characters-bg.png",  desc: "Individuals of note within the Twilight Band and beyond." },
-  organizations: { image: "/uploads/org-apocachynthion.png", desc: "Institutions and houses that structure the Empire of Synus." },
-  sine:          { image: "/uploads/sine-logo.png",          desc: "The Seam Division and all that falls under the Wonderwall Seat." },
-  places:        { image: "/uploads/map-places-index.png",   desc: "Territories, cities, and the geographies of the known world." },
-  apparatus:     { image: "/uploads/app-clepsydra-apparatus.png", desc: "Classified instruments, constructions, and mechanisms." },
-  systems:       { image: "/uploads/sys-redactory.png",      desc: "Structural and institutional frameworks that underpin the world." },
-  cosmology:     { image: "/uploads/ui-cosmology-bg.png",    desc: "The nature of the Archive, the Dive, and existence itself." },
+  characters:    { image: "/uploads/ui-characters-bg.png",  desc: locale === "pt-br" ? "Individuos de relevancia dentro da Faixa do Crepusculo e alem." : "Individuals of note within the Twilight Band and beyond." },
+  organizations: { image: "/uploads/org-apocachynthion.png", desc: locale === "pt-br" ? "Instituicoes e casas que estruturam o Imperio de Synus." : "Institutions and houses that structure the Empire of Synus." },
+  sine:          { image: "/uploads/sine-logo.png",          desc: locale === "pt-br" ? "A Divisao Seam e tudo sob o Assento Wonderwall." : "The Seam Division and all that falls under the Wonderwall Seat." },
+  places:        { image: "/uploads/map-places-index.png",   desc: locale === "pt-br" ? "Territorios, cidades e geografias do mundo conhecido." : "Territories, cities, and the geographies of the known world." },
+  apparatus:     { image: "/uploads/app-clepsydra-apparatus.png", desc: locale === "pt-br" ? "Instrumentos, construcoes e mecanismos classificados." : "Classified instruments, constructions, and mechanisms." },
+  systems:       { image: "/uploads/sys-redactory.png",      desc: locale === "pt-br" ? "Estruturas institucionais e ontologicas que sustentam o mundo." : "Structural and institutional frameworks that underpin the world." },
+  cosmology:     { image: "/uploads/ui-cosmology-bg.png",    desc: locale === "pt-br" ? "A natureza do Arquivo, do Dive e da propria existencia." : "The nature of the Archive, the Dive, and existence itself." },
 };
 
 const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
 ---
 
-<MainLayout active="home" pageTitle="SiNE Archives">
+<MainLayout active="home" pageTitle="SiNE Archives" locale={locale}>
 
   <!-- ── HERO ── -->
   <div class="hero">
@@ -47,10 +69,7 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
 
     <div class="hero__content">
       <img src="/uploads/ui-sine-logo-home.png" alt="SiNE" class="hero__logo" />
-      <p class="hero__sub">
-        A compendium of classified records, field assessments, and theoretical frameworks
-        originating from within the Empire of Synus and its adjacent cosmological structures.
-      </p>
+      <p class="hero__sub">{copy.heroSub}</p>
       <div class="hero__divider"></div>
       <p class="hero__meta">FILING YEAR 1127 · ACCESS LEVEL: PUBLIC · {totalPublic} RECORDS</p>
     </div>
@@ -81,7 +100,7 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
         return (
           <a
             class="list-row"
-            href={`/${s.key}/`}
+            href={localizedPath(locale, `/${s.key}/`)}
             data-key={s.key}
             data-img={meta.image || FALLBACK_IMG}
             data-desc={meta.desc}

@@ -1,9 +1,9 @@
 ---
 import CharacterEntryLayout from "../../../layouts/CharacterEntryLayout.astro";
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../../i18n/content";
 
 export async function getStaticPaths() {
-  const entries = await getCollection("characters");
+  const entries = await getLocalizedCollection("characters", "en");
   return entries
     .map((entry) => ({
       params: { slug: entry.slug },
@@ -14,4 +14,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<CharacterEntryLayout entry={entry} />
+<CharacterEntryLayout entry={entry} locale="en" />

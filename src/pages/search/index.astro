@@ -1,9 +1,12 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import type { SiteLocale } from "../../i18n/config";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 ---
 
-<MainLayout active="search" pageTitle="Search — SiNE Archives">
-  <section class="searchPage">
+<MainLayout active="search" pageTitle="Search — SiNE Archives" locale={locale}>
+  <section class="searchPage" data-locale={locale}>
     <div class="section__head">
       <h2 class="section__title">Search</h2>
 
@@ -38,6 +41,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <script is:inline type="module">
+    const locale = document.querySelector(".searchPage")?.dataset.locale || "en";
     const $q = document.querySelector("#q");
     const $results = document.querySelector("#results");
     const $status = document.querySelector("#status");
@@ -64,12 +68,54 @@ function debounce(fn, delay = 120) {
 }
 
 
-    function norm(s){ return (s || "").toString().toLowerCase(); }
+    const CONCEPT_GROUPS = {
+      "pt-br": [
+        ["igreja", "church"],
+        ["fe", "fé", "faith"],
+        ["demonio", "demônio", "demon", "demonic"],
+        ["exorcismo", "expulsao", "expulsão", "exorcism", "expulsion"],
+      ],
+      en: [
+        ["church", "igreja"],
+        ["faith", "fe", "fé"],
+        ["demon", "demonic", "demonio", "demônio"],
+        ["exorcism", "expulsion", "exorcismo", "expulsao", "expulsão"],
+      ],
+    };
+
+    function norm(s){
+      return (s || "")
+        .toString()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+    }
+
+    function buildSearchText(item){
+      const base = [
+        item.title,
+        item.summary,
+        (item.tags || []).join(" "),
+        item.body || "",
+      ].map(norm).join(" | ");
+
+      const groups = CONCEPT_GROUPS[locale] || CONCEPT_GROUPS.en;
+      const aliases = [];
+
+      for (const group of groups){
+        const hit = group.some((term) => base.includes(norm(term)));
+        if (hit) aliases.push(...group);
+      }
+
+      return `${base} | ${aliases.map(norm).join(" | ")}`;
+    }
+
     function scoreItem(item, query){
-  const q = (query || "").trim().toLowerCase();
+  const q = norm((query || "").trim());
   if (!q) return 0;
 
   const terms = q.split(/\s+/).filter(Boolean);
+  const hay = buildSearchText(item);
 
   const title = norm(item.title);
   const summary = norm(item.summary);
@@ -93,6 +139,7 @@ function debounce(fn, delay = 120) {
     if (tags.includes(t)) score += 14;
     if (summary.includes(t)) score += 10;
     if (body.includes(t)) score += 4;
+    if (hay.includes(t)) score += 6;
   }
 
   return score;
@@ -104,16 +151,11 @@ function debounce(fn, delay = 120) {
   if (!q) return true;
 
   const terms = q
-    .toLowerCase()
     .split(/\s+/)
+    .map(norm)
     .filter(Boolean);
 
-  const hay = [
-    item.title,
-    item.summary,
-    (item.tags || []).join(" "),
-    item.body || "",
-  ].map(norm).join(" | ");
+  const hay = buildSearchText(item);
 
   // every word must be present (AND search)
   return terms.every(t => hay.includes(t));
@@ -268,7 +310,7 @@ window.addEventListener("keydown", (e) => {
 
 
     // load index
-    fetch("/search-index.json")
+    fetch(`/search-index.json?locale=${locale}`)
       .then(r => r.json())
       .then(({ items }) => {
         indexItems = items || [];

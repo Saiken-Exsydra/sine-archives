@@ -1,6 +1,53 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../i18n/content";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
+import type { ContentKey } from "../../content-keys";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const copy = locale === "pt-br"
+  ? {
+      pageTitle: "Sistemas — SiNE Archives",
+      identityTag: "Sistemas Fundamentais",
+      identitySub: "Dois lados da mesma moeda",
+      addendums: "Adendos",
+      idleCta: "Examinar sistema",
+      collapsedHint: "Trocar",
+      allSystems: "Todos os Sistemas",
+      readFullEntry: "Ler artigo completo",
+      selectSystem: "Selecione um sistema para examinar",
+      clickCollapsed: "Clique no painel recolhido para trocar",
+      overlayEyebrow: "Sistemas · Adendos",
+      close: "Fechar",
+      entryCount: (n: number) => `${n} ${n === 1 ? "entrada" : "entradas"}`,
+      noEntries: "Nenhuma entrada registrada.",
+      bucketNames: {
+        divination: "Divination",
+        shared: "Compartilhado",
+        redactory: "Redactory",
+      },
+    }
+  : {
+      pageTitle: "Systems — SiNE Archives",
+      identityTag: "Fundamental Systems",
+      identitySub: "Two sides of the same Archive",
+      addendums: "Addendums",
+      idleCta: "Examine System ›",
+      collapsedHint: "Switch",
+      allSystems: "All Systems",
+      readFullEntry: "Read full entry",
+      selectSystem: "Select a system to examine",
+      clickCollapsed: "Click the collapsed panel to switch",
+      overlayEyebrow: "Systems · Addendums",
+      close: "Close",
+      entryCount: (n: number) => `${n} ${n === 1 ? "entry" : "entries"}`,
+      noEntries: "No entries filed.",
+      bucketNames: {
+        divination: "Divination",
+        shared: "Shared",
+        redactory: "Redactory",
+      },
+    };
 
 // ── Static system definitions ──
 const DIV_COLOR = "#4a62c4";
@@ -26,8 +73,8 @@ const SYSTEMS: SystemDef[] = [
     key: "divination",
     slug: "divinationSystem",
     name: "Divination",
-    subtitle: "Structural Reading",
-    tagline: "Body, Mind and Soul • Vessel, Conduit and Faith.",
+    subtitle: locale === "pt-br" ? "Pressão Estrutural" : "Structural Pressure",
+    tagline: locale === "pt-br" ? "Corpo, mente e alma \u2022 recept\u00E1culo, condutor e f\u00E9." : "Body, Mind and Soul \u2022 Vessel, Conduit and Faith.",
     color: DIV_COLOR,
     darkBg: "#05050e",
     image: "/uploads/sys-divination-panel.png",
@@ -38,25 +85,25 @@ const SYSTEMS: SystemDef[] = [
       { slug: "precursors",  section: "cosmology" },
     ],
     lore: [
-      "Divination is the fusion of a human individual with a powerful non-human entity — a god, or a fragment of one. The entity does not grant the vessel its power. It presses its nature through them until that nature begins to express itself as capability. What looks from the outside like a person who has become more than human is, in a meaningful sense, exactly what has happened.",
-      "The domain of the entity is the domain of the vessel. A fragment of flame produces a vessel who can shape fire. A fragment of decay, one whose touch unmakes. A fragment of mercy, one who can pull the dying back from where no healer's training reaches. There is no fixed ceiling on what is possible within an entity's domain — only on what the vessel can hold before the pressure begins to rewrite who they are.",
-      "The limit is not the entity. The limit is the vessel, and the vessel can break. A small fragment in a compatible mind produces modest gifts. A deep fusion produces effects that belong to a different category of human capability entirely — and a person whose values, priorities, and sense of self are slowly being reshaped by the thing pressing through them. At the extreme end, the original person is no longer there. What remains wears their shape, and is something else.",
+      locale === "pt-br" ? "Divination \u00E9 a fus\u00E3o entre uma pessoa humana e uma entidade n\u00E3o humana poderosa \u2014 um deus, ou um fragmento de um. A entidade n\u00E3o entrega poder ao vessel. Ela for\u00E7a a pr\u00F3pria natureza atrav\u00E9s dele at\u00E9 que essa natureza comece a aparecer como capacidade. O que, de fora, parece uma pessoa que virou algo al\u00E9m de humano \u00E9, num sentido bem real, exatamente isso." : "Divination is the fusion of a human individual with a powerful non-human entity \u2014 a god, or a fragment of one. The entity does not grant the vessel its power. It presses its nature through them until that nature begins to express itself as capability. What looks from the outside like a person who has become more than human is, in a meaningful sense, exactly what has happened.",
+      locale === "pt-br" ? "O dom\u00EDnio da entidade \u00E9 o dom\u00EDnio do vessel. Um fragmento de chama produz um vessel capaz de moldar fogo. Um fragmento de decad\u00EAncia produz um cujo toque desfaz. Um fragmento de miseric\u00F3rdia produz um capaz de puxar algu\u00E9m morrendo de volta de onde o treinamento de qualquer curandeiro j\u00E1 n\u00E3o alcan\u00E7a. N\u00E3o existe teto fixo para o que pode acontecer dentro do dom\u00EDnio de uma entidade \u2014 s\u00F3 o limite do que o vessel aguenta antes que a press\u00E3o comece a reescrever quem ele \u00E9." : "The domain of the entity is the domain of the vessel. A fragment of flame produces a vessel who can shape fire. A fragment of decay, one whose touch unmakes. A fragment of mercy, one who can pull the dying back from where no healer's training reaches. There is no fixed ceiling on what is possible within an entity's domain \u2014 only on what the vessel can hold before the pressure begins to rewrite who they are.",
+      locale === "pt-br" ? "O limite n\u00E3o est\u00E1 na entidade. O limite est\u00E1 no vessel, e o vessel pode quebrar. Um fragmento pequeno numa mente compat\u00EDvel produz dons modestos. Uma fus\u00E3o profunda produz efeitos que j\u00E1 entram em outra categoria de capacidade humana \u2014 e uma pessoa cujos valores, prioridades e senso de si v\u00E3o sendo remodelados aos poucos pela coisa que est\u00E1 passando atrav\u00E9s dela. No extremo, a pessoa original j\u00E1 n\u00E3o est\u00E1 mais ali. O que sobra veste a forma dela, mas \u00E9 outra coisa." : "The limit is not the entity. The limit is the vessel, and the vessel can break. A small fragment in a compatible mind produces modest gifts. A deep fusion produces effects that belong to a different category of human capability entirely \u2014 and a person whose values, priorities, and sense of self are slowly being reshaped by the thing pressing through them. At the extreme end, the original person is no longer there. What remains wears their shape, and is something else.",
     ],
     fields: {
-      "Institutional Body": "Church of the Luminant Threshold",
-      "Practitioner Title": "Divined / Vessel",
-      "Entry State": "The Threshold",
-      "Measured Cost": "Unconfirmed — no biological signature detected",
-      "Orientation": "Receptive — the Archive initiates contact",
-      "Senate Classification": "Religious practice — outside Apocachynthion jurisdiction",
+      [locale === "pt-br" ? "Corpo Institucional" : "Institutional Body"]: "Church of the Luminant Threshold",
+      [locale === "pt-br" ? "T\u00EDtulo do Praticante" : "Practitioner Title"]: "Divined / Vessel",
+      [locale === "pt-br" ? "Estado de Entrada" : "Entry State"]: "The Threshold",
+      [locale === "pt-br" ? "Custo Medido" : "Measured Cost"]: locale === "pt-br" ? "N\u00E3o confirmado \u2014 nenhuma assinatura biol\u00F3gica detectada" : "Unconfirmed \u2014 no biological signature detected",
+      [locale === "pt-br" ? "Orienta\u00E7\u00E3o" : "Orientation"]: locale === "pt-br" ? "Receptiva \u2014 o Archive inicia o contato" : "Receptive \u2014 the Archive initiates contact",
+      [locale === "pt-br" ? "Classifica\u00E7\u00E3o do Senado" : "Senate Classification"]: locale === "pt-br" ? "Pr\u00E1tica religiosa \u2014 fora da jurisdi\u00E7\u00E3o da Apocachynthion" : "Religious practice \u2014 outside Apocachynthion jurisdiction",
     },
   },
   {
     key: "redactory",
     slug: "redactorySystem",
     name: "Redactory",
-    subtitle: "Coherence Manipulation",
-    tagline: "Human, Mind and Reality • Pen, Ink and Paper.",
+    subtitle: locale === "pt-br" ? "sobreposição estrutural" : "Structural Overlay",
+    tagline: locale === "pt-br" ? "Humano, mente e realidade \u2022 pena, tinta e papel." : "Human, Mind and Reality \u2022 Pen, Ink and Paper.",
     color: RED_COLOR,
     darkBg: "#090303",
     image: "/uploads/sys-redactory-panel.png",
@@ -69,17 +116,17 @@ const SYSTEMS: SystemDef[] = [
       { slug: "clepsydra",          section: "apparatus" },
     ],
     lore: [
-      "Redactory is a rare human ability that allows certain individuals — Redactors — to alter the behavior of physical reality directly. By entering a focused mental state called the Dive, a Redactor guides the world to express itself differently than it normally would: reshaping matter, redirecting energy, manifesting objects, healing wounds. They do not invent. They redirect what is already there into a different shape.",
-      "Every Redactor has an Anchor — a conceptual domain through which their ability flows most naturally. Flame, metal, motion, light, blood, shadow, silence. The Anchor is not a container. It is a path. Everything is accessible in principle, but what lies inside the Anchor costs almost nothing, while what lies outside it costs enormously. Training is the slow work of widening that path without crossing the line.",
-      "The system itself is not limited. The practitioner is, and the limit is their life. Depth measures how far a Redactor has pushed into their work — and Depth kills. The deeper the Dive, the larger the effect, and the closer the practitioner moves to a threshold they cannot cross and survive. Overreach does not produce a near-death experience. It produces death, or something worse: a self that no longer reliably belongs to the person it used to be.",
+      locale === "pt-br" ? "Redactory \u00E9 uma habilidade humana rara que permite que certas pessoas \u2014 Redactors \u2014 alterem diretamente o comportamento da realidade f\u00EDsica. Ao entrar num estado mental focado chamado Dive, um Redactor guia o mundo para se expressar de um jeito diferente do normal: remodelando mat\u00E9ria, redirecionando energia, manifestando objetos, curando ferimentos. Eles n\u00E3o inventam. Eles redirecionam o que j\u00E1 existe para outra forma." : "Redactory is a rare human ability that allows certain individuals \u2014 Redactors \u2014 to alter the behavior of physical reality directly. By entering a focused mental state called the Dive, a Redactor guides the world to express itself differently than it normally would: reshaping matter, redirecting energy, manifesting objects, healing wounds. They do not invent. They redirect what is already there into a different shape.",
+      locale === "pt-br" ? "Todo Redactor tem uma Anchor \u2014 um dom\u00EDnio conceitual por onde a habilidade dele flui com mais naturalidade. Chama, metal, movimento, luz, sangue, sombra, sil\u00EAncio. A Anchor n\u00E3o \u00E9 um recipiente. Ela \u00E9 um caminho. Em princ\u00EDpio, tudo \u00E9 acess\u00EDvel, mas o que fica dentro da Anchor custa quase nada, enquanto o que est\u00E1 fora dela custa absurdamente caro. Treinar \u00E9 o trabalho lento de ampliar esse caminho sem cruzar a linha." : "Every Redactor has an Anchor \u2014 a conceptual domain through which their ability flows most naturally. Flame, metal, motion, light, blood, shadow, silence. The Anchor is not a container. It is a path. Everything is accessible in principle, but what lies inside the Anchor costs almost nothing, while what lies outside it costs enormously. Training is the slow work of widening that path without crossing the line.",
+      locale === "pt-br" ? "O sistema em si n\u00E3o \u00E9 limitado. O praticante \u00E9, e o limite \u00E9 a pr\u00F3pria vida dele. Depth mede at\u00E9 onde um Redactor mergulhou \u2014 e Depth mata. Quanto mais fundo o Dive, maior o efeito, e mais perto o praticante chega de um limiar que n\u00E3o d\u00E1 para atravessar e continuar vivo. Overreach n\u00E3o produz uma experi\u00EAncia de quase morte. Produz morte, ou algo pior: um eu que j\u00E1 n\u00E3o pertence de forma confi\u00E1vel \u00E0 pessoa que um dia foi." : "The system itself is not limited. The practitioner is, and the limit is their life. Depth measures how far a Redactor has pushed into their work \u2014 and Depth kills. The deeper the Dive, the larger the effect, and the closer the practitioner moves to a threshold they cannot cross and survive. Overreach does not produce a near-death experience. It produces death, or something worse: a self that no longer reliably belongs to the person it used to be.",
     ],
     fields: {
-      "Institutional Body": "The Apocachynthion",
-      "Practitioner Title": "Redactor",
-      "Entry State": "The Dive",
-      "Classification System": "Index Theorem — 11th revision",
-      "Measured Cost": "Biological — progressive, measurable, potentially terminal",
-      "Orientation": "Active — the practitioner initiates contact",
+      [locale === "pt-br" ? "Corpo Institucional" : "Institutional Body"]: "The Apocachynthion",
+      [locale === "pt-br" ? "T\u00EDtulo do Praticante" : "Practitioner Title"]: "Redactor",
+      [locale === "pt-br" ? "Estado de Entrada" : "Entry State"]: "The Dive",
+      [locale === "pt-br" ? "Sistema de Classifica\u00E7\u00E3o" : "Classification System"]: locale === "pt-br" ? "Index Theorem \u2014 11\u00AA revis\u00E3o" : "Index Theorem \u2014 11th revision",
+      [locale === "pt-br" ? "Custo Medido" : "Measured Cost"]: locale === "pt-br" ? "Biol\u00F3gico \u2014 progressivo, mensur\u00E1vel e potencialmente terminal" : "Biological \u2014 progressive, measurable, potentially terminal",
+      [locale === "pt-br" ? "Orienta\u00E7\u00E3o" : "Orientation"]: locale === "pt-br" ? "Ativa \u2014 o praticante inicia o contato" : "Active \u2014 the practitioner initiates contact",
     },
   },
 ];
@@ -97,7 +144,7 @@ type RelatedEntry = {
 const collectionsToScan = ["characters", "organizations", "cosmology", "apparatus", "places", "sine"] as const;
 const allEntries: Array<{ slug: string; section: string; data: any }> = [];
 for (const sec of collectionsToScan) {
-  const list = await getCollection(sec as any);
+  const list = await getLocalizedCollection(sec as ContentKey, locale);
   for (const e of list as Array<{ slug: string; data: any }>) {
     allEntries.push({ slug: e.slug, section: sec, data: e.data });
   }
@@ -114,7 +161,7 @@ const relatedFor = (sys: SystemDef): RelatedEntry[] =>
         title:   found.data.title,
         type:    found.data.type,
         summary: found.data.summary ?? "",
-        href:    `/${section}/${slug}/`,
+        href:    localizedPath(locale, `/${section}/${slug}/`),
       } satisfies RelatedEntry;
     })
     .filter(Boolean) as RelatedEntry[];
@@ -127,7 +174,7 @@ const SYSTEMS_PUBLIC = SYSTEMS.map((sys) => ({
 // ── Addendums: entries from `systems` collection bucketed by tag ──
 const EXCLUDED_ADDENDUM_SLUGS = new Set(["divinationsystem", "redactorysystem", "redactor"]);
 const ADDENDUM_PRIORITY: Record<string, number> = { resonance: 1 };
-const systemsCollection = await getCollection("systems");
+const systemsCollection = await getLocalizedCollection("systems", locale);
 const lower = (arr: string[] | undefined) => (arr ?? []).map((t) => t.toLowerCase());
 
 type AddendumBucket = "divination" | "redactory" | "shared";
@@ -150,7 +197,7 @@ const ADDENDUMS: Addendum[] = systemsCollection
       title: e.data.title,
       type: e.data.type,
       summary: e.data.summary ?? "",
-      href: `/systems/${e.slug}/`,
+      href: localizedPath(locale, `/systems/${e.slug}/`),
       bucket,
       priority: ADDENDUM_PRIORITY[e.slug.toLowerCase()] ?? 99,
     };
@@ -158,26 +205,24 @@ const ADDENDUMS: Addendum[] = systemsCollection
   .sort((a, b) => a.priority - b.priority || a.title.localeCompare(b.title));
 
 const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries: Addendum[] }[] = [
-  { key: "divination", name: "Divination", color: DIV_COLOR, entries: ADDENDUMS.filter((a) => a.bucket === "divination") },
-  { key: "shared",     name: "Shared",     color: "#9aa0c4", entries: ADDENDUMS.filter((a) => a.bucket === "shared") },
-  { key: "redactory",  name: "Redactory",  color: RED_COLOR, entries: ADDENDUMS.filter((a) => a.bucket === "redactory") },
+  { key: "divination", name: copy.bucketNames.divination, color: DIV_COLOR, entries: ADDENDUMS.filter((a) => a.bucket === "divination") },
+  { key: "shared",     name: copy.bucketNames.shared,     color: "#9aa0c4", entries: ADDENDUMS.filter((a) => a.bucket === "shared") },
+  { key: "redactory",  name: copy.bucketNames.redactory,  color: RED_COLOR, entries: ADDENDUMS.filter((a) => a.bucket === "redactory") },
 ];
 ---
 
-<MainLayout active="systems" pageTitle="Systems — SiNE Archives">
+<MainLayout active="systems" pageTitle={copy.pageTitle} locale={locale}>
 
   <div class="sys-root">
-
-    <!-- Identity bar -->
     <div class="sys-identity">
       <div class="sys-rule"></div>
       <div class="sys-identity__center">
-        <div class="sys-identity__tag">Fundamental Systems</div>
-        <div class="sys-identity__sub">Two sides of the same Archive</div>
+        <div class="sys-identity__tag">{copy.identityTag}</div>
+        <div class="sys-identity__sub">{copy.identitySub}</div>
       </div>
 
       <button class="sys-entries-btn" id="sys-entries-open" type="button">
-        Addendums
+        {copy.addendums}
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" opacity="0.6">
           <path d="M2 8 L8 2 M4 2 L8 2 L8 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -186,7 +231,6 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
       <div class="sys-rule sys-rule--right"></div>
     </div>
 
-    <!-- Split -->
     <div class="sys-split" id="sys-split" data-active="" data-hover="">
       {SYSTEMS_PUBLIC.map((sys, i) => (
         <div
@@ -195,7 +239,6 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
           data-side={i === 0 ? "left" : "right"}
           style={`--accent: ${sys.color}; --darkBg: ${sys.darkBg};`}
         >
-          {/* IDLE STATE */}
           <div class="sys-idle">
             <div class="sys-idle__bg">
               <img src={sys.image} alt="" style={`filter: ${sys.imageFilter};`} />
@@ -208,18 +251,16 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
               <div class="sys-idle__subtitle">{sys.subtitle}</div>
               <div class="sys-idle__name">{sys.name}</div>
               <div class="sys-idle__tagline">{sys.tagline}</div>
-              <div class="sys-idle__cta">Examine System ›</div>
+              <div class="sys-idle__cta">{copy.idleCta}</div>
             </div>
           </div>
 
-          {/* COLLAPSED STATE */}
           <div class="sys-collapsed">
             <div class="sys-collapsed__radial"></div>
-            <div class="sys-collapsed__hint">Switch</div>
+            <div class="sys-collapsed__hint">{copy.collapsedHint}</div>
             <div class="sys-collapsed__name">{sys.name}</div>
           </div>
 
-          {/* EXPANDED STATE */}
           <div class="sys-expanded">
             <div class="sys-expanded__topbar">
               <button class="sys-back" data-key={sys.key} type="button">
@@ -227,7 +268,7 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
                   <path d="M5 1 L1 5 L5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                   <line x1="1" y1="5" x2="11" y2="5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
                 </svg>
-                All Systems
+                {copy.allSystems}
               </button>
               <div class="sys-expanded__topbarTag">{sys.subtitle}</div>
             </div>
@@ -246,8 +287,8 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
             <div class="sys-expanded__body">
               <div class="sys-expanded__lore">
                 {sys.lore.map((para) => <p>{para}</p>)}
-                <a class="sys-expanded__entryLink" href={`/systems/${sys.slug.toLowerCase()}/`} style={`--accent: ${sys.color};`}>
-                  Read full entry
+                <a class="sys-expanded__entryLink" href={localizedPath(locale, `/systems/${sys.slug.toLowerCase()}/`)} style={`--accent: ${sys.color};`}>
+                  {copy.readFullEntry}
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                     <path d="M2 8 L8 2 M4 2 L8 2 L8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -258,27 +299,23 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
         </div>
       ))}
 
-      <!-- Decorative seam -->
       <div class="sys-seam"></div>
     </div>
 
-    <!-- Idle caption -->
     <div class="sys-caption" id="sys-caption">
-      <span>Select a system to examine</span>
+      <span>{copy.selectSystem}</span>
       <span class="sys-caption__dot">·</span>
-      <span>Click the collapsed panel to switch</span>
+      <span>{copy.clickCollapsed}</span>
     </div>
-
   </div>
 
-  <!-- Addendums overlay -->
   <div class="sys-overlay" id="sys-overlay" aria-hidden="true">
     <div class="sys-overlay__head">
       <div>
-        <div class="sys-overlay__eyebrow">Systems · Addendums</div>
-        <h2 class="sys-overlay__title">Addendums</h2>
+        <div class="sys-overlay__eyebrow">{copy.overlayEyebrow}</div>
+        <h2 class="sys-overlay__title">{copy.addendums}</h2>
       </div>
-      <button class="sys-overlay__close" id="sys-entries-close" aria-label="Close">×</button>
+      <button class="sys-overlay__close" id="sys-entries-close" aria-label={copy.close}>×</button>
     </div>
 
     <div class="sys-overlay__cols">
@@ -288,12 +325,12 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
             <div class="sys-overlay__bar"></div>
             <div class="sys-overlay__colName">{col.name}</div>
             <div class="sys-overlay__colCount">
-              {col.entries.length} {col.entries.length === 1 ? "entry" : "entries"}
+              {copy.entryCount(col.entries.length)}
             </div>
           </div>
 
           {col.entries.length === 0 && (
-            <div class="sys-overlay__empty">No entries filed.</div>
+            <div class="sys-overlay__empty">{copy.noEntries}</div>
           )}
 
           <div class="sys-overlay__list">
@@ -498,7 +535,7 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
     animation: sysEnter 0.5s cubic-bezier(0.16,1,0.3,1);
   }
 
-  /* When other panel is active → this panel collapsed */
+  /* When other panel is active â†’ this panel collapsed */
   .sys-split[data-active="redactory"]  .sys-panel--divination .sys-idle,
   .sys-split[data-active="divination"] .sys-panel--redactory  .sys-idle {
     display: none;

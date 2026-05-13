@@ -1,0 +1,9 @@
+---
+import OrganizationsPage from "../../organizations/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<OrganizationsPage locale="pt-br" />

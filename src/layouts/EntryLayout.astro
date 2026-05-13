@@ -1,10 +1,11 @@
 ---
 import MainLayout from "./MainLayout.astro";
-import { getCollection } from "astro:content";
 import { CONTENT_KEYS } from "../content-keys";
-import { SECTIONS } from "../sections";
+import { getLocalizedCollection } from "../i18n/content";
+import { localizedEntryPath, localizedPath, type SiteLocale } from "../i18n/config";
+import { getEntryLayoutLabels, sectionLabel as getSectionLabel } from "../i18n/ui";
 
-const { entry, active } = Astro.props;
+const { entry, active, locale = "en" } = Astro.props as { entry: any; active: string; locale?: SiteLocale };
 const { Content, headings } = await entry.render();
 
 const isCharacterEntry = active === "characters";
@@ -42,10 +43,9 @@ const skyphonChurchName = str(entry.data?.church_name);
 const skyphonPrinciple  = str(entry.data?.principle);
 const skyphonKeeperName = str(entry.data?.keeper_name);
 
-const sectionLabel =
-  SECTIONS.find((s) => s.key === active)?.label ??
-  ((active || "").charAt(0).toUpperCase() + (active || "").slice(1));
-const sectionHref = `/${active}/`;
+const sectionLabel = getSectionLabel(locale, active as any);
+const sectionHref = localizedPath(locale, `/${active}/`);
+const labels = getEntryLayoutLabels(locale);
 
 // ── Related entries ──
 function normalizeTags(tags: unknown): string[] {
@@ -64,11 +64,12 @@ const currentTags = normalizeTags(entry.data?.tags);
 
 const allPublic = (
   await Promise.all(
-    CONTENT_KEYS.map((c) => getCollection(c, (e) => e.data.status === "public"))
+    CONTENT_KEYS.map((c) => getLocalizedCollection(c, locale))
   )
 ).flat();
 
 const related = allPublic
+  .filter((e) => e.data.status === "public")
   .filter((e) => e.slug !== currentSlug)
   .map((e) => {
     const tags = normalizeTags(e.data?.tags);
@@ -97,11 +98,11 @@ if (isSkyphon) {
   if (skyphonPrinciple)  fields.push({ label: "Principle",         value: skyphonPrinciple });
   if (skyphonKeeperName) fields.push({ label: "Keeper Name",       value: skyphonKeeperName, wide: true });
 } else if (isApparatusEntry) {
-  if (appSealingStatus)  fields.push({ label: "Sealing Status",    value: appSealingStatus });
-  if (affiliation)       fields.push({ label: "Origin",            value: affiliation });
-  if (appCustody)        fields.push({ label: "Custody",           value: appCustody });
-  if (appKnownPrinciple) fields.push({ label: "Known Principle",   value: appKnownPrinciple });
-  if (appUserStatus)     fields.push({ label: "User Status",       value: appUserStatus });
+  if (appSealingStatus)  fields.push({ label: labels.apparatusFields.sealingStatus, value: appSealingStatus });
+  if (affiliation)       fields.push({ label: labels.apparatusFields.origin, value: affiliation });
+  if (appCustody)        fields.push({ label: labels.apparatusFields.custody, value: appCustody });
+  if (appKnownPrinciple) fields.push({ label: labels.apparatusFields.knownPrinciple, value: appKnownPrinciple });
+  if (appUserStatus)     fields.push({ label: labels.apparatusFields.userStatus, value: appUserStatus });
 } else if (isCharacterEntry) {
   if (registryStatus)  fields.push({ label: "Registry Status",     value: registryStatus });
   if (affiliation)     fields.push({ label: "Affiliation",         value: affiliation });
@@ -125,7 +126,7 @@ if (isSkyphon) {
 }
 ---
 
-<MainLayout active={active} pageTitle={`${entry.data.title} — ${sectionLabel} — SiNE Archives`}>
+<MainLayout active={active} pageTitle={`${entry.data.title} — ${sectionLabel} — SiNE Archives`} locale={locale}>
 
   <!-- ── HERO ── -->
   <div class="ent-hero">
@@ -139,7 +140,7 @@ if (isSkyphon) {
     )}
     <div class="ent-hero__content">
       <!-- breadcrumb -->
-      <nav class="ent-crumbs" aria-label="Breadcrumb">
+      <nav class="ent-crumbs" aria-label={labels.breadcrumb}>
         <a class="ent-crumbs__link" href={sectionHref}>{sectionLabel}</a>
         <span class="ent-crumbs__sep" aria-hidden="true">›</span>
         <span class="ent-crumbs__cur">{entry.data.title}</span>
@@ -168,7 +169,7 @@ if (isSkyphon) {
       {fields.length ? (
         <details class="ent-sidebar__card" open>
           <summary class="ent-sidebar__card-title">
-            File Data
+            {labels.fileData}
             <svg class="ent-sidebar__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
               <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -182,12 +183,12 @@ if (isSkyphon) {
         </details>
       ) : null}
 
-      <div class="ent-sidebar__updated">Filed: {entry.data.updated}</div>
+      <div class="ent-sidebar__updated">{labels.filed}: {entry.data.updated}</div>
 
       {/* TOC — only shown in sidebar when headings >= 3 */}
       {(headings?.length ?? 0) >= 3 ? (
         <details class="ent-toc" open>
-          <summary class="ent-toc__summary">On this page</summary>
+          <summary class="ent-toc__summary">{labels.onThisPage}</summary>
           <nav class="ent-toc__nav">
             <ul class="ent-toc__list">
               {(headings as { depth: number; slug: string; text: string }[])
@@ -217,7 +218,7 @@ if (isSkyphon) {
             <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.2"/>
             <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
           </svg>
-          <span class="ent-portrait-placeholder__text">Portrait Pending</span>
+          <span class="ent-portrait-placeholder__text">{labels.portraitPending}</span>
         </div>
       )}
 
@@ -236,21 +237,21 @@ if (isSkyphon) {
 
   <!-- ── RELATED ── -->
   {related.length ? (
-    <section class="ent-related" aria-label="Related entries">
+    <section class="ent-related" aria-label={labels.relatedEntries}>
       <div class="ent-related__inner">
         <div class="ent-related__header">
           <div class="ent-related__line"></div>
-          <span class="ent-related__label">Related entries</span>
+          <span class="ent-related__label">{labels.relatedEntries}</span>
           <div class="ent-related__line"></div>
         </div>
         <div class="ent-related__grid">
           {related.map(({ e, score }) => (
-            <a class="ent-related__item" href={`/${e.collection}/${e.slug}/`}>
+            <a class="ent-related__item" href={localizedEntryPath(locale, e.collection as any, e.slug)}>
               <div class="ent-related__name">{e.data.title}</div>
               {e.data.summary ? (
                 <div class="ent-related__summary">{e.data.summary}</div>
               ) : null}
-              <div class="ent-related__meta">{score} shared tag{score === 1 ? "" : "s"}</div>
+              <div class="ent-related__meta">{score} {score === 1 ? labels.sharedTag : labels.sharedTags}</div>
             </a>
           ))}
         </div>

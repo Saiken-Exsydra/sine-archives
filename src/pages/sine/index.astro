@@ -1,8 +1,10 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../i18n/content";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
 
-const all = await getCollection("sine");
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const all = await getLocalizedCollection("sine", locale);
 const publicEntries = all.filter((e) => e.data.status === "public");
 
 // Build panel data from content entries, mapping to the prototype's structure
@@ -18,12 +20,25 @@ const ACCENT_COLORS: Record<string, string> = {
   clockwork: "#6a4a9a",
 };
 
-const TAGLINES: Record<string, string> = {
-  sine:      "Seven divisions. One organization. Older than its peers.",
-  hourglass: "When the Empire cannot deploy, HourGlass fills the gap.",
-  clepsydra: "The lattice is not commanded. It is petitioned.",
-  stasis:    "The branch that doesn't officially exist.",
-  clockwork: "Zero institutional footprint. One hundred percent deniability.",
+const TAGLINES: Record<string, string> = locale === "pt-br"
+  ? {
+      sine:      "Sete divisões. Uma organização. Mais antiga do que suas equivalentes.",
+      hourglass: "Quando o Empire não pode agir, a HourGlass preenche a lacuna.",
+      clepsydra: "A lattice não é comandada. Ela é solicitada.",
+      stasis:    "O ramo que oficialmente não existe.",
+      clockwork: "Zero presença institucional. Cem por cento de negabilidade.",
+    }
+  : {
+      sine:      "Seven divisions. One organization. Older than its peers.",
+      hourglass: "When the Empire cannot deploy, HourGlass fills the gap.",
+      clepsydra: "The lattice is not commanded. It is petitioned.",
+      stasis:    "The branch that doesn't officially exist.",
+      clockwork: "Zero institutional footprint. One hundred percent deniability.",
+    };
+
+const copy = {
+  panelSubtitle: locale === "pt-br" ? "Organização" : "Organization",
+  openFile: locale === "pt-br" ? "Abrir Arquivo" : "Open File",
 };
 
 type SineEntry = {
@@ -52,7 +67,7 @@ const panels: SineEntry[] = panelOrder
     return {
       slug,
       label:       d.title,
-      subtitle:    d.type,
+      subtitle:    copy.panelSubtitle,
       tagline:     TAGLINES[slug] ?? d.summary,
       image:       d.image ?? "",
       accentColor: ACCENT_COLORS[slug] ?? "#b13a34",
@@ -61,9 +76,11 @@ const panels: SineEntry[] = panelOrder
     };
   })
   .filter(Boolean) as SineEntry[];
+
+const entryBasePath = localizedPath(locale, "/sine/");
 ---
 
-<MainLayout active="sine" pageTitle="SiNE Network — SiNE Archives">
+<MainLayout active="sine" pageTitle="SiNE Network — SiNE Archives" locale={locale}>
 
   <div class="sine-root">
 
@@ -107,7 +124,7 @@ const panels: SineEntry[] = panelOrder
             <div class="sine-panel__subtitle">{branch.subtitle}</div>
             <div class="sine-panel__label">{branch.label}</div>
             <div class="sine-panel__tagline">{branch.tagline}</div>
-            <div class="sine-panel__cta">Open File ›</div>
+            <div class="sine-panel__cta">{copy.openFile} &rsaquo;</div>
           </div>
 
           <!-- Left accent bar -->
@@ -167,7 +184,7 @@ const panels: SineEntry[] = panelOrder
 </MainLayout>
 
 <!-- Pass panel data to client script -->
-<script define:vars={{ panels }} is:inline>
+<script define:vars={{ panels, entryBasePath }} is:inline>
   const PANELS = panels;
 
   const panelsEl  = document.getElementById("sine-panels");
@@ -210,12 +227,16 @@ const panels: SineEntry[] = panelOrder
 
     // Main body — fetch rendered entry content via slug
     modalMain.innerHTML = `<p class="sine-modal__loading">Loading…</p>`;
-    fetch(`/sine/${branch.slug}/`)
+    fetch(`${entryBasePath}${branch.slug}/`)
       .then(r => r.text())
       .then(html => {
         const doc = new DOMParser().parseFromString(html, "text/html");
         // Extract the entry body content
-        const content = doc.querySelector(".entry-body") || doc.querySelector("article") || doc.querySelector("main");
+        const content =
+          doc.querySelector("[data-entry-body]") ||
+          doc.querySelector(".entry-body") ||
+          doc.querySelector("article") ||
+          doc.querySelector("main");
         if (content) {
           modalMain.innerHTML = content.innerHTML;
         } else {
@@ -887,3 +908,4 @@ const panels: SineEntry[] = panelOrder
     .sine-modal__main { padding: 22px 20px 60px; }
   }
 </style>
+

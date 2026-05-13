@@ -1,0 +1,9 @@
+---
+import CosmologyPage from "../../cosmology/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<CosmologyPage locale="pt-br" />

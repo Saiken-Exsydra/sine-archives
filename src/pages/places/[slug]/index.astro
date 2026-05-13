@@ -1,9 +1,9 @@
 ---
 import EntryLayout from "../../../layouts/EntryLayout.astro";
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../../i18n/content";
 
 export async function getStaticPaths() {
-  const entries = await getCollection("places");
+  const entries = await getLocalizedCollection("places", "en");
   return entries
     .filter((e) => e.data.status === "public")
     .map((entry) => ({
@@ -15,4 +15,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<EntryLayout active="places" entry={entry} />
+<EntryLayout active="places" entry={entry} locale="en" />

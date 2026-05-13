@@ -1,0 +1,9 @@
+---
+import PlacesPage from "../../places/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<PlacesPage locale="pt-br" />

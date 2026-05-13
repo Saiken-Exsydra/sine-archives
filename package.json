@@ -3,12 +3,12 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "check:text-encoding": "node scripts/pt-br-encoding-guard.mjs --check",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run check:text-encoding && astro build",
+    "fix:text-encoding": "node scripts/pt-br-encoding-guard.mjs --fix",
     "preview": "astro preview",
-    "astro": "astro",
-    "gen:astro": "node scripts/generate-astro-collections.mjs",
-    "prebuild": "npm run gen:astro"
+    "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.18.1"

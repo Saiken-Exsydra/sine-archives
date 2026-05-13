@@ -1,0 +1,9 @@
+---
+import SystemsPage from "../../systems/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<SystemsPage locale="pt-br" />

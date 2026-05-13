@@ -1,8 +1,10 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../i18n/content";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
 
-const all = await getCollection("cosmology");
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const all = await getLocalizedCollection("cosmology", locale);
 const publicEntries = all.filter((e) => e.data.status === "public");
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
@@ -111,9 +113,14 @@ const otherEntries = publicEntries
 
 const featuredPanels = featuredEntries.map(buildPanel);
 const otherPanels    = otherEntries.map((e, i) => buildPanel(e, featuredPanels.length + i));
+const entryBasePath = localizedPath(locale, "/cosmology/");
+
+const copy = {
+  readEntry: locale === "pt-br" ? "Ler Mais" : "Read Entry",
+};
 ---
 
-<MainLayout active="cosmology" pageTitle="Cosmology — SiNE Archives">
+<MainLayout active="cosmology" pageTitle="Cosmology — SiNE Archives" locale={locale}>
   <div class="cosmo-root">
 
     <!-- Identity bar -->
@@ -177,7 +184,7 @@ const otherPanels    = otherEntries.map((e, i) => buildPanel(e, featuredPanels.l
               type="button"
               data-open-entry={p.slug}
             >
-              Read Entry
+              {copy.readEntry}
               <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
                 <path d="M1 5.5h9M5.5 1l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -245,7 +252,7 @@ const otherPanels    = otherEntries.map((e, i) => buildPanel(e, featuredPanels.l
 
         <div class="cosmo-others__footer">
           <div class="cosmo-others__footer-rule"></div>
-          <a href="/" class="cosmo-others__back">← Return to Archives Index</a>
+          <a href={localizedPath(locale, "/")} class="cosmo-others__back">← Return to Archives Index</a>
         </div>
       </div>
     </section>
@@ -295,7 +302,7 @@ const otherPanels    = otherEntries.map((e, i) => buildPanel(e, featuredPanels.l
   </div>
 </MainLayout>
 
-<script define:vars={{ panels: [...featuredPanels, ...otherPanels] }} is:inline>
+<script define:vars={{ panels: [...featuredPanels, ...otherPanels], entryBasePath }} is:inline>
   const PANELS = panels;
   const byId = (id) => document.getElementById(id);
 
@@ -351,7 +358,7 @@ const otherPanels    = otherEntries.map((e, i) => buildPanel(e, featuredPanels.l
     modalLead.textContent = p.summary || "";
 
     modalBody.innerHTML = `<p class="cosmo-modal__loading">Loading…</p>`;
-    fetch(`/cosmology/${p.slug}/`)
+    fetch(`${entryBasePath}${p.slug}/`)
       .then((r) => r.text())
       .then((html) => {
         const doc = new DOMParser().parseFromString(html, "text/html");

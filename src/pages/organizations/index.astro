@@ -1,8 +1,10 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../i18n/content";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
 
-const rawEntries = await getCollection("organizations");
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const rawEntries = await getLocalizedCollection("organizations", locale);
 const publicEntries = rawEntries
   .filter((e) => e.data.status === "public")
   .sort((a, b) => {
@@ -25,6 +27,56 @@ const OBJECT_POSITION: Record<string, string> = {
   "the-church":     "center 40%",
 };
 
+const copy = locale === "pt-br"
+  ? {
+      pageTitle: "Organizações — SiNE Archives",
+      registryLabel: "REGISTRO INSTITUCIONAL",
+      countEntity: (n: number) => `${n} ${n === 1 ? "entidade" : "entidades"} em arquivo`,
+      countEntry: (n: number) => `${n} ${n === 1 ? "entrada" : "entradas"} em arquivo`,
+      sectionTitle: "Organizações",
+      sectionDesc: "Instituições ativas, órgãos de governo e ordens religiosas atuando dentro da SiNE",
+      indexLabel: "Índice de organizações",
+      openDossier: "Abrir Dossiê",
+      footerLabel: "Registro Institucional",
+      returnToIndex: "← Voltar ao Índice do Arquivo",
+      closeEntry: "Fechar entrada",
+      classificationData: "Dados de Classificação",
+      loadingEntry: "Carregando entrada…",
+      fieldDesignation: "Designação",
+      fieldAffiliation: "Afiliação",
+      fieldHeadquarters: "Sede",
+      fieldFounded: "Fundação",
+      fieldJurisdiction: "Jurisdição",
+      fieldStatus: "Estado",
+      fieldFiled: "Arquivado",
+      filedValue: "Organizações",
+      defaultType: "Organização",
+    }
+  : {
+      pageTitle: "Organizations — SiNE Archives",
+      registryLabel: "INSTITUTIONAL REGISTRY",
+      countEntity: (n: number) => `${n} ${n === 1 ? "entity" : "entities"} on file`,
+      countEntry: (n: number) => `${n} ${n === 1 ? "entry" : "entries"} on file`,
+      sectionTitle: "Organizations",
+      sectionDesc: "Active institutions, governance bodies, and faith orders operating within the SiNE",
+      indexLabel: "Organization index",
+      openDossier: "Open Dossier",
+      footerLabel: "Institutional Registry",
+      returnToIndex: "← Return to Archives Index",
+      closeEntry: "Close entry",
+      classificationData: "Classification Data",
+      loadingEntry: "Loading entry…",
+      fieldDesignation: "Designation",
+      fieldAffiliation: "Affiliation",
+      fieldHeadquarters: "Headquarters",
+      fieldFounded: "Founded",
+      fieldJurisdiction: "Jurisdiction",
+      fieldStatus: "Status",
+      fieldFiled: "Filed",
+      filedValue: "Organizations",
+      defaultType: "Organization",
+    };
+
 type Entry = (typeof publicEntries)[number];
 
 type Panel = {
@@ -45,18 +97,18 @@ const buildPanel = (e: Entry, idx: number): Panel => {
   const d = e.data as any;
   // Full fields for modal (designation + all contextual + filed)
   const allFields: Record<string, string> = {};
-  if (d.designation)  allFields["Designation"]  = d.designation;
-  if (d.affiliation)  allFields["Affiliation"]  = d.affiliation;
-  if (d.headquarters) allFields["Headquarters"] = d.headquarters;
-  if (d.founded)      allFields["Founded"]      = d.founded;
-  if (d.jurisdiction) allFields["Jurisdiction"] = d.jurisdiction;
-  if (d.status_label) allFields["Status"]       = d.status_label;
-  allFields["Filed"] = "Organizations";
+  if (d.designation)  allFields[copy.fieldDesignation]  = d.designation;
+  if (d.affiliation)  allFields[copy.fieldAffiliation]  = d.affiliation;
+  if (d.headquarters) allFields[copy.fieldHeadquarters] = d.headquarters;
+  if (d.founded)      allFields[copy.fieldFounded]      = d.founded;
+  if (d.jurisdiction) allFields[copy.fieldJurisdiction] = d.jurisdiction;
+  if (d.status_label) allFields[copy.fieldStatus]       = d.status_label;
+  allFields[copy.fieldFiled] = copy.filedValue;
 
   return {
     slug:           e.slug,
     title:          d.title,
-    type:           d.type || "Organization",
+    type:           d.type || copy.defaultType,
     designation:    d.designation || "",
     summary:        d.summary || "",
     image:          (d.image && d.image.length > 0) ? d.image : "",
@@ -74,31 +126,33 @@ const panels = publicEntries.map(buildPanel);
 const spreadFields = publicEntries.map((e) => {
   const d = e.data as any;
   const f: Record<string, string> = {};
-  if (d.affiliation)  f["Affiliation"]  = d.affiliation;
-  if (d.headquarters) f["Headquarters"] = d.headquarters;
-  if (d.founded)      f["Founded"]      = d.founded;
-  if (d.jurisdiction) f["Jurisdiction"] = d.jurisdiction;
-  if (d.status_label) f["Status"]       = d.status_label;
+  if (d.affiliation)  f[copy.fieldAffiliation]  = d.affiliation;
+  if (d.headquarters) f[copy.fieldHeadquarters] = d.headquarters;
+  if (d.founded)      f[copy.fieldFounded]      = d.founded;
+  if (d.jurisdiction) f[copy.fieldJurisdiction] = d.jurisdiction;
+  if (d.status_label) f[copy.fieldStatus]       = d.status_label;
   return f;
 });
+
+const entryBasePath = localizedPath(locale, "/organizations/");
 ---
 
-<MainLayout active="organizations" pageTitle="Organizations — SiNE Archives">
+<MainLayout active="organizations" pageTitle={copy.pageTitle} locale={locale}>
   <div class="orgs-root">
 
     <!-- Page header -->
     <header class="orgs-hdr">
       <div class="orgs-hdr__pre">
-        <span class="orgs-hdr__label">INSTITUTIONAL REGISTRY</span>
+        <span class="orgs-hdr__label">{copy.registryLabel}</span>
         <span class="orgs-hdr__sep" aria-hidden="true">·</span>
-        <span class="orgs-hdr__count">{panels.length} {panels.length === 1 ? "entity" : "entities"} on file</span>
+        <span class="orgs-hdr__count">{copy.countEntity(panels.length)}</span>
       </div>
-      <h1 class="orgs-hdr__title">Organizations</h1>
-      <p class="orgs-hdr__desc">Active institutions, governance bodies, and faith orders operating within the SiNE</p>
+      <h1 class="orgs-hdr__title">{copy.sectionTitle}</h1>
+      <p class="orgs-hdr__desc">{copy.sectionDesc}</p>
     </header>
 
     <!-- Quick index strip -->
-    <nav class="orgs-index" aria-label="Organization index">
+    <nav class="orgs-index" aria-label={copy.indexLabel}>
       {panels.map((p, i) => (
         <a href={`#org-${p.slug}`} class="orgs-index__item" style={`--accent: ${p.accent};`}>
           <span class="orgs-index__num" aria-hidden="true">{p.numeral}</span>
@@ -173,7 +227,7 @@ const spreadFields = publicEntries.map((e) => {
               <p class="org-spread__summary">{p.summary}</p>
 
               <button class="org-spread__cta" type="button" data-open-entry={p.slug}>
-                Open Dossier
+                {copy.openDossier}
                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
                   <path d="M1 5.5h9M5.5 1l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -189,14 +243,14 @@ const spreadFields = publicEntries.map((e) => {
       <div class="orgs-footer__inner">
         <div class="orgs-footer__rule"></div>
         <div class="orgs-footer__mid">
-          <span class="orgs-footer__label">Institutional Registry</span>
-          <span class="orgs-footer__count">{panels.length} {panels.length === 1 ? "entry" : "entries"} on file</span>
+          <span class="orgs-footer__label">{copy.footerLabel}</span>
+          <span class="orgs-footer__count">{copy.countEntry(panels.length)}</span>
         </div>
         <div class="orgs-footer__rule"></div>
       </div>
       <div class="orgs-footer__nav">
         <div class="orgs-footer__nav-rule"></div>
-        <a href="/" class="orgs-footer__back">← Return to Archives Index</a>
+        <a href={localizedPath(locale, "/")} class="orgs-footer__back">{copy.returnToIndex}</a>
       </div>
     </footer>
   </div>
@@ -204,7 +258,7 @@ const spreadFields = publicEntries.map((e) => {
   <!-- Modal overlay (unchanged from previous implementation) -->
   <div class="org-overlay" id="org-overlay" aria-hidden="true">
     <div class="org-modal" id="org-modal" role="dialog" aria-modal="true">
-      <button class="org-modal__close" id="org-modal-close" aria-label="Close entry">
+      <button class="org-modal__close" id="org-modal-close" aria-label={copy.closeEntry}>
         <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
           <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="10" y1="1" x2="1" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -228,7 +282,7 @@ const spreadFields = publicEntries.map((e) => {
       <div class="org-modal__pane" id="org-modal-pane">
         <div class="org-modal__pane-inner">
           <div class="org-modal__fields-card">
-            <div class="org-modal__fields-title" id="org-modal-fields-title">Classification Data</div>
+            <div class="org-modal__fields-title" id="org-modal-fields-title">{copy.classificationData}</div>
             <div id="org-modal-fields"></div>
           </div>
 
@@ -237,7 +291,7 @@ const spreadFields = publicEntries.map((e) => {
           <div class="org-modal__divider"></div>
 
           <div class="org-modal__body" id="org-modal-body">
-            <p class="org-modal__loading">Loading entry…</p>
+            <p class="org-modal__loading">{copy.loadingEntry}</p>
           </div>
         </div>
       </div>
@@ -245,7 +299,7 @@ const spreadFields = publicEntries.map((e) => {
   </div>
 </MainLayout>
 
-<script define:vars={{ panels }} is:inline>
+<script define:vars={{ panels, entryBasePath, copy }} is:inline>
   const PANELS = panels;
   const byId = (id) => document.getElementById(id);
 
@@ -281,7 +335,7 @@ const spreadFields = publicEntries.map((e) => {
     modalAccent.style.background = `linear-gradient(to top, ${p.accent}33, transparent 55%)`;
     modalBar.style.background = `linear-gradient(to bottom, transparent, ${p.accent}aa, transparent)`;
 
-    modalType.textContent = (p.type || "Organization").toUpperCase();
+    modalType.textContent = (p.type || copy.defaultType).toUpperCase();
     modalType.style.color = p.accent;
     modalTitle.textContent = p.title;
     modalDes.textContent = p.designation || "";
@@ -301,8 +355,8 @@ const spreadFields = publicEntries.map((e) => {
 
     modalLead.textContent = p.summary || "";
 
-    modalBody.innerHTML = `<p class="org-modal__loading">Loading entry…</p>`;
-    fetch(`/organizations/${p.slug}/`)
+    modalBody.innerHTML = `<p class="org-modal__loading">${copy.loadingEntry}</p>`;
+    fetch(`${entryBasePath}${p.slug}/`)
       .then((r) => r.text())
       .then((html) => {
         const doc = new DOMParser().parseFromString(html, "text/html");
@@ -1101,3 +1155,4 @@ const spreadFields = publicEntries.map((e) => {
     .org-modal__hero-content { padding: 28px 20px 20px; }
   }
 </style>
+

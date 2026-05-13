@@ -4,11 +4,11 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 // ---------------------------------------------------------------------------
 //  MAP CONFIGURATION
 //  To swap the map image for a higher-resolution version, change MAP_IMAGE.
-//  Update MAP_ASPECT (width ÷ height) if the new image has different dimensions.
+//  Update MAP_ASPECT (width x height) if the new image has different dimensions.
 // ---------------------------------------------------------------------------
 const MAP_IMAGE  = "/uploads/map-empire.png";
 const MAP_ALT    = "Illustrated map of the Empire of Synus, showing the northern, central, and southern regions with Aurora to the west and Ardeatus to the east.";
-const MAP_ASPECT = 1534 / 1025; // natural image width ÷ height ˜ 1.497
+const MAP_ASPECT = 1534 / 1025; // natural image width x height ~= 1.497
 
 const dossier = {
   north: {
@@ -72,7 +72,7 @@ const dossier = {
       "The south is the Empire's industrial slope. It begins at the central green belt, drops through the Scorch Escarpment, and ends in cracked extraction country. Lu'mia, Hora'veil, Cal'thas, and Sarn Pell make the southern geography feel engineered around fuel, armament, and frontier supply.",
     stats: [
       ["Northern lip",    "Scorch Escarpment"],
-      ["Industrial axis", "Hora'veil · Cal'thas"],
+      ["Industrial axis", "Hora'veil - Cal'thas"],
       ["Deep feature",    "Vael Mouth"],
     ],
     facts: [
@@ -154,7 +154,7 @@ const handles = [
 ];
 ---
 
-<MainLayout active="places" pageTitle="Empire Map — SiNE Archives">
+<MainLayout active="places" pageTitle="Empire Map - SiNE Archives">
   <section class="atlas" id="atlasRoot">
 
     <!-- Back link: floats over the map -->
@@ -213,10 +213,10 @@ const handles = [
           </svg>
         </div>
         <div class="carto-ref">
-          <span>IGS · REF 44·7</span>
+          <span>IGS Â· REF 44x7</span>
         </div>
         <div class="carto-classification">
-          IMPERIAL GEOGRAPHIC SURVEY · RESTRICTED CIRCULATION
+          IMPERIAL GEOGRAPHIC SURVEY Â· RESTRICTED CIRCULATION
         </div>
       </div>
 
@@ -239,7 +239,7 @@ const handles = [
     <aside class="dossier" id="dossier" aria-live="polite" aria-hidden="true">
 
       <div class="dossier-stamp" aria-hidden="true">
-        CLASSIFIED · INTERNAL USE ONLY
+        CLASSIFIED Â· INTERNAL USE ONLY
       </div>
 
       <button class="dossier-close" id="dossierClose"
@@ -365,7 +365,7 @@ const handles = [
     setText("dossierQuote",   data.quote);
     setText("dossierByline",  data.byline);
     setText("dossierRef",     data.docRef ?? "");
-    setText("dossierStatus",  `${data.eyebrow} · ${data.title}`);
+    setText("dossierStatus",  `${data.eyebrow} Â· ${data.title}`);
 
     const statsEl = el("dossierStats");
     if (statsEl) {

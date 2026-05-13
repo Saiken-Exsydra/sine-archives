@@ -1,0 +1,9 @@
+---
+import ApparatusPage from "../../apparatus/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<ApparatusPage locale="pt-br" />

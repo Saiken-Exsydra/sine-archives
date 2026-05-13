@@ -1,0 +1,9 @@
+---
+import CharactersPage from "../../characters/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<CharactersPage locale="pt-br" />

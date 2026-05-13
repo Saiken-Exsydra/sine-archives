@@ -1,15 +1,17 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import type { ContentKey } from "../content-keys";
+import { localizedEntryPath, type SiteLocale } from "../i18n/config";
 
 type Props = {
   section: ContentKey;
-  entry: CollectionEntry<ContentKey>;
+  entry: CollectionEntry<any>;
+  locale?: SiteLocale;
 };
 
-const { entry, section } = Astro.props as Props;
+const { entry, section, locale = "en" } = Astro.props as Props;
 
-const href = `/${section}/${entry.slug}/`;
+const href = localizedEntryPath(locale, section, entry.slug);
 const tags = entry.data.tags ?? [];
 const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toLowerCase();
 ---
@@ -43,7 +45,7 @@ const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toL
           <span class="ecard__tag">{String(t).toUpperCase()}</span>
         ))}
       </div>
-      <span class="ecard__updated">Updated {entry.data.updated}</span>
+      <span class="ecard__updated">{locale === "pt-br" ? "Atualizado" : "Updated"} {entry.data.updated}</span>
     </div>
   </div>
 

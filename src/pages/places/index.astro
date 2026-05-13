@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
+import { getLocalizedCollection } from "../../i18n/content";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
 
 const REGIONS = [
   {
@@ -41,7 +42,8 @@ const REGIONS = [
   },
 ];
 
-const all = (await getCollection("places")).filter((e) => e.data.status === "public");
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const all = (await getLocalizedCollection("places", locale)).filter((e) => e.data.status === "public");
 
 function regionEntries(matchTag: string) {
   return all
@@ -69,7 +71,7 @@ const regionsData = REGIONS.map((r) => ({
 const regionsJson = JSON.stringify(regionsData);
 ---
 
-<MainLayout active="places" pageTitle="Places — SiNE Archives">
+<MainLayout active="places" pageTitle="Places — SiNE Archives" locale={locale}>
   <div class="places-root" id="places-root" data-regions={regionsJson}>
     <div class="places-header">
       <div class="places-header__rule"></div>
@@ -81,7 +83,7 @@ const regionsJson = JSON.stringify(regionsData);
     </div>
 
     <div class="places-search" id="places-search">
-      <a class="places-map-link" href="/places/map/">
+      <a class="places-map-link" href={localizedPath(locale, "/places/map/")}>
         <span class="places-map-link__icon" aria-hidden="true">◇</span>
         <span>Empire Map</span>
       </a>
@@ -188,7 +190,7 @@ const regionsJson = JSON.stringify(regionsData);
                 region.entries.map((entry, i) => (
                   <a
                     class="place-card"
-                    href={`/places/${entry.slug}/`}
+                    href={localizedPath(locale, `/places/${entry.slug}/`)}
                     data-accent={region.accentColor}
                     style={`--accent:${region.accentColor}; --accent-soft:${region.accentColor}55; --accent-tint:${region.accentColor}12; --i:${i};`}
                   >
@@ -1102,7 +1104,7 @@ const regionsJson = JSON.stringify(regionsData);
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.className = "places-search__item";
-        a.href = `/places/${entry.slug}/`;
+        a.href = `${localizedPath(locale, "/places/")}${entry.slug}/`;
         a.style.setProperty("--accent", entry.accent);
         a.style.setProperty("--accent-tint", `${entry.accent}22`);
         a.dataset.idx = String(i);
