@@ -175,7 +175,8 @@ Translator decision rule:
 
 | Canon term | PT-BR sense | Gender/article | Policy |
 |---|---|---|---|
-| The Church | Igreja | feminine singular | keep unchanged |
+| Church | Igreja | feminine singular | translate to `Igreja` in pt-BR prose |
+| The Church | a Igreja | feminine singular | translate to `a Igreja` in pt-BR prose |
 | The Apocachynthion | instituicao reguladora | masculine singular | keep unchanged |
 | Empire of Synus | Imperio de Synus | masculine singular | keep unchanged |
 | Imperial Redactor Academy | Academia Imperial Redactor | feminine singular | keep unchanged |

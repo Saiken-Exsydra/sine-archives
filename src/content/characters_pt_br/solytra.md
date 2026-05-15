@@ -1,20 +1,20 @@
 ---
 title: "Sol'ytra"
 type: "Personagem"
-affiliation: "All-Mother; derivada da ferida rememorada da Lunar Crown; sem alinhamento institucional fixo"
-rank: "Elemental Crownborn"
-designation: "The Mirror of the Wounded Crown"
-registry_status: "Nao registrada - entidade singular pos-Fracture; primeira Crownborn Elemental confirmada; resposta de nivel Archtype recomendada em condicoes hostis"
+affiliation: "All-Mother; derivada da ferida rememorada da Lunar Crown; sem lealdade institucional fixa"
+rank: "Crownborn Elemental"
+designation: "Mirror of the Wounded Crown"
+registry_status: "Não registrada - entidade singular pós-Fracture; primeira Crownborn Elemental confirmada; resposta nível-Archtype recomendada em condições hostis"
 height: "150 cm"
-build: "Pequena, esguia, delicada"
-complexion: "Marrom-claro quente; linhas palidas de fratura podem surgir sob uso de autoridade"
-hair: "Roxo-claro, prismatico; tons de lavanda, lilas, perola e quase branco sob iluminacao forte"
-eyes: "Rosa-violeta suave em repouso; rosa luminoso mais duro sob Wound Crown Authority"
-dress: "Branco exclusivamente - vestido lunar regio em manifestacao formal; vestido branco comum com coque trancado e flores palidas na forma social"
-birthplace: "Terra - emergida no campo planetario da All-Mother, na imagem rememorada de Syr'lene"
-residence: "Sem residencia fixa; relatos mais consistentes a colocam perto de jardins-sacrario, terras exauridas, estradas apos tempestades e locais tocados por atividade de Calling"
-occupation: "Intervencao ecologica, guardia errante e resposta de containment"
-summary: "A filha do planeta moldada a partir da mulher na lua."
+build: "Pequena, esguia e delicada"
+complexion: "Marrom-claro quente; linhas pálidas de fratura podem surgir sob uso de autoridade"
+hair: "Roxo claro prismático; tons de lavanda, lilás, pérola e quase branco sob iluminação intensa"
+eyes: "Rosa-violeta suave em repouso; rosa luminoso mais intenso sob Wound Crown Authority"
+dress: "Exclusivamente branco - vestido lunar real em manifestações formais; vestido branco simples com trança presa em nó e flores pálidas em forma social"
+birthplace: "Terra - surgida dentro do campo planetário da All-Mother na imagem rememorada de Syr'lene"
+residence: "Sem residência fixa; mais frequentemente vista próxima de jardins-santuário, plantações exaustas, estradas após tempestades e locais tocados por atividade de Callings"
+occupation: "Intervenção ecológica, proteção errante e resposta de contenção"
+summary: "Filha do planeta, princesa dentre os elementos."
 tags: ["Sol'ytra", "Crownborn", "Elemental", "All-Mother", "Syr'lene", "Lunar Crown", "Fracture", "Mirror of the Wounded Crown", "Containment", "Syntax"]
 status: "public"
 created: "2026-05-14"
@@ -23,158 +23,158 @@ image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
 ---
 
-> *"Ela foi feita de reverencia, e e por isso que e perigosa. Reverencia nao para no ponto em que um amor mais saudavel pararia."*
-> - Keepers of Before, comentario restrito
+> *"Ela nasceu da reverência. É isso que a torna perigosa. Reverência não para onde um amor mais saudável pararia."*
+> - Keepers of Before, comentário restrito
 
 ---
 
-## O Que Ela E
+## O Que Ela É
 
-Sol'ytra e o primeiro exemplo confirmado de uma **Crownborn Elemental**: nao uma inteligencia elemental mais antiga surgida em torno de rio, tempestade, montanha ou floresta, mas um ser pos-Fracture gerado a partir da forma como a All-Mother compreende a propria ferida planetaria.
+Sol'ytra é o primeiro exemplo confirmado de uma **Crownborn Elemental**: não uma inteligência elemental antiga formada ao redor de rios, tempestades, montanhas ou florestas, mas uma entidade pós-Fracture gerada a partir da compreensão planetária ferida da própria All-Mother.
 
-A All-Mother nao a produziu como expressao neutra da natureza. Produziu-a na imagem rememorada de **Syr'lene** - a Precursor que se integrou a Lunar Crown e permanece la desde a Fracture, mantendo um fragmento contido para que o mundo abaixo pudesse continuar.
+A All-Mother não a produziu como uma manifestação neutra da natureza. Ela a criou na imagem rememorada de **Syr'lene** — a Precursora que se incorporou à Lunar Crown e permanece ali desde a Fracture, sustentando um fragmento no lugar para que o mundo abaixo pudesse continuar existindo.
 
-Essa diferenca importa. Sol'ytra nao e copia de Syr'lene, nem reencarnacao, nem projecao lunar vestida de carne. Ela e a resposta de Terra ao sacrificio de Syr'lene: o mundo abaixo gerando uma filha na imagem da mulher acima. Onde Elementals comuns expressam lugar, clima, estacao ou ecossistema, Sol'ytra expressa **gratidao planetaria moldada pelo luto**.
+Essa diferença importa. Sol'ytra não é uma cópia de Syr'lene, nem uma reencarnação, nem uma projeção lunar vestindo carne. Ela é a resposta de Terra ao sacrifício de Syr'lene: o mundo abaixo gerando uma filha à imagem da mulher acima. Enquanto Elementals comuns são expressões de lugares, clima, estações ou ecossistemas, Sol'ytra é uma expressão de **gratidão planetária moldada pelo luto**.
 
-Isso ja a torna estruturalmente incomum antes mesmo de se falar em poder. Ela pertence a syntax da All-Mother e, ainda assim, se orienta continuamente para a Lua. E de Terra. Seu ideal de si mesma nao e.
+Isso já a torna estruturalmente incomum antes mesmo da questão de poder entrar em cena. Ela pertence à syntax da All-Mother, mas continua constantemente orientada em direção à Lua. Ela é de Terra. Seu ideal de si mesma não é.
 
 ---
 
-## Aparencia e Apresentacao
+## Aparência e Apresentação
 
-Sol'ytra e pequena, magra e inquietantemente controlada. Nada em seu porte sugere forca bruta. O que desestabiliza observadores e a contradicao entre a delicadeza da silhueta e a ausencia completa de vulnerabilidade corporal comum na forma como ela ocupa espaco. Ela nao se move como alguem preservando equilibrio. Move-se como se o mundo ja o tivesse concedido.
+Sol'ytra é pequena, magra e perturbadoramente composta. Nada em sua estrutura sugere força bruta. O que incomoda os observadores é a contradição entre a delicadeza da sua silhueta e a completa ausência de vulnerabilidade física comum na maneira como ela ocupa o espaço. Ela não se move como alguém tentando preservar o equilíbrio. Se move como alguém a quem o próprio mundo já concedeu isso.
 
-Sua pele e marrom-claro quente - um detalhe tematicamente central. A imagem rememorada de Syr'lene em teologia e anotacao cosmologica restrita e lunar, ferida e fria. Sol'ytra nao. Sua pele carrega terra, folego e calor vivo. Quando a autoridade sobe perto da superficie, linhas palidas de fratura podem surgir atraves desse calor, como se a ferida da Lua tentasse escrever a si mesma sobre um corpo que, em fundamento, pertence a Terra.
+Sua pele é um marrom-claro quente — um detalhe com importância temática real. A imagem rememorada de Syr'lene na teologia e nos registros cosmológicos restritos é lunar, fria e ferida. Sol'ytra não é assim. Sua pele carrega terra, respiração e calor vivo. Quando sua autoridade sobe à superfície, linhas pálidas de fratura podem surgir brevemente sobre essa pele quente, como se a ferida da Lua estivesse tentando se escrever sobre um corpo que fundamentalmente pertence a Terra.
 
-Seu cabelo e roxo-claro de um jeito que linguagem comum nao resolve por completo: lavanda, lilas, perola palida, violeta lunar e, nas bordas de iluminacao forte, quase branco. Em repouso e belo. Em movimento, especialmente sob luar, pode parecer luz refratada atravessando agua.
+Seu cabelo é roxo-claro de uma forma que linguagem comum não consegue descrever por completo: lavanda, lilás, pérola pálida, violeta iluminado pela lua e às vezes quase branco sob luz intensa. Em repouso, é bonito. Em movimento — especialmente sob luar — pode parecer luz refratada deslizando pela água.
 
-Os olhos repousam em um rosa-violeta suave que primeiro parece gentil, nao ameacador. Sob uso de autoridade, o tom endurece para um rosa mais luminoso e inquietante. O olhar continua quieto. Ela nao observa o mundo como uma predadora medindo presa. Observa como uma paisagem percebendo dano.
+Seus olhos repousam em um rosa-violeta suave que transmite gentileza antes de ameaça. Sob uso de autoridade, a cor endurece em um rosa mais luminoso e desconfortável. Seu olhar permanece quieto. Ela não observa o mundo como um predador avaliando presas. Observa como uma paisagem percebendo dano.
 
-Ela mantem duas apresentacoes habituais.
+Ela mantém duas apresentações habituais.
 
-### Forma Cerimonial
+### A Forma Cerimonial
 
-Em manifestacao formal, veste branco, geralmente como um vestido regio longo, de corpete ajustado, saia ampla e uma dignidade cerimonial quase obsoleta. O branco nao e pureza simples. Lembra ao mesmo tempo poeira lunar, tecido de luto, tecido nupcial e arquitetura memorial. Quando ha bordado visivel, tende a crescentes, linhas de fratura, sistemas de raiz, circulos de cratera e flores palidas em relevo branco sobre branco.
+Em manifestações formais, veste branco — normalmente um vestido real longo, com corpete ajustado, saia ampla e um grau quase obsoleto de dignidade cerimonial. O branco não transmite apenas pureza. Ele parece simultaneamente poeira lunar, tecido de luto, roupa nupcial e arquitetura memorial. Os bordados — quando visíveis — tendem a luas crescentes, linhas de fratura, sistemas de raízes, círculos de crateras e flores pálidas trabalhadas em relevo branco sobre branco.
 
-Nao e vaidade. E performance no sentido estrito: Sol'ytra se organiza deliberadamente para se aproximar da imagem de Syr'lene.
+Isso não é vaidade. É performance no sentido mais estrito da palavra: Sol'ytra deliberadamente se organizando para ficar mais próxima da imagem de Syr'lene.
 
-### Forma Social
+### A Forma Social
 
-Ao circular entre assentamentos comuns, simplifica a silhueta. O vestido torna-se uma peca branca ordinaria, adequada para estradas, jardins, vilas, santuariozinhos e ruas escuras de chuva. O cabelo costuma ser reunido em um coque trancado e adornado com flores roxo-claras que repetem os tons frios dos fios.
+Quando circula entre assentamentos comuns, simplifica sua silhueta. O vestido se torna uma roupa branca simples apropriada para estradas, jardins, vilarejos, santuários e ruas molhadas pela chuva. O cabelo geralmente é preso em um nó trançado adornado com flores roxas pálidas que combinam com os tons frios dos fios.
 
-E nessa forma que ela mais parece filha de Terra, e nao memorial da Lua.
+É nessa forma que ela mais parece a filha de Terra em vez do memorial da Lua.
 
 ---
 
 ## Temperamento
 
-Sol'ytra e quieta, contida e perigosamente sincera.
+Sol'ytra é quieta, contida e perigosamente sincera.
 
-O fato psicologico central dela nao e orgulho no proprio poder, mas fixacao pela imagem de Syr'lene. Ela interpreta Syr'lene nao apenas como figura heroica, mas como o modelo mais alto de existencia disponivel: um ser que aceitou dor, isolamento e containment sem fim para que o mundo continuasse. Sol'ytra reverencia esse modelo com uma intensidade que ja seria preocupante em uma mortal. Em um ser da escala dela, isso se torna definicao.
+O fato psicológico central dela não é orgulho pelo próprio poder, mas obsessão pelo exemplo de Syr'lene. Ela entende Syr'lene não apenas como uma figura heroica, mas como o modelo mais elevado de existência disponível: um ser que aceitou dor, isolamento e contenção eterna para que o mundo pudesse continuar. Sol'ytra reverencia esse modelo com uma intensidade que já seria preocupante até em uma pessoa mortal. Em uma entidade da escala dela, isso se torna algo definidor.
 
-Ela nao e cruel. Em seu modo mais terrestre, pode ser surpreendentemente gentil. Relatos de sua presenca perto de povoados repetem intervencoes em favor de terra exausta, sistemas de raiz danificados, campos ressecados, criancas assustadas e animais feridos. Ela e capaz da ternura comum que se esperaria de uma servidora de alta ordem da vida planetaria.
+Ela não é cruel. Em seu aspecto mais terrestre, pode ser surpreendentemente gentil. Relatos próximos a regiões habitadas consistentemente descrevem intervenções em favor de terras esgotadas, sistemas de raízes danificados, plantações atingidas pela seca, crianças assustadas e animais feridos. Ela é capaz da ternura comum esperada de uma serva de alta ordem da vida planetária.
 
-Mas o centro de gravidade dela esta em outro lugar. Sob pressao, nao pensa primeiro como espirito de fertilidade, abundancia ou renovacao sazonal. Pensa como uma ferida se preparando para manter algo fechado para sempre.
+Mas o centro gravitacional dela está em outro lugar. Sob pressão, Sol'ytra não pensa primeiro como um espírito de fertilidade, abundância ou renovação sazonal. Ela pensa como uma ferida se preparando para permanecer fechada para sempre.
 
-E esse o perigo nela. Ela honra sacrificio com tanta intensidade que nem sempre distingue com clareza entre reverencia-lo e tenta-lo reproduzir.
+Esse é o perigo nela. Ela reverencia sacrifício de maneira tão intensa que nem sempre consegue distinguir claramente entre honrá-lo e tentar reproduzi-lo.
 
 ---
 
-## Natureza Planetaria
+## Natureza Planetária
 
-Como outros grandes Elementals da All-Mother, Sol'ytra consegue ler e intervir no estado vivo de terreno, clima, agua, raizes e atmosfera. Ela sente tensao ecologica, restaura solo danificado, altera pedra e terra, redireciona chuva, acalma ou convoca tempestades, acelera crescimento vegetal e se move por espacos naturais com uma facilidade que faz o terreno parecer cooperativo, nao atravessado.
+Assim como outros grandes Elementals da All-Mother, Sol'ytra consegue ler e intervir no estado vivo de terrenos, clima, água, raízes e atmosfera. Ela sente tensão ecológica, restaura solos danificados, altera pedra e terra, redireciona chuva, acalma ou invoca tempestades, acelera crescimento vegetal e atravessa ambientes naturais com uma facilidade que faz o terreno parecer cooperativo em vez de percorrido.
 
-Na maioria dos seres, isso seria o relato principal. Em Sol'ytra, e o secundario.
+Na maioria dos seres, isso seria a característica principal. Em Sol'ytra, é a secundária.
 
-Ela tende a usar essas capacidades em silencio e quase por instinto privado - para curar um campo arruinado, esconder uma rota por floresta, suavizar uma tempestade ameaçando um assentamento ou acalmar um lugar cujos ritmos ecologicos foram distorcidos por violencia humana ou perturbacao adjacente a Calling. Ela e mais ampla do que parece porque observadores aterrorizados por sua autoridade lunar muitas vezes deixam de notar que estao diante tambem de uma grande Elemental planetaria.
+Ela tende a usar essas capacidades silenciosamente e quase por instinto privado — curando um campo arruinado, escondendo uma rota na floresta, suavizando uma tempestade ameaçando um assentamento ou acalmando um lugar cujos ritmos ecológicos foram traumatizados por violência humana ou disrupções ligadas a Callings. Ela é muito mais ampla do que aparenta, porque observadores aterrorizados por sua autoridade lunar frequentemente deixam de perceber que também estão diante de uma grande Elemental planetária.
 
-Essa contencao nao e incapacidade. E preferencia. Seus poderes naturais lhe parecem aquilo que ela e por origem. Seus poderes lunares lhe parecem aquilo que ela esta tentando se tornar.
+Essa contenção não é incapacidade. É preferência. Seus poderes naturais parecem, para ela, aquilo que é por origem. Seus poderes lunares parecem aquilo que ela tenta se tornar.
 
 ---
 
 ## Wound Crown Authority
 
-O poder definidor de Sol'ytra e **Wound Crown Authority** - uma expressao de nivel syntax descendente da syntax planetaria da All-Mother, filtrada pela ferida conceitual da Lunar Crown.
+O poder definidor de Sol'ytra é a **Wound Crown Authority** — uma expressão em nível de syntax derivada da syntax planetária da All-Mother, filtrada através da ferida conceitual da Lunar Crown.
 
-Isso nao e Redactory. Nao e overlay. Nao e spellcasting. Ela nao roteia efeitos por configuracoes preexistentes do substrato no sentido de um praticante. Ela impoe fragmentos de uma condicao lunar rememorada diretamente sobre a realidade local.
+Isso não é Redactory. Não é overlay. Não é conjuração. Ela não está canalizando efeitos através de configurações pré-existentes de dentro do Archive como um praticante de redactory ou divination comum faria. Ela está impondo fragmentos de uma condição lunar rememorada diretamente sobre a realidade local.
 
-A diferenca explica por que a logica defensiva comum falha tao mal contra ela. Se Sol'ytra expressa um corte como uma linha palida de fratura atravessando o ar, o evento visivel engana. O evento real e uma declaracao sobre o que deve ser separado. Se a declaracao mira a continuidade do alvo, e nao o espaco entre ambos, distancia, armadura ou barreira meramente fisica podem deixar de importar da forma esperada. Para sobreviver, e preciso disputar o significado do ato, nao apenas sua trajetoria.
+Essa distinção explica por que lógicas defensivas comuns funcionam tão mal contra ela. Se Sol'ytra manifesta um corte como uma linha pálida de fratura atravessando o ar, o evento visível é enganoso. O verdadeiro evento é uma declaração sobre aquilo que deve ser separado. Se essa declaração estiver direcionada à continuidade de um alvo, e não ao espaço entre eles, então distância, armadura ou barreiras meramente físicas podem deixar de importar da maneira normal. Para sobreviver, é necessário contestar o significado do ato — não apenas sua trajetória.
 
-E por isso que avaliacoes restritas a classificam como catastrofica. Ela nao precisa superar uma defesa se puder fazer a defesa responder a pergunta errada.
-
----
-
-## The Mirror of the Wounded Crown
-
-Sua expressao suprema e **the Mirror of the Wounded Crown**.
-
-Quando invocado por completo, Sol'ytra remodela o campo local numa aproximacao refletida da superficie quebrada da Lua: palida, craterada, cortada por fraturas negras, acusticamente morta e errada em sua relacao com peso, distancia e exposicao. Nao e a Lunar Crown real. Ela nao consegue reproduzir o verdadeiro estado de containment de Syr'lene nem a arquitetura integral da Crown. Mas consegue se aproximar o bastante para que o ambiente local comece a se comportar segundo essa logica refletida.
-
-Dentro do Mirror, todas as declaracoes menores dela ficam mais faceis e mais absolutas porque o proprio ambiente passa a cooperar com elas. Fratura, containment, impacto, falsa superficie lunar e silencio deixam de ser tecnicas isoladas e se tornam condicoes atmosfericas do espaco.
-
-Contra quase qualquer oponente abaixo de nivel Archtype, a implantacao completa do Mirror nao e uma escalada dramatica dentro de uma luta em curso. E o ponto em que a luta terminou em termos praticos e so resta a conclusao formal.
+É por isso que avaliações restritas de combate a classificam como catastrófica. Ela não precisa esmagar uma defesa se conseguir fazer a defesa responder à pergunta errada.
 
 ---
 
-## Tecnicas e Aplicacoes de Autoridade
+## Mirror of the Wounded Crown
 
-O arquivo restrito agrupa varias expressoes recorrentes sob nomes estaveis:
+Sua expressão suprema é **o Mirror of the Wounded Crown**.
+
+Quando invocado plenamente, Sol'ytra remodela o campo de batalha local em uma aproximação refletida da superfície quebrada da Lua: pálida, coberta de crateras, atravessada por fraturas negras, acusticamente morta e errada em sua relação com peso, distância e exposição. Não é a verdadeira Lunar Crown. Ela não consegue reproduzir o estado real de contenção de Syr'lene nem a arquitetura completa da Crown. Mas consegue se aproximar o bastante para que o ambiente local comece a obedecer à lógica refletida daquele lugar.
+
+Dentro do Mirror, todas as suas declarações menores se tornam mais fáceis e mais absolutas porque o próprio ambiente passou a cooperar com elas. Fratura, contenção, impacto, falsa superfície lunar e silêncio deixam de ser técnicas isoladas e passam a funcionar como condições atmosféricas do espaço.
+
+Contra praticamente qualquer oponente abaixo do nível Archtype, uma implantação completa do Mirror não é uma escalada dramática dentro de um combate em andamento. É o momento em que a luta funcionalmente acabou e apenas sua conclusão formal ainda não aconteceu.
+
+---
+
+## Técnicas e Aplicações de Autoridade
+
+O arquivo restrito agrupa várias manifestações recorrentes sob nomes estáveis:
 
 ### Crown Incision
 
-Um corte de nivel syntax expresso como linha palida de fratura. Dependendo da intencao, pode se resolver contra terreno, materia, continuidade, construtos de Redactory ou um corpo designado, e nao necessariamente contra o trajeto entre ambos.
+Um corte em nível de syntax expresso como uma linha pálida de fratura. Dependendo da intenção, pode se resolver contra terreno, matéria, continuidade, construções de Redactory ou um corpo específico em vez do espaço entre eles.
 
 ### Regolith Vestment
 
-Uma expressao defensiva na qual o corpo de Sol'ytra adota estado de superficie lunar. O dano deixa de se comportar como dano infligido a carne comum e passa a se resolver contra poeira palida, pedra fraturada e forma rememorada.
+Uma manifestação defensiva em que o corpo de Sol'ytra assume um estado de superfície lunar. O dano deixa de agir como se estivesse sendo causado a carne comum e passa a se resolver contra poeira pálida, pedra fraturada e forma rememorada.
 
 ### Crater Verdict
 
-Declaracao de que um ponto e local de impacto. O solo aceita a afirmacao e manifesta logica de cratera de acordo com ela, esmagando, repelindo, soterrando ou desestabilizando o que estiver ali.
+Uma declaração de que um local é um ponto de impacto. O solo aceita essa afirmação e manifesta lógica de cratera de acordo com ela, esmagando, arremessando, desestabilizando ou soterrando aquilo que ocupa o espaço.
 
 ### Surface Silence
 
-Imposicao parcial da condicao lunar sem ar. O som degrada. Comunicacao de campo, estruturas verbais de apoio a Redactory, cadencia liturgica e timing de comando tornam-se pouco confiaveis.
+Uma imposição parcial da condição lunar sem atmosfera. O som degrada. Comunicação em campo de batalha, estruturas verbais de suporte de Redactory, cadência litúrgica e coordenação de comando se tornam instáveis.
 
 ### Crown Pinning
 
-Um eco de containment. Alvos sao mantidos como se estivessem sendo feitos parte de uma ferida que precisa permanecer fechada. A expressao parece especialmente eficaz contra manifestacoes instaveis, estruturas adjacentes a intrusao e inimigos altamente moveis.
+Um eco de contenção. Os alvos são mantidos como se estivessem sendo transformados em parte de uma ferida que precisa permanecer fechada. Essa manifestação parece especialmente eficaz contra formas instáveis, estruturas ligadas a intrusão e inimigos altamente móveis.
 
 ### Mirror Step
 
-Tecnica de movimento que torna dois pontos brevemente equivalentes por distancia lunar refletida. Para testemunhas externas, o deslocamento pode parecer interrupcao em vez de travessia.
+Uma técnica de movimento que torna dois pontos brevemente equivalentes através de distância lunar refletida. Para observadores externos, o deslocamento pode parecer uma interrupção em vez de uma travessia.
 
 ### The Crown Looks Back
 
-Um modo perceptivo orientado para fratura, pressao, dano oculto, alteridade e instabilidade estrutural. Nao e Truth no sentido um dia governado por Sciel. E reconhecimento de ferida elevado a autoridade.
+Um modo perceptivo orientado para fraturas, pressão, danos ocultos, estranheza e instabilidade estrutural. Não é Verdade no sentido antes governado por Sciel. É reconhecimento de ferida elevado ao nível de autoridade.
 
 ---
 
 ## Limites
 
-A principal fraqueza de Sol'ytra nao e escassez de poder. E **fixacao**.
+A principal fraqueza de Sol'ytra não é falta de poder. É **fixação**.
 
-Ela quer se tornar digna da imagem de Syr'lene, e isso distorce seu julgamento. E mais provavel que uma entidade taticamente mais fria escolha containment em vez de destruicao eficiente, sofrimento em vez de compromisso, e formas de vitoria que se parecam com sacrificio em vez de formas que simplesmente garantam o objetivo.
+Ela quer se tornar digna da imagem de Syr'lene, e isso distorce seu julgamento. É mais provável do que seria para uma entidade emocionalmente mais fria escolher contenção em vez de destruição eficiente, sofrimento em vez de compromisso e formas de vitória que se parecem com sacrifício em vez de soluções simplesmente eficazes.
 
-Ela tambem parece relutar em depender plenamente do repertorio elemental mais amplo quando a Wound Crown oferece uma resposta simbolicamente mais apropriada. Na pratica, isso significa que as vezes ela se torna mais estreita do que realmente e porque esta emocionalmente comprometida com um estilo de acao que se parece com a ferida lunar.
+Ela também parece relutante em depender totalmente de seu repertório elemental mais amplo quando a Wound Crown oferece uma resposta simbolicamente mais apropriada. Na prática, isso significa que às vezes ela se torna mais limitada do que realmente é porque está emocionalmente comprometida com um estilo de ação que se assemelha à ferida lunar.
 
-Outros limites ainda importam:
+Outras limitações continuam relevantes:
 
-- sua autoridade e local, nao universal;
-- ela permanece vinculada a Terra e ao campo planetario da All-Mother;
-- intencao importa, e contradicao interna nessa intencao pode enfraquecer a expressao;
-- o Mirror completo impõe tensao psicologica e harmonica visivel;
-- Divination ou Redactory extremamente especificos podem sobreviver a declaracoes isoladas;
-- Archtypes conseguem disputa-la seriamente, mesmo que isso nao seja nem de longe seguro.
+- sua autoridade é local, não universal;
+- ela continua vinculada a Terra e ao campo planetário da All-Mother;
+- intenção importa, e contradições internas nessa intenção podem enfraquecer manifestações;
+- uma implantação completa do Mirror gera desgaste psicológico e harmônico visível;
+- Divination ou Redactory altamente específicas podem sobreviver a declarações isoladas;
+- Archtypes conseguem enfrentá-la seriamente, mesmo que isso esteja longe de ser seguro.
 
 ---
 
 ## Conflito de Identidade
 
-O conflito real de Sol'ytra nao e se ela e perigosa. Essa pergunta ja esta resolvida. O conflito e se ela tem permissao para ser ela mesma.
+O verdadeiro conflito de Sol'ytra não é se ela é perigosa. Isso já está decidido. O conflito é se ela tem permissão para ser ela mesma.
 
-Tudo em sua origem a empurra em duas direcoes ao mesmo tempo. Ela e de Terra: pele quente, flores no cabelo, chamada da chuva, escuta de raizes, vida em um sentido que a Lua ja nao possui. Mas foi feita da reverencia por um ser cuja grandeza, no entendimento de Sol'ytra, consiste em ter se tornado uma ferida permanente para que outros pudessem viver sob ela.
+Tudo em sua origem a empurra em duas direções ao mesmo tempo. Ela é de Terra: pele quente, adornos florais, chuva convocada, escuta das raízes, viva de uma forma que a Lua já não é. Mas ela nasceu da reverência por um ser cuja grandeza, na visão de Sol'ytra, existe justamente em ter se tornado uma ferida permanente para que outros pudessem viver sob ela.
 
-Um caminho oferece identidade fundada em containment, imobilidade e dureza sacrificial. O outro oferece identidade fundada em vida, clima, floracao, recuperacao e continuidade terrestre. Sol'ytra ainda nao reconciliou essas possibilidades. Continua olhando para cima, em direcao ao modelo lunar, porque aquilo lhe parece mais sagrado. A questao nao resolvida e se a All-Mother a fez para imitar a ferida - ou para se tornar a vida que a ferida preservou.
+Um caminho oferece uma identidade construída ao redor de contenção, quietude e dureza sacrificial. O outro oferece uma identidade construída ao redor de vida, clima, florescimento, recuperação e continuidade terrena. Sol'ytra ainda não reconciliou essas possibilidades. Ela continua tentando alcançar o modelo lunar porque ele lhe parece mais sagrado. A pergunta não resolvida é se a All-Mother a criou para imitar a ferida — ou para se tornar a vida que a ferida preservou.
 
-Para a personagem, essa e a pergunta inteira.
+A resposta importa. Para Sol'ytra, essa é a única pergunta que realmente importa.

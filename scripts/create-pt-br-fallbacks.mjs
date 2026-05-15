@@ -6,6 +6,7 @@ const CONTENT_ROOT = path.join(ROOT, "src", "content");
 
 const args = new Set(process.argv.slice(2));
 const overwrite = args.has("--overwrite");
+const check = args.has("--check");
 
 function log(msg) {
   console.log(msg);
@@ -39,6 +40,7 @@ function copyMissingFiles({ enDir, ptDir }) {
   const targetDir = path.join(CONTENT_ROOT, ptDir);
   const created = [];
   const skipped = [];
+  const missing = [];
 
   const files = fs
     .readdirSync(sourceDir, { withFileTypes: true })
@@ -50,6 +52,10 @@ function copyMissingFiles({ enDir, ptDir }) {
     const sourcePath = path.join(sourceDir, file);
     const targetPath = path.join(targetDir, file);
 
+    if (!fs.existsSync(targetPath)) {
+      missing.push(file);
+    }
+
     if (fs.existsSync(targetPath) && !overwrite) {
       skipped.push(file);
       continue;
@@ -59,7 +65,7 @@ function copyMissingFiles({ enDir, ptDir }) {
     created.push(file);
   }
 
-  return { created, skipped };
+  return { created, skipped, missing };
 }
 
 function main() {
@@ -72,15 +78,41 @@ function main() {
 
   let totalCreated = 0;
   let totalSkipped = 0;
+  let totalMissing = 0;
+  let hasMissing = false;
 
   for (const pair of pairs) {
-    const { created, skipped } = copyMissingFiles(pair);
+    const { created, skipped, missing } = copyMissingFiles(pair);
     totalCreated += created.length;
     totalSkipped += skipped.length;
+    totalMissing += missing.length;
+
+    if (check && missing.length) {
+      hasMissing = true;
+      log(`${pair.enDir} -> ${pair.ptDir}: missing ${missing.length}`);
+      for (const file of missing) log(`  - ${file}`);
+      continue;
+    }
+
+    if (check) {
+      log(`${pair.enDir} -> ${pair.ptDir}: present ${skipped.length}`);
+      continue;
+    }
 
     if (created.length || skipped.length) {
       log(`${pair.enDir} -> ${pair.ptDir}: created ${created.length}, skipped ${skipped.length}`);
     }
+  }
+
+  if (check) {
+    if (hasMissing) {
+      console.error(`Missing ${totalMissing} pt-BR fallback file(s). Run: npm run seed:pt-br-fallbacks`);
+      process.exitCode = 1;
+      return;
+    }
+
+    log("All pt-BR fallback files present.");
+    return;
   }
 
   log(`Done. Created ${totalCreated} pt-BR fallback file(s). Skipped ${totalSkipped} existing file(s).`);
