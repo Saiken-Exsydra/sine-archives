@@ -22,8 +22,8 @@ tags: ["Wonderwall", "Rae", "SiNE", "Radiance", "Revelation", "First Radiance", 
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
-image: "../../assets/uploads/Al'ithia.webp"
-hero_image: "../../assets/uploads/Al'ithia-HERO.png"
+image: "../../assets/uploads/char-alithia-wonderwall.webp"
+hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
 ---
 
 > *"She was not an answer to my grief but a person standing beyond it."*

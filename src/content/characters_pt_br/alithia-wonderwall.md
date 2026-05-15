@@ -22,8 +22,8 @@ tags: ["Wonderwall", "Rae", "SiNE", "Radiance", "Revelation", "First Radiance", 
 status: "public" 
 created: "2026-05-14"
 updated: "2026-05-14"
-image: "../../assets/uploads/Al'ithia.webp"
-hero_image: "../../assets/uploads/Al'ithia-HERO.png"
+image: "../../assets/uploads/char-alithia-wonderwall.webp"
+hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
 ---
 
 > *"Ela não era uma resposta para o meu luto. Era uma pessoa existindo além dele."*

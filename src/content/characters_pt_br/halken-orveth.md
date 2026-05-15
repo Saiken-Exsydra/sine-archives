@@ -4,7 +4,7 @@ type: "Character"
 age: "399 (em 2200)"
 birth_year: "1801"
 birthplace: "Black Mere, Região Norte"
-affiliation: "One Church - Obsidian Rite"
+affiliation: "Igreja Una - Obsidian Rite"
 rank: "Rector-Ascendant"
 registry_status: "Implantação máxima restrita - um dos Sete vessels Seráficos"
 designation: "Sétimo Vessel Seráfico"
@@ -15,7 +15,7 @@ hair: "Preto já tomado em grande parte pelo cinza metálico; barba curta"
 eyes: "Castanho-escuros em condições normais; vermelho-dourado intenso durante manifestações elevadas"
 dress: "Batina preta simples, rosário de ferro, cordão vermelho do ofício preso ao pulso esquerdo; armadura de placas enegrecida de estilo pré-moderno em campo"
 residence: "Fortaleza-priorado de Saint Veyran, Kalt'sen, quando não está mobilizado sob ordens seladas"
-occupation: "Rector-Ascendant do Obsidian Rite; ativo estratégico exorcístico da One Church"
+occupation: "Rector-Ascendant do Obsidian Rite; ativo estratégico exorcístico da Igreja Una"
 summary: "Executor da Mão Sétupla."
 tags: ["Igreja", "Obsidian Rite", "Auctoriel", "The Seven", "Dominion", "Hallowed", "Sundersaint", "Kalt'sen"]
 status: "public"
@@ -30,9 +30,9 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 
 ## O Que Ele É
 
-Halk'en Orveth é um dos sete Rector-Ascendants vivos reconhecidos pela doutrina restrita da Igreja como vessels Seráficos diretos. A maioria do clero Hallowed carrega fragmentos angelicais. Orveth carrega a pressão do próprio Seraphim original: **Auctoriel, Seraphim de Dominion**.
+Halk'en Orveth é um dos sete Rector-Ascendants vivos reconhecidos pela doutrina restrita da Igreja como um vessel Seráfico direto. A maior parte do clero Hallowed e a maior parte dos Fragment Fusions do Obsidian Rite carregam um fragmento angelical integrado ao eu. Orveth é classificado como um caso mais raro de linhagem original: um Fragment Fusion tão profundo e tão estavelmente resolvido que a pressão nele é tratada institucionalmente como o próprio **Auctoriel, Seraphim de Dominion**, e não como uma manifestação ordinária de ordem inferior.
 
-Essa distinção define tudo no arquivo dele. Ele não é apenas um exorcista veterano com uma manifestação de domínio de autoridade anormalmente severa. Ele é um ponto de contato humano estabilizado através do qual Dominion consegue operar no mundo em escala estratégica.
+Essa distinção define tudo no arquivo dele. Ele não é apenas um exorcista veterano com uma manifestação de domínio de autoridade anormalmente severa. Ele é um ponto de contato humano estabilizado através do qual Dominion consegue operar no mundo em escala estratégica sem ser confundido com possessão demoníaca nem com apagamento humano.
 
 Na teologia da Igreja, **Dominion** não significa ambição, governo ou simples comando. É o estado sagrado onde uma autoridade legítima se torna vinculante: ordenação, investidura, juramento, sentença, contenção legal e a declaração exorcística de que uma presença hostil não possui direito de permanecer. A manifestação de Orveth assume a forma de **mãos** porque, no caso dele, Dominion não chega como símbolo — chega como contato direto.
 
@@ -60,7 +60,7 @@ Ele não foi elevado rapidamente. Recusou promoção duas vezes, argumentando qu
 
 Em **1881**, recebeu **Sundersaint**, a espada artefato superior conhecida como *the Parting Mercy*. A combinação foi controversa desde o início: um homem capaz de impor autoridade não deveria, em teoria, também portar um artefato de Severance divina. A Igreja aceitou o risco porque quase ninguém conseguia primeiro tornar uma estrutura de possessão responsiva e depois separá-la de forma limpa.
 
-Em **1906**, após o **Julgamento do Portão de Saint Kaldrin** e a primeira manifestação tangível amplamente testemunhada da sexta mão, o Diaconato deixou de tratá-lo como apenas um Rector-Ascendant excepcional. Internamente, passou a ser reconhecido como um dos **Seven**: os raríssimos vessels Seráficos através dos quais uma linhagem direta do Heaven pressiona o mundo.
+Em **1906**, após o **Julgamento do Portão de Saint Kaldrin** e a primeira manifestação tangível amplamente testemunhada da sexta mão, o Diaconato deixou de tratá-lo como apenas um Rector-Ascendant excepcional. Internamente, passou a ser reconhecido como um dos **Sete**: os raríssimos vessels Seráficos cuja integração é tão completa que uma linhagem direta do Céu pressiona o mundo através deles.
 
 Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do Obsidian Rite. Separou um estado ritualístico da Ponte Halvorn em 1968 sem derrubar a estrutura. Manifestou a **sétima mão** em **Vaul Mourne** em 2013 e transformou um desastre de possessão que havia tomado um hospice inteiro em um tribunal responsivo, pagando um custo enorme por isso. Mais tarde ajudou a moldar a ética moderna do Rite ao se opor à investidura forçada, defendendo que um fardo colocado sem consentimento legítimo não é ofício — é tomada à força. Em 2200, tornou-se ao mesmo tempo um dos pilares vivos da Igreja e uma das provas mais claras de que poder sagrado pode continuar perigoso sem necessariamente se corromper.
 
@@ -126,10 +126,10 @@ O maior fator de estabilidade de Orveth é que ele não trata poder como autoexp
 
 O perigo dele nasce exatamente do mesmo lugar que sua utilidade. Tem profundo desprezo por autoridades que abandonam responsabilidade por conforto, quase nenhuma paciência para hesitação institucional quando vidas estão em risco imediato e uma capacidade assustadora de colocar fardos sobre outras pessoas quando acredita que elas conseguem suportá-los. Pode ser extremamente gentil com os frágeis. É muito menos suave com os capazes que usam fraqueza como desculpa para fugir da obrigação.
 
-Toda sua teologia pode ser resumida em uma única frase: **autoridade não é o direito de comandar, mas a obrigação de responder pelas consequências do altissimo**. Essa crença salvou vidas por séculos. Também o tornou implacável.
+Toda sua teologia pode ser resumida em uma única frase: **autoridade não é o direito de comandar, mas a obrigação de responder pelas consequências daquilo que o comando faz**. Essa crença salvou vidas por séculos. Também o tornou implacável.
 
 ## Estado Atual
 
 Em 2200, Halk'en Orveth é um dos ativos vivos mais poderosos da Igreja e uma das poucas pessoas ainda capazes de resolver estruturas de possessão resistentes à autoridade sem provocar perdas civis catastróficas. Ele é fiel, disciplinado, pastoralmente estável dentro dos padrões institucionais atuais e continua sendo considerado necessário.
 
-Ele também é a prova viva do que acontece quando a mão do Heaven permanece no mundo tempo suficiente para aprender o peso das instituições — e continua se fechando mesmo assim.
+Ele também é a prova viva do que acontece quando a mão do Céu permanece no mundo tempo suficiente para aprender o peso das instituições — e continua se fechando mesmo assim.

@@ -30,9 +30,9 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 
 ## What He Is
 
-Halk'en Orveth is one of the seven living Rector-Ascendants recognized in the Church's restricted doctrine as direct Seraphic vessels. Most Hallowed clergy carry angelic fragments. Orveth carries pressure from the parent Seraphim itself: **Auctoriel, Seraphim of Dominion**.
+Halk'en Orveth is one of the seven living Rector-Ascendants recognized in the Church's restricted doctrine as a direct Seraphic vessel. Most Hallowed clergy and most Obsidian Rite fragment fusions carry an angelic fragment integrated into the self. Orveth is classified as a rarer parent-line case: a fragment fusion so deep and so cleanly stabilized that the pressure in him is treated institutionally as immediate **Auctoriel**, Seraphim of Dominion, rather than as an ordinary lower-order manifestation.
 
-That distinction is the center of his file. He is not simply a veteran exorcist with unusually severe authority-domain manifestation. He is a stabilized mortal contact point through which Dominion can become operative in the world at strategic scale.
+That distinction is the center of his file. He is not simply a veteran exorcist with unusually severe authority-domain manifestation. He is a stabilized mortal contact point through which Dominion can become operative in the world at strategic scale without being mistaken for demonic possession or human erasure.
 
 In Church theology, **Dominion** does not mean appetite, rulership, or simple command. It is the sacred condition by which rightful authority becomes binding: ordination, investiture, oath, sentence, lawful restraint, and the exorcistic declaration that a hostile presence has no right to remain. Orveth's manifestation expresses that principle as **hands** because Dominion, in his case, arrives not as symbol but as contact.
 
@@ -60,7 +60,7 @@ He was not elevated quickly. He refused advancement twice, arguing that his usef
 
 In **1881** he received **Sundersaint**, the greater artifact sword known as *the Parting Mercy*. The pairing was controversial from the start: a man who could impose authority should not, in principle, also bear an artifact of divine Severance. The Church accepted the risk because very few people could first make a possession structure answerable and then part it cleanly.
 
-By **1906**, after the **Trial of Saint Kaldrin's Gate** and the first widely witnessed tangible manifestation of the sixth hand, the Diaconate stopped treating him as merely an exceptional Rector-Ascendant. Internally, he became one of **the Seven**: the rare Seraphic vessels through whom a parent-line of Heaven presses directly.
+By **1906**, after the **Trial of Saint Kaldrin's Gate** and the first widely witnessed tangible manifestation of the sixth hand, the Diaconate stopped treating him as merely an exceptional Rector-Ascendant. Internally, he became one of **the Seven**: the rare Seraphic vessels whose fragment fusion is so complete that a parent-line of Heaven presses through them directly.
 
 Across the next three centuries he became one of the Obsidian Rite's defining figures. He severed a rite-state from Halvorn Bridge in 1968 without collapsing the span. He manifested the **seventh hand** at **Vaul Mourne** in 2013 and turned a hospice-wide possession disaster into an answerable court, at enormous cost. He later helped shape modern Rite ethics by opposing forced investiture, arguing that burden placed without rightful permission is not office but seizure. By 2200 he has become both a living pillar of the Church and one of the clearest reminders that holy power can remain dangerous without becoming corrupt.
 

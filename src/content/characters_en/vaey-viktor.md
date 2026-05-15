@@ -45,6 +45,8 @@ He now lives in the impossible category the Church most fears naming cleanly: a 
 
 Meruel belongs to a seraphic constellation concerned with measure rather than mercy. Its domain is not civic justice, punishment, or absolution. It measures the distance between what a person is and what that person might coherently become under courage, discipline, opportunity, training, and alignment with their deepest internal architecture.
 
+Viktor's case is a genuine Hallowed integration, not a demonic possession and not one of the Obsidian Rite's parent-line Seraphic anomalies. What lives in him is a real angelic fragment, permanently fused enough to reorder character, perception, and vocation while leaving the person morally responsible for what he chooses to do with that change.
+
 Through Meruel, Viktor perceives what he once called the **completed silhouette**: not the future, not destiny, but a coherent possible self standing in relation to the living one. In assessment work this made him invaluable. He could distinguish a frightened but genuine vessel from an empty claimant. He could identify when a candidate's present instability concealed enormous spiritual capacity. He could see whether a life had been damaged, delayed, or merely misread by others around it.
 
 The danger is that Meruel does not measure the whole of justice. It does not measure mercy, recoverability, motive, injury, or the moral weight of suffering with equal authority. Viktor knows this doctrinally. He no longer accepts it operationally.
