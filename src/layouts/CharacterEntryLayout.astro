@@ -1,9 +1,8 @@
 ---
-import { Picture } from "astro:assets";
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
 import { getHtmlLang, localizeCurrentPath, localizedEntryPath, localizedPath, LOCALE_LABELS, LOCALES, type SiteLocale } from "../i18n/config";
-import { isImageMetadata } from "../utils/optimized-images";
+import { getImageUrl } from "../utils/optimized-images";
 
 const { entry, locale = "en" } = Astro.props as { entry: any; locale?: SiteLocale };
 const { Content, headings } = await entry.render();
@@ -64,6 +63,7 @@ const summary        = str(entry.data?.summary);
 const updated        = str(entry.data?.updated);
 const type           = str(entry.data?.type ?? (locale === "pt-br" ? "Personagem" : "Character"));
 const heroImage      = entry.data?.image;
+const heroImageUrl   = getImageUrl(heroImage);
 const tags: string[] = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
 
 // â”€â”€ Field grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -649,27 +649,12 @@ const related = allPublic
     <!-- Portrait -->
     <div class="dos-portrait">
       {heroImage ? (
-        isImageMetadata(heroImage) ? (
-          <Picture
-            src={heroImage}
-            class="dos-portrait__img"
-            alt=""
-            widths={[768, 1280, 1600, 1920, 2560]}
-            sizes="(max-width: 700px) 100vw, (max-width: 900px) 44vw, 38vw"
-            formats={["avif", "webp"]}
-            quality={90}
-            fit="contain"
-            loading="eager"
-            decoding="async"
-          />
-        ) : (
-          <img
-            class="dos-portrait__img"
-            id="dos-portrait-img"
-            src={heroImage}
-            alt=""
-          />
-        )
+        <img
+          class="dos-portrait__img"
+          id="dos-portrait-img"
+          src={heroImageUrl ?? ""}
+          alt=""
+        />
       ) : (
         <svg
           class="dos-portrait__placeholder"

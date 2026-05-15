@@ -3,7 +3,7 @@ import { SECTIONS } from "../sections";
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
 import { localizedEntryPath, normalizeLocale } from "../i18n/config";
-import { buildOptimizedImageBundle } from "../utils/optimized-images";
+import { getImageUrl } from "../utils/optimized-images";
 
 const labelByKey = Object.fromEntries(SECTIONS.map((s) => [s.key, s.label])) as Record<string, string>;
 const sections = CONTENT_KEYS.map((key) => ({ key, label: labelByKey[key] ?? key }));
@@ -18,13 +18,6 @@ export const GET: APIRoute = async ({ url }) => {
         entries
           .filter((e) => e.data.status === "public")
           .map(async (e) => {
-            const image = await buildOptimizedImageBundle(e.data.image ?? null, {
-              widths: [160, 320],
-              sizes: "88px",
-              quality: 80,
-              fit: "cover",
-            });
-
             return {
               section: s.key,
               sectionLabel: s.label,
@@ -35,7 +28,7 @@ export const GET: APIRoute = async ({ url }) => {
               tags: e.data.tags ?? [],
               created: e.data.created,
               updated: e.data.updated,
-              image: image?.fallbackSrc ?? null,
+              image: getImageUrl(e.data.image ?? null),
               body: e.body ?? "",
             };
           })

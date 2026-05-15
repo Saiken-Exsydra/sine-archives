@@ -2,7 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
-import { buildOptimizedImageBundle } from "../../utils/optimized-images";
+import { getImageUrl } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const rawEntries = await getLocalizedCollection("organizations", locale);
@@ -86,7 +86,7 @@ type Panel = {
   type:           string;
   designation:    string;
   summary:        string;
-  image:          Awaited<ReturnType<typeof buildOptimizedImageBundle>>;
+  image:          string | null;
   accent:         string;
   numeral:        string;
   objectPosition: string;
@@ -112,12 +112,7 @@ const buildPanel = async (e: Entry, idx: number): Promise<Panel> => {
     type:           d.type || copy.defaultType,
     designation:    d.designation || "",
     summary:        d.summary || "",
-    image:          await buildOptimizedImageBundle(d.image ?? null, {
-      widths: [640, 960, 1280, 1600],
-      sizes: "(max-width: 900px) 100vw, 50vw",
-      quality: 82,
-      fit: "cover",
-    }),
+    image:          getImageUrl(d.image ?? null),
     accent:         ACCENTS[e.slug] || "#b13a34",
     numeral:        ROMAN[idx] || String(idx + 1),
     objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
@@ -180,22 +175,14 @@ const entryBasePath = localizedPath(locale, "/organizations/");
           <!-- Image side -->
           <div class="org-spread__img-wrap">
             {p.image ? (
-              <picture>
-                {p.image.avifSrcset && <source srcset={p.image.avifSrcset} sizes={p.image.sizes} type="image/avif" />}
-                {p.image.webpSrcset && <source srcset={p.image.webpSrcset} sizes={p.image.sizes} type="image/webp" />}
-                <img
-                  class="org-spread__img"
-                  src={p.image.fallbackSrc}
-                  srcset={p.image.fallbackSrcset || undefined}
-                  sizes={p.image.sizes}
-                  width={p.image.width || undefined}
-                  height={p.image.height || undefined}
-                  alt=""
-                  loading={i === 0 ? "eager" : "lazy"}
-                  decoding="async"
-                  style={`object-position: ${p.objectPosition};`}
-                />
-              </picture>
+              <img
+                class="org-spread__img"
+                src={p.image}
+                alt=""
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                style={`object-position: ${p.objectPosition};`}
+              />
             ) : (
               <div class="org-spread__img-fallback"></div>
             )}
@@ -338,43 +325,12 @@ const entryBasePath = localizedPath(locale, "/organizations/");
 
   let closing = false;
 
-  function syncResponsivePicture(picture, img, image) {
-    picture.querySelectorAll("source").forEach((source) => source.remove());
-
+  function syncModalImage(img, image) {
     if (!image) {
       img.removeAttribute("src");
-      img.removeAttribute("srcset");
-      img.removeAttribute("sizes");
-      img.removeAttribute("width");
-      img.removeAttribute("height");
       return;
     }
-
-    if (image.avifSrcset) {
-      const sourceAvif = document.createElement("source");
-      sourceAvif.type = "image/avif";
-      sourceAvif.srcset = image.avifSrcset;
-      sourceAvif.sizes = image.sizes;
-      picture.insertBefore(sourceAvif, img);
-    }
-
-    if (image.webpSrcset) {
-      const sourceWebp = document.createElement("source");
-      sourceWebp.type = "image/webp";
-      sourceWebp.srcset = image.webpSrcset;
-      sourceWebp.sizes = image.sizes;
-      picture.insertBefore(sourceWebp, img);
-    }
-
-    img.src = image.fallbackSrc;
-    if (image.fallbackSrcset) {
-      img.srcset = image.fallbackSrcset;
-    } else {
-      img.removeAttribute("srcset");
-    }
-    img.sizes = image.sizes;
-    if (image.width) img.width = image.width;
-    if (image.height) img.height = image.height;
+    img.src = image;
   }
 
   function openModal(slug) {
@@ -382,10 +338,10 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     if (!p) return;
 
     if (p.image) {
-      syncResponsivePicture(modalPicture, modalImg, p.image);
+      syncModalImage(modalImg, p.image);
       modalImg.style.display = "";
     } else {
-      syncResponsivePicture(modalPicture, modalImg, null);
+      syncModalImage(modalImg, null);
       modalImg.removeAttribute("src");
       modalImg.style.display = "none";
     }

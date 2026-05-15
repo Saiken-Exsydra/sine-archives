@@ -6,7 +6,6 @@ import cosmArchiveImage from "../../assets/uploads/cosm-archive.png";
 import cosmPrecursorsImage from "../../assets/uploads/cosm-precursors.png";
 import twilightBandPanelImage from "../../assets/uploads/cosmology/cosm-twilight-band.png";
 import {
-  buildOptimizedImageBundle,
   getImageUrl,
   type ContentImageValue,
 } from "../../utils/optimized-images";
@@ -77,7 +76,7 @@ type Panel = {
   type: string;
   designation: string;
   summary: string;
-  image: Awaited<ReturnType<typeof buildOptimizedImageBundle>>;
+  image: string | null;
   accent: string;
   numeral: string;
   objectPosition: string;
@@ -104,12 +103,7 @@ const buildPanel = async (e: Entry, idx: number): Promise<Panel> => {
     type: d.type || "Cosmology",
     designation: d.designation || d.summary?.split(".")[0] || "",
     summary: d.summary || "",
-    image: await buildOptimizedImageBundle(imageValue, {
-      widths: [768, 1280, 1600, 1920, 2560],
-      sizes: "100vw",
-      quality: 85,
-      fit: "cover",
-    }),
+    image: getImageUrl(imageValue),
     accent: ACCENTS[e.slug] || "#b13a34",
     numeral: ROMAN[idx] || String(idx + 1),
     objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
@@ -164,26 +158,14 @@ const copy = {
         >
           <div class="cosmo-panel__bg">
             {p.image && (
-              <picture>
-                {p.image.avifSrcset && (
-                  <source srcset={p.image.avifSrcset} sizes={p.image.sizes} type="image/avif" />
-                )}
-                {p.image.webpSrcset && (
-                  <source srcset={p.image.webpSrcset} sizes={p.image.sizes} type="image/webp" />
-                )}
-                <img
-                  src={p.image.fallbackSrc}
-                  srcset={p.image.fallbackSrcset || undefined}
-                  sizes={p.image.sizes}
-                  width={p.image.width || undefined}
-                  height={p.image.height || undefined}
-                  alt=""
-                  class="cosmo-panel__bg-img"
-                  loading={i === 0 ? "eager" : "lazy"}
-                  decoding="async"
-                  style={`object-position: ${p.objectPosition};`}
-                />
-              </picture>
+              <img
+                src={p.image}
+                alt=""
+                class="cosmo-panel__bg-img"
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                style={`object-position: ${p.objectPosition};`}
+              />
             )}
           </div>
 
@@ -361,43 +343,12 @@ const copy = {
 
   let closing = false;
 
-  function syncResponsivePicture(picture, img, image) {
-    picture.querySelectorAll("source").forEach((source) => source.remove());
-
+  function syncModalImage(img, image) {
     if (!image) {
       img.removeAttribute("src");
-      img.removeAttribute("srcset");
-      img.removeAttribute("sizes");
-      img.removeAttribute("width");
-      img.removeAttribute("height");
       return;
     }
-
-    if (image.avifSrcset) {
-      const sourceAvif = document.createElement("source");
-      sourceAvif.type = "image/avif";
-      sourceAvif.srcset = image.avifSrcset;
-      sourceAvif.sizes = image.sizes;
-      picture.insertBefore(sourceAvif, img);
-    }
-
-    if (image.webpSrcset) {
-      const sourceWebp = document.createElement("source");
-      sourceWebp.type = "image/webp";
-      sourceWebp.srcset = image.webpSrcset;
-      sourceWebp.sizes = image.sizes;
-      picture.insertBefore(sourceWebp, img);
-    }
-
-    img.src = image.fallbackSrc;
-    if (image.fallbackSrcset) {
-      img.srcset = image.fallbackSrcset;
-    } else {
-      img.removeAttribute("srcset");
-    }
-    img.sizes = image.sizes;
-    if (image.width) img.width = image.width;
-    if (image.height) img.height = image.height;
+    img.src = image;
   }
 
   function openModal(slug) {
@@ -405,10 +356,10 @@ const copy = {
     if (!p) return;
 
     if (p.image) {
-      syncResponsivePicture(modalPicture, modalImg, p.image);
+      syncModalImage(modalImg, p.image);
       modalImg.style.display = "";
     } else {
-      syncResponsivePicture(modalPicture, modalImg, null);
+      syncModalImage(modalImg, null);
       modalImg.removeAttribute("src");
       modalImg.style.display = "none";
     }

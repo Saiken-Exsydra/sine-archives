@@ -2,7 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
-import { buildOptimizedImageBundle } from "../../utils/optimized-images";
+import { getImageUrl } from "../../utils/optimized-images";
 import placeBrightMarginImage from "../../assets/uploads/place-bright-margin.png";
 import placeDarkmarginImage from "../../assets/uploads/place-darkmargin.png";
 import placeVrenneImage from "../../assets/uploads/place-vrenne.png";
@@ -63,20 +63,10 @@ function regionEntries(matchTag: string) {
 const regionsData = await Promise.all(
   REGIONS.map(async (r) => ({
     ...r,
-    backgroundImage: await buildOptimizedImageBundle(r.image, {
-      widths: [768, 1280, 1600, 1920],
-      sizes: "(max-width: 900px) 100vw, 34vw",
-      quality: 85,
-      fit: "cover",
-    }),
+    backgroundImage: getImageUrl(r.image),
     entries: await Promise.all(
       regionEntries(r.matchTag).map(async (e) => {
-        const image = await buildOptimizedImageBundle(e.data.image ?? null, {
-          widths: [160, 320, 480],
-          sizes: "72px",
-          quality: 82,
-          fit: "cover",
-        });
+        const image = getImageUrl(e.data.image ?? null);
 
         return {
           slug: e.slug,
@@ -85,7 +75,7 @@ const regionsData = await Promise.all(
           designation: (e.data as any).designation ?? null,
           summary: e.data.summary,
           image,
-          imageUrl: image?.fallbackSrc ?? null,
+          imageUrl: image,
         };
       })
     ),
@@ -161,34 +151,14 @@ const regionsJson = JSON.stringify(
         >
           {region.backgroundImage && (
             <div class="region-bgwrap">
-              <picture>
-                {region.backgroundImage.avifSrcset && (
-                  <source
-                    srcset={region.backgroundImage.avifSrcset}
-                    sizes={region.backgroundImage.sizes}
-                    type="image/avif"
-                  />
-                )}
-                {region.backgroundImage.webpSrcset && (
-                  <source
-                    srcset={region.backgroundImage.webpSrcset}
-                    sizes={region.backgroundImage.sizes}
-                    type="image/webp"
-                  />
-                )}
-                <img
-                  class="region-bg"
-                  src={region.backgroundImage.fallbackSrc}
-                  srcset={region.backgroundImage.fallbackSrcset || undefined}
-                  sizes={region.backgroundImage.sizes}
-                  width={region.backgroundImage.width || undefined}
-                  height={region.backgroundImage.height || undefined}
-                  alt=""
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  decoding="async"
-                  style={`object-position:${region.imagePosition};`}
-                />
-              </picture>
+              <img
+                class="region-bg"
+                src={region.backgroundImage}
+                alt=""
+                loading={idx === 0 ? "eager" : "lazy"}
+                decoding="async"
+                style={`object-position:${region.imagePosition};`}
+              />
               <div class="region-tint" style={`background:${region.gradient}; opacity:0.4;`}></div>
             </div>
           )}
@@ -256,24 +226,12 @@ const regionsJson = JSON.stringify(
                   >
                     <div class="place-card__thumb">
                       {entry.image ? (
-                        <picture>
-                          {entry.image.avifSrcset && (
-                            <source srcset={entry.image.avifSrcset} sizes={entry.image.sizes} type="image/avif" />
-                          )}
-                          {entry.image.webpSrcset && (
-                            <source srcset={entry.image.webpSrcset} sizes={entry.image.sizes} type="image/webp" />
-                          )}
-                          <img
-                            src={entry.image.fallbackSrc}
-                            srcset={entry.image.fallbackSrcset || undefined}
-                            sizes={entry.image.sizes}
-                            width={entry.image.width || undefined}
-                            height={entry.image.height || undefined}
-                            alt=""
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </picture>
+                        <img
+                          src={entry.image}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
                       ) : (
                         <svg width="18" height="18" viewBox="0 0 20 20" fill="none" opacity="0.3">
                           <path d="M10 2 L18 8 L18 18 L2 18 L2 8 Z" stroke="white" stroke-width="1.2" fill="none"/>

@@ -62,16 +62,20 @@ export async function buildOptimizedImageBundle(
   const [avif, webp, fallback] = await Promise.all([
     getImage({ ...sharedOptions, format: "avif" }),
     getImage({ ...sharedOptions, format: "webp" }),
-    getImage({ ...sharedOptions, format: options.fallbackFormat ?? value.format }),
+    options.fallbackFormat && !["avif", "webp"].includes(options.fallbackFormat)
+      ? getImage({ ...sharedOptions, format: options.fallbackFormat })
+      : Promise.resolve(null),
   ]);
+
+  const fallbackResult = fallback ?? webp;
 
   return {
     avifSrcset: getSrcsetAttribute(avif),
     webpSrcset: getSrcsetAttribute(webp),
-    fallbackSrc: fallback.src,
-    fallbackSrcset: getSrcsetAttribute(fallback),
+    fallbackSrc: fallbackResult.src,
+    fallbackSrcset: getSrcsetAttribute(fallbackResult),
     sizes: options.sizes,
-    width: Number(fallback.attributes.width ?? value.width),
-    height: Number(fallback.attributes.height ?? value.height),
+    width: Number(fallbackResult.attributes.width ?? value.width),
+    height: Number(fallbackResult.attributes.height ?? value.height),
   };
 }

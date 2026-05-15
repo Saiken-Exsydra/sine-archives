@@ -2,7 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
-import { buildOptimizedImageBundle } from "../../utils/optimized-images";
+import { getImageUrl } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const all = await getLocalizedCollection("sine", locale);
@@ -53,7 +53,7 @@ type SineEntry = {
   label: string;
   subtitle: string;
   tagline: string;
-  image: Awaited<ReturnType<typeof buildOptimizedImageBundle>>;
+  image: string | null;
   accentColor: string;
   numeral: string;
   fields: Record<string, string>;
@@ -76,12 +76,7 @@ const panelTasks = panelOrder
       label:       d.title,
       subtitle:    copy.panelSubtitle,
       tagline:     TAGLINES[slug] ?? d.summary,
-      image:       await buildOptimizedImageBundle(d.image ?? null, {
-        widths: [640, 960, 1280, 1600],
-        sizes: "(max-width: 900px) 100vw, 50vw",
-        quality: 82,
-        fit: "cover",
-      }),
+      image:       getImageUrl(d.image ?? null),
       accentColor: ACCENT_COLORS[slug] ?? "#b13a34",
       numeral:     ROMAN[i],
       fields,
@@ -125,21 +120,13 @@ const entryBasePath = localizedPath(locale, "/sine/");
           <!-- BG image -->
           <div class="sine-panel__bg">
             {branch.image && (
-              <picture>
-                {branch.image.avifSrcset && <source srcset={branch.image.avifSrcset} sizes={branch.image.sizes} type="image/avif" />}
-                {branch.image.webpSrcset && <source srcset={branch.image.webpSrcset} sizes={branch.image.sizes} type="image/webp" />}
-                <img
-                  class="sine-panel__bg-img"
-                  src={branch.image.fallbackSrc}
-                  srcset={branch.image.fallbackSrcset || undefined}
-                  sizes={branch.image.sizes}
-                  width={branch.image.width || undefined}
-                  height={branch.image.height || undefined}
-                  alt=""
-                  loading={i === 0 ? "eager" : "lazy"}
-                  decoding="async"
-                />
-              </picture>
+              <img
+                class="sine-panel__bg-img"
+                src={branch.image}
+                alt=""
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+              />
             )}
             <div class="sine-panel__accent-grad"></div>
           </div>
@@ -249,50 +236,19 @@ const entryBasePath = localizedPath(locale, "/sine/");
 
   let closing = false;
 
-  function syncResponsivePicture(picture, img, image) {
-    picture.querySelectorAll("source").forEach((source) => source.remove());
-
+  function syncModalImage(img, image) {
     if (!image) {
       img.removeAttribute("src");
-      img.removeAttribute("srcset");
-      img.removeAttribute("sizes");
-      img.removeAttribute("width");
-      img.removeAttribute("height");
       return;
     }
-
-    if (image.avifSrcset) {
-      const sourceAvif = document.createElement("source");
-      sourceAvif.type = "image/avif";
-      sourceAvif.srcset = image.avifSrcset;
-      sourceAvif.sizes = image.sizes;
-      picture.insertBefore(sourceAvif, img);
-    }
-
-    if (image.webpSrcset) {
-      const sourceWebp = document.createElement("source");
-      sourceWebp.type = "image/webp";
-      sourceWebp.srcset = image.webpSrcset;
-      sourceWebp.sizes = image.sizes;
-      picture.insertBefore(sourceWebp, img);
-    }
-
-    img.src = image.fallbackSrc;
-    if (image.fallbackSrcset) {
-      img.srcset = image.fallbackSrcset;
-    } else {
-      img.removeAttribute("srcset");
-    }
-    img.sizes = image.sizes;
-    if (image.width) img.width = image.width;
-    if (image.height) img.height = image.height;
+    img.src = image;
   }
 
   function openModal(branch) {
     if (!branch) return;
 
     // Populate hero
-    syncResponsivePicture(modalPicture, modalImg, branch.image);
+    syncModalImage(modalImg, branch.image);
     modalImg.style.display = branch.image ? "" : "none";
     modalAccent.style.background = `linear-gradient(135deg, ${branch.accentColor}33, transparent)`;
     modalSubtitle.textContent = branch.subtitle;

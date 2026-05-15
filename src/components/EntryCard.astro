@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import type { ContentKey } from "../content-keys";
 import { localizedEntryPath, type SiteLocale } from "../i18n/config";
-import { buildOptimizedImageBundle } from "../utils/optimized-images";
+import { getImageUrl } from "../utils/optimized-images";
 
 type Props = {
   section: ContentKey;
@@ -15,37 +15,20 @@ const { entry, section, locale = "en" } = Astro.props as Props;
 const href = localizedEntryPath(locale, section, entry.slug);
 const tags = entry.data.tags ?? [];
 const search = `${entry.data.title} ${entry.data.summary} ${tags.join(" ")}`.toLowerCase();
-const thumbImage = await buildOptimizedImageBundle(entry.data.image ?? null, {
-  widths: [260, 520],
-  sizes: "(max-width: 520px) 100vw, 130px",
-  quality: 82,
-  fit: "cover",
-});
+const thumbImage = getImageUrl(entry.data.image ?? null);
 ---
 
 <a class="ecard" href={href} data-search={search}>
   <div class="ecard__thumb">
     {thumbImage ? (
-      <picture>
-        {thumbImage.avifSrcset && (
-          <source srcset={thumbImage.avifSrcset} sizes={thumbImage.sizes} type="image/avif" />
-        )}
-        {thumbImage.webpSrcset && (
-          <source srcset={thumbImage.webpSrcset} sizes={thumbImage.sizes} type="image/webp" />
-        )}
-        <img
-          class="ecard__img"
-          src={thumbImage.fallbackSrc}
-          srcset={thumbImage.fallbackSrcset || undefined}
-          sizes={thumbImage.sizes}
-          width={thumbImage.width || undefined}
-          height={thumbImage.height || undefined}
-          alt=""
-          loading="lazy"
-          decoding="async"
-          style={(entry.data as any).image_position ? `object-position: ${(entry.data as any).image_position}` : undefined}
-        />
-      </picture>
+      <img
+        class="ecard__img"
+        src={thumbImage}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        style={(entry.data as any).image_position ? `object-position: ${(entry.data as any).image_position}` : undefined}
+      />
     ) : (
       <div class="ecard__img-empty">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" opacity="0.3">

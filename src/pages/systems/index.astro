@@ -1,5 +1,4 @@
 ---
-import { Picture } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
@@ -7,6 +6,7 @@ import { localizedPath, type SiteLocale } from "../../i18n/config";
 import type { ContentKey } from "../../content-keys";
 import divinationPanelImage from "../../assets/uploads/systems/sys-divination-panel.png";
 import redactoryPanelImage from "../../assets/uploads/systems/sys-redactory-panel.png";
+import { getImageUrl } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const copy = locale === "pt-br"
@@ -245,15 +245,10 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
         >
           <div class="sys-idle">
             <div class="sys-idle__bg">
-              <Picture
-                src={sys.image}
+              <img
+                src={getImageUrl(sys.image) ?? ""}
                 alt=""
                 class="sys-idle__bgImg"
-                widths={[768, 1280, 1600, 1920]}
-                sizes="(max-width: 900px) 100vw, 50vw"
-                formats={["avif", "webp"]}
-                quality={85}
-                fit="cover"
                 loading={i === 0 ? "eager" : "lazy"}
                 decoding="async"
                 style={`filter: ${sys.imageFilter};`}
@@ -290,15 +285,10 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
             </div>
 
             <div class="sys-expanded__hero">
-              <Picture
-                src={sys.image}
+              <img
+                src={getImageUrl(sys.image) ?? ""}
                 alt=""
                 class="sys-expanded__heroImg"
-                widths={[768, 1280, 1600, 1920]}
-                sizes="(max-width: 900px) 100vw, 50vw"
-                formats={["avif", "webp"]}
-                quality={85}
-                fit="cover"
                 loading="lazy"
                 decoding="async"
                 style={`filter: ${sys.imageFilter};`}
