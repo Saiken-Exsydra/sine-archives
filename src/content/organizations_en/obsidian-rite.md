@@ -1,85 +1,339 @@
 ---
 title: "The Obsidian Rite"
 type: "Organization"
-designation: "Operational Field Arm of the Church — Division of the Diocese"
-affiliation: "The Church — treaty operational relationship with Empire of Synus and HourGlass"
-headquarters: "Saint Her'chell Cathedral, Kalt'sen — operational command dispersed regionally"
-founded: "Pre-imperial — formalized as a distinct order in the early empire period"
-jurisdiction: "Twilight Band and northern frontier — operational authority in Desolation Events; treaty authority in frontier theatre"
+designation: "Operational Field Arm of the Church - Division of the Diocese"
+affiliation: "The Church - treaty operational relationship with Empire of Synus and HourGlass"
+headquarters: "Saint Her'chell Cathedral, Kalt'sen - operational command dispersed regionally"
+founded: "Post-Sundering field charter built from earlier vessel-clergy traditions"
+jurisdiction: "Twilight Band and northern frontier - operational authority in Desolation Events; treaty authority in frontier theatre"
 status_label: "Active"
-summary: "The Church's field arm. Where the theology ends and the work begins."
-tags: ["Obsidian Rite", "Church", "Organization", "Possession", "Exorcism", "Fragment Fusion", "Victorian Rite", "Cold Fleet", "Northern Front", "Darkmargin"]
+summary: "The Obsidian Rite is the Church's regulated order of Beatified field clergy for possession, expulsion, and high-risk divine engagement."
+tags: ["Obsidian Rite", "Church", "Organization", "Possession", "Exorcism", "Beatified", "Victorian Rite", "Cold Fleet", "Northern Front", "Darkmargin"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-05-15"
 image: "../../assets/uploads/org-obsidian-rite.png"
 ---
 
-> *"A Senior Warden of the Obsidian Rite is a theologian, a physician, a soldier, and something else. The something else is the part you need when those three aren't enough."*
-> — Unnamed military officer, debrief record, northern front
+> *"The Rite is necessary. The Rite has more direct operational power than any other formation the Church possesses. The Church governs it carefully because it understands what happens when power at this level operates without governance."*
 
 ---
 
-## What the Obsidian Rite Is
+## What the Rite Actually Is
 
-The Obsidian Rite is the operational arm of the Church — the body of clergy whose training extends beyond parish ministry and standard theological formation into the identification, containment, and expulsion of demonic possession at every stage of its progression.
+The Obsidian Rite is the Church's field arm for the identification, containment, and expulsion of demonic manifestation across the Twilight Band.
 
-They are not simply exorcists. The category is richer than that word implies. A fully trained and operational member of the Obsidian Rite is equipped for the doctrinal, physical, and metaphysical demands of engaging with possessing presences across a complete taxonomy of possession types — from the earliest, most treatable stages through to manifestations that have almost nothing of the original vessel's personality remaining.
+But current canon makes one thing much clearer than older summaries did:
 
-They are also, at the higher operational end, a military force in the most practical sense of that term. The northern frontier has given the Rite its most demanding sustained engagement environment, and the organization has adapted to it over generations.
+The Rite is not simply clergy with better training.
+
+Its members are **divine vessels**. More specifically, they are **Beatified vessels** carrying sustained angelic fragment fusions under Church regulation.
+
+That is the source of the Rite's real operational power.
+
+---
+
+## Why the Rite Is Different
+
+A trained Deacon can recite a rite.
+A Warden can bring an angelic domain through the rite.
+
+That distinction matters.
+
+The Rite's members do not rely only on liturgical correctness, sealed tools, or theological knowledge. Their angelic fusion gives the Naming, the expulsion rite, and their field presence structural weight that ordinary clergy cannot reproduce.
+
+So the Rite is:
+
+- a clerical order
+- a vessel-governance system
+- an exorcistic force
+- a pastoral formation built around identity erosion risk
+
+---
+
+## The Core Fact: Rite Members Are Beatified Vessels
+
+The Church distinguishes:
+
+- **the Crowning**: temporary angelic expression through a willing vessel
+- **the Beatified state**: sustained angelic fusion that remains as an ongoing structural fact
+
+The Obsidian Rite belongs to the second category.
+
+Its members are not temporarily visited. They are permanently invested.
+
+From investiture onward, an angelic fragment of the Sovereign's expressed domain is fused within the member at varying depth and stability.
+
+That fusion grants capability.
+It also creates cost.
+
+---
+
+## Constellation Depth Inside the Rite
+
+The Obsidian Rite Codex now frames its hierarchy through **Seraphic Constellations**.
+
+Not all Rite vessels carry the same depth of alignment.
+
+### Restricted Structural Ladder
+
+```text
+Cynosure contact
+`-- Seraphic vessel
+
+Cardinal Star contact
+`-- major Beatified vessel
+
+Stellate contact
+`-- ordinary Beatified Warden
+
+Mote / Spark / Gleam contact
+`-- minor saint-adjacent or visionary phenomena
+```
+
+This is one of the biggest current lore corrections.
+
+Most Rite members are **Stellate-aligned** Beatified vessels.
+Rarer ones carry **Cardinal Star** pressure.
+The most exceptional cases carry **Cynosure pressure** from one of the Seven Answers.
+
+That is why the Rite's hierarchy is not only about rank. It is also about fragment depth.
+
+---
+
+## What the Rite's Power Looks Like
+
+The Rite does not publish a full public catalog of fragment domains, but the Codex names major operational classes:
+
+- **Light-domain fusions**: radiance, demonic disruption, stronger Naming force
+- **Protection-domain fusions**: barrier-holding, shielding, threshold defense
+- **Healing-domain fusions**: recovery support at identity-and-vessel level
+- **Authority-domain fusions**: rare, mostly among Rector-Ascendants; strongest pressure in major exorcistic command
+
+This means the Rite is not uniform. Different members are not just stronger or weaker versions of one template. They are carrying different divine domains.
+
+---
+
+## The Cost: Identity Erosion
+
+The Rite's internal honesty begins here.
+
+Angelically fused clergy do change.
+
+Over years and decades, the fragment's domain reweights the vessel. A member becomes more structurally like the domain they carry. This can be enlargement. It can also become drift.
+
+The Rite watches for the moment when:
+
+- the priesthood stops anchoring the domain
+- the domain starts organizing the person
+
+This is why the Rite's support structure matters so much.
+
+It uses:
+
+- formation
+- confession
+- Ecclesiastic Surgical monitoring
+- long-term pastoral accompaniment
+
+The goal is not to stop Beatification. The goal is to keep the vessel a priest while the fragment keeps deepening.
 
 ---
 
 ## Rank Structure
 
-**Initiates** complete both standard priestly formation and the extended Obsidian Rite training curriculum. The curriculum covers the Church's possession taxonomy in detail, the formal rites of identification and expulsion, the **Naming** — the formal address of a possessing presence by its proper domain, which the Church teaches produces genuine disruption to lower-tier manifestations — and the field medicine and psychological support functions that every Rite member carries regardless of specialization.
+The Rite's rank ladder is operational, not merely ceremonial.
 
-**Wardens** are operational practitioners — fully qualified, deployable, and authorized to lead standard operations. Standard Rite deployment is a unit of three: a primary expulsor, a confessor-priest responsible for the vessel's spiritual preparation and recovery, and an **Ecclesiastic Surgeon** responsible for medical assessment and the difficult judgment call about whether expulsion remains a rescue at a given stage of possession progression.
+### Initiate
 
-**Senior Wardens** have extended authorization and field experience sufficient to manage complex operations and to serve as regional coordinators for Rite deployment. They hold access to the more detailed tiers of the Church's possession archive and can authorize escalated responses that Wardens cannot.
+An invested candidate in formation. The Initiate period teaches:
 
-**Rector-Ascendant** is the highest operational rank — reserved for those whose combined field record and theological standing qualify them to command a full operation independently, including in frontier theatre. There are few Rector-Ascendants at any given time. The qualification requirements are deliberate about this.
+- fusion stabilization
+- domain expression under control
+- possession taxonomy
+- expulsion rites
+- the Naming
+- physical and psychological maintenance
+- identity preservation
+
+### Warden
+
+The Rite's operational core.
+
+Wardens:
+
+- carry sealed instruments
+- serve as primary expulsors
+- operate in standard field units
+- are considered stable, deployable Beatified vessels
+
+### Senior Warden
+
+A Warden whose field record, fusion stability, and pastoral coherence qualify them for greater authority.
+
+Senior Wardens:
+
+- command in the absence of a Rector-Ascendant
+- sit on advancement panels
+- lead more complex sustained operations
+
+### Rector-Ascendant
+
+The Rite's highest field rank.
+
+A Rector-Ascendant is not just senior. They are a long-formed deep-fusion field authority whose judgment is trusted to stand in for the Church's judgment during major operations.
+
+This is also where rank and fragment depth begin to overlap more often, though they still remain distinct categories.
 
 ---
 
 ## The Standard Unit
 
-The Obsidian Rite deploys in units of three because the three required functions — expulsion, pastoral support, and medical judgment — are distinct enough that no single practitioner is expected to hold all of them at operational level simultaneously.
+Every formal Rite operation is built around a three-person structure:
 
-The **primary expulsor** leads the ritual engagement with the possessing presence. The **confessor-priest** manages the vessel's internal state throughout — the spiritual preparation that precedes engagement, the moment-to-moment support during, and the recovery work that begins immediately after. The **Ecclesiastic Surgeon** maintains continuous medical assessment and is specifically trained to make the determination — in real time, under operational conditions — of whether the vessel can survive the expulsion or whether the possession has progressed to a stage where attempting it would kill the person you are trying to save.
+- **primary expulsor**
+- **confessor-priest**
+- **Ecclesiastic Surgeon**
 
-The Ecclesiastic Surgeon's role requires the most difficult kind of judgment. The Church teaches that a person is never simply the body — but the body is what you can see, and the decision about whether a body can survive what the expulsion requires is a medical decision under conditions where standard medical training is insufficient.
+That design is deliberate.
+
+The Rite does not allow force, care, and judgment to collapse into one unchecked office if it can avoid it.
+
+### Primary Expulsor
+
+Leads the direct ritual engagement.
+
+### Confessor-Priest
+
+Handles spiritual preparation, relational steadiness, and aftercare of the vessel or survivor.
+
+### Ecclesiastic Surgeon
+
+Assesses survivability, tracks fusion coherence, and decides whether a case remains rescue or has moved beyond it.
+
+The Surgeon's role is especially important because the Rite's deepest operational question is often not "Can we expel this?" but "Can this person survive what expulsion will require?"
 
 ---
 
-## Fragment Fusions
+## The Naming
 
-Within the Obsidian Rite, a small number of practitioners hold a status that stands apart from the standard rank structure: **Fragment Fusions** — individuals in whom the fragment of a divine presence has integrated to a degree that represents transformation rather than possession.
+The Rite's signature technique is **the Naming**.
 
-The Church's taxonomy of possession's stages — Whispering, Tenant, Wearing, Hollowed, Consumed — describes a progression in which the possessing presence increasingly dominates the vessel. Fragment Fusion is a condition that exists outside this taxonomy. The presence that has integrated has done so in a way that produces enhancement rather than erosion, collaboration rather than displacement. The vessel's identity remains intact and in fact strengthened. The integrated fragment contributes to the practitioner's capabilities rather than consuming their autonomy.
+It is not only formula or liturgical language. It is the act of addressing a hostile presence by its proper domain within the Sovereign's ordering of creation, using the Warden's fused angelic coherence to make that address carry force.
 
-This condition is rare. The Church's understanding of why some vessel-presence interactions produce Fragment Fusions rather than possession progression is documented in the Keepers of Before's restricted archive rather than in the Rite's general training curriculum. What the Rite knows operationally is that Fragment Fusions are among its most capable practitioners, that their capabilities are significantly beyond what standard Rite training produces, and that the integrated presence does not interfere with their judgment or their institutional loyalty in any case the archive records.
+That is why a Beatified Warden can do things a merely trained priest cannot.
 
-**The identity erosion law** governs how Fragment Fusions are managed institutionally. It exists because the transformation changes who someone is in ways that are real and significant — not destructively, but permanently. The Church's formal position on what this means for the practitioner's continuity of person, their standing within the clergy, and their operational deployment has been developed carefully across the history of the few cases the archive contains.
+The Naming is strongest against lower-tier manifestations, but it remains the opening move of major expulsion even against far worse cases.
+
+---
+
+## The Distinction from Demonic Possession
+
+The Church holds the difference absolutely:
+
+- demonic possession is predatory and displacing
+- Beatified vesselhood is additive and regulated
+
+The Rite lives inside that distinction.
+
+Its members are not treated as possessed. They are treated as priests deepened by sustained angelic fusion.
+
+The Codex also admits the hard part:
+
+The distinction matters doctrinally and operationally, but the longer the service and the deeper the fusion, the more carefully the Rite must watch to make sure enlargement has not become something harder to name.
+
+---
+
+## Saints, Heralds, and Rite Members
+
+The Rite is not the only place in the Church where divine vesselhood exists.
+
+The Codex sharply distinguishes:
+
+- **Heralds / Choir Penitent**: Gift of Sight, not Beatified field vessels
+- **Saints**: deep holy cases, not automatically Rite members
+- **Unregulated divine vessels** in other territories: watched, guided if possible, not considered safe by default
+- **Obsidian Rite members**: the Church's formal answer to how divine vesselhood is trained, governed, and deployed
+
+So the Rite is not synonymous with all holiness in the Church.
+It is the Church's specialized vessel order.
+
+---
+
+## The Seven Answers and Exceptional Cases
+
+Most Rite members are not direct central-star cases.
+
+Restricted doctrine reserves a much smaller category for those carrying **Cynosure pressure** from one of the **Seven Answers**.
+
+These are not ordinary Beatified cases. They are exceptional vessels aligned to the central star of a Seraphic Constellation deeply enough that the Church treats them as singular strategic assets.
+
+Halk'en Orveth belongs here.
+Most Wardens do not.
+
+That distinction is crucial to understanding the modern Rite.
 
 ---
 
 ## The Victorian Rite
 
-The **Victorian Rite** is the Obsidian Rite's northern formation — the operational structure specifically organized for sustained engagement at the Darkmargin and in the waters of the Cold Fleet theatre.
+The northern formation of the Obsidian Rite is the **Victorian Rite**.
 
-The Victorian Rite was established when the Church's engagement with the War of the Threshold reached a scale where the standard unit deployment model was insufficient for the frontier's demands. The northern front is not a series of discrete possession incidents that a regional Warden can dispatch units to address. It is a sustained operational environment with Dark End mass engagements, SOE encounters, and conditions that require the Rite to function as an embedded military arm rather than a responsive field service.
+It exists because the northern frontier is not a series of isolated possession cases. It is a continuous theater of pressure, entity emergence, military cooperation, and accelerated erosion risk.
 
-The Victorian Rite works with HourGlass's Cold Fleet in the maritime theatre. WVS hulls carry Victorian Rite personnel as standard complement for extended northern operations. The working relationship between Cold Fleet crews and Victorian Rite Wardens in the field is one that has been developed through sustained joint operation and is functional, specific, and considerably warmer than either organization's formal policy documents reflect.
+The Victorian Rite works closely with:
 
-The Victorian Rite maintains its own archive of northern-specific engagement records — Dark End behavior patterns, SOE classification data developed from direct contact, engagement outcomes across conditions that interior Rite operations do not encounter. This archive is the most operationally current possession and entity classification record in the Church's holdings. It is also the record that fewest people with institutional authority over theological classification have read.
+- the Cold Fleet
+- HourGlass
+- northern formations of the Church
+
+Its central pastoral problem is not only survival.
+It is what the north does to a Beatified vessel over time.
+
+The Codex is explicit: identity erosion accelerates in northern service.
 
 ---
 
-## Relationship to Other Institutions
+## Institutional Meaning
 
-**The Church:** The Rite is the Church's operational arm and operates under the Church's hierarchy. Rector-Ascendants report to the Arch-Deacon of their region; the Victorian Rite's command structure reports through the northern regional Arch-Deacon to the Diaconate. The Rite does not make independent political decisions, but it carries significant operational autonomy in the field.
+The Obsidian Rite now makes the Church's larger hierarchy easier to understand:
 
-**The Empire and HourGlass:** The treaty arrangements governing the Rite's role in Desolation Events and the frontier theatre are formal and specific. In a declared Desolation Event, the Church assumes operational primacy. In the northern theatre, the Rite and HourGlass's forces operate under joint protocols that were developed through practical necessity over a long shared operational history.
+- **office** is one axis
+- **order membership** is another
+- **fragment depth** is a third
 
-**The Apocachynthion:** The Rite and the Apocachynthion share incident reports on cases where the same events produce relevant information for both institutions. Their explanatory frameworks — the Church's theology and the Apocachynthion's structural resonance analysis — are different enough that joint case interpretation produces regular friction. The sharing arrangement persists because both institutions need what the other has access to. The friction is managed rather than resolved.
+A person can therefore be:
+
+- a priest
+- a Warden
+- Beatified
+- Stellate-aligned
+
+or:
+
+- a priest
+- a Rector-Ascendant
+- Beatified
+- Cynosure-aligned to one of the Seven Answers
+
+Those are not redundant labels. They are the actual layered structure of the Rite.
+
+---
+
+## Why the Rite Matters
+
+The Obsidian Rite matters because it is the Church's answer to a problem no ordinary clergy can solve:
+
+How do you build an institution out of holy vesselhood without pretending vesselhood is safe?
+
+Its answer is:
+
+- investiture
+- formation
+- rank
+- confession
+- surgical monitoring
+- domain discipline
+- and constant refusal to forget that power and erosion arrive together
+
+That is the Rite in its modern form.
