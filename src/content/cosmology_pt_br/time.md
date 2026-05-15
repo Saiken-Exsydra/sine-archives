@@ -6,7 +6,7 @@ tags: ["Cosmology", "Time", "Archive", "Traversal", "Entropy", "Book of Humanity
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/cosm-time.png"
+image: "../../assets/uploads/cosmology/cosm-time.png"
 ---
 
 > *"A pergunta não é de onde o tempo vem. Tudo vem do Archive — já estava lá desde o início, e Tempo é apenas mais uma dessas coisas que já existiam. A pergunta é o que ele faz. O que ele tem permissão para fazer. E o que escolheu fazer."*

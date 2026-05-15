@@ -6,7 +6,7 @@ tags: ["systems", "magic", "Redactory", "Redactors", "Dive", "Anchor"]
 status: public
 created: "2026-02-12"
 updated: "2026-05-10"
-image: "/uploads/sys-redactory.png"
+image: "../../assets/uploads/sys-redactory.png"
 ---
 
 **Redactory** is the practiced ability to force reality to express a different valid state without rewriting the world's underlying laws.

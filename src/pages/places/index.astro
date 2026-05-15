@@ -2,6 +2,10 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { buildOptimizedImageBundle } from "../../utils/optimized-images";
+import placeBrightMarginImage from "../../assets/uploads/place-bright-margin.png";
+import placeDarkmarginImage from "../../assets/uploads/place-darkmargin.png";
+import placeVrenneImage from "../../assets/uploads/place-vrenne.png";
 
 const REGIONS = [
   {
@@ -11,7 +15,7 @@ const REGIONS = [
     numeral: "I",
     tagline: "Frontier territories beyond the Spine",
     accentColor: "#6a9ab5",
-    image: "/uploads/place-darkmargin.png",
+    image: placeDarkmarginImage,
     imagePosition: "center top",
     gradient: "linear-gradient(160deg, #080f18 0%, #06060b 70%)",
     matchTag: "northern region",
@@ -23,7 +27,7 @@ const REGIONS = [
     numeral: "II",
     tagline: "The seat of the Empire — Kalt'sen and the Band",
     accentColor: "#b13a34",
-    image: "/uploads/place-vrenne.png",
+    image: placeVrenneImage,
     imagePosition: "center center",
     gradient: "linear-gradient(160deg, #140808 0%, #06060b 70%)",
     matchTag: "central",
@@ -35,7 +39,7 @@ const REGIONS = [
     numeral: "III",
     tagline: "The outer reaches and the deep interior",
     accentColor: "#b08d3c",
-    image: "/uploads/place-bright-margin.png",
+    image: placeBrightMarginImage,
     imagePosition: "center center",
     gradient: "linear-gradient(160deg, #120f06 0%, #06060b 70%)",
     matchTag: "southern region",
@@ -56,19 +60,53 @@ function regionEntries(matchTag: string) {
     });
 }
 
-const regionsData = REGIONS.map((r) => ({
-  ...r,
-  entries: regionEntries(r.matchTag).map((e) => ({
-    slug: e.slug,
-    title: e.data.title,
-    type: e.data.type,
-    designation: (e.data as any).designation ?? null,
-    summary: e.data.summary,
-    image: e.data.image ?? null,
-  })),
-}));
+const regionsData = await Promise.all(
+  REGIONS.map(async (r) => ({
+    ...r,
+    backgroundImage: await buildOptimizedImageBundle(r.image, {
+      widths: [768, 1280, 1600, 1920],
+      sizes: "(max-width: 900px) 100vw, 34vw",
+      quality: 85,
+      fit: "cover",
+    }),
+    entries: await Promise.all(
+      regionEntries(r.matchTag).map(async (e) => {
+        const image = await buildOptimizedImageBundle(e.data.image ?? null, {
+          widths: [160, 320, 480],
+          sizes: "72px",
+          quality: 82,
+          fit: "cover",
+        });
 
-const regionsJson = JSON.stringify(regionsData);
+        return {
+          slug: e.slug,
+          title: e.data.title,
+          type: e.data.type,
+          designation: (e.data as any).designation ?? null,
+          summary: e.data.summary,
+          image,
+          imageUrl: image?.fallbackSrc ?? null,
+        };
+      })
+    ),
+  }))
+);
+
+const regionsJson = JSON.stringify(
+  regionsData.map((region) => ({
+    key: region.key,
+    label: region.label,
+    accentColor: region.accentColor,
+    entries: region.entries.map((entry) => ({
+      slug: entry.slug,
+      title: entry.title,
+      type: entry.type,
+      designation: entry.designation,
+      summary: entry.summary,
+      imageUrl: entry.imageUrl,
+    })),
+  }))
+);
 ---
 
 <MainLayout active="places" pageTitle="Places — SiNE Archives" locale={locale}>
@@ -121,14 +159,36 @@ const regionsJson = JSON.stringify(regionsData);
           tabindex="0"
           aria-label={`Open ${region.label}`}
         >
-          {region.image && (
+          {region.backgroundImage && (
             <div class="region-bgwrap">
-              <img
-                class="region-bg"
-                src={region.image}
-                alt=""
-                style={`object-position:${region.imagePosition};`}
-              />
+              <picture>
+                {region.backgroundImage.avifSrcset && (
+                  <source
+                    srcset={region.backgroundImage.avifSrcset}
+                    sizes={region.backgroundImage.sizes}
+                    type="image/avif"
+                  />
+                )}
+                {region.backgroundImage.webpSrcset && (
+                  <source
+                    srcset={region.backgroundImage.webpSrcset}
+                    sizes={region.backgroundImage.sizes}
+                    type="image/webp"
+                  />
+                )}
+                <img
+                  class="region-bg"
+                  src={region.backgroundImage.fallbackSrc}
+                  srcset={region.backgroundImage.fallbackSrcset || undefined}
+                  sizes={region.backgroundImage.sizes}
+                  width={region.backgroundImage.width || undefined}
+                  height={region.backgroundImage.height || undefined}
+                  alt=""
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  style={`object-position:${region.imagePosition};`}
+                />
+              </picture>
               <div class="region-tint" style={`background:${region.gradient}; opacity:0.4;`}></div>
             </div>
           )}
@@ -196,7 +256,24 @@ const regionsJson = JSON.stringify(regionsData);
                   >
                     <div class="place-card__thumb">
                       {entry.image ? (
-                        <img src={entry.image} alt="" loading="lazy" />
+                        <picture>
+                          {entry.image.avifSrcset && (
+                            <source srcset={entry.image.avifSrcset} sizes={entry.image.sizes} type="image/avif" />
+                          )}
+                          {entry.image.webpSrcset && (
+                            <source srcset={entry.image.webpSrcset} sizes={entry.image.sizes} type="image/webp" />
+                          )}
+                          <img
+                            src={entry.image.fallbackSrc}
+                            srcset={entry.image.fallbackSrcset || undefined}
+                            sizes={entry.image.sizes}
+                            width={entry.image.width || undefined}
+                            height={entry.image.height || undefined}
+                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </picture>
                       ) : (
                         <svg width="18" height="18" viewBox="0 0 20 20" fill="none" opacity="0.3">
                           <path d="M10 2 L18 8 L18 18 L2 18 L2 8 Z" stroke="white" stroke-width="1.2" fill="none"/>
@@ -1078,7 +1155,7 @@ const regionsJson = JSON.stringify(regionsData);
         type: e.type ?? null,
         designation: e.designation ?? null,
         summary: e.summary ?? "",
-        image: e.image ?? null,
+        image: e.imageUrl ?? null,
         region: r.label,
         accent: r.accentColor,
       }))

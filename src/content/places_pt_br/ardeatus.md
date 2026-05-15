@@ -6,7 +6,7 @@ tags: ["Places", "Ardeatus", "Federation", "Long War", "Covenant", "Vekrath", "I
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/place-ardeatus.png"
+image: "../../assets/uploads/places/place-ardeatus.png"
 ---
 
 > *"The furnaces do not cool. The foundries do not close. The conscription rolls do not empty. This is not experienced as hardship. It is experienced as identity."*

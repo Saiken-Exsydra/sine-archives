@@ -22,9 +22,9 @@ tags: ["Synus", "Wonderwall", "Redactor", "Radiance", "Inkless", "The Pale", "Th
 status: "public"
 created: "2026-02-12"
 updated: "2026-04-26"
-image: "/uploads/char-eclesia-wonderwall.png"
+image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
-hero_image: "/uploads/char-eclesia-wonderwall-hero.png"
+hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
 ---
 
 > *"A luz não experimenta o tempo. A luz não é o oposto da escuridão. A luz é, foi e sempre será. O ligamento do cosmos. Uma maravilha do infinito. Uma parede de contemplação. Uma afirmação eterna da negação que nunca morre."*
@@ -215,4 +215,3 @@ Os cadernos sugerem que ela está chegando ao limite da teoria que construiu —
 **Preparação para ambientes externos.** Escudos ópticos de vidro escurecido, carregados sempre que deixa a propriedade. Casaco preto de gola alta completamente fechado independentemente da temperatura. Quase nunca sai da propriedade durante períodos orbitais de High Radiance.
 
 **Capacidade defensiva.** Nenhum treinamento formal. Não carrega armas nem pratica combate. Sua produção descontrolada de Redactory sob estresse intenso é, honestamente, muito mais perigosa do que qualquer arma que poderia portar. Ela não considera isso reconfortante.
-

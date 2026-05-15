@@ -75,7 +75,7 @@ function generateConfigTs(sections) {
 
 import { defineCollection, z } from "astro:content";
 
-const entrySchema = z.object({
+const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) => z.object({
   title: z.string(),
   type: z.string(),
   summary: z.string(),
@@ -118,8 +118,8 @@ const entrySchema = z.object({
     (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v),
     z.string()
   ),
-  image: z.string().optional(),
-  hero_image: z.string().optional(),
+  image: z.union([image(), z.string()]).optional(),
+  hero_image: z.union([image(), z.string()]).optional(),
 });
 
 `;
@@ -130,7 +130,7 @@ const entrySchema = z.object({
   const collectionsObject =
     `export const collections = {\n` +
     keys
-      .map((key) => `  ${JSON.stringify(key)}: defineCollection({ schema: entrySchema }),`)
+      .map((key) => `  ${JSON.stringify(key)}: defineCollection({ schema: createEntrySchema }),`)
       .join("\n") +
     `\n};\n`;
 

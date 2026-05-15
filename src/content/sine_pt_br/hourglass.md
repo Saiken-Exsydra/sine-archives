@@ -12,7 +12,7 @@ tags: ["HourGlass", "SiNE", "Military", "Organization", "Cold Fleet", "Cloister"
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-10"
-image: "/uploads/sine-hourglass.png"
+image: "../../assets/uploads/sine-hourglass.png"
 ---
 
 > *"A maioria das organizações militares privadas existe para complementar a capacidade de um Estado. A HourGlass existe porque, em certos teatros e em certos períodos, ela era a própria capacidade estatal."*

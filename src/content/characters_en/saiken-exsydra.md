@@ -21,9 +21,9 @@ summary: "The Interval"
 tags: ["SiNE", "Wonderwall", "KT-Exs", "Interval-adjacent", "Northern Region", "Ex'sydra Lineage"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-04-29"
-image: "/uploads/char-saiken-exsydra.png"
-hero_image: "/uploads/char-saiken-exsydra-hero.png"
+updated: "2026-05-14"
+image: "../../assets/uploads/characters/char-saiken-exsydra.png"
+hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 ---
 
 # PERSONAL DOSSIER — RESTRICTED

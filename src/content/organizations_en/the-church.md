@@ -12,7 +12,7 @@ tags: ["Church", "Synus", "Faith", "Obsidian Rite", "Demonic", "Institution", "S
 status: "public"
 created: "2026-03-17"
 updated: "2026-05-10"
-image: "/uploads/org-church.png"
+image: "../../assets/uploads/org-church.png"
 ---
 
 > *This entry is written for general readership. It does not contain restricted theological data. For pastoral services, rite inquiries, or the location of your nearest parish, consult the Church's public directory directly.*

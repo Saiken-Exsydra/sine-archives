@@ -12,7 +12,7 @@ tags: ["Obsidian Rite", "Church", "Organization", "Possession", "Exorcism", "Fra
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/ObsidianRite.png"
+image: "../../assets/uploads/org-obsidian-rite.png"
 ---
 
 > *"Um Senior Warden do Obsidian Rite é teólogo, médico, soldado... e outra coisa. Essa outra coisa é a parte que você precisa quando as três primeiras já não bastam."*
@@ -83,4 +83,3 @@ O Victorian Rite mantém seu próprio arquivo de registros específicos da frent
 **The Empire e HourGlass:** Os tratados que regulam o papel do Rite em Desolation Events e no teatro fronteiriço são formais e extremamente específicos. Durante um Desolation Event oficialmente declarado, a Igreja assume primazia operacional. Já no norte, o Rite e as forças da HourGlass operam sob protocolos conjuntos desenvolvidos através de necessidade prática ao longo de uma longa história operacional compartilhada.
 
 **The Apocachynthion:** O Rite e o Apocachynthion compartilham relatórios de incidentes em casos onde os mesmos eventos geram informações relevantes para ambas as instituições. Os modelos explicativos das duas organizações — a teologia da Igreja e a análise de ressonância estrutural do Apocachynthion — são diferentes o bastante para produzir atrito constante em interpretações conjuntas de casos. Mesmo assim, o acordo de compartilhamento permanece ativo porque ambas precisam do acesso que a outra possui. O atrito é administrado, não resolvido.
-

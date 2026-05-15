@@ -6,7 +6,7 @@ tags: ["Cosmology", "Time", "Archive", "Traversal", "Entropy", "Book of Humanity
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/cosm-time.png"
+image: "../../assets/uploads/cosmology/cosm-time.png"
 ---
 
 > *"The question is not where time comes from. Everything comes from the Archive — it is already there, and Time is one of those already-theres. The question is what it does. What it is permitted to do. And what it chose."*

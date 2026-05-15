@@ -6,7 +6,7 @@ tags: ["Cosmology", "The Stase", "Dark Side", "Dark Ends", "SOE", "War of the Th
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/cosm-stase.png"
+image: "../../assets/uploads/cosmology/cosm-stase.png"
 ---
 
 > *"The soldiers on the northern front do not know what they're holding the line against. That is deliberate. Full knowledge of what the Stase is would not produce better soldiers. It would produce worse ones."*

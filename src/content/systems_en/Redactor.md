@@ -6,7 +6,7 @@ tags: ["systems", "magic"]
 status: public
 created: "2026-02-12"
 updated: "2026-02-20"
-image: "/uploads/sys-redactor.png"
+image: "../../assets/uploads/sys-redactor.png"
 ---
 
 A **Redactor** is a rare individual capable of performing **Redactory**—the practice of influencing how reality behaves in a specific place. Through intense mental focus, Redactors can guide the physical world toward outcomes that would normally be unlikely or difficult to occur.

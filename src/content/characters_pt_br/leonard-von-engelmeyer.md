@@ -22,8 +22,8 @@ tags: ["Apocachynthion", "Engelmeyer", "Thermodynamic Anchor", "Stase-Survivor",
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
-image: "/uploads/char-leonard-von-engelmeyer.jpg"
-hero_image: "/uploads/char-leonard-von-engelmeyer-hero.png"
+image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
+hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
 ---
 
 > *"A maioria dos praticantes impõe sua vontade sobre o mundo como um martelo. Mestre von-Engelmeyer impõe a dele como uma lareira acesa. Eu já fiquei ao lado dele durante demonstrações do que ele chama de 'Kalorian Nova'. O ar não simplesmente entra em combustão. Ele esquece que um dia teve permissão para ser frio. E ele faz isso sem levantar a voz, sem interromper uma frase sequer, e com uma empatia que torna a violência bruta da matemática quase gentil."*

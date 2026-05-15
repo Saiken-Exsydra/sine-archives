@@ -6,7 +6,7 @@ tags: ["Cosmology", "The Stase", "Dark Side", "Dark Ends", "SOE", "War of the Th
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/cosm-stase.png"
+image: "../../assets/uploads/cosmology/cosm-stase.png"
 ---
 
 > *"Os soldados da frente norte não sabem contra o que exatamente estão segurando a linha. Isso é intencional. Conhecimento completo sobre o que a Stase realmente é não produziria soldados melhores. Produziria piores."*

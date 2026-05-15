@@ -6,7 +6,7 @@ tags: ["Kalt'sen", "Places", "Capital", "Empire", "SiNE", "Apocachynthion", "Chu
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-10"
-image: "/uploads/place-kaltsen.png"
+image: "../../assets/uploads/places/place-kaltsen.png"
 ---
 
 > *"Every significant decision affecting the Twilight Band is eventually made in Kalt'sen, or made in response to something decided in Kalt'sen, or in deliberate opposition to something decided in Kalt'sen. The city is the center of the world not because it is the most beautiful place in it, but because the people who make things happen chose to concentrate their headquarters here, and then each subsequent institution chose to be here because the others were here."*

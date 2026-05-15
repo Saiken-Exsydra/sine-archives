@@ -7,7 +7,7 @@ priority: 1
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-31"
-image: "/uploads/place-vrenne.png"
+image: "../../assets/uploads/places/place-vrenne.png"
 ---
 
 > *"Vrenne is not the kind of city that developed an academy. It is the kind of city that the academy built around itself — and by the time anyone thought to ask whether this was the correct relationship between an institution and a city, the answer was already permanently yes."*

@@ -12,7 +12,7 @@ tags: ["Synus", "Redactor", "Institution", "Governance", "Pagers", "Academy", "K
 status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
-image: "/uploads/org-apocachynthion.png"
+image: "../../assets/uploads/org-apocachynthion.png"
 ---
 
 > *This entry is written for general readership. It does not contain restricted institutional data. For operational and classification records, consult the Apocachynthion's public registry office directly.*

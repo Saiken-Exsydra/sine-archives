@@ -22,8 +22,8 @@ tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hu
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/char-lenore-engelmeyer.png"
-hero_image: "/uploads/char-lenore-engelmeyer-hero.png"
+image: "../../assets/uploads/char-lenore-engelmeyer.png"
+hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
 ---
 
 > *"Ela ficou sentada na minha frente por quarenta minutos. Educada, cooperativa, respondeu todas as perguntas com o que eu só consigo descrever como uma cordialidade genuína. No meio da terceira bateria de avaliações, ergui os olhos das minhas anotações e ela estava me olhando. E tive uma sensação muito clara, muito específica e completamente irracional de que ela estava decidindo alguma coisa. Eu escrevi isso nas minhas notas e depois risquei. Penso nesse risco até hoje."*

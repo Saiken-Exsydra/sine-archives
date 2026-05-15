@@ -6,7 +6,7 @@ tags: ["Places", "Twilight Band", "Terra", "Twilight", "Geography", "Climate", "
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/cosm-twilight-band-diagram.png"
+image: "../../assets/uploads/cosm-twilight-band-diagram.png"
 ---
 
 > *"Dois mil quilômetros de largura. Oitenta mil quilômetros de circunferência. Toda cidade que você já ouviu falar existe aqui dentro. Toda guerra registrada na história aconteceu aqui dentro. Todo o resto é ou a luz que mataria você lentamente, ou a escuridão que mataria você rápido."*

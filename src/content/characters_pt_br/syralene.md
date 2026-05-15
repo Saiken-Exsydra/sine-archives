@@ -11,8 +11,8 @@ tags: ["Precursor", "Syr'lene", "Lunar Crown", "Fracture", "Containment", "Skyph
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/char-syralene.png"
-hero_image: "/uploads/char-syralene-hero.png"
+image: "../../assets/uploads/char-syralene.png"
+hero_image: "../../assets/uploads/char-syralene-hero.png"
 ---
 
 > *"Pergunte o que realmente realiza os milagres na frente norte — aqueles que não podem ser explicados por doutrina nem estratégia militar. A Igreja diz: a graça do Soberano. A resposta não está errada. Só não está completa."*

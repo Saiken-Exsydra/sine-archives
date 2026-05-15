@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { buildOptimizedImageBundle } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const rawEntries = await getLocalizedCollection("organizations", locale);
@@ -85,7 +86,7 @@ type Panel = {
   type:           string;
   designation:    string;
   summary:        string;
-  image:          string;
+  image:          Awaited<ReturnType<typeof buildOptimizedImageBundle>>;
   accent:         string;
   numeral:        string;
   objectPosition: string;
@@ -93,7 +94,7 @@ type Panel = {
   fields:         Record<string, string>;
 };
 
-const buildPanel = (e: Entry, idx: number): Panel => {
+const buildPanel = async (e: Entry, idx: number): Promise<Panel> => {
   const d = e.data as any;
   // Full fields for modal (designation + all contextual + filed)
   const allFields: Record<string, string> = {};
@@ -111,7 +112,12 @@ const buildPanel = (e: Entry, idx: number): Panel => {
     type:           d.type || copy.defaultType,
     designation:    d.designation || "",
     summary:        d.summary || "",
-    image:          (d.image && d.image.length > 0) ? d.image : "",
+    image:          await buildOptimizedImageBundle(d.image ?? null, {
+      widths: [640, 960, 1280, 1600],
+      sizes: "(max-width: 900px) 100vw, 50vw",
+      quality: 82,
+      fit: "cover",
+    }),
     accent:         ACCENTS[e.slug] || "#b13a34",
     numeral:        ROMAN[idx] || String(idx + 1),
     objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
@@ -120,7 +126,7 @@ const buildPanel = (e: Entry, idx: number): Panel => {
   };
 };
 
-const panels = publicEntries.map(buildPanel);
+const panels = await Promise.all(publicEntries.map(buildPanel));
 
 // Spread display fields (no designation, no filed)
 const spreadFields = publicEntries.map((e) => {
@@ -174,13 +180,22 @@ const entryBasePath = localizedPath(locale, "/organizations/");
           <!-- Image side -->
           <div class="org-spread__img-wrap">
             {p.image ? (
-              <img
-                class="org-spread__img"
-                src={p.image}
-                alt=""
-                loading={i === 0 ? "eager" : "lazy"}
-                style={`object-position: ${p.objectPosition};`}
-              />
+              <picture>
+                {p.image.avifSrcset && <source srcset={p.image.avifSrcset} sizes={p.image.sizes} type="image/avif" />}
+                {p.image.webpSrcset && <source srcset={p.image.webpSrcset} sizes={p.image.sizes} type="image/webp" />}
+                <img
+                  class="org-spread__img"
+                  src={p.image.fallbackSrc}
+                  srcset={p.image.fallbackSrcset || undefined}
+                  sizes={p.image.sizes}
+                  width={p.image.width || undefined}
+                  height={p.image.height || undefined}
+                  alt=""
+                  loading={i === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  style={`object-position: ${p.objectPosition};`}
+                />
+              </picture>
             ) : (
               <div class="org-spread__img-fallback"></div>
             )}
@@ -266,7 +281,9 @@ const entryBasePath = localizedPath(locale, "/organizations/");
       </button>
 
       <aside class="org-modal__hero" id="org-modal-hero">
-        <img class="org-modal__hero-img" id="org-modal-img" src="" alt="" />
+        <picture id="org-modal-picture">
+          <img class="org-modal__hero-img" id="org-modal-img" src="" alt="" />
+        </picture>
         <div class="org-modal__hero-fade"></div>
         <div class="org-modal__hero-accent" id="org-modal-accent"></div>
         <div class="org-grain"></div>
@@ -305,6 +322,7 @@ const entryBasePath = localizedPath(locale, "/organizations/");
 
   const overlay          = byId("org-overlay");
   const modal            = byId("org-modal");
+  const modalPicture     = byId("org-modal-picture");
   const modalImg         = byId("org-modal-img");
   const modalAccent      = byId("org-modal-accent");
   const modalBar         = byId("org-modal-bar");
@@ -320,14 +338,54 @@ const entryBasePath = localizedPath(locale, "/organizations/");
 
   let closing = false;
 
+  function syncResponsivePicture(picture, img, image) {
+    picture.querySelectorAll("source").forEach((source) => source.remove());
+
+    if (!image) {
+      img.removeAttribute("src");
+      img.removeAttribute("srcset");
+      img.removeAttribute("sizes");
+      img.removeAttribute("width");
+      img.removeAttribute("height");
+      return;
+    }
+
+    if (image.avifSrcset) {
+      const sourceAvif = document.createElement("source");
+      sourceAvif.type = "image/avif";
+      sourceAvif.srcset = image.avifSrcset;
+      sourceAvif.sizes = image.sizes;
+      picture.insertBefore(sourceAvif, img);
+    }
+
+    if (image.webpSrcset) {
+      const sourceWebp = document.createElement("source");
+      sourceWebp.type = "image/webp";
+      sourceWebp.srcset = image.webpSrcset;
+      sourceWebp.sizes = image.sizes;
+      picture.insertBefore(sourceWebp, img);
+    }
+
+    img.src = image.fallbackSrc;
+    if (image.fallbackSrcset) {
+      img.srcset = image.fallbackSrcset;
+    } else {
+      img.removeAttribute("srcset");
+    }
+    img.sizes = image.sizes;
+    if (image.width) img.width = image.width;
+    if (image.height) img.height = image.height;
+  }
+
   function openModal(slug) {
     const p = PANELS.find((x) => x.slug === slug);
     if (!p) return;
 
     if (p.image) {
-      modalImg.src = p.image;
+      syncResponsivePicture(modalPicture, modalImg, p.image);
       modalImg.style.display = "";
     } else {
+      syncResponsivePicture(modalPicture, modalImg, null);
       modalImg.removeAttribute("src");
       modalImg.style.display = "none";
     }

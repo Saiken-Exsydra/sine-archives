@@ -9,7 +9,7 @@ affiliation: "SiNE (founder and principal); Apocachynthion (registered — Archt
 house: "Wonderwall (founding figure, primary line); born Ex'sydra"
 rank: "Archtype"
 registry_status: "Registered — Archtype, Spatial Coherence anchor (institutional); operational license unconditional"
-designation: "Archtype · Twelve centuries. One question he hasn't answered yet."
+designation: "Archtype · Holder of Interval"
 height: "185 cm"
 build: "Broad, unhurried; the bearing of someone who has not found a room they couldn't wait in"
 complexion: "Brown, even — the particular evenness of someone whose biological processes have been stable for a very long time"
@@ -24,8 +24,8 @@ tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "R
 status: "public"
 created: "2026-03-30"
 updated: "2026-04-28"
-image: "/uploads/char-emmanuel-wonderwall.png"
-hero_image: "/uploads/char-emmanuel-wonderwall-hero.png"
+image: "../../assets/uploads/char-emmanuel-wonderwall.png"
+hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 ---
 
 > *"I do not remember what it felt like to be uncertain whether I would survive the year. I remember everything else."*

@@ -12,7 +12,7 @@ tags: ["Clepsydra", "SiNE", "S-CL", "GlassThreaders", "GlassWatchers", "Glass Si
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
-image: "/uploads/sine-clepsydra.png"
+image: "../../assets/uploads/sine-clepsydra.png"
 ---
 
 > *"A lattice não é um sistema de armas. Armas usam ela. Governos dependem dela. Cidades sobrevivem graças a ela. Mas a própria lattice é mais antiga do que qualquer doutrina atual e menos tolerante do que qualquer guerra moderna."*

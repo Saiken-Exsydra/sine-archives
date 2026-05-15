@@ -6,7 +6,7 @@ tags: ["Places", "Thornwall", "Empire", "Central Region", "Northern Region", "Ge
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/place-thornwall.png"
+image: "../../assets/uploads/places/place-thornwall.png"
 ---
 
 > *"The red-and-grey fins of the Thornwall above, and the green Central lowlands spread below as far as the eye can reach. One of the most cited scenic views in the Empire, and one of the few that earns the citation."*

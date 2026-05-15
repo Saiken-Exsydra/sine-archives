@@ -7,7 +7,7 @@ priority: 1
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/place-darkmargin.png"
+image: "../../assets/uploads/place-darkmargin.png"
 ---
 
 > *"The Darkmargin is not a metaphor. It is a coast. The water is black because there is no light to give it color. The things that come out of it are real. The war is real. We keep it there so it doesn't become your problem. This is what you pay taxes for."*

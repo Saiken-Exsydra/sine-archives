@@ -6,7 +6,7 @@ tags: ["Terra", "Cosmology", "Precursors", "Twilight Band", "Vael'Khar", "World"
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/cosm-terra.png"
+image: "../../assets/uploads/cosm-terra.png"
 ---
 
 > *"A world orbiting a black hole. Tidally locked. Perpetually half-dark. Somehow inhabited. The people who built it knew exactly what they were doing. The people who live on it no longer know it was built at all."*

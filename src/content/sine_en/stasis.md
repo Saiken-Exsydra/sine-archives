@@ -12,7 +12,7 @@ tags: ["StaSis", "SiNE", "S-AE", "Organization", "SOE", "Dark Ends", "Stase", "A
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-10"
-image: "/uploads/sine-stasis-logo.png"
+image: "../../assets/uploads/sine-stasis-logo.png"
 ---
 
 > *"StaSis maintains a catalogue. The catalogue exists. The catalogue is not published. These three facts together constitute StaSis's entire public profile."*

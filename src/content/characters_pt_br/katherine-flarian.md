@@ -22,8 +22,8 @@ tags: ["SiNE", "Stasis", "Continuity-Sensitive", "Vel'hara", "Himmelreich", "Sta
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
-image: "/uploads/char-katherine-flarian.webp"
-hero_image: "/uploads/char-katherine-flarian-hero.png"
+image: "../../assets/uploads/char-katherine-flarian.webp"
+hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
 ---
 
 > *"Uma parede não aprende. Se a fronteira muda em resposta a nós, então ela não é uma parede. É um sistema sob pressão. Tratar um sistema como se fosse alvenaria é exatamente como você mata pessoas."*

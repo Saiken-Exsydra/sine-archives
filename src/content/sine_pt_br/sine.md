@@ -12,7 +12,7 @@ tags: ["SiNE", "Wonderwall", "Organization", "CLOCKWORK", "HourGlass", "StaSis",
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-10"
-image: "/uploads/sine-logo.png"
+image: "../../assets/uploads/sine-logo.png"
 ---
 
 > *"As pessoas chamam de Wonderwall Company como se fosse um apelido carinhoso. Era o nome legal da instituição. Ninguém usa mais porque ninguém precisou continuar usando. Em certa escala operacional, o nome desse colosso insdustrial vira apenas uma formalidade."*

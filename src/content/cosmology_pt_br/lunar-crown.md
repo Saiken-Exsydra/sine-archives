@@ -6,7 +6,7 @@ tags: ["Cosmology", "Lunar Crown", "Fracture", "Callings", "Syr'lene", "Moon", "
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/Lunar Crown.png"
+image: "../../assets/uploads/cosm-lunar-crown.png"
 ---
 
 > *"A Lua não está quebrada porque algo caiu nela. A Lua está quebrada porque alguma coisa tentou atravessá-la — e alguém estava lá para impedir isso. E impedir custou tudo, exceto o mundo."*

@@ -6,7 +6,7 @@ tags: ["Places", "Aurora", "Federation", "Rite of Radiance", "Valerie", "White D
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/place-aurora.png"
+image: "../../assets/uploads/places/place-aurora.png"
 ---
 
 > *"Aurora is not a place that developed a theology of light. It is a place where light was already present, and everything else — the architecture, the government, the revolution — was built in response to that fact."*

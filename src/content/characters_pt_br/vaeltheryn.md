@@ -11,8 +11,8 @@ tags: ["Vael'Theryn", "Page Primordial", "Time", "Terra", "Archtype War", "Const
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/char-vaeltheryn.png"
-hero_image: "/uploads/char-vaeltheryn-hero.png"
+image: "../../assets/uploads/char-vaeltheryn.png"
+hero_image: "../../assets/uploads/char-vaeltheryn-hero.png"
 ---
 
 > *"A restrição não é uma prisão. É uma decisão. E essa diferença importa mais do que parece."*

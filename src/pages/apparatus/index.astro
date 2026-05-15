@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
 import { getApparatusPageLabels } from "../../i18n/ui";
+import { buildOptimizedImageBundle } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const labels = getApparatusPageLabels(locale);
@@ -50,7 +51,7 @@ type Card = {
   kind: string;
   designation: string;
   summary: string;
-  image: string;
+  image: Awaited<ReturnType<typeof buildOptimizedImageBundle>>;
   catnum: string;
   seal: { kind: SealKind; label: string };
   tags: string[];
@@ -58,7 +59,7 @@ type Card = {
   search: string;
 };
 
-const cards: Card[] = publicEntries.map((e: Entry, i: number): Card => {
+const cards: Card[] = await Promise.all(publicEntries.map(async (e: Entry, i: number): Promise<Card> => {
   const d = e.data as any;
   const kind = deriveKind(d);
   const seal = classifySeal(d.sealing_status || "");
@@ -75,14 +76,19 @@ const cards: Card[] = publicEntries.map((e: Entry, i: number): Card => {
     kind,
     designation: d.designation || "",
     summary: d.summary || "",
-    image: d.image && d.image.length > 0 ? d.image : "",
+    image: await buildOptimizedImageBundle(d.image ?? null, {
+      widths: [320, 640, 960, 1280],
+      sizes: "(max-width: 720px) 100vw, 33vw",
+      quality: 82,
+      fit: "cover",
+    }),
     catnum: `REG-${String(i + 1).padStart(3, "0")}`,
     seal,
     tags,
     updated,
     search,
   };
-});
+}));
 
 const kindSet = new Set<string>();
 cards.forEach((c) => kindSet.add(c.kind));
@@ -92,7 +98,7 @@ const filters: { label: string; value: string }[] = [
 ];
 
 const total = cards.length;
-const headerImage = cards.find((c) => c.image)?.image || "";
+const headerImage = cards.find((c) => c.image)?.image ?? null;
 const filingYear = (() => {
   const years = cards.map((c) => parseInt(c.updated, 10)).filter((n) => !Number.isNaN(n));
   return years.length ? String(Math.max(...years)) : "1127";
@@ -103,7 +109,21 @@ const filingYear = (() => {
   <div class="reg-root" data-entry-label={labels.entry} data-entries-label={labels.entries}>
     <header class="reg-header">
       {headerImage && (
-        <img class="reg-header__bg" src={headerImage} alt="" aria-hidden="true" />
+        <picture>
+          {headerImage.avifSrcset && <source srcset={headerImage.avifSrcset} sizes={headerImage.sizes} type="image/avif" />}
+          {headerImage.webpSrcset && <source srcset={headerImage.webpSrcset} sizes={headerImage.sizes} type="image/webp" />}
+          <img
+            class="reg-header__bg"
+            src={headerImage.fallbackSrc}
+            srcset={headerImage.fallbackSrcset || undefined}
+            sizes={headerImage.sizes}
+            width={headerImage.width || undefined}
+            height={headerImage.height || undefined}
+            alt=""
+            aria-hidden="true"
+            decoding="async"
+          />
+        </picture>
       )}
       <div class="reg-header__bg-fallback"></div>
       <div class="reg-header__overlay"></div>
@@ -157,7 +177,21 @@ const filingYear = (() => {
           <a class="reg-entry" href={c.href} data-type={c.kind.toLowerCase()} data-search={c.search}>
             <div class="reg-entry__visual">
               {c.image ? (
-                <img class="reg-entry__img" src={c.image} alt={c.title} />
+                <picture>
+                  {c.image.avifSrcset && <source srcset={c.image.avifSrcset} sizes={c.image.sizes} type="image/avif" />}
+                  {c.image.webpSrcset && <source srcset={c.image.webpSrcset} sizes={c.image.sizes} type="image/webp" />}
+                  <img
+                    class="reg-entry__img"
+                    src={c.image.fallbackSrc}
+                    srcset={c.image.fallbackSrcset || undefined}
+                    sizes={c.image.sizes}
+                    width={c.image.width || undefined}
+                    height={c.image.height || undefined}
+                    alt={c.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               ) : (
                 <div class="reg-entry__placeholder" aria-hidden="true">
                   <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">

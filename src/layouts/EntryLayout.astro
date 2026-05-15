@@ -1,9 +1,11 @@
 ---
+import { Picture } from "astro:assets";
 import MainLayout from "./MainLayout.astro";
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
 import { localizedEntryPath, localizedPath, type SiteLocale } from "../i18n/config";
 import { getEntryLayoutLabels, sectionLabel as getSectionLabel } from "../i18n/ui";
+import { isImageMetadata } from "../utils/optimized-images";
 
 const { entry, active, locale = "en" } = Astro.props as { entry: any; active: string; locale?: SiteLocale };
 const { Content, headings } = await entry.render();
@@ -46,6 +48,7 @@ const skyphonKeeperName = str(entry.data?.keeper_name);
 const sectionLabel = getSectionLabel(locale, active as any);
 const sectionHref = localizedPath(locale, `/${active}/`);
 const labels = getEntryLayoutLabels(locale);
+const entryImage = entry.data?.image;
 
 // ── Related entries ──
 function normalizeTags(tags: unknown): string[] {
@@ -130,9 +133,24 @@ if (isSkyphon) {
 
   <!-- ── HERO ── -->
   <div class="ent-hero">
-    {!isCharacterEntry && entry.data.image ? (
+    {!isCharacterEntry && entryImage ? (
       <>
-        <img class="ent-hero__img" src={entry.data.image} alt="" aria-hidden="true" />
+        {isImageMetadata(entryImage) ? (
+          <Picture
+            src={entryImage}
+            class="ent-hero__img"
+            alt=""
+            widths={[768, 1280, 1600, 1920, 2560]}
+            sizes="100vw"
+            formats={["avif", "webp"]}
+            quality={85}
+            fit="cover"
+            loading="eager"
+            decoding="async"
+          />
+        ) : (
+          <img class="ent-hero__img" src={entryImage} alt="" aria-hidden="true" />
+        )}
         <div class="ent-hero__overlay"></div>
       </>
     ) : (
@@ -225,7 +243,22 @@ if (isSkyphon) {
       {/* Apparatus / cosmology / org image in main area when not character */}
       {!isCharacterEntry && !isSystemEntry && !isSineEntry && entry.data.image ? (
         <div class="ent-media">
-          <img class="ent-media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
+          {isImageMetadata(entry.data.image) ? (
+            <Picture
+              src={entry.data.image}
+              class="ent-media__img"
+              alt={`${entry.data.title} image`}
+              widths={[768, 1280, 1600, 1920]}
+              sizes="100vw"
+              formats={["avif", "webp"]}
+              quality={85}
+              fit="cover"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <img class="ent-media__img" src={entry.data.image} alt={`${entry.data.title} image`} loading="lazy" />
+          )}
         </div>
       ) : null}
 

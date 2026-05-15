@@ -22,8 +22,8 @@ tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregi
 status: "public"
 created: "2026-03-30"
 updated: "2026-04-26"
-image: "/uploads/char-hisui-kirasagi.png"
-hero_image: "/uploads/char-hisui-kirasagi-hero.png"
+image: "../../assets/uploads/char-hisui-kirasagi.png"
+hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
 ---
 
 > *"A flor deveria ter matado ela. Não matou. O que ela fez no lugar é algo para o qual o Index Theorem simplesmente não tem linguagem, e que a Igreja chamaria de abominação. Não tenho certeza se qualquer um dos dois estaria errado. Tenho certeza apenas de que ela está na minha casa há dois anos e ninguém aqui dorme menos seguro por causa disso."*

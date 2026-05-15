@@ -6,7 +6,7 @@ tags: ["systems", "Index Theorem", "Redactory", "Dive", "Anchor", "Archtype", "C
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/sys-index-theorem.png"
+image: "../../assets/uploads/sys-index-theorem.png"
 ---
 
 > *"The Theorem does not ask what Redactory is in metaphysical terms. It asks what Redactors actually do when they produce an effect. The answer turns out to be specific enough to build a research program on."*

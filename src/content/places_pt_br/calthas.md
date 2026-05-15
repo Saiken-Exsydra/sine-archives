@@ -6,7 +6,7 @@ tags: ["Places", "Cal'thas", "Southern Region", "Empire", "Military", "Industry"
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/place-calthas.png"
+image: "../../assets/uploads/places/place-calthas.png"
 ---
 
 > *"Shift changes produce human floods through the wide industrial boulevards. The city does not stop. The war does not stop. Cal'thas understood the relationship between those two facts a long time ago."*

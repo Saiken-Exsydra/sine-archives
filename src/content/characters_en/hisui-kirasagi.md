@@ -8,7 +8,7 @@ affiliation: "Wonderwall estate (domestic staff, Kalt'sen)"
 house: ""
 rank: ""
 registry_status: "Unregistered — not known to the Apocachynthion in any capacity"
-designation: "Abyssal Flower · Kirasagi far bloom"
+designation: "Abyssal Flower · Kirasagi Peregrine"
 height: "1.65 m"
 build: "Compact, precise — built by a lifetime of service discipline"
 complexion: "Pale with faint warmth; fine crimson vein-marbling surfaces at the forearms under physical strain or Flower activation"
@@ -17,13 +17,13 @@ eyes: "Deep near-black at rest; violet-crimson with fractal petal-flares bloomin
 dress: "Long sleeves at all times, regardless of climate. Formal domestic attire of Hikari high-house tradition — dark colours, impeccable condition."
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
 occupation: "Household attendant — personal attendance to Ec'lesia Yal'ara Wonderwall"
-summary: "Far Bloom"
+summary: "A maid, a flower and a friend."
 tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregistered"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-04-26"
-image: "/uploads/char-hisui-kirasagi.png"
-hero_image: "/uploads/char-hisui-kirasagi-hero.png"
+updated: "2026-05-14"
+image: "../../assets/uploads/char-hisui-kirasagi.png"
+hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
 ---
 
 > *"The flower should have killed her. It does not kill her. What it does instead is something the Index Theorem has no vocabulary for and the Church would call an abomination. I am not certain either of them is wrong. I am certain that she has been in my household for two years and no one in it sleeps less safely for her presence."*

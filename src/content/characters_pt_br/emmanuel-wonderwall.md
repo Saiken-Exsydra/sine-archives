@@ -24,8 +24,8 @@ tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "R
 status: "public"
 created: "2026-03-30"
 updated: "2026-04-28"
-image: "/uploads/char-emmanuel-wonderwall.png"
-hero_image: "/uploads/char-emmanuel-wonderwall-hero.png"
+image: "../../assets/uploads/char-emmanuel-wonderwall.png"
+hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 ---
 
 > *"Eu não me lembro mais de como era viver sem saber se sobreviveria até o próximo ano. Todo o resto, eu lembro."*

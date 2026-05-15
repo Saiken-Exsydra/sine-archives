@@ -12,7 +12,7 @@ tags: ["Apparatus", "Precursor", "Intact Seal", "Threshold", "Obscurial", "Apoca
 status: "public"
 created: "2026-03-17"
 updated: "2026-05-10"
-image: "/uploads/app-clepsydra-apparatus.png"
+image: "../../assets/uploads/app-clepsydra-apparatus.png"
 ---
 
 > *"It is beyond my comprehension, All-mother - why is there something rather than nothing? Why do we exist at all?"*

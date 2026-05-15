@@ -11,8 +11,8 @@ tags: ["Precursor", "Syr'lene", "Lunar Crown", "Fracture", "Containment", "Skyph
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/char-syralene.png"
-hero_image: "/uploads/char-syralene-hero.png"
+image: "../../assets/uploads/char-syralene.png"
+hero_image: "../../assets/uploads/char-syralene-hero.png"
 ---
 
 > *"Ask what performs the miracles at the northern front — the ones that cannot be explained by doctrine or deployment. The Church says: the Sovereign's grace. The answer is not wrong. It is not complete."*

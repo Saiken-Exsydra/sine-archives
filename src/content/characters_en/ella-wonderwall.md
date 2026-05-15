@@ -8,7 +8,7 @@ affiliation: "House Wonderwall (primary line); SiNE (operational Redactor, succe
 house: "Wonderwall (primary line placement)"
 rank: "Radiance-class Redactor — Abyssal Anchor, operational license unconditional"
 registry_status: "Registered — Radiance-class, Light Anchor. KL-83 (internal designation, not publicly held)"
-designation: "An Echo from the past · Knows not of her fate"
+designation: "KL-83"
 height: "170 cm"
 build: "Very thin; long-fingered; the superficial impression of fragility that is inaccurate"
 complexion: "Pale"
@@ -17,9 +17,9 @@ eyes: "Fine-featured; shifts toward pale metallic pink-blue during active Redact
 dress: "Black exclusively — light-responsive fabrics developed through personal material research with Professor Lionheart; garments that function as both identity and training apparatus"
 residence: "Primary Wonderwall holdings; extended operational presence in Kalt'sen and Hora'veil as Company work requires"
 occupation: "SiNE Redactor (operational); internal successor candidate to the Wonderwall Seat and SiNE executive function"
-image: "/uploads/char-ella-wonderwall.png"
-hero_image: "/uploads/char-ella-wonderwall-hero.png"
-summary: "Twenty-five years old. Light Anchor, Abyssal. Being prepared for something she doesn't yet fully know the shape of."
+image: "../../assets/uploads/characters/char-ella-wonderwall.png"
+hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
+summary: "An Echo from the past · A hope of change."
 tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora", "Successor"]
 status: "public"
 created: "2026-03-30"
@@ -49,9 +49,9 @@ She knows only that she has always been expected to become someone substantial �
 
 **Father:** Em'manuel Kael Wonderwall — founder and principal of SiNE, Meridian Council chair, Archtype. The person who has shaped every significant condition of her life, who has trained her for three years with the declared intention of placing his work in her hands, and who has not yet told her the full weight of what that work is. He is warm with her in the specific way of someone who has been watching her grow for twenty-five years and finds the result genuinely, unexpectedly moving. She knows he is preparing her for something she does not yet fully see. She does not know how long he has been preparing.
 
-**Mother:** A'thena Rae Wonderwall — of the Rae branch, the same bloodline from which A'licia Rae Wonderwall came when Em'manuel first married into the Wonderwall family name nearly a thousand years ago. The pattern is not coincidence and is not discussed. A'thena knows more than she is asked about. She manages this with the composure of someone who understood, when she married him, that the ledger of things she would be asked to hold quietly was going to be long.
+**Mother:** Al'ithia Rae Wonderwall — of the Rae branch, the same bloodline from which A'licia Rae Wonderwall came when Em'manuel first married into the Wonderwall family name nearly a thousand years ago. The pattern is not coincidence and is not discussed. Al'ithia knows more than she is asked about. She manages this with the composure of someone who understood, when she married him, that the ledger of things she would be asked to hold quietly was going to be long.
 
-Publicly, E'lla is their daughter. This is true in every sense that the world can see and in every sense that the household has lived. She was brought into the primary Wonderwall line before she was old enough to form memories of anything else. She was raised in their home, educated under their roof, given their name without qualification. Em'manuel watched her learn to walk. A'thena was the first person she called for when she was frightened. Whatever Project Kaleidoscope was in its origins, the family it produced is not a performance. It is the only family E'lla has ever known, and it is real.
+Publicly, E'lla is their daughter. This is true in every sense that the world can see and in every sense that the household has lived. She was brought into the primary Wonderwall line before she was old enough to form memories of anything else. She was raised in their home, educated under their roof, given their name without qualification. Em'manuel watched her learn to walk. Al'ithia was the first person she called for when she was frightened. Whatever Project Kaleidoscope was in its origins, the family it produced is not a performance. It is the only family E'lla has ever known, and it is real.
 
 ---
 

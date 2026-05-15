@@ -6,7 +6,7 @@ tags: ["systems", "magic", "Divination", "Vessel", "Fragments", "Angels", "Demon
 status: public
 created: "2026-02-12"
 updated: "2026-05-10"
-image: "/uploads/sys-divination.png"
+image: "../../assets/uploads/sys-divination.png"
 ---
 
 **Divination** é o que acontece quando um ser humano se torna um vessel para coerência divina e começa a expressar o domínio de um deus — ou de um dos fragmentos desse deus.

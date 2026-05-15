@@ -17,8 +17,8 @@ eyes: "Traços delicados; assumem um tom metálico claro entre rosa e azul duran
 dress: "Somente preto — tecidos responsivos à luz desenvolvidos em pesquisas próprias de materiais ao lado do Professor Lionheart; roupas que funcionam tanto como identidade quanto aparato de treinamento"
 residence: "Propriedades principais dos Wonderwall; presença operacional prolongada em Kalt'sen e Hora'veil conforme o trabalho na Company exige"
 occupation: "Redactor operacional da SiNE; candidata interna à sucessão da Seat Wonderwall e da função executiva da SiNE"
-image: "/uploads/char-ella-wonderwall.png"
-hero_image: "/uploads/char-ella-wonderwall-hero.png"
+image: "../../assets/uploads/characters/char-ella-wonderwall.png"
+hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
 summary: "Anchor de Luz, Abyssal. Um eco do passado, resonando no presente."
 tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora", "Successor"]
 status: "public"
@@ -49,9 +49,9 @@ Tudo que sabe é que sempre existiu uma expectativa de que se tornasse alguém i
 
 **Pai:** Em'manuel Kael Wonderwall — fundador e principal nome da SiNE, presidente do Meridian Council, Archtype. Foi ele quem moldou todas as condições importantes da vida dela, quem a treinou por três anos com a intenção declarada de colocar seu trabalho em suas mãos e quem ainda não revelou o peso completo do que esse trabalho realmente é. Com E'lla, ele demonstra um tipo específico de afeto: o de alguém que passou vinte e cinco anos observando uma pessoa crescer e acabou genuinamente emocionado com o resultado. Ela sabe que está sendo preparada para algo maior do que consegue enxergar. Não sabe há quanto tempo essa preparação vem acontecendo.
 
-**Mãe:** A'thena Rae Wonderwall — do ramo Rae, a mesma linhagem de onde veio A'licia Rae Wonderwall quando Em'manuel entrou para a família Wonderwall quase mil anos atrás. O padrão não é coincidência e ninguém comenta sobre ele. A'thena sabe mais do que demonstra. Ela lida com isso com a tranquilidade de alguém que entendeu, no momento em que se casou com ele, que passaria a carregar silenciosamente uma longa lista de coisas impossíveis de comentar em voz alta.
+**Mãe:** Al'ithia Rae Wonderwall — do ramo Rae, a mesma linhagem de onde veio A'licia Rae Wonderwall quando Em'manuel entrou para a família Wonderwall quase mil anos atrás. O padrão não é coincidência e ninguém comenta sobre ele. Al'ithia sabe mais do que demonstra. Ela lida com isso com a tranquilidade de alguém que entendeu, no momento em que se casou com ele, que passaria a carregar silenciosamente uma longa lista de coisas impossíveis de comentar em voz alta.
 
-Publicamente, E'lla é filha deles. E isso é verdade em todos os sentidos que o mundo consegue enxergar — e em todos os sentidos que aquela família viveu de verdade. Ela foi colocada na linha principal dos Wonderwall antes mesmo de ter idade para formar memórias de qualquer outra coisa. Cresceu na casa deles, estudou sob o teto deles e recebeu o sobrenome sem qualquer ressalva. Em'manuel viu ela aprender a andar. A'thena foi a primeira pessoa que ela chamou quando sentiu medo. Independentemente do que o Project Kaleidoscope tenha sido na origem, a família que surgiu dele não é uma encenação. É a única família que E'lla já conheceu — e é real.
+Publicamente, E'lla é filha deles. E isso é verdade em todos os sentidos que o mundo consegue enxergar — e em todos os sentidos que aquela família viveu de verdade. Ela foi colocada na linha principal dos Wonderwall antes mesmo de ter idade para formar memórias de qualquer outra coisa. Cresceu na casa deles, estudou sob o teto deles e recebeu o sobrenome sem qualquer ressalva. Em'manuel viu ela aprender a andar. Al'ithia foi a primeira pessoa que ela chamou quando sentiu medo. Independentemente do que o Project Kaleidoscope tenha sido na origem, a família que surgiu dele não é uma encenação. É a única família que E'lla já conheceu — e é real.
 
 ---
 

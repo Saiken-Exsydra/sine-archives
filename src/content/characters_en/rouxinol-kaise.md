@@ -21,8 +21,8 @@ tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"
 status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
-image: "/uploads/char-rouxinol-kaise.png"
-hero_image: "/uploads/char-rouxinol-kaise-hero.png"
+image: "../../assets/uploads/char-rouxinol-kaise.png"
+hero_image: "../../assets/uploads/char-rouxinol-kaise-hero.png"
 ---
 
 > *"She does not carry ghosts. She carries what ghosts are made of — the shape of a person after the person is gone."*

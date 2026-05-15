@@ -12,7 +12,7 @@ tags: ["SiNE", "Wonderwall", "Organization", "CLOCKWORK", "HourGlass", "StaSis",
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-10"
-image: "/uploads/sine-logo.png"
+image: "../../assets/uploads/sine-logo.png"
 ---
 
 > *"People call it the Wonderwall Company as though it is an affectionate nickname. It was the legal name. Nobody uses it anymore because nobody needed to. At a certain scale of operation, the name becomes a technicality."*

@@ -12,7 +12,7 @@ tags: ["Clepsydra", "SiNE", "S-CL", "GlassThreaders", "GlassWatchers", "Glass Si
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
-image: "/uploads/sine-clepsydra.png"
+image: "../../assets/uploads/sine-clepsydra.png"
 ---
 
 > *"The lattice is not a weapon system. Weapons use it. Governments lean on it. Cities depend on it. But the lattice itself is older than any current doctrine and less forgiving than any current war."*

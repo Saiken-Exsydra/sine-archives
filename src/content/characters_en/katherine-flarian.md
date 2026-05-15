@@ -22,8 +22,8 @@ tags: ["SiNE", "Stasis", "Continuity-Sensitive", "Vel'hara", "Himmelreich", "Sta
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
-image: "/uploads/char-katherine-flarian.webp"
-hero_image: "/uploads/char-katherine-flarian-hero.png"
+image: "../../assets/uploads/char-katherine-flarian.webp"
+hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
 ---
 
 > *"A wall does not learn. If the boundary is changing in response to us, then it is not a wall. It is a system under pressure. Treating a system like masonry is how you get people killed."*

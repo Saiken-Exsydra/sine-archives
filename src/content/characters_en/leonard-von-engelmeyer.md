@@ -22,8 +22,8 @@ tags: ["Apocachynthion", "Engelmeyer", "Thermodynamic Anchor", "Stase-Survivor",
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
-image: "/uploads/char-leonard-von-engelmeyer.jpg"
-hero_image: "/uploads/char-leonard-von-engelmeyer-hero.png"
+image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
+hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
 ---
 
 > *"Most practitioners impose their will upon the world like a hammer. Master von-Engelmeyer imposes it like a hearth. I have stood next to him when he demonstrates what he calls the 'Kalorian Nova.' The air does not just burn. It forgets that it was ever permitted to be cold. He does this without raising his voice, without breaking his sentence, and with an empathy that makes the raw violence of the mathematics almost gentle."*

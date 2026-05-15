@@ -6,7 +6,7 @@ tags: ["Places", "Hal'vorn", "Northern Region", "Empire", "Night Legion", "Timbe
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
-image: "/uploads/place-halvorn.png"
+image: "../../assets/uploads/places/place-halvorn.png"
 ---
 
 > *"Hal'vorn is not a city that apologizes for its weather. It is a city that has decided the weather is correct and everyone else's expectations are the problem."*

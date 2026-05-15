@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "npm run check:text-encoding && astro build",
     "fix:text-encoding": "node scripts/pt-br-encoding-guard.mjs --fix",
+    "seed:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

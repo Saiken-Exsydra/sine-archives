@@ -6,7 +6,7 @@ tags: ["Cosmology", "Precursors", "Archtypes", "Terra", "Fracture", "Syr'lene", 
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/cosm-precursors.png"
+image: "../../assets/uploads/cosmology/cosm-precursors.png"
 ---
 
 > *"Eles criaram o mundo. E nunca deixaram de ser relevantes para ele. Essas duas coisas são verdade ao mesmo tempo — e ambas importam."*

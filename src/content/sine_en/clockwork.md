@@ -12,7 +12,7 @@ tags: ["CLOCKWORK", "SiNE", "Redactory", "Unregistered", "Organization", "Hours"
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-10"
-image: "/uploads/sine-clockwork.png"
+image: "../../assets/uploads/sine-clockwork.png"
 ---
 
 > *"The Dial turns. The Hours operate. The work is done. No one asks who did it."*

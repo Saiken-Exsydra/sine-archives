@@ -4,7 +4,7 @@
 
 import { defineCollection, z } from "astro:content";
 
-const entrySchema = z.object({
+const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) => z.object({
   title: z.string(),
   type: z.string(),
   summary: z.string(),
@@ -47,16 +47,16 @@ const entrySchema = z.object({
     (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v),
     z.string()
   ),
-  image: z.string().optional(),
-  hero_image: z.string().optional(),
+  image: z.union([image(), z.string()]).optional(),
+  hero_image: z.union([image(), z.string()]).optional(),
 });
 
 export const collections = {
-  "characters": defineCollection({ schema: entrySchema }),
-  "organizations": defineCollection({ schema: entrySchema }),
-  "sine": defineCollection({ schema: entrySchema }),
-  "places": defineCollection({ schema: entrySchema }),
-  "apparatus": defineCollection({ schema: entrySchema }),
-  "systems": defineCollection({ schema: entrySchema }),
-  "cosmology": defineCollection({ schema: entrySchema }),
+  "characters": defineCollection({ schema: createEntrySchema }),
+  "organizations": defineCollection({ schema: createEntrySchema }),
+  "sine": defineCollection({ schema: createEntrySchema }),
+  "places": defineCollection({ schema: createEntrySchema }),
+  "apparatus": defineCollection({ schema: createEntrySchema }),
+  "systems": defineCollection({ schema: createEntrySchema }),
+  "cosmology": defineCollection({ schema: createEntrySchema }),
 };

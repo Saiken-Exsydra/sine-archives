@@ -1,7 +1,9 @@
 ---
+import { Picture } from "astro:assets";
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
 import { getHtmlLang, localizeCurrentPath, localizedEntryPath, localizedPath, LOCALE_LABELS, LOCALES, type SiteLocale } from "../i18n/config";
+import { isImageMetadata } from "../utils/optimized-images";
 
 const { entry, locale = "en" } = Astro.props as { entry: any; locale?: SiteLocale };
 const { Content, headings } = await entry.render();
@@ -61,7 +63,7 @@ const designation    = str(entry.data?.designation);
 const summary        = str(entry.data?.summary);
 const updated        = str(entry.data?.updated);
 const type           = str(entry.data?.type ?? (locale === "pt-br" ? "Personagem" : "Character"));
-const heroImage      = str(entry.data?.image ?? "");
+const heroImage      = entry.data?.image;
 const tags: string[] = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
 
 // â”€â”€ Field grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -233,7 +235,7 @@ const related = allPublic
       width: 100%; height: 100%;
       object-fit: contain;
       object-position: center top;
-      filter: saturate(0.85) brightness(0.88);
+      filter: saturate(0.9) brightness(0.96);
     }
     .dos-portrait__placeholder {
       position: absolute; inset: 0;
@@ -241,15 +243,23 @@ const related = allPublic
 
     .dos-grad-right {
       position: absolute; inset: 0; z-index: 2;
-      background: linear-gradient(to right, rgba(6,6,11,0.15) 0%, rgba(6,6,11,0) 60%, rgba(6,6,11,0.55) 100%);
+      background: linear-gradient(
+        to right,
+        rgba(6,6,11,0.22) 0%,
+        rgba(6,6,11,0.08) 14%,
+        rgba(6,6,11,0) 38%,
+        rgba(6,6,11,0) 62%,
+        rgba(6,6,11,0.14) 78%,
+        rgba(6,6,11,0.4) 100%
+      );
     }
     .dos-grad-bottom {
       position: absolute; inset: 0; z-index: 2;
-      background: linear-gradient(to top, rgba(6,6,11,1) 0%, rgba(6,6,11,0.8) 25%, rgba(6,6,11,0) 55%);
+      background: linear-gradient(to top, rgba(6,6,11,0.86) 0%, rgba(6,6,11,0.54) 25%, rgba(6,6,11,0) 55%);
     }
     .dos-grad-top {
       position: absolute; inset: 0; z-index: 2;
-      background: linear-gradient(to bottom, rgba(6,6,11,0.55) 0%, transparent 20%);
+      background: linear-gradient(to bottom, rgba(6,6,11,0.32) 0%, transparent 20%);
     }
     .dos-scanlines {
       position: absolute; inset: 0; z-index: 3; pointer-events: none;
@@ -612,7 +622,7 @@ const related = allPublic
     <a class="nav__crumb-link" href={localizedPath(locale, "/")}>{copy.index}</a>
     <span class="nav__crumb-sep">></span>
     <a class="nav__crumb-link" href={localizedPath(locale, `/characters/?char=${encodeURIComponent(entry.slug)}`)}>{copy.section}</a>
-    <span class="nav__crumb-sep">â€º</span>
+    <span class="nav__crumb-sep">></span>
     <span class="nav__crumb-cur">{title}</span>
   </div>
   <button
@@ -639,12 +649,27 @@ const related = allPublic
     <!-- Portrait -->
     <div class="dos-portrait">
       {heroImage ? (
-        <img
-          class="dos-portrait__img"
-          id="dos-portrait-img"
-          src={heroImage}
-          alt=""
-        />
+        isImageMetadata(heroImage) ? (
+          <Picture
+            src={heroImage}
+            class="dos-portrait__img"
+            alt=""
+            widths={[768, 1280, 1600, 1920, 2560]}
+            sizes="(max-width: 700px) 100vw, (max-width: 900px) 44vw, 38vw"
+            formats={["avif", "webp"]}
+            quality={90}
+            fit="contain"
+            loading="eager"
+            decoding="async"
+          />
+        ) : (
+          <img
+            class="dos-portrait__img"
+            id="dos-portrait-img"
+            src={heroImage}
+            alt=""
+          />
+        )
       ) : (
         <svg
           class="dos-portrait__placeholder"

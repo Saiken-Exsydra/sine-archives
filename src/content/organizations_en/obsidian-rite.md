@@ -12,7 +12,7 @@ tags: ["Obsidian Rite", "Church", "Organization", "Possession", "Exorcism", "Fra
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "/uploads/ObsidianRite.png"
+image: "../../assets/uploads/org-obsidian-rite.png"
 ---
 
 > *"A Senior Warden of the Obsidian Rite is a theologian, a physician, a soldier, and something else. The something else is the part you need when those three aren't enough."*

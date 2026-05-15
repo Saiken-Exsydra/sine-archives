@@ -2,6 +2,14 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import cosmArchiveImage from "../../assets/uploads/cosm-archive.png";
+import cosmPrecursorsImage from "../../assets/uploads/cosm-precursors.png";
+import twilightBandPanelImage from "../../assets/uploads/cosmology/cosm-twilight-band.png";
+import {
+  buildOptimizedImageBundle,
+  getImageUrl,
+  type ContentImageValue,
+} from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const all = await getLocalizedCollection("cosmology", locale);
@@ -36,14 +44,14 @@ const ACCENTS: Record<string, string> = {
 };
 
 // Image fallbacks (when entry frontmatter has no image, but a fitting upload exists).
-const IMAGE_FALLBACKS: Record<string, string> = {
-  "the-archive": "/uploads/cosm-archive.png",
-  "precursors":  "/uploads/cosm-precursors.png",
+const IMAGE_FALLBACKS: Record<string, ContentImageValue> = {
+  "the-archive": cosmArchiveImage,
+  "precursors":  cosmPrecursorsImage,
 };
 
 // Image overrides (win over frontmatter image).
-const IMAGE_OVERRIDES: Record<string, string> = {
-  "twilight-band": "/uploads/cosm-twilight-band.png",
+const IMAGE_OVERRIDES: Record<string, ContentImageValue> = {
+  "twilight-band": twilightBandPanelImage,
 };
 
 // Per-slug bg-image object-position fine-tune.
@@ -56,7 +64,12 @@ const OBJECT_POSITION: Record<string, string> = {
 
 type Entry = (typeof publicEntries)[number];
 
-const resolveImage = (e: Entry) => IMAGE_OVERRIDES[e.slug] || (e.data.image && e.data.image.length > 0 ? e.data.image : IMAGE_FALLBACKS[e.slug] || "");
+const resolveImage = (e: Entry): ContentImageValue => {
+  const override = IMAGE_OVERRIDES[e.slug];
+  if (override) return override;
+  if (e.data.image) return e.data.image;
+  return IMAGE_FALLBACKS[e.slug] || null;
+};
 
 type Panel = {
   slug: string;
@@ -64,7 +77,7 @@ type Panel = {
   type: string;
   designation: string;
   summary: string;
-  image: string;
+  image: Awaited<ReturnType<typeof buildOptimizedImageBundle>>;
   accent: string;
   numeral: string;
   objectPosition: string;
@@ -72,7 +85,7 @@ type Panel = {
   fields: Record<string, string>;
 };
 
-const buildPanel = (e: Entry, idx: number): Panel => {
+const buildPanel = async (e: Entry, idx: number): Promise<Panel> => {
   const d = e.data as any;
   const fields: Record<string, string> = {};
   if (d.designation)     fields["Designation"]      = d.designation;
@@ -84,13 +97,19 @@ const buildPanel = (e: Entry, idx: number): Panel => {
   if (d.keeper_name)     fields["Keeper"]           = d.keeper_name;
   if (d.status_label)    fields["Status"]           = d.status_label;
   fields["Filed"] = "Cosmology";
+  const imageValue = resolveImage(e);
   return {
     slug: e.slug,
     title: d.title,
     type: d.type || "Cosmology",
     designation: d.designation || d.summary?.split(".")[0] || "",
     summary: d.summary || "",
-    image: resolveImage(e),
+    image: await buildOptimizedImageBundle(imageValue, {
+      widths: [768, 1280, 1600, 1920, 2560],
+      sizes: "100vw",
+      quality: 85,
+      fit: "cover",
+    }),
     accent: ACCENTS[e.slug] || "#b13a34",
     numeral: ROMAN[idx] || String(idx + 1),
     objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
@@ -102,7 +121,7 @@ const buildPanel = (e: Entry, idx: number): Panel => {
 // Featured: in FEATURED_ORDER if present + has image (or fallback).
 const featuredEntries = FEATURED_ORDER
   .map((slug) => publicEntries.find((e) => e.slug === slug))
-  .filter((e): e is Entry => !!e && resolveImage(e).length > 0);
+  .filter((e): e is Entry => !!e && !!getImageUrl(resolveImage(e)));
 
 const featuredSlugs = new Set(featuredEntries.map((e) => e.slug));
 
@@ -111,8 +130,10 @@ const otherEntries = publicEntries
   .filter((e) => !featuredSlugs.has(e.slug))
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 
-const featuredPanels = featuredEntries.map(buildPanel);
-const otherPanels    = otherEntries.map((e, i) => buildPanel(e, featuredPanels.length + i));
+const featuredPanels = await Promise.all(featuredEntries.map(buildPanel));
+const otherPanels = await Promise.all(
+  otherEntries.map((e, i) => buildPanel(e, featuredPanels.length + i))
+);
 const entryBasePath = localizedPath(locale, "/cosmology/");
 
 const copy = {
@@ -143,12 +164,26 @@ const copy = {
         >
           <div class="cosmo-panel__bg">
             {p.image && (
-              <img
-                src={p.image}
-                alt=""
-                class="cosmo-panel__bg-img"
-                style={`object-position: ${p.objectPosition};`}
-              />
+              <picture>
+                {p.image.avifSrcset && (
+                  <source srcset={p.image.avifSrcset} sizes={p.image.sizes} type="image/avif" />
+                )}
+                {p.image.webpSrcset && (
+                  <source srcset={p.image.webpSrcset} sizes={p.image.sizes} type="image/webp" />
+                )}
+                <img
+                  src={p.image.fallbackSrc}
+                  srcset={p.image.fallbackSrcset || undefined}
+                  sizes={p.image.sizes}
+                  width={p.image.width || undefined}
+                  height={p.image.height || undefined}
+                  alt=""
+                  class="cosmo-panel__bg-img"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  style={`object-position: ${p.objectPosition};`}
+                />
+              </picture>
             )}
           </div>
 
@@ -269,7 +304,9 @@ const copy = {
       </button>
 
       <aside class="cosmo-modal__hero" id="cosmo-modal-hero">
-        <img class="cosmo-modal__hero-img" id="cosmo-modal-img" src="" alt="" />
+        <picture id="cosmo-modal-picture">
+          <img class="cosmo-modal__hero-img" id="cosmo-modal-img" src="" alt="" />
+        </picture>
         <div class="cosmo-modal__hero-fade"></div>
         <div class="cosmo-modal__hero-accent" id="cosmo-modal-accent"></div>
         <div class="cosmo-grain"></div>
@@ -308,6 +345,7 @@ const copy = {
 
   const overlay     = byId("cosmo-overlay");
   const modal       = byId("cosmo-modal");
+  const modalPicture = byId("cosmo-modal-picture");
   const modalImg    = byId("cosmo-modal-img");
   const modalAccent = byId("cosmo-modal-accent");
   const modalBar    = byId("cosmo-modal-bar");
@@ -323,14 +361,54 @@ const copy = {
 
   let closing = false;
 
+  function syncResponsivePicture(picture, img, image) {
+    picture.querySelectorAll("source").forEach((source) => source.remove());
+
+    if (!image) {
+      img.removeAttribute("src");
+      img.removeAttribute("srcset");
+      img.removeAttribute("sizes");
+      img.removeAttribute("width");
+      img.removeAttribute("height");
+      return;
+    }
+
+    if (image.avifSrcset) {
+      const sourceAvif = document.createElement("source");
+      sourceAvif.type = "image/avif";
+      sourceAvif.srcset = image.avifSrcset;
+      sourceAvif.sizes = image.sizes;
+      picture.insertBefore(sourceAvif, img);
+    }
+
+    if (image.webpSrcset) {
+      const sourceWebp = document.createElement("source");
+      sourceWebp.type = "image/webp";
+      sourceWebp.srcset = image.webpSrcset;
+      sourceWebp.sizes = image.sizes;
+      picture.insertBefore(sourceWebp, img);
+    }
+
+    img.src = image.fallbackSrc;
+    if (image.fallbackSrcset) {
+      img.srcset = image.fallbackSrcset;
+    } else {
+      img.removeAttribute("srcset");
+    }
+    img.sizes = image.sizes;
+    if (image.width) img.width = image.width;
+    if (image.height) img.height = image.height;
+  }
+
   function openModal(slug) {
     const p = PANELS.find((x) => x.slug === slug);
     if (!p) return;
 
     if (p.image) {
-      modalImg.src = p.image;
+      syncResponsivePicture(modalPicture, modalImg, p.image);
       modalImg.style.display = "";
     } else {
+      syncResponsivePicture(modalPicture, modalImg, null);
       modalImg.removeAttribute("src");
       modalImg.style.display = "none";
     }

@@ -1,6 +1,7 @@
 ---
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { buildOptimizedImageBundle } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const copy = locale === "pt-br"
@@ -20,11 +21,11 @@ const copy = locale === "pt-br"
       fileSealed: "ARQUIVOS SINE - REGISTRO SELADO",
       filed: "Arquivado",
       openDossier: "Abrir Dossier",
-      previousCharacter: "Personagem anterior",
-      nextCharacter: "Proximo personagem",
+      hideOverlay: "Ocultar overlay",
+      showOverlay: "Mostrar overlay",
+      restoreOverlay: "Clique para restaurar overlay",
       fullscreen: "Tela cheia",
       exitFullscreen: "Sair da tela cheia",
-      arrowKeys: "Teclas de seta",
       dossierOnFile: "Dossie em Arquivo",
       swipeToNavigate: "Deslize para navegar",
     }
@@ -44,11 +45,11 @@ const copy = locale === "pt-br"
       fileSealed: "SiNE ARCHIVES - FILE SEALED",
       filed: "Filed",
       openDossier: "Open Dossier",
-      previousCharacter: "Previous character",
-      nextCharacter: "Next character",
+      hideOverlay: "Hide overlay",
+      showOverlay: "Show overlay",
+      restoreOverlay: "Click to restore overlay",
       fullscreen: "Full screen",
       exitFullscreen: "Exit full screen",
-      arrowKeys: "Arrow keys",
       dossierOnFile: "Dossier On File",
       swipeToNavigate: "Swipe to navigate",
     };
@@ -62,17 +63,33 @@ const characters = all
     return a.data.title.localeCompare(b.data.title);
   });
 
-const charData = characters.map((c) => ({
-  slug: c.slug,
-  title: c.data.title,
-  type: c.data.type ?? (locale === "pt-br" ? "Personagem" : "Character"),
-  designation: (c.data as any).designation ?? "",
-  summary: c.data.summary,
-  image: c.data.hero_image ?? "",
-  tags: c.data.tags ?? [],
-  updated: c.data.updated,
-  href: localizedPath(locale, `/characters/${c.slug}/?char=${encodeURIComponent(c.slug)}`),
-}));
+const STAGE_IMAGE_SIZES = "(max-width: 700px) 100vw, calc(100vw - 310px)";
+const FILMSTRIP_IMAGE_SIZES = "(max-width: 700px) 140px, 0px";
+
+const charData = await Promise.all(
+  characters.map(async (c) => ({
+    slug: c.slug,
+    title: c.data.title,
+    type: c.data.type ?? (locale === "pt-br" ? "Personagem" : "Character"),
+    designation: (c.data as any).designation ?? "",
+    summary: c.data.summary,
+    image: await buildOptimizedImageBundle(c.data.hero_image, {
+      widths: [768, 1280, 1600, 1920, 2560],
+      sizes: STAGE_IMAGE_SIZES,
+      quality: 90,
+      fit: "cover",
+    }),
+    thumbImage: await buildOptimizedImageBundle(c.data.hero_image, {
+      widths: [160, 320, 480],
+      sizes: FILMSTRIP_IMAGE_SIZES,
+      quality: 82,
+      fit: "cover",
+    }),
+    tags: c.data.tags ?? [],
+    updated: c.data.updated,
+    href: localizedPath(locale, `/characters/${c.slug}/?char=${encodeURIComponent(c.slug)}`),
+  }))
+);
 const sectionEyebrow = locale === "pt-br"
   ? `Secao - ${charData.length} Dossies`
   : `Section - ${charData.length} Dossiers`;
@@ -404,6 +421,7 @@ const sectionEyebrow = locale === "pt-br"
         overflow: hidden;
         background: #06060b;
       }
+      .stage--ui-hidden { cursor: zoom-out; }
 
       .stage__portrait {
         position: absolute; inset: 0;
@@ -416,7 +434,7 @@ const sectionEyebrow = locale === "pt-br"
         width: 100%; height: 100%;
         object-fit: cover;
         object-position: center 18%;
-        filter: saturate(0.85) brightness(1.05);
+        filter: saturate(1.08) brightness(1.1) contrast(1.02);
         will-change: transform;
       }
 
@@ -431,13 +449,13 @@ const sectionEyebrow = locale === "pt-br"
         position: absolute; inset: 0; z-index: 2; pointer-events: none;
       }
       .stage__grad-r {
-        background: linear-gradient(to right, rgba(6,6,11,0.9) 0%, rgba(6,6,11,0.35) 45%, rgba(6,6,11,0.1) 100%);
+        background: linear-gradient(to right, rgba(6,6,11,0.72) 0%, rgba(6,6,11,0.22) 45%, rgba(6,6,11,0.04) 100%);
       }
       .stage__grad-b {
-        background: linear-gradient(to top, rgba(6,6,11,1) 0%, rgba(6,6,11,0.75) 22%, rgba(6,6,11,0) 55%);
+        background: linear-gradient(to top, rgba(6,6,11,0.84) 0%, rgba(6,6,11,0.52) 22%, rgba(6,6,11,0) 55%);
       }
       .stage__grad-t {
-        background: linear-gradient(to bottom, rgba(6,6,11,0.6) 0%, transparent 18%);
+        background: linear-gradient(to bottom, rgba(6,6,11,0.42) 0%, transparent 18%);
       }
 
       .stage__scanlines {
@@ -581,25 +599,24 @@ const sectionEyebrow = locale === "pt-br"
       }
       .stage__cta:hover { background: #c94040; }
 
-      .stage__nav-btn {
+      .stage__view-btn {
         background: rgba(255,255,255,0.05);
         border: 1px solid rgba(255,255,255,0.1);
         color: rgba(232,228,220,0.5);
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 18px; width: 38px; height: 38px;
+        width: 38px; height: 38px;
         display: flex; align-items: center; justify-content: center;
         cursor: pointer; border-radius: 2px;
-        transition: background 0.2s, color 0.2s;
+        transition: background 0.2s, color 0.2s, border-color 0.2s;
       }
-      .stage__nav-btn:hover {
+      .stage__view-btn svg {
+        width: 16px;
+        height: 16px;
+      }
+      .stage__view-btn:hover,
+      .stage__view-btn[aria-pressed="true"] {
         background: rgba(177,58,52,0.15);
         color: var(--text);
-      }
-
-      .stage__key-hint {
-        font-family: 'DM Sans', sans-serif; font-size: 9px;
-        letter-spacing: 0.16em; color: rgba(232,228,220,0.2);
-        text-transform: uppercase; margin-left: 4px;
+        border-color: rgba(177,58,52,0.45);
       }
 
       /* dot navigator */
@@ -645,6 +662,19 @@ const sectionEyebrow = locale === "pt-br"
         display: none;
       }
 
+      .stage--ui-hidden .stage__top,
+      .stage--ui-hidden .stage__bottom,
+      .stage--ui-hidden .stage__dots,
+      .stage--ui-hidden .stage__stamp,
+      .stage--ui-hidden .stage__watermark,
+      .stage--ui-hidden .stage__grad-r,
+      .stage--ui-hidden .stage__grad-b,
+      .stage--ui-hidden .stage__grad-t,
+      .stage--ui-hidden .stage__scanlines {
+        opacity: 0;
+        pointer-events: none;
+      }
+
       @media (max-width: 768px) {
         html, body { overflow: auto; }
         .sidebar { display: none; }
@@ -679,8 +709,7 @@ const sectionEyebrow = locale === "pt-br"
         }
         .stage__actions { gap: 8px; flex-wrap: wrap; }
         .stage__cta { flex: 1; padding: 11px 16px; min-width: 140px; text-align: center; }
-        .stage__nav-btn { width: 40px; height: 40px; font-size: 16px; }
-        .stage__key-hint { display: none; }
+        .stage__view-btn { width: 40px; height: 40px; }
         .stage__dots { display: none; }
         .stage__watermark { display: none; }
         .stage__stamp { display: none; }
@@ -734,17 +763,6 @@ const sectionEyebrow = locale === "pt-br"
           height: 2px; background: var(--crimson);
         }
 
-        /* Hint */
-        .swipe-hint {
-          position: absolute;
-          bottom: 6px; left: 50%; transform: translateX(-50%);
-          z-index: 10;
-          font-family: 'DM Sans', sans-serif;
-          font-size: 8px; letter-spacing: 0.16em;
-          color: rgba(232,228,220,0.18);
-          text-transform: uppercase;
-          pointer-events: none;
-        }
       }
     </style>
   </head>
@@ -846,13 +864,37 @@ const sectionEyebrow = locale === "pt-br"
         <!-- Portrait layer -->
         <div class="stage__portrait is-in" id="stage-portrait">
           {charData[0].image ? (
-            <img
-              class="stage__portrait-img"
-              id="stage-img"
-              src={charData[0].image}
-              alt=""
-              style="transform: scale(1.07) translate(0%, 0%)"
-            />
+            <picture id="stage-picture">
+              {charData[0].image.avifSrcset && (
+                <source
+                  id="stage-source-avif"
+                  srcset={charData[0].image.avifSrcset}
+                  sizes={charData[0].image.sizes}
+                  type="image/avif"
+                />
+              )}
+              {charData[0].image.webpSrcset && (
+                <source
+                  id="stage-source-webp"
+                  srcset={charData[0].image.webpSrcset}
+                  sizes={charData[0].image.sizes}
+                  type="image/webp"
+                />
+              )}
+              <img
+                class="stage__portrait-img"
+                id="stage-img"
+                src={charData[0].image.fallbackSrc}
+                srcset={charData[0].image.fallbackSrcset || undefined}
+                sizes={charData[0].image.sizes}
+                width={charData[0].image.width || undefined}
+                height={charData[0].image.height || undefined}
+                alt=""
+                loading="eager"
+                decoding="async"
+                style="transform: scale(1.07) translate(0%, 0%)"
+              />
+            </picture>
           ) : (
             <svg
               id="stage-placeholder"
@@ -935,9 +977,18 @@ const sectionEyebrow = locale === "pt-br"
 
           <div class="stage__actions is-in" id="stage-actions">
             <a class="stage__cta" id="stage-cta" href={charData[0].href}>{copy.openDossier}</a>
-            <button class="stage__nav-btn" id="btn-prev" aria-label={copy.previousCharacter}>&#8593;</button>
-            <button class="stage__nav-btn" id="btn-next" aria-label={copy.nextCharacter}>&#8595;</button>
-            <span class="stage__key-hint">{copy.arrowKeys}</span>
+            <button
+              class="stage__view-btn"
+              id="btn-stage-ui-toggle"
+              type="button"
+              aria-pressed="false"
+              aria-label={copy.hideOverlay}
+              title={copy.hideOverlay}
+            >
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -958,8 +1009,6 @@ const sectionEyebrow = locale === "pt-br"
           <div class="stage__stamp-inner">{copy.dossierOnFile}</div>
         </div>
 
-        <!-- Mobile swipe hint -->
-        <div class="swipe-hint">{copy.swipeToNavigate}</div>
       </div>
 
       <!-- Mobile filmstrip -->
@@ -970,8 +1019,25 @@ const sectionEyebrow = locale === "pt-br"
             data-idx={i}
             aria-label={c.title}
           >
-            {c.image ? (
-              <img src={c.image} alt="" loading="lazy" />
+            {c.thumbImage ? (
+              <picture>
+                {c.thumbImage.avifSrcset && (
+                  <source srcset={c.thumbImage.avifSrcset} sizes={c.thumbImage.sizes} type="image/avif" />
+                )}
+                {c.thumbImage.webpSrcset && (
+                  <source srcset={c.thumbImage.webpSrcset} sizes={c.thumbImage.sizes} type="image/webp" />
+                )}
+                <img
+                  src={c.thumbImage.fallbackSrc}
+                  srcset={c.thumbImage.fallbackSrcset || undefined}
+                  sizes={c.thumbImage.sizes}
+                  width={c.thumbImage.width || undefined}
+                  height={c.thumbImage.height || undefined}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             ) : (
               <div class="filmstrip__item-fallback">{String(i + 1).padStart(2, "0")}</div>
             )}
@@ -1019,7 +1085,9 @@ const sectionEyebrow = locale === "pt-br"
       const stageCta = document.getElementById("stage-cta");
       const stageStamp = document.getElementById("stage-stamp");
       const stageRoot = document.getElementById("stage");
+      const stageUiToggle = document.getElementById("btn-stage-ui-toggle");
       const fullscreenBtn = document.getElementById("nav-fullscreen");
+      let isOverlayHidden = false;
 
       const allAnimated = [stageCounter, stageTags, stageRule, stageType, stageName, stageDesignation, stageSummary, stageActions, stageWatermark, stageStamp, stagePortrait];
 
@@ -1070,6 +1138,21 @@ const sectionEyebrow = locale === "pt-br"
         });
       }
 
+      function syncOverlayToggle() {
+        if (!stageUiToggle || !stageRoot) return;
+        const label = isOverlayHidden ? copy.showOverlay : copy.hideOverlay;
+        stageUiToggle.setAttribute("aria-pressed", String(isOverlayHidden));
+        stageUiToggle.setAttribute("aria-label", label);
+        stageUiToggle.setAttribute("title", label);
+        stageRoot.classList.toggle("stage--ui-hidden", isOverlayHidden);
+        stageRoot.setAttribute("title", isOverlayHidden ? copy.restoreOverlay : "");
+      }
+
+      function toggleOverlay(force) {
+        isOverlayHidden = typeof force === "boolean" ? force : !isOverlayHidden;
+        syncOverlayToggle();
+      }
+
       function buildPlaceholderSVG(char) {
         const ns = "http://www.w3.org/2000/svg";
         const svg = document.createElementNS(ns, "svg");
@@ -1103,21 +1186,53 @@ const sectionEyebrow = locale === "pt-br"
         return svg;
       }
 
+      function buildStagePicture(image) {
+        const picture = document.createElement("picture");
+        picture.id = "stage-picture";
+
+        if (image.avifSrcset) {
+          const sourceAvif = document.createElement("source");
+          sourceAvif.id = "stage-source-avif";
+          sourceAvif.type = "image/avif";
+          sourceAvif.srcset = image.avifSrcset;
+          sourceAvif.sizes = image.sizes;
+          picture.appendChild(sourceAvif);
+        }
+
+        if (image.webpSrcset) {
+          const sourceWebp = document.createElement("source");
+          sourceWebp.id = "stage-source-webp";
+          sourceWebp.type = "image/webp";
+          sourceWebp.srcset = image.webpSrcset;
+          sourceWebp.sizes = image.sizes;
+          picture.appendChild(sourceWebp);
+        }
+
+        const img = document.createElement("img");
+        img.className = "stage__portrait-img";
+        img.id = "stage-img";
+        img.src = image.fallbackSrc;
+        if (image.fallbackSrcset) img.srcset = image.fallbackSrcset;
+        img.sizes = image.sizes;
+        if (image.width) img.width = image.width;
+        if (image.height) img.height = image.height;
+        img.alt = "";
+        img.decoding = "async";
+        img.style.transform = "scale(1.07) translate(0%, 0%)";
+        picture.appendChild(img);
+
+        return picture;
+      }
+
       function updateContent(idx) {
         const c = chars[idx];
         activeIdx = idx;
 
         // portrait
-        const existing = stagePortrait.querySelector("img, svg");
+        const existing = stagePortrait.querySelector("picture, svg");
         if (existing) existing.remove();
         if (c.image) {
-          const img = document.createElement("img");
-          img.className = "stage__portrait-img";
-          img.src = c.image;
-          img.alt = "";
-          // Apply base scale immediately so zoom is correct before any mousemove
-          img.style.transform = "scale(1.07) translate(0%, 0%)";
-          stagePortrait.appendChild(img);
+          stagePortrait.appendChild(buildStagePicture(c.image));
         } else {
           stagePortrait.appendChild(buildPlaceholderSVG(c));
         }
@@ -1205,12 +1320,15 @@ const sectionEyebrow = locale === "pt-br"
         }
       });
 
-      // Buttons
-      document.getElementById("btn-prev").addEventListener("click", () => {
-        switchTo((activeIdx - 1 + chars.length) % chars.length);
+      stageUiToggle?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleOverlay();
       });
-      document.getElementById("btn-next").addEventListener("click", () => {
-        switchTo((activeIdx + 1) % chars.length);
+
+      stageRoot.addEventListener("click", (e) => {
+        if (!isOverlayHidden) return;
+        if (e.target.closest("#btn-stage-ui-toggle, #stage-cta, #stage-dots")) return;
+        toggleOverlay(false);
       });
 
       // Sidebar clicks
@@ -1223,18 +1341,6 @@ const sectionEyebrow = locale === "pt-br"
       document.getElementById("stage-dots").addEventListener("click", (e) => {
         const btn = e.target.closest(".stage__dot");
         if (btn) switchTo(parseInt(btn.dataset.idx, 10));
-      });
-
-      // Keyboard
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
-          e.preventDefault();
-          switchTo((activeIdx - 1 + chars.length) % chars.length);
-        }
-        if (e.key === "ArrowDown" || e.key === "ArrowRight") {
-          e.preventDefault();
-          switchTo((activeIdx + 1) % chars.length);
-        }
       });
 
       // Search
@@ -1309,6 +1415,8 @@ const sectionEyebrow = locale === "pt-br"
         touchStartX = null;
         touchStartY = null;
       }, { passive: true });
+
+      syncOverlayToggle();
     </script>
   </body>
 </html>
