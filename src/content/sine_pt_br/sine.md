@@ -2,7 +2,7 @@
 title: "SiNE"
 type: "Organização"
 designation: "The Wonderwall Company - Aparato Corporativo-Estatal de Sete Divisões"
-affiliation: "Independente - relações diplomáticas com o Empire of Synus e a Apocachynthion"
+affiliation: "Independente - relações diplomáticas com o Império de Synus e a Apocachynthion"
 headquarters: "Pluribus Hill, Kalt'sen"
 founded: "Ano 0 (aproximado - antecede o calendário imperial atual por uma margem indeterminada)"
 jurisdiction: "Twilight Band e fronteira - presença operacional em todas as grandes regiões"
@@ -26,7 +26,7 @@ A SiNE é um aparato corporativo-estatal — algo que começou como uma empresa 
 
 Ela foi fundada por **Em'manuel Kael Wonderwall** — uma figura cuja história operacional pessoal antecede a maioria das instituições com as quais ele hoje trabalha formalmente. A organização é dividida em sete grandes divisões, cada uma com um mandato distinto, uma designação formada por nome e código com prefixo S e um grau de autonomia interna que reflete a realidade de administrar sete operações fundamentalmente diferentes sob uma única estrutura institucional.
 
-A SiNE estabeleceu sua sede em **Pluribus Hill**, em Kalt'sen, capital imperial — não porque o Empire exigiu isso, mas porque operar no centro da geografia política do mundo produz certas vantagens que simplesmente não existem quando se trabalha a partir de uma base periférica. O edifício é enorme, antigo e já passou por mudanças suficientes ao longo dos séculos para que a configuração atual pareça permanente da mesma forma que certas coisas parecem permanentes apenas porque sobreviveram a tudo que poderia substituí-las.
+A SiNE estabeleceu sua sede em **Pluribus Hill**, em Kalt'sen, capital imperial — não porque o Império exigiu isso, mas porque operar no centro da geografia política do mundo produz certas vantagens que simplesmente não existem quando se trabalha a partir de uma base periférica. O edifício é enorme, antigo e já passou por mudanças suficientes ao longo dos séculos para que a configuração atual pareça permanente da mesma forma que certas coisas parecem permanentes apenas porque sobreviveram a tudo que poderia substituí-las.
 
 ---
 
@@ -42,7 +42,7 @@ A Entropy é a divisão que produz. As outras divisões usam aquilo que a Entrop
 
 O braço militar da SiNE — as **SiNE Integrated Forces**. A HourGlass é organizada em três comandos responsáveis por operações terrestres, aéreas e navais. Ela mantém a **Cold Fleet** no teatro marítimo do norte e o **Cloister of Applied Structure** como seu corpo especializado de Redactors.
 
-A HourGlass é uma força militar de espectro completo, não uma operação privada de segurança. Seu alcance operacional e reconhecimento diplomático dentro da arquitetura militar do Empire a diferenciam das empresas de segurança pertencentes a entidades comerciais. Quando a War of the Threshold exige forças que o exército imperial não consegue mobilizar em determinado momento, a HourGlass ocupa essa lacuna. A linguagem diplomática que regula essa relação foi negociada ao longo de muito tempo — e é extremamente específica sobre o que exatamente constitui uma “lacuna”.
+A HourGlass é uma força militar de espectro completo, não uma operação privada de segurança. Seu alcance operacional e reconhecimento diplomático dentro da arquitetura militar do Império a diferenciam das empresas de segurança pertencentes a entidades comerciais. Quando a War of the Threshold exige forças que o exército imperial não consegue mobilizar em determinado momento, a HourGlass ocupa essa lacuna. A linguagem diplomática que regula essa relação foi negociada ao longo de muito tempo — e é extremamente específica sobre o que exatamente constitui uma “lacuna”.
 
 ### S-CL: Clepsydra (Autoridade de Continuidade da Lattice)
 
@@ -58,7 +58,7 @@ A relação entre a Magi e a Apocachynthion é tecnicamente cooperativa e pragma
 
 ### S-LG: Evanote (Jurídico e Governança)
 
-A Evanote é exatamente o que parece ser. Mil e duzentos anos de negociações diplomáticas, disputas legais, autorizações operacionais e diplomacia institucional produziram uma divisão jurídica com profundidade significativa e uma memória institucional extremamente específica. A Evanote administra a posição regulatória da SiNE, seus tratados com o Empire e com a Igreja e todo o trabalho contínuo de operar em escala institucional dentro de um mundo cheio de órgãos regulatórios concorrentes.
+A Evanote é exatamente o que parece ser. Mil e duzentos anos de negociações diplomáticas, disputas legais, autorizações operacionais e diplomacia institucional produziram uma divisão jurídica com profundidade significativa e uma memória institucional extremamente específica. A Evanote administra a posição regulatória da SiNE, seus tratados com o Império e com a Igreja e todo o trabalho contínuo de operar em escala institucional dentro de um mundo cheio de órgãos regulatórios concorrentes.
 
 A Evanote também é a divisão que sabe onde os corpos estão enterrados — metaforicamente, na maior parte do tempo.
 
@@ -78,7 +78,7 @@ A StaSis também é a divisão cuja existência recebe o menor nível de reconhe
 
 Separada das sete divisões formais, a SiNE mantém uma estrutura cuja existência não é oficialmente reconhecida: a **CLOCKWORK** — um corpo não registrado composto por 144 Redactors organizados em doze unidades operacionais identificadas por callsigns temporais (DAWN até ZENITH). A CLOCKWORK opera com negabilidade absoluta, fora do sistema de registro e supervisão da Apocachynthion e com parâmetros de autorização que não aparecem em nenhum documento público.
 
-A CLOCKWORK existe porque as divisões formais não conseguem fazer tudo o que precisa ser feito. O espaço entre aquilo que a HourGlass consegue executar oficialmente, aquilo que a Clepsydra consegue autorizar estruturalmente e aquilo que os interesses estratégicos da SiNE ocasionalmente exigem é exatamente onde a CLOCKWORK atua. O Meridian Council sabe da existência da CLOCKWORK. O Empire oficialmente não sabe. Se a Apocachynthion deduziu sua existência a partir de anomalias operacionais é uma pergunta que nenhuma das duas instituições respondeu publicamente.
+A CLOCKWORK existe porque as divisões formais não conseguem fazer tudo o que precisa ser feito. O espaço entre aquilo que a HourGlass consegue executar oficialmente, aquilo que a Clepsydra consegue autorizar estruturalmente e aquilo que os interesses estratégicos da SiNE ocasionalmente exigem é exatamente onde a CLOCKWORK atua. O Meridian Council sabe da existência da CLOCKWORK. O Império oficialmente não sabe. Se a Apocachynthion deduziu sua existência a partir de anomalias operacionais é uma pergunta que nenhuma das duas instituições respondeu publicamente.
 
 ---
 
@@ -92,7 +92,7 @@ O papel do fundador nas decisões do Council é formalmente apenas um voto entre
 
 ## Relação com Outras Instituições
 
-**O Empire:** Vinculado por tratados e funcionalmente cooperativo em múltiplos níveis. O papel da HourGlass na War of the Threshold é a demonstração mais clara de como essa relação funciona: a SiNE possui capacidades de que o Empire precisa; o Empire possui autoridade legal que beneficia a SiNE operar dentro dela; e o arranjo resultante serve bem o suficiente aos interesses de ambos para sobreviver doze séculos sem grandes rupturas.
+**O Império:** Vinculado por tratados e funcionalmente cooperativo em múltiplos níveis. O papel da HourGlass na War of the Threshold é a demonstração mais clara de como essa relação funciona: a SiNE possui capacidades de que o Império precisa; o Império possui autoridade legal que beneficia a SiNE operar dentro dela; e o arranjo resultante serve bem o suficiente aos interesses de ambos para sobreviver doze séculos sem grandes rupturas.
 
 **A Apocachynthion:** Formalmente cooperativa, pragmaticamente complexa. A SiNE emprega grandes quantidades de Redactors registrados, o que gera negociações jurisdicionais constantes. A Magi compartilha alguns frameworks de treinamento com a Apocachynthion e diverge significativamente em vários outros. A Apocachynthion sabe que o escopo operacional da SiNE inclui coisas fora de sua visibilidade institucional. Essa consciência não gerou crise porque a SiNE vem administrando cuidadosamente a questão da visibilidade há muito tempo.
 

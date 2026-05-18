@@ -68,11 +68,11 @@ A doutrina do Obsidian Rite e as estratégias militares da frente norte foram de
 
 ## A War of the Threshold (Guerra do Limiar)
 
-A **War of the Threshold** é a campanha militar contínua do Empire na Darkmargin — a fronteira onde o limite da Twilight Band encontra a escuridão permanente.
+A **War of the Threshold** é a campanha militar contínua do Império na Darkmargin — a fronteira onde o limite da Twilight Band encontra a escuridão permanente.
 
 Ela acontece há muito tempo.
 
-Tempo suficiente para que a maioria dos cidadãos enxergue a guerra apenas como um fato de fundo do Empire, e não como uma crise ativa — algo que exige soldados, ordens de campo da Igreja e confrontos ocasionais, mas que permanece contido na fronteira há gerações.
+Tempo suficiente para que a maioria dos cidadãos enxergue a guerra apenas como um fato de fundo do Império, e não como uma crise ativa — algo que exige soldados, ordens de campo da Igreja e confrontos ocasionais, mas que permanece contido na fronteira há gerações.
 
 Essa percepção está tecnicamente correta em um sentido operacional restrito: a fronteira realmente não mudou de forma significativa em memória recente.
 

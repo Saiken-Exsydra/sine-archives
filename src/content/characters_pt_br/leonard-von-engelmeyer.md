@@ -71,7 +71,7 @@ E sua mente ficou ligada para sempre à Stase e a Kerz.
 
 Em Ardeatus, onde a doutrina civilizacional é profundamente ligada ao Covenant e à ortodoxia mecânica dos Forge-Keepers, um Redactor não registrado capaz de gerar calor anômalo ao ponto de romper uma Stase é considerado uma blasfêmia teológica e estrutural.
 
-Ao perceber que seria caçado pelos Ashborne Hunters ou dissecado pela Forge, Leonard pegou Kerz e fugiu de volta através da fronteira para o Empire of Synus.
+Ao perceber que seria caçado pelos Ashborne Hunters ou dissecado pela Forge, Leonard pegou Kerz e fugiu de volta através da fronteira para o Império de Synus.
 
 Ele se apresentou para admissão no Apocachynthion em 2163.
 

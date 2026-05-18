@@ -4,7 +4,7 @@ type: "Personagem"
 age: "98 (na época do registro, 2200); aparenta ter entre o fim dos vinte e começo dos trinta anos"
 birth_year: "2102"
 birthplace: "Kovansk, Distrito Ocidental das Fornalhas, Ardeatus"
-affiliation: "Secretariado de Custódia Conjunta da Marta Chord; residência diplomática ardeatana no Empire"
+affiliation: "Secretariado de Custódia Conjunta da Marta Chord; residência diplomática ardeatana no Império"
 rank: "Tempered Confirmado - vessel de Vhaldr, a Tempering Witness"
 registry_status: "Não-Redactor; caso de fusão divina confirmado repetidamente por avaliação imperial"
 designation: "Chefe de Escritório sobre o Marta Chord"
@@ -36,7 +36,7 @@ Daniel Van Degurechaff é o eixo humano do Marta Chord: o protocolo de custódia
 
 Ele não nasceu como opositor de Ardeatus. Foi moldado pelos sistemas do país, serviu a eles com fidelidade e acabou se tornando perigoso justamente por ter se tornado preciso demais dentro deles. Como Tempering Witness, passou décadas classificando vessels divinos, casos Ashborne, manifestações térmicas e anomalias estruturais. O domínio de Vhaldr o ensinou a ler transformações sob pressão com precisão demais para continuar aceitando todas as respostas oficiais que recebia.
 
-O resultado não foi uma conversão ideológica ao Empire. Daniel não romantiza Synus, a Redactory nem o Apocachynthion. Ele apenas aprendeu que medo sustentado por classificações ruins mata crianças, trabalhadores, soldados e prisioneiros muito mais rápido do que a doutrina admite.
+O resultado não foi uma conversão ideológica ao Império. Daniel não romantiza Synus, a Redactory nem o Apocachynthion. Ele apenas aprendeu que medo sustentado por classificações ruins mata crianças, trabalhadores, soldados e prisioneiros muito mais rápido do que a doutrina admite.
 
 ---
 
@@ -78,9 +78,9 @@ Em privado, ele é mais atento do que gentil. Lembra o nome dos Redactors transf
 
 ## Política e Contradição
 
-Daniel continua leal a Ardeatus, fiel a Vekrath e profundamente desconfiado da autoimagem moral do Empire. Essa combinação é exatamente o que torna difícil removê-lo. Ele não denuncia a doutrina do lado de fora. Ele cita a própria doutrina por dentro. Não argumenta que a Redactory é justa. Argumenta que classificações falsas profanam a lei, desperdiçam vidas e degradam as instituições que afirmam defender a ordem.
+Daniel continua leal a Ardeatus, fiel a Vekrath e profundamente desconfiado da autoimagem moral do Império. Essa combinação é exatamente o que torna difícil removê-lo. Ele não denuncia a doutrina do lado de fora. Ele cita a própria doutrina por dentro. Não argumenta que a Redactory é justa. Argumenta que classificações falsas profanam a lei, desperdiçam vidas e degradam as instituições que afirmam defender a ordem.
 
-O Empire desconfia dele porque Daniel audita o que acontece depois das transferências. Os setores mais radicais de Ardeatus desconfiam dele porque ele tornou punições muito mais difíceis de executar silenciosamente. O Apocachynthion o respeita porque ele envia sujeitos vivos com anotações reais em vez de corpos embrulhados em desculpas.
+O Império desconfia dele porque Daniel audita o que acontece depois das transferências. Os setores mais radicais de Ardeatus desconfiam dele porque ele tornou punições muito mais difíceis de executar silenciosamente. O Apocachynthion o respeita porque ele envia sujeitos vivos com anotações reais em vez de corpos embrulhados em desculpas.
 
 Por causa disso, ele acabou se tornando algo que nenhum dos lados gosta de admitir que precisa: um vessel divino estrangeiro cuja severidade mantém um mecanismo humanitário funcionando justamente porque ele se recusa a sentimentalizá-lo.
 

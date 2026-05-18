@@ -69,7 +69,7 @@ A Clepsydra pode negar uma solicitação. Pode atrasar uma autorização. Pode s
 
 Internamente, essa autoridade não é tratada como discricionariedade política. É doutrina estrutural.
 
-A lattice não se importa com qual instituição está com pressa. Um pedido que introduza risco de continuidade além dos parâmetros aceitáveis é tratado como uma condição de falha, independentemente de o solicitante ser HourGlass, StaSis, Entropy ou um gabinete carregando a assinatura do Wonderwall Seat. Exceções existem. Mas elas não anulam a regra.
+A lattice não se importa com qual instituição está com pressa. Um pedido que introduza risco de continuidade além dos parâmetros aceitáveis é tratado como uma condição de falha, independentemente de o solicitante ser HourGlass, StaSis, Entropy ou um gabinete carregando a assinatura do Assento Wonderwall. Exceções existem. Mas elas não anulam a regra.
 
 Onde outras divisões enxergam urgência, a Clepsydra faz primeiro outra pergunta: *o que isso faz com a lattice se for repetido?* Essa pergunta moldou a cultura da instituição por tanto tempo que sua cautela já não parece hesitação para quem está acostumado com ela. Parece alfabetização básica.
 

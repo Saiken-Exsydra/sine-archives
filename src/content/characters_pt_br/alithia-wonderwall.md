@@ -3,8 +3,8 @@ title: "Al'ithia Rae Wonderwall"
 type: "Personagem"
 age: "88 (em 2200); aparenta ter entre trinta e poucos anos"
 birth_year: "2112"
-birthplace: "Territórios costeiros do norte do ramo Rae, Empire of Synus"
-affiliation: "House Wonderwall (linha principal, líder política de facto); Empire of Synus (representante no Senado); SiNE (autoridade da Casa, supervisão indireta)"
+birthplace: "Territórios costeiros do norte do ramo Rae, Império de Synus"
+affiliation: "House Wonderwall (linha principal, líder política de facto); Império de Synus (representante no Senado); SiNE (autoridade da Casa, supervisão indireta)"
 house: "Wonderwall (origem no ramo Rae; linha principal por casamento)"
 rank: "Redactor classe-Radiance - Anchor de Revelation"
 registry_status: "Publicamente reconhecida como principal representante da House Wonderwall; em privado, reconhecida pela revisão da Casa e da Church como um caso estável de fusão divina sem precedentes conhecidos"
@@ -33,11 +33,11 @@ hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
 
 ## Identidade e Continuidade
 
-Al'ithia Rae Wonderwall é uma das poucas pessoas vivas no Empire cuja existência não pode ser descrita honestamente por nenhuma das categorias que o próprio Empire prefere usar. Ela não é uma ressurreição. Não é um caso de possessão. Não é uma Divine Vessel convencional. Também não é simplesmente Athena Rae usando outro nome, nem A'licia Rae Wonderwall retornada da morte em uma forma preservada.
+Al'ithia Rae Wonderwall é uma das poucas pessoas vivas no Império cuja existência não pode ser descrita honestamente por nenhuma das categorias que o próprio Império prefere usar. Ela não é uma ressurreição. Não é um caso de possessão. Não é uma Divine Vessel convencional. Também não é simplesmente Athena Rae usando outro nome, nem A'licia Rae Wonderwall retornada da morte em uma forma preservada.
 
 O que ela é, na linguagem mais precisa disponível, é um eu composto estável.
 
-Athena Rae nasceu em 2112 dentro do ramo Rae da família Wonderwall — o mesmo ramo do qual A'licia surgiu antes de a House Wonderwall se tornar uma das grandes potências dinásticas centrais do Empire. A'licia morreu séculos antes. O que restou dela não se dissipou por completo. Pela densidade do trabalho de sua Light Anchor, pela força do papel histórico que ocupou e por gerações de veneração Wonderwall direcionadas a ela como origem e modelo, sua continuidade pós-morte acabou se estabilizando em algo que a Casa passou a conhecer em privado como a Primeira Radiance.
+Athena Rae nasceu em 2112 dentro do ramo Rae da família Wonderwall — o mesmo ramo do qual A'licia surgiu antes de a House Wonderwall se tornar uma das grandes potências dinásticas centrais do Império. A'licia morreu séculos antes. O que restou dela não se dissipou por completo. Pela densidade do trabalho de sua Light Anchor, pela força do papel histórico que ocupou e por gerações de veneração Wonderwall direcionadas a ela como origem e modelo, sua continuidade pós-morte acabou se estabilizando em algo que a Casa passou a conhecer em privado como a Primeira Radiance.
 
 Athena cresceu dentro dessa reverência. Para ela, a Primeira Radiance nunca foi uma doutrina abstrata, mas uma presença familiar ao redor da qual oração, memória e identidade da família haviam orbitado por gerações. Aos quinze anos, o contato começou. Vieram sonhos, correções, acessos inexplicáveis a memórias e formas de reconhecimento muito além do que qualquer jovem Redactor deveria possuir. E aquilo nunca parou.
 
@@ -63,7 +63,7 @@ Isso é Revelation se manifestando social, política e metafisicamente ao mesmo 
 
 ## Posição Pública
 
-Pela lei formal, Em'manuel Kael Wonderwall continua sendo o Seat dos Wonderwall, senador hereditário e principal autoridade da SiNE. Na prática do cotidiano, porém, Al'ithia é quem mantém a Casa coesa em todos os pontos onde a House precisa tocar o resto do mundo.
+Pela lei formal, Em'manuel Kael Wonderwall continua sendo o Assento dos Wonderwall, senador hereditário e principal autoridade da SiNE. Na prática do cotidiano, porém, Al'ithia é quem mantém a Casa coesa em todos os pontos onde a House precisa tocar o resto do mundo.
 
 Ela comparece ao Senado. Lida com petições, obrigações cerimoniais, diplomacia entre Casas, patronagem provincial, condolências públicas, disputas de herança e as milhares de pequenas negociações através das quais legitimidade dinástica realmente é construída. A explicação pública é simples: a atenção de Em'manuel está completamente consumida pela SiNE, então sua esposa assumiu mais do peso externo da Casa. Isso é verdade — mas também é uma explicação pequena demais.
 
@@ -71,7 +71,7 @@ Al'ithia simplesmente é mais adequada para essa função do que ele.
 
 Em'manuel governa sistemas. Constrói estruturas tão grandes que a maioria das pessoas só percebe que elas existem quando falham. Al'ithia governa visibilidade, confiança e memória política. Ela lembra quem prometeu o quê, durante qual crise, diante de quais testemunhas e qual compromisso continuou valendo depois que os discursos terminaram. É por causa dela que a House Wonderwall consegue permanecer ao mesmo tempo temida e acessível. Ela dá à Casa um rosto humano sem jamais permitir que esse rosto se torne decorativo.
 
-Entre as Grandes Casas, isso transformou Al'ithia em uma das operadoras políticas mais importantes do Empire, mesmo sem ocupar formalmente o Seat.
+Entre as Grandes Casas, isso transformou Al'ithia em uma das operadoras políticas mais importantes do Império, mesmo sem ocupar formalmente o Assento.
 
 ---
 
@@ -151,4 +151,4 @@ Ela corrige a memória que a House construiu sobre sua própria origem. Corrige 
 
 Al'ithia prova que isso não é verdade.
 
-Ela está entre as pessoas politicamente mais importantes do Empire, é um dos casos teológicos mais estranhos dos registros modernos e uma das pouquíssimas integrantes da House Wonderwall ainda capazes de tornar aquela família mais honesta do que ela prefere ser.
+Ela está entre as pessoas politicamente mais importantes do Império, é um dos casos teológicos mais estranhos dos registros modernos e uma das pouquíssimas integrantes da House Wonderwall ainda capazes de tornar aquela família mais honesta do que ela prefere ser.

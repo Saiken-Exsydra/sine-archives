@@ -34,7 +34,7 @@ A StaSis é a divisão que assume o trabalho quando todos os outros frameworks d
 
 A StaSis ocupa uma posição incomum dentro do cenário institucional. Diferente das outras seis divisões da SiNE, que possuem documentação organizacional pública e funções operacionais reconhecidas, a existência da StaSis é, na melhor das hipóteses, **parcialmente reconhecida**.
 
-Esse reconhecimento parcial é deliberado. O mandato operacional da StaSis envolve lidar com entidades e situações que, se fossem totalmente documentadas e associadas publicamente a uma divisão conhecida da SiNE, atrairiam atenção institucional da Apocachynthion, da Igreja, do Empire e de inúmeras outras partes de maneiras que dificultariam o trabalho. O mandato exige um grau de liberdade operacional que simplesmente não existe quando há visibilidade institucional demais.
+Esse reconhecimento parcial é deliberado. O mandato operacional da StaSis envolve lidar com entidades e situações que, se fossem totalmente documentadas e associadas publicamente a uma divisão conhecida da SiNE, atrairiam atenção institucional da Apocachynthion, da Igreja, do Império e de inúmeras outras partes de maneiras que dificultariam o trabalho. O mandato exige um grau de liberdade operacional que simplesmente não existe quando há visibilidade institucional demais.
 
 O resultado é uma divisão que tecnicamente faz parte da estrutura pública da SiNE — sua designação S-AE aparece nos registros regulatórios da instituição — mas cuja função real só é descrita dentro da documentação interna da própria SiNE, em materiais inacessíveis pelos canais normais de informação.
 

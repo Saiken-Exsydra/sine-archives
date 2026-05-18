@@ -32,7 +32,7 @@ hero_image: "../../assets/uploads/char-rouxinol-kaise-hero.png"
 
 ## Origem — Vel'hara e o Corvel Institute
 
-Vel'hara é uma cidade-estado na extensão longitudinal oeste da Twilight Band, localizada no território de transição entre o Empire of Synus e a nação de Aurora — uma faixa de território intermediário que nenhum dos dois estados jamais tentou absorver formalmente. A cidade se sustenta como porto livre e enclave de pesquisa, tolerando instituições que o Empire regularia e atividades que Aurora proibiria.
+Vel'hara é uma cidade-estado na extensão longitudinal oeste da Twilight Band, localizada no território de transição entre o Império de Synus e a nação de Aurora — uma faixa de território intermediário que nenhum dos dois estados jamais tentou absorver formalmente. A cidade se sustenta como porto livre e enclave de pesquisa, tolerando instituições que o Império regularia e atividades que Aurora proibiria.
 
 Dentro de Vel'hara, operando sob uma carta comercial vel'harana, existe uma organização conhecida como **Corvel Institute** — oficialmente, um centro de pesquisa dedicado ao estudo de fenômenos anômalos da Redactory em regiões estruturalmente rarefeitas da Outer Band. O instituto não publica descobertas em nenhum órgão acadêmico reconhecido. Não envia documentação ao Apocachynthion. Recruta discretamente, mantém indivíduos de interesse sem qualquer processo legal formal e opera instalações nas zonas de planalto externo que não aparecem em nenhum mapa reconhecido publicamente.
 

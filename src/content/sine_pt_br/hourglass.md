@@ -2,7 +2,7 @@
 title: "HourGlass"
 type: "Organização"
 designation: "Forças Integradas da SiNE - S-IF"
-affiliation: "SiNE (ramo S-IF) - tratado permanente com o Empire of Synus"
+affiliation: "SiNE (ramo S-IF) - tratado permanente com o Império de Synus"
 headquarters: "Múltiplas instalações de comando - coordenação principal através de Kalt'sen"
 founded: "Concomitante à fundação da SiNE - a estrutura atual de três comandos foi estabelecida ao longo do desenvolvimento institucional"
 jurisdiction: "Twilight Band e fronteiras - autoridade operacional de espectro total sob acordos de tratado"
@@ -24,7 +24,7 @@ image: "../../assets/uploads/sine-hourglass.png"
 
 A HourGlass é a **SiNE Integrated Forces** — o braço militar da SiNE, designado como S-IF. Ela é organizada em três comandos responsáveis por operações terrestres, aéreas e navais, além do **Cloister of Applied Structure**, responsável pelas capacidades especializadas de Redactory da organização.
 
-Ela não é uma empresa de segurança privada em nenhum sentido convencional do termo. É uma força militar de espectro completo, com legitimidade formal por tratado, histórico operacional nos teatros de maior intensidade enfrentados pelo Empire e uma profundidade institucional construída ao longo de mil e duzentos anos de operação contínua. A diferença entre a HourGlass e um exército estatal é principalmente formal — uma questão de autoridade fundadora e estrutura jurídica, não de capacidade ou alcance operacional.
+Ela não é uma empresa de segurança privada em nenhum sentido convencional do termo. É uma força militar de espectro completo, com legitimidade formal por tratado, histórico operacional nos teatros de maior intensidade enfrentados pelo Império e uma profundidade institucional construída ao longo de mil e duzentos anos de operação contínua. A diferença entre a HourGlass e um exército estatal é principalmente formal — uma questão de autoridade fundadora e estrutura jurídica, não de capacidade ou alcance operacional.
 
 ---
 
@@ -94,4 +94,4 @@ A principal característica operacional da HourGlass é a **presença sustentada
 
 Isso reflete tanto a escolha institucional de uma organização cujo fundador observa a condição do mundo há muito tempo quanto a realidade prática de que as ameaças que a HourGlass existe para enfrentar não fazem pausas operacionais.
 
-A relação entre a cultura institucional de presença sustentada da HourGlass e os ciclos políticos periódicos do Empire — nos quais governos mudam, avaliações de ameaça são revisadas e compromissos militares são renegociados — é uma fonte recorrente de tensão. A HourGlass sobreviveu a mais desses ciclos do que foi moldada por eles. Isso não é consequência acidental de inércia organizacional. Em'manuel Wonderwall vem tomando decisões deliberadas sobre o que a HourGlass deve ser há doze séculos, e uma dessas decisões é garantir que a organização não dependa de quem ocupa momentaneamente as estruturas de governança Imperial para manter sua postura operacional.
+A relação entre a cultura institucional de presença sustentada da HourGlass e os ciclos políticos periódicos do Império — nos quais governos mudam, avaliações de ameaça são revisadas e compromissos militares são renegociados — é uma fonte recorrente de tensão. A HourGlass sobreviveu a mais desses ciclos do que foi moldada por eles. Isso não é consequência acidental de inércia organizacional. Em'manuel Wonderwall vem tomando decisões deliberadas sobre o que a HourGlass deve ser há doze séculos, e uma dessas decisões é garantir que a organização não dependa de quem ocupa momentaneamente as estruturas de governança Imperial para manter sua postura operacional.

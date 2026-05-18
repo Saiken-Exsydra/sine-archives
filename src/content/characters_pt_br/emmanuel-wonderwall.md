@@ -5,7 +5,7 @@ age: "Aproximadamente 1.205 anos (no ano 2200)"
 birth_name: "Al'uxxios Ex'sydra"
 birth_year: "Desconhecido — aproximadamente quarenta anos antes do Rito de Selia"
 birthplace: "Região costeira do norte, pré-Império — assentamento que já não existe sob esse nome"
-affiliation: "SiNE (fundador e principal); Apocachynthion (registrado — classificação Archtype, âncora de Spatial Coherence); Casa Wonderwall (chefe dinástico da linhagem principal); Empire of Synus (Senador hereditário)"
+affiliation: "SiNE (fundador e principal); Apocachynthion (registrado — classificação Archtype, âncora de Spatial Coherence); Casa Wonderwall (chefe dinástico da linhagem principal); Império de Synus (Senador hereditário)"
 house: "Wonderwall (figura fundadora, linhagem principal); nascido Ex'sydra"
 rank: "Archtype"
 registry_status: "Registrado — Archtype, âncora de Spatial Coherence (institucional); licença operacional incondicional"
@@ -18,7 +18,7 @@ eyes: "Âmbar escuro — avaliadores registraram que a cor parece acolhedora, e 
 dress: "Caro nos materiais, discreto no estilo; nada que tente chamar atenção"
 accessory: "A Cadence — uma bengala composta de BrightCrystal e liga ferrosa escura; sempre presente"
 residence: "Pluribus Hill, Kalt'sen — residência principal; múltiplas propriedades secundárias"
-occupation: "Fundador e principal da SiNE; presidente do Conselho Meridiano; Senador hereditário do Empire of Synus"
+occupation: "Fundador e principal da SiNE; presidente do Conselho Meridiano; Senador hereditário do Império de Synus"
 summary: "Doze séculos. Uma empresa. Uma pergunta que ele ainda não respondeu."
 tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "Remainder", "Cadence", "Project Kaleidoscope", "Kalt'sen", "Founder"]
 status: "public"
@@ -535,7 +535,7 @@ O primeiro que preparou sem a morte dela existindo diretamente atrás de cada av
 
 Os registros provisórios do Cloister descrevem um Redactor de Depth e estabilidade extraordinárias, portador de uma Anchor de Light que um praticante sênior da instituição descreveu, em correspondência privada, como:
 
-*“A manifestação natural mais completa da herança estrutural dessa linhagem que já avaliei em qualquer praticante vivo, incluindo o próprio Seat.”*
+*“A manifestação natural mais completa da herança estrutural dessa linhagem que já avaliei em qualquer praticante vivo, incluindo o próprio Assento.”*
 
 O eco do Remainder em Ju'llian não era apenas um traço residual.
 
@@ -597,7 +597,7 @@ Ninguém perguntou por quê.
 
 ## Project Kaleidoscope
 
-*Classificação: Infraestrutura Restrita da S-RD / Autorização Direta do Seat. Este programa não aparece em nenhum registro operacional da Entropy, documento orçamentário ou manifesto oficial de pessoal.*
+*Classificação: Infraestrutura Restrita da S-RD / Autorização Direta do Assento. Este programa não aparece em nenhum registro operacional da Entropy, documento orçamentário ou manifesto oficial de pessoal.*
 
 ### Origem e Mandato
 
@@ -871,7 +871,7 @@ Continua sustentando as duas realidades ao mesmo tempo enquanto espera que dessa
 
 ### Por Que Ele Ainda Não Contatou Ec'lesia
 
-Contato direto com o Seat — a manifestação primária da relação da linhagem com o Remainder, um Archtype de doze séculos carregando aquilo em uma densidade que nenhuma outra pessoa viva sequer se aproxima — causaria em Ec'lesia aproximadamente o mesmo efeito que o Instrument of Light causou em Ju'llian.
+Contato direto com o Assento — a manifestação primária da relação da linhagem com o Remainder, um Archtype de doze séculos carregando aquilo em uma densidade que nenhuma outra pessoa viva sequer se aproxima — causaria em Ec'lesia aproximadamente o mesmo efeito que o Instrument of Light causou em Ju'llian.
 
 A expressão do Remainder nela responderia à proximidade dele da mesma forma que uma estrutura ressonante responde a uma configuração correspondente:
 

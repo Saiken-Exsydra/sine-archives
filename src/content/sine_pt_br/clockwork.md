@@ -78,7 +78,7 @@ Manter esse nível de negabilidade em toda a população de praticantes — ao l
 
 O Meridian Council sabe. Em'manuel sabe. Além disso, o conhecimento é rigidamente controlado e compartimentalizado.
 
-O Empire oficialmente não sabe. Estruturas militares e de inteligência Imperiais encontraram, ao longo de uma longa história operacional, resultados que não conseguiam explicar através das atribuições institucionais disponíveis. Se alguém dentro dessas estruturas concluiu em particular que a SiNE mantém capacidades de Redactory não registradas e escolheu não perseguir as implicações disso, trata-se de julgamento individual, não de registro oficial.
+O Império oficialmente não sabe. Estruturas militares e de inteligência Imperiais encontraram, ao longo de uma longa história operacional, resultados que não conseguiam explicar através das atribuições institucionais disponíveis. Se alguém dentro dessas estruturas concluiu em particular que a SiNE mantém capacidades de Redactory não registradas e escolheu não perseguir as implicações disso, trata-se de julgamento individual, não de registro oficial.
 
 A Igreja não sabe — pelo menos não de forma que possa ser confirmada pelos próprios registros institucionais. Membros individuais do Obsidian Rite nos níveis operacionais mais altos — pessoas que atuam nos conflitos da fronteira norte há tempo suficiente para perceber padrões — podem ter desenvolvido suspeitas. Suspeita não é conhecimento, e o Obsidian Rite não age baseado em suspeitas quando o custo institucional de errar sobre um parceiro de tratado seria significativo.
 

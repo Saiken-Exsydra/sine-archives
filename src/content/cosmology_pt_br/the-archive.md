@@ -30,7 +30,7 @@ Isso não é misticismo. Essa ideia possui implicações diretas sobre como a Re
 
 O Archive não possui bordas. O que existe são diferenças de **densidade estrutural** — o quanto uma configuração está finalizada e o quanto ela resiste internamente a alterações. Algumas configurações são apenas ruído: instáveis, com pouca resistência e alta deriva estrutural. Outras são completamente coerentes: autoestáveis, internamente consistentes e resistentes a perturbações. Algumas chegam ao estado de **hipercoerência**: estruturas tão densas que conseguem exercer pressão sobre configurações adjacentes.
 
-O mundo — Terra, a Twilight Band, o Empire e tudo que compõe a experiência mortal — existe dentro dessa faixa hipercoerente. Ele se sustenta sozinho. Resiste a perturbações. Mas não é invulnerável. Configurações adjacentes podem exercer pressão sobre ele quando possuem densidade suficiente e quando a fronteira local entre este mundo e estruturas próximas se torna fina o bastante.
+O mundo — Terra, a Twilight Band, o Império e tudo que compõe a experiência mortal — existe dentro dessa faixa hipercoerente. Ele se sustenta sozinho. Resiste a perturbações. Mas não é invulnerável. Configurações adjacentes podem exercer pressão sobre ele quando possuem densidade suficiente e quando a fronteira local entre este mundo e estruturas próximas se torna fina o bastante.
 
 Essa é a base cosmológica daquilo que a War of the Threshold existe para administrar.
 

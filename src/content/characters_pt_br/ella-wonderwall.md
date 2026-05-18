@@ -16,7 +16,7 @@ hair: "Preto — natural; mantido pela própria Redactory em absorção quase to
 eyes: "Traços delicados; assumem um tom metálico claro entre rosa e azul durante o uso ativo da Redactory — o que acontece quase o tempo todo"
 dress: "Somente preto — tecidos responsivos à luz desenvolvidos em pesquisas próprias de materiais ao lado do Professor Lionheart; roupas que funcionam tanto como identidade quanto aparato de treinamento"
 residence: "Propriedades principais dos Wonderwall; presença operacional prolongada em Kalt'sen e Hora'veil conforme o trabalho na Company exige"
-occupation: "Redactor operacional da SiNE; candidata interna à sucessão da Seat Wonderwall e da função executiva da SiNE"
+occupation: "Redactor operacional da SiNE; candidata interna à sucessão do Assento Wonderwall e da função executiva da SiNE"
 image: "../../assets/uploads/characters/char-ella-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
 summary: "Anchor de Luz, Abyssal. Um eco do passado, resonando no presente."
