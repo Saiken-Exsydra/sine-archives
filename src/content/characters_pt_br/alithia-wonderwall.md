@@ -1,8 +1,8 @@
 ---
 title: "Al'ithia Rae Wonderwall"
 type: "Personagem"
-age: "88 (em 2200); aparenta ter entre trinta e poucos anos"
-birth_year: "2112"
+age: "89 (em 2200); aparenta ter entre trinta e poucos anos"
+birth_year: "2111"
 birthplace: "Territórios costeiros do norte do ramo Rae, Império de Synus"
 affiliation: "House Wonderwall (linha principal, líder política de facto); Império de Synus (representante no Senado); SiNE (autoridade da Casa, supervisão indireta)"
 house: "Wonderwall (origem no ramo Rae; linha principal por casamento)"
@@ -37,7 +37,7 @@ Al'ithia Rae Wonderwall é uma das poucas pessoas vivas no Império cuja existê
 
 O que ela é, na linguagem mais precisa disponível, é um eu composto estável.
 
-Athena Rae nasceu em 2112 dentro do ramo Rae da família Wonderwall — o mesmo ramo do qual A'licia surgiu antes de a House Wonderwall se tornar uma das grandes potências dinásticas centrais do Império. A'licia morreu séculos antes. O que restou dela não se dissipou por completo. Pela densidade do trabalho de sua Light Anchor, pela força do papel histórico que ocupou e por gerações de veneração Wonderwall direcionadas a ela como origem e modelo, sua continuidade pós-morte acabou se estabilizando em algo que a Casa passou a conhecer em privado como a Primeira Radiance.
+Athena Rae nasceu em 2111 dentro do ramo Rae da família Wonderwall — o mesmo ramo do qual A'licia surgiu antes de a House Wonderwall se tornar uma das grandes potências dinásticas centrais do Império. A'licia morreu séculos antes. O que restou dela não se dissipou por completo. Pela densidade do trabalho de sua Light Anchor, pela força do papel histórico que ocupou e por gerações de veneração Wonderwall direcionadas a ela como origem e modelo, sua continuidade pós-morte acabou se estabilizando em algo que a Casa passou a conhecer em privado como a Primeira Radiance.
 
 Athena cresceu dentro dessa reverência. Para ela, a Primeira Radiance nunca foi uma doutrina abstrata, mas uma presença familiar ao redor da qual oração, memória e identidade da família haviam orbitado por gerações. Aos quinze anos, o contato começou. Vieram sonhos, correções, acessos inexplicáveis a memórias e formas de reconhecimento muito além do que qualquer jovem Redactor deveria possuir. E aquilo nunca parou.
 

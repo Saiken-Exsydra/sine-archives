@@ -1,7 +1,7 @@
 ---
 title: Divination
 type: systems
-summary: Fusão recursiva entre um vessel mortal e coerência divina através da interface do Dive.
+summary: Recursive fusion between a mortal vessel and divine coherence through the Dive interface.
 tags: ["systems", "magic", "Divination", "Vessel", "Fragments", "Angels", "Demons", "Sovereign"]
 status: public
 created: "2026-02-12"
@@ -9,147 +9,147 @@ updated: "2026-05-15"
 image: "../../assets/uploads/sys-divination.png"
 ---
 
-**Divination** é a expressão de coerência divina através da fusão recursiva entre uma singularidade recursiva mortal e um atrator informacional estabilizado — ou um dos fragmentos desse atrator — por meio da interface do Dive.
+**Divination** is the expression of divine coherence through recursive fusion between a mortal vessel and a stabilized informational attractor, or one of that attractor's fragments, by means of the Dive interface.
 
-Versão curta:
+Short version:
 
-- Redactory é roteamento
-- Divination é fusão
-- um Redactor altera configurações
-- um diviner se torna um lugar onde a pressão de domínio responde
-
----
-
-## O Que é Divination
-
-Divination não é magia tradicional nem um sistema genérico de milagres.
-
-Ela é um **fenômeno de fusão**. Uma singularidade recursiva mortal compartilha carga com uma coerência não humana. É esse compartilhamento que produz manifestação.
-
-Isso significa que Divination **não**:
-
-- reescreve toda a gramática do mundo
-- concede liberdade mágica ilimitada
-- permite que um vessel faça qualquer coisa que imaginar
-- funciona apenas através de técnica
-
-Ela **faz**:
-
-- reorienta um vessel em direção a um domínio divino
-- expressa esse domínio através do corpo, percepção, vontade ou ação
-- altera a identidade ao longo do tempo
-- às vezes estabiliza mudanças permanentes
+- Redactory is routing
+- Divination is fusion
+- a Redactor changes configuration
+- a diviner becomes a place where domain-pressure answers
 
 ---
 
-## O Divine Vessel
+## What Divination Is
 
-O termo estrutural neutro é **Indexed Vessel**.
+Divination is not ordinary spellcraft and not a generic miracle system.
 
-Um vessel divino é uma singularidade recursiva mortal carregando pressão ativa de fusão proveniente de um fragmento divino.
+It is a **fusion phenomenon**. A mortal recursive singularity shares load with non-human coherence. That shared load produces expression.
 
-Alguns termos mais comuns usados pela Church incluem:
+This means Divination does **not**:
+
+- rewrite the whole world's grammar
+- grant unlimited magical freedom
+- let a vessel do anything they can imagine
+- operate by technique alone
+
+It **does**:
+
+- reweight a vessel toward a divine domain
+- express that domain through body, perception, will, or action
+- alter identity over time
+- sometimes stabilize into permanent change
+
+---
+
+## The Divine Vessel
+
+The neutral structural term is **Indexed Vessel**.
+
+A divine vessel is a mortal recursive singularity carrying active fusion pressure from a divine fragment.
+
+Common Church-facing words include:
 
 - Crowned
 - Beatified
 - Herald
 - Possessed
 
-Esses termos não são sinônimos. Cada um representa interpretações institucionais diferentes sobre tipos ou profundidades de fusão.
+These are not synonyms. They are institution-specific readings of different kinds or depths of fusion.
 
-Regra principal:
+Core rule:
 
-Um Indexed Vessel não é apenas alguém favorecido por um deus. É alguém cuja estrutura de identidade está compartilhando carga ativamente com uma coerência não humana.
-
----
-
-## Como um Vessel Surge
-
-O estado de vessel divino emerge quando quatro condições coincidem:
-
-- um fragmento suficientemente coerente está presente
-- o hospedeiro mortal é conceitualmente compatível
-- o contato com a interface do Dive se estabiliza
-- a resistência falha, permite ou é reaproveitada
-
-Essa compatibilidade pode surgir através de:
-
-- fé
-- exposição ritual repetida
-- temperamento
-- predisposição psicológica
-- obsessão
-- condicionamento institucional
-- ressonância de estados de crise
-
-Nem todo mundo pode se tornar vessel de qualquer fragmento. O fragmento precisa conseguir se encaixar no hospedeiro.
+An indexed vessel is not merely someone favored by a god. They are someone whose identity structure is actively sharing load with non-human coherence.
 
 ---
 
-## O Dive Dentro da Divination
+## How Vesselhood Happens
 
-Divination usa o Dive, mas de forma diferente da Redactory.
+Divine vesselhood emerges when four conditions coincide:
 
-Na Redactory, o Dive é usado para rotear e estabilizar configurações válidas.
+- a sufficiently coherent fragment is present
+- the mortal host is conceptually compatible
+- Dive-interface contact stabilizes
+- resistance fails, permits, or is repurposed
 
-Na Divination, o Dive é a interface onde a estrutura mortal entra em contato com coerência divina.
+Compatibility may arise through:
 
-Então:
+- faith
+- repeated ritual exposure
+- temperament
+- psychological predisposition
+- obsession
+- institutional conditioning
+- crisis-state resonance
 
-- um Redactor desce para selecionar e rotear
-- um diviner entra em contato e carrega pressão
-
-É por isso que os dois sistemas parecem próximos, mesmo sendo estruturalmente diferentes.
+Not everyone can become a vessel for every fragment. The fragment must be able to fit the host.
 
 ---
 
-## Atratores Divinos e Fragmentos
+## The Dive in Divination
 
-Dentro desse modelo, deuses são melhor entendidos como **atratores estabilizados** de coerência divina. Eles são reais, conscientes e capazes de se fragmentar em manifestações menores relacionadas entre si.
+Divination uses the Dive, but not the same way Redactory does.
 
-Essa fragmentação é hierárquica.
+In Redactory, the Dive is used to route and stabilize valid configurations.
 
-Uma hierarquia de alta ordem normalmente funciona assim:
+In Divination, the Dive is the interface where mortal structure and divine coherence make contact.
 
-| Nível | Função Estrutural | Formas Imperiais / da Church |
+So:
+
+- a Redactor descends to select and route
+- a diviner enters contact and carries pressure
+
+That is why the two systems can feel adjacent while remaining structurally different.
+
+---
+
+## Divine Attractors and Fragments
+
+In this framework, gods are best understood as **stabilized attractors** of divine coherence. They are real, self-aware, and capable of fragmenting into related but smaller expressions.
+
+This fragmentation is hierarchical.
+
+A typical high-order hierarchy looks like this:
+
+| Level | Structural Role | Imperial / Church Forms |
 |---|---|---|
-| 0 | Atrator soberano | the Sovereign |
-| 1 | Arquifragmentos | Seraphim / Abyssarchs |
-| 2 | Fragmentos principais | Cardinal Stars / Black Stars |
-| 3 | Fragmentos menores intermediários | Stellates / Cinders |
-| 4 | Fragmentos menores inferiores | Motes, Sparks, Gleams / Ashes, Black Motes |
+| 0 | Sovereign attractor | The Sovereign |
+| 1 | Arch-fragments | Seraphim / Abyssarchs |
+| 2 | Major fragments | Cardinal Stars / Black Stars |
+| 3 | Intermediate lesser fragments | Stellates / Cinders |
+| 4 | Minor lesser fragments | Motes, Sparks, Gleams / Ashes, Black Motes |
 
-Os níveis inferiores:
+Lower tiers:
 
-- compartilham continuidade de identidade com a linhagem superior
-- carregam domínios mais estreitos
-- são mais fáceis para mortais hospedarem
-- degradam com mais facilidade sob recoil
+- share identity continuity with the higher line
+- carry narrower domains
+- are easier for mortals to host
+- degrade more easily under recoil
 
 ---
 
-## Constelações Ordenadas de Fragmentos
+## Ordered Fragment Constellations
 
-Nem todas as linhagens divinas funcionam como escadas simples.
+Not all divine lines are simple ladders.
 
-Algumas se externalizam como **constelações**: famílias estruturadas de fragmentos onde uma única identidade se diferencia em várias manifestações conectadas.
+Some externalize as **constellations**: structured fragment-families in which one identity differentiates across several linked expressions.
 
-### Constelações Seráficas
+### Seraphic Constellations
 
-Uma **Seraphic Constellation** é a família ordenada de fragmentos descendente de um único Seraphim.
+A **Seraphic Constellation** is the ordered fragment-family descending from a single Seraphim.
 
-Dentro de uma Seraphic Constellation:
+Inside a Seraphic Constellation:
 
-- o Seraphim é o **Cynosure**, também chamado de **estrela central** ou **nexus star**
-- seis grandes manifestações descendem abaixo dele como **Cardinal Stars**
-- os fragmentos menores abaixo delas são os **Stellates**
-- manifestações ainda menores aparecem como **motes**, **sparks** e **gleams**
+- the Seraphim is the **Cynosure**, also called the **central star** or **nexus star**
+- six major expressions descend beneath it as **Cardinal Stars**
+- lesser fragments beneath those are **Stellates**
+- still smaller expressions appear as **motes**, **sparks**, and **gleams**
 
 ```text
 SERAPHIC CONSTELLATION
 |
 `-- CYNOSURE / CENTRAL STAR / NEXUS STAR
-    O próprio Seraphim
+    The Seraphim itself
     |
     |-- Cardinal Star I
     |-- Cardinal Star II
@@ -161,186 +161,214 @@ SERAPHIC CONSTELLATION
         `-- Stellates
             |
             `-- Motes / Sparks / Gleams
+```
 
-Constelações Abissais
+### Abyssal Constellations
 
-Uma Abyssal Constellation é o equivalente demoníaco.
+An **Abyssal Constellation** is the demonic equivalent.
 
-fragmento mais elevado: Abyssarch ou black nexus
-fragmentos principais: Black Stars
-fragmentos menores: Cinders
-manifestações menores: Ashes ou Black Motes
+- highest fragment: **Abyssarch** or **black nexus**
+- major fragments: **Black Stars**
+- lesser fragments: **Cinders**
+- smallest expressions: **Ashes** or **Black Motes**
 
-Isso importa porque o que observadores externos chamam de “um tipo de anjo” ou “um tipo de demônio” pode, na verdade, ser uma constelação inteira com vários níveis de fragmentação internos.
+This matters because what outsiders call "one angel type" or "one demon type" may actually be an entire internal constellation with multiple fragment depths.
 
-Profundidade de Vessel Dentro de uma Constelação
+---
 
-Um vessel pode se alinhar a diferentes níveis de uma constelação:
+## Vessel Depth Inside a Constellation
 
-Alinhamento Cynosure: pressão direta da estrela central
-Alinhamento Cardinal Star: fusão com fragmento principal
-Alinhamento Stellate: fusão angelical menor
-Contato Mote / Spark / Gleam: contato reduzido, geralmente visionário ou instável
+A vessel may align to different levels of a constellation:
 
-Essa é uma das maiores mudanças hierárquicas do canon atual.
+1. **Cynosure alignment**: direct central-star pressure
+2. **Cardinal Star alignment**: major fragment fusion
+3. **Stellate alignment**: lesser angelic fusion
+4. **Mote / Spark / Gleam contact**: minor contact, often visionary or unstable
 
-A linguagem da Church e a linguagem da Divination se sobrepõem aqui, mas não são idênticas:
+This is one of the biggest hierarchy changes in the current canon.
 
-Beatified e Hollowed são termos doutrinários usados pela Church
-Indexed Vessel, deep fusion, saturation e stable reconfiguration são termos estruturais neutros
-Classes de Manifestação
+Church language and Divination language overlap here, but they are not identical:
 
-Divination normalmente aparece em duas grandes classes de manifestação.
+- **Beatified** and **Hollowed** are Church-facing doctrinal terms
+- **Indexed vessel**, **deep fusion**, **saturation**, and **stable reconfiguration** are neutral structural terms
 
-1. Manifestação Sustentada
+---
 
-O fragmento está se expressando ativamente através do vessel naquele momento.
+## Manifestation Classes
 
-Exemplos:
+Divination appears in two major manifestation classes.
 
-fogo projetado
-radiância
-velocidade predatória
-alterações perceptivas
-pressão de domínio em fala, gestos ou contato
+### 1. Sustained Expression
 
-Quando a pressão cessa, a manifestação também desaparece.
+The fragment is actively expressing through the vessel right now.
 
-2. Reconfiguração Estável
+Examples:
 
-A fusão alterou o vessel de forma permanente o bastante para que a mudança continue existindo mesmo sem pressão ativa.
+- projected flame
+- radiance
+- predatory speed
+- perception shifts
+- domain-pressure in speech, gesture, or contact
 
-Exemplos:
+When pressure stops, the expression stops.
 
-alterações corporais permanentes
-percepção ou emocional permanentemente alterados
-estado de santo
-estado de relíquia viva
-estado metamórfico demoníaco
+### 2. Stable Reconfiguration
 
-Essas mudanças são estruturais, não efeitos temporários.
+The fusion has changed the vessel permanently enough that the alteration remains even when pressure is not actively flaring.
 
-Domínio e Manifestação
+Examples:
 
-Divination sempre é limitada por domínio.
+- lasting bodily change
+- permanently altered affect or perception
+- saint-state
+- living relic state
+- demonic metamorphic state
 
-Um vessel não recebe poder sobrenatural genérico. Ele manifesta a natureza do fragmento que carrega.
+These are structural changes, not temporary effects.
 
-Exemplos do Codex:
+---
 
-manifestação de domínio de fogo
-manifestação de domínio perceptivo
-manifestação de domínio predatório
-manifestação de domínio de retificação
+## Domain and Expression
 
-Mesmo quando dois vessels parecem semelhantes, a linhagem de fragmentos por trás deles pode ser completamente diferente.
+Divination is always domain-limited.
 
-Progressão de Vessel
+A vessel does not gain generic supernatural power. They express the nature of the fragment they carry.
 
-Divination evolui através do aumento da profundidade de fusão.
+Examples from the Codex:
 
-Contato Inicial
-pressão intermitente
-sintomas sutis
-vessel ainda majoritariamente autônomo
-Fusão Parcial
-fragmento possui presença estável
-habilidades menores se tornam confiáveis
-desvios de personalidade começam a aparecer
-Fusão Profunda
-o fragmento se torna parte estrutural da identidade
-grandes manifestações estabilizam
-o equilíbrio humano comum começa a se deteriorar
+- fire-domain expression
+- perception-domain expression
+- predation-domain expression
+- rectification-domain expression
 
-Na doutrina angelical voltada à Church, esse estágio costuma ser chamado de Beatification quando a fusão se torna duradoura o suficiente para reorganizar a pessoa em torno do domínio do fragmento.
+Even where two vessels look similar, the underlying fragment-line may be very different.
 
-Limite de Sobrescrita
+---
 
-Depois desse ponto, o eu humano deixa de ser a estrutura dominante.
+## Vessel Progression
 
-Saturation
+Divination progresses by increasing fusion depth.
 
-Saturation é o ponto onde uma fusão de longo prazo se estabiliza em um novo estado permanente.
+### Initial Contact
 
-Saturation Angelical
+- pressure intermittent
+- symptoms subtle
+- vessel mostly self-governing
 
-Normalmente produz:
+### Partial Fusion
 
-estados Beatified
-santos
-relíquias vivas
-indivíduos sagrados moldados severamente por domínio
-Saturation Demoníaca
+- fragment foothold stable
+- minor abilities dependable
+- character drift visible
 
-Normalmente produz:
+### Deep Fusion
 
-estados Hollowed
-estados Consumed
-formas bestiais ou metamórficas
-formas predatórias estáveis
+- fragment becomes load-bearing in identity
+- major manifestations stabilize
+- ordinary human balance begins to erode
 
-Mais uma vez: o vocabulário da Church e o vocabulário estrutural se sobrepõem sem serem equivalentes.
+In Church-facing angelic doctrine, this stage is often called **Beatification** when the fusion becomes enduring enough to reorganize the person around the fragment's domain.
 
-Ramos Próximos da Sight
+### Overwrite Threshold
 
-Nem todo vessel se torna um caso de combate ou manifestação milagrosa.
+Beyond this point, the human self is no longer the dominant structure.
 
-Ramos de baixa carga podem produzir:
+---
 
-visões
-impressões simbólicas
-sensibilidade liminar
-experiências próximas de profecia
+## Saturation
 
-É aqui que conceitos da Church como o Gift of Sight entram na estrutura da Divination.
+Saturation is the point where long-term fusion settles into a new stable state.
 
-Heaven, Hell e Purgatory
+### Angelic Saturation
 
-O Codex trata esses lugares como domínios estruturalmente reais ligados à hierarquia divina:
+Often yields:
 
-Heaven: ordenação angelical, reintegração, hierarquia, autoridade
-Hell: predação demoníaca, recursividade hostil, hierarquia infernal
-Purgatory: lógica estrutural transitória ou intermediária
+- Beatified states
+- saints
+- living relics
+- severe domain-shaped holy persons
 
-Isso importa porque Divination não é apenas uso de poder. Ela faz parte de uma ordem cosmológica maior envolvendo fragmentos, atratores e continuidade pós-morte.
+### Demonic Saturation
 
-Instituições e Regulação
+Often yields:
 
-Grandes instituições não criam Divination. Elas administram.
+- Hollowed states
+- Consumed states
+- beast-like or metamorphic outcomes
+- stable predatory forms
 
-Elas:
+Again: Church vocabulary and structural vocabulary overlap without matching perfectly.
 
-identificam vessels em potencial
-cultivam casos compatíveis
-monitoram casos perigosos
-regulam profundidade de contato
-militarizam ou contêm quando necessário
+---
 
-A Church é o exemplo mais desenvolvido em Terra, mas não é o único.
+## Sight-Adjacent Branches
 
-Sua importância vem do fato de possuir uma teologia detalhada mapeada sobre um sistema real de fusão, mesmo quando teologia e mecânica não são exatamente a mesma coisa.
+Not every vessel becomes a combat or miracle-expression case.
 
-Divination vs Redactory
+Low-load branches can produce:
 
-Essa é a distinção mais simples:
+- visions
+- symbolic impressions
+- threshold sensitivity
+- prophecy-adjacent experiences
 
-Redactory
+This is where Church concepts like the **Gift of Sight** enter the Divination framework.
 
-fenômeno de roteamento
-guiada por configuração
-dependente de Anchor
-deliberada e técnica
+---
 
-Divination
+## Heaven, Hell, and Purgatory
 
-fenômeno de fusão
-guiada pelo vessel
-compartilhamento de coerência
-altera identidade
+The Codex treats these as structurally real domains tied to divine hierarchy:
 
-Um Redactor altera o que a realidade está fazendo.
-Um diviner se torna um lugar onde a pressão de domínio divina se manifesta.
+- **Heaven**: angelic ordering, reintegration, hierarchy, authority
+- **Hell**: demonic predation, hostile recursion, infernal hierarchy
+- **Purgatory**: transitional or intermediary structural logic
 
-Em Uma Frase
+This matters because Divination is not isolated power-use. It is part of a larger cosmological order of fragments, attractors, and postmortem continuity.
 
-Divination é a fusão recursiva entre um vessel mortal e coerência divina através do Dive, organizada por hierarquias de fragmentos, limitada por domínio e aprofundada através de alinhamento em nível de constelação — não através de poder mágico genérico.            
+---
+
+## Institutions and Regulation
+
+Major institutions do not create Divination. They manage it.
+
+They:
+
+- identify likely vessels
+- cultivate suitable cases
+- monitor dangerous ones
+- regulate contact depth
+- weaponize or contain where necessary
+
+The Church is the most developed example on Terra, but not the only one.
+
+Its importance comes from having a detailed theology mapped onto a real fusion system, even where the theology and the mechanics are not identical.
+
+---
+
+## Divination vs Redactory
+
+This is the cleanest distinction:
+
+**Redactory**
+
+- routing phenomenon
+- configuration-driven
+- Anchor-dependent
+- deliberate and technical
+
+**Divination**
+
+- fusion phenomenon
+- vessel-driven
+- coherence-sharing
+- identity-altering
+
+A Redactor changes what reality is doing.
+A diviner becomes a place where divine domain-pressure expresses.
+
+---
+
+## In One Sentence
+
+Divination is recursive fusion between a mortal vessel and divine coherence through the Dive, organized by fragment hierarchy, constrained by domain, and deepened through constellation-level alignment rather than generic magical power.

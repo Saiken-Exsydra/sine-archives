@@ -3,10 +3,10 @@ title: "Vaey Viktor"
 type: "Character"
 age: "66 (na data do registro, 2200)"
 birth_year: "2134"
-birthplace: "Distrito fluvial menor ao nordeste de Kalt'sen, Região Central, Empire of Synus"
+birthplace: "Distrito fluvial menor ao nordeste de Kalt'sen, Região Central, Império de Synus"
 affiliation: "Igreja do Soberano; Obsidian Rite (assessor-sacerdote aposentado)"
-rank: "Hallowed vessel confirmado - Meruel, Measurement of Potential / Completion"
-registry_status: "Sacerdote aposentado em boa posição pública; avaliado privadamente como um Hallowed de domínio severo e suspeito de assassinatos em série sob proteção institucional"
+rank: "Beatificado confirmado - vessel de Meruel, Measurement of Potential / Completion"
+registry_status: "Sacerdote aposentado em boa posição pública; avaliado privadamente como um Beatificado de domínio severo e suspeito de assassinatos em série sob proteção institucional"
 designation: "O Santo Vazio"
 build: "Alto, magro e severo; a idade o curvou levemente para frente sem fazê-lo parecer fraco"
 hair: "Carmesim atravessado por fios brancos, cuidadosamente mantido"
@@ -15,7 +15,7 @@ dress: "Vestuário clerical preto mantido com precisão obsessiva; corrente estr
 residence: "Alojamento eclesiástico privado em Kalt'sen; viagens irregulares pela Região Central e distritos selecionados do norte"
 occupation: "Ex-assessor do Obsidian Rite e consultor informal em casos difíceis de manifestação"
 summary: "Aquilo que persegue... Aquilo que consome."
-tags: ["Igreja", "Obsidian Rite", "Hallowed", "Meruel", "Kalt'sen", "Soberano", "Avaliação", "Potencial"]
+tags: ["Igreja", "Obsidian Rite", "Beatificado", "Meruel", "Kalt'sen", "Soberano", "Avaliação", "Potencial"]
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
@@ -31,7 +31,7 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 
 ## Identidade
 
-Vaey Viktor é um sacerdote aposentado do Obsidian Rite, ex-avaliador de candidatos à santidade e um Hallowed vessel confirmado de Meruel, a manifestação angelical de Measurement of Potential and Completion. Durante quarenta anos, a Igreja o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a pressão dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
+Vaey Viktor é um sacerdote aposentado do Obsidian Rite, ex-avaliador de candidatos à santidade e um Beatificado confirmado — vessel de Meruel, a manifestação angelical de Measurement of Potential and Completion. Durante quarenta anos, a Igreja o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a pressão dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
 
 Ele era extraordinariamente bom nesse trabalho. E esse fato é justamente o começo do problema.
 
@@ -45,7 +45,7 @@ Hoje ele ocupa a categoria impossível que a Igreja mais teme nomear claramente:
 
 Meruel pertence a uma constelação Seráfica ligada à medida, não à misericórdia. Seu domínio não envolve justiça cívica, punição ou absolvição. Ele mede a distância entre aquilo que uma pessoa é e aquilo que ela poderia coerentemente se tornar através de coragem, disciplina, oportunidade, treinamento e alinhamento com sua arquitetura interna mais profunda.
 
-O caso de Viktor é uma integração Hallowed genuína, não uma possessão demoníaca e não um dos casos Seráficos de linhagem direta do Obsidian Rite. O que existe nele é um fragmento angelical real, fundido de forma permanente o bastante para reordenar caráter, percepção e vocação sem retirar da pessoa a responsabilidade moral por aquilo que escolhe fazer com essa mudança.
+O caso de Viktor é uma integração Beatificada genuína, não uma possessão demoníaca e não um dos casos Seráficos de linhagem direta do Obsidian Rite. O que existe nele é um fragmento angelical real, fundido de forma permanente o bastante para reordenar caráter, percepção e vocação sem retirar da pessoa a responsabilidade moral por aquilo que escolhe fazer com essa mudança.
 
 Por meio de Meruel, Viktor enxerga aquilo que um dia chamou de **silhueta completa**: não o futuro, nem destino, mas uma versão possível e coerente do indivíduo existindo em relação à pessoa viva diante dele. No trabalho de avaliação isso o tornava indispensável. Ele conseguia distinguir um vessel genuíno, mas assustado, de um impostor vazio. Conseguia identificar quando a instabilidade atual de alguém escondia uma capacidade espiritual gigantesca. Conseguia perceber se uma vida havia sido danificada, atrasada ou apenas mal compreendida pelas pessoas ao redor.
 
@@ -75,7 +75,7 @@ Durante quatro décadas percorreu as consequências de pequenos milagres, Crowni
 
 Esses quase-santos o moldaram mais profundamente do que os bem-sucedidos. Com o tempo, seus relatórios endureceram. Fracasso deixou de aparecer em sua linguagem como instabilidade, medo ou dano recuperável e começou a surgir como traição. A Igreja tolerou essa mudança porque ela vinha acompanhada de precisão profissional. Ele continuava acertando. Quando seus superiores finalmente perceberam que precisão e deformação espiritual estavam avançando juntas, Meruel já havia encontrado um vessel ideal na mente construída por Viktor ao longo de quarenta anos de julgamento comparativo.
 
-Sua aposentadoria em 2196 foi oficialmente voluntária. Na prática, foi um acordo. Parte de seus superiores estava alarmada com o tom punitivo de suas recomendações; outra parte temia as consequências políticas e teológicas de romper abertamente com um vessel angelical confirmado que havia descoberto santos hoje venerados pela própria instituição. A aposentadoria removeu sua autoridade formal sem obrigar a Igreja a pronunciar a frase que mais queria evitar: que um Hallowed genuíno pode se tornar uma atrocidade sem deixar de ser angelical.
+Sua aposentadoria em 2196 foi oficialmente voluntária. Na prática, foi um acordo. Parte de seus superiores estava alarmada com o tom punitivo de suas recomendações; outra parte temia as consequências políticas e teológicas de romper abertamente com um vessel angelical confirmado que havia descoberto santos hoje venerados pela própria instituição. A aposentadoria removeu sua autoridade formal sem obrigar a Igreja a pronunciar a frase que mais queria evitar: que um Beatificado genuíno pode se tornar uma atrocidade sem deixar de ser angelical.
 
 ---
 
@@ -109,9 +109,9 @@ Ele entrega morte nos lugares onde misericórdia exigiria contenção.
 
 ## Estado Atual
 
-Publicamente, Padre Vaey Viktor continua sendo um assessor-sacerdote aposentado honrado e em boa posição institucional. Descobriu santos. Serviu o Rite por quarenta anos. Ainda mantém o respeito de membros do clero e Hallowed que acreditam ter sido salvos por ele de classificações incorretas ou do caos de manifestações descontroladas. Continua podendo ser chamado para consultas em casos difíceis. Ainda viaja usando o próprio nome.
+Publicamente, Padre Vaey Viktor continua sendo um assessor-sacerdote aposentado honrado e em boa posição institucional. Descobriu santos. Serviu o Rite por quarenta anos. Ainda mantém o respeito de membros do clero e Beatificados que acreditam ter sido salvos por ele de classificações incorretas ou do caos de manifestações descontroladas. Continua podendo ser chamado para consultas em casos difíceis. Ainda viaja usando o próprio nome.
 
-Privadamente, a Igreja sabe muito mais do que admite. Registros restritos o descrevem como um Hallowed de domínio severo passando por reponderação avançada e o conectam a múltiplas mortes envolvendo candidatos talentosos, fracassados ou afastados. Mesmo assim, nenhum departamento escolheu agir de maneira decisiva. Sua proteção surgiu da vergonha institucional, covardia teológica, cautela política, gratidão pelo trabalho passado e da conveniência de tratar vítimas comprometidas como administrativamente descartáveis.
+Privadamente, a Igreja sabe muito mais do que admite. Registros restritos o descrevem como um Beatificado de domínio severo passando por reponderação avançada e o conectam a múltiplas mortes envolvendo candidatos talentosos, fracassados ou afastados. Mesmo assim, nenhum departamento escolheu agir de maneira decisiva. Sua proteção surgiu da vergonha institucional, covardia teológica, cautela política, gratidão pelo trabalho passado e da conveniência de tratar vítimas comprometidas como administrativamente descartáveis.
 
 Por isso, ele não é apenas um assassino escondido da Igreja. Ele também é um teste que a Igreja continua falhando miseravelmente.
 

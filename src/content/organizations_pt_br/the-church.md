@@ -143,7 +143,7 @@ A Igreja reconhece casos documentados de presença angelical se manifestando atr
 
 A Igreja regula o Crowning de forma extremamente rígida. Qualquer pessoa que alegue ter passado por um Crowning fora de um rito supervisionado pela instituição é tratada com grande preocupação pastoral, independentemente de a experiência parecer positiva. A base doutrinária dessa cautela é simples: um angel autorizado pelo Sovereign a agir através de um vessel não precisa ser invocado. Ele simplesmente chega. Se algo respondeu a um chamado, a recomendação da Igreja é perguntar — com muito cuidado — o que exatamente respondeu.
 
-Os **Hallowed** são indivíduos cuja personalidade foi significativamente e permanentemente reorientada pela presença angelical em direção ao domínio expresso do Sovereign. A Igreja ensina que os Hallowed não foram diminuídos. Eles foram ampliados — carregando mais da vontade manifesta do Sovereign e menos das pequenas limitações individuais de si mesmos.
+Os **Beatificados** são indivíduos cuja personalidade foi significativamente e permanentemente reorientada pela presença angelical em direção ao domínio expresso do Sovereign. A Igreja ensina que os Beatificados não foram diminuídos. Eles foram ampliados — carregando mais da vontade manifesta do Sovereign e menos das pequenas limitações individuais de si mesmos.
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Al'ithia Rae Wonderwall"
 type: "Character"
-age: "88 (as of 2200); appears early to mid-thirties"
-birth_year: "2112"
+age: "89 (as of 2200); appears early to mid-thirties"
+birth_year: "2111"
 birthplace: "Northern coastal Rae branch holdings, Empire of Synus"
 affiliation: "House Wonderwall (primary line, de facto political head); Empire of Synus (Senate representative); SiNE (House authority, indirect oversight)"
 house: "Wonderwall (Rae branch origin; primary line by marriage)"
@@ -37,7 +37,7 @@ Al'ithia Rae Wonderwall is one of the few living people in the Empire whose exis
 
 What she is, in the most accurate available language, is a stable composite self.
 
-Athena Rae was born in 2112 into the Rae branch of the Wonderwall family - the same branch from which A'licia came in the era before House Wonderwall became one of the Empire's central dynastic powers. A'licia died centuries earlier. What remained of her did not dissipate cleanly. Through the density of her Light Anchor work, the force of her historical role, and generations of Wonderwall reverence directed toward her as origin and model, her posthumous continuity stabilized into something the House came to know privately as the First Radiance.
+Athena Rae was born in 2111 into the Rae branch of the Wonderwall family - the same branch from which A'licia came in the era before House Wonderwall became one of the Empire's central dynastic powers. A'licia died centuries earlier. What remained of her did not dissipate cleanly. Through the density of her Light Anchor work, the force of her historical role, and generations of Wonderwall reverence directed toward her as origin and model, her posthumous continuity stabilized into something the House came to know privately as the First Radiance.
 
 Athena grew up inside that reverence. For her, the First Radiance was not abstract doctrine but a household fact - an ancestral presence toward which prayer, memory, and family identity had all been oriented for generations. At fifteen, contact began. It started as dreams, corrections, inexplicable memory access, and forms of recognition that exceeded anything a young Redactor should have possessed. It did not stop.
 

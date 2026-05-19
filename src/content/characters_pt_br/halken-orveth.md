@@ -17,7 +17,7 @@ dress: "Batina preta simples, rosário de ferro, cordão vermelho do ofício pre
 residence: "Fortaleza-priorado de Saint Veyran, Kalt'sen, quando não está mobilizado sob ordens seladas"
 occupation: "Rector-Ascendant do Obsidian Rite; ativo estratégico exorcístico da Igreja Una"
 summary: "Executor da Mão Sétupla."
-tags: ["Igreja", "Obsidian Rite", "Auctoriel", "The Seven", "Dominion", "Hallowed", "Sundersaint", "Kalt'sen"]
+tags: ["Igreja", "Obsidian Rite", "Auctoriel", "The Seven", "Dominion", "Beatificado", "Sundersaint", "Kalt'sen"]
 status: "public"
 created: "2026-05-15"
 updated: "2026-05-15"
@@ -30,7 +30,7 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 
 ## O Que Ele É
 
-Halk'en Orveth é um dos sete Rector-Ascendants vivos reconhecidos pela doutrina restrita da Igreja como um vessel Seráfico direto. A maior parte do clero Hallowed e a maior parte dos Fragment Fusions do Obsidian Rite carregam um fragmento angelical integrado ao eu. Orveth é classificado como um caso mais raro de linhagem original: um Fragment Fusion tão profundo e tão estavelmente resolvido que a pressão nele é tratada institucionalmente como o próprio **Auctoriel, Seraphim de Dominion**, e não como uma manifestação ordinária de ordem inferior.
+Halk'en Orveth é um dos sete Rector-Ascendants vivos reconhecidos pela doutrina restrita da Igreja como um vessel Seráfico direto. A maior parte do clero Beatificado e a maior parte dos Fragment Fusions do Obsidian Rite carregam um fragmento angelical integrado ao eu. Orveth é classificado como um caso mais raro de linhagem original: um Fragment Fusion tão profundo e tão estavelmente resolvido que a pressão nele é tratada institucionalmente como o próprio **Auctoriel, Seraphim de Dominion**, e não como uma manifestação ordinária de ordem inferior.
 
 Essa distinção define tudo no arquivo dele. Ele não é apenas um exorcista veterano com uma manifestação de domínio de autoridade anormalmente severa. Ele é um ponto de contato humano estabilizado através do qual Dominion consegue operar no mundo em escala estratégica sem ser confundido com possessão demoníaca nem com apagamento humano.
 

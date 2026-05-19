@@ -156,7 +156,7 @@ Translator decision rule:
 | Purgatory | Purgatorio | masculine singular | keep unchanged |
 | the Passageway | passagem liminar | feminine singular | keep unchanged |
 | the Crowning | coroacao | feminine singular | keep unchanged |
-| Hallowed | santificado/reorientado | variable by person | keep unchanged |
+| Beatified | beatificado | variable by person | keep unchanged |
 | the Whispering | sussurro/sussurrar inicial | masculine singular | keep unchanged |
 | the Tenant | inquilino/presenca residente | masculine singular | keep unchanged |
 | the Wearing | desgaste/sobrevestir | masculine singular | keep unchanged |
@@ -264,7 +264,7 @@ Translator decision rule:
 Use person-based agreement in Portuguese:
 - masculine referent: `o`, `um`, `ele`, `nascido`, `alinhado`, etc.
 - feminine referent: `a`, `uma`, `ela`, `nascida`, `alinhada`, etc.
-- titles like `Redactor`, `Archtype`, `Inkless`, `Hallowed`, `Warden`, `Herald` should agree with the character, not with English morphology.
+- titles like `Redactor`, `Archtype`, `Inkless`, `Beatified`, `Warden`, `Herald` should agree with the character, not with English morphology.
 
 | Canon term | PT-BR sense | Gender/article | Policy |
 |---|---|---|---|
