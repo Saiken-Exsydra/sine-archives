@@ -11,7 +11,7 @@ summary: "A divisão que oficialmente não existe para lidar com as coisas que o
 tags: ["StaSis", "SiNE", "S-AE", "Organization", "SOE", "Dark Ends", "Stase", "Anomalous", "Classification", "Deniability"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-05-20"
 image: "../../assets/uploads/sine-stasis-logo.png"
 ---
 
@@ -60,7 +60,7 @@ A relação operacional mais próxima da StaSis é com a formação Victorian Ri
 
 Ao longo de gerações operando em paralelo, o arquivo norte do Victorian Rite e o catálogo SOE da StaSis se transformaram em recursos complementares, e não redundantes. O Rite possui registros mais ricos sobre como entidades específicas respondem a intervenções específicas do Obsidian Rite. A StaSis possui análises mais amplas de padrões e classificações cruzadas entre incidentes — algo que o modelo de registro operacional do Rite não foi projetado para produzir.
 
-As duas organizações compartilham dados de maneira funcionalmente cooperativa, mas sem formalização institucional. Não existe nenhum acordo oficial de compartilhamento de dados reconhecido pelas divisões jurídicas das organizações-mãe. O compartilhamento acontece porque os praticantes no nível operacional — Wardens seniores do Victorian Rite e analistas de campo da StaSis destacados para a fronteira — consideram isso necessário para o trabalho e desenvolveram mecanismos informais para fazer funcionar.
+As duas organizações compartilham dados de maneira funcionalmente cooperativa, mas sem formalização institucional. Não existe nenhum acordo oficial de compartilhamento de dados reconhecido pelas divisões jurídicas das organizações-mãe. O compartilhamento acontece porque os praticantes no nível operacional — Votaries-Principal do Victorian Rite e analistas de campo da StaSis destacados para a fronteira — consideram isso necessário para o trabalho e desenvolveram mecanismos informais para fazer funcionar.
 
 ---
 

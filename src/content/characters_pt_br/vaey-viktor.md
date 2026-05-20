@@ -18,7 +18,7 @@ summary: "Aquilo que persegue... Aquilo que consome."
 tags: ["Igreja", "Obsidian Rite", "Beatificado", "Meruel", "Kalt'sen", "Soberano", "Avaliação", "Potencial"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-14"
+updated: "2026-05-20"
 image: "../../assets/uploads/char-vaey-viktor.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
@@ -35,7 +35,7 @@ Vaey Viktor é um sacerdote aposentado do Obsidian Rite, ex-avaliador de candida
 
 Ele era extraordinariamente bom nesse trabalho. E esse fato é justamente o começo do problema.
 
-Viktor não ascendeu dentro do Rite como um Warden de combate ou como um daqueles membros heroicos do clero que inspiram histórias. O dom dele era discernimento: a capacidade rara e fria de entender que tipo de pressão havia entrado na vida de alguém e no que aquela vida poderia se transformar se a pressão fosse conduzida corretamente. A Igreja confiava nele porque ele acertava vezes demais para ser ignorado. E continuou confiando tempo suficiente para que o próprio trabalho começasse a deformá-lo.
+Viktor não ascendeu dentro do Rite como um Votary de linha de frente ou como um daqueles membros heroicos do clero que inspiram histórias. O dom dele era discernimento: a capacidade rara e fria de entender que tipo de pressão havia entrado na vida de alguém e no que aquela vida poderia se transformar se a pressão fosse conduzida corretamente. A Igreja confiava nele porque ele acertava vezes demais para ser ignorado. E continuou confiando tempo suficiente para que o próprio trabalho começasse a deformá-lo.
 
 Hoje ele ocupa a categoria impossível que a Igreja mais teme nomear claramente: um vessel angelical genuíno cujo fragmento é real, cujo histórico de serviço contém bondade verdadeira e cujos atos atuais são assassinato.
 

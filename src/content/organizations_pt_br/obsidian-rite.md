@@ -1,85 +1,213 @@
 ---
 title: "The Obsidian Rite"
 type: "Organização"
-designation: "Braço Operacional de Campo da Igreja — divisão da Diocese"
-affiliation: "A Igreja — relação operacional por tratado com o Empire of Synus e HourGlass"
-headquarters: "Saint Her'chell Cathedral, Kalt'sen — comando operacional distribuído regionalmente"
-founded: "Pré-imperial — formalizado como ordem distinta no início do período imperial"
-jurisdiction: "Twilight Band e fronteira norte — autoridade operacional em Desolation Events; autoridade por tratado no teatro fronteiriço"
+designation: "Braço operacional de campo da Igreja - divisão da Diocese"
+affiliation: "A Igreja - relação operacional por tratado com o Empire of Synus e HourGlass"
+headquarters: "Saint Her'chell Cathedral, Kalt'sen - comando operacional distribuído regionalmente"
+founded: "Carta de campo pós-Sundering construída sobre tradições clericais anteriores de vesselhood"
+jurisdiction: "Twilight Band e fronteira norte - autoridade operacional em Desolation Events; autoridade por tratado no teatro fronteiriço"
 status_label: "Ativo"
-summary: "O braço de campo da Igreja. Onde a teologia termina e o trabalho começa."
-tags: ["Obsidian Rite", "Church", "Organization", "Possession", "Exorcism", "Fragment Fusion", "Victorian Rite", "Cold Fleet", "Northern Front", "Darkmargin"]
+summary: "A ordem regulada de clérigos Beatificados da Igreja para possessão, expulsão e engajamento divino de alto risco."
+tags: ["Obsidian Rite", "Church", "Organization", "Possession", "Exorcism", "Beatified", "Victorian Rite", "Cold Fleet", "Northern Front", "Darkmargin"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-05-20"
 image: "../../assets/uploads/org-obsidian-rite.png"
 ---
 
-> *"Um Senior Warden do Obsidian Rite é teólogo, médico, soldado... e outra coisa. Essa outra coisa é a parte que você precisa quando as três primeiras já não bastam."*
-> — Oficial militar não identificado, registro de debriefing, fronteira norte
+> *"O Rite é necessário. O Rite possui mais poder operacional direto do que qualquer outra formação da Igreja. A Igreja o governa com cuidado porque entende o que acontece quando poder desse nível opera sem governo."*
 
 ---
 
 ## O que é o Obsidian Rite
 
-O Obsidian Rite é o braço operacional da Igreja — o corpo clerical cujo treinamento vai além do ministério paroquial e da formação teológica comum, avançando para identificação, contenção e expulsão de possessões demoníacas em todos os estágios de progressão.
+O Obsidian Rite é o braço operacional da Igreja para identificação, contenção e expulsão de manifestações demoníacas em toda a Twilight Band.
 
-Eles não são apenas exorcistas. Essa categoria é muito mais complexa do que a palavra normalmente sugere. Um membro plenamente treinado e operacional do Obsidian Rite está preparado para lidar com as exigências doutrinárias, físicas e metafísicas do confronto contra presenças possessivas em toda a taxonomia de possessão reconhecida pela Igreja — desde os estágios iniciais, ainda tratáveis, até manifestações onde quase nada da personalidade original do vessel permanece intacto.
+O ponto mais importante do cânone revisado é simples:
 
-Nos níveis operacionais mais altos, eles também funcionam como uma força militar no sentido mais prático possível da expressão. A fronteira norte transformou o Rite em uma organização moldada para ambientes de conflito contínuo, e a instituição se adaptou a isso ao longo de gerações.
+O Rite não é apenas clero com treinamento melhor.
 
----
+Seus membros são **vessels Beatificados** carregando fusão angelical sustentada sob regulação da Igreja. É isso que dá peso real ao trabalho do Rite para além de liturgia correta, instrumentos selados ou formação sacerdotal comum.
 
-## Estrutura de Ranks
+O Rite é, ao mesmo tempo:
 
-**Initiates** completam tanto a formação sacerdotal padrão quanto o currículo expandido de treinamento do Obsidian Rite. O programa cobre em detalhes a taxonomia de possessão da Igreja, os ritos formais de identificação e expulsão, o **Naming** — o ato ritual de se dirigir a uma presença possessiva usando seu domínio verdadeiro, algo que a Igreja ensina causar desestabilização real em manifestações de nível inferior — além de medicina de campo e suporte psicológico, funções que todo membro do Rite aprende independentemente da especialização.
-
-**Wardens** são operadores de campo — plenamente qualificados, mobilizáveis e autorizados a liderar operações padrão. A formação operacional comum do Rite consiste em uma unidade de três pessoas: um expulsor principal, um padre-confessor responsável pela preparação espiritual e recuperação do vessel, e um **Ecclesiastic Surgeon**, responsável pela avaliação médica e pela decisão extremamente difícil de determinar se a expulsão ainda representa uma tentativa de resgate em determinado estágio da possessão.
-
-**Senior Wardens** possuem autorização ampliada e experiência de campo suficiente para coordenar operações complexas e atuar como coordenadores regionais de mobilização do Rite. Eles têm acesso às camadas mais detalhadas do arquivo de possessão da Igreja e podem autorizar respostas escaladas que Wardens comuns não podem.
-
-**Rector-Ascendant** é o rank operacional mais alto — reservado para indivíduos cujo histórico de campo e posição teológica permitem comandar operações completas de forma independente, inclusive em teatros fronteiriços. Existem poucos Rector-Ascendants em qualquer período. Os requisitos de qualificação foram feitos exatamente para manter isso assim.
+- uma ordem clerical
+- um sistema de governança de vessels
+- uma força exorcística de campo
+- uma formação pastoral construída ao redor do risco de erosão de identidade
 
 ---
 
-## A Unidade Padrão
+## Rank não é Contact-Depth
 
-O Obsidian Rite atua em unidades de três porque as três funções necessárias — expulsão, suporte pastoral e julgamento médico — são diferentes o bastante para que nenhum único operador seja obrigado a dominar todas simultaneamente em nível operacional.
+O Codex revisado separa duas escadas que resumos antigos tratavam como se fossem uma só.
 
-O **expulsor principal** conduz o confronto ritual contra a presença possessiva. O **padre-confessor** administra o estado interno do vessel durante todo o processo — desde a preparação espiritual antes do confronto até o suporte contínuo durante o ritual e o trabalho de recuperação iniciado imediatamente depois. Já o **Ecclesiastic Surgeon** mantém avaliação médica constante e é treinado especificamente para tomar, em tempo real e sob condições operacionais, a decisão sobre se o vessel ainda consegue sobreviver à expulsão ou se a possessão já avançou para um estágio em que tentar salvá-lo acabaria matando a própria pessoa.
+**Rank** é autoridade institucional:
 
-O papel do Ecclesiastic Surgeon exige o tipo mais difícil de julgamento possível. A Igreja ensina que uma pessoa nunca é apenas o próprio corpo — mas o corpo ainda é a única coisa visível, e decidir se ele consegue sobreviver ao que a expulsão exige se torna uma decisão médica em condições onde treinamento médico convencional não é suficiente.
+- **Postulant**: candidato recém-investido em formação
+- **Votary**: expulsor principal operacional padrão
+- **Votary-Principal**: Votary sênior com deveres de liderança e formação
+- **Prelate**: ofício de comando regional ou de formação abaixo de Rector-Ascendant
+- **Rector-Ascendant**: ofício regular de campo mais alto
+
+**Contact-depth** é o tipo de pressão angelical que o vessel carrega:
+
+- contato **Stellate** normalmente produz um **Votary**
+- contato **Cardinal Star** é reconhecido como **Lucent**
+- contato **Cynosure** é reconhecido como **Answered**
+
+Essa distinção importa. Lucent não é automaticamente comandante. Prelate não é automaticamente Lucent. Rector-Ascendant é um ofício. **Answered** é uma categoria teológica restrita, não uma promoção comum.
 
 ---
 
-## Fragment Fusions
+## A Escada Seráfica
 
-Dentro do Obsidian Rite existe um pequeno grupo de indivíduos que ocupa uma posição separada da estrutura normal de ranks: os **Fragment Fusions** — pessoas em quem o fragmento de uma presença divina se integrou a um nível que representa transformação, e não possessão.
+O Rite agora explica sua taxonomia divina por meio de **Seraphic Constellations**.
 
-A taxonomia da Igreja para os estágios da possessão — Whispering, Tenant, Wearing, Hollowed e Consumed — descreve uma progressão onde a presença possessiva domina gradualmente o vessel. Fragment Fusion existe fora dessa classificação. A presença integrada se fundiu de uma maneira que produz aprimoramento em vez de erosão, colaboração em vez de substituição. A identidade do vessel permanece intacta e, em muitos casos, até fortalecida. O fragmento integrado amplia as capacidades do operador em vez de consumir sua autonomia.
+```text
+Cynosure
+`-- o próprio Seraphim
+    `-- designação mortal: Answered
 
-Essa condição é extremamente rara. O entendimento da Igreja sobre por que algumas interações entre vessel e presença resultam em Fragment Fusions em vez da progressão normal da possessão está documentado nos arquivos restritos dos Keepers of Before, não no currículo geral de treinamento do Rite. O que o Rite sabe operacionalmente é que Fragment Fusions estão entre seus operadores mais capazes, que suas habilidades ultrapassam muito o que o treinamento padrão do Rite consegue produzir e que a presença integrada nunca interferiu no julgamento ou na lealdade institucional dos indivíduos registrados no arquivo.
+Cardinal Star
+`-- grande estrela governante abaixo do Seraphim
+    `-- designação mortal: Lucent
 
-A chamada **lei da erosão de identidade** regula institucionalmente os Fragment Fusions. Ela existe porque a transformação altera quem a pessoa é de maneiras reais e permanentes — não de forma destrutiva, mas irreversível. A posição oficial da Igreja sobre o que isso significa para continuidade da pessoa, posição clerical e mobilização operacional foi construída cuidadosamente ao longo da história dos poucos casos registrados.
+Stellate
+`-- ofício angelical menor ou fragmento
+    `-- designação mortal: Votary
+
+Mote / Spark / Gleam
+`-- contato menor, Crowning breve ou fenômeno visionário
+```
+
+Os **Seven Answers** são os sete Seraphim com contato estável com a Igreja.
+Os **Answered** são vessels mortais através dos quais um desses Seven Answers respondeu.
+Essa diferença é uma das correções mais importantes do cânone revisado.
+
+---
+
+## Como o poder do Rite se manifesta
+
+O Rite não publica um catálogo completo de domínios, mas o Codex identifica padrões operacionais principais:
+
+- fusões de **Light-domain** fortalecem radiância, disrupção e o Naming
+- fusões de **Protection-domain** reforçam barreiras, blindagem e defesa de limiar
+- fusões de **Healing-domain** sustentam recuperação de vessel e trabalho de Ecclesiastic Surgery
+- fusões de **Authority-domain** são raras e aparecem mais em alto comando, Lucents, Answered e alguns Rector-Ascendants
+
+É por isso que os membros do Rite não são intercambiáveis. Eles não são cópias mais fortes ou mais fracas de um mesmo modelo. Eles carregam ofícios divinos diferentes em profundidades diferentes.
+
+---
+
+## Formação padrão
+
+Toda operação formal do Rite é construída ao redor de uma unidade de três pessoas:
+
+- **expulsor principal**: normalmente um Votary ou superior
+- **confessor-priest**: preparação, steadiness e cuidado posterior
+- **Ecclesiastic Surgeon**: avaliação de sobrevivência, monitoramento de fusão e julgamento de resgate
+
+O Rite mantém essas funções separadas de propósito. Ele não gosta que força, cuidado e julgamento final colapsem num único ofício sem supervisão.
+
+O **Choir Penitent** continua sendo uma ordem companheira distinta, não um braço Beatificado de campo. Em operações do Rite, ele fornece avaliação antecipada, verificação de contato e ancoragem perceptiva durante engajamentos de alto nível e Grand Expulsions.
+
+---
+
+## The Naming
+
+A técnica assinatura do Rite é **the Naming**.
+
+Ela não é apenas linguagem litúrgica. É o ato de se dirigir a uma presença hostil pelo seu domínio verdadeiro dentro da ordenação do Sovereign, usando a coerência Beatificada de um Votary, Lucent ou Rector-Ascendant para fazer essa fala carregar força real.
+
+É por isso que um expulsor do Rite consegue fazer coisas que um sacerdote apenas treinado não consegue.
+
+---
+
+## O custo: erosão de identidade
+
+A honestidade do Rite começa aqui.
+
+Clérigos Beatificados mudam. Ao longo de anos e décadas, o domínio do fragmento repondera o vessel. Isso pode ser ampliação. Também pode se tornar drift.
+
+O Rite observa o momento em que:
+
+- o sacerdócio deixa de ancorar o domínio
+- o domínio começa a organizar a pessoa
+
+A resposta institucional é formação contínua, confissão, acompanhamento pastoral prolongado e monitoramento de Ecclesiastic Surgeons. O objetivo não é impedir a Beatificação. O objetivo é manter o vessel como sacerdote enquanto o fragmento se aprofunda.
+
+O Codex revisado é explícito: o perigo cresce com o contact-depth. Contato Stellate pode erodir uma vida. Contato Cardinal Star pode reorganizá-la. Contato Cynosure pode tornar difícil até para observadores treinados distinguir pessoa e ofício.
+
+---
+
+## Lucents e os Answered
+
+O cânone revisado dá nomes mais claros a duas categorias excepcionais.
+
+### Lucent
+
+Um **Lucent** é um vessel Beatificado cuja fusão alcança uma **Cardinal Star** em vez de um Stellate. Lucency não é linguagem honorífica. É um reconhecimento restrito de que o vessel carrega pressão de estrela maior, mais ampla e mais perigosa do que Votaries comuns conseguem sustentar.
+
+### Answered
+
+Os **Answered** são vessels mortais cuja fusão alcança o **Cynosure**: o próprio Seraphim como estrela central de uma Seraphic Constellation.
+
+Eles não são os Seven Answers.
+Eles são vessels através dos quais um dos Seven Answers respondeu.
+
+Halk'en Orveth pertence a essa categoria.
 
 ---
 
 ## The Victorian Rite
 
-O **Victorian Rite** é a formação setentrional do Obsidian Rite — a estrutura operacional especificamente organizada para confrontos contínuos na Darkmargin e nas águas do teatro marítimo da Cold Fleet.
+O braço setentrional do Obsidian Rite é o **Victorian Rite**.
 
-O Victorian Rite foi criado quando o envolvimento da Igreja na War of the Threshold atingiu uma escala em que o modelo tradicional de unidades padrão deixou de ser suficiente para a fronteira norte. O front setentrional não consiste em incidentes isolados de possessão que um Warden regional pode simplesmente despachar unidades para resolver. É um ambiente operacional contínuo, marcado por confrontos em massa com Dark Ends, encontros com SOEs e condições que exigem que o Rite funcione como um braço militar integrado, e não apenas como um serviço de resposta de campo.
+Ele existe porque a Darkmargin não é uma sequência de casos isolados de possessão. É um teatro contínuo de pressão, surgimento de entidades, cooperação por tratado e risco acelerado de erosão.
 
-O Victorian Rite atua ao lado da Cold Fleet da HourGlass no teatro marítimo. Em operações prolongadas no norte, embarcações WVS carregam membros do Victorian Rite como parte padrão da tripulação operacional. A relação entre tripulações da Cold Fleet e Wardens do Victorian Rite em campo foi construída ao longo de décadas de operações conjuntas contínuas e acabou se tornando muito mais funcional, específica e calorosa do que os documentos oficiais das duas organizações sugerem.
+O Victorian Rite trabalha em parceria operacional contínua com:
 
-O Victorian Rite mantém seu próprio arquivo de registros específicos da frente norte — padrões de comportamento de Dark Ends, dados classificatórios de SOEs obtidos através de contato direto e registros de engajamento em condições que operações internas do Rite jamais enfrentam. Esse arquivo é o registro operacional mais atualizado sobre possessões e entidades dentro dos acervos da Igreja. Também é o arquivo que menos pessoas com autoridade institucional sobre classificação teológica realmente leram.
+- a Cold Fleet
+- comandos fronteiriços da HourGlass
+- formações setentrionais da Igreja
+- contrapartes informais da StaSis no espaço de problema dos SOEs
+
+O Codex revisado é direto sobre seu principal problema pastoral: a erosão de identidade acelera no serviço do norte.
 
 ---
 
-## Relação com Outras Instituições
+## Significado institucional
 
-**A Igreja:** O Rite é o braço operacional da Igreja e funciona sob sua hierarquia institucional. Rector-Ascendants respondem ao Arch-Deacon de sua região; já a estrutura de comando do Victorian Rite responde, através do Arch-Deacon regional do norte, diretamente ao Diaconate. O Rite não toma decisões políticas independentes, mas possui grande autonomia operacional em campo.
+O Rite revisado torna a hierarquia da Igreja mais fácil de ler:
 
-**The Empire e HourGlass:** Os tratados que regulam o papel do Rite em Desolation Events e no teatro fronteiriço são formais e extremamente específicos. Durante um Desolation Event oficialmente declarado, a Igreja assume primazia operacional. Já no norte, o Rite e as forças da HourGlass operam sob protocolos conjuntos desenvolvidos através de necessidade prática ao longo de uma longa história operacional compartilhada.
+- **ofício** é um eixo
+- **pertencimento à ordem** é outro
+- **contact-depth** é um terceiro
 
-**The Apocachynthion:** O Rite e o Apocachynthion compartilham relatórios de incidentes em casos onde os mesmos eventos geram informações relevantes para ambas as instituições. Os modelos explicativos das duas organizações — a teologia da Igreja e a análise de ressonância estrutural do Apocachynthion — são diferentes o bastante para produzir atrito constante em interpretações conjuntas de casos. Mesmo assim, o acordo de compartilhamento permanece ativo porque ambas precisam do acesso que a outra possui. O atrito é administrado, não resolvido.
+Uma pessoa pode ser:
+
+- sacerdote
+- Votary
+- Beatificado
+- alinhado a Stellate
+
+Ou:
+
+- sacerdote
+- Rector-Ascendant
+- Beatificado
+- Answered
+- alinhado a Cynosure sob um dos Seven Answers
+
+Esses rótulos se sobrepõem. Eles não se substituem.
+
+---
+
+## Por que o Rite importa
+
+O Obsidian Rite é a resposta da Igreja para um problema que o clero comum não consegue resolver:
+
+Como construir uma instituição a partir de vesselhood sagrado sem fingir que vesselhood é seguro?
+
+A resposta do Rite é Investiture, formação, rank, disciplina de contact ledger, confissão, monitoramento cirúrgico e recusa constante em esquecer que poder e erosão chegam juntos.

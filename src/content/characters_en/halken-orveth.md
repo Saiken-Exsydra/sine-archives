@@ -6,8 +6,8 @@ birth_year: "1801"
 birthplace: "Black Mere, Northern Region"
 affiliation: "One Church - Obsidian Rite"
 rank: "Rector-Ascendant"
-registry_status: "Maximum restricted deployment - one of the Seven Answers' living Seraphic vessels"
-designation: "Seraphic Vessel of Auctoriel"
+registry_status: "Maximum restricted deployment - Answered-class vessel of Auctoriel"
+designation: "The Answered of Dominion"
 height: "1.90 m"
 build: "Broad-shouldered, heavily built, and iron-dense even out of armor"
 complexion: "Weathered fair skin; long pale scar on left cheek from pre-investiture field injury"
@@ -16,11 +16,11 @@ eyes: "Dark brown under ordinary conditions; deep red-gold at fourth-hand intens
 dress: "Plain black cassock, iron rosary, red cord of office at left wrist; blackened pre-modern plate in the field"
 residence: "Saint Veyran fortress-priory, Kalt'sen, when not deployed under sealed order"
 occupation: "Rector-Ascendant of the Obsidian Rite; one of the Church's most restricted Seraphic field assets"
-summary: "A Cynosure-aligned vessel of Auctoriel, Seraphim of Dominion, and one of the clearest living examples of what the Seven Answers mean in practice."
-tags: ["Church", "Obsidian Rite", "Auctoriel", "Seven Answers", "Dominion", "Beatified", "Sundersaint", "Kalt'sen"]
+summary: "A Cynosure-aligned Answered vessel of Auctoriel, Seraphim of Dominion, and one of the clearest living examples of what the Answered mean in practice."
+tags: ["Church", "Obsidian Rite", "Auctoriel", "Seven Answers", "Answered", "Dominion", "Beatified", "Sundersaint", "Kalt'sen"]
 status: "public"
 created: "2026-05-15"
-updated: "2026-05-15"
+updated: "2026-05-20"
 image: "../../assets/uploads/characters/char-halken-orveth.png"
 hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 ---
@@ -30,11 +30,11 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 
 ## What He Is
 
-Halk'en Orveth is one of the seven living Rector-Ascendants recognized within restricted ecclesiastical doctrine as a direct Seraphic vessel of the **Seven Answers**.
+Halk'en Orveth is one of the Church's rare living **Answered**: a Rector-Ascendant and Cynosure-contact Beatified vessel through whom one of the **Seven Answers** has answered.
 
 That must be separated from ordinary Beatified status.
 
-Most Obsidian Rite vessels carry angelic fragments. That is already transformative and already dangerous. Orveth is rarer than that. He carries **Cynosure pressure**: central-star alignment inside a Seraphic Constellation.
+Most Obsidian Rite members are Votaries carrying Stellate contact. That is already transformative and already dangerous. Orveth is rarer than that. He carries **Cynosure pressure**: central-star alignment inside a Seraphic Constellation.
 
 In his case, the central star is **Auctoriel, Seraphim of Dominion**.
 
@@ -42,8 +42,8 @@ That does **not** mean he contains the Seraphim in full. No mortal recursive sin
 
 That is why he matters.
 
-He is not just a powerful Warden.
-He is one of the Church's rare living explanations of what the Seven Answers actually are.
+He is not just a powerful Rector-Ascendant.
+He is one of the Church's clearest living explanations of what an Answered vessel actually is.
 
 ## The Hierarchy He Clarifies
 
@@ -53,7 +53,7 @@ Orveth is useful because he shows the difference between several categories the 
 - **Rite rank**: he is a Rector-Ascendant
 - **Beatified condition**: he is a sustained angelic vessel
 - **constellation depth**: he is Cynosure-aligned
-- **restricted Church category**: he is one of the Seven Answers' living vessels
+- **restricted Church category**: he is one of the Answered
 
 Those are different layers, not different names for the same thing.
 
@@ -205,7 +205,7 @@ He became **Rector-Ascendant** in **1878**.
 Later milestones include:
 
 - receiving **Sundersaint** in **1881**
-- recognition as one of the Seven Answers' vessels by the early twentieth century
+- recognition as one of the Answered by the early twentieth century
 - severing the rite-state of Halvorn Bridge without collapsing the structure
 - manifesting the seventh hand at **Vaul Mourne**
 - opposing forced investiture on the grounds that burden without rightful consent is seizure, not office
@@ -238,7 +238,7 @@ He is one of the clearest living examples of:
 
 - what a Seraphic Constellation means in practice
 - what Cynosure alignment looks like in a mortal vessel
-- what the Seven Answers are
+- what the Answered are in mortal practice
 - how Church rank and divine hierarchy intersect without becoming identical
 
 If the current Church and Obsidian Rite lore has a living spine, he is one of it.

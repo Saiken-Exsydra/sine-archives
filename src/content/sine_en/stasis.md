@@ -11,7 +11,7 @@ summary: "The division that doesn't officially exist to handle the things that o
 tags: ["StaSis", "SiNE", "S-AE", "Organization", "SOE", "Dark Ends", "Stase", "Anomalous", "Classification", "Deniability"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-05-20"
 image: "../../assets/uploads/sine-stasis-logo.png"
 ---
 
@@ -60,7 +60,7 @@ StaSis's closest institutional working relationship is with the Obsidian Rite's 
 
 The Victorian Rite's northern archive and StaSis's SOE catalogue have, over generations of parallel operation, developed into complementary rather than redundant resources. The Rite has richer engagement-level detail on how specific entities respond to specific Obsidian Rite interventions. StaSis has broader pattern analysis and cross-incident classification that the Rite's operationally focused record-keeping is not designed to produce.
 
-The two organizations share data on a basis that is functionally cooperative but not formally institutionalized. Neither has a joint data-sharing agreement in any document that their parent organizations' legal divisions would recognize. The sharing happens because the practitioners at the operational level - Victorian Rite Senior Wardens and StaSis field analysts with frontier postings - find it necessary for the work and have developed the informal mechanisms to make it happen.
+The two organizations share data on a basis that is functionally cooperative but not formally institutionalized. Neither has a joint data-sharing agreement in any document that their parent organizations' legal divisions would recognize. The sharing happens because the practitioners at the operational level - Victorian Rite Votaries-Principal and StaSis field analysts with frontier postings - find it necessary for the work and have developed the informal mechanisms to make it happen.
 
 ---
 

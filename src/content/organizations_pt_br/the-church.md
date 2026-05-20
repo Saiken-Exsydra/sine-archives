@@ -11,7 +11,7 @@ summary: "Deus Vult"
 tags: ["Church", "Synus", "Faith", "Obsidian Rite", "Demonic", "Institution", "Sovereign", "Twilight Band"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-05-10"
+updated: "2026-05-20"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -133,7 +133,7 @@ A Igreja desenvolveu sua própria taxonomia para a progressão de presença demo
 
 **The Wearing** — O limiar além do qual a própria estrutura do vessel começa a ser sobrescrita ativamente. O vessel ainda está vivo, mas já não é confiavelmente ele mesmo. Expulsão nessa fase ainda é possível, porém envolve riscos severos tanto para o vessel quanto para o clero responsável pela operação. Mesmo em casos bem-sucedidos, a recuperação nunca é completa.
 
-**The Hollowed** — Sobrescrita total. A coerência original do vessel foi deslocada. A posição da Igreja aqui representa um de seus ensinamentos pastorais mais difíceis: o corpo ainda merece o Last Rite porque aquele corpo um dia pertenceu a alguém amado pelo Sovereign. Porém, para uma unidade de Warden enfrentando um Hollowed, o objetivo já não é resgate. É contenção — e, se a contenção falhar, uma forma de encerramento que a Igreja realiza em silêncio e jamais descreve em registros públicos.
+**The Hollowed** — Sobrescrita total. A coerência original do vessel foi deslocada. A posição da Igreja aqui representa um de seus ensinamentos pastorais mais difíceis: o corpo ainda merece o Last Rite porque aquele corpo um dia pertenceu a alguém amado pelo Sovereign. Porém, para uma célula de Votary enfrentando um Hollowed, o objetivo já não é resgate. É contenção — e, se a contenção falhar, uma forma de encerramento que a Igreja realiza em silêncio e jamais descreve em registros públicos.
 
 **The Consumed** — Diferente de um Hollowed: não uma simples sobrescrita, mas uma transformação estrutural completa. A estrutura do vessel foi alterada permanentemente em algo que já não é nem a pessoa original nem uma presença puramente demoníaca, mas uma terceira categoria fundida. A Igreja chama os Consumed de **metamórficos**, e considera esse estado permanente e irreversível. Nenhum Rite of Expulsion é tentado nesse estágio.
 
@@ -171,13 +171,13 @@ O Obsidian Rite é o braço operacional da Igreja. Seus membros são clérigos q
 
 Eles não são soldados. Seus principais instrumentos são relíquias seladas pela Igreja, os ritos formais de expulsão e uma técnica tradicional chamada **the Naming** — o ato de se dirigir a uma presença possessiva usando seu domínio verdadeiro dentro da ordenação da criação estabelecida pelo Sovereign. A Igreja ensina que o Naming produz desestabilização real em manifestações demoníacas de nível inferior. Contra presenças superiores, o Naming sozinho não basta, mas continua sendo o movimento inicial de qualquer grande rito formal de expulsão.
 
-Dentro do Obsidian Rite, os ranks vão de **Initiate** até **Warden**, **Senior Warden** e finalmente **Rector-Ascendant** — reservado apenas para indivíduos cujo histórico operacional e posição teológica permitem comandar operações completas de forma independente. Operações padrão são realizadas em unidades de três membros: um expulsor principal, um padre-confessor responsável pela preparação espiritual e recuperação do vessel e um **Ecclesiastic Surgeon**, responsável por avaliar a condição física do vessel e determinar se a expulsão ainda representa uma tentativa de resgate viável.
+Dentro do Obsidian Rite, o cânone revisado separa **rank** de **contact-depth**. A escada de rank vai de **Postulant** a **Votary**, **Votary-Principal**, **Prelate** e finalmente **Rector-Ascendant**. Já a profundidade de contato distingue vessels **Stellate**, **Lucent** e, nos casos mais raros, **Answered**. Operações padrão continuam sendo realizadas em unidades de três membros: um expulsor principal, um padre-confessor responsável pela preparação espiritual e recuperação do vessel e um **Ecclesiastic Surgeon**, responsável por avaliar a condição física do vessel e determinar se a expulsão ainda representa uma tentativa de resgate viável.
 
 ### The Choir Penitent
 
 O Choir Penitent é a ordem formal de Heralds da Igreja — indivíduos portadores daquilo que a instituição chama de **the Gift of Sight**, submetido voluntariamente à supervisão e orientação eclesiástica. Dentro do Obsidian Rite, eles atuam como função de inteligência operacional — identificando a natureza e o nível de uma presença demoníaca antes do confronto de uma unidade expulsora, analisando manifestações angelicais alegadas para determinar sua autenticidade e fornecendo alertas antecipados sobre concentrações demoníacas antes que um Desolation Event alcance seus estágios mais perigosos.
 
-Membros do Choir Penitent não carregam instrumentos de expulsão. Protegê-los durante operações é responsabilidade do Warden designado para acompanhá-los.
+Membros do Choir Penitent não carregam instrumentos de expulsão. Protegê-los durante operações é responsabilidade do Votary ou Votary-Principal designado para acompanhá-los.
 
 O nome da ordem vem de sua doutrina fundadora: o Gift of Sight não é conquistado. É concedido. Aqueles que o carregam servem em penitência não por pecado, mas por privilégio — em reconhecimento de que enxergam coisas que ninguém pediu para ver e de que essa visão possui um custo.
 
@@ -211,7 +211,7 @@ Os Confessor-Priests acumulam mais inteligência prática sobre infiltração de
 
 **The Last Rite** — Administrado aos moribundos. O período próximo à morte é considerado um momento de vulnerabilidade liminar elevada. O Last Rite atua como um selamento formal — um fechamento da estrutura individual que, segundo a Igreja, torna o corpo hostil a aproximações demoníacas tardias.
 
-**The Rite of Expulsion** — Existem três versões organizadas por nível. O rito menor pode ser realizado por um Deacon treinado e lida com Whispering e estágios iniciais de Tenant. O rito maior é conduzido por Wardens do Obsidian Rite e cobre desde Tenant até Wearing. A **Grand Expulsion** foi realizada apenas sete vezes em toda a história registrada da Igreja. Ela exige a presença física de um Arch-Deacon ou superior, uma unidade completa de Warden, pelo menos dois membros do Choir Penitent e um quórum regional do Diaconate disponível para consulta. Uma Grand Expulsion leva no mínimo três dias. Sua taxa documentada de mortalidade entre os oficiante gira em torno de um em cada cinco.
+**The Rite of Expulsion** — Existem três versões organizadas por nível. O rito menor pode ser realizado por um Deacon treinado e lida com Whispering e estágios iniciais de Tenant. O rito maior é conduzido por Votaries do Obsidian Rite e cobre desde Tenant até Wearing. A **Grand Expulsion** foi realizada apenas sete vezes em toda a história registrada da Igreja. Ela exige a presença física de um Arch-Deacon ou superior, uma célula completa do Rite, pelo menos dois membros do Choir Penitent e um quórum regional do Diaconate disponível para consulta. Uma Grand Expulsion leva no mínimo três dias. Sua taxa documentada de mortalidade entre os oficiante gira em torno de um em cada cinco.
 
 **The Consecration of Place** — O ritual que marca formalmente um local como pertencente à jurisdição espiritual da Igreja. Espaços consagrados possuem vulnerabilidade liminar significativamente reduzida contra entrada demoníaca. Grandes igrejas, hospitais, câmaras formais de governança imperial e todos os pontos documentados de contato entre a Twilight Band e a fronteira do Dark Side ao longo das linhas da War of the Threshold são consagrados. Manter essas consagrações ativas sob pressão contínua é uma das obrigações permanentes mais custosas do Obsidian Rite.
 

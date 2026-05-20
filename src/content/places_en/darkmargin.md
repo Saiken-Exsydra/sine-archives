@@ -6,7 +6,7 @@ tags: ["Places", "Darkmargin", "War of the Threshold", "Cold Fleet", "Dark Ends"
 priority: 1
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-05-20"
 image: "../../assets/uploads/place-darkmargin.png"
 ---
 
@@ -49,7 +49,7 @@ The campaign's primary adversarial elements are:
 
 **SOEs** — Traversal-Independent Entities, the classification that StaSis maintains and that the Victorian Rite's northern archive documents. These are categorically different from Dark Ends — not altered organisms but entities that do not have biological signatures, whose behavior cannot be mapped onto biological frameworks, and whose engagement requires tools and doctrine that the standard military presence does not carry. SOE engagements require Victorian Rite involvement and, above certain threat classifications, StaSis specialist support.
 
-The War of the Threshold has not advanced the frontier significantly in any direction in living memory. Whether this represents successful containment or the specific quality of equilibrium that occurs when a threat is large enough to hold the frontier but not large enough to break through it is a question that StaSis analysts and Victorian Rite Senior Wardens with long frontier service have professional opinions about and institutional reasons not to publish.
+The War of the Threshold has not advanced the frontier significantly in any direction in living memory. Whether this represents successful containment or the specific quality of equilibrium that occurs when a threat is large enough to hold the frontier but not large enough to break through it is a question that StaSis analysts and Victorian Rite Votaries-Principal with long frontier service have professional opinions about and institutional reasons not to publish.
 
 ---
 

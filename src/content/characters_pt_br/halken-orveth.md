@@ -6,8 +6,8 @@ birth_year: "1801"
 birthplace: "Black Mere, Região Norte"
 affiliation: "Igreja Una - Obsidian Rite"
 rank: "Rector-Ascendant"
-registry_status: "Implantação máxima restrita - um dos Sete vessels Seráficos"
-designation: "Sétimo Vessel Seráfico"
+registry_status: "Implantação máxima restrita - vessel da classe Answered de Auctoriel"
+designation: "The Answered of Dominion"
 height: "1,90 m"
 build: "Ombros largos, corpo pesado e densidade quase metálica mesmo fora da armadura"
 complexion: "Pele clara marcada pelo tempo; cicatriz longa e pálida na bochecha esquerda de um ferimento anterior à investidura"
@@ -16,11 +16,11 @@ eyes: "Castanho-escuros em condições normais; vermelho-dourado intenso durante
 dress: "Batina preta simples, rosário de ferro, cordão vermelho do ofício preso ao pulso esquerdo; armadura de placas enegrecida de estilo pré-moderno em campo"
 residence: "Fortaleza-priorado de Saint Veyran, Kalt'sen, quando não está mobilizado sob ordens seladas"
 occupation: "Rector-Ascendant do Obsidian Rite; ativo estratégico exorcístico da Igreja Una"
-summary: "Executor da Mão Sétupla."
-tags: ["Igreja", "Obsidian Rite", "Auctoriel", "The Seven", "Dominion", "Beatificado", "Sundersaint", "Kalt'sen"]
+summary: "Um vessel Answered alinhado ao Cynosure de Auctoriel, Seraphim de Dominion."
+tags: ["Igreja", "Obsidian Rite", "Auctoriel", "Seven Answers", "Answered", "Dominion", "Beatificado", "Sundersaint", "Kalt'sen"]
 status: "public"
 created: "2026-05-15"
-updated: "2026-05-15"
+updated: "2026-05-20"
 image: "../../assets/uploads/characters/char-halken-orveth.png"
 hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 ---
@@ -30,7 +30,7 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 
 ## O Que Ele É
 
-Halk'en Orveth é um dos sete Rector-Ascendants vivos reconhecidos pela doutrina restrita da Igreja como um vessel Seráfico direto. A maior parte do clero Beatificado e a maior parte dos Fragment Fusions do Obsidian Rite carregam um fragmento angelical integrado ao eu. Orveth é classificado como um caso mais raro de linhagem original: um Fragment Fusion tão profundo e tão estavelmente resolvido que a pressão nele é tratada institucionalmente como o próprio **Auctoriel, Seraphim de Dominion**, e não como uma manifestação ordinária de ordem inferior.
+Halk'en Orveth é um dos raros **Answered** vivos reconhecidos pela doutrina restrita da Igreja: um Rector-Ascendant e vessel Beatificado de contato **Cynosure** através do qual um dos **Seven Answers** respondeu. A maior parte do clero do Obsidian Rite opera como Votaries de contato Stellate. Orveth pertence a uma categoria mais rara e mais perigosa. A pressão nele não é tratada como simples manifestação angelical de ordem inferior, mas como contato estabilizado com o próprio **Auctoriel, Seraphim de Dominion**, no nível do Cynosure.
 
 Essa distinção define tudo no arquivo dele. Ele não é apenas um exorcista veterano com uma manifestação de domínio de autoridade anormalmente severa. Ele é um ponto de contato humano estabilizado através do qual Dominion consegue operar no mundo em escala estratégica sem ser confundido com possessão demoníaca nem com apagamento humano.
 
@@ -60,7 +60,7 @@ Ele não foi elevado rapidamente. Recusou promoção duas vezes, argumentando qu
 
 Em **1881**, recebeu **Sundersaint**, a espada artefato superior conhecida como *the Parting Mercy*. A combinação foi controversa desde o início: um homem capaz de impor autoridade não deveria, em teoria, também portar um artefato de Severance divina. A Igreja aceitou o risco porque quase ninguém conseguia primeiro tornar uma estrutura de possessão responsiva e depois separá-la de forma limpa.
 
-Em **1906**, após o **Julgamento do Portão de Saint Kaldrin** e a primeira manifestação tangível amplamente testemunhada da sexta mão, o Diaconato deixou de tratá-lo como apenas um Rector-Ascendant excepcional. Internamente, passou a ser reconhecido como um dos **Sete**: os raríssimos vessels Seráficos cuja integração é tão completa que uma linhagem direta do Céu pressiona o mundo através deles.
+Em **1906**, após o **Julgamento do Portão de Saint Kaldrin** e a primeira manifestação tangível amplamente testemunhada da sexta mão, o Diaconato deixou de tratá-lo como apenas um Rector-Ascendant excepcional. Internamente, passou a ser reconhecido como um dos **Answered**: os raríssimos vessels Seraphic de contato Cynosure através dos quais um dos Seven Answers pressiona o mundo.
 
 Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do Obsidian Rite. Separou um estado ritualístico da Ponte Halvorn em 1968 sem derrubar a estrutura. Manifestou a **sétima mão** em **Vaul Mourne** em 2013 e transformou um desastre de possessão que havia tomado um hospice inteiro em um tribunal responsivo, pagando um custo enorme por isso. Mais tarde ajudou a moldar a ética moderna do Rite ao se opor à investidura forçada, defendendo que um fardo colocado sem consentimento legítimo não é ofício — é tomada à força. Em 2200, tornou-se ao mesmo tempo um dos pilares vivos da Igreja e uma das provas mais claras de que poder sagrado pode continuar perigoso sem necessariamente se corromper.
 

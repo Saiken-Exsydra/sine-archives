@@ -11,7 +11,7 @@ summary: "The Church is Terra's dominant faith institution and the main authorit
 tags: ["Church", "Synus", "Faith", "Obsidian Rite", "Demonic", "Institution", "Sovereign", "Twilight Band"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-05-15"
+updated: "2026-05-20"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -232,9 +232,9 @@ The Church Codex now makes this much clearer:
 For example:
 
 - a Parish Priest is an office
-- a Warden is an Obsidian Rite rank
+- a Votary is an Obsidian Rite rank
 - a Beatified vessel is a divine condition
-- a Seraphic Cynosure-aligned case is a deeper divine condition still
+- an Answered vessel is a deeper restricted theological condition still
 
 These categories overlap, but they are not the same thing.
 
@@ -243,7 +243,7 @@ That is why a figure like Halk'en Orveth can be:
 - a priest
 - a Rector-Ascendant
 - a Beatified vessel
-- a Seraphic central-star case of one of the Seven Answers
+- an Answered Cynosure-contact vessel of one of the Seven Answers
 
 without any of those labels replacing the others.
 
@@ -297,6 +297,6 @@ It is also:
 - a possession-response system
 - a vessel-governance institution
 - a theology of hierarchy built around real fragment contact
-- the body that has survived long enough to name the difference between a Herald, a Crowned vessel, a Beatified priest, a Warden, a Saint, and one of the Seven Answers
+- the body that has survived long enough to name the difference between a Herald, a Crowned vessel, a Beatified priest, a Votary, a Lucent, an Answered vessel, a Saint, and one of the Seven Answers
 
 That hierarchy is now central to understanding the Church at all.
