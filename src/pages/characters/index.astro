@@ -1,7 +1,7 @@
 ---
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
-import { buildOptimizedImageBundle } from "../../utils/optimized-images";
+import { buildOptimizedImageBundle, getImageKind } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const copy = locale === "pt-br"
@@ -28,6 +28,7 @@ const copy = locale === "pt-br"
       exitFullscreen: "Sair da tela cheia",
       dossierOnFile: "Dossie em Arquivo",
       swipeToNavigate: "Deslize para navegar",
+      nextImage: "Proxima imagem",
     }
   : {
       pageTitle: "Characters - SiNE Archives",
@@ -52,6 +53,7 @@ const copy = locale === "pt-br"
       exitFullscreen: "Exit full screen",
       dossierOnFile: "Dossier On File",
       swipeToNavigate: "Swipe to navigate",
+      nextImage: "Next image",
     };
 const all = await getLocalizedCollection("characters", locale);
 const characters = all
@@ -68,12 +70,32 @@ const FILMSTRIP_IMAGE_SIZES = "(max-width: 700px) 140px, 0px";
 
 const charData = await Promise.all(
   characters.map(async (c) => {
-    const stageImage = await buildOptimizedImageBundle(c.data.hero_image, {
-      widths: [640, 1280, 1920],
-      sizes: STAGE_IMAGE_SIZES,
-      quality: 90,
-      fit: "cover",
-    });
+    const heroCandidates = [
+      c.data.image,
+      c.data.hero_image,
+      ...(Array.isArray((c.data as any).hero_gallery) ? (c.data as any).hero_gallery : []),
+    ];
+
+    const heroValues = heroCandidates
+      .filter((value) => !!value && getImageKind(value) === "hero")
+      .filter((value, index, list) => list.findIndex((item) => {
+        const a = typeof item === "string" ? item : item?.src;
+        const b = typeof value === "string" ? value : value?.src;
+        return a === b;
+      }) === index);
+
+    const stageImages = (
+      await Promise.all(
+        heroValues.map((value) =>
+          buildOptimizedImageBundle(value, {
+            widths: [640, 1280, 1920],
+            sizes: STAGE_IMAGE_SIZES,
+            quality: 90,
+            fit: "cover",
+          })
+        )
+      )
+    ).filter(Boolean);
 
     return {
       slug: c.slug,
@@ -81,8 +103,8 @@ const charData = await Promise.all(
       type: c.data.type ?? (locale === "pt-br" ? "Personagem" : "Character"),
       designation: (c.data as any).designation ?? "",
       summary: c.data.summary,
-      image: stageImage,
-      thumbImage: stageImage ? { ...stageImage, sizes: FILMSTRIP_IMAGE_SIZES } : null,
+      images: stageImages,
+      thumbImage: stageImages[0] ? { ...stageImages[0], sizes: FILMSTRIP_IMAGE_SIZES } : null,
       tags: c.data.tags ?? [],
       updated: c.data.updated,
       href: localizedPath(locale, `/characters/${c.slug}/?char=${encodeURIComponent(c.slug)}`),
@@ -424,7 +446,7 @@ const sectionEyebrow = locale === "pt-br"
 
       .stage__portrait {
         position: absolute; inset: 0;
-        transition: opacity 0.55s ease;
+        transition: opacity 1s ease;
       }
       .stage__portrait.is-out { opacity: 0; }
       .stage__portrait.is-in  { opacity: 1; }
@@ -597,6 +619,51 @@ const sectionEyebrow = locale === "pt-br"
         display: inline-block;
       }
       .stage__cta:hover { background: #c94040; }
+
+      .stage__gallery {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .stage__gallery-count {
+        min-width: 56px;
+        padding: 0 12px;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: rgba(232,228,220,0.55);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        border-radius: 2px;
+      }
+      .stage__gallery-btn {
+        min-width: 38px;
+        height: 38px;
+        padding: 0 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: rgba(232,228,220,0.5);
+        cursor: pointer;
+        border-radius: 2px;
+        transition: background 0.2s, color 0.2s, border-color 0.2s;
+      }
+      .stage__gallery-btn:hover {
+        background: rgba(177,58,52,0.15);
+        color: var(--text);
+        border-color: rgba(177,58,52,0.45);
+      }
+      .stage__gallery[hidden] {
+        display: none;
+      }
 
       .stage__view-btn {
         background: rgba(255,255,255,0.05);
@@ -862,32 +929,32 @@ const sectionEyebrow = locale === "pt-br"
 
         <!-- Portrait layer -->
         <div class="stage__portrait is-in" id="stage-portrait">
-          {charData[0].image ? (
+          {charData[0].images[0] ? (
             <picture id="stage-picture">
-              {charData[0].image.avifSrcset && (
+              {charData[0].images[0].avifSrcset && (
                 <source
                   id="stage-source-avif"
-                  srcset={charData[0].image.avifSrcset}
-                  sizes={charData[0].image.sizes}
+                  srcset={charData[0].images[0].avifSrcset}
+                  sizes={charData[0].images[0].sizes}
                   type="image/avif"
                 />
               )}
-              {charData[0].image.webpSrcset && (
+              {charData[0].images[0].webpSrcset && (
                 <source
                   id="stage-source-webp"
-                  srcset={charData[0].image.webpSrcset}
-                  sizes={charData[0].image.sizes}
+                  srcset={charData[0].images[0].webpSrcset}
+                  sizes={charData[0].images[0].sizes}
                   type="image/webp"
                 />
               )}
               <img
                 class="stage__portrait-img"
                 id="stage-img"
-                src={charData[0].image.fallbackSrc}
-                srcset={charData[0].image.fallbackSrcset || undefined}
-                sizes={charData[0].image.sizes}
-                width={charData[0].image.width || undefined}
-                height={charData[0].image.height || undefined}
+                src={charData[0].images[0].fallbackSrc}
+                srcset={charData[0].images[0].fallbackSrcset || undefined}
+                sizes={charData[0].images[0].sizes}
+                width={charData[0].images[0].width || undefined}
+                height={charData[0].images[0].height || undefined}
                 alt=""
                 loading="eager"
                 decoding="async"
@@ -976,6 +1043,24 @@ const sectionEyebrow = locale === "pt-br"
 
           <div class="stage__actions is-in" id="stage-actions">
             <a class="stage__cta" id="stage-cta" href={charData[0].href}>{copy.openDossier}</a>
+            <div class="stage__gallery" id="stage-gallery" hidden={charData[0].images.length < 2}>
+              <div class="stage__gallery-count">
+                <span id="stage-gallery-current">01</span>
+                <span>&nbsp;/&nbsp;</span>
+                <span id="stage-gallery-total">{String(Math.max(charData[0].images.length, 1)).padStart(2, "0")}</span>
+              </div>
+              <button
+                class="stage__gallery-btn"
+                id="stage-gallery-next"
+                type="button"
+                aria-label={copy.nextImage}
+                title={copy.nextImage}
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M5 3.25L8.75 7L5 10.75" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
             <button
               class="stage__view-btn"
               id="btn-stage-ui-toggle"
@@ -1068,7 +1153,9 @@ const sectionEyebrow = locale === "pt-br"
       );
 
       let activeIdx = initialIdx;
+      let activeGalleryIdx = 0;
       let switchTimer = null;
+      let galleryTimer = null;
 
       const stagePortrait = document.getElementById("stage-portrait");
       const stageWatermark = document.getElementById("stage-watermark");
@@ -1082,10 +1169,15 @@ const sectionEyebrow = locale === "pt-br"
       const stageSummary = document.getElementById("stage-summary");
       const stageActions = document.getElementById("stage-actions");
       const stageCta = document.getElementById("stage-cta");
+      const stageGallery = document.getElementById("stage-gallery");
+      const stageGalleryCurrent = document.getElementById("stage-gallery-current");
+      const stageGalleryTotal = document.getElementById("stage-gallery-total");
+      const stageGalleryNext = document.getElementById("stage-gallery-next");
       const stageStamp = document.getElementById("stage-stamp");
       const stageRoot = document.getElementById("stage");
       const stageUiToggle = document.getElementById("btn-stage-ui-toggle");
       const fullscreenBtn = document.getElementById("nav-fullscreen");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       let isOverlayHidden = false;
 
       const allAnimated = [stageCounter, stageTags, stageRule, stageType, stageName, stageDesignation, stageSummary, stageActions, stageWatermark, stageStamp, stagePortrait];
@@ -1223,18 +1315,66 @@ const sectionEyebrow = locale === "pt-br"
         return picture;
       }
 
+      function syncGalleryUi(char = chars[activeIdx]) {
+        const total = char.images.length;
+        if (stageGallery) stageGallery.hidden = total < 2;
+        if (stageGalleryCurrent) {
+          stageGalleryCurrent.textContent = String(activeGalleryIdx + 1).padStart(2, "0");
+        }
+        if (stageGalleryTotal) {
+          stageGalleryTotal.textContent = String(Math.max(total, 1)).padStart(2, "0");
+        }
+      }
+
+      function scheduleGallery() {
+        window.clearTimeout(galleryTimer);
+        const char = chars[activeIdx];
+        if (!char || reducedMotion || char.images.length < 2) return;
+        galleryTimer = window.setTimeout(() => {
+          cycleGalleryImage();
+        }, 5000);
+      }
+
+      function renderGalleryImage(image) {
+        const existing = stagePortrait.querySelector("picture, svg");
+        if (existing) existing.remove();
+        if (image) {
+          stagePortrait.appendChild(buildStagePicture(image));
+        } else {
+          stagePortrait.appendChild(buildPlaceholderSVG(chars[activeIdx]));
+        }
+      }
+
+      function cycleGalleryImage(nextIdx) {
+        const char = chars[activeIdx];
+        if (!char || char.images.length < 2) return;
+        window.clearTimeout(galleryTimer);
+        activeGalleryIdx = typeof nextIdx === "number"
+          ? ((nextIdx % char.images.length) + char.images.length) % char.images.length
+          : (activeGalleryIdx + 1) % char.images.length;
+        stagePortrait.classList.remove("is-in");
+        stagePortrait.classList.add("is-out");
+        window.setTimeout(() => {
+          renderGalleryImage(char.images[activeGalleryIdx]);
+          syncGalleryUi(char);
+          requestAnimationFrame(() => {
+            stagePortrait.classList.remove("is-out");
+            stagePortrait.classList.add("is-in");
+          });
+          scheduleGallery();
+        }, 320);
+      }
+
       function updateContent(idx) {
         const c = chars[idx];
         activeIdx = idx;
+        activeGalleryIdx = 0;
+        window.clearTimeout(galleryTimer);
 
-        // portrait
-        const existing = stagePortrait.querySelector("picture, svg");
-        if (existing) existing.remove();
-        if (c.image) {
-          stagePortrait.appendChild(buildStagePicture(c.image));
-        } else {
-          stagePortrait.appendChild(buildPlaceholderSVG(c));
-        }
+        // hero gallery
+        renderGalleryImage(c.images[activeGalleryIdx]);
+        syncGalleryUi(c);
+        scheduleGallery();
 
         // watermark
         stageWatermark.innerHTML = c.title.split(" ")
@@ -1326,8 +1466,13 @@ const sectionEyebrow = locale === "pt-br"
 
       stageRoot.addEventListener("click", (e) => {
         if (!isOverlayHidden) return;
-        if (e.target.closest("#btn-stage-ui-toggle, #stage-cta, #stage-dots")) return;
+        if (e.target.closest("#btn-stage-ui-toggle, #stage-cta, #stage-dots, #stage-gallery-next")) return;
         toggleOverlay(false);
+      });
+
+      stageGalleryNext?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        cycleGalleryImage();
       });
 
       // Sidebar clicks
@@ -1416,6 +1561,8 @@ const sectionEyebrow = locale === "pt-br"
       }, { passive: true });
 
       syncOverlayToggle();
+      syncGalleryUi(chars[activeIdx]);
+      scheduleGallery();
     </script>
   </body>
 </html>

@@ -19,6 +19,10 @@ residence: "Propriedades principais dos Wonderwall; presença operacional prolon
 occupation: "Redactor operacional da SiNE; candidata interna à sucessão do Assento Wonderwall e da função executiva da SiNE"
 image: "../../assets/uploads/characters/char-ella-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-ella-wonderwall-portrait-asc.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-ella-wonderwall-hero-2.png"
 summary: "Anchor de Luz, Abyssal. Um eco do passado, resonando no presente."
 tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora", "Successor"]
 status: "public"

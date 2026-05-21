@@ -56,7 +56,7 @@ O catálogo SOE documenta tudo que a StaSis observou sobre eles: tipologias comp
 
 ## Relação com o Obsidian Rite
 
-A relação operacional mais próxima da StaSis é com a formação Victorian Rite do Obsidian Rite, na fronteira norte. As duas organizações trabalham em áreas adjacentes — o Rite lida com o que emerge do Dark Side usando ferramentas teológicas e rituais; a StaSis classifica aquilo com que o Rite interage e fornece suporte analítico que os próprios sistemas de classificação do Rite não conseguem cobrir no caso dos SOEs.
+A relação operacional mais próxima da StaSis é com a formação **Victorian Rite** do Obsidian Rite, na fronteira norte. As duas organizações trabalham em áreas adjacentes: o Rite lida com o que emerge do Dark Side usando ferramentas teológicas e rituais; a StaSis classifica aquilo com que o Rite interage e fornece suporte analítico que os próprios sistemas de classificação do Rite não conseguem cobrir no caso dos SOEs.
 
 Ao longo de gerações operando em paralelo, o arquivo norte do Victorian Rite e o catálogo SOE da StaSis se transformaram em recursos complementares, e não redundantes. O Rite possui registros mais ricos sobre como entidades específicas respondem a intervenções específicas do Obsidian Rite. A StaSis possui análises mais amplas de padrões e classificações cruzadas entre incidentes — algo que o modelo de registro operacional do Rite não foi projetado para produzir.
 

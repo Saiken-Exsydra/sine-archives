@@ -25,6 +25,10 @@ updated: "2026-04-26"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-eclesia-wonderwall-portrait-arc.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-eclesia-wonderwall-hero-arc.png"
 ---
 
 > *"A luz não experimenta o tempo. A luz não é o oposto da escuridão. A luz é, foi e sempre será. O ligamento do cosmos. Uma maravilha do infinito. Uma parede de contemplação. Uma afirmação eterna da negação que nunca morre."*

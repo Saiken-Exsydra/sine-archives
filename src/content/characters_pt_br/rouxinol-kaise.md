@@ -21,8 +21,8 @@ tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"
 status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
-image: "../../assets/uploads/char-rouxinol-kaise.png"
-hero_image: "../../assets/uploads/char-rouxinol-kaise-hero.png"
+image: "../../assets/uploads/Rouxinol Portrait (2).png"
+hero_image: "../../assets/uploads/Rouxinol HERO.png"
 ---
 
 > *"Ela não carrega fantasmas. Ela carrega aquilo de que fantasmas são feitos — o formato que sobra de uma pessoa depois que a pessoa já se foi."*

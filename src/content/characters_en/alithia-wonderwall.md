@@ -8,7 +8,7 @@ affiliation: "House Wonderwall (primary line, de facto political head); Empire o
 house: "Wonderwall (Rae branch origin; primary line by marriage)"
 rank: "Radiance-class Redactor - Revelation Anchor"
 registry_status: "Publicly held as House Wonderwall's principal representative; privately recognized by House and Church review as a stable divine-fusion case without known precedent"
-designation: "The Second Radiance"
+designation: "A Second Dawn Made from Memory"
 height: "Not publicly recorded"
 build: "Fine-boned, poised, and deliberately still; moves like someone who never wastes emphasis"
 complexion: "Pale; clear in the austere northern Rae way"
@@ -17,13 +17,17 @@ eyes: "Ordinarily within human range; under active Revelation they brighten towa
 dress: "White, silver, muted blue, and formal black - noble without theatricality"
 residence: "Primary Wonderwall holdings; regular state presence in Kalt'sen"
 occupation: "Senate representative and principal state-facing authority of House Wonderwall"
-summary: "Wonderwall's Light. A reincarnation of the First Radiance."
+summary: "Neither resurrection nor replacement; grief and lineage met, and someone new stepped into the light."
 tags: ["Wonderwall", "Rae", "SiNE", "Radiance", "Revelation", "First Radiance", "Senate", "Kalt'sen", "Divine Vessel", "A'licia"]
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-alithia-wonderwall-portrait-asc.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-alithia-wonderwall-hero-asc.png"
 ---
 
 > *"She was not an answer to my grief but a person standing beyond it."*

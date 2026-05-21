@@ -24,6 +24,10 @@ created: "2026-05-14"
 updated: "2026-05-14"
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-alithia-wonderwall-portrait-asc.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-alithia-wonderwall-hero-asc.png"
 ---
 
 > *"Ela não era uma resposta para o meu luto. Era uma pessoa existindo além dele."*

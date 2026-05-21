@@ -1,0 +1,1652 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06060b">
+  <title>SiNE Archives Homepage Prototype</title>
+  <style>
+    :root {
+      --bg: oklch(14% 0.015 285);
+      --surface: oklch(18% 0.018 285);
+      --surface-2: oklch(21% 0.02 285);
+      --fg: oklch(92% 0.012 85);
+      --muted: oklch(64% 0.012 85);
+      --border: oklch(28% 0.01 285);
+      --accent: oklch(57% 0.18 28);
+      --metal: oklch(68% 0.11 82);
+      --success: oklch(71% 0.12 156);
+      --warning: oklch(78% 0.13 82);
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+      --max: 1440px;
+      --radius: 18px;
+      --radius-sm: 10px;
+      --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+      --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--fg);
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at top left, rgba(176, 141, 60, 0.07), transparent 22rem),
+        radial-gradient(circle at top right, rgba(177, 58, 52, 0.12), transparent 26rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24rem),
+        var(--bg);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.17;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 92%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.04;
+      mix-blend-mode: screen;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 280px 280px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(22px);
+      background: rgba(6, 6, 11, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .topbar__inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 100px;
+      opacity: 0.92;
+    }
+
+    .brand__meta {
+      min-width: 0;
+    }
+
+    .brand__eyebrow,
+    .pill,
+    .micro,
+    .chip,
+    .status,
+    .section__eyebrow,
+    .system-switch button,
+    .char-list button,
+    .entry__date,
+    .place__metric,
+    .directory__count {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .brand__eyebrow {
+      color: rgba(232, 228, 220, 0.56);
+      margin-bottom: 5px;
+    }
+
+    .brand__title {
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 220, 0.9);
+      white-space: nowrap;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 0 13px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.035);
+      color: rgba(232, 228, 220, 0.74);
+    }
+
+    .pill--accent {
+      border-color: rgba(177, 58, 52, 0.28);
+      color: rgba(232, 228, 220, 0.96);
+      background: rgba(177, 58, 52, 0.16);
+    }
+
+    .hero {
+      padding: 44px 0 28px;
+    }
+
+    .hero__frame {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 20rem),
+        linear-gradient(135deg, rgba(177, 58, 52, 0.08), rgba(176, 141, 60, 0.03) 42%, rgba(255, 255, 255, 0.01) 100%),
+        rgba(10, 10, 20, 0.78);
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .hero__frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("../public/uploads/ui-cosmology-bg.png");
+      background-position: center;
+      background-size: cover;
+      opacity: 0.2;
+      filter: saturate(0.45) brightness(0.45);
+      transform: scale(1.06);
+    }
+
+    .hero__frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(6, 6, 11, 0.16), rgba(6, 6, 11, 0.66)),
+        linear-gradient(90deg, rgba(6, 6, 11, 0.92) 0%, rgba(6, 6, 11, 0.58) 40%, rgba(6, 6, 11, 0.8) 100%);
+      z-index: -1;
+    }
+
+    .hero__grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.16fr) minmax(340px, 0.84fr);
+      gap: 26px;
+      padding: 42px;
+    }
+
+    .hero__copy {
+      display: grid;
+      gap: 22px;
+      align-content: start;
+    }
+
+    .hero__copy h1 {
+      margin: 0;
+      max-width: 10ch;
+      font-family: var(--font-display);
+      font-size: clamp(4.1rem, 8vw, 7.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+    }
+
+    .hero__copy p {
+      margin: 0;
+      max-width: 62ch;
+      color: rgba(232, 228, 220, 0.74);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .hero__kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(232, 228, 220, 0.68);
+    }
+
+    .hero__kicker::before {
+      content: "";
+      width: 52px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(177, 58, 52, 0.9));
+    }
+
+    .hero__stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.03);
+      min-height: 108px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 0.95;
+    }
+
+    .stat span {
+      color: rgba(232, 228, 220, 0.6);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .console {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      background: rgba(8, 8, 16, 0.82);
+      min-height: 100%;
+    }
+
+    .console__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .console__title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .status {
+      color: var(--success);
+    }
+
+    .searchbox {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 58px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .searchbox svg {
+      width: 16px;
+      height: 16px;
+      color: rgba(232, 228, 220, 0.48);
+      flex: 0 0 auto;
+    }
+
+    .searchbox input {
+      width: 100%;
+      border: 0;
+      outline: none;
+      color: var(--fg);
+      background: transparent;
+    }
+
+    .searchbox input::placeholder {
+      color: rgba(232, 228, 220, 0.38);
+    }
+
+    .chiprow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(232, 228, 220, 0.72);
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .chip.is-active,
+    .chip:hover,
+    .chip:focus-visible {
+      border-color: rgba(177, 58, 52, 0.32);
+      color: rgba(232, 228, 220, 0.96);
+      background: rgba(177, 58, 52, 0.14);
+    }
+
+    .console__meta {
+      display: grid;
+      gap: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .console__row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      font-size: 13px;
+      color: rgba(232, 228, 220, 0.68);
+    }
+
+    .console__row span:last-child {
+      text-align: right;
+      color: rgba(232, 228, 220, 0.92);
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    .section__head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .section__eyebrow {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .section__title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 4.15rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+
+    .section__desc {
+      max-width: 54ch;
+      margin: 0;
+      color: rgba(232, 228, 220, 0.66);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .entries {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .entry {
+      grid-column: span 4;
+      display: grid;
+      gap: 16px;
+      min-height: 250px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 35%),
+        rgba(10, 10, 18, 0.75);
+      transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+    }
+
+    .entry:hover,
+    .entry:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(177, 58, 52, 0.28);
+      background:
+        linear-gradient(180deg, rgba(177, 58, 52, 0.06), transparent 35%),
+        rgba(12, 12, 22, 0.86);
+    }
+
+    .entry__top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .entry__section {
+      color: var(--accent);
+    }
+
+    .entry__title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 34px;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+
+    .entry__body {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .entry__summary {
+      margin: 0;
+      color: rgba(232, 228, 220, 0.72);
+      line-height: 1.68;
+      font-size: 14px;
+    }
+
+    .entry__tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 6px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(177, 58, 52, 0.16);
+      background: rgba(177, 58, 52, 0.08);
+      color: rgba(232, 228, 220, 0.8);
+      font-size: 11px;
+    }
+
+    .entry__date {
+      color: rgba(232, 228, 220, 0.48);
+    }
+
+    .registry {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.76fr) minmax(0, 1.24fr);
+      gap: 16px;
+    }
+
+    .char-list,
+    .char-panel,
+    .places__feature,
+    .place,
+    .systems__panel,
+    .directory__grid a {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 10, 18, 0.72);
+      border-radius: 24px;
+    }
+
+    .char-list {
+      padding: 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .char-list button {
+      width: 100%;
+      display: grid;
+      gap: 8px;
+      text-align: left;
+      padding: 15px 16px;
+      color: rgba(232, 228, 220, 0.8);
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 18px;
+      cursor: pointer;
+      transition: border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .char-list button strong {
+      font-family: var(--font-display);
+      font-size: 28px;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+    }
+
+    .char-list button span:last-child {
+      font-family: var(--font-body);
+      font-size: 13px;
+      line-height: 1.55;
+      letter-spacing: normal;
+      text-transform: none;
+      color: rgba(232, 228, 220, 0.58);
+    }
+
+    .char-list button.is-active,
+    .char-list button:hover,
+    .char-list button:focus-visible {
+      border-color: rgba(177, 58, 52, 0.28);
+      background: rgba(177, 58, 52, 0.08);
+      color: rgba(232, 228, 220, 0.96);
+    }
+
+    .char-panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 540px;
+    }
+
+    .char-panel__media {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: 46%;
+      background: linear-gradient(90deg, rgba(10, 10, 18, 0.05), rgba(10, 10, 18, 0.45));
+    }
+
+    .char-panel__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.84;
+      filter: saturate(0.78) contrast(1.04);
+    }
+
+    .char-panel__content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 16px;
+      width: min(58%, 640px);
+      padding: 30px;
+    }
+
+    .char-panel__designation {
+      color: var(--metal);
+      font-size: 14px;
+      letter-spacing: 0.06em;
+    }
+
+    .char-panel__name {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 4vw, 4.9rem);
+      line-height: 0.93;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .char-panel__summary,
+    .char-panel__quote,
+    .system-copy p,
+    .place__copy p,
+    .directory__desc {
+      color: rgba(232, 228, 220, 0.72);
+      line-height: 1.76;
+    }
+
+    .char-panel__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .char-panel__quote {
+      margin: 0;
+      padding-left: 18px;
+      border-left: 1px solid rgba(176, 141, 60, 0.4);
+      max-width: 54ch;
+      font-family: var(--font-display);
+      font-size: 24px;
+      line-height: 1.18;
+    }
+
+    .places {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .places__feature {
+      position: relative;
+      grid-column: span 7;
+      overflow: hidden;
+      min-height: 410px;
+    }
+
+    .places__feature img,
+    .place img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.66) brightness(0.68);
+    }
+
+    .places__feature::after,
+    .place::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6, 6, 11, 0.06), rgba(6, 6, 11, 0.82));
+    }
+
+    .places__feature .place__copy,
+    .place .place__copy {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 1;
+      padding: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .place {
+      position: relative;
+      overflow: hidden;
+      min-height: 198px;
+    }
+
+    .place--small-a {
+      grid-column: span 5;
+    }
+
+    .place--small-b {
+      grid-column: span 5;
+    }
+
+    .place__title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 40px;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+
+    .place__metric {
+      color: var(--metal);
+    }
+
+    .systems {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+      gap: 16px;
+    }
+
+    .system-switch {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .system-switch button {
+      display: grid;
+      gap: 10px;
+      width: 100%;
+      text-align: left;
+      padding: 18px 18px 16px;
+      color: rgba(232, 228, 220, 0.76);
+      background: rgba(10, 10, 18, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      cursor: pointer;
+    }
+
+    .system-switch button strong {
+      font-family: var(--font-display);
+      font-size: 34px;
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      text-transform: none;
+    }
+
+    .system-switch button small {
+      color: rgba(232, 228, 220, 0.58);
+      font-family: var(--font-body);
+      font-size: 13px;
+      line-height: 1.55;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .system-switch button.is-active,
+    .system-switch button:hover,
+    .system-switch button:focus-visible {
+      border-color: rgba(176, 141, 60, 0.28);
+      background: rgba(176, 141, 60, 0.09);
+      color: rgba(232, 228, 220, 0.96);
+    }
+
+    .systems__panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+    }
+
+    .systems__media {
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+    }
+
+    .systems__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.74) brightness(0.58);
+    }
+
+    .systems__content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 18px;
+      padding: 28px;
+      align-content: start;
+    }
+
+    .systems__headline {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .systems__headline h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(2.9rem, 4vw, 4.6rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+    }
+
+    .systems__headline .micro {
+      color: var(--metal);
+    }
+
+    .system-copy {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .system-copy article {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      background: rgba(6, 6, 11, 0.38);
+    }
+
+    .system-copy h4 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 220, 0.86);
+    }
+
+    .system-copy p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .directory__grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .directory__grid a {
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .directory__grid a:hover,
+    .directory__grid a:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(177, 58, 52, 0.26);
+    }
+
+    .directory__grid h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 34px;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+
+    .directory__count {
+      color: var(--accent);
+    }
+
+    .hidden-by-filter {
+      display: none !important;
+    }
+
+    .results-empty {
+      display: none;
+      margin-top: 14px;
+      padding: 18px 20px;
+      border: 1px dashed rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      color: rgba(232, 228, 220, 0.64);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .results-empty.is-visible {
+      display: block;
+    }
+
+    .footer {
+      padding: 28px 0 56px;
+    }
+
+    .footer__inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: rgba(232, 228, 220, 0.5);
+    }
+
+    @media (max-width: 1180px) {
+      .hero__grid,
+      .registry,
+      .systems {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__copy h1 {
+        max-width: 12ch;
+      }
+
+      .hero__stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .char-panel__content,
+      .char-panel__media {
+        width: 100%;
+      }
+
+      .char-panel__media {
+        position: relative;
+        height: 320px;
+      }
+
+      .char-panel__content {
+        padding-top: 0;
+      }
+
+      .char-panel {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .entries .entry,
+      .places__feature,
+      .place--small-a,
+      .place--small-b,
+      .directory__grid a {
+        grid-column: span 12;
+      }
+
+      .directory__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar__inner,
+      .shell,
+      .footer__inner {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .hero__grid {
+        padding: 24px;
+      }
+
+      .hero__stats,
+      .system-copy,
+      .directory__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section__head,
+      .systems__headline,
+      .console__row,
+      .footer__inner {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .brand {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .brand__title {
+        white-space: normal;
+      }
+
+      .topbar__inner {
+        padding: 12px 0;
+      }
+
+      .char-panel__quote {
+        font-size: 20px;
+      }
+
+      .char-panel__content,
+      .systems__content {
+        padding: 20px;
+      }
+
+      .char-panel__name,
+      .systems__headline h3 {
+        text-wrap: balance;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="brand">
+          <img src="../public/uploads/ui-sine-logo.png" alt="SiNE">
+          <div class="brand__meta">
+            <div class="brand__eyebrow">Filing Year 1127 / Public Surface</div>
+            <div class="brand__title">Archive Gateway Prototype</div>
+          </div>
+        </div>
+        <nav class="navlinks" aria-label="Archive navigation">
+          <a class="pill" href="#latest">Latest Entries</a>
+          <a class="pill" href="#characters">Characters</a>
+          <a class="pill" href="#places">Places</a>
+          <a class="pill pill--accent" href="#systems">Systems Atlas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="shell">
+          <div class="hero__frame">
+            <div class="hero__grid">
+              <div class="hero__copy">
+                <div class="hero__kicker micro">Archive Surface 01 / Reader Orientation</div>
+                <h1>The archive should feel inhabited.</h1>
+                <p>
+                  This homepage prototype keeps the live SiNE Archives language, then adds the information a first-time reader needs:
+                  recent records, visible characters, geographic anchors, and a clearer systems primer for Redactory and Divination.
+                </p>
+                <div class="hero__stats">
+                  <div class="stat">
+                    <strong>61</strong>
+                    <span>Public records currently visible across the English archive.</span>
+                  </div>
+                  <div class="stat">
+                    <strong>18</strong>
+                    <span>Characters with enough signal to browse as a living registry.</span>
+                  </div>
+                  <div class="stat">
+                    <strong>18</strong>
+                    <span>Places grounding the world in political, geographic, and frontier space.</span>
+                  </div>
+                  <div class="stat">
+                    <strong>06</strong>
+                    <span>Systems entries explaining the world&rsquo;s deep grammar and power structures.</span>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="console" aria-label="Archive query console">
+                <div class="console__head">
+                  <h2 class="console__title">Archive Query Console</h2>
+                  <span class="status">Index online</span>
+                </div>
+
+                <label class="searchbox" for="archive-search">
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"></circle>
+                    <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></line>
+                  </svg>
+                  <input id="archive-search" type="search" placeholder="Search names, systems, places, tags...">
+                </label>
+
+                <div class="chiprow" role="toolbar" aria-label="Filter sections">
+                  <button class="chip is-active" type="button" data-filter="all">All visible</button>
+                  <button class="chip" type="button" data-filter="characters">Characters</button>
+                  <button class="chip" type="button" data-filter="places">Places</button>
+                  <button class="chip" type="button" data-filter="systems">Systems</button>
+                  <button class="chip" type="button" data-filter="organizations">Institutions</button>
+                  <button class="chip" type="button" data-filter="sine">SiNE</button>
+                </div>
+
+                <div class="console__meta">
+                  <div class="console__row">
+                    <span>Current query</span>
+                    <span id="queryEcho">Showing all surfaced records</span>
+                  </div>
+                  <div class="console__row">
+                    <span>Matching cards</span>
+                    <span id="matchCount">6 latest entries</span>
+                  </div>
+                  <div class="console__row">
+                    <span>Homepage priority</span>
+                    <span>Navigation feel / character previews / systems overview</span>
+                  </div>
+                  <div class="console__row">
+                    <span>Prototype mode</span>
+                    <span>Responsive web / English / high fidelity</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="latest">
+        <div class="shell">
+          <div class="section__head">
+            <div>
+              <div class="section__eyebrow">Latest Entries / Updated May 20, 2026</div>
+              <h2 class="section__title">Recent movement inside the archive.</h2>
+            </div>
+            <p class="section__desc">
+              The live homepage already indexes sections well. This prototype adds a front-loaded recent-record layer so returning readers
+              can see what changed before they dive into the deeper directories.
+            </p>
+          </div>
+
+          <div class="entries" id="latestEntries">
+            <article class="entry" data-section="characters" data-search="halken orveth character church obsidian rite dominion answered">
+              <div class="entry__top">
+                <span class="entry__section micro">Character</span>
+                <span class="entry__date">2026-05-20</span>
+              </div>
+              <div class="entry__body">
+                <h3 class="entry__title">Halk&#39;en Orveth</h3>
+                <p class="entry__summary">A Cynosure-aligned Answered vessel of Auctoriel and one of the clearest living explanations of what Dominion means in practice.</p>
+                <div class="entry__tags">
+                  <span class="tag">Obsidian Rite</span>
+                  <span class="tag">Dominion</span>
+                  <span class="tag">Answered</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="entry" data-section="characters" data-search="vaey viktor character church meruel potential killer">
+              <div class="entry__top">
+                <span class="entry__section micro">Character</span>
+                <span class="entry__date">2026-05-20</span>
+              </div>
+              <div class="entry__body">
+                <h3 class="entry__title">Vaey Viktor</h3>
+                <p class="entry__summary">A retired priest, saint-assessor, and confirmed Hallowed vessel whose judgment of wasted potential has curdled into doctrine.</p>
+                <div class="entry__tags">
+                  <span class="tag">Meruel</span>
+                  <span class="tag">Assessment</span>
+                  <span class="tag">Church</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="entry" data-section="places" data-search="darkmargin place frontier war threshold cold fleet stase">
+              <div class="entry__top">
+                <span class="entry__section micro">Place</span>
+                <span class="entry__date">2026-05-20</span>
+              </div>
+              <div class="entry__body">
+                <h3 class="entry__title">The Darkmargin</h3>
+                <p class="entry__summary">The northern frontier where the Twilight Band ends, the dark begins, and the War of the Threshold is fought in earnest.</p>
+                <div class="entry__tags">
+                  <span class="tag">Northern Front</span>
+                  <span class="tag">Cold Fleet</span>
+                  <span class="tag">Dark Ends</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="entry" data-section="organizations" data-search="obsidian rite organization church possession expulsion field clergy">
+              <div class="entry__top">
+                <span class="entry__section micro">Institution</span>
+                <span class="entry__date">2026-05-20</span>
+              </div>
+              <div class="entry__body">
+                <h3 class="entry__title">The Obsidian Rite</h3>
+                <p class="entry__summary">The Church&rsquo;s regulated order of Beatified field clergy for possession, expulsion, and high-risk divine engagement.</p>
+                <div class="entry__tags">
+                  <span class="tag">Church</span>
+                  <span class="tag">Beatified</span>
+                  <span class="tag">Field Order</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="entry" data-section="organizations" data-search="the church organization sovereign faith beatification hierarchy">
+              <div class="entry__top">
+                <span class="entry__section micro">Institution</span>
+                <span class="entry__date">2026-05-20</span>
+              </div>
+              <div class="entry__body">
+                <h3 class="entry__title">The Church</h3>
+                <p class="entry__summary">Terra&rsquo;s dominant faith institution and the main authority on rites, possession, Beatification, and Seraphic hierarchy.</p>
+                <div class="entry__tags">
+                  <span class="tag">Faith</span>
+                  <span class="tag">Hierarchy</span>
+                  <span class="tag">Sovereign</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="entry" data-section="sine" data-search="stasis sine archive hidden division entities thresholds">
+              <div class="entry__top">
+                <span class="entry__section micro">SiNE</span>
+                <span class="entry__date">2026-05-20</span>
+              </div>
+              <div class="entry__body">
+                <h3 class="entry__title">StaSis</h3>
+                <p class="entry__summary">The division that does not officially exist to handle the things that officially do not exist.</p>
+                <div class="entry__tags">
+                  <span class="tag">Black File</span>
+                  <span class="tag">Thresholds</span>
+                  <span class="tag">Containment</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="results-empty" id="resultsEmpty">No surfaced latest entries match this query. Try a broader term or switch sections.</div>
+        </div>
+      </section>
+
+      <section id="characters">
+        <div class="shell">
+          <div class="section__head">
+            <div>
+              <div class="section__eyebrow">Character Registry / Hover or focus to inspect</div>
+              <h2 class="section__title">Meet the people before the doctrine swallows them.</h2>
+            </div>
+            <p class="section__desc">
+              The live site already has strong individual pages. This layer makes the cast legible from the homepage, especially for readers
+              landing cold on the world and trying to understand who carries its pressure.
+            </p>
+          </div>
+
+          <div class="registry">
+            <div class="char-list" role="tablist" aria-label="Character registry">
+              <button class="is-active" type="button" data-character="halken">
+                <span>Registry 01</span>
+                <strong>Halk&#39;en Orveth</strong>
+                <span>The Church&rsquo;s Answered of Dominion. Severe, controlled, and impossible to mistake for ordinary clergy.</span>
+              </button>
+              <button type="button" data-character="vaey">
+                <span>Registry 02</span>
+                <strong>Vaey Viktor</strong>
+                <span>A saint-assessor who can still appear gentle while treating greatness as debt and failure as verdict.</span>
+              </button>
+              <button type="button" data-character="alithia">
+                <span>Registry 03</span>
+                <strong>Al&#39;ithia Wonderwall</strong>
+                <span>Wonderwall&rsquo;s Light, positioned in the archive as a reincarnation of the First Radiance.</span>
+              </button>
+              <button type="button" data-character="daniel">
+                <span>Registry 04</span>
+                <strong>Daniel Van Degurechaff</strong>
+                <span>The witness who forces Ardeatus and the Empire to classify before they punish.</span>
+              </button>
+              <button type="button" data-character="eloi">
+                <span>Registry 05</span>
+                <strong>Eloi du Corvane</strong>
+                <span>A lyrical, raven-marked presence whose public summary already reads like a line of prophecy.</span>
+              </button>
+            </div>
+
+            <article class="char-panel" id="characterPanel" aria-live="polite">
+              <div class="char-panel__media">
+                <img id="characterImage" src="../public/uploads/char-halken-orveth-hero.png" alt="Halken Orveth portrait">
+              </div>
+              <div class="char-panel__content">
+                <div class="micro" id="characterType">Character / Answered-class vessel</div>
+                <div class="char-panel__designation" id="characterDesignation">The Answered of Dominion</div>
+                <h3 class="char-panel__name" id="characterName">Halk&#39;en Orveth</h3>
+                <p class="char-panel__summary" id="characterSummary">
+                  A Cynosure-aligned Answered vessel of Auctoriel, Seraphim of Dominion, and one of the clearest living examples of what the Answered mean in practice.
+                </p>
+                <div class="char-panel__meta" id="characterTags">
+                  <span class="tag">Church</span>
+                  <span class="tag">Auctoriel</span>
+                  <span class="tag">Dominion</span>
+                  <span class="tag">Kalt&#39;sen</span>
+                </div>
+                <p class="char-panel__quote" id="characterQuote">
+                  &ldquo;Dominion is easiest to praise when it is a word in liturgy. It is harder to endure when it grows hands.&rdquo;
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="places">
+        <div class="shell">
+          <div class="section__head">
+            <div>
+              <div class="section__eyebrow">Topography / Strategic geography</div>
+              <h2 class="section__title">Give the archive physical gravity.</h2>
+            </div>
+            <p class="section__desc">
+              Characters and institutions land harder once the homepage shows where they operate: frontier coasts, academy cities,
+              and geological hazard zones that explain why the world behaves the way it does.
+            </p>
+          </div>
+
+          <div class="places">
+            <article class="places__feature">
+              <img src="../public/uploads/place-darkmargin.png" alt="The Darkmargin">
+              <div class="place__copy">
+                <div class="place__metric">Northern Frontier / Updated 2026-05-20</div>
+                <h3 class="place__title">The Darkmargin</h3>
+                <p>The coastal frontier where the Twilight Band meets permanent dark, and where the War of the Threshold is kept from becoming everyone else&rsquo;s problem.</p>
+              </div>
+            </article>
+
+            <article class="place place--small-a">
+              <img src="../public/uploads/place-vrenne.png" alt="Vrenne">
+              <div class="place__copy">
+                <div class="place__metric">Central Corridor / Academy City</div>
+                <h3 class="place__title">Vrenne</h3>
+                <p>Home of the Academy of Syr&rsquo;lene, the city that feels less like it developed an institution and more like the institution built a city around itself.</p>
+              </div>
+            </article>
+
+            <article class="place place--small-b">
+              <img src="../public/uploads/place-vael-mouth.png" alt="The Vael Mouth">
+              <div class="place__copy">
+                <div class="place__metric">Mid Scorch Belt / Hazard Zone</div>
+                <h3 class="place__title">The Vael Mouth</h3>
+                <p>An 85 km collapsed caldera where BrightCrystal densifies to dangerous purity and the planet&rsquo;s relation to Vael&rsquo;Khar becomes physically visible.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="systems">
+        <div class="shell">
+          <div class="section__head">
+            <div>
+              <div class="section__eyebrow">Systems Atlas / Magic, theory, infrastructure</div>
+              <h2 class="section__title">Explain the world&rsquo;s grammar in public.</h2>
+            </div>
+            <p class="section__desc">
+              This is the section the current homepage is missing most. It should give new readers just enough structure to understand
+              the difference between routing, fusion, and the materials those powers run on.
+            </p>
+          </div>
+
+          <div class="systems">
+            <div class="system-switch" role="tablist" aria-label="Systems primer">
+              <button class="is-active" type="button" data-system="redactory">
+                <span>Primer 01</span>
+                <strong>Redactory</strong>
+                <small>The disciplined art of routing reality into allowed forms.</small>
+              </button>
+              <button type="button" data-system="divination">
+                <span>Primer 02</span>
+                <strong>Divination</strong>
+                <small>Recursive fusion between a mortal vessel and divine coherence through the Dive interface.</small>
+              </button>
+              <button type="button" data-system="brightcrystal">
+                <span>Primer 03</span>
+                <strong>BrightCrystal</strong>
+                <small>The world&rsquo;s primary energy substrate, economic base, and one of its least understood risks.</small>
+              </button>
+            </div>
+
+            <article class="systems__panel">
+              <div class="systems__media">
+                <img id="systemImage" src="../public/uploads/sys-redactory.png" alt="Redactory illustration">
+              </div>
+              <div class="systems__content">
+                <div class="systems__headline">
+                  <h3 id="systemName">Redactory</h3>
+                  <span class="micro" id="systemDate">Updated 2026-05-10</span>
+                </div>
+                <p class="section__desc" id="systemSummary">The practiced ability to force reality to express a different valid state without rewriting the world&rsquo;s underlying laws.</p>
+                <div class="system-copy" id="systemCopy">
+                  <article>
+                    <h4>Plain language</h4>
+                    <p>Redactory is routing, not creation. A practitioner selects from possibilities reality already allows, then forces one of those possibilities to happen here, now, under pressure.</p>
+                  </article>
+                  <article>
+                    <h4>Why it matters</h4>
+                    <p>It gives the homepage a clean on-ramp into the world&rsquo;s logic: temporary instancing, stable reconfiguration, the Dive, and the idea that deeper work means more foundational contact.</p>
+                  </article>
+                  <article>
+                    <h4>World hook</h4>
+                    <p>The Academy of Syr&rsquo;lene, Vrenne, Anchor domains, and the Index Theorem all radiate outward from this system, so surfacing it here clarifies half the archive.</p>
+                  </article>
+                  <article>
+                    <h4>Tag surface</h4>
+                    <p>Routing / Dive / Anchor / Strata / Stable reconfiguration</p>
+                  </article>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="directory">
+        <div class="shell">
+          <div class="section__head">
+            <div>
+              <div class="section__eyebrow">Archive Directory / Section-specific routes remain intact</div>
+              <h2 class="section__title">The homepage informs. The sections still specialize.</h2>
+            </div>
+            <p class="section__desc">
+              The goal is not to flatten the archive into one long page. It is to make the front door denser, more navigable, and more legible, then hand readers into the existing section pages with context.
+            </p>
+          </div>
+
+          <div class="directory__grid">
+            <a href="#characters">
+              <div class="directory__count">18 Records / Characters</div>
+              <h3>Characters</h3>
+              <p class="directory__desc">Named figures, vessels, witnesses, clergy, and dangerous exceptions.</p>
+            </a>
+            <a href="#places">
+              <div class="directory__count">18 Records / Places</div>
+              <h3>Places</h3>
+              <p class="directory__desc">Cities, frontiers, margins, and geographic structures with institutional consequences.</p>
+            </a>
+            <a href="#systems">
+              <div class="directory__count">06 Records / Systems</div>
+              <h3>Systems</h3>
+              <p class="directory__desc">Redactory, Divination, BrightCrystal, and the theoretical scaffolding beneath them.</p>
+            </a>
+            <a href="#latest">
+              <div class="directory__count">61 Records / Public Index</div>
+              <h3>Browse the latest</h3>
+              <p class="directory__desc">Start with what moved most recently, then drop into the archive with sharper intent.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>SiNE Archives prototype homepage / Separate from the live site</span>
+        <span class="micro">Built to extend the archive, not replace its section pages</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const characterData = {
+      halken: {
+        type: "Character / Answered-class vessel",
+        designation: "The Answered of Dominion",
+        name: "Halk'en Orveth",
+        summary: "A Cynosure-aligned Answered vessel of Auctoriel, Seraphim of Dominion, and one of the clearest living examples of what the Answered mean in practice.",
+        quote: "\"Dominion is easiest to praise when it is a word in liturgy. It is harder to endure when it grows hands.\"",
+        image: "../public/uploads/char-halken-orveth-hero.png",
+        alt: "Halken Orveth portrait",
+        tags: ["Church", "Auctoriel", "Dominion", "Kalt'sen"]
+      },
+      vaey: {
+        type: "Character / Hallowed assessor-priest",
+        designation: "The Hollow Saint",
+        name: "Vaey Viktor",
+        summary: "A retired Obsidian Rite assessor whose fragment of Meruel lets him perceive potential so clearly that he has started treating wasted greatness as blasphemy.",
+        quote: "\"He hears too clearly from too small a part of Heaven, and has decided the fragment is the whole of judgment.\"",
+        image: "../public/uploads/char-vaey-viktor-hero.jpg",
+        alt: "Vaey Viktor portrait",
+        tags: ["Meruel", "Assessment", "Potential", "Church"]
+      },
+      alithia: {
+        type: "Character / Wonderwall lineage",
+        designation: "Wonderwall's Light",
+        name: "Al'ithia Rae Wonderwall",
+        summary: "A reincarnation of the First Radiance whose presence immediately widens the homepage from archive index into mythic inheritance.",
+        quote: "\"Wonderwall's Light. A reincarnation of the First Radiance.\"",
+        image: "../public/uploads/Al'ithia-HERO.png",
+        alt: "Alithia Wonderwall portrait",
+        tags: ["Wonderwall", "Radiance", "Lineage", "Reincarnation"]
+      },
+      daniel: {
+        type: "Character / Tempered witness",
+        designation: "The Marta Chord witness",
+        name: "Daniel Van Degurechaff",
+        summary: "The man keeping the Marta Chord alive, forcing Ardeatus and the Empire to classify before they punish.",
+        quote: "\"The man keeping the Marta Chord alive. A Tempered witness of Vhaldr who forces Ardeatus and the Empire to classify before they punish.\"",
+        image: "../public/uploads/char-daniel-degurechaff-hero.webp",
+        alt: "Daniel Van Degurechaff portrait",
+        tags: ["Ardeatus", "Vhaldr", "Witness", "Classification"]
+      },
+      eloi: {
+        type: "Character / Courtly anomaly",
+        designation: "The raven voice",
+        name: "Eloi du Corvane",
+        summary: "A lyrical figure whose public record already reads like prophecy, melody, and threat braided together.",
+        quote: "\"Oh Raven won't you sing me a happy song?\"",
+        image: "../public/uploads/char-eloi-du-corvane-hero.png",
+        alt: "Eloi du Corvane portrait",
+        tags: ["Corvane", "Raven", "Song", "Prophecy"]
+      }
+    };
+
+    const systemsData = {
+      redactory: {
+        name: "Redactory",
+        date: "Updated 2026-05-10",
+        summary: "The disciplined art of routing reality into allowed forms.",
+        image: "../public/uploads/sys-redactory.png",
+        alt: "Redactory system art",
+        cards: [
+          ["Plain language", "Redactory is routing, not creation. A practitioner forces a different valid state rather than inventing a new law."],
+          ["Why it matters", "It gives the homepage a clean first explanation for how effects happen: temporary instancing, stable reconfiguration, the Dive, and depth."],
+          ["World hook", "The Academy of Syr'lene, Vrenne, and the Index Theorem all become more legible once this routing model is on the homepage."],
+          ["Tag surface", "Routing / Dive / Anchor / Strata / Stable reconfiguration"]
+        ]
+      },
+      divination: {
+        name: "Divination",
+        date: "Updated 2026-05-15",
+        summary: "Recursive fusion between a mortal vessel and divine coherence through the Dive interface.",
+        image: "../public/uploads/sys-divination.png",
+        alt: "Divination system art",
+        cards: [
+          ["Plain language", "Redactory changes configuration. Divination turns a mortal vessel into a place where domain-pressure answers."],
+          ["Why it matters", "It explains why the archive's saints, vessels, Beatified clergy, and possession language are not just religion but structural phenomena."],
+          ["World hook", "Once this is visible, characters like Halk'en Orveth and Vaey Viktor read as system expressions rather than mysterious lore fragments."],
+          ["Tag surface", "Fusion / Vessel / Fragments / Seraphim / Sovereign"]
+        ]
+      },
+      brightcrystal: {
+        name: "BrightCrystal",
+        date: "Updated 2026-03-30",
+        summary: "Curvature-Compressed Radiant Silicate: the world's primary energy substrate and the material nobody fully understands.",
+        image: "../public/uploads/sys-bright-crystal.png",
+        alt: "BrightCrystal system art",
+        cards: [
+          ["Plain language", "BrightCrystal stores, transmits, and amplifies resonance. It powers industry, currency, advanced practice, and systemic risk."],
+          ["Why it matters", "It converts the archive's cosmology and systems pages into a material economy readers can feel at the homepage level."],
+          ["World hook", "The Vael Mouth, Calling hazards, the Apocachynthion, and SiNE's hidden research all connect through BrightCrystal."],
+          ["Tag surface", "Energy / Resonance / Callings / Economy / Precursors"]
+        ]
+      }
+    };
+
+    const characterButtons = Array.from(document.querySelectorAll("[data-character]"));
+    const systemButtons = Array.from(document.querySelectorAll("[data-system]"));
+    const characterName = document.getElementById("characterName");
+    const characterType = document.getElementById("characterType");
+    const characterDesignation = document.getElementById("characterDesignation");
+    const characterSummary = document.getElementById("characterSummary");
+    const characterQuote = document.getElementById("characterQuote");
+    const characterImage = document.getElementById("characterImage");
+    const characterTags = document.getElementById("characterTags");
+    const systemName = document.getElementById("systemName");
+    const systemDate = document.getElementById("systemDate");
+    const systemSummary = document.getElementById("systemSummary");
+    const systemImage = document.getElementById("systemImage");
+    const systemCopy = document.getElementById("systemCopy");
+    const searchInput = document.getElementById("archive-search");
+    const chips = Array.from(document.querySelectorAll(".chip"));
+    const latestEntries = Array.from(document.querySelectorAll("#latestEntries .entry"));
+    const queryEcho = document.getElementById("queryEcho");
+    const matchCount = document.getElementById("matchCount");
+    const resultsEmpty = document.getElementById("resultsEmpty");
+
+    function setCharacter(key) {
+      const item = characterData[key];
+      if (!item) return;
+      characterButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.character === key);
+      });
+      characterType.textContent = item.type;
+      characterDesignation.textContent = item.designation;
+      characterName.textContent = item.name;
+      characterSummary.textContent = item.summary;
+      characterQuote.textContent = item.quote;
+      characterImage.src = item.image;
+      characterImage.alt = item.alt;
+      characterTags.innerHTML = item.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+    }
+
+    function setSystem(key) {
+      const item = systemsData[key];
+      if (!item) return;
+      systemButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.system === key);
+      });
+      systemName.textContent = item.name;
+      systemDate.textContent = item.date;
+      systemSummary.textContent = item.summary;
+      systemImage.src = item.image;
+      systemImage.alt = item.alt;
+      systemCopy.innerHTML = item.cards.map(([title, copy]) => {
+        return `<article><h4>${title}</h4><p>${copy}</p></article>`;
+      }).join("");
+    }
+
+    characterButtons.forEach((button) => {
+      const key = button.dataset.character;
+      button.addEventListener("mouseenter", () => setCharacter(key));
+      button.addEventListener("focus", () => setCharacter(key));
+      button.addEventListener("click", () => setCharacter(key));
+    });
+
+    systemButtons.forEach((button) => {
+      button.addEventListener("click", () => setSystem(button.dataset.system));
+    });
+
+    let activeFilter = "all";
+
+    function applySearch() {
+      const q = (searchInput.value || "").trim().toLowerCase();
+      const terms = q.split(/\s+/).filter(Boolean);
+      let visible = 0;
+
+      latestEntries.forEach((entry) => {
+        const section = entry.dataset.section || "";
+        const hay = entry.dataset.search || "";
+        const matchesQuery = !terms.length || terms.every((term) => hay.includes(term));
+        const matchesFilter = activeFilter === "all" || section === activeFilter;
+        const show = matchesQuery && matchesFilter;
+        entry.classList.toggle("hidden-by-filter", !show);
+        if (show) visible += 1;
+      });
+
+      queryEcho.textContent = q ? `Filtering by "${q}"` : `Showing ${activeFilter === "all" ? "all surfaced records" : activeFilter + " records"}`;
+      matchCount.textContent = `${visible} latest entr${visible === 1 ? "y" : "ies"}`;
+      resultsEmpty.classList.toggle("is-visible", visible === 0);
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        activeFilter = chip.dataset.filter || "all";
+        chips.forEach((item) => item.classList.toggle("is-active", item === chip));
+        applySearch();
+      });
+    });
+
+    searchInput.addEventListener("input", applySearch);
+
+    setCharacter("halken");
+    setSystem("redactory");
+    applySearch();
+  </script>
+</body>
+</html>

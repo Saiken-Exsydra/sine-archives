@@ -3,16 +3,16 @@ title: "Vael'Theryn"
 type: "Character"
 affiliation: "Page Primordial (Terra) — not a mortal or Archtype-class entity"
 rank: "Page Primordial"
-designation: "Page Primordial · Constrained by choice, not by force"
+designation: "The Grammar Beneath the World"
 registry_status: "Not registered — predates the concept of registration"
 occupation: "Witness — constrained observation and bounded intervention"
-summary: "The world's oldest inhabitant. Constrained to watch. Permitted to act, rarely, and within very specific limits."
+summary: "Terra's oldest mind watches every branch lean, and almost always chooses not to touch the scale."
 tags: ["Vael'Theryn", "Page Primordial", "Time", "Terra", "Archtype War", "Constraint", "Keepers of Before", "Skyphons"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
-image: "../../assets/uploads/char-vaeltheryn.png"
-hero_image: "../../assets/uploads/char-vaeltheryn-hero.png"
+image: "../../assets/uploads/characters/char-vaeltheryn-portrait.png"
+hero_image: "../../assets/uploads/characters/char-vaeltheryn-hero-main.png"
 ---
 
 > *"The constraint is not a cage. It is a decision. The distinction matters more than it might seem."*

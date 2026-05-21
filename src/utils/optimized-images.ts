@@ -30,6 +30,15 @@ export function getImageUrl(value: ContentImageValue): string | null {
   return typeof value === "string" ? value : value.src;
 }
 
+export function getImageKind(value: ContentImageValue): "hero" | "portrait" | "neutral" | "unknown" {
+  const url = getImageUrl(value);
+  if (!url) return "unknown";
+  const lower = url.toLowerCase();
+  if (lower.includes("portrait")) return "portrait";
+  if (lower.includes("hero")) return "hero";
+  return "neutral";
+}
+
 function getSrcsetAttribute(result: GetImageResult): string {
   return result.srcSet.attribute || "";
 }

@@ -106,10 +106,16 @@ The main image fields are:
 
 - `image`
 - `hero_image`
+- `portrait_gallery`
+- `hero_gallery`
 
 `image` is usually the main portrait/panel image.
 
 `hero_image` is usually the wide hero/stage image.
+
+`portrait_gallery` is optional and adds extra portrait images for the character entry page slideshow.
+
+`hero_gallery` is optional and adds extra hero images for the characters section stage slideshow.
 
 Use a relative path from the markdown file to `src/assets/uploads/...`.
 
@@ -130,7 +136,137 @@ created: "2026-05-14"
 updated: "2026-05-14"
 image: "../../assets/uploads/characters/char-my-new-character.png"
 hero_image: "../../assets/uploads/characters/char-my-new-character-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-my-new-character-portrait-2.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-my-new-character-hero-2.png"
 ---
+```
+
+## Character Portrait vs Hero Galleries
+
+Characters now support two separate optional galleries:
+
+- `portrait_gallery`
+- `hero_gallery`
+
+They do different jobs:
+
+- `portrait_gallery` is for the character entry page at `/characters/<slug>/`
+- `hero_gallery` is for the main characters section/page stage layout
+
+### How Character Images Behave
+
+- `image` = default portrait image
+- `hero_image` = default hero image
+- `portrait_gallery` = extra portrait images
+- `hero_gallery` = extra hero images
+
+Current page behavior:
+
+- character entry page rotates portrait images only
+- characters section stage rotates hero images only
+
+That means:
+
+- do not put hero-only images into `portrait_gallery`
+- do not put portrait-only images into `hero_gallery`
+
+### Naming Rule For Character Galleries
+
+Use clear filenames so the role is obvious:
+
+- portrait images should include `portrait` when possible
+- hero images should include `hero`
+
+Recommended examples:
+
+- `char-my-new-character-portrait.png`
+- `char-my-new-character-portrait-2.png`
+- `char-my-new-character-hero.png`
+- `char-my-new-character-hero-2.png`
+
+This makes the content easier to audit and matches how the current character workflows are organized.
+
+### Character Gallery Example
+
+```md
+---
+title: "My New Character"
+type: "Character"
+summary: "Short summary here."
+tags: ["Character", "Example"]
+status: "public"
+created: "2026-05-14"
+updated: "2026-05-14"
+image: "../../assets/uploads/characters/char-my-new-character-portrait.png"
+hero_image: "../../assets/uploads/characters/char-my-new-character-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-my-new-character-portrait-2.png"
+  - "../../assets/uploads/characters/char-my-new-character-portrait-3.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-my-new-character-hero-2.png"
+  - "../../assets/uploads/characters/char-my-new-character-hero-3.png"
+---
+```
+
+### Optional Gallery Controls
+
+These frontmatter fields are optional:
+
+- `portrait_gallery_transition`
+- `portrait_gallery_autoplay`
+- `hero_gallery_transition`
+- `hero_gallery_autoplay`
+
+Valid transition values:
+
+- `fade`
+- `slide`
+
+Autoplay values:
+
+- `true`
+- `false`
+
+Example:
+
+```md
+---
+portrait_gallery_transition: "fade"
+portrait_gallery_autoplay: true
+hero_gallery_transition: "fade"
+hero_gallery_autoplay: true
+---
+```
+
+If omitted, the current default behavior is:
+
+- transition defaults to `fade`
+- autoplay defaults to `true`
+
+### How To Add A New Gallery Image To An Existing Character
+
+1. Put new file in `src/assets/uploads/characters/`
+2. Use a clear filename like `char-name-portrait-2.png` or `char-name-hero-2.png`
+3. Add the relative path to either `portrait_gallery` or `hero_gallery`
+4. Update both EN and PT-BR markdown files if both locales use that asset
+5. Run `npm run build`
+
+### Al'ithia Example
+
+Example of the current pattern:
+
+- portrait extra: `src/assets/uploads/characters/char-alithia-wonderwall-portrait-asc.png`
+- hero extra: `src/assets/uploads/characters/char-alithia-wonderwall-hero-asc.png`
+
+Frontmatter:
+
+```md
+portrait_gallery:
+  - "../../assets/uploads/characters/char-alithia-wonderwall-portrait-asc.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-alithia-wonderwall-hero-asc.png"
 ```
 
 ### Place example
@@ -264,6 +400,8 @@ Do not put new 10 MB to 20 MB hero art in `public/uploads` unless you explicitly
 Follow the existing style as closely as possible:
 
 - characters: `char-name.png`, `char-name-hero.png`
+- characters portrait gallery: `char-name-portrait-2.png`
+- characters hero gallery: `char-name-hero-2.png`
 - places: `place-name.png`
 - cosmology: `cosm-name.png`
 - organizations: `org-name.png`
@@ -302,7 +440,8 @@ For a new entry with images:
 2. Create the entry in `src/content/<collection>_en/`
 3. Create the PT-BR partner in `src/content/<collection>_pt_br/` if needed
 4. Set `image` and `hero_image` using `../../assets/uploads/...`
-5. Run `npm run build`
+5. Add `portrait_gallery` and/or `hero_gallery` if the entry needs extra rotating images
+6. Run `npm run build`
 
 ## If Something Breaks
 

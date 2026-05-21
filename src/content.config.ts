@@ -48,6 +48,12 @@ const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) =>
     // Allow incremental rollout: migrated entries use Astro images, untouched ones keep legacy URLs.
     image: z.union([image(), z.string()]).optional(),
     hero_image: z.union([image(), z.string()]).optional(),
+    portrait_gallery: z.array(z.union([image(), z.string()])).optional(),
+    portrait_gallery_transition: z.enum(["fade", "slide"]).optional(),
+    portrait_gallery_autoplay: z.boolean().optional(),
+    hero_gallery: z.array(z.union([image(), z.string()])).optional(),
+    hero_gallery_transition: z.enum(["fade", "slide"]).optional(),
+    hero_gallery_autoplay: z.boolean().optional(),
   });
 
 export const collections = Object.fromEntries(

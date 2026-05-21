@@ -8,7 +8,7 @@ affiliation: "Apocachynthion (licensed); House Engelmeyer (reintegrated main lin
 house: "Engelmeyer (main line, reintegrated 2199 — formerly cadet Voren branch)"
 rank: "Quill"
 registry_status: "Registered — intake 2193; Quill certification issued 2195; conditional operational license active"
-designation: "Quiet Moon"
+designation: "Moon-Pale Hunger"
 height: "169 cm"
 build: "Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy"
 complexion: "Fair; even — no surface coherence tells during ability expression. The absence of tells is itself a tell, to anyone looking for it."
@@ -17,7 +17,7 @@ eyes: "Grey, very light — reads as near-colourless in low illumination. Every 
 dress: "White by preference — pale linens, light wools, materials that don't announce themselves"
 residence: "Vel'hara, western band (relocated 2199)"
 occupation: "Independent practitioner — licensed for operational engagement under conditional terms"
-summary: "Silence of the innocents."
+summary: "She wears innocence with perfect kindness, while something older than classification watches through her."
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"

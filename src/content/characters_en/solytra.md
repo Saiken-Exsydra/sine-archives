@@ -3,7 +3,7 @@ title: "Sol'ytra"
 type: "Character"
 affiliation: "All-Mother; derivative of the Lunar Crown's remembered wound; no fixed institutional allegiance"
 rank: "Crownborn Elemental"
-designation: "The Mirror of the Wounded Crown"
+designation: "Daughter of a Grieving World"
 registry_status: "Not registered - singular post-Fracture entity; first confirmed Crownborn Elemental; Archtype-level response advised in hostile conditions"
 height: "150 cm"
 build: "Small, slender, delicate"
@@ -14,13 +14,17 @@ dress: "White exclusively - royal lunar gown in formal manifestation; simpler wh
 birthplace: "Terra - emergent within the All-Mother's planetary field in remembered image of Syr'lene"
 residence: "No fixed residence; most consistently reported near shrine-gardens, exhausted farmland, post-storm roads, and sites touched by Calling activity"
 occupation: "Ecological intervention, wandering guardianship, and containment response"
-summary: "The planet's daughter shaped after the woman in the Moon."
+summary: "Terra answered Syr'lene's sacrifice by shaping gratitude, weather, and sorrow into a girl."
 tags: ["Sol'ytra", "Crownborn", "Elemental", "All-Mother", "Syr'lene", "Lunar Crown", "Fracture", "Mirror of the Wounded Crown", "Containment", "Syntax"]
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
 image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-solytra-portrait-2.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-solytra-hero-2.png"
 ---
 
 > *"She was made from reverence, which is why she is dangerous. Reverence does not stop where a healthier love would."*

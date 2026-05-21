@@ -21,6 +21,10 @@ created: "2026-05-14"
 updated: "2026-05-14"
 image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-solytra-portrait-2.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-solytra-hero-2.png"
 ---
 
 > *"Ela nasceu da reverência. É isso que a torna perigosa. Reverência não para onde um amor mais saudável pararia."*

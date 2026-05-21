@@ -1,8 +1,8 @@
 ---
 title: "The Obsidian Rite"
 type: "Organização"
-designation: "Braço operacional de campo da Igreja - divisão da Diocese"
-affiliation: "A Igreja - relação operacional por tratado com o Empire of Synus e HourGlass"
+designation: "Braço operacional de campo da Igreja"
+affiliation: "A Igreja - relação operacional por tratado com o Empire of Synus e a HourGlass"
 headquarters: "Saint Her'chell Cathedral, Kalt'sen - comando operacional distribuído regionalmente"
 founded: "Carta de campo pós-Sundering construída sobre tradições clericais anteriores de vesselhood"
 jurisdiction: "Twilight Band e fronteira norte - autoridade operacional em Desolation Events; autoridade por tratado no teatro fronteiriço"
@@ -23,9 +23,7 @@ image: "../../assets/uploads/org-obsidian-rite.png"
 
 O Obsidian Rite é o braço operacional da Igreja para identificação, contenção e expulsão de manifestações demoníacas em toda a Twilight Band.
 
-O ponto mais importante do cânone revisado é simples:
-
-O Rite não é apenas clero com treinamento melhor.
+O ponto central do Codex revisado é simples: o Rite não é apenas clero com treinamento melhor.
 
 Seus membros são **vessels Beatificados** carregando fusão angelical sustentada sob regulação da Igreja. É isso que dá peso real ao trabalho do Rite para além de liturgia correta, instrumentos selados ou formação sacerdotal comum.
 
@@ -38,11 +36,11 @@ O Rite é, ao mesmo tempo:
 
 ---
 
-## Rank não é Contact-Depth
+## Rank e contact-depth
 
 O Codex revisado separa duas escadas que resumos antigos tratavam como se fossem uma só.
 
-**Rank** é autoridade institucional:
+**Rank** descreve autoridade institucional:
 
 - **Postulant**: candidato recém-investido em formação
 - **Votary**: expulsor principal operacional padrão
@@ -50,17 +48,17 @@ O Codex revisado separa duas escadas que resumos antigos tratavam como se fossem
 - **Prelate**: ofício de comando regional ou de formação abaixo de Rector-Ascendant
 - **Rector-Ascendant**: ofício regular de campo mais alto
 
-**Contact-depth** é o tipo de pressão angelical que o vessel carrega:
+**contact-depth** descreve o tipo de pressão angelical que o vessel carrega:
 
 - contato **Stellate** normalmente produz um **Votary**
 - contato **Cardinal Star** é reconhecido como **Lucent**
 - contato **Cynosure** é reconhecido como **Answered**
 
-Essa distinção importa. Lucent não é automaticamente comandante. Prelate não é automaticamente Lucent. Rector-Ascendant é um ofício. **Answered** é uma categoria teológica restrita, não uma promoção comum.
+Essa distinção importa. Um Lucent não é automaticamente comandante. Um Prelate não é automaticamente Lucent. Um Rector-Ascendant é um ofício. **Answered** é uma categoria teológica restrita, não uma promoção comum.
 
 ---
 
-## A Escada Seráfica
+## A escada Seráfica
 
 O Rite agora explica sua taxonomia divina por meio de **Seraphic Constellations**.
 
@@ -82,7 +80,9 @@ Mote / Spark / Gleam
 ```
 
 Os **Seven Answers** são os sete Seraphim com contato estável com a Igreja.
+
 Os **Answered** são vessels mortais através dos quais um desses Seven Answers respondeu.
+
 Essa diferença é uma das correções mais importantes do cânone revisado.
 
 ---
@@ -91,10 +91,10 @@ Essa diferença é uma das correções mais importantes do cânone revisado.
 
 O Rite não publica um catálogo completo de domínios, mas o Codex identifica padrões operacionais principais:
 
-- fusões de **Light-domain** fortalecem radiância, disrupção e o Naming
-- fusões de **Protection-domain** reforçam barreiras, blindagem e defesa de limiar
-- fusões de **Healing-domain** sustentam recuperação de vessel e trabalho de Ecclesiastic Surgery
-- fusões de **Authority-domain** são raras e aparecem mais em alto comando, Lucents, Answered e alguns Rector-Ascendants
+- fusões de **light-domain** fortalecem radiância, disrupção e o the Naming
+- fusões de **protection-domain** reforçam barreiras, blindagem e defesa de limiar
+- fusões de **healing-domain** sustentam recuperação de vessel e trabalho de Ecclesiastic Surgery
+- fusões de **authority-domain** são raras e aparecem mais em alto comando, Lucents, Answered e alguns Rector-Ascendants
 
 É por isso que os membros do Rite não são intercambiáveis. Eles não são cópias mais fortes ou mais fracas de um mesmo modelo. Eles carregam ofícios divinos diferentes em profundidades diferentes.
 
@@ -105,16 +105,16 @@ O Rite não publica um catálogo completo de domínios, mas o Codex identifica p
 Toda operação formal do Rite é construída ao redor de uma unidade de três pessoas:
 
 - **expulsor principal**: normalmente um Votary ou superior
-- **confessor-priest**: preparação, steadiness e cuidado posterior
+- **Confessor-Priest**: preparação, steadiness e cuidado posterior
 - **Ecclesiastic Surgeon**: avaliação de sobrevivência, monitoramento de fusão e julgamento de resgate
 
-O Rite mantém essas funções separadas de propósito. Ele não gosta que força, cuidado e julgamento final colapsem num único ofício sem supervisão.
+O Rite mantém essas funções separadas de propósito. Ele não gosta que força, cuidado e julgamento final colapsem em um único ofício sem supervisão.
 
 O **Choir Penitent** continua sendo uma ordem companheira distinta, não um braço Beatificado de campo. Em operações do Rite, ele fornece avaliação antecipada, verificação de contato e ancoragem perceptiva durante engajamentos de alto nível e Grand Expulsions.
 
 ---
 
-## The Naming
+## O the Naming
 
 A técnica assinatura do Rite é **the Naming**.
 
@@ -141,7 +141,7 @@ O Codex revisado é explícito: o perigo cresce com o contact-depth. Contato Ste
 
 ---
 
-## Lucents e os Answered
+## Lucents e Answered
 
 O cânone revisado dá nomes mais claros a duas categorias excepcionais.
 
@@ -154,13 +154,14 @@ Um **Lucent** é um vessel Beatificado cuja fusão alcança uma **Cardinal Star*
 Os **Answered** são vessels mortais cuja fusão alcança o **Cynosure**: o próprio Seraphim como estrela central de uma Seraphic Constellation.
 
 Eles não são os Seven Answers.
+
 Eles são vessels através dos quais um dos Seven Answers respondeu.
 
 Halk'en Orveth pertence a essa categoria.
 
 ---
 
-## The Victorian Rite
+## O Victorian Rite
 
 O braço setentrional do Obsidian Rite é o **Victorian Rite**.
 

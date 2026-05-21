@@ -165,15 +165,15 @@ A Igreja é hierárquica. Ascensão dentro da estrutura ocorre através de consa
 
 ## As Ordens Especializadas
 
-### The Obsidian Rite
+### O Obsidian Rite
 
 O Obsidian Rite é o braço operacional da Igreja. Seus membros são clérigos que completaram tanto a formação sacerdotal comum quanto um treinamento expandido focado em identificação, contenção e expulsão de possessões demoníacas em todos os estágios de progressão.
 
 Eles não são soldados. Seus principais instrumentos são relíquias seladas pela Igreja, os ritos formais de expulsão e uma técnica tradicional chamada **the Naming** — o ato de se dirigir a uma presença possessiva usando seu domínio verdadeiro dentro da ordenação da criação estabelecida pelo Sovereign. A Igreja ensina que o Naming produz desestabilização real em manifestações demoníacas de nível inferior. Contra presenças superiores, o Naming sozinho não basta, mas continua sendo o movimento inicial de qualquer grande rito formal de expulsão.
 
-Dentro do Obsidian Rite, o cânone revisado separa **rank** de **contact-depth**. A escada de rank vai de **Postulant** a **Votary**, **Votary-Principal**, **Prelate** e finalmente **Rector-Ascendant**. Já a profundidade de contato distingue vessels **Stellate**, **Lucent** e, nos casos mais raros, **Answered**. Operações padrão continuam sendo realizadas em unidades de três membros: um expulsor principal, um padre-confessor responsável pela preparação espiritual e recuperação do vessel e um **Ecclesiastic Surgeon**, responsável por avaliar a condição física do vessel e determinar se a expulsão ainda representa uma tentativa de resgate viável.
+Dentro do Obsidian Rite, o cânone revisado separa **rank** de **contact-depth**. A escada de rank vai de **Postulant** a **Votary**, **Votary-Principal**, **Prelate** e finalmente **Rector-Ascendant**. Já a profundidade de contato distingue vessels **Stellate**, **Lucent** e, nos casos mais raros, **Answered**. Operações padrão continuam sendo realizadas em células de três membros: um expulsor principal, um Confessor-Priest responsável pela preparação espiritual e recuperação do vessel e um **Ecclesiastic Surgeon**, responsável por avaliar a condição física do vessel e determinar se a expulsão ainda representa uma tentativa de resgate viável.
 
-### The Choir Penitent
+### O Choir Penitent
 
 O Choir Penitent é a ordem formal de Heralds da Igreja — indivíduos portadores daquilo que a instituição chama de **the Gift of Sight**, submetido voluntariamente à supervisão e orientação eclesiástica. Dentro do Obsidian Rite, eles atuam como função de inteligência operacional — identificando a natureza e o nível de uma presença demoníaca antes do confronto de uma unidade expulsora, analisando manifestações angelicais alegadas para determinar sua autenticidade e fornecendo alertas antecipados sobre concentrações demoníacas antes que um Desolation Event alcance seus estágios mais perigosos.
 
