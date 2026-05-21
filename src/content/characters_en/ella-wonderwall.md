@@ -8,7 +8,7 @@ affiliation: "House Wonderwall (primary line); SiNE (operational Redactor, succe
 house: "Wonderwall (primary line placement)"
 rank: "Radiance-class Redactor — Abyssal Anchor, operational license unconditional"
 registry_status: "Registered — Radiance-class, Light Anchor. KL-83 (internal designation, not publicly held)"
-designation: "KL-83"
+designation: "The Light That Came Back Different"
 height: "170 cm"
 build: "Very thin; long-fingered; the superficial impression of fragility that is inaccurate"
 complexion: "Pale"
@@ -19,7 +19,11 @@ residence: "Primary Wonderwall holdings; extended operational presence in Kalt's
 occupation: "SiNE Redactor (operational); internal successor candidate to the Wonderwall Seat and SiNE executive function"
 image: "../../assets/uploads/characters/char-ella-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
-summary: "An Echo from the past · A hope of change."
+portrait_gallery:
+  - "../../assets/uploads/characters/char-ella-wonderwall-portrait-asc.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-ella-wonderwall-hero-2.png"
+summary: "Fashioned from another's absence, she answered with a self so vivid that even the grief that made her had to let go."
 tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora", "Successor"]
 status: "public"
 created: "2026-03-30"

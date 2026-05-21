@@ -8,7 +8,7 @@ affiliation: "Apocachynthion (provisional)"
 house: "Wonderwall (cadet branch, maternal line — two centuries diverged from primary line)"
 rank: "Quill (Provisional)"
 registry_status: "Registered — intake suspended, file open"
-designation: "Holder of Remainder"
+designation: "The Color Left After Light"
 height: "164cm"
 build: "Slight"
 complexion: "Very pale"
@@ -17,7 +17,7 @@ eyes: "Dark grey; shifting concentric rings at high exertion"
 dress: "Black exclusively — high-collared, layered, opaque"
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
 occupation: "Private scholar (none declared)"
-summary: "Color without ink."
+summary: "She moves through dim rooms like a girl teaching herself how to survive the thing in the light that has already learned her name."
 tags: ["Synus", "Wonderwall", "Redactor", "Radiance", "Inkless", "The Pale", "The Remainder", "Project Kaleidoscope"]
 status: "public"
 created: "2026-02-12"
@@ -25,6 +25,10 @@ updated: "2026-04-26"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-eclesia-wonderwall-portrait-arc.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-eclesia-wonderwall-hero-arc.png"
 ---
 
 > *"Light does not experience time. Light is not the antithesis of darkness. Light is, was, and always will be. The ligament of the cosmos. A wonder of infinity. A wall of contemplation. An eternal affirmation of the undying denial."*

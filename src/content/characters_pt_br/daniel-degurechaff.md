@@ -21,8 +21,8 @@ tags: ["Ardeatus", "Marta Chord", "Vhaldr", "Tempered", "Sarn Pell", "Apocachynt
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
-image: "../../assets/uploads/char-daniel-degurechaff-hero.webp"
-hero_image: "../../assets/uploads/char-daniel-degurechaff.png"
+image: "../../assets/uploads/characters/char-daniel-degurechaff-portrait.png"
+hero_image: "../../assets/uploads/characters/char-daniel-degurechaff-hero.png"
 ---
 
 > *"Ele é o que acontece quando uma nação decide, tarde demais, que precisão causa menos vergonha do que crueldade. Não sei se isso faz dele um reformista, um penitente, ou só o primeiro homem competente numa sala cheia de convicções."*

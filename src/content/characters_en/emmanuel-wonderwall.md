@@ -9,7 +9,7 @@ affiliation: "SiNE (founder and principal); Apocachynthion (registered — Archt
 house: "Wonderwall (founding figure, primary line); born Ex'sydra"
 rank: "Archtype"
 registry_status: "Registered — Archtype, Spatial Coherence anchor (institutional); operational license unconditional"
-designation: "Archtype · Holder of Interval"
+designation: "The Man Who Buried His First Name"
 height: "185 cm"
 build: "Broad, unhurried; the bearing of someone who has not found a room they couldn't wait in"
 complexion: "Brown, even — the particular evenness of someone whose biological processes have been stable for a very long time"
@@ -19,7 +19,7 @@ dress: "Expensive in materials, understated in style; nothing that announces its
 accessory: "The Cadence — a walking cane of BrightCrystal/dark ferrous alloy composite; always present"
 residence: "Pluribus Hill, Kalt'sen — primary residence; multiple secondary locations"
 occupation: "Founder and principal, SiNE; Meridian Council chair; hereditary Senator, Empire of Synus"
-summary: "Twelve centuries. One company. One question he hasn't answered yet."
+summary: "He has outlived houses, names, and griefs enough to become myth, yet still walks the city like a man refusing to let time turn him into one."
 tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "Remainder", "Cadence", "Project Kaleidoscope", "Kalt'sen", "Founder"]
 status: "public"
 created: "2026-03-30"

@@ -7,38 +7,38 @@ birthplace: "Vel'hara, western band (Corvel Institute custody)"
 affiliation: "Independent contractor (Apocachynthion-licensed)"
 house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
-registry_status: "Registered — compelled intake 2192; dual certification 2197; conditional license active"
-designation: "Gemini · Mirror and Threshold · No prior precedent"
+registry_status: "Registered - compelled intake 2192; dual certification 2197; conditional license active"
+designation: "She Who Keeps the Dead at the Threshold"
 build: "Compact; tensile"
 complexion: "Pale olive"
 hair: "Black, straight, shoulder-length; typically bound back during operations"
 eyes: "Dark brown (passive); layered reflection under dual-routing state"
 dress: "Close-fitting dark garments, layered protective paneling; long-bladed artifact instrument in back-worn sheath"
-residence: "Vrenne, Southern Region — no fixed address on file"
-occupation: "Independent contractor — licensed for operational engagement under conditional terms"
-summary: "Gemini"
+residence: "Vrenne, Southern Region - no fixed address on file"
+occupation: "Independent contractor - licensed for operational engagement under conditional terms"
+summary: "With one Anchor she mirrors the living, with the other she keeps the dead, and somewhere between them she learned to make a profession of killing."
 tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-03-17"
-image: "../../assets/uploads/char-rouxinol-kaise.png"
-hero_image: "../../assets/uploads/char-rouxinol-kaise-hero.png"
+updated: "2026-05-20"
+image: "../../assets/uploads/Rouxinol Portrait (2).png"
+hero_image: "../../assets/uploads/Rouxinol HERO.png"
 ---
 
-> *"She does not carry ghosts. She carries what ghosts are made of — the shape of a person after the person is gone."*
-> — Annotation in a Pager field report, Vrenne District, source designation redacted
+> *"She does not carry ghosts. She carries what ghosts are made of - the shape of a person after the person is gone."*
+> - Annotation in a Pager field report, Vrenne District, source designation redacted
 
 ---
 
-## Origin — Vel'hara and the Corvel Institute
+## Origin - Vel'hara and the Corvel Institute
 
-Vel'hara is a city-state in the western longitudinal extent of the Twilight Band, situated in the transitional territory between the Empire of Synus and the nation of Aurora — a strip of mid-band ground that neither state has historically sought to formally absorb. The city sustains itself as a free port and research enclave, tolerating institutions the Empire would regulate and activities Aurora would prohibit.
+Vel'hara is a city-state in the western reach of the Twilight Band, positioned between the Empire of Synus and Aurora. Neither power has fully absorbed it. That has made Vel'hara a place where trade, private research, and ethically dubious work can coexist with very little interference.
 
-Within Vel'hara, operating under Vel'haran commercial charter, is an organisation known as the **Corvel Institute** — nominally a research body studying anomalous Redactory phenomena in structurally thin regions of the outer band. It does not publish findings through any recognised academic body. It does not submit documentation to the Apocachynthion. It recruits quietly, retains subjects of interest without formal legal process, and maintains facilities in the outer plateau zones that do not appear on any publicly acknowledged map.
+One of the institutions that benefited from that freedom was the **Corvel Institute**. Officially, it studied unusual Redactory phenomena in structurally thin regions of the outer band. In practice, it operated more like a private black archive than a public research body. It did not publish through recognised academic channels, did not properly report to the Apocachynthion, and kept subjects of interest without meaningful legal process. Some of its facilities in the outer plateau were absent from any acknowledged map.
 
-Rouxinol Kaise was born within Corvel Institute custody. Her mother — recorded in Institute files as Sael Kaise, origin unverified — was identified during a structural-sensitivity screening near a thinness event on the outer plateau and retained as a subject of interest. She was pregnant at the time of retention.
+Rouxinol Kaise was born inside that system. Her mother, recorded in Institute files as Sael Kaise, was identified during a structural-sensitivity screening near a thinness event and retained for study. She was already pregnant at the time.
 
-Sael Kaise died when Rouxinol was four. The Institute's record lists respiratory failure. Rouxinol does not believe this. She has no evidence to the contrary. She has carried the uncertainty for twenty-three years.
+Sael Kaise died when Rouxinol was four. The official record states respiratory failure. Rouxinol does not believe that explanation. She has no proof against it. She has lived with the doubt for twenty-three years.
 
 ---
 
@@ -46,21 +46,21 @@ Sael Kaise died when Rouxinol was four. The Institute's record lists respiratory
 
 ### Dual Certification
 
-Rouxinol Kaise holds two concurrent active rank certifications — Stylus in her Mirror Anchor and Quill in her Threshold Anchor. This is without recorded precedent in the Apocachynthion's registry.
+Rouxinol Kaise holds two active rank certifications at the same time: Stylus in her Mirror Anchor and Quill in her Threshold Anchor. The Apocachynthion has no recorded precedent for this.
 
-Standard rank progression assumes a single stabilising Anchor, deepening over years of practice. A Redactor with two independently functional Anchor pathways — each capable of sustaining Dive without collapsing into Overreach, each stabilising around its own distinct conceptual anchor — does not fit anywhere in the framework as written. The Council of Volumes, following the formal certification review in 2197, issued a registry notation acknowledging that dual certification had been assigned as the closest available institutional representation of an anomalous structural condition, not as a claim that the framework adequately describes what this subject is.
+Ordinary rank progression assumes one Anchor: one stable centre through which a Redactor learns to deepen Dive over years of practice. Rouxinol does not fit that model. She possesses two functional pathways, each with its own internal logic, each able to sustain Dive, and each stabilised around a different Anchor. In administrative terms, dual certification is the closest language the institution has. It should not be mistaken for a full explanation of what she is.
 
 ### Stylus (Mirror Anchor)
 
-Elevation to Stylus in the Mirror Anchor was conferred in 2197, following a formal review of the subject's complete operational record since compelled intake in 2192, five years of structured Academy training, and the accumulated testimony of four Stylus-rank members who had observed her Mirror Anchor work under operational conditions.
+Elevation to Stylus in the Mirror Anchor was granted in 2197 after review of her operational record since compelled intake in 2192, five years of Academy training, and testimony from four Stylus-ranked observers who had seen her work directly.
 
-The review was not without dissent. Two Council members voted against elevation on the grounds that the interaction between the Mirror Anchor's depth operations and the secondary Threshold Anchor's concurrent routing creates instability conditions that standard Stylus certification does not account for. The majority position held that her demonstrated Mirror Anchor performance, assessed independently, met or exceeded the Council's criteria.
+The vote was not unanimous. Two Council members objected that her second Anchor made the Mirror Anchor too unusual to judge by normal standards. The majority held that if the Mirror Anchor was assessed on its own demonstrated performance, Rouxinol had already met, and in some respects exceeded, the standard for Stylus.
 
-She carries the Stylus insignia modified with the dual-certification notation mark. No standard form exists for this modification. The Registry Branch developed one specifically for this file.
+She carries a Stylus insignia modified with a dual-certification notation mark. No standard form existed for that alteration. The Registry Branch developed one specifically for her file.
 
 ### Quill (Threshold Anchor)
 
-The Threshold Anchor certification was issued concurrently with Stylus elevation in 2197. The Threshold Anchor was identified during intake in 2192 but not fully mapped until 2195 — three years into her training programme. Isolating it from the Mirror Anchor's concurrent routing activity was the central methodological challenge of her early training period. The isolation protocol the Academy developed for this case has no prior methodological precedent.
+The Threshold Anchor was certified at the same time. It had been noticed during intake in 2192, but it was not properly mapped until 2195 because separating it from the Mirror Anchor proved extremely difficult. For several years, the Academy was trying to study a second mechanism that kept speaking at the same time as the first. The isolation protocol eventually developed for the case had no known precedent.
 
 ---
 
@@ -68,83 +68,83 @@ The Threshold Anchor certification was issued concurrently with Stylus elevation
 
 ### Mirror Anchor
 
-Under the Index Theorem, Mirror-class Redactory is understood as a Redactor whose Anchor stabilises through conceptual alignment with correspondence — the relational property between a structure and an accurate replication of that structure. In practice, this produces the capacity to access, through the Dive, configuration routings that closely parallel the structural signature of another Redactor or resonance-bearing individual.
+Under the Index Theorem, a Mirror Anchor stabilises through correspondence: the relationship between a thing and a faithful likeness of that thing. For a general reader, the simplest comparison is musical. Rouxinol does not steal another Redactor's power, but when she is close enough, she can find their "pitch" and align herself to it. Once she has it, she can work in parallel with that pattern.
 
-**Resonance Correspondence** — Through sustained Dive while in direct proximity to another Redactor or resonance-bearing subject, Rouxinol can route her configuration selection toward an expression that parallels the target's structural anchor. The effect is not identity — she does not become the other Redactor, does not access their Dive pathway, does not replicate outputs that fall outside her own available configurations. At Stylus Depth, close proximity, she can sustain correspondence for several minutes without Overreach risk.
+**Resonance Correspondence** - While sustaining Dive near another Redactor or resonance-bearing subject, Rouxinol can shift her own output so that it runs alongside the target's Anchor pattern. The resemblance can be extremely close, but it is not identity. She does not become the other Redactor, cannot enter their private Dive pathway, and cannot produce results that lie outside her own available configurations. A useful analogy is a translator with an excellent ear: she can match the structure of what she hears, but she is still speaking in her own voice. At Stylus depth and close range, she can usually maintain that correspondence for several minutes without immediate Overreach risk.
 
-**Surface Reading** — At shallow Dive, without full correspondence active, she can identify the Anchor of a Redactor from brief proximity — in some documented cases, from a single observed output event. She cannot read Anchors that have never expressed in her presence.
+**Surface Reading** - At shallow Dive, even without full correspondence active, she can often identify another Redactor's Anchor from brief proximity or from witnessing a single output event. This is closer to recognising an accent from one sentence than to reading an entire life from a glance. If an Anchor has never expressed in her presence, she cannot reliably read it.
 
-**Correspondence Memory** — When the artifact blade has been used to terminate a target, the target's resonance anchor signature is retained in the secondary Threshold Anchor loop as a recoverable structural impression. The Mirror Anchor can then route correspondence toward that retained impression without requiring proximity to a living source.
+**Correspondence Memory** - When her artifact blade has been used to kill a target, the target's resonance signature may remain behind as a recoverable impression in the secondary Threshold loop. The Mirror Anchor can later align itself to that retained impression without needing the living source nearby. The simplest comparison is an afterimage: the light is gone, but the shape it burned into perception remains.
 
 ### Threshold Anchor
 
-The Threshold Anchor does not correspond to any named class in the Index Theorem's standard registry. The working classification "Threshold" was assigned by the 2192 intake panel for internal descriptive purposes and formally registered in 2195. Under the Index Theorem's available theoretical frameworks, the anchor appears to stabilise through conceptual alignment with boundary conditions — the structural properties of states in transition, the margins between stable configurations.
+The Threshold Anchor does not fit any named class in the standard Index Theorem registry. The label "Threshold" began as an internal description in 2192 and was formally registered in 2195 because no better category existed. If the Mirror Anchor is about resemblance, the Threshold Anchor is about edges: borders, crossings, and the unstable line between one state and another. It appears to stabilise around transition itself.
 
-**Structural Sensitivity** — Rouxinol perceives localised thinness, Calling resonance disturbance, proximity to active Dive, and environmental instability conditions through this Anchor as perceptual signals that register without deliberate Dive initiation. In thin regions, this provides operationally useful advance awareness. During Callings, the subject's own account describes it as significantly unpleasant.
+**Structural Sensitivity** - Through this Anchor, Rouxinol can notice local thinness, Calling-related resonance disturbance, nearby active Dive, and other forms of environmental instability without deliberately entering a full Dive. In practical terms, she often feels danger before others can name it. Field observers compare it to noticing a cold draft before finding the open door. In thin regions, this gives her valuable warning. During Callings, by her own account, the sensation is severely unpleasant.
 
-**Impression Retention** — The Threshold Anchor's boundary-condition alignment allows it to hold, as accessible indexed configurations, the resonance anchor impressions of individuals the blade has processed. The assessment panel's formal notation reads: *We can observe the retention function operating. We cannot fully account for it within available theoretical models. The mechanism by which termination of the source individual fails to terminate the retained configuration impression is not resolved.*
+**Impression Retention** - The same boundary-focused logic also seems to let the Threshold Anchor hold the impressions of individuals processed by the blade. The official problem is easy to describe even if it is not easy to solve: the person is dead, but something about their structural pattern remains available. The assessment panel concluded that the retention function is real, observable, and still not adequately explained by current theory.
 
-**Secondary-Loop Expression** — Under acute stress or deliberate effort at Dive depth, the Threshold Anchor's routing activity becomes externally perceptible. Observers describe the effect as a second presence manifesting alongside the subject — visually discernible, occasionally audible, inconsistent with her physical movements in precise and specific ways. During uncontrolled stress events, this expression manifests involuntarily. An observer without briefing, encountering this expression, will reasonably conclude they are observing a demonic possession event. This conclusion is incorrect. It has caused operational complications on three documented occasions.
+**Secondary-Loop Expression** - Under acute stress, or through deliberate effort at Dive depth, the Threshold Anchor can become visible from the outside. Witnesses describe this as a second presence appearing with her: something like a double, but not one that moves exactly as she moves. At times it is seen; at times it is heard; at times it seems to answer from the wrong side of the moment. An unbriefed observer would very reasonably assume demonic possession. That conclusion is incorrect, but it has still caused operational complications on three documented occasions.
 
 ### The Bifurcated Architecture
 
-The Index Theorem's standard model describes a Redactor with a single recursive structure — a self-sustaining coherence loop with one Anchor. The subject's architecture does not fit this model.
+The Index Theorem assumes that a Redactor is organised around one self-sustaining loop and one Anchor. Rouxinol is not.
 
-What the assessment record documents is a recursive structure that appears to have developed along two concurrent internal loops — each achieving independent coherence, each stabilising around its own distinct Anchor, each capable of independent Dive activity. The two loops share biological substrate and cannot operate in full independence of each other. They are structurally distinguishable in Dive conditions and demonstrably route through different configuration anchors even when simultaneously active.
+What assessors documented instead was a structure with two concurrent internal loops. Each has its own coherence. Each stabilises around a different Anchor. Each can participate in Dive activity. They are not two separate people occupying one body, and they are not fully independent systems, because they share one physical life. But under Dive conditions they can be distinguished, and when both are active they do not behave like one mechanism pretending to be two. A rough but useful analogy would be two engines mounted in one frame, each built for a different kind of terrain.
 
-The working term proposed in this panel's 2195 notation — *natural bifurcation* — is used in this file as a descriptive designation for the architecture. It does not appear in any current Index Theorem reference text.
+The working term proposed in 2195 was *natural bifurcation*. It remains a descriptive label rather than an accepted textbook category.
 
 ---
 
 ## The Kaise Blade
 
-Logged at compelled intake in 2192. Held under restricted review for two years pending classification. Released to the subject's conditional custody in 2194, following the determination that the blade's retention function was integral to the Threshold Anchor's documented operation.
+The blade was logged at compelled intake in 2192 and held under restricted review for two years while assessors attempted to classify it. It was returned to Rouxinol's conditional custody in 2194 after they concluded that the blade was not merely associated with the Threshold Anchor, but integral to its documented operation.
 
-**Working registry classification: mnemonic retention artifact — provenance unverified.**
+**Working registry classification: mnemonic retention artifact - provenance unverified.**
 
-The blade's construction material could not be fully characterised through standard intake analysis. Working classification: BrightCrystal-composite alloy, high-purity, pre-standard extraction era. The alloy composition suggests a manufacturing provenance considerably older than standard industrial processes can account for, and does not correspond to any material in the Apocachynthion's current artifact database.
+The blade's material could not be fully characterised through standard intake analysis. The working classification is a high-purity BrightCrystal-composite alloy from a manufacturing tradition older than standard industrial records can comfortably explain. In plain terms, the Apocachynthion has nothing else in its current artifact database that quite matches it.
 
-The blade was provided to the subject by the individual identified in this file as Aldric Vonn. Its origin prior to that transaction is not established. The current impression count is eleven. The count has not changed since 2197.
+The blade was given to Rouxinol by the man identified in this file as Aldric Vonn. Its earlier origin is unknown. The current impression count is eleven. That number has not changed since 2197.
 
 ---
 
 ## Physical Description
 
-Compact and tensile in frame, built for precision rather than force. Her complexion is pale olive; under sustained dual-Anchor Dive, a faint doubled shimmer becomes visible across her vein-lines — the secondary loop's routing activity expressing through surface tissue.
+Rouxinol is compact and tensile in build, shaped more for precision than force. Her complexion is pale olive. During sustained dual-Anchor Dive, a faint doubled shimmer becomes visible along her vein-lines, as though something beneath the skin is trying to route in parallel.
 
-Her hair is black, straight, and shoulder-length, typically bound back during operations. At rest her eyes are dark brown and narrowed; under active dual-routing state, they iris with layered reflection, as though two depths of the same eye are simultaneously present.
+Her hair is black, straight, and shoulder-length, usually bound back during operations. At rest, her eyes are dark brown and guarded. Under active dual-routing, they take on a layered reflective quality, as though two depths of the same gaze are present at once.
 
-She dresses in close-fitting dark garments with layered protective panelling at the torso and forearms. A long-bladed artifact instrument is carried in a back-worn sheath. Field wraps of treated cloth — former ceremonial material, function not recorded in her account — are worn at the wrists.
+She dresses in close-fitting dark garments with protective paneling at the torso and forearms. A long-bladed artifact weapon is carried in a back-worn sheath. Treated cloth wraps, apparently cut from former ceremonial material, are worn at the wrists.
 
 ---
 
 ## Biography
 
-### Early Formation — 2173 to 2187
+### Early Formation - 2173 to 2187
 
-Born within the Corvel Institute's outer-plateau facility. No civil registration exists. Year of birth is taken from Institute custody files obtained through third-party intelligence.
+Rouxinol was born in the Corvel Institute's outer-plateau facility. No civil registration exists. Her birth year is reconstructed from Institute custody files later obtained through third-party intelligence.
 
-The anomaly the Institute detected was not her mother's — it was Rouxinol's, perceptible before birth because a bifurcated architecture of this density produces environmental resonance disturbance the Institute's instruments had been calibrated to identify. Sael Kaise died in 2177. Ten years of structured observation and controlled assessment sessions followed. She was not mistreated in any crude physical sense. She was studied. The distinction, in those conditions and at that age, was not a practical comfort.
+The anomaly that drew the Institute's attention was not her mother's. It was Rouxinol's. Even before birth, a bifurcated architecture of that density was producing enough environmental resonance disturbance for the Institute's instruments to detect it. Sael Kaise died in 2177. Ten years of observation and controlled assessment followed. Rouxinol was not brutalised in some crudely theatrical sense. She was examined, measured, and kept. For a child, that difference offers little comfort.
 
-### Vel'hara and the Grey Circuit — 2187 to 2192
+### Vel'hara and the Grey Circuit - 2187 to 2192
 
-At age fourteen, during an incident involving another subject in an adjacent facility, she left. The Institute's post-incident analysis describes the event as a containment failure triggered by an uncontrolled resonance interaction between two subjects; the structural damage to the primary research building is described as extensive. She was in Vel'hara's outer district within a month.
+At fourteen, during an incident involving another subject in a neighbouring facility, she escaped. The Institute later described the event as a containment failure caused by uncontrolled resonance interaction between two subjects. The structural damage to the primary research building was extensive. Within a month, Rouxinol was in Vel'hara's outer district.
 
-Aldric Vonn found her within weeks. She was fifteen. He made an offer framed as employment and structured, as she later understood it, as long-term investment. She accepted.
+Aldric Vonn found her within weeks. She was fifteen. He presented his offer as employment; she later understood it as a long investment in a person with unusual value. She accepted.
 
-Over four years he provided operational discipline, threat assessment and contract judgment, a practical understanding of what her architecture was actually producing — and, in the third year, the blade. He presented it with a single statement she has memorised verbatim: *"This was made to hold what it takes. I don't know what it takes. You're going to find out."*
+Over four years he taught her operational discipline, threat assessment, contract judgment, and, most importantly, a practical understanding of what her architecture was actually doing. In the third year, he gave her the blade. He did so with a single sentence she has memorised exactly: *"This was made to hold what it takes. I don't know what it takes. You're going to find out."*
 
-### Compelled Intake and Training — 2192 to 2197
+### Compelled Intake and Training - 2192 to 2197
 
-A field Pager operating in the lower industrial district of Vrenne filed an incident report following an operation in which a grey-space contractor had produced Redactory outputs consistent with simultaneous dual-Anchor Dive activity at a Depth that exceeded anything a Quill-level practitioner should have demonstrated — without registration in the imperial system. The dual-signature observation elevated the report to internal review.
+A field Pager in Vrenne's lower industrial district filed the incident report that changed the course of her life. During one operation, an unregistered grey-space contractor had produced Redactory outputs showing what appeared to be simultaneous dual-Anchor Dive activity at a depth no ordinary Quill should have been able to reach. That dual signature forced the matter into internal review.
 
-Forty-one days in the Vrenne holding facility. She cooperated from the second day. She disclosed the blade and its retention function voluntarily in the first week — before the assessors had independently identified the impression-retention mechanism.
+She spent forty-one days in the Vrenne holding facility. She began cooperating on the second day. In the first week, she voluntarily disclosed the blade and its retention function before assessors had independently identified the mechanism.
 
-Five years of structured training followed under a programme developed specifically for this case. Stylus certification in the Mirror Anchor and Quill certification in the Threshold Anchor were issued concurrently in 2197. The conditional operational license followed within the month.
+Five years of structured training followed under a programme designed specifically for her case. Stylus certification in the Mirror Anchor and Quill certification in the Threshold Anchor were issued together in 2197. Her conditional operational license followed within the month.
 
-### Present Condition — 2198 to 2200
+### Present Condition - 2198 to 2200
 
-Rouxinol operates out of Vrenne under her conditional license. She takes assignments. She completes them. She does not take assignments she has assessed as requiring her to function as an instrument for an institution she does not trust. She has declined two formal recruitment overtures since her license was issued — one from a Founding House militia, one from a private contractor operating under SiNE's indirect corporate structure. The refusals were not hostile. They were precise.
+Rouxinol operates out of Vrenne under a conditional license. She takes assignments and finishes them. She does not accept work that would reduce her to an instrument of institutions she does not trust. Since her license was issued, she has refused two formal recruitment offers: one from a Founding House militia and one from a private contractor linked indirectly to SiNE's corporate structure. The refusals were not emotional. They were exact.
 
 The secondary loop's impression count has not changed since 2197.
 
@@ -152,27 +152,26 @@ The secondary loop's impression count has not changed since 2197.
 
 ## Psychology & Characterisation
 
-**Core tension.** She carries eleven structural echoes in the secondary Threshold loop and has not added to the count in three years (since 2197). Whether this represents a moral position, a strategic calculation, or an acknowledgement that continued accumulation is approaching the limit of what the secondary loop can hold without coherence degradation — she has not stated this to any contact recorded in this file.
+**Core tension.** She carries eleven structural echoes in the secondary Threshold loop and has not added to that count since 2197. No recorded source can say with certainty whether this reflects restraint, strategy, guilt, or simple recognition that the loop may be nearing the limit of what it can hold safely. Rouxinol herself has not explained it.
 
-**Intelligence.** High and precise. She understood her own architecture without any formal framework and arrived at conclusions the Academy's specialist assessors spent months verifying. During intake documentation, the panel lead described her self-reporting as the most accurate unsupported account of a novel Redactory condition in thirty years of classification work.
+**Intelligence.** High, exacting, and unusually self-aware. She understood large parts of her own condition before any formal framework was offered to her, and she reached conclusions the Academy later spent months verifying. During intake, the panel lead described her self-report as the most accurate unsupported account of a novel Redactory condition seen in thirty years of classification work.
 
+**Emotional register.** Controlled on the surface. Her calm appears trained rather than natural, the kind of discipline built because it became necessary. The strain shows under specific conditions: when she sees someone being used as a tool, and when the secondary loop reveals itself around people who do not understand what they are seeing.
 
-**Emotional register.** Compressed at the surface. She occupies calm through discipline that long acquaintance with people from the grey circuit suggests was built rather than native. The seams show under specific conditions: when she identifies someone being used as an instrument, and when the secondary loop expresses involuntarily in proximity to people she has not briefed.
-
-**Moral code.** Private. Legible through refusals: she will not be owned; she will not kill people she has assessed as not worth killing; she will not take assignments whose actual purpose she has been deceived about. These are not identical to the association's conduct standards. They are hers.
+**Moral code.** Private, but legible through refusal. She will not be owned. She will not kill people she has judged not worth killing. She will not accept work whose real purpose has been hidden from her. These principles are not identical to institutional conduct rules. They are her own.
 
 ---
 
 ## Relationships
 
-**Aldric Vonn** — Former handler and trainer. She owes him the blade, the understanding of what the blade means, and the operational discipline that produced the Redactor this file describes rather than the uncontrolled anomaly the Pagers apprehended in 2192. She does not owe him her choices. He understood this while training her. Current status unverified.
+**Aldric Vonn** - Former handler and trainer. He gave her the blade, taught her what it meant, and shaped the operational discipline that turned her into the Redactor described in this file rather than the uncontrolled anomaly the Pagers apprehended in 2192. He did not purchase her future choices with that work, and available evidence suggests he understood that. Current status unverified.
 
-**The Corvel Institute** — She has not returned to Vel'hara since leaving in 2187. Whether the Institute is still operational, whether the research she represented continues through other subjects, whether they are looking for her — these are questions she considers routinely. She does not find any of the possible answers relaxing.
+**The Corvel Institute** - She has not returned to Vel'hara since leaving in 2187. Whether the Institute still operates, whether the research built around her continued through other subjects, and whether it still wants her back are questions she considers regularly. None of the likely answers are comforting.
 
-**The Secondary Loop** — Not a relationship in the conventional sense. An internal condition with the phenomenological texture of one — present her entire life, responsive to experience, with consistent properties she can distinguish from her own primary-loop processing. She refers to it, in two incidental comments recorded during intake assessment, as *the other side of the line.*
+**The Secondary Loop** - Not a relationship in the ordinary sense, but close enough that observers keep reaching for that language. It has been present her entire life, responds in consistent ways, and possesses qualities she can distinguish from her own primary processing. In two incidental intake comments, she referred to it as *the other side of the line.*
 
-**The Apocachynthion** — She registers her contracts. She maintains her license. She attends scheduled Depth assessments. She does not volunteer information beyond what the institution requires. The relationship is functional and carries the specific quality that attaches to any arrangement that began with someone being taken somewhere they did not choose to go.
+**The Apocachynthion** - She registers her contracts, maintains her license, and attends scheduled depth assessments. She does not volunteer more information than the institution requires. The relationship is functional and marked by the fact that it began with her being taken somewhere she had not chosen to go.
 
-**The Church — Vrenne Diocese** — A pastoral intelligence report flagged Rouxinol to the Vrenne Arch-Deacon in 2191, prior to Apocachynthion intake. The Church's classification at that time was vessel-abomination — two presences in one body, interpreted as advanced multi-fragment demonic cohabitation. No revision of the Church's internal classification has been communicated to this office. Whether the Condemned designation remains active in the Vrenne Diocese's restricted pastoral record is not confirmed. She is aware that it may be.
+**The Church - Vrenne Diocese** - A pastoral intelligence report flagged Rouxinol to the Vrenne Arch-Deacon in 2191, before Apocachynthion intake. The Church's classification at the time was vessel-abomination: two presences in one body, interpreted as advanced multi-fragment demonic cohabitation. No official revision of that internal classification has been communicated to this office. It is not confirmed whether the Condemned designation remains active in the restricted pastoral record of the Vrenne Diocese. Rouxinol is aware that it may.
 
-**Ec'lesia Wonderwall** — One documented contact, in the Kalt'sen outer transit district approximately four months before the date of this filing (early 2200). Both parties survived. The Pager assessor reviewing the structural disturbance record noted that the coherence signatures produced during the encounter do not match the expected output of either subject operating independently, and that the interaction produced a combined routing pattern the assessor did not have a prior account of. The notation ends there.
+**Ec'lesia Wonderwall** - One documented contact, in the Kalt'sen outer transit district approximately four months before the date of this filing, in early 2200. Both parties survived. The Pager assessor who reviewed the structural disturbance record noted that the coherence signatures produced during the encounter did not match the expected output of either subject acting independently, and that the interaction generated a combined routing pattern for which the assessor had no prior comparison. The notation ends there.

@@ -2,7 +2,7 @@
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
 import { getHtmlLang, localizeCurrentPath, localizedEntryPath, localizedPath, LOCALE_LABELS, LOCALES, type SiteLocale } from "../i18n/config";
-import { getImageUrl } from "../utils/optimized-images";
+import { getImageKind, getImageUrl } from "../utils/optimized-images";
 
 const { entry, locale = "en" } = Astro.props as { entry: any; locale?: SiteLocale };
 const { Content, headings } = await entry.render();
@@ -30,6 +30,7 @@ const copy = locale === "pt-br"
       fullscreen: "Tela cheia",
       exitFullscreen: "Sair da tela cheia",
       languageLabel: "Seletor de idioma",
+      nextImage: "Proxima imagem",
     }
   : {
       index: "Index",
@@ -53,6 +54,7 @@ const copy = locale === "pt-br"
       fullscreen: "Full screen",
       exitFullscreen: "Exit full screen",
       languageLabel: "Language switcher",
+      nextImage: "Next image",
     };
 
 const str = (v: unknown) => String(v ?? "").trim();
@@ -62,8 +64,25 @@ const designation    = str(entry.data?.designation);
 const summary        = str(entry.data?.summary);
 const updated        = str(entry.data?.updated);
 const type           = str(entry.data?.type ?? (locale === "pt-br" ? "Personagem" : "Character"));
-const heroImage      = entry.data?.image;
-const heroImageUrl   = getImageUrl(heroImage);
+const galleryTransition = entry.data?.portrait_gallery_transition === "slide" ? "slide" : "fade";
+const galleryAutoplay = entry.data?.portrait_gallery_autoplay !== false;
+const portraitCandidates = [
+  ...(Array.isArray(entry.data?.portrait_gallery) ? entry.data.portrait_gallery : []),
+  entry.data?.image,
+];
+const portraitImages = portraitCandidates
+  .map((value) => ({ value, url: getImageUrl(value), kind: getImageKind(value) }))
+  .filter((item) => !!item.value && !!item.url)
+  .sort((a, b) => {
+    const score = (kind: ReturnType<typeof getImageKind>) => {
+      if (kind === "portrait") return 0;
+      if (kind === "neutral") return 1;
+      if (kind === "hero") return 2;
+      return 3;
+    };
+    return score(a.kind) - score(b.kind);
+  })
+  .filter((item, index, list) => list.findIndex((entry) => entry.url === item.url) === index);
 const tags: string[] = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
 
 // â”€â”€ Field grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -231,14 +250,87 @@ const related = allPublic
     .dos-portrait {
       position: absolute; inset: 0;
     }
+    .dos-portrait__gallery {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
     .dos-portrait__img {
+      position: absolute;
+      inset: 0;
       width: 100%; height: 100%;
       object-fit: contain;
       object-position: center top;
       filter: saturate(0.9) brightness(0.96);
+      opacity: 0;
+      transform: translateX(0);
+      transition: opacity 1000ms ease, transform 1000ms ease;
+      will-change: opacity, transform;
+    }
+    .dos-portrait__img[data-state="active"] {
+      opacity: 1;
+    }
+    .dos-portrait__gallery[data-transition="slide"] .dos-portrait__img {
+      transform: translateX(12%);
+    }
+    .dos-portrait__gallery[data-transition="slide"] .dos-portrait__img[data-state="active"],
+    .dos-portrait__gallery[data-transition="slide"] .dos-portrait__img[data-state="entering"] {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .dos-portrait__gallery[data-transition="slide"] .dos-portrait__img[data-state="pre-enter"] {
+      opacity: 0;
+      transform: translateX(12%);
+    }
+    .dos-portrait__gallery[data-transition="slide"] .dos-portrait__img[data-state="leaving"] {
+      opacity: 0;
+      transform: translateX(-12%);
     }
     .dos-portrait__placeholder {
       position: absolute; inset: 0;
+    }
+    .dos-portrait__controls {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      z-index: 11;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dos-portrait__counter {
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(6,6,11,0.58);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: rgba(232,228,220,0.72);
+      text-transform: uppercase;
+    }
+    .dos-portrait__next {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 999px;
+      background: rgba(6,6,11,0.58);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: rgba(232,228,220,0.82);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .dos-portrait__next:hover {
+      background: rgba(177,58,52,0.18);
+      border-color: rgba(177,58,52,0.32);
+      color: var(--text);
+      transform: translateX(1px);
     }
 
     .dos-grad-right {
@@ -600,6 +692,7 @@ const related = allPublic
       .nav__pills { display: none; }
       .dos-body, .dos-fields, .dos-lead-wrap { padding-left: 20px; padding-right: 20px; }
       .dos-identity { padding: 0 20px 28px; }
+      .dos-portrait__controls { top: 18px; right: 18px; }
       .dos-identity__name { font-size: clamp(38px, 9vw, 56px); }
       .dos-identity__designation { font-size: 12px; }
       .dos-identity__tag { font-size: 9px; }
@@ -648,13 +741,24 @@ const related = allPublic
 
     <!-- Portrait -->
     <div class="dos-portrait">
-      {heroImage ? (
-        <img
-          class="dos-portrait__img"
-          id="dos-portrait-img"
-          src={heroImageUrl ?? ""}
-          alt=""
-        />
+      {portraitImages.length > 0 ? (
+        <div
+          class="dos-portrait__gallery"
+          data-portrait-gallery
+          data-transition={galleryTransition}
+          data-autoplay={galleryAutoplay ? "true" : "false"}
+          data-interval="5000"
+        >
+          {portraitImages.map((item, index) => (
+            <img
+              class="dos-portrait__img"
+              data-portrait-slide
+              data-state={index === 0 ? "active" : "idle"}
+              src={item.url}
+              alt=""
+            />
+          ))}
+        </div>
       ) : (
         <svg
           class="dos-portrait__placeholder"
@@ -691,6 +795,25 @@ const related = allPublic
         </svg>
       )}
     </div>
+
+    {portraitImages.length > 1 && (
+      <div class="dos-portrait__controls">
+        <div class="dos-portrait__counter">
+          <span data-portrait-current>1</span> / <span>{portraitImages.length}</span>
+        </div>
+        <button
+          class="dos-portrait__next"
+          type="button"
+          data-portrait-next
+          aria-label={copy.nextImage}
+          title={copy.nextImage}
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M5 3.25L8.75 7L5 10.75" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    )}
 
     <!-- Gradient overlays -->
     <div class="dos-grad-right"></div>
@@ -863,6 +986,77 @@ const related = allPublic
       document.addEventListener("fullscreenchange", syncFullscreen);
       syncFullscreen();
     }
+  }
+
+  const portraitGallery = document.querySelector("[data-portrait-gallery]");
+  if (portraitGallery) {
+    const slides = Array.from(portraitGallery.querySelectorAll("[data-portrait-slide]"));
+    const nextBtn = document.querySelector("[data-portrait-next]");
+    const currentCount = document.querySelector("[data-portrait-current]");
+    const transition = portraitGallery.getAttribute("data-transition") === "slide" ? "slide" : "fade";
+    const autoplay = portraitGallery.getAttribute("data-autoplay") !== "false";
+    const interval = Number(portraitGallery.getAttribute("data-interval") || "5000");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let activeIndex = 0;
+    let timer = 0;
+    let locked = false;
+
+    const syncCount = () => {
+      if (currentCount) currentCount.textContent = String(activeIndex + 1);
+    };
+
+    const schedule = () => {
+      window.clearTimeout(timer);
+      if (!autoplay || reducedMotion || slides.length < 2) return;
+      timer = window.setTimeout(() => {
+        advance();
+      }, interval);
+    };
+
+    const settleSlideStates = (nextIndex) => {
+      slides.forEach((slide, index) => {
+        slide.setAttribute("data-state", index === nextIndex ? "active" : "idle");
+      });
+      activeIndex = nextIndex;
+      locked = false;
+      syncCount();
+      schedule();
+    };
+
+    const advance = () => {
+      if (locked || slides.length < 2) return;
+      const nextIndex = (activeIndex + 1) % slides.length;
+      const current = slides[activeIndex];
+      const next = slides[nextIndex];
+
+      window.clearTimeout(timer);
+
+      if (transition === "slide") {
+        locked = true;
+        current.setAttribute("data-state", "leaving");
+        next.setAttribute("data-state", "pre-enter");
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            next.setAttribute("data-state", "entering");
+          });
+        });
+        window.setTimeout(() => settleSlideStates(nextIndex), 1020);
+        return;
+      }
+
+      current.setAttribute("data-state", "idle");
+      next.setAttribute("data-state", "active");
+      activeIndex = nextIndex;
+      syncCount();
+      schedule();
+    };
+
+    nextBtn?.addEventListener("click", advance);
+    portraitGallery.addEventListener("mouseenter", () => window.clearTimeout(timer));
+    portraitGallery.addEventListener("mouseleave", schedule);
+
+    syncCount();
+    schedule();
   }
 </script>
 
