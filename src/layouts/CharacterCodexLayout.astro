@@ -1,0 +1,421 @@
+---
+import MainLayout from "./MainLayout.astro";
+import { localizedPath, type SiteLocale } from "../i18n/config";
+import { getImageUrl } from "../utils/optimized-images";
+import type { CharacterCodexRecord } from "../utils/character-codex";
+
+const {
+  entry,
+  codex,
+  locale = "en",
+} = Astro.props as {
+  entry: any;
+  codex: CharacterCodexRecord;
+  locale?: SiteLocale;
+};
+
+const copy = locale === "pt-br"
+  ? {
+      section: "Personagens",
+      entry: "Entrada",
+      codex: "Codex",
+      openArchive: "Arquivo Profundo",
+      titleSuffix: "Codex",
+      fileRef: "Referencia de arquivo",
+      source: "Fonte",
+      archiveFolder: "Pasta The Archive / Characters",
+      unavailable: "Nenhum dossier completo encontrado para este personagem no arquivo atual.",
+      note: "Quando um arquivo correspondente existir em `The Archive/Characters`, esta pagina exibira o texto integral automaticamente.",
+    }
+  : {
+      section: "Characters",
+      entry: "Entry",
+      codex: "Codex",
+      openArchive: "Deep Archive",
+      titleSuffix: "Codex",
+      fileRef: "Archive reference",
+      source: "Source",
+      archiveFolder: "The Archive / Characters folder",
+      unavailable: "No full dossier was found for this character in the current archive.",
+      note: "When a matching file exists in `The Archive/Characters`, this page will render the full text automatically.",
+    };
+
+const heroImageUrl = getImageUrl(entry.data?.hero_image) ?? getImageUrl(entry.data?.image);
+const pageTitle = `${entry.data.title} - ${copy.titleSuffix} - SiNE Archives`;
+const entryHref = localizedPath(locale, `/characters/${entry.slug}/`);
+---
+
+<MainLayout pageTitle={pageTitle} active="characters" locale={locale}>
+  <section class="codex-hero">
+    {heroImageUrl ? (
+      <>
+        <img class="codex-hero__img" src={heroImageUrl} alt="" aria-hidden="true" />
+        <div class="codex-hero__veil"></div>
+      </>
+    ) : (
+      <div class="codex-hero__fallback"></div>
+    )}
+
+    <div class="codex-hero__content">
+      <nav class="codex-crumbs" aria-label="Breadcrumb">
+        <a class="codex-crumbs__link" href={localizedPath(locale, "/characters/")}>{copy.section}</a>
+        <span class="codex-crumbs__sep" aria-hidden="true">></span>
+        <a class="codex-crumbs__link" href={entryHref}>{copy.entry}</a>
+        <span class="codex-crumbs__sep" aria-hidden="true">></span>
+        <span class="codex-crumbs__cur">{copy.codex}</span>
+      </nav>
+
+      <div class="codex-hero__eyebrow">{copy.openArchive}</div>
+      <h1 class="codex-hero__title">{entry.data.title}</h1>
+      {entry.data.designation && <p class="codex-hero__designation">{entry.data.designation}</p>}
+    </div>
+  </section>
+
+  <section class="codex-shell">
+    <aside class="codex-meta">
+      <div class="codex-meta__card">
+        <div class="codex-meta__label">{copy.fileRef}</div>
+        <div class="codex-meta__value">{codex.fileName ?? "UNFILED"}</div>
+      </div>
+      <div class="codex-meta__card">
+        <div class="codex-meta__label">{copy.source}</div>
+        <div class="codex-meta__value">{copy.archiveFolder}</div>
+      </div>
+    </aside>
+
+    <main class="codex-main">
+      {codex.exists && codex.html ? (
+        <article class="codex-prose" data-codex-body set:html={codex.html} />
+      ) : (
+        <div class="codex-empty">
+          <p class="codex-empty__title">{copy.unavailable}</p>
+          <p class="codex-empty__text">{copy.note}</p>
+        </div>
+      )}
+    </main>
+  </section>
+</MainLayout>
+
+<style>
+  .codex-hero {
+    position: relative;
+    min-height: 360px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .codex-hero__img,
+  .codex-hero__fallback,
+  .codex-hero__veil {
+    position: absolute;
+    inset: 0;
+  }
+
+  .codex-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    filter: saturate(0.55) brightness(0.26);
+  }
+
+  .codex-hero__fallback {
+    background:
+      radial-gradient(circle at top, rgba(176, 141, 60, 0.22), transparent 38%),
+      linear-gradient(135deg, rgba(177, 58, 52, 0.16), rgba(6, 6, 11, 0.92));
+  }
+
+  .codex-hero__veil {
+    background: linear-gradient(to bottom, rgba(6, 6, 11, 0.2), rgba(6, 6, 11, 0.72) 58%, var(--bg) 100%);
+  }
+
+  .codex-hero__content {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 48px 32px 38px;
+  }
+
+  .codex-crumbs {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .codex-crumbs__link {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .codex-crumbs__link:hover {
+    color: var(--text);
+  }
+
+  .codex-crumbs__sep {
+    color: var(--gold);
+  }
+
+  .codex-crumbs__cur {
+    color: var(--text-dim);
+  }
+
+  .codex-hero__eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .codex-hero__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 0.96;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+
+  .codex-hero__designation {
+    max-width: 720px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(232, 228, 220, 0.72);
+  }
+
+  .codex-shell {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 34px 32px 88px;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .codex-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: sticky;
+    top: 84px;
+    align-self: start;
+  }
+
+  .codex-meta__card {
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    background: rgba(10, 10, 18, 0.76);
+  }
+
+  .codex-meta__label {
+    margin-bottom: 5px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .codex-meta__value {
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    overflow-wrap: anywhere;
+  }
+
+  .codex-main {
+    min-width: 0;
+    padding: 26px clamp(22px, 3.8vw, 44px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    background:
+      linear-gradient(180deg, rgba(176, 141, 60, 0.03), transparent 120px),
+      rgba(8, 8, 14, 0.92);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+  }
+
+  .codex-empty__title {
+    margin: 0 0 12px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    color: var(--text);
+  }
+
+  .codex-empty__text {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  .codex-prose {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text-muted);
+    line-height: 1.85;
+  }
+
+  .codex-prose :global(h1) {
+    margin: 0 0 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .codex-prose :global(h2) {
+    margin: 34px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    line-height: 1.15;
+    color: var(--text);
+    letter-spacing: 0.03em;
+  }
+
+  .codex-prose :global(h3) {
+    margin: 24px 0 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+    color: rgba(232, 228, 220, 0.9);
+  }
+
+  .codex-prose :global(p),
+  .codex-prose :global(li) {
+    font-size: 15px;
+    line-height: 1.88;
+    color: var(--text-muted);
+  }
+
+  .codex-prose :global(p) {
+    margin: 0 0 14px;
+  }
+
+  .codex-prose :global(ul),
+  .codex-prose :global(ol) {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+
+  .codex-prose :global(blockquote) {
+    margin: 22px 0;
+    padding: 14px 18px;
+    border-left: 2px solid var(--crimson);
+    background: rgba(177, 58, 52, 0.07);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .codex-prose :global(blockquote p) {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    font-style: italic;
+    color: rgba(232, 228, 220, 0.68);
+  }
+
+  .codex-prose :global(hr) {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 28px 0;
+  }
+
+  .codex-prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .codex-prose :global(th),
+  .codex-prose :global(td) {
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .codex-prose :global(th) {
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: rgba(232, 228, 220, 0.48);
+  }
+
+  .codex-prose :global(code) {
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.92em;
+    color: rgba(232, 228, 220, 0.9);
+  }
+
+  @media (max-width: 860px) {
+    .codex-shell {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 24px 20px 64px;
+    }
+
+    .codex-meta {
+      position: static;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .codex-hero__content {
+      padding: 34px 20px 30px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .codex-hero {
+      min-height: 300px;
+    }
+
+    .codex-meta {
+      grid-template-columns: 1fr;
+    }
+
+    .codex-shell {
+      padding: 20px 16px 56px;
+    }
+
+    .codex-main {
+      padding: 20px 16px;
+    }
+  }
+</style>
+
+<script>
+  const codexBody = document.querySelector("[data-codex-body]");
+
+  if (codexBody) {
+    codexBody.querySelectorAll("h1, h2, h3").forEach((heading) => {
+      if (!heading.id) {
+        const slug = (heading.textContent || "")
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/-+/g, "-");
+
+        if (slug) heading.id = slug;
+      }
+    });
+  }
+</script>

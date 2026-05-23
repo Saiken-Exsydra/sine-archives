@@ -4,4 +4,6 @@ dist/
 .DS_Store
 .env
 open-design/
-The Archive/
+The Archive/*
+!The Archive/Characters/
+!The Archive/Characters/**

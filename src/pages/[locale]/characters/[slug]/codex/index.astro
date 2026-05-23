@@ -1,0 +1,18 @@
+---
+import CharacterCodexLayout from "../../../../../layouts/CharacterCodexLayout.astro";
+import { getLocalizedCollection } from "../../../../../i18n/content";
+import { getCharacterCodexRecord } from "../../../../../utils/character-codex";
+
+export async function getStaticPaths() {
+  const entries = await getLocalizedCollection("characters", "pt-br");
+  return entries.map((entry) => ({
+    params: { locale: "pt-br", slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const codex = await getCharacterCodexRecord(entry);
+---
+
+<CharacterCodexLayout entry={entry} codex={codex} locale="pt-br" />

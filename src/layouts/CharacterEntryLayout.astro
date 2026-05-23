@@ -1,8 +1,9 @@
 ---
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
-import { getHtmlLang, localizeCurrentPath, localizedEntryPath, localizedPath, LOCALE_LABELS, LOCALES, type SiteLocale } from "../i18n/config";
+import { getHtmlLang, localizedEntryPath, localizedPath, type SiteLocale } from "../i18n/config";
 import { getImageKind, getImageUrl } from "../utils/optimized-images";
+import { getCharacterCodexRecord } from "../utils/character-codex";
 
 const { entry, locale = "en" } = Astro.props as { entry: any; locale?: SiteLocale };
 const { Content, headings } = await entry.render();
@@ -31,6 +32,9 @@ const copy = locale === "pt-br"
       exitFullscreen: "Sair da tela cheia",
       languageLabel: "Seletor de idioma",
       nextImage: "Proxima imagem",
+      openCodex: "Abrir Codex",
+      codexReady: "Dossie completo",
+      codexPending: "Codex indisponivel",
     }
   : {
       index: "Index",
@@ -55,6 +59,9 @@ const copy = locale === "pt-br"
       exitFullscreen: "Exit full screen",
       languageLabel: "Language switcher",
       nextImage: "Next image",
+      openCodex: "Open Codex",
+      codexReady: "Full dossier",
+      codexPending: "Codex unavailable",
     };
 
 const str = (v: unknown) => String(v ?? "").trim();
@@ -129,6 +136,9 @@ const related = allPublic
   .filter((x) => x.n > 0)
   .sort((a, b) => b.n - a.n || new Date(b.e.data?.updated ?? 0).getTime() - new Date(a.e.data?.updated ?? 0).getTime())
   .slice(0, 6);
+
+const codex = await getCharacterCodexRecord(entry);
+const codexHref = localizedPath(locale, `/characters/${entry.slug}/codex/`);
 ---
 
 <!doctype html>
@@ -454,6 +464,11 @@ const related = allPublic
       display: flex; align-items: flex-start;
       justify-content: space-between; gap: 24px;
     }
+    .dos-header__actions {
+      display: flex;
+      align-items: flex-start;
+      flex-shrink: 0;
+    }
     .dos-header__file-label {
       font-family: 'DM Sans', sans-serif;
       font-size: 9px; letter-spacing: 0.26em;
@@ -465,23 +480,49 @@ const related = allPublic
       font-size: 12px; color: rgba(176,141,60,0.75);
       letter-spacing: 0.06em; line-height: 1.4;
     }
-    .dos-access {
-      flex-shrink: 0;
-      border: 1px solid rgba(177,58,52,0.2);
-      padding: 6px 14px;
-      display: flex; flex-direction: column;
-      align-items: flex-end; gap: 2px;
+    .dos-codex-link {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      min-width: 164px;
+      padding: 11px 14px 10px;
+      border: 1px solid rgba(176,141,60,0.26);
+      border-radius: 4px;
+      text-decoration: none;
+      background:
+        linear-gradient(180deg, rgba(176,141,60,0.14), rgba(176,141,60,0.04)),
+        rgba(8,8,14,0.9);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
-    .dos-access__label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 8px; letter-spacing: 0.22em;
-      color: rgba(177,58,52,0.5); text-transform: uppercase;
+    .dos-codex-link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(176,141,60,0.42);
+      background:
+        linear-gradient(180deg, rgba(176,141,60,0.2), rgba(176,141,60,0.06)),
+        rgba(8,8,14,0.94);
     }
-    .dos-access__level {
+    .dos-codex-link__label {
       font-family: 'DM Sans', sans-serif;
-      font-size: 11px; letter-spacing: 0.12em;
-      color: rgba(232,228,220,0.25); text-transform: uppercase;
-      font-weight: 600;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(232,228,220,0.88);
+    }
+    .dos-codex-link__meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(176,141,60,0.72);
+    }
+    .dos-codex-link.is-disabled {
+      pointer-events: none;
+      opacity: 0.56;
+      border-color: rgba(255,255,255,0.08);
+      background: rgba(10,10,18,0.8);
     }
 
     /* summary lead */
@@ -689,6 +730,15 @@ const related = allPublic
         white-space: nowrap;
       }
       .dos-header { position: static; padding: 18px 20px; }
+      .dos-header__inner,
+      .dos-header__actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .dos-codex-link {
+        min-width: 0;
+        align-items: flex-start;
+      }
       .nav__pills { display: none; }
       .dos-body, .dos-fields, .dos-lead-wrap { padding-left: 20px; padding-right: 20px; }
       .dos-identity { padding: 0 20px 28px; }
@@ -862,9 +912,15 @@ const related = allPublic
             <div class="dos-header__designation">{designation}</div>
           )}
         </div>
-        <div class="dos-access">
-          <div class="dos-access__label">{copy.access}</div>
-          <div class="dos-access__level">{copy.public}</div>
+        <div class="dos-header__actions">
+          <a
+            class={`dos-codex-link${codex.exists ? "" : " is-disabled"}`}
+            href={codex.exists ? codexHref : undefined}
+            aria-disabled={codex.exists ? undefined : "true"}
+          >
+            <span class="dos-codex-link__label">{copy.openCodex}</span>
+            <span class="dos-codex-link__meta">{codex.exists ? copy.codexReady : copy.codexPending}</span>
+          </a>
         </div>
       </div>
     </div>
