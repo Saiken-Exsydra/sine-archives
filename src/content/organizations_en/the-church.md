@@ -8,10 +8,10 @@ founded: "Pre-imperial - predates the Empire of Synus by an unspecified margin"
 jurisdiction: "Twilight Band - operational presence across all three macro-regions and Dark Side frontier"
 status_label: "Active - treaty-bound (Compact of the Two Houses)"
 summary: "The Church is Terra's dominant faith institution and the main authority on rites, possession, Beatification, and regulated Seraphic hierarchy within the Twilight Band."
-tags: ["Church", "Synus", "Faith", "Obsidian Rite", "Demonic", "Institution", "Sovereign", "Twilight Band"]
+tags: ["Church", "Synus", "Faith", "Obsidian Rite", "Demonic", "Institution", "Sovereign", "Twilight Band", "Intact Seal"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-05-20"
+updated: "2026-05-24"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -53,9 +53,11 @@ That is why Church doctrine says His name is never spoken. His true name is not 
 
 The Church calls the ancient breaking of the Moon **the Fracture**, or **the Severance of the Crown**.
 
-The Moon was once the **Intact Seal**: the sign that the threshold between the world and what should not enter it remained properly held.
+The Moon was once the **Intact Seal**: the sign that the threshold between the world and what should not enter it remained properly held. Restricted Church theology now emphasizes that this was not only mystery or prohibition. It was also **mercy**. The heavens were once bounded for the world's protection.
 
-Something struck it from below the world. The Seal broke, but did not fully fail. The Ring overhead is therefore read as both wound and proof of survival.
+Something struck the Seal. It broke, but did not fully fail. The Ring overhead is therefore read as both wound and proof of survival.
+
+This theological emphasis is why the Church treats unguided fascination with the farther heaven as spiritually dangerous. To stare upward without discipline is not always treated as curiosity. Sometimes it is treated as refusal of the mercy that once kept sight itself safe.
 
 ### The Instruments of the Intact Seal
 
@@ -91,13 +93,9 @@ This produces the Church's stage taxonomy:
 - **Hollowed**
 - **Consumed**
 
-The taxonomy is not just descriptive. It determines what kind of response is still rescue, what kind has become containment, and what kind has become irreversible metamorphic loss.
-
 ---
 
 ## The Church's Angelic Hierarchy
-
-This is one of the biggest current lore shifts.
 
 Restricted Church doctrine teaches that the Sovereign's highest angelic attendants are the **Ten Seraphim**, collectively called **the Tenfold Firmament**.
 
@@ -106,23 +104,11 @@ Of those ten:
 - **the Seven Answers** are the seven with stable, repeated, survivable Church contact
 - **the Missing Firmament** are the three preserved in scripture but not presently answering
 
-```text
-THE SOVEREIGN
-|
-`-- THE TENFOLD FIRMAMENT
-    |
-    |-- THE SEVEN ANSWERS
-    |   `-- known, contacted Seraphim
-    |
-    `-- THE MISSING FIRMAMENT
-        `-- named, but not answering
-```
-
 Each Seraphim governs its own **Seraphic Constellation**.
 
 Within a Seraphic Constellation:
 
-- the Seraphim is the **Cynosure** or **central star**
+- the Seraphim is the **Cynosure** or central star
 - six major fragment-expressions descend as **Cardinal Stars**
 - lesser expressions beneath them are **Stellates**
 - below those come **motes**, **sparks**, and **gleams**
@@ -143,21 +129,17 @@ The **Crowning** is temporary angelic expression through a willing and prepared 
 
 When angelic presence remains, deepens, and permanently reorients a person toward the Sovereign's expressed domain, the Church calls the result **Beatification**.
 
-The Beatified are not treated as possessed. They are treated as enlarged by angelic domain-pressure, though the Church also recognizes that enlargement is not the same thing as safety.
-
 ### The Gift of Sight
 
 The **Gift of Sight** is the Church's term for Heraldic or visionary perception. It is treated as receptive, not projective. A true Herald receives. They do not manufacture.
 
-This is why the Church distrusts unsupervised summoning, self-directed visionary forcing, and unsanctioned claims of angelic contact.
+This is why the Church distrusts unsupervised summoning, self-directed visionary forcing, unsanctioned claims of angelic contact, and more recently, unguided efforts to force contact with the farther heaven above the wounded sky.
 
 ---
 
 ## The Hierarchy of the One Church
 
 The Church's ordinary governance structure is separate from its divine taxonomy.
-
-That distinction matters.
 
 ### Governance Ladder
 
@@ -223,29 +205,17 @@ Present throughout the institution, holding the seal, pastoral intelligence, and
 
 ## The Obsidian Rite Inside Church Hierarchy
 
-The Church Codex now makes this much clearer:
+The Church's governance ladder, its specialized orders, and its divine-contact categories are related but not interchangeable.
 
-- Church **office** is one hierarchy
-- Church **specialized orders** are another layer
-- Church **divine conditions** are a third layer
+That distinction matters when reading Church records. A person may simultaneously hold:
 
-For example:
+- an ecclesiastical office
+- a specialized-order rank
+- a divine-contact condition
 
-- a Parish Priest is an office
-- a Votary is an Obsidian Rite rank
-- a Beatified vessel is a divine condition
-- an Answered vessel is a deeper restricted theological condition still
+Those labels do not replace one another. They accumulate.
 
-These categories overlap, but they are not the same thing.
-
-That is why a figure like Halk'en Orveth can be:
-
-- a priest
-- a Rector-Ascendant
-- a Beatified vessel
-- an Answered Cynosure-contact vessel of one of the Seven Answers
-
-without any of those labels replacing the others.
+This is why a figure such as **Halk'en Orveth** can be, at once, a priest, an Obsidian Rite officer, a Beatified vessel, and a deeper restricted contact case without any one description exhausting the others.
 
 ---
 
@@ -278,13 +248,6 @@ Under that arrangement:
 
 The Church cannot regulate Redactory directly. That remains the Apocachynthion's domain.
 
-But the Church does regulate what the Empire cannot replicate well:
-
-- possession doctrine
-- Beatification doctrine
-- Seraphic and demonic categorization
-- pastoral and operational response to divine or infernal vesselhood
-
 ---
 
 ## Why the Church Matters
@@ -297,6 +260,5 @@ It is also:
 - a possession-response system
 - a vessel-governance institution
 - a theology of hierarchy built around real fragment contact
-- the body that has survived long enough to name the difference between a Herald, a Crowned vessel, a Beatified priest, a Votary, a Lucent, an Answered vessel, a Saint, and one of the Seven Answers
-
-That hierarchy is now central to understanding the Church at all.
+- a structure capable of distinguishing a priest from a Votary, a Crowned vessel from a Beatified one, and revelation from dangerous fascination
+- an institutional memory of the wound in the sky and of the mercy that once veiled more than the current world safely understands

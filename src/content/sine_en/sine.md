@@ -7,11 +7,11 @@ headquarters: "Pluribus Hill, Kalt'sen"
 founded: "Year 0 (approximate - preceded the current imperial calendar by an indeterminate margin)"
 jurisdiction: "Twilight Band and frontier - operational presence across all major regions"
 status_label: "Active"
-summary: "Seven divisions. One organization. Older than most institutions that believe themselves its peers."
+summary: "Seven divisions. One organization. Older than most institutions that believe themselves its peers, and built to operate inside a world that still refuses full explanation."
 tags: ["SiNE", "Wonderwall", "Organization", "CLOCKWORK", "HourGlass", "StaSis", "Clepsydra", "Em'manuel", "Kalt'sen", "Military", "Research"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-05-24"
 image: "../../assets/uploads/sine-logo.png"
 ---
 
@@ -22,11 +22,11 @@ image: "../../assets/uploads/sine-logo.png"
 
 ## What SiNE Is
 
-SiNE is a corporate-state apparatus - something that began as a private company and, across twelve hundred years of operation, accumulated the scale, treaty standing, and operational scope that makes the distinction between private company and quasi-governmental body a matter of current convention rather than practical reality.
+SiNE is a corporate-state apparatus - something that began as a private company and, across twelve hundred years of operation, accumulated the scale, treaty standing, and operational scope that makes the distinction between private company and quasi-governmental body a matter of convention rather than practical reality.
 
-It was founded by **Em'manuel Kael Wonderwall** - a figure whose personal operational history predates most of the institutions he now formally works alongside. It is organized into seven major divisions, each with a distinct mandate, a designation combining a name and an S-prefix code, and a degree of internal autonomy that reflects the reality of managing seven fundamentally different operations under a single institutional umbrella.
+It was founded by **Em'manuel Kael Wonderwall**, whose personal operational history predates most of the institutions he now formally works alongside. It is organized into seven major divisions, each with a distinct mandate, a designation combining a name and an S-prefix code, and a degree of internal autonomy that reflects the reality of managing seven fundamentally different operations under a single institutional umbrella.
 
-It headquartered itself at **Pluribus Hill** in Kalt'sen, the Imperial capital - not because the Empire required it, but because being at the center of the world's political geography produces certain efficiencies that operating from a provincial base does not. The building is large, old, and has seen enough changes to its occupants over the centuries that the current arrangement feels permanent in the way things feel permanent when they have simply outlasted everything that might have replaced them.
+SiNE is also one of the clearest expressions of **post-Fracture science as survival under partial ignorance**. It is an institution that can build infrastructure, route armies, classify anomalies, and prove that many things about Terra should not still be working - without being able to supply a complete explanation for why the world remains survivable anyway.
 
 ---
 
@@ -34,15 +34,17 @@ It headquartered itself at **Pluribus Hill** in Kalt'sen, the Imperial capital -
 
 ### S-RD: Entropy (Research and Development)
 
-SiNE's research arm. Entropy handles the development and testing of new Redactory applications, materials research (including proprietary BrightCrystal processing work that the Apocachynthion does not have full visibility into), and the institutional research functions that underpin the other divisions' operational capabilities.
+SiNE's research arm. Entropy handles the development and testing of new Redactory applications, materials research, and the institutional research functions that underpin the other divisions' operational capabilities.
 
-Entropy is the division that produces. The other divisions use what Entropy produces.
+Entropy is not organized around scientific triumphalism. Its deeper culture is shaped by the humiliations of post-Fracture inquiry: old astronomy failing, lunar models refusing closure, Ksy'rion's broken inheritance leaving behind distortions that can be measured without being fully normalized, and the recurring realization that Terra's continued habitability outruns the explanatory reach of ordinary equations.
+
+In practical terms, Entropy builds infrastructure inside that gap. It produces usable theory where complete theory is unavailable.
 
 ### S-IF: HourGlass (Integrated Forces)
 
 SiNE's military arm - the **SiNE Integrated Forces**. HourGlass is organized into three commands covering land, air, and naval operations. It maintains the **Cold Fleet** in the northern maritime theatre and the **Cloister of Applied Structure** as its Redactor specialist corps.
 
-HourGlass is a full-spectrum military force, not a private security operation. Its operational scope and treaty recognition within the Empire's military architecture distinguish it from the private security operations of commercial entities. When the War of the Threshold requires forces the Imperial military cannot deploy at a particular moment, HourGlass fills the gap. The treaty language governing this relationship was negotiated over a long period and is specific about what constitutes a gap.
+HourGlass is a full-spectrum military force, not a private security operation. When the War of the Threshold requires forces the Imperial military cannot deploy at a particular moment, HourGlass fills the gap.
 
 ### S-CL: Clepsydra (Continuity Lattice Authority)
 
@@ -58,7 +60,7 @@ The relationship between Magi and the Apocachynthion is technically cooperative 
 
 ### S-LG: Evanote (Legal and Governance)
 
-Evanote is what it sounds like. Twelve hundred years of treaty negotiations, legal challenges, operational authorizations, and institutional diplomacy have produced a legal division with significant depth and specific institutional memory. Evanote manages SiNE's regulatory standing, its treaty relationships with the Empire and the Church, and the ongoing business of operating at institutional scale in a world with many competing regulatory bodies.
+Evanote manages SiNE's regulatory standing, its treaty relationships with the Empire and the Church, and the ongoing business of operating at institutional scale in a world with many competing regulatory bodies.
 
 Evanote is also the division that knows where the bodies are - metaphorically, mostly.
 
@@ -68,23 +70,23 @@ AdVita manages SiNE's public-facing presence, community relationships in regions
 
 ### S-AE: StaSis (Anomalous Entity Management)
 
-StaSis is SiNE's anomalous entity division - responsible for the classification, monitoring, and operational response to non-standard entities, with particular focus on SOEs (Traversal-Independent Entities) emerging from the Dark Side frontier. It maintains the most comprehensive non-restricted catalogue of anomalous entity types in current institutional use.
+StaSis is SiNE's anomalous entity division - responsible for the classification, monitoring, and operational response to non-standard entities, with particular focus on SOEs emerging from the Dark Side frontier. It maintains the most comprehensive non-restricted catalogue of anomalous entity types in current institutional use.
 
-StaSis is also the division whose existence is least officially acknowledged. It operates with institutional deniability that the other six divisions do not maintain, because its operational mandate includes things that standard institutional accountability frameworks were not designed for. It works. The accounting is a separate conversation.
+StaSis is also the division whose existence is least officially acknowledged. It operates with institutional deniability because its operational mandate includes things standard accountability frameworks were not designed for.
 
 ---
 
 ## CLOCKWORK
 
-Separate from the seven formal divisions, SiNE maintains a body whose existence is not formally acknowledged: **CLOCKWORK** - an unregistered body of 144 Redactors organized into twelve operational units designated by temporal callsigns (DAWN through ZENITH). CLOCKWORK operates with absolute deniability, outside the Apocachynthion's registration and oversight framework, and with authorization parameters that do not appear in any public document.
+Separate from the seven formal divisions, SiNE maintains a body whose existence is not formally acknowledged: **CLOCKWORK** - an unregistered body of 144 Redactors organized into twelve operational units designated by temporal callsigns.
 
-CLOCKWORK exists because the formal divisions cannot do everything that needs to be done. The gap between what HourGlass can do officially, what Clepsydra can authorize structurally, and what SiNE's strategic interests occasionally require is where CLOCKWORK operates. The Meridian Council knows about CLOCKWORK. The Empire does not, officially. Whether the Apocachynthion has inferred its existence from operational anomalies is a question neither institution has answered publicly.
+CLOCKWORK exists because the formal divisions cannot do everything that needs to be done. The gap between what HourGlass can do officially, what Clepsydra can authorize structurally, and what SiNE's strategic interests occasionally require is where CLOCKWORK operates.
 
 ---
 
 ## The Meridian Council
 
-SiNE's governing body. Membership includes Em'manuel Wonderwall as founder and principal, the heads of each of the seven formal divisions, and a small number of additional figures whose portfolio responsibilities span division boundaries. The Council makes strategic decisions. Operational execution belongs to the divisions.
+SiNE's governing body. Membership includes Em'manuel Wonderwall as founder and principal, the heads of each of the seven formal divisions, and a small number of additional figures whose portfolio responsibilities span division boundaries.
 
 The founder's role in Council decisions is formally one voice among several. In practice, Em'manuel has been running this for twelve hundred years and everyone in the room knows it.
 
@@ -92,8 +94,8 @@ The founder's role in Council decisions is formally one voice among several. In 
 
 ## Relationship to Other Institutions
 
-**The Empire:** Treaty-bound, functionally cooperative at multiple levels. HourGlass's role in the War of the Threshold is the clearest expression of how the relationship works: SiNE has capabilities the Empire needs, the Empire has legal authority SiNE benefits from working within, and the resulting arrangement serves both interests well enough to have survived twelve centuries without significant rupture.
+**The Empire:** Treaty-bound, functionally cooperative at multiple levels. The relationship works in part because the post-Fracture world does not permit any one institution to hold the whole explanatory picture. The Empire holds civil authority, SiNE holds infrastructure and force, the Church holds parts of the dangerous theological record, and the Apocachynthion holds Redactor governance.
 
-**The Apocachynthion:** Formally cooperative, practically complex. SiNE employs registered Redactors in significant numbers, which creates ongoing jurisdictional negotiation. Magi and the Apocachynthion share some training frameworks and differ significantly on others. The Apocachynthion is aware that SiNE's operational envelope includes things outside Apocachynthion visibility. This awareness has not produced a crisis because SiNE has been careful about the visibility question for a very long time.
+**The Apocachynthion:** Formally cooperative, practically complex. The Apocachynthion is aware that SiNE's operational envelope includes things outside Apocachynthion visibility. This awareness has not produced a crisis because SiNE has been careful about the visibility question for a very long time.
 
-**The Church:** Respectful distance maintained by both sides. The Church does not regulate SiNE's operations. SiNE does not challenge the Church's theological authority. Where operational interests intersect - particularly at the northern frontier - the relationship is professional and effective. The Church has no official position on CLOCKWORK because it has no official knowledge of CLOCKWORK.
+**The Church:** Respectful distance maintained by both sides. Where operational interests intersect - particularly at the northern frontier - the relationship is professional and effective.
