@@ -4,7 +4,7 @@ type: "Character"
 age: "24 (as of 2200)"
 birth_year: "2176"
 birthplace: "Valerie, Aurora"
-affiliation: "Lyréne Pharmaceuticals; Vitrified Wing (secret program)"
+affiliation: "Lyrene Pharmaceuticals; Vitrified Wing (secret program)"
 rank: "Quill-ranked Redactor"
 registry_status: "MAGI-registered Redactor; conditionally certified in Aurora"
 designation: "Girl Made to Hear Forbidden Machinery"
@@ -15,154 +15,130 @@ eyes: "Verdant-gold"
 dress: "Clean Auroran professional wear; practical research clothing off duty"
 residence: "Valerie, Aurora"
 occupation: "Junior research associate in neural-interface diagnostics"
-summary: "Engineered as a key to the Sibyl Fragment, she is beginning to read the hands that built her."
-tags: ["Aurora", "Valerie", "Lyréne", "Vitrified Wing", "Mechanism", "Redactor", "Precursor", "CLOCKWORK"]
+summary: "A young Auroran researcher with a rare Mechanism Anchor who is slowly discovering that her entire life was built around a hidden project. She was engineered to interface with the Sibyl Fragment, and the same talent that made her useful is now helping her read the people who made her."
+tags: ["Aurora", "Valerie", "Lyrene", "Vitrified Wing", "Mechanism", "Redactor", "Precursor", "CLOCKWORK"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-14"
+updated: "2026-05-24"
 image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn.webp"
 hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
 ---
 
-> *"She was made to read a machine no modern mind should be able to read. The problem for the people who made her is that she has started reading them too."*
-> - CLOCKWORK notation, current file
+> *"She was made to read a machine no modern mind should be able to read."*
+> - CLOCKWORK notation
 
 ---
 
-## Overview
+## Quick Facts
 
-Ayanna Aedh d'Aibhilyn is an Auroran researcher living in Valerie. Publicly, she is a promising junior specialist in neural-interface diagnostics and a young Redactor with an unusual Mechanism Anchor.
+| Field | Explanation |
+|---|---|
+| Nation / Origin | Valerie, Aurora |
+| Affiliation | Lyrene Pharmaceuticals; secretly tied to the Vitrified Wing |
+| Role | Researcher, engineered interface subject, emerging investigator of her own life |
+| Power System | Redactory |
+| Anchor / Domain / Condition | Mechanism; engineered compatibility with the Sibyl Fragment |
+| Status | Alive, active, and beginning to uncover the project built around her |
+| Related Entries | Lyrene Pharmaceuticals, Vitrified Wing, Sibyl Fragment, CLOCKWORK |
 
-Privately, she is the first successful subject of **Project Ennea**, a hidden Vitrified Wing program inside Lyréne Pharmaceuticals. She was engineered before birth to become a living interface for a Precursor device called the **Sibyl Fragment**.
+## Who She Is
 
-Ayanna does not know this.
+Ayanna is one of the clearest "constructed life" characters in the setting, but the important part is that she is still a real person.
 
-She knows only that parts of her life do not fit together cleanly anymore.
+Publicly, she is a junior researcher in Valerie with a promising future in neural-interface diagnostics and a rare but plausible Mechanism Anchor.
 
----
+Privately, she is the first successful subject of **Project Ennea**, a hidden Vitrified Wing program inside Lyrene Pharmaceuticals. The project's purpose was not simply to create a strong Redactor. It was to create a human being capable of interfacing with a Precursor device called the **Sibyl Fragment**.
 
-## Origin & Cover Identity
+Ayanna does not know this yet in full. What she does know is that parts of her life are starting to feel arranged.
 
-Ayanna was not grown in a tank or built as an adult. She was carried, born, and raised as a real child. That choice was intentional. The program needed a real person with a stable mind, not a laboratory instrument with human shape.
+## Personality and Role
 
-Her public identity was built to look ordinary. She was raised in Valerie by two Lyréne scientists who became her parents in every emotional sense that matters. They were given the Aedh d'Aibhilyn family identity and told to raise her in a normal home, guide her into science, and keep her psychologically stable.
+Ayanna is curious, steady, and more grounded than the people who designed her probably wanted.
 
-That plan worked too well. Ayanna grew into a genuine person with real loyalties, real friendships, real work, and a life she truly believes is her own.
+She enjoys ordinary life in a sincere way. She likes Valerie, likes her work, and built routines that feel small and personal rather than grand or symbolic. That detail matters because it makes the later betrayal sharper. The project did not build an empty shell. It built a woman with attachments, habits, and a real internal life.
 
-Most of it is real.
-
-What is false is the hidden structure behind it.
-
----
+Her role in the story is shifting, though. She is moving from subject to investigator. The same precision that made her useful in lab settings is now turning toward biography, institutional behavior, and the quiet lies around her.
 
 ## What She Really Is
 
-Ayanna is the first successful biological interface produced by the Vitrified Wing's coherence-substrate program. Her body and mind were designed across a large set of genetic and developmental parameters to produce one result: a person whose recursive structure is dense and clean enough to receive meaningful output from the Sibyl Fragment.
+Ayanna was not cloned, summoned, or raised in a tank.
 
-She is not a clone. She is not a copy of anyone else. She is not an empty vessel waiting to be filled.
+She was born and raised as a real child under a carefully managed cover identity. Her parents loved her in every emotional sense that matters, but the framework around that family was built to guide her toward one specific end: becoming a biologically viable interface for the Sibyl Fragment.
 
-She is a real human being who was deliberately made for a purpose she was never told.
+That means the central moral problem in her story is not fake humanity. It is instrumentalized humanity.
 
-That fact defines the moral problem around her. The project did not fail because it made a monster. It failed because it succeeded in making a person and then tried to treat that person like equipment.
+She is a real woman who was designed for a purpose she was never allowed to consent to.
 
-The program has at least one younger follow-up subject still in childhood. Ayanna does not know that either.
+## Abilities in Plain Language
 
----
+Ayanna's Anchor is **Mechanism**.
 
-## Redactory Profile
+In simple terms, Mechanism lets her understand systems through force, stress, motion, load, transfer, and relationship. She does not just look at a machine and see parts. She sees how tension travels through it, where pressure is accumulating, and what small adjustment might change the whole behavior.
 
-Ayanna manifested as a Redactor at nineteen during a structural-mechanics lab exercise. Her ability was classified as **Mechanism**, and the classification is broadly correct.
+In practice, this lets her:
 
-She perceives systems through force, stress, motion, energy transfer, and mechanical relationships. Most Mechanism Redactors learn perception after they first learn action. Ayanna was unusual from the start because her perception came first and came in a very refined form.
+- read force paths and energy flow quickly;
+- identify weak points in moving or engineered systems;
+- redirect motion or load across a structure;
+- interfere briefly with ongoing mechanical or energetic processes;
+- perceive structural logic more cleanly than most practitioners with the same surface classification.
 
-Her known abilities include:
+The important reader note is that Mechanism is probably the public-facing layer of something deeper. Her Anchor seems to be training her to read not only machines, but any hidden system built out of relationships and pressure.
 
-- reading force paths, stress distribution, and energy flow in real time
-- redirecting the motion of moving objects
-- shifting load across structures to strengthen or weaken them
-- briefly interrupting or rerouting energy moving through a system
-- suspending a mechanical process for a short window at high cost
+## What Her Abilities Look Like
 
-What the public classification misses is that this Anchor is probably only the surface expression of the deeper capacity she was made for. Her Mechanism perception is training her, without her knowing it, to read structures more complex than machines.
+Ayanna's power is very physical and very readable in scene terms.
 
----
+In a lab, she might look at a stressed assembly and understand immediately which component is carrying the real burden, or how a device will fail before the visible break happens.
+
+In field use, a Mechanism-aligned Redactor like Ayanna could redirect the motion of a moving object, shift load through a support structure so it holds longer, or disrupt the clean operation of a machine for a few critical seconds.
+
+The same gift also applies socially and investigatively. She is beginning to notice that records, relationships, and institutional habits behave like engineered systems too. That is why her power is dangerous to the people who built her. She was made to read one hidden machine, and now she is learning to read all the hands around it.
 
 ## The Sibyl Fragment
 
-The **Sibyl Fragment** is a Precursor diagnostic device. It was not made for modern human use. Normal instruments cannot read it properly, and ordinary people can only receive distorted impressions from it, if they receive anything at all.
+The **Sibyl Fragment** is a Precursor diagnostic device that modern humans are not supposed to understand cleanly.
 
-Ayanna was engineered to change that.
+The Vitrified Wing believes Ayanna was built to solve that problem. If their theory is correct, her recursive structure will eventually let her receive and interpret output from the Fragment in ways ordinary instruments and ordinary minds cannot.
 
-The Vitrified Wing believes her recursive structure will let her act as a receiver for the Fragment's output. If they are right, she may eventually be able to perceive coherence anomalies, resonance events, and deeper structural conditions that modern institutions cannot interpret on their own.
+This matters because the Sibyl Fragment is not just a cool artifact. It may provide access to information about coherence anomalies, structural failures, and deeper substrate conditions that modern institutions cannot currently read on their own.
 
-The Wing may also be underestimating her. If coupling succeeds, Ayanna could end up seeing far more than they planned.
+The project wanted a human key. Ayanna is that key.
 
----
+## Limits and Risks
 
-## The Life Built Around Her
+Ayanna's biggest limits are not raw power limits. They are knowledge limits and control limits.
 
-The hidden project around Ayanna did not create a fake world. It inserted control into a real one.
+First, she still does not know the full truth about her origin. That means she is operating with missing context while the people around her are not.
 
-Her parents were assigned to raise her, but they became real parents. Several of her childhood friendships were deliberately placed, but the feelings inside those friendships were still genuine. Her former boyfriend was almost certainly a Wing operative, chosen because he fit her too perfectly. Her education and research career were real achievements, but they were guided from the beginning toward the program's needs.
+Second, Mechanism does not make her omniscient. She can read systems and pressure very well, but she still has to gather evidence, test instincts, and survive people who are willing to remove obstacles permanently.
 
-This is why her story matters. Ayanna's life is not false. It is compromised.
+Third, if coupling with the Sibyl Fragment succeeds, the result may exceed what her creators think they are controlling. That is dangerous both for her and for everyone attempting to use her as equipment.
 
-That distinction is the whole tragedy.
+## Relationships and Affiliations
 
----
+**Mireille du Vauclain** is one of the key architects behind her existence and may also become one of the earliest cracks in the project because of guilt.
 
-## The Investigation
+**The Aedh d'Aibhilyn parents** are emotionally real parents even if the structure around them was assigned. Their future importance depends on whether love wins over compliance.
 
-Ayanna has spent the last year quietly testing the weak points in her own biography.
+**Elise** represents one of the least manufactured parts of Ayanna's life, which makes her especially important.
 
-She has noticed odd medical records, strange patterns in old friendships, irregular diagnostic procedures, and family history details that do not hold up under light scrutiny. She has also started to suspect that her Redactory profile is too clean and too advanced to be normal luck.
+**Cael Rouvelle** is the security logic of the project in human form. If Ayanna becomes unmanageable, he is one of the most likely people to enforce that decision violently.
 
-Her most dangerous lead was an archivist named **Yvanne du Roux**, who found a discrepancy in the Aibhilyn record.
+**Em'manuel Wonderwall / CLOCKWORK** matters because an outside intelligence has already started noticing the pattern around her life. The Vitrified Wing may not understand that it is no longer the only watcher in the room.
 
-Yvanne died eleven days later in what was staged as a domestic accident.
+## Why She Matters
 
-Ayanna does not have proof, but her Mechanism perception tells her the death does not feel right.
+Ayanna matters because she turns a very large setting question into a personal one.
 
-Since then, she has become more careful. She avoids written notes, limits digital traces, and thinks in places she can physically verify. She has also made indirect contact with a skeptical journalist, which has pushed the Wing from surveillance into active suppression.
+What does it mean to engineer a person for access? What happens when the tool becomes observant enough to study the workshop? How much of a life can remain genuine if its hidden architecture was planned from before birth?
 
----
+She also matters because her story is not just about victimhood. Ayanna is starting to push back. The thing that made her useful to the project is becoming the thing that makes her dangerous to it.
 
-## Personality
+## Related Entries
 
-Ayanna is curious, steady, and easier to like than the people studying her intended. She enjoys her work. She likes Valerie. She has built small routines that belong to her rather than to the project: morning runs, a neat apartment, a life shaped by ordinary choices.
-
-She is not paranoid by nature. That matters. Her suspicion grew slowly because she wanted to trust what she had.
-
-What is changing now is her attention. She has begun to recognize the feeling of being handled. She cannot map the full design yet, but she can feel that some important parts of her life were arranged from outside.
-
-That makes her more watchful, more disciplined, and harder to contain.
-
----
-
-## Key Relationships
-
-**Mireille du Vauclain** - The senior researcher who designed much of Ayanna's substrate and now lives near the family as a trusted adult presence. Ayanna does not know how central Mireille is to her origin. Mireille's growing guilt may become one of the first cracks in the project.
-
-**The Aibhilyns** - Not her biological parents, but absolutely the people who raised her. They helped maintain the lie around her. They also truly love her. Their future importance will depend on whether they choose the project or their daughter.
-
-**Elise** - Ayanna's closest friend and, as far as the record shows, the one major early relationship the Wing did not plan. Elise represents the most untouched part of Ayanna's life.
-
-**Cael Rouvelle** - Security lead for the Vitrified Wing. He is the man most likely to order or carry out lethal containment if the project decides Ayanna can no longer be managed.
-
-**Em'manuel Wonderwall / CLOCKWORK** - CLOCKWORK has identified Ayanna as important through the pattern around her life. It is watching. The Wing does not know it is being watched.
-
----
-
-## Present Condition
-
-As of 2200, Ayanna is still living inside the cover identity built for her. She is still working at Lyréne. She is still legally registered as a young Auroran Redactor with a rare but explainable profile.
-
-Under that surface, the structure is starting to fail.
-
-She is asking questions. The Wing is removing obstacles. People around her are now in danger simply because they helped her notice the wrong detail.
-
-Ayanna's story begins at the moment her gift turns back on the system that made her.
-
-She was built to read hidden structure.
-
-Now she is starting to read her own life.
+- Lyrene Pharmaceuticals
+- Vitrified Wing
+- CLOCKWORK
+- Precursor technology
+- Mechanism

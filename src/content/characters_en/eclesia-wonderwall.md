@@ -17,11 +17,11 @@ eyes: "Dark grey; shifting concentric rings at high exertion"
 dress: "Black exclusively; high-collared, layered, opaque"
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
 occupation: "Private scholar"
-summary: "An Inkless Wonderwall Light-bearer who lives carefully, thinks precisely, and treats her own dangerous power as a problem to be survived before it can ever become a gift."
+summary: "A cadet-branch Wonderwall whose Light runs so deep the usual instruments misread her as Inkless. She lives carefully, studies her own condition relentlessly, and may be one of the family's most important natural cases in centuries."
 tags: ["Synus", "Wonderwall", "Redactor", "Radiance", "Inkless", "Kalt'sen", "Sai'ken Ex'sydra", "Hisui Kirasagi"]
 status: "public"
 created: "2026-02-12"
-updated: "2026-05-22"
+updated: "2026-05-24"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
@@ -36,83 +36,112 @@ hero_gallery:
 
 ---
 
-## What She Is
+## Quick Facts
 
-Ec'lesia Yalara Wonderwall is a young Redactor from a cadet branch of House Wonderwall whose public file still fails to describe the seriousness of her condition.
+| Field | Explanation |
+|---|---|
+| Nation / Origin | Kalt'sen, from a cadet branch of House Wonderwall |
+| Affiliation | Apocachynthion provisional file; Wonderwall cadet branch |
+| Role | Scholar, unstable Light-bearer, major natural Wonderwall case under quiet watch |
+| Power System | Redactory |
+| Anchor / Domain / Condition | Light; publicly misread as Inkless because normal instruments fail to classify her cleanly |
+| Status | Alive, monitored, intake suspended, still developing outside normal institutional comfort |
+| Related Entries | Em'manuel Kael Wonderwall, E'lla Rae Wonderwall, Sai'ken Ex'sydra, Hisui Kirasagi, The Luminant Shore |
 
-She is officially classified as **Radiance** and marked **Inkless**. The first label is true. The second is misleading in the way institutional labels often are when a case exceeds the tools used to classify it.
+## Who She Is
 
-Ec'lesia is not without an Anchor. She is called Inkless because the instruments used to read her cannot cleanly identify what she is carrying. Her Redactory expresses through Light at a depth the ordinary framework does not read well, so the institution recorded the failure of its method as if it were a trait of the girl.
+Ec'lesia is a young Wonderwall from a cadet branch of the family, which means she was not raised at the center of the House's true power and did not grow up with language for the scale of what she carries.
 
-That error matters. It has shaped how other people approach her. It has also left Ec'lesia doing much of the real interpretive work herself.
+That matters because her official label, **Inkless**, is easy to misunderstand.
 
----
+Ec'lesia is not a Redactor without an Anchor. She is called Inkless because the tools used to classify her fail when they try to read what she is actually doing. The institution recorded the failure of its instruments as if it were a property of the girl.
 
-## Family and Branch
+In simple terms, her power is too strange for the standard method, so the standard method blamed her instead of itself.
 
-Ec'lesia was born in Kalt'sen to a cadet branch of the Wonderwall line that split from the primary house roughly two centuries ago. The branch kept the family name, a measure of social weight, and enough of the bloodline inheritance for something rare to surface again in her.
+She lives with the consequences of that misreading every day.
 
-Her father, Gal'ahad Kjackter, was a civil engineer and not a Redactor. He died in 2189 during the Krel Tunnel collapse. His death remains the deepest emotional wound in her life and one of the clearest reasons she learned so young to fold grief inward rather than outward.
+## Personality and Role
 
-Her mother, Al'yana Wonderwall-Kjackter, is a modest Reflection-domain practitioner who understands that her daughter is unusual without fully grasping the scale of the case. Her younger sister, El'ytra, carries the family echo in the quieter way most descendants do.
+Ec'lesia is quiet, precise, and deeply self-governed. She does not dramatize herself and does not trust easy explanations. If she cannot test an answer against experience, she is unlikely to keep it.
 
-This branch does not live like the central Wonderwall line. It has no grand institutional power of its own. It is a respectable household in Kalt'sen carrying more inherited strangeness than it was ever equipped to name.
+That makes her one of the most reliable interpreters of her own condition, even though she is young and even though the institutions around her technically outrank her. She pays attention, records what she observes, and changes her conclusions when reality gives her better data.
 
----
+People who mistake her for fragile are usually reading the surface and missing the method. Ec'lesia is careful because care is what keeps her functional. Her reserve is not weakness. It is discipline.
 
-## Her Power
+Her role in the story is therefore larger than "mysterious girl with dangerous light." She is a person building a survival framework from the inside because the official framework around her is incomplete.
 
-Ec'lesia's Redactory is Light-domain in expression and severe in practical effect. Around her, light can pull inward, thin out, harden briefly into structure, or release violently after too much pressure has been held for too long.
+## Family and Context
 
-The patterns repeatedly associated with her include:
+Ec'lesia was born into a respectable but relatively ordinary cadet branch of House Wonderwall. The branch split from the primary line roughly two centuries ago. It retained the family name, some social standing, and enough of the bloodline inheritance for something rare to reappear in her generation.
 
-- ambient light being drawn inward until nearby space feels unnaturally dim;
-- brief solidification of light into forms that can hold shape or bear weight;
-- spatial distortion at high exertion, where distance, edges, and orientation stop feeling trustworthy;
-- involuntary discharge after prolonged retention, sometimes as flare and sometimes as concentrated release.
+Her father, **Gal'ahad Kjackter**, was a civil engineer and not a Redactor. His death in the Krel Tunnel collapse left a permanent mark on her. It is one of the main reasons she learned to internalize distress rather than throw it outward.
 
-Her relationship to those abilities is defined less by ambition than by management.
+Her mother, **Al'yana Wonderwall-Kjackter**, is a modest Reflection-domain Redactor who understands her daughter is unusual without fully grasping how unusual. Her younger sister, **El'ytra**, carries the family inheritance in the much quieter way most descendants do.
 
-She does not treat her power romantically. She does not trust it enough for that. She studies it, restricts it, measures its conditions, and develops slowly on purpose because she has already learned that faster growth can mean louder pressure, worse consequences, and less control. The black clothing, dim rooms, indirect lamps, and disciplined routines are not aesthetic choices. They are how she stays ahead of what her own body can do.
+This background is important because Ec'lesia did not come out of a major lab, a central House project, or a carefully managed primary-line succession plan. She emerged from a branch that was never built to host a case like hers.
 
-Ec'lesia is powerful, but she does not live like someone enjoying power. She lives like someone carrying it carefully.
+## Abilities in Plain Language
 
----
+Ec'lesia's Redactory expresses through **Light**, but not in the clean, straightforward way many readers might expect from a Radiance classification.
 
-## How She Behaves
+Around her, light can pull inward, thin out, harden into brief structure, or gather under pressure until release becomes dangerous. At higher stress, her output also starts affecting the way space is perceived. Distance, edges, and orientation can stop feeling reliable.
 
-Ec'lesia is quiet, exact, and highly self-governed. She does not waste speech. She does not decorate her thoughts. She is the kind of person who would rather arrive at a hard truth alone than accept an easy explanation from someone she does not trust.
+In practice, that can mean:
 
-Her intelligence is best described as accurate rather than simply high. She observes patiently, discards bad conclusions quickly, and keeps only what survives repeated contact with experience. That habit has made her more perceptive about her own condition than several institutions that nominally outrank her.
+- a room dimming even when the lamps are still on;
+- light behaving like a temporary surface or support;
+- a held-back charge building inside the environment until it breaks loose;
+- visual and spatial distortion during deeper exertion.
 
-People who read her reserve as fragility usually misunderstand her. She is not delicate in character. She is careful because care is what keeps her functional.
+The important point is that Ec'lesia does not approach these abilities like a gifted prodigy enjoying discovery. She approaches them like a person handling unstable material.
 
-Warmth exists in her, but usually in small and unspectacular forms. She is more likely to protect someone quietly than to reassure them theatrically. Even her solitude is less theatrical melancholy than operational preference: fewer lights, fewer variables, fewer mistakes.
+## What Her Abilities Look Like
 
----
+Ec'lesia's power is easier to understand when seen in practical terms.
 
-## Household Life
+In daily life, she manages her surroundings aggressively. Dim rooms, indirect lighting, black clothing, and controlled routines are not aesthetic flourishes. They reduce stressors and give her fewer variables to monitor.
 
-Ec'lesia lives in the eastern residential quarter of Kalt'sen, in the Wonderwall cadet-branch estate where most of her present life has narrowed into study, controlled routine, and private endurance.
+In a defensive situation, she may be able to harden light just long enough for it to matter: a brief support, a temporary barrier, or a path that should not exist but holds for a moment anyway.
 
-Two people matter to that routine in ways the public version of her file should not ignore.
+In a crisis, her output can become more alarming. Nearby light may drain inward until the room feels wrong. Then, if pressure keeps rising, that same gathered intensity can release in a way that is concentrated rather than explosive.
 
-**Sai'ken Ex'sydra** serves as the estate's security specialist. Publicly he is there as a protective detail; in practice he has become part of the structure around her daily life. His steadiness, watchfulness, and unusual ability to remain calm around abnormal conditions make him one of the few presences in her environment that does not aggravate the atmosphere around her. Ec'lesia may not know everything he is, but she knows his presence changes a room.
+The visible effect is one reason her case unsettles institutions. Her hair can take on a cold pink-blue luminescence at high exertion, her eyes can develop shifting rings, and the space around her can feel less trustworthy even before anything visibly breaks.
 
-**Hisui Kirasagi** serves in personal attendance to Ec'lesia within the household. More than a servant, she is part of the intimate rhythm of Ec'lesia's contained life: practical support, quiet companionship, and one of the few people close enough to witness how much management ordinary days actually require.
+## Limits and Misconceptions
 
-That matters because Ec'lesia is not an isolated figure floating in abstraction. She lives inside a household ecology of care, surveillance, restraint, and unusual loyalties.
+The biggest misconception is the Inkless label itself.
 
----
+Ec'lesia is not missing an Anchor. She is being misread by tools that were not built for a case like hers.
 
-## Present Condition
+She is also not a free-form reality editor. Her power is severe, but it is not limitless. The more pressure she carries, the greater the risk of distortion, involuntary release, and deepening conditions she cannot fully map alone.
 
-Institutionally, Ec'lesia remains unresolved. She holds provisional Quill certification, but her intake was suspended after supervised sessions produced excessive Depth, difficult recovery, and a case the institution did not know how to name correctly.
+Another important limit is pace. Ec'lesia develops slowly on purpose. Faster growth would not simply mean getting stronger faster. It could also mean making the underlying condition louder before she has the structure to survive it.
 
-Privately, she has continued the work anyway.
+There is also a relational limit. People around her often want to help while only half understanding what she is. Ec'lesia knows this. It is one reason she relies so heavily on self-study and controlled routines.
 
-She reads, writes, and studies herself with the discipline of someone who understands that ignorance is not safety. Her notebooks, habits, and self-imposed restrictions all point to the same fact: she knows her condition is dangerous, and she intends to survive it without surrendering herself to people who only half understand it.
+## Relationships and Affiliations
 
-That is what makes her compelling.
+**Sai'ken Ex'sydra** serves publicly as security for the household and privately as one of the few presences around Ec'lesia that does not aggravate the atmosphere around her. She may not know his full significance, but she knows his steadiness changes a room.
 
-Ec'lesia is not simply a strange young woman with unusual Light. She is a severe Redactory case, an Inkless misread, a cadet-branch Wonderwall under increasing pressure, and a person building her own framework for survival because no one else has yet offered one she can trust.
+**Hisui Kirasagi** is part attendant, part caretaker, and part quiet companion. Her importance is practical and intimate. She is close enough to see how much work ordinary days cost Ec'lesia.
+
+**Em'manuel Kael Wonderwall** matters even at a distance. He is one of the people watching her case most carefully, though direct proximity between them may be dangerous because of what he represents in the family's deeper inheritance pattern.
+
+**E'lla Rae Wonderwall** matters as a comparison case. Both are major Wonderwall Light-bearers, but they arrive from very different directions: E'lla through reconstruction and Ec'lesia through natural inheritance.
+
+## Why She Matters
+
+Ec'lesia matters because she may be one of the most important natural Wonderwall cases in centuries.
+
+She is a cadet-branch girl whose existence exposes the limits of institutional language, classification technology, and family control all at once. She proves that the deepest patterns in the Wonderwall line cannot be fully planned, replicated, or contained by official systems.
+
+She also matters because her story is not only about danger. It is about intelligence under pressure. Ec'lesia is compelling precisely because she is trying to understand herself without surrendering herself. In a setting full of institutions that want to define people before they are ready, she is doing the harder work of becoming legible on her own terms.
+
+## Related Entries
+
+- E'lla Rae Wonderwall
+- Em'manuel Kael Wonderwall
+- Sai'ken Ex'sydra
+- Hisui Kirasagi
+- The Luminant Shore
+- The Shores

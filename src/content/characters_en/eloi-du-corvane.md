@@ -1,5 +1,5 @@
 ---
-title: "Éloi du Corvane"
+title: "Eloi du Corvane"
 type: "Character"
 affiliation: "Former Auroran gallery circuit; active hostile vessel linked to the Nevermore"
 registry_status: "Indexed Vessel. Unregulated. Active fusion with non-Sovereign attractor-fragment."
@@ -11,11 +11,11 @@ hair: "Black with a subdued blue-violet sheen, worn somewhat long"
 eyes: "Dark grey nearing black; under manifestation they seem ringed around an interior void"
 dress: "Old-canton formal lines inverted into mourning: high collars, long coats, layered black and violet fabrics, narrow gloves, silver fastenings"
 occupation: "Painter; former gallery exhibitor; private portraitist"
-summary: "He made an altar of grief long before the raven found him; now every color he touches remembers how to mourn."
+summary: "An Auroran painter whose life was already organized around grief before the Nevermore found him. His work treats absence as something nearly sacred, and his fusion with that fragment turned mourning, beauty, and dread into one of the setting's most dangerous artistic domains."
 tags: ["Aurora", "Nevermore", "Divine Vessel", "Art", "Grief", "Corvane", "Painter", "Valerie"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-14"
+updated: "2026-05-24"
 image: "../../assets/uploads/characters/char-eloi-du-corvane.webp"
 image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eloi-du-corvane-hero.png"
@@ -26,86 +26,120 @@ hero_image: "../../assets/uploads/characters/char-eloi-du-corvane-hero.png"
 
 ---
 
-## What He Is
+## Quick Facts
 
-Éloi du Corvane is an Auroran painter and hostile Divine Vessel in advanced fusion with the **Nevermore**, a stabilized non-Sovereign attractor-fragment aligned with grief, absence, dread, raven-witness, and the refusal of return.
+| Field | Explanation |
+|---|---|
+| Nation / Origin | Aurora, House Corvane |
+| Affiliation | Former gallery and portrait circuit; now an active hostile vessel case |
+| Role | Painter, aesthetic predator, grief-domain vessel |
+| Power System | Divine or attractor-fragment fusion |
+| Anchor / Domain / Condition | Advanced fusion with the Nevermore, aligned to grief, absence, and dread |
+| Status | Alive, unregulated, and especially dangerous in prepared interiors |
+| Related Entries | Nevermore, Aurora, Divine Vessels, Valerie |
 
-Calling him merely possessed is structurally wrong. The Nevermore did not hollow him out and replace him. It found a life already organized around loss and answered it. His danger comes from that compatibility. The fragment did not create his theology; it gave domain-expression to convictions he had already begun building for himself.
+## Who He Is
 
-Éloi believes loss is the only honest tutor. He believes beauty becomes obscene when it forgets it will end. He believes the living insult the dead when they grow comfortable.
+Eloi du Corvane is a painter whose art and metaphysics became inseparable.
 
-He does not think of himself as a murderer.
+He is not simply "an artist who went mad" and not simply "a man possessed by an evil fragment." Both of those descriptions are too lazy for what the file is actually showing. Eloi was already building a worldview around grief before the Nevermore entered his life. The fragment did not invent his obsessions. It gave them force, structure, and a way to act on the world.
 
-He thinks of himself as a reminder.
+That is the key to understanding him. His danger comes from compatibility.
 
----
+Eloi believes loss is not a tragic interruption of life but one of life's most honest truths. Beauty, in his view, becomes corrupt when it forgets mortality. Affection becomes shallow when it acts as though it can keep what it loves forever. His art started as a way to place grief outside himself. Over time, it became a way to teach grief back into other people.
+
+He is frightening because this philosophy is not empty posturing. He has talent, discipline, cultural fluency, and enough real insight into beauty that his beliefs cannot be dismissed as simple delusion.
 
 ## The Corvane Wound
 
-The Corvanes were an old Auroran family tied to canton politics, cultural patronage, and civic legitimacy. During a political purge, the household was attacked and nearly extinguished. Éloi and his mother survived only because she begged for mercy from the killer.
+The original wound in Eloi's life is family violence.
 
-That mercy became the first structure of his later worldview. Survival was not restoration. It was remainder.
+House Corvane was damaged almost beyond recovery during a political purge. Eloi survived with his mother. Most of the household did not. That survival mattered, but it did not bring restoration with it. He grew up in a home where the dead remained present through preserved letters, clothing, portraits, rooms, and rituals of memory.
 
-His mother loved him deeply, but never recovered from what was done to their family. She preserved letters, portraits, clothing, and objects from the dead so completely that Éloi grew up inside a house where absence had weight, arrangement, and ritual. He learned grief not as an event but as atmosphere.
+That kind of upbringing teaches grief as atmosphere rather than event.
 
-That inheritance shaped the second wound that made him compatible with the Nevermore: he mourned not only the dead, but the unlived versions of the living. The family that might have been. The mother he never truly got back. The self he might have become without blood at the center of the house.
+For Eloi, mourning was not something that happened and then ended. It became the organizing mood of the house and therefore the organizing language of his inner life. He did not only grieve the dead. He also grieved the unlived lives that violence had taken from the living.
 
----
+That distinction is important. He is not attached only to memory. He is attached to remainder.
 
-## Painting
+## Personality and Role
 
-Painting was the first language that let Éloi place grief outside his body. He began with rooms, hallways, windows, furniture, and domestic stillness rather than heroic scenes. Even before open manifestation, his work treated absence as subject rather than background.
+Eloi is elegant, articulate, and often courteous, which makes him much more dangerous than a visibly feral threat would be.
 
-Auroran galleries first praised him as elegant, mature, restrained, haunted, and disciplined. What patrons called sophistication was often injury arranged beautifully enough to pass as refinement.
+He understands criticism, composition, social ritual, gallery behavior, and how to make another person feel seen before making them feel judged. He can be attentive in a way that initially reads as intimacy. He can discuss technique with precision. He can sound almost tender while reorganizing someone psychologically into the shape his domain prefers.
 
-He rose through galleries, salons, and private portrait commissions with genuine technical brilliance and a quiet, exacting social charm. He was difficult, but not unreachable. He had friends. He gave careful criticism. He could be funny in a dry, severe way.
+His role in the setting is partly that of a hostile vessel and partly that of a warning about aesthetic intelligence without mercy. He shows what happens when real artistic sensitivity fuses with a theology of absence so complete that other people become material for it.
 
-That matters because the later myth prefers solitude as origin. It is cleaner to imagine he was always alone. It is not true.
+That is why the story does not reduce him to a random killer. His violence has curation logic.
 
----
+## The Nevermore in Plain Language
 
-## Appearance and Presence
+The **Nevermore** is a fragment aligned with grief, absence, dread, witness, and the refusal of return.
 
-Éloi is physically memorable without needing spectacle. He is tall, narrow, fine-boned, and composed with almost painful precision. His eyes are the detail most witnesses remember. In low light they can seem less reflective than hollowed inward.
+In plain terms, it is not just "death energy" or generic darkness. It is a force that makes endings feel final, intimate, and impossible to soften with comforting lies.
 
-He dresses in inverted Auroran refinement: old-canton formalwear reduced into mourning blacks, charcoals, cold greys, and muted violets. White appears only as deliberate contrast. Feather motifs recur often enough to be treated as self-iconography rather than taste.
+When expressed through Eloi, that domain becomes artistic and spatial. The Nevermore works especially well through:
 
-His hands are almost always stained with black pigment. Under ordinary light it looks like paint or ink. During active manifestation the stain appears to gather at the fingertips, beneath the nails, and in the creases of the palm as though the substance is becoming newly wet.
+- marked interiors;
+- paintings and unfinished canvases;
+- low light;
+- places already emotionally charged by performance, memory, or display;
+- the visual arrangement of absence itself.
 
-He remains courteous even at his most dangerous. He asks permission before touching a canvas. He compliments technique precisely. He does not rant or perform anger. When displeased, he becomes quieter.
+This means Eloi does not merely attack people. He arranges environments until their emotions, memories, and surroundings begin cooperating with the fragment's logic.
 
-That civility is one of the reasons survivors remember shame as clearly as fear.
+## What His Abilities Look Like
 
----
+Eloi's manifestation often begins with black paint or ink-like substance appearing too alive to be ordinary pigment.
 
-## The Nevermore
+It can cling to canvas, walls, floors, clothing, skin, or even air under the right conditions. Rooms he has prepared become progressively more hostile as symbols, unfinished portraits, darkness, and prior markings accumulate weight. By the time overt violence begins, the environment often already feels as though it has agreed with him.
 
-The Nevermore manifests through black nocturnal paint resembling ink. The substance can adhere not only to walls, canvases, clothing, and skin, but under active pressure to open air itself. It gathers around marked interiors, prepared galleries, studios, archives, theatres, and low-light rooms where emotional exposure has already been primed.
+At higher expression, the Nevermore manifests through a raven-crowned or raven-headed figure carrying concentrated dread. Witnesses describe it not just as monstrous, but as conclusive. That word matters. Eloi's domain does not merely scare. It presses the sense that something has reached its final shape.
 
-Its highest expression is a large raven-crowned or raven-headed humanoid figure carrying concentrated dread and the certainty of finality. Witnesses do not describe it as merely monstrous. They describe it as conclusive.
+Socially, his power can look quieter. He may guide a conversation toward loss, fixate on what a subject has abandoned, or turn an apparently ordinary critique into a pressure point that reopens private grief. If the room is already marked, that emotional opening can become operational.
 
-Prepared interiors make Éloi dramatically more dangerous. Prior marking, repeated symbols, painted thresholds, unfinished portraits, and staged darkness all increase his effective control of space, mood, and perception.
+## Painting and Predation
 
----
+Eloi's art career matters because it taught him exactly how people offer themselves to an atmosphere.
 
-## Method
+Galleries, portrait sittings, salons, and private studios trained him in pacing, attention, exposure, and the subtle relationship between being observed and being arranged. Those same skills now serve his hostile manifestation pattern.
 
-Éloi is linked unofficially to disappearances, ruined works, and dread-manifestation incidents targeting artists, performers, and emotionally exposed subjects. He does not choose victims at random. His violence follows his theology.
+He is drawn especially to artists, performers, and emotionally exposed people because he believes they should understand impermanence better than most. When they do not, he experiences that failure almost as insult. In his thinking, he is not attacking innocence. He is correcting dishonesty.
 
-He is drawn to people who attempt to live as though beauty, affection, applause, youth, inspiration, or human presence can be enjoyed without the discipline of loss. Artists are especially vulnerable because he sees their work as evidence that they should have understood impermanence better than most.
+That belief is morally monstrous, but it is internally coherent. The file works better when a reader understands that coherence instead of flattening him into chaos.
 
-He destabilizes targets psychologically before overt manifestation becomes necessary. He can speak to them with unsettling tenderness, turning critique, memory, and grief into pressure. By the time the room darkens, many victims have already been partially arranged into his domain.
+## Limits and Misconceptions
 
-Operationally, he should be treated as severe in galleries, theatres, private studios, civic archives, and any marked low-light interior. If prior marking is confirmed, assessment should escalate immediately.
+Eloi is not strongest everywhere.
 
----
+Prepared interiors matter. Repeated markings matter. Staged darkness matters. Prior emotional vulnerability matters. If he cannot shape the atmosphere, he becomes less mythic and more materially vulnerable.
 
-## Present Standing
+He is also not an empty puppet. The Nevermore acts through compatibility, not total replacement. That makes him worse in one sense, because the decisions remain recognizably his.
 
-Publicly, Éloi du Corvane is absent from ordinary cultural life. Privately, he remains an active restricted-interest vessel whose fusion advanced through compatibility rather than coercive takeover.
+The other common misunderstanding is that grief itself is the problem. It is not. The danger is grief turned into doctrine, art turned into enforcement, and beauty treated as valuable only when it serves disappearance.
 
-He is not simply a criminal painter, nor merely an unstable mystic requiring ordinary containment. He is a grief-structured domain predator with cultural fluency, tactical patience, and a fragment that expresses through aesthetic arrangement as easily as through terror.
+## Relationships and Affiliations
 
-The central danger in his file is not that he has forgotten beauty.
+**The Nevermore** is his defining bond. Eloi does not relate to it as an invading contamination but as a partner that understood what he was already becoming.
 
-It is that he understands beauty extremely well and believes its highest truth is disappearance.
+**Aurora** matters because it gave him the cultural world he still uses: salons, portraiture, family memory, and old-canton refinement.
+
+**House Corvane** remains the origin of his wound. Its destruction is not just backstory. It is the emotional grammar that made him legible to the fragment.
+
+The mention of **Valerie** in his tags suggests another important emotional axis in his broader dossier history, even if the public-facing entry only gestures toward it.
+
+## Why He Matters
+
+Eloi matters because he is one of the clearest examples in the setting of a fragment finding a host whose inner life already matches it too well.
+
+He also broadens what a dangerous vessel can look like. He is not military, not priestly, and not institutionally grand. He is an artist whose aesthetic intelligence became a battlefield.
+
+For readers, he is important because he turns several SiNE themes into one person: grief as structure, beauty as moral argument, and the terrifying possibility that someone can understand loss deeply and still choose to weaponize that understanding against the living.
+
+## Related Entries
+
+- Nevermore
+- Aurora
+- Divine Vessels
+- Art and Vessel Cases
+- Valerie

@@ -17,11 +17,11 @@ eyes: "Human at rest; metallic luminance under Revelation"
 dress: "White, silver, muted blue, and formal black"
 residence: "Primary Wonderwall holdings; regular state presence in Kalt'sen"
 occupation: "Senate representative and principal state-facing authority of House Wonderwall"
-summary: "Born Athena Rae and later fused with the Shore-bound continuity of A'licia Wonderwall, Al'ithia is the House's political center, E'lla's true mother, and one of the line's least understood miracles."
+summary: "House Wonderwall's public leader and E'lla's mother. Born Athena Rae, she became Al'ithia after integrating with the Shore-bound continuity of A'licia Wonderwall, creating one of the line's clearest proofs that a miracle can still remain a person."
 tags: ["Wonderwall", "Rae", "Radiance", "Revelation", "First Radiance", "Luminant Shore", "Shores", "Divine Vessel", "A'licia"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-22"
+updated: "2026-05-24"
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
 portrait_gallery:
@@ -35,190 +35,115 @@ hero_gallery:
 
 ---
 
-## Identity and Continuity
+## Quick Facts
 
-Al'ithia Rae Wonderwall cannot be described honestly by any single category the Empire likes to use.
+| Field | Explanation |
+|---|---|
+| Nation / Origin | Born in the northern coastal Rae branch of House Wonderwall |
+| Affiliation | House Wonderwall, Empire of Synus, SiNE |
+| Role | Public leader of House Wonderwall, Senate representative, political center of the family |
+| Power System | Redactory with Shore-adjacent continuity significance |
+| Anchor / Domain / Condition | Revelation; stable composite continuity of Athena Rae and A'licia Rae Wonderwall |
+| Status | Alive, active, and central to Wonderwall public life |
+| Related Entries | Em'manuel Kael Wonderwall, E'lla Rae Wonderwall, A'licia Rae Wonderwall, The Luminant Shore |
 
-She is not a resurrection.
-She is not a possession case.
-She is not simply Athena Rae under a new title.
-She is not A'licia Rae Wonderwall restored intact.
+## Who She Is
 
-She is a **stable composite self**.
+Al'ithia is easiest to understand if a reader starts with the person instead of the miracle.
 
-The easiest way to understand her is to divide her history into three linked lives.
+She is the woman most people in Synus actually experience as the day-to-day center of House Wonderwall. She manages the House's public obligations, appears in Senate settings, remembers old promises other people hope have been forgotten, and gives Wonderwall power a human face.
 
-The first is **A'licia Rae Wonderwall**, the original great Light-bearer of the line and the woman who made the Wonderwall name politically indispensable after the Sundering.
+She is also one of the strangest continuity cases in the setting.
 
-The second is **Athena Rae**, born in 2111 into the Rae branch from which A'licia herself once came. Athena grew up not with abstract theology but with a family practice of remembering A'licia as a living source, a household fact, almost a presence.
+Al'ithia was born **Athena Rae**, from the same Rae branch that once produced **A'licia Rae Wonderwall**, the original great Light-bearer of the family. Over time, Athena's life became deeply entangled with the continuing posthumous presence the family revered as the **First Radiance**. That presence is now better understood as A'licia's Shore-bound continuity at the **Luminant Shore**.
 
-The third is **Al'ithia**, the woman produced when Athena's mortal continuity and A'licia's posthumous continuity fully integrated.
+What returned from that contact was not simply Athena changed and not A'licia restored. It was **Al'ithia**: a stable third self formed from two real continuities.
 
-That is why simple summaries fail. "A'licia returned" is wrong. "Athena was possessed" is wrong. "Al'ithia is a vessel" is also too small.
+That distinction matters. She is not a resurrection, not a possession case, and not a decorative mystery. She is a person whose identity genuinely includes two true pasts.
 
-She carries two true pasts and lives as one stable person.
+## Personality and Role
 
----
+Al'ithia is composed, exact, and unusually good at making power feel legible instead of theatrical. Where Em'manuel often reads as scale, distance, and hidden machinery, Al'ithia reads as presence, clarity, and social gravity.
 
-## The First Radiance and the Luminant Shore
+She is not soft in the sense of being easily moved. She is soft in the sense of understanding how human beings actually endure authority. She knows when people need a promise, when they need a correction, when they need a visible gesture of care, and when they simply need someone in the room who cannot be bluffed.
 
-Older Wonderwall language treated A'licia's afterlife as something close to a divine attractor. The family called that continuing presence the **First Radiance**.
+This is why she is so politically effective. She does not merely represent Wonderwall power. She translates it into a form other people can survive.
 
-That older language was not useless. It was incomplete.
+That role extends into family life as well. Al'ithia is the emotional center of the House in ways no title fully captures.
 
-Under current Shore doctrine, A'licia did not simply become an ancestral spirit or household goddess. She reached the **Luminant Shore** and did not fully leave. What later generations worshipped as the First Radiance is now better understood as A'licia's Light-aligned recursive continuity, **Tidebound** to the Luminant Shore and strengthened across centuries by repeated family remembrance, ritual, and reverent indexing.
-
-In plain language: A'licia died, but enough of her remained coherently reachable that the family kept finding her.
-
-At first that did not mean speeches from beyond death. It looked more like pressure, orientation, and assistance. Descendants reported rooms feeling easier to understand after invoking her name. Light-bearing Wonderwalls stabilized under strain more often than chance suggested. Family rites developed around the assumption that A'licia was not merely remembered but answerable.
-
-Athena eventually reached that Shore-bound continuity directly.
-
-Al'ithia is what came back from that meeting.
-
----
-
-## Revelation
+## Abilities in Plain Language
 
 Al'ithia's Anchor is **Revelation**.
 
-That does not mean generic prophecy, mind-reading, or magical honesty rays. Revelation is the threshold at which concealed structure becomes impossible to hide. It is the moment a false arrangement stops holding. It is the instant the load-bearing truth in a room becomes visible whether the room wanted it visible or not.
+In simple terms, Revelation is not generic prophecy and it is not magic that forces everyone to confess their secrets. It is power over the moment when hidden structure becomes visible. A false arrangement stops holding. A concealed weakness shows itself. The truth a room has been circling suddenly becomes the only thing that matters.
 
-This is why her power often looks political before it looks spectacular.
+This gives her abilities that are often more frightening in politics than in battle.
 
-She wins rooms by clarifying them.
+In practice, Revelation can help her:
 
-Examples help:
+- identify the real hinge in a negotiation;
+- expose the lie or omission a political argument depends on;
+- force concealed patterns, motives, or structural truths into visibility;
+- perceive what in a person, ritual, or institution is load-bearing rather than ornamental.
 
-- a negotiation becomes much harder to manipulate once she identifies which concession actually matters;
-- a ceremonial dispute collapses once she names the one tradition both sides are secretly depending on;
-- a political lie often survives noise, but not the sudden visibility of the fact it was built to avoid.
+Her connection to A'licia explains why this fits so well. A'licia's domain was **Light**. Athena's domain was the act of receiving what Light reveals. One exposes. The other makes exposure meaningful. Their compatibility was not random.
 
-Her compatibility with A'licia therefore was not arbitrary. A'licia's domain was **Light**. Athena's was the structure that receives what Light makes visible. Light reveals. Revelation receives revelation. The fit was exact.
+## What Her Abilities Look Like
 
----
+Al'ithia's power is often subtle until the result lands.
 
-## From Athena to Al'ithia
+In everyday political life, a meeting can stop feeling slippery the moment she names the one fact everyone has been avoiding. A ceremonial dispute that seemed endless may collapse once she identifies which tradition both sides are secretly relying on.
 
-Athena was not born expecting any of this. She was a Rae-branch girl with a Revelation Anchor and unusual devotional alignment to the First Radiance. The contact began in adolescence and did not complete quickly. Years of unstable duality followed.
+In an investigation or private confrontation, Revelation can work like forced clarity. She may notice the hidden pressure in a conversation, the contradiction inside an account, or the one unspoken assumption the entire exchange is standing on.
 
-That long middle phase matters because it proves Al'ithia was not a sudden miracle and not a simple takeover. There was a real period in which divine-vessel language seemed like the least inaccurate available framework. Observers saw two continuities pressing toward one life and lacked better terms.
+In combat or crisis conditions, her power can become more visibly dramatic. Revelation-aligned Redactory can expose weak points, strip concealment out of an environment, or make a false defensive arrangement fail exactly where it was pretending to be strongest.
 
-What finally emerged was not a host-plus-passenger arrangement.
+The visible effect is rarely flashy by default. It is sharper than that. Rooms feel cleaner, lies feel thinner, and people often react as if the space has become more honest than they intended.
 
-It was not:
+## The First Radiance and the Composite Self
 
-- Athena erased by A'licia;
-- A'licia reborn through Athena;
-- a mortal body carrying an outside fragment.
+The older family name for A'licia's continuing presence was **the First Radiance**.
 
-It was a third self.
+A reader can think of that as the Wonderwall family's early attempt to describe a real phenomenon before they had better theory for it. Under modern Shore interpretation, A'licia did not simply become a ghost or household goddess. She became **Tidebound** to the Luminant Shore, where enough of her Light-aligned continuity remained reachable for later generations to keep finding her.
 
-That distinction is more than philosophy. It is the moral center of the whole case. If Athena had merely been overwritten, the story would be tragic and obscene. If A'licia had simply been restored, the story would be metaphysically strange but emotionally simpler. Instead, both continuities remained real and neither was allowed to stand alone.
+Athena's contact with that continuity did not produce a host-and-passenger arrangement. It produced a merged becoming that eventually stabilized as Al'ithia.
 
-Al'ithia is the person formed when becoming replaced hierarchy.
+This matters because it changes how readers should think about her identity. Al'ithia is not Athena wearing A'licia's memory and she is not A'licia using Athena's body. She is the person made when both histories remained true and neither was allowed to erase the other.
 
----
+## Limits and Misconceptions
 
-## Political Role
+Several misconceptions need to be cleared away.
 
-In law, Em'manuel remains the Wonderwall Seat.
+Al'ithia does not read every mind in the room. Revelation is not telepathy.
 
-In practical politics, Al'ithia is the face, memory, and organizing intelligence of House Wonderwall wherever the House touches other people.
+She also does not force truth in some absolute cosmic sense. People can still resist, misdirect, or choose silence. Her power is about making structure harder to hide, not making deception impossible forever.
 
-She handles:
+Her continuity is also not an excuse to treat her like a relic. One of the important limits in her story is social rather than magical: people who reduce her to "A'licia returned" are misunderstanding the person standing in front of them.
 
-- Senate presence;
-- inter-House diplomacy;
-- petitions and ceremonial obligations;
-- dynastic patronage;
-- public grief, public trust, and public visibility;
-- the low-glamour negotiations that actually keep a great House legitimate.
+She also occupies an unusual position in relation to the **Remainder**. It notices her, but it does not attach to her in the same hereditary way it does to natural full-expression Wonderwall Light cases such as Ec'lesia. That makes her important, but it also means she is not the simple answer to the family's bloodline problem.
 
-She is better at this than Em'manuel.
+## Relationships and Affiliations
 
-That is not sentimental praise. It is structural fact. Em'manuel governs systems, infrastructure, and hidden machinery. Al'ithia governs visibility, trust, and the exact shape in which power can be endured by others without turning into theater or panic.
+**Em'manuel Kael Wonderwall** is her husband, but that relationship only makes sense if the distinction between Athena, A'licia, and Al'ithia is respected. The morally important fact is that Em'manuel did not marry a returned dead wife. He married Al'ithia.
 
-Another way to put it: Em'manuel can make a room obey. Al'ithia can make a room feel that it has been understood. In politics, the second skill is often more durable.
+**E'lla Rae Wonderwall** is her daughter in the full lived sense. When KL-83 was released from Project Kaleidoscope and placed into the primary line, Al'ithia stepped back from public duties to raise her. Meals, tutors, discipline, fear, illness, and early power management all passed through Al'ithia's hands. That is what makes the motherhood real.
 
-This is why many people in Synus experience her, not him, as the true day-to-day center of Wonderwall authority.
+**A'licia Rae Wonderwall** remains part of her history, but not as a separate person residing inside her. A'licia is one of the two real pasts Al'ithia carries into the present.
 
----
+Within the House, Al'ithia also quietly changed how the First Radiance is remembered. She pulled family reverence away from unreachable idealization and back toward a more human understanding of what A'licia was.
 
-## E'lla
+## Why She Matters
 
-The most important domestic fact in Al'ithia's file is simple: she is E'lla's mother in the full lived sense, not merely in political presentation.
+Al'ithia matters because she proves several important things at once.
 
-When KL-83 was released from Project Kaleidoscope and placed into the primary line, Al'ithia stepped back from active political life for years to raise her. She handled the ordinary repetitions that make parenthood real:
+She proves that a Wonderwall miracle does not have to end in disaster. She proves that a setting can handle metaphysical complexity without losing the person at the center of it. She proves that political power in this world is not only held by the loudest practitioner or the deepest theorist, but also by the person who can make truth survivable in public.
 
-- meals;
-- tutors;
-- illness;
-- discipline;
-- early Redactory care;
-- bad dreams;
-- daily proof that the child was loved as a person rather than curated as a project.
+For E'lla, she matters as mother, stabilizer, and future interpreter of the family's Light inheritance. For Em'manuel, she matters as the living correction to the idea that continuity always has to become tragedy. For readers, she matters because she turns one of the setting's strangest metaphysical cases into something deeply human.
 
-That distinction mattered enormously. E'lla could easily have become a machine for other people's grief. Al'ithia did not allow that.
+## Related Entries
 
-The emotional complication is obvious. Through A'licia, Al'ithia remembers the first E'lla. Through Athena, she raised the current one. She had every structural reason to confuse remembrance with replacement.
-
-She refused.
-
-That refusal is one of the greatest mercies the Wonderwall line has managed in centuries.
-
-It also makes Al'ithia unusually important to E'lla's future. She is not only the mother who raised her. At Shore depth she is also tied to the **First Radiance**, the maternal origin-point of the Wonderwall Light line itself. E'lla does not fully understand that relationship yet. She feels the pull before she has language for it.
-
----
-
-## Em'manuel
-
-Al'ithia and Em'manuel's marriage is stable now. It was not inevitable.
-
-He first encountered Athena as a problem he feared might be unresolved grief made visible. He investigated her before he trusted her. He classified before he recognized. She endured being treated as an anomaly at the exact moment when what she most needed was to be acknowledged as a person.
-
-Only later did recognition become love clean enough to deserve its own name.
-
-This distinction matters:
-
-- Em'manuel did not remarry A'licia.
-- He did not use Athena as consolation for A'licia.
-- He married **Al'ithia**.
-
-That is the moral center of the relationship. If he had treated her as a second chance at his dead wife, the marriage would be a desecration. Instead, the file's own private logic insists on something harder and more decent: A'licia is real, Athena is real, Al'ithia is real, and love had to learn the difference.
-
----
-
-## Relation to the Remainder
-
-The Remainder does not attach to Al'ithia the way it attaches to the bloodline's natural full-expression Light cases.
-
-A'licia's Light predates the hereditary Wonderwall-Remainder pattern. Athena came from a compatible branch, but not through the same direct inheritance logic that lets the Remainder choose a bearer like Ec'lesia.
-
-So Al'ithia occupies a rare middle position:
-
-- the Remainder notices her;
-- it does not fail to perceive her;
-- it does not claim her in the usual hereditary way.
-
-That makes her important. In a family where almost everything eventually turns into inheritance mechanics, Al'ithia remains one of the few truly anomalous presences.
-
-Em'manuel's own private reading is memorable for good reason: the Remainder seems to regard her like a door it cannot remember building.
-
-That is about as concise a summary as this family ever gets.
-
----
-
-## Presence
-
-Al'ithia appears far younger than her years, even by high-order Redactor standards. Some of that is longevity stabilization. Some of it is intensified by her composite continuity. She presents as a woman in her thirties despite being eighty-nine in year 2200.
-
-She does not look exactly like A'licia. That is a mercy. She does not look wholly unlike her. That is not.
-
-Her public appearance is controlled rather than ornate: dark hair, pale complexion, exact posture, and a wardrobe built around white, silver, muted blue, and formal black. The choices are deliberate. She does not dress like a shrine to the First Radiance. She dresses like the woman responsible for preventing the First Radiance from turning into costume.
-
-Under active Revelation, her eyes brighten toward a metallic luminance. The effect is not flamboyant. It is clarifying. People tend to feel that the room has become more honest than they intended.
-
-The most precise social description of her remains simple:
-
-when Al'ithia enters, it becomes harder to lie convincingly.
+- Em'manuel Kael Wonderwall
+- E'lla Rae Wonderwall
+- Ec'lesia Wonderwall
+- The Luminant Shore
+- The Shores

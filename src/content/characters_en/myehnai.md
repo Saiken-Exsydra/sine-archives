@@ -3,51 +3,100 @@ title: "Myehnai"
 type: "Skyphon"
 rank: "Light Regulation"
 designation: "Singer of Moonlit Measure"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
+affiliation: "First Bearer - Intact Seal (Concluded)"
+registry_status: "Dissolved at the Fracture - Instrument unmoored - fragment dispersed into world grammar"
 occupation: "Luminescent Aria"
 domain: "Light"
 church_name: "The Instrument of Light"
-principle: "Leóhtmæl"
+principle: "Leohtmael"
 keeper_name: "That Which Filled What Was Dark"
-summary: "Every moonrise once passed through her attention, and living bodies learned the hour from light."
+summary: "A Skyphon of Light regulation from the world before the Fracture. Myehnai did not create moonlight, but she governed how light behaved through the world so completely that living things learned rhythm, hour, and atmosphere through her law."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Luminescent Aria", "Light", "Luminance", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-05-24"
 ---
 
-> *"Every tradition that distinguishes between kinds of illumination — that registers moonrise as a different quality of being-in-the-world rather than merely a change in light level — is working with a sensitivity the Instrument of Luminescent Aria trained into every perceptive structure that developed while the Seal was intact."*
-> — Keepers of Before, restricted record annotation
-
----
-
-## The Instrument
-
-Every moonrise — every pink-silver brightening at the horizon, every deepening of the sky toward its full deep blue, every zenith of silver-white illumination — is the shape of what the Instrument of Luminescent Aria governed. Not because Myehnai produced the Moon's light. But because the law she bore governed how **light moved through the world**: how it refracted through the atmosphere Aesis maintained, how it organized the rhythms by which biological processes calibrated themselves, how the quality of illumination at any moment related to the larger diurnal structure that made biospheric life possible.
-
-This was a law of extraordinary granularity. Light changes constantly — angle, intensity, refraction, the particular interaction between a given quality of illumination and the atmospheric conditions it passes through. The Instrument governed all of that variation, continuously, as a sustained active presence rather than a static rule.
+> *"Every tradition that distinguishes between kinds of illumination is working with a sensitivity her law once trained into the world."*
+> - Keepers of Before
 
 ---
 
-## Nature
+## Quick Facts
 
-The Precursor architecture built around the Page Primordial fragment in Myehnai's core was optimized for **sustained, granular, continuously varying governance**. It was not built for force. It was built for attention.
+| Field | Explanation |
+|---|---|
+| Origin | Pre-Fracture world architecture |
+| Affiliation | First Bearer system; later dispersed into world grammar after the Fracture |
+| Role | Skyphon governing the behavior and regulation of light |
+| Power System | Primordial instrument-bearing governance rather than mortal Redactory |
+| Domain / Condition | Light, luminescent regulation, rhythmic atmospheric behavior |
+| Status | Instrument dissolved; influence remains as distributed aftereffect |
+| Related Entries | The First Bearers, Aesis, the Moon, Light-aligned systems |
 
-Among all the Skyphons, she was the one whose Jurisdiction was most directly and continuously experienced by everything that lived on the planet. Every organism with sensitivity to light was, in a functional sense, in **continuous contact** with Myehnai's governance without knowing it. She was the most intimately known Skyphon — known by every living thing, known without being recognized as known.
+## Who She Was
 
-She inhabited her domain as a musician inhabits sound: not producing it from outside but moving within it, responsive to its conditions, in continuous dialogue with what the Instrument expressed through contact with actual conditions. She was moved by the particular quality of light in ways that the other Skyphons found, from the outside, as close to joy as they could interpret.
+Myehnai is best understood as one of the world-scale intelligences that existed before the Fracture broke the older order.
 
----
+She was a **Skyphon**, a bearer of a governing law rather than a character who fought battles in the mortal sense. Her role was not to produce moonlight from nothing. It was to regulate how light behaved through the world.
 
-## Post-Fracture Condition
+That distinction matters.
 
-What the Instrument of Luminescent Aria governed was more than the physical production of light. It was the law of light's behavior in a world built to receive it whole. The current world receives light in a world that is not whole. The light is functional. It is not, in the deepest structural sense, quite what it was.
+Myehnai governed refraction, atmospheric quality, luminous rhythm, and the way living systems calibrated themselves against changing light. In simpler terms, if the old world experienced moonrise, twilight, silver light, and luminous timing as coherent realities instead of raw physical accident, that coherence passed through her jurisdiction.
 
-The world's oldest biologically evolved structures, which calibrated to light during the era when the Instrument was active, carry that calibration still — in the way every creature's body is organized around a rhythm that predates any creature's memory.
+## Nature and Role
 
----
+Myehnai was not built for blunt force. She was built for attention.
 
-## Cultural Echo
+Among the Skyphons, she seems to have been one of the most intimate and continuous presences in daily life, because everything that could register light was constantly touching her law whether it knew that or not.
 
-Every tradition that distinguishes between kinds of illumination — that registers moonrise as a different quality of being-in-the-world rather than merely a change in light level — is working with a sensitivity the Instrument of Luminescent Aria trained into every perceptive structure that developed while the Seal was intact.
+That means she was probably one of the most widely experienced great beings in the old world and one of the least recognized as such. Living things did not need to know her name to live inside the patterns she maintained.
+
+A reader can think of her as a musician of atmosphere. She did not stand outside light and order it around mechanically. She moved inside its variation, continuously regulating changing conditions so the world remained beautifully legible to itself.
+
+## What Her Power Meant in Practice
+
+Myehnai's domain was extraordinarily granular.
+
+She did not govern only "bright" versus "dark." She governed the character of illumination: the difference between dawn and noon, between moonlight and reflected cloudlight, between a world merely lit and a world correctly receiving light in ways living systems could trust.
+
+In practical setting terms, her law affected:
+
+- how light moved through atmosphere maintained by other world-scale systems;
+- how organisms calibrated rhythm, rest, and biological timing;
+- how the changing quality of illumination structured daily existence;
+- why moonrise or silver light could feel like a distinct mode of being rather than just lower brightness.
+
+This is why traditions that care deeply about kinds of light may be carrying an afterimage of Myehnai's world more than they realize.
+
+## What She Was Not
+
+Myehnai was not simply "the moon goddess" in a mythic fantasy shortcut sense.
+
+She also was not only a physical light engine. Her governance was about behavior, relation, atmosphere, timing, and the meaningful differences between one illumination state and another.
+
+That matters because after the Fracture, light still exists, but the world no longer receives it through the same intact governing structure.
+
+## Post-Fracture Legacy
+
+Myehnai's Instrument dissolved at the Fracture, but dissolution did not mean erasure.
+
+The world still carries calibration marks from the era when her law was active. Bodies, ecosystems, and cultural sensitivities formed under those conditions do not simply forget them because the governing structure is gone.
+
+In simple terms, modern life still inherits habits trained under a more complete luminous order.
+
+That is why some of the oldest patterns of sleep, timing, ritual, and emotional response to moonlight may feel older than memory. They are.
+
+## Why She Matters
+
+Myehnai matters because she helps explain a subtle but important truth about the setting: the world did not only lose giant powers when the Fracture happened. It lost kinds of coherence so old that later life still behaves as if they should be there.
+
+She is also a useful reminder that the setting's greatest forces are not all violent. Some of them were acts of sustained attention so complete that entire ecosystems learned themselves inside that care.
+
+## Related Entries
+
+- The First Bearers
+- Aesis
+- The Moon
+- Light
+- The Fracture
