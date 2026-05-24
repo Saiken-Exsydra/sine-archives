@@ -21,8 +21,8 @@ summary: "O Interval"
 tags: ["SiNE", "Wonderwall", "KT-Exs", "Interval-adjacent", "Northern Region", "Ex'sydra Lineage"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-04-29"
-image: "../../assets/uploads/characters/char-saiken-exsydra.png"
+updated: "2026-05-24"
+image: "../../assets/uploads/characters/char-saiken-exsydra.webp"
 hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 ---
 

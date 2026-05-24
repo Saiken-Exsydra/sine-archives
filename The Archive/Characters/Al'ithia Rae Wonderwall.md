@@ -1,7 +1,3 @@
-Below is a first full dossier draft. I treated this as a retconnedcurrent-canon file, so it deliberately overwrites the simpler “A’licia died and remained dead” framing while preserving the existing pillars A’licia as the source of the Wonderwall Light inheritance, Emmanuel as the formal Wonderwall Seat and SiNE chief, EllaKL-83 as the cleanest expression of A’licia’s inheritance, and Project Kaleidoscope as Emmanuel’s long-running reconstruction effort.   
-
----
-
 # PERSONAL DOSSIER — RESTRICTED
 
 ## AL’ITHIA RAE WONDERWALL
