@@ -1,4 +1,4 @@
----
+﻿---
 title: "Myehnai"
 type: "Skyphon"
 rank: "Light Regulation"
@@ -21,18 +21,6 @@ updated: "2026-05-24"
 > - Keepers of Before
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Origin | Pre-Fracture world architecture |
-| Affiliation | First Bearer system; later dispersed into world grammar after the Fracture |
-| Role | Skyphon governing the behavior and regulation of light |
-| Power System | Primordial instrument-bearing governance rather than mortal Redactory |
-| Domain / Condition | Light, luminescent regulation, rhythmic atmospheric behavior |
-| Status | Instrument dissolved; influence remains as distributed aftereffect |
-| Related Entries | The First Bearers, Aesis, the Moon, Light-aligned systems |
 
 ## Who She Was
 
@@ -93,10 +81,3 @@ Myehnai matters because she helps explain a subtle but important truth about the
 
 She is also a useful reminder that the setting's greatest forces are not all violent. Some of them were acts of sustained attention so complete that entire ecosystems learned themselves inside that care.
 
-## Related Entries
-
-- The First Bearers
-- Aesis
-- The Moon
-- Light
-- The Fracture

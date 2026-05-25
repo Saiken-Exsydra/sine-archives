@@ -1,4 +1,4 @@
----
+﻿---
 title: "Daniel Van Degurechaff"
 type: "Character"
 age: "98 (at time of filing, 2200); appears late twenties to early thirties"
@@ -29,18 +29,6 @@ hero_image: "../../assets/uploads/characters/char-daniel-degurechaff-hero.png"
 > - S. Vaerholt, Apocachynthion external assessor, year 2198
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Ardeatus, Western Furnace District |
-| Affiliation | Marta Chord, Ardeatan diplomatic service, transfer networks with Synus |
-| Role | Custody-transfer architect, divine vessel assessor, political witness in crisis cases |
-| Power System | Divine fusion |
-| Anchor / Domain / Condition | Tempered vessel of Vhaldr, the Tempering Witness |
-| Status | Alive, active, politically exposed, and still central to Chord operations |
-| Related Entries | Marta Chord, Ardeatus, Vhaldr, Apocachynthion |
 
 ## Who He Is
 
@@ -126,10 +114,3 @@ He is one of the setting's best examples of someone whose importance is procedur
 
 For readers, he is also a useful lens on a larger truth about SiNE: systems do not become humane just because someone good works inside them. But sometimes one accurate, relentless person can carve out enough structure that fewer people die while the larger world argues.
 
-## Related Entries
-
-- Marta Chord
-- Ardeatus
-- Vhaldr
-- Apocachynthion
-- Redactory

@@ -73,6 +73,7 @@ const updated        = str(entry.data?.updated);
 const type           = str(entry.data?.type ?? (locale === "pt-br" ? "Personagem" : "Character"));
 const galleryTransition = entry.data?.portrait_gallery_transition === "slide" ? "slide" : "fade";
 const galleryAutoplay = entry.data?.portrait_gallery_autoplay !== false;
+const showRelatedEntries = locale !== "en";
 const portraitCandidates = [
   ...(Array.isArray(entry.data?.portrait_gallery) ? entry.data.portrait_gallery : []),
   entry.data?.image,
@@ -122,20 +123,21 @@ function normTags(t: unknown): string[] {
 }
 const curTags = normTags(entry.data?.tags);
 
-const allPublic = (
-  await Promise.all(CONTENT_KEYS.map((c) => getLocalizedCollection(c, locale)))
-).flat();
-
-const related = allPublic
-  .filter((e) => e.data.status === "public")
-  .filter((e) => e.slug !== entry.slug)
-  .map((e) => {
-    const n = normTags(e.data?.tags).filter((t) => curTags.includes(t)).length;
-    return { e, n };
-  })
-  .filter((x) => x.n > 0)
-  .sort((a, b) => b.n - a.n || new Date(b.e.data?.updated ?? 0).getTime() - new Date(a.e.data?.updated ?? 0).getTime())
-  .slice(0, 6);
+const related = showRelatedEntries
+  ? (
+      await Promise.all(CONTENT_KEYS.map((c) => getLocalizedCollection(c, locale)))
+    )
+      .flat()
+      .filter((e) => e.data.status === "public")
+      .filter((e) => e.slug !== entry.slug)
+      .map((e) => {
+        const n = normTags(e.data?.tags).filter((t) => curTags.includes(t)).length;
+        return { e, n };
+      })
+      .filter((x) => x.n > 0)
+      .sort((a, b) => b.n - a.n || new Date(b.e.data?.updated ?? 0).getTime() - new Date(a.e.data?.updated ?? 0).getTime())
+      .slice(0, 6)
+  : [];
 
 const codex = await getCharacterCodexRecord(entry);
 const codexHref = localizedPath(locale, `/characters/${entry.slug}/codex/`);

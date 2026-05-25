@@ -1,4 +1,4 @@
----
+﻿---
 title: "E'lla Rae Wonderwall"
 type: "Character"
 age: "25 (at time of filing, 2200)"
@@ -34,18 +34,6 @@ updated: "2026-05-24"
 > - Private Wonderwall notation, year 2200
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Born through Project Kaleidoscope and placed into the primary Wonderwall line in early childhood |
-| Affiliation | House Wonderwall, SiNE |
-| Role | Elite Light Redactor, successor candidate, hidden center of Kaleidoscope's unfinished legacy |
-| Power System | Redactory |
-| Anchor / Domain / Condition | Light; Abyssal; post-White Desert Shore-adjacent instability; KL-83 in restricted files |
-| Status | Alive, operational, and under quiet family-level protection |
-| Related Entries | Em'manuel Kael Wonderwall, Al'ithia Rae Wonderwall, Ec'lesia Wonderwall, Project Kaleidoscope, The Luminant Shore |
 
 ## Who She Is
 
@@ -163,11 +151,3 @@ She is not only a powerful Redactor. She is a test case for whether a person can
 
 If Em'manuel represents the architect and Al'ithia represents the humanized miracle, E'lla represents the unfinished heir: brilliant, dangerous, carefully controlled, and still missing the truth that would let her understand why so many lives have been arranged around her.
 
-## Related Entries
-
-- Em'manuel Kael Wonderwall
-- Al'ithia Rae Wonderwall
-- Ec'lesia Wonderwall
-- Project Kaleidoscope
-- The Luminant Shore
-- The Shores

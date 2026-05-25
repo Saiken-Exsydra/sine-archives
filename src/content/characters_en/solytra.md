@@ -1,4 +1,4 @@
----
+﻿---
 title: "Sol'ytra"
 type: "Character"
 affiliation: "All-Mother; derivative of the Lunar Crown's remembered wound; no fixed institutional allegiance"
@@ -31,18 +31,6 @@ hero_gallery:
 > - Keepers of Before
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Origin | Terra; emergent within the All-Mother's planetary field |
-| Affiliation | All-Mother, Lunar Crown memory, no fixed human institution |
-| Role | Crownborn Elemental, ecological guardian, containment-scale threat |
-| Power System | Elemental and syntax-level authority rather than ordinary Redactory |
-| Anchor / Domain / Condition | Planetary elemental nature combined with Wound Crown Authority |
-| Status | Active, wandering, and potentially catastrophic in hostile conditions |
-| Related Entries | Syr'lene, the All-Mother, the Lunar Crown, Terra |
 
 ## Who She Is
 
@@ -114,10 +102,3 @@ What is the right response to sacrifice? Reverence? Continuation? Repair? Repeti
 
 She also matters because she is one of the clearest reminders that the setting's most dangerous beings are not always cruel. Some of them are sincere. Some of them are trying to be holy. Sometimes that is worse.
 
-## Related Entries
-
-- Syr'lene
-- The All-Mother
-- Terra
-- The Lunar Crown
-- The Fracture

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ayanna Aedh d'Aibhilyn"
 type: "Character"
 age: "24 (as of 2200)"
@@ -28,18 +28,6 @@ hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
 > - CLOCKWORK notation
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Valerie, Aurora |
-| Affiliation | Lyrene Pharmaceuticals; secretly tied to the Vitrified Wing |
-| Role | Researcher, engineered interface subject, emerging investigator of her own life |
-| Power System | Redactory |
-| Anchor / Domain / Condition | Mechanism; engineered compatibility with the Sibyl Fragment |
-| Status | Alive, active, and beginning to uncover the project built around her |
-| Related Entries | Lyrene Pharmaceuticals, Vitrified Wing, Sibyl Fragment, CLOCKWORK |
 
 ## Who She Is
 
@@ -135,10 +123,3 @@ What does it mean to engineer a person for access? What happens when the tool be
 
 She also matters because her story is not just about victimhood. Ayanna is starting to push back. The thing that made her useful to the project is becoming the thing that makes her dangerous to it.
 
-## Related Entries
-
-- Lyrene Pharmaceuticals
-- Vitrified Wing
-- CLOCKWORK
-- Precursor technology
-- Mechanism

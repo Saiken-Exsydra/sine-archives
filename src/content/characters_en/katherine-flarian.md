@@ -1,4 +1,4 @@
----
+﻿---
 title: "Katherine Flarian"
 type: "Character"
 age: "35 (as of 2200)"
@@ -30,18 +30,6 @@ hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
 > - Katherine Flarian
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Vel'hara |
-| Affiliation | SiNE Stasis, Continuity Office |
-| Role | Continuity Architect, breach analyst, founder of Stabilistics |
-| Power System | None in the ordinary sense; continuity-sensitive non-practitioner |
-| Anchor / Domain / Condition | Post-Himmelreich continuity sensitivity, chronic pain, fractional lateness |
-| Status | Alive, active, physically deteriorating, still central to S-AE operations |
-| Related Entries | Stasis, Himmelreich, Rouxinol Kaise, Em'manuel Kael Wonderwall |
 
 ## Who She Is
 
@@ -128,10 +116,3 @@ Through her, continuity failure stops being just strange cosmology and becomes a
 
 She is not a mage, not a saint, and not a myth. She is a woman who heard the wall give way once and dedicated the rest of her life to making sure others hear it early enough to live.
 
-## Related Entries
-
-- Stasis
-- Rouxinol Kaise
-- Em'manuel Kael Wonderwall
-- The Shores
-- Redactory

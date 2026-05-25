@@ -1,4 +1,4 @@
----
+﻿---
 title: "Halk'en Orveth"
 type: "Character"
 age: "399 (as of 2200)"
@@ -29,18 +29,6 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 > - Mother Salienne Karth, sealed formation note, year 2074
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Northern Region, later formed entirely by Church service |
-| Affiliation | One Church, Obsidian Rite |
-| Role | Rector-Ascendant, exorcistic and field-deployment asset, one of the Church's rare Answered |
-| Power System | Seraphic vesselhood |
-| Anchor / Domain / Condition | Cynosure-aligned vessel of Auctoriel, Seraphim of Dominion |
-| Status | Alive, heavily restricted, and still used for the Church's hardest cases |
-| Related Entries | Auctoriel, Obsidian Rite, Seven Answers, Sundersaint |
 
 ## Who He Is
 
@@ -160,10 +148,3 @@ Through him, readers can see the difference between clergy rank, Beatified statu
 
 He also matters because he embodies one of SiNE's recurring tensions: a power can be holy, lawful, and still dangerous to the person carrying it if that power is too narrow to equal the whole good.
 
-## Related Entries
-
-- Auctoriel
-- Obsidian Rite
-- Seven Answers
-- Sundersaint
-- Divine Vessels

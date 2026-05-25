@@ -49,6 +49,7 @@ const sectionHref = localizedPath(locale, `/${active}/`);
 const labels = getEntryLayoutLabels(locale);
 const entryImage = entry.data?.image;
 const entryImageUrl = getImageUrl(entryImage);
+const showRelatedEntries = locale !== "en";
 
 // ── Related entries ──
 function normalizeTags(tags: unknown): string[] {
@@ -65,28 +66,29 @@ function sharedCount(a: string[], b: string[]): number {
 const currentSlug = entry.slug;
 const currentTags = normalizeTags(entry.data?.tags);
 
-const allPublic = (
-  await Promise.all(
-    CONTENT_KEYS.map((c) => getLocalizedCollection(c, locale))
-  )
-).flat();
-
-const related = allPublic
-  .filter((e) => e.data.status === "public")
-  .filter((e) => e.slug !== currentSlug)
-  .map((e) => {
-    const tags = normalizeTags(e.data?.tags);
-    const score = currentTags.length ? sharedCount(currentTags, tags) : 0;
-    return { e, score };
-  })
-  .filter((x) => x.score > 0)
-  .sort((a, b) => {
-    if (b.score !== a.score) return b.score - a.score;
-    const au = new Date(a.e.data?.updated ?? 0).getTime();
-    const bu = new Date(b.e.data?.updated ?? 0).getTime();
-    return bu - au;
-  })
-  .slice(0, 6);
+const related = showRelatedEntries
+  ? (
+      await Promise.all(
+        CONTENT_KEYS.map((c) => getLocalizedCollection(c, locale))
+      )
+    )
+      .flat()
+      .filter((e) => e.data.status === "public")
+      .filter((e) => e.slug !== currentSlug)
+      .map((e) => {
+        const tags = normalizeTags(e.data?.tags);
+        const score = currentTags.length ? sharedCount(currentTags, tags) : 0;
+        return { e, score };
+      })
+      .filter((x) => x.score > 0)
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        const au = new Date(a.e.data?.updated ?? 0).getTime();
+        const bu = new Date(b.e.data?.updated ?? 0).getTime();
+        return bu - au;
+      })
+      .slice(0, 6)
+  : [];
 
 // ── Build sidebar fields list ──
 type Field = { label: string; value: string; wide?: boolean };

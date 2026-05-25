@@ -1,4 +1,4 @@
----
+﻿---
 title: "Leonard von-Engelmeyer"
 type: "Character"
 age: "55 (as of 2200)"
@@ -30,18 +30,6 @@ hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
 > - Senior Assessor Vel'omis
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Born in Eraveth, Ardeatus; now based in Kalt'sen |
-| Affiliation | Apocachynthion, Kalt'sen Academy |
-| Role | Senior instructor, thermodynamic specialist, Stase survivor |
-| Power System | Redactory |
-| Anchor / Domain / Condition | High-order thermodynamic Redactory shaped by Stase trauma and linked to Kerz |
-| Status | Alive, protected by the Empire, and still a major teaching figure |
-| Related Entries | Le'nore Voren Engelmeyer, Stase, Kerz, Apocachynthion |
 
 ## Who He Is
 
@@ -138,10 +126,3 @@ He takes a frightening set of circumstances, Stase contact, lethal thermodynamic
 
 For readers, he is also a strong human bridge between bigger cosmological concepts and everyday institutional life. Through Leonard, Stase stops being only a distant anomaly and becomes a wound someone carried back into the classroom.
 
-## Related Entries
-
-- Le'nore Voren Engelmeyer
-- Stase
-- Apocachynthion
-- Redactory
-- Kerz

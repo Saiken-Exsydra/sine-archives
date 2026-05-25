@@ -1,4 +1,4 @@
----
+﻿---
 title: "Rouxinol Kaise"
 type: "Character"
 age: "27 (at time of filing, 2200)"
@@ -29,18 +29,6 @@ hero_image: "../../assets/uploads/Rouxinol HERO.png"
 > - Pager field annotation
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Vel'hara; born in Corvel Institute custody |
-| Affiliation | Independent contractor under Apocachynthion license |
-| Role | Dual-Anchor Redactor, field operative, keeper of a mnemonic retention blade |
-| Power System | Redactory |
-| Anchor / Domain / Condition | Mirror and Threshold; natural bifurcated architecture |
-| Status | Alive, active, conditionally licensed, and still treated as an exceptional case |
-| Related Entries | Katherine Flarian, Ec'lesia Wonderwall, Apocachynthion, Vel'hara |
 
 ## Who She Is
 
@@ -146,10 +134,3 @@ She is a living reminder that official models prefer neat centers, single Anchor
 
 For readers, she is one of the clearest examples of a character who has every reason to become only a weapon and refuses to let that be the whole story.
 
-## Related Entries
-
-- Katherine Flarian
-- Ec'lesia Wonderwall
-- Sai'ken Ex'sydra
-- Apocachynthion
-- Vel'hara

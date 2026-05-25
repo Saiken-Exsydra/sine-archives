@@ -1,4 +1,4 @@
----
+﻿---
 title: "Eloi du Corvane"
 type: "Character"
 affiliation: "Former Auroran gallery circuit; active hostile vessel linked to the Nevermore"
@@ -25,18 +25,6 @@ hero_image: "../../assets/uploads/characters/char-eloi-du-corvane-hero.png"
 > - Internal notation copied into the restricted file after the Third Gallery Incident
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Aurora, House Corvane |
-| Affiliation | Former gallery and portrait circuit; now an active hostile vessel case |
-| Role | Painter, aesthetic predator, grief-domain vessel |
-| Power System | Divine or attractor-fragment fusion |
-| Anchor / Domain / Condition | Advanced fusion with the Nevermore, aligned to grief, absence, and dread |
-| Status | Alive, unregulated, and especially dangerous in prepared interiors |
-| Related Entries | Nevermore, Aurora, Divine Vessels, Valerie |
 
 ## Who He Is
 
@@ -136,10 +124,3 @@ He also broadens what a dangerous vessel can look like. He is not military, not 
 
 For readers, he is important because he turns several SiNE themes into one person: grief as structure, beauty as moral argument, and the terrifying possibility that someone can understand loss deeply and still choose to weaponize that understanding against the living.
 
-## Related Entries
-
-- Nevermore
-- Aurora
-- Divine Vessels
-- Art and Vessel Cases
-- Valerie

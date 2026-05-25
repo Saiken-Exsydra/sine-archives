@@ -1,4 +1,4 @@
----
+﻿---
 title: "Syr'lene"
 type: "Character"
 affiliation: "Precursors (original); Lunar Crown (current - permanent embedding)"
@@ -19,18 +19,6 @@ hero_image: "../../assets/uploads/char-syralene-hero.png"
 > - Keepers of Before, restricted annotation
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Origin | Precursor era, before ordinary human history |
-| Affiliation | The original Precursor project; now permanently embedded in the Lunar Crown |
-| Role | Containment anchor, systems integrator, unseen guardian of the sky |
-| Power System | Precursor structural authority |
-| Anchor / Domain / Condition | Her own Anchor is embedded in the lunar lattice to hold an internal fragment in place |
-| Status | Still active, still containing the Crown fragment, not freely mobile |
-| Related Entries | Lunar Crown, Fracture, Precursors, Callings |
 
 ## Who She Is
 
@@ -133,10 +121,3 @@ She is one of the setting's strongest examples of care expressed not as comfort 
 
 For readers, she also helps explain one of SiNE's central themes: sometimes the people holding the world together are almost completely invisible to the people living inside the world they saved.
 
-## Related Entries
-
-- Lunar Crown
-- The Fracture
-- Precursors
-- Callings
-- Keepers of Before

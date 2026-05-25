@@ -1,4 +1,4 @@
----
+﻿---
 title: "Em'manuel Kael Wonderwall"
 type: "Character"
 age: "Approximately 1,205 (as of year 2200)"
@@ -31,18 +31,6 @@ hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 > - Private Wonderwall notation
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Northern coastal region, before the modern Empire fully stabilized |
-| Affiliation | House Wonderwall, SiNE, Apocachynthion, Empire of Synus |
-| Role | Wonderwall patriarch, SiNE founder, Senate power broker, long-range strategist |
-| Power System | Redactory |
-| Anchor / Domain / Condition | Interval, officially filed as Spatial Coherence; Archtype; long-term Remainder contact |
-| Status | Alive, active, and still one of the most powerful people in the setting |
-| Related Entries | Al'ithia Rae Wonderwall, E'lla Rae Wonderwall, Ec'lesia Wonderwall, Project Kaleidoscope, The Shores |
 
 ## Who He Is
 
@@ -143,11 +131,3 @@ He is the surviving bridge between the erased Ex'sydra line and House Wonderwall
 
 He also matters as a reader-facing character because he turns abstract lore into lived consequence. Through him, the setting's biggest metaphysical ideas stop being just cosmology and become family history, policy, grief, and impossible choices.
 
-## Related Entries
-
-- Al'ithia Rae Wonderwall
-- E'lla Rae Wonderwall
-- Ec'lesia Wonderwall
-- Sai'ken Ex'sydra
-- Project Kaleidoscope
-- The Shores

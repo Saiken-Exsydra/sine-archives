@@ -1,4 +1,4 @@
----
+﻿---
 title: "Vael'Theryn"
 type: "Character"
 affiliation: "Page Primordial (Terra) - not a mortal or Archtype-class entity"
@@ -19,18 +19,6 @@ hero_image: "../../assets/uploads/characters/char-vaeltheryn-hero-main.png"
 > - Keepers of Before, restricted notation
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Origin | Terra itself, at the level of Page coherence |
-| Affiliation | None in the ordinary institutional sense; known only to the highest restricted archives |
-| Role | Witness, world-scale perceiver, rare bounded intervener |
-| Power System | Page Primordial existence |
-| Anchor / Domain / Condition | Terra's native macro-singularity and informational coherence |
-| Status | Active, omniscient within Terra's Page, voluntarily constrained |
-| Related Entries | Precursors, Skyphons, Archtype War, Terra |
 
 ## What Vael'Theryn Is
 
@@ -118,10 +106,3 @@ It reveals that Terra is not simply a stage where other powers move. The world i
 
 For readers, Vael'Theryn is one of the clearest statements of SiNE's deeper ethics: seeing farther does not always license acting more.
 
-## Related Entries
-
-- Terra
-- Precursors
-- Skyphons
-- Archtype War
-- Keepers of Before

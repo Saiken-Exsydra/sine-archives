@@ -1,4 +1,4 @@
----
+﻿---
 title: "Vaey Viktor"
 type: "Character"
 age: "66 (at time of filing, 2200)"
@@ -28,18 +28,6 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 > - Mother Calienne Voss
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Central Region, Empire of Synus |
-| Affiliation | Church of the Sovereign, Obsidian Rite |
-| Role | Retired assessor-priest, Hallowed vessel, institutional embarrassment the Church still protects |
-| Power System | Divination |
-| Anchor / Domain / Condition | Hallowed vessel of Meruel, Measurement of Potential and Completion |
-| Status | Alive, in public good standing, privately suspected of serial murder |
-| Related Entries | Obsidian Rite, The Church, Divine Vessels, Meruel |
 
 ## Who He Is
 
@@ -129,10 +117,3 @@ He also exposes a structural problem inside the Church. Institutions like to ima
 
 For readers, he is one of the clearest warnings in the setting about what happens when discernment loses mercy and keeps calling itself truth.
 
-## Related Entries
-
-- The Church of the Sovereign
-- Obsidian Rite
-- Divine Vessels
-- Meruel
-- Divination

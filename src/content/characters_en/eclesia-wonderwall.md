@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ec'lesia Yalara Wonderwall"
 type: "Character"
 age: "22 (at time of filing, 2200)"
@@ -35,18 +35,6 @@ hero_gallery:
 > - Private Wonderwall assessment, year 2200
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Kalt'sen, from a cadet branch of House Wonderwall |
-| Affiliation | Apocachynthion provisional file; Wonderwall cadet branch |
-| Role | Scholar, unstable Light-bearer, major natural Wonderwall case under quiet watch |
-| Power System | Redactory |
-| Anchor / Domain / Condition | Light; publicly misread as Inkless because normal instruments fail to classify her cleanly |
-| Status | Alive, monitored, intake suspended, still developing outside normal institutional comfort |
-| Related Entries | Em'manuel Kael Wonderwall, E'lla Rae Wonderwall, Sai'ken Ex'sydra, Hisui Kirasagi, The Luminant Shore |
 
 ## Who She Is
 
@@ -137,11 +125,3 @@ She is a cadet-branch girl whose existence exposes the limits of institutional l
 
 She also matters because her story is not only about danger. It is about intelligence under pressure. Ec'lesia is compelling precisely because she is trying to understand herself without surrendering herself. In a setting full of institutions that want to define people before they are ready, she is doing the harder work of becoming legible on her own terms.
 
-## Related Entries
-
-- E'lla Rae Wonderwall
-- Em'manuel Kael Wonderwall
-- Sai'ken Ex'sydra
-- Hisui Kirasagi
-- The Luminant Shore
-- The Shores

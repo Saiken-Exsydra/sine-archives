@@ -1,4 +1,4 @@
----
+﻿---
 title: "Al'ithia Rae Wonderwall"
 type: "Character"
 age: "89 (as of 2200); appears early to mid-thirties"
@@ -34,18 +34,6 @@ hero_gallery:
 > - Private Wonderwall assessment
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Born in the northern coastal Rae branch of House Wonderwall |
-| Affiliation | House Wonderwall, Empire of Synus, SiNE |
-| Role | Public leader of House Wonderwall, Senate representative, political center of the family |
-| Power System | Redactory with Shore-adjacent continuity significance |
-| Anchor / Domain / Condition | Revelation; stable composite continuity of Athena Rae and A'licia Rae Wonderwall |
-| Status | Alive, active, and central to Wonderwall public life |
-| Related Entries | Em'manuel Kael Wonderwall, E'lla Rae Wonderwall, A'licia Rae Wonderwall, The Luminant Shore |
 
 ## Who She Is
 
@@ -140,10 +128,3 @@ She proves that a Wonderwall miracle does not have to end in disaster. She prove
 
 For E'lla, she matters as mother, stabilizer, and future interpreter of the family's Light inheritance. For Em'manuel, she matters as the living correction to the idea that continuity always has to become tragedy. For readers, she matters because she turns one of the setting's strangest metaphysical cases into something deeply human.
 
-## Related Entries
-
-- Em'manuel Kael Wonderwall
-- E'lla Rae Wonderwall
-- Ec'lesia Wonderwall
-- The Luminant Shore
-- The Shores

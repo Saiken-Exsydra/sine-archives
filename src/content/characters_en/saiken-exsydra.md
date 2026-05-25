@@ -1,4 +1,4 @@
----
+﻿---
 title: "Sai'ken Ex'sydra"
 type: "Character"
 age: "25 (as of 2200)"
@@ -30,18 +30,6 @@ hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 > - Private Wonderwall notation
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Ael'keth, eastern Northern borderlands |
-| Affiliation | KT-Exs, Wonderwall Seat, SiNE cover structures |
-| Role | Protective operative, structural observer, restored heir to an erased lineage |
-| Power System | Redactory-adjacent sensitivity; incomplete formal classification |
-| Anchor / Domain / Condition | Traverse-sensitive, Interval-adjacent, privately read as threshold-bearing |
-| Status | Alive, active, and still missing key truths about his own name and lineage |
-| Related Entries | Ec'lesia Wonderwall, Em'manuel Kael Wonderwall, Hisui Kirasagi, House Ex'sydra |
 
 ## Who He Is
 
@@ -120,10 +108,3 @@ He is the surviving continuation of the erased Ex'sydra house. He is one of the 
 
 For readers, he is important because he gives the setting a grounded way to show how hidden bloodline history can survive as instinct before it survives as knowledge. He is standing inside a legacy older institutions thought they had buried, and the story is partly about when he will finally be told what he already is.
 
-## Related Entries
-
-- Ec'lesia Wonderwall
-- Em'manuel Kael Wonderwall
-- Hisui Kirasagi
-- E'lla Rae Wonderwall
-- The Shores

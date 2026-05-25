@@ -1,4 +1,4 @@
----
+﻿---
 title: "Hisui Kirasagi"
 type: "Character"
 age: "24 (as of 2200)"
@@ -30,18 +30,6 @@ hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
 > - Private Wonderwall notation
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Tsukimiya, Hikari |
-| Affiliation | Wonderwall cadet-branch estate |
-| Role | Household attendant, protector, carrier of the Abyssal Flower |
-| Power System | Biological resonance symbiosis rather than standard Redactory |
-| Anchor / Domain / Condition | The Abyssal Flower, inherited through Kirasagi seeding tradition |
-| Status | Alive, unregistered, externally stable, and far calmer than her condition should allow |
-| Related Entries | Ec'lesia Wonderwall, Sai'ken Ex'sydra, Hikari, Bloom-like symbiosis |
 
 ## Who She Is
 
@@ -128,10 +116,3 @@ She shows that not all dangerous power belongs to Redactors, Church vessels, or 
 
 She also matters structurally inside the Wonderwall arc. If the Flower is calmer near Ec'lesia than anywhere else, that is probably not incidental. Hisui may be one of the first living indicators that something about Ec'lesia's environment is changing the behavior of other anomalous systems.
 
-## Related Entries
-
-- Ec'lesia Wonderwall
-- Sai'ken Ex'sydra
-- Em'manuel Kael Wonderwall
-- Hikari
-- Bloom

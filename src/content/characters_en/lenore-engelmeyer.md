@@ -1,4 +1,4 @@
----
+﻿---
 title: "Le'nore Voren Engelmeyer"
 type: "Character"
 age: "23 (at time of filing, 2200)"
@@ -30,18 +30,6 @@ hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
 > - Senior Assessor Vel'omis
 
 ---
-
-## Quick Facts
-
-| Field | Explanation |
-|---|---|
-| Nation / Origin | Drevholt, western band interior |
-| Affiliation | Apocachynthion, House Engelmeyer main line |
-| Role | Quill-ranked practitioner, living anomaly, unresolved threat hidden inside a charming social frame |
-| Power System | Redactory on the surface; deeper biological and predatory anomaly beneath the official classification |
-| Anchor / Domain / Condition | Officially Deception; unofficially far beyond what that box was meant to hold |
-| Status | Alive, licensed, and quietly investigating the truth around her family and her own nature |
-| Related Entries | Leonard von-Engelmeyer, Corvel Institute, Em'manuel Kael Wonderwall, Vel'hara |
 
 ## Who She Is
 
@@ -135,10 +123,3 @@ She is a reminder that not every dangerous being in the setting announces danger
 
 She also matters because her story is still moving inward. The question is not whether she is dangerous. The question is what happens when she finally pulls the one thread she has spent years refusing to touch.
 
-## Related Entries
-
-- Leonard von-Engelmeyer
-- Corvel Institute
-- Vel'hara
-- Em'manuel Kael Wonderwall
-- Rouxinol Kaise
