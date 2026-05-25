@@ -16,6 +16,7 @@ tags: ["Aurora", "Nevermore", "Divine Vessel", "Art", "Grief", "Corvane", "Paint
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
+codex_file: "Eloi du Corvane Dossier.md"
 image: "../../assets/uploads/characters/char-eloi-du-corvane.webp"
 image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eloi-du-corvane-hero.png"

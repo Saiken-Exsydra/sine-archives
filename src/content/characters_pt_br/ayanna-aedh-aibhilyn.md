@@ -20,6 +20,7 @@ tags: ["Aurora", "Valerie", "Lyréne", "Vitrified Wing", "Mechanism", "Redactor"
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
+codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn.webp"
 hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
 ---

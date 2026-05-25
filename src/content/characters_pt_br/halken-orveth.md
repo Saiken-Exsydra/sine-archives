@@ -21,6 +21,7 @@ tags: ["Igreja", "Obsidian Rite", "Auctoriel", "Seven Answers", "Answered", "Dom
 status: "public"
 created: "2026-05-15"
 updated: "2026-05-20"
+codex_file: "Halk'en Orveth Dossier.md"
 image: "../../assets/uploads/characters/char-halken-orveth.png"
 hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 ---

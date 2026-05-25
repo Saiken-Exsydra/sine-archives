@@ -22,6 +22,7 @@ tags: ["Synus", "Wonderwall", "Redactor", "Radiance", "Inkless", "Kalt'sen", "Sa
 status: "public"
 created: "2026-02-12"
 updated: "2026-05-22"
+codex_file: "Eclesia Wonderwall Dossier.md"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"

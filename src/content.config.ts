@@ -45,6 +45,7 @@ const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) =>
       (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v),
       z.string()
     ),
+    codex_file: z.string().optional(),
     // Allow incremental rollout: migrated entries use Astro images, untouched ones keep legacy URLs.
     image: z.union([image(), z.string()]).optional(),
     hero_image: z.union([image(), z.string()]).optional(),

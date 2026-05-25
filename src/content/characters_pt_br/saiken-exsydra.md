@@ -22,6 +22,7 @@ tags: ["SiNE", "Wonderwall", "KT-Exs", "Interval-adjacent", "Northern Region", "
 status: "public"
 created: "2026-03-17"
 updated: "2026-05-24"
+codex_file: "Sai'ken Exsydra Dossier.md"
 image: "../../assets/uploads/characters/char-saiken-exsydra.webp"
 hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 ---

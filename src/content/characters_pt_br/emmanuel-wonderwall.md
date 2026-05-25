@@ -24,6 +24,7 @@ tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "R
 status: "public"
 created: "2026-03-30"
 updated: "2026-04-28"
+codex_file: "Em'manuel Kael Wonderwall Dossier.md"
 image: "../../assets/uploads/char-emmanuel-wonderwall.png"
 hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 ---

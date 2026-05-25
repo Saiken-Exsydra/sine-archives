@@ -22,6 +22,7 @@ tags: ["Apocachynthion", "Engelmeyer", "Thermodynamic Anchor", "Stase-Survivor",
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
+codex_file: "Leonard von Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
 hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
 ---

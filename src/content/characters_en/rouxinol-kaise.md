@@ -16,11 +16,12 @@ eyes: "Dark brown (passive); layered reflection under dual-routing state"
 dress: "Close-fitting dark garments, layered protective paneling; long-bladed artifact instrument in back-worn sheath"
 residence: "Vrenne, Southern Region - no fixed address on file"
 occupation: "Independent contractor - licensed for operational engagement under conditional terms"
-summary: "An independent Redactor with two functioning Anchors, Mirror and Threshold, plus an artifact blade that retains the impressions of the dead. She makes a profession of lethal work, but on rules that belong to her rather than the institutions around her."
+summary: "An independent Redactor with two functioning Anchors, Mirror and Threshold, plus a blade that retains the impressions of the dead. She kills for a living, but under rules she chose for herself rather than rules institutions chose for her."
 tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"]
 status: "public"
 created: "2026-03-17"
 updated: "2026-05-24"
+codex_file: "Rouxinol Kaise Dossier.md"
 image: "../../assets/uploads/Rouxinol Portrait (2).png"
 hero_image: "../../assets/uploads/Rouxinol HERO.png"
 ---
@@ -30,107 +31,72 @@ hero_image: "../../assets/uploads/Rouxinol HERO.png"
 
 ---
 
-## Who She Is
+## Overview
 
-Rouxinol is one of the strangest formally licensed Redactors in the setting.
+Rouxinol is one of the strangest licensed Redactors in the setting. She works as an independent contractor, takes lethal jobs under strict personal rules, and carries a reputation that makes institutions uneasy even when they need her.
 
-She was born into the custody system of the **Corvel Institute**, a Vel'haran research body that behaved much more like a private black-site archive than a public institution. From the beginning, her life was shaped by being examined, measured, and treated as an anomaly worth keeping.
+She was born into the custody of the **Corvel Institute**, which treated her as an anomaly before it treated her as a child. She survived that beginning, emerged with two working Anchors instead of one, and built a life that is still at least partly her own.
 
-What makes her exceptional is not only that she survived that beginning. It is that she emerged with **two functioning Anchors** and built a life on terms that are still partly her own.
+That combination makes her more than just a dangerous specialist. She is a walking argument against tidy official categories.
 
-Publicly, she is a licensed independent contractor. In reality, she is one of the best examples of how badly official Redactory frameworks can fit a real person when that person falls outside the expected architecture.
+## Personality
 
-## Personality and Role
+Rouxinol is controlled, private, and fiercely self-directed. She does not trust institutions easily, and she has good reason not to.
 
-Rouxinol is controlled, private, and sharply self-directed.
+What makes her compelling is that this history did not reduce her to passive bitterness. Instead, it gave her a hard personal code. She does not like hidden terms, does not kill casually, and refuses to let other people own her just because they find her useful.
 
-She does not trust institutions by default, and the file gives good reason for that. She was born in one institution's custody, forcibly processed by another, and trained under conditions that always treated her as valuable before they treated her as free.
+She is dangerous, but not empty. That distinction matters.
 
-What makes her compelling is that this history did not flatten her into passive bitterness. Instead, it gave her a strict personal code. She will not be owned. She will not kill without judgment. She does not accept hidden terms easily.
+## Background
 
-Her role in the setting is part contractor, part anomaly, part boundary-case for Redactory theory itself.
+The Corvel Institute shaped Rouxinol's earliest life through custody, measurement, and control. Later institutions processed and studied her again because she did not fit the expected shape of a Redactor.
 
-## The Two Anchors in Plain Language
+The central reason is simple: Rouxinol has **two Anchors**, **Mirror** and **Threshold**. That alone makes her rare. The way those Anchors interact, plus the weapon she carries, makes her even harder to classify.
 
-Rouxinol's case is built around **Mirror** and **Threshold**.
+Now she works under a conditional public license, which means the institutions still want access to her usefulness even if they remain uncomfortable with what she is.
 
-The **Mirror Anchor** is about correspondence. In simple terms, Rouxinol can align herself closely enough to another Redactor's pattern that her output begins running alongside theirs. She does not steal their identity or become their exact duplicate. She finds the structure of their power well enough to work in parallel with it.
+## Abilities
 
-The **Threshold Anchor** is about edges, crossings, and unstable lines between states. It gives her sensitivity to thinness, disturbance, and the sort of environmental wrongness most people only recognize after it has already become dangerous.
+Rouxinol's first Anchor, **Mirror**, lets her line herself up with another Redactor's pattern closely enough to work in parallel with it. She does not become them. She finds the shape of their power and starts answering in the same language.
 
-The important thing is that these are not one Anchor pretending to be two moods. Rouxinol appears to have a **bifurcated architecture** with two real operational loops.
+Her second Anchor, **Threshold**, is about edges, crossings, and unstable borders. It makes her sensitive to dangerous places, disturbed environments, and the moment when something is about to slip from one state into another.
 
-## Abilities in Plain Language
+In practice, that means she can:
 
-Rouxinol's powers are easier to understand once they are separated.
+- identify and follow another Redactor's power surprisingly quickly;
+- adapt her own output to match or answer what another practitioner is doing;
+- sense thin places, breach edges, and the first signs that a place is becoming unsafe;
+- use her blade to retain impressions of the dead that later become useful through Mirror.
 
-Through **Mirror**, she can:
+The easiest way to picture her in action is as someone who can both hear the power in a room and hear the crack in the floor under it.
 
-- identify another Redactor's Anchor quickly from expression or proximity;
-- align her own output closely with another practitioner's pattern;
-- maintain short-term correspondence with a living or recorded resonance source;
-- later reuse retained impressions if the source was captured through her blade's secondary function.
+## Limitations
 
-Through **Threshold**, she can:
+Mirror is not identity theft. Rouxinol cannot simply become someone else without limit.
 
-- feel local thinness, active Dive pressure, and Calling-related disturbance;
-- detect instability before ordinary observers know what is wrong;
-- hold or interact with impressions tied to transitions, especially through her blade;
-- produce secondary-loop effects that make it seem, to outsiders, as if a second presence is appearing with her.
+Threshold is powerful but socially and psychologically messy. It can make her seem uncanny, can unsettle allies, and can make unbriefed observers misread her as possessed or haunted.
 
-Together, these Anchors make her unusually effective in complicated field conditions. She can read what power is doing, follow it, and also sense where reality is about to become unsafe.
+Her blade is also a burden, not just an advantage. The retained impressions it stores are useful, but building a life around the dead still being tactically available is not obviously healthy.
 
-## What Her Abilities Look Like
+And beneath all of that is the human cost: Rouxinol has had to invent her own ethical framework because the institutions around her repeatedly treated her as a case file before treating her as a person.
 
-Rouxinol is a very visual character in action.
+## Important Relationships
 
-In a confrontation with another Redactor, Mirror can make her feel uncannily adaptive. She does not simply counter through generic skill. She starts answering in the same structural language as the person in front of her, as if she heard their power and found the harmony line.
+**Aldric Vonn** helped turn raw survival into usable discipline and gave her the blade she still carries.
 
-In thin or disturbed regions, Threshold changes the scene entirely. She may react before anyone else understands the danger, turn toward the exact wrong place in a room, or appear to be listening to a border no one else can hear.
+**The Corvel Institute** remains the hidden origin of her life and one of the unresolved threats hanging over it.
 
-At higher stress, witnesses sometimes report a second-presence effect: not a full duplicate, but the sense that something beside or slightly behind her is answering from the wrong side of the moment. That is one reason unbriefed observers often mistake her for a possession case.
+**The Apocachynthion** licensed her, studies her, and still does not have a clean category for her.
 
-Her blade intensifies the whole image. It is not just a weapon. It is part of the machinery through which the dead remain structurally available to her.
+**Katherine Flarian** respects her because Threshold touches the kind of breach edges Katherine studies through systems and containment.
 
-## The Kaise Blade
+## Story Role
 
-The blade is one of the most important parts of Rouxinol's entry.
+Rouxinol matters because she pushes directly against the assumptions built into Redactory theory. Official systems prefer one Anchor, one clean classification, and one predictable kind of usefulness. Rouxinol refuses all three.
 
-Its working classification is a **mnemonic retention artifact**. In simple terms, when the blade processes a target under the right conditions, the target's resonance impression may remain available afterward.
+She also matters because she sits at the intersection of death, imitation, and unstable borders without collapsing into a simple necromancer archetype. She is one of the clearest examples in the setting of a person who had every reason to become only a weapon and chose not to.
 
-This is why the Threshold loop matters so much. Rouxinol is not literally walking around with talking ghosts inside her. She is carrying retained structural impressions, and those retained impressions can later be used by her Mirror Anchor as correspondence sources.
+## Deeper Lore
 
-That is what makes her so unsettling. Death does not simply end the tactical usefulness of the person she killed.
-
-## Limits and Risks
-
-Rouxinol's limits are as important as her strengths.
-
-First, correspondence is not identity theft. Mirror lets her run alongside another pattern, not become its unrestricted owner.
-
-Second, Threshold is useful but disturbing. Its secondary-loop expression can frighten allies, confuse observers, and create real social and operational problems in any environment that reads anomaly through religious or demonic frameworks first.
-
-Third, her blade's retained impressions are not an obviously healthy system to build a life around. The file leaves open whether her unchanged impression count since 2197 reflects restraint, fear of overload, or recognition that the loop may not be safe to fill forever.
-
-There is also the human limit. Rouxinol has had to construct her own moral rules because the institutions around her have repeatedly treated her as a case before treating her as a person.
-
-## Relationships and Affiliations
-
-**Aldric Vonn** is the trainer who helped turn her survival into usable field discipline and gave her the blade she still carries.
-
-**The Corvel Institute** remains the hidden origin of her life and one of the unresolved threats hanging over her history.
-
-**The Apocachynthion** has a functional but uneasy relationship with her. It licensed her, studies her, and still does not have a clean category for what she is.
-
-**Katherine Flarian** respects her because Threshold seems able to touch breach edges directly in ways Katherine's own field can only approach through systems and containment logic.
-
-**Ec'lesia Wonderwall** matters because the one documented meeting between them produced a combined routing pattern that the reviewing Pager had no precedent for.
-
-## Why She Matters
-
-Rouxinol matters because she pushes directly against the assumptions built into Redactory theory.
-
-She is a living reminder that official models prefer neat centers, single Anchors, and predictable classifications, while real cases do not always cooperate. She also matters narratively because she stands at the intersection of death, correspondence, and boundary logic without collapsing into simple necromancer shorthand.
-
-For readers, she is one of the clearest examples of a character who has every reason to become only a weapon and refuses to let that be the whole story.
+Rouxinol appears to have a genuinely split Redactory architecture rather than one Anchor with unusual moods. Her blade functions as a mnemonic retention artifact, meaning it can preserve the resonance impressions of certain dead targets. Those impressions are not literal talking ghosts, but they can later serve as correspondence sources through Mirror, which is why her relationship to death is so operationally unsettling.
 

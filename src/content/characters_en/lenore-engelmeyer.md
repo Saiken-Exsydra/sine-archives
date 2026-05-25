@@ -17,11 +17,12 @@ eyes: "Grey, very light - reads as near-colorless in low illumination. Every ass
 dress: "White by preference - pale linens, light wools, materials that do not announce themselves"
 residence: "Vel'hara, western band"
 occupation: "Independent practitioner - licensed for operational engagement under conditional terms"
-summary: "A Quill-ranked Deception Redactor from the Engelmeyer Voren branch whose official classification explains only the surface. She is warm, intelligent, quietly terrifying, and carrying a hunger the institutions around her do not know how to name."
+summary: "A Quill-ranked Deception Redactor from the Engelmeyer Voren branch whose official classification explains only the surface. She is warm, intelligent, quietly terrifying, and carrying a hunger the institutions around her still do not know how to name."
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-24"
+codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
 ---
@@ -31,95 +32,71 @@ hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
 
 ---
 
-## Who She Is
+## Overview
 
-Le'nore is one of the most unsettling characters in the setting precisely because she is not chaotic.
+Le'nore is deeply unsettling precisely because she does not feel chaotic. She is polite, intelligent, easy to like, and almost soothing to speak with.
 
-Publicly, she is a polite, intelligent, Quill-ranked practitioner from the Voren branch of House Engelmeyer, later reintegrated into the main line. She is well-mannered, observant, shy in an appealing way, and almost unnervingly easy to like.
+That surface is real. It is also incomplete.
 
-That surface is real.
+The official system calls her a **Deception Anchor** case because that is the nearest safe category for what she lets institutions see. In reality, her condition reaches much farther than misdirection or illusion. It touches hunger, body structure, memory, and identity in ways the official label does not begin to cover.
 
-It is also incomplete.
+## Personality
 
-The official system calls her a **Deception Anchor** case because that is the nearest available category for what she lets institutions see. In practice, Le'nore is carrying something much older and much stranger than a clean perception-manipulation profile. Her abilities touch body structure, predation, memory, identity, and incorporation in ways no ordinary Anchor framework fully explains.
+Le'nore is warm, careful, and frighteningly self-integrated. She does not feel like a person split between humanity and anomaly. She feels like someone who has folded those things together so completely that most people leave her company thinking they understood her better than they did.
 
-## Personality and Role
+She is also quietly methodical. She studies people, follows patterns, and treats uncertainty as information rather than panic.
 
-Le'nore is careful, warm, and frighteningly integrated.
+That is part of what makes her dangerous. She does not need to become visibly monstrous to control a room.
 
-She does not read like a person split between her humanity and her anomaly. She has folded them together so completely that most observers leave her company feeling they understood everything while somehow grasping less than they expected.
+## Background
 
-She is also highly intelligent in a quiet, methodical way. She follows threads, studies people, and treats uncertainty as data rather than emotional defeat. This makes her dangerous even when she is doing nothing visibly hostile.
+Le'nore comes from the **Voren branch** of House Engelmeyer, a line that carried odd disturbances and recurring unease across generations without any institution understanding the pattern properly.
 
-Her role in the world is not only "monster in human form." She is also a study in what happens when a person grows up without any acceptable language for what she is and becomes her own framework instead.
+Her father, **Al'tair Aldhor**, was secretly a Corvel Institute researcher sent into the branch under cover of an ordinary life. Her mother, **Re'lha Voren Engelmeyer**, disappeared when Le'nore was nine.
 
-## Abilities in Plain Language
+That disappearance is one of the central wounds in her story. It is also one of the truths she still refuses to look at directly.
 
-The official label for Le'nore is **Deception**, and that is not completely false.
+## Abilities
 
-At the surface level, she can alter perception, disappear from attention, break other people's continuity of awareness, and guide observers toward the interpretation she wants them to hold. This alone would make her a rare and difficult practitioner.
+At the surface level, Le'nore really can do what the **Deception** label suggests. She can slip out of attention, alter how people interpret what they see, and make absence feel natural.
 
-The deeper problem is that perception effects are only the part institutions can describe safely.
+The deeper problem is that those effects are only the part institutions can safely name.
 
 Le'nore also appears able to:
 
-- alter her own biological structure far beyond normal human parameters;
+- alter her own body far beyond normal human limits;
 - move, heal, and physically respond in ways her visible frame should not support;
-- consume a person and retain that person's structural pattern;
-- later reproduce voice, movement, and behavioral texture from what was absorbed;
-- maintain a predatory hunger that is steady, rational, and not experienced by her as moral contamination.
+- consume a person and retain something of that person's pattern;
+- later reproduce voice, movement, or behavior from what was taken;
+- manage a steady predatory hunger without becoming irrational.
 
-That is why Deception is best understood as a useful mask rather than a complete diagnosis.
+The simplest way to understand this is that Deception is not the whole truth. It is the safest mask for a much stranger condition.
 
-## What Her Abilities Look Like
+## Limitations
 
-In a social setting, Le'nore's power can be subtle enough to pass as charm, timing, and emotional intelligence. A person may lose track of her for a few minutes, miss a key detail, or remember the mood of the encounter more strongly than its content.
+Le'nore is not "just" an illusionist, but she is also not an indiscriminate predator.
 
-In practical field terms, that means she can slip through attention, control the story other people think they are inside, and make absence feel natural.
+One of the most disturbing things about her is that her hunger is rational. She plans around it. She restrains it. She appears to target people whose disappearance is least likely to trigger serious institutional pursuit.
 
-The more disturbing side is physical.
+Her biggest limits seem to be personal rather than technical. She does not use every part of what she carries equally. The clearest example is her mother. She has never reproduced Re'lha's pattern, which suggests there are truths inside herself she can technically reach but still refuses to touch.
 
-If Le'nore stops holding the body-shape she presents socially, she can alter herself structurally in ways that no ordinary Redactory case should allow. The file makes clear that the human appearance is not her only possible configuration. It is the one she maintains because it works.
+## Important Relationships
 
-Her consumption ability is even more concrete. The dead do not vanish into simple loss. Their structural pattern becomes available to her, which means mimicry in her case may not be imitation at all. It may be access.
+**Al'tair Voren Engelmeyer** remains present through cautious correspondence rather than open reunion.
 
-## Limits and Misconceptions
+**Re'lha Voren Engelmeyer** is the absence around which much of Le'nore's interior life is built.
 
-The first misconception is that Le'nore is "just" a deception specialist. She is not.
+**The Apocachynthion** licenses her by accepting the version of her that fits inside a known box. Le'nore cooperates because that arrangement benefits her.
 
-The second is that her hunger makes her irrational. It does not. One of the most disturbing parts of her characterization is that she manages it with planning, restraint, and a moral logic of her own.
+**House Engelmeyer** is useful to her, but not fully trusted.
 
-She is also not a mindless predator who kills at random. The pattern described in the entry suggests targeted disappearance logic: people whose absence is least likely to produce serious institutional response.
+## Story Role
 
-Her real limits seem to be personal rather than technical. She does not access everything she carries equally. The clearest example is her mother. She has never reproduced Re'lha's pattern, and the fact that she refuses that possibility is one of the strongest signs that there are rooms inside herself she still will not enter.
+Le'nore matters because she exposes the limits of classification, morality, and ordinary social reading all at once.
 
-## Family and Context
+She reminds the reader that not every dangerous being announces danger through spectacle. Some of them are charming, patient, kind-seeming, and socially fluent. Some of them have built a stable self out of truths the world still has no category for.
 
-Le'nore comes from the **Voren branch** of House Engelmeyer, a line that carried recurring perceptions, disturbances, and the feeling of being watched across generations without any institution understanding the pattern properly.
+## Deeper Lore
 
-Her father, **Al'tair Aldhor**, was not simply a provincial doctor. He was a Corvel Institute researcher sent into Drevholt to study the family under cover of an ordinary life. He married into the branch, fathered Le'nore, and remained close to the anomaly long enough to become part of it.
-
-Her mother, **Re'lha Voren Engelmeyer**, disappeared when Le'nore was nine. That absence is central to Le'nore's story, and the entry makes clear that what happened that night is one of the truths she still cannot face directly.
-
-The move to **Vel'hara** in 2199 matters because it places her near both the **Corvel Institute** and her father without forcing the confrontation yet. She is in the same city as two of the most important unresolved facts in her life, and she is choosing stillness.
-
-## Relationships and Affiliations
-
-**Al'tair Voren Engelmeyer** remains present through correspondence rather than reunion. Their relationship is affectionate, careful, and full of avoided truths.
-
-**Re'lha Voren Engelmeyer** is the absence around which much of Le'nore's interior life is organized.
-
-**House Engelmeyer** is useful to her, but not deeply trusted.
-
-**The Apocachynthion** has licensed and classified her, but only by accepting the version of her that fits inside a known box. Le'nore cooperates with that arrangement because it benefits her.
-
-**Em'manuel Kael Wonderwall** matters even though she does not know it yet. The file suggests a brief indirect encounter that was more significant to him than to her.
-
-## Why She Matters
-
-Le'nore matters because she exposes the limits of classification, morality, and social reading all at once.
-
-She is a reminder that not every dangerous being in the setting announces danger through spectacle. Some of them are kind, patient, and socially graceful. Some of them build a complete self out of truths the world has no category for.
-
-She also matters because her story is still moving inward. The question is not whether she is dangerous. The question is what happens when she finally pulls the one thread she has spent years refusing to touch.
+The deeper mystery in Le'nore's case is that her apparent Deception profile may only be the visible edge of a much older predatory architecture involving incorporation, retained patterning, and structural mimicry. The institutions around her keep the official category narrow because the wider truth does not fit cleanly inside any accepted Anchor framework.
 

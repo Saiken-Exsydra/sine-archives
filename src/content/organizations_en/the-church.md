@@ -90,7 +90,7 @@ This produces the Church's stage taxonomy:
 - **Whispering**
 - **Tenant**
 - **Wearing**
-- **Hollowed**
+- **Hallowed**
 - **Consumed**
 
 ---

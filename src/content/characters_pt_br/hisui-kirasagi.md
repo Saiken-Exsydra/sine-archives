@@ -22,6 +22,7 @@ tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregi
 status: "public"
 created: "2026-03-30"
 updated: "2026-04-26"
+codex_file: "Hisui Kirasagi Dossier.md"
 image: "../../assets/uploads/char-hisui-kirasagi.png"
 hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
 ---

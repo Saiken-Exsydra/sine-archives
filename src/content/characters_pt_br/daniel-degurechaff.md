@@ -21,6 +21,7 @@ tags: ["Ardeatus", "Marta Chord", "Vhaldr", "Tempered", "Sarn Pell", "Apocachynt
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
+codex_file: "Daniel Degurechaff Dossier.md"
 image: "../../assets/uploads/characters/char-daniel-degurechaff-portrait.png"
 hero_image: "../../assets/uploads/characters/char-daniel-degurechaff-hero.png"
 ---

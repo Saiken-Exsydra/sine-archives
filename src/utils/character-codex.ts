@@ -15,6 +15,7 @@ type CharacterLike = {
   slug: string;
   data?: {
     title?: unknown;
+    codex_file?: unknown;
   };
 };
 
@@ -58,10 +59,12 @@ async function getArchiveRecords(): Promise<ArchiveRecord[]> {
 }
 
 function getCandidateKeys(entry: CharacterLike): string[] {
+  const rawCodexFile = String(entry.data?.codex_file ?? "").trim();
   const rawTitle = String(entry.data?.title ?? "").trim();
   const slugWords = entry.slug.replace(/-/g, " ");
   const slugCompact = entry.slug.replace(/-/g, "");
-  const candidates = [rawTitle, slugWords, slugCompact];
+  const codexBaseName = rawCodexFile.replace(/\.md$/i, "");
+  const candidates = [rawCodexFile, codexBaseName, rawTitle, slugWords, slugCompact];
 
   return candidates
     .map(normalizeArchiveKey)
@@ -72,6 +75,13 @@ function getCandidateKeys(entry: CharacterLike): string[] {
 async function findArchiveRecord(entry: CharacterLike): Promise<ArchiveRecord | null> {
   const archiveRecords = await getArchiveRecords();
   const candidateKeys = getCandidateKeys(entry);
+  const explicitCodexFile = String(entry.data?.codex_file ?? "").trim();
+
+  if (explicitCodexFile) {
+    const explicitKey = normalizeArchiveKey(explicitCodexFile.replace(/\.md$/i, ""));
+    const explicitMatch = archiveRecords.find((record) => record.key === explicitKey);
+    if (explicitMatch) return explicitMatch;
+  }
 
   for (const candidateKey of candidateKeys) {
     const exact = archiveRecords.find((record) => record.key === candidateKey);

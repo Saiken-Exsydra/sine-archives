@@ -28,6 +28,7 @@ tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project K
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-10"
+codex_file: "Ella Rae Wonderwall Dossier.md"
 ---
 
 > *"Ela não é ela. Eu sabia disso desde o primeiro ano. Em algum momento perto do terceiro, deixei de precisar que fosse. O que eu não previ — o que metodologia nenhuma poderia prever — é que ela se tornaria alguém completamente, irreversivelmente ela mesma, e que isso pareceria um resultado melhor. Ainda estou tentando entender o que fazer com isso."*

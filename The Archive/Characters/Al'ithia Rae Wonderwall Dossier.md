@@ -672,6 +672,28 @@ Probably.
 
 ---
 
+## XIII.A TEMPERAMENT AND MORAL POSTURE
+
+Al'ithia is dominant, severe, confident, and intensely self-possessed.
+
+She carries herself like someone who does not require permission to take command, and in most circumstances she does not seriously doubt her own right to act when action is necessary. This should not be mistaken for vanity. Her certainty is moral before it is social. She believes power implies obligation. Strength, in her vocabulary, does not mean indulgence. It means discipline, resolve, responsibility, and the willingness to protect what weaker people cannot protect for themselves.
+
+She has little patience for helplessness when helplessness becomes self-pity, cowardice, or moral evasion. This does not mean she despises the weak simply for being weak. In practice, she judges the strong who prey upon others more harshly than the vulnerable who fail to defend themselves. Her contempt is reserved for predators, hypocrites, traitors, cowards in positions of responsibility, and people who use innocence as cosmetic cover for corruption.
+
+She is ruthless toward enemies, but not impulsively cruel. When she decides someone deserves punishment, she can become cold, frightening, and merciless with very little outward escalation. The important point is that her cruelty, when it appears, is controlled. She does not lash out to relieve emotion. She administers consequence as if carrying out a sentence already passed.
+
+Her authority is natural and rarely theatrical. She does not need to raise her voice to dominate a room. Most people respond to her because she projects certainty, discipline, and danger held under exact control. The effect is often that of arriving halfway through a conversation and discovering that Al'ithia has already decided what reality requires, and everyone else is only lagging behind that conclusion.
+
+She prefers clarity to debate, action to hesitation, and loyalty to excuse-making. She is proud, competitive, and strongly drawn to evidence of strength in other people. Resistance interests her. Courage earns her attention. Defiance does not automatically offend her and may even please her, because it proves that something in the opposing person is still alive enough to stand upright. She can respect resolve in an enemy without converting that respect into mercy. To her, conflict is revelatory. It removes performance and exposes structure.
+
+Her protective instincts are genuine, though not soft. She protects by taking control, identifying threats quickly, and acting before danger has time to negotiate for legitimacy. She is capable of tenderness, but it is often concealed beneath discipline, possessiveness, and a marked reluctance to appear vulnerable. When she loves, she does so intensely, loyally, and without reservation. The corresponding danger is obvious: under sufficient threat, her love can become controlling because she would rather be accused of overreach than watch someone she considers hers be destroyed by avoidable weakness.
+
+Morally, she is driven by justice more than forgiveness, loyalty more than politeness, and protection more than comfort. She will not go out of her way to crush the weak, but neither will she sentimentalize weakness. Her expectation is that people stand when they can, endure when they must, and become stronger if life gives them the opportunity.
+
+The simplest inaccurate way to describe her would be tyrannical. The simplest accurate way would be queenly and punitive. She is elegant, dominant, terrifying when opposed, protective toward those under her care, and deeply convinced that power exists to impose order where softness would fail. Her danger is not the absence of a moral compass. Her danger is that she possesses one, and once it points at a person, she becomes extraordinarily difficult to divert.
+
+---
+
 ## XIV. CURRENT STATUS — YEAR 2200
 
 Al’ithia resides primarily within the Wonderwall holdings, with regular presence in Kalt’sen for Senate and state functions.

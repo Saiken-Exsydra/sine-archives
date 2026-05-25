@@ -47,6 +47,7 @@ const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) => z.object
     (v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v),
     z.string()
   ),
+  codex_file: z.string().optional(),
   image: z.union([image(), z.string()]).optional(),
   hero_image: z.union([image(), z.string()]).optional(),
 });

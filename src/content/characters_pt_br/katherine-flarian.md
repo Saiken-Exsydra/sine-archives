@@ -22,6 +22,7 @@ tags: ["SiNE", "Stasis", "Continuity-Sensitive", "Vel'hara", "Himmelreich", "Sta
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-10"
+codex_file: "Katherine Flarian Dossier.md"
 image: "../../assets/uploads/char-katherine-flarian.webp"
 hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
 ---

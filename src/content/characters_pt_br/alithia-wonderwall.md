@@ -22,6 +22,7 @@ tags: ["Wonderwall", "Rae", "SiNE", "Radiance", "Revelation", "First Radiance", 
 status: "public" 
 created: "2026-05-14"
 updated: "2026-05-14"
+codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
 portrait_gallery:

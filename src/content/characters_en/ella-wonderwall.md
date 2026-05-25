@@ -17,7 +17,7 @@ eyes: "Pale metallic pink-blue under active Light use"
 dress: "Black exclusively; light-responsive fabrics used as control apparatus"
 residence: "Primary Wonderwall holdings; extended operational presence in Kalt'sen and Hora'veil"
 occupation: "SiNE Redactor; internal successor candidate"
-summary: "The final subject of Project Kaleidoscope and one of the strongest Light Redactors of her generation. She survived the White Desert, now lives under constant control demands, and may be carrying far more of the program's unfinished history than she knows."
+summary: "The final success of Project Kaleidoscope and one of the strongest Light Redactors of her generation. She was made to answer an old Wonderwall obsession, survived a disastrous contact with the Shore of Light, and now lives under the weight of a history she still has not been told in full."
 image: "../../assets/uploads/characters/char-ella-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
 portrait_gallery:
@@ -28,6 +28,7 @@ tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project K
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-24"
+codex_file: "Ella Rae Wonderwall Dossier.md"
 ---
 
 > *"The program stopped producing bodies. It did not stop existing."*
@@ -35,119 +36,73 @@ updated: "2026-05-24"
 
 ---
 
-## Who She Is
+## Overview
 
-E'lla is one of the easiest Wonderwalls to misread from the outside.
+E'lla is one of the strongest Light Redactors of her generation, but that description hides the most important part of her story. She is the final success of **Project Kaleidoscope**, a long Wonderwall attempt to recreate an earlier lost heir and rebuild an impossible kind of Light.
 
-At first glance, she can look like a highly educated noble daughter with severe taste, careful manners, and unusual technical value to SiNE. All of that is true. None of it explains her.
+That makes her both a person and the result of a family project that lasted for centuries. She was raised as a daughter, trained as a future power inside SiNE, and shaped by a history that was already waiting for her before she was old enough to understand it.
 
-In simple terms, E'lla is the final successful subject of **Project Kaleidoscope**, the six-century Wonderwall program that tried to rebuild the first E'lla Rae Wonderwall from archived biology and archived Redactory structure. She is therefore both a person and the end result of a very old family experiment.
+She is also not the clean solution the family hoped for. Kaleidoscope gave her extraordinary Light, but it did not give her the exact inheritance pattern the deeper Wonderwall problem was built around. So E'lla lives in a painful middle place: brilliant, useful, loved, carefully managed, and never quite the answer the project was really trying to force into existence.
 
-That still is not the whole story.
+## Personality
 
-Kaleidoscope recreated extraordinary **Light**, but it did not recreate the specific hereditary pattern the **Remainder** responds to in the natural Wonderwall bloodline. So E'lla stands in a painful middle position. She has one of the strongest Light profiles of her era, but the deeper family mechanism Em'manuel was truly trying to answer passed around her instead of through her.
+E'lla is intelligent, stylish, exacting, and much harder on herself than most people realize. She likes precision, clean lines, and solutions that can be adjusted before they become disasters.
 
-That means she is not the natural answer to the Wonderwall line's oldest problem. She is the engineered answer.
+That is one reason clothing matters so much to her. Tailoring, fabric choice, and surface control are not just aesthetic interests. They fit the way she thinks. She prefers systems she can shape closely rather than large messy displays.
 
-## Personality and Role
+The White Desert changed her. Before it, she seems to have been more openly confident and less guarded in unfamiliar space. After it, she became more deliberate, more suspicious of uncontrolled environments, and much more focused on keeping her own power from getting ahead of her.
 
-E'lla is intelligent, exacting, stylish, and much harsher on herself than most people around her realize.
+## Background
 
-Before the White Desert, she appears to have been more openly confident and more comfortable in visible space. After the disaster, she became quieter, more deliberate, and far less willing to trust environments she has not already studied. That is not a simple trauma note. It is part of how she stays functional.
+E'lla was created by Project Kaleidoscope and placed into the main Wonderwall line before she turned five. From then on, her life was shaped by two truths at once: she was genuinely family, and she was also the living outcome of an old family obsession.
 
-She does not like broad, sloppy uses of power. She prefers narrow control, exact lines, and solutions that can be corrected if something starts to go wrong. This is one reason her interest in garment construction matters so much. Sewing, tailoring, and material design are not just hobbies for her. They are extensions of how she thinks: precise, controlled, and local.
+She was raised by **Al'ithia** in the human sense that matters most and trained under **Em'manuel** for a future inside SiNE. That future is not limited to combat or field use. She is also being prepared for logistics, command, crisis handling, and the practical machinery of power.
 
-Inside SiNE, she is being trained for far more than field use. She is learning BrightCrystal logistics, special-project governance, crisis response, and the practical side of executive power. In other words, she is being prepared not only as a Redactor, but as infrastructure.
+The central break in her life is the **White Desert**. Publicly it was treated as a catastrophic Light-related failure. In practical terms, it was the moment her power went far deeper than the people around her expected and proved that her connection to Light was more dangerous than a simple high-tier Radiance case.
 
-## Abilities in Plain Language
+## Abilities
 
-E'lla's Anchor is **Light itself**.
+E'lla is a **Redactor**, meaning she uses the setting's structured magic through an **Anchor**, the concept her power understands best. Her Anchor is **Light itself**.
 
-That sounds simple until it is explained properly. She is not just a person who can emit brightness or fire radiant blasts. Her Anchor is not a smaller branch like reflection, beamwork, or glare manipulation. It is Light at a very deep conceptual level.
+That does not just mean brightness or laser-like force. E'lla can gather, redirect, sharpen, suppress, or reshape light with remarkable control. She is especially dangerous when she can work through fabrics, surfaces, reflections, and prepared environments.
 
-In practice, that can let her:
+In practice, that can look like:
 
-- gather, sharpen, redirect, or strip light out of a space;
-- use light for elegant precision rather than only brute force;
-- alter how visible, legible, or exposed something becomes;
-- shape light through clothing, surfaces, and controlled material routes;
-- descend into much more dangerous states if the environment or pressure around her pushes too far.
+- drawing light into narrow controlled lines instead of wasting it in a broad blast;
+- turning reflective surfaces into routes for pressure, visibility, or attack;
+- making a room reveal more than the people inside it wanted revealed;
+- cutting, blinding, or overwhelming a target with concentrated radiance;
+- suppressing her own reflectivity so hair, clothes, and nearby surfaces behave less dangerously.
 
-Most of the time, she works far above her worst threshold and simply looks like an exceptionally strong Radiance-class practitioner. The danger is that her domain does not naturally stop at the safe layer.
+Think of her power less as "she glows" and more as "she can make an entire space obey a harsher idea of what light should do."
 
-## What Her Abilities Look Like
+## Limitations
 
-E'lla's power is best understood through scenes.
+Light is not safe for E'lla just because it belongs to her. Bright rooms, uncontrolled reflections, mirrored spaces, and unstable fields can all turn from scenery into threat.
 
-In daily life, she uses constant low-level control to manage herself. Since the White Desert, she suppresses reflectivity in her hair and wardrobe, which is why her black clothing often seems to absorb light instead of merely wearing a dark color. This is not just fashion. It is a control system.
+Her worst failure state is **Shorefall**, a descent so deep that Light starts shaping itself through her instead of the other way around. The White Desert proved that threshold is real. It was not a dramatic rumor. It happened, and people died.
 
-In technical work, she favors precision. A light-thread along fabric, a carefully managed reflective surface, or a narrow line of force is more natural to her than a large uncontrolled burst.
+She also lives with a human limitation that matters just as much as the magical one: she still does not know the full truth of Project Kaleidoscope, the earlier failed subjects, or what pieces of that long experiment may still be active around her.
 
-In combat, Light in her hands can become cutting, blinding, revealing, or structurally overwhelming depending on how deep she goes. She is especially dangerous when she has a prepared environment and controlled surfaces to work with.
+That means E'lla is expected to carry consequences she was not allowed to fully understand in advance.
 
-In defense, she can use Light to regulate what a room exposes, how reflections behave, and how much of her own output is allowed to spill outward. This is one reason unfamiliar mirrored spaces are so risky for her. They create too many routes at once.
+## Important Relationships
 
-The visible effect is striking. Her eyes often carry a pale metallic pink-blue cast under active use, and in intense conditions the room can feel over-described, as if Light is trying to reveal more than anyone present asked to see.
+**Al'ithia Rae Wonderwall** is her mother in the lived, practical, emotional sense. She raised E'lla as a daughter, not as a successful specimen.
 
-## The White Desert
+**Em'manuel Kael Wonderwall** is protector, teacher, and one of the architects of her present life. He trained her, positioned her, and built the project that made her while still withholding some of the truth from her.
 
-The White Desert is the central turning point in E'lla's life.
+**Ec'lesia Wonderwall** matters because she stands outside Kaleidoscope. In private Wonderwall thinking, that may make Ec'lesia one of the few people capable of reaching E'lla cleanly if she falls too deeply into Light again.
 
-Publicly, the event was recorded as a catastrophic radiance storm and BrightCrystal field failure during an Aurora-linked observational passage. That account is not false, but it is incomplete.
+**The First Radiance** matters to E'lla even before she fully understands why. She has begun to feel that something woman-shaped answers from the Luminant Shore.
 
-What happened in practical terms is that E'lla performed what should have been a routine shallow-Dive clearing action in an environment already saturated with unstable Light pressure. Instead of making a controlled adjustment, she triggered a much deeper response. Eight personnel died. Sixty-eight were injured.
+## Story Role
 
-The deeper interpretation is even more important. E'lla did not become possessed and she did not suddenly reveal the Remainder. She **sank** into Light hard enough that newer Wonderwall theory treats the event as contact with the **Luminant Shore**.
+E'lla sits at the intersection of engineered inheritance, family grief, institutional power, and the newer Shore side of the setting's cosmology.
 
-A reader can think of that as the point where Light stopped behaving like only a power and started behaving like a place pressing back through her.
+She matters because she asks a hard question in human form: what happens when someone is made to be an answer before she is ever told what the question was? Through E'lla, the Wonderwalls stop being just a powerful family with strange history and become a story about love, control, secrecy, and the cost of trying to rebuild what should have been mourned.
 
-She survived, but the survival came with a cost. Since then, every bright room, every uncontrolled reflective surface, and every unfamiliar spatial field has to be treated as a potential risk factor rather than neutral scenery.
+## Deeper Lore
 
-## Project Kaleidoscope as a Living Condition
-
-This is one of the most important parts of E'lla's entry.
-
-Project Kaleidoscope is not only the program that made her. Near Shore pressure, it may still be expressing through her as an unfinished field.
-
-That is why private observers pay attention to things like:
-
-- dreams of girls she cannot identify;
-- instincts that arrive before explanation;
-- reflected expressions that do not seem fully identical to her own;
-- brief afterimages or secondary faces in glass under pressure;
-- the feeling that fear, warning, or motion reached her from somewhere adjacent to herself.
-
-The current interpretation is not possession. It is closer to resonance-overhang from the previous Kaleidoscope subjects and the unfinished patterns gathered around the same impossible Light demand.
-
-What matters for readers is the practical risk. E'lla is not only managing her own identity. She may also be managing the edges of a long experiment that never ended cleanly.
-
-## Limits and Risks
-
-E'lla has major limits, and they are essential to understanding her.
-
-She cannot treat Light as a harmless aesthetic domain. For her, it is beautiful and dangerous at the same time.
-
-She is also not a natural Remainder-recognized Wonderwall case. That protects her in some ways and isolates her in others. She was built to answer a family problem that the family still has not fully explained to her.
-
-Her greatest failure state is not ordinary overload. It is **Shorefall**: a descent so deep that Light begins shaping itself through her instead of the other way around. That is why the White Desert matters so much. It proved the threshold is real.
-
-There is also the human limit. E'lla does not know the full truth of KL-83, the eighty-two prior subjects, or what parts of Kaleidoscope may still be active through her. Her family is asking her to prepare for a future while withholding the language that would let her understand it fully.
-
-## Relationships and Affiliations
-
-**Al'ithia Rae Wonderwall** is her mother in the real emotional sense. She is the person who raised E'lla as a daughter rather than as a project outcome.
-
-**Em'manuel Kael Wonderwall** is both protector and architect of her present condition. He trained her, positioned her inside SiNE, and built the program that produced her, all while still withholding the full account of what she is.
-
-**Ec'lesia Wonderwall** matters to E'lla because she stands outside Kaleidoscope. In some private Wonderwall thinking, that may make Ec'lesia one of the few people capable of reaching E'lla cleanly during a Shore event rather than being heard as one more reflection inside the storm.
-
-**The First Radiance** also matters, though E'lla does not yet understand how. She has begun to sense a woman-shaped presence at the Luminant Shore without knowing that this presence may be family in more than one sense.
-
-## Why She Matters
-
-E'lla matters because she sits at the crossing point between engineered inheritance, extraordinary Light, family secrecy, and the setting's newer Shore cosmology.
-
-She is not only a powerful Redactor. She is a test case for whether a person can survive being made into an answer before she is even told the question. She also gives readers one of the clearest examples of how SiNE and House Wonderwall turn private grief into large-scale systems.
-
-If Em'manuel represents the architect and Al'ithia represents the humanized miracle, E'lla represents the unfinished heir: brilliant, dangerous, carefully controlled, and still missing the truth that would let her understand why so many lives have been arranged around her.
+In deeper Wonderwall interpretation, the White Desert was not only an accident. It may have been E'lla reaching the **Luminant Shore**, the Shore tied to Light, revelation, and impossible visibility. Kaleidoscope may also remain partially active around her as leftover patterning from the earlier subjects, which is why private observers watch for strange reflections, borrowed instincts, and echoes that do not feel fully like her own.
 

@@ -21,6 +21,7 @@ tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"
 status: "public"
 created: "2026-03-17"
 updated: "2026-03-17"
+codex_file: "Rouxinol Kaise Dossier.md"
 image: "../../assets/uploads/Rouxinol Portrait (2).png"
 hero_image: "../../assets/uploads/Rouxinol HERO.png"
 ---

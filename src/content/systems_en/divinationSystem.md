@@ -58,7 +58,7 @@ Long contact can alter the vessel permanently enough that the change remains aft
 Examples:
 
 - saint-state;
-- Hollowed states;
+- Beatified states;
 - relic-like bodies;
 - lasting sensory or emotional shifts;
 - stable monstrous or sanctified morphologies.
@@ -127,7 +127,7 @@ Typical progression:
 
 At extreme depth, the vessel may settle into a new stable state or cease to remain the dominant organizing self.
 
-Church terms like **Beatification** and **Hollowing** describe parts of this process, but the structural mechanics beneath them are broader than any one institution's doctrine.
+Church terms like **Beatification** and the Church's possession-stage taxonomy describe parts of this process, but the structural mechanics beneath them are broader than any one institution's doctrine.
 
 ---
 

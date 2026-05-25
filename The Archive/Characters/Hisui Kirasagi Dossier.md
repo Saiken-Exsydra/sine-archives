@@ -1,5 +1,5 @@
 # PERSONAL DOSSIER — RESTRICTED
-## HI'SUI KIRASAGI
+## HISUI KIRASAGI
 *Filed and maintained by Em'manuel Kael Wonderwall, Wonderwall Seat*
 *Seat's private archive — no institutional copy exists*
 
@@ -16,7 +16,7 @@
 
 *CLOCKWORK's foreign-anomaly screening operates on a standing protocol: immigration applications passing through the empire's border administration are flagged when physiological markers in the applicant's medical intake documentation fall outside any standard biological profile. The flags arrive quarterly. Most are unremarkable — metabolic anomalies, inherited resonance sensitivity in lineages that never produced practitioners, the occasional misclassified minor Dive complication that border physicians recorded without understanding. I review them myself. It has always seemed imprudent to delegate this category of assessment to someone whose threshold of interest might differ from mine.*
 
-*The flag for Hi'sui Kirasagi arrived in the second quarter of 2197. The physiological profile the border physicians had recorded — because they are trained to be thorough, and she was thorough enough in her own presentation that nothing in her manner prompted them to be less so — contained structural markers they classified as a minor circulatory irregularity. It was not a circulatory irregularity. What they had measured, without knowing what they were measuring, was the vascular integration of a resonance-active organism that had been symbiotic with its host's blood for longer than she had been alive.*
+*The flag for Hisui Kirasagi arrived in the second quarter of 2197. The physiological profile the border physicians had recorded — because they are trained to be thorough, and she was thorough enough in her own presentation that nothing in her manner prompted them to be less so — contained structural markers they classified as a minor circulatory irregularity. It was not a circulatory irregularity. What they had measured, without knowing what they were measuring, was the vascular integration of a resonance-active organism that had been symbiotic with its host's blood for longer than she had been alive.*
 
 *I recognized it because I had seen something like it once before, in documentation from an ancient-site excavation the Company conducted in Hikari's compressed central corridor in year 2162. The biological material recovered at that site had degraded past the threshold of functional analysis, but the structural signature had been catalogued. What the border physician's intake form described was that signature in a living host.*
 
@@ -44,7 +44,7 @@
 
 | Field | Entry |
 |---|---|
-| **Full Name** | Hi'sui Kirasagi |
+| **Full Name** | Hisui Kirasagi |
 | **Year of Birth** | 2176 |
 | **Current Age** | 24 (as of year 2200) |
 | **Birthplace** | Tsukimiya, a harbor city on the Darkmargin coast of Hikari |
@@ -250,6 +250,6 @@ I have had this conversation with myself before. I have not resolved it. I do no
 
 ---
 
-*End of Dossier — Hi'sui Kirasagi*
+*End of Dossier — Hisui Kirasagi*
 *Filed: Year 2200. Author: Em'manuel Kael Wonderwall.*
 *No copy exists outside this archive.*

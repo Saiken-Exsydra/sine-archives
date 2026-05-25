@@ -22,6 +22,7 @@ tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hu
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
+codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
 ---

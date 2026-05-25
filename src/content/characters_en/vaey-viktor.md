@@ -5,8 +5,8 @@ age: "66 (at time of filing, 2200)"
 birth_year: "2134"
 birthplace: "Minor river district northeast of Kalt'sen, Central Region, Empire of Synus"
 affiliation: "Church of the Sovereign; Obsidian Rite (retired assessor-priest)"
-rank: "Confirmed Hallowed vessel - Meruel, Measurement of Potential / Completion"
-registry_status: "Retired priest in good public standing; privately assessed as a severe-domain Hallowed and suspected serial killer under institutional protection"
+rank: "Confirmed Beatified vessel - Meruel, Measurement of Potential / Completion"
+registry_status: "Retired priest in good public standing; privately assessed as a severe-domain Beatified vessel and suspected serial killer under institutional protection"
 designation: "The Saint Who Hunts the Unbecome"
 build: "Tall, thin, and severe; age has bent him slightly forward without making him seem weak"
 hair: "Crimson threaded with white, neatly kept"
@@ -14,11 +14,12 @@ eyes: "Very clear; under Meruel's pressure they pale toward a cold red-white"
 dress: "Meticulously maintained black clerical dress; narrow silver measuring chain hidden beneath left sleeve"
 residence: "Private ecclesiastical lodging in Kalt'sen; irregular travel through the Central Region and select northern districts"
 occupation: "Retired Obsidian Rite assessor and informal consultant in difficult manifestation cases"
-summary: "A retired Obsidian Rite assessor and confirmed Hallowed vessel of Meruel. He spent decades measuring saint-candidates and now murders people he believes have betrayed their own potential."
-tags: ["Church", "Obsidian Rite", "Hallowed", "Meruel", "Kalt'sen", "Sovereign", "Assessment", "Potential"]
+summary: "A retired Obsidian Rite assessor and confirmed Beatified vessel of Meruel. Vaey Viktor spent decades measuring saint-candidates and now hunts people he believes have betrayed the lives they could have become."
+tags: ["Church", "Obsidian Rite", "Beatified", "Meruel", "Kalt'sen", "Sovereign", "Assessment", "Potential"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-24"
+updated: "2026-05-25"
+codex_file: "Vaey Viktor Dossier.md"
 image: "../../assets/uploads/char-vaey-viktor.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
@@ -29,91 +30,65 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 
 ---
 
-## Who He Is
+## Overview
 
-Vaey Viktor is one of the setting's clearest examples of a genuinely holy power going morally wrong without becoming fake.
+Vaey Viktor is one of the setting's most disturbing reminders that real holiness does not automatically produce moral safety.
 
-He is a retired priest of the **Obsidian Rite** and a confirmed Hallowed vessel of **Meruel**, an angelic measurement associated with potential and completion. For decades, the Church sent him into difficult manifestation cases because he was extraordinarily good at identifying what kind of spiritual pressure had entered a life and what that life might become under the right guidance.
+He is a retired priest of the **Obsidian Rite** and a confirmed Beatified vessel of **Meruel**, an angelic force associated with measurement, potential, and completion. For decades he helped the Church assess saint-candidates and difficult manifestation cases. Now he kills people he believes have betrayed what they were meant to become.
 
-That skill made him useful.
+The horror of Vaey is not that he is fake. It is that he is real.
 
-It also helped deform him.
+## Personality
 
-Today, Vaey lives in a category the Church hates naming clearly: a real angelic vessel, carrying a real fragment, whose current acts are murder.
+Vaey is courteous, patient, and often genuinely gentle in conversation. He can be reassuring to frightened families, respectful to junior clergy, and calm in situations where other people become visibly cruel.
 
-## Personality and Role
+That surface gentleness makes him worse, not better. His problem is not uncontrolled rage. It is a settled theology of judgment that treats wasted potential as a kind of sin worthy of punishment.
 
-Vaey is gentle in person and terrible in principle.
+He is the sort of person who can sound compassionate while deciding someone should die.
 
-That combination is what makes him so dangerous. He is not a frothing fanatic or a theatrical sadist. He can calm frightened families, speak kindly to junior clergy, and sit patiently beside distressed children without visible contempt or impatience.
+## Background
 
-His problem is not lack of kindness in the immediate moment. It is that his theology has hardened into a form of judgment that treats wasted greatness as a moral crime.
+Vaey spent most of his life inside Church assessment work. He was valuable because Meruel's domain made him unusually good at reading difficult cases. He could sense hidden capacity, tell the difference between fraudulent spectacle and genuine contact, and identify people whose unstable lives still carried a coherent path toward sainthood or greatness.
 
-His role in the setting is therefore larger than "killer priest." He is also an indictment of an institution that kept trusting accurate judgment after it had already curdled into something else.
+Over time, that gift hardened into obsession. Instead of treating unrealized potential as a tragedy, he began treating it as guilt. The same insight that once made him useful slowly became the logic behind his murders.
 
-## Meruel in Plain Language
+The Church's role matters here too. Vaey was allowed to stay useful long after the danger should have been obvious, and parts of the institution still shield him because admitting the truth would expose too much failure at once.
 
-Meruel's domain is not mercy, forgiveness, or punishment in the broad sense.
+## Abilities
 
-Meruel measures the distance between what a person is now and what that person might coherently become if courage, discipline, opportunity, and alignment all went well.
+Meruel's domain is easiest to understand as measurement of the life a person might coherently become under the right conditions. Vaey refers to this as the **completed silhouette**.
 
-Through Meruel, Vaey can perceive what he calls the **completed silhouette**.
+In plain language, he can often sense the difference between someone's present self and a truer possible self they might still have reached. That made him excellent at assessment work.
 
-In simple terms, he can often sense a person's unrealized but coherent possible self. That made him incredibly valuable in assessment work. He could tell the difference between emptiness and buried capacity, between false sainthood and frightened but genuine contact.
+In violent use, the same power becomes brutal. Vaey can force a target into a moment of unbearable clarity about the life they did not become and judge them through that gap. His attacks often leave wounds that feel symbolic rather than random: damage tied to an abandoned gift, a refused calling, or an unfinished sacred pattern.
 
-The danger is that Meruel does not measure the whole of justice. It measures potential much more clearly than it measures mercy.
+That is why his killings feel less like ordinary murder and more like verdicts.
 
-## What His Power Looks Like
+## Limitations
 
-Vaey's abilities are not flashy in the way many combat-oriented powers are.
+Vaey does not measure literal destiny. The completed silhouette is a coherent possible self, not a guaranteed future.
 
-In assessment work, he can look at a candidate and feel the shape of what that life could become. That means he can identify hidden capacity, misread vessel cases, and people whose instability conceals something larger.
+That distinction is where his moral collapse begins. He receives real information through Meruel, but Meruel measures only one part of reality. It is far better at perceiving potential than mercy, fear, exhaustion, coercion, trauma, or the ordinary reasons people fail to become their best selves.
 
-In hostile use, the same domain becomes much darker. He can force a target toward the unbearable clarity of their unrealized self for a moment and then pass judgment on the distance between that possibility and the life they actually chose.
+Vaey's greatest weakness is therefore theological. He mistakes a sharp partial truth for total judgment.
 
-The wounds he leaves are not random. They often express through the domain of failure itself: an unwritten scholar's hand, a singer's throat, a withdrawn vessel's body marked with unfinished sacred geometry.
+## Important Relationships
 
-That is why his murders feel like verdicts rather than explosions.
+**Meruel** is the defining pressure in his life. Vaey has let one fragment of Heaven become his entire moral vocabulary.
 
-## What He Does Now
+**The Obsidian Rite** formed him, used him, and now has to live with what it helped create.
 
-Vaey does not kill indiscriminately.
+**The Church of the Sovereign** still matters because parts of it continue protecting him out of shame, gratitude, and fear of scandal.
 
-His apparent targets share a pattern: people who, in his judgment, once had the capacity for something greater and then withdrew, refused, or settled into a smaller life.
+**Mother Calienne Voss** represents the minority inside the institution willing to say the obvious thing aloud: Vaey hears something real, but not enough of it.
 
-That includes saint-candidates who resisted Church custody, gifted people who abandoned their gift, and damaged prodigies he has decided no longer deserve the excuse of fear or exhaustion.
+## Story Role
 
-In his own theology, this is not murder. It is correction.
+Vaey matters because he shows how discernment can rot into cruelty without losing its legitimacy at the source.
 
-That is the horror of him. He is not hiding from his actions behind confusion. He has built a complete interpretation that makes them feel righteous.
+He also exposes an institutional weakness in the Church. Systems like to imagine that corruption always looks false, demonic, or openly rebellious. Vaey is far worse than that. He is pious, useful, accurate in part, and still monstrous.
 
-## Limits and Misconceptions
+## Deeper Lore
 
-Vaey is not measuring literal destiny.
-
-The completed silhouette is a coherent possibility, not a guaranteed future. He can perceive what might have been reachable, but that does not mean every failure to reach it is sinful.
-
-That is exactly where his moral collapse begins.
-
-He also does not carry the whole of Heaven. Meruel is one fragment with one domain. Vaey's tragedy is that he has mistaken the fragment's clarity for total judgment.
-
-His greatest limit, then, is theological. He receives real information through an incomplete lens and insists on treating that lens as the whole truth.
-
-## Relationships and Affiliations
-
-**The Obsidian Rite** made him what he is institutionally. He served it for decades, discovered real saints for it, and now remains one of the reasons it has to confront its own cowardice.
-
-**The Church of the Sovereign** still protects him more than it wants to admit. That protection comes from shame, fear, gratitude, and political calculation.
-
-**Meruel** is the defining pressure in his life. Vaey does not merely carry the fragment. He has let its measurement become his moral vocabulary.
-
-**Mother Calienne Voss** and others like her matter because they are among the few voices inside the institution willing to describe the problem accurately: Vaey hears something real, but not enough of it.
-
-## Why He Matters
-
-Vaey Viktor matters because he proves that holiness and moral safety are not the same thing in this setting.
-
-He also exposes a structural problem inside the Church. Institutions like to imagine corruption as obviously false, demonic, or external. Vaey is worse than that. He is real, useful, pious in a narrow way, and still monstrous.
-
-For readers, he is one of the clearest warnings in the setting about what happens when discernment loses mercy and keeps calling itself truth.
+In stricter terms, Vaey's most distinctive capability is not raw destructive output but evaluative pressure. Meruel's fragment lets him compare an actual life against a coherent unrealized completion-state with frightening accuracy. The fatal error is that Vaey treats the measured gap as guilt instead of grief.
 

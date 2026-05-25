@@ -133,9 +133,9 @@ A Igreja desenvolveu sua própria taxonomia para a progressão de presença demo
 
 **The Wearing** — O limiar além do qual a própria estrutura do vessel começa a ser sobrescrita ativamente. O vessel ainda está vivo, mas já não é confiavelmente ele mesmo. Expulsão nessa fase ainda é possível, porém envolve riscos severos tanto para o vessel quanto para o clero responsável pela operação. Mesmo em casos bem-sucedidos, a recuperação nunca é completa.
 
-**The Hollowed** — Sobrescrita total. A coerência original do vessel foi deslocada. A posição da Igreja aqui representa um de seus ensinamentos pastorais mais difíceis: o corpo ainda merece o Last Rite porque aquele corpo um dia pertenceu a alguém amado pelo Sovereign. Porém, para uma célula de Votary enfrentando um Hollowed, o objetivo já não é resgate. É contenção — e, se a contenção falhar, uma forma de encerramento que a Igreja realiza em silêncio e jamais descreve em registros públicos.
+**The Hallowed** — Sobrescrita total. A coerência original do vessel foi deslocada. A posição da Igreja aqui representa um de seus ensinamentos pastorais mais difíceis: o corpo ainda merece o Last Rite porque aquele corpo um dia pertenceu a alguém amado pelo Sovereign. Porém, para uma célula de Votary enfrentando um Hallowed, o objetivo já não é resgate. É contenção — e, se a contenção falhar, uma forma de encerramento que a Igreja realiza em silêncio e jamais descreve em registros públicos.
 
-**The Consumed** — Diferente de um Hollowed: não uma simples sobrescrita, mas uma transformação estrutural completa. A estrutura do vessel foi alterada permanentemente em algo que já não é nem a pessoa original nem uma presença puramente demoníaca, mas uma terceira categoria fundida. A Igreja chama os Consumed de **metamórficos**, e considera esse estado permanente e irreversível. Nenhum Rite of Expulsion é tentado nesse estágio.
+**The Consumed** — Diferente de um Hallowed: não uma simples sobrescrita, mas uma transformação estrutural completa. A estrutura do vessel foi alterada permanentemente em algo que já não é nem a pessoa original nem uma presença puramente demoníaca, mas uma terceira categoria fundida. A Igreja chama os Consumed de **metamórficos**, e considera esse estado permanente e irreversível. Nenhum Rite of Expulsion é tentado nesse estágio.
 
 ### The Crowning
 

@@ -19,6 +19,7 @@ tags: ["Sol'ytra", "Crownborn", "Elemental", "All-Mother", "Syr'lene", "Lunar Cr
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-14"
+codex_file: "Sol'ytra Dossier.md"
 image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
 portrait_gallery:

@@ -17,11 +17,12 @@ eyes: "Gray, clear and cool; low light makes them appear almost colorless"
 dress: "Custom-tailored lab coats cut for field movement and formal office alike; dark fitted clothing beneath; gloves at active sites; personal carry of medication, analog notation pads, and isolation instruments"
 residence: "Kalt'sen secure quarters, Pluribus Hill lower administrative ring; frequent rotation through Stasis field sites"
 occupation: "Continuity Architect, SiNE Stasis Continuity Office (S-AE)"
-summary: "A non-Redactor whose body was damaged by the Himmelreich incident until it became sensitive to continuity failure. She turned that wound into a discipline and is now one of Stasis's most important experts in keeping contradiction from spreading."
+summary: "A non-Redactor whose body was damaged by the Himmelreich incident until it became sensitive to continuity failure. She turned that injury into a discipline and is now one of Stasis's most important experts in stopping contradiction from spreading."
 tags: ["SiNE", "Stasis", "Continuity-Sensitive", "Vel'hara", "Himmelreich", "Stabilistics"]
 status: "public"
 created: "2026-05-10"
 updated: "2026-05-24"
+codex_file: "Katherine Flarian Dossier.md"
 image: "../../assets/uploads/char-katherine-flarian.webp"
 hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
 ---
@@ -31,88 +32,68 @@ hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
 
 ---
 
-## Who She Is
+## Overview
 
-Katherine is one of the most important non-Redactor characters in this part of the setting.
+Katherine is one of the most important non-Redactor characters in this part of the setting. She does not Dive, does not carry an Anchor, and does not solve problems with magic.
 
-She cannot Dive, does not carry an Anchor, and is not a vessel. What makes her significant is that the **Himmelreich incident** damaged her nervous system so badly, and so specifically, that it began reacting to local continuity failure before standard systems could fully resolve it.
+What makes her matter is that the **Himmelreich incident** damaged her nervous system so specifically that it began reacting to continuity failure before standard systems could fully read it. In simpler terms, her body started feeling contradiction before the instruments were ready.
 
-Stasis eventually named this condition **continuity sensitivity**.
+That injury became her profession.
 
-In simple terms, Katherine's body became a bad instrument that could still be calibrated. Contradiction, sequence failure, and local non-sequential pressure hurt her in distinctive ways. Over time she learned how to read that pain as data.
+## Personality
 
-That is why her story matters. She is not magical. She is injured, brilliant, and useful in a field where those three facts are now inseparable.
+Katherine is precise, unsentimental, and far too honest to romanticize what happened to her. She does not think of herself as chosen. She thinks of herself as damaged, trained, and responsible.
 
-## Personality and Role
+That attitude is part of what makes her so effective. She does not chase mystery for its own sake. She wants systems that work, containment that holds, and fewer dead people at the end of an incident.
 
-Katherine is precise, unsentimental, and too honest to romanticize what happened to her.
+For Katherine, stability is not bureaucratic comfort. It is the condition that lets a room stay one room and a person stay one person.
 
-She does not think of herself as a chosen specialist or tragic visionary. In her own terms, Himmelreich was a catastrophic failure that scarred her and could have spread much farther. If later work saved lives, that matters. The mythology around the wound does not.
+## Background
 
-This attitude shapes her role inside Stasis. She is not there to perform mystery. She is there to make contradiction survivable, document what breaks, and force institutions to stop treating continuity problems like abstract theory.
+Before Himmelreich, Katherine was not supposed to become this kind of specialist. After Himmelreich, she had little choice.
 
-Her core moral value is stability, but not in the lazy sense of stagnation. For Katherine, stability means preserving conditions under which human beings can remain human beings without the room deciding otherwise.
+The incident left her with **continuity sensitivity**, meaning her nervous system now reacts painfully when a place starts failing to agree with itself. Over time, Stasis learned that her pain patterns were consistent enough to be useful.
 
-## Continuity Sensitivity in Plain Language
+Katherine then helped build **stabilistics**, the practical field devoted to reading, containing, and stopping continuity failure before it spreads into something worse.
 
-Katherine's condition is often easier to understand than its jargon makes it sound.
+## Abilities
 
-After Himmelreich, her nervous system started behaving as if parts of it were arriving slightly late. Stasis uses the term **fractional lateness** for this.
+Katherine does not cast spells. Her usefulness comes from the way her damaged body and trained mind work together.
 
-In practice, when continuity pressure rises, she may feel:
+In practice, she can:
 
-- pressure behind the eyes or at the base of the skull;
-- delay in touch, as if surfaces are reaching her a moment after contact;
-- speech and sound falling slightly out of step;
-- nausea, jaw pain, and involuntary pauses when a system stops agreeing with itself.
+- read the first signs of continuity failure in a site, archive, chamber, or event record;
+- identify where a contradiction is thinning a system first;
+- help calibrate containment setups so a room is forced into short-term self-agreement;
+- design response procedures that keep a breach from becoming a permanent problem.
 
-That experience is not symbolic. It is physical, painful, and repeatable enough to be operationalized.
+The easiest way to picture her role is this: other people bring equipment, theory, and containment hardware. Katherine is the person who can tell when the room itself has started to disagree with the plan.
 
-## What She Can Do
+## Limitations
 
-Katherine's usefulness comes from three connected areas.
+Katherine pays for her work physically.
 
-**Continuity mapping** lets her read the shape of local contradiction. Given a site, archive, relay structure, or incident record, she can often tell where sequence pressure is thinning first and what kind of failure is trying to happen.
+When continuity pressure rises, she may experience pain behind the eyes, delayed touch, sickening timing errors in sound and speech, nausea, shaking, or collapse. Heavy work can leave her exhausted and barely functional.
 
-**Local continuity lock** is much narrower and much more expensive. With prepared equipment and the right control geometry, Katherine can help force a room or chamber into short-term self-agreement. She is not using magic. She is acting as a living calibration point inside a containment system.
+She also cannot do her best work alone. Her strongest interventions depend on prepared systems, trained staff, and carefully built infrastructure around her.
 
-**Stabilistics** is the field she built from that experience. It combines her bodily readout with systems analysis, BrightCrystal buffering, and contradiction-response design to answer one practical question: how do you stop a breach from turning into a place where contradiction learns to live?
+And even with all that, she is not omniscient. One reason she is good at this field is that she knows exactly where reading a failure ends and pretending to understand everything begins.
 
-## What Her Abilities Look Like
+## Important Relationships
 
-Katherine's work is not visually spectacular in the same way Redactory often is, but it is easy to imagine in a scene.
+**Em'manuel Kael Wonderwall** supports her office, reads her reports, and withholds some context from her. She knows enough to know that this is happening.
 
-In a field site, she may walk into a chamber, go still, and begin identifying weak points before the instruments are ready to agree with her. She does not see glowing lines in the air. She feels the room arguing with itself and translates that into action.
+**Maelin Voss** helped pull her out of Himmelreich and remains one of the most important people in her working and personal life.
 
-During a continuity lock, the setup is harsher. BrightCrystal lattice plates, analog clocks, contradiction buffers, and isolation hardware all matter. Katherine has to remain physically inside the geometry while the lock holds. If it works, the room becomes temporarily harder for a contradiction event to fork against itself.
+**Rouxinol Kaise** matters because Rouxinol's Threshold-related abilities touch the same kinds of breach edges Katherine studies from a different angle.
 
-What other people notice is not glamour. It is strain. They see someone reading danger through pain, staying in place because leaving early would be worse.
+## Story Role
 
-## Limits and Costs
+Katherine matters because she turns one of the setting's most abstract dangers into something bodily, procedural, and human.
 
-Katherine pays for everything she does.
+Through her, continuity failure stops being only cosmology and becomes workplace risk, chronic pain, crisis management, and institutional design. She is a strong example of SiNE at its best and worst at once: capable of learning from disaster, and also capable of building systems around a wounded person until that person becomes indispensable.
 
-Her condition is chronic, painful, and degrading. Medication keeps her operational but not comfortable. Heavy continuity work can leave her exhausted, vomiting, shaking, or unable to focus.
+## Deeper Lore
 
-She also cannot do this alone in the simplistic action-hero sense. Her strongest interventions depend on prepared systems, trained support, and infrastructure built around her method.
-
-There is a conceptual limit too. Katherine reads continuity failure better than almost anyone in Stasis, but she does not claim to understand the whole universe because of it. One of the reasons she is good at this work is that she knows where data ends and pressure begins.
-
-## Relationships and Affiliations
-
-**Em'manuel Kael Wonderwall** backs her office, reads her memos, and deliberately withholds some larger context from her. She knows this is happening even if she does not know the full shape of what he is withholding.
-
-**Maelin Voss** is one of the most important people in her life and the field lead who helped pull her out of Himmelreich. Their relationship is practical, durable, and built on years of shared crisis.
-
-**Rouxinol Kaise** matters because her Threshold behavior interacts with breach edges in a way Katherine finds important and difficult to replace. Katherine sees Rouxinol as one of the few practitioners whose abilities touch the same class of problem from a different angle.
-
-She also stands in constant relationship to **Stasis** itself. Much of the branch's current continuity security, isolation logic, and archive hardening exists because Katherine refused to let those conversations stay separate.
-
-## Why She Matters
-
-Katherine matters because she makes one of the setting's hardest technical areas feel human and operational instead of abstract.
-
-Through her, continuity failure stops being just strange cosmology and becomes a workplace hazard, a systems problem, a bodily cost, and a discipline built from survival. She is also a strong example of SiNE at its best and worst at the same time: an institution capable of learning from disaster, but also willing to turn a damaged employee into indispensable infrastructure.
-
-She is not a mage, not a saint, and not a myth. She is a woman who heard the wall give way once and dedicated the rest of her life to making sure others hear it early enough to live.
+Stasis describes part of Katherine's condition as **fractional lateness**: the sense that some signals in her body arrive slightly out of step when local continuity begins to fail. That distortion became the basis for her continuity mapping work and for the stabilistics methods now used to harden sites, archives, and containment systems against contradiction spread.
 

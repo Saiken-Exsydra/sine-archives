@@ -19,6 +19,7 @@ tags: ["Igreja", "Obsidian Rite", "Beatificado", "Meruel", "Kalt'sen", "Soberano
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-20"
+codex_file: "Vaey Viktor Dossier.md"
 image: "../../assets/uploads/char-vaey-viktor.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"

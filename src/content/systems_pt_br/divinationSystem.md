@@ -185,7 +185,7 @@ Essa é uma das maiores mudanças hierárquicas do canon atual.
 
 A linguagem da Church e a linguagem da Divination se sobrepõem aqui, mas não são idênticas:
 
-Beatified e Hollowed são termos doutrinários usados pela Church
+Beatified e a taxonomia de possessão da Church são termos doutrinários usados pela Church
 Indexed Vessel, deep fusion, saturation e stable reconfiguration são termos estruturais neutros
 Classes de Manifestação
 
@@ -273,7 +273,7 @@ Saturation Demoníaca
 
 Normalmente produz:
 
-estados Hollowed
+estados Beatified
 estados Consumed
 formas bestiais ou metamórficas
 formas predatórias estáveis

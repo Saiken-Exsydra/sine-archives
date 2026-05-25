@@ -89,6 +89,34 @@ This is one reason survivors often report shame after encounters with him. They 
 
 ---
 
+## III.A TEMPERAMENT AND PREDATORY STYLE
+
+Eloi is charming, refined, controlled, and deeply unsettling.
+
+He does not present himself like a brute or zealot. He can be courteous, soft-spoken, attentive, and almost painfully precise in the way he speaks. He understands etiquette, artistic language, grief, silence, and the social rituals of cultured rooms. He can compliment a painting, apologize before interrupting, or speak to a terrified person with such calm civility that the politeness itself becomes threatening. Survivors consistently remember the contradiction: he can behave like a gentleman while preparing to destroy something irreplaceable.
+
+He is intimate rather than explosive. Eloi does not merely strike people from the outside. He studies them. He observes their work, their emotional habits, their attachments, their unfinished griefs, and the places where identity is bound to beauty. He is especially dangerous to artists because artists expose themselves through what they make. A painting, song, manuscript, role, or performance gives him a route inward. He does not only wound the body. He wounds the meaning around the person.
+
+His manipulation is emotional and symbolic rather than crudely power-seeking. He does not lie simply to obtain compliance. He arranges rooms, shadows, paintings, marks, memories, and silences so that a target begins to feel what he wants them to feel. He wants fear to feel like recognition. He wants dread to feel like truth. He wants the victim to participate in their own collapse and then mistake that collapse for revelation.
+
+He is lonely in a corrupted, almost sacred way. This loneliness is not ordinary social isolation. It comes from growing up in a house where grief functioned as atmosphere, inheritance, and language. His mother loved him, but she could not truly return from what had been done to the family. This taught him that a person can remain alive while the real center of them has already been taken. His bond with the Nevermore emerges from this wound. He does not experience it as a master or invader, but as companionship: the one that did not lie, the guest who stayed after the house had already ended.
+
+He is affectionate in ways that have become unsafe. He can show tenderness, but the tenderness no longer protects people from harm. It now accompanies the harm. He may speak gently to a victim, preserve a ruined artist's sketch with reverence, or apologize before destroying something they love. These gestures are not performative in the shallow sense. They are sincere, which makes them worse. His compassion has not vanished. It has been bent into service of a monstrous conclusion. He believes he is giving people truth even when he is actually giving them another wound.
+
+He is obsessive, especially where grief, art, and attempted recovery are concerned. Temporary happiness after suffering offends him more than innocence does. He does not hate joy simply because it exists. He hates joy that has survived grief and begun to behave as though grief no longer has authority. To him, that feels like betrayal: betrayal of the dead, betrayal of beauty, betrayal of memory, betrayal of the fact that everything ends.
+
+He is theatrical, but quietly so. Eloi does not need loud speeches or obvious madness. His theatricality lives in composition. A black stroke left on a wall. A raven appearing in a painting where none had been drawn. A figure removed from a canvas and replaced with an empty chair. A voice failing during rehearsal. A room becoming darker in a way that feels intentional. His violence is staged like a gallery piece: precise, symbolic, and designed for the victim to understand too late.
+
+He is cruel, but his cruelty feels like instruction rather than rage. He does not usually lash out because he has lost control. He punishes because he believes he has seen something others refuse to see. He has made himself critic, priest, judge, and executioner of impermanence. He no longer allows people to encounter loss according to the pace of their own lives. He imposes it and then calls the imposition a lesson.
+
+He is emotionally cold, but not emotionless. His inner life is intense. It is simply organized around absence rather than warmth. He feels grief, attachment, reverence, aesthetic devotion, and even care. But those emotions no longer lead him toward mercy. They lead him toward finality. If he loves something, he may preserve its ending more carefully than its life. If he respects an artist, he may decide they deserve to be broken in a way that makes their work honest.
+
+He is most frightening because he can sound right. Eloi's horror is built from incomplete truths. Everything ends. The dead do not return. Beauty is temporary. Joy can become vain. Art can lie when it pretends permanence exists. None of these recognitions are inherently foolish. The atrocity begins when he decides that truth gives him the right to wound others.
+
+The simplest accurate shorthand is that Eloi du Corvane is a refined grief-predator: a courteous, intimate, artistically precise vessel of absence who turns tenderness into dread and convinces himself that every wound he creates is merely truth arriving early.
+
+---
+
 ## IV. THE CORVANE FAMILY
 
 ### IV.1 What Happened

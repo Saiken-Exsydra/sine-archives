@@ -17,11 +17,12 @@ eyes: "Deep near-black at rest; violet-crimson with fractal petal-flares under F
 dress: "Long sleeves at all times, regardless of climate. Formal domestic attire of Hikari high-house tradition - dark colors, impeccable condition."
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
 occupation: "Household attendant - personal attendance to Ec'lesia Yal'ara Wonderwall"
-summary: "A household attendant from Hikari carrying an Abyssal Flower inside her body. What should have become a monstrous inheritance has, in her case, become one of the quietest and most protective presences in the Wonderwall household."
+summary: "A household attendant from Hikari carrying an Abyssal Flower inside her body. What should have turned her into a horror story has instead become one of the quietest and most protective presences in the Wonderwall household."
 tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregistered"]
 status: "public"
 created: "2026-03-30"
 updated: "2026-05-24"
+codex_file: "Hisui Kirasagi Dossier.md"
 image: "../../assets/uploads/char-hisui-kirasagi.png"
 hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
 ---
@@ -31,88 +32,70 @@ hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
 
 ---
 
-## Who She Is
+## Overview
 
-Hisui is one of the best examples in the setting of how dangerous things do not always look dramatic from the outside.
+Hisui is a household attendant in the Wonderwall cadet-branch estate. She is precise, polite, and so competent that many people would dismiss her as harmless background staff.
 
-Publicly, she is a foreign household attendant serving the Wonderwall cadet branch in Kalt'sen. She is precise, courteous, and so good at domestic work that people around her can mistake excellence for harmlessness.
+That would be a mistake. Hisui carries the **Abyssal Flower**, a living inherited organism inside her body. It is not a metaphor, not a curse in the purely symbolic sense, and not ordinary Redactory. It is a second living system that should have made her monstrous or dead.
 
-Under that surface, she carries the **Abyssal Flower**, a living resonance-active organism integrated into the Kirasagi bloodline of Hikari for centuries.
+Instead, she became one of the calmest people in the house.
 
-This does not make her a Redactor in the normal sense, and it does not make her a Divine Vessel either. The Flower is biological, inherited, and symbiotic. In simple terms, Hisui has a second living system inside her body, one old enough and strange enough that most modern institutions would classify it badly if they noticed it at all.
+## Personality
 
-## Personality and Role
+Hisui is disciplined, controlled, and quietly warm once someone gets close enough to see it. She comes from a tradition where service, bodily control, and duty are treated as one continuous craft, and it shows in everything she does.
 
-Hisui is disciplined first, warm second, and visibly chaotic almost never.
+She does not waste movement, does not speak carelessly, and rarely lets other people see how much effort goes into looking composed. That reserve is not emptiness. It is training.
 
-She was raised in a service tradition where domestic precision, bodily control, and duty are treated as one continuous skill set. That background shapes everything about her. She does not waste motion, does not overshare, and rarely lets other people see how much work goes into looking calm.
+Around **Ec'lesia**, that training becomes something more personal. Hisui's care is no longer just professional excellence. It is chosen protection.
 
-What makes her interesting is that this reserve is not emptiness. She is gentler than she first appears. Around **Ec'lesia**, especially, her attention becomes protective in a way that clearly exceeds ordinary job obligation.
+## Background
 
-Her role in the story is also larger than "servant with a secret power." She is a carrier of a foreign and poorly understood biological inheritance, and her unusual calm in the Wonderwall household may be telling the setting something important about that environment.
+Hisui comes from Hikari, where the Kirasagi line has carried the Abyssal Flower across generations. She arrived in Kalt'sen as a household attendant, but that title hides how unusual her body and family history really are.
 
-## The Abyssal Flower in Plain Language
+She is not a Redactor and not a Divine Vessel. The Flower is biological, inherited, and symbiotic. That makes her important because she expands the setting beyond the Empire's usual categories for dangerous people.
 
-The **Abyssal Flower** is a living organism seeded into the Kirasagi line across generations.
+Part of her burden is that the Flower also carries traces of earlier hosts. She has lived for years with inherited murmurs, impressions, and pressure that most people around her cannot even imagine.
 
-A reader can think of it as a Bloom-like symbiosis, but one with its own cultural history, its own inheritance method, and a much sharper relationship to memory, blood, and recursive pressure.
-
-The Flower is not metaphorical. It produces real external structures the Kirasagi call petals. It also carries resonance traces from previous hosts, which means Hisui has lived her entire life with the low constant pressure of inherited voices and impressions called **the Murmuring**.
-
-This matters because Hisui's condition is not just about combat utility. It is also about what it means to stay yourself while carrying a living lineage inside your body.
-
-## Abilities in Plain Language
+## Abilities
 
 Hisui's abilities come from the Flower rather than from the Dive.
 
-In practice, the Flower gives her several major capabilities:
+In practice, that means she can:
 
-- **Petal projection** that cuts through matter and disrupts short-term memory consolidation on contact;
-- **Hemoturgy**, meaning limited influence over blood behavior such as encouraging clotting, worsening bleeding, or destabilizing circulation;
-- **Bloom fields**, which distort movement and perception within a local area;
-- **Renewal weave**, where petal structures act like temporary biological scaffolding so the body can repair itself more effectively.
+- grow cutting petal-like structures from the Flower that slice through matter and can leave a target mentally disoriented;
+- influence blood in limited but frightening ways, such as helping clotting, worsening bleeding, or disrupting circulation;
+- create local fields that make movement and perception less reliable;
+- use the Flower's living structures as temporary scaffolding so a body has a better chance to repair itself.
 
-The easiest way to understand these powers is to remember that the Flower behaves like living hostile beauty. It protects, cuts, misdirects, and repairs, but it always does so through its own strange biology rather than spell-like casting.
+The easiest way to picture the Flower is as hostile beauty made flesh. It can protect, heal, cut, and mislead, but it always does so like a living organism, not like a clean spell effect.
 
-## What Her Abilities Look Like
+## Limitations
 
-Hisui's power is vivid when it manifests, even though she works hard to keep it hidden.
+Hisui pays heavily for overuse.
 
-In combat, petals can emerge as crimson-black fractal structures that slice rather than bludgeon. The effect is elegant and frightening at the same time. A target may be cut physically and then struggle to hold onto what happened in the last few seconds.
+The first danger is **Overbloom**. Too much output pushes her away from stable control and toward physical and mental breakdown.
 
-In defense, a Bloom field can make incoming movement unreliable. A person running through it may find their path bending wrong, while an observer may struggle to process what they are seeing accurately.
+The second danger is **the Murmuring**, the pressure of inherited voices and impressions left by earlier hosts. Under stress, those impressions can crowd her sense of self.
 
-In medical or emergency use, the Renewal Weave is one of her most important abilities. It does not magically heal wounds. It provides temporary living structure so a body has a better chance to complete its own repair before the support fails.
+The third and worst risk is consumption. If Hisui weakens too far, the Flower may stop behaving like a contained partner and start behaving like the thing that survives by overtaking her.
 
-The visible effects include crimson vein-marbling, violet-crimson eyes, petal-flare patterns, and in extreme states the sense that her body is trying to bloom into something too beautiful and too dangerous to still be called human in a comfortable way.
+That means every use of her power is tied to self-control, restraint, and the ongoing question of how much of herself she can afford to spend.
 
-## Limits and Costs
+## Important Relationships
 
-Hisui's limits are severe.
+**Ec'lesia Wonderwall** is the most important person in Hisui's current life. Officially she serves her. In practice she protects her, and the Flower itself seems calmer around Ec'lesia than it is anywhere else.
 
-The first is **Overbloom**. Too much output drains her own coherence, darkens the petals, and pushes her toward structural weakness rather than simple physical tiredness.
+**Sai'ken Ex'sydra** is one of the few people around whom Hisui seems genuinely at ease. Both of them are self-controlled, observant, and carrying inherited conditions they do not fully explain to outsiders.
 
-The second is **the Murmuring**. The Flower retains impressions from past hosts. Under normal conditions, that means constant low-level crowding. Under stress, those echoes can become harder to separate cleanly from her own sense of self.
+**Ren'ya Kirasagi**, her older brother, remains an important tie to home and to the life she might have lived if she had not become the family traveler.
 
-The third is outright **consumption risk**. If her own coherence drops too low, the Flower can stop behaving like a contained symbiosis and start overtaking the host.
+## Story Role
 
-She is also vulnerable during **Calling** events because the Flower conducts ambient disturbance instead of merely noticing it. In simple terms, hostile resonance conditions can make her much more dangerous and much less safe at the same time.
+Hisui matters because she brings a different kind of danger into the story: not loud, not theatrical, and not easily classified by the Empire's institutions.
 
-## Relationships and Affiliations
+She is also one of the clearest signs that the Wonderwall household is affecting strange systems around it. If the Abyssal Flower is calmer near Ec'lesia than anywhere else, that is probably not an accident.
 
-**Ec'lesia Wonderwall** is the most important person in Hisui's current life. Officially she serves her. In practice she has chosen to protect her, and the Flower itself appears calmer around Ec'lesia than it has elsewhere in Hisui's life.
+## Deeper Lore
 
-**Sai'ken Ex'sydra** is the household security operative and one of the few people around whom Hisui seems genuinely at ease. Their rapport works because both are disciplined, observant, and living with inherited conditions they do not fully explain to others.
-
-**Ren'ya Kirasagi**, her older brother, remains in Hikari and is part of the reason Hisui became the family traveler instead of staying home.
-
-**Em'manuel Kael Wonderwall** barely exists in her conscious story at present. She does not know he arranged her placement or that her present calm may be serving as data for deeper Wonderwall observation.
-
-## Why She Matters
-
-Hisui matters because she expands the setting beyond the Empire's usual categories.
-
-She shows that not all dangerous power belongs to Redactors, Church vessels, or official institutions. She also gives the story a quieter but very effective form of horror: a perfectly mannered young woman carrying an ancient living organism that should have ruined her and, for now, has instead made her careful, useful, and strangely kind.
-
-She also matters structurally inside the Wonderwall arc. If the Flower is calmer near Ec'lesia than anywhere else, that is probably not incidental. Hisui may be one of the first living indicators that something about Ec'lesia's environment is changing the behavior of other anomalous systems.
+The Abyssal Flower can be understood as a lineage-bound symbiotic organism with strong ties to memory, blood, and inherited pressure. Its retained impressions from former hosts are what the Kirasagi call **the Murmuring**. Hisui's unusual stability may be telling the setting something important about Ec'lesia's environment and about how other anomalous systems behave near her.
 
