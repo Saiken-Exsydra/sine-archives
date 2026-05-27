@@ -1136,437 +1136,479 @@ const sectionEyebrow = locale === "pt-br"
 
     <script define:vars={{ charData, copy }}>
       const chars = charData;
-      const storageKey = `sine:characters:active:${document.documentElement.lang === "pt-BR" ? "pt-br" : "en"}`;
-      const params = new URLSearchParams(window.location.search);
-      const requestedSlug = params.get("char");
-      const storedSlug = sessionStorage.getItem(storageKey);
-      const initialSlug = requestedSlug || storedSlug;
-      const initialIdx = Math.max(0, chars.findIndex((char) => char.slug === initialSlug));
-      const referrerUrl = (() => {
-        try {
-          return document.referrer ? new URL(document.referrer) : null;
-        } catch {
-          return null;
+      const charactersInitKey = "__sineCharactersInit";
+      const charactersCleanupKey = "__sineCharactersCleanup";
+      const charactersBeforeSwapKey = "__sineCharactersBeforeSwap";
+
+      const initializeCharactersPage = () => {
+        if (typeof window[charactersCleanupKey] === "function") {
+          window[charactersCleanupKey]();
+          window[charactersCleanupKey] = null;
         }
-      })();
-      const cameFromCharacterEntry = !!(
-        referrerUrl &&
-        referrerUrl.origin === window.location.origin &&
-        /^\/(?:pt-br\/)?characters\/[^/]+\/?$/.test(referrerUrl.pathname) &&
-        referrerUrl.pathname.replace(/\/+$/, "/") !== window.location.pathname.replace(/\/+$/, "/")
-      );
 
-      let activeIdx = initialIdx;
-      let activeGalleryIdx = 0;
-      let switchTimer = null;
-      let galleryTimer = null;
+        const charsRoot = document.getElementById("chars-root");
+        if (!(charsRoot instanceof HTMLElement) || chars.length === 0) {
+          return;
+        }
 
-      const stagePortrait = document.getElementById("stage-portrait");
-      const stageWatermark = document.getElementById("stage-watermark");
-      const stageCounter = document.getElementById("stage-counter");
-      const stageCounterNum = document.getElementById("stage-counter-num");
-      const stageTags = document.getElementById("stage-tags");
-      const stageRule = document.getElementById("stage-rule");
-      const stageType = document.getElementById("stage-type");
-      const stageName = document.getElementById("stage-name");
-      const stageDesignation = document.getElementById("stage-designation");
-      const stageSummary = document.getElementById("stage-summary");
-      const stageActions = document.getElementById("stage-actions");
-      const stageCta = document.getElementById("stage-cta");
-      const stageGallery = document.getElementById("stage-gallery");
-      const stageGalleryCurrent = document.getElementById("stage-gallery-current");
-      const stageGalleryTotal = document.getElementById("stage-gallery-total");
-      const stageGalleryNext = document.getElementById("stage-gallery-next");
-      const stageStamp = document.getElementById("stage-stamp");
-      const stageRoot = document.getElementById("stage");
-      const stageUiToggle = document.getElementById("btn-stage-ui-toggle");
-      const fullscreenBtn = document.getElementById("nav-fullscreen");
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      let isOverlayHidden = false;
+        const listenerScope = new AbortController();
+        const { signal } = listenerScope;
+        const storageKey = `sine:characters:active:${document.documentElement.lang === "pt-BR" ? "pt-br" : "en"}`;
+        const params = new URLSearchParams(window.location.search);
+        const requestedSlug = params.get("char");
+        const storedSlug = sessionStorage.getItem(storageKey);
+        const initialSlug = requestedSlug || storedSlug;
+        const initialIdx = Math.max(0, chars.findIndex((char) => char.slug === initialSlug));
 
-      const allAnimated = [stageCounter, stageTags, stageRule, stageType, stageName, stageDesignation, stageSummary, stageActions, stageWatermark, stageStamp, stagePortrait];
+        let activeIdx = initialIdx;
+        let activeGalleryIdx = 0;
+        let switchTimer = 0;
+        let galleryTimer = 0;
+        let galleryTransitionTimer = 0;
+        let phaseTimer = 0;
+        let filmstripObserver = null;
+        let touchStartX = null;
+        let touchStartY = null;
+        let isOverlayHidden = false;
 
-      if (fullscreenBtn) {
-        const enterLabel = fullscreenBtn.dataset.enterLabel || "Full screen";
-        const exitLabel = fullscreenBtn.dataset.exitLabel || "Exit full screen";
+        window[charactersCleanupKey] = () => {
+          listenerScope.abort();
+          window.clearTimeout(switchTimer);
+          window.clearTimeout(galleryTimer);
+          window.clearTimeout(galleryTransitionTimer);
+          window.clearTimeout(phaseTimer);
+          filmstripObserver?.disconnect();
+          filmstripObserver = null;
+        };
 
-        if (!document.documentElement.requestFullscreen) {
-          fullscreenBtn.hidden = true;
-        } else {
-          const syncFullscreen = () => {
-            const active = !!document.fullscreenElement;
-            const label = active ? exitLabel : enterLabel;
-            fullscreenBtn.setAttribute("aria-label", label);
-            fullscreenBtn.setAttribute("title", label);
-            fullscreenBtn.classList.toggle("is-active", active);
-          };
+        const stagePortrait = charsRoot.querySelector("#stage-portrait");
+        const stageWatermark = charsRoot.querySelector("#stage-watermark");
+        const stageCounter = charsRoot.querySelector("#stage-counter");
+        const stageCounterNum = charsRoot.querySelector("#stage-counter-num");
+        const stageTags = charsRoot.querySelector("#stage-tags");
+        const stageRule = charsRoot.querySelector("#stage-rule");
+        const stageType = charsRoot.querySelector("#stage-type");
+        const stageName = charsRoot.querySelector("#stage-name");
+        const stageDesignation = charsRoot.querySelector("#stage-designation");
+        const stageSummary = charsRoot.querySelector("#stage-summary");
+        const stageActions = charsRoot.querySelector("#stage-actions");
+        const stageCta = charsRoot.querySelector("#stage-cta");
+        const stageGallery = charsRoot.querySelector("#stage-gallery");
+        const stageGalleryCurrent = charsRoot.querySelector("#stage-gallery-current");
+        const stageGalleryTotal = charsRoot.querySelector("#stage-gallery-total");
+        const stageGalleryNext = charsRoot.querySelector("#stage-gallery-next");
+        const stageStamp = charsRoot.querySelector("#stage-stamp");
+        const stageRoot = charsRoot.querySelector("#stage");
+        const stageUiToggle = charsRoot.querySelector("#btn-stage-ui-toggle");
+        const sidebarList = charsRoot.querySelector("#sidebar-list");
+        const dotsEl = charsRoot.querySelector("#stage-dots");
+        const searchInput = charsRoot.querySelector("#sidebar-search");
+        const searchClear = charsRoot.querySelector("#sidebar-search-clear");
+        const noResults = charsRoot.querySelector("#sidebar-no-results");
+        const filmstrip = charsRoot.querySelector("#filmstrip");
+        const fullscreenBtn = document.getElementById("nav-fullscreen");
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const sidebarItems = Array.from(charsRoot.querySelectorAll(".sidebar__item"));
+        const allAnimated = [stageCounter, stageTags, stageRule, stageType, stageName, stageDesignation, stageSummary, stageActions, stageWatermark, stageStamp, stagePortrait];
 
-          fullscreenBtn.addEventListener("click", async () => {
-            try {
-              if (document.fullscreenElement) {
-                await document.exitFullscreen();
-              } else {
-                await document.documentElement.requestFullscreen();
+        if (!(stageRoot instanceof HTMLElement) || !(stagePortrait instanceof HTMLElement)) {
+          return;
+        }
+
+        if (fullscreenBtn) {
+          const enterLabel = fullscreenBtn.dataset.enterLabel || "Full screen";
+          const exitLabel = fullscreenBtn.dataset.exitLabel || "Exit full screen";
+
+          if (!document.documentElement.requestFullscreen) {
+            fullscreenBtn.hidden = true;
+          } else {
+            const syncFullscreen = () => {
+              const active = !!document.fullscreenElement;
+              const label = active ? exitLabel : enterLabel;
+              fullscreenBtn.setAttribute("aria-label", label);
+              fullscreenBtn.setAttribute("title", label);
+              fullscreenBtn.classList.toggle("is-active", active);
+            };
+
+            fullscreenBtn.addEventListener("click", async () => {
+              try {
+                if (document.fullscreenElement) {
+                  await document.exitFullscreen();
+                } else {
+                  await document.documentElement.requestFullscreen();
+                }
+              } catch {
+                syncFullscreen();
               }
-            } catch {
-              syncFullscreen();
+            }, { signal });
+
+            document.addEventListener("fullscreenchange", syncFullscreen, { signal });
+            syncFullscreen();
+          }
+        }
+
+        function setPhase(phase) {
+          const inClass = "is-in";
+          const outClass = "is-out";
+          allAnimated.forEach((el) => {
+            if (!el) return;
+            if (phase === "in") {
+              el.classList.remove(outClass);
+              el.classList.add(inClass);
+            } else {
+              el.classList.remove(inClass);
+              el.classList.add(outClass);
+            }
+          });
+        }
+
+        function syncOverlayToggle() {
+          if (!stageUiToggle) return;
+          const label = isOverlayHidden ? copy.showOverlay : copy.hideOverlay;
+          stageUiToggle.setAttribute("aria-pressed", String(isOverlayHidden));
+          stageUiToggle.setAttribute("aria-label", label);
+          stageUiToggle.setAttribute("title", label);
+          stageRoot.classList.toggle("stage--ui-hidden", isOverlayHidden);
+          stageRoot.setAttribute("title", isOverlayHidden ? copy.restoreOverlay : "");
+        }
+
+        function toggleOverlay(force) {
+          isOverlayHidden = typeof force === "boolean" ? force : !isOverlayHidden;
+          syncOverlayToggle();
+        }
+
+        function buildPlaceholderSVG() {
+          const ns = "http://www.w3.org/2000/svg";
+          const svg = document.createElementNS(ns, "svg");
+          svg.setAttribute("viewBox", "0 0 900 1000");
+          svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+          svg.setAttribute("class", "stage__placeholder");
+          svg.style.position = "absolute";
+          svg.style.inset = "0";
+          svg.innerHTML = `
+            <defs>
+              <radialGradient id="rg-dyn" cx="50%" cy="38%" r="55%">
+                <stop offset="0%" stop-color="rgba(177,58,52,0.18)"/>
+                <stop offset="100%" stop-color="rgba(6,6,11,0)"/>
+              </radialGradient>
+            </defs>
+            <rect width="900" height="1000" fill="#06060b"/>
+            <rect width="900" height="1000" fill="url(#rg-dyn)"/>
+            ${Array.from({ length: 50 }, (_, i) => `<line x1="0" y1="${i * 20}" x2="900" y2="${i * 20}" stroke="rgba(255,255,255,0.012)" stroke-width="1"/>`).join("")}
+            ${[60, 130, 210, 300, 400].map((r) => `<circle cx="450" cy="380" r="${r}" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>`).join("")}
+            <line x1="450" y1="200" x2="450" y2="560" stroke="rgba(177,58,52,0.18)" stroke-width="0.8"/>
+            <line x1="270" y1="380" x2="630" y2="380" stroke="rgba(177,58,52,0.18)" stroke-width="0.8"/>
+            <path d="M310 240 L310 268 L338 268" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
+            <path d="M590 240 L590 268 L562 268" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
+            <path d="M310 520 L310 492 L338 492" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
+            <path d="M590 520 L590 492 L562 492" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
+            <circle cx="450" cy="342" r="52" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
+            <path d="M338 510 Q338 456 450 456 Q562 456 562 510" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
+            <text x="450" y="580" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.35)">{copy.portraitClassified}</text>
+            <text x="450" y="596" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.1)">{copy.fileSealed}</text>
+          `;
+          return svg;
+        }
+
+        function buildStagePicture(image) {
+          const picture = document.createElement("picture");
+          picture.id = "stage-picture";
+
+          if (image.avifSrcset) {
+            const sourceAvif = document.createElement("source");
+            sourceAvif.id = "stage-source-avif";
+            sourceAvif.type = "image/avif";
+            sourceAvif.srcset = image.avifSrcset;
+            sourceAvif.sizes = image.sizes;
+            picture.appendChild(sourceAvif);
+          }
+
+          if (image.webpSrcset) {
+            const sourceWebp = document.createElement("source");
+            sourceWebp.id = "stage-source-webp";
+            sourceWebp.type = "image/webp";
+            sourceWebp.srcset = image.webpSrcset;
+            sourceWebp.sizes = image.sizes;
+            picture.appendChild(sourceWebp);
+          }
+
+          const img = document.createElement("img");
+          img.className = "stage__portrait-img";
+          img.id = "stage-img";
+          img.src = image.fallbackSrc;
+          if (image.fallbackSrcset) img.srcset = image.fallbackSrcset;
+          img.sizes = image.sizes;
+          if (image.width) img.width = image.width;
+          if (image.height) img.height = image.height;
+          img.alt = "";
+          img.decoding = "async";
+          img.style.transform = "scale(1.07) translate(0%, 0%)";
+          picture.appendChild(img);
+
+          return picture;
+        }
+
+        function syncGalleryUi(char = chars[activeIdx]) {
+          const total = char?.images.length || 0;
+          if (stageGallery) stageGallery.hidden = total < 2;
+          if (stageGalleryCurrent) {
+            stageGalleryCurrent.textContent = String(activeGalleryIdx + 1).padStart(2, "0");
+          }
+          if (stageGalleryTotal) {
+            stageGalleryTotal.textContent = String(Math.max(total, 1)).padStart(2, "0");
+          }
+        }
+
+        function scheduleGallery() {
+          window.clearTimeout(galleryTimer);
+          const char = chars[activeIdx];
+          if (!char || reducedMotion || char.images.length < 2) return;
+          galleryTimer = window.setTimeout(() => {
+            cycleGalleryImage();
+          }, 5000);
+        }
+
+        function renderGalleryImage(image) {
+          const existing = stagePortrait.querySelector("picture, svg");
+          if (existing) existing.remove();
+          if (image) {
+            stagePortrait.appendChild(buildStagePicture(image));
+          } else {
+            stagePortrait.appendChild(buildPlaceholderSVG());
+          }
+        }
+
+        function cycleGalleryImage(nextIdx) {
+          const char = chars[activeIdx];
+          if (!char || char.images.length < 2) return;
+          window.clearTimeout(galleryTimer);
+          window.clearTimeout(galleryTransitionTimer);
+          activeGalleryIdx = typeof nextIdx === "number"
+            ? ((nextIdx % char.images.length) + char.images.length) % char.images.length
+            : (activeGalleryIdx + 1) % char.images.length;
+          stagePortrait.classList.remove("is-in");
+          stagePortrait.classList.add("is-out");
+          galleryTransitionTimer = window.setTimeout(() => {
+            renderGalleryImage(char.images[activeGalleryIdx]);
+            syncGalleryUi(char);
+            requestAnimationFrame(() => {
+              if (signal.aborted) return;
+              stagePortrait.classList.remove("is-out");
+              stagePortrait.classList.add("is-in");
+            });
+            scheduleGallery();
+          }, 320);
+        }
+
+        function updateContent(idx) {
+          const c = chars[idx];
+          if (!c) return;
+
+          activeIdx = idx;
+          activeGalleryIdx = 0;
+          window.clearTimeout(galleryTimer);
+          window.clearTimeout(galleryTransitionTimer);
+
+          renderGalleryImage(c.images[activeGalleryIdx]);
+          syncGalleryUi(c);
+          scheduleGallery();
+
+          if (stageWatermark) {
+            stageWatermark.innerHTML = c.title.split(" ")
+              .map((word) => `<div class="stage__watermark-word">${word}</div>`)
+              .join("");
+          }
+
+          if (stageCounterNum) {
+            stageCounterNum.textContent = String(idx + 1).padStart(2, "0");
+          }
+
+          if (stageTags) {
+            stageTags.innerHTML = c.tags.slice(0, 3)
+              .map((tag) => `<span class="stage__tag">${tag}</span>`)
+              .join("");
+          }
+
+          if (stageType) stageType.textContent = `${c.type} - ${copy.filed} ${c.updated}`;
+          if (stageName) stageName.textContent = c.title;
+          if (stageDesignation) {
+            stageDesignation.textContent = c.designation;
+            stageDesignation.style.display = c.designation ? "" : "none";
+          }
+          if (stageSummary) stageSummary.textContent = c.summary;
+          if (stageCta instanceof HTMLAnchorElement) stageCta.href = c.href;
+          sessionStorage.setItem(storageKey, c.slug);
+
+          const next = new URL(window.location.href);
+          next.searchParams.set("char", c.slug);
+          history.replaceState(history.state || {}, "", next);
+
+          charsRoot.querySelectorAll(".sidebar__item").forEach((el, itemIdx) => {
+            const isActive = itemIdx === idx;
+            el.classList.toggle("is-active", isActive);
+            const numEl = el.querySelector(".sidebar__item-num");
+            if (!(numEl instanceof HTMLElement)) return;
+            let line = numEl.querySelector(".sidebar__item-num-line");
+            if (isActive && !line) {
+              line = document.createElement("span");
+              line.className = "sidebar__item-num-line";
+              numEl.appendChild(line);
+            } else if (!isActive && line) {
+              line.remove();
             }
           });
 
-          document.addEventListener("fullscreenchange", syncFullscreen);
-          syncFullscreen();
+          charsRoot.querySelectorAll(".stage__dot").forEach((el, dotIdx) => {
+            el.classList.toggle("is-active", dotIdx === idx);
+          });
         }
-      }
 
-      function setPhase(phase) {
-        const inClass = "is-in";
-        const outClass = "is-out";
-        allAnimated.forEach(el => {
-          if (!el) return;
-          if (phase === "in") {
-            el.classList.remove(outClass);
-            el.classList.add(inClass);
-          } else {
-            el.classList.remove(inClass);
-            el.classList.add(outClass);
+        function switchTo(idx) {
+          if (!Number.isInteger(idx) || idx < 0 || idx >= chars.length || idx === activeIdx) return;
+          window.clearTimeout(switchTimer);
+          window.clearTimeout(phaseTimer);
+          setPhase("out");
+          switchTimer = window.setTimeout(() => {
+            updateContent(idx);
+            phaseTimer = window.setTimeout(() => {
+              setPhase("in");
+            }, 60);
+          }, 360);
+        }
+
+        function applySearch(query) {
+          const q = query.trim().toLowerCase();
+          let anyVisible = false;
+          sidebarItems.forEach((item) => {
+            const idx = parseInt(item.dataset.idx || "-1", 10);
+            const c = chars[idx];
+            if (!c) return;
+            const hit = !q ||
+              c.title.toLowerCase().includes(q) ||
+              (c.designation && c.designation.toLowerCase().includes(q)) ||
+              (c.type && c.type.toLowerCase().includes(q));
+            item.style.display = hit ? "" : "none";
+            if (hit) anyVisible = true;
+          });
+          noResults?.classList.toggle("is-visible", !anyVisible);
+          searchClear?.classList.toggle("is-visible", q.length > 0);
+        }
+
+        stageRoot.addEventListener("mousemove", (event) => {
+          const rect = stageRoot.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - 0.5;
+          const y = (event.clientY - rect.top) / rect.height - 0.5;
+          const img = stagePortrait.querySelector("img");
+          if (img) {
+            img.style.transform = `scale(1.07) translate(${x * -3.5}%, ${y * -2.5}%)`;
           }
-        });
-      }
+        }, { signal });
 
-      function syncOverlayToggle() {
-        if (!stageUiToggle || !stageRoot) return;
-        const label = isOverlayHidden ? copy.showOverlay : copy.hideOverlay;
-        stageUiToggle.setAttribute("aria-pressed", String(isOverlayHidden));
-        stageUiToggle.setAttribute("aria-label", label);
-        stageUiToggle.setAttribute("title", label);
-        stageRoot.classList.toggle("stage--ui-hidden", isOverlayHidden);
-        stageRoot.setAttribute("title", isOverlayHidden ? copy.restoreOverlay : "");
-      }
+        stageUiToggle?.addEventListener("click", (event) => {
+          event.stopPropagation();
+          toggleOverlay();
+        }, { signal });
 
-      function toggleOverlay(force) {
-        isOverlayHidden = typeof force === "boolean" ? force : !isOverlayHidden;
-        syncOverlayToggle();
-      }
+        stageRoot.addEventListener("click", (event) => {
+          if (!isOverlayHidden) return;
+          if (event.target instanceof Element && event.target.closest("#btn-stage-ui-toggle, #stage-cta, #stage-dots, #stage-gallery-next")) return;
+          toggleOverlay(false);
+        }, { signal });
 
-      function buildPlaceholderSVG(char) {
-        const ns = "http://www.w3.org/2000/svg";
-        const svg = document.createElementNS(ns, "svg");
-        svg.setAttribute("viewBox", "0 0 900 1000");
-        svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
-        svg.setAttribute("class", "stage__placeholder");
-        svg.style.position = "absolute";
-        svg.style.inset = "0";
-        svg.innerHTML = `
-          <defs>
-            <radialGradient id="rg-dyn" cx="50%" cy="38%" r="55%">
-              <stop offset="0%" stop-color="rgba(177,58,52,0.18)"/>
-              <stop offset="100%" stop-color="rgba(6,6,11,0)"/>
-            </radialGradient>
-          </defs>
-          <rect width="900" height="1000" fill="#06060b"/>
-          <rect width="900" height="1000" fill="url(#rg-dyn)"/>
-          ${Array.from({length:50},(_,i)=>`<line x1="0" y1="${i*20}" x2="900" y2="${i*20}" stroke="rgba(255,255,255,0.012)" stroke-width="1"/>`).join("")}
-          ${[60,130,210,300,400].map(r=>`<circle cx="450" cy="380" r="${r}" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>`).join("")}
-          <line x1="450" y1="200" x2="450" y2="560" stroke="rgba(177,58,52,0.18)" stroke-width="0.8"/>
-          <line x1="270" y1="380" x2="630" y2="380" stroke="rgba(177,58,52,0.18)" stroke-width="0.8"/>
-          <path d="M310 240 L310 268 L338 268" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
-          <path d="M590 240 L590 268 L562 268" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
-          <path d="M310 520 L310 492 L338 492" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
-          <path d="M590 520 L590 492 L562 492" fill="none" stroke="rgba(177,58,52,0.45)" stroke-width="1.5"/>
-          <circle cx="450" cy="342" r="52" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
-          <path d="M338 510 Q338 456 450 456 Q562 456 562 510" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
-          <text x="450" y="580" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="8" letter-spacing="6" fill="rgba(177,58,52,0.35)">{copy.portraitClassified}</text>
-          <text x="450" y="596" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="7" letter-spacing="4" fill="rgba(255,255,255,0.1)">{copy.fileSealed}</text>
-        `;
-        return svg;
-      }
-
-      function buildStagePicture(image) {
-        const picture = document.createElement("picture");
-        picture.id = "stage-picture";
-
-        if (image.avifSrcset) {
-          const sourceAvif = document.createElement("source");
-          sourceAvif.id = "stage-source-avif";
-          sourceAvif.type = "image/avif";
-          sourceAvif.srcset = image.avifSrcset;
-          sourceAvif.sizes = image.sizes;
-          picture.appendChild(sourceAvif);
-        }
-
-        if (image.webpSrcset) {
-          const sourceWebp = document.createElement("source");
-          sourceWebp.id = "stage-source-webp";
-          sourceWebp.type = "image/webp";
-          sourceWebp.srcset = image.webpSrcset;
-          sourceWebp.sizes = image.sizes;
-          picture.appendChild(sourceWebp);
-        }
-
-        const img = document.createElement("img");
-        img.className = "stage__portrait-img";
-        img.id = "stage-img";
-        img.src = image.fallbackSrc;
-        if (image.fallbackSrcset) img.srcset = image.fallbackSrcset;
-        img.sizes = image.sizes;
-        if (image.width) img.width = image.width;
-        if (image.height) img.height = image.height;
-        img.alt = "";
-        img.decoding = "async";
-        img.style.transform = "scale(1.07) translate(0%, 0%)";
-        picture.appendChild(img);
-
-        return picture;
-      }
-
-      function syncGalleryUi(char = chars[activeIdx]) {
-        const total = char.images.length;
-        if (stageGallery) stageGallery.hidden = total < 2;
-        if (stageGalleryCurrent) {
-          stageGalleryCurrent.textContent = String(activeGalleryIdx + 1).padStart(2, "0");
-        }
-        if (stageGalleryTotal) {
-          stageGalleryTotal.textContent = String(Math.max(total, 1)).padStart(2, "0");
-        }
-      }
-
-      function scheduleGallery() {
-        window.clearTimeout(galleryTimer);
-        const char = chars[activeIdx];
-        if (!char || reducedMotion || char.images.length < 2) return;
-        galleryTimer = window.setTimeout(() => {
+        stageGalleryNext?.addEventListener("click", (event) => {
+          event.stopPropagation();
           cycleGalleryImage();
-        }, 5000);
-      }
+        }, { signal });
 
-      function renderGalleryImage(image) {
-        const existing = stagePortrait.querySelector("picture, svg");
-        if (existing) existing.remove();
-        if (image) {
-          stagePortrait.appendChild(buildStagePicture(image));
-        } else {
-          stagePortrait.appendChild(buildPlaceholderSVG(chars[activeIdx]));
-        }
-      }
-
-      function cycleGalleryImage(nextIdx) {
-        const char = chars[activeIdx];
-        if (!char || char.images.length < 2) return;
-        window.clearTimeout(galleryTimer);
-        activeGalleryIdx = typeof nextIdx === "number"
-          ? ((nextIdx % char.images.length) + char.images.length) % char.images.length
-          : (activeGalleryIdx + 1) % char.images.length;
-        stagePortrait.classList.remove("is-in");
-        stagePortrait.classList.add("is-out");
-        window.setTimeout(() => {
-          renderGalleryImage(char.images[activeGalleryIdx]);
-          syncGalleryUi(char);
-          requestAnimationFrame(() => {
-            stagePortrait.classList.remove("is-out");
-            stagePortrait.classList.add("is-in");
-          });
-          scheduleGallery();
-        }, 320);
-      }
-
-      function updateContent(idx) {
-        const c = chars[idx];
-        activeIdx = idx;
-        activeGalleryIdx = 0;
-        window.clearTimeout(galleryTimer);
-
-        // hero gallery
-        renderGalleryImage(c.images[activeGalleryIdx]);
-        syncGalleryUi(c);
-        scheduleGallery();
-
-        // watermark
-        stageWatermark.innerHTML = c.title.split(" ")
-          .map(w => `<div class="stage__watermark-word">${w}</div>`)
-          .join("");
-
-        // counter
-        stageCounterNum.textContent = String(idx + 1).padStart(2, "0");
-
-        // tags
-        stageTags.innerHTML = c.tags.slice(0, 3)
-          .map(t => `<span class="stage__tag">${t}</span>`)
-          .join("");
-
-        // text
-        stageType.textContent = `${c.type} - ${copy.filed} ${c.updated}`;
-        stageName.textContent = c.title;
-        stageDesignation.textContent = c.designation;
-        stageDesignation.style.display = c.designation ? "" : "none";
-        stageSummary.textContent = c.summary;
-        stageCta.href = c.href;
-        sessionStorage.setItem(storageKey, c.slug);
-
-        const next = new URL(window.location.href);
-        next.searchParams.set("char", c.slug);
-        history.replaceState({}, "", next);
-
-        // sidebar items
-        document.querySelectorAll(".sidebar__item").forEach((el, i) => {
-          const isAct = i === idx;
-          el.classList.toggle("is-active", isAct);
-          const numEl = el.querySelector(".sidebar__item-num");
-          let line = numEl.querySelector(".sidebar__item-num-line");
-          if (isAct && !line) {
-            line = document.createElement("span");
-            line.className = "sidebar__item-num-line";
-            numEl.appendChild(line);
-          } else if (!isAct && line) {
-            line.remove();
+        sidebarList?.addEventListener("click", (event) => {
+          const btn = event.target instanceof Element ? event.target.closest(".sidebar__item") : null;
+          if (btn instanceof HTMLElement) {
+            switchTo(parseInt(btn.dataset.idx || "-1", 10));
           }
-        });
+        }, { signal });
 
-        // dots
-        document.querySelectorAll(".stage__dot").forEach((el, i) => {
-          el.classList.toggle("is-active", i === idx);
-        });
-      }
+        dotsEl?.addEventListener("click", (event) => {
+          const btn = event.target instanceof Element ? event.target.closest(".stage__dot") : null;
+          if (btn instanceof HTMLElement) {
+            switchTo(parseInt(btn.dataset.idx || "-1", 10));
+          }
+        }, { signal });
 
-      function switchTo(idx) {
-        if (idx === activeIdx) return;
-        clearTimeout(switchTimer);
-        setPhase("out");
-        switchTimer = setTimeout(() => {
-          updateContent(idx);
-          setTimeout(() => setPhase("in"), 60);
-        }, 360);
-      }
+        searchInput?.addEventListener("input", () => {
+          applySearch(searchInput.value);
+        }, { signal });
 
-      if (initialIdx !== 0) {
-        updateContent(initialIdx);
-      } else if (chars[0]) {
-        sessionStorage.setItem(storageKey, chars[0].slug);
-      }
+        searchClear?.addEventListener("click", () => {
+          if (!searchInput) return;
+          searchInput.value = "";
+          applySearch("");
+          searchInput.focus();
+        }, { signal });
 
-      if (cameFromCharacterEntry && referrerUrl) {
-        const returnHref = `${referrerUrl.pathname}${referrerUrl.search}${referrerUrl.hash}`;
-        history.pushState({ characterReturnGuard: true }, "", window.location.href);
-        window.addEventListener("popstate", (event) => {
-          if (event.state?.characterReturnGuard) return;
-          window.location.replace(returnHref);
-        });
-      }
+        filmstrip?.addEventListener("click", (event) => {
+          const btn = event.target instanceof Element ? event.target.closest(".filmstrip__item") : null;
+          if (btn instanceof HTMLElement) {
+            switchTo(parseInt(btn.dataset.idx || "-1", 10));
+          }
+        }, { signal });
 
-      // Mouse parallax
-      stageRoot.addEventListener("mousemove", (e) => {
-        const r = stageRoot.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        const img = stagePortrait.querySelector("img");
-        if (img) {
-          img.style.transform = `scale(1.07) translate(${x * -3.5}%, ${y * -2.5}%)`;
-        }
-      });
-
-      stageUiToggle?.addEventListener("click", (e) => {
-        e.stopPropagation();
-        toggleOverlay();
-      });
-
-      stageRoot.addEventListener("click", (e) => {
-        if (!isOverlayHidden) return;
-        if (e.target.closest("#btn-stage-ui-toggle, #stage-cta, #stage-dots, #stage-gallery-next")) return;
-        toggleOverlay(false);
-      });
-
-      stageGalleryNext?.addEventListener("click", (e) => {
-        e.stopPropagation();
-        cycleGalleryImage();
-      });
-
-      // Sidebar clicks
-      document.getElementById("sidebar-list").addEventListener("click", (e) => {
-        const btn = e.target.closest(".sidebar__item");
-        if (btn) switchTo(parseInt(btn.dataset.idx, 10));
-      });
-
-      // Dot clicks
-      document.getElementById("stage-dots").addEventListener("click", (e) => {
-        const btn = e.target.closest(".stage__dot");
-        if (btn) switchTo(parseInt(btn.dataset.idx, 10));
-      });
-
-      // Search
-      const searchInput = document.getElementById("sidebar-search");
-      const searchClear = document.getElementById("sidebar-search-clear");
-      const noResults = document.getElementById("sidebar-no-results");
-      const sidebarItems = Array.from(document.querySelectorAll(".sidebar__item"));
-
-      function applySearch(query) {
-        const q = query.trim().toLowerCase();
-        let anyVisible = false;
-        sidebarItems.forEach((item) => {
-          const idx = parseInt(item.dataset.idx, 10);
-          const c = chars[idx];
-          const hit = !q ||
-            c.title.toLowerCase().includes(q) ||
-            (c.designation && c.designation.toLowerCase().includes(q)) ||
-            (c.type && c.type.toLowerCase().includes(q));
-          item.style.display = hit ? "" : "none";
-          if (hit) anyVisible = true;
-        });
-        noResults.classList.toggle("is-visible", !anyVisible);
-        searchClear.classList.toggle("is-visible", q.length > 0);
-      }
-
-      searchInput.addEventListener("input", () => applySearch(searchInput.value));
-
-      searchClear.addEventListener("click", () => {
-        searchInput.value = "";
-        applySearch("");
-        searchInput.focus();
-      });
-
-      // Filmstrip
-      const filmstrip = document.getElementById("filmstrip");
-      filmstrip?.addEventListener("click", (e) => {
-        const btn = e.target.closest(".filmstrip__item");
-        if (btn) switchTo(parseInt(btn.dataset.idx, 10));
-      });
-
-      // Sync filmstrip on every switch via observing sidebar items (cheap hook):
-      // tap into the same dot list mutation. We instead patch via a MutationObserver on dots.
-      const dotsEl = document.getElementById("stage-dots");
-      if (filmstrip && dotsEl) {
-        const obs = new MutationObserver(() => {
-          const activeDot = dotsEl.querySelector(".stage__dot.is-active");
-          const idx = activeDot ? parseInt(activeDot.dataset.idx, 10) : 0;
-          filmstrip.querySelectorAll(".filmstrip__item").forEach((el, i) => {
-            el.classList.toggle("is-active", i === idx);
+        if (filmstrip && dotsEl) {
+          filmstripObserver = new MutationObserver(() => {
+            const activeDot = dotsEl.querySelector(".stage__dot.is-active");
+            const idx = activeDot instanceof HTMLElement ? parseInt(activeDot.dataset.idx || "0", 10) : 0;
+            filmstrip.querySelectorAll(".filmstrip__item").forEach((el, itemIdx) => {
+              el.classList.toggle("is-active", itemIdx === idx);
+            });
+            const active = filmstrip.querySelector(".filmstrip__item.is-active");
+            active?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
           });
-          const active = filmstrip.querySelector(".filmstrip__item.is-active");
-          active?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-        });
-        obs.observe(dotsEl, { subtree: true, attributes: true, attributeFilter: ["class"] });
+          filmstripObserver.observe(dotsEl, { subtree: true, attributes: true, attributeFilter: ["class"] });
+        }
+
+        stageRoot.addEventListener("touchstart", (event) => {
+          touchStartX = event.touches[0].clientX;
+          touchStartY = event.touches[0].clientY;
+        }, { passive: true, signal });
+
+        stageRoot.addEventListener("touchend", (event) => {
+          if (touchStartX === null) return;
+          const dx = event.changedTouches[0].clientX - touchStartX;
+          const dy = event.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx < 0) switchTo((activeIdx + 1) % chars.length);
+            else switchTo((activeIdx - 1 + chars.length) % chars.length);
+          }
+          touchStartX = null;
+          touchStartY = null;
+        }, { passive: true, signal });
+
+        syncOverlayToggle();
+        if (initialIdx !== 0) {
+          updateContent(initialIdx);
+        } else {
+          sessionStorage.setItem(storageKey, chars[0].slug);
+          syncGalleryUi(chars[0]);
+          scheduleGallery();
+        }
+        applySearch(searchInput?.value || "");
+      };
+
+      if (!window[charactersInitKey]) {
+        window[charactersInitKey] = initializeCharactersPage;
+        document.addEventListener("astro:page-load", window[charactersInitKey]);
       }
 
-      // Touch swipe on stage
-      let touchStartX = null;
-      let touchStartY = null;
-      stageRoot.addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-      }, { passive: true });
-      stageRoot.addEventListener("touchend", (e) => {
-        if (touchStartX === null) return;
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dy = e.changedTouches[0].clientY - touchStartY;
-        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
-          if (dx < 0) switchTo((activeIdx + 1) % chars.length);
-          else switchTo((activeIdx - 1 + chars.length) % chars.length);
-        }
-        touchStartX = null;
-        touchStartY = null;
-      }, { passive: true });
+      if (!window[charactersBeforeSwapKey]) {
+        window[charactersBeforeSwapKey] = () => {
+          if (typeof window[charactersCleanupKey] === "function") {
+            window[charactersCleanupKey]();
+            window[charactersCleanupKey] = null;
+          }
+        };
+        document.addEventListener("astro:before-swap", window[charactersBeforeSwapKey]);
+      }
 
-      syncOverlayToggle();
-      syncGalleryUi(chars[activeIdx]);
-      scheduleGallery();
+      window[charactersInitKey]();
     </script>
   </body>
 </html>

@@ -113,7 +113,7 @@ const copy = locale === "pt-br"
             min="0"
             max="100"
             step="1"
-            value="68"
+            value="20"
             data-music-volume
             aria-label={copy.volume}
           />
@@ -196,15 +196,16 @@ const copy = locale === "pt-br"
       trackKey: "sine:music:track",
       muteKey: "sine:music:muted",
       sessionStateKey: "sine:music:session-state",
-      entryVolume: 0.68,
+      entryVolume: 0.2,
       trackMap: new Map(),
       trackOrder: [],
       defaultTrackId,
       currentTrack: null,
-      currentVolume: 0.68,
+      currentVolume: 0.2,
       isMuted: false,
       pendingTime: null,
       autoplayBlocked: false,
+      queuedGestureAutoplay: false,
       initialized: false,
       shouldResumePlayback: true,
       musicRoot: null,
@@ -309,6 +310,37 @@ const copy = locale === "pt-br"
         window.dispatchEvent(new CustomEvent("sine:music-state", { detail }));
       };
 
+      controller.clearQueuedGestureAutoplay = () => {
+        if (typeof controller.removeQueuedGestureAutoplay === "function") {
+          controller.removeQueuedGestureAutoplay();
+        }
+        controller.removeQueuedGestureAutoplay = null;
+        controller.queuedGestureAutoplay = false;
+      };
+
+      controller.queueGestureAutoplay = () => {
+        if (controller.queuedGestureAutoplay) return;
+        controller.queuedGestureAutoplay = true;
+
+        const resumeOnGesture = async () => {
+          controller.clearQueuedGestureAutoplay();
+          if (!controller.shouldResumePlayback || !controller.audio.paused) return;
+          await controller.playCurrent();
+        };
+
+        const options = { capture: true };
+
+        document.addEventListener("pointerdown", resumeOnGesture, options);
+        document.addEventListener("keydown", resumeOnGesture, options);
+        document.addEventListener("touchstart", resumeOnGesture, options);
+
+        controller.removeQueuedGestureAutoplay = () => {
+          document.removeEventListener("pointerdown", resumeOnGesture, options);
+          document.removeEventListener("keydown", resumeOnGesture, options);
+          document.removeEventListener("touchstart", resumeOnGesture, options);
+        };
+      };
+
       controller.applyPendingTime = () => {
         if (controller.pendingTime == null) return;
         if (!Number.isFinite(controller.audio.duration) || controller.audio.duration <= 0) return;
@@ -406,17 +438,23 @@ const copy = locale === "pt-br"
 
         try {
           await controller.audio.play();
+          controller.shouldResumePlayback = true;
           controller.autoplayBlocked = false;
+          controller.clearQueuedGestureAutoplay();
           controller.render();
           return true;
         } catch {
+          controller.shouldResumePlayback = true;
           controller.autoplayBlocked = true;
+          controller.queueGestureAutoplay();
           controller.render();
           return false;
         }
       };
 
       controller.pauseCurrent = () => {
+        controller.shouldResumePlayback = false;
+        controller.clearQueuedGestureAutoplay();
         controller.audio.pause();
         controller.render();
       };
@@ -505,6 +543,10 @@ const copy = locale === "pt-br"
             ?? (Number.isFinite(storedVolume) ? Math.min(1, Math.max(0, storedVolume)) : controller.entryVolume);
           controller.isMuted = startupState?.muted ?? (storedMuted === "true");
           controller.pendingTime = startupState?.currentTime ?? null;
+          if (!startupState && storedMuted !== "true" && !Number.isFinite(storedVolume)) {
+            controller.currentVolume = controller.entryVolume;
+            controller.isMuted = false;
+          }
           controller.audio.volume = controller.isMuted ? 0 : controller.currentVolume;
           controller.initialized = true;
           return;
