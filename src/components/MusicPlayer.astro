@@ -744,6 +744,12 @@ const copy = locale === "pt-br"
     } else {
       controller.render();
     }
+
+    if (controller.shouldResumePlayback && controller.audio.paused) {
+      controller.queueGestureAutoplay();
+    } else if (!controller.shouldResumePlayback) {
+      controller.clearQueuedGestureAutoplay();
+    }
   };
 
   if (!window[initKey]) {
