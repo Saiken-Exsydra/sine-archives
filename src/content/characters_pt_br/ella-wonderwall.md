@@ -8,7 +8,7 @@ affiliation: "House Wonderwall (linha principal); SiNE (Redactor operacional, ca
 house: "Wonderwall (posição na linha principal)"
 rank: "Redactor classe-Radiance — Abyssal Anchor, licença operacional irrestrita"
 registry_status: "Registrada — classe-Radiance, Anchor de Luz. KL-83 (designação interna, não divulgada publicamente)"
-designation: "KL-83"
+designation: "A luz que voltou diferente"
 height: "170 cm"
 build: "Magra; dedos longos; uma fragilidade aparente que não corresponde à realidade"
 complexion: "Pele pálida"
@@ -23,7 +23,7 @@ portrait_gallery:
   - "../../assets/uploads/characters/char-ella-wonderwall-portrait-asc.png"
 hero_gallery:
   - "../../assets/uploads/characters/char-ella-wonderwall-hero-2.png"
-summary: "Anchor de Luz, Abyssal. Um eco do passado, resonando no presente."
+summary: "Feita de um anseio antigo e obrigada a sobreviver a ele, brilha como retorno e vive como alguem ainda em formacao."
 tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora", "Successor"]
 status: "public"
 created: "2026-03-30"

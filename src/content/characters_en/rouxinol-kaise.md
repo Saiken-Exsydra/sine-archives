@@ -16,7 +16,7 @@ eyes: "Dark brown (passive); layered reflection under dual-routing state"
 dress: "Close-fitting dark garments, layered protective paneling; long-bladed artifact instrument in back-worn sheath"
 residence: "Vrenne, Southern Region - no fixed address on file"
 occupation: "Independent contractor - licensed for operational engagement under conditional terms"
-summary: "An independent Redactor with two functioning Anchors, Mirror and Threshold, plus a blade that retains the impressions of the dead. She kills for a living, but under rules she chose for herself rather than rules institutions chose for her."
+summary: "Half mirror, half crossing-place; she walks with the dead at her shoulder and still answers to no law but her own."
 tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"]
 status: "public"
 created: "2026-03-17"

@@ -11,7 +11,7 @@ hair: "Black with a subdued blue-violet sheen, worn somewhat long"
 eyes: "Dark grey nearing black; under manifestation they seem ringed around an interior void"
 dress: "Old-canton formal lines inverted into mourning: high collars, long coats, layered black and violet fabrics, narrow gloves, silver fastenings"
 occupation: "Painter; former gallery exhibitor; private portraitist"
-summary: "An Auroran painter whose life was already shaped by grief before the Nevermore found him. His fusion with that fragment turned mourning, beauty, and dread into one of the setting's most dangerous artistic domains."
+summary: "He gave sorrow beauty enough to stay, and in the hush beside his canvases, Nevermore became something intimate."
 tags: ["Aurora", "Nevermore", "Divine Vessel", "Art", "Grief", "Corvane", "Painter", "Valerie"]
 status: "public"
 created: "2026-05-14"

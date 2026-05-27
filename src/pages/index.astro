@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { SECTIONS } from "../sections";
 import { CONTENT_KEYS, type ContentKey } from "../content-keys";
+import { getLocalizedMusicCatalog } from "../data/music";
 import { getLocalizedCollection } from "../i18n/content";
 import { localizedPath, type SiteLocale } from "../i18n/config";
 import { sectionLabel as getSectionLabel } from "../i18n/ui";
@@ -9,6 +9,8 @@ import { sectionLabel as getSectionLabel } from "../i18n/ui";
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 
 const sections = CONTENT_KEYS.map((key) => ({ key, label: getSectionLabel(locale, key) }));
+const soundtrackLabel = locale === "pt-br" ? "Trilhas Sonoras" : "Soundtracks";
+const soundtrackEntries = getLocalizedMusicCatalog(locale);
 
 async function getPublic(key: ContentKey) {
   const all = await getLocalizedCollection(key, locale);
@@ -22,7 +24,18 @@ const bySection = await Promise.all(
   })
 );
 
-const totalPublic = bySection.reduce((sum, s) => sum + s.count, 0);
+const indexSections = [
+  ...bySection,
+  {
+    key: "soundtracks",
+    label: soundtrackLabel,
+    entries: soundtrackEntries,
+    count: soundtrackEntries.length,
+    href: localizedPath(locale, "/soundtracks/"),
+  },
+] as const;
+
+const totalPublic = indexSections.reduce((sum, s) => sum + s.count, 0);
 const copy = locale === "pt-br"
   ? {
       heroSub: "Compêndio de registros classificados, avaliações de campo e estruturas teóricas originadas no Império de Synus e em suas estruturas cosmológicas adjacentes.",
@@ -51,6 +64,7 @@ const sectionMeta: Record<string, { image: string; desc: string }> = {
   apparatus:     { image: "/uploads/app-clepsydra-apparatus.png", desc: locale === "pt-br" ? "Instrumentos, construcoes e mecanismos classificados." : "Classified instruments, constructions, and mechanisms." },
   systems:       { image: "/uploads/sys-redactory.png",      desc: locale === "pt-br" ? "Estruturas institucionais e ontologicas que sustentam o mundo." : "Structural and institutional frameworks that underpin the world." },
   cosmology:     { image: "/uploads/ui-cosmology-bg.png",    desc: locale === "pt-br" ? "A natureza do Arquivo, do Dive e da propria existencia." : "The nature of the Archive, the Dive, and existence itself." },
+  soundtracks:   { image: "/uploads/ui-banner.png",          desc: locale === "pt-br" ? "Cancoes, camas atmosfericas e trilhas de cena para acompanhar leitura pelo arquivo." : "Songs, atmospheric beds, and scene score pieces for reading through the archive." },
 };
 
 const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
@@ -95,12 +109,12 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
 
       <div class="list-toprule"></div>
 
-      {bySection.map((s, i) => {
+      {indexSections.map((s, i) => {
         const meta = sectionMeta[s.key] ?? { image: FALLBACK_IMG, desc: "" };
         return (
           <a
             class="list-row"
-            href={localizedPath(locale, `/${s.key}/`)}
+            href={s.href ?? localizedPath(locale, `/${s.key}/`)}
             data-key={s.key}
             data-img={meta.image || FALLBACK_IMG}
             data-desc={meta.desc}
@@ -126,7 +140,7 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
         <img src="/uploads/ui-sine-logo.png" alt="" class="preview-default__logo" />
       </div>
 
-      {bySection.map((s) => {
+      {indexSections.map((s) => {
         const meta = sectionMeta[s.key] ?? { image: FALLBACK_IMG, desc: "" };
         return (
           <div class="preview-layer" data-key={s.key}>

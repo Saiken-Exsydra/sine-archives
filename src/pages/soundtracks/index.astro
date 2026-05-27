@@ -1,0 +1,1620 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getLocalizedMusicCatalog } from "../../data/music";
+import songs from "../../data/songs.json";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
+
+const formatDurationLabel = (duration?: number | null) => {
+  if (!duration || !Number.isFinite(duration)) return null;
+  const totalSeconds = Math.max(0, Math.floor(duration));
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = String(totalSeconds % 60).padStart(2, "0");
+  return `${String(minutes).padStart(2, "0")}:${seconds}`;
+};
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const tracks = getLocalizedMusicCatalog(locale);
+
+const copy = locale === "pt-br"
+  ? {
+      pageTitle: "Trilhas Sonoras - SiNE Archives",
+      featuredTrack: "Faixa em destaque",
+      audioCatalog: "Catalogo de audio",
+      title: "Trilhas Sonoras",
+      countSingular: "faixa",
+      countPlural: "faixas",
+      track: "Faixa",
+      artistAlbum: "Artista / Album",
+      duration: "Duracao",
+      mood: "Clima",
+      playerReady: "Canal pronto",
+      playerPlaying: "Em reproducao",
+      playerPaused: "Em pausa",
+      play: "Tocar",
+      pause: "Pausar",
+      previous: "Anterior",
+      next: "Proxima",
+      seek: "Buscar posicao",
+      volume: "Volume",
+      mute: "Silenciar",
+      unmute: "Restaurar audio",
+      moreOptions: "Mais opcoes",
+      noResults: "Nenhuma faixa encontrada para este filtro.",
+      queue: "Tocar no player",
+      active: "No player",
+      unavailable: "Reservado",
+      unknownArtist: "Artista nao identificado",
+      unknownAlbum: "Album desconhecido",
+      unclassifiedMood: "Peca registrada",
+    }
+  : {
+      pageTitle: "Soundtracks - SiNE Archives",
+      featuredTrack: "Featured track",
+      audioCatalog: "Audio catalog",
+      title: "Soundtracks",
+      countSingular: "track",
+      countPlural: "tracks",
+      track: "Track",
+      artistAlbum: "Artist / Album",
+      duration: "Duration",
+      mood: "Mood",
+      playerReady: "Channel ready",
+      playerPlaying: "Now playing",
+      playerPaused: "Paused",
+      play: "Play",
+      pause: "Pause",
+      previous: "Previous",
+      next: "Next",
+      seek: "Seek position",
+      volume: "Volume",
+      mute: "Mute",
+      unmute: "Restore audio",
+      moreOptions: "More options",
+      noResults: "No tracks found for this filter.",
+      queue: "Play in player",
+      active: "In player",
+      unavailable: "Reserved",
+      unknownArtist: "Unknown artist",
+      unknownAlbum: "Unknown album",
+      unclassifiedMood: "Recorded piece",
+    };
+
+const metadataEntries = songs.map((song, index) => {
+  const linkedTrack = tracks.find((track) => track.audioSrc === song.src);
+
+  return {
+    id: linkedTrack?.id ?? `song-${index + 1}`,
+    kind: linkedTrack?.kind ?? "song",
+    kindLabel: linkedTrack?.kindLabel ?? copy.song,
+    title: linkedTrack?.title ?? song.title,
+    artist: song.artist || copy.unknownArtist,
+    album: song.album || copy.unknownAlbum,
+    durationSeconds: song.duration,
+    durationLabel: formatDurationLabel(song.duration),
+    src: song.src,
+    cover: song.cover || linkedTrack?.image || "/uploads/ui-banner.png",
+    summary: linkedTrack?.summary ?? song.album ?? "",
+    trackId: linkedTrack?.id ?? null,
+    mood: linkedTrack?.mood ?? copy.unclassifiedMood,
+  };
+});
+
+const metadataSrcSet = new Set(metadataEntries.map((entry) => entry.src));
+const fallbackEntries = tracks
+  .filter((track) => track.audioSrc && !metadataSrcSet.has(track.audioSrc))
+  .map((track) => ({
+    id: track.id,
+    kind: track.kind,
+    kindLabel: track.kindLabel,
+    title: track.title,
+    artist: track.subtitle || copy.unknownArtist,
+    album: track.kindLabel,
+    durationSeconds: null,
+    durationLabel: track.duration,
+    src: track.audioSrc,
+    cover: track.image,
+    summary: track.summary,
+    trackId: track.id,
+    mood: track.mood,
+  }));
+
+const catalogEntries = [...metadataEntries, ...fallbackEntries];
+const total = catalogEntries.length;
+const featuredTrackId = "sistera-no-1";
+const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id) === featuredTrackId) ?? catalogEntries[0];
+---
+
+<MainLayout
+  active="soundtracks"
+  pageTitle={copy.pageTitle}
+  locale={locale}
+  hideFooter={true}
+  pageClass="page--soundtracks"
+>
+  <section
+    class="sound-archive"
+    data-sound-page
+    data-empty-label={copy.noResults}
+    data-track-label-singular={copy.countSingular}
+    data-track-label-plural={copy.countPlural}
+    data-queue-label={copy.queue}
+    data-active-label={copy.active}
+    data-unavailable-label={copy.unavailable}
+    data-player-ready={copy.playerReady}
+    data-player-playing={copy.playerPlaying}
+    data-player-paused={copy.playerPaused}
+    data-play-label={copy.play}
+    data-pause-label={copy.pause}
+    data-volume-label={copy.volume}
+    data-mute-label={copy.mute}
+    data-unmute-label={copy.unmute}
+    data-featured-track-id={featuredEntry.trackId ?? featuredEntry.id}
+    data-search-base={localizedPath(locale, "/search/")}
+  >
+    <div class="sound-archive__veil"></div>
+    <div class="sound-archive__glow"></div>
+    <div class="sine-grain"></div>
+
+    <div class="sound-shell">
+      <aside class="sound-feature" data-sound-deck>
+        <div class="sound-feature__header">{copy.featuredTrack}</div>
+
+        <div class="sound-feature__artwrap">
+          <img
+            class="sound-feature__art"
+            data-deck-art
+            src={featuredEntry.cover}
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="sound-feature__artshade"></div>
+        </div>
+
+        <div class="sound-feature__body">
+          <div class="sound-feature__kind" data-deck-kind>{featuredEntry.kindLabel}</div>
+          <h2 class="sound-feature__title" data-deck-title>{featuredEntry.title}</h2>
+
+          <div class="sound-feature__meta-copy">
+            <div class="sound-feature__artist" data-deck-artist>{featuredEntry.artist}</div>
+            <div class="sound-feature__album" data-deck-album>{featuredEntry.album}</div>
+          </div>
+
+          <p class="sound-feature__summary" data-deck-summary>{featuredEntry.summary}</p>
+
+          <div class="sound-feature__progress-block">
+            <input
+              class="sound-feature__progress"
+              type="range"
+              min="0"
+              max={featuredEntry.durationSeconds ?? 0}
+              step="0.1"
+              value="0"
+              data-deck-progress
+              aria-label={copy.seek}
+            />
+            <div class="sound-feature__time">
+              <span data-deck-current-time>00:00</span>
+              <span data-deck-duration>{featuredEntry.durationLabel ?? "00:00"}</span>
+            </div>
+          </div>
+
+          <div class="sound-feature__controls">
+            <button class="sound-feature__transport" type="button" data-deck-prev aria-label={copy.previous} title={copy.previous}>
+              <img src="/uploads/previous.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            </button>
+            <button class="sound-feature__transport sound-feature__transport--primary" type="button" data-deck-toggle aria-label={copy.play} title={copy.play}>
+              <img data-deck-toggle-icon src="/uploads/play.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            </button>
+            <button class="sound-feature__transport" type="button" data-deck-next aria-label={copy.next} title={copy.next}>
+              <img src="/uploads/next.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            </button>
+          </div>
+
+          <div class="sound-feature__volume">
+            <button class="sound-feature__volume-toggle" type="button" data-deck-mute aria-label={copy.mute} title={copy.mute}>
+              <img data-deck-volume-icon src="/uploads/speaker-low.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            </button>
+            <input
+              class="sound-feature__volume-input"
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              value="68"
+              data-deck-volume
+              aria-label={copy.volume}
+            />
+            <span class="sound-feature__volume-value" data-deck-volume-value>68</span>
+          </div>
+
+          <a class="sound-feature__link" href="#" data-deck-link hidden aria-hidden="true" tabindex="-1">
+            <span>{copy.viewAlbum}</span>
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="sound-feature__status" data-deck-status>{copy.playerReady}</div>
+        </div>
+      </aside>
+
+      <div class="sound-catalog">
+        <header class="sound-catalog__hero">
+          <div class="sound-catalog__lead">
+            <div class="sound-catalog__eyebrow">{copy.audioCatalog}</div>
+            <h1 class="sound-catalog__title">{copy.title}</h1>
+            <div class="sound-catalog__ornament"></div>
+            <div class="sound-catalog__count" id="sound-count-body">
+              {total} {total === 1 ? copy.countSingular : copy.countPlural}
+            </div>
+          </div>
+        </header>
+
+        <div class="sound-table">
+          <div class="sound-table__head">
+            <div>{copy.track}</div>
+            <div>{copy.artistAlbum}</div>
+            <div>{copy.duration}</div>
+          </div>
+
+          <div class="sound-table__body" id="sound-list">
+            {catalogEntries.map((entry, index) => {
+              const rowTrackId = entry.trackId ?? entry.id;
+              const queryText = entry.album !== copy.unknownAlbum ? entry.album : entry.title;
+              const isFeaturedDefault = rowTrackId === (featuredEntry.trackId ?? featuredEntry.id);
+
+              return (
+                <article
+                  class={`sound-row${isFeaturedDefault ? " is-active-track" : ""}`}
+                  data-track-card
+                  data-track-id={rowTrackId}
+                  data-track-src={entry.src}
+                  data-kind={entry.kind}
+                  data-search={`${entry.title} ${entry.artist} ${entry.album} ${entry.summary}`.toLowerCase()}
+                  data-image={entry.cover}
+                  data-kind-label={entry.kindLabel}
+                  data-title={entry.title}
+                  data-artist={entry.artist}
+                  data-album={entry.album}
+                  data-summary={entry.summary}
+                  data-mood={entry.mood}
+                  data-duration-label={entry.durationLabel ?? "00:00"}
+                  data-duration-seconds={entry.durationSeconds ?? ""}
+                  data-link-query={queryText}
+                  role={entry.src ? "button" : undefined}
+                  tabindex={entry.src ? "0" : undefined}
+                  aria-label={entry.src ? `${copy.queue}: ${entry.title}` : copy.unavailable}
+                  style={`--sound-delay: ${0.06 * index}s;`}
+                >
+                  <div class="sound-row__track">
+                    <div class="sound-row__accent"></div>
+                    <div class="sound-row__cover">
+                      <img src={entry.cover} alt="" loading="lazy" decoding="async" />
+                    </div>
+
+                    <div class="sound-row__copy">
+                      <div class="sound-row__kind">{entry.kindLabel}</div>
+                      <h2 class="sound-row__title">{entry.title}</h2>
+                    </div>
+                  </div>
+
+                  <div class="sound-row__meta">
+                    <span class="sound-row__artist">{entry.artist}</span>
+                    <span class="sound-row__album">{entry.album}</span>
+                  </div>
+
+                  <div class="sound-row__actions">
+                    <button
+                      class="sound-row__play"
+                      type="button"
+                      data-track-select={rowTrackId}
+                      aria-label={entry.src ? copy.play : copy.unavailable}
+                      title={entry.src ? copy.play : copy.unavailable}
+                      disabled={!entry.src}
+                    >
+                      <img class="sound-row__play-icon" data-track-button-icon src="/uploads/play.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                    </button>
+
+                    <span class="sound-row__duration">{entry.durationLabel ?? "00:00"}</span>
+
+                    <button class="sound-row__more" type="button" aria-label={copy.moreOptions} title={copy.moreOptions}>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+
+        <div class="sound-empty" id="sound-empty" hidden>{copy.noResults}</div>
+
+        <div class="sound-pagination" aria-label="Pagination">
+          <span class="sound-pagination__count">01 / 01</span>
+          <div class="sound-pagination__controls">
+            <button class="sound-pagination__btn" type="button" aria-label={copy.previous} disabled>
+              <img src="/uploads/previous.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            </button>
+            <button class="sound-pagination__btn sound-pagination__btn--current" type="button" aria-current="page">1</button>
+            <button class="sound-pagination__btn" type="button" aria-label={copy.next} disabled>
+              <img src="/uploads/next.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const soundtrackInitKey = '__sineSoundtracksInit';
+    const soundtrackCleanupKey = '__sineSoundtracksCleanup';
+    const soundtrackBeforeSwapKey = '__sineSoundtracksBeforeSwap';
+
+    const initializeSoundtracksPage = () => {
+      if (typeof window[soundtrackCleanupKey] === 'function') {
+        window[soundtrackCleanupKey]();
+        window[soundtrackCleanupKey] = null;
+      }
+
+      const soundPage = document.querySelector('[data-sound-page]');
+
+      if (!(soundPage instanceof HTMLElement)) {
+        return;
+      }
+
+      const cards = Array.from(soundPage.querySelectorAll('[data-track-card]'));
+      const emptyState = soundPage.querySelector('#sound-empty');
+      const countNode = soundPage.querySelector('#sound-count-body');
+      const deck = soundPage.querySelector('[data-sound-deck]');
+      const deckArt = soundPage.querySelector('[data-deck-art]');
+      const deckKind = soundPage.querySelector('[data-deck-kind]');
+      const deckTitle = soundPage.querySelector('[data-deck-title]');
+      const deckArtist = soundPage.querySelector('[data-deck-artist]');
+      const deckAlbum = soundPage.querySelector('[data-deck-album]');
+      const deckSummary = soundPage.querySelector('[data-deck-summary]');
+      const deckDuration = soundPage.querySelector('[data-deck-duration]');
+      const deckCurrentTime = soundPage.querySelector('[data-deck-current-time]');
+      const deckProgress = soundPage.querySelector('[data-deck-progress]');
+      const deckStatus = soundPage.querySelector('[data-deck-status]');
+      const deckToggle = soundPage.querySelector('[data-deck-toggle]');
+      const deckToggleIcon = soundPage.querySelector('[data-deck-toggle-icon]');
+      const deckPrev = soundPage.querySelector('[data-deck-prev]');
+      const deckNext = soundPage.querySelector('[data-deck-next]');
+      const deckMute = soundPage.querySelector('[data-deck-mute]');
+      const deckVolume = soundPage.querySelector('[data-deck-volume]');
+      const deckVolumeIcon = soundPage.querySelector('[data-deck-volume-icon]');
+      const deckVolumeValue = soundPage.querySelector('[data-deck-volume-value]');
+      const deckLink = soundPage.querySelector('[data-deck-link]');
+
+      if (!cards.length) {
+        return;
+      }
+
+      const listenerScope = new AbortController();
+      const { signal } = listenerScope;
+      window[soundtrackCleanupKey] = () => listenerScope.abort();
+
+      const featuredTrackId = soundPage.dataset.featuredTrackId || cards[0]?.dataset.trackId || '';
+      const searchBase = soundPage.dataset.searchBase || '/search/';
+      const singular = soundPage.dataset.trackLabelSingular || 'track';
+      const plural = soundPage.dataset.trackLabelPlural || 'tracks';
+      const playerReady = soundPage.dataset.playerReady || 'Channel ready';
+      const playerPlaying = soundPage.dataset.playerPlaying || 'Now playing';
+      const playerPaused = soundPage.dataset.playerPaused || 'Paused';
+      const playLabel = soundPage.dataset.playLabel || 'Play';
+      const pauseLabel = soundPage.dataset.pauseLabel || 'Pause';
+      const muteLabel = soundPage.dataset.muteLabel || 'Mute';
+      const unmuteLabel = soundPage.dataset.unmuteLabel || 'Restore audio';
+      const unavailableLabel = soundPage.dataset.unavailableLabel || 'Reserved';
+
+      let activeTrackId = featuredTrackId;
+      let activePlaying = false;
+      let activeState = null;
+      let seeking = false;
+      const sessionStateKey = 'sine:music:session-state';
+
+      const applyPlayerState = (state) => {
+        if (!state?.trackId) return false;
+        activeState = state;
+        activeTrackId = state.trackId;
+        activePlaying = !!state.playing;
+        return true;
+      };
+
+      const formatTime = (value) => {
+        const seconds = Math.max(0, Math.floor(Number(value) || 0));
+        const minutes = Math.floor(seconds / 60);
+        const remainder = String(seconds % 60).padStart(2, '0');
+        return `${String(minutes).padStart(2, '0')}:${remainder}`;
+      };
+
+      const readControllerState = () => {
+        const controller = window.__sineMusicController;
+
+        if (!controller || typeof controller.getState !== 'function') {
+          return null;
+        }
+
+        return controller.getState() || null;
+      };
+
+      const readSavedSessionState = () => {
+        try {
+          const raw = window.sessionStorage.getItem(sessionStateKey);
+          if (!raw) return null;
+
+          const parsed = JSON.parse(raw);
+          if (!parsed || typeof parsed !== 'object' || typeof parsed.trackId !== 'string') {
+            return null;
+          }
+
+          return {
+            currentTime: Number.isFinite(parsed.currentTime) ? Math.max(0, parsed.currentTime) : 0,
+            duration: null,
+            muted: Boolean(parsed.muted),
+            playing: Boolean(parsed.wasPlaying),
+            trackId: parsed.trackId,
+            volume: Number.isFinite(parsed.volume) ? parsed.volume : null,
+          };
+        } catch {
+          return null;
+        }
+      };
+
+      const syncFromKnownState = () => {
+        const nextState = readControllerState() || readSavedSessionState();
+
+        if (!applyPlayerState(nextState)) {
+          return false;
+        }
+
+        updateActiveButtons();
+        updateDeck();
+        return true;
+      };
+
+      const getCardByTrackId = (trackId) => cards.find((card) => card.dataset.trackId === trackId) || null;
+      const getDeckCard = () => getCardByTrackId(activeTrackId) || getCardByTrackId(featuredTrackId) || cards[0] || null;
+
+      const updateCount = (visible) => {
+        if (!countNode) return;
+        countNode.textContent = `${visible} ${visible === 1 ? singular : plural}`;
+      };
+
+      const updateActiveButtons = () => {
+        cards.forEach((card) => {
+          const trackId = card.dataset.trackId;
+          const button = card.querySelector('[data-track-select]');
+          const icon = card.querySelector('[data-track-button-icon]');
+          const isActive = trackId === activeTrackId;
+
+          card.classList.toggle('is-active-track', isActive);
+
+          if (!button || !icon) {
+            return;
+          }
+
+          if (button.disabled) {
+            button.setAttribute('aria-label', unavailableLabel);
+            button.setAttribute('title', unavailableLabel);
+            icon.setAttribute('src', '/uploads/play.svg');
+            return;
+          }
+
+          if (isActive && activePlaying) {
+            button.setAttribute('aria-label', pauseLabel);
+            button.setAttribute('title', pauseLabel);
+            icon.setAttribute('src', '/uploads/pause.svg');
+            return;
+          }
+
+          button.setAttribute('aria-label', playLabel);
+          button.setAttribute('title', playLabel);
+          icon.setAttribute('src', '/uploads/play.svg');
+        });
+      };
+
+      const updateDeck = () => {
+        const deckCard = getDeckCard();
+        if (!deckCard || !deck) return;
+
+        const trackId = deckCard.dataset.trackId || featuredTrackId;
+        const durationSeconds = Number(deckCard.dataset.durationSeconds || 0);
+        const stateMatchesDeck = activeState?.trackId === trackId;
+        const currentTimeValue = stateMatchesDeck ? Number(activeState?.currentTime || 0) : 0;
+        const liveDurationValue = stateMatchesDeck && Number.isFinite(activeState?.duration) ? Number(activeState.duration) : durationSeconds;
+        const totalDurationLabel = liveDurationValue > 0
+          ? formatTime(liveDurationValue)
+          : (deckCard.dataset.durationLabel || '00:00');
+        const volumeValue = typeof activeState?.volume === 'number'
+          ? Math.round(activeState.volume * 100)
+          : Number(deckVolume?.value || 68);
+        const muted = !!activeState?.muted || volumeValue <= 0;
+        const currentIndex = Math.max(0, cards.findIndex((card) => card.dataset.trackId === trackId));
+
+        deck.classList.toggle('is-playing', stateMatchesDeck && activePlaying);
+
+        if (deckArt) deckArt.setAttribute('src', deckCard.dataset.image || '');
+        if (deckKind) deckKind.textContent = deckCard.dataset.kindLabel || '';
+        if (deckTitle) deckTitle.textContent = deckCard.dataset.title || '';
+        if (deckArtist) deckArtist.textContent = deckCard.dataset.artist || '';
+        if (deckAlbum) deckAlbum.textContent = deckCard.dataset.album || '';
+        if (deckSummary) deckSummary.textContent = deckCard.dataset.summary || '';
+        if (deckCurrentTime) deckCurrentTime.textContent = formatTime(currentTimeValue);
+        if (deckDuration) deckDuration.textContent = totalDurationLabel;
+        if (deckStatus) {
+          deckStatus.textContent = stateMatchesDeck
+            ? (activePlaying ? playerPlaying : playerPaused)
+            : playerReady;
+        }
+        if (deckToggle) {
+          const label = stateMatchesDeck && activePlaying ? pauseLabel : playLabel;
+          deckToggle.setAttribute('aria-label', label);
+          deckToggle.setAttribute('title', label);
+        }
+        if (deckToggleIcon) {
+          deckToggleIcon.setAttribute('src', stateMatchesDeck && activePlaying ? '/uploads/pause.svg' : '/uploads/play.svg');
+        }
+        if (deckPrev) deckPrev.disabled = currentIndex <= 0;
+        if (deckNext) deckNext.disabled = currentIndex >= cards.length - 1;
+        if (deckMute) {
+          const label = muted ? unmuteLabel : muteLabel;
+          deckMute.setAttribute('aria-label', label);
+          deckMute.setAttribute('title', label);
+        }
+        if (deckVolume) deckVolume.value = String(volumeValue);
+        if (deckVolumeValue) deckVolumeValue.textContent = String(volumeValue);
+        if (deckVolumeIcon) {
+          const iconSrc = muted
+            ? '/uploads/speaker-mute.svg'
+            : volumeValue < 45
+              ? '/uploads/speaker-low.svg'
+              : '/uploads/speaker-high.svg';
+          deckVolumeIcon.setAttribute('src', iconSrc);
+        }
+        if (deckLink) {
+          const query = encodeURIComponent(deckCard.dataset.linkQuery || deckCard.dataset.title || '');
+          deckLink.setAttribute('href', `${searchBase}?q=${query}`);
+        }
+        if (deckProgress) {
+          deckProgress.disabled = liveDurationValue <= 0;
+          deckProgress.max = String(liveDurationValue > 0 ? liveDurationValue : 0);
+          if (!seeking) {
+            deckProgress.value = String(Math.min(currentTimeValue, liveDurationValue || 0));
+          }
+        }
+      };
+
+      const applyFilters = () => {
+        let visible = 0;
+
+        cards.forEach((card) => {
+          card.hidden = false;
+          visible += 1;
+        });
+
+        if (emptyState) emptyState.hidden = visible !== 0;
+        updateCount(visible);
+      };
+
+      const selectTrack = (trackId, autoplay) => {
+        if (!trackId) return;
+        activeTrackId = trackId;
+        updateActiveButtons();
+        updateDeck();
+        window.dispatchEvent(new CustomEvent('sine:music-select', {
+          detail: {
+            trackId,
+            autoplay,
+            openPanel: false,
+          },
+        }));
+      };
+
+      cards.forEach((card) => {
+        if (!card.dataset.trackSrc) return;
+
+        card.addEventListener('click', (event) => {
+          const interactiveTarget = event.target instanceof Element
+            ? event.target.closest('button, a, input, label')
+            : null;
+
+          if (interactiveTarget) return;
+
+          const trackId = card.dataset.trackId;
+          if (!trackId) return;
+
+          selectTrack(trackId, true);
+        }, { signal });
+
+        card.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+
+          const trackId = card.dataset.trackId;
+          if (!trackId) return;
+
+          event.preventDefault();
+          selectTrack(trackId, true);
+        }, { signal });
+      });
+
+      soundPage.querySelectorAll('[data-track-select]').forEach((button) => {
+        button.addEventListener('click', (event) => {
+          event.stopPropagation();
+          const trackId = button.getAttribute('data-track-select');
+          if (!trackId) return;
+
+          if (trackId === activeTrackId) {
+            window.dispatchEvent(new CustomEvent('sine:music-command', {
+              detail: { command: activePlaying ? 'pause' : 'play' },
+            }));
+            return;
+          }
+
+          selectTrack(trackId, true);
+        }, { signal });
+      });
+
+      deckToggle?.addEventListener('click', () => {
+        const deckCard = getDeckCard();
+        if (!deckCard) return;
+        const trackId = deckCard.dataset.trackId;
+        if (!trackId) return;
+
+        if (trackId === activeTrackId) {
+          window.dispatchEvent(new CustomEvent('sine:music-command', {
+            detail: { command: activePlaying ? 'pause' : 'play' },
+          }));
+          return;
+        }
+
+        selectTrack(trackId, true);
+      }, { signal });
+
+      const stepDeck = (direction) => {
+        const deckCard = getDeckCard();
+        if (!deckCard) return;
+
+        const currentIndex = cards.findIndex((card) => card.dataset.trackId === deckCard.dataset.trackId);
+        if (currentIndex < 0) return;
+
+        const nextCard = cards[currentIndex + direction];
+        if (!nextCard) return;
+
+        selectTrack(nextCard.dataset.trackId || '', activePlaying);
+      };
+
+      deckPrev?.addEventListener('click', () => stepDeck(-1), { signal });
+      deckNext?.addEventListener('click', () => stepDeck(1), { signal });
+
+      deckMute?.addEventListener('click', () => {
+        window.dispatchEvent(new CustomEvent('sine:music-command', {
+          detail: { command: 'mute' },
+        }));
+      }, { signal });
+
+      deckVolume?.addEventListener('input', () => {
+        window.dispatchEvent(new CustomEvent('sine:music-command', {
+          detail: { command: 'volume', value: Number(deckVolume.value) / 100 },
+        }));
+      }, { signal });
+
+      deckProgress?.addEventListener('input', () => {
+        seeking = true;
+        if (deckCurrentTime) deckCurrentTime.textContent = formatTime(deckProgress.value);
+      }, { signal });
+
+      deckProgress?.addEventListener('change', () => {
+        seeking = false;
+        window.dispatchEvent(new CustomEvent('sine:music-command', {
+          detail: { command: 'seek', value: Number(deckProgress.value) },
+        }));
+      }, { signal });
+
+      window.addEventListener('sine:music-state', (event) => {
+        applyPlayerState(event.detail || null);
+        activeTrackId = activeTrackId || featuredTrackId;
+        updateActiveButtons();
+        updateDeck();
+      }, { signal });
+
+      const hasSavedSession = (() => {
+        try {
+          return !!window.sessionStorage.getItem(sessionStateKey);
+        } catch {
+          return false;
+        }
+      })();
+
+      applyFilters();
+      syncFromKnownState();
+      updateActiveButtons();
+      updateDeck();
+
+      if (!hasSavedSession && featuredTrackId) {
+        selectTrack(featuredTrackId, false);
+      }
+
+      window.dispatchEvent(new CustomEvent('sine:music-request-state'));
+      requestAnimationFrame(() => {
+        if (signal.aborted) return;
+        syncFromKnownState();
+        window.dispatchEvent(new CustomEvent('sine:music-request-state'));
+      });
+    };
+
+    if (!window[soundtrackInitKey]) {
+      window[soundtrackInitKey] = initializeSoundtracksPage;
+      document.addEventListener('astro:page-load', window[soundtrackInitKey]);
+    }
+
+    if (!window[soundtrackBeforeSwapKey]) {
+      window[soundtrackBeforeSwapKey] = () => {
+        if (typeof window[soundtrackCleanupKey] === 'function') {
+          window[soundtrackCleanupKey]();
+          window[soundtrackCleanupKey] = null;
+        }
+      };
+      document.addEventListener('astro:before-swap', window[soundtrackBeforeSwapKey]);
+    }
+
+    window[soundtrackInitKey]();
+  </script>
+
+  <style>
+    @keyframes soundFadeSlideUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    :global(body.page--soundtracks) {
+      background:
+        radial-gradient(circle at top right, rgba(115, 52, 38, 0.18), transparent 22%),
+        radial-gradient(circle at 20% 30%, rgba(27, 33, 63, 0.3), transparent 32%),
+        linear-gradient(180deg, #07070c 0%, #05050a 100%);
+    }
+
+    :global(body.page--soundtracks) .nav {
+      background: rgba(5, 5, 10, 0.9);
+      border-bottom-color: rgba(123, 72, 56, 0.34);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    :global(body.page--soundtracks) .nav__logo {
+      gap: 14px;
+    }
+
+    :global(body.page--soundtracks) .nav__logo-img {
+      height: 28px;
+      opacity: 0.88;
+    }
+
+    :global(body.page--soundtracks) .nav__logo-text {
+      color: rgba(237, 231, 222, 0.92);
+      letter-spacing: 0.34em;
+    }
+
+    :global(body.page--soundtracks) .nav__actions {
+      gap: 18px;
+    }
+
+    :global(body.page--soundtracks) .nav__locale-switch {
+      gap: 0;
+      padding: 0;
+      border-radius: 0;
+      background: rgba(255, 255, 255, 0.02);
+      border-color: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    :global(body.page--soundtracks) .nav__locale-pill {
+      min-height: 38px;
+      padding: 0 22px;
+      border-radius: 0;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(232, 228, 220, 0.52);
+      letter-spacing: 0.2em;
+    }
+
+    :global(body.page--soundtracks) .nav__locale-pill:last-child {
+      border-right: 0;
+    }
+
+    :global(body.page--soundtracks) .nav__locale-pill.is-active {
+      background: rgba(177, 58, 52, 0.08);
+      color: #f0725d;
+    }
+
+    :global(body.page--soundtracks) .nav__icon-btn,
+    :global(body.page--soundtracks) .musicbar__toggle {
+      color: rgba(232, 228, 220, 0.74);
+    }
+
+    .sound-archive {
+      position: relative;
+      min-height: calc(100vh - var(--nav-height));
+      padding: 10px 28px 24px;
+      overflow: clip;
+    }
+
+    .sound-archive__veil,
+    .sound-archive__glow {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .sound-archive__veil {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.016), transparent 180px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent 22%, transparent 78%, rgba(177, 58, 52, 0.04));
+    }
+
+    .sound-archive__glow {
+      background:
+        radial-gradient(circle at 76% 14%, rgba(167, 89, 51, 0.14), transparent 18%),
+        radial-gradient(circle at 44% 62%, rgba(32, 39, 88, 0.18), transparent 24%);
+    }
+
+    .sound-shell {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(300px, 356px) minmax(0, 1fr);
+      gap: 34px;
+      align-items: start;
+      min-height: calc(100vh - var(--nav-height) - 34px);
+    }
+
+    .sound-feature,
+    .sound-row,
+    .sound-pagination__btn {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 11, 17, 0.72);
+    }
+
+    .sound-feature {
+      position: sticky;
+      top: calc(var(--nav-height) + 18px);
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.38);
+      animation: soundFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .sound-feature__header,
+    .sound-catalog__eyebrow,
+    .sound-catalog__count,
+    .sound-filters__btn,
+    .sound-table__head,
+    .sound-row__kind,
+    .sound-row__artist,
+    .sound-row__album,
+    .sound-row__duration,
+    .sound-feature__kind,
+    .sound-feature__artist,
+    .sound-feature__album,
+    .sound-feature__status,
+    .sound-pagination__count,
+    .sound-feature__link {
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .sound-feature__header {
+      padding: 22px 26px 16px;
+      color: #d46d58;
+    }
+
+    .sound-feature__artwrap {
+      position: relative;
+      margin: 0 26px;
+      aspect-ratio: 1 / 1.02;
+      overflow: hidden;
+      background: #05050a;
+    }
+
+    .sound-feature__art {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sound-feature__artshade {
+      position: absolute;
+      inset: 0;
+      background: none;
+    }
+
+    .sound-feature__body {
+      display: grid;
+      gap: 14px;
+      padding: 22px 26px 28px;
+    }
+
+    .sound-feature__kind,
+    .sound-row__kind {
+      color: #d4604c;
+    }
+
+    .sound-feature__title,
+    .sound-catalog__title,
+    .sound-row__title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .sound-feature__title {
+      font-size: clamp(34px, 3.4vw, 50px);
+      line-height: 0.92;
+    }
+
+    .sound-feature__meta-copy {
+      display: grid;
+      gap: 6px;
+    }
+
+    .sound-feature__artist,
+    .sound-feature__album,
+    .sound-row__artist,
+    .sound-row__album {
+      color: rgba(232, 228, 220, 0.74);
+    }
+
+    .sound-feature__summary,
+    .sound-row__summary {
+      color: rgba(232, 228, 220, 0.6);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .sound-feature__progress-block {
+      display: grid;
+      gap: 8px;
+    }
+
+    .sound-feature__progress,
+    .sound-feature__volume-input {
+      width: 100%;
+      accent-color: #d4604c;
+      cursor: pointer;
+    }
+
+    .sound-feature__time {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: rgba(232, 228, 220, 0.64);
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+    }
+
+    .sound-feature__controls {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .sound-feature__transport,
+    .sound-row__play,
+    .sound-row__more,
+    .sound-feature__volume-toggle,
+    .sound-feature__link,
+    .sound-pagination__btn {
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.24s ease, background 0.24s ease, transform 0.24s ease;
+    }
+
+    .sound-feature__transport,
+    .sound-feature__volume-toggle,
+    .sound-pagination__btn {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .sound-feature__transport img,
+    .sound-row__play-icon,
+    .sound-pagination__btn img,
+    .sound-feature__volume-toggle img {
+      width: 18px;
+      height: 18px;
+      filter: brightness(0) saturate(100%) invert(95%) sepia(18%) saturate(160%) hue-rotate(327deg) brightness(105%) contrast(91%);
+    }
+
+    .sound-feature__transport--primary {
+      border-color: rgba(212, 96, 76, 0.58);
+      background: rgba(120, 34, 24, 0.34);
+    }
+
+    .sound-feature__transport:hover:not(:disabled),
+    .sound-row__play:hover:not(:disabled),
+    .sound-row__more:hover,
+    .sound-feature__volume-toggle:hover,
+    .sound-feature__link:hover,
+    .sound-pagination__btn:hover:not(:disabled) {
+      border-color: rgba(212, 96, 76, 0.54);
+      background: rgba(128, 36, 26, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .sound-feature__transport:disabled,
+    .sound-row__play:disabled,
+    .sound-pagination__btn:disabled {
+      opacity: 0.34;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .sound-feature__volume {
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sound-feature__volume-toggle {
+      min-height: 42px;
+    }
+
+    .sound-feature__volume-value {
+      min-width: 22px;
+      color: rgba(232, 228, 220, 0.62);
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+    }
+
+    .sound-feature__link {
+      display: none;
+      justify-content: space-between;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      color: rgba(232, 228, 220, 0.9);
+    }
+
+    .sound-feature__status {
+      color: rgba(232, 228, 220, 0.42);
+    }
+
+    .sound-catalog {
+      display: grid;
+      gap: 16px;
+      padding-top: 20px;
+      min-width: 0;
+    }
+
+    .sound-catalog__hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 26px;
+      padding: 12px 8px 22px;
+      animation: soundFadeSlideUp 0.7s 0.08s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .sound-catalog__lead {
+      display: grid;
+      gap: 14px;
+    }
+
+    .sound-catalog__eyebrow {
+      color: #d4604c;
+    }
+
+    .sound-catalog__title {
+      font-size: clamp(56px, 7.1vw, 84px);
+      line-height: 0.88;
+      letter-spacing: -0.03em;
+    }
+
+    .sound-catalog__ornament {
+      width: 202px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(212, 96, 76, 0.65), rgba(212, 96, 76, 0.15) 68%, transparent);
+      position: relative;
+    }
+
+    .sound-catalog__ornament::before {
+      content: "";
+      position: absolute;
+      left: 42px;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border: 1px solid rgba(212, 96, 76, 0.52);
+      background: rgba(12, 12, 18, 0.9);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .sound-catalog__count {
+      color: #d4604c;
+    }
+
+    .sound-catalog__toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 0 8px 10px;
+    }
+
+    .sound-table {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sound-table__head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.85fr) 190px;
+      gap: 22px;
+      padding: 18px 14px;
+      color: rgba(232, 228, 220, 0.42);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sound-table__body {
+      display: grid;
+    }
+
+    .sound-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.85fr) 190px;
+      gap: 22px;
+      align-items: center;
+      padding: 0 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      min-height: 146px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
+      animation: soundFadeSlideUp 0.62s var(--sound-delay, 0s) cubic-bezier(0.16, 1, 0.3, 1) both;
+      transition: border-color 0.24s ease, background 0.24s ease, transform 0.24s ease;
+    }
+
+    .sound-row[data-track-src] {
+      cursor: pointer;
+    }
+
+    .sound-row:first-child {
+      border-top: 0;
+    }
+
+    .sound-row:hover,
+    .sound-row:focus-visible,
+    .sound-row.is-active-track {
+      border-color: rgba(212, 96, 76, 0.22);
+      background: rgba(14, 14, 20, 0.9);
+    }
+
+    .sound-row:focus-visible {
+      outline: 1px solid rgba(212, 96, 76, 0.52);
+      outline-offset: 0;
+    }
+
+    .sound-row__track {
+      display: grid;
+      grid-template-columns: 4px 86px minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .sound-row__accent {
+      align-self: stretch;
+      background: transparent;
+      transition: background 0.24s ease;
+    }
+
+    .sound-row.is-active-track .sound-row__accent {
+      background: linear-gradient(180deg, rgba(212, 96, 76, 0.94), rgba(212, 96, 76, 0.22));
+    }
+
+    .sound-row__cover {
+      width: 86px;
+      aspect-ratio: 1 / 1.22;
+      overflow: hidden;
+      background: #05050a;
+    }
+
+    .sound-row__cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.64) saturate(0.8);
+    }
+
+    .sound-row__copy {
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .sound-row__title {
+      font-size: clamp(28px, 2.8vw, 44px);
+      line-height: 0.92;
+    }
+
+    .sound-row__meta {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+    }
+
+    .sound-row__album {
+      color: rgba(232, 228, 220, 0.5);
+    }
+
+    .sound-row__actions {
+      display: grid;
+      grid-template-columns: 54px auto 38px;
+      align-items: center;
+      justify-content: end;
+      gap: 18px;
+    }
+
+    .sound-row__play {
+      min-height: 54px;
+      padding: 0;
+      border: 1px solid rgba(212, 96, 76, 0.44);
+      background: rgba(110, 31, 22, 0.16);
+    }
+
+    .sound-row__duration {
+      color: rgba(232, 228, 220, 0.64);
+      justify-self: center;
+    }
+
+    .sound-row__more {
+      min-height: 38px;
+      gap: 3px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    .sound-row__more span {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(232, 228, 220, 0.72);
+      display: block;
+    }
+
+    .sound-empty {
+      padding: 42px 12px 0;
+      color: rgba(232, 228, 220, 0.44);
+      text-align: center;
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .sound-pagination {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 10px 8px 0;
+    }
+
+    .sound-pagination__count {
+      color: rgba(232, 228, 220, 0.52);
+    }
+
+    .sound-pagination__controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .sound-pagination__btn {
+      min-width: 34px;
+      min-height: 34px;
+      padding: 0 10px;
+    }
+
+    .sound-pagination__btn--current {
+      border-color: rgba(212, 96, 76, 0.48);
+      color: rgba(255, 238, 230, 0.94);
+    }
+
+    @media (max-width: 1180px) {
+      .sound-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .sound-feature {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    @media (max-width: 920px) {
+      :global(body.page--soundtracks) .nav {
+        padding-left: max(14px, env(safe-area-inset-left));
+        padding-right: max(14px, env(safe-area-inset-right));
+      }
+
+      :global(body.page--soundtracks) .nav__actions {
+        gap: 10px;
+      }
+
+      :global(body.page--soundtracks) .nav__locale-pill {
+        min-height: 34px;
+        padding: 0 14px;
+      }
+
+      .sound-archive {
+        padding: 10px 18px 20px;
+      }
+
+      .sound-shell {
+        gap: 24px;
+        min-height: auto;
+      }
+
+      .sound-feature {
+        max-width: 720px;
+      }
+
+      .sound-feature__body {
+        gap: 12px;
+      }
+
+      .sound-catalog__hero,
+      .sound-catalog__toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .sound-table__head {
+        display: none;
+      }
+
+      .sound-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 18px 14px;
+        min-height: 0;
+      }
+
+      .sound-row__meta,
+      .sound-row__actions {
+        padding-left: 20px;
+      }
+
+      .sound-row__actions {
+        justify-content: start;
+        grid-template-columns: 54px auto 38px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :global(body.page--soundtracks) .nav {
+        padding-left: max(10px, env(safe-area-inset-left));
+        padding-right: max(10px, env(safe-area-inset-right));
+      }
+
+      :global(body.page--soundtracks) .nav__logo {
+        min-width: 0;
+      }
+
+      :global(body.page--soundtracks) .nav__logo-text {
+        display: none;
+      }
+
+      :global(body.page--soundtracks) .nav__actions {
+        gap: 8px;
+      }
+
+      :global(body.page--soundtracks) .nav__locale-switch {
+        max-width: min(56vw, 220px);
+      }
+
+      :global(body.page--soundtracks) .nav__locale-pill {
+        min-height: 32px;
+        padding: 0 8px;
+        font-size: 8px;
+        letter-spacing: 0.14em;
+      }
+
+      .sound-archive {
+        padding: 8px 12px 18px;
+      }
+
+      .sound-feature__header,
+      .sound-feature__body,
+      .sound-feature__artwrap {
+        margin-left: 18px;
+        margin-right: 18px;
+      }
+
+      .sound-feature__header {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .sound-feature__body {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .sound-catalog__title {
+        font-size: 46px;
+      }
+
+      .sound-catalog__hero {
+        gap: 14px;
+        padding: 8px 0 18px;
+      }
+
+      .sound-catalog__lead {
+        gap: 10px;
+      }
+
+      .sound-catalog__ornament {
+        width: min(150px, 48vw);
+      }
+
+      .sound-feature__controls,
+      .sound-row__track {
+        gap: 12px;
+      }
+
+      .sound-feature__title {
+        font-size: clamp(28px, 10vw, 40px);
+      }
+
+      .sound-feature__summary {
+        font-size: 13px;
+      }
+
+      .sound-feature__volume {
+        grid-template-columns: 42px minmax(0, 1fr) auto;
+      }
+
+      .sound-row__track {
+        grid-template-columns: 4px 72px minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .sound-row__cover {
+        width: 72px;
+      }
+
+      .sound-row__copy {
+        gap: 8px;
+      }
+
+      .sound-row__title {
+        font-size: clamp(24px, 9vw, 34px);
+      }
+
+      .sound-row__summary {
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .sound-row__meta,
+      .sound-row__actions {
+        padding-left: 0;
+      }
+
+      .sound-row__meta {
+        gap: 8px;
+      }
+
+      .sound-row__actions {
+        grid-template-columns: 54px minmax(0, 1fr) 38px;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .sound-row__duration {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :global(body.page--soundtracks) .nav {
+        gap: 8px;
+      }
+
+      :global(body.page--soundtracks) .nav__actions {
+        min-width: 0;
+        gap: 6px;
+      }
+
+      :global(body.page--soundtracks) .nav__locale-switch {
+        max-width: min(52vw, 190px);
+      }
+
+      .sound-shell {
+        gap: 18px;
+      }
+
+      .sound-feature__header {
+        padding-top: 18px;
+        padding-bottom: 14px;
+      }
+
+      .sound-feature__header,
+      .sound-feature__body,
+      .sound-feature__artwrap {
+        margin-left: 14px;
+        margin-right: 14px;
+      }
+
+      .sound-feature__body {
+        padding-bottom: 20px;
+      }
+
+      .sound-feature__controls {
+        gap: 8px;
+      }
+
+      .sound-feature__transport,
+      .sound-row__play,
+      .sound-feature__volume-toggle {
+        min-height: 48px;
+      }
+
+      .sound-feature__volume {
+        gap: 8px;
+      }
+
+      .sound-feature__volume-value {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+      }
+
+      .sound-catalog__title {
+        font-size: 38px;
+      }
+
+      .sound-row {
+        gap: 14px;
+        padding: 14px 12px;
+      }
+
+      .sound-row__track {
+        grid-template-columns: 3px 60px minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .sound-row__cover {
+        width: 60px;
+      }
+
+      .sound-row__title {
+        font-size: clamp(22px, 8.2vw, 30px);
+      }
+
+      .sound-row__actions {
+        grid-template-columns: 48px minmax(0, 1fr) 32px;
+        gap: 10px;
+      }
+
+      .sound-row__play {
+        min-height: 48px;
+      }
+
+      .sound-row__duration,
+      .sound-feature__artist,
+      .sound-feature__album,
+      .sound-row__artist,
+      .sound-row__album {
+        font-size: 9px;
+        letter-spacing: 0.18em;
+      }
+    }
+  </style>
+</MainLayout>

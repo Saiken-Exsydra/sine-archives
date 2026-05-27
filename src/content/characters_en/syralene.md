@@ -6,7 +6,7 @@ rank: "Precursor"
 designation: "She Who Holds the Moon Together"
 registry_status: "Not registered - predates the Apocachynthion by a margin that makes the question inapplicable"
 occupation: "Containment - the fragment within the Crown"
-summary: "One of Terra's original Precursors, now permanently embedded in the broken Lunar Crown. Syr'lene has spent centuries holding a dangerous fragment in place and making the smallest possible corrections that keep the world from getting worse."
+summary: "Century after century, she keeps loving the world in the least visible way possible: by not letting it break further."
 tags: ["Precursor", "Syr'lene", "Lunar Crown", "Fracture", "Containment", "Skyphon", "Keepers of Before", "Miracle", "Northern Front"]
 status: "public"
 created: "2026-03-30"

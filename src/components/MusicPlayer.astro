@@ -1,0 +1,1132 @@
+---
+import { DEFAULT_MUSIC_TRACK_ID, getLocalizedMusicCatalog } from "../data/music";
+import { localizedPath, type SiteLocale } from "../i18n/config";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const tracks = getLocalizedMusicCatalog(locale);
+const initialTrack = tracks.find((track) => track.id === DEFAULT_MUSIC_TRACK_ID) ?? tracks[0];
+const soundtrackHref = localizedPath(locale, "/soundtracks/");
+
+const copy = locale === "pt-br"
+  ? {
+      player: "Canal Sonoro",
+      nowPlaying: "Tocando agora",
+      openPlayer: "Abrir player",
+      closePlayer: "Fechar player",
+      tooltip: "MusicPlayer",
+      play: "Tocar",
+      pause: "Pausar",
+      playPause: "Alternar reproducao",
+      mute: "Silenciar",
+      unmute: "Restaurar audio",
+      library: "Abrir trilhas",
+      volume: "Volume",
+      volumeLow: "Baixo",
+      volumeHigh: "Alto",
+      stateMuted: "Silenciado",
+      unavailable: "Sem arquivo",
+      autoplayBlocked: "Audio pronto",
+    }
+  : {
+      player: "Sound Channel",
+      nowPlaying: "Playing Now",
+      openPlayer: "Open player",
+      closePlayer: "Close player",
+      tooltip: "MusicPlayer",
+      play: "Play",
+      pause: "Pause",
+      playPause: "Toggle playback",
+      mute: "Mute",
+      unmute: "Restore audio",
+      library: "Open soundtracks",
+      volume: "Volume",
+      volumeLow: "Low",
+      volumeHigh: "High",
+      stateMuted: "Muted",
+      unavailable: "No file",
+      autoplayBlocked: "Audio ready",
+    };
+---
+
+<div class="musicbar" data-music-player>
+  <button
+    class="musicbar__toggle"
+    type="button"
+    data-music-toggle
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    aria-label={copy.openPlayer}
+  >
+    <img
+      class="musicbar__icon"
+      data-music-icon
+      src="/uploads/waveform.svg"
+      alt=""
+      aria-hidden="true"
+      loading="eager"
+      decoding="async"
+    />
+    <span class="musicbar__tooltip" data-music-tooltip>{copy.tooltip}</span>
+  </button>
+
+  <div class="musicbar__panel" data-music-panel hidden role="dialog" aria-label={copy.player}>
+    <div class="musicbar__body">
+      <div class="musicbar__header">
+        <div class="musicbar__copy">
+          <div class="musicbar__label">{copy.nowPlaying}</div>
+          <div class="musicbar__track-title" data-music-title>{initialTrack.title}</div>
+          <div class="musicbar__track-album" data-music-album>{initialTrack.album}</div>
+
+          <div class="musicbar__track-meta">
+            <span class="musicbar__pill" data-music-kind>{initialTrack.kindLabel}</span>
+            <span class="musicbar__pill" data-music-duration>{initialTrack.duration}</span>
+            <span class="musicbar__pill" data-music-year>{initialTrack.year}</span>
+          </div>
+        </div>
+
+        <div class="musicbar__art-shell" aria-hidden="true">
+          <img class="musicbar__art" data-music-art src={initialTrack.image} alt="" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="musicbar__actions">
+        <button class="musicbar__action musicbar__action--icon" type="button" data-music-play-toggle aria-label={copy.playPause} title={copy.pause}>
+          <img class="musicbar__action-icon" data-music-play-icon src="/uploads/pause.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        </button>
+        <button class="musicbar__action musicbar__action--ghost musicbar__action--icon" type="button" data-music-mute-toggle aria-label={copy.mute} title={copy.mute}>
+          <img class="musicbar__action-icon" src="/uploads/speaker-mute.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+        </button>
+        <a class="musicbar__action musicbar__action--link" href={soundtrackHref} data-music-library-link>
+          {copy.library}
+        </a>
+      </div>
+
+      <label class="musicbar__volume">
+        <span class="musicbar__volume-label">{copy.volume}</span>
+        <div class="musicbar__volume-track">
+          <span class="musicbar__volume-mark" aria-hidden="true">
+            <img class="musicbar__volume-icon" src="/uploads/speaker-low.svg" alt="" loading="lazy" decoding="async" />
+          </span>
+          <input
+            class="musicbar__volume-input"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value="68"
+            data-music-volume
+            aria-label={copy.volume}
+          />
+          <span class="musicbar__volume-mark" aria-hidden="true">
+            <img class="musicbar__volume-icon" src="/uploads/speaker-high.svg" alt="" loading="lazy" decoding="async" />
+          </span>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ tracks, copy, defaultTrackId: DEFAULT_MUSIC_TRACK_ID }}>
+  const scriptElement = document.currentScript;
+  const controllerKey = "__sineMusicController";
+  const initKey = "__sineMusicInit";
+
+  const resolveMusicRoot = () => {
+    if (scriptElement instanceof HTMLScriptElement) {
+      const previous = scriptElement.previousElementSibling;
+      if (
+        previous instanceof HTMLElement
+        && previous.isConnected
+        && previous.matches("[data-music-player]")
+      ) {
+        return previous;
+      }
+    }
+
+    return document.querySelector("[data-music-player]");
+  };
+
+  const createController = () => {
+    const iconWave = "/uploads/waveform.svg";
+    const iconMuted = "/uploads/waveform-slash.svg";
+
+    const storage = {
+      get(key) {
+        try {
+          return window.localStorage.getItem(key);
+        } catch {
+          return null;
+        }
+      },
+      set(key, value) {
+        try {
+          window.localStorage.setItem(key, value);
+        } catch {
+          return;
+        }
+      },
+    };
+
+    const session = {
+      get(key) {
+        try {
+          return window.sessionStorage.getItem(key);
+        } catch {
+          return null;
+        }
+      },
+      set(key, value) {
+        try {
+          window.sessionStorage.setItem(key, value);
+        } catch {
+          return;
+        }
+      },
+    };
+
+    const audio = new Audio();
+    audio.loop = true;
+    audio.preload = "auto";
+
+    const controller = {
+      audio,
+      storage,
+      session,
+      volumeKey: "sine:music:volume",
+      trackKey: "sine:music:track",
+      muteKey: "sine:music:muted",
+      sessionStateKey: "sine:music:session-state",
+      entryVolume: 0.68,
+      trackMap: new Map(),
+      trackOrder: [],
+      defaultTrackId,
+      currentTrack: null,
+      currentVolume: 0.68,
+      isMuted: false,
+      pendingTime: null,
+      autoplayBlocked: false,
+      initialized: false,
+      shouldResumePlayback: true,
+      musicRoot: null,
+      toggleButton: null,
+      panel: null,
+      icon: null,
+      tooltip: null,
+      art: null,
+      title: null,
+      album: null,
+      kind: null,
+      duration: null,
+      year: null,
+      playButton: null,
+      playIcon: null,
+      muteButton: null,
+      volumeInput: null,
+      libraryLink: null,
+      panelOpen: false,
+      panelAnimating: false,
+      copy,
+      cleanupDom: null,
+      onDocumentClick: null,
+      onDocumentKeydown: null,
+      onMusicSelect: null,
+      onMusicCommand: null,
+      onRequestState: null,
+      onPersistSession: null,
+    };
+
+    controller.resolveTrack = (trackId) =>
+      controller.trackMap.get(trackId)
+      || controller.trackMap.get(controller.defaultTrackId)
+      || tracks[0]
+      || null;
+
+      controller.restoreSessionState = () => {
+        const raw = controller.session.get(controller.sessionStateKey);
+
+        if (!raw) return null;
+
+        try {
+          const parsed = JSON.parse(raw);
+
+          if (!parsed || typeof parsed !== "object" || !controller.trackMap.has(parsed.trackId)) {
+            return null;
+          }
+
+          return {
+            trackId: parsed.trackId,
+            volume: Number.isFinite(parsed.volume)
+              ? Math.min(1, Math.max(0, parsed.volume))
+              : controller.entryVolume,
+            muted: Boolean(parsed.muted),
+            currentTime: Number.isFinite(parsed.currentTime) ? Math.max(0, parsed.currentTime) : 0,
+            wasPlaying: Boolean(parsed.wasPlaying),
+          };
+        } catch {
+          return null;
+        }
+      };
+
+      controller.persist = () => {
+        if (!controller.currentTrack) return;
+        controller.storage.set(controller.trackKey, controller.currentTrack.id);
+        controller.storage.set(controller.volumeKey, String(controller.currentVolume));
+        controller.storage.set(controller.muteKey, String(controller.isMuted));
+      };
+
+      controller.persistSession = () => {
+        if (!controller.currentTrack) return;
+        controller.session.set(controller.sessionStateKey, JSON.stringify({
+          trackId: controller.currentTrack.id,
+          volume: controller.currentVolume,
+          muted: controller.isMuted,
+          currentTime: Number.isFinite(controller.audio.currentTime) ? controller.audio.currentTime : 0,
+          wasPlaying: !controller.audio.paused && !controller.audio.ended,
+        }));
+      };
+
+      controller.getState = () => {
+        if (!controller.currentTrack) return;
+        const trackIndex = Math.max(0, controller.trackOrder.indexOf(controller.currentTrack.id));
+        return {
+          muted: controller.isMuted,
+          playing: !controller.audio.paused,
+          track: controller.currentTrack,
+          trackId: controller.currentTrack.id,
+          trackIndex,
+          currentTime: Number.isFinite(controller.audio.currentTime) ? controller.audio.currentTime : 0,
+          duration: Number.isFinite(controller.audio.duration) ? controller.audio.duration : null,
+          hasPrevious: trackIndex > 0,
+          hasNext: trackIndex < controller.trackOrder.length - 1,
+          volume: controller.currentVolume,
+        };
+      };
+
+      controller.emitState = () => {
+        const detail = controller.getState();
+        if (!detail) return;
+
+        window.dispatchEvent(new CustomEvent("sine:music-state", { detail }));
+      };
+
+      controller.applyPendingTime = () => {
+        if (controller.pendingTime == null) return;
+        if (!Number.isFinite(controller.audio.duration) || controller.audio.duration <= 0) return;
+        controller.audio.currentTime = Math.min(controller.audio.duration, Math.max(0, controller.pendingTime));
+        controller.pendingTime = null;
+      };
+
+      controller.syncSource = () => {
+        if (!controller.currentTrack?.audioSrc) return;
+        if (controller.audio.dataset.trackId === controller.currentTrack.id) return;
+        controller.audio.src = controller.currentTrack.audioSrc;
+        controller.audio.dataset.trackId = controller.currentTrack.id;
+        controller.applyPendingTime();
+      };
+
+      controller.isWaveformSlashed = () => controller.isMuted || controller.currentVolume <= 0;
+      controller.isVisuallyPlaying = () => !controller.isWaveformSlashed();
+
+      controller.render = () => {
+        if (!controller.currentTrack) return;
+
+        const playText = controller.audio.paused ? controller.copy.play : controller.copy.pause;
+        const muteText = controller.isMuted ? controller.copy.unmute : controller.copy.mute;
+        const root = controller.musicRoot;
+
+        if (controller.art) controller.art.setAttribute("src", controller.currentTrack.image);
+        if (controller.title) controller.title.textContent = controller.currentTrack.title;
+        if (controller.album) controller.album.textContent = controller.currentTrack.album;
+        if (controller.kind) controller.kind.textContent = controller.currentTrack.kindLabel;
+        if (controller.duration) controller.duration.textContent = controller.currentTrack.duration;
+        if (controller.year) controller.year.textContent = controller.currentTrack.year;
+        if (controller.playIcon) {
+          controller.playIcon.setAttribute("src", controller.audio.paused ? "/uploads/play.svg" : "/uploads/pause.svg");
+        }
+        if (controller.playButton) {
+          controller.playButton.disabled = !controller.currentTrack.audioSrc;
+          controller.playButton.setAttribute("title", playText);
+          controller.playButton.setAttribute("aria-label", playText);
+        }
+        if (controller.muteButton) {
+          controller.muteButton.setAttribute("title", muteText);
+          controller.muteButton.setAttribute("aria-label", muteText);
+        }
+        if (controller.toggleButton) {
+          controller.toggleButton.setAttribute("aria-label", controller.panelOpen ? controller.copy.closePlayer : controller.copy.openPlayer);
+        }
+        if (controller.icon) {
+          controller.icon.setAttribute("src", controller.isWaveformSlashed() ? iconMuted : iconWave);
+        }
+        if (controller.tooltip) controller.tooltip.textContent = controller.copy.tooltip;
+        if (controller.volumeInput) {
+          controller.volumeInput.value = String(Math.round(controller.currentVolume * 100));
+        }
+        if (root) {
+          root.classList.toggle("is-playing", controller.isVisuallyPlaying());
+          root.classList.toggle("is-muted", controller.isWaveformSlashed());
+        }
+
+        controller.persistSession();
+        controller.emitState();
+      };
+
+      controller.setPanel = (open) => {
+        if (!controller.panel || !controller.musicRoot) return;
+
+        controller.panelOpen = open;
+        controller.panelAnimating = true;
+
+        if (open) {
+          controller.panel.hidden = false;
+          requestAnimationFrame(() => {
+            if (!controller.musicRoot || !controller.panel) return;
+            controller.musicRoot.classList.add("is-open");
+            controller.panel.dataset.state = "open";
+            controller.panelAnimating = false;
+          });
+        } else {
+          controller.panel.dataset.state = "closed";
+          controller.musicRoot.classList.remove("is-open");
+        }
+
+        if (controller.toggleButton) {
+          controller.toggleButton.setAttribute("aria-expanded", String(open));
+          controller.toggleButton.setAttribute("aria-label", open ? controller.copy.closePlayer : controller.copy.openPlayer);
+        }
+      };
+
+      controller.playCurrent = async () => {
+        if (!controller.currentTrack?.audioSrc) {
+          controller.render();
+          return false;
+        }
+
+        controller.syncSource();
+
+        try {
+          await controller.audio.play();
+          controller.autoplayBlocked = false;
+          controller.render();
+          return true;
+        } catch {
+          controller.autoplayBlocked = true;
+          controller.render();
+          return false;
+        }
+      };
+
+      controller.pauseCurrent = () => {
+        controller.audio.pause();
+        controller.render();
+      };
+
+      controller.setMuted = (nextMuted) => {
+        controller.isMuted = nextMuted;
+        controller.audio.volume = controller.isMuted ? 0 : controller.currentVolume;
+        controller.persist();
+        controller.render();
+      };
+
+      controller.setVolume = (nextValue) => {
+        controller.currentVolume = Math.min(1, Math.max(0, nextValue));
+        if (controller.currentVolume > 0 && controller.isMuted) {
+          controller.isMuted = false;
+        }
+        controller.audio.volume = controller.isMuted ? 0 : controller.currentVolume;
+        controller.persist();
+        controller.render();
+      };
+
+      controller.setTrack = async (trackId, options = {}) => {
+        const nextTrack = controller.resolveTrack(trackId);
+
+        if (!nextTrack) return;
+
+        const autoplay = !!options.autoplay;
+        const shouldOpenPanel = !!options.openPanel;
+        const sameTrack = controller.currentTrack?.id === nextTrack.id;
+
+        controller.currentTrack = nextTrack;
+        controller.persist();
+
+        if (!sameTrack) {
+          controller.audio.pause();
+          controller.audio.currentTime = 0;
+          controller.audio.dataset.trackId = "";
+          controller.pendingTime = 0;
+        }
+
+        if (controller.currentTrack.audioSrc) {
+          controller.syncSource();
+        }
+
+        if (shouldOpenPanel) {
+          controller.setPanel(true);
+        }
+
+        controller.render();
+
+        if (autoplay) {
+          await controller.playCurrent();
+        }
+      };
+
+      controller.stepTrack = async (direction) => {
+        if (!controller.currentTrack) return false;
+        const currentIndex = controller.trackOrder.indexOf(controller.currentTrack.id);
+        if (currentIndex < 0) return false;
+        const nextIndex = Math.min(controller.trackOrder.length - 1, Math.max(0, currentIndex + direction));
+        if (nextIndex === currentIndex) return false;
+        await controller.setTrack(controller.trackOrder[nextIndex], { autoplay: true, openPanel: false });
+        return true;
+      };
+
+      controller.seekTo = (nextTime) => {
+        if (!Number.isFinite(controller.audio.duration)) return;
+        controller.audio.currentTime = Math.min(controller.audio.duration, Math.max(0, nextTime));
+        controller.render();
+      };
+
+      controller.setCatalog = (nextTracks, nextDefaultTrackId) => {
+        controller.trackMap = new Map(nextTracks.map((track) => [track.id, track]));
+        controller.trackOrder = nextTracks.map((track) => track.id);
+        controller.defaultTrackId = nextDefaultTrackId;
+
+        if (!controller.initialized) {
+          const startupState = controller.restoreSessionState();
+          const storedTrackId = controller.storage.get(controller.trackKey);
+          const storedVolume = Number(controller.storage.get(controller.volumeKey));
+          const storedMuted = controller.storage.get(controller.muteKey);
+
+          controller.shouldResumePlayback = startupState ? startupState.wasPlaying : true;
+          controller.currentTrack = controller.resolveTrack(startupState?.trackId || storedTrackId || nextDefaultTrackId);
+          controller.currentVolume = startupState?.volume
+            ?? (Number.isFinite(storedVolume) ? Math.min(1, Math.max(0, storedVolume)) : controller.entryVolume);
+          controller.isMuted = startupState?.muted ?? (storedMuted === "true");
+          controller.pendingTime = startupState?.currentTime ?? null;
+          controller.audio.volume = controller.isMuted ? 0 : controller.currentVolume;
+          controller.initialized = true;
+          return;
+        }
+
+        if (controller.currentTrack) {
+          controller.currentTrack = controller.resolveTrack(controller.currentTrack.id);
+        } else {
+          controller.currentTrack = controller.resolveTrack(nextDefaultTrackId);
+        }
+      };
+
+      controller.bind = (root, nextCopy) => {
+        if (typeof controller.cleanupDom === "function") {
+          controller.cleanupDom();
+        }
+
+        controller.copy = nextCopy;
+        controller.musicRoot = root;
+        controller.toggleButton = root.querySelector("[data-music-toggle]");
+        controller.panel = root.querySelector("[data-music-panel]");
+        controller.icon = root.querySelector("[data-music-icon]");
+        controller.tooltip = root.querySelector("[data-music-tooltip]");
+        controller.art = root.querySelector("[data-music-art]");
+        controller.title = root.querySelector("[data-music-title]");
+        controller.album = root.querySelector("[data-music-album]");
+        controller.kind = root.querySelector("[data-music-kind]");
+        controller.duration = root.querySelector("[data-music-duration]");
+        controller.year = root.querySelector("[data-music-year]");
+        controller.playButton = root.querySelector("[data-music-play-toggle]");
+        controller.playIcon = root.querySelector("[data-music-play-icon]");
+        controller.muteButton = root.querySelector("[data-music-mute-toggle]");
+        controller.volumeInput = root.querySelector("[data-music-volume]");
+        controller.libraryLink = root.querySelector("[data-music-library-link]");
+        controller.panelOpen = false;
+        controller.panelAnimating = false;
+
+        if (controller.panel) {
+          controller.panel.hidden = true;
+          controller.panel.dataset.state = "closed";
+        }
+        root.classList.remove("is-open");
+
+        const onToggleClick = () => {
+          controller.setPanel(!controller.panelOpen);
+        };
+        const onPlayClick = async () => {
+          if (controller.audio.paused) {
+            await controller.playCurrent();
+          } else {
+            controller.pauseCurrent();
+          }
+        };
+        const onMuteClick = () => {
+          controller.setMuted(!controller.isMuted);
+        };
+        const onVolumeInput = (event) => {
+          const next = Number(event.currentTarget.value) / 100;
+          controller.setVolume(next);
+        };
+        const onLibraryClick = () => {
+          controller.setPanel(false);
+        };
+        const onPanelTransitionEnd = (event) => {
+          if (event.propertyName !== "opacity") return;
+          if (controller.panelOpen || !controller.panel) return;
+          controller.panel.hidden = true;
+          controller.panelAnimating = false;
+        };
+
+        controller.toggleButton?.addEventListener("click", onToggleClick);
+        controller.playButton?.addEventListener("click", onPlayClick);
+        controller.muteButton?.addEventListener("click", onMuteClick);
+        controller.volumeInput?.addEventListener("input", onVolumeInput);
+        controller.libraryLink?.addEventListener("click", onLibraryClick);
+        controller.panel?.addEventListener("transitionend", onPanelTransitionEnd);
+
+        controller.cleanupDom = () => {
+          controller.toggleButton?.removeEventListener("click", onToggleClick);
+          controller.playButton?.removeEventListener("click", onPlayClick);
+          controller.muteButton?.removeEventListener("click", onMuteClick);
+          controller.volumeInput?.removeEventListener("input", onVolumeInput);
+          controller.libraryLink?.removeEventListener("click", onLibraryClick);
+          controller.panel?.removeEventListener("transitionend", onPanelTransitionEnd);
+        };
+
+        controller.render();
+      };
+
+      controller.onDocumentClick = (event) => {
+        if (!controller.panelOpen || controller.panelAnimating || !controller.musicRoot) return;
+        if (controller.musicRoot.contains(event.target)) return;
+        controller.setPanel(false);
+      };
+
+      controller.onDocumentKeydown = (event) => {
+        if (event.key === "Escape" && controller.panelOpen && !controller.panelAnimating) {
+          controller.setPanel(false);
+        }
+      };
+
+      controller.onMusicSelect = async (event) => {
+        const detail = event.detail || {};
+        await controller.setTrack(detail.trackId, {
+          autoplay: detail.autoplay !== false,
+          openPanel: !!detail.openPanel,
+        });
+      };
+
+      controller.onMusicCommand = async (event) => {
+        const detail = event.detail || {};
+
+        switch (detail.command) {
+          case "toggle":
+            if (controller.audio.paused) {
+              await controller.playCurrent();
+            } else {
+              controller.pauseCurrent();
+            }
+            break;
+          case "play":
+            await controller.playCurrent();
+            break;
+          case "pause":
+            controller.pauseCurrent();
+            break;
+          case "previous":
+            await controller.stepTrack(-1);
+            break;
+          case "next":
+            await controller.stepTrack(1);
+            break;
+          case "mute":
+            controller.setMuted(typeof detail.value === "boolean" ? detail.value : !controller.isMuted);
+            break;
+          case "volume":
+            if (typeof detail.value === "number") {
+              controller.setVolume(detail.value);
+            }
+            break;
+          case "seek":
+            if (typeof detail.value === "number") {
+              controller.seekTo(detail.value);
+            }
+            break;
+          default:
+            break;
+        }
+      };
+
+      controller.onRequestState = () => controller.emitState();
+      controller.onPersistSession = () => controller.persistSession();
+
+      controller.audio.addEventListener("play", () => controller.render());
+      controller.audio.addEventListener("pause", () => controller.render());
+      controller.audio.addEventListener("ended", () => controller.render());
+      controller.audio.addEventListener("loadedmetadata", () => controller.applyPendingTime());
+      controller.audio.addEventListener("timeupdate", () => controller.emitState());
+      controller.audio.addEventListener("loadedmetadata", () => controller.emitState());
+
+      document.addEventListener("click", controller.onDocumentClick);
+      document.addEventListener("keydown", controller.onDocumentKeydown);
+      window.addEventListener("sine:music-select", controller.onMusicSelect);
+      window.addEventListener("sine:music-command", controller.onMusicCommand);
+      window.addEventListener("sine:music-request-state", controller.onRequestState);
+      window.addEventListener("pagehide", controller.onPersistSession);
+      window.addEventListener("beforeunload", controller.onPersistSession);
+
+    return controller;
+  };
+
+  const initializeMusicPlayer = () => {
+    const musicRoot = resolveMusicRoot();
+    if (!musicRoot) return;
+
+    const controller = window[controllerKey] || createController();
+    window[controllerKey] = controller;
+
+    controller.setCatalog(tracks, defaultTrackId);
+    controller.bind(musicRoot, copy);
+    controller.persist();
+
+    if (!controller.audio.dataset.booted) {
+      controller.audio.dataset.booted = "true";
+      if (controller.currentTrack?.audioSrc) {
+        controller.syncSource();
+        if (controller.shouldResumePlayback) {
+          controller.playCurrent();
+        } else {
+          controller.render();
+        }
+      } else {
+        controller.render();
+      }
+    } else {
+      controller.render();
+    }
+  };
+
+  if (!window[initKey]) {
+    window[initKey] = initializeMusicPlayer;
+    document.addEventListener("astro:page-load", window[initKey]);
+    window.addEventListener("pageshow", window[initKey]);
+  }
+
+  window[initKey]();
+</script>
+
+<style>
+  .musicbar {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .musicbar__toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .musicbar__toggle:hover,
+  .musicbar.is-open .musicbar__toggle {
+    transform: translateY(-1px);
+  }
+
+  .musicbar__icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.72;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(12%) saturate(170%) hue-rotate(334deg) brightness(106%) contrast(90%);
+    transition: opacity 0.2s ease, filter 0.2s ease;
+  }
+
+  .musicbar.is-playing .musicbar__icon,
+  .musicbar__toggle:hover .musicbar__icon,
+  .musicbar.is-open .musicbar__icon {
+    opacity: 0.96;
+    filter:
+      brightness(0) saturate(100%) invert(96%) sepia(12%) saturate(170%) hue-rotate(334deg) brightness(106%) contrast(90%)
+      drop-shadow(0 0 10px rgba(177, 58, 52, 0.26));
+  }
+
+  .musicbar.is-muted .musicbar__icon {
+    opacity: 0.56;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(12%) saturate(170%) hue-rotate(334deg) brightness(106%) contrast(90%);
+  }
+
+  .musicbar__tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -10px;
+    padding: 8px 10px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-4px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(7, 7, 12, 0.92);
+    color: rgba(232, 228, 220, 0.84);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 2;
+  }
+
+  .musicbar__toggle:hover .musicbar__tooltip,
+  .musicbar__toggle:focus-visible .musicbar__tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .musicbar__panel {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: min(468px, calc(100vw - 32px));
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(7, 7, 12, 0.96);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 28px 50px rgba(0, 0, 0, 0.42);
+    opacity: 0;
+    transform: translateY(-14px) scale(0.98);
+    transform-origin: top right;
+    pointer-events: none;
+    transition:
+      opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .musicbar__panel::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(177, 58, 52, 0.52), rgba(176, 141, 60, 0.28), transparent 82%);
+    pointer-events: none;
+  }
+
+  .musicbar__panel[data-state="open"] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    box-shadow: 0 36px 62px rgba(0, 0, 0, 0.46);
+  }
+
+  .musicbar__body {
+    position: relative;
+    padding: 22px 18px 18px;
+    display: grid;
+    gap: 12px;
+    background:
+      radial-gradient(circle at top right, rgba(176, 141, 60, 0.08), transparent 34%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24%);
+  }
+
+  .musicbar__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 116px;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .musicbar__copy {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .musicbar__art-shell {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      radial-gradient(circle at top right, rgba(176, 141, 60, 0.18), transparent 32%),
+      rgba(255, 255, 255, 0.02);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .musicbar__art-shell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 36%),
+      linear-gradient(0deg, rgba(7, 7, 12, 0.34), transparent 42%);
+    pointer-events: none;
+  }
+
+  .musicbar__art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .musicbar__label,
+  .musicbar__pill,
+  .musicbar__volume-label,
+  .musicbar__volume-mark {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .musicbar__label {
+    color: var(--crimson);
+  }
+
+  .musicbar__track-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 0.95;
+    color: var(--text);
+  }
+
+  .musicbar__track-album {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .musicbar__track-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .musicbar__pill {
+    padding: 6px 9px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(232, 228, 220, 0.42);
+  }
+
+  .musicbar__actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .musicbar__action {
+    min-height: 42px;
+    padding: 0 12px;
+    border: 1px solid rgba(177, 58, 52, 0.26);
+    background: rgba(177, 58, 52, 0.12);
+    color: var(--text);
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+  }
+
+  .musicbar__action--icon {
+    padding: 0;
+  }
+
+  .musicbar__action-icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(12%) saturate(170%) hue-rotate(334deg) brightness(106%) contrast(90%);
+  }
+
+  .musicbar__action:hover:not(:disabled) {
+    border-color: rgba(177, 58, 52, 0.46);
+    background: rgba(177, 58, 52, 0.2);
+  }
+
+  .musicbar__action:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+
+  .musicbar__action--ghost {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .musicbar__action--ghost:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .musicbar__action--link {
+    border-color: rgba(176, 141, 60, 0.24);
+    background: rgba(176, 141, 60, 0.12);
+    color: rgba(232, 228, 220, 0.92);
+  }
+
+  .musicbar__action--link:hover {
+    border-color: rgba(176, 141, 60, 0.42);
+    background: rgba(176, 141, 60, 0.18);
+  }
+
+  .musicbar__volume {
+    display: grid;
+    gap: 8px;
+  }
+
+  .musicbar__volume-label {
+    color: rgba(232, 228, 220, 0.42);
+  }
+
+  .musicbar__volume-track {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .musicbar__volume-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(232, 228, 220, 0.26);
+  }
+
+  .musicbar__volume-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.78;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(12%) saturate(170%) hue-rotate(334deg) brightness(106%) contrast(90%);
+  }
+
+  .musicbar__volume-input {
+    width: 100%;
+    accent-color: var(--crimson);
+    cursor: pointer;
+  }
+
+  @media (max-width: 540px) {
+    .musicbar__tooltip {
+      display: none;
+    }
+
+    .musicbar__panel {
+      position: fixed;
+      top: calc(var(--nav-height) + env(safe-area-inset-top) + 10px);
+      right: max(10px, env(safe-area-inset-right));
+      left: max(10px, env(safe-area-inset-left));
+      width: auto;
+      max-height: calc(100dvh - var(--nav-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 24px);
+      overflow: auto;
+      border-radius: 18px;
+      transform-origin: top center;
+    }
+
+    .musicbar__header {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .musicbar__art-shell {
+      width: min(132px, 38vw);
+    }
+
+    .musicbar__actions {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .musicbar__action--link {
+      grid-column: 1 / -1;
+    }
+
+    .musicbar__body {
+      padding: 18px 16px 16px;
+      gap: 14px;
+    }
+
+    .musicbar__track-title {
+      font-size: 28px;
+    }
+
+    .musicbar__track-album {
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .musicbar__pill {
+      padding: 5px 8px;
+    }
+
+    .musicbar__action {
+      min-height: 46px;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+    }
+
+    .musicbar__volume-track {
+      gap: 8px;
+    }
+
+    .musicbar__volume-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .musicbar__panel {
+      top: calc(var(--nav-height) + env(safe-area-inset-top) + 8px);
+      right: max(8px, env(safe-area-inset-right));
+      left: max(8px, env(safe-area-inset-left));
+      max-height: calc(100dvh - var(--nav-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 18px);
+      border-radius: 14px;
+    }
+
+    .musicbar__body {
+      padding: 16px 14px 14px;
+    }
+
+    .musicbar__track-title {
+      font-size: 24px;
+    }
+
+    .musicbar__track-meta {
+      gap: 6px;
+    }
+
+    .musicbar__actions {
+      gap: 6px;
+    }
+
+    .musicbar__action {
+      min-height: 44px;
+      padding: 0 10px;
+    }
+
+    .musicbar__art-shell {
+      width: min(118px, 36vw);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .musicbar__panel {
+      transition: none;
+      transform: translateY(0) scale(1);
+    }
+  }
+</style>

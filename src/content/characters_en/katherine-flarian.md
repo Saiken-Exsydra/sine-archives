@@ -17,7 +17,7 @@ eyes: "Gray, clear and cool; low light makes them appear almost colorless"
 dress: "Custom-tailored lab coats cut for field movement and formal office alike; dark fitted clothing beneath; gloves at active sites; personal carry of medication, analog notation pads, and isolation instruments"
 residence: "Kalt'sen secure quarters, Pluribus Hill lower administrative ring; frequent rotation through Stasis field sites"
 occupation: "Continuity Architect, SiNE Stasis Continuity Office (S-AE)"
-summary: "A non-Redactor whose body was damaged by the Himmelreich incident until it became sensitive to continuity failure. She turned that injury into a discipline and is now one of Stasis's most important experts in stopping contradiction from spreading."
+summary: "She learned the sound reality makes when it begins to disagree with itself, and made a vocation of listening first."
 tags: ["SiNE", "Stasis", "Continuity-Sensitive", "Vel'hara", "Himmelreich", "Stabilistics"]
 status: "public"
 created: "2026-05-10"

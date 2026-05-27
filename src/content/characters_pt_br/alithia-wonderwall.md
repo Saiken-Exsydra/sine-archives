@@ -8,7 +8,7 @@ affiliation: "House Wonderwall (linha principal, líder política de facto); Imp
 house: "Wonderwall (origem no ramo Rae; linha principal por casamento)"
 rank: "Redactor classe-Radiance - Anchor de Revelation"
 registry_status: "Publicamente reconhecida como principal representante da House Wonderwall; em privado, reconhecida pela revisão da Casa e da Church como um caso estável de fusão divina sem precedentes conhecidos"
-designation: "The Second Radiance"
+designation: "A Segunda Radiancia"
 height: "Não registrado publicamente"
 build: "Estrutura delicada, postura precisa e imóvel de propósito; se move como alguém que nunca desperdiça ênfase"
 complexion: "Pele pálida; limpa no austero estilo costeiro do norte dos Rae"
@@ -17,7 +17,7 @@ eyes: "Normalmente dentro dos padrões humanos; sob Revelation ativa, brilham em
 dress: "Branco, prata, azul discreto e preto formal - nobre sem teatralidade"
 residence: "Propriedades principais dos Wonderwall; presença frequente do Estado em Kalt'sen"
 occupation: "Representante do Senado e principal autoridade pública da House Wonderwall"
-summary: "Luz dos Wonderwall, a Reencarnação da First Radiance."
+summary: "Feita de memoria, mas humana ate o fim; calor onde sua casa esperava milagre, vida onde o luto queria retorno."
 tags: ["Wonderwall", "Rae", "SiNE", "Radiance", "Revelation", "First Radiance", "Senate", "Kalt'sen", "Divine Vessel", "A'licia"]
 status: "public" 
 created: "2026-05-14"

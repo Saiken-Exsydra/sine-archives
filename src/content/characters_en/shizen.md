@@ -10,7 +10,7 @@ domain: "Life"
 church_name: "The Instrument of Life"
 principle: "Cweornríse"
 keeper_name: "That Which Came Uninvited"
-summary: "Where life took root, it did so inside the quiet consent of Shizen's keeping."
+summary: "Life took root in the shelter of her consent and kept growing because she loved it enough not to let go."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Emergence", "Life", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

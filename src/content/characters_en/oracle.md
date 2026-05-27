@@ -10,7 +10,7 @@ domain: "Foresight"
 church_name: "The Instrument of Foresight"
 principle: "Forðgesceaft"
 keeper_name: "That Which Knew Before It Was Asked"
-summary: "Not prophecy, but the world's own leaning felt clearly enough to know what almost comes next."
+summary: "Not prophecy, but the almost-heard lean of the world toward what comes next."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Foresight", "Clairvoyance", "Divination", "Choir Penitent", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

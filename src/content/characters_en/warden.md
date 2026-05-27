@@ -10,7 +10,7 @@ domain: "Order / Justice"
 church_name: "The Instrument of Order"
 principle: "Dómweard"
 keeper_name: "That Which Remembered Everything"
-summary: "He kept a shared world from becoming war, teaching difference how to remain in one field."
+summary: "The bond that kept difference from becoming war."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Aegis", "Justice", "Vigilance", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

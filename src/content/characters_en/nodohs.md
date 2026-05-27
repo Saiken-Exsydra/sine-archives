@@ -10,7 +10,7 @@ domain: "Death"
 church_name: "The Instrument of Death"
 principle: "Endegemearc"
 keeper_name: "That Which Gave Chase"
-summary: "Under this law, death was not negation but the opening by which life could continue elsewhere."
+summary: "Death, under his hand, was not refusal but release."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Mortality", "Death", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

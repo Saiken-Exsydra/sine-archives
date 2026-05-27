@@ -6,13 +6,18 @@
     "check:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs --check",
     "check:text-encoding": "node scripts/pt-br-encoding-guard.mjs --check",
     "dev": "astro dev",
-    "build": "npm run check:pt-br-fallbacks && npm run check:text-encoding && astro build",
+    "build": "npm run songs:generate && npm run check:pt-br-fallbacks && npm run check:text-encoding && astro build",
     "fix:text-encoding": "node scripts/pt-br-encoding-guard.mjs --fix",
     "seed:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs",
+    "songs:generate": "node scripts/generate-song-metadata.mjs",
+    "songs:update": "node scripts/update-song-metadata.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.18.1"
+    "astro": "^5.18.1",
+    "fast-glob": "^3.3.3",
+    "music-metadata": "^11.12.3",
+    "node-id3": "^0.2.9"
   }
 }

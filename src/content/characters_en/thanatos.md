@@ -10,7 +10,7 @@ domain: "Ascension"
 church_name: "The Instrument of Ascension"
 principle: "Weaxanfæðm"
 keeper_name: "That Which Already Had Them"
-summary: "Sentience did not only awaken under this law; it was given a distance toward which to grow."
+summary: "The distant completion every sentient thing aches toward, whether it knows the ache or not."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Elysium", "Ascendancy", "Apocachynthion", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

@@ -17,7 +17,7 @@ eyes: "Deep near-black at rest; violet-crimson with fractal petal-flares under F
 dress: "Long sleeves at all times, regardless of climate. Formal domestic attire of Hikari high-house tradition - dark colors, impeccable condition."
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
 occupation: "Household attendant - personal attendance to Ec'lesia Yal'ara Wonderwall"
-summary: "A household attendant from Hikari carrying an Abyssal Flower inside her body. What should have turned her into a horror story has instead become one of the quietest and most protective presences in the Wonderwall household."
+summary: "A tenderness cultivated in impossible depth; graceful enough to seem harmless, and strange enough that horror blooms only after one has already leaned close."
 tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregistered"]
 status: "public"
 created: "2026-03-30"

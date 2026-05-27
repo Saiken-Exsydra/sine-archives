@@ -4,24 +4,24 @@ type: "Personagem"
 age: "22 (na epoca do registro, 2200)"
 birth_year: "2178"
 birthplace: "Kalt'sen, Regiao Central, Imperio de Synus"
-affiliation: "Apocachynthion (provisorio)"
+affiliation: "Apocachynthion (sob revisao restrita)"
 house: "Wonderwall (ramo cadete, linhagem materna)"
 rank: "Quill (Provisorio)"
-registry_status: "Registrada - admissao suspensa, arquivo aberto"
-designation: "A Cor Que Restou Depois Da Luz"
+registry_status: "Registrada - admissao comum suspensa, retida sob observacao restrita"
+designation: "A cor sem tinta"
 height: "164 cm"
 build: "Esguia"
 complexion: "Muito palida"
-hair: "Preto profundo; luminescencia fria rosa-azulada sob alto esforco"
-eyes: "Cinza-escuros; aneis concentricos mutaveis sob alto esforco"
-dress: "Exclusivamente preto; gola alta, camadas sobrepostas, tecido opaco"
-residence: "Propriedade Wonderwall, distrito residencial leste, Kalt'sen"
-occupation: "Pesquisadora particular"
-summary: "Uma portadora de Luz Inkless da linhagem Wonderwall que vive com cuidado, pensa com precisao e trata o proprio poder perigoso como um problema a ser sobrevivido antes de poder ser aceito."
-tags: ["Synus", "Wonderwall", "Redactor", "Radiance", "Inkless", "Kalt'sen", "Sai'ken Ex'sydra", "Hisui Kirasagi"]
+hair: "Castanho quente; fios dourado-palidos nas temporas apos pratica de Stilllight"
+eyes: "Castanhos com pontos ambar; aneis dourado-palidos durante roteamento ativo"
+dress: "Amarelos quentes, creme, marrom suave, verde-palido, lencos estampados; cinza da Academia durante pratica"
+residence: "Propriedade Wonderwall, distrito residencial leste, Kalt'sen; residencia controlada da Academia em Lon'drina durante os termos ativos"
+occupation: "Estudante provisoria e assistente de calibracao"
+summary: "Afetuosa, curiosa, falante e dificil de intimidar; carrega Stilllight, nao Light, e se mantem estavel ficando perto da vida humana comum."
+tags: ["Synus", "Wonderwall", "Redactor", "Stilllight", "Inkless", "Kalt'sen", "Lon'drina", "Sai'ken Ex'sydra", "Hisui Kirasagi"]
 status: "public"
 created: "2026-02-12"
-updated: "2026-05-22"
+updated: "2026-05-27"
 codex_file: "Eclesia Wonderwall Dossier.md"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
@@ -32,88 +32,87 @@ hero_gallery:
   - "../../assets/uploads/characters/char-eclesia-wonderwall-hero-arc.png"
 ---
 
-> *"Ela transformou resistencia em metodo. E por isso que ainda continua sendo ela mesma."*
-> - Avaliacao privada Wonderwall, ano 2200
+> *"Ela entra em uma sala como se o mundo estivesse esperando sua chegada, e a maioria das salas, para meu continuo aborrecimento, concorda."*
+> - Anotacao privada Wonderwall, ano 2200
 
 ---
 
-## O Que Ela E
+## Visao Geral
 
-Ec'lesia Yalara Wonderwall e uma jovem Redactor de um ramo cadete da House Wonderwall cujo arquivo publico ainda falha em descrever a gravidade real de sua condicao.
+Ec'lesia Yalara Wonderwall e uma Wonderwall de ramo cadete cujo arquivo foi lido errado por anos exatamente do jeito que instituicoes costumam errar diante de pessoas incomuns: confundiram o limite das proprias ferramentas com a verdade sobre ela.
 
-Ela e oficialmente classificada como **Radiance** e marcada como **Inkless**. O primeiro rotulo e verdadeiro. O segundo e enganoso, no modo como rotulos institucionais costumam ser quando um caso excede as ferramentas usadas para classifica-lo.
+Oficialmente ela ainda esta marcada como **Inkless**. Isso nao significa ausencia de Anchor. Significa que os instrumentos comuns de Redactory falham ao tentar le-la corretamente. O que eles chamam de ausencia e, na verdade, **Stilllight**: uma Anchor derivada de classe Radiance voltada nao para a luz como revelacao ou forca radiante, mas para a luz cuja mocao foi interrompida.
 
-Ec'lesia nao e alguem sem Anchor. Ela e chamada de Inkless porque os instrumentos usados para le-la nao conseguem identificar com clareza aquilo que ela carrega. Sua Redactory se expressa atraves da Luz em uma profundidade que a estrutura comum nao le bem, entao a instituicao registrou a falha do proprio metodo como se fosse uma caracteristica dela.
+Essa diferenca importa. Ec'lesia nao e uma segunda E'lla. Nao e outro caso primario de Light. E um tipo diferente de problema Wonderwall.
 
-Esse erro importa. Ele moldou a maneira como outras pessoas a abordam. Tambem deixou Ec'lesia fazendo sozinha grande parte do trabalho real de interpretacao.
+## Personalidade
 
----
+A versao antiga de Ec'lesia como alguem quieta, retraida e sempre escondida esta errada.
 
-## Familia e Ramo
+Ec'lesia e brilhante, afetuosa, socialmente destemida, intrometida no melhor sentido, e quase agressivamente disposta a conhecer pessoas. Ela lembra nomes, faz perguntas demais, coleciona amigos com eficiencia imprudente e tem o habito de decidir que pessoas solitarias nao devem continuar solitarias por muito tempo. Fala com facilidade, ri com facilidade e tem muito pouco respeito automatico por solenidade.
 
-Ec'lesia nasceu em Kalt'sen em um ramo cadete da linhagem Wonderwall que se separou da casa principal ha cerca de dois seculos. O ramo manteve o nome da familia, parte do peso social ligado a ele e o suficiente da heranca da linhagem para que algo raro reaparecesse nela.
+Esse calor nao e superficial. Ela e mais observadora e mais disciplinada do que sua maneira sugere no primeiro contato. Sua inteligencia e relacional e experimental: aprende notando o que sobra depois de um evento, fazendo perguntas em excesso e montando modelos praticos a partir de informacao parcial.
 
-Seu pai, Gal'ahad Kjackter, era engenheiro civil e nao era Redactor. Morreu em 2189 durante o colapso do Tunel Krel. Sua morte continua sendo a ferida emocional mais profunda da vida de Ec'lesia e uma das razoes mais claras pelas quais ela aprendeu tao cedo a dobrar o luto para dentro.
+Sua alegria publica tambem parece ajuda-la a permanecer estavel. Ruido, conversa, tarefas, grupos de estudo, refeicoes compartilhadas, fofoca e contato humano comum a mantem ancorada na vida vivida. O silencio a incomoda muito antes de ela conseguir explicar por que.
 
-Sua mae, Al'yana Wonderwall-Kjackter, e uma praticante modesta do dominio Reflection que entende que a filha e incomum sem compreender totalmente a escala do caso. Sua irma mais nova, El'ytra, carrega o eco da familia da forma mais silenciosa e comum entre os descendentes.
+## Origem
 
-Esse ramo nao vive como a linha central dos Wonderwall. Nao possui grande poder institucional proprio. E uma casa respeitavel em Kalt'sen carregando mais estranheza herdada do que jamais esteve preparada para nomear.
+Ec'lesia nasceu em **2178**, em **Kalt'sen**, dentro de um ramo cadete Wonderwall que mantinha o nome da familia sem manter o peso politico da linha principal. Esse ramo produziu vidas comuns por geracoes: Redactors modestos, nao-Redactors, trabalhadores civis, gente de casa - e depois Ec'lesia.
 
----
+Seu pai, **Gal'ahad Kjackter**, era engenheiro civil da Autoridade Imperial de Trilhos. Morreu no **colapso do Tunel Krel** em 2189. Sua influencia, porem, permaneceu. Foi ele quem lhe ensinou a pensar em lampadas, tuneis, estruturas de suporte e na forma como a luz diz onde o mundo ainda concorda em existir. Essa linguagem acabou importando mais para sua Anchor do que qualquer um percebeu no inicio.
 
-## Seu Poder
+Sua mae, **Al'yana Yalara Wonderwall-Kjackter**, e uma Redactor de Anchor Reflection e ex-assistente de instrucao da Academia de Lon'drina. Ela sabe que a filha e extraordinaria. Nao entende por completo aquilo que a observa atraves das frestas.
 
-A Redactory de Ec'lesia e de expressao Luz e severa em seus efeitos praticos. Ao redor dela, a luz pode ser puxada para dentro, rarear, endurecer brevemente em estrutura ou se libertar de modo violento depois que pressao demais foi retida por tempo demais.
+Sua irma mais nova, **El'ytra**, importa porque Ec'lesia nao e so uma anomalia. E uma irma mais velha, uma leitora de vozes teatrais ruins e uma pessoa ainda presa ao amor comum.
 
-Os padroes repetidamente associados a ela incluem:
+## Anchor e Habilidades
 
-- luz ambiente sendo puxada para perto do proprio corpo ate o espaco proximo parecer anormalmente escuro;
-- breve solidificacao da luz em formas capazes de manter estrutura ou suportar peso;
-- distorcao espacial sob alto esforco, quando distancia, bordas e orientacao deixam de parecer confiaveis;
-- descarga involuntaria apos retencao prolongada, as vezes como clarão e as vezes como liberacao concentrada.
+A verdadeira Anchor de Ec'lesia e **Stilllight**.
 
-Sua relacao com essas habilidades e definida menos por ambicao do que por gerenciamento.
+Stilllight nao e Light em si. E radiancia interrompida, resfriada, suspensa, condensada ou preservada depois do momento em que ja deveria ter se dispersado. Em termos praticos, Ec'lesia pode fazer a luz parar de se comportar como luz normal.
 
-Ela nao trata o proprio poder com romantismo. Nao confia nele o suficiente para isso. Ela o estuda, o restringe, mede suas condicoes e avanca devagar de proposito, porque ja aprendeu que crescimento rapido pode significar pressao mais alta, consequencias piores e menos controle. As roupas pretas, os quartos escuros, as lampadas indiretas e as rotinas disciplinadas nao sao escolhas esteticas. Sao como ela se mantem um passo a frente daquilo que o proprio corpo pode fazer.
+Isso pode aparecer como:
 
-Ec'lesia e poderosa, mas nao vive como alguem que aproveita o proprio poder. Vive como alguem que o carrega com cuidado.
+- contas ou poeira de luz dourado-palida suspensas mesmo depois de a fonte mudar;
+- iluminacao fria que parece quente, mas se sente estranhamente quieta;
+- paineis, hastes ou fios finos de radiancia condensada;
+- pos-imagens preservadas no espaco depois que a atencao ja se moveu;
+- reflexos atrasados e costuras luminosas onde um campo de influencia termina e outro comeca.
 
----
+Ela e mais forte onde a luz ja existe e mais fraca em escuridao total, a menos que leve uma fonte consigo. Seu trabalho tambem e mais confiavel em condicoes fechadas do que em campo aberto. Stilllight nao e controle elemental amplo. E uma forma muito especifica e cada vez mais perigosa de fazer a radiancia permanecer quieta.
 
-## Como Ela Se Comporta
+## Situacao Institucional
 
-Ec'lesia e quieta, exata e altamente autocontrolada. Nao desperdica fala. Nao enfeita o proprio pensamento. E o tipo de pessoa que prefere chegar sozinha a uma verdade dificil do que aceitar uma explicacao facil vinda de alguem em quem nao confia.
+Ec'lesia entrou no processo de admissao da **Academia de Lon'drina** em **2196**. A Academia conseguiu detectar pressao de Radiance, contradicao termica e efeitos de persistencia, mas nao uma Anchor convencional. O resultado foi uma **certificacao provisoria de Quill**, a classificacao Inkless e a remocao de sua progressao comum.
 
-Sua inteligencia e melhor descrita como precisa, nao apenas alta. Ela observa com paciencia, descarta conclusoes ruins com rapidez e guarda apenas o que sobrevive ao contato repetido com a experiencia. Esse habito a tornou mais perceptiva sobre a propria condicao do que varias instituicoes que teoricamente a supervisionam.
+Ela nao foi expulsa.
 
-Quem le sua reserva como fragilidade geralmente a entende mal. Ela nao e delicada em carater. Ela e cuidadosa porque cuidado e o que a mantem funcional.
+Em vez disso, a Academia a reteve sob colocacao observacional restrita no **Anexo de Calibracao de Radiance**, onde hoje atua como estudante provisoria e assistente de calibracao. Oficialmente, ajuda a testar lentes, placas de resposta, arranjos de pos-imagem e outros instrumentos de medicao. Nao oficialmente, tornou-se parte da ecologia social do Anexo, para irritacao de qualquer pessoa que prefira hierarquias arrumadas.
 
-Existe calor nela, mas normalmente em formas pequenas e sem exibicao. Ela tende mais a proteger alguem em silencio do que a conforta-lo de modo performatico. Ate sua solidao e menos melancolia dramatica do que preferencia operacional: menos luzes, menos variaveis, menos erros.
+Ela nao esta liberada para campo. Pratica de alto output continua restrita. Mas tambem nao esta selada em isolamento. Estuda, assiste a mais aulas do que tecnicamente deveria, ajuda no trabalho de calibracao e continua se tornando util em salas que ainda nao sabem bem o que fazer com ela.
 
----
+## Relacoes Importantes
 
-## Vida na Propriedade
+**Sai'ken Ex'sydra** continua designado para sua proximidade. Publicamente ele e seguranca domestica e apoio de ligacao. Na verdade, tambem esta ali porque sua arquitetura consegue perceber perturbacao de cadencia cedo - e porque, se Ec'lesia algum dia entrar em uma janela de conversao irreversivel, talvez ele precise mata-la antes que o evento estabilize.
 
-Ec'lesia vive no distrito residencial leste de Kalt'sen, na propriedade do ramo cadete Wonderwall, onde sua vida presente se estreitou em estudo, rotina controlada e resistencia privada.
+**Hisui Kirasagi** e uma das formas mais claras de cuidado comum na vida de Ec'lesia. Ela ve de perto o custo diario da estabilidade da garota.
 
-Duas pessoas importam para essa rotina de um modo que a versao publica de seu arquivo nao deveria ignorar.
+**Em'manuel Kael Wonderwall** observa seu caso com muito cuidado a distancia. Ele entende mais da estrutura subjacente do que quase qualquer pessoa viva, e e exatamente por isso que sua distancia importa.
 
-**Sai'ken Ex'sydra** atua como especialista de seguranca da propriedade. Publicamente ele esta ali como detalhe protetivo; na pratica ele se tornou parte da estrutura ao redor da vida diaria dela. Sua firmeza, sua vigilancia e sua capacidade incomum de permanecer calmo diante de condicoes anormais fazem dele uma das poucas presencas em seu ambiente que nao agrava a atmosfera ao redor dela. Ec'lesia talvez nao saiba tudo o que ele e, mas sabe que sua presenca muda uma sala.
+**E'lla Rae Wonderwall** nao e sua duplicata nem seu molde. Se E'lla representa Light engenheirada em profundidade catastrofica, Ec'lesia representa uma convergencia Wonderwall natural que se tornou algo adjacente a Light.
 
-**Hisui Kirasagi** serve em atendimento pessoal a Ec'lesia dentro da casa. Mais do que uma criada, ela faz parte do ritmo intimo da vida contida de Ec'lesia: apoio pratico, companhia silenciosa e uma das poucas pessoas proximas o bastante para testemunhar quanto gerenciamento os dias comuns realmente exigem.
+## Papel na Historia
 
-Isso importa porque Ec'lesia nao e uma figura isolada flutuando em abstracao. Ela vive dentro de uma ecologia domestica de cuidado, vigilancia, contencao e lealdades incomuns.
+Ec'lesia importa porque quebra toda categoria arrumada ao seu redor.
 
----
+Ela e um caso natural de heranca Wonderwall vindo do ramo errado da familia. E socialmente vibrante onde esperavam reclusao. E emocionalmente direta sem ser simples. Nao e um arquivo vazio de Inkless, nao e uma usuaria convencional de Radiance e nao e outra repeticao de Abyssal Light.
 
-## Condicao Atual
+Ela e uma jovem construindo uma vida em voz alta o suficiente para continuar humana enquanto algo no escuro tenta aprender a permanecer por meio dela.
 
-Institucionalmente, Ec'lesia continua sendo um caso sem resolucao. Possui certificacao provisoria de Quill, mas sua admissao foi suspensa depois que sessoes supervisionadas produziram Depth demais, recuperacao demais e um caso que a instituicao nao soube nomear corretamente.
+## Lore Profundo
 
-Em privado, ela continuou o trabalho assim mesmo.
+O perigo mais fundo em torno de Ec'lesia nao e output bruto. E a relacao entre **Stilllight** e o **Remainder**.
 
-Ela le, escreve e estuda a si mesma com a disciplina de alguem que entende que ignorancia nao e seguranca. Seus cadernos, seus habitos e suas restricoes autoimpostas apontam todos para o mesmo fato: ela sabe que sua condicao e perigosa e pretende sobreviver a ela sem entregar a si mesma a pessoas que so a compreendem pela metade.
+Stilllight cria radiancia interrompida: luz que permanece no intervalo em que o movimento ja deveria ter terminado. Isso torna Ec'lesia incomumente compativel com estrutura de fresta e com aquilo que os arquivos antigos Wonderwall chamam de Remainder. Em cenarios de falha mais tardios, o medo nao e apenas perda de controle. O medo e que seu Dive possa ser empurrado para **Luminant Shorefall**, permitindo que o Remainder a use como vetor de acesso em direcao a First Radiance.
 
-E isso que a torna convincente.
-
-Ec'lesia nao e apenas uma jovem estranha com Luz incomum. Ela e um caso severo de Redactory, uma Inkless mal interpretada, uma Wonderwall de ramo cadete sob pressao crescente e uma pessoa construindo a propria estrutura de sobrevivencia porque ninguem mais ainda lhe ofereceu uma que ela consiga confiar.
+E por isso que ela e vigiada tao de perto.

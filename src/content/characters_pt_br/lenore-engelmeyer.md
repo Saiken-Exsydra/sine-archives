@@ -8,7 +8,7 @@ affiliation: "Apocachynthion (licenciada); Casa Engelmeyer (linhagem principal r
 house: "Engelmeyer (linhagem principal, reintegrada em 2199 — anteriormente ramo cadete Voren)"
 rank: "Quill"
 registry_status: "Registrada — admissão em 2193; certificação Quill emitida em 2195; licença operacional condicional ativa"
-designation: "Quiet Moon"
+designation: "Fome palida de lua"
 height: "169 cm"
 build: "Leve; compacta sem parecer frágil; se move como alguém que já decidiu antes quanto espaço pretende ocupar"
 complexion: "Clara; uniforme — sem sinais superficiais de coerência durante expressão de habilidade. A ausência de sinais é, por si só, um sinal para quem sabe procurar."
@@ -17,7 +17,7 @@ eyes: "Cinza muito claro — quase sem cor em ambientes pouco iluminados. Todo a
 dress: "Branco por preferência — linhos claros, lãs leves, materiais que não chamam atenção para si"
 residence: "Vel'hara, faixa ocidental (realocada em 2199)"
 occupation: "Praticante independente — licenciada para atuação operacional sob termos condicionais"
-summary: "O silêncio dos inocentes."
+summary: "Encantadora, cuidadosa, impossivel de comover; veste a civilidade como seda sobre uma fome de paciencia exemplar."
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"

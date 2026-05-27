@@ -6,7 +6,7 @@ rank: "Page Primordial"
 designation: "The Grammar Beneath the World"
 registry_status: "Not registered - predates the concept of registration"
 occupation: "Witness - constrained observation and bounded intervention"
-summary: "The Page Primordial of Terra, less a person on the world than the world's own deepest living mind. Vael'Theryn can perceive Terra's branching futures, but acts only within a severe self-imposed limit shaped by the cost of past overreach."
+summary: "The oldest mind on Terra, watching with a restraint severe enough to pass for mercy."
 tags: ["Vael'Theryn", "Page Primordial", "Time", "Terra", "Archtype War", "Constraint", "Keepers of Before", "Skyphons"]
 status: "public"
 created: "2026-03-30"

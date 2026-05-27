@@ -10,7 +10,7 @@ domain: "Binding / Gravity"
 church_name: "The Instrument of Binding"
 principle: "Healdsweord"
 keeper_name: "That Which Held the World to Itself"
-summary: "Not strength but constancy: the patience by which a planet remains one thing instead of fragments."
+summary: "Gravity as devotion; the long, quiet refusal to let a world come apart."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Constraint", "Binding", "Gravity", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

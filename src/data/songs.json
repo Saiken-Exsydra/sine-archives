@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Glass Server Archive",
+    "artist": "LeviG",
+    "album": "Glass Server Archive",
+    "year": null,
+    "track": null,
+    "duration": 181.92,
+    "src": "/music/tracks/Glass%20Server%20Archive.mp3",
+    "cover": "/music/covers/tracks--Glass%20Server%20Archive.jpg"
+  },
+  {
+    "title": "Moonsick",
+    "artist": "Skadi",
+    "album": "Moonsick",
+    "year": null,
+    "track": null,
+    "duration": 289.94,
+    "src": "/music/tracks/Moonsick.mp3",
+    "cover": "/music/source-covers/gravitas-cover.png"
+  },
+  {
+    "title": "Sistera No 1",
+    "artist": "Skadi",
+    "album": "Gravitas",
+    "year": null,
+    "track": null,
+    "duration": 234.91,
+    "src": "/music/tracks/Sistera%20N%C2%B0%201.mp3",
+    "cover": "/music/source-covers/sistera-no-1-cover.png"
+  },
+  {
+    "title": "Tacet Lapis",
+    "artist": null,
+    "album": null,
+    "year": null,
+    "track": null,
+    "duration": 288,
+    "src": "/music/tracks/Tacet%20Lapis.mp3",
+    "cover": "/music/source-covers/tacet-lapis-cover.png"
+  }
+]

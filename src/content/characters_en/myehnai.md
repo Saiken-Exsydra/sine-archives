@@ -10,7 +10,7 @@ domain: "Light"
 church_name: "The Instrument of Light"
 principle: "Leohtmael"
 keeper_name: "That Which Filled What Was Dark"
-summary: "A Skyphon of Light regulation from the world before the Fracture. Myehnai did not create moonlight, but she governed how light behaved through the world so completely that living things learned rhythm, hour, and atmosphere through her law."
+summary: "Light in her keeping was never brightness alone, but rhythm, hour, and the tenderness of recurrence."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Luminescent Aria", "Light", "Luminance", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from "astro:transitions";
+import MusicPlayer from "../../components/MusicPlayer.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
 import { buildOptimizedImageBundle, getImageKind } from "../../utils/optimized-images";
@@ -129,6 +131,7 @@ const sectionEyebrow = locale === "pt-br"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
       rel="stylesheet"
     />
+    <ClientRouter />
     <style is:global>
       :root {
         --bg:         #06060b;
@@ -845,6 +848,7 @@ const sectionEyebrow = locale === "pt-br"
           <span class="nav__crumb-sep">></span>
           <span class="nav__crumb-cur">{copy.section}</span>
         </span>
+        <MusicPlayer locale={locale} />
         <button
           class="nav__fullscreen-btn"
           id="nav-fullscreen"

@@ -16,7 +16,7 @@ eyes: "Dark brown under ordinary conditions; deep red-gold at fourth-hand intens
 dress: "Plain black cassock, iron rosary, red cord of office at left wrist; blackened pre-modern plate in the field"
 residence: "Saint Veyran fortress-priory, Kalt'sen, when not deployed under sealed order"
 occupation: "Rector-Ascendant of the Obsidian Rite; one of the Church's most restricted Seraphic field assets"
-summary: "A legendary Obsidian Rite field priest and one of the Church's rare Answered. Through him, Auctoriel's domain of Dominion becomes so direct that command, restraint, and judgment stop feeling symbolic and start behaving like physical law."
+summary: "Gentle until judgment is required; then even the air around him remembers how to kneel."
 tags: ["Church", "Obsidian Rite", "Auctoriel", "Seven Answers", "Answered", "Dominion", "Beatified", "Sundersaint", "Kalt'sen"]
 status: "public"
 created: "2026-05-15"

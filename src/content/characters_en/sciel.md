@@ -10,7 +10,7 @@ domain: "Truth"
 church_name: "The Instrument of Truth"
 principle: "Sôðcwide"
 keeper_name: "That Which Will Not Be Otherwise"
-summary: "Before any law could govern, reality itself had to remain real beneath her witness."
+summary: "Where all things threatened to become claim and counterclaim, she was the fact that remained."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Verum", "Truth", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"

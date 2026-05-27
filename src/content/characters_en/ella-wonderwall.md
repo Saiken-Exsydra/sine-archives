@@ -8,7 +8,7 @@ affiliation: "House Wonderwall (primary line); SiNE"
 house: "Wonderwall (primary line placement)"
 rank: "Radiance-class Redactor - Abyssal Anchor, operational license unconditional"
 registry_status: "Registered - Radiance-class, Light Anchor. KL-83 in restricted files"
-designation: "The Light That Came Back Different"
+designation: "The Luminant Ataraxia"
 height: "170 cm"
 build: "Very thin; long-fingered; superficially delicate"
 complexion: "Pale"
@@ -17,7 +17,7 @@ eyes: "Pale metallic pink-blue under active Light use"
 dress: "Black exclusively; light-responsive fabrics used as control apparatus"
 residence: "Primary Wonderwall holdings; extended operational presence in Kalt'sen and Hora'veil"
 occupation: "SiNE Redactor; internal successor candidate"
-summary: "The final success of Project Kaleidoscope and one of the strongest Light Redactors of her generation. She was made to answer an old Wonderwall obsession, survived a disastrous contact with the Shore of Light, and now lives under the weight of a history she still has not been told in full."
+summary: "Made from a lost girl's shape and left to survive the peace that followed; she stands at the center of many broken lights, becoming neither the return nor the ruin, but herself."
 image: "../../assets/uploads/characters/char-ella-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
 portrait_gallery:
@@ -105,4 +105,3 @@ She matters because she asks a hard question in human form: what happens when so
 ## Deeper Lore
 
 In deeper Wonderwall interpretation, the White Desert was not only an accident. It may have been E'lla reaching the **Luminant Shore**, the Shore tied to Light, revelation, and impossible visibility. Kaleidoscope may also remain partially active around her as leftover patterning from the earlier subjects, which is why private observers watch for strange reflections, borrowed instincts, and echoes that do not feel fully like her own.
-

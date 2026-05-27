@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import MusicPlayer from "../components/MusicPlayer.astro";
 import {
   getHtmlLang,
   localizeCurrentPath,
@@ -13,6 +15,8 @@ const {
   pageTitle = "SiNE Archives",
   active = "home",
   locale = "en",
+  hideFooter = false,
+  pageClass = "",
 } = Astro.props;
 const siteLocale = locale as SiteLocale;
 const currentPath = Astro.url.pathname;
@@ -38,9 +42,10 @@ const footerText = siteLocale === "pt-br"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
       rel="stylesheet"
     />
+    <ClientRouter />
   </head>
 
-  <body>
+  <body class={pageClass || undefined}>
     <nav class="nav" aria-label="Primary navigation">
       <a class="nav__logo" href={localizedPath(siteLocale, "/")}>
         <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="nav__logo-img" />
@@ -48,6 +53,7 @@ const footerText = siteLocale === "pt-br"
       </a>
 
       <div class="nav__actions">
+        <MusicPlayer locale={siteLocale} />
         <div class="nav__locale-switch" aria-label={siteLocale === "pt-br" ? "Seletor de idioma" : "Language switcher"}>
           {LOCALES.map((targetLocale) => (
             <a
@@ -86,10 +92,12 @@ const footerText = siteLocale === "pt-br"
       <slot />
     </main>
 
-    <footer class="footer">
-      <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="footer__logo" />
-      <span class="footer__text">{footerText}</span>
-    </footer>
+    {!hideFooter && (
+      <footer class="footer">
+        <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="footer__logo" />
+        <span class="footer__text">{footerText}</span>
+      </footer>
+    )}
 
     <script>
       const fullscreenButton = document.querySelector<HTMLButtonElement>("[data-fullscreen-toggle]");
@@ -201,6 +209,7 @@ const footerText = siteLocale === "pt-br"
     display: flex;
     align-items: center;
     gap: 12px;
+    min-width: 0;
   }
 
   .nav__locale-switch {

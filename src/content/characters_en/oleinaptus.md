@@ -10,7 +10,7 @@ domain: "Entropy"
 church_name: "The Instrument of Entropy"
 principle: "Tídmeltan"
 keeper_name: "That Which Was Already There"
-summary: "Decay, in that keeping, was never waste alone but the slow release that makes renewal possible."
+summary: "The slow undoing that keeps the world from drowning in what it can no longer carry."
 tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Dissolution", "Entropy", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"
