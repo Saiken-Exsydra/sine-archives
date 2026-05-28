@@ -20,7 +20,7 @@ summary: "A man trained to serve the sentence, altered by the sight of who burns
 tags: ["Ardeatus", "Marta Chord", "Vhaldr", "Tempered", "Sarn Pell", "Apocachynthion", "Vekrath", "Diplomatic Liaison"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-24"
+updated: "2026-05-27"
 codex_file: "Daniel Degurechaff Dossier.md"
 image: "../../assets/uploads/characters/char-daniel-degurechaff-portrait.png"
 hero_image: "../../assets/uploads/characters/char-daniel-degurechaff-hero.png"
@@ -54,6 +54,14 @@ Daniel was trained inside the Ardeatan system he now spends much of his life cor
 The turning point was **Marta Vesk**, an eleven-year-old child killed in **2154** after officials used the wrong doctrine and the wrong containment response on a Redactory emergence. Daniel protested. The protest was buried.
 
 Instead of walking away, he started collecting proof that Marta was not a one-time tragedy. That archive eventually helped force the political negotiations that produced the **Marta Chord**, ratified in **2171**.
+
+## Apocachynthion Registry Position
+
+**Registry Status:** Unregistered
+**Rank:** Unranked
+**Mark:** No Mark
+**Anchor:** Unassessed; non-applicable
+**Pager Note:** None
 
 ## Abilities
 

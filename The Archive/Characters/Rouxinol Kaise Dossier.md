@@ -1,7 +1,7 @@
 # PERSONAL DOSSIER — RESTRICTED
 ## ROUXINOL KAISE
 **Redactor · Stylus (Mirror Anchor) · Quill (Threshold Anchor) · Bifurcated Architecture · No House Affiliation**
-*Filed by: Apocachynthion, Central Registry — compelled intake completed 2192 · dual certification issued 2197 · file active · conditional operational license on record*
+*Filed by: Apocachynthion, Central Registry — compelled intake completed 2192 · dual certification issued 2197 · file active · Mark 4 under sealed Margins*
 
 ---
 
@@ -17,18 +17,39 @@
 | **Full Name** | Rouxinol Kaise |
 | **Year of Birth** | 2173 (age 27 at time of filing, 2200) |
 | **Birthplace** | Vel'hara (city-state, western band — see Section II) |
-| **Registry Status** | Registered — compelled intake 2192; dual certification issued 2197; conditional operational license active |
+| **Registry Status** | Registered — compelled intake 2192; dual certification issued 2197; Mark 4 active under sealed Margins |
 | **Rank** | Stylus (Mirror Anchor) / Quill (Threshold Anchor) — dual concurrent certification; no prior registry precedent |
 | **Designation** | None — Inkless designation considered and rejected; both Anchors identified, but the architecture producing them has no existing classification framework |
 | **Anchor Stratal Position** | Mirror Anchor: deep but derived, still suspended above the strata. Threshold Anchor: far deeper, likely suspended extremely close to the strata; whether it qualifies as Abyssal remains an open theoretical question. The two Anchors do not rest at the same depth. This distinction is structurally significant and underlies most of the anomalous features documented in this file. |
 | **House** | None |
 | **Residence** | Hora'veil, Southern Region — no fixed address on file; contact maintained through licensed contractor registry |
-| **Occupation** | Independent contractor — licensed for operational engagement under conditional terms |
+| **Occupation** | Independent contractor — Marked for operational engagement under conditional terms |
 | **Build** | Compact; tensile; built for precision rather than force |
 | **Complexion** | Pale olive; under sustained dual-Anchor Dive, faint doubled shimmer visible across vein-lines — secondary-loop routing expressing through surface tissue |
 | **Hair** | Black, straight, shoulder-length; typically bound back during operations |
 | **Eyes** | Passive: dark brown, steady, narrowed at rest. Active (dual-routing state): irised with layered reflection — as though two depths of the same eye are simultaneously present |
 | **Dress** | Close-fitting dark garments, layered protective paneling at torso and forearms. Long-bladed artifact instrument carried in back-worn sheath. Field wraps of treated cloth at wrists — former ceremonial material, function not recorded in her account. |
+
+---
+
+### I.1 — Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** Stylus (Mirror Anchor) / Quill (Threshold Anchor)  
+**Mark:** Mark 4  
+**Open Mark:** None  
+**Margins:** Assignment disclosure within forty-eight hours; lethal outcomes and impression acquisition reported on review schedule; blade impression count change reported immediately; scheduled Depth assessments every six months  
+**Anchor:** Mirror / Threshold  
+**Anchor Reading:** Confirmed / Confirmed  
+**Depth Reading:** Deep in Mirror; Abyssal-adjacent review pending in Threshold  
+**Reach Reading:** Broad, bifurcated, monitored  
+**Registration Tenure:** 8 years  
+**Academy Record:** Compelled intake 2192; dual-track formation; dual certification 2197  
+**Practice Record:** Contractor field work under specialist review  
+**Blots:** Compelled intake initiated after pre-registration dual-routing incident; one civilian death on original field report  
+**Pager Note:** Review  
+**Current Seal:** Council of Volumes dual-certification notation; Hora'veil specialist panel countersignature
 
 ---
 
@@ -194,7 +215,7 @@ The Threshold Anchor's secondary-loop expression during stress is not fully with
 
 The impression-load in the secondary loop degrades its coherence over time. No mechanism for releasing a retained impression has been identified in the assessment record or the available theoretical literature. The long-term structural consequence of continued accumulation is not modelled. The subject has not increased the impression count since 2197.
 
-The stratal depth differential between the two Anchors produces a directional limitation under deep Threshold work. When Rouxinol pushes the Threshold Anchor to significant depth, the foundational pressure of that Anchor's routing pulls the available configuration space in both loops toward more fundamental expressions. The Mirror Anchor, whose correspondence work depends on precise access to derived configurations, loses resolution under this pull � not catastrophically, but measurably. The finer distinctions between correspondence targets become harder to hold. Surface Reading accuracy decreases. Correspondence Memory routing, which relies on the Mirror Anchor navigating derived domain signatures precisely, becomes approximate rather than exact. This is not an Overreach condition and does not carry the same recovery requirements. It is a structural consequence of the two Anchors operating at different depths simultaneously, and it resolves when Threshold Dive depth decreases. It cannot be trained away. It is a feature of the architecture.
+The stratal depth differential between the two Anchors produces a directional limitation under deep Threshold work. When Rouxinol pushes the Threshold Anchor to significant depth, the foundational pressure of that Anchor's routing pulls the available configuration space in both loops toward more fundamental expressions. The Mirror Anchor, whose correspondence work depends on precise access to derived configurations, loses resolution under this pull � not catastrophically, but measurably. The finer distinctions between correspondence targets become harder to hold. Surface Reading accuracy decreases. Correspondence Memory routing, which relies on the Mirror Anchor navigating derived domain signatures precisely, becomes approximate rather than exact. This is not an Overreach condition and does not carry the same recovery requirements. It is a structural consequence of the two Anchors operating at different depths simultaneously, and it resolves when Threshold Dive depth decreases. It cannot be trained away. It is a feature of the architecture.
 
 ---
 
@@ -214,7 +235,7 @@ The Pager division located her through the grey-space contractor network in Hora
 
 Rouxinol was held in the Hora'veil holding facility for forty-one days pending classification. She did not resist registration after the initial contact event. She cooperated with assessment procedures, provided accurate self-reporting on both Anchor domains once formal identification was confirmed, and disclosed the blade and its retention function voluntarily in the first week — before the assessors had independently identified the impression-retention mechanism.
 
-Her cooperation is noted in the file. It did not remove the compelled intake designation, which is a procedural requirement for all cases in which registration occurred through Pager enforcement action. This notation remains in her permanent registry record and affects the terms of her operational license.
+Her cooperation is noted in the file. It did not remove the compelled intake designation, which is a procedural requirement for all cases in which registration occurred through Pager enforcement action. This notation remains in her permanent registry record and affects the Margins attached to her current Mark.
 
 ---
 
@@ -270,11 +291,11 @@ Forty-one days in the Hora'veil holding facility. She cooperated. Intake was com
 
 She produced what the training assessors required, met the certification criteria for both Anchor domains, and occupied a category the institution had no precedent for with the patience and precision that her Pager intake file had described as her most consistent operational characteristic.
 
-Stylus certification in the Mirror Anchor and Quill certification in the Threshold Anchor were issued concurrently in 2197. The conditional operational license followed within the month.
+Stylus certification in the Mirror Anchor and Quill certification in the Threshold Anchor were issued concurrently in 2197. Mark 4 was sealed within the month under specialist Margin.
 
 ### Present Condition — 2198 to 2200
 
-Rouxinol operates out of Hora'veil under her conditional license. Her contractor registry is current. She takes assignments. She completes them. She does not take assignments she has assessed as requiring her to function as an instrument for an institution she does not trust. She has declined two formal recruitment overtures since her license was issued — one from a Founding House militia, one from a private contractor operating under SiNE's indirect corporate structure. The refusals were not hostile. They were precise.
+Rouxinol operates out of Hora'veil under her conditional Mark. Her contractor registry is current. She takes assignments. She completes them. She does not take assignments she has assessed as requiring her to function as an instrument for an institution she does not trust. She has declined two formal recruitment overtures since her Mark was sealed — one from a Founding House militia, one from a private contractor operating under SiNE's indirect corporate structure. The refusals were not hostile. They were precise.
 
 The secondary loop's impression count has not changed since 2197.
 
@@ -314,7 +335,7 @@ She has not returned to Vel'hara since leaving in 2187. Whether the Institute is
 Not a relationship in the conventional sense. An internal condition with the phenomenological texture of one — present her entire life, responsive to experience, with consistent properties she can distinguish from her own primary-loop processing. She does not name it in any documentation this office has access to. She refers to it, in two incidental comments recorded during intake assessment, as *the other side of the line.*
 
 **The Apocachynthion — Institutional**
-She registers her contracts. She maintains her license. She attends scheduled Depth assessments. She does not volunteer information beyond what the institution requires. The relationship is functional and carries the specific quality that attaches to any arrangement that began with someone being taken somewhere they did not choose to go.
+She registers her contracts. She maintains her Mark. She attends scheduled Depth assessments. She does not volunteer information beyond what the institution requires. The relationship is functional and carries the specific quality that attaches to any arrangement that began with someone being taken somewhere they did not choose to go.
 
 **The Church — Hora'veil Diocese**
 A pastoral intelligence report flagged Rouxinol to the Hora'veil Arch-Deacon in 2190, prior to Apocachynthion intake. The Church's classification at that time was vessel-abomination — two presences in one body, interpreted as advanced multi-fragment demonic cohabitation at an integrated stage. The Church was formally notified of the Apocachynthion's intake and preliminary classification results in 2192. No revision of the Church's internal classification has been communicated to this office. The two institutional frameworks for what she is do not resolve to the same conclusion, and the Church has not been presented with any account of bifurcated recursive architecture it has the doctrinal vocabulary to evaluate. Whether the Condemned designation remains active in the Hora'veil Diocese's restricted pastoral record is not confirmed in any document available here. She is aware that it may be.
@@ -326,11 +347,11 @@ One documented contact, in the Kalt'sen outer transit district approximately fou
 
 ## XIII. APOCACHYNTHION ASSESSMENT — CURRENT STATUS
 
-Registry status: active. Both certifications current. Conditional operational license issued 2197, maintained under the following terms:
+Registry status: active. Both certifications current. Mark 4 sealed in 2197, maintained under the following Margins:
 
 Operational assignments must be disclosed to the regional contractor registry within forty-eight hours of contract acceptance. Assignments involving lethal outcomes must be disclosed within ten days, including any impression acquisition through the artifact blade. The blade's impression count must remain stable or any change communicated immediately. Scheduled Depth assessments every six months at the Hora'veil regional Academy, conducted by the specialist assessors holding the active file.
 
-These terms were reached through negotiated agreement rather than standard protocol application. Standard Quill and Stylus operational licenses do not include mandatory assignment disclosure. She accepted the additional terms without formal objection. The panel lead noted that her acceptance was prompt enough to suggest she had already determined, before the terms were offered, what she was and was not willing to agree to, and that these fell within that limit.
+These Margins were reached through negotiated agreement rather than standard protocol application. Standard Quill and Stylus Mark practice does not include mandatory assignment disclosure in this form. She accepted the additional terms without formal objection. The panel lead noted that her acceptance was prompt enough to suggest she had already determined, before the terms were offered, what she was and was not willing to agree to, and that these fell within that limit.
 
 **Outstanding notes:**
 
@@ -346,10 +367,10 @@ The dual-certification framework has no established precedent. The Council of Vo
 
 *END OF FILE*
 
-*Rouxinol Kaise · b. 2173, Vel'hara · Stylus (Mirror Anchor) / Quill (Threshold Anchor) · compelled intake 2192 · dual certification issued 2197 · conditional license active · file open*
+*Rouxinol Kaise · b. 2173, Vel'hara · Stylus (Mirror Anchor) / Quill (Threshold Anchor) · compelled intake 2192 · dual certification issued 2197 · Mark 4 active under sealed Margin · file open*
 
 ---
 
-> *Internal distribution only. Not for civilian circulation. All registration, assessment, classification, and disciplinary procedures referenced in this document are subject to current Council of Volumes protocols and operative Academy guidelines. This document does not constitute operational authorization for any action not specified by the conditional license on record. The Kaise Blade is logged under restricted artifact custody — any secondary party acquisition requires immediate Council notification under the Artifact Retention Protocol.*
+> *Internal distribution only. Not for civilian circulation. All registration, assessment, classification, and disciplinary procedures referenced in this document are subject to current Council of Volumes protocols and operative Academy guidelines. This document does not constitute operational authorization for any action not specified by the current Mark on record. The Kaise Blade is logged under restricted artifact custody — any secondary party acquisition requires immediate Council notification under the Artifact Retention Protocol.*
 
 

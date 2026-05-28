@@ -7,7 +7,7 @@ birthplace: "Kalt'sen, Central Region, Empire of Synus"
 affiliation: "Apocachynthion (restricted review)"
 house: "Wonderwall (cadet branch, maternal line)"
 rank: "Quill (Provisional)"
-registry_status: "Registered - ordinary intake suspended, retained under restricted observational placement"
+registry_status: "Registered - Quill provisional, Mark 1; ordinary intake suspended under sealed review"
 designation: "The Inkless Color"
 height: "164 cm"
 build: "Slight"
@@ -83,13 +83,27 @@ She is strongest where light already exists and weaker in total darkness unless 
 
 ## Institutional Situation
 
-Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a **Quill provisional certification**, labeled Inkless, and removed from ordinary progression.
+Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a **Quill provisional certification**, given **Mark 1** for supervised practice only, labeled Inkless, and removed from ordinary progression.
 
 She was not expelled.
 
 Instead, the Academy retained her under restricted observational placement in the **Radiance Calibration Annex**, where she now serves as a provisional student and calibration assistant. Officially she helps test lenses, response plates, afterimage arrays, and other measurement equipment. Unofficially she has made herself part of the Annex's social ecology, to the annoyance of anyone who prefers tidy hierarchy.
 
 She is not field-cleared. High-output practice remains restricted. But she is not sealed away either. She studies, attends more lectures than she is technically allowed to, helps with calibration work, and keeps making herself useful in rooms that are not sure what to do with her.
+
+## Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf
+**Registry Status:** Registered
+**Rank:** Quill, provisional
+**Mark:** Mark 1
+**Open Mark:** None
+**Margins:** No independent field work; high-output practice only under specialist supervision; restricted retention at Lon'drina; contingency seal held separately
+**Anchor:** Stilllight, still carried as Inkless in public institutional language
+**Anchor Reading:** Disputed / Inkless
+**Depth Reading:** Shallow-to-mid under stable conditions; Shore risk under escalation
+**Reach Reading:** Narrow in ordinary practice; unstable under sink pressure
+**Pager Note:** Review
 
 ## Important Relationships
 

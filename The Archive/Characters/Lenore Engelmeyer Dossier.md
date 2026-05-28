@@ -1,6 +1,6 @@
 # PERSONAL DOSSIER — RESTRICTED
 ## LE'NORE VOREN ENGELMEYER
-**Registered Practitioner · Quill · Deception-Anchor (Confirmed Classification) · House Engelmeyer (Reintegrated, Main Line) · Conditional Operational License**
+**Registered Practitioner · Quill · Mark 2 · Deception-Anchor (Confirmed Classification) · House Engelmeyer (Reintegrated, Main Line) · Sealed Practice File**
 *Filed by: Apocachynthion, Hora'veil Regional Academy — initial intake completed 2193 · Quill certification issued 2195 · file active and open*
 *Secondary cross-reference filed: SiNE S-AE Branch, Central Region anomalous incident registry — no formal classification, monitoring status*
 
@@ -18,12 +18,12 @@
 | **Full Name** | Le'nore Voren Engelmeyer |
 | **Year of Birth** | 2177 (age 23 at time of filing, 2200) |
 | **Birthplace** | Drevholt, a small township in the western band interior, approximately forty kilometers east of the Vel'hara city-state |
-| **Registry Status** | Registered — intake 2193; Quill certification issued 2195; conditional operational license active and unmodified through five annual reviews |
+| **Registry Status** | Registered — intake 2193; Quill certification issued 2195; Mark 2 active and unmodified through five annual reviews |
 | **Rank** | Quill |
 | **Anchor Classification** | Deception — confirmed through specialist panel assessment, Year 2194. No Inkless designation. No outstanding classification review. Classification is not under contest. |
 | **House** | Engelmeyer — cadet branch origin; formally reintegrated to main-line recognition Year 2199. The middle name Voren is the branch-line identifier inherited through her mother's line; Al'tair Engelmeyer adopted it upon marriage. Le'nore carried the two-name structure (Le'nore Engelmeyer) as cadet-branch member prior to reintegration; the full three-name structure was formally conferred by the main house in Year 2199. |
 | **Current Residence** | Vel'hara, western band — relocated Year 2199 at main-house arrangement. Registered through the western-band inter-registry compact. |
-| **Occupation** | Independent practitioner — licensed for operational engagement under conditional terms |
+| **Occupation** | Independent practitioner — Marked for operational engagement under conditional terms |
 | **Height** | 169 cm |
 | **Build** | Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy and is not revising the estimate |
 | **Complexion** | Fair; even; no surface indicators during assessed ability expression — no vein shimmer, no atmospheric disturbance, no coherence bleed. Multiple assessors ***I*** have worked with noted the absence of these tells. The absence is itself a tell, to anyone looking for it. |
@@ -31,6 +31,27 @@
 | **Eyes** | Grey, very light — reads as near-colorless in low illumination. Every assessor who has spent significant time across a table from her has noted the eyes and none have found a description that closes the subject. The first field assessor who saw her wrote: *the color is not the thing that registers.* He did not elaborate. |
 | **Typical Dress** | White by preference — pale linens, light wools, materials that don't announce themselves. The preference is consistent enough across five years of documented contact to be a signature without being a rule. |
 | **General Impression** | Notably attractive in a way that registers before anything else registers. People notice her face first. They notice something else second. By the time they are trying to name the second thing, they have usually already smiled back at her. |
+
+---
+
+### I.1 — Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** Quill  
+**Mark:** Mark 2  
+**Open Mark:** None  
+**Margins:** Disclosure required for non-consenting perceptual influence; Depth assessments every eight months at Hora'veil; no operational engagement near Apocachynthion-monitored diplomatic or Senate events without prior registry notice  
+**Anchor:** Deception  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Mid  
+**Reach Reading:** Broad, monitored  
+**Registration Tenure:** 7 years  
+**Academy Record:** Hora'veil intake 2193; specialist panel confirmation 2194; Quill certification 2195  
+**Practice Record:** Independent civic and contractor work under western-band inter-registry compact  
+**Blots:** None formally recorded  
+**Pager Note:** None  
+**Current Seal:** Hora'veil regional authority; senior assessor review
 
 ---
 
@@ -200,17 +221,17 @@ Senior Assessor Vel'omis, reviewing the file four years later, wrote in a privat
 
 ---
 
-### III.4 Quill Certification and Conditional License — Year 2195
+### III.4 Quill Certification and Mark 2 Seal — Year 2195
 
-Quill certification followed panel assessment and completion of foundational training. Standard progression for a practitioner with confirmed Anchor classification and demonstrated stable output.
+Quill certification followed panel assessment and completion of foundational training. Mark 2 sealing followed because the subject's observed stability supported independent civic practice within recorded limits.
 
 Le'nore passed the certification examination in Year 2195. Performance noted as consistent with assessed capability — institutional language for passing at a level that confirms the classification without producing unexpected results. She gave them what they expected to see.
 
-Conditional terms: all operational engagements involving application of perceptual influence on non-consenting parties disclosed to the regional registry within forty-eight hours; Depth assessments every eight months at Hora'veil; no operational engagement in proximity to Apocachynthion-monitored diplomatic or Senate events without prior registry notification.
+Recorded Margins: all operational engagements involving application of perceptual influence on non-consenting parties disclosed to the regional registry within forty-eight hours; Depth assessments every eight months at Hora'veil; no operational engagement in proximity to Apocachynthion-monitored diplomatic or Senate events without prior registry notification.
 
 She accepted the terms without objection, and faster than acceptance without prior consideration would have required.
 
-She has complied with all terms across five years of licensure.
+She has complied with all recorded Margins across five years of practice.
 
 ---
 
@@ -505,9 +526,9 @@ One brief, indirect encounter arranged without her awareness of who she was spea
 
 ## XIII. APOCACHYNTHION ASSESSMENT — CURRENT STATUS
 
-Registry status: active. Quill certification current. Conditional operational license active and unmodified through five annual reviews. Anchor classification: Deception, confirmed. No outstanding reviews. No formal reclassification proceedings.
+Registry status: active. Quill certification current. Mark 2 active and unmodified through five annual reviews. Anchor classification: Deception, confirmed. No outstanding reviews. No formal reclassification proceedings.
 
-Scheduled Depth assessments every eight months at Hora'veil, maintained through the western-band inter-registry compact. All mandatory disclosures compliant for the duration of the license period.
+Scheduled Depth assessments every eight months at Hora'veil, maintained through the western-band inter-registry compact. All mandatory disclosures compliant for the duration of the current Mark period.
 
 **Anomalous findings on record:**
 
@@ -529,10 +550,10 @@ The file has a quality that experienced assessors recognize in cases that are la
 
 *END OF FILE*
 
-*Le'nore Voren Engelmeyer · b. 2177, Drevholt, western band interior · Quill, Deception-Anchor (confirmed) · intake 2193, certification 2195 · reintegrated to House Engelmeyer main line 2199 · currently resident Vel'hara, western band · conditional license active · file open*
+*Le'nore Voren Engelmeyer · b. 2177, Drevholt, western band interior · Quill, Deception-Anchor (confirmed) · Mark 2 active · intake 2193, certification 2195 · reintegrated to House Engelmeyer main line 2199 · currently resident Vel'hara, western band · file open*
 
 ---
 
-> *Internal distribution only. Not for civilian circulation. All registration, assessment, classification, and monitoring procedures referenced in this document are subject to current Council of Volumes protocols and operative Academy guidelines. This document does not constitute operational authorization for any action not specified by the conditional license on record. The S-AE cross-reference designated CENTRAL-ANOMALOUS-2200-CR-07 is not part of this file's formal institutional scope. Its existence is noted. Its contents are not available through standard registry channels.*
+> *Internal distribution only. Not for civilian circulation. All registration, assessment, classification, and monitoring procedures referenced in this document are subject to current Council of Volumes protocols and operative Academy guidelines. This document does not constitute operational authorization for any action not specified by the current Mark on record. The S-AE cross-reference designated CENTRAL-ANOMALOUS-2200-CR-07 is not part of this file's formal institutional scope. Its existence is noted. Its contents are not available through standard registry channels.*
 
 

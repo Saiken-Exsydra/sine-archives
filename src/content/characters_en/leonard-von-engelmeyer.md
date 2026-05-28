@@ -7,7 +7,7 @@ birthplace: "Eraveth, Ardeatus (Northern Frontier Region)"
 affiliation: "Apocachynthion - Kalt'sen Academy"
 house: "House Engelmeyer (expatriate branch, formally estranged)"
 rank: "Stylus"
-registry_status: "Registered - asylum intake 2163; active instructional license"
+registry_status: "Registered - Stylus, Mark 4; asylum intake 2163; instructional standing current"
 designation: "The Hearth After the Blast"
 height: ""
 build: ""
@@ -21,7 +21,7 @@ summary: "The catastrophe failed to hollow him; what remained was not softness, 
 tags: ["Apocachynthion", "Engelmeyer", "Thermodynamic Anchor", "Stase-Survivor", "Ardeatus", "Kalt'sen"]
 status: "public"
 created: "2026-05-10"
-updated: "2026-05-24"
+updated: "2026-05-27"
 codex_file: "Leonard von Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
 hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
@@ -55,6 +55,20 @@ Leonard was born into an expatriate Engelmeyer branch in **Ardeatus**. His famil
 During the attack that killed his parents, a Stase incursion froze the event in a suspended unfinished state. Leonard survived by awakening as a Redactor inside that rupture.
 
 An anomalous mechanical crow later named **Kerz** entered that same impossible moment and has remained tied to him ever since.
+
+## Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf
+**Registry Status:** Registered
+**Rank:** Stylus
+**Mark:** Mark 4
+**Open Mark:** None
+**Margins:** Pager notice for Stase-adjacent field return; no standing military deployment without Council request
+**Anchor:** Thermodynamic
+**Anchor Reading:** Confirmed
+**Depth Reading:** Deep
+**Reach Reading:** Disciplined
+**Practice Record:** Academy instruction; restricted hazardous consultation
 
 ## Abilities
 

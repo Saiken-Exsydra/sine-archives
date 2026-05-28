@@ -11,7 +11,7 @@ summary: "Seven divisions. One organization. Older than most institutions that b
 tags: ["SiNE", "Wonderwall", "Organization", "CLOCKWORK", "HourGlass", "StaSis", "Clepsydra", "Em'manuel", "Kalt'sen", "Military", "Research"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-24"
+updated: "2026-05-27"
 image: "../../assets/uploads/sine-logo.png"
 ---
 
@@ -54,9 +54,9 @@ Clepsydra is not military in character, though nearly every military campaign of
 
 ### S-RM: Magi (Redactor Management)
 
-Magi handles SiNE's internal Redactor population - certification management for SiNE-affiliated practitioners, training programs that operate parallel to but distinct from the Apocachynthion's academy system, and the administrative machinery that governs how registered practitioners operate within SiNE's institutional structure.
+Magi handles SiNE's internal Redactor population - placement management for SiNE-affiliated practitioners, compact-side coordination with the Apocachynthion's registry, and the administrative machinery that governs how registered practitioners operate within SiNE's institutional structure.
 
-The relationship between Magi and the Apocachynthion is technically cooperative and practically complicated. Registered practitioners in SiNE's employ report to both institutional hierarchies in ways that produce conflicting obligations often enough to keep both institutions' legal divisions occupied.
+The relationship between Magi and the Apocachynthion is technically cooperative and practically complicated. Registered practitioners in SiNE's employ report to both institutional hierarchies in ways that produce conflicting obligations often enough to keep both institutions' legal divisions occupied. In imperial territory, Magi can place a Redactor only within the scope of that practitioner's current **Mark** and **Margins**, unless an emergency **Open Mark** is recognized through Apocachynthion authority.
 
 ### S-LG: Evanote (Legal and Governance)
 
@@ -96,6 +96,6 @@ The founder's role in Council decisions is formally one voice among several. In 
 
 **The Empire:** Treaty-bound, functionally cooperative at multiple levels. The relationship works in part because the post-Fracture world does not permit any one institution to hold the whole explanatory picture. The Empire holds civil authority, SiNE holds infrastructure and force, the Church holds parts of the dangerous theological record, and the Apocachynthion holds Redactor governance.
 
-**The Apocachynthion:** Formally cooperative, practically complex. The Apocachynthion is aware that SiNE's operational envelope includes things outside Apocachynthion visibility. This awareness has not produced a crisis because SiNE has been careful about the visibility question for a very long time.
+**The Apocachynthion:** Formally cooperative, practically complex. SiNE can train, contract, and command Redactors inside its own structure, but within the Empire it still depends on Apocachynthion registration, Mark recognition, and Pager law wherever Redactory practice itself is concerned. The Apocachynthion is aware that SiNE's operational envelope includes things outside Apocachynthion visibility. This awareness has not produced a crisis because SiNE has been careful about the visibility question for a very long time.
 
 **The Church:** Respectful distance maintained by both sides. Where operational interests intersect - particularly at the northern frontier - the relationship is professional and effective.

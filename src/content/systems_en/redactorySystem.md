@@ -5,7 +5,7 @@ summary: "The deliberate routing of local reality through the Dive: powerful, te
 tags: ["systems", "Redactory", "Dive", "Anchor", "Strata", "Abyssal", "Archtype", "Shores"]
 status: "public"
 created: "2026-02-12"
-updated: "2026-05-22"
+updated: "2026-05-27"
 image: "../../assets/uploads/sys-redactory.png"
 ---
 
@@ -173,6 +173,8 @@ The Apocachynthion exists because:
 - poorly trained Redactors cause structural harm;
 - desperate Redactors take unsafe routes;
 - gifted Redactors can create disasters faster than ordinary institutions can describe them.
+
+That does not mean the Apocachynthion governs Redactory's metaphysics. It governs practitioners. In institutional doctrine, **Rank** names the Redactor's standing, while **Mark** names the level of practice the institution permits. The Dive, the Anchor, Depth, Reach, and Shore-risk remain structural facts whether the current Mark is broad, narrow, open, or blotted.
 
 The Shores doctrine only sharpens this. A catastrophic Dive failure is no longer merely a question of burnout or uncontrolled manifestation. In rare cases it may be Shorefall.
 

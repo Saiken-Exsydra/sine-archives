@@ -14,7 +14,7 @@
 
 *This is not the Vitrified Wing infrastructure record. That file, if acquired in full, would say what it needs to say about Project Ennea, the coherence-substrate program, and the institutional chain that produced Subject E-1.*
 
-*It is not the Lyréne Pharmaceuticals corporate record. That document would describe a junior research associate, a promising neural-interface diagnostics specialist, and an Auroran Redactor with a conditional certification file. It would be correct in several surface details and false by omission in nearly every way that matters.*
+*It is not the Lyréne Pharmaceuticals corporate record. That document would describe a junior research associate, a promising neural-interface diagnostics specialist, and an Auroran Redactor with a conditional Mark file. It would be correct in several surface details and false by omission in nearly every way that matters.*
 
 *It is not a Precursor artifact brief. The Sibyl Fragment requires its own record. Ayanna is not the artifact, not its property, and not merely a technical solution to its interface problem.*
 
@@ -63,13 +63,31 @@ Stable canon:
 | **Project Association** | Project Ennea |
 | **Age** | Twenty-four |
 | **Citizenship** | Auroran, federally registered, Valerie civic district |
-| **Redactor Status** | MAGI-registered Redactor; Quill rank; conditional Auroran-territory certification |
+| **Redactor Status** | MAGI-recognized Redactor; Quill rank; Mark 2 under Auroran-territory Margin |
 | **Registered Classification** | Mechanism Anchor |
 | **Actual Status** | Engineered biological coherence interface; sentient legal person; unaware of her true purpose |
 | **Institutional Position** | Junior researcher and concealed subject of long-term coherence monitoring |
 | **Primary Associated Artifact** | The Sibyl Fragment, a Precursor diagnostic instrument requiring a receiver of unusual recursive density |
 | **Public Standing** | Promising Auroran research associate with unusual mechanical-perceptual Redactory capability |
 | **Private Standing** | First successful coherence-engineered subject; active investigator into her own constructed life; current suppression target of the Vitrified Wing |
+
+---
+
+### I.1 — Apocachynthion Registry
+
+**Leaf Type:** Practice Leaf  
+**Registry Status:** Registered under Auroran compact  
+**Rank:** Quill  
+**Mark:** Mark 2  
+**Open Mark:** None  
+**Margins:** Auroran-territory practice only under compact recognition; no combat deployment; no deep-site or anomaly-adjacent work without supplemental seal  
+**Anchor:** Mechanism  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Mid  
+**Reach Reading:** Disciplined  
+**Practice Record:** Research, diagnostics, and controlled civic-industrial work  
+**Pager Note:** None  
+**Current Seal:** Auroran embassy assessment under Apocachynthion recognition
 
 ---
 
@@ -167,7 +185,7 @@ It had been built across her whole childhood.
 
 Ayanna manifested as a Redactor at nineteen, during a structural-mechanics laboratory exercise. A torsion test rig stopped at a load where it should have failed, and she knew before checking that it had stopped because she had made it stop.
 
-She registered through Aurora's framework and was assessed by the Apocachynthion's Auroran embassy. The assessment classified her as a **Mechanism Anchor** and issued Quill rank with conditional certification.
+She registered through Aurora's framework and was assessed by the Apocachynthion's Auroran embassy. The assessment classified her as a **Mechanism Anchor**, confirmed Quill rank, and sealed **Mark 2** under conditional Auroran-territory Margin.
 
 The classification is accurate but incomplete.
 

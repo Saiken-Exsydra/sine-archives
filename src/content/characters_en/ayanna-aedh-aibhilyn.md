@@ -6,7 +6,7 @@ birth_year: "2176"
 birthplace: "Valerie, Aurora"
 affiliation: "Lyrene Pharmaceuticals; Vitrified Wing (secret program)"
 rank: "Quill-ranked Redactor"
-registry_status: "MAGI-registered Redactor; conditionally certified in Aurora"
+registry_status: "Auroran-compact Redactor; Quill, Mark 2 under conditional Margins"
 designation: "The Girl the Machine Answered"
 build: "Tall, slim, and precise; naturally athletic without looking strong"
 complexion: "Medium-fair"
@@ -19,7 +19,7 @@ summary: "Built to listen where no modern mind should reach; now the hidden mech
 tags: ["Aurora", "Valerie", "Lyrene", "Vitrified Wing", "Mechanism", "Redactor", "Precursor", "CLOCKWORK"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-24"
+updated: "2026-05-27"
 codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn.webp"
 hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
@@ -53,6 +53,20 @@ Ayanna was not grown in a tank or dropped into the world fully formed. She was b
 Her parents loved her in the ways that matter emotionally, but the larger system around that family was designed to guide her toward one outcome: becoming a viable human interface for the Sibyl Fragment.
 
 That means the central horror in her story is not that she is unreal. It is that so much of her life was planned around use.
+
+## Apocachynthion Registry
+
+**Leaf Type:** Practice Leaf
+**Registry Status:** Registered under Auroran compact
+**Rank:** Quill
+**Mark:** Mark 2
+**Open Mark:** None
+**Margins:** Auroran-territory practice only under compact recognition; no combat deployment; no deep-site work without supplemental seal
+**Anchor:** Mechanism
+**Anchor Reading:** Confirmed
+**Depth Reading:** Mid
+**Reach Reading:** Disciplined
+**Practice Record:** Research, diagnostics, and controlled civic-industrial work
 
 ## Abilities
 

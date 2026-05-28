@@ -62,7 +62,7 @@ This sentence will remain in the file.
 | **Birthplace** | Kalt'sen, Central Region, Empire of Synus |
 | **House** | Wonderwall cadet branch, maternal line; two centuries diverged from primary line |
 | **Residence** | Wonderwall estate, eastern residential quarter, Kalt'sen; controlled Academy residence at Lon'drina during active terms |
-| **Apocachynthion Status** | Registered; Quill provisional certification issued 2196; ordinary intake suspended; retained under restricted observational and calibration placement |
+| **Apocachynthion Status** | Registered; Quill provisional certification issued 2196; Mark 1 sealed for supervised practice; ordinary intake suspended; retained under restricted observational and calibration placement |
 | **Current Institutional Placement** | Academy of Lon'drina, Radiance Calibration Annex; provisional student / research assistant under specialist supervision |
 | **Rank (Institutional)** | Quill, Provisional; not cleared for independent field work |
 | **Institutional Designation** | Inkless, under review |
@@ -78,6 +78,27 @@ This sentence will remain in the file.
 | **Operational Status** | Functionally stable in daily life; supervised in high-output practice; catastrophic risk confined to high-depth, recovery-window, and Shore-resonant conditions |
 | **Assigned Proximity Asset** | Sai'ken Exsydra — KT-Exs — Seat's direct report; household liaison; cadence surveillance; interval response; lethal containment mandate |
 | **Personality Register** | Highly outgoing, socially fearless, affectionate, bright-tempered, talkative, emotionally direct; routinely underestimated because of warmth |
+
+---
+
+### I.1 — Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** Quill, provisional  
+**Mark:** Mark 1  
+**Open Mark:** None  
+**Margins:** No independent field work; high-output practice only under specialist supervision; restricted retention at Lon'drina; lethal contingency separately sealed  
+**Anchor:** Stilllight, carried institutionally as unresolved Inkless Radiance anomaly  
+**Anchor Reading:** Inkless / disputed  
+**Depth Reading:** Shallow-to-mid under stable conditions; Shore-facing risk under escalation  
+**Reach Reading:** Narrow in ordinary practice; unstable under sink pressure  
+**Registration Tenure:** 4 years  
+**Academy Record:** Lon'drina intake 2196; specialist review ongoing  
+**Practice Record:** Calibration assistance; supervised Radiance Annex work  
+**Blots:** None formally recorded  
+**Pager Note:** Review  
+**Current Seal:** Lon'drina specialist review; separate lethal seal on contingency file
 
 ---
 
@@ -227,7 +248,7 @@ She arrived late to the first assessment because she had stopped in the outer co
 
 Vel'kara, to her credit, did not pretend to understand this.
 
-The intake instruments failed to locate a conventional Anchor. They detected Radiance pressure, a thermal anomaly, partial matter-like persistence, and a secondary coherence shadow that appeared at the edge of the reading and vanished between measurement intervals. The provisional conclusion was Inkless Radiance anomaly. The formal certification issued was Quill, provisional. Ordinary intake was suspended pending specialist review.
+The intake instruments failed to locate a conventional Anchor. They detected Radiance pressure, a thermal anomaly, partial matter-like persistence, and a secondary coherence shadow that appeared at the edge of the reading and vanished between measurement intervals. The provisional conclusion was Inkless Radiance anomaly. The formal certification issued was Quill, provisional. Mark 1 was sealed for supervised practice only. Ordinary intake was suspended pending specialist review.
 
 Ec'lesia interpreted this as partial failure and spent the evening organizing a study group for three students who had passed without difficulty.
 
@@ -837,7 +858,7 @@ The Apocachynthion's file is wrong in classification and useful in observation.
 
 Vel'kara's notes remain the most honest external institutional record. She identified that Ec'lesia's output involved Radiance behavior inconsistent with ordinary Anchor categories and that a secondary coherence presence appeared during certain tests. She did not have the word Remainder. She did not force certainty where she lacked framework. I respect this.
 
-The Registry Branch converted uncertainty into process: provisional Quill certification, Inkless designation, suspended intake, specialist review, restricted retention. This is what institutions do when they do not know enough to act and know enough not to release.
+The Registry Branch converted uncertainty into process: provisional Quill certification, Mark 1, Inkless designation, suspended intake, specialist review, restricted retention. This is what institutions do when they do not know enough to act and know enough not to release.
 
 The Academy's current approach is therefore tolerable. It is not adequate.
 

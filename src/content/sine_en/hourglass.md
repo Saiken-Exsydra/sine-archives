@@ -11,7 +11,7 @@ summary: "SiNE's military arm. Three commands, one doctrine, and a sustained pre
 tags: ["HourGlass", "SiNE", "Military", "Organization", "Cold Fleet", "Cloister", "War of the Threshold", "S-IF"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-05-27"
 image: "../../assets/uploads/sine-hourglass.png"
 ---
 
@@ -32,7 +32,7 @@ It is not a private security firm in any sense that term usually implies. It is 
 
 ### Threshold Command - Land Operations
 
-Threshold Command is HourGlass's ground force. It conducts all land-based operations, from conventional military engagements to specialized operations in support of Apocachynthion or Church field work. Threshold Command maintains the largest standing personnel count of the three commands and has the most extensive operational record at the northern frontier.
+Threshold Command is HourGlass's ground force. It conducts all land-based operations, from conventional military engagements to specialized operations in support of Apocachynthion or Church field work. Threshold Command maintains the largest standing personnel count of the three commands and has the most extensive operational record at the northern frontier. Embedded Redactor roles in this command usually require **Mark 3** for field work and **Mark 4** when operations push into thinness-heavy engineering or extreme environmental response.
 
 Standard Threshold Command doctrine integrates conventional infantry and armored formations with Cloister-attached Redactor units and, in frontier operations, Church Obsidian Rite elements. The integration protocols were developed over generations of working alongside both institutions and have been refined to a point where they mostly run without active management.
 
@@ -40,7 +40,7 @@ In the War of the Threshold's ground theatre, Threshold Command is typically the
 
 ### Corridor Command - Aerial Operations
 
-Corridor Command operates HourGlass's aerial capabilities - tactical and strategic air assets, rapid deployment of Redactor specialists to engagements where ground approach is not viable, and reconnaissance operations across the frontier zone and interior.
+Corridor Command operates HourGlass's aerial capabilities - tactical and strategic air assets, rapid deployment of Redactor specialists to engagements where ground approach is not viable, and reconnaissance operations across the frontier zone and interior. Most aerial Redactor assignments sit at **Mark 3**, with strike-adjacent or severe-route intervention work escalating toward **Mark 4**.
 
 The name reflects a doctrine as much as a mission type: Corridor Command is responsible for maintaining operational corridors - lanes of movement and communication that connect HourGlass's dispersed elements. In the Twilight Band's geography, the ability to move personnel and information quickly across significant distances is a strategic requirement, and Corridor Command's existence is partly organized around that requirement.
 
@@ -50,7 +50,7 @@ Margin Command handles HourGlass's naval operations, with particular emphasis on
 
 The Cold Fleet operates in permanently dark, cold, turbulent waters in the zone where the Twilight Band's edge meets the Dark Side. This is not standard naval operating environment. The ships - designated **WVS hulls** - are purpose-built for these conditions, with structural and resonance shielding appropriate to operating in proximity to Stase-adjacent waters and in conditions where what emerges from the dark is not always categorizable under standard maritime threat doctrine.
 
-Margin Command's Cold Fleet role in the War of the Threshold is primarily maritime corridor control - preventing Dark Ends and SOEs from flanking northern frontier positions by sea, maintaining supply and reinforcement lanes to the most isolated frontier installations, and conducting the occasional engagement that requires a platform that is simultaneously far from shore and difficult to identify.
+Margin Command's Cold Fleet role in the War of the Threshold is primarily maritime corridor control - preventing Dark Ends and SOEs from flanking northern frontier positions by sea, maintaining supply and reinforcement lanes to the most isolated frontier installations, and conducting the occasional engagement that requires a platform that is simultaneously far from shore and difficult to identify. The Cold Fleet's specialist Redactor billets usually require **Mark 4**, especially for Depth Readers and Seam Binders.
 
 ---
 
@@ -70,9 +70,9 @@ This is occasionally frustrating to soldiers and entirely acceptable to the offi
 
 ## The Cloister of Applied Structure
 
-The **Cloister of Applied Structure** is HourGlass's Redactor specialist corps - the body of practitioners whose training, certification, and operational deployment are managed through HourGlass's internal systems rather than through the Apocachynthion's standard framework.
+The **Cloister of Applied Structure** is HourGlass's Redactor specialist corps - the body of practitioners whose training and operational deployment are managed through HourGlass's internal systems rather than through the Apocachynthion's standard academy track.
 
-This is a source of ongoing jurisdictional complexity. Practitioners in the Cloister are registered with the Apocachynthion - they have to be, legal requirements for operational deployment demand it - but their operational training and immediate command authority sit within HourGlass. The Apocachynthion's oversight of Cloister practitioners is formal where it is most visible and considerably thinner at the operational edge.
+This is a source of ongoing jurisdictional complexity. Practitioners in the Cloister are still registered and **Marked** through the Apocachynthion - they have to be, legal requirements for operational deployment demand it - but their operational training and immediate command authority sit within HourGlass. HourGlass can command the mission. It cannot erase a practitioner's **Margins** or lawfully order Redactory outside the current Mark without recognized emergency opening.
 
 The Cloister's doctrine emphasizes integration - Redactory as a component of combined-arms operations rather than a specialist function employed separately. A Cloister practitioner is expected to understand the tactical situation their ability is being applied to, not simply to execute ability on command. This requires a specific kind of training that the Apocachynthion's academies do not provide, because the Apocachynthion's academies are not training soldiers.
 
@@ -80,7 +80,7 @@ The Cloister's doctrine emphasizes integration - Redactory as a component of com
 
 ## Rank Structure
 
-HourGlass uses a distinct rank structure that does not map directly onto either the Imperial military hierarchy or the Apocachynthion's practitioner certification levels.
+HourGlass uses a distinct rank structure that does not map directly onto either the Imperial military hierarchy or the Apocachynthion's practitioner rank structure.
 
 The senior operational rank is **Marshal-Delegate** - the designation for the commanding officer of each command and for senior figures in the Cloister. The Marshal-Delegate designation carries authority both within HourGlass and, in contexts governed by treaty arrangements, in joint operations with Imperial forces.
 

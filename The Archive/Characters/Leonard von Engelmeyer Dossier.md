@@ -2,8 +2,8 @@
 
 **LEONARD VON-ENGELMEYER**
 
-Registered Practitioner · Stylus · Thermodynamic Anchor (Confirmed) · Expatriate Branch, House Engelmeyer · Apocachynthion Senior Instructor  
-Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus certification issued 1105 · file active
+Registered Practitioner · Stylus · Mark 4 · Thermodynamic Anchor (Confirmed) · Expatriate Branch, House Engelmeyer · Apocachynthion Senior Instructor  
+Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus elevation recorded 1105 · Mark 4 current · file active
 
 *"Most practitioners impose their will upon the world like a hammer. Master von-Engelmeyer imposes it like a hearth. I have stood next to him when he demonstrates what he calls the 'Kalorian Nova.' The air does not just burn. It forgets that it was ever permitted to be cold. He does this without raising his voice, without breaking his sentence, and with an empathy that makes the raw violence of the mathematics almost gentle."* — Senior Assessor Vel'omis, Central Academy, private notation appended to the Year 1120 instructional review.
 
@@ -16,13 +16,34 @@ Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus c
 | **Full Name** | Leonard von-Engelmeyer |
 | **Year of Birth** | 1072 (age 55 at time of filing, 1127) |
 | **Birthplace** | Eraveth, Ardeatus (Northern Frontier Region) |
-| **Registry Status** | Registered — asylum intake 1090; active instructional license |
+| **Registry Status** | Registered — asylum intake 1090; Sealed instructional file current |
 | **Rank** | Stylus (Thermodynamic Anchor) |
 | **Designation** | STASE-SURVIVOR (Restricted Classification) |
 | **House** | House Engelmeyer (Imperial lineage; western band origin. His branch is expatriate and formally estranged from the main line) |
 | **Residence** | Kalt'sen, Central Region (Apocachynthion Academy Quarters) |
 | **Occupation** | Senior Instructor of Kinetic and Thermodynamic Redactory |
 | **Anomalous Companion** | One (1) SOE (Traversal-Independent Entity), housed in an Ardeatan mechanical avian construct. Designation: *Kerz*. |
+
+---
+
+### I.1 — Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** Stylus  
+**Mark:** Mark 4  
+**Open Mark:** None  
+**Margins:** Pager notice for Stase-adjacent field return; no standing military deployment without Council request  
+**Anchor:** Thermodynamic  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** Disciplined  
+**Registration Tenure:** 37 years  
+**Academy Record:** Asylum intake 1090; central formation track; Stylus elevation recorded 1105  
+**Practice Record:** Academy instruction; restricted hazardous consultation  
+**Blots:** None recorded  
+**Pager Note:** None  
+**Current Seal:** Council of Volumes instructional standing; central registry renewal
 
 ---
 

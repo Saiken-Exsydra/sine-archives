@@ -49,6 +49,16 @@
 
 ---
 
+### I.1 — Apocachynthion Registry Position
+
+**Registry Status:** Unregistered  
+**Rank:** Unranked  
+**Mark:** No Mark  
+**Anchor:** Unassessed; non-applicable  
+**Pager Note:** None
+
+---
+
 ## II. WHAT HE IS
 
 Daniel Degurechaff is the living hinge of an agreement neither Ardeatus nor Synus truly wanted to need.

@@ -4,10 +4,10 @@ type: "Character"
 age: "23 (at time of filing, 2200)"
 birth_year: "2177"
 birthplace: "Drevholt, western band interior"
-affiliation: "Apocachynthion (licensed); House Engelmeyer (reintegrated main line, 2199)"
+affiliation: "Apocachynthion (sealed file, Mark 2); House Engelmeyer (reintegrated main line, 2199)"
 house: "Engelmeyer (main line, reintegrated 2199 - formerly cadet Voren branch)"
 rank: "Quill"
-registry_status: "Registered - intake 2193; Quill certification issued 2195; conditional operational license active"
+registry_status: "Registered - Quill, Mark 2; intake 2193; sealed Margins active"
 designation: "The Hunger in Silk"
 height: "169 cm"
 build: "Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy"
@@ -16,12 +16,12 @@ hair: "Blonde, near-white - the color of old linen in direct light. Cut in a pre
 eyes: "Grey, very light - reads as near-colorless in low illumination. Every assessor who has spent significant time across a table from her has noted the eyes."
 dress: "White by preference - pale linens, light wools, materials that do not announce themselves"
 residence: "Vel'hara, western band"
-occupation: "Independent practitioner - licensed for operational engagement under conditional terms"
+occupation: "Independent practitioner - conditionally Marked for operational engagement"
 summary: "Charming, careful, and impossible to pity; she makes refinement feel like restraint, until one remembers that restraint is not the same as mercy."
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-24"
+updated: "2026-05-27"
 codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
@@ -56,6 +56,20 @@ Her father, **Al'tair Aldhor**, was secretly a Corvel Institute researcher sent 
 
 That disappearance is one of the central wounds in her story. It is also one of the truths she still refuses to look at directly.
 
+## Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf
+**Registry Status:** Registered
+**Rank:** Quill
+**Mark:** Mark 2
+**Open Mark:** None
+**Margins:** Disclosure required for non-consenting perceptual influence; Depth review every eight months; no diplomatic or Senate-adjacent work without prior registry notice
+**Anchor:** Deception
+**Anchor Reading:** Confirmed
+**Depth Reading:** Mid
+**Reach Reading:** Broad, monitored
+**Practice Record:** Independent civic and contractor work under western-band compact
+
 ## Abilities
 
 At the surface level, Le'nore really can do what the **Deception** label suggests. She can slip out of attention, alter how people interpret what they see, and make absence feel natural.
@@ -86,7 +100,7 @@ Her biggest limits seem to be personal rather than technical. She does not use e
 
 **Re'lha Voren Engelmeyer** is the absence around which much of Le'nore's interior life is built.
 
-**The Apocachynthion** licenses her by accepting the version of her that fits inside a known box. Le'nore cooperates because that arrangement benefits her.
+**The Apocachynthion** Marks her by accepting the version of her that fits inside a known box. Le'nore cooperates because that arrangement benefits her.
 
 **House Engelmeyer** is useful to her, but not fully trusted.
 

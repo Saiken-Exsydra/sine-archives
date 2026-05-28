@@ -4,10 +4,10 @@ type: "Character"
 age: "27 (at time of filing, 2200)"
 birth_year: "2173"
 birthplace: "Vel'hara, western band (Corvel Institute custody)"
-affiliation: "Independent contractor (Apocachynthion-licensed)"
+affiliation: "Independent contractor (Apocachynthion-registered, Mark 4)"
 house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
-registry_status: "Registered - compelled intake 2192; dual certification 2197; conditional license active"
+registry_status: "Registered - compelled intake 2192; dual certification 2197; Mark 4 under sealed Margins"
 designation: "She Who Keeps the Dead at the Threshold"
 build: "Compact; tensile"
 complexion: "Pale olive"
@@ -15,12 +15,12 @@ hair: "Black, straight, shoulder-length; typically bound back during operations"
 eyes: "Dark brown (passive); layered reflection under dual-routing state"
 dress: "Close-fitting dark garments, layered protective paneling; long-bladed artifact instrument in back-worn sheath"
 residence: "Vrenne, Southern Region - no fixed address on file"
-occupation: "Independent contractor - licensed for operational engagement under conditional terms"
+occupation: "Independent contractor - conditionally Marked for hazardous engagement"
 summary: "Half mirror, half crossing-place; she walks with the dead at her shoulder and still answers to no law but her own."
 tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-05-24"
+updated: "2026-05-27"
 codex_file: "Rouxinol Kaise Dossier.md"
 image: "../../assets/uploads/Rouxinol Portrait (2).png"
 hero_image: "../../assets/uploads/Rouxinol HERO.png"
@@ -33,7 +33,7 @@ hero_image: "../../assets/uploads/Rouxinol HERO.png"
 
 ## Overview
 
-Rouxinol is one of the strangest licensed Redactors in the setting. She works as an independent contractor, takes lethal jobs under strict personal rules, and carries a reputation that makes institutions uneasy even when they need her.
+Rouxinol is one of the strangest Marked Redactors in the setting. She works as an independent contractor, takes lethal jobs under strict personal rules, and carries a reputation that makes institutions uneasy even when they need her.
 
 She was born into the custody of the **Corvel Institute**, which treated her as an anomaly before it treated her as a child. She survived that beginning, emerged with two working Anchors instead of one, and built a life that is still at least partly her own.
 
@@ -53,7 +53,21 @@ The Corvel Institute shaped Rouxinol's earliest life through custody, measuremen
 
 The central reason is simple: Rouxinol has **two Anchors**, **Mirror** and **Threshold**. That alone makes her rare. The way those Anchors interact, plus the weapon she carries, makes her even harder to classify.
 
-Now she works under a conditional public license, which means the institutions still want access to her usefulness even if they remain uncomfortable with what she is.
+Now she works under a conditional public Mark, which means the institutions still want access to her usefulness even if they remain uncomfortable with what she is.
+
+## Apocachynthion Registry
+
+**Leaf Type:** Sealed Leaf
+**Registry Status:** Registered
+**Rank:** Stylus (Mirror) / Quill (Threshold)
+**Mark:** Mark 4
+**Open Mark:** None
+**Margins:** Assignment disclosure within forty-eight hours; lethal outcomes and impression gain reported on review schedule; specialist Depth assessment every six months
+**Anchor:** Mirror / Threshold
+**Anchor Reading:** Confirmed / Confirmed
+**Depth Reading:** Deep in Mirror; Abyssal-adjacent dispute in Threshold
+**Reach Reading:** Broad, bifurcated, monitored
+**Pager Note:** Review
 
 ## Abilities
 
@@ -86,7 +100,7 @@ And beneath all of that is the human cost: Rouxinol has had to invent her own et
 
 **The Corvel Institute** remains the hidden origin of her life and one of the unresolved threats hanging over it.
 
-**The Apocachynthion** licensed her, studies her, and still does not have a clean category for her.
+**The Apocachynthion** Marked her, studies her, and still does not have a clean category for her.
 
 **Katherine Flarian** respects her because Threshold touches the kind of breach edges Katherine studies through systems and containment.
 

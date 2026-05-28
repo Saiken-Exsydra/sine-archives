@@ -7,11 +7,11 @@ headquarters: "The Binding, Kalt'sen"
 founded: "Post-Sundering of Selia - pre-imperial founding era"
 jurisdiction: "Empire of Synus - all three macro-regions"
 status_label: "Active - treaty-bound (Compact of Institutional Authority)"
-summary: "The imperial institution responsible for Redactor training, classification, oversight, and containment."
+summary: "The imperial institution responsible for Redactor training, registration, Marking, oversight, and containment."
 tags: ["Synus", "Redactor", "Institution", "Governance", "Pagers", "Academy", "Kalt'sen", "Observation"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-05-24"
+updated: "2026-05-27"
 image: "../../assets/uploads/org-apocachynthion.png"
 ---
 
@@ -21,7 +21,7 @@ image: "../../assets/uploads/org-apocachynthion.png"
 
 ## What Is the Apocachynthion?
 
-The Apocachynthion is the imperial institution responsible for every aspect of Redactor life within the Empire of Synus - from the moment a person first shows signs of Redactory ability, through their training, certification, and entire professional career.
+The Apocachynthion is the imperial institution responsible for every aspect of Redactor life within the Empire of Synus - from the moment a person first shows signs of Redactory ability, through their training, Mark review, and entire professional career.
 
 It is not a branch of the military. It is not a division of the imperial police. It exists independently of both, bound to the Empire through a formal treaty called the **Compact of Institutional Authority**.
 
@@ -57,7 +57,7 @@ The Empress retains the right to petition the Council directly in matters of exc
 
 The Apocachynthion is not itself an academy. It is the governing body that oversees a network of them.
 
-The **Imperial Redactor Academy** is administered by the Apocachynthion and comprises individual academies distributed across all three macro-regions of the Empire. They share a common curriculum, common certification standards, and common protocols.
+The **Imperial Redactor Academy** is administered by the Apocachynthion and comprises individual academies distributed across all three macro-regions of the Empire. They share a common curriculum, common rank standards, common Mark review practice, and common protocols.
 
 Academies are the primary point of contact between the Apocachynthion and the general public. When a person manifests Redactory ability, enrolment is mandatory.
 
@@ -65,7 +65,7 @@ The most prominent academy in public imagination is the facility in **Vrenne** -
 
 ### Assessment
 
-The Academies handle the formal process by which a Redactor's abilities are evaluated, categorized, and matched to appropriate deployment pathways upon certification.
+The Academies handle the formal process by which a Redactor's abilities are evaluated, categorized, and matched to appropriate deployment pathways through rank assessment and Mark review.
 
 ---
 
@@ -84,6 +84,21 @@ The Quill rank is granted upon passing the certification examination that closes
 ### The Stylus
 
 The Stylus rank represents demonstrated mastery within one's domain of competence. It is conferred by the Council of Volumes following formal review.
+
+## Rank and Mark
+
+The Apocachynthion distinguishes between **Rank** and **Mark**.
+
+Rank names the instrument: **Nib**, **Quill**, or **Stylus**. Mark names the permission: the degree of Redactory practice the institution currently allows that practitioner to undertake.
+
+The standard sequence runs from **No Mark** to **Mark 5**. A Redactor may hold high rank and a restricted Mark, or modest rank and a temporarily widened scope through an **Open Mark** in crisis conditions.
+
+The language surrounding that permission is formal and consistent:
+
+- **Margin** names the restriction around a Mark.
+- **Blot** names a recorded failure, misconduct event, or uncontrolled incident.
+- **Seal** names the authority that confirmed, renewed, opened, or restricted the Mark.
+- **Leaf** names the record type under which the practitioner is filed.
 
 ### The Inkless Designation
 
@@ -111,6 +126,8 @@ The Pagers are headed by a **Page Warden** - a Stylus-rank member elected by pee
 
 The Pagers are not the imperial police. Their jurisdiction is specifically institutional - concerning Redactors, Redactory practice, and violations of imperial law as it applies to those two things.
 
+They enforce Margins, review Blots, open Pager Leaves when required, and may countersign an Open Mark during a genuine emergency.
+
 ### Containment Authority
 
 The Pagers hold the Empire's sole institutional authority to order the formal containment of a Redactor assessed as an active and ongoing threat to public safety. Containment orders require Council approval.
@@ -135,12 +152,14 @@ The public-facing institution does not elaborate much further. The restricted on
 
 ## Career Sectors
 
-Upon certification, Redactors are directed toward deployment in one of several sectors based on assessed profile, classification, and institutional need:
+Upon rank confirmation and Mark review, Redactors are directed toward deployment in one of several sectors based on assessed profile, classification, and institutional need:
 
-- **Military service**
+- **Military service** - usually Mark 3 or higher
 - **Industrial application**
 - **Infrastructure management**
 - **Scientific research**
 - **State administration**
+
+Civil practice usually begins at **Mark 2**. Deep-site, thin-site, and major infrastructure work usually require **Mark 4**. Strategic or catastrophic intervention usually requires **Mark 5** or a temporary **Open Mark**.
 
 Placement is handled collaboratively between the individual, the Academy's specialization assessment team, and the Registry Branch.
