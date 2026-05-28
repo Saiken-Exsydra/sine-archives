@@ -43,7 +43,7 @@ The inscription visible on the interior face of the lower blade housing cannot b
 
 ## Material Composition
 
-The alloy is unidentified - white with a faint iridescence that does not correspond to any known BrightCrystal refraction index. The surface does not accept damage by any tested means short of Archtype-level Redactory pressure, and damage inflicted at that threshold heals within approximately twelve hours of ceasing contact.
+The alloy is unidentified - white with a faint iridescence that does not correspond to any known [[brightcrystal|BrightCrystal]] refraction index. The surface does not accept damage by any tested means short of Archtype-level Redactory pressure, and damage inflicted at that threshold heals within approximately twelve hours of ceasing contact.
 
 **Registry classification:** Obscurial-Adjacent Apparatus - Precursor Artifact Registry, Volume IX, entries 7-11.
 
@@ -55,7 +55,7 @@ The alloy is unidentified - white with a faint iridescence that does not corresp
 
 The Instrument belongs, in its first recorded provenance, to the Skyphon designated in recovered mythology and Church restricted archive alike as the **Skyphon of Reality** - the First Bearer assigned to carry this particular Instrument through the world.
 
-The Skyphons were the First Bearers: neither mortal nor instrument, fashioned to serve as a living interface between the Instruments of the Intact Seal and the world those Instruments were made to protect. The Church holds them in its category of *the Rightly Unmade* - creatures whose dissolution when the Instruments were scattered was not punishment but conclusion.
+The Skyphons were the First Bearers: neither mortal nor instrument, fashioned to serve as a living interface between the Instruments of the Intact Seal and the world those Instruments were made to protect. [[the-church|The Church]] holds them in its category of *the Rightly Unmade* - creatures whose dissolution when the Instruments were scattered was not punishment but conclusion.
 
 The Skyphon of Reality was, by the logic of its designation, the Bearer whose specific function concerned the boundary between what exists and what does not. The Instrument it carried reflects this in the principle inscribed within it - *Sôðcwide*, a term appearing in no other pre-fracture document, translated as *The Nothingness*, though a persistent minority of scholars prefers *The Condition of Having Not Yet Been.*
 
@@ -125,7 +125,7 @@ Redactors who have encountered the Instrument during Dive states report its pres
 
 ## Institutional Position
 
-The Apocachynthion does not have custody of the Clepsydra Apparatus. The Deep Archive contains eleven formal acquisition efforts across the institution's history. None succeeded. In nine cases, the Instrument was gone before collection could occur. In two cases, the retrieval team declined to take it after contact - both teams filed reports containing the phrase *it was not ready to be taken*, or a variation of it.
+The [[apocachynthion|Apocachynthion]] does not have custody of the Clepsydra Apparatus. The Deep Archive contains eleven formal acquisition efforts across the institution's history. None succeeded. In nine cases, the Instrument was gone before collection could occur. In two cases, the retrieval team declined to take it after contact - both teams filed reports containing the phrase *it was not ready to be taken*, or a variation of it.
 
 The Church's position is that the Obscurials belong to no mortal institution. The Church does not actively pursue the Instrument. It notes the Instrument's existence in its restricted pastoral correspondence and waits.
 

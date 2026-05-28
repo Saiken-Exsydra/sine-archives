@@ -59,7 +59,7 @@ Instead of walking away, he started collecting proof that Marta was not a one-ti
 
 **Registry Status:** Unregistered
 **Rank:** Unranked
-**Mark:** No Mark
+**[[mark|Mark]]:** No Mark
 **Anchor:** Unassessed; non-applicable
 **Pager Note:** None
 

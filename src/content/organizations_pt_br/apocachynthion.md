@@ -81,19 +81,49 @@ As Academies conduzem o processo formal pelo qual as habilidades de um Redactor 
 
 A estrutura de ranks do Apocachynthion utiliza a linguagem do ofício da escrita — uma metáfora presente na instituição desde sua fundação, quando seus primeiros membros descreviam a Redactory como uma forma de inscrição sobre a estrutura física da realidade.
 
-### The Nib
+### The Nib {#nib}
 
 Nib é o rank inicial, ocupado por todo Redactor desde o primeiro dia de matrícula em uma Academy até a conclusão do treinamento fundamental e aprovação no exame inicial de certificação. Um Nib permanece sob supervisão ativa durante todo o treinamento. Operações independentes fora dos terrenos da Academy não são permitidas. O tempo necessário nesse rank varia bastante entre indivíduos.
 
-### The Quill
+### The Quill {#quill}
 
 O rank Quill é concedido após aprovação no exame de certificação que encerra o treinamento fundamental. Ele representa o rank operacional do Apocachynthion — a designação ocupada pela maioria dos membros ativos ao longo de suas carreiras profissionais. Um Quill é um Redactor totalmente certificado, autorizado a operar de forma independente, aceitar atribuições institucionais e utilizar suas habilidades dentro dos limites definidos pelo seu perfil avaliado. A maior parte dos Redactors se aposenta como Quill após carreiras longas e respeitadas.
 
-### The Stylus
+### The Stylus {#stylus}
 
 O rank Stylus representa domínio comprovado dentro da própria área de competência. Ele não é concedido apenas através de exames — é conferido pelo Council of Volumes após uma revisão formal de todo o histórico operacional de um Quill e dos testemunhos de membros seniores que trabalharam ao lado do candidato. Um Stylus não é necessariamente o Redactor mais poderoso da associação. Mas está entre os mais confiáveis — algo que a instituição considera igualmente importante.
 
-### A Designação Inkless
+## Rank e Mark {#rank-and-mark}
+
+O Apocachynthion distingue entre **Rank** e **Mark**.
+
+Rank nomeia o instrumento institucional: **Nib**, **Quill** ou **Stylus**. Mark nomeia a permissao: o grau de pratica de Redactory que a instituicao permite naquele momento.
+
+### Mark {#mark}
+
+A sequencia padrao vai de **No Mark** ate **Mark 5**. Um Redactor pode ter rank alto e Mark restrito, ou rank modesto e escopo ampliado em condicoes excepcionais.
+
+### Open Mark {#open-mark}
+
+Um **Open Mark** e a ampliacao temporaria do Mark normal durante uma emergencia real. Ele nao substitui o registro de base. Ele reconhece que a situacao excedeu o escopo ordinario permitido.
+
+### Margins {#margins}
+
+**Margins** sao as restricoes em torno de um Mark: o que precisa ser reportado, o que exige supervisao e o que continua proibido.
+
+### Blots {#blots}
+
+**Blots** sao falhas registradas, eventos de ma conduta ou incidentes sem controle. Eles importam porque o sistema de Mark mede permissao e tambem confianca institucional.
+
+### Seal {#seal}
+
+**Seal** nomeia a autoridade que confirmou, renovou, restringiu ou abriu o Mark. O Seal registra quem responde por aquela permissao.
+
+### Leaf {#leaf}
+
+**Leaf** nomeia o tipo de arquivo sob o qual o praticante e registrado. O termo preserva a metafora de escrita que o Apocachynthion usa desde a fundacao.
+
+### A Designação Inkless {#inkless}
 
 Além dos três ranks fundamentais, o Apocachynthion mantém uma designação paralela chamada **Inkless**. Um Redactor Inkless é alguém cujo perfil de habilidade não pode ser mapeado para nenhum domínio consistente através dos procedimentos padrões de avaliação — independentemente dos instrumentos ou avaliadores utilizados. Todo Redactor possui um caminho conceitual estabilizador através do qual sua prática opera. O caminho de um Inkless é real e comprovadamente existe. Ele apenas não pode ser lido externamente.
 
@@ -101,7 +131,7 @@ Essa designação aparece nos registros internos da instituição e em briefings
 
 ---
 
-## Os Pagers
+## Os Pagers {#pagers}
 
 O braço de execução institucional do Apocachynthion é chamado de **Pagers** — um nome derivado de um antigo termo administrativo usado para definir os limites formais de uma jurisdição, a linha além da qual alguém deixa a proteção da instituição que abandonou.
 

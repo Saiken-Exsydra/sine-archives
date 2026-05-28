@@ -56,17 +56,22 @@ That means the central horror in her story is not that she is unreal. It is that
 
 ## Apocachynthion Registry
 
-**Leaf Type:** Practice Leaf
-**Registry Status:** Registered under Auroran compact
-**Rank:** Quill
-**Mark:** Mark 2
-**Open Mark:** None
-**Margins:** Auroran-territory practice only under compact recognition; no combat deployment; no deep-site work without supplemental seal
-**Anchor:** Mechanism
-**Anchor Reading:** Confirmed
-**Depth Reading:** Mid
-**Reach Reading:** Disciplined
-**Practice Record:** Research, diagnostics, and controlled civic-industrial work
+**[[leaf|Leaf Type]]:** Practice Leaf  
+**Registry Status:** Registered under Auroran compact  
+**Rank:** [[quill|Quill]]  
+**[[mark|Mark]]:** [[mark-2|Mark 2]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civic  
+**Anchor:** Mechanism  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** 5 years  
+**Academy Record:** Auroran embassy assessment after manifestation at nineteen; compact certification maintained through MAGI recognition  
+**Practice Record:** Research, diagnostics, and controlled civic-industrial work  
+**[[blots|Blots]]:** None  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Auroran embassy assessment under Apocachynthion recognition
 
 ## Abilities
 

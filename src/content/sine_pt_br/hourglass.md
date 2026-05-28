@@ -32,9 +32,9 @@ Ela não é uma empresa de segurança privada em nenhum sentido convencional do 
 
 ### Threshold Command — Operações Terrestres
 
-O Threshold Command é a força terrestre da HourGlass. Ele conduz todo tipo de operação em solo, desde confrontos militares convencionais até operações especializadas de suporte ao Apocachynthion ou ao trabalho de campo da Igreja. O Threshold Command mantém o maior efetivo permanente entre os três comandos e possui o histórico operacional mais extenso na fronteira norte.
+O Threshold Command é a força terrestre da HourGlass. Ele conduz todo tipo de operação em solo, desde confrontos militares convencionais até operações especializadas de suporte ao [[apocachynthion|Apocachynthion]] ou ao trabalho de campo da [[the-church|Igreja]]. O Threshold Command mantém o maior efetivo permanente entre os três comandos e possui o histórico operacional mais extenso na fronteira norte.
 
-A doutrina padrão do Threshold Command integra infantaria convencional e formações blindadas com unidades de Redactors vinculadas ao Cloister e, em operações de fronteira, elementos do Obsidian Rite da Igreja. Os protocolos de integração foram desenvolvidos ao longo de gerações de cooperação entre essas instituições e já chegaram a um ponto em que quase funcionam sozinhos, sem necessidade de supervisão ativa.
+A doutrina padrão do Threshold Command integra infantaria convencional e formações blindadas com unidades de Redactors vinculadas ao Cloister e, em operações de fronteira, elementos do [[obsidian-rite|Obsidian Rite da Igreja]]. Os protocolos de integração foram desenvolvidos ao longo de gerações de cooperação entre essas instituições e já chegaram a um ponto em que quase funcionam sozinhos, sem necessidade de supervisão ativa.
 
 No teatro terrestre da War of the Threshold, o Threshold Command normalmente atua como a força de presença sustentada — segurando a linha enquanto elementos especializados lidam com ameaças específicas.
 
@@ -72,7 +72,7 @@ Isso ocasionalmente irrita soldados e é perfeitamente aceitável para oficiais 
 
 O **Cloister of Applied Structure** é o corpo de especialistas em Redactory da HourGlass — o grupo de praticantes cujo treinamento, certificação e implantação operacional são administrados pelos sistemas internos da própria HourGlass, em vez da estrutura padrão do Apocachynthion.
 
-Isso gera uma complexidade jurisdicional constante. Os praticantes do Cloister são registrados no Apocachynthion — precisam ser, já que os requisitos legais para implantação operacional exigem isso — mas seu treinamento operacional e autoridade imediata de comando pertencem à HourGlass. A supervisão do Apocachynthion sobre os praticantes do Cloister é formal nas áreas mais visíveis e consideravelmente mais fraca nas extremidades operacionais.
+Isso gera uma complexidade jurisdicional constante. Os praticantes do Cloister são registrados no Apocachynthion — precisam ser, já que os requisitos legais para implantação operacional exigem isso — mas seu treinamento operacional e autoridade imediata de comando pertencem à HourGlass. A supervisão do [[apocachynthion|Apocachynthion]] sobre os praticantes do Cloister é formal nas áreas mais visíveis e consideravelmente mais fraca nas extremidades operacionais.
 
 A doutrina do Cloister enfatiza integração — a Redactory como parte de operações combinadas, não como uma função especializada usada separadamente. Espera-se que um praticante do Cloister compreenda a situação tática em que sua habilidade está sendo aplicada, e não apenas execute uma capacidade sob comando. Isso exige um tipo específico de treinamento que as academias do Apocachynthion não oferecem, porque elas não treinam soldados.
 

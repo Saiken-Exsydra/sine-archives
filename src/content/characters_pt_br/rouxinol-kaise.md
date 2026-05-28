@@ -65,6 +65,25 @@ A certificação da Threshold Anchor foi emitida simultaneamente à promoção p
 
 ---
 
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha selada  
+**Registry Status:** Registrada  
+**Rank:** [[stylus|Stylus]] (Mirror Anchor) / [[quill|Quill]] (Threshold Anchor)  
+**[[mark|Mark]]:** [[mark-4|Mark 4]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Militar  
+**Anchor:** Mirror / Threshold  
+**Anchor Reading:** Confirmed / Confirmed  
+**Depth Reading:** Deep / Abyssal  
+**Reach Reading:** broad  
+**Registration Tenure:** 8 anos  
+**Academy Record:** Intake compulsorio em 2192; formacao de trilha dupla; certificacao dupla em 2197  
+**Practice Record:** Trabalho de campo como contratada sob revisao especialista  
+**[[blots|Blots]]:** Incidente de Intake Compulsorio  
+**Pager Note:** Review  
+**[[seal|Current Seal]]:** Notacao de certificacao dupla do Council of Volumes; contrassinatura do painel especialista de Hora'veil
+
 ## Classificação Redactory
 
 ### Mirror Anchor

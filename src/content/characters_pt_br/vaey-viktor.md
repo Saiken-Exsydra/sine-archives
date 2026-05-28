@@ -32,11 +32,11 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 
 ## Identidade
 
-Vaey Viktor é um sacerdote aposentado do Obsidian Rite, ex-avaliador de candidatos à santidade e um Beatificado confirmado — vessel de Meruel, a manifestação angelical de Measurement of Potential and Completion. Durante quarenta anos, a Igreja o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a pressão dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
+Vaey Viktor é um sacerdote aposentado do [[obsidian-rite|Obsidian Rite]], ex-avaliador de candidatos à santidade e um Beatificado confirmado — vessel de Meruel, a manifestação angelical de Measurement of Potential and Completion. Durante quarenta anos, a [[the-church|Igreja]] o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a pressão dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
 
 Ele era extraordinariamente bom nesse trabalho. E esse fato é justamente o começo do problema.
 
-Viktor não ascendeu dentro do Rite como um Votary de linha de frente ou como um daqueles membros heroicos do clero que inspiram histórias. O dom dele era discernimento: a capacidade rara e fria de entender que tipo de pressão havia entrado na vida de alguém e no que aquela vida poderia se transformar se a pressão fosse conduzida corretamente. A Igreja confiava nele porque ele acertava vezes demais para ser ignorado. E continuou confiando tempo suficiente para que o próprio trabalho começasse a deformá-lo.
+Viktor não ascendeu dentro do Rite como um Votary de linha de frente ou como um daqueles membros heroicos do clero que inspiram histórias. O dom dele era discernimento: a capacidade rara e fria de entender que tipo de pressão havia entrado na vida de alguém e no que aquela vida poderia se transformar se a pressão fosse conduzida corretamente. A [[the-church|Igreja]] confiava nele porque ele acertava vezes demais para ser ignorado. E continuou confiando tempo suficiente para que o próprio trabalho começasse a deformá-lo.
 
 Hoje ele ocupa a categoria impossível que a Igreja mais teme nomear claramente: um vessel angelical genuíno cujo fragmento é real, cujo histórico de serviço contém bondade verdadeira e cujos atos atuais são assassinato.
 
@@ -46,7 +46,7 @@ Hoje ele ocupa a categoria impossível que a Igreja mais teme nomear claramente:
 
 Meruel pertence a uma constelação Seráfica ligada à medida, não à misericórdia. Seu domínio não envolve justiça cívica, punição ou absolvição. Ele mede a distância entre aquilo que uma pessoa é e aquilo que ela poderia coerentemente se tornar através de coragem, disciplina, oportunidade, treinamento e alinhamento com sua arquitetura interna mais profunda.
 
-O caso de Viktor é uma integração Beatificada genuína, não uma possessão demoníaca e não um dos extremos Seráficos de classe **Answered** ou **Lucent** do Obsidian Rite. O que existe nele é um fragmento angelical real, fundido de forma permanente o bastante para reordenar caráter, percepção e vocação sem retirar da pessoa a responsabilidade moral por aquilo que escolhe fazer com essa mudança.
+O caso de Viktor é uma integração Beatificada genuína, não uma possessão demoníaca e não um dos extremos Seráficos de classe [[answered|Answered]] ou [[lucent|Lucent]] do [[obsidian-rite|Obsidian Rite]]. O que existe nele é um fragmento angelical real, fundido de forma permanente o bastante para reordenar caráter, percepção e vocação sem retirar da pessoa a responsabilidade moral por aquilo que escolhe fazer com essa mudança.
 
 Por meio de Meruel, Viktor enxerga aquilo que um dia chamou de **silhueta completa**: não o futuro, nem destino, mas uma versão possível e coerente do indivíduo existindo em relação à pessoa viva diante dele. No trabalho de avaliação isso o tornava indispensável. Ele conseguia distinguir um vessel genuíno, mas assustado, de um impostor vazio. Conseguia identificar quando a instabilidade atual de alguém escondia uma capacidade espiritual gigantesca. Conseguia perceber se uma vida havia sido danificada, atrasada ou apenas mal compreendida pelas pessoas ao redor.
 
@@ -70,7 +70,7 @@ Quando Meruel se manifesta fortemente através dele, o tremor desaparece das mã
 
 ## Os Anos no Obsidian Rite
 
-Vaey entrou cedo na formação da Igreja e rapidamente chamou atenção por um dom que inicialmente causava desconforto antes de provocar admiração. Ele conseguia ouvir aquilo que as pessoas não estavam dizendo. Conseguia separar milagre de medo, medo de expectativa litúrgica e pressão espiritual das histórias criadas por comunidades assustadas. Esse talento o levou até Kalt'sen e depois ao Obsidian Rite como especialista em avaliação, não como agente de campo.
+Vaey entrou cedo na formação da [[the-church|Igreja]] e rapidamente chamou atenção por um dom que inicialmente causava desconforto antes de provocar admiração. Ele conseguia ouvir aquilo que as pessoas não estavam dizendo. Conseguia separar milagre de medo, medo de expectativa litúrgica e pressão espiritual das histórias criadas por comunidades assustadas. Esse talento o levou até Kalt'sen e depois ao [[obsidian-rite|Obsidian Rite]] como especialista em avaliação, não como agente de campo.
 
 Durante quatro décadas percorreu as consequências de pequenos milagres, Crownings fracassados, suspeitas de santidade, mimetismos demoníacos e rumores paroquiais. Descobriu santos verdadeiros ainda vivos. Expôs cultos falsos. Evitou diversas classificações incorretas graves. Também desenvolveu uma obsessão crescente pelas pessoas que quase se tornaram algo maior — e então falharam, recuaram, quebraram ou desistiram.
 

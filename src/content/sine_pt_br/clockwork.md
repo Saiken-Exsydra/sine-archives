@@ -22,7 +22,7 @@ image: "../../assets/uploads/sine-clockwork.png"
 
 ## O Que é a CLOCKWORK
 
-A CLOCKWORK é uma divisão interna da SiNE cuja existência não é reconhecida em nenhum documento público. Ela não é registrada no Apocachynthion. Seus praticantes não aparecem em nenhum registro institucional de certificação. Suas operações não existem em nenhuma cadeia de relatórios que ultrapasse as estruturas internas mais restritas da SiNE.
+A CLOCKWORK é uma divisão interna da SiNE cuja existência não é reconhecida em nenhum documento público. Ela não é registrada no [[apocachynthion|Apocachynthion]]. Seus praticantes não aparecem em nenhum registro institucional de certificação. Suas operações não existem em nenhuma cadeia de relatórios que ultrapasse as estruturas internas mais restritas da SiNE.
 
 Ela consiste em **144 Redactors** organizados em **doze unidades operacionais**, cada uma identificada por um codinome temporal — DAWN, MORNING, RISE, MERIDIAN, NOON, AFTERNOON, DUSK, EVENING, FALL, ZENITH, NIGHT e uma décima segunda designação que não aparece em nenhum registro sobrevivente de comunicações internas.
 
@@ -80,6 +80,6 @@ O Meridian Council sabe. Em'manuel sabe. Além disso, o conhecimento é rigidame
 
 O Império oficialmente não sabe. Estruturas militares e de inteligência Imperiais encontraram, ao longo de uma longa história operacional, resultados que não conseguiam explicar através das atribuições institucionais disponíveis. Se alguém dentro dessas estruturas concluiu em particular que a SiNE mantém capacidades de Redactory não registradas e escolheu não perseguir as implicações disso, trata-se de julgamento individual, não de registro oficial.
 
-A Igreja não sabe — pelo menos não de forma que possa ser confirmada pelos próprios registros institucionais. Membros individuais do Obsidian Rite nos níveis operacionais mais altos — pessoas que atuam nos conflitos da fronteira norte há tempo suficiente para perceber padrões — podem ter desenvolvido suspeitas. Suspeita não é conhecimento, e o Obsidian Rite não age baseado em suspeitas quando o custo institucional de errar sobre um parceiro de tratado seria significativo.
+[[the-church|A Igreja]] não sabe — pelo menos não de forma que possa ser confirmada pelos próprios registros institucionais. Membros individuais do [[obsidian-rite|Obsidian Rite]] nos níveis operacionais mais altos — pessoas que atuam nos conflitos da fronteira norte há tempo suficiente para perceber padrões — podem ter desenvolvido suspeitas. Suspeita não é conhecimento, e o Obsidian Rite não age baseado em suspeitas quando o custo institucional de errar sobre um parceiro de tratado seria significativo.
 
 A CLOCKWORK nunca foi confirmada por nenhuma instituição externa desde sua fundação. Essa é a evidência mais simples de que ela foi projetada corretamente.

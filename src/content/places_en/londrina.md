@@ -16,9 +16,9 @@ image: "../../assets/uploads/places/place-londrina.png"
 
 ## The Imperial Academy City
 
-Lon'drina is a mid-sized city in the temperate heart of the Central Region. Its identity is not built around operational scale or specialist capability — it is built around age and continuity. The **Academy of Lon'drina** was established in the early centuries of the Empire's formation, predating most of the Apocachynthion's current institutional architecture, and it retains a prestige that newer institutions do not possess and cannot acquire.
+Lon'drina is a mid-sized city in the temperate heart of the Central Region. Its identity is not built around operational scale or specialist capability — it is built around age and continuity. The **Academy of Lon'drina** was established in the early centuries of the Empire's formation, predating most of the [[apocachynthion|Apocachynthion]]'s current institutional architecture, and it retains a prestige that newer institutions do not possess and cannot acquire.
 
-The distinction matters: the Academy of Syr'lene at Vrenne is where the Apocachynthion does its work — assessment volume, specialist panels, advanced research, certification infrastructure. The Academy of Lon'drina is where the Empire educated its practitioners before that infrastructure existed. It does not compete with Vrenne on operational terms. It does not need to. Scholars trained at Lon'drina carry a credential whose weight is entirely about what the institution has been, not what it currently does at scale.
+The distinction matters: the [[academy-of-syrlene|Academy of Syr'lene]] at Vrenne is where the Apocachynthion does its work — assessment volume, specialist panels, advanced research, certification infrastructure. The Academy of Lon'drina is where the Empire educated its practitioners before that infrastructure existed. It does not compete with Vrenne on operational terms. It does not need to. Scholars trained at Lon'drina carry a credential whose weight is entirely about what the institution has been, not what it currently does at scale.
 
 Population: approximately **600,000**.
 

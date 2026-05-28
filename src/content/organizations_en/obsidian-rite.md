@@ -145,11 +145,11 @@ The revised Codex is explicit that danger scales with contact-depth. Stellate co
 
 The revised canon gives two exceptional categories clearer names.
 
-### Lucent
+### Lucent {#lucent}
 
 A **Lucent** is a Beatified vessel whose fusion reaches a **Cardinal Star** rather than a Stellate. Lucency is not honorary language. It is a restricted recognition that the vessel carries broader and more dangerous major-star pressure than ordinary Votaries can sustain.
 
-### Answered
+### Answered {#answered}
 
 The **Answered** are mortal vessels whose fusion reaches the **Cynosure**: the Seraphim itself as the central star of a Seraphic Constellation.
 

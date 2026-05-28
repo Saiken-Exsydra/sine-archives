@@ -145,11 +145,11 @@ O Codex revisado é explícito: o perigo cresce com o contact-depth. Contato Ste
 
 O cânone revisado dá nomes mais claros a duas categorias excepcionais.
 
-### Lucent
+### Lucent {#lucent}
 
 Um **Lucent** é um vessel Beatificado cuja fusão alcança uma **Cardinal Star** em vez de um Stellate. Lucency não é linguagem honorífica. É um reconhecimento restrito de que o vessel carrega pressão de estrela maior, mais ampla e mais perigosa do que Votaries comuns conseguem sustentar.
 
-### Answered
+### Answered {#answered}
 
 Os **Answered** são vessels mortais cuja fusão alcança o **Cynosure**: o próprio Seraphim como estrela central de uma Seraphic Constellation.
 

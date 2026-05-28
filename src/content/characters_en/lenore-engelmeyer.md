@@ -58,17 +58,22 @@ That disappearance is one of the central wounds in her story. It is also one of 
 
 ## Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf
-**Registry Status:** Registered
-**Rank:** Quill
-**Mark:** Mark 2
-**Open Mark:** None
-**Margins:** Disclosure required for non-consenting perceptual influence; Depth review every eight months; no diplomatic or Senate-adjacent work without prior registry notice
-**Anchor:** Deception
-**Anchor Reading:** Confirmed
-**Depth Reading:** Mid
-**Reach Reading:** Broad, monitored
-**Practice Record:** Independent civic and contractor work under western-band compact
+**[[leaf|Leaf Type]]:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** [[quill|Quill]]  
+**[[mark|Mark]]:** [[mark-2|Mark 2]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civic  
+**Anchor:** Deception  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** 7 years  
+**Academy Record:** Hora'veil intake 2193; specialist panel confirmation 2194; Quill certification 2195  
+**Practice Record:** Independent civic and contractor work under western-band inter-registry compact  
+**[[blots|Blots]]:** None  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Hora'veil regional authority; senior assessor review
 
 ## Abilities
 

@@ -41,7 +41,7 @@ hero_gallery:
 
 Ec'lesia Yalara Wonderwall is a cadet-branch Wonderwall whose file was misread for years in exactly the way institutions tend to misread unusual people: they mistook the limits of their tools for the truth about her.
 
-Officially she is still marked **Inkless**. That does not mean she lacks an Anchor. It means ordinary Redactory instruments fail to read her correctly. What they call absence is actually **Stilllight**: a derived Radiance-class Anchor concerned not with light as revelation or radiant force, but with light whose motion has been arrested.
+Officially she is still marked [[inkless|Inkless]]. That does not mean she lacks an Anchor. It means ordinary Redactory instruments fail to read her correctly. What they call absence is actually **Stilllight**: a derived Radiance-class Anchor concerned not with light as revelation or radiant force, but with light whose motion has been arrested.
 
 That distinction matters. Ec'lesia is not a second E'lla. She is not another primary Light case. She is a different kind of Wonderwall problem altogether.
 
@@ -83,7 +83,7 @@ She is strongest where light already exists and weaker in total darkness unless 
 
 ## Institutional Situation
 
-Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a **Quill provisional certification**, given **Mark 1** for supervised practice only, labeled Inkless, and removed from ordinary progression.
+Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a [[quill|Quill]] provisional certification, given [[mark-1|Mark 1]] for supervised practice only, labeled [[inkless|Inkless]], and removed from ordinary progression.
 
 She was not expelled.
 
@@ -93,17 +93,22 @@ She is not field-cleared. High-output practice remains restricted. But she is no
 
 ## Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf
-**Registry Status:** Registered
-**Rank:** Quill, provisional
-**Mark:** Mark 1
-**Open Mark:** None
-**Margins:** No independent field work; high-output practice only under specialist supervision; restricted retention at Lon'drina; contingency seal held separately
-**Anchor:** Stilllight, still carried as Inkless in public institutional language
-**Anchor Reading:** Disputed / Inkless
-**Depth Reading:** Shallow-to-mid under stable conditions; Shore risk under escalation
-**Reach Reading:** Narrow in ordinary practice; unstable under sink pressure
-**Pager Note:** Review
+**[[leaf|Leaf Type]]:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** [[quill|Quill]], provisional  
+**[[mark|Mark]]:** [[mark-1|Mark 1]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Restricted  
+**Anchor:** Stilllight  
+**Anchor Reading:** Disputed  
+**Depth Reading:** Deep  
+**Reach Reading:** minimal  
+**Registration Tenure:** 4 years  
+**Academy Record:** Lon'drina intake 2196; specialist review ongoing  
+**Practice Record:** Calibration assistance; supervised Radiance Annex work  
+**[[blots|Blots]]:** None  
+**Pager Note:** Review  
+**[[seal|Current Seal]]:** Lon'drina specialist review; separate lethal seal on contingency file
 
 ## Important Relationships
 
@@ -127,6 +132,6 @@ She is a young woman building a life loudly enough to stay human while something
 
 The deepest danger around Ec'lesia is not raw output. It is the relationship between **Stilllight** and the **Remainder**.
 
-Stilllight creates arrested radiance: light that lingers in the interval where motion should have completed. That makes Ec'lesia unusually compatible with gap-structure and with the thing older Wonderwall files call the Remainder. In later-stage failure scenarios, the fear is not merely that she loses control. The fear is that her Dive could be pushed toward **Luminant Shorefall**, allowing the Remainder to use her as an access vector toward the First Radiance.
+Stilllight creates arrested radiance: light that lingers in the interval where motion should have completed. That makes Ec'lesia unusually compatible with gap-structure and with the thing older Wonderwall files call the Remainder. In later-stage failure scenarios, the fear is not merely that she loses control. The fear is that her Dive could be pushed toward **[[shorefall|Luminant Shorefall]]**, allowing the Remainder to use her as an access vector toward the First Radiance.
 
 That is why she is watched so closely.

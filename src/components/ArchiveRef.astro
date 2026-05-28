@@ -1,0 +1,43 @@
+---
+import { nextArchiveRefPreviewId } from "../utils/archive-ref-core.mjs";
+import { resolveArchiveRef, type ArchiveRefResolution } from "../utils/archive-refs";
+import type { ContentKey } from "../content-keys";
+
+interface Props {
+  ref: string;
+  currentSection: ContentKey;
+  currentSlug: string;
+  locale?: "en" | "pt-br";
+}
+
+const { ref, currentSection, currentSlug, locale = "en" } = Astro.props as Props;
+const resolved = resolveArchiveRef({
+  ref,
+  currentSection,
+  currentSlug,
+  locale,
+}) as ArchiveRefResolution;
+
+if (!resolved.exists) {
+  throw new Error(`[archive-ref] ${resolved.message} Offending ref: ${ref}`);
+}
+
+const previewId = resolved.preview ? nextArchiveRefPreviewId() : null;
+---
+
+<span class={`archive-ref${resolved.preview ? " archive-ref--with-preview" : ""}`}>
+  <a
+    class="archive-ref__link"
+    href={resolved.href}
+    data-archive-ref-target={resolved.targetKey}
+    aria-describedby={previewId ?? undefined}
+  >
+    {resolved.label}
+  </a>
+  {resolved.preview ? (
+    <span class="archive-ref__preview" id={previewId ?? undefined} role="tooltip">
+      <span class="archive-ref__preview-title">{resolved.targetTitle}</span>
+      <span class="archive-ref__preview-text">{resolved.preview}</span>
+    </span>
+  ) : null}
+</span>

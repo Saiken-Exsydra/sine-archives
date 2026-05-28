@@ -177,6 +177,10 @@ Dentro do Obsidian Rite, o cânone revisado separa **rank** de **contact-depth**
 
 O Choir Penitent é a ordem formal de Heralds da Igreja — indivíduos portadores daquilo que a instituição chama de **the Gift of Sight**, submetido voluntariamente à supervisão e orientação eclesiástica. Dentro do Obsidian Rite, eles atuam como função de inteligência operacional — identificando a natureza e o nível de uma presença demoníaca antes do confronto de uma unidade expulsora, analisando manifestações angelicais alegadas para determinar sua autenticidade e fornecendo alertas antecipados sobre concentrações demoníacas antes que um Desolation Event alcance seus estágios mais perigosos.
 
+### The Gift of Sight {#gift-of-sight}
+
+O **Gift of Sight** é o termo eclesiástico para percepção heraldica ou visionária de natureza receptiva. Um verdadeiro Herald recebe. Ele não fabrica. A Igreja trata esse dom como contato que exige disciplina, supervisão e formação contínua, não como licença para forçar o véu por conta própria.
+
 Membros do Choir Penitent não carregam instrumentos de expulsão. Protegê-los durante operações é responsabilidade do Votary ou Votary-Principal designado para acompanhá-los.
 
 O nome da ordem vem de sua doutrina fundadora: o Gift of Sight não é conquistado. É concedido. Aqueles que o carregam servem em penitência não por pecado, mas por privilégio — em reconhecimento de que enxergam coisas que ninguém pediu para ver e de que essa visão possui um custo.

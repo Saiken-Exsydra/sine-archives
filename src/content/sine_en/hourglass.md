@@ -32,9 +32,9 @@ It is not a private security firm in any sense that term usually implies. It is 
 
 ### Threshold Command - Land Operations
 
-Threshold Command is HourGlass's ground force. It conducts all land-based operations, from conventional military engagements to specialized operations in support of Apocachynthion or Church field work. Threshold Command maintains the largest standing personnel count of the three commands and has the most extensive operational record at the northern frontier. Embedded Redactor roles in this command usually require **Mark 3** for field work and **Mark 4** when operations push into thinness-heavy engineering or extreme environmental response.
+Threshold Command is HourGlass's ground force. It conducts all land-based operations, from conventional military engagements to specialized operations in support of [[apocachynthion|Apocachynthion]] or [[the-church|Church]] field work. Threshold Command maintains the largest standing personnel count of the three commands and has the most extensive operational record at the northern frontier. Embedded Redactor roles in this command usually require [[mark-3|Mark 3]] for field work and [[mark-4|Mark 4]] when operations push into thinness-heavy engineering or extreme environmental response.
 
-Standard Threshold Command doctrine integrates conventional infantry and armored formations with Cloister-attached Redactor units and, in frontier operations, Church Obsidian Rite elements. The integration protocols were developed over generations of working alongside both institutions and have been refined to a point where they mostly run without active management.
+Standard Threshold Command doctrine integrates conventional infantry and armored formations with Cloister-attached Redactor units and, in frontier operations, [[obsidian-rite|Church Obsidian Rite]] elements. The integration protocols were developed over generations of working alongside both institutions and have been refined to a point where they mostly run without active management.
 
 In the War of the Threshold's ground theatre, Threshold Command is typically the sustained presence element - holding the line while specialized elements address specific threats.
 
@@ -72,7 +72,7 @@ This is occasionally frustrating to soldiers and entirely acceptable to the offi
 
 The **Cloister of Applied Structure** is HourGlass's Redactor specialist corps - the body of practitioners whose training and operational deployment are managed through HourGlass's internal systems rather than through the Apocachynthion's standard academy track.
 
-This is a source of ongoing jurisdictional complexity. Practitioners in the Cloister are still registered and **Marked** through the Apocachynthion - they have to be, legal requirements for operational deployment demand it - but their operational training and immediate command authority sit within HourGlass. HourGlass can command the mission. It cannot erase a practitioner's **Margins** or lawfully order Redactory outside the current Mark without recognized emergency opening.
+This is a source of ongoing jurisdictional complexity. Practitioners in the Cloister are still registered and **Marked** through the Apocachynthion - they have to be, legal requirements for operational deployment demand it - but their operational training and immediate command authority sit within HourGlass. HourGlass can command the mission. It cannot erase a practitioner's [[margins|Margins]] or lawfully order Redactory outside the current Mark without recognized emergency opening.
 
 The Cloister's doctrine emphasizes integration - Redactory as a component of combined-arms operations rather than a specialist function employed separately. A Cloister practitioner is expected to understand the tactical situation their ability is being applied to, not simply to execute ability on command. This requires a specific kind of training that the Apocachynthion's academies do not provide, because the Apocachynthion's academies are not training soldiers.
 

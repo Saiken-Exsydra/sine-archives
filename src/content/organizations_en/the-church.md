@@ -129,7 +129,7 @@ The **Crowning** is temporary angelic expression through a willing and prepared 
 
 When angelic presence remains, deepens, and permanently reorients a person toward the Sovereign's expressed domain, the Church calls the result **Beatification**.
 
-### The Gift of Sight
+### The Gift of Sight {#gift-of-sight}
 
 The **Gift of Sight** is the Church's term for Heraldic or visionary perception. It is treated as receptive, not projective. A true Herald receives. They do not manufacture.
 

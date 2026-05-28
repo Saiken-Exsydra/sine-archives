@@ -36,7 +36,7 @@ Aurora shares a **land border** with Synus to the east through the forested high
 
 ---
 
-## The White Desert
+## The White Desert {#white-desert}
 
 The **White Desert** occupies Aurora's southern territory in its entirety below a certain latitude. Its extreme conditions are not thermal but **photonic**. The desert's composition — fine white silicate sand formed over geological time by Bright-Side radiation acting on the mineral-rich substrate — reflects accretion-disk radiation with an efficiency far beyond what dark earth or stone would produce. Standing at the desert's edge during High Radiance, the light comes from below as much as above.
 

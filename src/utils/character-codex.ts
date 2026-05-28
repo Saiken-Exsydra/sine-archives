@@ -6,6 +6,7 @@ import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
+import remarkArchiveHeadingIds from "./remark-archive-heading-ids.mjs";
 
 const ARCHIVE_CHARACTERS_DIR = fileURLToPath(
   new URL("../../The Archive/Characters/", import.meta.url),
@@ -112,6 +113,7 @@ async function renderArchiveMarkdown(filePath: string): Promise<string> {
       const rendered = await unified()
         .use(remarkParse)
         .use(remarkGfm)
+        .use(remarkArchiveHeadingIds)
         .use(remarkRehype)
         .use(rehypeStringify)
         .process(source);

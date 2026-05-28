@@ -54,13 +54,13 @@ Clepsydra is not military in character, though nearly every military campaign of
 
 ### S-RM: Magi (Redactor Management)
 
-Magi handles SiNE's internal Redactor population - placement management for SiNE-affiliated practitioners, compact-side coordination with the Apocachynthion's registry, and the administrative machinery that governs how registered practitioners operate within SiNE's institutional structure.
+Magi handles SiNE's internal Redactor population - placement management for SiNE-affiliated practitioners, compact-side coordination with the [[apocachynthion|Apocachynthion]]'s registry, and the administrative machinery that governs how registered practitioners operate within SiNE's institutional structure.
 
-The relationship between Magi and the Apocachynthion is technically cooperative and practically complicated. Registered practitioners in SiNE's employ report to both institutional hierarchies in ways that produce conflicting obligations often enough to keep both institutions' legal divisions occupied. In imperial territory, Magi can place a Redactor only within the scope of that practitioner's current **Mark** and **Margins**, unless an emergency **Open Mark** is recognized through Apocachynthion authority.
+The relationship between Magi and the [[apocachynthion|Apocachynthion]] is technically cooperative and practically complicated. Registered practitioners in SiNE's employ report to both institutional hierarchies in ways that produce conflicting obligations often enough to keep both institutions' legal divisions occupied. In imperial territory, Magi can place a Redactor only within the scope of that practitioner's current [[mark|Mark]] and [[margins|Margins]], unless an emergency [[open-mark|Open Mark]] is recognized through [[pagers|Apocachynthion authority]].
 
 ### S-LG: Evanote (Legal and Governance)
 
-Evanote manages SiNE's regulatory standing, its treaty relationships with the Empire and the Church, and the ongoing business of operating at institutional scale in a world with many competing regulatory bodies.
+Evanote manages SiNE's regulatory standing, its treaty relationships with the Empire and the [[the-church|Church]], and the ongoing business of operating at institutional scale in a world with many competing regulatory bodies.
 
 Evanote is also the division that knows where the bodies are - metaphorically, mostly.
 
@@ -94,8 +94,8 @@ The founder's role in Council decisions is formally one voice among several. In 
 
 ## Relationship to Other Institutions
 
-**The Empire:** Treaty-bound, functionally cooperative at multiple levels. The relationship works in part because the post-Fracture world does not permit any one institution to hold the whole explanatory picture. The Empire holds civil authority, SiNE holds infrastructure and force, the Church holds parts of the dangerous theological record, and the Apocachynthion holds Redactor governance.
+**The Empire:** Treaty-bound, functionally cooperative at multiple levels. The relationship works in part because the post-Fracture world does not permit any one institution to hold the whole explanatory picture. The Empire holds civil authority, SiNE holds infrastructure and force, the [[the-church|Church]] holds parts of the dangerous theological record, and the [[apocachynthion|Apocachynthion]] holds Redactor governance.
 
-**The Apocachynthion:** Formally cooperative, practically complex. SiNE can train, contract, and command Redactors inside its own structure, but within the Empire it still depends on Apocachynthion registration, Mark recognition, and Pager law wherever Redactory practice itself is concerned. The Apocachynthion is aware that SiNE's operational envelope includes things outside Apocachynthion visibility. This awareness has not produced a crisis because SiNE has been careful about the visibility question for a very long time.
+**[[apocachynthion|The Apocachynthion]]:** Formally cooperative, practically complex. SiNE can train, contract, and command Redactors inside its own structure, but within the Empire it still depends on Apocachynthion registration, Mark recognition, and Pager law wherever Redactory practice itself is concerned. The Apocachynthion is aware that SiNE's operational envelope includes things outside Apocachynthion visibility. This awareness has not produced a crisis because SiNE has been careful about the visibility question for a very long time.
 
-**The Church:** Respectful distance maintained by both sides. Where operational interests intersect - particularly at the northern frontier - the relationship is professional and effective.
+**[[the-church|The Church]]:** Respectful distance maintained by both sides. Where operational interests intersect - particularly at the northern frontier - the relationship is professional and effective.

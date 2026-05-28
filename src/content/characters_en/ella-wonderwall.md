@@ -6,8 +6,8 @@ birth_year: "2175"
 birthplace: "Project Kaleidoscope facility - released to primary Wonderwall line before age five"
 affiliation: "House Wonderwall (primary line); SiNE"
 house: "Wonderwall (primary line placement)"
-rank: "Radiance-class Redactor - Abyssal Anchor; Mark 5 standing recognized"
-registry_status: "Registered - Radiance-class, Light Anchor. KL-83 in restricted files"
+rank: "Stylus - Light Anchor; Mark 5 standing recognized"
+registry_status: "Registered - Stylus, Light Anchor. KL-83 in restricted files"
 designation: "The Luminant Ataraxia"
 height: "170 cm"
 build: "Very thin; long-fingered; superficially delicate"
@@ -38,7 +38,7 @@ codex_file: "Ella Rae Wonderwall Dossier.md"
 
 ## Overview
 
-E'lla is one of the strongest Light Redactors of her generation, but that description hides the most important part of her story. She is the final success of **Project Kaleidoscope**, a long Wonderwall attempt to recreate an earlier lost heir and rebuild an impossible kind of Light.
+E'lla is one of the strongest Light Redactors of her generation, but that description hides the most important part of her story. She is the final success of [[project-kaleidoscope|Project Kaleidoscope]], a long Wonderwall attempt to recreate an earlier lost heir and rebuild an impossible kind of Light.
 
 That makes her both a person and the result of a family project that lasted for centuries. She was raised as a daughter, trained as a future power inside SiNE, and shaped by a history that was already waiting for her before she was old enough to understand it.
 
@@ -54,11 +54,30 @@ The White Desert changed her. Before it, she seems to have been more openly conf
 
 ## Background
 
-E'lla was created by Project Kaleidoscope and placed into the main Wonderwall line before she turned five. From then on, her life was shaped by two truths at once: she was genuinely family, and she was also the living outcome of an old family obsession.
+E'lla was created by [[project-kaleidoscope|Project Kaleidoscope]] and placed into the main Wonderwall line before she turned five. From then on, her life was shaped by two truths at once: she was genuinely family, and she was also the living outcome of an old family obsession.
 
 She was raised by **Al'ithia** in the human sense that matters most and trained under **Em'manuel** for a future inside SiNE. That future is not limited to combat or field use. She is also being prepared for logistics, command, crisis handling, and the practical machinery of power.
 
-The central break in her life is the **White Desert**. Publicly it was treated as a catastrophic Light-related failure. In practical terms, it was the moment her power went far deeper than the people around her expected and proved that her connection to Light was more dangerous than a simple high-tier Radiance case.
+The central break in her life is the [[white-desert|White Desert]]. Publicly it was treated as a catastrophic Light-related failure. In practical terms, it was the moment her power went far deeper than the people around her expected and proved that her connection to Light was more dangerous than a simple high-tier Radiance case.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Sealed Leaf  
+**Registry Status:** Registered; KL-83 retained in restricted files  
+**Rank:** [[stylus|Stylus]]  
+**[[mark|Mark]]:** [[mark-5|Mark 5]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Military  
+**Anchor:** Light  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Abyssal  
+**Reach Reading:** catastrophic  
+**Registration Tenure:** Undisclosed  
+**Academy Record:** House-directed formation; controlled post-Aurora recovery and precision training  
+**Practice Record:** SiNE operational work, materials control, and successor-track command preparation  
+**[[blots|Blots]]:** [[white-desert|White Desert]] Incident  
+**Pager Note:** Review  
+**[[seal|Current Seal]]:** Wonderwall restricted file; internal successor standing maintained
 
 ## Abilities
 
@@ -80,9 +99,9 @@ Think of her power less as "she glows" and more as "she can make an entire space
 
 Light is not safe for E'lla just because it belongs to her. Bright rooms, uncontrolled reflections, mirrored spaces, and unstable fields can all turn from scenery into threat.
 
-Her worst failure state is **Shorefall**, a descent so deep that Light starts shaping itself through her instead of the other way around. The White Desert proved that threshold is real. It was not a dramatic rumor. It happened, and people died.
+Her worst failure state is **[[shorefall|Shorefall]]**, a descent so deep that Light starts shaping itself through her instead of the other way around. The [[white-desert|White Desert]] proved that threshold is real. It was not a dramatic rumor. It happened, and people died.
 
-She also lives with a human limitation that matters just as much as the magical one: she still does not know the full truth of Project Kaleidoscope, the earlier failed subjects, or what pieces of that long experiment may still be active around her.
+She also lives with a human limitation that matters just as much as the magical one: she still does not know the full truth of [[project-kaleidoscope|Project Kaleidoscope]], the earlier failed subjects, or what pieces of that long experiment may still be active around her.
 
 That means E'lla is expected to carry consequences she was not allowed to fully understand in advance.
 
@@ -104,4 +123,4 @@ She matters because she asks a hard question in human form: what happens when so
 
 ## Deeper Lore
 
-In deeper Wonderwall interpretation, the White Desert was not only an accident. It may have been E'lla reaching the **Luminant Shore**, the Shore tied to Light, revelation, and impossible visibility. Kaleidoscope may also remain partially active around her as leftover patterning from the earlier subjects, which is why private observers watch for strange reflections, borrowed instincts, and echoes that do not feel fully like her own.
+In deeper Wonderwall interpretation, the [[white-desert|White Desert]] was not only an accident. It may have been E'lla reaching the [[luminant-shore|Luminant Shore]], the Shore tied to Light, revelation, and impossible visibility. [[project-kaleidoscope|Kaleidoscope]] may also remain partially active around her as leftover patterning from the earlier subjects, which is why private observers watch for strange reflections, borrowed instincts, and echoes that do not feel fully like her own.

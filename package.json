@@ -3,10 +3,12 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "check:archive-refs": "node scripts/check-archive-refs.mjs",
+    "report:archive-refs": "node scripts/report-archive-ref-candidates.mjs",
     "check:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs --check",
     "check:text-encoding": "node scripts/pt-br-encoding-guard.mjs --check",
     "dev": "astro dev",
-    "build": "npm run songs:generate && npm run check:pt-br-fallbacks && npm run check:text-encoding && astro build",
+    "build": "npm run songs:generate && npm run check:pt-br-fallbacks && npm run check:text-encoding && npm run check:archive-refs && astro build",
     "fix:text-encoding": "node scripts/pt-br-encoding-guard.mjs --fix",
     "seed:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs",
     "songs:generate": "node scripts/generate-song-metadata.mjs",

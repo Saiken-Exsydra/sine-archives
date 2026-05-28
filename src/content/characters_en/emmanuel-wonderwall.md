@@ -57,6 +57,25 @@ The collapse tied to that failure destroyed more than lives. It also destroyed a
 
 Across the following centuries he founded SiNE, shaped policy, guarded dangerous knowledge, and turned his attention toward the strange inheritance problems growing inside the Wonderwall line.
 
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** Archtype  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civic  
+**Anchor:** Spatial Coherence  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Abyssal  
+**Reach Reading:** catastrophic  
+**Registration Tenure:** Undisclosed  
+**Academy Record:** No ordinary intake; partial Archtype transition record held at the Cloister of Applied Structure  
+**Practice Record:** Statecraft, infrastructure control, SiNE leadership, and catastrophic-response authority  
+**[[blots|Blots]]:** None  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Unrestricted Archtype recognition under standing institutional classification
+
 ## Abilities
 
 Em'manuel is a **Redactor**, meaning he uses the setting's structured magic through an **Anchor**, the concept his power understands best. His own name for that Anchor is **Interval**.
@@ -88,7 +107,7 @@ The human limit matters just as much. Thinking on civilizational scale helped hi
 
 **Al'ithia Rae Wonderwall** forced him to confront the difference between memory and a living person. Through her, he had to learn that not every impossible return is a restoration.
 
-**E'lla Rae Wonderwall** is the final success of Project Kaleidoscope and the heir he tried to build. He trains her while still withholding some of the truth about what made her.
+**E'lla Rae Wonderwall** is the final success of [[project-kaleidoscope|Project Kaleidoscope]] and the heir he tried to build. He trains her while still withholding some of the truth about what made her.
 
 **Ec'lesia Wonderwall** is the opposite kind of problem: not engineered, but possibly closer to the natural inheritance pattern the deeper Wonderwall mystery actually recognizes.
 

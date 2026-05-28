@@ -88,6 +88,27 @@ O que a classificação pública não percebe é que essa Anchor provavelmente �
 
 ---
 
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha de pratica  
+**Registry Status:** Registrada sob compacto aurorano  
+**Rank:** [[quill|Quill]]  
+**[[mark|Mark]]:** [[mark-2|Mark 2]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civico  
+**Anchor:** Mechanism  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** 5 anos  
+**Academy Record:** Avaliacao da embaixada aurorana apos a manifestacao aos dezenove anos; certificacao de compacto mantida sob reconhecimento da MAGI  
+**Practice Record:** Pesquisa, diagnostico e trabalho civico-industrial controlado  
+**[[blots|Blots]]:** Nenhum  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Avaliacao da embaixada aurorana sob reconhecimento do Apocachynthion
+
+---
+
 ## O Sibyl Fragment
 
 O **Sibyl Fragment** é um dispositivo diagnóstico Precursor. Ele não foi criado para uso humano moderno. Instrumentos normais não conseguem interpretá-lo corretamente, e pessoas comuns só recebem impressões distorcidas dele — quando recebem alguma coisa.

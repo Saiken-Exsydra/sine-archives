@@ -70,6 +70,25 @@ A classificação explica a ausência de assinaturas normais de Dive, os efeitos
 
 **Essa classificação é uma caixa que a própria Le'nore construiu.** Desde a primeira sessão em que a hipótese surgiu, ela percebeu exatamente a direção para onde o painel estava indo e passou a reproduzir precisamente o que aquela estrutura teórica previa. Ela entregou a eles um recipiente conceitual. E passou a viver dentro dele. Ela conhece os fundamentos dessa teoria melhor do que a maioria dos praticantes conhece a própria taxonomia de Anchor, porque a caixa só funciona quando você sabe exatamente onde ficam as paredes dela.
 
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha selada  
+**Registry Status:** Registrada  
+**Rank:** [[quill|Quill]]  
+**[[mark|Mark]]:** [[mark-2|Mark 2]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civico  
+**Anchor:** Deception  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** 7 anos  
+**Academy Record:** Intake de Hora'veil em 2193; confirmacao do painel especialista em 2194; certificacao Quill em 2195  
+**Practice Record:** Trabalho civico e de contratada sob compacto inter-registro da faixa oeste  
+**[[blots|Blots]]:** Nenhum  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Autoridade regional de Hora'veil; revisao de avaliador senior
+
 ## Verdadeira Natureza — O Que a Classificação Não Contém
 
 *O trecho abaixo não aparece em nenhum arquivo institucional.*

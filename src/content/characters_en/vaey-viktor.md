@@ -34,7 +34,7 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 
 Vaey Viktor is one of the setting's most disturbing reminders that real holiness does not automatically produce moral safety.
 
-He is a retired priest of the **Obsidian Rite** and a confirmed Beatified vessel of **Meruel**, an angelic force associated with measurement, potential, and completion. For decades he helped the Church assess saint-candidates and difficult manifestation cases. Now he kills people he believes have betrayed what they were meant to become.
+He is a retired priest of the [[obsidian-rite|Obsidian Rite]] and a confirmed Beatified vessel of **Meruel**, an angelic force associated with measurement, potential, and completion. For decades he helped the [[the-church|Church]] assess saint-candidates and difficult manifestation cases. Now he kills people he believes have betrayed what they were meant to become.
 
 The horror of Vaey is not that he is fake. It is that he is real.
 
@@ -48,11 +48,11 @@ He is the sort of person who can sound compassionate while deciding someone shou
 
 ## Background
 
-Vaey spent most of his life inside Church assessment work. He was valuable because Meruel's domain made him unusually good at reading difficult cases. He could sense hidden capacity, tell the difference between fraudulent spectacle and genuine contact, and identify people whose unstable lives still carried a coherent path toward sainthood or greatness.
+Vaey spent most of his life inside [[the-church|Church]] assessment work. He was valuable because Meruel's domain made him unusually good at reading difficult cases. He could sense hidden capacity, tell the difference between fraudulent spectacle and genuine contact, and identify people whose unstable lives still carried a coherent path toward sainthood or greatness.
 
 Over time, that gift hardened into obsession. Instead of treating unrealized potential as a tragedy, he began treating it as guilt. The same insight that once made him useful slowly became the logic behind his murders.
 
-The Church's role matters here too. Vaey was allowed to stay useful long after the danger should have been obvious, and parts of the institution still shield him because admitting the truth would expose too much failure at once.
+The [[the-church|Church]]'s role matters here too. Vaey was allowed to stay useful long after the danger should have been obvious, and parts of the institution still shield him because admitting the truth would expose too much failure at once.
 
 ## Abilities
 
@@ -76,9 +76,9 @@ Vaey's greatest weakness is therefore theological. He mistakes a sharp partial t
 
 **Meruel** is the defining pressure in his life. Vaey has let one fragment of Heaven become his entire moral vocabulary.
 
-**The Obsidian Rite** formed him, used him, and now has to live with what it helped create.
+**[[obsidian-rite|The Obsidian Rite]]** formed him, used him, and now has to live with what it helped create.
 
-**The Church of the Sovereign** still matters because parts of it continue protecting him out of shame, gratitude, and fear of scandal.
+**[[the-church|The Church of the Sovereign]]** still matters because parts of it continue protecting him out of shame, gratitude, and fear of scandal.
 
 **Mother Calienne Voss** represents the minority inside the institution willing to say the obvious thing aloud: Vaey hears something real, but not enough of it.
 
@@ -86,7 +86,7 @@ Vaey's greatest weakness is therefore theological. He mistakes a sharp partial t
 
 Vaey matters because he shows how discernment can rot into cruelty without losing its legitimacy at the source.
 
-He also exposes an institutional weakness in the Church. Systems like to imagine that corruption always looks false, demonic, or openly rebellious. Vaey is far worse than that. He is pious, useful, accurate in part, and still monstrous.
+He also exposes an institutional weakness in the [[the-church|Church]]. Systems like to imagine that corruption always looks false, demonic, or openly rebellious. Vaey is far worse than that. He is pious, useful, accurate in part, and still monstrous.
 
 ## Deeper Lore
 

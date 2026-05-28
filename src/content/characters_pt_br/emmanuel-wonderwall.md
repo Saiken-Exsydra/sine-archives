@@ -38,7 +38,7 @@ hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 
 ### Antes da Fundação — A Casa Ex'sydra
 
-O nome Wonderwall existe desde antes da Casa. Antes de pertencer a Em'manuel, pertenceu a uma mulher chamada A'licia Rae Wonderwall, e antes dela, a uma pequena linhagem acadêmica sem grande importância política baseada na costa norte — focada no comportamento estrutural do BrightCrystal na interface da Scorch. Úteis. Não importantes.
+O nome Wonderwall existe desde antes da Casa. Antes de pertencer a Em'manuel, pertenceu a uma mulher chamada A'licia Rae Wonderwall, e antes dela, a uma pequena linhagem acadêmica sem grande importância política baseada na costa norte — focada no comportamento estrutural do [[brightcrystal|BrightCrystal]] na interface da Scorch. Úteis. Não importantes.
 
 Em'manuel não nasceu nessa família. Nasceu em outra completamente diferente.
 
@@ -46,15 +46,15 @@ A casa Ex'sydra era a principal instituição teórica do reino pré-Imperial �
 
 Estavam parcialmente certos. A Anchor que acessavam era real. Só não era o que eles acreditavam que fosse. E a diferença entre essas duas coisas matou quase todos eles quando a Fratura demonstrou isso da pior forma possível.
 
-Al'uxxios Ex'sydra — nascido entre a geração mais jovem da casa, visto internamente como alguém mais prático do que ambicioso em teoria, focado em pesquisas estruturais de BrightCrystal que tinham mais em comum com o trabalho da família Wonderwall do que com a doutrina sequencial dos Ex'sydra — sobreviveu à Fratura porque era jovem demais e periférico demais para que ainda tivessem colocado sobre ele a responsabilidade teórica pelo que estava para acontecer.
+Al'uxxios Ex'sydra — nascido entre a geração mais jovem da casa, visto internamente como alguém mais prático do que ambicioso em teoria, focado em pesquisas estruturais de [[brightcrystal|BrightCrystal]] que tinham mais em comum com o trabalho da família Wonderwall do que com a doutrina sequencial dos Ex'sydra — sobreviveu à Fratura porque era jovem demais e periférico demais para que ainda tivessem colocado sobre ele a responsabilidade teórica pelo que estava para acontecer.
 
 ### A Fratura — O Que Sua Casa Fez e Quanto Custou
 
-Os Ex'sydra foram os autores da estrutura teórica que sustentou o elemento mais catastrófico do Rito de Selia: a Doutrina Sequencial. O Dive coletivo das doze casas exigia, segundo os cálculos deles, uma convergência sequencial perfeitamente sincronizada — cada tradição iniciando seu Dive em um intervalo específico, seguindo a ordem que a leitura do fio indicava como estruturalmente correta. Três gerações de trabalho com a Anchor produziram um conjunto de matrizes temporais de BrightCrystal — amplificadores e condutores projetados para sincronizar a sensibilidade de travessia de múltiplos praticantes em um único mapa de trajetória. As matrizes eram a contribuição dos Ex'sydra.
+Os Ex'sydra foram os autores da estrutura teórica que sustentou o elemento mais catastrófico do Rito de Selia: a Doutrina Sequencial. O Dive coletivo das doze casas exigia, segundo os cálculos deles, uma convergência sequencial perfeitamente sincronizada — cada tradição iniciando seu Dive em um intervalo específico, seguindo a ordem que a leitura do fio indicava como estruturalmente correta. Três gerações de trabalho com a Anchor produziram um conjunto de matrizes temporais de [[brightcrystal|BrightCrystal]] — amplificadores e condutores projetados para sincronizar a sensibilidade de travessia de múltiplos praticantes em um único mapa de trajetória. As matrizes eram a contribuição dos Ex'sydra.
 
 A análise estava errada de uma forma extremamente específica e absolutamente fatal: o que eles estavam lendo não era sequência temporal. Era trajetória — a tendência estrutural de configurações presentes evoluírem para configurações adjacentes, a inclinação do que existe em direção ao que vem depois. Ler uma inclinação corretamente não significa ter autoridade sobre ela. As matrizes, projetadas para sincronizar e amplificar, fizeram exatamente o que deveriam fazer usando exatamente os dados errados. Amplificaram a perturbação de Resonance. Sincronizaram a cascata. O colapso que veio depois foi mais rápido e mais absoluto por causa delas.
 
-As outras casas também participaram. O processo de transformar os Ex'sydra em bode expiatório não foi totalmente injusto — apenas extremamente conveniente. O nome Ex'sydra foi removido dos registros institucionais. Seus arquivos foram confiscados, suas propriedades redistribuídas e suas contribuições teóricas absorvidas sem crédito pela base de pesquisa que mais tarde se tornaria o Apocachynthion. Um membro sênior da casa — não Al'uxxios — foi capturado, condenado e executado como principal responsável pelo fracasso. Entre a condenação e a execução, ela teve tempo de dar à luz uma criança. A criança foi entregue a uma família refugiada na Região Norte e cresceu carregando um nome que já não significava nada para ninguém.
+As outras casas também participaram. O processo de transformar os Ex'sydra em bode expiatório não foi totalmente injusto — apenas extremamente conveniente. O nome Ex'sydra foi removido dos registros institucionais. Seus arquivos foram confiscados, suas propriedades redistribuídas e suas contribuições teóricas absorvidas sem crédito pela base de pesquisa que mais tarde se tornaria o [[apocachynthion|Apocachynthion]]. Um membro sênior da casa — não Al'uxxios — foi capturado, condenado e executado como principal responsável pelo fracasso. Entre a condenação e a execução, ela teve tempo de dar à luz uma criança. A criança foi entregue a uma família refugiada na Região Norte e cresceu carregando um nome que já não significava nada para ninguém.
 
 Al'uxxios descobriu isso depois. Carregou essa informação por anos antes de finalmente arquivá-la, dentro da arquitetura mental privada que estava desenvolvendo para lidar com coisas que não podia consertar, como uma perda. Estava errado sobre isso ser uma perda. Só descobriria aproximadamente quinhentos anos depois.
 
@@ -66,7 +66,7 @@ Ele nunca realizou essa segunda sessão. A'licia também não esperou por uma.
 
 O que ela era, segundo a avaliação privada que Em'manuel escreveu quinhentos anos após sua morte: a praticante estruturalmente mais clara que ele conheceu em doze séculos. Não a mais poderosa. A mais *clara* — uma Anchor de Luz operando sem interferências, expressando exatamente aquilo que era, sem as distorções que o acúmulo inevitavelmente introduz.
 
-**Toda a herança de Light na linhagem Wonderwall veio dela.** E'lla, Ju'llian, Ec'lesia — a Luz veio de A'licia. Essa é a parte do legado da família que aparece em todos os registros institucionais, em todos os estudos acadêmicos e em todas as análises do Apocachynthion sobre o perfil Redactory da linhagem. Quando olham para essa família, é isso que as pessoas enxergam. A contribuição de A'licia, não a dele.
+**Toda a herança de Light na linhagem Wonderwall veio dela.** E'lla, Ju'llian, Ec'lesia — a Luz veio de A'licia. Essa é a parte do legado da família que aparece em todos os registros institucionais, em todos os estudos acadêmicos e em todas as análises do [[apocachynthion|Apocachynthion]] sobre o perfil Redactory da linhagem. Quando olham para essa família, é isso que as pessoas enxergam. A contribuição de A'licia, não a dele.
 
 A contribuição dele para a linhagem é outra. E ela não aparece em nenhum registro institucional.
 
@@ -76,15 +76,15 @@ A contribuição dele para a linhagem é outra. E ela não aparece em nenhum reg
 
 ### A Anchor: Interval
 
-O Apocachynthion classifica Em'manuel como **Spatial Coherence** — uma designação usada para manifestações de Anchor associadas a configuração posicional e relacional. Spatial Coherence funciona como categoria taxonômica. O problema é que, no caso específico dele, aquilo que existe dentro dessa categoria é algo que a classificação só consegue aproximar de forma extremamente imperfeita.
+O [[apocachynthion|Apocachynthion]] classifica Em'manuel como **Spatial Coherence** — uma designação usada para manifestações de Anchor associadas a configuração posicional e relacional. Spatial Coherence funciona como categoria taxonômica. O problema é que, no caso específico dele, aquilo que existe dentro dessa categoria é algo que a classificação só consegue aproximar de forma extremamente imperfeita.
 
 A Anchor é **Interval**. Nome escolhido por ele. Não por eles.
 
 Interval não é distância espacial. É a propriedade relacional existente entre configurações — espaciais, sequenciais ou estruturais. O espaço entre onde algo está e onde não está. A pausa entre a existência de uma configuração e a próxima. O fato estrutural de que todo estado que já existiu sempre existiu em relação aos estados adjacentes, e que essas relações também fazem parte da gramática do Archive — presentes, quantificáveis e acessíveis para um praticante cuja arquitetura recursiva se estabiliza ao redor delas.
 
-Nenhum outro praticante nos registros de doze séculos do Apocachynthion possui uma Anchor de Interval. A tradição de leitura sequencial da casa Ex'sydra foi a aproximação mais próxima que já existiu de uma formulação formal disso — três gerações de praticantes cuja sensibilidade herdada ao Interval foi transformada em metodologia operacional, ainda que interpretada da forma errada. Eles acreditavam estar lendo o tempo. Na verdade, estavam lendo trajetória: a inclinação estrutural governada, antes da Fratura, por *Forðgesceaft*, a lei do Instrument of Foresight, dispersa em influência residual depois que o bearing acabou.
+Nenhum outro praticante nos registros de doze séculos do [[apocachynthion|Apocachynthion]] possui uma Anchor de Interval. A tradição de leitura sequencial da casa Ex'sydra foi a aproximação mais próxima que já existiu de uma formulação formal disso — três gerações de praticantes cuja sensibilidade herdada ao Interval foi transformada em metodologia operacional, ainda que interpretada da forma errada. Eles acreditavam estar lendo o tempo. Na verdade, estavam lendo trajetória: a inclinação estrutural governada, antes da Fratura, por *Forðgesceaft*, a lei do Instrument of Foresight, dispersa em influência residual depois que o bearing acabou.
 
-Em'manuel deu esse nome à Anchor no século seguinte à Fratura, quando já tinha distância suficiente dos erros dos Ex'sydra para compreender aquilo que eles tentavam alcançar sem repetir a mesma falha de interpretação. Nunca utilizou esse nome em nenhum contexto institucional. Para o Apocachynthion, aquilo continua sendo Spatial Coherence, e ele aceita a classificação sem corrigir ninguém. Não precisa que entendam exatamente o que ele é. Só precisa que aceitem que ele é útil.
+Em'manuel deu esse nome à Anchor no século seguinte à Fratura, quando já tinha distância suficiente dos erros dos Ex'sydra para compreender aquilo que eles tentavam alcançar sem repetir a mesma falha de interpretação. Nunca utilizou esse nome em nenhum contexto institucional. Para o [[apocachynthion|Apocachynthion]], aquilo continua sendo Spatial Coherence, e ele aceita a classificação sem corrigir ninguém. Não precisa que entendam exatamente o que ele é. Só precisa que aceitem que ele é útil.
 
 ### Expressão Operacional
 
@@ -102,7 +102,7 @@ Isso não é o que um Fragment de Time faz. Um Fragment de Time interrompe a lei
 
 ### A Transição para Archtype
 
-Em'manuel passou pela automodificação recursiva de classe Archtype no terceiro século da existência do Império. O Apocachynthion não possui registro disso. O Cloister of Applied Structure possui apenas um documento técnico parcial armazenado em seu nível mais profundo, escrito pelo próprio Em'manuel, acompanhado da anotação:
+Em'manuel passou pela automodificação recursiva de classe Archtype no terceiro século da existência do Império. O [[apocachynthion|Apocachynthion]] não possui registro disso. O Cloister of Applied Structure possui apenas um documento técnico parcial armazenado em seu nível mais profundo, escrito pelo próprio Em'manuel, acompanhado da anotação:
 
 *“Para que alguém que venha depois consiga entender quanto custou fazer isso corretamente.”*
 
@@ -122,15 +122,34 @@ Desde então, recusou todos os pedidos para falar sobre isso.
 
 ---
 
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha selada  
+**Registry Status:** Registrado  
+**Rank:** Archtype  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civico  
+**Anchor:** Spatial Coherence  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Abyssal  
+**Reach Reading:** catastrophic  
+**Registration Tenure:** Nao divulgado  
+**Academy Record:** Nenhum intake comum; registro parcial da transicao Archtype mantido no Cloister of Applied Structure  
+**Practice Record:** Governo de Estado, controle de infraestrutura, lideranca da SiNE e autoridade de resposta catastrofica  
+**[[blots|Blots]]:** Nenhum  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Reconhecimento irrestrito de Archtype sob classificacao institucional permanente
+
 ## A Cadence
 
-Uma bengala de qualidade ostensivamente refinada — composta por BrightCrystal e uma liga ferrosa escura fundidos em um nível que sugere ou uma técnica de fabricação muito além da capacidade industrial atual do Império ou um período extremamente longo de modificação estrutural produzindo um composto emergente que nenhum processo único de fabricação conseguiria criar.
+Uma bengala de qualidade ostensivamente refinada — composta por [[brightcrystal|BrightCrystal]] e uma liga ferrosa escura fundidos em um nível que sugere ou uma técnica de fabricação muito além da capacidade industrial atual do Império ou um período extremamente longo de modificação estrutural produzindo um composto emergente que nenhum processo único de fabricação conseguiria criar.
 
 A segunda opção.
 
-Doze séculos de uso diário por um praticante de Interval cuja Redactory é constantemente canalizada através de condutores ressonantes de BrightCrystal inevitavelmente produzem modificação estrutural.
+Doze séculos de uso diário por um praticante de Interval cuja Redactory é constantemente canalizada através de condutores ressonantes de [[brightcrystal|BrightCrystal]] inevitavelmente produzem modificação estrutural.
 
-A Cadence começou como o principal elemento condutor das matrizes temporais de BrightCrystal dos Ex'sydra — o núcleo cristalino central através do qual três gerações de praticantes sensíveis ao Interval conduziam seus trabalhos de leitura sequencial.
+A Cadence começou como o principal elemento condutor das matrizes temporais de [[brightcrystal|BrightCrystal]] dos Ex'sydra — o núcleo cristalino central através do qual três gerações de praticantes sensíveis ao Interval conduziam seus trabalhos de leitura sequencial.
 
 Al'uxxios a manteve consigo quando todo o resto foi destruído ou confiscado.
 
@@ -184,7 +203,7 @@ No ano quatrocentos e dois do Império, uma pesquisa precursora da S-RD liderada
 
 Não era geológico.
 
-Não era BrightCrystal.
+Não era [[brightcrystal|BrightCrystal]].
 
 Era estrutural — uma região do substrato do Archive organizada, internamente coerente e operando segundo princípios que o Index Theorem não conseguia acomodar.
 
@@ -602,7 +621,7 @@ Ninguém perguntou por quê.
 
 ### Origem e Mandato
 
-O programa de pesquisa que mais tarde se tornaria o Project Kaleidoscope foi autorizado no ano oitocentos e quarenta e um do Império, quatorze anos após a dispersão de Ju'llian.
+O programa de pesquisa que mais tarde se tornaria o [[project-kaleidoscope|Project Kaleidoscope]] foi autorizado no ano oitocentos e quarenta e um do Império, quatorze anos após a dispersão de Ju'llian.
 
 A perda esclareceu algo que Em'manuel vinha ponderando desde a morte de E'lla:
 
@@ -612,7 +631,7 @@ Ele não esperaria indefinidamente por algo que poderia construir.
 
 O mandato oficial do programa:
 
-Replicar o perfil Redactory de E'lla Rae Wonderwall — especificamente sua manifestação de Anchor de Light e a arquitetura recursiva responsável pelos efeitos documentados no substrato — através de reconstrução biológica precisa usando material genético e configurações de coerência arquivadas em armazenamento estabilizado por BrightCrystal desde o ano de sua morte.
+Replicar o perfil Redactory de E'lla Rae Wonderwall — especificamente sua manifestação de Anchor de Light e a arquitetura recursiva responsável pelos efeitos documentados no substrato — através de reconstrução biológica precisa usando material genético e configurações de coerência arquivadas em armazenamento estabilizado por [[brightcrystal|BrightCrystal]] desde o ano de sua morte.
 
 O verdadeiro mandato do programa, conhecido apenas por Em'manuel:
 
@@ -768,7 +787,7 @@ O ramo possui duas filhas.
 
 Ec'lesia Yalara Wonderwall tem vinte e dois anos.
 
-Para qualquer observador externo, ela é apenas uma jovem comum pertencente a um pequeno ramo cadete — uma Redactor de habilidade legítima, mas não extraordinária, sem características particularmente marcantes além da designação Inkless que o Apocachynthion não consegue resolver.
+Para qualquer observador externo, ela é apenas uma jovem comum pertencente a um pequeno ramo cadete — uma Redactor de habilidade legítima, mas não extraordinária, sem características particularmente marcantes além da designação [[inkless|Inkless]] que o [[apocachynthion|Apocachynthion]] não consegue resolver.
 
 Ela não escolheu nada disso.
 
@@ -804,7 +823,7 @@ Não sabe que aquilo é o Remainder.
 
 Nos próprios cadernos, passou a descrever a presença como algo que a acompanha — algo que se manifesta durante Dives de esforço elevado e eventos descontrolados, algo que jamais demonstrou hostilidade, mas que ela ainda não consegue localizar ou compreender completamente.
 
-Sem acesso a qualquer conhecimento institucional relevante, construiu uma interpretação da própria condição mais precisa do que qualquer análise produzida pelo Apocachynthion.
+Sem acesso a qualquer conhecimento institucional relevante, construiu uma interpretação da própria condição mais precisa do que qualquer análise produzida pelo [[apocachynthion|Apocachynthion]].
 
 O Remainder dentro dela não está consumindo.
 
@@ -848,7 +867,7 @@ Ainda não percebeu que a porta fechada do quarto da irmã representa uma condi�
 
 A questão sucessória, em seu estado atual, está estruturada ao redor de duas pessoas que sequer sabem da existência uma da outra da maneira que realmente importa.
 
-E'lla — vinte e cinco anos, operacionalmente estável, carregando a manifestação de Anchor de Light que o Project Kaleidoscope passou duzentos e oitenta e cinco anos tentando reproduzir, atualmente treinando ativamente como sucessora designada de Em'manuel — é a resposta institucional para o problema da sucessão.
+E'lla — vinte e cinco anos, operacionalmente estável, carregando a manifestação de Anchor de Light que o [[project-kaleidoscope|Project Kaleidoscope]] passou duzentos e oitenta e cinco anos tentando reproduzir, atualmente treinando ativamente como sucessora designada de Em'manuel — é a resposta institucional para o problema da sucessão.
 
 No sentido técnico mais relevante possível, a reconstrução biológica funcionou.
 

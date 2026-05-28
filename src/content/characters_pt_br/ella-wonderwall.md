@@ -6,8 +6,8 @@ birth_year: "2175"
 birthplace: "Instalação do Project Kaleidoscope — transferida para a linha principal dos Wonderwall antes dos cinco anos"
 affiliation: "House Wonderwall (linha principal); SiNE (Redactor operacional, candidata à sucessão)"
 house: "Wonderwall (posição na linha principal)"
-rank: "Redactor classe-Radiance — Abyssal Anchor, licença operacional irrestrita"
-registry_status: "Registrada — classe-Radiance, Anchor de Luz. KL-83 (designação interna, não divulgada publicamente)"
+rank: "Stylus — Anchor de Light, licença operacional irrestrita"
+registry_status: "Registrada — Stylus, Anchor de Light. KL-83 (designação interna, não divulgada publicamente)"
 designation: "A luz que voltou diferente"
 height: "170 cm"
 build: "Magra; dedos longos; uma fragilidade aparente que não corresponde à realidade"
@@ -38,7 +38,7 @@ codex_file: "Ella Rae Wonderwall Dossier.md"
 
 ## O Que Ela É
 
-E'lla é o produto final do Project Kaleidoscope e, na prática, a única que ainda importa.
+E'lla é o produto final do [[project-kaleidoscope|Project Kaleidoscope]] e, na prática, a única que ainda importa.
 
 O objetivo do programa era reconstruir biologicamente o perfil de Redactory da primeira E'lla Rae Wonderwall: a Anchor de Luz, a arquitetura recursiva associada aos efeitos documentados de organização do substrate e a precisão de desenvolvimento que séculos de refinamento finalmente permitiram alcançar. Em termos técnicos, o programa funcionou. Nos termos específicos que motivaram sua criação, fracassou. Ela carrega a própria Luz. Não carrega o eco estrutural acumulado da linhagem. O Remainder não sabe que ela existe.
 
@@ -56,7 +56,7 @@ Tudo que sabe é que sempre existiu uma expectativa de que se tornasse alguém i
 
 **Mãe:** Al'ithia Rae Wonderwall — do ramo Rae, a mesma linhagem de onde veio A'licia Rae Wonderwall quando Em'manuel entrou para a família Wonderwall quase mil anos atrás. O padrão não é coincidência e ninguém comenta sobre ele. Al'ithia sabe mais do que demonstra. Ela lida com isso com a tranquilidade de alguém que entendeu, no momento em que se casou com ele, que passaria a carregar silenciosamente uma longa lista de coisas impossíveis de comentar em voz alta.
 
-Publicamente, E'lla é filha deles. E isso é verdade em todos os sentidos que o mundo consegue enxergar — e em todos os sentidos que aquela família viveu de verdade. Ela foi colocada na linha principal dos Wonderwall antes mesmo de ter idade para formar memórias de qualquer outra coisa. Cresceu na casa deles, estudou sob o teto deles e recebeu o sobrenome sem qualquer ressalva. Em'manuel viu ela aprender a andar. Al'ithia foi a primeira pessoa que ela chamou quando sentiu medo. Independentemente do que o Project Kaleidoscope tenha sido na origem, a família que surgiu dele não é uma encenação. É a única família que E'lla já conheceu — e é real.
+Publicamente, E'lla é filha deles. E isso é verdade em todos os sentidos que o mundo consegue enxergar — e em todos os sentidos que aquela família viveu de verdade. Ela foi colocada na linha principal dos Wonderwall antes mesmo de ter idade para formar memórias de qualquer outra coisa. Cresceu na casa deles, estudou sob o teto deles e recebeu o sobrenome sem qualquer ressalva. Em'manuel viu ela aprender a andar. Al'ithia foi a primeira pessoa que ela chamou quando sentiu medo. Independentemente do que o [[project-kaleidoscope|Project Kaleidoscope]] tenha sido na origem, a família que surgiu dele não é uma encenação. É a única família que E'lla já conheceu — e é real.
 
 ---
 
@@ -82,7 +82,7 @@ A versão pública de E'lla parece controlada, sofisticada, difícil de constran
 
 ## O Deserto Branco
 
-Aos dezessete anos, durante uma passagem de observação alinhada à SiNE nas estações desérticas do norte de Aurora, E'lla entrou no perímetro do White Desert em condições que deveriam permanecer controláveis. Oficialmente, o comboio estava ali para troca de materiais e observação de campo em cooperação com o pessoal das estações aurorianas. Extraoficialmente, o objetivo era de Em'manuel: coletar dados de proximidade sobre como o perfil dela reagia em um território estruturalmente condicionado pelo Instrument of Light — a lei ancestral que governa a luz em todas as suas formas, seu movimento pelo mundo e seu papel na organização de ritmo biológico, atmosfera e iluminação em toda Terra.
+Aos dezessete anos, durante uma passagem de observação alinhada à SiNE nas estações desérticas do norte de Aurora, E'lla entrou no perímetro do [[white-desert|White Desert]] em condições que deveriam permanecer controláveis. Oficialmente, o comboio estava ali para troca de materiais e observação de campo em cooperação com o pessoal das estações aurorianas. Extraoficialmente, o objetivo era de Em'manuel: coletar dados de proximidade sobre como o perfil dela reagia em um território estruturalmente condicionado pelo Instrument of Light — a lei ancestral que governa a luz em todas as suas formas, seu movimento pelo mundo e seu papel na organização de ritmo biológico, atmosfera e iluminação em toda Terra.
 
 Durante o trajeto, formou-se uma tempestade fotônica anormal. Os registros da estação descrevem um evento de brilho extremo, instabilidade direcional no campo de luz refletida e degradação rápida da estabilização de Redactory entre os praticantes de escolta do comboio. Mais tarde, E'lla descreveu o deserto dizendo que ele *"parou de refletir luz e começou a decidir ela."* A frase é mais precisa do que parece. O White Desert não é apenas brilhante. Durante séculos, viveu sob a presença passiva, a pressão e a ressonância do Instrument of Light. Toda a região está saturada pelo campo residual dessa lei.
 
@@ -120,7 +120,7 @@ Sua Anchor é **Light**. Não reflexão, não refração, não feixe direcionado
 
 Assim como a primeira E'lla, ela produz efeitos organizadores no Dive depois de mergulhos prolongados em alta Depth. Regiões por onde ela passou se tornam mais legíveis para Redactors que mergulham depois dela. A resistência de roteamento local diminui. Configurações adjacentes à luz se estabilizam com facilidade. Durante algum tempo, o ambiente se comporta como se tivesse sido lembrado de qual é a função da visibilidade.
 
-Esse efeito é uma das maiores confirmações de que o Project Kaleidoscope realmente conseguiu replicar aquilo que foi criado para reproduzir.
+Esse efeito é uma das maiores confirmações de que o [[project-kaleidoscope|Project Kaleidoscope]] realmente conseguiu replicar aquilo que foi criado para reproduzir.
 
 ### Limites Operacionais
 
@@ -131,6 +131,25 @@ Ela ainda consegue realizar Dives profundos. Ainda consegue estabilizar campos d
 Isso a torna mais lenta para agir em situações-limite. Também reduz drasticamente as chances de matar todo mundo na sala por acidente — algo que Em'manuel considera uma troca perfeitamente aceitável.
 
 ---
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha selada  
+**Registry Status:** Registrada; KL-83 mantida em arquivos restritos  
+**Rank:** [[stylus|Stylus]]  
+**[[mark|Mark]]:** [[mark-5|Mark 5]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Militar  
+**Anchor:** Light  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Abyssal  
+**Reach Reading:** catastrophic  
+**Registration Tenure:** Nao divulgado  
+**Academy Record:** Formacao dirigida pela House; recuperacao controlada pos-Aurora e treino de precisao  
+**Practice Record:** Trabalho operacional da SiNE, controle de materiais e preparacao de sucessao  
+**[[blots|Blots]]:** [[white-desert|White Desert]] Incident  
+**Pager Note:** Review  
+**[[seal|Current Seal]]:** Arquivo restrito Wonderwall; standing interno de sucessora mantido
 
 ## Moda, Materiais e a Questão do Controle
 
@@ -148,7 +167,7 @@ Ela costuma carregar um kit de costura consigo. Não é um hábito decorativo. �
 
 Atualmente, ela ocupa um cargo que é metade aprendizado, metade ensaio informal de sucessão.
 
-Dentro da SiNE, está sendo apresentada às partes da máquina que realmente importam: logística de BrightCrystal, governança de materiais restritos, revisão de projetos especiais, triagem interna de pesquisa e a arte política de fazer uma sala inteira acreditar que uma decisão foi coletiva quando, na prática, ela era estruturalmente inevitável desde o início. E'lla aprende rápido.
+Dentro da SiNE, está sendo apresentada às partes da máquina que realmente importam: logística de [[brightcrystal|BrightCrystal]], governança de materiais restritos, revisão de projetos especiais, triagem interna de pesquisa e a arte política de fazer uma sala inteira acreditar que uma decisão foi coletiva quando, na prática, ela era estruturalmente inevitável desde o início. E'lla aprende rápido.
 
 Hora'veil importa mais para ela do que Kalt'sen. Não por ideologia, mas por temperamento. Kalt'sen recompensa paciência, abstração e peso institucional. Hora'veil recompensa velocidade, entendimento industrial e tolerância para máquinas, ruído e compromissos práticos. É lá que ela parece mais viva.
 
@@ -163,7 +182,7 @@ Ela não sabe:
 - que é a KL-83;
 - que oitenta e dois sujeitos vieram antes dela;
 - que carrega o nome de uma mulher morta cuja vida — e cuja recusa — ainda organiza essa linhagem;
-- que o Project Kaleidoscope foi encerrado por causa dela;
+- que o [[project-kaleidoscope|Project Kaleidoscope]] foi encerrado por causa dela;
 - que o incidente do White Desert assustou Em'manuel mais do que ele permitiu que qualquer pessoa percebesse;
 - que aquilo que falta nela em comparação aos casos mais perigosos da linhagem talvez seja justamente o que pode salvá-la.
 

@@ -34,7 +34,7 @@ A SiNE estabeleceu sua sede em **Pluribus Hill**, em Kalt'sen, capital imperial 
 
 ### S-RD: Entropy (Pesquisa e Desenvolvimento)
 
-O braço de pesquisa da SiNE. A Entropy conduz desenvolvimento e testes de novas aplicações de Redactory, pesquisa de materiais (incluindo trabalhos proprietários de processamento de BrightCrystal que a Apocachynthion não consegue supervisionar totalmente) e todas as funções de pesquisa institucional que sustentam a capacidade operacional das outras divisões.
+O braço de pesquisa da SiNE. A Entropy conduz desenvolvimento e testes de novas aplicações de Redactory, pesquisa de materiais (incluindo trabalhos proprietários de processamento de [[brightcrystal|BrightCrystal]] que a [[apocachynthion|Apocachynthion]] não consegue supervisionar totalmente) e todas as funções de pesquisa institucional que sustentam a capacidade operacional das outras divisões.
 
 A Entropy é a divisão que produz. As outras divisões usam aquilo que a Entropy produz.
 
@@ -52,9 +52,9 @@ A Clepsydra não possui natureza militar, embora praticamente toda campanha mili
 
 ### S-RM: Magi (Gestão de Redactors)
 
-A Magi administra a população interna de Redactors da SiNE — certificação de praticantes afiliados à instituição, programas de treinamento que operam paralelamente, mas separados, do sistema acadêmico da Apocachynthion e toda a máquina administrativa que regula como praticantes registrados atuam dentro da estrutura institucional da SiNE.
+A Magi administra a população interna de Redactors da SiNE — certificação de praticantes afiliados à instituição, programas de treinamento que operam paralelamente, mas separados, do sistema acadêmico da [[apocachynthion|Apocachynthion]] e toda a máquina administrativa que regula como praticantes registrados atuam dentro da estrutura institucional da SiNE.
 
-A relação entre a Magi e a Apocachynthion é tecnicamente cooperativa e pragmaticamente complicada. Praticantes registrados empregados pela SiNE respondem às duas hierarquias institucionais ao mesmo tempo, e isso gera conflitos de obrigação com frequência suficiente para manter os departamentos jurídicos das duas organizações constantemente ocupados.
+A relação entre a Magi e a [[apocachynthion|Apocachynthion]] é tecnicamente cooperativa e pragmaticamente complicada. Praticantes registrados empregados pela SiNE respondem às duas hierarquias institucionais ao mesmo tempo, e isso gera conflitos de obrigação com frequência suficiente para manter os departamentos jurídicos das duas organizações constantemente ocupados.
 
 ### S-LG: Evanote (Jurídico e Governança)
 
@@ -76,9 +76,9 @@ A StaSis também é a divisão cuja existência recebe o menor nível de reconhe
 
 ## CLOCKWORK
 
-Separada das sete divisões formais, a SiNE mantém uma estrutura cuja existência não é oficialmente reconhecida: a **CLOCKWORK** — um corpo não registrado composto por 144 Redactors organizados em doze unidades operacionais identificadas por callsigns temporais (DAWN até ZENITH). A CLOCKWORK opera com negabilidade absoluta, fora do sistema de registro e supervisão da Apocachynthion e com parâmetros de autorização que não aparecem em nenhum documento público.
+Separada das sete divisões formais, a SiNE mantém uma estrutura cuja existência não é oficialmente reconhecida: a **[[clockwork|CLOCKWORK]]** — um corpo não registrado composto por 144 Redactors organizados em doze unidades operacionais identificadas por callsigns temporais (DAWN até ZENITH). A CLOCKWORK opera com negabilidade absoluta, fora do sistema de registro e supervisão da [[apocachynthion|Apocachynthion]] e com parâmetros de autorização que não aparecem em nenhum documento público.
 
-A CLOCKWORK existe porque as divisões formais não conseguem fazer tudo o que precisa ser feito. O espaço entre aquilo que a HourGlass consegue executar oficialmente, aquilo que a Clepsydra consegue autorizar estruturalmente e aquilo que os interesses estratégicos da SiNE ocasionalmente exigem é exatamente onde a CLOCKWORK atua. O Meridian Council sabe da existência da CLOCKWORK. O Império oficialmente não sabe. Se a Apocachynthion deduziu sua existência a partir de anomalias operacionais é uma pergunta que nenhuma das duas instituições respondeu publicamente.
+A CLOCKWORK existe porque as divisões formais não conseguem fazer tudo o que precisa ser feito. O espaço entre aquilo que a HourGlass consegue executar oficialmente, aquilo que a Clepsydra consegue autorizar estruturalmente e aquilo que os interesses estratégicos da SiNE ocasionalmente exigem é exatamente onde a CLOCKWORK atua. O Meridian Council sabe da existência da CLOCKWORK. O Império oficialmente não sabe. Se a [[apocachynthion|Apocachynthion]] deduziu sua existência a partir de anomalias operacionais é uma pergunta que nenhuma das duas instituições respondeu publicamente.
 
 ---
 
@@ -94,6 +94,6 @@ O papel do fundador nas decisões do Council é formalmente apenas um voto entre
 
 **O Império:** Vinculado por tratados e funcionalmente cooperativo em múltiplos níveis. O papel da HourGlass na War of the Threshold é a demonstração mais clara de como essa relação funciona: a SiNE possui capacidades de que o Império precisa; o Império possui autoridade legal que beneficia a SiNE operar dentro dela; e o arranjo resultante serve bem o suficiente aos interesses de ambos para sobreviver doze séculos sem grandes rupturas.
 
-**A Apocachynthion:** Formalmente cooperativa, pragmaticamente complexa. A SiNE emprega grandes quantidades de Redactors registrados, o que gera negociações jurisdicionais constantes. A Magi compartilha alguns frameworks de treinamento com a Apocachynthion e diverge significativamente em vários outros. A Apocachynthion sabe que o escopo operacional da SiNE inclui coisas fora de sua visibilidade institucional. Essa consciência não gerou crise porque a SiNE vem administrando cuidadosamente a questão da visibilidade há muito tempo.
+**[[apocachynthion|A Apocachynthion]]:** Formalmente cooperativa, pragmaticamente complexa. A SiNE emprega grandes quantidades de Redactors registrados, o que gera negociações jurisdicionais constantes. A Magi compartilha alguns frameworks de treinamento com a Apocachynthion e diverge significativamente em vários outros. A Apocachynthion sabe que o escopo operacional da SiNE inclui coisas fora de sua visibilidade institucional. Essa consciência não gerou crise porque a SiNE vem administrando cuidadosamente a questão da visibilidade há muito tempo.
 
-**A Igreja:** Uma distância respeitosa mantida por ambos os lados. A Igreja não regula as operações da SiNE. A SiNE não desafia a autoridade teológica da Igreja. Onde os interesses operacionais se cruzam — especialmente na fronteira norte — a relação é profissional e eficiente. A Igreja não possui posição oficial sobre a CLOCKWORK porque oficialmente não possui conhecimento sobre a CLOCKWORK.
+**[[the-church|A Igreja]]:** Uma distância respeitosa mantida por ambos os lados. A Igreja não regula as operações da SiNE. A SiNE não desafia a autoridade teológica da Igreja. Onde os interesses operacionais se cruzam — especialmente na fronteira norte — a relação é profissional e eficiente. A Igreja não possui posição oficial sobre a CLOCKWORK porque oficialmente não possui conhecimento sobre a CLOCKWORK.

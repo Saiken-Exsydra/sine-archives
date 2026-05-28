@@ -16,7 +16,7 @@ image: ""
 
 ## Overview
 
-Callings are periodic surges of resonance energy that pass through the Twilight Band, originating from the fractured Lunar Crown. They are among the most widely documented phenomena in the world — observed across every culture in the Band's recorded history, interpreted through dozens of different theological and philosophical frameworks, studied intensively by both the Apocachynthion's research divisions and independent scholars.
+Callings are periodic surges of resonance energy that pass through the Twilight Band, originating from the fractured Lunar Crown. They are among the most widely documented phenomena in the world — observed across every culture in the Band's recorded history, interpreted through dozens of different theological and philosophical frameworks, studied intensively by both the [[apocachynthion|Apocachynthion]]'s research divisions and independent scholars.
 
 Despite this attention, their mechanism remains incompletely understood at the institutional level.
 
@@ -50,7 +50,7 @@ The Apocachynthion monitors Calling intensity through a network of resonance sen
 
 ## Callings and BrightCrystal
 
-**BrightCrystal** — the resonance-structured silicate that functions as the world's primary energy substrate — has a specific interaction with Callings that represents a category of risk the Apocachynthion takes seriously.
+[[brightcrystal|BrightCrystal]] — the resonance-structured silicate that functions as the world's primary energy substrate — has a specific interaction with Callings that represents a category of risk the Apocachynthion takes seriously.
 
 BrightCrystal's structure is not passive under resonance. It responds to resonance input by amplifying and redirecting it — this is the property that makes it useful as an energy medium. During a strong Calling, a dense BrightCrystal concentration does not simply receive the surge and absorb it. It amplifies it. A strong Calling passing through a major BrightCrystal deposit can intensify by an order of magnitude before it propagates outward.
 
@@ -74,7 +74,7 @@ The calendar is not perfect. The Lunar Crown's internal dynamics introduce varia
 
 Every major culture in the Twilight Band has named the Callings — or named the seasons they produce, or named the effects they generate in people and environments. The specific names and the frameworks used to interpret them vary enormously. What is consistent across all of them is the recognition that this is a recurring, structured phenomenon rather than random events — something that can be mapped, predicted, and prepared for.
 
-The Church interprets Callings as the voice of the fractured Seal, a residue of the Fracture that periodically reasserts itself as a reminder of the world's wound and the threshold's compromise. This is theologically coherent with the actual mechanism in the ways that Church theology usually is — structurally accurate, explanatorily different in framework.
+[[the-church|The Church]] interprets Callings as the voice of the fractured Seal, a residue of the Fracture that periodically reasserts itself as a reminder of the world's wound and the threshold's compromise. This is theologically coherent with the actual mechanism in the ways that Church theology usually is — structurally accurate, explanatorily different in framework.
 
 The Apocachynthion interprets Callings as resonance events with identifiable origins and predictable structural properties. This is also accurate. The two interpretations are not incompatible except where institutions insist on exclusivity of explanation.
 

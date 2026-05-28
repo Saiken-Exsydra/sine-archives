@@ -136,7 +136,7 @@ The Shore-facing version is not singular enough to summarize in one sentence.
 
 ---
 
-## IV. THE WHITE DESERT INCIDENT
+## IV. THE WHITE DESERT INCIDENT {#white-desert-incident}
 
 ### IV.1 What Happened
 
@@ -280,7 +280,7 @@ She stands there with every unresolved refraction of the program that made her.
 
 ---
 
-## VI. PROJECT KALEIDOSCOPE AS LIVING SHORE CONDITION
+## VI. PROJECT KALEIDOSCOPE AS LIVING SHORE CONDITION {#project-kaleidoscope}
 
 ### VI.1 Non-Generalization Clause
 

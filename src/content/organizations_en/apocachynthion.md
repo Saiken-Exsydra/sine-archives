@@ -73,34 +73,49 @@ The Academies handle the formal process by which a Redactor's abilities are eval
 
 The Apocachynthion's rank structure uses the language of the written craft.
 
-### The Nib
+### The Nib {#nib}
 
 The Nib is the entry rank, held by every Redactor from their first day of Academy enrolment through the completion of foundational training and the passing of their initial certification examination.
 
-### The Quill
+### The Quill {#quill}
 
 The Quill rank is granted upon passing the certification examination that closes foundational training. It is the working rank of the Apocachynthion.
 
-### The Stylus
+### The Stylus {#stylus}
 
 The Stylus rank represents demonstrated mastery within one's domain of competence. It is conferred by the Council of Volumes following formal review.
 
-## Rank and Mark
+## Rank and Mark {#rank-and-mark}
 
 The Apocachynthion distinguishes between **Rank** and **Mark**.
 
 Rank names the instrument: **Nib**, **Quill**, or **Stylus**. Mark names the permission: the degree of Redactory practice the institution currently allows that practitioner to undertake.
 
+### Mark {#mark}
+
 The standard sequence runs from **No Mark** to **Mark 5**. A Redactor may hold high rank and a restricted Mark, or modest rank and a temporarily widened scope through an **Open Mark** in crisis conditions.
 
-The language surrounding that permission is formal and consistent:
+### Open Mark {#open-mark}
 
-- **Margin** names the restriction around a Mark.
-- **Blot** names a recorded failure, misconduct event, or uncontrolled incident.
-- **Seal** names the authority that confirmed, renewed, opened, or restricted the Mark.
-- **Leaf** names the record type under which the practitioner is filed.
+An **Open Mark** is a temporary widening of the standing Mark under authentic emergency conditions. It does not replace the underlying record. It acknowledges that the situation has exceeded the practitioner's ordinary permitted scope.
 
-### The Inkless Designation
+### Margins {#margins}
+
+A **Margin** names the restriction around a Mark: what must be reported, what cannot be attempted, what conditions require supervision, or what forms of practice remain prohibited.
+
+### Blots {#blots}
+
+A **Blot** names a recorded failure, misconduct event, or uncontrolled incident. Blots matter because Marking is not only about power. It is also about institutional trust.
+
+### Seal {#seal}
+
+A **Seal** names the authority that confirmed, renewed, opened, or restricted the Mark. The Seal records who stood behind the permission and who may later answer for it.
+
+### Leaf {#leaf}
+
+A **Leaf** names the record type under which the practitioner is filed. The term reflects the institution's view of registry as written craft: permissions, restrictions, and incidents are all matters of inscription.
+
+### The Inkless Designation {#inkless}
 
 Alongside the three foundational ranks, the Apocachynthion maintains a parallel designation called **Inkless**. An Inkless Redactor is one whose ability profile cannot be mapped to any consistent domain through standard assessment procedures.
 
@@ -108,7 +123,7 @@ The designation appears in internal registry files and in relevant operational b
 
 ---
 
-## The Pagers
+## The Pagers {#pagers}
 
 The Apocachynthion's enforcement arm is called the **Pagers**.
 

@@ -36,19 +36,19 @@ Clepsydra's primary ground custody complex is adjacent to the Hill district, whi
 
 ---
 
-## The Binding
+## The Binding {#binding}
 
-**The Binding** is the Apocachynthion's central complex - named for the binding of registered practitioners to the institution's regulatory framework. It is the largest single structure in Kalt'sen by footprint, and one of the oldest continuously occupied institutional buildings on the continent.
+**[[binding|The Binding]]** is the Apocachynthion's central complex - named for the binding of registered practitioners to the institution's regulatory framework. It is the largest single structure in Kalt'sen by footprint, and one of the oldest continuously occupied institutional buildings on the continent.
 
-The Binding houses the Apocachynthion's administrative core, the central assessment division, the records archive for the complete registered practitioner population, the research library, and the Pager training facilities. It is also where the most sensitive portions of the Apocachynthion's operational research occur - the work that requires proximity to the archive and to the assessment infrastructure that the Binding's specific resonance environment supports.
+The Binding houses the [[apocachynthion|Apocachynthion]]'s administrative core, the central assessment division, the records archive for the complete registered practitioner population, the research library, and the Pager training facilities. It is also where the most sensitive portions of the Apocachynthion's operational research occur - the work that requires proximity to the archive and to the assessment infrastructure that the Binding's specific resonance environment supports.
 
-The Binding and Pluribus Hill are within walking distance of each other. The institutional relationship between the Apocachynthion and SiNE is, at the street level, a relationship of colleagues who work near each other and have developed functional proximity without resolving the deeper jurisdictional questions. Practitioners employed by SiNE who are registered with the Apocachynthion navigate the space between the two buildings as a regular commute.
+The Binding and Pluribus Hill are within walking distance of each other. The institutional relationship between the [[apocachynthion|Apocachynthion]] and SiNE is, at the street level, a relationship of colleagues who work near each other and have developed functional proximity without resolving the deeper jurisdictional questions. Practitioners employed by SiNE who are registered with the Apocachynthion navigate the space between the two buildings as a regular commute.
 
 ---
 
 ## Saint Her'chell Cathedral
 
-**Saint Her'chell Cathedral** is the Church's central address - the primary seat of the Arch-Patriarch, the administrative center of the Diaconate Council, and the most significant single church building in the Twilight Band.
+**Saint Her'chell Cathedral** is the [[the-church|Church]]'s central address - the primary seat of the Arch-Patriarch, the administrative center of the Diaconate Council, and the most significant single church building in the Twilight Band.
 
 It is also where the Keepers of Before maintain their primary archive. The Cathedral's lower levels extend into structures that predate the current building significantly, and it is in those lower levels that the most restricted theological records are held.
 
@@ -58,7 +58,7 @@ The Cathedral holds the distinction of being the building in Kalt'sen where the 
 
 ## The City and Its Density
 
-Kalt'sen's defining characteristic is the density of consequence per block. A practitioner walking between the Binding and the Cathedral passes within a hundred meters of three embassies, two research institutes, one building that is technically a private residence but whose occupant is effectively a sovereign entity, and the public entrance to the Apocachynthion's monitoring infrastructure.
+Kalt'sen's defining characteristic is the density of consequence per block. A practitioner walking between the Binding and the Cathedral passes within a hundred meters of three embassies, two research institutes, one building that is technically a private residence but whose occupant is effectively a sovereign entity, and the public entrance to the [[apocachynthion|Apocachynthion]]'s monitoring infrastructure.
 
 The city has the specific quality of a place where everyone significant knows everyone else significant, and most of them have complicated histories with at least some of them. Institutional cooperation in Kalt'sen is conducted across tables where the people sitting at them have known each other for years, disagreed with each other for years, and have developed the specific institutional politeness that comes from having to keep working together regardless.
 
@@ -70,8 +70,8 @@ For the institutions themselves, Kalt'sen's geography creates a proximity that p
 
 ## Transportation and Infrastructure
 
-Kalt'sen is the primary hub of the Empire's BrightCrystal-powered infrastructure network - the transit lines, communication relays, and energy distribution systems that connect the Twilight Band's cities and outposts are organized around Kalt'sen as their central node.
+Kalt'sen is the primary hub of the Empire's [[brightcrystal|BrightCrystal]]-powered infrastructure network - the transit lines, communication relays, and energy distribution systems that connect the Twilight Band's cities and outposts are organized around Kalt'sen as their central node.
 
 This is a strategic fact as much as a practical one. Controlling Kalt'sen's infrastructure node is controlling the nervous system of the Empire's integrated systems. This is known and has been known for a long time. The institutions that have chosen to be here are partly choosing to be adjacent to that control, whether or not they would characterize their presence in those terms.
 
-The city's BrightCrystal infrastructure density is among the highest in the Twilight Band, which makes it one of the areas most affected by strong Calling events. Kalt'sen has Calling protocols. Every major installation has Calling protocols. The protocols are practiced and, in the years when a particularly strong periapsis Calling passes through, they are necessary.
+The city's [[brightcrystal|BrightCrystal]] infrastructure density is among the highest in the Twilight Band, which makes it one of the areas most affected by strong Calling events. Kalt'sen has Calling protocols. Every major installation has Calling protocols. The protocols are practiced and, in the years when a particularly strong periapsis Calling passes through, they are necessary.

@@ -78,6 +78,27 @@ Ele se apresentou para admissão no Apocachynthion em 2163.
 
 ---
 
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha selada  
+**Registry Status:** Registrado  
+**Rank:** [[stylus|Stylus]]  
+**[[mark|Mark]]:** [[mark-4|Mark 4]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Instrucional  
+**Anchor:** Thermodynamic  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** 37 anos  
+**Academy Record:** Intake de asilo em 1090; trilha central de formacao; elevacao a Stylus registrada em 1105  
+**Practice Record:** Instrucao academica; consulta perigosa restrita  
+**[[blots|Blots]]:** Nenhum  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Standing instrucional do Council of Volumes; renovacao do registro central
+
+---
+
 ## Habilidades
 
 ### A Kalorian Nova

@@ -37,9 +37,18 @@ Recursive singularities can arrive there.
 
 ## Core Terms
 
-- **Shorefall**: arrival at a Shore, voluntary or involuntary.
-- **Shorewalking**: controlled navigation or action within a Shore.
-- **Shorewalker**: one who reaches a Shore, stabilizes there temporarily, and expresses its pressure through body, power, and identity without immediate collapse.
+### Shorefall {#shorefall}
+
+Arrival at a Shore, voluntary or involuntary.
+
+### Shorewalking
+
+Controlled navigation or action within a Shore.
+
+### Shorewalker {#shorewalker}
+
+One who reaches a Shore, stabilizes there temporarily, and expresses its pressure through body, power, and identity without immediate collapse.
+
 - **Tidebound**: partially anchored to a Shore through repeated or sustained contact.
 - **Returnwake**: the residue left after coming back.
 - **Stranding**: failure or delay in returning.
@@ -156,7 +165,7 @@ The stronger the expression, the greater the price.
 
 ## Known Shores
 
-### The Luminant Shore
+### The Luminant Shore {#luminant-shore}
 
 The borderland of Light, revelation, visibility, and recognition.
 

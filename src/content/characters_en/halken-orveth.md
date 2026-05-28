@@ -33,11 +33,11 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 
 ## Overview
 
-Halk'en Orveth is one of the clearest examples of what the Church means by an **Answered** vessel. He is not just a holy man or a powerful priest. He is one of the rare people through whom one of the **Seven Answers** can act with unusual directness.
+Halk'en Orveth is one of the clearest examples of what the [[the-church|Church]] means by an [[answered|Answered]] vessel. He is not just a holy man or a powerful priest. He is one of the rare people through whom one of the **Seven Answers** can act with unusual directness.
 
 That Answer is **Auctoriel**, Seraphim of Dominion.
 
-In simple terms, Orveth is one of the Church's strongest proofs that divine authority in this setting can become something with real weight, force, and contact.
+In simple terms, Orveth is one of the [[the-church|Church]]'s strongest proofs that divine authority in this setting can become something with real weight, force, and contact.
 
 ## Personality
 
@@ -51,7 +51,7 @@ That care is part of what keeps him usable. He understands that Dominion is not 
 
 Orveth was born in **1801** in **Black Mere** and did not begin life with extraordinary bloodline importance. His defining emergence came during the **Mornhallow possession riots** in **1823**, when he entered a hospital ward others could not stabilize and insisted that the place belonged to the sick, not to what had invaded it.
 
-That event pulled him into the Obsidian Rite. Over time, his bond with Auctoriel deepened until he became one of the Church's tiny number of the **Answered**.
+That event pulled him into the [[obsidian-rite|Obsidian Rite]]. Over time, his bond with Auctoriel deepened until he became one of the [[the-church|Church]]'s tiny number of the **Answered**.
 
 He is now deployed only in the kinds of cases where ordinary clergy, ordinary soldiers, and even many holy vessels are not enough.
 
@@ -76,11 +76,11 @@ Orveth is not the voice of God in any total sense. He carries one divine domain 
 
 His power is strongest when his authority is real. That means Dominion is not just arbitrary force he can use anywhere without conditions.
 
-There is also a deeper danger. If a mortal vessel carries Dominion too fully for too long, the line between human restraint and raw principle can start to wear thin. The Church depends on him, but it also fears what that scale of real divine pressure could eventually do to him.
+There is also a deeper danger. If a mortal vessel carries Dominion too fully for too long, the line between human restraint and raw principle can start to wear thin. The [[the-church|Church]] depends on him, but it also fears what that scale of real divine pressure could eventually do to him.
 
 ## Important Relationships
 
-**The Obsidian Rite** formed him, deploys him, and fears him in the practical way institutions fear their rarest weapons.
+[[obsidian-rite|The Obsidian Rite]] formed him, deploys him, and fears him in the practical way institutions fear their rarest weapons.
 
 **Auctoriel** is not just the source of his power but the pressure shaping his habits, limits, and sense of duty.
 
@@ -88,7 +88,7 @@ There is also a deeper danger. If a mortal vessel carries Dominion too fully for
 
 ## Story Role
 
-Orveth matters because he makes difficult Church lore suddenly understandable. Through him, readers can feel the difference between general holiness, Beatified status, and the far more dangerous depth of an Answered vessel.
+Orveth matters because he makes difficult [[the-church|Church]] lore suddenly understandable. Through him, readers can feel the difference between general holiness, Beatified status, and the far more dangerous depth of an Answered vessel.
 
 He also embodies one of the setting's recurring tensions: a power can be holy, lawful, and still dangerous to the person carrying it if that power is too narrow to equal the whole good.
 

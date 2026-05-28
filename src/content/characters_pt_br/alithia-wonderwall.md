@@ -6,7 +6,7 @@ birth_year: "2111"
 birthplace: "Territórios costeiros do norte do ramo Rae, Império de Synus"
 affiliation: "House Wonderwall (linha principal, líder política de facto); Império de Synus (representante no Senado); SiNE (autoridade da Casa, supervisão indireta)"
 house: "Wonderwall (origem no ramo Rae; linha principal por casamento)"
-rank: "Redactor classe-Radiance - Anchor de Revelation"
+rank: "Stylus - Anchor de Revelation"
 registry_status: "Publicamente reconhecida como principal representante da House Wonderwall; em privado, reconhecida pela revisão da Casa e da Church como um caso estável de fusão divina sem precedentes conhecidos"
 designation: "A Segunda Radiancia"
 height: "Não registrado publicamente"
@@ -65,6 +65,25 @@ Na prática, a Redactory de Al'ithia costuma se manifestar menos como força dir
 Isso é Revelation se manifestando social, política e metafisicamente ao mesmo tempo.
 
 ---
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha restrita da House  
+**Registry Status:** Nenhum arquivo praticante comum do Apocachynthion; continuidade revisada em privado pela House Wonderwall  
+**Rank:** [[stylus|Stylus]]  
+**[[mark|Mark]]:** [[mark-5|Mark 5]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civico  
+**Anchor:** Revelation  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** Nao divulgado  
+**Academy Record:** Formacao Redactory do ramo Rae; expressao adolescente excepcional de Revelation antes da integracao completa  
+**Practice Record:** Trabalho senatorial, governanca da House e consulta de alto nivel em Radiance  
+**[[blots|Blots]]:** Nenhum  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Revisao privada de continuidade da House Wonderwall; sem catalogacao formal no registro padrao
 
 ## Posição Pública
 

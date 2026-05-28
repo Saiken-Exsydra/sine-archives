@@ -57,17 +57,22 @@ Now she works under a conditional public Mark, which means the institutions stil
 
 ## Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf
-**Registry Status:** Registered
-**Rank:** Stylus (Mirror) / Quill (Threshold)
-**Mark:** Mark 4
-**Open Mark:** None
-**Margins:** Assignment disclosure within forty-eight hours; lethal outcomes and impression gain reported on review schedule; specialist Depth assessment every six months
-**Anchor:** Mirror / Threshold
-**Anchor Reading:** Confirmed / Confirmed
-**Depth Reading:** Deep in Mirror; Abyssal-adjacent dispute in Threshold
-**Reach Reading:** Broad, bifurcated, monitored
-**Pager Note:** Review
+**[[leaf|Leaf Type]]:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** [[stylus|Stylus]] (Mirror Anchor) / [[quill|Quill]] (Threshold Anchor)  
+**[[mark|Mark]]:** [[mark-4|Mark 4]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Military  
+**Anchor:** Mirror / Threshold  
+**Anchor Reading:** Confirmed / Confirmed  
+**Depth Reading:** Deep / Abyssal  
+**Reach Reading:** broad  
+**Registration Tenure:** 8 years  
+**Academy Record:** Compelled intake 2192; dual-track formation; dual certification 2197  
+**Practice Record:** Contractor field work under specialist review  
+**[[blots|Blots]]:** Compelled Intake Incident  
+**Pager Note:** Review  
+**[[seal|Current Seal]]:** Council of Volumes dual-certification notation; Hora'veil specialist panel countersignature
 
 ## Abilities
 

@@ -58,17 +58,22 @@ An anomalous mechanical crow later named **Kerz** entered that same impossible m
 
 ## Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf
-**Registry Status:** Registered
-**Rank:** Stylus
-**Mark:** Mark 4
-**Open Mark:** None
-**Margins:** Pager notice for Stase-adjacent field return; no standing military deployment without Council request
-**Anchor:** Thermodynamic
-**Anchor Reading:** Confirmed
-**Depth Reading:** Deep
-**Reach Reading:** Disciplined
-**Practice Record:** Academy instruction; restricted hazardous consultation
+**[[leaf|Leaf Type]]:** Sealed Leaf  
+**Registry Status:** Registered  
+**Rank:** [[stylus|Stylus]]  
+**[[mark|Mark]]:** [[mark-4|Mark 4]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Instructional  
+**Anchor:** Thermodynamic  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** 37 years  
+**Academy Record:** Asylum intake 1090; central formation track; Stylus elevation recorded 1105  
+**Practice Record:** Academy instruction; restricted hazardous consultation  
+**[[blots|Blots]]:** None  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Council of Volumes instructional standing; central registry renewal
 
 ## Abilities
 

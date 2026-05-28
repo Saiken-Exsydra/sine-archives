@@ -27,7 +27,7 @@ What it does is give Vrenne a specific character that other cities don't have. T
 
 ---
 
-## The Academy of Syr'lene
+## The Academy of Syr'lene {#academy-of-syrlene}
 
 The **Academy of Syr'lene** is the Apocachynthion's primary training institution — oldest, largest, and in possession of several specialist functions that the other academies distributed across the Band do not have.
 

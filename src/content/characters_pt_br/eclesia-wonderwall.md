@@ -41,7 +41,7 @@ hero_gallery:
 
 Ec'lesia Yalara Wonderwall e uma Wonderwall de ramo cadete cujo arquivo foi lido errado por anos exatamente do jeito que instituicoes costumam errar diante de pessoas incomuns: confundiram o limite das proprias ferramentas com a verdade sobre ela.
 
-Oficialmente ela ainda esta marcada como **Inkless**. Isso nao significa ausencia de Anchor. Significa que os instrumentos comuns de Redactory falham ao tentar le-la corretamente. O que eles chamam de ausencia e, na verdade, **Stilllight**: uma Anchor derivada de classe Radiance voltada nao para a luz como revelacao ou forca radiante, mas para a luz cuja mocao foi interrompida.
+Oficialmente ela ainda esta marcada como [[inkless|Inkless]]. Isso nao significa ausencia de Anchor. Significa que os instrumentos comuns de Redactory falham ao tentar le-la corretamente. O que eles chamam de ausencia e, na verdade, **Stilllight**: uma Anchor derivada de classe Radiance voltada nao para a luz como revelacao ou forca radiante, mas para a luz cuja mocao foi interrompida.
 
 Essa diferenca importa. Ec'lesia nao e uma segunda E'lla. Nao e outro caso primario de Light. E um tipo diferente de problema Wonderwall.
 
@@ -83,13 +83,32 @@ Ela e mais forte onde a luz ja existe e mais fraca em escuridao total, a menos q
 
 ## Situacao Institucional
 
-Ec'lesia entrou no processo de admissao da **Academia de Lon'drina** em **2196**. A Academia conseguiu detectar pressao de Radiance, contradicao termica e efeitos de persistencia, mas nao uma Anchor convencional. O resultado foi uma **certificacao provisoria de Quill**, a classificacao Inkless e a remocao de sua progressao comum.
+Ec'lesia entrou no processo de admissao da **Academia de Lon'drina** em **2196**. A Academia conseguiu detectar pressao de Radiance, contradicao termica e efeitos de persistencia, mas nao uma Anchor convencional. O resultado foi uma certificacao provisoria de [[quill|Quill]], a classificacao [[inkless|Inkless]] e a remocao de sua progressao comum.
 
 Ela nao foi expulsa.
 
 Em vez disso, a Academia a reteve sob colocacao observacional restrita no **Anexo de Calibracao de Radiance**, onde hoje atua como estudante provisoria e assistente de calibracao. Oficialmente, ajuda a testar lentes, placas de resposta, arranjos de pos-imagem e outros instrumentos de medicao. Nao oficialmente, tornou-se parte da ecologia social do Anexo, para irritacao de qualquer pessoa que prefira hierarquias arrumadas.
 
 Ela nao esta liberada para campo. Pratica de alto output continua restrita. Mas tambem nao esta selada em isolamento. Estuda, assiste a mais aulas do que tecnicamente deveria, ajuda no trabalho de calibracao e continua se tornando util em salas que ainda nao sabem bem o que fazer com ela.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** Folha selada  
+**Registry Status:** Registrada  
+**Rank:** [[quill|Quill]], provisoria  
+**[[mark|Mark]]:** [[mark-1|Mark 1]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Restrito  
+**Anchor:** Stilllight  
+**Anchor Reading:** Disputed  
+**Depth Reading:** Deep  
+**Reach Reading:** minimal  
+**Registration Tenure:** 4 anos  
+**Academy Record:** Intake de Lon'drina em 2196; revisao especialista em andamento  
+**Practice Record:** Assistencia de calibracao; trabalho supervisionado no Anexo de Radiance  
+**[[blots|Blots]]:** Nenhum  
+**Pager Note:** Review  
+**[[seal|Current Seal]]:** Revisao especialista de Lon'drina; selo letal separado no arquivo de contingencia
 
 ## Relacoes Importantes
 
@@ -113,6 +132,6 @@ Ela e uma jovem construindo uma vida em voz alta o suficiente para continuar hum
 
 O perigo mais fundo em torno de Ec'lesia nao e output bruto. E a relacao entre **Stilllight** e o **Remainder**.
 
-Stilllight cria radiancia interrompida: luz que permanece no intervalo em que o movimento ja deveria ter terminado. Isso torna Ec'lesia incomumente compativel com estrutura de fresta e com aquilo que os arquivos antigos Wonderwall chamam de Remainder. Em cenarios de falha mais tardios, o medo nao e apenas perda de controle. O medo e que seu Dive possa ser empurrado para **Luminant Shorefall**, permitindo que o Remainder a use como vetor de acesso em direcao a First Radiance.
+Stilllight cria radiancia interrompida: luz que permanece no intervalo em que o movimento ja deveria ter terminado. Isso torna Ec'lesia incomumente compativel com estrutura de fresta e com aquilo que os arquivos antigos Wonderwall chamam de Remainder. Em cenarios de falha mais tardios, o medo nao e apenas perda de controle. O medo e que seu Dive possa ser empurrado para **[[shorefall|Luminant Shorefall]]**, permitindo que o Remainder a use como vetor de acesso em direcao a First Radiance.
 
 E por isso que ela e vigiada tao de perto.

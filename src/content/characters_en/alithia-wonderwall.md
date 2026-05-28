@@ -6,7 +6,7 @@ birth_year: "2111"
 birthplace: "Northern coastal Rae branch holdings, Empire of Synus"
 affiliation: "House Wonderwall; Empire of Synus; SiNE"
 house: "Wonderwall (Rae branch origin; primary line by marriage)"
-rank: "Radiance-class Redactor - Revelation Anchor"
+rank: "Stylus - Revelation Anchor"
 registry_status: "Publicly held as House Wonderwall's principal representative; privately recognized as a stable composite continuity"
 designation: "The Second Radiance"
 height: "Not publicly recorded"
@@ -59,6 +59,25 @@ Athena Rae grew up in the Rae branch, which preserved a deep connection to A'lic
 Athena's contact with that remaining presence did not produce a simple host-and-spirit arrangement. It became a long fusion that eventually stabilized as Al'ithia. That is why people inside the family can honestly say she carries two real pasts while still being one person.
 
 That history changed how the House remembers A'licia. Under Al'ithia's influence, the First Radiance stopped being only a polished family legend and became something more human again: still sacred, still powerful, but no longer flattened into a decorative myth.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** House-restricted leaf  
+**Registry Status:** No ordinary Apocachynthion practitioner file; continuity reviewed privately by House Wonderwall  
+**Rank:** [[stylus|Stylus]]  
+**[[mark|Mark]]:** [[mark-5|Mark 5]]  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civic  
+**Anchor:** Revelation  
+**Anchor Reading:** Confirmed  
+**Depth Reading:** Deep  
+**Reach Reading:** broad  
+**Registration Tenure:** Undisclosed  
+**Academy Record:** Rae-branch Redactory formation; exceptional adolescent Revelation expression before full integration  
+**Practice Record:** Senate statecraft, House governance, and high-level Radiance consultation  
+**[[blots|Blots]]:** None  
+**Pager Note:** None  
+**[[seal|Current Seal]]:** Wonderwall private continuity review; no formal standard-registry cataloguing
 
 ## Abilities
 
