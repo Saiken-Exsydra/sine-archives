@@ -6,6 +6,7 @@ tags: ["Places", "Aurora", "Federation", "Rite of Radiance", "Valerie", "White D
 status: "public"
 created: "2026-03-31"
 updated: "2026-03-31"
+codex_file: "The Aurora Codex.md"
 image: "../../assets/uploads/places/place-aurora.png"
 ---
 

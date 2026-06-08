@@ -37,7 +37,7 @@ const copy = locale === "pt-br"
       index: "Index",
       section: "Characters",
       search: "Search",
-      sectionDesc: "Individuals of note within the Twilight Band and beyond.",
+      sectionDesc: "Personal dossiers of individuals of note within the Twilight Band and beyond.",
       searchPlaceholder: "Search dossiers",
       clearSearch: "Clear search",
       noResults: "No dossiers found",
@@ -114,7 +114,7 @@ const charData = await Promise.all(
 );
 const sectionEyebrow = locale === "pt-br"
   ? `Secao - ${charData.length} Dossies`
-  : `Section - ${charData.length} Dossiers`;
+  : "PERSONAL DOSSIERS";
 ---
 
 <!doctype html>

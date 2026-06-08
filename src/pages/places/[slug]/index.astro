@@ -1,6 +1,8 @@
 ---
 import EntryLayout from "../../../layouts/EntryLayout.astro";
 import { getLocalizedCollection } from "../../../i18n/content";
+import { localizedPath } from "../../../i18n/config";
+import { getPlaceCodexRecord } from "../../../utils/place-codex";
 
 export async function getStaticPaths() {
   const entries = await getLocalizedCollection("places", "en");
@@ -13,6 +15,15 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const codex = await getPlaceCodexRecord(entry);
 ---
 
-<EntryLayout active="places" entry={entry} locale="en" />
+<EntryLayout
+  active="places"
+  entry={entry}
+  locale="en"
+  codexAction={codex.exists ? {
+    href: localizedPath("en", `/places/${entry.slug}/codex/`),
+    label: "Open Full Codex",
+  } : null}
+/>

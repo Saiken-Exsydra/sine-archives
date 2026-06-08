@@ -2,8 +2,9 @@ import type { APIRoute } from "astro";
 import { SECTIONS } from "../sections";
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
-import { localizedEntryPath, normalizeLocale } from "../i18n/config";
+import { localizedEntryPath, localizedPath, normalizeLocale } from "../i18n/config";
 import { getImageUrl } from "../utils/optimized-images";
+import { getLocalizedMusicCatalog } from "../data/music";
 
 const labelByKey = Object.fromEntries(SECTIONS.map((s) => [s.key, s.label])) as Record<string, string>;
 const sections = CONTENT_KEYS.map((key) => ({ key, label: labelByKey[key] ?? key }));
@@ -36,7 +37,21 @@ export const GET: APIRoute = async ({ url }) => {
     })
   );
 
-  const items = itemsNested.flat();
+  const soundtrackItems = getLocalizedMusicCatalog(locale).map((track) => ({
+    section: "soundtracks",
+    sectionLabel: "Soundtracks",
+    slug: track.id,
+    href: localizedPath(locale, `/soundtracks/?track=${encodeURIComponent(track.id)}`),
+    title: track.title,
+    summary: track.summary,
+    tags: [track.kindLabel, track.album, track.mood].filter(Boolean),
+    created: track.year,
+    updated: track.year,
+    image: track.image,
+    body: [track.subtitle, track.summary, track.album, track.mood].filter(Boolean).join(" "),
+  }));
+
+  const items = [...itemsNested.flat(), ...soundtrackItems];
 
   return new Response(JSON.stringify({ items }), {
     headers: {

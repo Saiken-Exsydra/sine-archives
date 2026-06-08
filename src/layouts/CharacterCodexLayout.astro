@@ -30,14 +30,14 @@ const copy = locale === "pt-br"
   : {
       section: "Characters",
       entry: "Entry",
-      codex: "Codex",
-      openArchive: "Deep Archive",
-      titleSuffix: "Codex",
+      codex: "Full Codex",
+      openArchive: "Full Codex",
+      titleSuffix: "Full Codex",
       fileRef: "Archive reference",
       source: "Source",
       archiveFolder: "The Archive / Characters folder",
-      unavailable: "No full dossier was found for this character in the current archive.",
-      note: "When a matching file exists in `The Archive/Characters`, this page will render the full text automatically.",
+      unavailable: "Full Codex Not Indexed",
+      note: "No deeper codex record is indexed for this character in the current public mirror.",
     };
 
 const heroImageUrl = getImageUrl(entry.data?.hero_image) ?? getImageUrl(entry.data?.image);

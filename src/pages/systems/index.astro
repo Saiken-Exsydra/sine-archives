@@ -33,8 +33,9 @@ const copy = locale === "pt-br"
     }
   : {
       pageTitle: "Systems — SiNE Archives",
-      identityTag: "Fundamental Systems",
-      identitySub: "Two sides of the same Archive",
+      identityTag: "SYSTEM RECORDS",
+      identityTitle: "Systems",
+      identitySub: "Structural, institutional, metaphysical, and operational systems indexed by the archive.",
       addendums: "Addendums",
       idleCta: "Examine System ›",
       collapsedHint: "Switch",
@@ -222,6 +223,7 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
       <div class="sys-rule"></div>
       <div class="sys-identity__center">
         <div class="sys-identity__tag">{copy.identityTag}</div>
+        {"identityTitle" in copy && <div class="sys-identity__title">{copy.identityTitle}</div>}
         <div class="sys-identity__sub">{copy.identitySub}</div>
       </div>
 
@@ -475,10 +477,22 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
     letter-spacing: 0.28em; text-transform: uppercase;
     color: rgba(232,228,220,0.2);
   }
+  .sys-identity__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    line-height: 0.95;
+    color: rgba(232,228,220,0.78);
+    margin-top: 6px;
+  }
   .sys-identity__sub {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 14px; color: rgba(232,228,220,0.28);
-    margin-top: 3px;
+    max-width: 620px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(232,228,220,0.26);
+    margin-top: 8px;
   }
   .sys-entries-btn {
     font-family: 'DM Sans', sans-serif;

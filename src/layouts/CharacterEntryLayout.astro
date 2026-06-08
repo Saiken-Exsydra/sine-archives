@@ -43,6 +43,8 @@ const copy = locale === "pt-br"
       pageTitle: "Characters",
       onFile: "On File",
       dossier: "Dossier - SiNE Archives Filing Year 1127",
+      publicDossierEntry: "PUBLIC DOSSIER ENTRY",
+      dossierNote: "Summary-level record generated from available archive material.",
       access: "Access Level",
       public: "Public",
       fileData: "File Data",
@@ -60,9 +62,9 @@ const copy = locale === "pt-br"
       exitFullscreen: "Exit full screen",
       languageLabel: "Language switcher",
       nextImage: "Next image",
-      openCodex: "Open Codex",
-      codexReady: "Full dossier",
-      codexPending: "Codex unavailable",
+      openCodex: "Open Full Codex",
+      codexReady: "Full Codex Indexed",
+      codexPending: "Full Codex Not Indexed",
     };
 
 const str = (v: unknown) => String(v ?? "").trim();
@@ -74,7 +76,7 @@ const updated        = str(entry.data?.updated);
 const type           = str(entry.data?.type ?? (locale === "pt-br" ? "Personagem" : "Character"));
 const galleryTransition = entry.data?.portrait_gallery_transition === "slide" ? "slide" : "fade";
 const galleryAutoplay = entry.data?.portrait_gallery_autoplay !== false;
-const showRelatedEntries = locale !== "en";
+const showRelatedEntries = true;
 const portraitCandidates = [
   ...(Array.isArray(entry.data?.portrait_gallery) ? entry.data.portrait_gallery : []),
   entry.data?.image,
@@ -482,6 +484,23 @@ const codexHref = localizedPath(locale, `/characters/${entry.slug}/codex/`);
       font-family: 'DM Sans', sans-serif;
       font-size: 12px; color: rgba(176,141,60,0.75);
       letter-spacing: 0.06em; line-height: 1.4;
+      margin-bottom: 0;
+    }
+    .dos-header__entry-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(232,228,220,0.5);
+      margin-bottom: 8px;
+    }
+    .dos-header__note {
+      max-width: 420px;
+      margin: 10px 0 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      line-height: 1.6;
+      color: rgba(232,228,220,0.48);
     }
     .dos-codex-link {
       display: inline-flex;
@@ -911,8 +930,14 @@ const codexHref = localizedPath(locale, `/characters/${entry.slug}/codex/`);
       <div class="dos-header__inner">
         <div>
           <div class="dos-header__file-label">{copy.dossier}</div>
+          {"publicDossierEntry" in copy && (
+            <div class="dos-header__entry-label">{copy.publicDossierEntry}</div>
+          )}
           {designation && (
             <div class="dos-header__designation">{designation}</div>
+          )}
+          {"dossierNote" in copy && (
+            <p class="dos-header__note">{copy.dossierNote}</p>
           )}
         </div>
         <div class="dos-header__actions">

@@ -104,8 +104,9 @@ const regionsJson = JSON.stringify(
     <div class="places-header">
       <div class="places-header__rule"></div>
       <div class="places-header__center">
+        <span class="places-header__eyebrow">GEOGRAPHICAL FILES</span>
         <span class="places-header__label">Places</span>
-        <span class="places-header__sub">Territories, cities &amp; geographies of the known world</span>
+        <span class="places-header__sub">Geographical files, regions, cities, and locations of the known world.</span>
       </div>
       <div class="places-header__rule places-header__rule--right"></div>
     </div>
@@ -298,6 +299,13 @@ const regionsJson = JSON.stringify(
     align-items: center;
     gap: 5px;
     padding: 0 40px;
+  }
+  .places-header__eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.24);
   }
   .places-header__label {
     font-family: 'Cormorant Garamond', serif;

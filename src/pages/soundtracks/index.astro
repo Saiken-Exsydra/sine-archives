@@ -50,8 +50,9 @@ const copy = locale === "pt-br"
   : {
       pageTitle: "Soundtracks - SiNE Archives",
       featuredTrack: "Featured track",
-      audioCatalog: "Audio catalog",
+      audioCatalog: "AUDIO ARCHIVE",
       title: "Soundtracks",
+      subtitle: "Audio archive of themes, motifs, and associated records.",
       countSingular: "track",
       countPlural: "tracks",
       track: "Track",
@@ -242,6 +243,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
           <div class="sound-catalog__lead">
             <div class="sound-catalog__eyebrow">{copy.audioCatalog}</div>
             <h1 class="sound-catalog__title">{copy.title}</h1>
+            {"subtitle" in copy && <p class="sound-catalog__subtitle">{copy.subtitle}</p>}
             <div class="sound-catalog__ornament"></div>
             <div class="sound-catalog__count" id="sound-count-body">
               {total} {total === 1 ? copy.countSingular : copy.countPlural}
@@ -407,6 +409,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       const muteLabel = soundPage.dataset.muteLabel || 'Mute';
       const unmuteLabel = soundPage.dataset.unmuteLabel || 'Restore audio';
       const unavailableLabel = soundPage.dataset.unavailableLabel || 'Reserved';
+      const requestedTrackId = new URLSearchParams(window.location.search).get('track') || '';
 
       let activeTrackId = featuredTrackId;
       let activePlaying = false;
@@ -476,6 +479,10 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
       const getCardByTrackId = (trackId) => cards.find((card) => card.dataset.trackId === trackId) || null;
       const getDeckCard = () => getCardByTrackId(activeTrackId) || getCardByTrackId(featuredTrackId) || cards[0] || null;
+
+      if (requestedTrackId && getCardByTrackId(requestedTrackId)) {
+        activeTrackId = requestedTrackId;
+      }
 
       const updateCount = (visible) => {
         if (!countNode) return;
@@ -1117,6 +1124,16 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       font-size: clamp(56px, 7.1vw, 84px);
       line-height: 0.88;
       letter-spacing: -0.03em;
+    }
+    .sound-catalog__subtitle {
+      max-width: 560px;
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      line-height: 1.6;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(239, 233, 224, 0.46);
     }
 
     .sound-catalog__ornament {

@@ -1,6 +1,8 @@
 ---
 import EntryLayout from "../../../layouts/EntryLayout.astro";
 import { getLocalizedCollection } from "../../../i18n/content";
+import { localizedPath } from "../../../i18n/config";
+import { getCosmologyCodexRecord } from "../../../utils/cosmology-codex";
 
 export async function getStaticPaths() {
   const entries = await getLocalizedCollection("cosmology", "en");
@@ -13,6 +15,15 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const codex = await getCosmologyCodexRecord(entry);
 ---
 
-<EntryLayout active="cosmology" entry={entry} locale="en" />
+<EntryLayout
+  active="cosmology"
+  entry={entry}
+  locale="en"
+  codexAction={codex.exists ? {
+    href: localizedPath("en", `/cosmology/${entry.slug}/codex/`),
+    label: "Open Full Codex",
+  } : null}
+/>

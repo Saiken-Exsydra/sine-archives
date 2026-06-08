@@ -46,6 +46,9 @@ const copy = {
   fullscreen: locale === "pt-br" ? "Tela cheia" : "Full screen",
   exitFullscreen: locale === "pt-br" ? "Sair da tela cheia" : "Exit full screen",
   divisionData: locale === "pt-br" ? "Dados da divisao" : "Division Data",
+  sectionLabel: "COMPANY RECORDS",
+  sectionTitle: "SiNE",
+  sectionSubtitle: "Company records, branch profiles, and public-facing summaries of the Wonderwall apparatus.",
 };
 
 type SineEntry = {
@@ -99,8 +102,9 @@ const entryBasePath = localizedPath(locale, "/sine/");
       <div class="sine-identity__center">
         <img src="/uploads/sine-logo.png" alt="SiNE" class="sine-identity__logo" />
         <div class="sine-identity__meta">
-          <span class="sine-identity__tag">SYNUS INTEGRATED NETWORK OF EQUILIBRIUM</span>
-          <span class="sine-identity__year">EST. YEAR 340</span>
+          <span class="sine-identity__tag">{copy.sectionLabel}</span>
+          <span class="sine-identity__title">{copy.sectionTitle}</span>
+          <span class="sine-identity__subtitle">{copy.sectionSubtitle}</span>
         </div>
       </div>
       <div class="sine-rule"></div>
@@ -402,8 +406,9 @@ const entryBasePath = localizedPath(locale, "/sine/");
 
   .sine-identity__meta {
     display: flex;
-    gap: 20px;
-    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
   }
 
   .sine-identity__tag {
@@ -414,12 +419,20 @@ const entryBasePath = localizedPath(locale, "/sine/");
     text-transform: uppercase;
   }
 
-  .sine-identity__year {
+  .sine-identity__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 0.95;
+    color: rgba(232,228,220,0.86);
+  }
+  .sine-identity__subtitle {
+    max-width: 520px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 9px;
-    letter-spacing: 0.24em;
-    color: rgba(177,58,52,0.4);
+    font-size: 10px;
+    line-height: 1.55;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+    color: rgba(232,228,220,0.28);
   }
 
   /* ── Panel row ── */

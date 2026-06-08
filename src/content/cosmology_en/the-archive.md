@@ -6,6 +6,7 @@ tags: ["Cosmology", "Archive", "Cosmological Substrate", "Indexing", "Coherence"
 status: "public"
 created: "2026-03-30"
 updated: "2026-03-30"
+codex_file: "The Archive Codex.md"
 image: ""
 ---
 

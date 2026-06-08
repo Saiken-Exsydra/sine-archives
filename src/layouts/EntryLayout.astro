@@ -1,5 +1,6 @@
 ---
 import "../styles/archive-refs.css";
+import ArchiveMetadataStrip from "../components/ArchiveMetadataStrip.astro";
 import MainLayout from "./MainLayout.astro";
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
@@ -7,7 +8,22 @@ import { localizedEntryPath, localizedPath, type SiteLocale } from "../i18n/conf
 import { getEntryLayoutLabels, sectionLabel as getSectionLabel } from "../i18n/ui";
 import { getImageUrl } from "../utils/optimized-images";
 
-const { entry, active, locale = "en" } = Astro.props as { entry: any; active: string; locale?: SiteLocale };
+type CodexAction = {
+  href: string;
+  label: string;
+};
+
+const {
+  entry,
+  active,
+  locale = "en",
+  codexAction = null,
+} = Astro.props as {
+  entry: any;
+  active: string;
+  locale?: SiteLocale;
+  codexAction?: CodexAction | null;
+};
 const { Content, headings } = await entry.render();
 
 const isCharacterEntry = active === "characters";
@@ -50,7 +66,6 @@ const sectionHref = localizedPath(locale, `/${active}/`);
 const labels = getEntryLayoutLabels(locale);
 const entryImage = entry.data?.image;
 const entryImageUrl = getImageUrl(entryImage);
-const showRelatedEntries = locale !== "en";
 
 // ── Related entries ──
 function normalizeTags(tags: unknown): string[] {
@@ -66,6 +81,7 @@ function sharedCount(a: string[], b: string[]): number {
 
 const currentSlug = entry.slug;
 const currentTags = normalizeTags(entry.data?.tags);
+const showRelatedEntries = currentTags.length > 0;
 
 const related = showRelatedEntries
   ? (
@@ -152,6 +168,7 @@ if (isSkyphon) {
         <span class="ent-crumbs__cur">{entry.data.title}</span>
       </nav>
 
+      {!isCharacterEntry && locale === "en" && <div class="ent-hero__eyebrow">PUBLIC ENTRY</div>}
       <div class="ent-hero__type">{entry.data.type ?? sectionLabel}</div>
       <h1 class="ent-hero__title">{entry.data.title}</h1>
       {designation && <div class="ent-hero__designation">{designation}</div>}
@@ -216,6 +233,15 @@ if (isSkyphon) {
         <p class="ent-lead">{summary}</p>
       ) : null}
       <div class="ent-divider"></div>
+      {locale === "en" && (
+        <ArchiveMetadataStrip />
+      )}
+      {codexAction && (
+        <div class="ent-codex-action">
+          <span class="ent-codex-action__label">Extended Archive Record</span>
+          <a class="ent-codex-action__link" href={codexAction.href}>{codexAction.label}</a>
+        </div>
+      )}
 
       {/* Character portrait in prose area when no hero image */}
       {isCharacterEntry && !entry.data.image && (
@@ -332,6 +358,15 @@ if (isSkyphon) {
   .ent-crumbs__link:hover { color: var(--text); }
   .ent-crumbs__sep { color: var(--crimson); opacity: 0.7; }
   .ent-crumbs__cur { color: var(--text-dim); }
+
+  .ent-hero__eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.42);
+    margin-bottom: 8px;
+  }
 
   .ent-hero__type {
     font-family: 'DM Sans', sans-serif;
@@ -564,6 +599,53 @@ if (isSkyphon) {
     height: 1px;
     background: rgba(255, 255, 255, 0.07);
     margin: 0 0 32px;
+  }
+
+  .ent-codex-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: -8px 0 28px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 2px solid rgba(177, 58, 52, 0.52);
+    border-radius: 6px;
+    background: rgba(10, 10, 18, 0.72);
+  }
+
+  .ent-codex-action__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.4);
+  }
+
+  .ent-codex-action__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 14px;
+    border: 1px solid rgba(177, 58, 52, 0.34);
+    border-radius: 999px;
+    background: rgba(177, 58, 52, 0.12);
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+  }
+
+  .ent-codex-action__link:hover {
+    border-color: rgba(177, 58, 52, 0.52);
+    background: rgba(177, 58, 52, 0.2);
+    color: rgba(232, 228, 220, 0.98);
   }
 
   .ent-portrait-placeholder {
@@ -806,6 +888,10 @@ if (isSkyphon) {
     .ent-prose :global(li) { font-size: 14px; line-height: 1.78; }
 
     .ent-lead { font-size: 17px; margin: 0 0 18px; }
+    .ent-codex-action {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     .ent-related { padding: 40px 0 60px; }
     .ent-related__inner { padding: 0 20px; }
     .ent-related__grid { grid-template-columns: 1fr; }
