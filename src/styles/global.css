@@ -10,8 +10,6 @@
   --text-muted: rgba(232, 228, 220, 0.55);
   --text-dim:   rgba(232, 228, 220, 0.3);
   --shadow:     0 14px 40px rgba(0, 0, 0, 0.35);
-  --search-vt-duration: 1500ms;
-  --search-vt-ease: cubic-bezier(.16, 1, .3, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,35 +45,6 @@ body {
 
 img { display: block; max-width: 100%; }
 button { font-family: inherit; }
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  background: #050407;
-}
-
-html[data-search-vt="active"]::view-transition-old(root),
-html[data-search-vt="active"]::view-transition-new(root) {
-  animation: none !important;
-  mix-blend-mode: normal !important;
-}
-
-html[data-search-vt="active"]::view-transition-image-pair(root) {
-  isolation: auto;
-}
-
-html[data-search-vt="active"]::view-transition-group(root) {
-  animation: none !important;
-}
-
-html[data-search-vt="active"]::view-transition {
-  background:
-    radial-gradient(
-      circle at var(--search-vt-x, 100vw) var(--search-vt-y, 0px),
-      rgba(145, 34, 34, 0.28),
-      rgba(5, 4, 7, 0.98) 42%,
-      #050407 100%
-    );
-}
 
 /* ── Cinematic animations ── */
 @keyframes kenburns {
@@ -119,15 +88,4 @@ html[data-search-vt="active"]::view-transition {
     rgba(0, 0, 0, 0.03) 3px,
     rgba(0, 0, 0, 0.03) 4px
   );
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html[data-search-vt="active"]::view-transition-old(root),
-  html[data-search-vt="active"]::view-transition-new(root),
-  html[data-search-vt="active"]::view-transition-group(root) {
-    animation: none !important;
-    clip-path: none !important;
-    transform: none !important;
-    filter: none !important;
-  }
 }

@@ -1,13 +1,15 @@
-﻿---
+---
 title: "Ayanna Aedh d'Aibhilyn"
 type: "Character"
 age: "24 (as of 2200)"
 birth_year: "2176"
 birthplace: "Valerie, Aurora"
 affiliation: "Lyrene Pharmaceuticals; Vitrified Wing (secret program)"
+house: ""
 rank: "Quill-ranked Redactor"
 registry_status: "Auroran-compact Redactor; Quill, Mark 2 under conditional Margins"
 designation: "The Girl the Machine Answered"
+height: ""
 build: "Tall, slim, and precise; naturally athletic without looking strong"
 complexion: "Medium-fair"
 hair: "Light green with a pale silver cast under moonlight"
@@ -16,13 +18,23 @@ dress: "Clean Auroran professional wear; practical research clothing off duty"
 residence: "Valerie, Aurora"
 occupation: "Junior research associate in neural-interface diagnostics"
 summary: "Built to listen where no modern mind should reach; now the hidden mechanism speaks through everyone who made her."
-tags: ["Aurora", "Valerie", "Lyrene", "Vitrified Wing", "Mechanism", "Redactor", "Precursor", "CLOCKWORK"]
-status: "public"
-created: "2026-05-14"
-updated: "2026-05-27"
-codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn.webp"
 hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Aurora"
+  - "Valerie"
+  - "Lyrene"
+  - "Vitrified Wing"
+  - "Mechanism"
+  - "Redactor"
+  - "Precursor"
+  - "CLOCKWORK"
+status: "public"
+created: "2026-05-14"
+updated: "2026-06-11"
+codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 ---
 
 > *"She was made to read a machine no modern mind should be able to read."*
@@ -37,6 +49,16 @@ Ayanna is a young researcher in Valerie with a rare gift for understanding machi
 The truth is worse and more interesting. Ayanna was designed as part of **Project Ennea**, a hidden program meant to create a human being capable of interfacing with the **Sibyl Fragment**, a Precursor device modern people are not supposed to understand cleanly.
 
 The important part is that Ayanna is still fully a person. Her story is not about fake humanity. It is about a real life being built for a purpose she never agreed to.
+
+## Identity
+
+**Public Identity:** A gifted young Auroran researcher whose career seems to point toward an ordinary future in Valerie.
+
+**Institutional Identity:** A conditionally certified [[quill|Quill]] under Auroran compact review, with a file that sits uncomfortably close to machine-interface research.
+
+**Private Truth:** Ayanna was engineered through **Project Ennea** to become a viable human interface for the **Sibyl Fragment**.
+
+**Primary Tension:** She is trying to build an ordinary adult life inside a body and biography that were designed for use long before she could consent.
 
 ## Personality
 
@@ -114,6 +136,3 @@ Ayanna matters because she turns a huge setting question into a personal one: wh
 She is also not just a victim. The same gift that made her useful is starting to make her dangerous to the people who planned her life. She was meant to read one forbidden machine. Now she is learning to read the whole system that built her.
 
 ## Deeper Lore
-
-Mechanism may be only the public-facing layer of Ayanna's deeper design. Project Ennea appears to have aimed not just for a strong technician, but for a human mind capable of receiving and interpreting output from Precursor machinery that ordinary instruments and ordinary cognition cannot handle cleanly.
-

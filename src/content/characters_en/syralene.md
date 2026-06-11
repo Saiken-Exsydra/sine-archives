@@ -1,18 +1,41 @@
-﻿---
+---
 title: "Syr'lene"
 type: "Character"
+age: ""
+birth_year: ""
+birthplace: ""
 affiliation: "Precursors (original); Lunar Crown (current - permanent embedding)"
+house: ""
 rank: "Precursor"
-designation: "She Who Holds the Moon Together"
 registry_status: "Not registered - predates the Apocachynthion by a margin that makes the question inapplicable"
+designation: "She Who Holds the Moon Together"
+height: ""
+build: ""
+complexion: ""
+hair: ""
+eyes: ""
+dress: ""
+residence: ""
 occupation: "Containment - the fragment within the Crown"
 summary: "Century after century, she keeps loving the world in the least visible way possible: by not letting it break further."
-tags: ["Precursor", "Syr'lene", "Lunar Crown", "Fracture", "Containment", "Skyphon", "Keepers of Before", "Miracle", "Northern Front"]
-status: "public"
-created: "2026-03-30"
-updated: "2026-05-25"
 image: "../../assets/uploads/char-syralene.png"
 hero_image: "../../assets/uploads/char-syralene-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Precursor"
+  - "Syr'lene"
+  - "Lunar Crown"
+  - "Fracture"
+  - "Containment"
+  - "Skyphon"
+  - "Keepers of Before"
+  - "Miracle"
+  - "Northern Front"
+status: "public"
+created: "2026-03-30"
+updated: "2026-06-11"
+codex_file: ""
 ---
 
 > *"Ask what performs the miracles at the northern front. The Church says: the Sovereign's grace. The answer is not wrong. It is not complete."*
@@ -28,6 +51,16 @@ Before the Fracture, she was one of Terra's five **Precursors** and the one most
 
 The simplest way to picture her is this: Syr'lene is the intelligence still holding the Moon together.
 
+## Identity
+
+**Public Identity:** More myth and hidden infrastructure than person in ordinary public memory, associated with the Moon more than with a living face.
+
+**Institutional Identity:** A Precursor-era containment intelligence embedded in the broken **Lunar Crown** and functionally treated as part of the world's emergency architecture.
+
+**Private Truth:** Syr'lene is still there, still conscious enough to maintain a task that should have consumed any ordinary self centuries ago.
+
+**Primary Tension:** Her defining act of love became endless maintenance, leaving open the question of how much personhood can survive after becoming infrastructure.
+
 ## Personality
 
 Syr'lene is harder to describe in ordinary social terms now because she no longer lives an ordinary life. What remains most visible in her is patience, discipline, and a kind of care that expresses itself through endless maintenance rather than visible comfort.
@@ -41,6 +74,25 @@ Among the Precursors, Syr'lene specialized in integration. She understood how Te
 One important detail is that the dangerous fragment inside the Lunar Crown did not arrive with the Fracture. It was already there, lodged in the Crown during the older era of the intact Seal. The Fracture simply turned an old contained danger into an immediate crisis.
 
 When the Crown broke, Syr'lene permanently transferred her own structural core into the lunar lattice to keep that fragment contained. She did not die in a single heroic instant and disappear. She turned herself into infrastructure.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** None  
+**Registry Status:** Contained continuity authority embedded in the Lunar Crown; not an ordinary practitioner case  
+**Rank:** Not applicable  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Lunar containment  
+**Anchor:** Not applicable  
+**Anchor Reading:** Not applicable  
+**Depth Reading:** Planetary  
+**Reach Reading:** Lunar-Crown linked  
+**Registration Tenure:** Continuous since the Fracture  
+**Academy Record:** Precursor-era authority only  
+**Practice Record:** Fragment containment and world-harmonic maintenance  
+**[[blots|Blots]]:** Not applicable  
+**Pager Note:** Do not classify as ordinary living practitioner  
+**[[seal|Current Seal]]:** Keepers of Before restricted file
 
 ## Abilities
 
@@ -82,6 +134,3 @@ Syr'lene matters because she changes how readers understand miracles, the Moon, 
 She is one of the setting's purest examples of hidden heroism. People survive because of her without knowing her name. Whole regions endure because she keeps paying a cost few people can even imagine.
 
 ## Deeper Lore
-
-In technical terms, Syr'lene's present condition is best understood as permanent Anchor-level integration with damaged lunar containment architecture. The recurring **Callings** are not symbolic omens but propagating resonance effects from her ongoing effort to hold a pre-existing lodged fragment in place under changing orbital stress.
-

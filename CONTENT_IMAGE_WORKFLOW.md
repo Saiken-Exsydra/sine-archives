@@ -95,6 +95,10 @@ Examples:
 
 Create the markdown file in the correct collection folder.
 
+For character entries, start from the reusable template at
+`src/templates/character-entry-template.md` so the front matter, registry
+block, and section order stay aligned with the live character pages.
+
 Examples:
 
 - `src/content/characters_en/my-new-character.md`

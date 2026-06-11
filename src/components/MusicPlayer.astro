@@ -754,11 +754,10 @@ const copy = locale === "pt-br"
 
   if (!window[initKey]) {
     window[initKey] = initializeMusicPlayer;
-    document.addEventListener("astro:page-load", window[initKey]);
     window.addEventListener("pageshow", window[initKey]);
   }
 
-  window[initKey]();
+  window.registerPageInit?.("music-player", window[initKey] || initializeMusicPlayer);
 </script>
 
 <style>

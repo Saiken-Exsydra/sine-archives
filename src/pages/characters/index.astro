@@ -1,4 +1,5 @@
 ---
+import SiteShell from "../../layouts/SiteShell.astro";
 import MusicPlayer from "../../components/MusicPlayer.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
@@ -117,20 +118,13 @@ const sectionEyebrow = locale === "pt-br"
   : `Section - ${charData.length} Dossiers`;
 ---
 
-<!doctype html>
-<html lang={locale === "pt-br" ? "pt-BR" : "en"}>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#06060b" />
-    <title>{copy.pageTitle}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
-      rel="stylesheet"
-    />
-    <style is:global>
+<SiteShell
+  pageTitle={copy.pageTitle}
+  locale={locale}
+  routeKind="character-index"
+  transitionProfile="character-stage"
+>
+  <style is:global>
       :root {
         --bg:         #06060b;
         --surface:    #0a0a14;
@@ -190,6 +184,10 @@ const sectionEyebrow = locale === "pt-br"
       }
       .nav__right {
         display: flex; align-items: center; gap: 16px;
+      }
+      .nav__search-slot {
+        display: flex;
+        align-items: center;
       }
       .nav__crumb {
         display: flex; align-items: center; gap: 6px;
@@ -831,9 +829,9 @@ const sectionEyebrow = locale === "pt-br"
         }
 
       }
-    </style>
-  </head>
-  <body>
+  </style>
+
+  <main id="page-content" transition:name="page-content">
     <!-- NAV -->
     <nav class="nav">
       <a class="nav__logo" href={localizedPath(locale, "/")}>
@@ -846,7 +844,9 @@ const sectionEyebrow = locale === "pt-br"
           <span class="nav__crumb-sep">></span>
           <span class="nav__crumb-cur">{copy.section}</span>
         </span>
-        <MusicPlayer locale={locale} />
+        <div transition:persist>
+          <MusicPlayer locale={locale} />
+        </div>
         <button
           class="nav__fullscreen-btn"
           id="nav-fullscreen"
@@ -860,12 +860,20 @@ const sectionEyebrow = locale === "pt-br"
             <path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <a class="nav__search-btn" href={localizedPath(locale, "/search/")} aria-label={copy.search}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
-            <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-          </svg>
-        </a>
+        <div class="nav__search-slot" transition:persist>
+          <a
+            class="nav__search-btn"
+            href={localizedPath(locale, "/search/")}
+            aria-label={copy.search}
+            data-astro-prefetch="load"
+            data-transition-trigger="search"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+              <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </nav>
 
@@ -1131,19 +1139,12 @@ const sectionEyebrow = locale === "pt-br"
         ))}
       </div>
     </div>
+  </main>
 
-    <script define:vars={{ charData, copy }}>
+  <script define:vars={{ charData, copy }}>
       const chars = charData;
-      const charactersInitKey = "__sineCharactersInit";
-      const charactersCleanupKey = "__sineCharactersCleanup";
-      const charactersBeforeSwapKey = "__sineCharactersBeforeSwap";
 
       const initializeCharactersPage = () => {
-        if (typeof window[charactersCleanupKey] === "function") {
-          window[charactersCleanupKey]();
-          window[charactersCleanupKey] = null;
-        }
-
         const charsRoot = document.getElementById("chars-root");
         if (!(charsRoot instanceof HTMLElement) || chars.length === 0) {
           return;
@@ -1169,7 +1170,7 @@ const sectionEyebrow = locale === "pt-br"
         let touchStartY = null;
         let isOverlayHidden = false;
 
-        window[charactersCleanupKey] = () => {
+        const cleanup = () => {
           listenerScope.abort();
           window.clearTimeout(switchTimer);
           window.clearTimeout(galleryTimer);
@@ -1210,6 +1211,7 @@ const sectionEyebrow = locale === "pt-br"
         const allAnimated = [stageCounter, stageTags, stageRule, stageType, stageName, stageDesignation, stageSummary, stageActions, stageWatermark, stageStamp, stagePortrait];
 
         if (!(stageRoot instanceof HTMLElement) || !(stagePortrait instanceof HTMLElement)) {
+          cleanup();
           return;
         }
 
@@ -1589,25 +1591,11 @@ const sectionEyebrow = locale === "pt-br"
           scheduleGallery();
         }
         applySearch(searchInput?.value || "");
+
+        return cleanup;
       };
 
-      if (!window[charactersInitKey]) {
-        window[charactersInitKey] = initializeCharactersPage;
-        document.addEventListener("astro:page-load", window[charactersInitKey]);
-      }
-
-      if (!window[charactersBeforeSwapKey]) {
-        window[charactersBeforeSwapKey] = () => {
-          if (typeof window[charactersCleanupKey] === "function") {
-            window[charactersCleanupKey]();
-            window[charactersCleanupKey] = null;
-          }
-        };
-        document.addEventListener("astro:before-swap", window[charactersBeforeSwapKey]);
-      }
-
-      window[charactersInitKey]();
+      window.registerPageInit?.("characters-page", initializeCharactersPage);
     </script>
-  </body>
-</html>
+</SiteShell>
 

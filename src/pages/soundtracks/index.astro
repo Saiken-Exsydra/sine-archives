@@ -354,16 +354,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
   </section>
 
   <script is:inline>
-    const soundtrackInitKey = '__sineSoundtracksInit';
-    const soundtrackCleanupKey = '__sineSoundtracksCleanup';
-    const soundtrackBeforeSwapKey = '__sineSoundtracksBeforeSwap';
-
     const initializeSoundtracksPage = () => {
-      if (typeof window[soundtrackCleanupKey] === 'function') {
-        window[soundtrackCleanupKey]();
-        window[soundtrackCleanupKey] = null;
-      }
-
       const soundPage = document.querySelector('[data-sound-page]');
 
       if (!(soundPage instanceof HTMLElement)) {
@@ -400,7 +391,6 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
       const listenerScope = new AbortController();
       const { signal } = listenerScope;
-      window[soundtrackCleanupKey] = () => listenerScope.abort();
 
       const featuredTrackId = soundPage.dataset.featuredTrackId || cards[0]?.dataset.trackId || '';
       const searchBase = soundPage.dataset.searchBase || '/search/';
@@ -749,24 +739,11 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
         syncFromKnownState();
         window.dispatchEvent(new CustomEvent('sine:music-request-state'));
       });
+
+      return () => listenerScope.abort();
     };
 
-    if (!window[soundtrackInitKey]) {
-      window[soundtrackInitKey] = initializeSoundtracksPage;
-      document.addEventListener('astro:page-load', window[soundtrackInitKey]);
-    }
-
-    if (!window[soundtrackBeforeSwapKey]) {
-      window[soundtrackBeforeSwapKey] = () => {
-        if (typeof window[soundtrackCleanupKey] === 'function') {
-          window[soundtrackCleanupKey]();
-          window[soundtrackCleanupKey] = null;
-        }
-      };
-      document.addEventListener('astro:before-swap', window[soundtrackBeforeSwapKey]);
-    }
-
-    window[soundtrackInitKey]();
+    window.registerPageInit?.('soundtracks-page', initializeSoundtracksPage);
   </script>
 
   <style>

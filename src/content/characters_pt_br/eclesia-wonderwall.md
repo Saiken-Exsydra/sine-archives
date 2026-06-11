@@ -26,6 +26,29 @@ codex_file: "Eclesia Wonderwall Dossier.md"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
+dossier_quote:
+  text: "Ela entra em uma sala como se o mundo estivesse esperando sua chegada, e a maioria das salas, para meu continuo aborrecimento, concorda."
+  source: "Anotacao privada Wonderwall, ano 2200"
+related_links:
+  - label: "Apocachynthion"
+    href: "/pt-br/organizations/apocachynthion/"
+  - label: "Kalt'sen"
+    href: "/pt-br/places/kaltsen/"
+  - label: "Lon'drina"
+    href: "/pt-br/places/londrina/"
+ability_snapshot_section: "Anchor e Habilidades"
+ability_snapshot:
+  - eyebrow: "Classe de Anchor"
+    title: "Stilllight (Radiance derivada)"
+    body: "Luz cuja mocao foi interrompida. Observada em vez de emitida. Interage com percepcao, memoria e os espacos entre eventos."
+  - eyebrow: "Capacidades centrais"
+    title: "Aplicacoes observadas"
+    items:
+      - "Traco residual - le o que a luz deixou para tras."
+      - "Tecelagem de quietude - interrompe padroes de luz e os mantem."
+      - "Percepcao de frestas - sente inconsistencias em registros e espacos."
+      - "Ancoragem de eco - estabiliza outros ao fixar memorias estaveis."
+      - "Auxilio de calibracao - ajuda a ajustar instrumentos sob interferencia de Stilllight."
 portrait_gallery:
   - "../../assets/uploads/characters/char-eclesia-wonderwall-portrait-arc.png"
 hero_gallery:

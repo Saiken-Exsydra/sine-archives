@@ -1,0 +1,75 @@
+---
+import "../styles/global.css";
+import "../styles/transition-system.css";
+import { ClientRouter } from "astro:transitions";
+import { getHtmlLang, type SiteLocale } from "../i18n/config";
+import {
+  resolveTransitionRouteMeta,
+  type RouteKind,
+} from "../utils/transition-routes";
+
+const {
+  pageClass = "",
+  pageTitle = "SiNE Archives",
+  routeKind = "generic",
+  locale = "en",
+  transitionProfile,
+  themeColor = "#06060b",
+} = Astro.props as {
+  pageClass?: string;
+  pageTitle?: string;
+  routeKind?: RouteKind;
+  locale?: SiteLocale;
+  transitionProfile?: string;
+  themeColor?: string;
+};
+
+const routeMeta = resolveTransitionRouteMeta(Astro.url.pathname, routeKind, transitionProfile);
+const siteLocale = locale as SiteLocale;
+---
+
+<!doctype html>
+<html
+  lang={getHtmlLang(siteLocale)}
+  data-route={routeMeta.route}
+  data-transition-profile={routeMeta.transitionProfile}
+  data-transition-route={routeMeta.routeKind}
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content={themeColor} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{pageTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <slot name="head" />
+    <ClientRouter />
+    <script is:inline>
+      window.__sinePendingPageInits = window.__sinePendingPageInits || [];
+      window.registerPageInit = window.registerPageInit || function registerPageInit(key, init) {
+        window.__sinePendingPageInits.push([key, init]);
+      };
+    </script>
+    <script>
+      import "../scripts/transition-lifecycle";
+    </script>
+  </head>
+
+  <body
+    class={pageClass || undefined}
+    data-route={routeMeta.route}
+    data-transition-profile={routeMeta.transitionProfile}
+    data-transition-route={routeMeta.routeKind}
+  >
+    <div id="site-shell" data-route={routeMeta.route} data-transition-profile={routeMeta.transitionProfile} data-transition-route={routeMeta.routeKind}>
+      <div class="site-shell__bg" aria-hidden="true" transition:persist></div>
+      <slot />
+    </div>
+  </body>
+</html>

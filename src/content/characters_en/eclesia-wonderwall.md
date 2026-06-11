@@ -18,18 +18,50 @@ dress: "Warm yellows, cream, soft brown, pale green, patterned scarves; Academy 
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen; controlled Academy residence at Lon'drina during active terms"
 occupation: "Provisional student and calibration assistant"
 summary: "Bright, affectionate, nosy, and difficult to intimidate; carries Stilllight, not Light, and stays stable by keeping close to ordinary human life."
-tags: ["Synus", "Wonderwall", "Redactor", "Stilllight", "Inkless", "Kalt'sen", "Lon'drina", "Sai'ken Ex'sydra", "Hisui Kirasagi"]
-status: "public"
-created: "2026-02-12"
-updated: "2026-05-27"
-codex_file: "Eclesia Wonderwall Dossier.md"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
-image_position: "center top"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
 portrait_gallery:
   - "../../assets/uploads/characters/char-eclesia-wonderwall-portrait-arc.png"
 hero_gallery:
   - "../../assets/uploads/characters/char-eclesia-wonderwall-hero-arc.png"
+tags:
+  - "Synus"
+  - "Wonderwall"
+  - "Redactor"
+  - "Stilllight"
+  - "Inkless"
+  - "Kalt'sen"
+  - "Lon'drina"
+  - "Sai'ken Ex'sydra"
+  - "Hisui Kirasagi"
+status: "public"
+created: "2026-02-12"
+updated: "2026-06-11"
+codex_file: "Eclesia Wonderwall Dossier.md"
+image_position: "center top"
+dossier_quote:
+  text: "She enters rooms as though the world has been waiting for her to arrive, and most rooms, to my continued inconvenience, agree with her."
+  source: "Private Wonderwall notation, year 2200"
+related_links:
+  - label: "Apocachynthion"
+    href: "/organizations/apocachynthion/"
+  - label: "Kalt'sen"
+    href: "/places/kaltsen/"
+  - label: "Lon'drina"
+    href: "/places/londrina/"
+ability_snapshot_section: "Abilities"
+ability_snapshot:
+  - eyebrow: "Anchor Class"
+    title: "Stilllight (Derived Radiance)"
+    body: "Light whose motion has been arrested. Observed rather than emitted. Interacts with perception, memory, and the spaces between events."
+  - eyebrow: "Core Abilities"
+    title: "Observed applications"
+    items:
+      - "Residual Tracing - reads what light left behind."
+      - "Stillness Weaving - arrests light patterns and holds them."
+      - "Gap Perception - senses inconsistencies in records and spaces."
+      - "Echo Anchoring - steadies others by fixing to stable memories."
+      - "Calibration Aid - assists in tuning instruments around Stilllight interference."
 ---
 
 > *"She enters rooms as though the world has been waiting for her to arrive, and most rooms, to my continued inconvenience, agree with her."*
@@ -45,9 +77,17 @@ Officially she is still marked [[inkless|Inkless]]. That does not mean she lacks
 
 That distinction matters. Ec'lesia is not a second E'lla. She is not another primary Light case. She is a different kind of Wonderwall problem altogether.
 
-## Personality
+## Identity
 
-The older idea of Ec'lesia as quiet, withdrawn, and permanently hidden away is wrong.
+**Public Identity:** A bright cadet-branch Wonderwall student whose social warmth makes her look far less dangerous than her file suggests.
+
+**Institutional Identity:** A provisional [[quill|Quill]] kept under restricted review as an [[inkless|Inkless]] anomaly in the Lon'drina calibration apparatus.
+
+**Private Truth:** Ec'lesia does have an Anchor. It is **Stilllight**, a derived Radiance condition unusually compatible with gap-structure and the Remainder.
+
+**Primary Tension:** She stays most human by leaning into ordinary life, while every institution around her keeps watching for the version of her that might stop being ordinary at all.
+
+## Personality
 
 Ec'lesia is bright, affectionate, socially fearless, intrusive in the charitable sense, and almost aggressively willing to know people. She remembers names, asks too many questions, collects friends with reckless efficiency, and has a habit of deciding that lonely people should not be left lonely for long. She talks easily, laughs easily, and treats solemnity with very little automatic respect.
 
@@ -64,32 +104,6 @@ Her father, **Gal'ahad Kjackter**, was a civil engineer with the Imperial Rail A
 Her mother, **Al'yana Yalara Wonderwall-Kjackter**, is a Reflection-class Redactor and former assistant instructor at the Academy of Lon'drina. She knows Ec'lesia is extraordinary. She does not fully understand what is watching her daughter through the gaps.
 
 Her younger sister, **El'ytra**, matters because Ec'lesia is not just an anomaly. She is an older sister, a reader of bad theatrical voices, and a person still tied to ordinary love.
-
-## Anchor and Abilities
-
-Ec'lesia's true Anchor is **Stilllight**.
-
-Stilllight is not Light itself. It is radiance arrested, cooled, suspended, condensed, or preserved after it should already have dispersed. In practical terms, Ec'lesia can make light stop behaving like normal light.
-
-That can appear as:
-
-- suspended beads or dust of pale-gold light lingering after the source changes;
-- cold illumination that looks warm but feels strangely quiet;
-- thin glasslike panels, rods, or threads of condensed radiance;
-- preserved afterimages that remain in space after attention has moved on;
-- delayed reflections and luminous seams where one field of influence ends and another begins.
-
-She is strongest where light already exists and weaker in total darkness unless she brings a source with her. Her work is also more reliable in enclosed conditions than in open terrain. Stilllight is not broad elemental control. It is a highly specific and increasingly dangerous way of making radiance hold still.
-
-## Institutional Situation
-
-Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a [[quill|Quill]] provisional certification, given [[mark-1|Mark 1]] for supervised practice only, labeled [[inkless|Inkless]], and removed from ordinary progression.
-
-She was not expelled.
-
-Instead, the Academy retained her under restricted observational placement in the **Radiance Calibration Annex**, where she now serves as a provisional student and calibration assistant. Officially she helps test lenses, response plates, afterimage arrays, and other measurement equipment. Unofficially she has made herself part of the Annex's social ecology, to the annoyance of anyone who prefers tidy hierarchy.
-
-She is not field-cleared. High-output practice remains restricted. But she is not sealed away either. She studies, attends more lectures than she is technically allowed to, helps with calibration work, and keeps making herself useful in rooms that are not sure what to do with her.
 
 ## Apocachynthion Registry
 
@@ -110,6 +124,32 @@ She is not field-cleared. High-output practice remains restricted. But she is no
 **Pager Note:** Review  
 **[[seal|Current Seal]]:** Lon'drina specialist review; separate lethal seal on contingency file
 
+## Abilities
+
+Ec'lesia's true Anchor is **Stilllight**.
+
+Stilllight is not Light itself. It is radiance arrested, cooled, suspended, condensed, or preserved after it should already have dispersed. In practical terms, Ec'lesia can make light stop behaving like normal light.
+
+That can appear as:
+
+- suspended beads or dust of pale-gold light lingering after the source changes;
+- cold illumination that looks warm but feels strangely quiet;
+- thin glasslike panels, rods, or threads of condensed radiance;
+- preserved afterimages that remain in space after attention has moved on;
+- delayed reflections and luminous seams where one field of influence ends and another begins.
+
+She is strongest where light already exists and weaker in total darkness unless she brings a source with her. Her work is also more reliable in enclosed conditions than in open terrain. Stilllight is not broad elemental control. It is a highly specific and increasingly dangerous way of making radiance hold still.
+
+## Limitations
+
+Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a [[quill|Quill]] provisional certification, given [[mark-1|Mark 1]] for supervised practice only, labeled [[inkless|Inkless]], and removed from ordinary progression.
+
+She was not expelled.
+
+Instead, the Academy retained her under restricted observational placement in the **Radiance Calibration Annex**, where she now serves as a provisional student and calibration assistant. Officially she helps test lenses, response plates, afterimage arrays, and other measurement equipment. Unofficially she has made herself part of the Annex's social ecology, to the annoyance of anyone who prefers tidy hierarchy.
+
+She is not field-cleared. High-output practice remains restricted. But she is not sealed away either. She studies, attends more lectures than she is technically allowed to, helps with calibration work, and keeps making herself useful in rooms that are not sure what to do with her.
+
 ## Important Relationships
 
 **Sai'ken Ex'sydra** remains assigned to her proximity. Publicly he is household security and liaison support. In truth he is also there because his architecture can sense cadence disturbance early, and because if Ec'lesia ever reaches an unrecoverable Shore-conversion window, he may be forced to kill her before the event stabilizes.
@@ -129,9 +169,3 @@ She is a natural Wonderwall inheritance case from the wrong branch of the family
 She is a young woman building a life loudly enough to stay human while something in the dark keeps trying to learn how to remain through her.
 
 ## Deeper Lore
-
-The deepest danger around Ec'lesia is not raw output. It is the relationship between **Stilllight** and the **Remainder**.
-
-Stilllight creates arrested radiance: light that lingers in the interval where motion should have completed. That makes Ec'lesia unusually compatible with gap-structure and with the thing older Wonderwall files call the Remainder. In later-stage failure scenarios, the fear is not merely that she loses control. The fear is that her Dive could be pushed toward **[[shorefall|Luminant Shorefall]]**, allowing the Remainder to use her as an access vector toward the First Radiance.
-
-That is why she is watched so closely.

@@ -1,6 +1,5 @@
 ---
-import "../styles/global.css";
-import { ClientRouter } from "astro:transitions";
+import SiteShell from "./SiteShell.astro";
 import MusicPlayer from "../components/MusicPlayer.astro";
 import {
   getHtmlLang,
@@ -10,6 +9,7 @@ import {
   LOCALES,
   type SiteLocale,
 } from "../i18n/config";
+import type { RouteKind } from "../utils/transition-routes";
 
 type NavTrailItem = {
   label: string;
@@ -24,9 +24,13 @@ const {
   pageClass = "",
   navVariant = "default",
   navTrail = [],
+  routeKind,
+  transitionProfile,
 } = Astro.props;
 const siteLocale = locale as SiteLocale;
 const currentPath = Astro.url.pathname;
+const derivedRouteKind = (routeKind
+  ?? (active === "home" ? "home" : active === "search" ? "search" : "section-index")) as RouteKind;
 const searchLabel = siteLocale === "pt-br" ? "Buscar" : "Search";
 const fullscreenLabel = siteLocale === "pt-br" ? "Tela cheia" : "Full screen";
 const exitFullscreenLabel = siteLocale === "pt-br" ? "Sair da tela cheia" : "Exit full screen";
@@ -37,24 +41,14 @@ const resolvedNavTrail = Array.isArray(navTrail) ? navTrail as NavTrailItem[] : 
 const showNavTrail = resolvedNavTrail.length > 0;
 ---
 
-<!doctype html>
-<html lang={getHtmlLang(siteLocale)}>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#06060b" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>{pageTitle}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
-      rel="stylesheet"
-    />
-    <ClientRouter />
-  </head>
-
-  <body class={pageClass || undefined}>
+<SiteShell
+  locale={siteLocale}
+  pageClass={pageClass}
+  pageTitle={pageTitle}
+  routeKind={derivedRouteKind}
+  transitionProfile={transitionProfile ?? (active === "search" ? "search-reveal" : undefined)}
+>
+  <slot name="head" slot="head" />
     <nav class:list={["nav", navVariant !== "default" && `nav--${navVariant}`]} aria-label="Primary navigation">
       <a class="nav__logo" href={localizedPath(siteLocale, "/")}>
         <img src="/uploads/ui-sine-logo.png" alt="SiNE" class="nav__logo-img" />
@@ -93,7 +87,9 @@ const showNavTrail = resolvedNavTrail.length > 0;
             ))}
           </div>
         )}
-        <MusicPlayer locale={siteLocale} />
+        <div class="nav__player-slot" transition:persist>
+          <MusicPlayer locale={siteLocale} />
+        </div>
         <div class="nav__locale-switch" aria-label={siteLocale === "pt-br" ? "Seletor de idioma" : "Language switcher"}>
           {LOCALES.map((targetLocale) => (
             <a
@@ -119,22 +115,25 @@ const showNavTrail = resolvedNavTrail.length > 0;
             <path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <a
-          class="nav__icon-btn nav__search-btn"
-          href={localizedPath(siteLocale, "/search/")}
-          data-search-trigger
-          data-astro-prefetch="viewport"
-          aria-label={searchLabel}
-        >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4" />
-            <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
-          </svg>
-        </a>
+        <div class="nav__search-slot" transition:persist>
+          <a
+            class="nav__icon-btn nav__search-btn"
+            href={localizedPath(siteLocale, "/search/")}
+            data-astro-prefetch="load"
+            data-search-trigger
+            data-transition-trigger="search"
+            aria-label={searchLabel}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4" />
+              <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+            </svg>
+          </a>
+        </div>
       </div>
     </nav>
 
-    <main class="main">
+    <main class="main" id="page-content" transition:name="page-content">
       <slot />
     </main>
 
@@ -145,46 +144,49 @@ const showNavTrail = resolvedNavTrail.length > 0;
       </footer>
     )}
 
-    <script>
-      import "../scripts/searchViewTransition";
+    <script is:inline>
+      window.registerPageInit?.("main-layout-fullscreen", () => {
+        const fullscreenButton = document.querySelector("[data-fullscreen-toggle]");
+        if (!(fullscreenButton instanceof HTMLButtonElement)) return;
 
-      const fullscreenButton = document.querySelector<HTMLButtonElement>("[data-fullscreen-toggle]");
-
-      if (fullscreenButton) {
+        const controller = new AbortController();
+        const { signal } = controller;
         const canFullscreen = !!document.documentElement.requestFullscreen;
         const enterLabel = fullscreenButton.dataset.enterLabel || fullscreenButton.ariaLabel || "Full screen";
         const exitLabel = fullscreenButton.dataset.exitLabel || "Exit full screen";
 
         if (!canFullscreen) {
           fullscreenButton.hidden = true;
-        } else {
-          const updateFullscreenState = () => {
-            const active = !!document.fullscreenElement;
-            const label = active ? exitLabel : enterLabel;
-            fullscreenButton.setAttribute("aria-label", label);
-            fullscreenButton.setAttribute("title", label);
-            fullscreenButton.classList.toggle("is-active", active);
-          };
-
-          fullscreenButton.addEventListener("click", async () => {
-            try {
-              if (document.fullscreenElement) {
-                await document.exitFullscreen();
-              } else {
-                await document.documentElement.requestFullscreen();
-              }
-            } catch {
-              updateFullscreenState();
-            }
-          });
-
-          document.addEventListener("fullscreenchange", updateFullscreenState);
-          updateFullscreenState();
+          return () => controller.abort();
         }
-      }
+
+        const updateFullscreenState = () => {
+          const active = !!document.fullscreenElement;
+          const label = active ? exitLabel : enterLabel;
+          fullscreenButton.setAttribute("aria-label", label);
+          fullscreenButton.setAttribute("title", label);
+          fullscreenButton.classList.toggle("is-active", active);
+        };
+
+        fullscreenButton.addEventListener("click", async () => {
+          try {
+            if (document.fullscreenElement) {
+              await document.exitFullscreen();
+            } else {
+              await document.documentElement.requestFullscreen();
+            }
+          } catch {
+            updateFullscreenState();
+          }
+        }, { signal });
+
+        document.addEventListener("fullscreenchange", updateFullscreenState, { signal });
+        updateFullscreenState();
+
+        return () => controller.abort();
+      });
     </script>
-  </body>
-</html>
+</SiteShell>
 
 <style>
   :global(:root) {
@@ -274,6 +276,18 @@ const showNavTrail = resolvedNavTrail.length > 0;
     align-items: center;
     gap: 12px;
     min-width: 0;
+  }
+
+  .nav__player-slot {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .nav__search-slot {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
   }
 
   .nav__crumb {

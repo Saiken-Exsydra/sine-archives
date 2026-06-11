@@ -130,9 +130,27 @@ const clientItems = items.map((item) => ({
   defaultOrder: item.defaultOrder,
   searchText: item.searchText,
 }));
+const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 ---
 
-<MainLayout active="search" pageTitle={copy.pageTitle} locale={locale}>
+<MainLayout
+  active="search"
+  pageTitle={copy.pageTitle}
+  locale={locale}
+  routeKind="search"
+  transitionProfile="search-reveal"
+>
+  {searchPreloadImage && (
+    <Fragment slot="head">
+      <link
+        rel="preload"
+        as="image"
+        href={searchPreloadImage.fallbackSrc}
+        imagesrcset={searchPreloadImage.fallbackSrcset || undefined}
+        imagesizes={searchPreloadImage.sizes || "(max-width: 900px) 100vw, 44vw"}
+      />
+    </Fragment>
+  )}
   <section class="search-shell" data-search-root data-locale={locale}>
     <div class="search-hero">
       <div class="search-hero__glow"></div>
@@ -515,21 +533,9 @@ const clientItems = items.map((item) => ({
   </section>
 
   <script define:vars={{ copy }} is:inline>
-    const searchInitKey = "__sineSearchInit";
-    const searchCleanupKey = "__sineSearchCleanup";
-    const searchBeforeSwapKey = "__sineSearchBeforeSwap";
-
     function initializeArchiveSearch() {
       const root = document.querySelector("[data-search-root]");
       if (!(root instanceof HTMLElement) || root.dataset.searchBound === "true") return;
-      root.dataset.searchBound = "true";
-
-      const controller = new AbortController();
-      const { signal } = controller;
-      window[searchCleanupKey] = () => {
-        controller.abort();
-        root.dataset.searchBound = "false";
-      };
 
       const locale = root.dataset.locale || "en";
       const storageKey = `sine-search-state:${locale}`;
@@ -570,6 +576,14 @@ const clientItems = items.map((item) => ({
       ) {
         return;
       }
+
+      root.dataset.searchBound = "true";
+
+      const controller = new AbortController();
+      const { signal } = controller;
+      const runtimeState = window.__sineTransitionState || null;
+      const shouldFocusInput = runtimeState?.lastIntent?.type === "search"
+        && /^\/(?:pt-br\/)?search\/?$/i.test(window.location.pathname);
 
       const parsed = JSON.parse(dataScript.textContent || '{"items":[],"groupLabelByKey":{}}');
       const groupLabelByKey = parsed.groupLabelByKey || {};
@@ -965,6 +979,14 @@ const clientItems = items.map((item) => ({
         applyFilters();
       }, 80);
 
+      if (shouldFocusInput) {
+        requestAnimationFrame(() => {
+          if (!signal.aborted) {
+            input.focus({ preventScroll: true });
+          }
+        });
+      }
+
       input.addEventListener("input", rerunSearch, { signal });
 
       input.addEventListener("keydown", (event) => {
@@ -1049,40 +1071,17 @@ const clientItems = items.map((item) => ({
           timeoutId = window.setTimeout(() => fn(), delay);
         };
       }
-    }
 
-    if (!window[searchInitKey]) {
-      window[searchInitKey] = initializeArchiveSearch;
-      document.addEventListener("astro:page-load", window[searchInitKey]);
-    }
-
-    if (!window[searchBeforeSwapKey]) {
-      window[searchBeforeSwapKey] = () => {
-        if (typeof window[searchCleanupKey] === "function") {
-          window[searchCleanupKey]();
-          window[searchCleanupKey] = null;
-        }
+      return () => {
+        controller.abort();
+        root.dataset.searchBound = "false";
       };
-      document.addEventListener("astro:before-swap", window[searchBeforeSwapKey]);
     }
 
-    window[searchInitKey]();
+    window.registerPageInit?.("archive-search", initializeArchiveSearch);
   </script>
 
   <style>
-    @keyframes searchGrainShift {
-      0% { background-position: 0 0; }
-      25% { background-position: 14% 20%; }
-      50% { background-position: -8% 10%; }
-      75% { background-position: 8% -5%; }
-      100% { background-position: 0 0; }
-    }
-
-    @keyframes searchCardSweep {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
     .search-shell {
       min-height: 100vh;
       color: var(--text);
@@ -1115,7 +1114,7 @@ const clientItems = items.map((item) => ({
       mix-blend-mode: overlay;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       background-size: 256px 256px;
-      animation: searchGrainShift 8s steps(1) infinite;
+      animation: grainShift 8s steps(1) infinite;
     }
 
     .search-hero__scanlines {
@@ -1526,9 +1525,10 @@ const clientItems = items.map((item) => ({
     .search-primary-card__img {
       object-fit: cover;
       object-position: var(--search-primary-object-position, center 20%);
+      opacity: 0;
       filter: saturate(0.78) brightness(0.8);
       transform: scale(1.04);
-      transition: transform 0.62s cubic-bezier(0.16, 1, 0.3, 1), filter 0.42s;
+      transition: opacity 0.28s ease, transform 0.62s cubic-bezier(0.16, 1, 0.3, 1), filter 0.42s;
     }
 
     .search-primary-card__surface:hover .search-primary-card__img,
@@ -1547,6 +1547,12 @@ const clientItems = items.map((item) => ({
       transform: scale(1.12);
     }
 
+    .search-primary-card__visual.is-loaded .search-primary-card__img,
+    .search-card__visual.is-loaded .search-card__img,
+    .search-row__thumb.is-loaded .search-row__img {
+      opacity: 1;
+    }
+
     .search-primary-card__shade {
       position: absolute;
       inset: 0;
@@ -1559,14 +1565,11 @@ const clientItems = items.map((item) => ({
     .search-primary-card__loading {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.08) 45%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      transform: translateX(-100%);
-      animation: searchCardSweep 1.4s ease-in-out infinite;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+        radial-gradient(circle at 24% 32%, rgba(177, 58, 52, 0.14), transparent 28%),
+        linear-gradient(180deg, rgba(11, 11, 18, 0.52), rgba(6, 6, 11, 0.18));
+      animation: loadingPulse 1.4s ease-in-out infinite;
       pointer-events: none;
     }
 
@@ -1791,9 +1794,10 @@ const clientItems = items.map((item) => ({
     .search-card__img {
       object-fit: cover;
       object-position: center 28%;
+      opacity: 0;
       filter: saturate(0.76) brightness(0.76);
       transform: scale(1.02);
-      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s;
+      transition: opacity 0.28s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s;
     }
 
     .search-card__surface:hover .search-card__img,
@@ -1879,14 +1883,11 @@ const clientItems = items.map((item) => ({
     .search-row__thumb::after {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.08) 45%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      transform: translateX(-100%);
-      animation: searchCardSweep 1.4s ease-in-out infinite;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+        radial-gradient(circle at 28% 28%, rgba(177, 58, 52, 0.12), transparent 24%),
+        linear-gradient(180deg, rgba(11, 11, 18, 0.46), rgba(6, 6, 11, 0.16));
+      animation: loadingPulse 1.4s ease-in-out infinite;
       pointer-events: none;
     }
 
@@ -2073,7 +2074,9 @@ const clientItems = items.map((item) => ({
     .search-row__img {
       object-fit: cover;
       object-position: center;
+      opacity: 0;
       filter: saturate(0.8) brightness(0.82);
+      transition: opacity 0.28s ease, filter 0.3s ease;
     }
 
     .search-row__content {

@@ -45,7 +45,13 @@ const pageTitle = `${entry.data.title} - ${copy.titleSuffix} - SiNE Archives`;
 const entryHref = localizedPath(locale, `/characters/${entry.slug}/`);
 ---
 
-<MainLayout pageTitle={pageTitle} active="characters" locale={locale}>
+<MainLayout
+  pageTitle={pageTitle}
+  active="characters"
+  locale={locale}
+  routeKind="character-codex"
+  transitionProfile="character-codex"
+>
   <section class="codex-hero">
     {heroImageUrl ? (
       <>

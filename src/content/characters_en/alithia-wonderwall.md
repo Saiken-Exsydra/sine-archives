@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Al'ithia Rae Wonderwall"
 type: "Character"
 age: "89 (as of 2200); appears early to mid-thirties"
@@ -18,17 +18,26 @@ dress: "White, silver, muted blue, and formal black"
 residence: "Primary Wonderwall holdings; regular state presence in Kalt'sen"
 occupation: "Senate representative and principal state-facing authority of House Wonderwall"
 summary: "Made from memory, yet human all the way through; warmth where her house expected miracle, life where grief expected return."
-tags: ["Wonderwall", "Rae", "Radiance", "Revelation", "First Radiance", "Luminant Shore", "Shores", "Divine Vessel", "A'licia"]
-status: "public"
-created: "2026-05-14"
-updated: "2026-05-25"
-codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
 portrait_gallery:
   - "../../assets/uploads/characters/char-alithia-wonderwall-portrait-asc.png"
 hero_gallery:
   - "../../assets/uploads/characters/char-alithia-wonderwall-hero-asc.png"
+tags:
+  - "Wonderwall"
+  - "Rae"
+  - "Radiance"
+  - "Revelation"
+  - "First Radiance"
+  - "Luminant Shore"
+  - "Shores"
+  - "Divine Vessel"
+  - "A'licia"
+status: "public"
+created: "2026-05-14"
+updated: "2026-06-11"
+codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 ---
 
 > *"She was never a returned relic. She was a new woman carrying two true pasts."*
@@ -43,6 +52,16 @@ Al'ithia is the public face of House Wonderwall. She handles the House's politic
 She is also one of the strangest people in the Wonderwall line. She began life as **Athena Rae**, a woman from the same family branch that once produced **A'licia Rae Wonderwall**, the House's first great Light-bearer. Over time Athena became bound to what the family called the **First Radiance**: the part of A'licia that still answers from the **Luminant Shore**, a metaphysical borderland tied to Light, revelation, and impossible visibility.
 
 The important part is that Al'ithia is not a resurrection and not a possession case. She is a new person shaped from Athena's life and A'licia's remaining presence. That miracle could easily have become a tragedy. Instead, it became one of the most human lives in the House.
+
+## Identity
+
+**Public Identity:** House Wonderwall's Senate-facing matriarch and the composed political voice of one of the Empire's most intimidating families.
+
+**Institutional Identity:** A [[stylus|Stylus]]-class Redactor aligned to Revelation, treated within House channels as a continuity case rather than an ordinary practitioner file.
+
+**Private Truth:** Al'ithia is the stable self created when Athena Rae's life and A'licia's Shore-bound remaining presence ceased being separable histories.
+
+**Primary Tension:** Everyone around her is tempted to mistake her for a restored relic, while her real life depends on being recognized as a new woman with her own will.
 
 ## Personality
 
@@ -119,6 +138,3 @@ Al'ithia matters because she proves the Wonderwalls are capable of producing som
 She is the family member who makes power legible, grief survivable, and history human again. In a line full of experiments, inheritances, and metaphysical danger, she is the clearest argument that a miracle can still become an ordinary kind of love, loyalty, and public responsibility.
 
 ## Deeper Lore
-
-In stricter technical terms, Al'ithia is the stable result of Athena Rae's life merging with A'licia's Shore-bound remaining presence at the Luminant Shore. The family once described that presence as the First Radiance long before it had better language for what it was. Al'ithia is therefore neither Athena unchanged nor A'licia restored, but a third self whose identity genuinely includes both histories.
-

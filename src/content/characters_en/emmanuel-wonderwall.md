@@ -1,8 +1,7 @@
-﻿---
+---
 title: "Em'manuel Kael Wonderwall"
 type: "Character"
 age: "Approximately 1,205 (as of year 2200)"
-birth_name: "Al'uxxios Ex'sydra"
 birth_year: "Unknown - approximately forty years before the Rite of Selia"
 birthplace: "Northern coastal region, pre-Empire"
 affiliation: "SiNE; Apocachynthion; House Wonderwall; Empire of Synus"
@@ -19,13 +18,26 @@ dress: "Expensive, understated"
 residence: "Pluribus Hill, Kalt'sen"
 occupation: "Founder and principal of SiNE; Meridian Council chair; hereditary Senator"
 summary: "He built houses, empires, and silences with the same patient hand, then lived long enough for the spaces he preserved to begin answering back."
-tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "Remainder", "Project Kaleidoscope", "Luminant Shore", "Shores"]
-status: "public"
-created: "2026-03-30"
-updated: "2026-05-24"
-codex_file: "Em'manuel Kael Wonderwall Dossier.md"
 image: "../../assets/uploads/char-emmanuel-wonderwall.png"
 hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Wonderwall"
+  - "Ex'sydra"
+  - "SiNE"
+  - "Archtype"
+  - "Interval"
+  - "Em'manuel"
+  - "Remainder"
+  - "Project Kaleidoscope"
+  - "Luminant Shore"
+  - "Shores"
+status: "public"
+created: "2026-03-30"
+updated: "2026-06-11"
+codex_file: "Em'manuel Kael Wonderwall Dossier.md"
+birth_name: "Al'uxxios Ex'sydra"
 ---
 
 > *"I am old enough that patience and cowardice have occasionally worn each other's clothes."*
@@ -40,6 +52,16 @@ Em'manuel is the founder of SiNE, the patriarch of House Wonderwall, and one of 
 Up close, he is much harder to simplify. He was born **Al'uxxios Ex'sydra**, heir to a line whose work helped cause a catastrophe large enough that history found it useful to erase the family name. After surviving that collapse, he married **A'licia Rae Wonderwall** and buried his first identity inside hers.
 
 That means Em'manuel is not just an old leader with hidden grief. He is one of the people who helped build the world after breaking part of the one before it.
+
+## Identity
+
+**Public Identity:** The patient patriarch of House Wonderwall and founder of SiNE, so old and central that the modern order seems built around him.
+
+**Institutional Identity:** A high-level Revelation-era statesman operating as a registered Wonderwall Redactor and system architect with enormous quiet authority.
+
+**Private Truth:** He was born **Al'uxxios Ex'sydra**, heir to an erased line whose disaster still shapes the world he later helped rebuild.
+
+**Primary Tension:** Em'manuel protects the present by managing consequences he understands better than anyone, including consequences that began with him.
 
 ## Personality
 
@@ -120,6 +142,3 @@ Em'manuel ties together a huge part of the setting's hidden history. Through him
 He matters because he is both builder and wound. He founded systems that protect the world, but many of the Wonderwalls' deepest secrets, experiments, and inherited dangers also pass through his hands.
 
 ## Deeper Lore
-
-In deeper lore terms, Em'manuel is one of the rare people able to survive direct contact with the **Remainder** because his Interval Anchor already operates in the spaces between states. That contact amplified his reach and left a hereditary echo in the Wonderwall line. When that echo meets A'licia's Light inheritance at enough depth, it helps explain some of the family's strangest and most dangerous cases.
-

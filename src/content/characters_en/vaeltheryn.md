@@ -1,18 +1,40 @@
-﻿---
+---
 title: "Vael'Theryn"
 type: "Character"
+age: ""
+birth_year: ""
+birthplace: ""
 affiliation: "Page Primordial (Terra) - not a mortal or Archtype-class entity"
+house: ""
 rank: "Page Primordial"
-designation: "The Grammar Beneath the World"
 registry_status: "Not registered - predates the concept of registration"
+designation: "The Grammar Beneath the World"
+height: ""
+build: ""
+complexion: ""
+hair: ""
+eyes: ""
+dress: ""
+residence: ""
 occupation: "Witness - constrained observation and bounded intervention"
 summary: "The oldest mind on Terra, watching with a restraint severe enough to pass for mercy."
-tags: ["Vael'Theryn", "Page Primordial", "Time", "Terra", "Archtype War", "Constraint", "Keepers of Before", "Skyphons"]
-status: "public"
-created: "2026-03-30"
-updated: "2026-05-25"
 image: "../../assets/uploads/characters/char-vaeltheryn-portrait.png"
 hero_image: "../../assets/uploads/characters/char-vaeltheryn-hero-main.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Vael'Theryn"
+  - "Page Primordial"
+  - "Time"
+  - "Terra"
+  - "Archtype War"
+  - "Constraint"
+  - "Keepers of Before"
+  - "Skyphons"
+status: "public"
+created: "2026-03-30"
+updated: "2026-06-11"
+codex_file: ""
 ---
 
 > *"The constraint is not a cage. It is a decision."*
@@ -28,6 +50,16 @@ Vael'Theryn is Terra's **Page Primordial**, the deepest coherent mind of the wor
 
 This is why the entry sounds so structural. Vael'Theryn is less a hidden ruler and more the living grammar beneath reality on Terra.
 
+## Identity
+
+**Public Identity:** A name most people would mistake for theology, cosmology, or myth rather than a conscious actor.
+
+**Institutional Identity:** Terra's **Page Primordial**, recognized in older restricted traditions as a world-scale intelligence rather than a ruler, deity, or ordinary vessel.
+
+**Private Truth:** Vael'Theryn's distance is not absence. It is a continuous act of deliberate restraint by a mind with far more capacity to interfere than it usually permits itself.
+
+**Primary Tension:** The world's deepest witness could overstep almost constantly, but meaningfully chooses not to, even when that refusal is painful to watch from below.
+
 ## Personality
 
 If Vael'Theryn has a defining trait, it is restraint.
@@ -41,6 +73,25 @@ That makes Vael'Theryn less comforting than a benevolent god and more unsettling
 Vael'Theryn predates nearly every institution that matters to later history. The **Precursors** understood Vael'Theryn well enough to collaborate rather than trying to treat the Page Primordial like a resource. That collaboration helped make the **Skyphons** possible, because their creation required a density of native world-grammar only Terra's own primordial mind could provide.
 
 The entry also points back to the **Archtype War**, when unrestricted intervention at this kind of scale helped produce consequences severe enough to leave a permanent lesson behind. That lesson became the principle usually summarized as **Do not overstep**.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** None  
+**Registry Status:** Page Primordial; not an ordinary practitioner case  
+**Rank:** Not applicable  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Planetary  
+**Anchor:** Not applicable  
+**Anchor Reading:** Not applicable  
+**Depth Reading:** Page Primordial  
+**Reach Reading:** World-scale  
+**Registration Tenure:** Precursor-era continuous  
+**Academy Record:** Not applicable  
+**Practice Record:** Terra-scale observation, constraint, and branch-density oversight  
+**[[blots|Blots]]:** Not applicable  
+**Pager Note:** Do not overstep  
+**[[seal|Current Seal]]:** Keepers of Before restricted notation
 
 ## Abilities
 
@@ -75,6 +126,3 @@ Vael'Theryn matters because this entry changes the scale of the setting. Terra i
 At the same time, Vael'Theryn prevents that revelation from turning into a simple "hidden god fixes everything" story. The whole point is that knowledge and permission are not the same thing.
 
 ## Deeper Lore
-
-In technical terms, Vael'Theryn is a macro-singular planetary intelligence with native access to Terra's branch-weighted state space. The crucial historical detail is that the present-day intervention limit is ethical and structural, not merely mechanical: Vael'Theryn does less because it understands exactly what too much would cost.
-

@@ -142,6 +142,8 @@ if (isSkyphon) {
   pageTitle={`${entry.data.title} — ${sectionLabel} — SiNE Archives`}
   locale={locale}
   navVariant="entry"
+  routeKind="entry-detail"
+  transitionProfile="entry-detail"
   navTrail={[
     { label: navLabels.index, href: localizedPath(locale, "/") },
     { label: sectionLabel, href: sectionHref },
@@ -818,26 +820,27 @@ if (isSkyphon) {
 </style>
 
 <script>
-  // Assign IDs to headings inside prose for TOC links
-  const body = document.querySelector("[data-entry-body]");
-  if (body) {
-    body.querySelectorAll("h2, h3").forEach((h) => {
-      if (!h.id) {
-        const slug = (h.textContent || "")
-          .trim().toLowerCase()
-          .replace(/[^a-z0-9\s-]/g, "")
-          .replace(/\s+/g, "-")
-          .replace(/-+/g, "-");
-        if (slug) h.id = slug;
-      }
-    });
-  }
+  window.registerPageInit?.("entry-layout", () => {
+    const body = document.querySelector("[data-entry-body]");
+    if (body) {
+      body.querySelectorAll("h2, h3").forEach((h) => {
+        if (!h.id) {
+          const slug = (h.textContent || "")
+            .trim().toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .replace(/-+/g, "-");
+          if (slug) h.id = slug;
+        }
+      });
+    }
 
-  // Collapse File Data + TOC on mobile by default
-  if (window.matchMedia("(max-width: 860px)").matches) {
-    document.querySelectorAll<HTMLDetailsElement>(".ent-sidebar__card, .ent-toc").forEach((d) => {
-      d.removeAttribute("open");
-    });
-  }
-
+    if (window.matchMedia("(max-width: 860px)").matches) {
+      document.querySelectorAll(".ent-sidebar__card, .ent-toc").forEach((details) => {
+        if (details instanceof HTMLDetailsElement) {
+          details.removeAttribute("open");
+        }
+      });
+    }
+  });
 </script>

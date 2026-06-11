@@ -168,27 +168,32 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
 </MainLayout>
 
 <script is:inline>
-  (function () {
+  window.registerPageInit?.("home-preview-panel", () => {
     const panel = document.getElementById("preview-panel");
     if (!panel) return;
+
+    const controller = new AbortController();
+    const { signal } = controller;
     const def = document.getElementById("preview-default");
     const layers = panel.querySelectorAll(".preview-layer");
     const rows = document.querySelectorAll(".list-row");
 
     function activate(key) {
       if (def) def.classList.toggle("is-hidden", !!key);
-      layers.forEach((l) => {
-        l.classList.toggle("is-active", l.dataset.key === key);
+      layers.forEach((layer) => {
+        layer.classList.toggle("is-active", layer.dataset.key === key);
       });
     }
 
     rows.forEach((row) => {
-      row.addEventListener("mouseenter", () => activate(row.dataset.key));
-      row.addEventListener("focus", () => activate(row.dataset.key));
-      row.addEventListener("mouseleave", () => activate(null));
-      row.addEventListener("blur", () => activate(null));
+      row.addEventListener("mouseenter", () => activate(row.dataset.key), { signal });
+      row.addEventListener("focus", () => activate(row.dataset.key), { signal });
+      row.addEventListener("mouseleave", () => activate(null), { signal });
+      row.addEventListener("blur", () => activate(null), { signal });
     });
-  })();
+
+    return () => controller.abort();
+  });
 </script>
 
 <style>

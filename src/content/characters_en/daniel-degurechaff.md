@@ -1,10 +1,11 @@
-﻿---
+---
 title: "Daniel Van Degurechaff"
 type: "Character"
 age: "98 (at time of filing, 2200); appears late twenties to early thirties"
 birth_year: "2102"
 birthplace: "Kovansk, Western Furnace District, Ardeatus"
 affiliation: "Joint Custody Secretariat of the Marta Chord; Ardeatan diplomatic residence in the Empire"
+house: ""
 rank: "Confirmed Tempered - vessel of Vhaldr, the Tempering Witness"
 registry_status: "Non-Redactor; divine-fusion case repeatedly confirmed by imperial assessment"
 designation: "The Mercy Inside the Verdict"
@@ -17,13 +18,23 @@ dress: "Black-and-white Ardeatan diplomatic uniform with restrained brass detail
 residence: "Sarn Pell diplomatic compound, Southern Region of Synus"
 occupation: "Senior Tempering Witness and chief transfer liaison for Ardeatan-born Redactor custody cases"
 summary: "A man trained to serve the sentence, altered by the sight of who burns beneath it; now every doctrine that misnames the innocent has reason to fear him."
-tags: ["Ardeatus", "Marta Chord", "Vhaldr", "Tempered", "Sarn Pell", "Apocachynthion", "Vekrath", "Diplomatic Liaison"]
-status: "public"
-created: "2026-05-14"
-updated: "2026-05-27"
-codex_file: "Daniel Degurechaff Dossier.md"
 image: "../../assets/uploads/characters/char-daniel-degurechaff-portrait.png"
 hero_image: "../../assets/uploads/characters/char-daniel-degurechaff-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Ardeatus"
+  - "Marta Chord"
+  - "Vhaldr"
+  - "Tempered"
+  - "Sarn Pell"
+  - "Apocachynthion"
+  - "Vekrath"
+  - "Diplomatic Liaison"
+status: "public"
+created: "2026-05-14"
+updated: "2026-06-11"
+codex_file: "Daniel Degurechaff Dossier.md"
 ---
 
 > *"He is what happens when a nation decides, very late, that accuracy is less embarrassing than cruelty."*
@@ -38,6 +49,16 @@ Daniel matters because paperwork can save lives in this setting just as surely a
 He is the senior transfer liaison behind the **Marta Chord**, the cross-border process that gets Ardeatan-born Redactors out of domestic punishment systems and into safer custody before bad doctrine kills them. He does not win wars or command armies. He keeps a rescue system from collapsing.
 
 That makes him one of the setting's most important bureaucrats, which is exactly why he matters so much.
+
+## Identity
+
+**Public Identity:** A senior transfer liaison whose paperwork, diplomacy, and persistence keep vulnerable Redactors moving toward safer custody.
+
+**Institutional Identity:** An external humanitarian assessor attached to the **Marta Chord**, operating beside systems he knows from the inside.
+
+**Private Truth:** Daniel is also a divine-fusion case whose moral authority was forged by one preventable child's death and the archive he built around it.
+
+**Primary Tension:** He must keep using institutions precise enough to save people even though those same institutions taught him exactly how bureaucracy kills.
 
 ## Personality
 
@@ -55,13 +76,24 @@ The turning point was **Marta Vesk**, an eleven-year-old child killed in **2154*
 
 Instead of walking away, he started collecting proof that Marta was not a one-time tragedy. That archive eventually helped force the political negotiations that produced the **Marta Chord**, ratified in **2171**.
 
-## Apocachynthion Registry Position
+## Apocachynthion Registry
 
-**Registry Status:** Unregistered
-**Rank:** Unranked
-**[[mark|Mark]]:** No Mark
-**Anchor:** Unassessed; non-applicable
-**Pager Note:** None
+**[[leaf|Leaf Type]]:** No practitioner leaf issued  
+**Registry Status:** Non-Redactor; divine-fusion case repeatedly confirmed by imperial assessment  
+**Rank:** Not applicable  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Civil  
+**Anchor:** Not applicable  
+**Anchor Reading:** Unassessed  
+**Depth Reading:** Not applicable  
+**Reach Reading:** Not applicable  
+**Registration Tenure:** Not applicable  
+**Academy Record:** None  
+**Practice Record:** Marta Chord transfer oversight, cross-border review, and humanitarian liaison work  
+**[[blots|Blots]]:** None  
+**Pager Note:** External assessor attached to Redactory abuse review  
+**[[seal|Current Seal]]:** Imperial assessment oversight only
 
 ## Abilities
 
@@ -102,6 +134,3 @@ Daniel matters because he shows what moral courage looks like inside procedure. 
 He is also a strong reminder that systems do not become humane just because one good person works inside them. Sometimes all one accurate, relentless person can do is keep the door open long enough for fewer people to die.
 
 ## Deeper Lore
-
-Daniel's most specialized operational state is sometimes described as **Witness Heat**: a condition in which Vhaldr's pressure makes him especially good at distinguishing between superficially similar but morally crucial cases, such as emergent Redactory, divine contact, trauma response, forced sedation, or intentional mislabeling by frightened officials.
-

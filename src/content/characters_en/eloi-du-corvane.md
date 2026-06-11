@@ -1,25 +1,41 @@
-﻿---
+---
 title: "Eloi du Corvane"
 type: "Character"
+age: ""
+birth_year: ""
+birthplace: ""
 affiliation: "Former Auroran gallery circuit; active hostile vessel linked to the Nevermore"
+house: "Corvane"
+rank: ""
 registry_status: "Indexed Vessel. Unregulated. Active fusion with non-Sovereign attractor-fragment."
 designation: "Where Grief Learned to Paint"
-house: "Corvane"
+height: ""
 build: "Tall, narrow-framed, and refined; elegance that turns discomforting when held too still"
 complexion: "Cool-toned and faintly bloodless under ordinary light"
 hair: "Black with a subdued blue-violet sheen, worn somewhat long"
 eyes: "Dark grey nearing black; under manifestation they seem ringed around an interior void"
 dress: "Old-canton formal lines inverted into mourning: high collars, long coats, layered black and violet fabrics, narrow gloves, silver fastenings"
+residence: ""
 occupation: "Painter; former gallery exhibitor; private portraitist"
 summary: "He gave sorrow beauty enough to stay, and in the hush beside his canvases, Nevermore became something intimate."
-tags: ["Aurora", "Nevermore", "Divine Vessel", "Art", "Grief", "Corvane", "Painter", "Valerie"]
+image: "../../assets/uploads/characters/char-eloi-du-corvane.webp"
+hero_image: "../../assets/uploads/characters/char-eloi-du-corvane-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Aurora"
+  - "Nevermore"
+  - "Divine Vessel"
+  - "Art"
+  - "Grief"
+  - "Corvane"
+  - "Painter"
+  - "Valerie"
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-25"
+updated: "2026-06-11"
 codex_file: "Eloi du Corvane Dossier.md"
-image: "../../assets/uploads/characters/char-eloi-du-corvane.webp"
 image_position: "center top"
-hero_image: "../../assets/uploads/characters/char-eloi-du-corvane-hero.png"
 ---
 
 > *"He does not worship the thing. He speaks to it. He paints with it. He calls it friend."*
@@ -34,6 +50,16 @@ Eloi du Corvane is a painter whose art and spiritual corruption became impossibl
 He is not just "an artist who went mad," and he is not just "a man possessed by an evil fragment." He was already building his life around grief before the **Nevermore** found him. The fragment did not invent his obsessions. It gave them power.
 
 That is what makes him so dangerous. He was already compatible.
+
+## Identity
+
+**Public Identity:** A refined painter and aristocratic survivor whose work turned grief into a reputation.
+
+**Institutional Identity:** An indexed but unregulated vessel case tied to gallery incidents, restricted file circulation, and fragment-corruption concern.
+
+**Private Truth:** Eloi did not become dangerous because the **Nevermore** erased his humanity; he became dangerous because the fragment found a grief pattern already willing to worship absence.
+
+**Primary Tension:** His gentleness, intimacy, and artistic sensitivity remain real even while those same traits have become the methods by which he preys on other people.
 
 ## Personality
 
@@ -50,6 +76,25 @@ The central wound in Eloi's life is family violence. House Corvane was shattered
 He grew up in a house where grief was not a passing event but the permanent atmosphere: dead relatives preserved in letters, clothes, portraits, rooms, and rituals. That taught him to experience mourning as structure.
 
 By the time the Nevermore entered his life, Eloi was already treating absence as something nearly sacred.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** No licensed leaf issued  
+**Registry Status:** Indexed Vessel. Unregulated. Active fusion with non-Sovereign attractor-fragment.  
+**Rank:** Unranked  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Restricted  
+**Anchor:** Not applicable  
+**Anchor Reading:** Not applicable  
+**Depth Reading:** Unknown  
+**Reach Reading:** Localized but escalating  
+**Registration Tenure:** Not applicable  
+**Academy Record:** None  
+**Practice Record:** No lawful practice standing; anomaly activity clusters around artwork, proximity, and grief sites  
+**[[blots|Blots]]:** Multiple corruption and fatality events  
+**Pager Note:** Do not approach without fragment-containment support  
+**[[seal|Current Seal]]:** Restricted Corvane incident file
 
 ## Abilities
 
@@ -89,6 +134,3 @@ Eloi matters because he is one of the clearest examples of a fragment finding th
 He also expands what a dangerous vessel can look like. He is not a battlefield tyrant or a screaming monster. He is an artist whose aesthetic intelligence became a weapon.
 
 ## Deeper Lore
-
-At higher manifestation, witnesses describe the Nevermore through Eloi as a raven-crowned or raven-headed figure carrying concentrated finality. The important technical point is that his domain works especially well through marked interiors, unfinished images, and emotional openings tied to loss, which is why his art practice and his predatory behavior reinforce one another so effectively.
-

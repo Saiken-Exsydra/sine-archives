@@ -9,10 +9,12 @@
     "check:text-encoding": "node scripts/pt-br-encoding-guard.mjs --check",
     "dev": "astro dev",
     "build": "npm run songs:generate && npm run check:pt-br-fallbacks && npm run check:text-encoding && npm run check:archive-refs && astro build",
+    "check": "astro check",
     "fix:text-encoding": "node scripts/pt-br-encoding-guard.mjs --fix",
     "seed:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs",
     "songs:generate": "node scripts/generate-song-metadata.mjs",
     "songs:update": "node scripts/update-song-metadata.mjs",
+    "test:transitions": "playwright test tests/transition-smoke.spec.ts",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -21,5 +23,11 @@
     "fast-glob": "^3.3.3",
     "music-metadata": "^11.12.3",
     "node-id3": "^0.2.9"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3",
+    "typescript": "^5.9.3"
   }
 }

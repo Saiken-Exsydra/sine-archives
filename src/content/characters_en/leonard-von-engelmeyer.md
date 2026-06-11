@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Leonard von-Engelmeyer"
 type: "Character"
 age: "55 (as of 2200)"
@@ -18,13 +18,21 @@ dress: ""
 residence: "Kalt'sen, Apocachynthion Academy Quarters"
 occupation: "Senior Instructor of Kinetic and Thermodynamic Redactory"
 summary: "The catastrophe failed to hollow him; what remained was not softness, but warmth made durable by surviving what should have ended him."
-tags: ["Apocachynthion", "Engelmeyer", "Thermodynamic Anchor", "Stase-Survivor", "Ardeatus", "Kalt'sen"]
-status: "public"
-created: "2026-05-10"
-updated: "2026-05-27"
-codex_file: "Leonard von Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
 hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Apocachynthion"
+  - "Engelmeyer"
+  - "Thermodynamic Anchor"
+  - "Stase-Survivor"
+  - "Ardeatus"
+  - "Kalt'sen"
+status: "public"
+created: "2026-05-10"
+updated: "2026-06-11"
+codex_file: "Leonard von Engelmeyer Dossier.md"
 ---
 
 > *"The air does not just burn. It forgets that it was ever permitted to be cold."*
@@ -39,6 +47,16 @@ Leonard is a respected instructor at the Kalt'sen Academy, known for patience, p
 That calm comes from surviving something extreme. When he was fifteen, an explosion and a **Stase** incursion killed his parents and should have killed him too.
 
 Instead, Leonard awakened inside the disaster and lived. The rest of his life has been shaped by what it cost.
+
+## Identity
+
+**Public Identity:** A trusted Academy instructor known for teaching dangerous power without humiliating the people learning it.
+
+**Institutional Identity:** A senior [[stylus|Stylus]] Redactor with long instructional standing and a thermodynamic file built on survival inside catastrophe.
+
+**Private Truth:** Leonard awakened inside a Stase disaster, survived by becoming something the event could not finish killing, and never fully left that impossible moment behind.
+
+**Primary Tension:** He has made himself into a steward of other people's control while carrying powers that were born from an unfinished collapse of his own.
 
 ## Personality
 
@@ -117,6 +135,3 @@ Leonard matters because he turns survival into instruction. He takes Stase conta
 He is also one of the best human bridges between larger cosmological ideas and ordinary institutional life. Through Leonard, Stase stops being a distant abstract horror and becomes a wound someone carried back into the classroom.
 
 ## Deeper Lore
-
-Leonard's signature expression, the **Kalorian Nova**, is not simply a fire blast but a local thermodynamic override so severe that enclosed spaces can become lethal almost immediately. His original survival inside the Stase-distorted explosion appears to have created a permanent link between his heat expression, his sensitivity to pressure, and Kerz's traversal-independent presence.
-

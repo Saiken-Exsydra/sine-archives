@@ -1,4 +1,4 @@
-﻿---
+---
 title: "E'lla Rae Wonderwall"
 type: "Character"
 age: "25 (at time of filing, 2200)"
@@ -24,10 +24,21 @@ portrait_gallery:
   - "../../assets/uploads/characters/char-ella-wonderwall-portrait-asc.png"
 hero_gallery:
   - "../../assets/uploads/characters/char-ella-wonderwall-hero-2.png"
-tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Luminant Shore", "Shores", "Aurora"]
+tags:
+  - "Wonderwall"
+  - "E'lla"
+  - "SiNE"
+  - "Light"
+  - "Radiance"
+  - "Abyssal"
+  - "Project Kaleidoscope"
+  - "KL-83"
+  - "Luminant Shore"
+  - "Shores"
+  - "Aurora"
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-24"
+updated: "2026-06-11"
 codex_file: "Ella Rae Wonderwall Dossier.md"
 ---
 
@@ -43,6 +54,16 @@ E'lla is one of the strongest Light Redactors of her generation, but that descri
 That makes her both a person and the result of a family project that lasted for centuries. She was raised as a daughter, trained as a future power inside SiNE, and shaped by a history that was already waiting for her before she was old enough to understand it.
 
 She is also not the clean solution the family hoped for. Kaleidoscope gave her extraordinary Light, but it did not give her the exact inheritance pattern the deeper Wonderwall problem was built around. So E'lla lives in a painful middle place: brilliant, useful, loved, carefully managed, and never quite the answer the project was really trying to force into existence.
+
+## Identity
+
+**Public Identity:** A polished Wonderwall heir and elite Light Redactor whose competence makes her look like a clean family success.
+
+**Institutional Identity:** The final working outcome of [[project-kaleidoscope|Project Kaleidoscope]] and a high-value SiNE asset shaped for controlled Light deployment.
+
+**Private Truth:** E'lla is both fully daughter and fully project result, loved as family while also carrying the residue of generations of engineered expectation.
+
+**Primary Tension:** She is powerful enough to justify the program that made her, but never quite the exact inheritance answer that program was actually trying to force.
 
 ## Personality
 
@@ -122,5 +143,3 @@ E'lla sits at the intersection of engineered inheritance, family grief, institut
 She matters because she asks a hard question in human form: what happens when someone is made to be an answer before she is ever told what the question was? Through E'lla, the Wonderwalls stop being just a powerful family with strange history and become a story about love, control, secrecy, and the cost of trying to rebuild what should have been mourned.
 
 ## Deeper Lore
-
-In deeper Wonderwall interpretation, the [[white-desert|White Desert]] was not only an accident. It may have been E'lla reaching the [[luminant-shore|Luminant Shore]], the Shore tied to Light, revelation, and impossible visibility. [[project-kaleidoscope|Kaleidoscope]] may also remain partially active around her as leftover patterning from the earlier subjects, which is why private observers watch for strange reflections, borrowed instincts, and echoes that do not feel fully like her own.

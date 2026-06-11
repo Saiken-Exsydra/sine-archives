@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Hisui Kirasagi"
 type: "Character"
 age: "24 (as of 2200)"
@@ -18,13 +18,21 @@ dress: "Long sleeves at all times, regardless of climate. Formal domestic attire
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
 occupation: "Household attendant - personal attendance to Ec'lesia Yal'ara Wonderwall"
 summary: "A tenderness cultivated in impossible depth; graceful enough to seem harmless, and strange enough that horror blooms only after one has already leaned close."
-tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregistered"]
-status: "public"
-created: "2026-03-30"
-updated: "2026-05-24"
-codex_file: "Hisui Kirasagi Dossier.md"
 image: "../../assets/uploads/char-hisui-kirasagi.png"
 hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Hikari"
+  - "Kirasagi"
+  - "Abyssal Flower"
+  - "Symbiote"
+  - "Wonderwall"
+  - "Unregistered"
+status: "public"
+created: "2026-03-30"
+updated: "2026-06-11"
+codex_file: "Hisui Kirasagi Dossier.md"
 ---
 
 > *"The flower should have killed her. It does not kill her."*
@@ -39,6 +47,16 @@ Hisui is a household attendant in the Wonderwall cadet-branch estate. She is pre
 That would be a mistake. Hisui carries the **Abyssal Flower**, a living inherited organism inside her body. It is not a metaphor, not a curse in the purely symbolic sense, and not ordinary Redactory. It is a second living system that should have made her monstrous or dead.
 
 Instead, she became one of the calmest people in the house.
+
+## Identity
+
+**Public Identity:** A cadet-branch household attendant whose composure encourages people to underestimate her.
+
+**Institutional Identity:** A person the Apocachynthion does not formally know how to file, because her danger is biological, hereditary, and outside ordinary Redactory categories.
+
+**Private Truth:** Hisui carries the **Abyssal Flower** as a living symbiote and bears inherited traces of earlier hosts inside her own body.
+
+**Primary Tension:** She preserves ordinary domestic steadiness through constant bodily discipline while living with a second system that should have made ordinary life impossible.
 
 ## Personality
 
@@ -55,6 +73,25 @@ Hisui comes from Hikari, where the Kirasagi line has carried the Abyssal Flower 
 She is not a Redactor and not a Divine Vessel. The Flower is biological, inherited, and symbiotic. That makes her important because she expands the setting beyond the Empire's usual categories for dangerous people.
 
 Part of her burden is that the Flower also carries traces of earlier hosts. She has lived for years with inherited murmurs, impressions, and pressure that most people around her cannot even imagine.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** None  
+**Registry Status:** Unregistered - not known to the Apocachynthion in any capacity  
+**Rank:** Not applicable  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Domestic  
+**Anchor:** Not applicable  
+**Anchor Reading:** Not applicable  
+**Depth Reading:** Not applicable  
+**Reach Reading:** Localized biological manifestation  
+**Registration Tenure:** Not applicable  
+**Academy Record:** None  
+**Practice Record:** Household service and defensive Abyssal Flower use  
+**[[blots|Blots]]:** Unfiled  
+**Pager Note:** Not known to the Apocachynthion  
+**[[seal|Current Seal]]:** None
 
 ## Abilities
 
@@ -96,6 +133,3 @@ Hisui matters because she brings a different kind of danger into the story: not 
 She is also one of the clearest signs that the Wonderwall household is affecting strange systems around it. If the Abyssal Flower is calmer near Ec'lesia than anywhere else, that is probably not an accident.
 
 ## Deeper Lore
-
-The Abyssal Flower can be understood as a lineage-bound symbiotic organism with strong ties to memory, blood, and inherited pressure. Its retained impressions from former hosts are what the Kirasagi call **the Murmuring**. Hisui's unusual stability may be telling the setting something important about Ec'lesia's environment and about how other anomalous systems behave near her.
-

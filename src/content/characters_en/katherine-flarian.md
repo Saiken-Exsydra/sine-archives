@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Katherine Flarian"
 type: "Character"
 age: "35 (as of 2200)"
@@ -18,13 +18,21 @@ dress: "Custom-tailored lab coats cut for field movement and formal office alike
 residence: "Kalt'sen secure quarters, Pluribus Hill lower administrative ring; frequent rotation through Stasis field sites"
 occupation: "Continuity Architect, SiNE Stasis Continuity Office (S-AE)"
 summary: "She learned the sound reality makes when it begins to disagree with itself, and made a vocation of listening first."
-tags: ["SiNE", "Stasis", "Continuity-Sensitive", "Vel'hara", "Himmelreich", "Stabilistics"]
-status: "public"
-created: "2026-05-10"
-updated: "2026-05-24"
-codex_file: "Katherine Flarian Dossier.md"
 image: "../../assets/uploads/char-katherine-flarian.webp"
 hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "SiNE"
+  - "Stasis"
+  - "Continuity-Sensitive"
+  - "Vel'hara"
+  - "Himmelreich"
+  - "Stabilistics"
+status: "public"
+created: "2026-05-10"
+updated: "2026-06-11"
+codex_file: "Katherine Flarian Dossier.md"
 ---
 
 > *"Treating a system like masonry is how you get people killed."*
@@ -39,6 +47,16 @@ Katherine is one of the most important non-Redactor characters in this part of t
 What makes her matter is that the **Himmelreich incident** damaged her nervous system so specifically that it began reacting to continuity failure before standard systems could fully read it. In simpler terms, her body started feeling contradiction before the instruments were ready.
 
 That injury became her profession.
+
+## Identity
+
+**Public Identity:** A non-Redactor specialist whose name is attached to rooms, sites, and procedures that need to stay coherent under pressure.
+
+**Institutional Identity:** A SiNE internal stabilistics authority with clearance high enough to see the kinds of failures most people are never told exist.
+
+**Private Truth:** Katherine's expertise comes from damage: the Himmelreich incident rewired her nervous system into an instrument for sensing continuity failure.
+
+**Primary Tension:** The same injury that makes her useful is also the proof that no one should need to become useful this way in the first place.
 
 ## Personality
 
@@ -55,6 +73,25 @@ Before Himmelreich, Katherine was not supposed to become this kind of specialist
 The incident left her with **continuity sensitivity**, meaning her nervous system now reacts painfully when a place starts failing to agree with itself. Over time, Stasis learned that her pain patterns were consistent enough to be useful.
 
 Katherine then helped build **stabilistics**, the practical field devoted to reading, containing, and stopping continuity failure before it spreads into something worse.
+
+## Apocachynthion Registry
+
+**[[leaf|Leaf Type]]:** No public leaf issued  
+**Registry Status:** SiNE internal - Meridian-tier clearance; not publicly associated with Stasis  
+**Rank:** Not applicable  
+**[[mark|Mark]]:** None  
+**[[open-mark|Open Mark]]:** None  
+**[[margins|Margins]]:** Meridian-tier internal  
+**Anchor:** Not applicable  
+**Anchor Reading:** Not applicable  
+**Depth Reading:** Continuity-sensitive civilian  
+**Reach Reading:** Site-local  
+**Registration Tenure:** Not applicable  
+**Academy Record:** None  
+**Practice Record:** Stabilistics design, containment review, and continuity-breach response  
+**[[blots|Blots]]:** Internal only  
+**Pager Note:** SiNE internal specialist  
+**[[seal|Current Seal]]:** Stasis association withheld from public file
 
 ## Abilities
 
@@ -94,6 +131,3 @@ Katherine matters because she turns one of the setting's most abstract dangers i
 Through her, continuity failure stops being only cosmology and becomes workplace risk, chronic pain, crisis management, and institutional design. She is a strong example of SiNE at its best and worst at once: capable of learning from disaster, and also capable of building systems around a wounded person until that person becomes indispensable.
 
 ## Deeper Lore
-
-Stasis describes part of Katherine's condition as **fractional lateness**: the sense that some signals in her body arrive slightly out of step when local continuity begins to fail. That distortion became the basis for her continuity mapping work and for the stabilistics methods now used to harden sites, archives, and containment systems against contradiction spread.
-

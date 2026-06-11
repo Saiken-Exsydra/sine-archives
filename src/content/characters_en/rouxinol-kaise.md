@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Rouxinol Kaise"
 type: "Character"
 age: "27 (at time of filing, 2200)"
@@ -9,6 +9,7 @@ house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
 registry_status: "Registered - compelled intake 2192; dual certification 2197; Mark 4 under sealed Margins"
 designation: "She Who Keeps the Dead at the Threshold"
+height: ""
 build: "Compact; tensile"
 complexion: "Pale olive"
 hair: "Black, straight, shoulder-length; typically bound back during operations"
@@ -17,13 +18,21 @@ dress: "Close-fitting dark garments, layered protective paneling; long-bladed ar
 residence: "Vrenne, Southern Region - no fixed address on file"
 occupation: "Independent contractor - conditionally Marked for hazardous engagement"
 summary: "Half mirror, half crossing-place; she walks with the dead at her shoulder and still answers to no law but her own."
-tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"]
-status: "public"
-created: "2026-03-17"
-updated: "2026-05-27"
-codex_file: "Rouxinol Kaise Dossier.md"
 image: "../../assets/uploads/Rouxinol Portrait (2).png"
 hero_image: "../../assets/uploads/Rouxinol HERO.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Vel'hara"
+  - "Redactor"
+  - "Mirror"
+  - "Threshold"
+  - "Contractor"
+  - "Bifurcated"
+status: "public"
+created: "2026-03-17"
+updated: "2026-06-11"
+codex_file: "Rouxinol Kaise Dossier.md"
 ---
 
 > *"She does not carry ghosts. She carries what ghosts are made of."*
@@ -38,6 +47,16 @@ Rouxinol is one of the strangest Marked Redactors in the setting. She works as a
 She was born into the custody of the **Corvel Institute**, which treated her as an anomaly before it treated her as a child. She survived that beginning, emerged with two working Anchors instead of one, and built a life that is still at least partly her own.
 
 That combination makes her more than just a dangerous specialist. She is a walking argument against tidy official categories.
+
+## Identity
+
+**Public Identity:** An independent contractor whose reputation makes institutions nervous even when they need her alive and cooperative.
+
+**Institutional Identity:** A sealed-leaf Redactor operating under conditional public Mark authority, with a file complicated by dual certification and persistent specialist review.
+
+**Private Truth:** Rouxinol was raised through custody and anomaly management, then emerged with two working Anchors and a life no institution has ever stopped trying to own.
+
+**Primary Tension:** She survives by staying useful enough to be tolerated while refusing the logic that usefulness should entitle anyone else to possess her.
 
 ## Personality
 
@@ -116,6 +135,3 @@ Rouxinol matters because she pushes directly against the assumptions built into 
 She also matters because she sits at the intersection of death, imitation, and unstable borders without collapsing into a simple necromancer archetype. She is one of the clearest examples in the setting of a person who had every reason to become only a weapon and chose not to.
 
 ## Deeper Lore
-
-Rouxinol appears to have a genuinely split Redactory architecture rather than one Anchor with unusual moods. Her blade functions as a mnemonic retention artifact, meaning it can preserve the resonance impressions of certain dead targets. Those impressions are not literal talking ghosts, but they can later serve as correspondence sources through Mirror, which is why her relationship to death is so operationally unsettling.
-

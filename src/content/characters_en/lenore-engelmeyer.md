@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Le'nore Voren Engelmeyer"
 type: "Character"
 age: "23 (at time of filing, 2200)"
@@ -18,13 +18,23 @@ dress: "White by preference - pale linens, light wools, materials that do not an
 residence: "Vel'hara, western band"
 occupation: "Independent practitioner - conditionally Marked for operational engagement"
 summary: "Charming, careful, and impossible to pity; she makes refinement feel like restraint, until one remembers that restraint is not the same as mercy."
-tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
-status: "public"
-created: "2026-03-30"
-updated: "2026-05-27"
-codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
+portrait_gallery: []
+hero_gallery: []
+tags:
+  - "Engelmeyer"
+  - "Deception"
+  - "Redactor"
+  - "Quill"
+  - "Vel'hara"
+  - "Corvel"
+  - "Hunger"
+  - "Voren"
+status: "public"
+created: "2026-03-30"
+updated: "2026-06-11"
+codex_file: "Lenore Engelmeyer Dossier.md"
 ---
 
 > *"She was polite, cooperative, answered every question with genuine warmth."*
@@ -39,6 +49,16 @@ Le'nore is deeply unsettling precisely because she does not feel chaotic. She is
 That surface is real. It is also incomplete.
 
 The official system calls her a **Deception Anchor** case because that is the nearest safe category for what she lets institutions see. In reality, her condition reaches much farther than misdirection or illusion. It touches hunger, body structure, memory, and identity in ways the official label does not begin to cover.
+
+## Identity
+
+**Public Identity:** An easy-to-like young Redactor whose warmth makes her file sound far safer than it is.
+
+**Institutional Identity:** A sealed-leaf [[quill|Quill]] case formally categorized under Deception and kept under specialist review because the official label is only partially true.
+
+**Private Truth:** Le'nore's condition reaches beyond illusion into hunger, identity, body-logic, and the controlled folding together of incompatible selves.
+
+**Primary Tension:** She appears most stable when she is already curating what other people are allowed to understand about her.
 
 ## Personality
 
@@ -116,6 +136,3 @@ Le'nore matters because she exposes the limits of classification, morality, and 
 She reminds the reader that not every dangerous being announces danger through spectacle. Some of them are charming, patient, kind-seeming, and socially fluent. Some of them have built a stable self out of truths the world still has no category for.
 
 ## Deeper Lore
-
-The deeper mystery in Le'nore's case is that her apparent Deception profile may only be the visible edge of a much older predatory architecture involving incorporation, retained patterning, and structural mimicry. The institutions around her keep the official category narrow because the wider truth does not fit cleanly inside any accepted Anchor framework.
-

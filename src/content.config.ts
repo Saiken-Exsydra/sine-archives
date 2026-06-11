@@ -49,6 +49,27 @@ const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) =>
     aliases: z.array(z.string().min(1)).optional(),
     preview: z.string().optional(),
     codex_file: z.string().optional(),
+    image_position: z.string().optional(),
+    hero_image_position: z.string().optional(),
+    dossier_quote: z.object({
+      text: z.string(),
+      source: z.string().optional(),
+    }).optional(),
+    related_links: z.array(z.object({
+      label: z.string(),
+      href: z.string(),
+    })).optional(),
+    ability_snapshot_section: z.string().optional(),
+    ability_snapshot: z.array(z.object({
+      eyebrow: z.string().optional(),
+      title: z.string(),
+      body: z.string().optional(),
+      items: z.array(z.string()).optional(),
+    })).optional(),
+    archive_note: z.object({
+      label: z.string().optional(),
+      text: z.string(),
+    }).optional(),
     // Allow incremental rollout: migrated entries use Astro images, untouched ones keep legacy URLs.
     image: z.union([image(), z.string()]).optional(),
     hero_image: z.union([image(), z.string()]).optional(),

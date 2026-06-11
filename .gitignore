@@ -3,6 +3,8 @@ dist/
 .astro/
 .DS_Store
 .env
+playwright-report/
+test-results/
 open-design/
 The Archive/*
 !The Archive/Characters/
