@@ -2,9 +2,11 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
 import { getImageUrl } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
 const rawEntries = await getLocalizedCollection("organizations", locale);
 const publicEntries = rawEntries
   .filter((e) => e.data.status === "public")
@@ -138,7 +140,16 @@ const spreadFields = publicEntries.map((e) => {
 const entryBasePath = localizedPath(locale, "/organizations/");
 ---
 
-<MainLayout active="organizations" pageTitle={copy.pageTitle} locale={locale}>
+<MainLayout
+  active="organizations"
+  pageTitle={copy.pageTitle}
+  locale={locale}
+  navVariant="section"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "organizations") },
+  ]}
+>
   <div class="orgs-root">
 
     <!-- Page header -->

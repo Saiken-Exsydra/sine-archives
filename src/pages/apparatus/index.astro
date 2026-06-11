@@ -2,11 +2,16 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
-import { getApparatusPageLabels } from "../../i18n/ui";
+import {
+  getApparatusPageLabels,
+  getArchiveNavLabels,
+  sectionLabel,
+} from "../../i18n/ui";
 import { getImageUrl } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const labels = getApparatusPageLabels(locale);
+const navLabels = getArchiveNavLabels(locale);
 const rawEntries = await getLocalizedCollection("apparatus", locale);
 const publicEntries = rawEntries
   .filter((e) => e.data.status === "public")
@@ -100,7 +105,16 @@ const filingYear = (() => {
 })();
 ---
 
-<MainLayout active="apparatus" pageTitle={labels.pageTitle} locale={locale}>
+<MainLayout
+  active="apparatus"
+  pageTitle={labels.pageTitle}
+  locale={locale}
+  navVariant="section"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "apparatus") },
+  ]}
+>
   <div class="reg-root" data-entry-label={labels.entry} data-entries-label={labels.entries}>
     <header class="reg-header">
       {headerImage && (

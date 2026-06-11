@@ -1,0 +1,2251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06060b">
+  <title>SiNE Archives / Glass Character Dossiers Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: oklch(14% 0.015 285);
+      --bg-soft: oklch(18% 0.02 285);
+      --surface: oklch(22% 0.014 282 / 0.62);
+      --surface-strong: oklch(26% 0.016 282 / 0.78);
+      --surface-press: oklch(18% 0.014 282 / 0.86);
+      --fg: oklch(92% 0.012 85);
+      --muted: oklch(72% 0.012 85 / 0.74);
+      --soft: oklch(83% 0.01 85 / 0.46);
+      --border: oklch(84% 0.008 85 / 0.12);
+      --border-strong: oklch(84% 0.01 85 / 0.2);
+      --accent: oklch(57% 0.18 28);
+      --metal: oklch(68% 0.11 82);
+      --spectral: oklch(73% 0.11 220);
+      --success: oklch(76% 0.13 156);
+      --shadow-xl: 0 36px 120px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.28);
+      --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.18);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --content: min(1480px, calc(100% - 32px));
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      color-scheme: dark;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--fg);
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at 14% 16%, rgba(177, 58, 52, 0.16), transparent 24rem),
+        radial-gradient(circle at 82% 12%, rgba(96, 164, 199, 0.14), transparent 22rem),
+        radial-gradient(circle at 74% 76%, rgba(176, 141, 60, 0.08), transparent 24rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24rem),
+        var(--bg);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 96px 96px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.68), transparent 100%);
+      opacity: 0.16;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.84' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 280px 280px;
+      mix-blend-mode: screen;
+      opacity: 0.04;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      color: inherit;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 40px;
+    }
+
+    .shell {
+      width: var(--content);
+      margin: 0 auto;
+    }
+
+    .glass {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015)),
+        rgba(9, 10, 18, 0.56);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(22px) saturate(128%);
+      -webkit-backdrop-filter: blur(22px) saturate(128%);
+    }
+
+    .glass--strong {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(8, 9, 15, 0.76);
+      border-color: var(--border-strong);
+    }
+
+    .micro,
+    .eyebrow,
+    .chip,
+    .pill,
+    .metric,
+    .kicker,
+    .meta-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      margin: 14px auto 0;
+      width: min(1560px, calc(100% - 24px));
+      border-radius: 22px;
+    }
+
+    .topbar__inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand__mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .brand__mark::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(96, 164, 199, 0.32), transparent 46%),
+        radial-gradient(circle at 35% 35%, rgba(177, 58, 52, 0.22), transparent 48%);
+      filter: blur(12px);
+    }
+
+    .brand__mark img {
+      position: relative;
+      width: 26px;
+      opacity: 0.94;
+    }
+
+    .brand__copy strong {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 220, 0.94);
+    }
+
+    .brand__copy span {
+      display: block;
+      margin-top: 4px;
+      color: var(--soft);
+      font-size: 13px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: rgba(232, 228, 220, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+    }
+
+    .pill:hover,
+    .pill:focus-visible {
+      transform: translateY(-1px);
+      color: rgba(232, 228, 220, 0.96);
+      border-color: rgba(96, 164, 199, 0.24);
+      background: rgba(96, 164, 199, 0.1);
+      outline: none;
+    }
+
+    .pill:active {
+      transform: translateY(1px) scale(0.985);
+      background: rgba(96, 164, 199, 0.14);
+    }
+
+    .pill--active {
+      border-color: rgba(177, 58, 52, 0.32);
+      background: rgba(177, 58, 52, 0.14);
+      color: rgba(232, 228, 220, 0.98);
+    }
+
+    .intro {
+      padding-top: 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .intro__panel,
+    .intro__metrics {
+      border-radius: 28px;
+      padding: 26px 28px;
+    }
+
+    .intro__eyebrow {
+      color: var(--metal);
+      margin-bottom: 18px;
+    }
+
+    .intro__title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(52px, 6vw, 84px);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      text-wrap: pretty;
+    }
+
+    .intro__lede {
+      max-width: 58ch;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+      text-wrap: pretty;
+    }
+
+    .intro__metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-content: stretch;
+    }
+
+    .metric-card {
+      border-radius: 20px;
+      padding: 18px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .metric-card strong {
+      font-size: 30px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .metric-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .workspace {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .rail {
+      border-radius: 28px;
+      padding: 20px;
+      position: sticky;
+      top: 96px;
+      max-height: calc(100vh - 120px);
+      display: flex;
+      flex-direction: column;
+      min-height: 760px;
+    }
+
+    .rail__header {
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .rail__header h2 {
+      margin: 12px 0 10px;
+      font-family: var(--font-display);
+      font-size: 46px;
+      line-height: 0.96;
+      letter-spacing: -0.02em;
+    }
+
+    .rail__header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      text-wrap: pretty;
+    }
+
+    .search {
+      position: relative;
+      margin-top: 18px;
+    }
+
+    .search input {
+      width: 100%;
+      min-height: 52px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--fg);
+      padding: 0 52px 0 48px;
+      transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .search input::placeholder {
+      color: rgba(232, 228, 220, 0.42);
+    }
+
+    .search input:focus {
+      outline: none;
+      border-color: rgba(96, 164, 199, 0.28);
+      background: rgba(255, 255, 255, 0.055);
+      box-shadow: 0 0 0 4px rgba(96, 164, 199, 0.08);
+    }
+
+    .search svg,
+    .search button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .search svg {
+      left: 18px;
+      width: 16px;
+      height: 16px;
+      color: rgba(232, 228, 220, 0.5);
+    }
+
+    .search button {
+      right: 14px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: rgba(232, 228, 220, 0.48);
+      background: rgba(255, 255, 255, 0.04);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+
+    .search button.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .search button:hover {
+      color: rgba(232, 228, 220, 0.9);
+      background: rgba(177, 58, 52, 0.16);
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .chip {
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(232, 228, 220, 0.66);
+      transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease, color 0.16s ease;
+    }
+
+    .chip:hover,
+    .chip:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(176, 141, 60, 0.24);
+      color: rgba(232, 228, 220, 0.94);
+      background: rgba(176, 141, 60, 0.09);
+      outline: none;
+    }
+
+    .chip.is-active {
+      background: rgba(177, 58, 52, 0.14);
+      border-color: rgba(177, 58, 52, 0.3);
+      color: rgba(232, 228, 220, 0.95);
+    }
+
+    .rail__list {
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+      overflow: auto;
+      padding-right: 2px;
+      flex: 1;
+    }
+
+    .rail__list::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .rail__list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+    }
+
+    .rail-item {
+      width: 100%;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.03);
+      transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .rail-item:hover,
+    .rail-item:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(96, 164, 199, 0.18);
+      background: rgba(255, 255, 255, 0.045);
+      outline: none;
+    }
+
+    .rail-item:active {
+      transform: translateY(0) scale(0.992);
+    }
+
+    .rail-item.is-active {
+      border-color: rgba(177, 58, 52, 0.24);
+      background:
+        linear-gradient(180deg, rgba(177, 58, 52, 0.13), rgba(177, 58, 52, 0.02)),
+        rgba(255, 255, 255, 0.05);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    }
+
+    .rail-item__thumb {
+      position: relative;
+      width: 56px;
+      aspect-ratio: 1 / 1.18;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+
+    .rail-item__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .rail-item__index {
+      position: absolute;
+      left: 6px;
+      bottom: 6px;
+      min-width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(7, 8, 14, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(232, 228, 220, 0.82);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .rail-item__meta {
+      min-width: 0;
+    }
+
+    .rail-item__type {
+      color: var(--metal);
+      margin-bottom: 8px;
+    }
+
+    .rail-item__name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      text-wrap: pretty;
+    }
+
+    .rail-item__designation {
+      margin-top: 8px;
+      color: rgba(232, 228, 220, 0.68);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .rail-item__tagline {
+      margin-top: 10px;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .rail__empty {
+      display: none;
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 20px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      line-height: 1.6;
+    }
+
+    .rail__empty.is-visible {
+      display: block;
+    }
+
+    .rail__footer {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--soft);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .viewer {
+      display: grid;
+      gap: 18px;
+    }
+
+    .stage {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      min-height: 700px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 44%);
+      isolation: isolate;
+    }
+
+    .stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 70% 24%, rgba(96, 164, 199, 0.16), transparent 18rem),
+        radial-gradient(circle at 20% 22%, rgba(177, 58, 52, 0.14), transparent 20rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18rem);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .stage__copy,
+    .stage__figure {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+    }
+
+    .stage__copy {
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .stage__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .stage__counter {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stage__counter strong {
+      font-family: var(--font-display);
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .stage__counter span {
+      color: var(--soft);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .stage__chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(232, 228, 220, 0.78);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .stage__headline {
+      max-width: 720px;
+    }
+
+    .stage__label {
+      color: var(--metal);
+      margin-bottom: 14px;
+    }
+
+    .stage__name {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(66px, 7vw, 106px);
+      line-height: 0.88;
+      letter-spacing: -0.03em;
+      text-wrap: pretty;
+    }
+
+    .stage__designation {
+      margin-top: 14px;
+      color: rgba(232, 228, 220, 0.74);
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .stage__summary {
+      margin-top: 22px;
+      max-width: 58ch;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+      text-wrap: pretty;
+    }
+
+    .stage__quote {
+      margin-top: 24px;
+      padding-left: 18px;
+      border-left: 1px solid rgba(176, 141, 60, 0.36);
+      color: rgba(232, 228, 220, 0.84);
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.2vw, 30px);
+      line-height: 1.18;
+      text-wrap: pretty;
+    }
+
+    .stage__quote-source {
+      display: block;
+      margin-top: 12px;
+      color: var(--soft);
+      font-family: var(--font-body);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .stage__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .btn:active {
+      transform: translateY(1px) scale(0.985);
+    }
+
+    .btn--primary {
+      background: rgba(177, 58, 52, 0.18);
+      border-color: rgba(177, 58, 52, 0.3);
+      color: rgba(232, 228, 220, 0.98);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .btn--primary:hover,
+    .btn--primary:focus-visible {
+      background: rgba(177, 58, 52, 0.24);
+      border-color: rgba(177, 58, 52, 0.38);
+      box-shadow: 0 14px 24px rgba(177, 58, 52, 0.16);
+    }
+
+    .btn--ghost {
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(232, 228, 220, 0.84);
+    }
+
+    .btn--ghost:hover,
+    .btn--ghost:focus-visible {
+      border-color: rgba(96, 164, 199, 0.26);
+      background: rgba(96, 164, 199, 0.1);
+      color: rgba(232, 228, 220, 0.98);
+    }
+
+    .stage__facts {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .fact-card {
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      min-height: 110px;
+    }
+
+    .fact-card strong {
+      display: block;
+      margin-top: 12px;
+      font-family: var(--font-display);
+      font-size: 26px;
+      line-height: 1.02;
+      font-weight: 600;
+      text-wrap: pretty;
+    }
+
+    .fact-card p {
+      margin: 10px 0 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.6;
+      text-wrap: pretty;
+    }
+
+    .stage__figure {
+      min-height: 700px;
+      overflow: hidden;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stage__media {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .stage__media::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(7, 8, 14, 0.1) 0%, rgba(7, 8, 14, 0.08) 25%, rgba(7, 8, 14, 0.58) 100%),
+        linear-gradient(180deg, rgba(7, 8, 14, 0.18) 0%, rgba(7, 8, 14, 0) 28%, rgba(7, 8, 14, 0.72) 100%);
+      z-index: 1;
+    }
+
+    .stage__media::after {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+      z-index: 2;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 24%, transparent 76%, rgba(0, 0, 0, 0.4));
+    }
+
+    .stage__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transform: scale(1.04);
+      filter: saturate(0.86) contrast(0.98) brightness(0.84);
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.34s ease;
+    }
+
+    .stage__figure:hover .stage__image {
+      transform: scale(1.08);
+    }
+
+    .stage__seal {
+      position: absolute;
+      right: 26px;
+      bottom: 26px;
+      z-index: 3;
+      width: 146px;
+      aspect-ratio: 1;
+      border-radius: 999px;
+      border: 1px solid rgba(176, 141, 60, 0.24);
+      background:
+        radial-gradient(circle at 50% 50%, rgba(176, 141, 60, 0.14), rgba(176, 141, 60, 0.04) 56%, rgba(176, 141, 60, 0) 70%),
+        rgba(7, 8, 14, 0.42);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stage__seal span {
+      color: rgba(232, 228, 220, 0.82);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      line-height: 1.8;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+      gap: 18px;
+    }
+
+    .panel {
+      border-radius: 28px;
+      padding: 24px;
+    }
+
+    .panel__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .panel__title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 34px;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+    }
+
+    .tabbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tab {
+      min-height: 36px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(232, 228, 220, 0.68);
+      transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+    }
+
+    .tab:hover,
+    .tab:focus-visible {
+      background: rgba(96, 164, 199, 0.08);
+      border-color: rgba(96, 164, 199, 0.2);
+      color: rgba(232, 228, 220, 0.92);
+      outline: none;
+    }
+
+    .tab.is-active {
+      background: rgba(176, 141, 60, 0.12);
+      border-color: rgba(176, 141, 60, 0.24);
+      color: rgba(232, 228, 220, 0.96);
+    }
+
+    .prose {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.85;
+      text-wrap: pretty;
+    }
+
+    .prose p {
+      margin: 0;
+    }
+
+    .prose p + p {
+      margin-top: 16px;
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .signal-card {
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      min-height: 132px;
+    }
+
+    .signal-card strong {
+      display: block;
+      margin-top: 10px;
+      font-family: var(--font-display);
+      font-size: 24px;
+      line-height: 1.02;
+      font-weight: 600;
+    }
+
+    .signal-card p {
+      margin: 10px 0 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.65;
+      text-wrap: pretty;
+    }
+
+    .relations {
+      display: grid;
+      gap: 12px;
+    }
+
+    .relation {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .relation strong {
+      display: block;
+      color: rgba(232, 228, 220, 0.96);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .relation p {
+      margin: 10px 0 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.68;
+      text-wrap: pretty;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .registry {
+      display: grid;
+      gap: 12px;
+    }
+
+    .registry__row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .registry__row:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .registry__row span {
+      color: var(--soft);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .registry__row strong {
+      text-align: right;
+      color: rgba(232, 228, 220, 0.94);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500;
+      text-wrap: pretty;
+    }
+
+    .accordion {
+      overflow: hidden;
+      max-height: 80px;
+      transition: max-height 0.36s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .accordion.is-open {
+      max-height: 340px;
+    }
+
+    .accordion__toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: rgba(232, 228, 220, 0.92);
+    }
+
+    .accordion__toggle svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s ease;
+    }
+
+    .accordion.is-open .accordion__toggle svg {
+      transform: rotate(45deg);
+    }
+
+    .accordion__body {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.72;
+      text-wrap: pretty;
+    }
+
+    .quick-actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .quick-actions .btn {
+      justify-content: flex-start;
+      padding-inline: 16px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translate(-50%, 18px);
+      min-width: 260px;
+      max-width: min(92vw, 420px);
+      padding: 14px 18px;
+      border-radius: 16px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(8, 9, 15, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-lg);
+      color: rgba(232, 228, 220, 0.9);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      z-index: 60;
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(3, 4, 8, 0.56);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.24s ease;
+      z-index: 80;
+    }
+
+    .modal.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal__panel {
+      width: min(760px, 100%);
+      border-radius: 28px;
+      padding: 26px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(220px, 0.68fr);
+      gap: 18px;
+      transform: translateY(18px) scale(0.985);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .modal.is-open .modal__panel {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal__title {
+      margin: 10px 0 0;
+      font-family: var(--font-display);
+      font-size: clamp(42px, 6vw, 60px);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+    }
+
+    .modal__copy p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.82;
+      text-wrap: pretty;
+    }
+
+    .modal__stack {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .modal__meta {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .modal__meta strong {
+      display: block;
+      margin-top: 8px;
+      font-family: var(--font-display);
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    .modal__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .is-switching .stage__copy,
+    .is-switching .stage__image,
+    .is-switching .details {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .stage__copy,
+    .stage__image,
+    .details {
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    @media (max-width: 1180px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .rail {
+        position: static;
+        max-height: none;
+        min-height: 0;
+      }
+
+      .stage {
+        grid-template-columns: 1fr;
+        min-height: 0;
+      }
+
+      .stage__figure {
+        min-height: 460px;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        order: -1;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      .modal__panel {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 20px, 100%);
+      }
+
+      .topbar__inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .intro__panel,
+      .intro__metrics,
+      .panel,
+      .rail,
+      .stage__copy {
+        padding: 20px;
+      }
+
+      .intro__title {
+        font-size: clamp(42px, 14vw, 64px);
+      }
+
+      .rail__header h2 {
+        font-size: 38px;
+      }
+
+      .rail-item {
+        grid-template-columns: 48px minmax(0, 1fr);
+      }
+
+      .rail-item__name {
+        font-size: 24px;
+      }
+
+      .stage__name {
+        font-size: clamp(48px, 14vw, 72px);
+      }
+
+      .stage__facts,
+      .signal-grid,
+      .intro__metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .stage__top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .stage__chips {
+        justify-content: flex-start;
+      }
+
+      .stage__figure {
+        min-height: 360px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar glass">
+      <div class="topbar__inner">
+        <a class="brand" href="#">
+          <span class="brand__mark glass">
+            <img src="../public/uploads/ui-sine-logo.png" alt="">
+          </span>
+          <span class="brand__copy">
+            <strong>SiNE Archives</strong>
+            <span>Character dossiers / glass concept</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="pill" href="archive-home-glass-cinematic.html">Home</a>
+          <a class="pill pill--active" href="#">Characters</a>
+          <a class="pill" href="#">Places</a>
+          <a class="pill" href="#">Systems</a>
+          <a class="pill pill--ghost" href="#">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="intro">
+        <div class="intro__panel glass">
+          <div class="intro__eyebrow eyebrow">Responsive character archive / split dossier browser</div>
+          <h1 class="intro__title">A classier cinematic dossier room for the character archive.</h1>
+          <p class="intro__lede">
+            The structure stays intact: names and dossiers on the left, a dominant hero chamber on the right.
+            The redesign shifts the language from tactical terminal to sealed salon archive: black glass, graphite layers,
+            warm parchment type, and luminous accent edges reserved for focus, search, and activation.
+          </p>
+        </div>
+
+        <div class="intro__metrics glass">
+          <article class="metric-card">
+            <div class="metric">Navigation posture</div>
+            <strong>Indexed</strong>
+            <p>Searchable rail, active file state, and cleaner hierarchy for large character sets.</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric">Image treatment</div>
+            <strong>Heroic</strong>
+            <p>Large portrait chamber with restrained seals, deep crop control, and softer cinematic motion.</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric">Interaction tone</div>
+            <strong>Polished</strong>
+            <p>Glass hover, press depth, cross-fade dossier swaps, modal open state, and collapsible archive notes.</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric">Visual stance</div>
+            <strong>Classy</strong>
+            <p>Less HUD noise, more curated archival luxury. Crimson leads action, gold marks authority, cyan stays rare.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="rail glass" aria-label="Character index">
+          <div class="rail__header">
+            <div class="eyebrow">Section / dossier browser</div>
+            <h2>Characters</h2>
+            <p>Search by title, designation, or archive family. The left rail remains the filing system; the right side becomes a full dossier chamber.</p>
+
+            <label class="search">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"></circle>
+                <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></line>
+              </svg>
+              <input id="search-input" type="search" placeholder="Search dossiers">
+              <button id="search-clear" type="button" aria-label="Clear search">x</button>
+            </label>
+
+            <div class="filter-row" id="filter-row" aria-label="Character filters">
+              <button class="chip is-active" type="button" data-group="all">All files</button>
+              <button class="chip" type="button" data-group="wonderwall">Wonderwall</button>
+              <button class="chip" type="button" data-group="sine">SiNE</button>
+              <button class="chip" type="button" data-group="church">Church</button>
+              <button class="chip" type="button" data-group="outer">Outer lines</button>
+            </div>
+          </div>
+
+          <div class="rail__list" id="character-list"></div>
+          <div class="rail__empty" id="list-empty">No dossiers match that search. Clear the term or switch the filing group.</div>
+
+          <div class="rail__footer">
+            SiNE Archives / Filing Year 1127<br>
+            Public split-view concept retaining current IA while lifting tone, depth, and interaction polish.
+          </div>
+        </aside>
+
+        <section class="viewer" id="viewer">
+          <article class="stage glass glass--strong" id="stage">
+            <div class="stage__copy">
+              <div class="stage__top">
+                <div class="stage__counter">
+                  <strong id="stage-count">01</strong>
+                  <span id="stage-total">/ 06</span>
+                </div>
+                <div class="stage__chips" id="stage-tags"></div>
+              </div>
+
+              <div class="stage__headline">
+                <div class="stage__label eyebrow" id="stage-type">Character / public file</div>
+                <h2 class="stage__name" id="stage-name">Em'manuel Kael Wonderwall</h2>
+                <div class="stage__designation" id="stage-designation">The Patient Interval</div>
+                <p class="stage__summary" id="stage-summary"></p>
+                <blockquote class="stage__quote" id="stage-quote">
+                  <span id="stage-quote-text"></span>
+                  <span class="stage__quote-source" id="stage-quote-source"></span>
+                </blockquote>
+
+                <div class="stage__actions">
+                  <button class="btn btn--primary" id="open-dossier" type="button">Open dossier</button>
+                  <button class="btn btn--ghost" id="toggle-note" type="button">Toggle archive note</button>
+                </div>
+              </div>
+
+              <div class="stage__facts" id="stage-facts"></div>
+            </div>
+
+            <div class="stage__figure">
+              <div class="stage__media">
+                <img class="stage__image" id="stage-image" src="" alt="">
+              </div>
+              <div class="stage__seal">
+                <span id="stage-seal">Public file<br>SiNE archives<br>Glass concept</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="details" id="details">
+            <article class="panel glass">
+              <div class="panel__header">
+                <div>
+                  <div class="eyebrow">Dossier body</div>
+                  <h3 class="panel__title">Archive reading</h3>
+                </div>
+                <div class="tabbar" id="tabbar" aria-label="Dossier views">
+                  <button class="tab is-active" type="button" data-tab="overview">Overview</button>
+                  <button class="tab" type="button" data-tab="signals">Signals</button>
+                  <button class="tab" type="button" data-tab="relations">Relations</button>
+                </div>
+              </div>
+              <div id="tab-panel"></div>
+            </article>
+
+            <aside class="stack">
+              <article class="panel glass">
+                <div class="eyebrow">Registry</div>
+                <h3 class="panel__title">File data</h3>
+                <div class="registry" id="registry"></div>
+              </article>
+
+              <article class="panel glass accordion" id="archive-note">
+                <button class="accordion__toggle" id="archive-note-toggle" type="button" aria-expanded="false">
+                  <span>
+                    <span class="eyebrow">Archive note</span><br>
+                    <span class="panel__title">Controlled remarks</span>
+                  </span>
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 2.5V13.5M2.5 8H13.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <div class="accordion__body" id="archive-note-body"></div>
+              </article>
+
+              <article class="panel glass">
+                <div class="eyebrow">Quick actions</div>
+                <h3 class="panel__title">Archive controls</h3>
+                <div class="quick-actions">
+                  <button class="btn btn--ghost" id="flash-search" type="button">Focus search field</button>
+                  <button class="btn btn--ghost" id="copy-brief" type="button">Copy art-direction brief</button>
+                </div>
+              </article>
+            </aside>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal" id="dossier-modal" aria-hidden="true">
+      <div class="modal__panel glass glass--strong">
+        <div class="modal__copy">
+          <div class="eyebrow">Dossier opening transition</div>
+          <h3 class="modal__title" id="modal-title"></h3>
+          <p id="modal-summary"></p>
+          <div class="modal__actions">
+            <button class="btn btn--primary" id="modal-confirm" type="button">Continue to full dossier</button>
+            <button class="btn btn--ghost" id="modal-close" type="button">Close</button>
+          </div>
+        </div>
+
+        <div class="modal__stack">
+          <div class="modal__meta">
+            <div class="eyebrow">Registry state</div>
+            <strong id="modal-status"></strong>
+          </div>
+          <div class="modal__meta">
+            <div class="eyebrow">Anchor or condition</div>
+            <strong id="modal-anchor"></strong>
+          </div>
+          <div class="modal__meta">
+            <div class="eyebrow">Archive route</div>
+            <strong id="modal-route"></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const characters = [
+      {
+        id: "emmanuel",
+        index: 1,
+        group: "wonderwall",
+        title: "Em'manuel Kael Wonderwall",
+        type: "Founder / primary file",
+        designation: "The Patient Interval",
+        summary: "He built houses, empires, and silences with the same patient hand, then lived long enough for the spaces he preserved to begin answering back.",
+        quote: "I am old enough that patience and cowardice have occasionally worn each other's clothes.",
+        quoteSource: "Private Wonderwall notation",
+        image: "../public/uploads/char-emmanuel-wonderwall-hero.png",
+        thumb: "../public/uploads/char-emmanuel-wonderwall.png",
+        updated: "2026-05-24",
+        status: "Registered / public",
+        affiliation: "SiNE; Apocachynthion; House Wonderwall",
+        house: "Wonderwall",
+        anchor: "Interval / Spatial Coherence",
+        residence: "Pluribus Hill, Kalt'sen",
+        age: "Approx. 1,205",
+        tags: ["Wonderwall", "SiNE", "Interval"],
+        overview: [
+          "From a distance he can read as the familiar immortal statesman. Up close he is far less clean: a builder whose present authority is inseparable from the catastrophe buried under his first name, Al'uxxios Ex'sydra.",
+          "The redesign treats that contradiction with more ceremony. Instead of a raw tactical stage, his dossier reads like a sealed political chamber, where history, infrastructure, and grief all live behind the same glass."
+        ],
+        signals: [
+          { label: "Anchor", title: "Interval", text: "Power over the gap between one state and the next. His threat is not spectacle; it is controlled delay." },
+          { label: "Reading", title: "Civilizational scale", text: "He thinks in systems, inheritance, and second-order damage before most people have named the present cost." },
+          { label: "Limit", title: "Moral strain", text: "He sees the damage of his own decisions clearly and may still decide that the larger system requires them." },
+          { label: "Role", title: "Builder and wound", text: "He founded protective structures while also transmitting the deeper Wonderwall injuries that still shape the line." }
+        ],
+        relations: [
+          { name: "Al'ithia", text: "Forced him to confront the difference between memory and a living person." },
+          { name: "E'lla", text: "Successor shaped by projects he architected but never fully explained." },
+          { name: "Sai'ken", text: "Restored the Exsydra name through him while withholding the full meaning of that restoration." }
+        ],
+        facts: [
+          ["Registry status", "Registered - Archtype, Spatial Coherence anchor"],
+          ["Rank", "Archtype"],
+          ["Residence", "Pluribus Hill, Kalt'sen"],
+          ["Occupation", "Founder and principal of SiNE; Meridian Council chair"],
+          ["Updated", "2026-05-24"]
+        ],
+        stageFacts: [
+          { label: "Anchor", value: "Interval", text: "Makes change itself harder to complete." },
+          { label: "Position", value: "Founder", text: "Statecraft, infrastructure, and deep archive authority." },
+          { label: "Tone", value: "Measured", text: "Warm in public, brutal only when costs have been counted." }
+        ],
+        note: "Classy glass works here when the UI stops shouting. Em'manuel's file should feel expensive, inevitable, and morally cold: soft gleam, heavy spacing, little wasted motion.",
+        route: "/characters/emmanuel-wonderwall/"
+      },
+      {
+        id: "ella",
+        index: 2,
+        group: "sine",
+        title: "E'lla Rae Wonderwall",
+        type: "Successor / sealed leaf",
+        designation: "The Luminant Ataraxia",
+        summary: "Made from a lost girl's shape and left to survive the peace that followed; she stands at the center of many broken lights, becoming neither the return nor the ruin, but herself.",
+        quote: "The program stopped producing bodies. It did not stop existing.",
+        quoteSource: "Private Wonderwall notation, year 2200",
+        image: "../public/uploads/char-ella-wonderwall-hero.png",
+        thumb: "../public/uploads/char-ella-wonderwall.png",
+        updated: "2026-05-24",
+        status: "Registered / restricted review",
+        affiliation: "House Wonderwall; SiNE",
+        house: "Wonderwall",
+        anchor: "Light",
+        residence: "Primary Wonderwall holdings; Kalt'sen and Hora'veil",
+        age: "25",
+        tags: ["Light", "SiNE", "Kaleidoscope"],
+        overview: [
+          "E'lla is not just a powerful Redactor. She is the final success of Project Kaleidoscope, raised as family while also carrying the weight of a centuries-long experiment aimed at rebuilding impossible Light.",
+          "The classy version of her page should feel precise and tightly controlled, like couture built for containment: polished surfaces, exact proportions, and illumination used with near-ritual restraint."
+        ],
+        signals: [
+          { label: "Anchor", title: "Light", text: "Not brightness as decoration, but total spatial obedience under a harsher idea of visibility." },
+          { label: "Incident", title: "White Desert", text: "Proof that her Light can outrun ordinary control and become lethal at abyssal depth." },
+          { label: "Discipline", title: "Tailored control", text: "Fabric, reflection, and prepared environments matter because she thinks through surfaces." },
+          { label: "Risk", title: "Shorefall", text: "The threshold where Light starts shaping itself through her instead of the reverse." }
+        ],
+        relations: [
+          { name: "Al'ithia", text: "Raised her as a daughter rather than as a successful specimen." },
+          { name: "Em'manuel", text: "Teacher, protector, and architect of the project that made her." },
+          { name: "Ec'lesia", text: "Potentially one of the few people who might still reach her cleanly in failure." }
+        ],
+        facts: [
+          ["Registry status", "Registered - Stylus, Light Anchor. KL-83 retained"],
+          ["Rank", "Stylus / Mark 5 standing"],
+          ["Residence", "Primary Wonderwall holdings; operational presence in Hora'veil"],
+          ["Occupation", "SiNE Redactor; internal successor candidate"],
+          ["Updated", "2026-05-24"]
+        ],
+        stageFacts: [
+          { label: "Anchor", value: "Light", text: "Concentrates, redirects, suppresses, and weaponizes visibility." },
+          { label: "State", value: "Controlled", text: "Lives by precision and surface discipline after the White Desert." },
+          { label: "Weight", value: "Inherited", text: "A person loved as family while still carrying project history." }
+        ],
+        note: "Her dossier should show luxury without softness. Use light like a controlled blade, not a romantic glow. That is where the classy version avoids becoming generic glass fashion UI.",
+        route: "/characters/ella-wonderwall/"
+      },
+      {
+        id: "eclesia",
+        index: 3,
+        group: "wonderwall",
+        title: "Ec'lesia Yalara Wonderwall",
+        type: "Cadet branch / provisional file",
+        designation: "The Inkless Color",
+        summary: "Bright, affectionate, nosy, and difficult to intimidate; carries Stilllight, not Light, and stays stable by keeping close to ordinary human life.",
+        quote: "She enters rooms as though the world has been waiting for her to arrive, and most rooms, to my continued inconvenience, agree with her.",
+        quoteSource: "Private Wonderwall notation, year 2200",
+        image: "../public/uploads/char-eclesia-wonderwall-hero.png",
+        thumb: "../public/uploads/char-eclesia-wonderwall.png",
+        updated: "2026-05-27",
+        status: "Registered / provisional",
+        affiliation: "Apocachynthion restricted review",
+        house: "Wonderwall cadet branch",
+        anchor: "Stilllight",
+        residence: "Wonderwall estate; Lon'drina during active terms",
+        age: "22",
+        tags: ["Stilllight", "Wonderwall", "Inkless"],
+        overview: [
+          "Ec'lesia was misread for years because institutions mistook the limit of their instruments for the truth about her. What looked like absence was a different Radiance-derived condition entirely: Stilllight, light whose motion has been arrested.",
+          "The redesign lets her dossier breathe. She should feel luminous and socially open inside the same dark glass system, using warmer spacing and cleaner copy contrast rather than adding pastel softness."
+        ],
+        signals: [
+          { label: "Anchor", title: "Stilllight", text: "Not ordinary Light, but arrested luminous pressure misread as a missing read." },
+          { label: "Social mode", title: "Fearless warmth", text: "Aggressively willing to know people, intrusive in the charitable sense, and hard to isolate." },
+          { label: "File issue", title: "Instrument failure", text: "Ordinary Redactory tools keep mistaking unusual architecture for emptiness." },
+          { label: "Stability", title: "Human proximity", text: "Ordinary life and relational closeness help keep her system stable." }
+        ],
+        relations: [
+          { name: "Hisui", text: "Household attendant whose care is as personal as it is disciplined." },
+          { name: "Sai'ken", text: "Protective contingency stationed close enough to sense escalation before others do." },
+          { name: "E'lla", text: "A distinct Wonderwall problem, important precisely because she is not a second E'lla." }
+        ],
+        facts: [
+          ["Registry status", "Quill provisional, Mark 1; ordinary intake suspended"],
+          ["Rank", "Quill provisional"],
+          ["Residence", "Wonderwall estate; controlled Academy residence at Lon'drina"],
+          ["Occupation", "Provisional student and calibration assistant"],
+          ["Updated", "2026-05-27"]
+        ],
+        stageFacts: [
+          { label: "Anchor", value: "Stilllight", text: "Radiance whose motion has been arrested rather than extinguished." },
+          { label: "Mode", value: "Affectionate", text: "The warmest social presence in the rail, used as contrast within dark glass." },
+          { label: "Problem", value: "Unreadable", text: "The file exists because the instruments failed before she did." }
+        ],
+        note: "She is where the system proves it can carry joy without becoming cute. Keep the page dark, but let the type and spacing turn brighter and more breathable around her.",
+        route: "/characters/eclesia-wonderwall/"
+      },
+      {
+        id: "saiken",
+        index: 4,
+        group: "outer",
+        title: "Sai'ken Exsydra",
+        type: "KT-Exs operative / active file",
+        designation: "The Heir of the Unwritten House",
+        summary: "A quiet KT-Exs operative carrying the last confirmed active Exsydra cadence architecture: not a prophet, but a man who can feel danger before it fully arrives and literally enter gap-space to move between beats.",
+        quote: "He is not quiet because nothing is happening in him. He is quiet because too much is happening before the rest of us arrive.",
+        quoteSource: "Ma'ren Keth, private training note",
+        image: "../public/uploads/char-saiken-exsydra-hero.png",
+        thumb: "../public/uploads/char-saiken-exsydra.webp",
+        updated: "2026-05-27",
+        status: "Active / protective assignment",
+        affiliation: "KT-Exs; Wonderwall Seat direct apparatus",
+        house: "Exsydra",
+        anchor: "Cadence / gap-space tolerance",
+        residence: "Wonderwall cadet-branch estate, Kalt'sen",
+        age: "25",
+        tags: ["Exsydra", "Cadence", "Gap-space"],
+        overview: [
+          "Sai'ken carries the last confirmed living Exsydra cadence architecture. He is not a prophet and does not control Time. He feels the pressure of the present leaning toward the next state before most people can name what changed.",
+          "His page wants a colder rhythm: thinner accents, more negative space, and sharper image crop. He is where the cinematic system should feel almost silent."
+        ],
+        signals: [
+          { label: "Perception", title: "Cadence", text: "Receives warning pressure from the present under transition, not clean answers about the future." },
+          { label: "Movement", title: "Gap-space", text: "Can enter an unread interval between configurations and reappear from a changed angle." },
+          { label: "Cost", title: "Vector debt", text: "Every traverse builds recursive strain and makes return harder." },
+          { label: "Assignment", title: "Ec'lesia contingency", text: "Stationed close enough to protect, observe, and act if escalation stabilizes catastrophically." }
+        ],
+        relations: [
+          { name: "Em'manuel", text: "Restored the Exsydra name and positioned him within the Seat's apparatus." },
+          { name: "Ec'lesia", text: "Center of his current assignment and the reason his proximity is never neutral." },
+          { name: "Ma'ren Keth", text: "First instructor to understand that his impossible reflexes were architecture, not luck." }
+        ],
+        facts: [
+          ["Registry status", "Active - KT-Exs operative; assigned 2197"],
+          ["Rank", "Operational file"],
+          ["Residence", "Wonderwall cadet-branch estate, Kalt'sen"],
+          ["Occupation", "Household protection and contingency asset"],
+          ["Updated", "2026-05-27"]
+        ],
+        stageFacts: [
+          { label: "Core read", value: "Cadence", text: "Feels the next wrong beat before the room catches up." },
+          { label: "Trait", value: "Restrained", text: "Reserve is a survival habit around perceptions other people would misunderstand." },
+          { label: "Threat", value: "Off-sequence", text: "Impossible in close combat because public continuity briefly loses him." }
+        ],
+        note: "Do not over-ornament his surface. Sai'ken is strongest when the design gets almost spare, with one spectral focus edge and a lot of disciplined black air.",
+        route: "/characters/saiken-exsydra/"
+      },
+      {
+        id: "hisui",
+        index: 5,
+        group: "outer",
+        title: "Hisui Kirasagi",
+        type: "Domestic file / unregistered",
+        designation: "Flower from the Abyssal Shore",
+        summary: "A tenderness cultivated in impossible depth; graceful enough to seem harmless, and strange enough that horror blooms only after one has already leaned close.",
+        quote: "The flower should have killed her. It does not kill her.",
+        quoteSource: "Private Wonderwall notation",
+        image: "../public/uploads/char-hisui-kirasagi-hero.png",
+        thumb: "../public/uploads/char-hisui-kirasagi.png",
+        updated: "2026-05-24",
+        status: "Unregistered / domestic file",
+        affiliation: "Wonderwall estate domestic staff",
+        house: "Kirasagi line",
+        anchor: "Abyssal Flower symbiote",
+        residence: "Wonderwall estate, eastern residential quarter",
+        age: "24",
+        tags: ["Kirasagi", "Abyssal Flower", "Unregistered"],
+        overview: [
+          "Hisui is easy to misread as harmless background precision. That is exactly why she is so effective. The Abyssal Flower in her body should have made her monstrous or dead; instead it produced one of the calmest people in the house.",
+          "Visually, her dossier should feel delicate and unnerving at once. The glass remains dark and ceremonial, but the motion should turn almost petal-soft before the copy reveals the horror."
+        ],
+        signals: [
+          { label: "Condition", title: "Living symbiote", text: "Biological inheritance rather than Redactory or divine vessel architecture." },
+          { label: "Capability", title: "Cut and repair", text: "The Flower can slice, disrupt blood, scaffold healing, and distort local perception." },
+          { label: "Risk", title: "Overbloom", text: "Too much output pushes her toward breakdown and loss of stable control." },
+          { label: "Pressure", title: "Murmuring", text: "Inherited voices from earlier hosts crowd the edges of self under strain." }
+        ],
+        relations: [
+          { name: "Ec'lesia", text: "Her chosen protection is no longer only professional service." },
+          { name: "Wonderwall estate", text: "The domestic role hides how unusual her body and lineage really are." },
+          { name: "Earlier hosts", text: "The Flower carries impressions of them as pressure rather than memory." }
+        ],
+        facts: [
+          ["Registry status", "Unregistered - not known to the Apocachynthion"],
+          ["Rank", "Household attendant file"],
+          ["Residence", "Wonderwall estate, eastern residential quarter"],
+          ["Occupation", "Personal attendance to Ec'lesia Yalara Wonderwall"],
+          ["Updated", "2026-05-24"]
+        ],
+        stageFacts: [
+          { label: "Condition", value: "Flower", text: "A second living system carried inside an apparently composed body." },
+          { label: "Manner", value: "Precise", text: "Built by service discipline, never wasting motion or speech." },
+          { label: "Threat", value: "Blooming", text: "The horror arrives after closeness, not before it." }
+        ],
+        note: "Her glass treatment can borrow a trace of floral softness in motion only. Do not sweeten the palette. The body carries the strangeness; the UI should remain composed.",
+        route: "/characters/hisui-kirasagi/"
+      },
+      {
+        id: "halken",
+        index: 6,
+        group: "church",
+        title: "Halk'en Orveth",
+        type: "Church file / maximum restriction",
+        designation: "Dominion in Human Shape",
+        summary: "Gentle until judgment is required; then even the air around him remembers how to kneel.",
+        quote: "Dominion is easiest to praise when it is a word in liturgy. It is harder to endure when it grows hands.",
+        quoteSource: "Mother Salienne Karth, sealed formation note",
+        image: "../public/uploads/char-halken-orveth-hero.png",
+        thumb: "../public/uploads/char-halken-orveth.png",
+        updated: "2026-05-24",
+        status: "Maximum restricted deployment",
+        affiliation: "One Church - Obsidian Rite",
+        house: "No house / answered vessel",
+        anchor: "Dominion / Auctoriel",
+        residence: "Saint Veyran fortress-priory, Kalt'sen",
+        age: "399",
+        tags: ["Church", "Dominion", "Answered"],
+        overview: [
+          "Orveth is one of the clearest examples of what the Church means by an Answered vessel. Through him, Dominion is not just doctrine or authority in the abstract, but a pressure that can become physically binding.",
+          "His redesign should feel austere and ecclesiastical within the same glass language: darker fields, stronger verticals, fewer decorative chips, and more emphasis on judgment and lawful force."
+        ],
+        signals: [
+          { label: "Answer", title: "Auctoriel", text: "Dominion made direct enough to give lawful command real weight and contact." },
+          { label: "Expression", title: "Seven hands", text: "Permission, witness, restraint, investiture, judgment, command, and fuller sovereign force." },
+          { label: "Temperament", title: "Careful severity", text: "Gentle and self-limiting in ordinary contact, which is part of why he remains usable." },
+          { label: "Risk", title: "Mortal burden", text: "Too much Dominion can wear away the line between human restraint and raw principle." }
+        ],
+        relations: [
+          { name: "Obsidian Rite", text: "Formed him, deploys him, and fears him like a rare weapon." },
+          { name: "Auctoriel", text: "Not just power source but the pressure shaping his habits and limits." },
+          { name: "Sundersaint", text: "Works alongside Dominion by cutting what his authority has made answerable." }
+        ],
+        facts: [
+          ["Registry status", "Maximum restricted deployment - Answered-class vessel"],
+          ["Rank", "Rector-Ascendant"],
+          ["Residence", "Saint Veyran fortress-priory, Kalt'sen"],
+          ["Occupation", "Obsidian Rite field asset"],
+          ["Updated", "2026-05-24"]
+        ],
+        stageFacts: [
+          { label: "Answer", value: "Dominion", text: "Rightful authority becoming binding rather than persuasive." },
+          { label: "Bearing", value: "Gentle", text: "Quiet, careful, and disciplined until judgment is required." },
+          { label: "Weight", value: "Answered", text: "One of the Church's strongest proofs that divine authority can touch matter." }
+        ],
+        note: "This is the file where the glass system can afford harder edges. Less cyan, more iron-black and muted gold. The luxury is ecclesiastical, not social.",
+        route: "/characters/halken-orveth/"
+      }
+    ];
+
+    const state = {
+      activeId: characters[0].id,
+      activeTab: "overview",
+      activeGroup: "all",
+      query: "",
+      noteOpen: false
+    };
+
+    const listEl = document.getElementById("character-list");
+    const emptyEl = document.getElementById("list-empty");
+    const searchInput = document.getElementById("search-input");
+    const searchClear = document.getElementById("search-clear");
+    const filterRow = document.getElementById("filter-row");
+    const viewer = document.getElementById("viewer");
+    const tabbar = document.getElementById("tabbar");
+    const tabPanel = document.getElementById("tab-panel");
+    const registry = document.getElementById("registry");
+    const archiveNote = document.getElementById("archive-note");
+    const archiveNoteBody = document.getElementById("archive-note-body");
+    const archiveNoteToggle = document.getElementById("archive-note-toggle");
+    const toast = document.getElementById("toast");
+    const modal = document.getElementById("dossier-modal");
+    const openDossierBtn = document.getElementById("open-dossier");
+    const toggleNoteBtn = document.getElementById("toggle-note");
+    const flashSearchBtn = document.getElementById("flash-search");
+    const copyBriefBtn = document.getElementById("copy-brief");
+    const modalClose = document.getElementById("modal-close");
+    const modalConfirm = document.getElementById("modal-confirm");
+
+    const stageName = document.getElementById("stage-name");
+    const stageType = document.getElementById("stage-type");
+    const stageDesignation = document.getElementById("stage-designation");
+    const stageSummary = document.getElementById("stage-summary");
+    const stageQuoteText = document.getElementById("stage-quote-text");
+    const stageQuoteSource = document.getElementById("stage-quote-source");
+    const stageImage = document.getElementById("stage-image");
+    const stageCount = document.getElementById("stage-count");
+    const stageTotal = document.getElementById("stage-total");
+    const stageTags = document.getElementById("stage-tags");
+    const stageFacts = document.getElementById("stage-facts");
+    const stageSeal = document.getElementById("stage-seal");
+
+    const modalTitle = document.getElementById("modal-title");
+    const modalSummary = document.getElementById("modal-summary");
+    const modalStatus = document.getElementById("modal-status");
+    const modalAnchor = document.getElementById("modal-anchor");
+    const modalRoute = document.getElementById("modal-route");
+
+    let toastTimer = 0;
+
+    function getVisibleCharacters() {
+      const query = state.query.trim().toLowerCase();
+      return characters.filter((character) => {
+        const groupMatch = state.activeGroup === "all" || character.group === state.activeGroup;
+        const text = [
+          character.title,
+          character.designation,
+          character.summary,
+          character.affiliation,
+          character.house,
+          character.anchor,
+          character.tags.join(" ")
+        ].join(" ").toLowerCase();
+        const queryMatch = !query || text.includes(query);
+        return groupMatch && queryMatch;
+      });
+    }
+
+    function getCharacter(id) {
+      return characters.find((character) => character.id === id) || characters[0];
+    }
+
+    function showToast(message) {
+      window.clearTimeout(toastTimer);
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      toastTimer = window.setTimeout(() => {
+        toast.classList.remove("is-visible");
+      }, 1800);
+    }
+
+    function renderList() {
+      const visible = getVisibleCharacters();
+      if (!visible.some((character) => character.id === state.activeId) && visible[0]) {
+        state.activeId = visible[0].id;
+      }
+
+      listEl.innerHTML = visible.map((character) => `
+        <button class="rail-item${character.id === state.activeId ? " is-active" : ""}" type="button" data-id="${character.id}">
+          <span class="rail-item__thumb">
+            <img src="${character.thumb}" alt="">
+            <span class="rail-item__index">${String(character.index).padStart(2, "0")}</span>
+          </span>
+          <span class="rail-item__meta">
+            <span class="rail-item__type micro">${character.type}</span>
+            <span class="rail-item__name">${character.title}</span>
+            <span class="rail-item__designation">${character.designation}</span>
+            <span class="rail-item__tagline">${character.summary}</span>
+          </span>
+        </button>
+      `).join("");
+
+      emptyEl.classList.toggle("is-visible", visible.length === 0);
+      stageTotal.textContent = `/ ${String(characters.length).padStart(2, "0")}`;
+    }
+
+    function renderOverview(character) {
+      return `
+        <div class="prose">
+          ${character.overview.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+        </div>
+      `;
+    }
+
+    function renderSignals(character) {
+      return `
+        <div class="signal-grid">
+          ${character.signals.map((signal) => `
+            <article class="signal-card">
+              <div class="eyebrow">${signal.label}</div>
+              <strong>${signal.title}</strong>
+              <p>${signal.text}</p>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderRelations(character) {
+      return `
+        <div class="relations">
+          ${character.relations.map((relation) => `
+            <article class="relation">
+              <strong>${relation.name}</strong>
+              <p>${relation.text}</p>
+            </article>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function renderTabPanel(character) {
+      if (state.activeTab === "signals") {
+        tabPanel.innerHTML = renderSignals(character);
+        return;
+      }
+      if (state.activeTab === "relations") {
+        tabPanel.innerHTML = renderRelations(character);
+        return;
+      }
+      tabPanel.innerHTML = renderOverview(character);
+    }
+
+    function renderRegistry(character) {
+      registry.innerHTML = character.facts.map(([label, value]) => `
+        <div class="registry__row">
+          <span>${label}</span>
+          <strong>${value}</strong>
+        </div>
+      `).join("");
+    }
+
+    function renderStageFacts(character) {
+      stageFacts.innerHTML = character.stageFacts.map((fact) => `
+        <article class="fact-card">
+          <div class="meta-label">${fact.label}</div>
+          <strong>${fact.value}</strong>
+          <p>${fact.text}</p>
+        </article>
+      `).join("");
+    }
+
+    function syncAccordion() {
+      archiveNote.classList.toggle("is-open", state.noteOpen);
+      archiveNoteToggle.setAttribute("aria-expanded", String(state.noteOpen));
+    }
+
+    function renderCharacter(character) {
+      stageName.textContent = character.title;
+      stageType.textContent = `${character.type} / updated ${character.updated}`;
+      stageDesignation.textContent = character.designation;
+      stageSummary.textContent = character.summary;
+      stageQuoteText.textContent = character.quote;
+      stageQuoteSource.textContent = character.quoteSource;
+      stageImage.src = character.image;
+      stageImage.alt = `${character.title} portrait`;
+      stageCount.textContent = String(character.index).padStart(2, "0");
+      stageTags.innerHTML = character.tags.map((tag) => `<span class="meta-chip">${tag}</span>`).join("");
+      stageSeal.innerHTML = `${character.status}<br>${character.house}<br>glass dossier`;
+      archiveNoteBody.textContent = character.note;
+      renderStageFacts(character);
+      renderRegistry(character);
+      renderTabPanel(character);
+
+      modalTitle.textContent = character.title;
+      modalSummary.textContent = character.summary;
+      modalStatus.textContent = character.status;
+      modalAnchor.textContent = character.anchor;
+      modalRoute.textContent = character.route;
+    }
+
+    function updateTabButtons() {
+      tabbar.querySelectorAll(".tab").forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.tab === state.activeTab);
+      });
+    }
+
+    function setActiveCharacter(id) {
+      const nextCharacter = getCharacter(id);
+      if (!nextCharacter || nextCharacter.id === state.activeId) {
+        return;
+      }
+
+      viewer.classList.add("is-switching");
+      window.setTimeout(() => {
+        state.activeId = nextCharacter.id;
+        renderList();
+        renderCharacter(nextCharacter);
+        window.requestAnimationFrame(() => {
+          viewer.classList.remove("is-switching");
+        });
+      }, 170);
+    }
+
+    function ensureVisibleSelection() {
+      const visible = getVisibleCharacters();
+      if (!visible.length) {
+        return;
+      }
+
+      if (!visible.some((character) => character.id === state.activeId)) {
+        state.activeId = visible[0].id;
+      }
+    }
+
+    function rerender() {
+      ensureVisibleSelection();
+      renderList();
+      renderCharacter(getCharacter(state.activeId));
+      updateTabButtons();
+      syncAccordion();
+      searchClear.classList.toggle("is-visible", state.query.length > 0);
+    }
+
+    listEl.addEventListener("click", (event) => {
+      const button = event.target instanceof Element ? event.target.closest(".rail-item") : null;
+      if (!(button instanceof HTMLElement)) {
+        return;
+      }
+      setActiveCharacter(button.dataset.id);
+    });
+
+    searchInput.addEventListener("input", () => {
+      state.query = searchInput.value;
+      rerender();
+    });
+
+    searchClear.addEventListener("click", () => {
+      searchInput.value = "";
+      state.query = "";
+      rerender();
+      searchInput.focus();
+    });
+
+    filterRow.addEventListener("click", (event) => {
+      const button = event.target instanceof Element ? event.target.closest(".chip") : null;
+      if (!(button instanceof HTMLElement)) {
+        return;
+      }
+      state.activeGroup = button.dataset.group || "all";
+      filterRow.querySelectorAll(".chip").forEach((chip) => {
+        chip.classList.toggle("is-active", chip === button);
+      });
+      rerender();
+    });
+
+    tabbar.addEventListener("click", (event) => {
+      const button = event.target instanceof Element ? event.target.closest(".tab") : null;
+      if (!(button instanceof HTMLElement)) {
+        return;
+      }
+      state.activeTab = button.dataset.tab || "overview";
+      updateTabButtons();
+      renderTabPanel(getCharacter(state.activeId));
+    });
+
+    archiveNoteToggle.addEventListener("click", () => {
+      state.noteOpen = !state.noteOpen;
+      syncAccordion();
+    });
+
+    toggleNoteBtn.addEventListener("click", () => {
+      state.noteOpen = !state.noteOpen;
+      syncAccordion();
+      showToast(state.noteOpen ? "Archive note expanded." : "Archive note sealed.");
+    });
+
+    flashSearchBtn.addEventListener("click", () => {
+      searchInput.focus();
+      showToast("Search focus moved to the dossier rail.");
+    });
+
+    copyBriefBtn.addEventListener("click", async () => {
+      const text = "Black glass, graphite layers, warm serif display, crimson action, gold metadata, spectral cyan reserved for focus only.";
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast("Art-direction brief copied.");
+      } catch {
+        showToast("Clipboard access unavailable.");
+      }
+    });
+
+    function openModal() {
+      const character = getCharacter(state.activeId);
+      renderCharacter(character);
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    openDossierBtn.addEventListener("click", openModal);
+    modalClose.addEventListener("click", closeModal);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    modalConfirm.addEventListener("click", () => {
+      closeModal();
+      showToast(`Dossier route prepared for ${getCharacter(state.activeId).title}.`);
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
+
+    const stageRoot = document.getElementById("stage");
+    stageRoot.addEventListener("mousemove", (event) => {
+      const rect = stageRoot.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      stageImage.style.transform = `scale(1.06) translate(${x * -1.4}%, ${y * -0.9}%)`;
+    });
+
+    stageRoot.addEventListener("mouseleave", () => {
+      stageImage.style.transform = "scale(1.04)";
+    });
+
+    rerender();
+  </script>
+</body>
+</html>

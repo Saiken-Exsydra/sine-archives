@@ -4,7 +4,11 @@ import MainLayout from "./MainLayout.astro";
 import { CONTENT_KEYS } from "../content-keys";
 import { getLocalizedCollection } from "../i18n/content";
 import { localizedEntryPath, localizedPath, type SiteLocale } from "../i18n/config";
-import { getEntryLayoutLabels, sectionLabel as getSectionLabel } from "../i18n/ui";
+import {
+  getArchiveNavLabels,
+  getEntryLayoutLabels,
+  sectionLabel as getSectionLabel,
+} from "../i18n/ui";
 import { getImageUrl } from "../utils/optimized-images";
 
 const { entry, active, locale = "en" } = Astro.props as { entry: any; active: string; locale?: SiteLocale };
@@ -48,6 +52,7 @@ const skyphonKeeperName = str(entry.data?.keeper_name);
 const sectionLabel = getSectionLabel(locale, active as any);
 const sectionHref = localizedPath(locale, `/${active}/`);
 const labels = getEntryLayoutLabels(locale);
+const navLabels = getArchiveNavLabels(locale);
 const entryImage = entry.data?.image;
 const entryImageUrl = getImageUrl(entryImage);
 const showRelatedEntries = locale !== "en";
@@ -132,7 +137,17 @@ if (isSkyphon) {
 }
 ---
 
-<MainLayout active={active} pageTitle={`${entry.data.title} — ${sectionLabel} — SiNE Archives`} locale={locale}>
+<MainLayout
+  active={active}
+  pageTitle={`${entry.data.title} — ${sectionLabel} — SiNE Archives`}
+  locale={locale}
+  navVariant="entry"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel, href: sectionHref },
+    { label: entry.data.title },
+  ]}
+>
 
   <!-- ── HERO ── -->
   <div class="ent-hero">
@@ -145,13 +160,6 @@ if (isSkyphon) {
       <div class="ent-hero__fallback"></div>
     )}
     <div class="ent-hero__content">
-      <!-- breadcrumb -->
-      <nav class="ent-crumbs" aria-label={labels.breadcrumb}>
-        <a class="ent-crumbs__link" href={sectionHref}>{sectionLabel}</a>
-        <span class="ent-crumbs__sep" aria-hidden="true">›</span>
-        <span class="ent-crumbs__cur">{entry.data.title}</span>
-      </nav>
-
       <div class="ent-hero__type">{entry.data.type ?? sectionLabel}</div>
       <h1 class="ent-hero__title">{entry.data.title}</h1>
       {designation && <div class="ent-hero__designation">{designation}</div>}
@@ -311,27 +319,6 @@ if (isSkyphon) {
     max-width: 1000px;
     width: 100%;
   }
-
-  /* breadcrumb */
-  .ent-crumbs {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .ent-crumbs__link {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .ent-crumbs__link:hover { color: var(--text); }
-  .ent-crumbs__sep { color: var(--crimson); opacity: 0.7; }
-  .ent-crumbs__cur { color: var(--text-dim); }
 
   .ent-hero__type {
     font-family: 'DM Sans', sans-serif;
@@ -798,8 +785,6 @@ if (isSkyphon) {
     .ent-hero__title { font-size: clamp(32px, 8vw, 52px); }
     .ent-hero__designation { font-size: 12px; margin-bottom: 14px; }
     .ent-hero__tag { font-size: 9px; }
-    .ent-crumbs { font-size: 10px; margin-bottom: 14px; }
-
     .ent-prose :global(h2) { font-size: 22px; margin: 30px 0 10px; }
     .ent-prose :global(h3) { font-size: 17px; margin: 22px 0 6px; }
     .ent-prose :global(p),

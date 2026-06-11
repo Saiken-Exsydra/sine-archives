@@ -2,9 +2,11 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
 import { getImageUrl } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
 const all = await getLocalizedCollection("sine", locale);
 const publicEntries = all.filter((e) => e.data.status === "public");
 
@@ -89,7 +91,16 @@ const panelsResolved = (await Promise.all(panelTasks)).filter(Boolean) as SineEn
 const entryBasePath = localizedPath(locale, "/sine/");
 ---
 
-<MainLayout active="sine" pageTitle="SiNE Network — SiNE Archives" locale={locale}>
+<MainLayout
+  active="sine"
+  pageTitle="SiNE Network — SiNE Archives"
+  locale={locale}
+  navVariant="section"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "sine") },
+  ]}
+>
 
   <div class="sine-root">
 

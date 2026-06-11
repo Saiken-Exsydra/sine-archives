@@ -1,694 +1,2317 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import type { SiteLocale } from "../../i18n/config";
+import { buildSearchIndex } from "../../utils/search-index";
+
+export const prerender = true;
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const { items } = await buildSearchIndex(locale);
+
+const normalizeTag = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]+/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const getGroupKey = (section: string) => (section === "sine" || section === "systems" ? "dossiers" : section);
+const getYear = (value: string) => value.match(/(\d{4})/)?.[1] ?? "";
+
 const copy = locale === "pt-br"
   ? {
       pageTitle: "Busca - SiNE Archives",
-      title: "Busca",
-      searchAll: "Buscar em todas as entradas",
-      placeholder: "Buscar titulo, resumo, tags, corpo...",
-      filter: "Filtrar",
-      tags: "Tags",
-      clear: "Limpar",
-      loading: "Carregando indice...",
-      noscript: "A busca requer JavaScript.",
-      noResults: "Nenhum resultado.",
-      result: "resultado",
+      eyebrow: "Indice Cruzado",
+      title: "Search the Archive",
+      description: "Cruze personagens, aparatos, cosmologia, lugares e registros relacionados em um indice de arquivo rapido e estavel.",
+      searchLabel: "Buscar no arquivo",
+      searchPlaceholder: "Buscar titulos, designacoes, tags, secoes e passagens...",
+      searchHint: "Pressione / para focar",
+      autocompleteHint: "Tab para completar",
+      clearSearch: "Limpar busca",
+      liveFilter: "Filtrando resultados instantaneamente",
+      all: "All",
+      characters: "Personagens",
+      places: "Lugares",
+      apparatus: "Aparatos",
+      cosmology: "Cosmologia",
+      organizations: "Organizacoes",
+      dossiers: "Dossies",
+      allRecords: "Todos os Registros",
+      searchResults: "Resultados de Busca",
+      bestMatch: "Melhor Correspondencia",
+      featuredRecord: "Registro em Destaque",
+      similarMatches: "Correspondencias Similares",
+      records: "registros",
+      record: "registro",
       results: "resultados",
-      noTagFilters: "Nenhum filtro de tag.",
-      active: "Ativo",
-      error: "Nao foi possivel carregar a busca. Atualize a pagina ou tente novamente.",
+      result: "resultado",
+      matches: "correspondencias",
+      matchesFor: "correspondencias para",
+      remainingMatches: "Correspondencias Restantes",
+      openEntry: "Abrir registro",
+      publicRecord: "Registro Publico",
+      noResultsTitle: "Nenhum registro encontrado",
+      noResultsFor: "Nenhum registro encontrado para",
+      noResultsBody: "Tente buscar por titulo, secao, tag, classificacao ou ano.",
+      noJs: "A busca requer JavaScript.",
+      filterBySection: "Filtrar por secao",
     }
   : {
       pageTitle: "Search - SiNE Archives",
-      title: "Search",
-      searchAll: "Search all entries",
-      placeholder: "Search title, summary, tags, body...",
-      filter: "Filter",
-      tags: "Tags",
-      clear: "Clear",
-      loading: "Loading index...",
-      noscript: "Search requires JavaScript to run.",
-      noResults: "No results.",
-      result: "result",
+      eyebrow: "Cross Index",
+      title: "Search the Archive",
+      description: "Move across characters, apparatus, cosmology, places, and related records through one fast, stable archive index.",
+      searchLabel: "Search archive",
+      searchPlaceholder: "Search titles, designations, tags, sections, and passages...",
+      searchHint: "Press / to focus",
+      autocompleteHint: "Tab to complete",
+      clearSearch: "Clear search",
+      liveFilter: "Filtering results instantly",
+      all: "All",
+      characters: "Characters",
+      places: "Places",
+      apparatus: "Apparatus",
+      cosmology: "Cosmology",
+      organizations: "Organizations",
+      dossiers: "Dossiers",
+      allRecords: "All Records",
+      searchResults: "Search Results",
+      bestMatch: "Best Match",
+      featuredRecord: "Featured Record",
+      similarMatches: "Similar Matches",
+      records: "records",
+      record: "record",
       results: "results",
-      noTagFilters: "No tag filters.",
-      active: "Active",
-      error: "Could not load search. Please refresh or try again later.",
+      result: "result",
+      matches: "matches",
+      matchesFor: "matches for",
+      remainingMatches: "Remaining Matches",
+      openEntry: "Open entry",
+      publicRecord: "Public Record",
+      noResultsTitle: "No records found",
+      noResultsFor: "No records found for",
+      noResultsBody: "Try searching by title, section, tag, classification, or year.",
+      noJs: "Search requires JavaScript.",
+      filterBySection: "Filter by section",
     };
+
+const filterGroups = [
+  { key: "all", label: copy.all, sections: null },
+  { key: "characters", label: copy.characters, sections: ["characters"] },
+  { key: "places", label: copy.places, sections: ["places"] },
+  { key: "apparatus", label: copy.apparatus, sections: ["apparatus"] },
+  { key: "cosmology", label: copy.cosmology, sections: ["cosmology"] },
+  { key: "organizations", label: copy.organizations, sections: ["organizations"] },
+  { key: "dossiers", label: copy.dossiers, sections: ["sine", "systems"] },
+] as const;
+
+const groupLabelByKey = Object.fromEntries(filterGroups.map((group) => [group.key, group.label])) as Record<string, string>;
+const groupCounts = filterGroups.map((group) => ({
+  ...group,
+  count: group.sections ? items.filter((item) => group.sections.includes(item.section as never)).length : items.length,
+}));
+
+const clientItems = items.map((item) => ({
+  id: item.id,
+  title: item.title,
+  summary: item.summary,
+  designation: item.designation,
+  type: item.type,
+  section: item.section,
+  sectionLabel: item.sectionLabel,
+  groupKey: getGroupKey(item.section),
+  tags: item.tags.map((tag) => ({ key: normalizeTag(tag), label: tag })),
+  updated: item.updated,
+  updatedTimestamp: item.updatedTimestamp,
+  priority: item.priority,
+  defaultOrder: item.defaultOrder,
+  searchText: item.searchText,
+}));
 ---
 
 <MainLayout active="search" pageTitle={copy.pageTitle} locale={locale}>
-  <section class="searchPage" data-locale={locale}>
-    <div class="section__head">
-      <h2 class="section__title">{copy.title}</h2>
+  <section class="search-shell" data-search-root data-locale={locale}>
+    <div class="search-hero">
+      <div class="search-hero__glow"></div>
+      <div class="search-hero__grain"></div>
+      <div class="search-hero__scanlines"></div>
+      <div class="search-hero__diagram" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-      <div class="controls">
-        <label class="section__search" aria-label={copy.searchAll}>
-          <span class="section__icon" aria-hidden="true">⌕</span>
-          <input id="q" class="section__input" type="search" placeholder={copy.placeholder} />
-        </label>
+      <div class="search-hero__content">
+        <div class="search-hero__eyebrow">{copy.eyebrow}</div>
+        <h1 class="search-hero__title">{copy.title}</h1>
+        <p class="search-hero__desc">{copy.description}</p>
 
-        <button id="toggleFilters" class="filter" type="button">
-          {copy.filter}
-        </button>
+        <div class="search-console">
+          <label class="search-console__label" for="archive-search-input">{copy.searchLabel}</label>
+          <div class="search-console__bar">
+            <span class="search-console__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+                <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.35" />
+                <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="search-console__field">
+              <span class="search-console__autocomplete" aria-hidden="true">
+                <span id="archive-search-typed" class="search-console__autocomplete-typed"></span><span id="archive-search-completion" class="search-console__autocomplete-rest"></span>
+              </span>
+              <input
+                id="archive-search-input"
+                class="search-console__input"
+                data-search-input
+                type="search"
+                placeholder={copy.searchPlaceholder}
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </span>
+            <button
+              id="archive-search-clear"
+              class="search-console__clear"
+              type="button"
+              aria-label={copy.clearSearch}
+              title={copy.clearSearch}
+              hidden
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M3 3l8 8M11 3L3 11" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="search-console__meta">
+            <div class="search-console__statusline">
+              <span class="search-console__statusdot"></span>
+              <span>{copy.liveFilter}</span>
+            </div>
+            <div class="search-console__hint">{copy.searchHint} / {copy.autocompleteHint}</div>
+            <div class="search-console__count" id="archive-search-count" aria-live="polite">
+              {items.length} {items.length === 1 ? copy.record : copy.records}
+            </div>
+          </div>
+
+          <div class="search-filters" role="toolbar" aria-label={copy.filterBySection}>
+            {groupCounts.map((group, index) => (
+              <button
+                class:list={["search-chip", { "is-active": index === 0 }]}
+                type="button"
+                data-search-filter={group.key}
+                aria-pressed={index === 0 ? "true" : "false"}
+              >
+                <span class="search-chip__label">{group.label}</span>
+                <span class="search-chip__count">{group.count}</span>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
 
-    <div id="filters" class="filters" hidden>
-      <div class="filters__head">
-      <div id="activeTags" class="activeTags" aria-live="polite"></div>
-        <div class="filters__title">{copy.tags}</div>
-        <button id="clearTags" class="filters__clear" type="button">{copy.clear}</button>
+    <div class="search-results-shell">
+      <div class="search-results-shell__bar">
+        <div class="search-results-shell__heading">
+          <div class="search-results-shell__eyebrow">{copy.eyebrow}</div>
+          <div class="search-results-shell__active" id="archive-search-active-filter">{copy.allRecords}</div>
+        </div>
+        <div class="search-results-shell__status" id="archive-search-status" aria-live="polite">
+          {items.length} {items.length === 1 ? copy.result : copy.results}
+        </div>
       </div>
-      <div id="tagList" class="taglist" aria-label="Tag filters"></div>
+
+      <noscript>
+        <div class="search-noscript">{copy.noJs}</div>
+      </noscript>
+
+      <div class="search-results-state" id="archive-search-results-state">
+        <div class="search-primary" id="archive-search-primary">
+          {items.map((item, index) => (
+            <article
+              class="search-primary-card"
+              data-search-primary-card
+              data-item-id={item.id}
+              data-section={item.section}
+              hidden={index > 0}
+            >
+              <a class="search-primary-card__surface" href={item.href} data-search-link>
+                <div class:list={["search-primary-card__visual", { "is-loaded": !item.image }]}>
+                  {item.image ? (
+                    <picture>
+                      {item.image.avifSrcset && (
+                        <source
+                          type="image/avif"
+                          srcset={item.image.avifSrcset}
+                          sizes="(max-width: 900px) 100vw, 44vw"
+                        />
+                      )}
+                      {item.image.webpSrcset && (
+                        <source
+                          type="image/webp"
+                          srcset={item.image.webpSrcset}
+                          sizes="(max-width: 900px) 100vw, 44vw"
+                        />
+                      )}
+                      <img
+                        class="search-primary-card__img"
+                        src={item.image.fallbackSrc}
+                        srcset={item.image.fallbackSrcset || undefined}
+                        sizes="(max-width: 900px) 100vw, 44vw"
+                        width={item.image.width || undefined}
+                        height={item.image.height || undefined}
+                        alt=""
+                        loading={index === 0 ? "eager" : "lazy"}
+                        fetchpriority={index === 0 ? "high" : "auto"}
+                        decoding="async"
+                        style={item.imagePosition ? `--search-primary-object-position:${item.imagePosition};` : undefined}
+                      />
+                    </picture>
+                  ) : (
+                    <div class="search-primary-card__placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 960 520" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <radialGradient id={`search-primary-rg-${item.id.replace(/[^a-z0-9]+/gi, "-")}`} cx="50%" cy="42%" r="58%">
+                            <stop offset="0%" stop-color="rgba(177,58,52,0.18)" />
+                            <stop offset="100%" stop-color="rgba(6,6,11,0)" />
+                          </radialGradient>
+                        </defs>
+                        <rect width="960" height="520" fill="#06060b" />
+                        <rect width="960" height="520" fill={`url(#search-primary-rg-${item.id.replace(/[^a-z0-9]+/gi, "-")})`} />
+                        <circle cx="640" cy="250" r="70" fill="none" stroke="rgba(232,228,220,0.14)" stroke-width="1.6" />
+                        <circle cx="640" cy="250" r="132" fill="none" stroke="rgba(232,228,220,0.08)" stroke-width="1.2" />
+                        <line x1="120" y1="92" x2="840" y2="92" stroke="rgba(232,228,220,0.06)" stroke-width="1" />
+                        <line x1="120" y1="428" x2="840" y2="428" stroke="rgba(232,228,220,0.06)" stroke-width="1" />
+                      </svg>
+                    </div>
+                  )}
+                  <div class="search-primary-card__shade"></div>
+                  <div class="search-primary-card__loading"></div>
+                </div>
+
+                <div class="search-primary-card__body">
+                  <div class="search-primary-card__eyebrow" data-search-primary-kicker>{copy.featuredRecord}</div>
+                  <div class="search-primary-card__type">{item.type}</div>
+                  <h2 class="search-primary-card__title">{item.title}</h2>
+                  {item.designation && <div class="search-primary-card__designation">{item.designation}</div>}
+                  <p class="search-primary-card__summary">{item.summary}</p>
+                  <div class="search-primary-card__footer">
+                    <div class="search-primary-card__tags">
+                      {item.tags.slice(0, 4).map((tag) => (
+                        <span class="search-primary-card__tag">{tag}</span>
+                      ))}
+                    </div>
+                    <div class="search-primary-card__trail">
+                      <span class="search-primary-card__access">{copy.publicRecord}</span>
+                      {getYear(item.updated) && <span class="search-primary-card__year">YR {getYear(item.updated)}</span>}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <section class="search-secondary" id="archive-search-secondary" hidden={items.length <= 1}>
+          <div class="search-secondary__head">
+            <span class="search-secondary__label">{copy.similarMatches}</span>
+            <span class="search-secondary__line"></span>
+          </div>
+
+          <div class="search-featured-grid" id="archive-search-featured-grid" data-featured-count={Math.max(Math.min(items.length - 1, 4), 0)}>
+          {items.map((item, index) => (
+            <article
+              class="search-card"
+              data-search-featured-card
+              data-item-id={item.id}
+              hidden={index === 0 || index >= 5}
+            >
+              <a class="search-card__surface" href={item.href} data-search-link>
+                <div class:list={["search-card__visual", { "is-loaded": !item.image }]}>
+                  {item.image ? (
+                    <picture>
+                      {item.image.avifSrcset && (
+                        <source
+                          type="image/avif"
+                          srcset={item.image.avifSrcset}
+                          sizes={item.image.sizes}
+                        />
+                      )}
+                      {item.image.webpSrcset && (
+                        <source
+                          type="image/webp"
+                          srcset={item.image.webpSrcset}
+                          sizes={item.image.sizes}
+                        />
+                      )}
+                      <img
+                        class="search-card__img"
+                        src={item.image.fallbackSrc}
+                        srcset={item.image.fallbackSrcset || undefined}
+                        sizes={item.image.sizes}
+                        width={item.image.width || undefined}
+                        height={item.image.height || undefined}
+                        alt=""
+                        loading={index > 0 && index < 3 ? "eager" : "lazy"}
+                        fetchpriority={index === 1 ? "high" : "auto"}
+                        decoding="async"
+                        style={item.imagePosition ? `object-position:${item.imagePosition};` : undefined}
+                      />
+                    </picture>
+                  ) : (
+                    <div class="search-card__placeholder" aria-hidden="true">
+                      <svg viewBox="0 0 480 620" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <radialGradient id={`search-rg-${item.id.replace(/[^a-z0-9]+/gi, "-")}`} cx="50%" cy="38%" r="60%">
+                            <stop offset="0%" stop-color="rgba(177,58,52,0.18)" />
+                            <stop offset="100%" stop-color="rgba(6,6,11,0)" />
+                          </radialGradient>
+                        </defs>
+                        <rect width="480" height="620" fill="#06060b" />
+                        <rect width="480" height="620" fill={`url(#search-rg-${item.id.replace(/[^a-z0-9]+/gi, "-")})`} />
+                        <circle cx="240" cy="230" r="46" fill="none" stroke="rgba(232,228,220,0.16)" stroke-width="1.4" />
+                        <path d="M150 390c0-50 36-92 90-92s90 42 90 92" fill="none" stroke="rgba(232,228,220,0.14)" stroke-width="1.4" />
+                        <line x1="86" y1="110" x2="394" y2="110" stroke="rgba(232,228,220,0.08)" stroke-width="1" />
+                        <line x1="86" y1="510" x2="394" y2="510" stroke="rgba(232,228,220,0.08)" stroke-width="1" />
+                      </svg>
+                    </div>
+                  )}
+                  <div class="search-card__visual-shade"></div>
+                  <div class="search-card__visual-frame" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="search-card__section">{item.sectionLabel}</div>
+                  <div class="search-card__seal">{copy.publicRecord}</div>
+                  <div class="search-card__loading"></div>
+                </div>
+
+                <div class="search-card__content">
+                  <div class="search-card__heading">
+                    <div class="search-card__type">{item.type}</div>
+                    <h2 class="search-card__title">{item.title}</h2>
+                    {item.designation && <div class="search-card__designation">{item.designation}</div>}
+                  </div>
+                  <p class="search-card__summary">{item.summary}</p>
+                  <div class="search-card__footer">
+                    <div class="search-card__tags">
+                      {item.tags.slice(0, 3).map((tag) => (
+                        <span class="search-card__tag">{tag}</span>
+                      ))}
+                    </div>
+                    <div class="search-card__trail">
+                      {getYear(item.updated) && <span class="search-card__year">YR {getYear(item.updated)}</span>}
+                      <span class="search-card__action">{copy.openEntry}</span>
+                      <span class="search-card__chevron" aria-hidden="true">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <path d="M1.5 6H10M6.2 1.5L10.5 6 6.2 10.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+        </section>
+
+        <section class="search-remaining" id="archive-search-remaining" hidden={items.length <= 4}>
+          <div class="search-remaining__head">
+            <span class="search-remaining__label">{copy.remainingMatches}</span>
+            <span class="search-remaining__line"></span>
+          </div>
+
+          <div class="search-remaining__list" id="archive-search-remaining-list">
+            {items.map((item, index) => (
+              <article
+                class="search-row"
+                data-search-remaining-row
+                data-item-id={item.id}
+                hidden={index < 5}
+              >
+                <a class="search-row__surface" href={item.href} data-search-link>
+                  <div class:list={["search-row__thumb", { "is-loaded": !item.image }]}>
+                    {item.image ? (
+                      <picture>
+                        {item.image.avifSrcset && (
+                          <source
+                            type="image/avif"
+                            srcset={item.image.avifSrcset}
+                            sizes="72px"
+                          />
+                        )}
+                        {item.image.webpSrcset && (
+                          <source
+                            type="image/webp"
+                            srcset={item.image.webpSrcset}
+                            sizes="72px"
+                          />
+                        )}
+                        <img
+                          class="search-row__img"
+                          src={item.image.fallbackSrc}
+                          srcset={item.image.fallbackSrcset || undefined}
+                          sizes="72px"
+                          width={72}
+                          height={72}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                          style={item.imagePosition ? `object-position:${item.imagePosition};` : undefined}
+                        />
+                      </picture>
+                    ) : (
+                      <div class="search-row__placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="72" height="72" fill="#06060b" />
+                          <circle cx="36" cy="28" r="12" fill="none" stroke="rgba(232,228,220,0.16)" stroke-width="1.2" />
+                          <path d="M18 54c0-10 8-18 18-18s18 8 18 18" fill="none" stroke="rgba(232,228,220,0.14)" stroke-width="1.2" />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+
+                  <div class="search-row__content">
+                    <div class="search-row__category">{item.sectionLabel}</div>
+                    <h3 class="search-row__title">{item.title}</h3>
+                    <p class="search-row__summary">{item.designation || item.summary}</p>
+                  </div>
+
+                  <div class="search-row__meta">
+                    <span class="search-row__access">{copy.publicRecord}</span>
+                    {getYear(item.updated) && <span class="search-row__year">YR {getYear(item.updated)}</span>}
+                    <span class="search-row__chevron" aria-hidden="true">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M1.5 6H10M6.2 1.5L10.5 6 6.2 10.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <div class="search-empty" id="archive-search-empty" hidden={items.length > 0} aria-live="polite">
+          <div class="search-empty__line"></div>
+          <h2 class="search-empty__title">{copy.noResultsTitle}</h2>
+          <p class="search-empty__body">{copy.noResultsBody}</p>
+        </div>
+      </div>
     </div>
 
-    <div id="status" class="status" aria-live="polite">{copy.loading}</div>
-    <noscript>
-  <div class="status">{copy.noscript}</div>
-</noscript>
-
-
-    <div id="results" class="results" aria-label="Search results"></div>
+    <script
+      id="archive-search-data"
+      type="application/json"
+      set:html={JSON.stringify({
+        items: clientItems,
+        groupLabelByKey,
+      })}
+    ></script>
   </section>
 
-  <script define:vars={{ copy }} is:inline type="module">
-    const locale = document.querySelector(".searchPage")?.dataset.locale || "en";
-    const $q = document.querySelector("#q");
-    const $results = document.querySelector("#results");
-    const $status = document.querySelector("#status");
-    const $filters = document.querySelector("#filters");
-    const $tagList = document.querySelector("#tagList");
-    const $toggleFilters = document.querySelector("#toggleFilters");
-    const $clearTags = document.querySelector("#clearTags");
+  <script define:vars={{ copy }} is:inline>
+    const searchInitKey = "__sineSearchInit";
+    const searchCleanupKey = "__sineSearchCleanup";
+    const searchBeforeSwapKey = "__sineSearchBeforeSwap";
 
-    const params = new URLSearchParams(location.search);
-    const initialQ = params.get("q") || "";
-    $q.value = initialQ;
-    if (initialQ) $q.focus();
+    function initializeArchiveSearch() {
+      const root = document.querySelector("[data-search-root]");
+      if (!(root instanceof HTMLElement) || root.dataset.searchBound === "true") return;
+      root.dataset.searchBound = "true";
 
+      const controller = new AbortController();
+      const { signal } = controller;
+      window[searchCleanupKey] = () => {
+        controller.abort();
+        root.dataset.searchBound = "false";
+      };
 
-    let indexItems = [];
-    let selectedTags = new Set();
-    // Waits a tiny moment after typing stops before running run()
-function debounce(fn, delay = 120) {
-  let t;
-  return () => {
-    clearTimeout(t);
-    t = setTimeout(fn, delay);
-  };
-}
+      const locale = root.dataset.locale || "en";
+      const storageKey = `sine-search-state:${locale}`;
+      const input = root.querySelector("#archive-search-input");
+      const typedGhost = root.querySelector("#archive-search-typed");
+      const completionGhost = root.querySelector("#archive-search-completion");
+      const clearSearchButton = root.querySelector("#archive-search-clear");
+      const countEl = root.querySelector("#archive-search-count");
+      const statusEl = root.querySelector("#archive-search-status");
+      const activeFilterEl = root.querySelector("#archive-search-active-filter");
+      const primarySection = root.querySelector("#archive-search-primary");
+      const primaryKickers = Array.from(root.querySelectorAll("[data-search-primary-kicker]"));
+      const secondarySection = root.querySelector("#archive-search-secondary");
+      const featuredGrid = root.querySelector("#archive-search-featured-grid");
+      const remainingSection = root.querySelector("#archive-search-remaining");
+      const emptyEl = root.querySelector("#archive-search-empty");
+      const emptyTitleEl = emptyEl?.querySelector(".search-empty__title");
+      const emptyBodyEl = emptyEl?.querySelector(".search-empty__body");
+      const dataScript = root.querySelector("#archive-search-data");
+      const filterButtons = Array.from(root.querySelectorAll("[data-search-filter]"));
 
-
-    const CONCEPT_GROUPS = {
-      "pt-br": [
-        ["igreja", "church"],
-        ["fe", "fé", "faith"],
-        ["demonio", "demônio", "demon", "demonic"],
-        ["exorcismo", "expulsao", "expulsão", "exorcism", "expulsion"],
-      ],
-      en: [
-        ["church", "igreja"],
-        ["faith", "fe", "fé"],
-        ["demon", "demonic", "demonio", "demônio"],
-        ["exorcism", "expulsion", "exorcismo", "expulsao", "expulsão"],
-      ],
-    };
-
-    function norm(s){
-      return (s || "")
-        .toString()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase();
-    }
-
-    function buildSearchText(item){
-      const base = [
-        item.title,
-        item.summary,
-        (item.tags || []).join(" "),
-        item.body || "",
-      ].map(norm).join(" | ");
-
-      const groups = CONCEPT_GROUPS[locale] || CONCEPT_GROUPS.en;
-      const aliases = [];
-
-      for (const group of groups){
-        const hit = group.some((term) => base.includes(norm(term)));
-        if (hit) aliases.push(...group);
-      }
-
-      return `${base} | ${aliases.map(norm).join(" | ")}`;
-    }
-
-    function scoreItem(item, query){
-  const q = norm((query || "").trim());
-  if (!q) return 0;
-
-  const terms = q.split(/\s+/).filter(Boolean);
-  const hay = buildSearchText(item);
-
-  const title = norm(item.title);
-  const summary = norm(item.summary);
-  const tags = norm((item.tags || []).join(" "));
-  const body = norm(item.body || "");
-
-  let score = 0;
-
-  // Bonus if the whole query phrase appears
-  const phrase = q;
-  if (phrase.length >= 3){
-    if (title.includes(phrase)) score += 60;
-    if (tags.includes(phrase)) score += 35;
-    if (summary.includes(phrase)) score += 20;
-    if (body.includes(phrase)) score += 10;
-  }
-
-  // Per-term scoring (AND query is still enforced by matchesQuery)
-  for (const t of terms){
-    if (title.includes(t)) score += 25;
-    if (tags.includes(t)) score += 14;
-    if (summary.includes(t)) score += 10;
-    if (body.includes(t)) score += 4;
-    if (hay.includes(t)) score += 6;
-  }
-
-  return score;
-}
-
-
-    function matchesQuery(item, query){
-  const q = (query || "").trim();
-  if (!q) return true;
-
-  const terms = q
-    .split(/\s+/)
-    .map(norm)
-    .filter(Boolean);
-
-  const hay = buildSearchText(item);
-
-  // every word must be present (AND search)
-  return terms.every(t => hay.includes(t));
-}
-
-
-    function matchesTags(item){
-      if (selectedTags.size === 0) return true;
-      const tags = new Set((item.tags || []).map(t => norm(t)));
-      for (const t of selectedTags){
-        if (!tags.has(t)) return false;
-      }
-      return true;
-    }
-
-    function renderResults(items){
-      $results.innerHTML = "";
-      if (items.length === 0){
-        $status.textContent = copy.noResults;
+      if (
+        !(input instanceof HTMLInputElement) ||
+        !(typedGhost instanceof HTMLElement) ||
+        !(completionGhost instanceof HTMLElement) ||
+        !(clearSearchButton instanceof HTMLButtonElement) ||
+        !(countEl instanceof HTMLElement) ||
+        !(statusEl instanceof HTMLElement) ||
+        !(activeFilterEl instanceof HTMLElement) ||
+        !(primarySection instanceof HTMLElement) ||
+        !(secondarySection instanceof HTMLElement) ||
+        !(featuredGrid instanceof HTMLElement) ||
+        !(remainingSection instanceof HTMLElement) ||
+        !(emptyEl instanceof HTMLElement) ||
+        !(emptyTitleEl instanceof HTMLElement) ||
+        !(emptyBodyEl instanceof HTMLElement) ||
+        !(dataScript instanceof HTMLScriptElement)
+      ) {
         return;
       }
 
-      $status.textContent = `${items.length} ${items.length === 1 ? copy.result : copy.results}.`;
+      const parsed = JSON.parse(dataScript.textContent || '{"items":[],"groupLabelByKey":{}}');
+      const groupLabelByKey = parsed.groupLabelByKey || {};
+      const items = (parsed.items || []).map((item) => ({
+        ...item,
+        titleNorm: normalize(item.title),
+        designationNorm: normalize(item.designation),
+        summaryNorm: normalize(item.summary),
+        typeNorm: normalize(item.type),
+        sectionLabelNorm: normalize(item.sectionLabel),
+      }));
 
-      for (const item of items){
-        const a = document.createElement("a");
-        a.className = "rcard";
-        a.href = item.href;
+      const featuredCards = Array.from(root.querySelectorAll("[data-search-featured-card]"));
+      const primaryCards = Array.from(root.querySelectorAll("[data-search-primary-card]"));
+      const remainingRows = Array.from(root.querySelectorAll("[data-search-remaining-row]"));
+      const primaryCardsById = new Map(primaryCards.map((card) => [card.getAttribute("data-item-id"), card]));
+      const featuredCardsById = new Map(featuredCards.map((card) => [card.getAttribute("data-item-id"), card]));
+      const remainingRowsById = new Map(remainingRows.map((row) => [row.getAttribute("data-item-id"), row]));
+      const searchLinks = Array.from(root.querySelectorAll("[data-search-link]"));
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-        const section = item.href.split("/").filter(Boolean)[0] || "";
+      const CONCEPT_GROUPS = [
+        ["church", "igreja"],
+        ["faith", "fe"],
+        ["demon", "demonic", "demonio"],
+        ["exorcism", "expulsion", "exorcismo", "expulsao"],
+        ["archive", "arquivo"],
+        ["moon", "lua", "lunar"],
+      ];
 
-        const img = item.image
-          ? `<img class="rcard__img" src="${item.image}" alt="" loading="lazy">`
-          : `<div class="rcard__img rcard__img--empty" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.2"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>`;
+      const state = {
+        query: "",
+        completion: "",
+        group: "all",
+      };
 
-        const firstTag = (item.tags || [])[0];
-        const tagHtml = firstTag ? `<span class="rcard__tag">${String(firstTag).toUpperCase()}</span>` : "";
-
-        a.innerHTML = `
-          <div class="rcard__thumb">${img}</div>
-          <div class="rcard__body">
-            <div class="rcard__section">${section.toUpperCase()}</div>
-            <div class="rcard__title">${item.title}</div>
-            ${tagHtml}
-          </div>
-        `;
-
-        $results.appendChild(a);
+      function normalize(value) {
+        return (value || "")
+          .toString()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/[^\p{L}\p{N}\s]+/gu, " ")
+          .replace(/\s+/g, " ")
+          .trim();
       }
-    }
 
-    function buildTagFilters(items){
-      const counts = new Map();
-      for (const it of items){
-        for (const t of (it.tags || [])){
-          const key = norm(t);
-          counts.set(key, (counts.get(key) || 0) + 1);
+      function normalizeCompact(value) {
+        return (value || "")
+          .toString()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/[^\p{L}\p{N}]+/gu, "");
+      }
+
+      function loadInitialState() {
+        const url = new URL(window.location.href);
+        const q = url.searchParams.get("q");
+        const group = url.searchParams.get("section");
+        if (q || group) {
+          return {
+            query: q || "",
+            group: group || "all",
+          };
+        }
+
+        try {
+          const raw = sessionStorage.getItem(storageKey);
+          if (!raw) return { query: "", group: "all" };
+          const saved = JSON.parse(raw);
+          return {
+            query: typeof saved.query === "string" ? saved.query : "",
+            group: typeof saved.group === "string" ? saved.group : "all",
+          };
+        } catch {
+          return { query: "", group: "all" };
         }
       }
 
-      const tags = [...counts.entries()]
-        .sort((a,b) => b[1] - a[1])
-        .slice(0, 60); // keep UI tidy
+      function persistState() {
+        const snapshot = {
+          query: state.query,
+          group: state.group,
+        };
 
-      $tagList.innerHTML = "";
-      for (const [key, count] of tags){
-        const label = document.createElement("label");
-        label.className = "tagcheck";
-        label.innerHTML = `
-          <input type="checkbox" value="${key}">
-          <span class="tagcheck__pill">${key.toUpperCase()}</span>
-          <span class="tagcheck__count">${count}</span>
-        `;
-        const input = label.querySelector("input");
-        input.addEventListener("change", () => {
-  if (input.checked) selectedTags.add(key);
-  else selectedTags.delete(key);
+        try {
+          sessionStorage.setItem(storageKey, JSON.stringify(snapshot));
+        } catch {}
 
-  // Firefox-friendly active styling fallback
-  label.classList.toggle("is-active", input.checked);
+        const url = new URL(window.location.href);
+        if (state.query) url.searchParams.set("q", state.query);
+        else url.searchParams.delete("q");
 
-  run();
-});
+        if (state.group && state.group !== "all") url.searchParams.set("section", state.group);
+        else url.searchParams.delete("section");
 
-        $tagList.appendChild(label);
+        history.replaceState({ ...(history.state || {}), sineSearch: snapshot }, "", url);
+      }
+
+      function queryAliases(term) {
+        for (const group of CONCEPT_GROUPS) {
+          const normalizedGroup = group.map((value) => normalize(value));
+          if (normalizedGroup.includes(term)) return normalizedGroup;
+        }
+        return [term];
+      }
+
+      function matchesQuery(item, queryNorm) {
+        if (!queryNorm) return true;
+        const terms = queryNorm.split(" ").filter(Boolean);
+        return terms.every((term) => queryAliases(term).some((variant) => item.searchText.includes(variant)));
+      }
+
+      function matchesGroup(item) {
+        return state.group === "all" || item.groupKey === state.group;
+      }
+
+      function scoreItem(item, queryNorm) {
+        if (!queryNorm) return 0;
+        const phrase = queryNorm;
+        const terms = phrase.split(" ").filter(Boolean);
+        let score = 0;
+
+        if (item.titleNorm.includes(phrase)) score += 120;
+        if (item.titleNorm.startsWith(phrase)) score += 55;
+        if (item.designationNorm.includes(phrase)) score += 40;
+        if (item.typeNorm.includes(phrase)) score += 22;
+        if (item.sectionLabelNorm.includes(phrase)) score += 18;
+        if (item.summaryNorm.includes(phrase)) score += 12;
+
+        for (const term of terms) {
+          const variants = queryAliases(term);
+          const tagHit = variants.some((variant) => item.tags.some((tag) => tag.key === variant));
+          if (variants.some((variant) => item.titleNorm.includes(variant))) score += 28;
+          if (variants.some((variant) => item.designationNorm.includes(variant))) score += 14;
+          if (variants.some((variant) => item.summaryNorm.includes(variant))) score += 8;
+          if (variants.some((variant) => item.typeNorm.includes(variant))) score += 8;
+          if (variants.some((variant) => item.sectionLabelNorm.includes(variant))) score += 6;
+          if (tagHit) score += 22;
+        }
+
+        score += Math.max(0, 100 - Math.min(item.priority, 100));
+        score += Math.min(item.updatedTimestamp / 1000000000000, 20);
+        return score;
+      }
+
+      function buildResultSet() {
+        const queryNorm = normalize(state.query);
+        return items
+          .filter((item) => matchesGroup(item) && matchesQuery(item, queryNorm))
+          .map((item) => ({ item, score: scoreItem(item, queryNorm) }))
+          .sort((left, right) => {
+            if (queryNorm && right.score !== left.score) return right.score - left.score;
+            if (left.item.defaultOrder !== right.item.defaultOrder) {
+              return left.item.defaultOrder - right.item.defaultOrder;
+            }
+            return left.item.title.localeCompare(right.item.title);
+          })
+          .map((entry) => entry.item);
+      }
+
+      function getCompletionSuffix(title, queryCompact) {
+        if (!queryCompact) return "";
+        let compactPrefix = "";
+        let prefixEnd = 0;
+
+        for (const char of title) {
+          prefixEnd += char.length;
+          compactPrefix += normalizeCompact(char);
+
+          if (compactPrefix === queryCompact) {
+            return title.slice(prefixEnd);
+          }
+
+          if (!queryCompact.startsWith(compactPrefix)) {
+            return "";
+          }
+        }
+
+        return "";
+      }
+
+      function getQueryToken(rawQuery) {
+        if (!rawQuery || /\s$/.test(rawQuery)) {
+          return { compactToken: "" };
+        }
+
+        const match = rawQuery.match(/([^\s]+)$/);
+        const rawToken = match ? match[1] : "";
+        return {
+          compactToken: normalizeCompact(rawToken),
+        };
+      }
+
+      function getSourceCompletionMatch(source, compactToken) {
+        if (!source || !compactToken) return null;
+
+        const words = source.split(/\s+/).filter(Boolean);
+        for (let index = 0; index < words.length; index += 1) {
+          const word = words[index];
+          const compactWord = normalizeCompact(word);
+          if (!compactWord || compactWord === compactToken || !compactWord.startsWith(compactToken)) continue;
+
+          const suffix = getCompletionSuffix(word, compactToken);
+          if (!suffix) continue;
+
+          return {
+            suffix,
+            wordIndex: index,
+          };
+        }
+
+        return null;
+      }
+
+      function updateInlineCompletion() {
+        const rawQuery = input.value || "";
+        const { compactToken } = getQueryToken(rawQuery);
+        typedGhost.textContent = rawQuery;
+        completionGhost.textContent = "";
+        state.completion = "";
+
+        if (compactToken.length < 2) return;
+
+        const bestMatch = items
+          .map((item) => {
+            const titleMatch = getSourceCompletionMatch(item.title, compactToken);
+            const designationMatch = getSourceCompletionMatch(item.designation, compactToken);
+
+            if (titleMatch) {
+              return {
+                item,
+                suffix: titleMatch.suffix,
+                score: titleMatch.wordIndex === 0 ? 120 : 96,
+              };
+            }
+
+            if (designationMatch) {
+              return {
+                item,
+                suffix: designationMatch.suffix,
+                score: designationMatch.wordIndex === 0 ? 72 : 56,
+              };
+            }
+
+            return { item, suffix: "", score: -1 };
+          })
+          .filter((entry) => entry.score > 0 && entry.suffix)
+          .sort((left, right) => {
+            if (right.score !== left.score) return right.score - left.score;
+            if (left.item.defaultOrder !== right.item.defaultOrder) {
+              return left.item.defaultOrder - right.item.defaultOrder;
+            }
+            return left.item.title.localeCompare(right.item.title);
+          })[0];
+
+        if (!bestMatch) return;
+
+        state.completion = bestMatch.suffix;
+        completionGhost.textContent = bestMatch.suffix;
+      }
+
+      function acceptInlineCompletion() {
+        if (!state.completion) return false;
+        input.value = `${input.value}${state.completion}`;
+        state.query = input.value;
+        updateInlineCompletion();
+        applyFilters();
+        return true;
+      }
+
+      function setNodeVisibility(node, visible, order) {
+        if (!(node instanceof HTMLElement)) return;
+        node.hidden = !visible;
+        node.style.order = visible ? String(order) : "";
+      }
+
+      function animatePrimary(primaryCard) {
+        if (!(primaryCard instanceof HTMLElement) || reducedMotion) return;
+        primaryCard.animate(
+          [
+            { opacity: 0.56, transform: "translateY(8px)" },
+            { opacity: 1, transform: "translateY(0)" },
+          ],
+          {
+            duration: 220,
+            easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+          }
+        );
+      }
+
+      function updateResultVisibility(nextItems) {
+        const primaryItem = nextItems[0] ?? null;
+        const secondaryItems = nextItems.slice(1, 5);
+        const remainingItems = nextItems.slice(5);
+        const primaryId = primaryItem?.id ?? null;
+        const featuredIds = new Set(secondaryItems.map((item) => item.id));
+        const remainingIds = new Set(remainingItems.map((item) => item.id));
+
+        featuredGrid.dataset.featuredCount = String(secondaryItems.length);
+
+        items.forEach((item) => {
+          setNodeVisibility(primaryCardsById.get(item.id), primaryId === item.id, 0);
+          setNodeVisibility(featuredCardsById.get(item.id), featuredIds.has(item.id), secondaryItems.findIndex((entry) => entry.id === item.id));
+          setNodeVisibility(remainingRowsById.get(item.id), remainingIds.has(item.id), remainingItems.findIndex((entry) => entry.id === item.id));
+        });
+
+        if (primaryId) {
+          animatePrimary(primaryCardsById.get(primaryId));
+        }
+
+        primarySection.hidden = primaryItem === null;
+        secondarySection.hidden = secondaryItems.length === 0;
+        featuredGrid.hidden = secondaryItems.length === 0;
+        remainingSection.hidden = remainingItems.length === 0;
+        emptyEl.hidden = nextItems.length !== 0;
+      }
+
+      function updateFilterButtons() {
+        filterButtons.forEach((button) => {
+          if (!(button instanceof HTMLButtonElement)) return;
+          const isActive = button.dataset.searchFilter === state.group;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+      }
+
+      function updateClearButton() {
+        clearSearchButton.hidden = !input.value.trim();
+      }
+
+      function updateStatus(resultCount) {
+        const hasQuery = state.query.trim().length > 0;
+        const resultLabel = resultCount === 1 ? copy.result : copy.results;
+        const recordLabel = resultCount === 1 ? copy.record : copy.records;
+        const activeLabel = groupLabelByKey[state.group] || copy.allRecords;
+        const primaryLabel = hasQuery ? copy.bestMatch : copy.featuredRecord;
+
+        countEl.textContent = `${resultCount} ${recordLabel}`;
+        statusEl.textContent = hasQuery
+          ? `${resultCount} ${copy.matchesFor} "${state.query.trim()}"`
+          : `${resultCount} ${resultLabel}`;
+        activeFilterEl.textContent = hasQuery ? copy.searchResults : (state.group === "all" ? copy.allRecords : activeLabel);
+        primaryKickers.forEach((node) => {
+          if (node instanceof HTMLElement) node.textContent = primaryLabel;
+        });
+
+        if (resultCount === 0) {
+          const query = state.query.trim();
+          emptyTitleEl.textContent = query ? `${copy.noResultsFor} "${query}"` : copy.noResultsTitle;
+          emptyBodyEl.textContent = copy.noResultsBody;
+        }
+      }
+
+      function applyFilters() {
+        state.query = input.value;
+        const filteredResults = buildResultSet();
+        updateResultVisibility(filteredResults);
+        updateStatus(filteredResults.length);
+        updateInlineCompletion();
+        updateClearButton();
+        updateFilterButtons();
+        persistState();
+      }
+
+      function syncImageLoading() {
+        const imageSelectors = ".search-primary-card__img, .search-card__img, .search-row__img";
+        const images = Array.from(root.querySelectorAll(imageSelectors));
+        images.forEach((image) => {
+          if (!(image instanceof HTMLImageElement)) return;
+          const visual = image.closest(".search-primary-card__visual, .search-card__visual, .search-row__thumb");
+          if (!(visual instanceof HTMLElement)) return;
+          const markLoaded = () => visual.classList.add("is-loaded");
+          if (image.complete) {
+            markLoaded();
+            return;
+          }
+          image.addEventListener("load", markLoaded, { once: true, signal });
+          image.addEventListener("error", markLoaded, { once: true, signal });
+        });
+      }
+
+      const initialState = loadInitialState();
+      state.query = initialState.query;
+      state.group = groupLabelByKey[initialState.group] ? initialState.group : "all";
+      input.value = initialState.query;
+
+      syncImageLoading();
+      applyFilters();
+
+      const rerunSearch = debounce(() => {
+        applyFilters();
+      }, 80);
+
+      input.addEventListener("input", rerunSearch, { signal });
+
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Tab" || event.key === "ArrowRight") {
+          if (!state.completion || input.selectionStart !== input.value.length || input.selectionEnd !== input.value.length) return;
+          event.preventDefault();
+          acceptInlineCompletion();
+          return;
+        }
+
+        if (event.key === "Escape") {
+          state.completion = "";
+          completionGhost.textContent = "";
+        }
+      }, { signal });
+
+      clearSearchButton.addEventListener("click", () => {
+        input.value = "";
+        state.query = "";
+        state.completion = "";
+        typedGhost.textContent = "";
+        completionGhost.textContent = "";
+        applyFilters();
+        input.focus();
+      }, { signal });
+
+      filterButtons.forEach((button) => {
+        if (!(button instanceof HTMLButtonElement)) return;
+        button.addEventListener("click", () => {
+          state.group = button.dataset.searchFilter || "all";
+          applyFilters();
+        }, { signal });
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key !== "/") return;
+        const active = document.activeElement;
+        const typing = active && (
+          active.tagName === "INPUT" ||
+          active.tagName === "TEXTAREA" ||
+          active.isContentEditable
+        );
+        if (typing) return;
+        event.preventDefault();
+        input.focus();
+      }, { signal });
+
+      window.addEventListener("pagehide", persistState, { signal });
+
+      searchLinks.forEach((link) => {
+        if (!(link instanceof HTMLAnchorElement)) return;
+
+        const surface = link.closest(".search-primary-card, .search-card, .search-row");
+        link.addEventListener("pointerdown", () => {
+          surface?.classList.add("is-opening");
+        }, { signal });
+
+        link.addEventListener("pointerleave", () => {
+          surface?.classList.remove("is-opening");
+        }, { signal });
+
+        link.addEventListener("click", (event) => {
+          if (
+            event.defaultPrevented ||
+            event.button !== 0 ||
+            event.metaKey ||
+            event.ctrlKey ||
+            event.shiftKey ||
+            event.altKey
+          ) {
+            return;
+          }
+          persistState();
+          surface?.classList.add("is-opening");
+        }, { signal });
+      });
+
+      function debounce(fn, delay) {
+        let timeoutId = 0;
+        return () => {
+          window.clearTimeout(timeoutId);
+          timeoutId = window.setTimeout(() => fn(), delay);
+        };
       }
     }
 
-    function run(){
-      const query = $q.value.trim();
-      const filtered = indexItems
-  .filter(it => matchesQuery(it, query))
-  .filter(it => matchesTags(it))
-  .map(it => ({ it, score: scoreItem(it, query) }))
-  .sort((a, b) => {
-    // Higher score first
-    if (b.score !== a.score) return b.score - a.score;
-
-    // Tie-breaker: newer updated first
-    return (a.it.updated < b.it.updated ? 1 : -1);
-  })
-  .map(x => x.it);
-
-
-      renderResults(filtered);
-      const $activeTags = document.querySelector("#activeTags");
-if ($activeTags){
-  const list = [...selectedTags].map(t => t.toUpperCase());
-  $activeTags.textContent = list.length ? `${copy.active}: ${list.join(" · ")}` : copy.noTagFilters;
-}
-
-
-      // keep URL in sync (so header search can link here)
-      const next = new URL(location.href);
-      if (query) next.searchParams.set("q", query);
-      else next.searchParams.delete("q");
-      history.replaceState({}, "", next);
+    if (!window[searchInitKey]) {
+      window[searchInitKey] = initializeArchiveSearch;
+      document.addEventListener("astro:page-load", window[searchInitKey]);
     }
 
-    $q.addEventListener("input", debounce(run, 120));
+    if (!window[searchBeforeSwapKey]) {
+      window[searchBeforeSwapKey] = () => {
+        if (typeof window[searchCleanupKey] === "function") {
+          window[searchCleanupKey]();
+          window[searchCleanupKey] = null;
+        }
+      };
+      document.addEventListener("astro:before-swap", window[searchBeforeSwapKey]);
+    }
 
-    $toggleFilters.addEventListener("click", () => {
-      $filters.hidden = !$filters.hidden;
-    });
-
-    $clearTags.addEventListener("click", () => {
-  selectedTags.clear();
-  $tagList.querySelectorAll("input[type=checkbox]").forEach(cb => {
-    cb.checked = false;
-    cb.closest(".tagcheck")?.classList.remove("is-active");
-  });
-  run();
-});
-
-    // Keyboard shortcut: press "/" to focus the search input
-window.addEventListener("keydown", (e) => {
-  if (e.key !== "/") return;
-
-  const el = document.activeElement;
-  const typing =
-    el &&
-    (el.tagName === "INPUT" ||
-     el.tagName === "TEXTAREA" ||
-     el.isContentEditable);
-
-  // If you're already typing somewhere, don't steal the "/" key
-  if (typing) return;
-
-  e.preventDefault();
-  $q.focus();
-});
-
-
-    // load index
-    fetch(`/search-index.json?locale=${locale}`)
-      .then(r => r.json())
-      .then(({ items }) => {
-        indexItems = items || [];
-        buildTagFilters(indexItems);
-        run();
-      })
-      .catch(() => {
-  $status.textContent = copy.error;
-  $results.innerHTML = "";
-});
-
+    window[searchInitKey]();
   </script>
 
   <style>
-    /* ── Page shell ── */
-    .searchPage {
-      max-width: 1300px;
+    @keyframes searchGrainShift {
+      0% { background-position: 0 0; }
+      25% { background-position: 14% 20%; }
+      50% { background-position: -8% 10%; }
+      75% { background-position: 8% -5%; }
+      100% { background-position: 0 0; }
+    }
+
+    @keyframes searchCardSweep {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .search-shell {
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top center, rgba(177, 58, 52, 0.12), transparent 34%),
+        linear-gradient(180deg, rgba(7, 7, 12, 0.98) 0%, rgba(4, 4, 8, 1) 100%);
+    }
+
+    .search-hero {
+      position: relative;
+      overflow: clip;
+      padding: clamp(40px, 7vw, 86px) 0 34px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .search-hero__glow {
+      position: absolute;
+      inset: auto 14% -90px;
+      height: 280px;
+      background: radial-gradient(circle at center, rgba(177, 58, 52, 0.24) 0%, rgba(177, 58, 52, 0.06) 42%, transparent 74%);
+      filter: blur(24px);
+      pointer-events: none;
+    }
+
+    .search-hero__grain {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.03;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
+      animation: searchGrainShift 8s steps(1) infinite;
+    }
+
+    .search-hero__scanlines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.03) 3px,
+        rgba(0, 0, 0, 0.03) 4px
+      );
+      opacity: 0.7;
+    }
+
+    .search-hero__diagram {
+      position: absolute;
+      inset: 26px 7% 10px;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .search-hero__diagram span {
+      position: absolute;
+      left: 50%;
+      border: 1px solid rgba(176, 141, 60, 0.08);
+      border-radius: 50%;
+      transform: translateX(-50%);
+    }
+
+    .search-hero__diagram span:nth-child(1) {
+      top: 16px;
+      width: min(1180px, 92%);
+      height: 360px;
+    }
+
+    .search-hero__diagram span:nth-child(2) {
+      top: 58px;
+      width: min(980px, 76%);
+      height: 276px;
+    }
+
+    .search-hero__diagram span:nth-child(3) {
+      top: 106px;
+      width: min(720px, 56%);
+      height: 184px;
+    }
+
+    .search-hero__content,
+    .search-results-shell {
+      width: min(calc(100% - 48px), 1360px);
       margin: 0 auto;
-      padding: 60px 32px 100px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ── Header ── */
-    .section__head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
+    .search-hero__content {
+      display: grid;
+      gap: 22px;
+      justify-items: center;
+      text-align: center;
     }
 
-    .section__title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 40px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: 0.01em;
-      margin: 0;
-    }
-
-    /* ── Controls ── */
-    .controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .section__search {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      background: rgba(10, 10, 18, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 6px;
-      min-width: 360px;
-      transition: border-color 0.2s;
-    }
-
-    .section__search:focus-within {
-      border-color: rgba(177, 58, 52, 0.5);
-    }
-
-    .section__icon {
-      font-size: 15px;
-      color: var(--text-dim);
-      line-height: 1;
-    }
-
-    .section__input {
-      flex: 1;
-      border: 0;
-      outline: none;
-      background: transparent;
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      padding: 0;
-      margin: 0;
-    }
-
-    .section__input::placeholder { color: var(--text-dim); }
-    .section__input::-webkit-search-decoration,
-    .section__input::-webkit-search-cancel-button { -webkit-appearance: none; }
-
-    .filter {
-      appearance: none;
-      cursor: pointer;
-      color: var(--text);
-      background: rgba(177, 58, 52, 0.1);
-      border: 1px solid rgba(177, 58, 52, 0.3);
-      border-radius: 6px;
-      padding: 10px 16px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .filter:hover {
-      background: rgba(177, 58, 52, 0.2);
-      border-color: rgba(177, 58, 52, 0.5);
-    }
-
-    /* ── Filters panel ── */
-    .filters__head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-      margin-bottom: 14px;
-    }
-
-    .filters__title {
-      font-family: 'DM Sans', sans-serif;
+    .search-hero__eyebrow,
+    .search-results-shell__eyebrow,
+    .search-chip__label,
+    .search-chip__count,
+    .search-card__section,
+    .search-card__type,
+    .search-card__action,
+    .search-row__category,
+    .search-row__access,
+    .search-row__year {
+      font-family: "DM Sans", sans-serif;
       font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--text-dim);
     }
 
-    .filters__clear {
-      appearance: none;
-      cursor: pointer;
+    .search-hero__eyebrow {
+      color: var(--crimson);
+    }
+
+    .search-hero__title {
+      margin: 0;
+      max-width: 920px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(54px, 9vw, 104px);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+
+    .search-hero__desc {
+      margin: 0;
+      max-width: 760px;
       color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .search-console {
+      width: min(1120px, 100%);
+      display: grid;
+      gap: 14px;
+    }
+
+    .search-console__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .search-console__bar {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 0 16px 0 20px;
+      min-height: 86px;
+      border: 1px solid rgba(177, 58, 52, 0.34);
+      background:
+        linear-gradient(180deg, rgba(11, 11, 18, 0.96), rgba(8, 8, 13, 0.98)),
+        radial-gradient(circle at 50% 120%, rgba(177, 58, 52, 0.14), transparent 45%);
+      box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.46),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+      transition: border-color 0.28s, box-shadow 0.28s, transform 0.28s;
+    }
+
+    .search-console__bar:focus-within {
+      border-color: rgba(177, 58, 52, 0.54);
+      box-shadow:
+        0 28px 96px rgba(0, 0, 0, 0.52),
+        0 0 36px rgba(177, 58, 52, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .search-console__icon {
+      display: inline-flex;
+      align-items: center;
+      color: rgba(232, 228, 220, 0.38);
+    }
+
+    .search-console__field {
+      position: relative;
+      display: block;
+      min-width: 0;
+    }
+
+    .search-console__autocomplete,
+    .search-console__input {
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+
+    .search-console__autocomplete {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(26px, 2.9vw, 40px);
+      letter-spacing: 0.012em;
+    }
+
+    .search-console__autocomplete-typed {
+      color: transparent;
+      user-select: none;
+    }
+
+    .search-console__autocomplete-rest {
+      color: rgba(232, 228, 220, 0.22);
+      user-select: none;
+    }
+
+    .search-console__input {
+      position: relative;
+      z-index: 2;
+      padding: 0;
+      border: 0;
+      outline: none;
       background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
-      padding: 6px 12px;
-      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(26px, 2.9vw, 40px);
+      letter-spacing: 0.012em;
+    }
+
+    .search-console__input::placeholder {
+      color: rgba(232, 228, 220, 0.22);
+    }
+
+    .search-console__input::-webkit-search-decoration,
+    .search-console__input::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+
+    .search-console__clear {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(177, 58, 52, 0.32);
+      background: rgba(177, 58, 52, 0.05);
+      color: rgba(232, 228, 220, 0.54);
+      cursor: pointer;
+      transition: border-color 0.22s, color 0.22s, background 0.22s, transform 0.22s;
+    }
+
+    .search-console__clear:hover,
+    .search-console__clear:focus-visible {
+      border-color: rgba(177, 58, 52, 0.48);
+      background: rgba(177, 58, 52, 0.12);
+      color: var(--text);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .search-console__meta {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 12px 18px;
+      color: var(--text-dim);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .search-console__statusline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(232, 228, 220, 0.52);
+    }
+
+    .search-console__statusdot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--crimson);
+      box-shadow: 0 0 10px rgba(177, 58, 52, 0.46);
+    }
+
+    .search-console__hint {
+      color: rgba(232, 228, 220, 0.34);
+    }
+
+    .search-console__count {
+      color: rgba(232, 228, 220, 0.62);
+    }
+
+    .search-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .search-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.025);
+      color: rgba(232, 228, 220, 0.7);
+      cursor: pointer;
+      transition: border-color 0.22s, background 0.22s, color 0.22s, transform 0.22s;
+    }
+
+    .search-chip:hover,
+    .search-chip:focus-visible,
+    .search-chip.is-active {
+      border-color: rgba(177, 58, 52, 0.36);
+      background: rgba(177, 58, 52, 0.1);
+      color: var(--text);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .search-chip__count {
+      color: rgba(232, 228, 220, 0.42);
+    }
+
+    .search-results-shell {
+      padding: 24px 0 94px;
+    }
+
+    .search-results-shell__bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .search-results-shell__heading {
+      display: grid;
+      gap: 8px;
+    }
+
+    .search-results-shell__eyebrow {
+      color: rgba(232, 228, 220, 0.34);
+    }
+
+    .search-results-shell__active {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(20px, 2.4vw, 30px);
+      line-height: 1.04;
+      color: var(--text);
+    }
+
+    .search-results-shell__status {
+      color: rgba(232, 228, 220, 0.42);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .search-noscript {
+      margin-bottom: 18px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+    }
+
+    .search-results-state {
+      display: grid;
+      gap: 28px;
+    }
+
+    .search-primary {
+      display: grid;
+    }
+
+    .search-primary-card {
+      min-width: 0;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    .search-primary-card.is-opening {
+      transform: scale(0.994);
+    }
+
+    .search-primary-card__surface {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      min-height: 0;
+      height: clamp(360px, 30vw, 430px);
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        radial-gradient(circle at 76% 22%, rgba(177, 58, 52, 0.16), transparent 34%),
+        linear-gradient(180deg, rgba(10, 10, 16, 0.97), rgba(7, 7, 12, 0.995));
+      box-shadow: 0 34px 96px rgba(0, 0, 0, 0.42);
+      overflow: hidden;
+      transition: border-color 0.26s, transform 0.26s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .search-primary-card__surface:hover,
+    .search-primary-card__surface:focus-visible {
+      border-color: rgba(177, 58, 52, 0.38);
+      box-shadow: 0 42px 118px rgba(0, 0, 0, 0.5);
+      transform: translateY(-4px);
+      outline: none;
+    }
+
+    .search-primary-card__visual {
+      position: relative;
+      min-height: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #06060b;
+    }
+
+    .search-primary-card__visual picture,
+    .search-primary-card__visual img,
+    .search-primary-card__placeholder,
+    .search-primary-card__placeholder svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .search-primary-card__img {
+      object-fit: cover;
+      object-position: var(--search-primary-object-position, center 20%);
+      filter: saturate(0.78) brightness(0.8);
+      transform: scale(1.04);
+      transition: transform 0.62s cubic-bezier(0.16, 1, 0.3, 1), filter 0.42s;
+    }
+
+    .search-primary-card__surface:hover .search-primary-card__img,
+    .search-primary-card__surface:focus-visible .search-primary-card__img {
+      transform: scale(1.075);
+      filter: saturate(0.9) brightness(0.9);
+    }
+
+    .search-primary-card[data-section="characters"] .search-primary-card__img {
+      object-position: var(--search-primary-object-position, center 12%);
+      transform: scale(1.08);
+    }
+
+    .search-primary-card[data-section="characters"] .search-primary-card__surface:hover .search-primary-card__img,
+    .search-primary-card[data-section="characters"] .search-primary-card__surface:focus-visible .search-primary-card__img {
+      transform: scale(1.12);
+    }
+
+    .search-primary-card__shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(6, 6, 11, 0.08) 0%, rgba(6, 6, 11, 0.28) 44%, rgba(6, 6, 11, 0.82) 100%),
+        linear-gradient(180deg, rgba(6, 6, 11, 0) 0%, rgba(6, 6, 11, 0.12) 46%, rgba(6, 6, 11, 0.72) 100%);
+      pointer-events: none;
+    }
+
+    .search-primary-card__loading {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.08) 45%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%);
+      animation: searchCardSweep 1.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .search-primary-card__visual.is-loaded .search-primary-card__loading {
+      display: none;
+    }
+
+    .search-primary-card__body {
+      display: grid;
+      align-content: center;
+      gap: 12px;
+      min-width: 0;
+      padding: 28px 30px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .search-primary-card__eyebrow {
+      color: rgba(232, 228, 220, 0.52);
+      font-family: "DM Sans", sans-serif;
       font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      transition: border-color 0.2s, color 0.2s;
     }
 
-    .filters__clear:hover { border-color: rgba(177, 58, 52, 0.4); color: var(--text); }
-
-    /* ── Tag filters ── */
-    .searchPage :global(.activeTags) {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      color: var(--text-dim);
-      letter-spacing: 0.04em;
-      margin: 8px 0 12px;
+    .search-primary-card__type {
+      color: var(--crimson);
     }
 
-    .searchPage :global(.taglist) {
+    .search-primary-card__title {
+      margin: 0;
+      overflow-wrap: anywhere;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(42px, 4.3vw, 68px);
+      line-height: 0.9;
+      letter-spacing: -0.025em;
+      color: var(--text);
+    }
+
+    .search-primary-card__designation {
+      color: rgba(176, 141, 60, 0.84);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.42;
+    }
+
+    .search-primary-card__summary {
+      margin: 0;
+      max-width: 46ch;
+      color: var(--text-muted);
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.72;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .search-primary-card__footer {
       display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      max-height: 140px;
-      overflow: auto;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      min-width: 0;
+      padding-top: 8px;
     }
 
-    .searchPage :global(.tagcheck) {
+    .search-primary-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .search-primary-card__tag {
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.025);
+      color: rgba(232, 228, 220, 0.6);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .search-primary-card__trail {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      margin-left: auto;
+      min-width: fit-content;
+      text-align: right;
+      align-self: flex-end;
+      color: rgba(232, 228, 220, 0.56);
+    }
+
+    .search-primary-card__access,
+    .search-primary-card__year {
+      white-space: nowrap;
+    }
+
+    .search-primary-card__year {
+      color: rgba(232, 228, 220, 0.34);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .search-secondary {
+      display: grid;
+      gap: 14px;
+    }
+
+    .search-secondary__head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .search-secondary__label {
+      color: rgba(232, 228, 220, 0.62);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .search-secondary__line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(177, 58, 52, 0.28), rgba(255, 255, 255, 0.04));
+    }
+
+    .search-featured-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .search-featured-grid[data-featured-count="1"] .search-card:not([hidden]) {
+      grid-column: 4 / span 6;
+    }
+
+    .search-featured-grid[data-featured-count="2"] .search-card:not([hidden]) {
+      grid-column: span 6;
+    }
+
+    .search-featured-grid[data-featured-count="3"] .search-card:not([hidden]) {
+      grid-column: span 4;
+    }
+
+    .search-featured-grid[data-featured-count="4"] .search-card:not([hidden]),
+    .search-featured-grid[data-featured-count="0"] .search-card:not([hidden]) {
+      grid-column: span 3;
+    }
+
+    .search-card,
+    .search-row {
+      min-width: 0;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    .search-card.is-opening,
+    .search-row.is-opening {
+      transform: scale(0.992);
+    }
+
+    .search-card__surface,
+    .search-row__surface {
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(10, 10, 16, 0.96), rgba(7, 7, 12, 0.98));
+      box-shadow: 0 24px 74px rgba(0, 0, 0, 0.36);
+      transition: border-color 0.26s, transform 0.26s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .search-card__surface {
+      display: grid;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .search-card__surface:hover,
+    .search-card__surface:focus-visible,
+    .search-row__surface:hover,
+    .search-row__surface:focus-visible {
+      border-color: rgba(177, 58, 52, 0.34);
+      box-shadow: 0 30px 88px rgba(0, 0, 0, 0.44);
+      outline: none;
+    }
+
+    .search-card__surface:hover,
+    .search-card__surface:focus-visible {
+      transform: translateY(-4px);
+    }
+
+    .search-card__visual {
       position: relative;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #06060b;
+    }
+
+    .search-card__visual picture,
+    .search-card__visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .search-card__img {
+      object-fit: cover;
+      object-position: center 28%;
+      filter: saturate(0.76) brightness(0.76);
+      transform: scale(1.02);
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s;
+    }
+
+    .search-card__surface:hover .search-card__img,
+    .search-card__surface:focus-visible .search-card__img {
+      transform: scale(1.05);
+      filter: saturate(0.88) brightness(0.88);
+    }
+
+    .search-card__placeholder,
+    .search-card__placeholder svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .search-card__visual-shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(6, 6, 11, 0.08) 0%, rgba(6, 6, 11, 0.34) 55%, rgba(6, 6, 11, 0.86) 100%),
+        linear-gradient(90deg, rgba(6, 6, 11, 0.18), transparent 38%);
+      pointer-events: none;
+    }
+
+    .search-card__visual-frame {
+      position: absolute;
+      inset: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s;
+    }
+
+    .search-card__visual-frame span {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: rgba(177, 58, 52, 0.68);
+      border-style: solid;
+    }
+
+    .search-card__visual-frame span:nth-child(1) { top: 0; left: 0; border-width: 1.5px 0 0 1.5px; }
+    .search-card__visual-frame span:nth-child(2) { top: 0; right: 0; border-width: 1.5px 1.5px 0 0; }
+    .search-card__visual-frame span:nth-child(3) { bottom: 0; left: 0; border-width: 0 0 1.5px 1.5px; }
+    .search-card__visual-frame span:nth-child(4) { bottom: 0; right: 0; border-width: 0 1.5px 1.5px 0; }
+
+    .search-card__surface:hover .search-card__visual-frame,
+    .search-card__surface:focus-visible .search-card__visual-frame,
+    .search-card.is-opening .search-card__visual-frame {
+      opacity: 1;
+    }
+
+    .search-card__section,
+    .search-card__seal {
+      position: absolute;
+      left: 16px;
+      z-index: 2;
+      color: rgba(232, 228, 220, 0.68);
+    }
+
+    .search-card__section {
+      top: 16px;
+      color: rgba(232, 228, 220, 0.48);
+    }
+
+    .search-card__seal {
+      bottom: 16px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 10px;
-      border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(10, 10, 18, 0.6);
-      cursor: pointer;
-      user-select: none;
-      transition: border-color 0.15s, background 0.15s;
+      color: rgba(232, 228, 220, 0.74);
     }
 
-    .searchPage :global(.tagcheck:hover) { border-color: rgba(177, 58, 52, 0.3); }
-    .searchPage :global(.tagcheck input) { position: absolute; opacity: 0; pointer-events: none; }
-
-    .searchPage :global(.tagcheck__pill) {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+    .search-card__seal::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(176, 141, 60, 0.88);
+      box-shadow: 0 0 10px rgba(176, 141, 60, 0.3);
     }
 
-    .searchPage :global(.tagcheck__count) {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 10px;
-      color: var(--text-dim);
+    .search-card__loading,
+    .search-row__thumb::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.08) 45%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%);
+      animation: searchCardSweep 1.4s ease-in-out infinite;
+      pointer-events: none;
     }
 
-    .searchPage :global(.tagcheck:has(input:checked)),
-    .searchPage :global(.tagcheck.is-active) {
-      border-color: rgba(177, 58, 52, 0.5);
-      background: rgba(177, 58, 52, 0.12);
+    .search-card__visual.is-loaded .search-card__loading,
+    .search-row__thumb.is-loaded::after {
+      display: none;
     }
 
-    /* ── Status ── */
-    .searchPage :global(.status) {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin: 16px 0 20px;
-    }
-
-    /* ── Results grid — 5 columns ── */
-    .searchPage :global(.results) {
+    .search-card__content {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
       gap: 12px;
+      padding: 16px 16px 14px;
+      min-width: 0;
     }
 
-    /* ── Result card ── */
-    .searchPage :global(.rcard) {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
+    .search-card__heading {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .search-card__type {
+      color: var(--crimson);
+    }
+
+    .search-card__title {
+      margin: 0;
+      overflow-wrap: anywhere;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(28px, 2.2vw, 38px);
+      line-height: 0.98;
+      letter-spacing: -0.018em;
       color: var(--text);
-      background: rgba(10, 10, 18, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 6px;
+    }
+
+    .search-card__designation {
+      color: rgba(176, 141, 60, 0.84);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .search-card__summary {
+      margin: 0;
+      color: var(--text-muted);
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      line-height: 1.66;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      transition: border-color 0.25s;
+      min-height: calc(1.66em * 3);
     }
 
-    .searchPage :global(.rcard:hover) {
-      border-color: rgba(177, 58, 52, 0.45);
+    .search-card__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      min-width: 0;
     }
 
-    .searchPage :global(.rcard__thumb) {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-      background: rgba(6, 6, 11, 0.8);
-      flex-shrink: 0;
+    .search-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      min-width: 0;
     }
 
-    .searchPage :global(.rcard__img) {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transition: transform 0.4s;
+    .search-card__tag {
+      padding: 5px 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.025);
+      color: rgba(232, 228, 220, 0.56);
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
-    .searchPage :global(.rcard:hover .rcard__img) {
-      transform: scale(1.04);
+    .search-card__trail {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: flex-end;
+      min-width: fit-content;
+      color: rgba(232, 228, 220, 0.54);
     }
 
-    .searchPage :global(.rcard__img--empty) {
-      width: 100%;
-      height: 100%;
+    .search-card__year {
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: rgba(232, 228, 220, 0.34);
+    }
+
+    .search-card__action {
+      color: rgba(232, 228, 220, 0.6);
+      transition: color 0.22s, transform 0.22s;
+    }
+
+    .search-card__chevron,
+    .search-row__chevron {
+      display: inline-flex;
+      align-items: center;
+      color: rgba(232, 228, 220, 0.66);
+      transition: color 0.22s, transform 0.22s;
+    }
+
+    .search-card__surface:hover .search-card__action,
+    .search-card__surface:focus-visible .search-card__action,
+    .search-card__surface:hover .search-card__chevron,
+    .search-card__surface:focus-visible .search-card__chevron,
+    .search-row__surface:hover .search-row__chevron,
+    .search-row__surface:focus-visible .search-row__chevron {
+      color: var(--text);
+      transform: translateX(2px);
+    }
+
+    .search-remaining {
+      display: grid;
+      gap: 14px;
+    }
+
+    .search-remaining__head {
       display: flex;
       align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, rgba(177, 58, 52, 0.12), rgba(6, 6, 11, 0.6));
+      gap: 16px;
     }
 
-    .searchPage :global(.rcard__img--empty svg) {
-      width: 32px;
-      height: 32px;
-      color: rgba(177, 58, 52, 0.35);
-    }
-
-    .searchPage :global(.rcard__body) {
-      padding: 12px 14px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .searchPage :global(.rcard__section) {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 9px;
+    .search-remaining__label {
+      color: rgba(232, 228, 220, 0.62);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.18em;
-      color: var(--crimson);
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    .searchPage :global(.rcard__title) {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 16px;
-      font-weight: 700;
+    .search-remaining__line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(177, 58, 52, 0.28), rgba(255, 255, 255, 0.04));
+    }
+
+    .search-remaining__list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .search-row__surface {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 18px;
+      padding: 12px 16px 12px 12px;
+      min-height: 92px;
+    }
+
+    .search-row__thumb {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      overflow: hidden;
+      background: #06060b;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .search-row__thumb picture,
+    .search-row__thumb img,
+    .search-row__placeholder,
+    .search-row__placeholder svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .search-row__img {
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.8) brightness(0.82);
+    }
+
+    .search-row__content {
+      display: grid;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .search-row__category {
+      color: rgba(232, 228, 220, 0.44);
+    }
+
+    .search-row__title {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(24px, 1.9vw, 30px);
+      line-height: 0.98;
       color: var(--text);
-      line-height: 1.2;
+      overflow-wrap: anywhere;
     }
 
-    .searchPage :global(.rcard__tag) {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-top: 2px;
+    .search-row__summary {
+      margin: 0;
+      color: var(--text-muted);
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      max-width: 780px;
     }
 
-    /* ── Responsive ── */
-    @media (max-width: 1100px) {
-      .searchPage :global(.results) { grid-template-columns: repeat(4, 1fr); }
+    .search-row__meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: flex-end;
+      color: rgba(232, 228, 220, 0.54);
+      white-space: nowrap;
     }
 
-    @media (max-width: 820px) {
-      .searchPage :global(.results) { grid-template-columns: repeat(3, 1fr); }
-      .section__search { min-width: 260px; }
+    .search-row__access {
+      color: rgba(232, 228, 220, 0.62);
     }
 
-    @media (max-width: 540px) {
-      .searchPage :global(.results) { grid-template-columns: repeat(2, 1fr); }
-      .searchPage { padding: 40px 16px 80px; }
-      .section__head { align-items: stretch; }
-      .controls {
-        width: 100%;
+    .search-row__year {
+      color: rgba(232, 228, 220, 0.34);
+    }
+
+    .search-empty {
+      display: grid;
+      gap: 16px;
+      justify-items: center;
+      text-align: center;
+      padding: 84px 20px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      background: linear-gradient(180deg, rgba(9, 9, 15, 0.84), rgba(6, 6, 10, 0.96));
+    }
+
+    .search-empty__line {
+      width: 34px;
+      height: 1px;
+      background: rgba(177, 58, 52, 0.42);
+    }
+
+    .search-empty__title {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(36px, 4vw, 46px);
+      color: var(--text);
+    }
+
+    .search-empty__body {
+      margin: 0;
+      max-width: 560px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 1180px) {
+      .search-primary-card__surface {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+        height: clamp(350px, 36vw, 410px);
+      }
+
+      .search-featured-grid[data-featured-count="3"] .search-card:not([hidden]),
+      .search-featured-grid[data-featured-count="4"] .search-card:not([hidden]) {
+        grid-column: span 6;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .search-hero__content,
+      .search-results-shell {
+        width: min(100%, calc(100% - 30px));
+      }
+
+      .search-console__meta {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+
+      .search-results-shell__bar {
+        align-items: start;
         flex-direction: column;
-        align-items: stretch;
       }
-      .section__search {
-        min-width: 0;
-        width: 100%;
-        min-height: 46px;
+
+      .search-featured-grid .search-card:not([hidden]) {
+        grid-column: span 12 !important;
       }
-      .filter {
-        width: 100%;
+
+      .search-primary-card__surface {
+        grid-template-columns: 1fr;
+        height: auto;
       }
-      .filters__head {
-        align-items: flex-start;
+
+      .search-primary-card__visual {
+        min-height: 260px;
+      }
+
+      .search-row__surface {
+        grid-template-columns: 72px minmax(0, 1fr);
+      }
+
+      .search-row__meta {
+        grid-column: 2;
+        justify-content: flex-start;
         flex-wrap: wrap;
       }
-      .searchPage :global(.taglist) {
-        max-height: 180px;
+    }
+
+    @media (max-width: 720px) {
+      .search-hero {
+        padding-top: 30px;
+      }
+
+      .search-console__bar {
+        min-height: 74px;
+        padding: 0 12px 0 16px;
+      }
+
+      .search-primary-card__body {
+        padding: 24px 20px 22px;
+      }
+
+      .search-primary-card__footer,
+      .search-card__footer {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
-    @media (max-width: 400px) {
-      .searchPage :global(.results) { grid-template-columns: 1fr; }
+    @media (max-width: 560px) {
+      .search-hero__content,
+      .search-results-shell {
+        width: min(100%, calc(100% - 20px));
+      }
+
+      .search-hero__title {
+        font-size: clamp(42px, 15vw, 72px);
+      }
+
+      .search-console__bar {
+        grid-template-columns: auto 1fr auto;
+        min-height: 68px;
+      }
+
+      .search-console__input,
+      .search-console__autocomplete {
+        font-size: 24px;
+      }
+
+      .search-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+      }
+
+      .search-chip {
+        flex: 0 0 auto;
+      }
+
+      .search-featured-grid,
+      .search-results-state {
+        gap: 16px;
+      }
+
+      .search-primary-card__visual {
+        min-height: 220px;
+      }
+
+      .search-primary-card__title {
+        font-size: clamp(38px, 11vw, 56px);
+      }
+
+      .search-row__surface {
+        grid-template-columns: 1fr;
+      }
+
+      .search-row__thumb {
+        width: 100%;
+        height: 104px;
+      }
+
+      .search-row__meta {
+        grid-column: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .search-hero__grain,
+      .search-primary-card__loading,
+      .search-card__loading,
+      .search-row__thumb::after {
+        animation: none;
+      }
+
+      .search-console__bar,
+      .search-console__clear,
+      .search-chip,
+      .search-primary-card,
+      .search-card,
+      .search-row,
+      .search-primary-card__surface,
+      .search-card__surface,
+      .search-row__surface,
+      .search-primary-card__img,
+      .search-card__img,
+      .search-card__visual-frame,
+      .search-primary-card__action,
+      .search-card__action,
+      .search-card__chevron,
+      .search-row__chevron {
+        transition: none;
+      }
     }
   </style>
 </MainLayout>

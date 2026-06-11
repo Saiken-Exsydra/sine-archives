@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../../../layouts/MainLayout.astro";
+import { localizedPath, type SiteLocale } from "../../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../../i18n/ui";
 
 // ---------------------------------------------------------------------------
 //  MAP CONFIGURATION
@@ -9,6 +11,9 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 const MAP_IMAGE  = "/uploads/map-empire.png";
 const MAP_ALT    = "Illustrated map of the Empire of Synus, showing the northern, central, and southern regions with Aurora to the west and Ardeatus to the east.";
 const MAP_ASPECT = 1534 / 1025; // natural image width x height ~= 1.497
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
+const mapPageLabel = locale === "pt-br" ? "Mapa do Imperio" : "Empire Map";
 
 const dossier = {
   north: {
@@ -154,11 +159,21 @@ const handles = [
 ];
 ---
 
-<MainLayout active="places" pageTitle="Empire Map - SiNE Archives">
+<MainLayout
+  active="places"
+  pageTitle={`${mapPageLabel} - SiNE Archives`}
+  locale={locale}
+  navVariant="entry"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "places"), href: localizedPath(locale, "/places/") },
+    { label: mapPageLabel },
+  ]}
+>
   <section class="atlas" id="atlasRoot">
 
     <!-- Back link: floats over the map -->
-    <a class="atlas-back" href="/places/" aria-label="Return to Places">
+    <a class="atlas-back" href={localizedPath(locale, "/places/")} aria-label="Return to Places">
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
         <path d="M7 1.5L3 5L7 8.5" stroke="currentColor" stroke-width="1.4"
               stroke-linecap="round" stroke-linejoin="round"/>

@@ -1,6 +1,19 @@
 import type { ContentKey } from "../content-keys";
 import type { SiteLocale } from "./config";
 
+const ARCHIVE_NAV_LABELS: Record<SiteLocale, { index: string }> = {
+  en: {
+    index: "Index",
+  },
+  "pt-br": {
+    index: "Indice",
+  },
+};
+
+export function getArchiveNavLabels(locale: SiteLocale) {
+  return ARCHIVE_NAV_LABELS[locale];
+}
+
 const SECTION_LABELS: Record<SiteLocale, Record<ContentKey, string>> = {
   en: {
     characters: "Characters",

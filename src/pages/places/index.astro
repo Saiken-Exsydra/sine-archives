@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
 import { getImageUrl } from "../../utils/optimized-images";
 import placeBrightMarginImage from "../../assets/uploads/place-bright-margin.png";
 import placeDarkmarginImage from "../../assets/uploads/place-darkmargin.png";
@@ -47,6 +48,7 @@ const REGIONS = [
 ];
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
 const all = (await getLocalizedCollection("places", locale)).filter((e) => e.data.status === "public");
 
 function regionEntries(matchTag: string) {
@@ -99,7 +101,16 @@ const regionsJson = JSON.stringify(
 );
 ---
 
-<MainLayout active="places" pageTitle="Places — SiNE Archives" locale={locale}>
+<MainLayout
+  active="places"
+  pageTitle="Places — SiNE Archives"
+  locale={locale}
+  navVariant="section"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "places") },
+  ]}
+>
   <div class="places-root" id="places-root" data-regions={regionsJson}>
     <div class="places-header">
       <div class="places-header__rule"></div>

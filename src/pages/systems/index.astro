@@ -4,11 +4,13 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
 import type { ContentKey } from "../../content-keys";
+import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
 import divinationPanelImage from "../../assets/uploads/systems/sys-divination-panel.png";
 import redactoryPanelImage from "../../assets/uploads/systems/sys-redactory-panel.png";
 import { getImageUrl } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
 const copy = locale === "pt-br"
   ? {
       pageTitle: "Sistemas — SiNE Archives",
@@ -215,7 +217,16 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
 ];
 ---
 
-<MainLayout active="systems" pageTitle={copy.pageTitle} locale={locale}>
+<MainLayout
+  active="systems"
+  pageTitle={copy.pageTitle}
+  locale={locale}
+  navVariant="section"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "systems") },
+  ]}
+>
 
   <div class="sys-root">
     <div class="sys-identity">

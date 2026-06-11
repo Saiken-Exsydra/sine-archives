@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
 import cosmArchiveImage from "../../assets/uploads/cosm-archive.png";
 import cosmPrecursorsImage from "../../assets/uploads/cosm-precursors.png";
 import twilightBandPanelImage from "../../assets/uploads/cosmology/cosm-twilight-band.png";
@@ -11,6 +12,7 @@ import {
 } from "../../utils/optimized-images";
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
 const all = await getLocalizedCollection("cosmology", locale);
 const publicEntries = all.filter((e) => e.data.status === "public");
 
@@ -136,7 +138,16 @@ const copy = {
 };
 ---
 
-<MainLayout active="cosmology" pageTitle="Cosmology — SiNE Archives" locale={locale}>
+<MainLayout
+  active="cosmology"
+  pageTitle="Cosmology — SiNE Archives"
+  locale={locale}
+  navVariant="section"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "cosmology") },
+  ]}
+>
   <div class="cosmo-root">
 
     <!-- Identity bar -->

@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedMusicCatalog } from "../../data/music";
 import songs from "../../data/songs.json";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { getArchiveNavLabels } from "../../i18n/ui";
 
 const formatDurationLabel = (duration?: number | null) => {
   if (!duration || !Number.isFinite(duration)) return null;
@@ -13,6 +14,7 @@ const formatDurationLabel = (duration?: number | null) => {
 };
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
 const tracks = getLocalizedMusicCatalog(locale);
 
 const copy = locale === "pt-br"
@@ -130,6 +132,11 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
   locale={locale}
   hideFooter={true}
   pageClass="page--soundtracks"
+  navVariant="section"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: copy.title },
+  ]}
 >
   <section
     class="sound-archive"

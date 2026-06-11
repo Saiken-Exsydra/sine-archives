@@ -9,6 +9,10 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  prefetch: {
+    prefetchAll: false,
+    defaultStrategy: "hover",
+  },
   markdown: {
     remarkPlugins: [remarkArchiveHeadingIds, remarkArchiveWikiLinks],
   },

@@ -1,0 +1,2482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06060b">
+  <title>SiNE Archives / Glass Cinematic Home Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: oklch(14% 0.015 285);
+      --bg-soft: oklch(18% 0.02 285);
+      --surface: oklch(22% 0.014 282 / 0.62);
+      --surface-strong: oklch(26% 0.016 282 / 0.78);
+      --surface-press: oklch(18% 0.014 282 / 0.86);
+      --fg: oklch(92% 0.012 85);
+      --muted: oklch(72% 0.012 85 / 0.74);
+      --soft: oklch(83% 0.01 85 / 0.48);
+      --border: oklch(84% 0.008 85 / 0.12);
+      --border-strong: oklch(84% 0.01 85 / 0.2);
+      --accent: oklch(57% 0.18 28);
+      --metal: oklch(68% 0.11 82);
+      --spectral: oklch(73% 0.11 220);
+      --success: oklch(76% 0.13 156);
+      --shadow-xl: 0 36px 120px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.28);
+      --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.18);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --content: min(1440px, calc(100% - 32px));
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--fg);
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(177, 58, 52, 0.16), transparent 26rem),
+        radial-gradient(circle at 80% 10%, rgba(96, 164, 199, 0.12), transparent 22rem),
+        radial-gradient(circle at 85% 60%, rgba(176, 141, 60, 0.08), transparent 26rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24rem),
+        var(--bg);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 96px 96px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.68), transparent 100%);
+      opacity: 0.18;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.84' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 280px 280px;
+      mix-blend-mode: screen;
+      opacity: 0.04;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      background: none;
+      padding: 0;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+    }
+
+    .shell {
+      width: var(--content);
+      margin: 0 auto;
+    }
+
+    .glass {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015)),
+        rgba(9, 10, 18, 0.56);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(22px) saturate(128%);
+      -webkit-backdrop-filter: blur(22px) saturate(128%);
+    }
+
+    .glass--strong {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(8, 9, 15, 0.76);
+      border-color: var(--border-strong);
+    }
+
+    .micro,
+    .eyebrow,
+    .pill,
+    .metric,
+    .chip,
+    .status,
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      margin: 14px auto 0;
+      width: min(1560px, calc(100% - 24px));
+      border-radius: 22px;
+      transition: transform 0.32s ease, border-color 0.32s ease;
+    }
+
+    .topbar__inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand__mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand__mark::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(96, 164, 199, 0.32), transparent 46%),
+        radial-gradient(circle at 35% 35%, rgba(177, 58, 52, 0.22), transparent 48%);
+      filter: blur(12px);
+    }
+
+    .brand__mark img {
+      position: relative;
+      width: 26px;
+      opacity: 0.94;
+    }
+
+    .brand__copy {
+      min-width: 0;
+    }
+
+    .brand__copy strong {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 220, 0.94);
+      white-space: nowrap;
+    }
+
+    .brand__copy span {
+      display: block;
+      margin-top: 4px;
+      color: var(--soft);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: rgba(232, 228, 220, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+    }
+
+    .pill:hover,
+    .pill:focus-visible {
+      transform: translateY(-1px);
+      color: rgba(232, 228, 220, 0.96);
+      border-color: rgba(96, 164, 199, 0.24);
+      background: rgba(96, 164, 199, 0.1);
+      outline: none;
+    }
+
+    .pill:active {
+      transform: translateY(1px) scale(0.985);
+      background: rgba(96, 164, 199, 0.14);
+    }
+
+    .pill--active {
+      border-color: rgba(177, 58, 52, 0.3);
+      background: rgba(177, 58, 52, 0.14);
+      color: rgba(232, 228, 220, 0.96);
+    }
+
+    .pill--ghost {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .drawer {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.46s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.26s ease, padding 0.26s ease;
+      padding: 0 18px;
+    }
+
+    .drawer.is-open {
+      max-height: 520px;
+      opacity: 1;
+      padding: 0 18px 18px;
+    }
+
+    .drawer__grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+    }
+
+    .drawer__panel {
+      padding: 20px;
+      border-radius: var(--radius-md);
+    }
+
+    .drawer__panel h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .drawer__panel p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .drawer__links {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .drawer__links a {
+      min-height: 78px;
+      border-radius: 16px;
+      padding: 14px;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+
+    .drawer__links a:hover,
+    .drawer__links a:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(177, 58, 52, 0.24);
+      outline: none;
+    }
+
+    .drawer__links strong {
+      display: block;
+      margin-top: 12px;
+      font-size: 15px;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      font-family: var(--font-body);
+    }
+
+    .hero {
+      padding: 34px 0 20px;
+    }
+
+    .hero__frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      min-height: 760px;
+      isolation: isolate;
+    }
+
+    .hero__frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(6, 6, 11, 0.1), rgba(6, 6, 11, 0.78)),
+        linear-gradient(90deg, rgba(6, 6, 11, 0.9) 0%, rgba(6, 6, 11, 0.56) 42%, rgba(6, 6, 11, 0.78) 100%),
+        url("../public/uploads/ui-cosmology-bg.png") center/cover no-repeat;
+      filter: saturate(0.68) brightness(0.72);
+      transform: scale(1.04);
+      z-index: -3;
+    }
+
+    .hero__frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 78% 28%, rgba(96, 164, 199, 0.18), transparent 18rem),
+        radial-gradient(circle at 26% 14%, rgba(177, 58, 52, 0.16), transparent 20rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 16rem);
+      z-index: -2;
+    }
+
+    .hero__frame .grain {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 240px 240px;
+      mix-blend-mode: screen;
+    }
+
+    .hero__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.16fr) minmax(360px, 0.84fr);
+      gap: 22px;
+      padding: 42px;
+    }
+
+    .hero__copy {
+      display: grid;
+      gap: 22px;
+      align-content: space-between;
+      min-height: 676px;
+    }
+
+    .hero__stack {
+      display: grid;
+      gap: 20px;
+      align-content: start;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(232, 228, 220, 0.72);
+    }
+
+    .kicker::before {
+      content: "";
+      width: 52px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(177, 58, 52, 0.9));
+    }
+
+    .hero h1 {
+      margin: 0;
+      max-width: 10ch;
+      font-family: var(--font-display);
+      font-size: clamp(4.4rem, 9vw, 8.3rem);
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .hero__lede {
+      max-width: 60ch;
+      margin: 0;
+      color: rgba(232, 228, 220, 0.8);
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .cta {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 18px;
+      border-radius: 999px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .cta:active {
+      transform: translateY(1px) scale(0.986);
+    }
+
+    .cta--primary {
+      border: 1px solid rgba(177, 58, 52, 0.28);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(177, 58, 52, 0.16);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 36px rgba(177, 58, 52, 0.18);
+    }
+
+    .cta--primary:hover,
+    .cta--primary:focus-visible {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 42px rgba(177, 58, 52, 0.24);
+    }
+
+    .cta--ghost {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(232, 228, 220, 0.84);
+    }
+
+    .hero__rail {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .rail-card {
+      min-height: 116px;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: grid;
+      align-content: space-between;
+    }
+
+    .rail-card strong {
+      font-family: var(--font-display);
+      font-size: 34px;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+
+    .rail-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .hero__console {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+      padding: 20px;
+      border-radius: 28px;
+    }
+
+    .console__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .console__head h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .status {
+      color: var(--success);
+    }
+
+    .searchbox {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 58px;
+      padding: 0 14px;
+      border-radius: 16px;
+      transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .searchbox svg {
+      width: 16px;
+      height: 16px;
+      color: rgba(232, 228, 220, 0.44);
+      flex: 0 0 auto;
+    }
+
+    .searchbox:focus-within {
+      border-color: rgba(96, 164, 199, 0.28);
+      background: rgba(96, 164, 199, 0.08);
+      box-shadow: 0 0 0 1px rgba(96, 164, 199, 0.12), 0 0 30px rgba(96, 164, 199, 0.1);
+    }
+
+    .searchbox input {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--fg);
+    }
+
+    .searchbox input::placeholder {
+      color: rgba(232, 228, 220, 0.4);
+    }
+
+    .console__grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .console__route {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .console__route:hover,
+    .console__route:focus-visible {
+      transform: translateX(2px);
+      border-color: rgba(177, 58, 52, 0.2);
+      background: rgba(177, 58, 52, 0.08);
+      outline: none;
+    }
+
+    .console__route strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      font-family: var(--font-body);
+    }
+
+    .console__route span:last-child {
+      color: var(--muted);
+      max-width: 11ch;
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .console__meta {
+      display: grid;
+      gap: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .console__row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .console__row strong {
+      color: rgba(232, 228, 220, 0.92);
+      font-weight: 500;
+    }
+
+    section {
+      padding: 24px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .section-head > div:first-child {
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 4.4rem);
+      line-height: 0.94;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .section-desc {
+      margin: 0;
+      max-width: 58ch;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .bar__filters,
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(232, 228, 220, 0.72);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+    }
+
+    .chip:hover,
+    .chip:focus-visible,
+    .chip.is-active {
+      transform: translateY(-1px);
+      border-color: rgba(177, 58, 52, 0.26);
+      background: rgba(177, 58, 52, 0.12);
+      color: rgba(232, 228, 220, 0.96);
+      outline: none;
+    }
+
+    .chip:active {
+      transform: translateY(1px) scale(0.988);
+    }
+
+    .metric {
+      color: var(--soft);
+    }
+
+    .latest-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .record {
+      grid-column: span 4;
+      border-radius: 24px;
+      min-height: 308px;
+      padding: 20px;
+      display: grid;
+      gap: 16px;
+      align-content: start;
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+      transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .record::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(96, 164, 199, 0.12), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 30%);
+      opacity: 0;
+      transition: opacity 0.22s ease;
+    }
+
+    .record:hover,
+    .record:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(177, 58, 52, 0.26);
+      box-shadow: var(--shadow-sm);
+      outline: none;
+    }
+
+    .record:hover::before,
+    .record:focus-visible::before {
+      opacity: 1;
+    }
+
+    .record:active {
+      transform: translateY(1px) scale(0.992);
+    }
+
+    .record__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .record__section {
+      color: var(--accent);
+    }
+
+    .record__title {
+      margin: 0;
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-size: 38px;
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+    }
+
+    .record__body {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 12px;
+    }
+
+    .record__body p {
+      margin: 0;
+      color: rgba(232, 228, 220, 0.74);
+      font-size: 14px;
+      line-height: 1.68;
+    }
+
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      min-height: 28px;
+      padding: 0 10px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(232, 228, 220, 0.8);
+      font-size: 11px;
+      line-height: 1;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .empty {
+      display: none;
+      padding: 20px;
+      border-radius: 18px;
+      margin-top: 14px;
+      color: var(--muted);
+      border: 1px dashed rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .empty.is-visible {
+      display: block;
+    }
+
+    .spotlight {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
+      gap: 16px;
+    }
+
+    .spotlight-list {
+      display: grid;
+      gap: 8px;
+      padding: 10px;
+      border-radius: 24px;
+    }
+
+    .spotlight-list button {
+      width: 100%;
+      text-align: left;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid transparent;
+      display: grid;
+      gap: 8px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .spotlight-list button:hover,
+    .spotlight-list button:focus-visible,
+    .spotlight-list button.is-active {
+      transform: translateX(2px);
+      border-color: rgba(177, 58, 52, 0.24);
+      background: rgba(177, 58, 52, 0.08);
+      outline: none;
+    }
+
+    .spotlight-list strong {
+      font-family: var(--font-display);
+      font-size: 30px;
+      line-height: 0.94;
+      letter-spacing: -0.03em;
+      text-transform: none;
+    }
+
+    .spotlight-list span:last-child {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.58;
+      text-transform: none;
+      font-family: var(--font-body);
+      letter-spacing: normal;
+    }
+
+    .spotlight-panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+      border-radius: 28px;
+    }
+
+    .spotlight-panel__media {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: 46%;
+    }
+
+    .spotlight-panel__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.84;
+      filter: saturate(0.74) contrast(1.05);
+    }
+
+    .spotlight-panel__fade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(6, 6, 11, 0.96) 0%, rgba(6, 6, 11, 0.78) 42%, rgba(6, 6, 11, 0.18) 100%),
+        radial-gradient(circle at 76% 20%, rgba(96, 164, 199, 0.18), transparent 18rem);
+    }
+
+    .spotlight-panel__body {
+      position: relative;
+      z-index: 1;
+      width: min(58%, 660px);
+      display: grid;
+      gap: 16px;
+      padding: 30px;
+    }
+
+    .spotlight-panel__designation {
+      color: var(--metal);
+      font-size: 14px;
+      letter-spacing: 0.06em;
+    }
+
+    .spotlight-panel__name {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 5vw, 5.3rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .spotlight-panel__body p {
+      margin: 0;
+      color: rgba(232, 228, 220, 0.78);
+      line-height: 1.75;
+    }
+
+    .quote {
+      margin: 0;
+      max-width: 56ch;
+      padding-left: 18px;
+      border-left: 1px solid rgba(176, 141, 60, 0.42);
+      font-family: var(--font-display);
+      font-size: 25px;
+      line-height: 1.16;
+    }
+
+    .accordion {
+      display: grid;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .accordion-item {
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      min-height: 54px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .accordion-trigger:hover,
+    .accordion-trigger:focus-visible {
+      background: rgba(255, 255, 255, 0.03);
+      outline: none;
+    }
+
+    .accordion-trigger span:last-child {
+      color: var(--soft);
+      transition: transform 0.22s ease;
+    }
+
+    .accordion-item.is-open .accordion-trigger span:last-child {
+      transform: rotate(45deg);
+      color: var(--spectral);
+    }
+
+    .accordion-panel {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.26s ease;
+    }
+
+    .accordion-panel__inner {
+      padding: 0 16px 16px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.68;
+    }
+
+    .places {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .place {
+      position: relative;
+      overflow: hidden;
+      min-height: 224px;
+      border-radius: 26px;
+    }
+
+    .place--feature {
+      grid-column: span 7;
+      min-height: 420px;
+    }
+
+    .place--a,
+    .place--b {
+      grid-column: span 5;
+    }
+
+    .place img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.7) brightness(0.7);
+      transform: scale(1);
+      transition: transform 0.5s ease;
+    }
+
+    .place:hover img,
+    .place:focus-within img {
+      transform: scale(1.04);
+    }
+
+    .place::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(6, 6, 11, 0.08), rgba(6, 6, 11, 0.86)),
+        radial-gradient(circle at 76% 20%, rgba(96, 164, 199, 0.12), transparent 20rem);
+    }
+
+    .place__copy {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 1;
+      padding: 22px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .place__copy h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 42px;
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+    }
+
+    .place__copy p {
+      margin: 0;
+      max-width: 52ch;
+      color: rgba(232, 228, 220, 0.78);
+      line-height: 1.68;
+      font-size: 14px;
+    }
+
+    .systems {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+      gap: 16px;
+    }
+
+    .systems-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .systems-list button {
+      text-align: left;
+      padding: 18px;
+      border-radius: 20px;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .systems-list button:hover,
+    .systems-list button:focus-visible,
+    .systems-list button.is-active {
+      transform: translateX(2px);
+      border-color: rgba(176, 141, 60, 0.22);
+      background: rgba(176, 141, 60, 0.08);
+      outline: none;
+    }
+
+    .systems-list button strong {
+      display: block;
+      margin: 10px 0 8px;
+      font-family: var(--font-display);
+      font-size: 34px;
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      text-transform: none;
+    }
+
+    .systems-list button small {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      font-family: var(--font-body);
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .systems-panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 450px;
+      border-radius: 28px;
+    }
+
+    .systems-panel__media {
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+    }
+
+    .systems-panel__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.7) brightness(0.62);
+    }
+
+    .systems-panel__fade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(6, 6, 11, 0.18), rgba(6, 6, 11, 0.9)),
+        radial-gradient(circle at 78% 18%, rgba(176, 141, 60, 0.14), transparent 20rem);
+    }
+
+    .systems-panel__body {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 18px;
+      padding: 28px;
+      align-content: start;
+    }
+
+    .systems-panel__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .systems-panel__head h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 4.4vw, 4.9rem);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+    }
+
+    .systems-copy {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .systems-copy article {
+      padding: 18px;
+      border-radius: 18px;
+    }
+
+    .systems-copy h4 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .systems-copy p {
+      margin: 0;
+      color: rgba(232, 228, 220, 0.74);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .directory {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .directory a {
+      min-height: 220px;
+      border-radius: 24px;
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+      align-content: end;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .directory a:hover,
+    .directory a:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(177, 58, 52, 0.22);
+      background: rgba(177, 58, 52, 0.08);
+      outline: none;
+    }
+
+    .directory h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 38px;
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+    }
+
+    .directory p {
+      margin: 0;
+      color: rgba(232, 228, 220, 0.72);
+      font-size: 14px;
+      line-height: 1.68;
+    }
+
+    .footer {
+      padding: 24px 0 56px;
+    }
+
+    .footer__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      border-radius: 20px;
+    }
+
+    .footer__row span:last-child {
+      color: var(--soft);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(4, 4, 10, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal__card {
+      width: min(1040px, 100%);
+      max-height: calc(100vh - 36px);
+      overflow: auto;
+      border-radius: 30px;
+      position: relative;
+      transform: translateY(24px) scale(0.985);
+      opacity: 0;
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease;
+    }
+
+    .modal.is-open .modal__card {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    .modal__close {
+      position: sticky;
+      top: 14px;
+      z-index: 2;
+      margin: 14px 14px 0 auto;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: rgba(232, 228, 220, 0.86);
+    }
+
+    .modal__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 0;
+      min-height: 620px;
+      margin-top: -42px;
+    }
+
+    .modal__body {
+      padding: 34px 34px 34px 34px;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .modal__body h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 5vw, 5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+    }
+
+    .modal__body p {
+      margin: 0;
+      color: rgba(232, 228, 220, 0.78);
+      line-height: 1.72;
+    }
+
+    .modal__aside {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    .modal__aside img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(0.72) brightness(0.78);
+    }
+
+    .modal__aside::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(6, 6, 11, 0.14), rgba(6, 6, 11, 0.84)),
+        radial-gradient(circle at 60% 18%, rgba(96, 164, 199, 0.16), transparent 16rem);
+    }
+
+    .modal__stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .modal__stats article {
+      padding: 16px;
+      border-radius: 18px;
+    }
+
+    .modal__stats strong {
+      display: block;
+      margin-top: 12px;
+      font-size: 15px;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      font-family: var(--font-body);
+    }
+
+    .modal__stats span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.58;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.62s ease, transform 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1180px) {
+      .hero__layout,
+      .spotlight,
+      .systems,
+      .drawer__grid,
+      .modal__layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__copy {
+        min-height: auto;
+      }
+
+      .hero__console,
+      .drawer__panel {
+        min-width: 0;
+      }
+
+      .spotlight-panel {
+        min-height: 700px;
+      }
+
+      .spotlight-panel__media {
+        width: 100%;
+        inset: auto 0 0 0;
+        height: 44%;
+      }
+
+      .spotlight-panel__fade {
+        background:
+          linear-gradient(180deg, rgba(6, 6, 11, 0.92) 0%, rgba(6, 6, 11, 0.74) 48%, rgba(6, 6, 11, 0.2) 100%),
+          radial-gradient(circle at 76% 78%, rgba(96, 164, 199, 0.18), transparent 18rem);
+      }
+
+      .spotlight-panel__body {
+        width: 100%;
+        padding-bottom: 280px;
+      }
+
+      .systems-copy,
+      .modal__stats,
+      .drawer__links,
+      .directory {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .record {
+        grid-column: span 6;
+      }
+
+      .place--feature,
+      .place--a,
+      .place--b {
+        grid-column: span 12;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar {
+        margin-top: 10px;
+        width: calc(100% - 16px);
+      }
+
+      .topbar__inner {
+        padding: 10px 12px;
+      }
+
+      .brand__copy span,
+      .brand__copy strong {
+        white-space: normal;
+      }
+
+      .hero__frame {
+        min-height: auto;
+      }
+
+      .hero__layout {
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.4rem, 16vw, 5.2rem);
+      }
+
+      .hero__rail {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .bar,
+      .footer__row {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .latest-grid,
+      .directory,
+      .systems-copy,
+      .modal__stats,
+      .drawer__links {
+        grid-template-columns: 1fr;
+      }
+
+      .record {
+        grid-column: span 12;
+      }
+
+      .spotlight-panel {
+        min-height: 760px;
+      }
+
+      .spotlight-panel__body {
+        padding: 22px 22px 250px;
+      }
+
+      .systems-panel__body,
+      .modal__body {
+        padding: 22px;
+      }
+
+      .modal__layout {
+        margin-top: -42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar glass glass--strong">
+      <div class="topbar__inner">
+        <a class="brand" href="#home" aria-label="SiNE Archives home concept">
+          <div class="brand__mark glass">
+            <img src="../public/uploads/ui-sine-logo.png" alt="">
+          </div>
+          <div class="brand__copy">
+            <strong>SiNE Archives</strong>
+            <span class="micro">Public archive / dark glass reinterpretation</span>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary archive navigation">
+          <a class="pill pill--active" href="#latest">Latest records</a>
+          <a class="pill" href="#spotlight">Dossiers</a>
+          <a class="pill" href="#systems">Systems</a>
+          <a class="pill pill--ghost" href="#directory">Directory</a>
+          <button class="pill" id="menuToggle" type="button" aria-expanded="false" aria-controls="navDrawer">Open index</button>
+        </nav>
+      </div>
+
+      <div class="drawer" id="navDrawer">
+        <div class="drawer__grid">
+          <section class="drawer__panel glass" aria-labelledby="drawer-title">
+            <p class="eyebrow">Archive routes / surfaced from the home layer</p>
+            <h3 id="drawer-title">The home page behaves like a filtered threshold, not a dead splash screen.</h3>
+            <p>
+              This nav state pushes more context into the first interaction: classified sections, bilingual routing, and live access lanes
+              without losing the archive's severity.
+            </p>
+            <div class="drawer__links">
+              <a class="glass" href="#latest">
+                <span class="micro">Route 01</span>
+                <strong>Latest</strong>
+              </a>
+              <a class="glass" href="#spotlight">
+                <span class="micro">Route 02</span>
+                <strong>Dossiers</strong>
+              </a>
+              <a class="glass" href="#places">
+                <span class="micro">Route 03</span>
+                <strong>Places</strong>
+              </a>
+              <a class="glass" href="#systems">
+                <span class="micro">Route 04</span>
+                <strong>Systems</strong>
+              </a>
+            </div>
+          </section>
+
+          <section class="drawer__panel glass" aria-labelledby="drawer-meta">
+            <p class="eyebrow">Current state / preserved archive posture</p>
+            <h3 id="drawer-meta">What stays recognizable</h3>
+            <p>
+              Warm parchment text, crimson activation, gold metadata, serif-led hierarchy, and the classified archival tone all remain intact.
+              The shift is the surface treatment: obsidian-black glass, cinematic reflections, and spectral edge light.
+            </p>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero shell reveal">
+        <div class="hero__frame glass glass--strong">
+          <div class="grain"></div>
+          <div class="hero__layout">
+            <div class="hero__copy">
+              <div class="hero__stack">
+                <p class="kicker">Classified threshold / responsive archive concept</p>
+                <h1>The SiNE Archives, reframed in black glass.</h1>
+                <p class="hero__lede">
+                  The redesign keeps the current archive's dark ritual atmosphere and branded color language, but recasts it as a more tactile,
+                  premium surface system: obsidian panes, graphite blur, crimson activation, gold metadata, and brief spectral cyan used only where search,
+                  focus, or state change should feel electrically alive.
+                </p>
+
+                <div class="hero__actions">
+                  <a class="cta cta--primary" href="#latest">Surface latest records</a>
+                  <button class="cta cta--ghost" type="button" id="heroDrawerToggle">Inspect nav state</button>
+                </div>
+              </div>
+
+              <div class="hero__rail">
+                <article class="rail-card glass">
+                  <span class="micro">Interaction posture</span>
+                  <strong>Glassed</strong>
+                  <p>Every panel becomes translucent, layered, and depth-aware instead of flat or card-heavy.</p>
+                </article>
+                <article class="rail-card glass">
+                  <span class="micro">Accent budget</span>
+                  <strong>Crimson</strong>
+                  <p>Primary action and active states stay brand-faithful. Gold remains metadata-only.</p>
+                </article>
+                <article class="rail-card glass">
+                  <span class="micro">Motion language</span>
+                  <strong>Spectral</strong>
+                  <p>Drawer expansion, dossier reveal, and search focus use soft glass pressure instead of loud UI tricks.</p>
+                </article>
+              </div>
+            </div>
+
+            <aside class="hero__console glass" aria-label="Archive access console">
+              <div class="console__head">
+                <h2>Archive access console</h2>
+                <span class="status">public access live</span>
+              </div>
+
+              <label class="searchbox glass" for="heroSearch">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.5"></circle>
+                  <path d="M16 16L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+                <input id="heroSearch" type="text" placeholder="Search dossiers, systems, and places" aria-label="Search the concept home page">
+              </label>
+
+              <div class="console__grid">
+                <a class="console__route glass" href="#latest">
+                  <div>
+                    <span class="micro">Surface 01</span>
+                    <strong>Recently revised records</strong>
+                  </div>
+                  <span>Filterable cards</span>
+                </a>
+                <a class="console__route glass" href="#spotlight">
+                  <div>
+                    <span class="micro">Surface 02</span>
+                    <strong>Character dossier spotlight</strong>
+                  </div>
+                  <span>Panel swap</span>
+                </a>
+                <a class="console__route glass" href="#systems">
+                  <div>
+                    <span class="micro">Surface 03</span>
+                    <strong>Systems primer</strong>
+                  </div>
+                  <span>Tabbed explainer</span>
+                </a>
+              </div>
+
+              <div class="console__meta">
+                <div class="console__row">
+                  <span>Primary sections</span>
+                  <strong>Characters, Places, Systems, Cosmology, Organizations</strong>
+                </div>
+                <div class="console__row">
+                  <span>Languages</span>
+                  <strong>English / PT-BR</strong>
+                </div>
+                <div class="console__row">
+                  <span>Surface priority</span>
+                  <strong>Home threshold + nav states first</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell reveal" id="latest">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Latest surface / search-first archival cards</p>
+            <h2 class="section-title">Surface records before the user commits to a section.</h2>
+          </div>
+          <p class="section-desc">
+            The current home page is strong as an atmospheric gateway. This concept makes it more usable by exposing a searchable layer of real records
+            directly on the threshold, with click-to-open glass dossier previews.
+          </p>
+        </div>
+
+        <div class="bar">
+          <div class="chips" aria-label="Latest record filters">
+            <button class="chip is-active" type="button" data-filter="all">All</button>
+            <button class="chip" type="button" data-filter="characters">Characters</button>
+            <button class="chip" type="button" data-filter="places">Places</button>
+            <button class="chip" type="button" data-filter="systems">Systems</button>
+            <button class="chip" type="button" data-filter="organizations">Organizations</button>
+          </div>
+          <div class="metric" id="resultsSummary">Showing all surfaced records</div>
+        </div>
+
+        <div class="latest-grid" id="latestGrid">
+          <button
+            class="record glass"
+            type="button"
+            data-section="characters"
+            data-search="halken orveth answered dominion church auctorial"
+            data-modal="halken">
+            <div class="record__meta">
+              <span class="record__section micro">Characters</span>
+              <span class="metric">Revised dossier</span>
+            </div>
+            <h3 class="record__title">Halk'en Orveth</h3>
+            <div class="record__body">
+              <p>A Cynosure-aligned Answered vessel whose presence makes the archive's theology feel operational instead of abstract.</p>
+              <div class="tagrow">
+                <span class="tag">Answered</span>
+                <span class="tag">Church</span>
+                <span class="tag">Dominion</span>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="record glass"
+            type="button"
+            data-section="characters"
+            data-search="vaey viktor meruel hollow saint assessment church"
+            data-modal="vaey">
+            <div class="record__meta">
+              <span class="record__section micro">Characters</span>
+              <span class="metric">High-interest figure</span>
+            </div>
+            <h3 class="record__title">Vaey Viktor</h3>
+            <div class="record__body">
+              <p>The retired Obsidian Rite assessor whose fragment of Meruel lets him hear squandered potential like a moral alarm.</p>
+              <div class="tagrow">
+                <span class="tag">Meruel</span>
+                <span class="tag">Obsidian Rite</span>
+                <span class="tag">Assessment</span>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="record glass"
+            type="button"
+            data-section="places"
+            data-search="darkmargin frontier twilight band war threshold coastal dark"
+            data-modal="darkmargin">
+            <div class="record__meta">
+              <span class="record__section micro">Places</span>
+              <span class="metric">Frontier zone</span>
+            </div>
+            <h3 class="record__title">The Darkmargin</h3>
+            <div class="record__body">
+              <p>The coast where the Twilight Band meets permanent dark, and where the empire keeps catastrophe geographically contained.</p>
+              <div class="tagrow">
+                <span class="tag">Frontier</span>
+                <span class="tag">Threshold War</span>
+                <span class="tag">Northern coast</span>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="record glass"
+            type="button"
+            data-section="systems"
+            data-search="redactory routing reality dive anchor strata"
+            data-modal="redactory">
+            <div class="record__meta">
+              <span class="record__section micro">Systems</span>
+              <span class="metric">Primer route</span>
+            </div>
+            <h3 class="record__title">Redactory</h3>
+            <div class="record__body">
+              <p>The cleanest homepage on-ramp into the archive's logic: routing possibility rather than inventing a new law.</p>
+              <div class="tagrow">
+                <span class="tag">Routing</span>
+                <span class="tag">Dive</span>
+                <span class="tag">Anchor</span>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="record glass"
+            type="button"
+            data-section="organizations"
+            data-search="apocachynthion institution brightcrystal imperial research classified"
+            data-modal="apocachynthion">
+            <div class="record__meta">
+              <span class="record__section micro">Organizations</span>
+              <span class="metric">Institutional route</span>
+            </div>
+            <h3 class="record__title">Apocachynthion</h3>
+            <div class="record__body">
+              <p>A research institution whose public face already suggests the archive is cataloguing something more dangerous than scholarship.</p>
+              <div class="tagrow">
+                <span class="tag">Research</span>
+                <span class="tag">Imperial</span>
+                <span class="tag">Classified</span>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="record glass"
+            type="button"
+            data-section="systems"
+            data-search="divination vessel seraphim fusion answered fragments"
+            data-modal="divination">
+            <div class="record__meta">
+              <span class="record__section micro">Systems</span>
+              <span class="metric">Possession grammar</span>
+            </div>
+            <h3 class="record__title">Divination</h3>
+            <div class="record__body">
+              <p>The system that clarifies why saints, fragments, vessels, and divine pressure belong beside the archive's science.</p>
+              <div class="tagrow">
+                <span class="tag">Fusion</span>
+                <span class="tag">Seraphim</span>
+                <span class="tag">Vessels</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="empty" id="emptyState">No surfaced records match that filter in this concept pass.</div>
+      </section>
+
+      <section class="shell reveal" id="spotlight">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Dossier spotlight / glass panel transition</p>
+            <h2 class="section-title">Opening a dossier should feel ceremonial, not abrupt.</h2>
+          </div>
+          <p class="section-desc">
+            The spotlight demonstrates how detail views could inherit the same black-glass language: structured metadata, strong portrait treatment,
+            and expandable field notes instead of flat collapses.
+          </p>
+        </div>
+
+        <div class="spotlight">
+          <div class="spotlight-list glass">
+            <button class="is-active" type="button" data-character="halken">
+              <span class="micro">Registry 01</span>
+              <strong>Halk'en Orveth</strong>
+              <span>The Answered of Dominion, where Church doctrine becomes visible in a single body.</span>
+            </button>
+            <button type="button" data-character="vaey">
+              <span class="micro">Registry 02</span>
+              <strong>Vaey Viktor</strong>
+              <span>A Meruel-fragment assessor who now treats unrealized greatness as a sin of waste.</span>
+            </button>
+            <button type="button" data-character="solytra">
+              <span class="micro">Registry 03</span>
+              <strong>Sol'ytra</strong>
+              <span>An extant presence whose image already implies velocity, spectral brightness, and danger.</span>
+            </button>
+            <button type="button" data-character="alithia">
+              <span class="micro">Registry 04</span>
+              <strong>Al'ithia Rae Wonderwall</strong>
+              <span>Wonderwall lineage pushed fully into mythic inheritance and public memory.</span>
+            </button>
+          </div>
+
+          <article class="spotlight-panel glass glass--strong">
+            <div class="spotlight-panel__media">
+              <img id="spotlightImage" src="../public/uploads/char-halken-orveth-hero.png" alt="Halken Orveth portrait">
+            </div>
+            <div class="spotlight-panel__fade"></div>
+            <div class="spotlight-panel__body">
+              <div class="micro" id="spotlightType">Character / Answered-class vessel</div>
+              <div class="spotlight-panel__designation" id="spotlightDesignation">The Answered of Dominion</div>
+              <h3 class="spotlight-panel__name" id="spotlightName">Halk'en Orveth</h3>
+              <p id="spotlightSummary">
+                A Cynosure-aligned Answered vessel of Auctoriel, Seraphim of Dominion, and one of the clearest living proofs that the archive's theology
+                is not metaphor but operating structure.
+              </p>
+              <div class="tagrow" id="spotlightTags">
+                <span class="tag">Church</span>
+                <span class="tag">Auctoriel</span>
+                <span class="tag">Dominion</span>
+                <span class="tag">Kalt'sen</span>
+              </div>
+              <p class="quote" id="spotlightQuote">"Dominion is easiest to praise when it is a word in liturgy. It is harder to endure when it grows hands."</p>
+
+              <div class="accordion" id="spotlightAccordion">
+                <div class="accordion-item glass is-open">
+                  <button class="accordion-trigger" type="button" aria-expanded="true">
+                    <span>Field notes</span>
+                    <span>+</span>
+                  </button>
+                  <div class="accordion-panel">
+                    <div class="accordion-panel__inner" id="spotlightFieldNotes">
+                      Keep the notes dense and classified: vessel class, doctrinal implications, notable alignments, and one sharply written line that gives the reader a reason to descend into the full dossier.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item glass">
+                  <button class="accordion-trigger" type="button" aria-expanded="false">
+                    <span>Surface treatment notes</span>
+                    <span>+</span>
+                  </button>
+                  <div class="accordion-panel">
+                    <div class="accordion-panel__inner">
+                      The portrait pane is denser and darker than the body panel, so the dossier feels like a classified enclosure opening rather than a generic marketing card.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell reveal" id="places">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Topography / location-led atmosphere</p>
+            <h2 class="section-title">Let the world read as terrain, not just taxonomy.</h2>
+          </div>
+          <p class="section-desc">
+            The place layer carries the same glass language but leans more cinematic: luminous coastlines, institutional cities,
+            and hazard zones that make the archive's cosmology physically legible.
+          </p>
+        </div>
+
+        <div class="places">
+          <article class="place place--feature glass glass--strong">
+            <img src="../public/uploads/place-darkmargin.png" alt="The Darkmargin">
+            <div class="place__copy">
+              <span class="micro">Frontier coast / Twilight Band threshold</span>
+              <h3>The Darkmargin</h3>
+              <p>The coastline where permanent dark begins and the War of the Threshold stops being theory. The glass treatment turns this into a cinematic anchor without losing the archive's severity.</p>
+            </div>
+          </article>
+
+          <article class="place place--a glass">
+            <img src="../public/uploads/place-vrenne.png" alt="Vrenne">
+            <div class="place__copy">
+              <span class="micro">Academy city / systems capital</span>
+              <h3>Vrenne</h3>
+              <p>Home of the Academy of Syr'lene, where system theory, institutional power, and urban identity are indistinguishable.</p>
+            </div>
+          </article>
+
+          <article class="place place--b glass">
+            <img src="../public/uploads/place-aurora.png" alt="Aurora">
+            <div class="place__copy">
+              <span class="micro">Cultural route / public-facing threshold</span>
+              <h3>Aurora</h3>
+              <p>A more luminous route into the archive, useful for showing that not every classified surface has to collapse into the same darkness.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell reveal" id="systems">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Systems primer / theory made navigable</p>
+            <h2 class="section-title">A homepage should teach just enough grammar to reward the next click.</h2>
+          </div>
+          <p class="section-desc">
+            The systems block shows how the glass treatment can handle denser explanatory content without becoming soft or decorative. This is where the archive proves it is not just mood.
+          </p>
+        </div>
+
+        <div class="systems">
+          <div class="systems-list" role="tablist" aria-label="Systems primer tabs">
+            <button class="glass is-active" type="button" data-system="redactory">
+              <span class="micro">Primer 01</span>
+              <strong>Redactory</strong>
+              <small>The disciplined art of routing reality into allowed forms.</small>
+            </button>
+            <button class="glass" type="button" data-system="divination">
+              <span class="micro">Primer 02</span>
+              <strong>Divination</strong>
+              <small>Recursive fusion between mortal vessel and divine coherence.</small>
+            </button>
+            <button class="glass" type="button" data-system="brightcrystal">
+              <span class="micro">Primer 03</span>
+              <strong>BrightCrystal</strong>
+              <small>The material substrate connecting economy, energy, and systemic risk.</small>
+            </button>
+          </div>
+
+          <article class="systems-panel glass glass--strong">
+            <div class="systems-panel__media">
+              <img id="systemImage" src="../public/uploads/sys-redactory.png" alt="Redactory system art">
+            </div>
+            <div class="systems-panel__fade"></div>
+            <div class="systems-panel__body">
+              <div class="systems-panel__head">
+                <h3 id="systemName">Redactory</h3>
+                <span class="micro" id="systemMeta">Routing / Dive / Anchor</span>
+              </div>
+              <p class="section-desc" id="systemSummary">The practiced ability to force reality to express a different valid state without rewriting the world's underlying laws.</p>
+
+              <div class="systems-copy" id="systemCards">
+                <article class="glass">
+                  <h4>Plain language</h4>
+                  <p>Redactory is routing, not creation. A practitioner selects from possibilities reality already allows and forces one into local expression.</p>
+                </article>
+                <article class="glass">
+                  <h4>Why it matters</h4>
+                  <p>It gives the home page a clean first explanation for how the archive's effects happen, and why deeper work means more foundational contact.</p>
+                </article>
+                <article class="glass">
+                  <h4>World hook</h4>
+                  <p>The Academy of Syr'lene, Vrenne, Anchor domains, and the Index Theorem all become more legible once this routing model is visible up front.</p>
+                </article>
+                <article class="glass">
+                  <h4>Interaction note</h4>
+                  <p>Tabs switch with immediate content replacement while the glass pane stays continuous, so density rises without breaking the visual field.</p>
+                </article>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell reveal" id="directory">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Section directory / continuation routes</p>
+            <h2 class="section-title">The threshold informs. The archive still specializes.</h2>
+          </div>
+          <p class="section-desc">
+            This concept does not flatten the site into one page. It gives the home page stronger intelligence, then hands readers into the existing section architecture with more intent.
+          </p>
+        </div>
+
+        <div class="directory">
+          <a class="glass" href="#spotlight">
+            <span class="micro">Section route / character dossiers</span>
+            <h3>Characters</h3>
+            <p>Named figures, vessels, clergy, witnesses, and dangerous exceptions.</p>
+          </a>
+          <a class="glass" href="#places">
+            <span class="micro">Section route / world geography</span>
+            <h3>Places</h3>
+            <p>Cities, margins, coasts, and institutional geographies with narrative consequence.</p>
+          </a>
+          <a class="glass" href="#systems">
+            <span class="micro">Section route / theoretical grammar</span>
+            <h3>Systems</h3>
+            <p>Redactory, Divination, BrightCrystal, and the operational logic beneath them.</p>
+          </a>
+          <a class="glass" href="#latest">
+            <span class="micro">Section route / surfaced revision layer</span>
+            <h3>Latest</h3>
+            <p>A searchable threshold that prioritizes what changed, what matters, and what deserves the next click.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell reveal">
+      <div class="footer__row glass">
+        <span class="micro">SiNE Archives / classified distribution / public access layer</span>
+        <span class="micro">Black glass, graphite blur, crimson active, gold metadata, spectral focus</span>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal" id="recordModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__card glass glass--strong">
+      <button class="modal__close glass" type="button" id="modalClose" aria-label="Close record preview">X</button>
+      <div class="modal__layout">
+        <div class="modal__body">
+          <span class="eyebrow" id="modalEyebrow">Character record / preview</span>
+          <h3 id="modalTitle">Halk'en Orveth</h3>
+          <p id="modalSummary">A Cynosure-aligned Answered vessel whose profile makes the archive's theology feel immediate, embodied, and operational.</p>
+          <div class="tagrow" id="modalTags">
+            <span class="tag">Answered</span>
+            <span class="tag">Church</span>
+          </div>
+          <div class="modal__stats">
+            <article class="glass">
+              <span class="micro">Reason to surface</span>
+              <strong id="modalReason">Best entry into Answered-class doctrine.</strong>
+              <span>Use the threshold itself to explain why this record matters.</span>
+            </article>
+            <article class="glass">
+              <span class="micro">Interaction</span>
+              <strong>Dossier opening</strong>
+              <span>Clicking the card expands into a layered glass modal instead of hard-jumping away.</span>
+            </article>
+            <article class="glass">
+              <span class="micro">Preserved tone</span>
+              <strong>Classified, not playful</strong>
+              <span>The interaction becomes richer without dropping the archive's formal severity.</span>
+            </article>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item glass is-open">
+              <button class="accordion-trigger" type="button" aria-expanded="true">
+                <span>Preview excerpt</span>
+                <span>+</span>
+              </button>
+              <div class="accordion-panel">
+                <div class="accordion-panel__inner" id="modalExcerpt">
+                  Dominion is easiest to praise at a distance. The archive becomes more compelling when the home page proves it can bring doctrine into the body of a single person.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="modal__aside">
+          <img id="modalImage" src="../public/uploads/char-halken-orveth-hero.png" alt="Halken Orveth portrait">
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const drawer = document.getElementById("navDrawer");
+    const menuToggle = document.getElementById("menuToggle");
+    const heroDrawerToggle = document.getElementById("heroDrawerToggle");
+
+    function toggleDrawer(force) {
+      const open = typeof force === "boolean" ? force : !drawer.classList.contains("is-open");
+      drawer.classList.toggle("is-open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+    }
+
+    menuToggle.addEventListener("click", () => toggleDrawer());
+    heroDrawerToggle.addEventListener("click", () => toggleDrawer(true));
+
+    const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
+    const recordButtons = Array.from(document.querySelectorAll("[data-modal]"));
+    const resultsSummary = document.getElementById("resultsSummary");
+    const emptyState = document.getElementById("emptyState");
+    const heroSearch = document.getElementById("heroSearch");
+    let activeFilter = "all";
+
+    function applyFilters() {
+      const query = (heroSearch.value || "").trim().toLowerCase();
+      const terms = query.split(/\s+/).filter(Boolean);
+      let visible = 0;
+
+      recordButtons.forEach((button) => {
+        const section = button.dataset.section || "";
+        const searchable = button.dataset.search || "";
+        const filterMatch = activeFilter === "all" || activeFilter === section;
+        const queryMatch = !terms.length || terms.every((term) => searchable.includes(term));
+        const show = filterMatch && queryMatch;
+        button.classList.toggle("hidden", !show);
+        if (show) visible += 1;
+      });
+
+      const filterLabel = activeFilter === "all" ? "surfaced records" : activeFilter + " records";
+      const queryLabel = query ? ' matching "' + query + '"' : "";
+      resultsSummary.textContent = "Showing " + visible + " " + filterLabel + queryLabel;
+      emptyState.classList.toggle("is-visible", visible === 0);
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter || "all";
+        filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+        applyFilters();
+      });
+    });
+
+    heroSearch.addEventListener("input", applyFilters);
+
+    const spotlightData = {
+      halken: {
+        type: "Character / Answered-class vessel",
+        designation: "The Answered of Dominion",
+        name: "Halk'en Orveth",
+        summary: "A Cynosure-aligned Answered vessel of Auctoriel, Seraphim of Dominion, and one of the clearest living proofs that the archive's theology is not metaphor but operating structure.",
+        quote: "\"Dominion is easiest to praise when it is a word in liturgy. It is harder to endure when it grows hands.\"",
+        image: "../public/uploads/char-halken-orveth-hero.png",
+        alt: "Halken Orveth portrait",
+        tags: ["Church", "Auctoriel", "Dominion", "Kalt'sen"],
+        notes: "Show vessel class, doctrine, and political consequence in one compact pane. The portrait should carry force without turning the archive into a character gallery."
+      },
+      vaey: {
+        type: "Character / Hallowed assessor-priest",
+        designation: "The Hollow Saint",
+        name: "Vaey Viktor",
+        summary: "A retired Obsidian Rite assessor whose fragment of Meruel lets him perceive unrealized potential so clearly that he now treats waste as a kind of sacrilege.",
+        quote: "\"He hears too clearly from too small a part of Heaven, and has decided the fragment is the whole of judgment.\"",
+        image: "../public/uploads/char-vaey-viktor-hero.jpg",
+        alt: "Vaey Viktor portrait",
+        tags: ["Meruel", "Assessment", "Potential", "Church"],
+        notes: "His panel should feel severe and diagnostic. The glass treatment here leans more graphite than luminous so the crimson state reads as authority, not warmth."
+      },
+      solytra: {
+        type: "Character / Spectral presence",
+        designation: "Volatile radiance",
+        name: "Sol'ytra",
+        summary: "A figure whose existing imagery already suggests momentum, brightness, and danger; ideal for proving that the glass system can hold higher-energy portraits without losing control.",
+        quote: "\"Some beings do not arrive. They break visibility around themselves.\"",
+        image: "../public/uploads/char-solytra-hero.png",
+        alt: "Solytra portrait",
+        tags: ["Radiance", "Velocity", "Spectral", "Danger"],
+        notes: "This is where the spectral cyan accent can appear as a thin edge-light. It should never overwhelm the brand crimson or warm paper text."
+      },
+      alithia: {
+        type: "Character / Wonderwall lineage",
+        designation: "Wonderwall's Light",
+        name: "Al'ithia Rae Wonderwall",
+        summary: "A reincarnated line presence whose dossier immediately widens the archive from taxonomy into inheritance, memory, and mythic scale.",
+        quote: "\"Wonderwall's Light. A reincarnation of the First Radiance.\"",
+        image: "../src/assets/uploads/char-alithia-wonderwall-hero.png",
+        alt: "Al'ithia Rae Wonderwall portrait",
+        tags: ["Wonderwall", "Radiance", "Lineage", "Inheritance"],
+        notes: "Use her panel to prove the home page can surface mythic weight without abandoning classified UI. The portrait gets more halo; the copy stays controlled."
+      }
+    };
+
+    const spotlightButtons = Array.from(document.querySelectorAll("[data-character]"));
+    const spotlightType = document.getElementById("spotlightType");
+    const spotlightDesignation = document.getElementById("spotlightDesignation");
+    const spotlightName = document.getElementById("spotlightName");
+    const spotlightSummary = document.getElementById("spotlightSummary");
+    const spotlightQuote = document.getElementById("spotlightQuote");
+    const spotlightImage = document.getElementById("spotlightImage");
+    const spotlightTags = document.getElementById("spotlightTags");
+    const spotlightFieldNotes = document.getElementById("spotlightFieldNotes");
+
+    function syncOpenAccordions() {
+      accordionItems.forEach((item) => {
+        if (item.classList.contains("is-open")) {
+          const panel = item.querySelector(".accordion-panel");
+          panel.style.height = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+    function setSpotlight(key) {
+      const item = spotlightData[key];
+      if (!item) return;
+      spotlightButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.character === key));
+      spotlightType.textContent = item.type;
+      spotlightDesignation.textContent = item.designation;
+      spotlightName.textContent = item.name;
+      spotlightSummary.textContent = item.summary;
+      spotlightQuote.textContent = item.quote;
+      spotlightImage.src = item.image;
+      spotlightImage.alt = item.alt;
+      spotlightFieldNotes.textContent = item.notes;
+      spotlightTags.innerHTML = item.tags.map((tag) => '<span class="tag">' + tag + "</span>").join("");
+      syncOpenAccordions();
+    }
+
+    spotlightButtons.forEach((button) => {
+      const key = button.dataset.character;
+      button.addEventListener("mouseenter", () => setSpotlight(key));
+      button.addEventListener("focus", () => setSpotlight(key));
+      button.addEventListener("click", () => setSpotlight(key));
+    });
+
+    const systemsData = {
+      redactory: {
+        name: "Redactory",
+        meta: "Routing / Dive / Anchor",
+        summary: "The practiced ability to force reality to express a different valid state without rewriting the world's underlying laws.",
+        image: "../public/uploads/sys-redactory.png",
+        alt: "Redactory system art",
+        cards: [
+          ["Plain language", "Redactory is routing, not creation. A practitioner selects from possibilities reality already allows and forces one into local expression."],
+          ["Why it matters", "It gives the home page a clean first explanation for how the archive's effects happen, and why deeper work means more foundational contact."],
+          ["World hook", "The Academy of Syr'lene, Vrenne, Anchor domains, and the Index Theorem all become more legible once this routing model is visible up front."],
+          ["Interaction note", "Tabs switch inside one continuous glass pane so informational density rises without losing atmosphere."]
+        ]
+      },
+      divination: {
+        name: "Divination",
+        meta: "Fusion / Vessels / Fragments",
+        summary: "Recursive fusion between a mortal vessel and divine coherence through the Dive interface.",
+        image: "../public/uploads/sys-divination.png",
+        alt: "Divination system art",
+        cards: [
+          ["Plain language", "Redactory changes configuration. Divination turns a mortal vessel into a place where domain-pressure answers."],
+          ["Why it matters", "It explains why saints, fragments, vessels, and possession language are not just religious pageantry but structural phenomena."],
+          ["World hook", "Once this is visible, characters like Halk'en Orveth and Vaey Viktor read as system expressions instead of isolated lore fragments."],
+          ["Interaction note", "This tab can carry slightly more spectral edge light because its subject is intrusion, coherence, and answered pressure."]
+        ]
+      },
+      brightcrystal: {
+        name: "BrightCrystal",
+        meta: "Energy / Economy / Risk",
+        summary: "Curvature-Compressed Radiant Silicate: the world's primary energy substrate and the material nobody fully understands.",
+        image: "../public/uploads/sys-bright-crystal.png",
+        alt: "BrightCrystal system art",
+        cards: [
+          ["Plain language", "BrightCrystal stores, transmits, and amplifies resonance. It powers industry, currency, advanced practice, and systemic risk."],
+          ["Why it matters", "It turns cosmology and systems theory into a material economy readers can understand at the homepage level."],
+          ["World hook", "The Vael Mouth, Calling hazards, the Apocachynthion, and hidden research all connect through BrightCrystal."],
+          ["Interaction note", "Use gold more visibly here than elsewhere, because this system carries extraction, industry, and precious-material logic."]
+        ]
+      }
+    };
+
+    const systemButtons = Array.from(document.querySelectorAll("[data-system]"));
+    const systemName = document.getElementById("systemName");
+    const systemMeta = document.getElementById("systemMeta");
+    const systemSummary = document.getElementById("systemSummary");
+    const systemImage = document.getElementById("systemImage");
+    const systemCards = document.getElementById("systemCards");
+
+    function setSystem(key) {
+      const item = systemsData[key];
+      if (!item) return;
+      systemButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.system === key));
+      systemName.textContent = item.name;
+      systemMeta.textContent = item.meta;
+      systemSummary.textContent = item.summary;
+      systemImage.src = item.image;
+      systemImage.alt = item.alt;
+      systemCards.innerHTML = item.cards.map(([title, copy]) => {
+        return '<article class="glass"><h4>' + title + "</h4><p>" + copy + "</p></article>";
+      }).join("");
+    }
+
+    systemButtons.forEach((button) => {
+      button.addEventListener("click", () => setSystem(button.dataset.system));
+    });
+
+    const modalData = {
+      halken: {
+        eyebrow: "Character record / preview",
+        title: "Halk'en Orveth",
+        summary: "A Cynosure-aligned Answered vessel whose profile makes the archive's theology feel immediate, embodied, and operational.",
+        reason: "Best entry into Answered-class doctrine.",
+        excerpt: "Dominion is easiest to praise at a distance. The archive becomes more compelling when the home page proves it can bring doctrine into the body of a single person.",
+        image: "../public/uploads/char-halken-orveth-hero.png",
+        alt: "Halken Orveth portrait",
+        tags: ["Answered", "Church", "Dominion", "Cynosure"]
+      },
+      vaey: {
+        eyebrow: "Character record / preview",
+        title: "Vaey Viktor",
+        summary: "A retired Obsidian Rite assessor whose fragment of Meruel turned potential into a doctrine of judgment.",
+        reason: "High-value route into moral pressure and divine fragments.",
+        excerpt: "His record belongs near the top because it shows the archive's religious cosmology can also behave like bureaucracy, pathology, and threat assessment.",
+        image: "../public/uploads/char-vaey-viktor-hero.jpg",
+        alt: "Vaey Viktor portrait",
+        tags: ["Meruel", "Assessment", "Potential", "Church"]
+      },
+      darkmargin: {
+        eyebrow: "Place record / preview",
+        title: "The Darkmargin",
+        summary: "The coast where permanent dark begins, and where geography itself becomes a classification problem.",
+        reason: "Fastest way to give the archive physical gravity.",
+        excerpt: "The home page should not only tell readers what exists. It should tell them where pressure gathers, where the empire points its fear, and why distance matters.",
+        image: "../public/uploads/place-darkmargin.png",
+        alt: "The Darkmargin landscape",
+        tags: ["Frontier", "Threshold War", "Twilight Band", "Coast"]
+      },
+      redactory: {
+        eyebrow: "System record / preview",
+        title: "Redactory",
+        summary: "Routing reality into another valid state: the archive's cleanest public explanation for how change happens.",
+        reason: "Best theoretical primer for first-time readers.",
+        excerpt: "The home page becomes much more legible once one system is explained in plain language instead of being deferred to a deeper section page.",
+        image: "../public/uploads/sys-redactory-panel.png",
+        alt: "Redactory panel art",
+        tags: ["Routing", "Dive", "Anchor", "Index Theorem"]
+      },
+      apocachynthion: {
+        eyebrow: "Organization record / preview",
+        title: "Apocachynthion",
+        summary: "A research institution whose public presence already implies the archive is categorizing something more dangerous than scholarship.",
+        reason: "Shows institutional power without requiring full page depth.",
+        excerpt: "Bringing one institution to the threshold gives the home page a clearer sense of who is looking, recording, and deciding what counts as knowledge.",
+        image: "../public/uploads/org-apocachynthion.png",
+        alt: "Apocachynthion emblem",
+        tags: ["Research", "Empire", "BrightCrystal", "Classified"]
+      },
+      divination: {
+        eyebrow: "System record / preview",
+        title: "Divination",
+        summary: "Recursive fusion between mortal vessel and divine coherence, where theology, interface, and danger occupy the same sentence.",
+        reason: "Necessary if the site wants saints and vessels to feel structural.",
+        excerpt: "Without a fast public explanation of Divination, many character dossiers read as private myth. With it, the archive's logic becomes coherent immediately.",
+        image: "../public/uploads/sys-divination-panel.png",
+        alt: "Divination panel art",
+        tags: ["Fusion", "Seraphim", "Vessel", "Fragments"]
+      }
+    };
+
+    const recordModal = document.getElementById("recordModal");
+    const modalClose = document.getElementById("modalClose");
+    const modalEyebrow = document.getElementById("modalEyebrow");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalSummary = document.getElementById("modalSummary");
+    const modalReason = document.getElementById("modalReason");
+    const modalExcerpt = document.getElementById("modalExcerpt");
+    const modalImage = document.getElementById("modalImage");
+    const modalTags = document.getElementById("modalTags");
+
+    function openModal(key) {
+      const item = modalData[key];
+      if (!item) return;
+      modalEyebrow.textContent = item.eyebrow;
+      modalTitle.textContent = item.title;
+      modalSummary.textContent = item.summary;
+      modalReason.textContent = item.reason;
+      modalExcerpt.textContent = item.excerpt;
+      modalImage.src = item.image;
+      modalImage.alt = item.alt;
+      modalTags.innerHTML = item.tags.map((tag) => '<span class="tag">' + tag + "</span>").join("");
+      recordModal.classList.add("is-open");
+      recordModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      syncOpenAccordions();
+    }
+
+    function closeModal() {
+      recordModal.classList.remove("is-open");
+      recordModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    recordButtons.forEach((button) => {
+      button.addEventListener("click", () => openModal(button.dataset.modal));
+    });
+
+    modalClose.addEventListener("click", closeModal);
+    recordModal.addEventListener("click", (event) => {
+      if (event.target === recordModal) closeModal();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+        toggleDrawer(false);
+      }
+    });
+
+    const accordionItems = Array.from(document.querySelectorAll(".accordion-item"));
+
+    function setAccordionState(item, open) {
+      const trigger = item.querySelector(".accordion-trigger");
+      const panel = item.querySelector(".accordion-panel");
+      item.classList.toggle("is-open", open);
+      trigger.setAttribute("aria-expanded", String(open));
+      panel.style.height = open ? panel.scrollHeight + "px" : "0px";
+    }
+
+    accordionItems.forEach((item) => {
+      const trigger = item.querySelector(".accordion-trigger");
+      const panel = item.querySelector(".accordion-panel");
+      const open = item.classList.contains("is-open");
+      panel.style.height = open ? panel.scrollHeight + "px" : "0px";
+      trigger.addEventListener("click", () => {
+        const next = !item.classList.contains("is-open");
+        setAccordionState(item, next);
+      });
+    });
+
+    const revealItems = Array.from(document.querySelectorAll(".reveal"));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    setSpotlight("halken");
+    setSystem("redactory");
+    applyFilters();
+  </script>
+</body>
+</html>
