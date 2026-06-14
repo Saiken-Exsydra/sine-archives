@@ -308,14 +308,16 @@ const count = publicEntries.length;
   }
 </style>
 
-<script define:vars={{ entryLabel: labels.entry, entriesLabel: labels.entries, matchingLabel: labels.matching }}>
-  const input = document.getElementById("sec-search-input") as HTMLInputElement | null;
+<script define:vars={{ entryLabel: labels.entry, entriesLabel: labels.entries, matchingLabel: labels.matching }} is:inline>
+  const input = document.getElementById("sec-search-input");
   const list = document.getElementById("sec-list");
   const noResults = document.getElementById("sec-no-results");
   const countEl = document.getElementById("sec-count");
 
-  if (input && list) {
-    const cards = Array.from(list.querySelectorAll<HTMLElement>("[data-search]"));
+  if (input instanceof HTMLInputElement && list) {
+    const cards = Array.from(list.querySelectorAll("[data-search]")).filter(
+      (card) => card instanceof HTMLElement
+    );
     const totalCount = cards.length;
 
     input.addEventListener("input", () => {

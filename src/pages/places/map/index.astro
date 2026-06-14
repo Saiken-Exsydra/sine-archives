@@ -305,7 +305,7 @@ const handles = [
 </MainLayout>
 
 <!-- ---------------------------------------------------------------------- -->
-<script define:vars={{ dossierJson: JSON.stringify(dossier), mapAspectRatio: MAP_ASPECT }}>
+<script define:vars={{ dossierJson: JSON.stringify(dossier), mapAspectRatio: MAP_ASPECT }} is:inline>
   const DOSSIER    = JSON.parse(dossierJson);
   const MAP_ASPECT = mapAspectRatio;
 

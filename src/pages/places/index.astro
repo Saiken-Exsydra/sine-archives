@@ -6,7 +6,7 @@ import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
 import { getImageUrl } from "../../utils/optimized-images";
 import placeBrightMarginImage from "../../assets/uploads/place-bright-margin.png";
 import placeDarkmarginImage from "../../assets/uploads/place-darkmargin.png";
-import placeVrenneImage from "../../assets/uploads/place-vrenne.png";
+import placeVrenneImage from "../../assets/uploads/places/place-vrenne.png";
 
 const REGIONS = [
   {
@@ -48,6 +48,7 @@ const REGIONS = [
 ];
 
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const placesEntryBase = localizedPath(locale, "/places/");
 const navLabels = getArchiveNavLabels(locale);
 const all = (await getLocalizedCollection("places", locale)).filter((e) => e.data.status === "public");
 
@@ -111,7 +112,7 @@ const regionsJson = JSON.stringify(
     { label: sectionLabel(locale, "places") },
   ]}
 >
-  <div class="places-root" id="places-root" data-regions={regionsJson}>
+  <div class="places-root" id="places-root" data-regions={regionsJson} data-entry-base={placesEntryBase}>
     <div class="places-header">
       <div class="places-header__rule"></div>
       <div class="places-header__center">
@@ -1114,6 +1115,7 @@ const regionsJson = JSON.stringify(
 
   if (root && searchBtn && searchPanel && searchInput && searchResults && searchWrap) {
     const regionsAttr = root.getAttribute("data-regions") ?? "[]";
+    const entryBase = root.dataset.entryBase ?? "/places/";
     let regionsData: any[] = [];
     try { regionsData = JSON.parse(regionsAttr); } catch {}
 
@@ -1158,7 +1160,7 @@ const regionsJson = JSON.stringify(
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.className = "places-search__item";
-        a.href = `${localizedPath(locale, "/places/")}${entry.slug}/`;
+        a.href = `${entryBase}${entry.slug}/`;
         a.style.setProperty("--accent", entry.accent);
         a.style.setProperty("--accent-tint", `${entry.accent}22`);
         a.dataset.idx = String(i);

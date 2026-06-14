@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, rm, stat, unlink, writeFile } from "node:fs/promises";
+import { mkdir, readdir, rm, stat, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import fg from "fast-glob";
 import { parseFile } from "music-metadata";
@@ -80,7 +80,7 @@ async function readMetadata(filePath) {
 
   let coverUrl = null;
 
-  if (picture?.data?.length) {
+  if (!override?.cover && picture?.data?.length) {
     const coverExtension = inferCoverExtension(picture);
     const coverName = `${getCoverBasename(filePath)}${coverExtension}`;
     const coverPath = path.join(coversRoot, coverName);

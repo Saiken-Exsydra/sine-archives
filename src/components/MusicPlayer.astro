@@ -126,7 +126,7 @@ const copy = locale === "pt-br"
   </div>
 </div>
 
-<script define:vars={{ tracks, copy, defaultTrackId: DEFAULT_MUSIC_TRACK_ID }}>
+<script define:vars={{ tracks, copy, defaultTrackId: DEFAULT_MUSIC_TRACK_ID }} is:inline>
   const scriptElement = document.currentScript;
   const controllerKey = "__sineMusicController";
   const initKey = "__sineMusicInit";

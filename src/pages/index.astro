@@ -20,7 +20,12 @@ async function getPublic(key: ContentKey) {
 const bySection = await Promise.all(
   sections.map(async (s) => {
     const entries = await getPublic(s.key);
-    return { ...s, entries, count: entries.length };
+    return {
+      ...s,
+      entries,
+      count: entries.length,
+      href: localizedPath(locale, `/${s.key}/`),
+    };
   })
 );
 
@@ -114,7 +119,7 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
         return (
           <a
             class="list-row"
-            href={s.href ?? localizedPath(locale, `/${s.key}/`)}
+            href={s.href}
             data-key={s.key}
             data-img={meta.image || FALLBACK_IMG}
             data-desc={meta.desc}

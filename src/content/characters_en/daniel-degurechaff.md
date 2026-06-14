@@ -18,7 +18,7 @@ dress: "Black-and-white Ardeatan diplomatic uniform with restrained brass detail
 residence: "Sarn Pell diplomatic compound, Southern Region of Synus"
 occupation: "Senior Tempering Witness and chief transfer liaison for Ardeatan-born Redactor custody cases"
 summary: "A man trained to serve the sentence, altered by the sight of who burns beneath it; now every doctrine that misnames the innocent has reason to fear him."
-image: "../../assets/uploads/characters/char-daniel-degurechaff-portrait.png"
+image: "../../assets/uploads/characters/char-daniel-degurechaff-portrait.webp"
 hero_image: "../../assets/uploads/characters/char-daniel-degurechaff-hero.png"
 portrait_gallery: []
 hero_gallery: []

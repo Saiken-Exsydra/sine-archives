@@ -31,6 +31,13 @@ type AbilitySnapshotCard = {
   items?: string[];
 };
 
+type NormalizedAbilitySnapshotCard = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  items: string[];
+};
+
 type ArchiveNote = {
   label?: string;
   text: string;
@@ -198,7 +205,7 @@ const extraGalleryImages = [
   .map((value) => ({ value, url: getImageUrl(value), kind: getImageKind(value) }))
   .filter((item) => !!item.value && !!item.url)
   .filter((item, index, list) => list.findIndex((entry) => entry.url === item.url) === index)
-  .filter((item) => item.url !== portraitImages[0]?.url || !railUrls.has(item.url) || portraitImages.length <= 1);
+  .filter((item) => item.url !== portraitImages[0]?.url || !railUrls.has(item.url));
 
 const tags: string[] = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
 
@@ -245,13 +252,13 @@ const contentHeadings = (Array.isArray(headings) ? headings : [])
 const tocEnabled = false;
 const showToc = tocEnabled && contentHeadings.length > 0;
 
-const relatedLinks = Array.isArray(entry.data?.related_links)
+const relatedLinks: RelatedLink[] = Array.isArray(entry.data?.related_links)
   ? entry.data.related_links
       .map((item: RelatedLink) => ({ label: str(item?.label), href: str(item?.href) }))
-      .filter((item) => item.label && item.href)
+      .filter((item: RelatedLink) => item.label && item.href)
   : [];
 
-const abilitySnapshot = Array.isArray(entry.data?.ability_snapshot)
+const abilitySnapshot: NormalizedAbilitySnapshotCard[] = Array.isArray(entry.data?.ability_snapshot)
   ? entry.data.ability_snapshot
       .map((card: AbilitySnapshotCard) => ({
         eyebrow: str(card?.eyebrow),
@@ -259,7 +266,7 @@ const abilitySnapshot = Array.isArray(entry.data?.ability_snapshot)
         body: str(card?.body),
         items: Array.isArray(card?.items) ? card.items.map((item) => str(item)).filter(Boolean) : [],
       }))
-      .filter((card) => card.title)
+      .filter((card: NormalizedAbilitySnapshotCard) => card.title)
   : [];
 
 const abilitySnapshotSection = str(entry.data?.ability_snapshot_section);
@@ -1614,7 +1621,7 @@ const codexHref = localizedPath(locale, `/characters/${entry.slug}/codex/`);
     </div>
   </main>
 
-  <script define:vars={{ headingSlugs: contentHeadings.map((heading) => heading.slug) }}>
+  <script define:vars={{ headingSlugs: contentHeadings.map((heading) => heading.slug) }} is:inline>
     window.registerPageInit?.("character-entry-page", () => {
       const listenerScope = new AbortController();
       const { signal } = listenerScope;

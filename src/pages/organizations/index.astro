@@ -165,7 +165,7 @@ const entryBasePath = localizedPath(locale, "/organizations/");
 
     <!-- Quick index strip -->
     <nav class="orgs-index" aria-label={copy.indexLabel}>
-      {panels.map((p, i) => (
+      {panels.map((p) => (
         <a href={`#org-${p.slug}`} class="orgs-index__item" style={`--accent: ${p.accent};`}>
           <span class="orgs-index__num" aria-hidden="true">{p.numeral}</span>
           <span class="orgs-index__name">{p.title}</span>
@@ -320,7 +320,6 @@ const entryBasePath = localizedPath(locale, "/organizations/");
 
   const overlay          = byId("org-overlay");
   const modal            = byId("org-modal");
-  const modalPicture     = byId("org-modal-picture");
   const modalImg         = byId("org-modal-img");
   const modalAccent      = byId("org-modal-accent");
   const modalBar         = byId("org-modal-bar");

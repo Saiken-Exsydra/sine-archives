@@ -525,6 +525,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     <script
       id="archive-search-data"
       type="application/json"
+      is:inline
       set:html={JSON.stringify({
         items: clientItems,
         groupLabelByKey,

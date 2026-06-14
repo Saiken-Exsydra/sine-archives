@@ -1,12 +1,25 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import type { ContentKey } from "../content-keys";
 import { localizedEntryPath, type SiteLocale } from "../i18n/config";
 import { getImageUrl } from "../utils/optimized-images";
 
+type EntryCardData = {
+  title: string;
+  type?: string;
+  summary: string;
+  designation?: string;
+  tags?: string[];
+  updated: string;
+  image?: Parameters<typeof getImageUrl>[0];
+  image_position?: string;
+};
+
 type Props = {
   section: ContentKey;
-  entry: CollectionEntry<any>;
+  entry: {
+    slug: string;
+    data: EntryCardData;
+  };
   locale?: SiteLocale;
 };
 
@@ -27,7 +40,7 @@ const thumbImage = getImageUrl(entry.data.image ?? null);
         alt=""
         loading="lazy"
         decoding="async"
-        style={(entry.data as any).image_position ? `object-position: ${(entry.data as any).image_position}` : undefined}
+        style={entry.data.image_position ? `object-position: ${entry.data.image_position}` : undefined}
       />
     ) : (
       <div class="ecard__img-empty">
@@ -43,8 +56,8 @@ const thumbImage = getImageUrl(entry.data.image ?? null);
   <div class="ecard__body">
     <div class="ecard__type">{entry.data.type ?? section}</div>
     <div class="ecard__title">{entry.data.title}</div>
-    {(entry.data as any).designation ? (
-      <div class="ecard__designation">{(entry.data as any).designation}</div>
+    {entry.data.designation ? (
+      <div class="ecard__designation">{entry.data.designation}</div>
     ) : null}
     <div class="ecard__summary">{entry.data.summary}</div>
 
