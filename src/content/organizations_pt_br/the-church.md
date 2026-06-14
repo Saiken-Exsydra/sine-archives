@@ -11,7 +11,7 @@ summary: "Deus Vult"
 tags: ["Church", "Synus", "Faith", "Obsidian Rite", "Demonic", "Institution", "Sovereign", "Twilight Band"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-05-20"
+updated: "2026-06-12"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -101,11 +101,11 @@ O ritual falhou em seu propósito original. O que aconteceu em vez disso foi uma
 
 ### O Pós-Sundering e o Apocachynthion
 
-O Sundering não destruiu todas as doze casas. Mas destruiu o suficiente de suas tradições e linhagens para tornar impossível reconstruir o reino como ele existia antes. Em **1026**, três novas dinastias de Redactors emergiram dos escombros — casas que não participaram do ritual ou cujas linhagens sobreviveram relativamente intactas. Essas três, junto aos sobreviventes remanescentes das doze originais, formaram as **Fifteen Houses**: as Casas Fundadoras do futuro Empire of Synus.
+O Sundering não destruiu todas as doze casas. Mas destruiu o suficiente de suas tradições e linhagens para tornar impossível reconstruir o reino como ele existia antes. Os registros restritos da Igreja também deixam claro que o acordo fundador do Empire, em **1026**, não recuperou quinze dinastias de Redactors. Ele preservou doze casas dinásticas remanescentes e elevou três casas ricas não-Redactor, cujo peso na reconstrução se tornou politicamente impossível de ignorar. Juntas, elas formaram as **Fifteen Houses**: as Casas Fundadoras do futuro Empire of Synus.
 
 Antes que qualquer sistema de governança pudesse ser reorganizado, os sobreviventes precisaram enfrentar o problema estrutural que o antigo reino jamais conseguiu resolver — e que seu último ato demonstrou da forma mais catastrófica possível: como impedir o próximo Sundering. A resposta foi o **Apocachynthion** — criado imediatamente após o desastre e formalmente ratificado em 1026 junto ao acordo fundador do Empire, com um único mandato: regular a prática da Redactory.
 
-A Igreja encara isso com aquilo que seus registros teológicos privados descrevem como *aprovação cautelosa*. O mandato do Apocachynthion é legítimo. O problema que ele tenta resolver é real. A reserva da Igreja — jamais mencionada em sermões públicos — é que o Apocachynthion enterrou os nomes das doze casas e os registros do ritual em vez de confrontá-los diretamente. A instituição governa a Redactory para impedir catástrofes estruturais. Mas não governa a teologia que levou as doze casas até o limiar que tentaram abrir. A Igreja considera que essa responsabilidade pertence a ela.
+A Igreja encara isso com aquilo que seus registros teológicos privados descrevem como *aprovação cautelosa*. O mandato do Apocachynthion é legítimo. O problema que ele tenta resolver é real. As casas Redactor remanescentes, movidas por arrependimento, cálculo político ou ambos, aceitaram submeter sua prática à governança do Apocachynthion, e as três casas comerciais recém-elevadas entraram no mesmo acordo que tornou essa governança politicamente vinculante. A reserva da Igreja — jamais mencionada em sermões públicos — é que o Apocachynthion enterrou os nomes das doze casas e os registros do ritual em vez de confrontá-los diretamente. A instituição governa a Redactory para impedir catástrofes estruturais. Mas não governa a teologia que levou as doze casas até o limiar que tentaram abrir. A Igreja considera que essa responsabilidade pertence a ela.
 
 ---
 

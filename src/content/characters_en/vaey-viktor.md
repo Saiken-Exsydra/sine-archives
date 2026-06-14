@@ -4,7 +4,7 @@ type: "Character"
 age: "66 (at time of filing, 2200)"
 birth_year: "2134"
 birthplace: "Minor river district northeast of Kalt'sen, Central Region, Empire of Synus"
-affiliation: "Church of the Sovereign; Obsidian Rite (retired assessor-priest)"
+affiliation: "The Church; Obsidian Rite (retired assessor-priest)"
 house: ""
 rank: "Confirmed Beatified vessel - Meruel, Measurement of Potential / Completion"
 registry_status: "Retired priest in good public standing; privately assessed as a severe-domain Beatified vessel and suspected serial killer under institutional protection"
@@ -16,7 +16,7 @@ hair: "Crimson threaded with white, neatly kept"
 eyes: "Very clear; under Meruel's pressure they pale toward a cold red-white"
 dress: "Meticulously maintained black clerical dress; narrow silver measuring chain hidden beneath left sleeve"
 residence: "Private ecclesiastical lodging in Kalt'sen; irregular travel through the Central Region and select northern districts"
-occupation: "Retired Obsidian Rite assessor and informal consultant in difficult manifestation cases"
+occupation: "Retired Obsidian Rite assessor-priest and informal consultant in difficult manifestation cases"
 summary: "He mistakes one terrible sliver of heaven for the whole of judgment, and kills in the name of what a life failed to become."
 image: "../../assets/uploads/char-vaey-viktor.png"
 hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
@@ -33,7 +33,7 @@ tags:
   - "Potential"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-11"
+updated: "2026-06-12"
 codex_file: "Vaey Viktor Dossier.md"
 image_position: "center top"
 ---
@@ -55,7 +55,7 @@ The horror of Vaey is not that he is fake. It is that he is real.
 
 **Public Identity:** A retired priest whose gentleness still makes him look, at first glance, like a trustworthy holy elder.
 
-**Institutional Identity:** A Beatified Church assessor whose long usefulness let warning signs hide behind reverence, habit, and clerical protection.
+**Institutional Identity:** A Beatified Church assessor whose long usefulness let warning signs hide behind reverence, clerical protection, and the Rite's reluctance to denounce one of its own.
 
 **Private Truth:** Vaey's murders are not a betrayal of fake holiness. They are the result of genuine contact with **Meruel** hardening into a theology that punishes wasted potential.
 
@@ -80,7 +80,7 @@ The [[the-church|Church]]'s role matters here too. Vaey was allowed to stay usef
 ## Apocachynthion Registry
 
 **[[leaf|Leaf Type]]:** No Apocachynthion practitioner leaf issued  
-**Registry Status:** Beatified vessel tolerated under sealed Church review; retired from formal assessment authority  
+**Registry Status:** Beatified vessel tolerated under sealed Church review; retired from formal Obsidian Rite assessment authority  
 **Rank:** Not applicable  
 **[[mark|Mark]]:** None  
 **[[open-mark|Open Mark]]:** None  
@@ -89,12 +89,12 @@ The [[the-church|Church]]'s role matters here too. Vaey was allowed to stay usef
 **Anchor Reading:** Not applicable  
 **Depth Reading:** Beatified vessel  
 **Reach Reading:** Person-scale evaluative reading  
-**Registration Tenure:** Retired from formal Church assessment  
+**Registration Tenure:** Retired from formal Obsidian Rite assessment  
 **Academy Record:** Church formation and saint-case assessment service  
 **Practice Record:** Manifestation review and unsanctioned vigilante targeting  
 **[[blots|Blots]]:** Multiple killings under sealed review  
 **Pager Note:** Do not treat apparent gentleness as disarming  
-**[[seal|Current Seal]]:** Church restricted review
+**[[seal|Current Seal]]:** Church restricted review; Obsidian Rite access by direct authorization
 
 ## Abilities
 
@@ -120,7 +120,7 @@ Vaey's greatest weakness is therefore theological. He mistakes a sharp partial t
 
 **[[obsidian-rite|The Obsidian Rite]]** formed him, used him, and now has to live with what it helped create.
 
-**[[the-church|The Church of the Sovereign]]** still matters because parts of it continue protecting him out of shame, gratitude, and fear of scandal.
+**[[the-church|The Church]]** still matters because parts of it continue protecting him out of shame, gratitude, and fear of scandal.
 
 **Mother Calienne Voss** represents the minority inside the institution willing to say the obvious thing aloud: Vaey hears something real, but not enough of it.
 

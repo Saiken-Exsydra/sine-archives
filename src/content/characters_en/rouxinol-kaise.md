@@ -7,7 +7,7 @@ birthplace: "Vel'hara, western band (Corvel Institute custody)"
 affiliation: "Independent contractor (Apocachynthion-registered, Mark 4)"
 house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
-registry_status: "Registered - compelled intake 2192; dual certification 2197; Mark 4 under sealed Margins"
+registry_status: "Registered - compelled intake 2192; dual certification recognized in 2197 as the closest available institutional notation; Mark 4 under sealed Margins"
 designation: "She Who Keeps the Dead at the Threshold"
 height: ""
 build: "Compact; tensile"
@@ -31,7 +31,7 @@ tags:
   - "Bifurcated"
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-11"
+updated: "2026-06-12"
 codex_file: "Rouxinol Kaise Dossier.md"
 ---
 
@@ -52,7 +52,7 @@ That combination makes her more than just a dangerous specialist. She is a walki
 
 **Public Identity:** An independent contractor whose reputation makes institutions nervous even when they need her alive and cooperative.
 
-**Institutional Identity:** A sealed-leaf Redactor operating under conditional public Mark authority, with a file complicated by dual certification and persistent specialist review.
+**Institutional Identity:** A sealed-leaf Redactor operating under conditional public Mark authority, with a file the Council of Volumes records through dual certification because no cleaner category exists.
 
 **Private Truth:** Rouxinol was raised through custody and anomaly management, then emerged with two working Anchors and a life no institution has ever stopped trying to own.
 
@@ -72,7 +72,7 @@ The Corvel Institute shaped Rouxinol's earliest life through custody, measuremen
 
 The central reason is simple: Rouxinol has **two Anchors**, **Mirror** and **Threshold**. That alone makes her rare. The way those Anchors interact, plus the weapon she carries, makes her even harder to classify.
 
-Now she works under a conditional public Mark, which means the institutions still want access to her usefulness even if they remain uncomfortable with what she is.
+Now she works under a conditional public Mark, which means the institutions still want access to her usefulness even if they remain uncomfortable with what she is. Even her dual certification is treated as the closest available notation, not as proof that the framework fully explains her.
 
 ## Apocachynthion Registry
 
@@ -91,7 +91,7 @@ Now she works under a conditional public Mark, which means the institutions stil
 **Practice Record:** Contractor field work under specialist review  
 **[[blots|Blots]]:** Compelled Intake Incident  
 **Pager Note:** Review  
-**[[seal|Current Seal]]:** Council of Volumes dual-certification notation; Hora'veil specialist panel countersignature
+**[[seal|Current Seal]]:** Council of Volumes dual-certification notation under continuing review; Hora'veil specialist panel countersignature
 
 ## Abilities
 

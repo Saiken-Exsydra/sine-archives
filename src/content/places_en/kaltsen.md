@@ -5,7 +5,7 @@ summary: "The Imperial capital. The city where every major institution in the wo
 tags: ["Kalt'sen", "Places", "Capital", "Empire", "SiNE", "Apocachynthion", "Church", "Pluribus Hill", "Clepsydra"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-06-12"
 image: "../../assets/uploads/places/place-kaltsen.png"
 ---
 
@@ -40,7 +40,7 @@ Clepsydra's primary ground custody complex is adjacent to the Hill district, whi
 
 **[[binding|The Binding]]** is the Apocachynthion's central complex - named for the binding of registered practitioners to the institution's regulatory framework. It is the largest single structure in Kalt'sen by footprint, and one of the oldest continuously occupied institutional buildings on the continent.
 
-The Binding houses the [[apocachynthion|Apocachynthion]]'s administrative core, the central assessment division, the records archive for the complete registered practitioner population, the research library, and the Pager training facilities. It is also where the most sensitive portions of the Apocachynthion's operational research occur - the work that requires proximity to the archive and to the assessment infrastructure that the Binding's specific resonance environment supports.
+The Binding houses the [[apocachynthion|Apocachynthion]]'s administrative core, the Folio's office, the Council of Volumes' governing seat, the central assessment division, the archive tower for the complete registered practitioner population, the research library, and the Pager training facilities. It is also where the most sensitive portions of the Apocachynthion's operational research occur - the work that requires proximity to the archive and to the assessment infrastructure that the Binding's specific resonance environment supports.
 
 The Binding and Pluribus Hill are within walking distance of each other. The institutional relationship between the [[apocachynthion|Apocachynthion]] and SiNE is, at the street level, a relationship of colleagues who work near each other and have developed functional proximity without resolving the deeper jurisdictional questions. Practitioners employed by SiNE who are registered with the Apocachynthion navigate the space between the two buildings as a regular commute.
 
@@ -50,7 +50,7 @@ The Binding and Pluribus Hill are within walking distance of each other. The ins
 
 **Saint Her'chell Cathedral** is the [[the-church|Church]]'s central address - the primary seat of the Arch-Patriarch, the administrative center of the Diaconate Council, and the most significant single church building in the Twilight Band.
 
-It is also where the Keepers of Before maintain their primary archive. The Cathedral's lower levels extend into structures that predate the current building significantly, and it is in those lower levels that the most restricted theological records are held.
+It is also where the Keepers of Before maintain their primary archive and the Church's deepest restricted theological record. The Cathedral's lower levels extend into structures that predate the current building significantly, and it is in those lower levels that the most restricted theological records are held.
 
 The Cathedral holds the distinction of being the building in Kalt'sen where the most consequential information about the true nature of the world is held and the fewest people per square meter have access to it.
 

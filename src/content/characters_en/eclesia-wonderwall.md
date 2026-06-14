@@ -4,10 +4,10 @@ type: "Character"
 age: "22 (at time of filing, 2200)"
 birth_year: "2178"
 birthplace: "Kalt'sen, Central Region, Empire of Synus"
-affiliation: "Apocachynthion (restricted review)"
+affiliation: "Apocachynthion (restricted review; Inkless designation)"
 house: "Wonderwall (cadet branch, maternal line)"
 rank: "Quill (Provisional)"
-registry_status: "Registered - Quill provisional, Mark 1; ordinary intake suspended under sealed review"
+registry_status: "Registered - Quill provisional, Inkless designation, Mark 1; ordinary intake suspended under sealed review"
 designation: "The Inkless Color"
 height: "164 cm"
 build: "Slight"
@@ -36,7 +36,7 @@ tags:
   - "Hisui Kirasagi"
 status: "public"
 created: "2026-02-12"
-updated: "2026-06-11"
+updated: "2026-06-12"
 codex_file: "Eclesia Wonderwall Dossier.md"
 image_position: "center top"
 dossier_quote:
@@ -73,7 +73,7 @@ ability_snapshot:
 
 Ec'lesia Yalara Wonderwall is a cadet-branch Wonderwall whose file was misread for years in exactly the way institutions tend to misread unusual people: they mistook the limits of their tools for the truth about her.
 
-Officially she is still marked [[inkless|Inkless]]. That does not mean she lacks an Anchor. It means ordinary Redactory instruments fail to read her correctly. What they call absence is actually **Stilllight**: a derived Radiance-class Anchor concerned not with light as revelation or radiant force, but with light whose motion has been arrested.
+Officially she still carries the [[inkless|Inkless]] designation. That does not make Inkless her rank, and it does not mean she lacks an Anchor. It means ordinary Redactory instruments fail to read her correctly. What they call absence is actually **Stilllight**: a derived Radiance-class Anchor concerned not with light as revelation or radiant force, but with light whose motion has been arrested.
 
 That distinction matters. Ec'lesia is not a second E'lla. She is not another primary Light case. She is a different kind of Wonderwall problem altogether.
 
@@ -81,7 +81,7 @@ That distinction matters. Ec'lesia is not a second E'lla. She is not another pri
 
 **Public Identity:** A bright cadet-branch Wonderwall student whose social warmth makes her look far less dangerous than her file suggests.
 
-**Institutional Identity:** A provisional [[quill|Quill]] kept under restricted review as an [[inkless|Inkless]] anomaly in the Lon'drina calibration apparatus.
+**Institutional Identity:** A provisional [[quill|Quill]] kept under restricted review, carried institutionally as an [[inkless|Inkless]] case in the Lon'drina calibration apparatus.
 
 **Private Truth:** Ec'lesia does have an Anchor. It is **Stilllight**, a derived Radiance condition unusually compatible with gap-structure and the Remainder.
 
@@ -108,13 +108,13 @@ Her younger sister, **El'ytra**, matters because Ec'lesia is not just an anomaly
 ## Apocachynthion Registry
 
 **[[leaf|Leaf Type]]:** Sealed Leaf  
-**Registry Status:** Registered  
+**Registry Status:** Registered; Inkless designation active  
 **Rank:** [[quill|Quill]], provisional  
 **[[mark|Mark]]:** [[mark-1|Mark 1]]  
 **[[open-mark|Open Mark]]:** None  
 **[[margins|Margins]]:** Restricted  
 **Anchor:** Stilllight  
-**Anchor Reading:** Disputed  
+**Anchor Reading:** Inkless / disputed  
 **Depth Reading:** Deep  
 **Reach Reading:** minimal  
 **Registration Tenure:** 4 years  
@@ -142,7 +142,7 @@ She is strongest where light already exists and weaker in total darkness unless 
 
 ## Limitations
 
-Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a [[quill|Quill]] provisional certification, given [[mark-1|Mark 1]] for supervised practice only, labeled [[inkless|Inkless]], and removed from ordinary progression.
+Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a [[quill|Quill]] provisional certification, given [[mark-1|Mark 1]] for supervised practice only, assigned the [[inkless|Inkless]] designation, and removed from ordinary progression.
 
 She was not expelled.
 

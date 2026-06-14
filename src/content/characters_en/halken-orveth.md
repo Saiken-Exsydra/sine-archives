@@ -4,7 +4,7 @@ type: "Character"
 age: "399 (as of 2200)"
 birth_year: "1801"
 birthplace: "Black Mere, Northern Region"
-affiliation: "One Church - Obsidian Rite"
+affiliation: "The Church - Obsidian Rite"
 house: ""
 rank: "Rector-Ascendant"
 registry_status: "Maximum restricted deployment - Answered-class vessel of Auctoriel"
@@ -34,7 +34,7 @@ tags:
   - "Kalt'sen"
 status: "public"
 created: "2026-05-15"
-updated: "2026-06-11"
+updated: "2026-06-12"
 codex_file: "Halk'en Orveth Dossier.md"
 ---
 
@@ -55,7 +55,7 @@ In simple terms, Orveth is one of the [[the-church|Church]]'s strongest proofs t
 
 **Public Identity:** A severe but gentle priest whose presence makes the Church's language about holy authority feel physically real.
 
-**Institutional Identity:** One of the Church's maximum-restriction answered-vessel deployments, reserved for cases where ordinary clergy and ordinary force are no longer enough.
+**Institutional Identity:** One of the Obsidian Rite's maximum-restriction Rector-Ascendant deployments, reserved for cases where ordinary clergy and ordinary force are no longer enough.
 
 **Private Truth:** Orveth remains usable partly because he refuses to confuse Dominion with universal permission, even while carrying a force built around rightful command.
 
@@ -80,7 +80,7 @@ He is now deployed only in the kinds of cases where ordinary clergy, ordinary so
 ## Apocachynthion Registry
 
 **[[leaf|Leaf Type]]:** No Apocachynthion practitioner leaf issued  
-**Registry Status:** Maximum restricted deployment - Answered-class vessel of Auctoriel  
+**Registry Status:** Maximum restricted Church deployment - Answered-class vessel of Auctoriel  
 **Rank:** Not applicable  
 **[[mark|Mark]]:** None  
 **[[open-mark|Open Mark]]:** None  
@@ -94,7 +94,7 @@ He is now deployed only in the kinds of cases where ordinary clergy, ordinary so
 **Practice Record:** High-risk ecclesial deployment, possession response, and answered-vessel intervention  
 **[[blots|Blots]]:** None publicly filed  
 **Pager Note:** Maximum restriction deployment only  
-**[[seal|Current Seal]]:** Church custody
+**[[seal|Current Seal]]:** Church custody; Rector-Ascendant command authorization
 
 ## Abilities
 

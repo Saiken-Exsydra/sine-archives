@@ -11,7 +11,7 @@ summary: "A associação imperial de Redactors"
 tags: ["Synus", "Redactor", "Institution", "Governance", "Pagers", "Academy", "Kalt'sen"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-06-12"
 image: "../../assets/uploads/org-apocachynthion.png"
 ---
 
@@ -39,7 +39,7 @@ Antes do Empire existir, o território que mais tarde se tornaria seu núcleo ce
 
 Essas doze casas eventualmente tentaram realizar algo para o qual suas tradições vinham se preparando havia séculos. O resultado ficou conhecido como **the Sundering of Selia**. O evento fragmentou simultaneamente as doze tradições de Redactory, destruiu várias das casas por completo e remodelou a geografia política da região de maneiras que ainda podem ser vistas hoje. Três das doze recusaram participação; suas linhagens sobreviveram quase intactas. As demais precisaram se reconstruir nas décadas seguintes a partir do pouco que restou.
 
-Foi a partir desses sobreviventes — as três casas que permaneceram afastadas e os remanescentes das outras nove — que surgiram as **Fifteen Founding Houses** e, junto delas, toda a arquitetura política do Empire.
+Dessas doze fontes dinásticas sobreviventes — as três casas que permaneceram afastadas e os remanescentes das outras nove — só doze Casas puderam ser recuperadas. As **Fifteen Founding Houses** exigiram mais três. Elas vieram de fora da velha ordem dinástica: três casas ricas e não políticas, cujo poder derivava não de linhagem Redactor, mas de monopólios comerciais, e que ocuparam o vazio político aberto pelo Sundering. Seus recursos ajudaram a tornar possível a construção institucional do Empire nascente, em troca do status formal que a linhagem sozinha já não bastava para garantir. Não eram casas de Redactors. Sua elevação foi transacional. Também foi permanente.
 
 A primeira coisa em que todos concordaram — antes de fronteiras, antes de governança, antes de quase qualquer outra decisão — foi que o que aconteceu em Selia jamais poderia se repetir. A instituição criada para impedir isso foi formalizada em um documento chamado **First Charter of Inscription**, escrito por Redactors seniores sobreviventes e ratificado pelo que mais tarde se tornaria o primeiro Senado Imperial. Esse documento estabeleceu três princípios fundamentais que continuam válidos até hoje:
 
