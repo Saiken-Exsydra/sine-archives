@@ -1,0 +1,30 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import RedactorProfile from "../../../components/redactory/RedactorProfile.astro";
+import { getRedactorProfileContent } from "../../../data/redactor-profile";
+import { localizedPath, type SiteLocale } from "../../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../../i18n/ui";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const content = getRedactorProfileContent(locale);
+const navLabels = getArchiveNavLabels(locale);
+---
+
+<MainLayout
+  active="systems"
+  pageTitle={content.pageTitle}
+  locale={locale}
+  navVariant="entry"
+  hideFooter={true}
+  pageClass="redactor-profile-page"
+  routeKind="generic"
+  transitionProfile="redactory-profile"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "systems"), href: localizedPath(locale, "/systems/") },
+    { label: "Redactory", href: localizedPath(locale, "/systems/redactory/") },
+    { label: "Redactor" },
+  ]}
+>
+  <RedactorProfile locale={locale} />
+</MainLayout>

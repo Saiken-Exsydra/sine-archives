@@ -5,6 +5,7 @@ import { getLocalizedCollection } from "../../i18n/content";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
 import type { ContentKey } from "../../content-keys";
 import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
+import RedactoryGateway from "../../components/redactory/RedactoryGateway.astro";
 import divinationPanelImage from "../../assets/uploads/systems/sys-divination-panel.png";
 import redactoryPanelImage from "../../assets/uploads/systems/sys-redactory-panel.png";
 import { getImageUrl } from "../../utils/optimized-images";
@@ -322,6 +323,7 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
                     <path d="M2 8 L8 2 M4 2 L8 2 L8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
+                {sys.key === "redactory" && <RedactoryGateway locale={locale} />}
               </div>
             </div>
           </div>
@@ -384,15 +386,17 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
 </MainLayout>
 
 <script is:inline>
-  (() => {
+  window.registerPageInit?.("systems-index-interactions", () => {
     const split    = document.getElementById("sys-split");
     const caption  = document.getElementById("sys-caption");
     const overlay  = document.getElementById("sys-overlay");
     const openBtn  = document.getElementById("sys-entries-open");
     const closeBtn = document.getElementById("sys-entries-close");
-    if (!split) return;
+    if (!(split instanceof HTMLElement) || !(caption instanceof HTMLElement)) return;
 
     const panels = split.querySelectorAll(".sys-panel");
+    const controller = new AbortController();
+    const listenerOptions = { signal: controller.signal };
 
     const setActive = (key) => {
       split.dataset.active = key || "";
@@ -406,49 +410,59 @@ const ADDENDUM_COLS: { key: AddendumBucket; name: string; color: string; entries
       panel.addEventListener("mouseenter", () => {
         if (split.dataset.active) return;
         split.dataset.hover = key;
-      });
+      }, listenerOptions);
       panel.addEventListener("mouseleave", () => {
         if (split.dataset.active) return;
         split.dataset.hover = "";
-      });
+      }, listenerOptions);
       panel.addEventListener("click", (e) => {
         // Don't re-trigger when clicking inside expanded body
         if (split.dataset.active === key) return;
         // Ignore clicks on back button (handled separately)
         if (e.target.closest(".sys-back")) return;
         setActive(key);
-      });
+      }, listenerOptions);
     });
 
     split.querySelectorAll(".sys-back").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
         setActive("");
-      });
+      }, listenerOptions);
     });
 
     // Entries overlay
     const openOverlay = () => {
+      if (!(overlay instanceof HTMLElement)) return;
       overlay.classList.add("is-open");
       overlay.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
     };
     const closeOverlay = () => {
+      if (!(overlay instanceof HTMLElement)) return;
       overlay.classList.remove("is-open");
       overlay.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
     };
 
-    openBtn?.addEventListener("click", openOverlay);
-    closeBtn?.addEventListener("click", closeOverlay);
-    overlay?.addEventListener("click", (e) => { if (e.target === overlay) closeOverlay(); });
+    openBtn?.addEventListener("click", openOverlay, listenerOptions);
+    closeBtn?.addEventListener("click", closeOverlay, listenerOptions);
+    overlay?.addEventListener("click", (e) => {
+      if (e.target === overlay) closeOverlay();
+    }, listenerOptions);
 
     document.addEventListener("keydown", (e) => {
       if (e.key !== "Escape") return;
-      if (overlay.classList.contains("is-open")) { closeOverlay(); return; }
+      if (overlay?.classList.contains("is-open")) { closeOverlay(); return; }
       if (split.dataset.active) setActive("");
-    });
-  })();
+    }, listenerOptions);
+
+    return () => {
+      controller.abort();
+      closeOverlay();
+      split.dataset.hover = "";
+    };
+  });
 </script>
 
 <style>

@@ -1,0 +1,777 @@
+---
+import type { SiteLocale } from "../../i18n/config";
+import { localizedPath } from "../../i18n/config";
+import { getIndexTheoremContent, type TheoryCard } from "../../data/index-theorem";
+
+interface Props {
+  locale?: SiteLocale;
+}
+
+const { locale = "en" } = Astro.props;
+const content = getIndexTheoremContent(locale);
+const diveHref = localizedPath(locale, "/systems/redactory/dive/");
+const redactorHref = localizedPath(locale, "/systems/redactory/redactor/");
+const deskHref = localizedPath(locale, "/systems/redactory/");
+
+const standardSections = [
+  { id: "indexing", ...content.index },
+  { id: "conservation", ...content.conservation },
+  { id: "routing", ...content.routing },
+  { id: "anchor", ...content.anchor },
+  { id: "dive", ...content.dive },
+  { id: "explains", ...content.explains },
+  { id: "limits", ...content.limits },
+];
+const sectionCards = (section: (typeof standardSections)[number]) =>
+  "cards" in section ? section.cards as TheoryCard[] : [];
+---
+
+<article class="index-theorem">
+  <header class="theorem-hero">
+    <span class="theorem-eyebrow">{content.hero.eyebrow}</span>
+    <h1>{content.hero.title}</h1>
+    <p class="theorem-hero__subtitle">{content.hero.subtitle}</p>
+
+    <div class="theorem-folio" transition:name="redactory-papers" aria-label="Index Theorem diagram">
+      <span class="theorem-folio__corner theorem-folio__corner--top" aria-hidden="true"></span>
+      <span class="theorem-folio__corner theorem-folio__corner--bottom" aria-hidden="true"></span>
+      <ol class="theorem-route">
+        <li><strong>Possibility</strong><span>something the world can become</span></li>
+        <li><strong>Address</strong><span>one exact version is found</span></li>
+        <li><strong>Route</strong><span>the Anchor makes it reachable</span></li>
+        <li><strong>Expression</strong><span>the local world follows it</span></li>
+      </ol>
+    </div>
+
+    <div class="theorem-hero__copy">
+      {content.hero.intro.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <p class="theorem-note">{content.hero.note}</p>
+    <div class="theorem-actions">
+      <a href="#indexing">{content.hero.startAction}</a>
+      <a href={diveHref} data-astro-prefetch="load">{content.hero.diveAction}</a>
+    </div>
+  </header>
+
+  <div class="theorem-body">
+    <section class="theorem-section theorem-section--statement" id="simple-form">
+      <header class="theorem-section__heading">
+        <span class="theorem-section__number" aria-hidden="true">01</span>
+        <span class="theorem-eyebrow">{content.theorem.eyebrow}</span>
+        <h2>{content.theorem.title}</h2>
+      </header>
+      <blockquote>{content.theorem.statement}</blockquote>
+      <div class="theorem-copy">
+        {content.theorem.copy.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <p class="theorem-note">{content.theorem.note}</p>
+    </section>
+
+    {standardSections.map((section, index) => (
+      <section class={`theorem-section theorem-section--${section.id}`} id={section.id}>
+        <header class="theorem-section__heading">
+          <span class="theorem-section__number" aria-hidden="true">{String(index + 2).padStart(2, "0")}</span>
+          <span class="theorem-eyebrow">{section.eyebrow}</span>
+          <h2>{section.title}</h2>
+        </header>
+
+        <div class="theorem-copy">
+          {section.copy.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        {section.id === "indexing" && (
+          <div class="theorem-process" aria-label="From imagination to Redaction">
+            {sectionCards(section).map((card) => (
+              <article>
+                <strong>{card.title}</strong>
+                <p>{card.text}</p>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {section.id === "conservation" && (
+          <div class="theorem-examples">
+            {sectionCards(section).map((card) => (
+              <article>
+                <span>{card.label}</span>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {section.id === "routing" && (
+          <dl class="theorem-comparison">
+            {content.routing.comparisons.map((item) => (
+              <div>
+                <dt>{item.title}</dt>
+                <dd>{item.text}</dd>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </dl>
+        )}
+
+        {section.id === "anchor" && (
+          <>
+            <div class="theorem-anchor-route" aria-label="Archive to Redaction route">
+              <span>Archive</span>
+              <small>too vast</small>
+              <span>Anchor</span>
+              <small>reachable route</small>
+              <span>Redaction</span>
+            </div>
+            <div class="theorem-cards theorem-cards--four">
+              {sectionCards(section).map((card) => (
+                <article><h3>{card.title}</h3><p>{card.text}</p></article>
+              ))}
+            </div>
+          </>
+        )}
+
+        {section.id === "dive" && (
+          <>
+            <div class="theorem-process" aria-label="The Dive process">
+              {sectionCards(section).map((card) => (
+                <article><strong>{card.title}</strong><p>{card.text}</p></article>
+              ))}
+            </div>
+            <div class="theorem-section__action">
+              <a href={diveHref} data-astro-prefetch="load">{content.dive.action}</a>
+            </div>
+          </>
+        )}
+
+        {section.id === "explains" && (
+          <div class="theorem-cards theorem-cards--three">
+            {sectionCards(section).map((card) => (
+              <article><h3>{card.title}</h3><p>{card.text}</p></article>
+            ))}
+          </div>
+        )}
+
+        {"note" in section && section.note && <p class="theorem-note">{section.note}</p>}
+      </section>
+    ))}
+
+    <section class="theorem-summary" id="summary">
+      <span class="theorem-eyebrow">{content.summary.eyebrow}</span>
+      <h2>{content.summary.title}</h2>
+      <ol>
+        {content.summary.lines.map((line, index) => (
+          <li><span>{String(index + 1).padStart(2, "0")}</span><strong>{line}</strong></li>
+        ))}
+      </ol>
+      <p>{content.summary.copy}</p>
+      <div class="theorem-actions">
+        <a href={redactorHref} data-astro-prefetch="load">{content.summary.redactorAction}</a>
+        <a href={diveHref} data-astro-prefetch="load">{content.summary.diveAction}</a>
+        <a href={deskHref} data-astro-prefetch="load">{content.summary.deskAction}</a>
+      </div>
+    </section>
+  </div>
+</article>
+
+<style>
+  .index-theorem {
+    --theorem-paper: #d7ccb5;
+    --theorem-ink: #17171b;
+    --theorem-blue: #6789bd;
+    --theorem-red: #9d413c;
+    min-height: 100vh;
+    overflow: clip;
+    color: rgba(239, 235, 225, 0.9);
+    background:
+      radial-gradient(circle at 50% 3%, rgba(75, 91, 122, 0.18), transparent 30%),
+      linear-gradient(180deg, #08080c, #050509 54%, #080609);
+  }
+
+  .theorem-hero {
+    display: flex;
+    min-height: min(940px, calc(100svh - var(--nav-height, 56px)));
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 24px 120px;
+    text-align: center;
+  }
+
+  .theorem-eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(126, 157, 204, 0.78);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  h1 {
+    margin: 8px 0 10px;
+    font-size: clamp(58px, 9vw, 110px);
+    line-height: 0.9;
+  }
+
+  .theorem-hero__subtitle {
+    max-width: 720px;
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 34px);
+    color: rgba(239, 235, 225, 0.72);
+  }
+
+  .theorem-folio {
+    position: relative;
+    width: min(780px, 90vw);
+    margin: 48px 0 38px;
+    padding: clamp(34px, 6vw, 62px);
+    color: var(--theorem-ink);
+    background:
+      linear-gradient(100deg, rgba(255, 255, 255, 0.23), transparent 24%),
+      linear-gradient(135deg, #d8ceb9, #bfb198);
+    border: 1px solid rgba(235, 225, 204, 0.55);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5), inset 0 0 50px rgba(85, 61, 38, 0.12);
+    transform: rotate(-0.35deg);
+    animation: folioSettle 850ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .theorem-folio::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(41, 42, 48, 0.14);
+    pointer-events: none;
+  }
+
+  .theorem-folio__corner {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-color: rgba(91, 52, 49, 0.38);
+  }
+
+  .theorem-folio__corner--top {
+    left: 22px;
+    top: 22px;
+    border-left: 1px solid;
+    border-top: 1px solid;
+  }
+
+  .theorem-folio__corner--bottom {
+    right: 22px;
+    bottom: 22px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+
+  .theorem-route {
+    --theorem-route-gap: clamp(38px, 6vw, 66px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: var(--theorem-route-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .theorem-route li {
+    position: relative;
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+    padding: 18px 0;
+  }
+
+  .theorem-route li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: calc(var(--theorem-route-gap) / -2 - 13px);
+    top: 30px;
+    width: 26px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(72, 93, 128, 0.72), rgba(145, 61, 57, 0.65));
+  }
+
+  .theorem-route li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    right: calc(var(--theorem-route-gap) / -2 - 13px);
+    top: 27px;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid rgba(145, 61, 57, 0.65);
+    border-top: 1px solid rgba(145, 61, 57, 0.65);
+    transform: rotate(45deg);
+  }
+
+  .theorem-route strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(23px, 3vw, 32px);
+    font-weight: 600;
+  }
+
+  .theorem-route span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    color: rgba(23, 23, 27, 0.66);
+  }
+
+  .theorem-hero__copy,
+  .theorem-copy {
+    display: grid;
+    gap: 14px;
+  }
+
+  .theorem-hero__copy {
+    max-width: 740px;
+  }
+
+  .theorem-hero__copy p,
+  .theorem-copy p,
+  .theorem-summary > p {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(15px, 1.55vw, 18px);
+    line-height: 1.8;
+    color: rgba(239, 235, 225, 0.65);
+  }
+
+  .theorem-note {
+    max-width: 760px;
+    margin: 28px auto 0;
+    padding: 14px 18px;
+    border-left: 1px solid rgba(157, 65, 60, 0.6);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.65;
+    color: rgba(239, 235, 225, 0.55);
+    background: rgba(255, 255, 255, 0.018);
+  }
+
+  .theorem-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .theorem-actions a,
+  .theorem-section__action a {
+    min-width: 160px;
+    padding: 12px 18px;
+    border: 1px solid rgba(126, 157, 204, 0.3);
+    color: rgba(239, 235, 225, 0.78);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+  }
+
+  .theorem-actions a:hover,
+  .theorem-actions a:focus-visible,
+  .theorem-section__action a:hover,
+  .theorem-section__action a:focus-visible {
+    color: #fff;
+    border-color: rgba(157, 65, 60, 0.72);
+    background: rgba(103, 137, 189, 0.1);
+  }
+
+  .theorem-actions a:focus-visible,
+  .theorem-section__action a:focus-visible {
+    outline: 2px solid rgba(218, 227, 243, 0.94);
+    outline-offset: 4px;
+  }
+
+  .theorem-body {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto;
+    padding-bottom: 120px;
+  }
+
+  .theorem-section {
+    position: relative;
+    padding: clamp(85px, 11vw, 135px) clamp(0px, 4vw, 42px);
+    border-top: 1px solid rgba(225, 216, 197, 0.08);
+  }
+
+  .theorem-section::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 58px;
+    width: 76px;
+    height: 30px;
+    opacity: 0.28;
+    background:
+      linear-gradient(var(--theorem-red), var(--theorem-red)) 0 0 / 100% 1px no-repeat,
+      linear-gradient(var(--theorem-blue), var(--theorem-blue)) 16px 9px / 60px 1px no-repeat,
+      linear-gradient(var(--theorem-red), var(--theorem-red)) 34px 18px / 42px 1px no-repeat;
+  }
+
+  .theorem-section__heading {
+    position: relative;
+    max-width: 760px;
+    margin-bottom: 34px;
+    padding-left: 54px;
+  }
+
+  .theorem-section__number {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: rgba(157, 65, 60, 0.65);
+  }
+
+  .theorem-section h2,
+  .theorem-summary h2 {
+    margin: 7px 0 0;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 0.98;
+  }
+
+  .theorem-copy {
+    max-width: 790px;
+    margin-left: 54px;
+  }
+
+  .theorem-section blockquote {
+    max-width: 840px;
+    margin: 0 0 34px 54px;
+    padding: 34px clamp(24px, 5vw, 52px);
+    border: 1px solid rgba(205, 192, 167, 0.22);
+    background:
+      linear-gradient(110deg, rgba(216, 204, 181, 0.09), rgba(157, 65, 60, 0.035)),
+      rgba(255, 255, 255, 0.012);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(27px, 4vw, 42px);
+    line-height: 1.22;
+    color: rgba(239, 235, 225, 0.88);
+  }
+
+  .theorem-process,
+  .theorem-cards,
+  .theorem-examples {
+    display: grid;
+    gap: 12px;
+    margin: 38px 0 0 54px;
+  }
+
+  .theorem-process {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .theorem-process article,
+  .theorem-cards article,
+  .theorem-examples article {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid rgba(205, 192, 167, 0.13);
+    background:
+      linear-gradient(135deg, rgba(103, 137, 189, 0.045), rgba(157, 65, 60, 0.025)),
+      rgba(11, 10, 14, 0.82);
+  }
+
+  .theorem-process article {
+    position: relative;
+  }
+
+  .theorem-process article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    z-index: 2;
+    width: 16px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--theorem-blue), var(--theorem-red));
+  }
+
+  .theorem-process strong,
+  .theorem-cards h3,
+  .theorem-examples h3 {
+    display: block;
+    margin: 0 0 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .theorem-process p,
+  .theorem-cards p,
+  .theorem-examples p,
+  .theorem-comparison dd {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: rgba(239, 235, 225, 0.58);
+  }
+
+  .theorem-examples {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .theorem-examples span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(126, 157, 204, 0.72);
+  }
+
+  .theorem-cards--four {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .theorem-cards--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .theorem-anchor-route {
+    display: grid;
+    max-width: 560px;
+    justify-items: center;
+    gap: 9px;
+    margin: 42px auto 0;
+  }
+
+  .theorem-anchor-route span {
+    min-width: 190px;
+    padding: 13px 20px;
+    border: 1px solid rgba(205, 192, 167, 0.18);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.018);
+  }
+
+  .theorem-anchor-route small {
+    position: relative;
+    padding: 15px 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(126, 157, 204, 0.6);
+  }
+
+  .theorem-anchor-route small::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    inset-block: -5px;
+    width: 1px;
+    z-index: -1;
+    background: linear-gradient(var(--theorem-blue), var(--theorem-red));
+  }
+
+  .theorem-section__action {
+    margin: 30px 0 0 54px;
+  }
+
+  .theorem-comparison {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 40px 0 0 54px;
+  }
+
+  .theorem-comparison div {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    padding: 24px;
+    border: 1px solid rgba(205, 192, 167, 0.14);
+    background: rgba(255, 255, 255, 0.014);
+  }
+
+  .theorem-comparison dt {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 600;
+  }
+
+  .theorem-comparison span {
+    margin-top: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(157, 85, 80, 0.8);
+  }
+
+  .theorem-summary {
+    display: flex;
+    min-height: 720px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 20px;
+    text-align: center;
+    background: radial-gradient(circle, rgba(103, 137, 189, 0.08), transparent 57%);
+  }
+
+  .theorem-summary ol {
+    display: grid;
+    width: min(820px, 100%);
+    gap: 8px;
+    margin: 42px 0 34px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .theorem-summary li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(205, 192, 167, 0.12);
+    text-align: left;
+  }
+
+  .theorem-summary li span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.17em;
+    color: rgba(157, 65, 60, 0.7);
+  }
+
+  .theorem-summary li strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(23px, 3vw, 31px);
+    font-weight: 500;
+  }
+
+  .theorem-summary > p {
+    max-width: 730px;
+  }
+
+  @keyframes folioSettle {
+    from { opacity: 0; transform: translateY(18px) rotate(-1.4deg); filter: brightness(0.62); }
+    to { opacity: 1; transform: rotate(-0.35deg); filter: none; }
+  }
+
+  @media (max-width: 780px) {
+    .theorem-route {
+      grid-template-columns: 1fr;
+      row-gap: 18px;
+    }
+
+    .theorem-route li {
+      padding: 14px 18px;
+    }
+
+    .theorem-route li:not(:last-child)::after {
+      left: 50%;
+      right: auto;
+      top: auto;
+      bottom: -13px;
+      width: 1px;
+      height: 26px;
+    }
+
+    .theorem-route li:not(:last-child)::before {
+      left: calc(50% - 3px);
+      right: auto;
+      top: auto;
+      bottom: -12px;
+      transform: rotate(135deg);
+    }
+
+    .theorem-section__heading,
+    .theorem-copy,
+    .theorem-section blockquote,
+    .theorem-process,
+    .theorem-cards,
+    .theorem-examples,
+    .theorem-comparison,
+    .theorem-section__action {
+      margin-left: 0;
+    }
+
+    .theorem-process,
+    .theorem-cards--three,
+    .theorem-cards--four,
+    .theorem-examples,
+    .theorem-comparison {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .theorem-section::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .theorem-hero {
+      padding-inline: 16px;
+    }
+
+    .theorem-body {
+      width: min(100% - 28px, 680px);
+    }
+
+    .theorem-section {
+      padding-inline: 2px;
+    }
+
+    .theorem-section__heading {
+      padding-left: 38px;
+    }
+
+    .theorem-process,
+    .theorem-cards--three,
+    .theorem-cards--four,
+    .theorem-examples,
+    .theorem-comparison {
+      grid-template-columns: 1fr;
+    }
+
+    .theorem-process article:not(:last-child)::after {
+      left: 50%;
+      right: auto;
+      top: auto;
+      bottom: -8px;
+      width: 1px;
+      height: 16px;
+    }
+
+    .theorem-actions,
+    .theorem-actions a,
+    .theorem-section__action a {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theorem-folio {
+      animation: none;
+    }
+
+    .theorem-actions a,
+    .theorem-section__action a {
+      transition: none;
+    }
+  }
+</style>

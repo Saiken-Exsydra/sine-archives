@@ -1,0 +1,9 @@
+---
+import RedactorProfilePage from "../../../systems/redactory/redactor.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<RedactorProfilePage locale="pt-br" />

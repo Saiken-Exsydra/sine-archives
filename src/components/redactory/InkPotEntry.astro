@@ -1,0 +1,166 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  action: string;
+  asset?: string | null;
+}
+
+const { href, title, description, action, asset = null } = Astro.props;
+---
+
+<a class="inkpot-entry" href={href} data-astro-prefetch="load" aria-label={title}>
+  <span class="inkpot-entry__object" transition:name="redactory-inkpot" aria-hidden="true">
+    {asset ? (
+      <img src={asset} alt="" loading="eager" decoding="async" />
+    ) : (
+      <svg viewBox="0 0 180 180" role="presentation">
+        <ellipse cx="90" cy="145" rx="57" ry="17" fill="rgba(0,0,0,.48)"/>
+        <path d="M52 60h76l17 67c3 15-7 27-23 27H58c-16 0-26-12-23-27L52 60Z" fill="rgba(10,13,22,.94)" stroke="rgba(114,139,181,.55)" stroke-width="2"/>
+        <path d="M62 41h56l10 19H52l10-19Z" fill="rgba(23,28,41,.96)" stroke="rgba(160,171,190,.48)" stroke-width="2"/>
+        <ellipse cx="90" cy="42" rx="28" ry="8" fill="#05070d" stroke="rgba(178,190,211,.55)" stroke-width="2"/>
+        <path d="M49 113c23-12 52 13 88-4" fill="none" stroke="rgba(59,94,153,.52)" stroke-width="3"/>
+      </svg>
+    )}
+    <span class="inkpot-entry__well"></span>
+  </span>
+  <span class="inkpot-entry__copy">
+    <span class="inkpot-entry__eyebrow">{action}</span>
+    <strong>{title}</strong>
+    <span>{description}</span>
+  </span>
+</a>
+
+<style>
+  .inkpot-entry {
+    position: absolute;
+    right: 4%;
+    top: 31%;
+    z-index: 8;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 14px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .inkpot-entry:focus-visible {
+    outline: 2px solid rgba(218, 227, 243, 0.95);
+    outline-offset: 7px;
+  }
+
+  .inkpot-entry__object {
+    position: relative;
+    display: grid;
+    width: 112px;
+    height: 112px;
+    place-items: center;
+  }
+
+  .inkpot-entry__object img,
+  .inkpot-entry__object svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.64));
+    transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), filter 300ms ease;
+  }
+
+  .inkpot-entry__object img {
+    display: none;
+  }
+
+  .inkpot-entry__well {
+    position: absolute;
+    left: 38%;
+    top: 22%;
+    width: 24%;
+    height: 12%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(95, 126, 182, 0.5), rgba(7, 10, 19, 0.1) 65%, transparent);
+    box-shadow: 0 0 24px rgba(63, 105, 173, 0.3);
+    transition: box-shadow 250ms ease;
+  }
+
+  .inkpot-entry:hover .inkpot-entry__object img,
+  .inkpot-entry:hover .inkpot-entry__object svg,
+  .inkpot-entry:focus-visible .inkpot-entry__object img,
+  .inkpot-entry:focus-visible .inkpot-entry__object svg {
+    transform: translateY(-5px) scale(1.035);
+    filter: drop-shadow(0 20px 30px rgba(43, 81, 145, 0.42));
+  }
+
+  .inkpot-entry:hover .inkpot-entry__well,
+  .inkpot-entry:focus-visible .inkpot-entry__well {
+    box-shadow: 0 0 34px rgba(79, 126, 202, 0.55), 0 0 58px rgba(177, 58, 52, 0.18);
+  }
+
+  .inkpot-entry__copy {
+    display: flex;
+    max-width: 190px;
+    flex-direction: column;
+    padding: 12px 14px;
+    background: rgba(5, 7, 12, 0.76);
+    border-left: 1px solid rgba(177, 58, 52, 0.58);
+    backdrop-filter: blur(10px);
+  }
+
+  .inkpot-entry__eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(116, 151, 209, 0.8);
+  }
+
+  strong {
+    margin: 2px 0 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    color: var(--text);
+  }
+
+  .inkpot-entry__copy > span:last-child {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    color: rgba(232, 228, 220, 0.56);
+  }
+
+  @media (max-width: 760px) {
+    .inkpot-entry {
+      position: relative;
+      inset: auto;
+      flex-direction: row;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(100deg, rgba(31, 43, 67, 0.18), rgba(177, 58, 52, 0.05));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .inkpot-entry__object img {
+      display: block;
+      width: 620px;
+      max-width: none;
+      height: auto;
+      position: absolute;
+      left: -493px;
+      top: -84px;
+    }
+
+    .inkpot-entry__object {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .inkpot-entry__object img,
+    .inkpot-entry__object svg,
+    .inkpot-entry__well {
+      transition: none;
+    }
+  }
+</style>

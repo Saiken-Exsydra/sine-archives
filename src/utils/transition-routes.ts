@@ -15,6 +15,10 @@ export type TransitionProfile =
   | "character-codex"
   | "entry-detail"
   | "section-index"
+  | "redactory-desk"
+  | "redactory-dive"
+  | "redactory-profile"
+  | "redactory-theorem"
   | "home";
 
 export type TransitionRouteMeta = {

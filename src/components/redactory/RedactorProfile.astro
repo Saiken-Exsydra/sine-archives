@@ -1,0 +1,531 @@
+---
+import type { SiteLocale } from "../../i18n/config";
+import { localizedPath } from "../../i18n/config";
+import { redactoryAssets } from "../../data/redactory";
+import { getRedactorProfileContent, type ProfileCard } from "../../data/redactor-profile";
+
+interface Props {
+  locale?: SiteLocale;
+}
+
+const { locale = "en" } = Astro.props;
+const content = getRedactorProfileContent(locale);
+const anchorHref = localizedPath(locale, "/systems/redactory/redactor/#anchor");
+const diveHref = localizedPath(locale, "/systems/redactory/dive/");
+const deskHref = localizedPath(locale, "/systems/redactory/");
+const sections = [
+  { id: "rarity", ...content.rarity },
+  { id: "manifestation", ...content.manifestation },
+  { id: "anchor", ...content.anchor },
+  { id: "discovery", ...content.discovery },
+  { id: "dive", ...content.dive },
+  { id: "training", ...content.training },
+  { id: "danger", ...content.danger },
+];
+---
+
+<article class="redactor-profile">
+  <header class="redactor-profile__hero">
+    <span class="redactor-profile__quill" transition:name="redactory-quill" aria-hidden="true">
+      <img src={redactoryAssets.quillGateway} alt="" loading="eager" decoding="async" />
+    </span>
+    <span class="redactor-profile__eyebrow">{content.hero.eyebrow}</span>
+    <h1>{content.hero.title}</h1>
+    <p class="redactor-profile__subtitle">{content.hero.subtitle}</p>
+    <span class="redactor-profile__title-line" aria-hidden="true"></span>
+    <p class="redactor-profile__intro">{content.hero.intro}</p>
+    <div class="redactor-profile__actions">
+      <a href={anchorHref}>{content.hero.anchorAction}</a>
+      <a href={diveHref} data-astro-prefetch="load">{content.hero.diveAction}</a>
+    </div>
+  </header>
+
+  <div class="redactor-profile__body">
+    <span class="redactor-profile__spine" aria-hidden="true"></span>
+
+    {sections.map((section, sectionIndex) => (
+      <section class={`profile-section profile-section--${section.id}`} id={section.id}>
+        <span class="profile-section__marker" aria-hidden="true">{String(sectionIndex + 1).padStart(2, "0")}</span>
+        <div class="profile-section__heading">
+          <span class="redactor-profile__eyebrow">{section.eyebrow}</span>
+          <h2>{section.title}</h2>
+        </div>
+
+        <div class="profile-section__copy">
+          {section.copy.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+
+        {section.id === "rarity" && (
+          <div class="profile-stat">
+            <strong>{content.rarity.stat}</strong>
+            <span>{content.rarity.statLabel}</span>
+          </div>
+        )}
+
+        <div class:list={["profile-cards", section.id === "anchor" && "profile-cards--anchor", section.id === "dive" && "profile-cards--languages"]}>
+          {(section.cards as ProfileCard[]).map((card) => (
+            card.details ? (
+              <details class="profile-card profile-card--reveal">
+                <summary>
+                  <span>{card.label}</span>
+                  <strong>{card.title}</strong>
+                  <p>{card.text}</p>
+                  <em>Open the route</em>
+                </summary>
+                <div class="profile-card__details">
+                  {card.details.map((detail) => (
+                    <p><span>{detail.label}</span>{detail.text}</p>
+                  ))}
+                </div>
+              </details>
+            ) : (
+              <article class="profile-card">
+                {card.label && <span>{card.label}</span>}
+                <strong>{card.title}</strong>
+                <p>{card.text}</p>
+              </article>
+            )
+          ))}
+        </div>
+
+        {"note" in section && section.note && <p class="profile-section__note">{section.note}</p>}
+      </section>
+    ))}
+
+    <section class="profile-close">
+      <span class="redactor-profile__eyebrow">{content.close.eyebrow}</span>
+      <h2>{content.close.title}</h2>
+      <p>{content.close.copy}</p>
+      <div class="redactor-profile__actions">
+        <a href={diveHref} data-astro-prefetch="load">{content.close.diveAction}</a>
+        <a href={deskHref} data-astro-prefetch="load">{content.close.deskAction}</a>
+      </div>
+    </section>
+  </div>
+</article>
+
+<style>
+  .redactor-profile {
+    --profile-blue: #668bc7;
+    --profile-red: #a43e3a;
+    min-height: 100vh;
+    overflow: clip;
+    background:
+      radial-gradient(circle at 50% 5%, rgba(61, 83, 124, 0.2), transparent 32%),
+      linear-gradient(180deg, #08080c, #050509 58%, #070508);
+    color: rgba(239, 236, 229, 0.9);
+  }
+
+  .redactor-profile__hero {
+    display: flex;
+    min-height: min(860px, calc(100svh - var(--nav-height, 56px)));
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px 110px;
+    text-align: center;
+  }
+
+  .redactor-profile__quill {
+    position: relative;
+    width: min(640px, 82vw);
+    margin-bottom: 28px;
+  }
+
+  .redactor-profile__quill::after {
+    content: "";
+    position: absolute;
+    left: 11%;
+    right: 9%;
+    bottom: -8px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--profile-blue), var(--profile-red), transparent);
+    box-shadow: 0 0 16px rgba(91, 135, 207, 0.3);
+  }
+
+  .redactor-profile__quill img {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    opacity: 0.86;
+    filter: brightness(1.08) saturate(0.86);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    animation: profileQuillSettle 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .redactor-profile__eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(128, 160, 212, 0.76);
+  }
+
+  h1,
+  h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  h1 {
+    margin: 8px 0 12px;
+    font-size: clamp(62px, 10vw, 118px);
+    line-height: 0.88;
+  }
+
+  .redactor-profile__subtitle {
+    max-width: 780px;
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.2;
+    color: rgba(239, 236, 229, 0.78);
+  }
+
+  .redactor-profile__title-line {
+    width: min(430px, 70vw);
+    height: 1px;
+    margin: 28px 0;
+    background: linear-gradient(90deg, transparent, var(--profile-blue), var(--profile-red), transparent);
+    transform-origin: center;
+    animation: profileLineWrite 780ms 180ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .redactor-profile__intro,
+  .profile-close > p {
+    max-width: 710px;
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(15px, 1.7vw, 18px);
+    line-height: 1.8;
+    color: rgba(239, 236, 229, 0.65);
+  }
+
+  .redactor-profile__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .redactor-profile__actions a {
+    min-width: 160px;
+    padding: 12px 18px;
+    border: 1px solid rgba(130, 159, 205, 0.28);
+    color: rgba(239, 236, 229, 0.78);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+  }
+
+  .redactor-profile__actions a:hover,
+  .redactor-profile__actions a:focus-visible {
+    color: #fff;
+    border-color: rgba(161, 84, 82, 0.7);
+    background: rgba(86, 112, 158, 0.1);
+  }
+
+  .redactor-profile__actions a:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid rgba(218, 227, 243, 0.94);
+    outline-offset: 4px;
+  }
+
+  .redactor-profile__body {
+    position: relative;
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+    padding-bottom: 130px;
+  }
+
+  .redactor-profile__spine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(100, 139, 200, 0.26), rgba(164, 62, 58, 0.2), transparent);
+    transform: translateX(-50%);
+  }
+
+  .profile-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(34px, 7vw, 90px);
+    padding: clamp(90px, 12vw, 150px) 0;
+  }
+
+  .profile-section__heading,
+  .profile-section__copy {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .profile-section__marker {
+    position: absolute;
+    left: 50%;
+    top: 82px;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 1px solid rgba(125, 159, 214, 0.44);
+    border-radius: 50%;
+    background: #07070b;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(178, 202, 238, 0.84);
+    box-shadow: 0 0 24px rgba(70, 109, 171, 0.12);
+    transform: translateX(-50%);
+  }
+
+  .profile-section h2,
+  .profile-close h2 {
+    margin: 8px 0 0;
+    font-size: clamp(42px, 5.6vw, 70px);
+    line-height: 0.98;
+  }
+
+  .profile-section__copy {
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    padding-top: 0;
+  }
+
+  .profile-section__copy p,
+  .profile-section__note {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(15px, 1.45vw, 17px);
+    line-height: 1.75;
+    color: rgba(239, 236, 229, 0.65);
+  }
+
+  .profile-stat,
+  .profile-cards,
+  .profile-section__note {
+    grid-column: 1 / -1;
+  }
+
+  .profile-stat {
+    display: grid;
+    justify-items: center;
+    margin-top: 16px;
+    padding: 36px;
+    border-block: 1px solid rgba(139, 158, 190, 0.12);
+    background: rgba(255, 255, 255, 0.012);
+  }
+
+  .profile-stat strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(54px, 8vw, 88px);
+    font-weight: 500;
+    color: rgba(239, 236, 229, 0.9);
+  }
+
+  .profile-stat span,
+  .profile-card > span,
+  .profile-card summary > span,
+  .profile-card__details span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: rgba(122, 155, 207, 0.68);
+  }
+
+  .profile-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .profile-cards--languages {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .profile-card {
+    min-width: 0;
+    padding: 22px;
+    text-align: center;
+    border: 1px solid rgba(143, 160, 190, 0.12);
+    background:
+      linear-gradient(135deg, rgba(73, 105, 158, 0.045), rgba(164, 62, 58, 0.025)),
+      rgba(9, 9, 14, 0.82);
+  }
+
+  .profile-card strong {
+    display: block;
+    margin: 4px 0 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .profile-card p {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: rgba(239, 236, 229, 0.58);
+  }
+
+  details.profile-card {
+    padding: 0;
+  }
+
+  .profile-card summary {
+    display: block;
+    padding: 22px;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .profile-card summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .profile-card summary em {
+    display: block;
+    margin-top: 16px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-style: normal;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(164, 78, 73, 0.72);
+  }
+
+  .profile-card__details {
+    display: grid;
+    gap: 14px;
+    padding: 0 22px 22px;
+    text-align: center;
+    border-top: 1px solid rgba(143, 160, 190, 0.1);
+  }
+
+  .profile-card__details p {
+    padding-top: 14px;
+  }
+
+  .profile-card__details span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .profile-section__note {
+    justify-self: center;
+    max-width: 700px;
+    margin-top: 16px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .profile-close {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-height: 620px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    text-align: center;
+    background: radial-gradient(circle, rgba(77, 103, 148, 0.09), transparent 55%);
+  }
+
+  .profile-close > p {
+    margin-top: 24px;
+  }
+
+  @keyframes profileQuillSettle {
+    from { opacity: 0; transform: translateY(-12px) rotate(-1deg); filter: brightness(0.6); }
+    to { opacity: 0.86; transform: none; filter: brightness(1.08) saturate(0.86); }
+  }
+
+  @keyframes profileLineWrite {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+  }
+
+  @media (max-width: 820px) {
+    .redactor-profile__body {
+      width: min(100% - 30px, 680px);
+    }
+
+    .redactor-profile__spine {
+      left: 15px;
+    }
+
+    .profile-section,
+    .profile-section:nth-of-type(even) {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding-left: 48px;
+    }
+
+    .profile-section__marker {
+      left: 15px;
+      top: 86px;
+    }
+
+    .profile-section__copy {
+      padding-top: 0;
+    }
+
+    .profile-cards,
+    .profile-cards--languages {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 540px) {
+    .redactor-profile__hero {
+      padding-inline: 18px;
+    }
+
+    .redactor-profile__actions {
+      width: 100%;
+    }
+
+    .redactor-profile__actions a {
+      width: 100%;
+    }
+
+    .profile-cards,
+    .profile-cards--languages {
+      grid-template-columns: 1fr;
+    }
+
+    .profile-card--reveal .profile-card__details {
+      display: grid;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .redactor-profile__quill img,
+    .redactor-profile__title-line {
+      animation: none;
+    }
+
+    .redactor-profile__actions a {
+      transition: none;
+    }
+  }
+</style>

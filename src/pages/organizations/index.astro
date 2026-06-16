@@ -315,6 +315,10 @@ const entryBasePath = localizedPath(locale, "/organizations/");
 </MainLayout>
 
 <script define:vars={{ panels, entryBasePath, copy }} is:inline>
+  window.registerPageInit?.("organizations-index-interactions", () => {
+  const root = document.querySelector(".orgs-root");
+  if (!(root instanceof HTMLElement)) return;
+
   const PANELS = panels;
   const byId = (id) => document.getElementById(id);
 
@@ -332,7 +336,12 @@ const entryBasePath = localizedPath(locale, "/organizations/");
   const modalLead        = byId("org-modal-lead");
   const modalBody        = byId("org-modal-body");
   const closeBtn         = byId("org-modal-close");
+  if (!overlay || !modal || !modalImg || !modalAccent || !modalBar || !modalType || !modalTitle || !modalDes || !modalTags || !modalFieldsTitle || !modalFields || !modalLead || !modalBody || !closeBtn) return;
 
+  const controller = new AbortController();
+  const listenerOptions = { signal: controller.signal };
+  const observers = [];
+  let closeTimer = 0;
   let closing = false;
 
   function syncModalImage(img, image) {
@@ -380,7 +389,7 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     modalLead.textContent = p.summary || "";
 
     modalBody.innerHTML = `<p class="org-modal__loading">${copy.loadingEntry}</p>`;
-    fetch(`${entryBasePath}${p.slug}/`)
+    fetch(`${entryBasePath}${p.slug}/`, { signal: controller.signal })
       .then((r) => r.text())
       .then((html) => {
         const doc = new DOMParser().parseFromString(html, "text/html");
@@ -395,6 +404,7 @@ const entryBasePath = localizedPath(locale, "/organizations/");
         }
       })
       .catch(() => {
+        if (controller.signal.aborted) return;
         modalBody.innerHTML = `<p class="org-modal__para">${p.summary || ""}</p>`;
       });
 
@@ -409,7 +419,7 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     if (closing) return;
     closing = true;
     modal.classList.add("is-closing");
-    setTimeout(() => {
+    closeTimer = window.setTimeout(() => {
       overlay.classList.remove("is-open");
       overlay.setAttribute("aria-hidden", "true");
       modal.classList.remove("is-closing");
@@ -418,21 +428,21 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     }, 380);
   }
 
-  document.querySelectorAll("[data-open-entry]").forEach((el) => {
+  root.querySelectorAll("[data-open-entry]").forEach((el) => {
     el.addEventListener("click", () => {
       const slug = el.getAttribute("data-open-entry");
       openModal(slug);
-    });
+    }, listenerOptions);
   });
 
-  closeBtn.addEventListener("click", closeModal);
-  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+  closeBtn.addEventListener("click", closeModal, listenerOptions);
+  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); }, listenerOptions);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal();
-  });
+  }, listenerOptions);
 
   // Reveal-on-scroll for spreads
-  const spreadEls = document.querySelectorAll(".org-spread");
+  const spreadEls = root.querySelectorAll(".org-spread");
   spreadEls.forEach((el, i) => {
     if (i === 0) {
       requestAnimationFrame(() => el.classList.add("in-view"));
@@ -449,7 +459,17 @@ const entryBasePath = localizedPath(locale, "/organizations/");
       },
       { threshold: 0.08 }
     );
+    observers.push(io);
     io.observe(el);
+  });
+  return () => {
+    controller.abort();
+    observers.forEach((observer) => observer.disconnect());
+    window.clearTimeout(closeTimer);
+    overlay.classList.remove("is-open");
+    modal.classList.remove("is-closing");
+    document.body.style.overflow = "";
+  };
   });
 </script>
 

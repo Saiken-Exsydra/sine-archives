@@ -1,0 +1,212 @@
+---
+import type { SiteLocale } from "../../i18n/config";
+import { localizedPath } from "../../i18n/config";
+import { getRedactoryContent, hasRedactoryAsset, redactoryAssets } from "../../data/redactory";
+
+interface Props {
+  locale?: SiteLocale;
+}
+
+const { locale = "en" } = Astro.props;
+const copy = getRedactoryContent(locale).gateway;
+const quillAsset = hasRedactoryAsset(redactoryAssets.quillGateway)
+  ? redactoryAssets.quillGateway
+  : hasRedactoryAsset(redactoryAssets.quillCutout)
+  ? redactoryAssets.quillCutout
+  : hasRedactoryAsset(redactoryAssets.quill)
+    ? redactoryAssets.quill
+    : null;
+---
+
+<a
+  class="redactory-gateway"
+  href={localizedPath(locale, "/systems/redactory/")}
+  data-astro-prefetch="load"
+  aria-label={`${copy.title}. ${copy.action}`}
+>
+  <span class="redactory-gateway__object" transition:name="redactory-quill" aria-hidden="true">
+    {quillAsset ? (
+      <img src={quillAsset} alt="" loading="lazy" decoding="async" />
+    ) : (
+      <svg viewBox="0 0 210 310" role="presentation">
+        <path class="quill-fill" d="M178 20C105 54 55 119 39 199c22-28 47-50 77-66-34 29-61 64-80 105l18 8c24-51 57-92 98-124 24-37 34-72 26-102Z"/>
+        <path class="quill-line" d="M178 20C120 74 80 143 54 246M39 199c30-14 60-36 89-65M55 159c18-6 37-16 57-30M71 120c15-5 31-13 48-23M54 246l-15 42"/>
+      </svg>
+    )}
+    <span class="redactory-gateway__ink-line"></span>
+  </span>
+
+  <span class="redactory-gateway__copy">
+    <span class="redactory-gateway__eyebrow">{copy.eyebrow}</span>
+    <strong>{copy.title}</strong>
+    <span class="redactory-gateway__description">{copy.description}</span>
+    <span class="redactory-gateway__action">{copy.action}<span aria-hidden="true"> &gt;</span></span>
+  </span>
+</a>
+
+<style>
+  .redactory-gateway {
+    --gateway-blue: #688ac3;
+    --gateway-red: #b13a34;
+    display: grid;
+    grid-template-columns: minmax(92px, 0.32fr) 1fr;
+    align-items: center;
+    gap: clamp(18px, 4vw, 34px);
+    width: 100%;
+    margin-top: 30px;
+    padding: clamp(18px, 3vw, 28px);
+    color: inherit;
+    text-decoration: none;
+    background:
+      radial-gradient(circle at 12% 46%, rgba(78, 112, 171, 0.13), transparent 34%),
+      linear-gradient(115deg, rgba(255, 255, 255, 0.025), rgba(177, 58, 52, 0.025));
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-left: 2px solid color-mix(in srgb, var(--gateway-blue) 72%, transparent);
+    transition: border-color 240ms ease, background 240ms ease, box-shadow 240ms ease;
+  }
+
+  .redactory-gateway:hover,
+  .redactory-gateway:focus-visible {
+    border-color: rgba(121, 153, 207, 0.42);
+    border-left-color: var(--gateway-red);
+    background:
+      radial-gradient(circle at 14% 46%, rgba(78, 112, 171, 0.21), transparent 38%),
+      linear-gradient(115deg, rgba(255, 255, 255, 0.04), rgba(177, 58, 52, 0.06));
+    box-shadow: 0 14px 42px rgba(0, 0, 0, 0.28), inset 0 0 48px rgba(75, 109, 166, 0.04);
+  }
+
+  .redactory-gateway:focus-visible {
+    outline: 2px solid rgba(218, 227, 243, 0.94);
+    outline-offset: 4px;
+  }
+
+  .redactory-gateway__object {
+    position: relative;
+    display: grid;
+    min-height: 150px;
+    place-items: center;
+  }
+
+  .redactory-gateway__object img,
+  .redactory-gateway__object svg {
+    width: min(100%, 150px);
+    max-height: 170px;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.55));
+    transform: rotate(7deg);
+    transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), filter 300ms ease;
+  }
+
+  .redactory-gateway__object img {
+    aspect-ratio: 707 / 164;
+    object-fit: cover;
+    border-radius: 2px;
+    opacity: 0.88;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+
+  .quill-fill {
+    fill: rgba(187, 195, 207, 0.15);
+    stroke: rgba(188, 202, 224, 0.68);
+    stroke-width: 2;
+  }
+
+  .quill-line {
+    fill: none;
+    stroke: rgba(133, 160, 204, 0.78);
+    stroke-width: 2.4;
+    stroke-linecap: round;
+  }
+
+  .redactory-gateway__ink-line {
+    position: absolute;
+    left: 12%;
+    right: 4%;
+    bottom: 8px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gateway-blue), var(--gateway-red), transparent);
+    box-shadow: 0 0 14px rgba(81, 122, 192, 0.35);
+    transform: scaleX(0.35);
+    transform-origin: left;
+    transition: transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .redactory-gateway:hover .redactory-gateway__object img,
+  .redactory-gateway:hover .redactory-gateway__object svg,
+  .redactory-gateway:focus-visible .redactory-gateway__object img,
+  .redactory-gateway:focus-visible .redactory-gateway__object svg {
+    transform: translateY(-5px) rotate(3deg);
+    filter: drop-shadow(0 14px 24px rgba(53, 93, 160, 0.3));
+  }
+
+  .redactory-gateway:hover .redactory-gateway__ink-line,
+  .redactory-gateway:focus-visible .redactory-gateway__ink-line {
+    transform: scaleX(1);
+  }
+
+  .redactory-gateway__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .redactory-gateway__eyebrow,
+  .redactory-gateway__action {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .redactory-gateway__eyebrow {
+    margin-bottom: 7px;
+    color: rgba(118, 151, 207, 0.72);
+  }
+
+  strong {
+    margin-bottom: 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(25px, 4vw, 35px);
+    line-height: 1.05;
+    color: var(--text);
+  }
+
+  .redactory-gateway__description {
+    max-width: 520px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: rgba(232, 228, 220, 0.52);
+  }
+
+  .redactory-gateway__action {
+    margin-top: 16px;
+    color: rgba(188, 83, 76, 0.88);
+  }
+
+  @media (max-width: 560px) {
+    .redactory-gateway {
+      grid-template-columns: 76px 1fr;
+      padding: 16px;
+    }
+
+    .redactory-gateway__object {
+      min-height: 122px;
+    }
+
+    .redactory-gateway__description {
+      font-size: 11.5px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .redactory-gateway,
+    .redactory-gateway__object img,
+    .redactory-gateway__object svg,
+    .redactory-gateway__ink-line {
+      transition: none;
+    }
+  }
+</style>

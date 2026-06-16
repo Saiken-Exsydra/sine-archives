@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  eyebrow?: string;
+}
+
+const { title, description, eyebrow } = Astro.props;
+---
+
+<div class="lore-panel">
+  {eyebrow && <span class="lore-panel__eyebrow">{eyebrow}</span>}
+  <h3>{title}</h3>
+  <p>{description}</p>
+</div>
+
+<style>
+  .lore-panel {
+    width: min(310px, calc(100vw - 48px));
+    padding: 18px 20px 20px;
+    background:
+      linear-gradient(135deg, rgba(15, 20, 31, 0.97), rgba(7, 7, 13, 0.98)),
+      #080910;
+    border: 1px solid rgba(112, 138, 184, 0.28);
+    border-left-color: rgba(177, 58, 52, 0.72);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(14px);
+  }
+
+  .lore-panel__eyebrow {
+    display: block;
+    margin-bottom: 7px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(133, 162, 211, 0.72);
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    line-height: 1.05;
+    color: var(--text);
+  }
+
+  p {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: rgba(232, 228, 220, 0.68);
+  }
+</style>

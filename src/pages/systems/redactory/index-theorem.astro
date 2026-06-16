@@ -1,0 +1,30 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import IndexTheorem from "../../../components/redactory/IndexTheorem.astro";
+import { getIndexTheoremContent } from "../../../data/index-theorem";
+import { localizedPath, type SiteLocale } from "../../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../../i18n/ui";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const content = getIndexTheoremContent(locale);
+const navLabels = getArchiveNavLabels(locale);
+---
+
+<MainLayout
+  active="systems"
+  pageTitle={content.pageTitle}
+  locale={locale}
+  navVariant="entry"
+  hideFooter={true}
+  pageClass="index-theorem-page"
+  routeKind="generic"
+  transitionProfile="redactory-theorem"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "systems"), href: localizedPath(locale, "/systems/") },
+    { label: "Redactory", href: localizedPath(locale, "/systems/redactory/") },
+    { label: "Index Theorem" },
+  ]}
+>
+  <IndexTheorem locale={locale} />
+</MainLayout>

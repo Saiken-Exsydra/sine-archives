@@ -1,0 +1,30 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import DiveScroll from "../../../components/redactory/DiveScroll.astro";
+import { getRedactoryContent } from "../../../data/redactory";
+import { localizedPath, type SiteLocale } from "../../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../../i18n/ui";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const content = getRedactoryContent(locale);
+const navLabels = getArchiveNavLabels(locale);
+---
+
+<MainLayout
+  active="systems"
+  pageTitle={content.divePageTitle}
+  locale={locale}
+  navVariant="entry"
+  hideFooter={true}
+  pageClass="redactory-dive-page"
+  routeKind="generic"
+  transitionProfile="redactory-dive"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "systems"), href: localizedPath(locale, "/systems/") },
+    { label: "Redactory", href: localizedPath(locale, "/systems/redactory/") },
+    { label: "Dive" },
+  ]}
+>
+  <DiveScroll locale={locale} enableCanvas={true} />
+</MainLayout>

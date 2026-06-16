@@ -139,3 +139,81 @@ test("sine panels stay interactive across client navigation", async ({ page }) =
 
   expect(errors).toEqual([]);
 });
+
+test("systems panels stay interactive after returning from Redactory desk", async ({ page }) => {
+  const errors = trackClientErrors(page);
+
+  await page.goto("/systems/", { waitUntil: "networkidle" });
+  const redactoryPanel = page.locator('.sys-panel[data-key="redactory"]');
+  await redactoryPanel.click();
+  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "redactory");
+
+  await page.getByRole("link", { name: /Enter the Redactory Desk/i }).click();
+  await expect(page).toHaveURL(/\/systems\/redactory\/?$/);
+
+  await page.getByRole("link", { name: "Systems", exact: true }).click();
+  await expect(page).toHaveURL(/\/systems\/?$/);
+  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "");
+
+  await page.locator('.sys-panel[data-key="divination"]').click();
+  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "divination");
+
+  await page.getByRole("button", { name: /All Systems/i }).click();
+  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "");
+
+  await page.getByRole("button", { name: /Addendums/i }).click();
+  await expect(page.locator("#sys-overlay")).toHaveClass(/is-open/);
+  await page.getByRole("button", { name: /Close/i }).click();
+  await expect(page.locator("#sys-overlay")).not.toHaveClass(/is-open/);
+
+  expect(errors).toEqual([]);
+});
+
+test("apparatus filters survive return navigation", async ({ page }) => {
+  const errors = trackClientErrors(page);
+
+  await page.goto("/apparatus/", { waitUntil: "networkidle" });
+  await page.locator(".reg-entry").first().click();
+  await expect(page).toHaveURL(/\/apparatus\/[^/]+\/?$/);
+  await page.getByRole("link", { name: "Apparatus", exact: true }).click();
+  await expect(page).toHaveURL(/\/apparatus\/?$/);
+
+  const apparatusSearch = page.locator("#reg-search");
+  await apparatusSearch.fill("zzzz-no-match");
+  await expect(page.locator("#reg-empty")).toHaveClass(/is-visible/);
+
+  expect(errors).toEqual([]);
+});
+
+test("section index controls survive leaving and returning", async ({ page }) => {
+  const errors = trackClientErrors(page);
+
+  await page.goto("/cosmology/", { waitUntil: "networkidle" });
+  await page.locator(".nav__logo").click();
+  await page.locator('a[href="/cosmology/"]').first().click();
+  await page.locator("[data-open-entry]").first().click();
+  await expect(page.locator("#cosmo-overlay")).toHaveClass(/is-open/);
+  await page.locator("#cosmo-modal-close").click();
+
+  await page.goto("/organizations/", { waitUntil: "networkidle" });
+  await page.locator(".nav__logo").click();
+  await page.locator('a[href="/organizations/"]').first().click();
+  await page.locator("[data-open-entry]").first().click();
+  await expect(page.locator("#org-overlay")).toHaveClass(/is-open/);
+  await page.locator("#org-modal-close").click();
+
+  await page.goto("/places/", { waitUntil: "networkidle" });
+  await page.locator(".nav__logo").click();
+  await page.locator('a[href="/places/"]').first().click();
+  await page.locator("#places-search-btn").click();
+  await expect(page.locator("#places-search-panel")).toHaveClass(/is-open/);
+
+  await page.goto("/places/map/", { waitUntil: "networkidle" });
+  await page.locator(".nav__logo").click();
+  await page.locator('a[href="/places/"]').first().click();
+  await page.locator('a[href="/places/map/"]').click();
+  await page.locator(".handle").first().click();
+  await expect(page.locator("#dossier")).toHaveClass(/is-open/);
+
+  expect(errors).toEqual([]);
+});

@@ -1,0 +1,213 @@
+---
+import { hasRedactoryAsset, redactoryAssets } from "../../data/redactory";
+
+interface Props {
+  enableCanvas?: boolean;
+}
+
+const { enableCanvas = true } = Astro.props;
+const noiseAsset = hasRedactoryAsset(redactoryAssets.inkNoise) ? redactoryAssets.inkNoise : null;
+---
+
+<div
+  class="ink-flow"
+  aria-hidden="true"
+  data-ink-flow
+  data-canvas-enabled={enableCanvas ? "true" : "false"}
+  style={noiseAsset ? `--ink-noise-image: url("${noiseAsset}")` : undefined}
+>
+  <div class="ink-flow__wash ink-flow__wash--one"></div>
+  <div class="ink-flow__wash ink-flow__wash--two"></div>
+  <div class="ink-flow__wash ink-flow__wash--three"></div>
+  <canvas class="ink-flow__canvas" data-ink-canvas></canvas>
+  <div class="ink-flow__noise"></div>
+  <div class="ink-flow__vignette"></div>
+</div>
+
+<script is:inline>
+  window.registerPageInit?.("redactory-ink-flow", () => {
+    const root = document.querySelector("[data-ink-flow]");
+    const canvas = root?.querySelector("[data-ink-canvas]");
+    if (!(root instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement)) return;
+    if (root.dataset.canvasEnabled !== "true") {
+      canvas.hidden = true;
+      return;
+    }
+
+    const context = canvas.getContext("2d", { alpha: true });
+    if (!context) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const particles = Array.from({ length: 24 }, (_, index) => ({
+      x: (index * 0.173) % 1,
+      y: (index * 0.311) % 1,
+      radius: 18 + (index % 6) * 7,
+      speed: 0.000018 + (index % 5) * 0.000005,
+      drift: 0.025 + (index % 4) * 0.014,
+      phase: index * 0.71,
+    }));
+    let frame = 0;
+    let lastPaint = 0;
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+
+    const resize = () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+
+    const paint = (time = 0) => {
+      context.clearRect(0, 0, width, height);
+      const depth = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--ink-depth")) || 0;
+
+      for (let index = 0; index < particles.length; index += 1) {
+        const particle = particles[index];
+        const y = ((particle.y + time * particle.speed) % 1.18) * height - height * 0.09;
+        const x = (particle.x + Math.sin(time * 0.00012 + particle.phase) * particle.drift) * width;
+        const radius = particle.radius * (0.8 + depth * 0.045);
+        const gradient = context.createRadialGradient(x, y, 0, x, y, radius);
+        const blue = index % 4 !== 0;
+        gradient.addColorStop(0, blue ? "rgba(66, 105, 169, 0.055)" : "rgba(151, 43, 43, 0.035)");
+        gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+        context.fillStyle = gradient;
+        context.beginPath();
+        context.arc(x, y, radius, 0, Math.PI * 2);
+        context.fill();
+      }
+    };
+
+    const tick = (time) => {
+      if (time - lastPaint >= 42) {
+        paint(time);
+        lastPaint = time;
+      }
+      frame = requestAnimationFrame(tick);
+    };
+
+    const handleVisibility = () => {
+      cancelAnimationFrame(frame);
+      if (!document.hidden && !reducedMotion.matches) frame = requestAnimationFrame(tick);
+    };
+
+    const controller = new AbortController();
+    resize();
+    paint(0);
+    if (!reducedMotion.matches) frame = requestAnimationFrame(tick);
+    window.addEventListener("resize", resize, { signal: controller.signal });
+    document.addEventListener("visibilitychange", handleVisibility, { signal: controller.signal });
+
+    return () => {
+      cancelAnimationFrame(frame);
+      controller.abort();
+    };
+  });
+</script>
+
+<style>
+  .ink-flow {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: var(--depth-background, var(--ink-black));
+    transition: background 900ms ease;
+  }
+
+  .ink-flow__wash {
+    position: absolute;
+    width: 72vw;
+    height: 72vw;
+    border-radius: 45% 55% 62% 38%;
+    filter: blur(70px);
+    opacity: var(--depth-blue-wash, 0.12);
+    mix-blend-mode: screen;
+    animation: inkDrift 24s ease-in-out infinite alternate;
+  }
+
+  .ink-flow__wash--one {
+    left: -26vw;
+    top: -18vw;
+    background: radial-gradient(circle, rgba(55, 93, 157, 0.34), transparent 68%);
+  }
+
+  .ink-flow__wash--two {
+    right: -34vw;
+    top: 28vh;
+    background: radial-gradient(circle, rgba(140, 39, 42, 0.18), transparent 66%);
+    opacity: var(--depth-red-wash, 0.08);
+    animation-delay: -8s;
+    animation-duration: 31s;
+  }
+
+  .ink-flow__wash--three {
+    left: 13vw;
+    bottom: -45vw;
+    background: radial-gradient(circle, rgba(61, 77, 119, 0.22), transparent 65%);
+    opacity: calc(var(--depth-blue-wash, 0.12) * 0.65);
+    animation-delay: -15s;
+    animation-duration: 36s;
+  }
+
+  .ink-flow__canvas,
+  .ink-flow__noise,
+  .ink-flow__vignette {
+    position: absolute;
+    inset: 0;
+  }
+
+  .ink-flow__canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ink-flow__noise {
+    background-image:
+      var(--ink-noise-image, url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.84' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"));
+    background-size: 240px;
+    opacity: 0.028;
+    mix-blend-mode: soft-light;
+    animation: inkNoiseShift 10s steps(2) infinite;
+  }
+
+  .ink-flow__vignette {
+    background:
+      radial-gradient(ellipse at center, transparent var(--depth-compression, 34%), rgba(0, 0, 0, var(--depth-vignette, 0.62)) 100%),
+      linear-gradient(90deg, rgba(0, 0, 0, var(--depth-vignette, 0.36)), transparent 20%, transparent 80%, rgba(0, 0, 0, var(--depth-vignette, 0.42)));
+    transition: background 900ms ease;
+  }
+
+  @keyframes inkDrift {
+    from { transform: translate3d(-2%, -1%, 0) rotate(-5deg) scale(0.96); }
+    to { transform: translate3d(8%, 6%, 0) rotate(8deg) scale(1.08); }
+  }
+
+  @keyframes inkNoiseShift {
+    0% { background-position: 0 0; }
+    50% { background-position: 42px -28px; }
+    100% { background-position: -24px 36px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ink-flow,
+    .ink-flow__vignette {
+      transition: none;
+    }
+
+    .ink-flow__wash,
+    .ink-flow__noise {
+      animation: none;
+    }
+
+    .ink-flow__canvas {
+      opacity: 0.7;
+    }
+  }
+</style>

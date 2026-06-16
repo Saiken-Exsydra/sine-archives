@@ -1,0 +1,895 @@
+---
+import type { SiteLocale } from "../../i18n/config";
+import { localizedPath } from "../../i18n/config";
+import { getRedactoryContent, hasRedactoryAsset, redactoryAssets } from "../../data/redactory";
+import DeskHotspot from "./DeskHotspot.astro";
+import InkPotEntry from "./InkPotEntry.astro";
+
+interface Props {
+  locale?: SiteLocale;
+}
+
+const { locale = "en" } = Astro.props;
+const content = getRedactoryContent(locale);
+const deskAsset = hasRedactoryAsset(redactoryAssets.uploadedDesk)
+  ? redactoryAssets.uploadedDesk
+  : hasRedactoryAsset(redactoryAssets.desk)
+    ? redactoryAssets.desk
+    : null;
+const paperAsset = hasRedactoryAsset(redactoryAssets.papersCutout)
+  ? redactoryAssets.papersCutout
+  : null;
+const quillAsset = hasRedactoryAsset(redactoryAssets.quillCutout)
+  ? redactoryAssets.quillCutout
+  : hasRedactoryAsset(redactoryAssets.quill)
+    ? redactoryAssets.quill
+    : null;
+const inkpotAsset = hasRedactoryAsset(redactoryAssets.uploadedInkpot)
+  ? redactoryAssets.uploadedInkpot
+  : hasRedactoryAsset(redactoryAssets.inkpot)
+    ? redactoryAssets.inkpot
+    : null;
+const redactorHref = localizedPath(locale, "/systems/redactory/redactor/");
+const theoremHref = localizedPath(locale, "/systems/redactory/index-theorem/");
+---
+
+<article class="redactory-desk">
+  <header class="redactory-desk__header">
+    <span>{content.desk.eyebrow}</span>
+    <h1>{content.desk.title}</h1>
+    <p>{content.desk.intro}</p>
+  </header>
+
+  <div class="redactory-desk__frame">
+    <div
+      class:list={["redactory-desk__scene", deskAsset && "has-desk-asset"]}
+      style={deskAsset ? `--desk-image: url("${deskAsset}")` : undefined}
+      aria-label={content.desk.instruction}
+    >
+      <div class="redactory-desk__grain" aria-hidden="true"></div>
+      {inkpotAsset && (
+        <img class="redactory-desk__asset-layer redactory-desk__asset-layer--inkpot" src={inkpotAsset} alt="" aria-hidden="true" />
+      )}
+      <div class="redactory-desk__paper" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="redactory-desk__compass" aria-hidden="true"></div>
+      <div class="redactory-desk__ink-trace" aria-hidden="true"></div>
+      <div class="redactory-desk__quill" aria-hidden="true">
+        {quillAsset ? (
+          <img src={quillAsset} alt="" loading="eager" decoding="async" />
+        ) : (
+          <svg viewBox="0 0 210 310" role="presentation">
+            <path d="M178 20C105 54 55 119 39 199c22-28 47-50 77-66-34 29-61 64-80 105l18 8c24-51 57-92 98-124 24-37 34-72 26-102Z"/>
+            <path d="M178 20C120 74 80 143 54 246M39 199c30-14 60-36 89-65M55 159c18-6 37-16 57-30M71 120c15-5 31-13 48-23M54 246l-15 42"/>
+          </svg>
+        )}
+      </div>
+      <a
+        class="redactory-desk__papers-link"
+        href={theoremHref}
+        data-redactory-papers
+        data-astro-prefetch="load"
+        aria-label="Open the Index Theorem entry"
+      >
+        <span class="redactory-desk__papers-object" transition:name="redactory-papers" aria-hidden="true">
+          {paperAsset && <img src={paperAsset} alt="" loading="eager" decoding="async" />}
+          <span class="redactory-desk__paper-glow"></span>
+          <svg class="redactory-desk__paper-annotations" viewBox="0 0 100 100" role="presentation">
+            <path d="M25 28h38M22 38h49M29 48h31M20 59h45" />
+            <circle cx="67" cy="43" r="10" />
+            <path d="M67 33v20M57 43h20M38 68c13-8 26-5 38 2" />
+          </svg>
+        </span>
+        <span class="redactory-desk__papers-copy">
+          <span class="redactory-desk__papers-eyebrow">Theory</span>
+          <strong>The Index Theorem</strong>
+          <span>The theory behind Redactory.</span>
+        </span>
+      </a>
+      <a
+        class="redactory-desk__quill-link"
+        href={redactorHref}
+        data-redactor-quill
+        data-astro-prefetch="load"
+        aria-label="Open the Redactor profile"
+      >
+        <span class="redactory-desk__quill-object" transition:name="redactory-quill" aria-hidden="true">
+          <img src={redactoryAssets.quillGateway} alt="" loading="eager" decoding="async" />
+        </span>
+        <span class="redactory-desk__quill-line" aria-hidden="true">
+          <span></span>
+        </span>
+        <span class="redactory-desk__quill-copy">
+          <span class="redactory-desk__quill-eyebrow">Profile</span>
+          <strong>The Redactor</strong>
+          <span>Meet the person behind the work.</span>
+        </span>
+      </a>
+
+      <span class="redactory-desk__instruction">{content.desk.instruction}</span>
+
+    </div>
+
+    <section class="redactory-desk__mobile-list" aria-labelledby="desk-object-list-title">
+      <h2 id="desk-object-list-title">{content.desk.mobileInstruction}</h2>
+      {content.hotspots.map((hotspot) => (
+        <DeskHotspot
+          {...hotspot}
+          id={`mobile-${hotspot.id}`}
+          href={hotspot.id === "redactor" ? redactorHref : hotspot.id === "routing" ? theoremHref : undefined}
+          ariaLabel={hotspot.id === "redactor"
+            ? locale === "pt-br" ? "Abrir o perfil do Redactor" : "Open the Redactor profile"
+            : hotspot.id === "routing"
+              ? locale === "pt-br" ? "Abrir a entrada do Teorema do Indice" : "Open the Index Theorem entry"
+              : undefined}
+          staticCard={hotspot.id !== "redactor" && hotspot.id !== "routing"}
+        />
+      ))}
+    </section>
+
+    <InkPotEntry
+      href={localizedPath(locale, "/systems/redactory/dive/")}
+      title={content.desk.inkpotTitle}
+      description={content.desk.inkpotDescription}
+      action={content.desk.inkpotAction}
+      asset={inkpotAsset}
+    />
+  </div>
+</article>
+
+<script is:inline>
+  window.registerPageInit?.("redactory-desk-hotspots", () => {
+    const hotspots = Array.from(document.querySelectorAll("[data-desk-hotspot]"));
+    const frame = document.querySelector(".redactory-desk__frame");
+    const inkpotEntry = document.querySelector(".inkpot-entry");
+    const quillLink = document.querySelector("[data-redactor-quill]");
+    const papersLink = document.querySelector("[data-redactory-papers]");
+    if (!(frame instanceof HTMLElement)) return;
+
+    const controller = new AbortController();
+    const setPaperActive = (active) => frame.classList.toggle("is-paper-active", active);
+    const setInkpotActive = (active) => frame.classList.toggle("is-inkpot-active", active);
+
+    hotspots.forEach((hotspot) => {
+      hotspot.addEventListener("toggle", () => {
+        if (!(hotspot instanceof HTMLDetailsElement) || !hotspot.open) return;
+        hotspots.forEach((other) => {
+          if (other !== hotspot && other instanceof HTMLDetailsElement) other.open = false;
+        });
+      }, { signal: controller.signal });
+    });
+
+    if (inkpotEntry instanceof HTMLElement) {
+      inkpotEntry.addEventListener("mouseenter", () => setInkpotActive(true), { signal: controller.signal });
+      inkpotEntry.addEventListener("mouseleave", () => setInkpotActive(false), { signal: controller.signal });
+      inkpotEntry.addEventListener("focusin", () => setInkpotActive(true), { signal: controller.signal });
+      inkpotEntry.addEventListener("focusout", () => setInkpotActive(false), { signal: controller.signal });
+    }
+
+    if (quillLink instanceof HTMLAnchorElement) {
+      quillLink.addEventListener("click", (event) => {
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) return;
+
+        event.preventDefault();
+        frame.classList.add("is-quill-writing");
+        window.setTimeout(() => window.location.assign(quillLink.href), 780);
+      }, { signal: controller.signal });
+    }
+
+    if (papersLink instanceof HTMLAnchorElement) {
+      papersLink.addEventListener("mouseenter", () => setPaperActive(true), { signal: controller.signal });
+      papersLink.addEventListener("mouseleave", () => setPaperActive(false), { signal: controller.signal });
+      papersLink.addEventListener("focusin", () => setPaperActive(true), { signal: controller.signal });
+      papersLink.addEventListener("focusout", () => setPaperActive(false), { signal: controller.signal });
+      papersLink.addEventListener("click", (event) => {
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) return;
+
+        event.preventDefault();
+        frame.classList.add("is-papers-opening");
+        window.setTimeout(() => window.location.assign(papersLink.href), 820);
+      }, { signal: controller.signal });
+    }
+
+    return () => {
+      controller.abort();
+      frame.classList.remove("is-paper-active", "is-inkpot-active", "is-quill-writing", "is-papers-opening");
+    };
+  });
+</script>
+
+<style>
+  .redactory-desk {
+    --desk-blue: #5578b4;
+    --desk-red: #a63b37;
+    min-height: calc(100svh - var(--nav-height, 56px));
+    padding: clamp(38px, 6vw, 78px) clamp(18px, 4vw, 58px) 70px;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(42, 56, 86, 0.18), transparent 34%),
+      #050407;
+  }
+
+  .redactory-desk__header {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 760px);
+    margin: 0 auto clamp(28px, 4vw, 48px);
+    text-align: center;
+  }
+
+  .redactory-desk__header > span,
+  .redactory-desk__instruction {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+
+  .redactory-desk__header > span {
+    color: rgba(109, 143, 198, 0.75);
+  }
+
+  h1 {
+    margin: 7px 0 13px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 7vw, 84px);
+    line-height: 0.94;
+    color: var(--text);
+    text-shadow: 0 14px 48px rgba(0, 0, 0, 0.46);
+  }
+
+  .redactory-desk__header p {
+    max-width: 670px;
+    margin: 0 auto;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(13px, 1.6vw, 15px);
+    line-height: 1.75;
+    color: rgba(232, 228, 220, 0.56);
+  }
+
+  .redactory-desk__frame {
+    position: relative;
+    width: min(100%, 1260px);
+    margin: 0 auto;
+  }
+
+  .redactory-desk__scene {
+    position: relative;
+    min-height: clamp(580px, 65vw, 760px);
+    aspect-ratio: 1672 / 941;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      linear-gradient(rgba(5, 6, 10, 0.2), rgba(5, 6, 10, 0.5)),
+      repeating-linear-gradient(92deg, transparent 0 72px, rgba(255, 255, 255, 0.012) 73px 75px),
+      radial-gradient(circle at 50% 45%, rgba(54, 45, 40, 0.52), rgba(15, 14, 17, 0.92) 66%),
+      linear-gradient(110deg, #131116, #08090e);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.48), inset 0 0 90px rgba(0, 0, 0, 0.72);
+  }
+
+  .redactory-desk__scene.has-desk-asset {
+    background-image:
+      linear-gradient(rgba(5, 6, 10, 0.35), rgba(5, 6, 10, 0.62)),
+      var(--desk-image);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .redactory-desk__scene.has-desk-asset .redactory-desk__paper,
+  .redactory-desk__scene.has-desk-asset .redactory-desk__compass,
+  .redactory-desk__scene.has-desk-asset .redactory-desk__ink-trace,
+  .redactory-desk__scene.has-desk-asset .redactory-desk__quill {
+    opacity: 0;
+  }
+
+  .redactory-desk__asset-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0;
+    filter: brightness(1.12) saturate(0.82);
+    transition: opacity 260ms ease, filter 260ms ease;
+  }
+
+  .redactory-desk__frame.is-inkpot-active .redactory-desk__asset-layer--inkpot {
+    opacity: 0.52;
+    filter: brightness(1.22) saturate(0.95) drop-shadow(0 0 18px rgba(78, 119, 187, 0.2));
+  }
+
+  .redactory-desk__scene::before,
+  .redactory-desk__scene::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .redactory-desk__scene::before {
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(76, 108, 163, 0.12), transparent 16%, transparent 84%, rgba(177, 58, 52, 0.09)),
+      radial-gradient(ellipse at center, transparent 44%, rgba(0, 0, 0, 0.68) 100%);
+  }
+
+  .redactory-desk__scene::after {
+    inset: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .redactory-desk__grain {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: screen;
+  }
+
+  .redactory-desk__paper {
+    position: absolute;
+    left: 33%;
+    top: 17%;
+    width: 35%;
+    height: 54%;
+    z-index: 2;
+    padding: 12%;
+    transform: rotate(-2deg);
+    background:
+      linear-gradient(100deg, rgba(24, 26, 32, 0.86), rgba(43, 42, 42, 0.68)),
+      #1a191c;
+    border: 1px solid rgba(220, 213, 195, 0.12);
+    box-shadow: 16px 24px 42px rgba(0, 0, 0, 0.42);
+  }
+
+  .redactory-desk__paper span {
+    display: block;
+    height: 1px;
+    margin-bottom: 18%;
+    background: linear-gradient(90deg, rgba(111, 126, 151, 0.2), rgba(177, 58, 52, 0.14), transparent);
+  }
+
+  .redactory-desk__compass {
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    z-index: 2;
+    width: 126px;
+    aspect-ratio: 1;
+    border: 1px solid rgba(153, 165, 188, 0.25);
+    border-radius: 50%;
+    box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.7), 0 14px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .redactory-desk__compass::before,
+  .redactory-desk__compass::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: rgba(133, 151, 181, 0.24);
+    transform: translate(-50%, -50%) rotate(34deg);
+  }
+
+  .redactory-desk__compass::before { width: 80%; height: 1px; }
+  .redactory-desk__compass::after { width: 1px; height: 80%; }
+
+  .redactory-desk__ink-trace {
+    position: absolute;
+    left: 40%;
+    top: 64%;
+    z-index: 3;
+    width: 31%;
+    height: 16%;
+    border-bottom: 4px solid rgba(30, 50, 88, 0.48);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px rgba(55, 94, 155, 0.22));
+    transform: rotate(8deg);
+  }
+
+  .redactory-desk__quill {
+    position: absolute;
+    left: 12%;
+    top: 19%;
+    z-index: 3;
+    width: 18%;
+    height: 46%;
+    transform: rotate(12deg);
+  }
+
+  .redactory-desk__papers-link {
+    position: absolute;
+    left: 0.8%;
+    top: 17%;
+    z-index: 7;
+    display: block;
+    width: 32.2%;
+    height: 60.8%;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .redactory-desk__papers-link:focus-visible {
+    outline: none;
+  }
+
+  .redactory-desk__papers-object {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .redactory-desk__papers-object > img {
+    position: absolute;
+    left: -2.5%;
+    top: -28%;
+    width: 310.6%;
+    height: 164.5%;
+    max-width: none;
+    opacity: 0;
+    filter: brightness(1.08) saturate(0.74);
+    transform-origin: 42% 27%;
+    transition:
+      opacity 260ms ease,
+      filter 300ms ease,
+      transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .redactory-desk__frame.is-paper-active .redactory-desk__papers-object > img,
+  .redactory-desk__papers-link:hover .redactory-desk__papers-object > img,
+  .redactory-desk__papers-link:focus-visible .redactory-desk__papers-object > img {
+    opacity: 0.48;
+    filter: brightness(1.18) sepia(0.12) saturate(0.82) drop-shadow(0 0 16px rgba(190, 158, 102, 0.13));
+  }
+
+  .redactory-desk__paper-glow {
+    position: absolute;
+    inset: 8% 5% 10%;
+    opacity: 0;
+    background: radial-gradient(ellipse at 45% 46%, rgba(220, 190, 132, 0.19), transparent 67%);
+    mix-blend-mode: screen;
+    transition: opacity 300ms ease;
+  }
+
+  .redactory-desk__papers-link:hover .redactory-desk__paper-glow,
+  .redactory-desk__papers-link:focus-visible .redactory-desk__paper-glow {
+    opacity: 1;
+  }
+
+  .redactory-desk__paper-annotations {
+    position: absolute;
+    left: 14%;
+    top: 13%;
+    width: 68%;
+    height: 68%;
+    overflow: visible;
+    opacity: 0;
+  }
+
+  .redactory-desk__paper-annotations path,
+  .redactory-desk__paper-annotations circle {
+    fill: none;
+    stroke: rgba(75, 91, 122, 0.62);
+    stroke-width: 0.7;
+    stroke-linecap: round;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+  }
+
+  .redactory-desk__papers-copy {
+    position: absolute;
+    left: 79%;
+    top: 29%;
+    display: flex;
+    width: max-content;
+    max-width: 205px;
+    flex-direction: column;
+    padding: 12px 14px;
+    background: rgba(5, 7, 12, 0.78);
+    border-left: 1px solid rgba(177, 58, 52, 0.58);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(10px);
+    transition:
+      border-color 280ms ease,
+      box-shadow 280ms ease,
+      transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .redactory-desk__papers-eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(116, 151, 209, 0.8);
+  }
+
+  .redactory-desk__papers-copy strong {
+    margin: 2px 0 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--text);
+  }
+
+  .redactory-desk__papers-copy > span:last-child {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    color: rgba(232, 228, 220, 0.56);
+  }
+
+  .redactory-desk__papers-link:hover .redactory-desk__papers-copy,
+  .redactory-desk__papers-link:focus-visible .redactory-desk__papers-copy {
+    border-color: rgba(177, 58, 52, 0.86);
+    box-shadow:
+      0 16px 34px rgba(0, 0, 0, 0.38),
+      0 0 22px rgba(190, 158, 102, 0.09);
+    transform: translateY(-2px);
+  }
+
+  .redactory-desk__papers-link:focus-visible .redactory-desk__papers-copy {
+    outline: 2px solid rgba(218, 227, 243, 0.94);
+    outline-offset: 4px;
+  }
+
+  .redactory-desk__frame.is-papers-opening .redactory-desk__papers-object > img {
+    animation: deskPapersLift 820ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .redactory-desk__frame.is-papers-opening .redactory-desk__paper-annotations {
+    animation: deskAnnotationsAppear 620ms 80ms ease both;
+  }
+
+  .redactory-desk__frame.is-papers-opening .redactory-desk__paper-annotations path,
+  .redactory-desk__frame.is-papers-opening .redactory-desk__paper-annotations circle {
+    animation: deskAnnotationsWrite 560ms 110ms ease-out both;
+  }
+
+  .redactory-desk__frame.is-papers-opening .redactory-desk__paper-glow {
+    animation: deskPaperGlow 760ms 80ms ease-out both;
+  }
+
+  .redactory-desk__frame.is-papers-opening .redactory-desk__scene {
+    animation: deskSceneDepart 820ms ease both;
+  }
+
+  .redactory-desk__quill-link {
+    position: absolute;
+    left: 47.54785%;
+    top: 77.47078%;
+    z-index: 7;
+    display: block;
+    width: 42.28469%;
+    aspect-ratio: 707 / 164;
+    color: inherit;
+    text-decoration: none;
+    transform-origin: 18% 72%;
+  }
+
+  .redactory-desk__quill-object {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: hidden;
+  }
+
+  .redactory-desk__quill-object img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1) saturate(1);
+    transform-origin: 18% 72%;
+    animation: deskQuillIdle 8s ease-in-out infinite;
+    transition: filter 280ms ease, transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .redactory-desk__quill-line {
+    position: absolute;
+    left: 7%;
+    bottom: 4%;
+    width: 48%;
+    height: 10px;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .redactory-desk__quill-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(88, 131, 201, 0.9), rgba(175, 56, 52, 0.82), transparent);
+    box-shadow: 0 0 12px rgba(77, 121, 194, 0.42);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .redactory-desk__quill-line span {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #91add9;
+    box-shadow: 0 0 14px rgba(98, 145, 218, 0.9), 0 0 24px rgba(177, 58, 52, 0.46);
+    opacity: 0;
+  }
+
+  .redactory-desk__quill-copy {
+    position: absolute;
+    left: 30%;
+    bottom: 94%;
+    display: flex;
+    width: max-content;
+    max-width: 205px;
+    flex-direction: column;
+    padding: 12px 14px;
+    background: rgba(5, 7, 12, 0.78);
+    border-left: 1px solid rgba(177, 58, 52, 0.58);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(10px);
+    transition:
+      border-color 280ms ease,
+      box-shadow 280ms ease,
+      transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .redactory-desk__quill-eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(116, 151, 209, 0.8);
+  }
+
+  .redactory-desk__quill-copy strong {
+    margin: 2px 0 4px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--text);
+  }
+
+  .redactory-desk__quill-copy > span:last-child {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    color: rgba(232, 228, 220, 0.56);
+  }
+
+  .redactory-desk__quill-link:hover .redactory-desk__quill-object img,
+  .redactory-desk__quill-link:focus-visible .redactory-desk__quill-object img {
+    filter:
+      brightness(1.12)
+      saturate(1.08)
+      drop-shadow(0 0 12px rgba(75, 119, 190, 0.28))
+      drop-shadow(0 0 18px rgba(177, 58, 52, 0.12));
+    transform: translateY(-3px) rotate(-0.8deg);
+  }
+
+  .redactory-desk__quill-link:hover .redactory-desk__quill-copy,
+  .redactory-desk__quill-link:focus-visible .redactory-desk__quill-copy {
+    border-color: rgba(177, 58, 52, 0.86);
+    box-shadow:
+      0 16px 34px rgba(0, 0, 0, 0.38),
+      0 0 24px rgba(75, 119, 190, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .redactory-desk__quill-link:focus-visible {
+    outline: 2px solid rgba(218, 227, 243, 0.94);
+    outline-offset: 5px;
+  }
+
+  .redactory-desk__frame.is-quill-writing .redactory-desk__quill-object img {
+    animation: deskQuillWrite 780ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .redactory-desk__frame.is-quill-writing .redactory-desk__quill-line::before {
+    animation: deskInkWrite 560ms 120ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .redactory-desk__frame.is-quill-writing .redactory-desk__quill-line span {
+    animation: deskInkPulse 520ms 180ms ease-in-out both;
+  }
+
+  .redactory-desk__frame.is-quill-writing .redactory-desk__scene {
+    animation: deskSceneDepart 780ms ease both;
+  }
+
+  .redactory-desk__quill img,
+  .redactory-desk__quill svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(10px 20px 18px rgba(0, 0, 0, 0.52));
+  }
+
+  .redactory-desk__quill svg path:first-child {
+    fill: rgba(184, 192, 205, 0.12);
+    stroke: rgba(178, 193, 218, 0.46);
+    stroke-width: 2;
+  }
+
+  .redactory-desk__quill svg path:last-child {
+    fill: none;
+    stroke: rgba(114, 145, 196, 0.6);
+    stroke-width: 2.3;
+    stroke-linecap: round;
+  }
+
+  .redactory-desk__instruction {
+    position: absolute;
+    left: 28px;
+    bottom: 25px;
+    z-index: 4;
+    color: rgba(232, 228, 220, 0.25);
+  }
+
+  .redactory-desk__mobile-list {
+    display: none;
+  }
+
+  @keyframes deskQuillIdle {
+    0%,
+    100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-1.5px) rotate(-0.2deg); }
+  }
+
+  @keyframes deskQuillWrite {
+    0% { transform: none; }
+    34% { transform: translateY(-10px) rotate(-2.4deg); }
+    70% { transform: translate(-5px, -3px) rotate(1.2deg); }
+    100% { transform: translate(-7px, -1px) rotate(0.4deg); }
+  }
+
+  @keyframes deskInkWrite {
+    from { transform: scaleX(0); opacity: 0.35; }
+    to { transform: scaleX(1); opacity: 1; }
+  }
+
+  @keyframes deskInkPulse {
+    0% { left: 0; opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { left: calc(100% - 7px); opacity: 0; }
+  }
+
+  @keyframes deskSceneDepart {
+    0% { filter: none; opacity: 1; }
+    72% { filter: brightness(0.82); opacity: 1; }
+    100% { filter: brightness(0.46); opacity: 0.42; }
+  }
+
+  @keyframes deskPapersLift {
+    0% { opacity: 0.48; transform: none; filter: brightness(1.18) sepia(0.12) saturate(0.82); }
+    42% { opacity: 0.66; transform: translate(2px, -9px) rotate(-0.7deg); filter: brightness(1.3) sepia(0.14); }
+    100% { opacity: 0.5; transform: translate(5px, -5px) rotate(0.25deg); filter: brightness(1.08); }
+  }
+
+  @keyframes deskAnnotationsAppear {
+    0% { opacity: 0; }
+    28%,
+    82% { opacity: 0.86; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes deskAnnotationsWrite {
+    from { stroke-dashoffset: 120; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes deskPaperGlow {
+    0% { opacity: 0; transform: scale(0.72); }
+    42% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.22); }
+  }
+
+  @media (max-width: 900px) {
+    .redactory-desk__scene {
+      min-height: 610px;
+    }
+
+    .redactory-desk__compass {
+      width: 100px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .redactory-desk {
+      padding-inline: 14px;
+    }
+
+    .redactory-desk__scene {
+      min-height: 390px;
+      aspect-ratio: 1672 / 941;
+    }
+
+    .redactory-desk__scene :global(.desk-hotspot) {
+      display: none;
+    }
+
+    .redactory-desk__paper {
+      left: 27%;
+      width: 46%;
+      height: 57%;
+    }
+
+    .redactory-desk__asset-layer {
+      display: none;
+    }
+
+    .redactory-desk__papers-link,
+    .redactory-desk__quill-link {
+      display: none;
+    }
+
+    .redactory-desk__quill {
+      left: 6%;
+      width: 25%;
+    }
+
+    .redactory-desk__compass {
+      right: 8%;
+      width: 76px;
+    }
+
+    .redactory-desk__instruction {
+      display: none;
+    }
+
+    .redactory-desk__mobile-list {
+      display: grid;
+      gap: 12px;
+      padding-top: 16px;
+    }
+
+    .redactory-desk__mobile-list h2 {
+      margin: 12px 0 2px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 220, 0.38);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .redactory-desk__asset-layer,
+    .redactory-desk__quill-object img,
+    .redactory-desk__papers-object > img,
+    .redactory-desk__paper-glow,
+    .redactory-desk__papers-copy {
+      transition: none;
+      animation: none;
+    }
+  }
+</style>

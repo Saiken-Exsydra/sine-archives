@@ -1,0 +1,9 @@
+---
+import RedactoryDivePage from "../../../systems/redactory/dive.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<RedactoryDivePage locale="pt-br" />

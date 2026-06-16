@@ -241,57 +241,68 @@ const filingYear = (() => {
 </MainLayout>
 
 <script is:inline>
-  const regRoot = document.querySelector('.reg-root');
-  const entryLabel = regRoot?.dataset.entryLabel || 'entry';
-  const entriesLabel = regRoot?.dataset.entriesLabel || 'entries';
-  const entries = Array.from(document.querySelectorAll('.reg-entry'));
-  entries.forEach((el, i) => {
-    el.style.animationDelay = (i * 0.07) + 's';
-    el.classList.add('is-visible');
+  window.registerPageInit?.("apparatus-index-filters", () => {
+    const regRoot = document.querySelector('.reg-root');
+    if (!(regRoot instanceof HTMLElement)) return;
+
+    const entryLabel = regRoot.dataset.entryLabel || 'entry';
+    const entriesLabel = regRoot.dataset.entriesLabel || 'entries';
+    const entries = Array.from(regRoot.querySelectorAll('.reg-entry'));
+    const filterBtns = regRoot.querySelectorAll('.reg-filter-btn');
+    const countEl = regRoot.querySelector('#reg-count');
+    const headerCount = regRoot.querySelector('#header-count');
+    const emptyEl = regRoot.querySelector('#reg-empty');
+    const searchInput = regRoot.querySelector('#reg-search');
+    const controller = new AbortController();
+    const listenerOptions = { signal: controller.signal };
+
+    let activeFilter = 'all';
+    let searchQuery = '';
+
+    entries.forEach((el, i) => {
+      el.style.animationDelay = (i * 0.07) + 's';
+      el.classList.add('is-visible');
+    });
+
+    const applyFilters = () => {
+      let visible = 0;
+      entries.forEach((el) => {
+        const type = (el.dataset.type || '').toLowerCase();
+        const search = (el.dataset.search || '').toLowerCase();
+        const matchType = activeFilter === 'all' || type === activeFilter;
+        const matchSearch = !searchQuery || search.includes(searchQuery) || type.includes(searchQuery);
+        const show = matchType && matchSearch;
+        el.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      const label = visible === 1 ? entryLabel : entriesLabel;
+      if (countEl) countEl.textContent = visible + ' ' + label;
+      if (headerCount) headerCount.textContent = String(visible).padStart(2, '0');
+      if (emptyEl) emptyEl.classList.toggle('is-visible', visible === 0);
+    };
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((other) => {
+          other.classList.remove('is-active');
+          other.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        activeFilter = btn.dataset.filter || 'all';
+        applyFilters();
+      }, listenerOptions);
+    });
+
+    if (searchInput instanceof HTMLInputElement) {
+      searchInput.addEventListener('input', () => {
+        searchQuery = searchInput.value.trim().toLowerCase();
+        applyFilters();
+      }, listenerOptions);
+    }
+
+    return () => controller.abort();
   });
-
-  const filterBtns  = document.querySelectorAll('.reg-filter-btn');
-  const countEl     = document.getElementById('reg-count');
-  const headerCount = document.getElementById('header-count');
-  const emptyEl     = document.getElementById('reg-empty');
-  const searchInput = document.getElementById('reg-search');
-
-  let activeFilter = 'all';
-  let searchQuery  = '';
-
-  function applyFilters() {
-    let visible = 0;
-    entries.forEach((el) => {
-      const type   = (el.dataset.type   || '').toLowerCase();
-      const search = (el.dataset.search || '').toLowerCase();
-      const matchType   = activeFilter === 'all' || type === activeFilter;
-      const matchSearch = !searchQuery || search.includes(searchQuery) || type.includes(searchQuery);
-      const show = matchType && matchSearch;
-      el.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
-    const label = visible === 1 ? entryLabel : entriesLabel;
-    if (countEl) countEl.textContent = visible + ' ' + label;
-    if (headerCount) headerCount.textContent = String(visible).padStart(2, '0');
-    if (emptyEl) emptyEl.classList.toggle('is-visible', visible === 0);
-  }
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => { b.classList.remove('is-active'); b.setAttribute('aria-selected', 'false'); });
-      btn.classList.add('is-active');
-      btn.setAttribute('aria-selected', 'true');
-      activeFilter = btn.dataset.filter;
-      applyFilters();
-    });
-  });
-
-  if (searchInput) {
-    searchInput.addEventListener('input', () => {
-      searchQuery = searchInput.value.trim().toLowerCase();
-      applyFilters();
-    });
-  }
 </script>
 
 <style>

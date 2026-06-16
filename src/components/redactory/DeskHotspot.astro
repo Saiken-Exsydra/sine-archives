@@ -1,0 +1,224 @@
+---
+import LorePanel from "./LorePanel.astro";
+
+interface Props {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+  position: { x: string; y: string };
+  href?: string;
+  ariaLabel?: string;
+  variant?: "quill" | "paper" | "instrument" | "ink-line";
+  staticCard?: boolean;
+}
+
+const {
+  id,
+  label,
+  title,
+  description,
+  position,
+  href,
+  ariaLabel,
+  variant = "paper",
+  staticCard = false,
+} = Astro.props;
+const style = `--hotspot-x:${position.x}; --hotspot-y:${position.y};`;
+---
+
+{staticCard ? (
+  <div class={`desk-hotspot desk-hotspot--${variant} desk-hotspot--static`}>
+    <LorePanel eyebrow={label} title={title} description={description} />
+  </div>
+) : href ? (
+  <a
+    class={`desk-hotspot desk-hotspot--${variant}`}
+    href={href}
+    aria-label={ariaLabel ?? `${label}: ${title}`}
+    style={style}
+  >
+    <span class="desk-hotspot__marker" aria-hidden="true"></span>
+    <span class="desk-hotspot__mobile-copy">
+      <LorePanel eyebrow={label} title={title} description={description} />
+    </span>
+  </a>
+) : (
+  <details class={`desk-hotspot desk-hotspot--${variant}`} style={style} data-desk-hotspot>
+    <summary aria-controls={`hotspot-panel-${id}`}>
+      <span class="desk-hotspot__marker" aria-hidden="true"></span>
+      <span class="sr-only">{label}</span>
+    </summary>
+    <div class="desk-hotspot__panel" id={`hotspot-panel-${id}`}>
+      <LorePanel eyebrow={label} title={title} description={description} />
+    </div>
+  </details>
+)}
+
+<style>
+  .desk-hotspot {
+    position: absolute;
+    left: var(--hotspot-x);
+    top: var(--hotspot-y);
+    z-index: 5;
+    color: inherit;
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .desk-hotspot__marker,
+  summary {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 50%;
+  }
+
+  .desk-hotspot__marker {
+    position: relative;
+    border: 1px solid rgba(125, 159, 211, 0.52);
+    background: rgba(4, 8, 15, 0.68);
+    box-shadow:
+      0 0 0 7px rgba(75, 105, 156, 0.08),
+      0 0 28px rgba(75, 119, 184, 0.2);
+    transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+
+  .desk-hotspot__marker::before,
+  .desk-hotspot__marker::after {
+    content: "";
+    position: absolute;
+    background: rgba(220, 226, 236, 0.72);
+  }
+
+  .desk-hotspot__marker::before {
+    width: 12px;
+    height: 1px;
+  }
+
+  .desk-hotspot__marker::after {
+    width: 1px;
+    height: 12px;
+  }
+
+  .desk-hotspot:hover .desk-hotspot__marker,
+  .desk-hotspot[open] .desk-hotspot__marker,
+  summary:focus-visible .desk-hotspot__marker,
+  a:focus-visible .desk-hotspot__marker {
+    border-color: rgba(191, 78, 70, 0.9);
+    box-shadow:
+      0 0 0 8px rgba(177, 58, 52, 0.11),
+      0 0 38px rgba(68, 113, 184, 0.36);
+    transform: scale(1.08);
+  }
+
+  summary:focus-visible,
+  a:focus-visible {
+    outline: 2px solid rgba(213, 224, 244, 0.92);
+    outline-offset: 7px;
+    border-radius: 50%;
+  }
+
+  .desk-hotspot__panel {
+    position: absolute;
+    left: 28px;
+    top: 30px;
+    z-index: 10;
+    animation: hotspotPanelIn 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .desk-hotspot--instrument .desk-hotspot__panel {
+    left: auto;
+    right: 28px;
+  }
+
+  .desk-hotspot--ink-line .desk-hotspot__panel {
+    top: auto;
+    bottom: 28px;
+  }
+
+  .desk-hotspot__mobile-copy {
+    display: none;
+  }
+
+  .desk-hotspot--static {
+    display: none;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @keyframes hotspotPanelIn {
+    from { opacity: 0; transform: translateY(8px) scale(0.98); }
+    to { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 760px) {
+    .desk-hotspot {
+      position: relative;
+      inset: auto;
+      display: block;
+      transform: none;
+    }
+
+    .desk-hotspot > summary {
+      display: none;
+    }
+
+    .desk-hotspot__panel {
+      position: static;
+      animation: none;
+    }
+
+    .desk-hotspot:not([open]) .desk-hotspot__panel {
+      display: block;
+    }
+
+    .desk-hotspot__mobile-copy {
+      display: block;
+    }
+
+    .desk-hotspot--static {
+      display: block;
+    }
+
+    a.desk-hotspot {
+      border-radius: 2px;
+    }
+
+    a.desk-hotspot:focus-visible {
+      outline-offset: 3px;
+    }
+
+    a.desk-hotspot > .desk-hotspot__marker {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .desk-hotspot__marker,
+    .desk-hotspot__panel {
+      transition: none;
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,138 @@
+---
+interface Props {
+  items: Array<{ id: string; label: string }>;
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="depth-meter" aria-label="Dive depth">
+  <span class="depth-meter__title">Depth</span>
+  <ol>
+    {items.map((item, index) => (
+      <li data-depth-marker={index}>
+        <a href={`#${item.id}`} aria-label={item.label} title={item.label}>
+          <span class="depth-meter__node" aria-hidden="true"></span>
+          <span class="depth-meter__label">{item.label}</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .depth-meter {
+    position: fixed;
+    right: clamp(10px, 2vw, 30px);
+    top: 50%;
+    z-index: 12;
+    width: 38px;
+    padding: 15px;
+    background: rgba(3, 5, 10, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.065);
+    backdrop-filter: blur(12px);
+    transform: translateY(-50%);
+  }
+
+  .depth-meter__title {
+    display: block;
+    margin: 0 auto 13px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.3);
+    writing-mode: vertical-rl;
+  }
+
+  ol {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: rgba(232, 228, 220, 0.26);
+    text-decoration: none;
+    transition: color 240ms ease;
+  }
+
+  .depth-meter__node {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 auto;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    transition: background 240ms ease, box-shadow 240ms ease, transform 240ms ease;
+  }
+
+  .depth-meter__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  a:hover,
+  a:focus-visible,
+  li.is-current a {
+    color: rgba(156, 184, 228, 0.94);
+  }
+
+  a:focus-visible {
+    outline: 1px solid rgba(218, 227, 243, 0.9);
+    outline-offset: 5px;
+  }
+
+  li.is-current .depth-meter__node {
+    background: currentColor;
+    box-shadow: 0 0 15px rgba(104, 145, 211, 0.5);
+    transform: scale(1.22);
+  }
+
+  @media (max-width: 900px) {
+    .depth-meter {
+      position: sticky;
+      top: calc(var(--nav-height, 56px) + 6px);
+      right: auto;
+      width: calc(100% - 24px);
+      margin: 0 12px;
+      padding: 10px 12px;
+      overflow-x: auto;
+      transform: none;
+    }
+
+    .depth-meter__title {
+      display: none;
+    }
+
+    ol {
+      display: flex;
+      width: max-content;
+      min-width: 100%;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    a {
+      display: grid;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a,
+    .depth-meter__node {
+      transition: none;
+    }
+  }
+</style>

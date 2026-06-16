@@ -1033,7 +1033,12 @@ const regionsJson = JSON.stringify(
 </style>
 
 <script>
+  window.registerPageInit?.("places-index-interactions", () => {
   const root = document.getElementById("places-root");
+  if (!(root instanceof HTMLElement)) return;
+
+  const controller = new AbortController();
+  const listenerOptions = { signal: controller.signal };
   const row = document.getElementById("places-row");
   const footer = document.getElementById("places-footer");
   const footerLabel = document.getElementById("places-footer-label");
@@ -1076,23 +1081,23 @@ const regionsJson = JSON.stringify(
         const target = e.target as HTMLElement;
         if (target.closest("[data-close]") || target.closest(".place-card")) return;
         open(key);
-      });
+      }, listenerOptions);
       panel.addEventListener("keydown", (e) => {
         if (panel.classList.contains("is-active")) return;
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           open(key);
         }
-      });
+      }, listenerOptions);
       panel.querySelector("[data-close]")?.addEventListener("click", (e) => {
         e.stopPropagation();
         close();
-      });
+      }, listenerOptions);
     });
 
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && row.hasAttribute("data-active")) close();
-    });
+    }, listenerOptions);
   }
 
   // ── search ────────────────────────────────────────────────
@@ -1227,9 +1232,9 @@ const regionsJson = JSON.stringify(
 
     searchBtn.addEventListener("click", () => {
       if (isOpen()) closeSearch(); else openSearch();
-    });
+    }, listenerOptions);
 
-    searchInput.addEventListener("input", () => render(searchInput.value));
+    searchInput.addEventListener("input", () => render(searchInput.value), listenerOptions);
 
     searchInput.addEventListener("keydown", (e) => {
       const items = searchResults.querySelectorAll<HTMLElement>(".places-search__item");
@@ -1242,11 +1247,17 @@ const regionsJson = JSON.stringify(
         closeSearch();
         searchBtn.focus();
       }
-    });
+    }, listenerOptions);
 
     document.addEventListener("click", (e) => {
       if (!isOpen()) return;
       if (!searchWrap.contains(e.target as Node)) closeSearch();
-    });
+    }, listenerOptions);
   }
+
+  return () => {
+    controller.abort();
+    document.getElementById("places-search-panel")?.classList.remove("is-open");
+  };
+  });
 </script>

@@ -306,10 +306,15 @@ const handles = [
 
 <!-- ---------------------------------------------------------------------- -->
 <script define:vars={{ dossierJson: JSON.stringify(dossier), mapAspectRatio: MAP_ASPECT }} is:inline>
+  window.registerPageInit?.("places-map-interactions", () => {
   const DOSSIER    = JSON.parse(dossierJson);
   const MAP_ASPECT = mapAspectRatio;
 
   const atlasRoot    = document.getElementById("atlasRoot");
+  if (!(atlasRoot instanceof HTMLElement)) return;
+
+  const controller = new AbortController();
+  const listenerOptions = { signal: controller.signal };
   const atlasStage   = document.getElementById("atlasStage");
   const mapFrame     = document.getElementById("mapFrame");
   const mapTransform = document.getElementById("mapTransform");
@@ -447,23 +452,23 @@ const handles = [
   }
 
   // -- Event wiring -------------------------------------------------------
-  document.querySelectorAll(".handle").forEach(h => {
+  atlasRoot.querySelectorAll(".handle").forEach(h => {
     h.addEventListener("click", e => {
       e.stopPropagation();
       h.dataset.region === state.selection ? closeRegion() : openRegion(h.dataset.region);
-    });
+    }, listenerOptions);
   });
 
   // Click on stage (not on a handle or dossier) ? dismiss
-  atlasStage?.addEventListener("click", () => { if (state.selection) closeRegion(); });
-  dossierEl?.addEventListener("click", e => e.stopPropagation());
+  atlasStage?.addEventListener("click", () => { if (state.selection) closeRegion(); }, listenerOptions);
+  dossierEl?.addEventListener("click", e => e.stopPropagation(), listenerOptions);
 
-  dossierClose?.addEventListener("click", closeRegion);
-  resetBtn?.addEventListener("click", closeRegion);
+  dossierClose?.addEventListener("click", closeRegion, listenerOptions);
+  resetBtn?.addEventListener("click", closeRegion, listenerOptions);
 
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && state.selection) closeRegion();
-  });
+  }, listenerOptions);
 
   // Fullscreen
   fullscreenBtn?.addEventListener("click", async () => {
@@ -474,19 +479,24 @@ const handles = [
         await document.exitFullscreen();
       }
     } catch {}
-  });
+  }, listenerOptions);
 
-  document.addEventListener("fullscreenchange", () =>
-    requestAnimationFrame(() => focusMap(state.selection ?? "empire"))
-  );
+  document.addEventListener("fullscreenchange", () => {
+    requestAnimationFrame(() => focusMap(state.selection ?? "empire"));
+  }, listenerOptions);
 
-  window.addEventListener("resize", () =>
-    requestAnimationFrame(() => focusMap(state.selection ?? "empire"))
-  );
+  window.addEventListener("resize", () => {
+    requestAnimationFrame(() => focusMap(state.selection ?? "empire"));
+  }, listenerOptions);
 
   // Init
   syncMapSize();
   applyTransform();
+  return () => {
+    controller.abort();
+    closeRegion();
+  };
+  });
 </script>
 
 <!-- ---------------------------------------------------------------------- -->

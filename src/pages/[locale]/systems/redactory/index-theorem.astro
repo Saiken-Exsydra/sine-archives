@@ -1,0 +1,9 @@
+---
+import IndexTheoremPage from "../../../systems/redactory/index-theorem.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<IndexTheoremPage locale="pt-br" />
