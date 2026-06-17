@@ -1,0 +1,24 @@
+---
+type Props = {
+  title: string;
+  subtitle: string;
+  status: string;
+  href?: string;
+  cta?: string;
+  active?: boolean;
+};
+
+const { title, subtitle, status, href, cta, active = false } = Astro.props;
+const Tag = active && href ? "a" : "article";
+---
+
+<Tag
+  class:list={["observatory-destination", active && "observatory-destination--active"]}
+  href={active && href ? href : undefined}
+  aria-label={active && cta ? `${title}: ${cta}` : undefined}
+>
+  <span class="observatory-destination__status">{status}</span>
+  <h3>{title}</h3>
+  <p>{subtitle}</p>
+  {active && cta && <span class="observatory-destination__cta">{cta}</span>}
+</Tag>

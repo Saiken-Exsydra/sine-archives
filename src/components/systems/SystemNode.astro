@@ -1,0 +1,29 @@
+---
+type Props = {
+  id: string;
+  title: string;
+  summary: string;
+  logo: string;
+  angle: number;
+  x: number;
+  y: number;
+};
+
+const { id, title, summary, logo, angle, x, y } = Astro.props;
+---
+
+<button
+  class="observatory-node"
+  type="button"
+  data-system-node={id}
+  data-angle={angle}
+  style={`--node-x: ${x}%; --node-y: ${y}%;`}
+  aria-label={`${title}: ${summary}`}
+>
+  <span class="observatory-node__dot" aria-hidden="true"></span>
+  <span class="observatory-node__mark" aria-hidden="true">
+    <img src={logo} alt="" loading="eager" decoding="async" />
+  </span>
+  <span class="observatory-node__label">{title}</span>
+  <span class="observatory-node__summary">{summary}</span>
+</button>

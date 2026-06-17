@@ -36,6 +36,10 @@ export function isSearchPath(pathname: string) {
   return /^\/(?:pt-br\/)?search\/?$/i.test(pathname);
 }
 
+export function isObservatoryPath(pathname: string) {
+  return /^\/(?:pt-br\/)?systems\/observatory\/?$/i.test(pathname);
+}
+
 export function isHomePath(pathname: string) {
   return /^\/(?:pt-br\/)?$/i.test(pathname);
 }

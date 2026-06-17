@@ -1,0 +1,354 @@
+<div class="archive-sphere" data-archive-sphere>
+  <canvas
+    class="archive-sphere__canvas"
+    data-archive-sphere-canvas
+    aria-hidden="true"
+  ></canvas>
+  <div class="archive-sphere__veil" aria-hidden="true"></div>
+</div>
+
+<script is:inline>
+  window.registerPageInit?.("archive-sphere-canvas", () => {
+    const hosts = Array.from(document.querySelectorAll("[data-archive-sphere]"));
+    if (!hosts.length) return;
+
+    const cleanups = hosts.map((host) => {
+      const canvas = host.querySelector("[data-archive-sphere-canvas]");
+      if (!(canvas instanceof HTMLCanvasElement)) return null;
+
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return null;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const mobileQuery = window.matchMedia("(max-width: 720px)");
+      const state = {
+        width: 0,
+        height: 0,
+        size: 0,
+        dpr: 1,
+        particles: [],
+        streaks: [],
+        pulses: [],
+        frame: 0,
+        raf: 0,
+        hidden: document.hidden,
+        reduced: reduceMotion.matches,
+      };
+
+      function rand(min, max) {
+        return min + Math.random() * (max - min);
+      }
+
+      function makeParticle(index, total) {
+        const angle = rand(0, Math.PI * 2);
+        const orbit = Math.sqrt(Math.random()) * rand(0.12, 0.94);
+        const z = rand(0.15, 1);
+        const inward = Math.random() > 0.5 ? 1 : -1;
+
+        return {
+          x: 0,
+          y: 0,
+          z,
+          angle,
+          orbit,
+          baseOrbit: orbit,
+          speed: rand(0.00045, 0.0019) * (Math.random() > 0.5 ? 1 : -1),
+          brightness: rand(0.22, 0.92),
+          radius: rand(0.52, 1.34),
+          drift: rand(0.00018, 0.00072) * inward,
+          phase: (index / Math.max(total, 1)) * Math.PI * 2,
+          mode: Math.random(),
+        };
+      }
+
+      function seedParticles() {
+        const target = mobileQuery.matches ? Math.round(rand(40, 56)) : Math.round(rand(72, 94));
+        state.particles = Array.from({ length: target }, (_, index) => makeParticle(index, target));
+        state.streaks = [];
+        state.pulses = [];
+      }
+
+      function resize() {
+        const rect = host.getBoundingClientRect();
+        const nextSize = Math.max(220, Math.floor(Math.min(rect.width, rect.height)));
+        state.size = nextSize;
+        state.width = nextSize;
+        state.height = nextSize;
+        state.dpr = Math.min(window.devicePixelRatio || 1, 1.2);
+        canvas.width = Math.floor(nextSize * state.dpr);
+        canvas.height = Math.floor(nextSize * state.dpr);
+        canvas.style.width = `${nextSize}px`;
+        canvas.style.height = `${nextSize}px`;
+        ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+        seedParticles();
+      }
+
+      function addPulse(angle, strength = 0.7) {
+        state.pulses.push({ angle, age: 0, life: 90, strength });
+        if (state.pulses.length > 5) state.pulses.shift();
+      }
+
+      function onPulse(event) {
+        const detail = event.detail || {};
+        addPulse(Number(detail.angle) || 0, Number(detail.strength) || 0.65);
+      }
+
+      function onVisibility() {
+        state.hidden = document.hidden;
+        if (!state.hidden && !state.raf) state.raf = requestAnimationFrame(draw);
+      }
+
+      function drawBackground(cx, cy, radius, t) {
+        ctx.globalCompositeOperation = "source-over";
+        ctx.clearRect(0, 0, state.width, state.height);
+
+        const bg = ctx.createRadialGradient(cx, cy, radius * 0.02, cx, cy, radius * 1.02);
+        bg.addColorStop(0, "rgba(255, 255, 255, 0.08)");
+        bg.addColorStop(0.16, "rgba(184, 221, 255, 0.065)");
+        bg.addColorStop(0.42, "rgba(49, 91, 134, 0.065)");
+        bg.addColorStop(0.7, "rgba(7, 17, 31, 0.045)");
+        bg.addColorStop(0.88, "rgba(0, 2, 5, 0.02)");
+        bg.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = bg;
+        ctx.beginPath();
+        ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        const outer = ctx.createRadialGradient(cx, cy, radius * 0.62, cx, cy, radius * 1.04);
+        outer.addColorStop(0, "rgba(0, 0, 0, 0)");
+        outer.addColorStop(0.7, "rgba(184, 221, 255, 0.03)");
+        outer.addColorStop(1, "rgba(255, 255, 255, 0)");
+        ctx.fillStyle = outer;
+        ctx.beginPath();
+        ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = "rgba(218, 238, 255, 0.09)";
+        ctx.lineWidth = 1;
+        for (let i = 0; i < 11; i += 1) {
+          const r = radius * (0.16 + i * 0.074 + Math.sin(t * 0.00018 + i) * 0.006);
+          ctx.beginPath();
+          ctx.arc(cx, cy, r, Math.PI * (0.06 * i), Math.PI * (1.42 + 0.05 * i));
+          ctx.stroke();
+        }
+      }
+
+      function updateParticle(p, cx, cy, radius, t) {
+        p.angle += state.reduced ? 0 : p.speed * (0.8 + p.z * 0.7);
+        p.orbit += state.reduced ? 0 : Math.sin(t * 0.00025 + p.phase) * 0.00022 + p.drift;
+
+        if (p.orbit > 0.94 || p.orbit < 0.06) {
+          p.drift *= -1;
+          p.orbit = Math.min(0.94, Math.max(0.06, p.orbit));
+        }
+
+        const woven = Math.sin(p.angle * 3 + t * 0.00022 + p.phase) * radius * 0.032;
+        const spiral = p.mode > 0.68 ? Math.sin(t * 0.00019 + p.phase) * radius * 0.05 : 0;
+        const rr = radius * p.orbit + woven + spiral;
+        const squash = 0.72 + p.z * 0.18;
+        p.x = cx + Math.cos(p.angle) * rr;
+        p.y = cy + Math.sin(p.angle) * rr * squash + Math.sin(p.phase + t * 0.00033) * radius * 0.025;
+      }
+
+      function drawConnections(radius) {
+        const maxDist = radius * 0.24;
+        const particles = state.particles;
+        ctx.globalCompositeOperation = "lighter";
+        ctx.lineWidth = 0.65;
+
+        for (let i = 0; i < particles.length; i += 1) {
+          const a = particles[i];
+          let links = 0;
+          for (let j = i + 1; j < particles.length && links < 4; j += 3) {
+            const b = particles[j];
+            const dx = a.x - b.x;
+            const dy = a.y - b.y;
+            const dist = Math.hypot(dx, dy);
+            if (dist > maxDist) continue;
+            const depth = 1 - Math.abs(a.z - b.z);
+            const alpha = (1 - dist / maxDist) * depth * 0.18;
+            if (alpha < 0.02) continue;
+            ctx.strokeStyle = `rgba(218, 238, 255, ${alpha})`;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+            links += 1;
+          }
+        }
+      }
+
+      function maybeSpawnStreak(cx, cy, radius) {
+        if (state.reduced || state.streaks.length > 5 || Math.random() > 0.026) return;
+        const angle = rand(0, Math.PI * 2);
+        const inward = Math.random() > 0.45;
+        state.streaks.push({
+          angle,
+          start: inward ? rand(0.72, 0.96) : rand(0.12, 0.38),
+          end: inward ? rand(0.18, 0.42) : rand(0.66, 0.92),
+          age: 0,
+          life: rand(58, 104),
+          warm: false,
+          cx,
+          cy,
+          radius,
+        });
+      }
+
+      function drawStreaks(cx, cy, radius) {
+        ctx.globalCompositeOperation = "lighter";
+        state.streaks = state.streaks.filter((s) => s.age < s.life);
+        state.streaks.forEach((s) => {
+          s.age += 1;
+          const p = s.age / s.life;
+          const head = s.start + (s.end - s.start) * p;
+          const tail = s.start + (s.end - s.start) * Math.max(0, p - 0.12);
+          const a = Math.sin(p * Math.PI) * 0.22;
+          ctx.strokeStyle = `rgba(238, 248, 255, ${a * 0.95})`;
+          ctx.lineWidth = 0.68;
+          ctx.beginPath();
+          ctx.moveTo(cx + Math.cos(s.angle) * radius * tail, cy + Math.sin(s.angle) * radius * tail * 0.82);
+          ctx.lineTo(cx + Math.cos(s.angle) * radius * head, cy + Math.sin(s.angle) * radius * head * 0.82);
+          ctx.stroke();
+        });
+      }
+
+      function drawPulses(cx, cy, radius) {
+        ctx.globalCompositeOperation = "lighter";
+        state.pulses = state.pulses.filter((p) => p.age < p.life);
+        state.pulses.forEach((p) => {
+          p.age += 1;
+          const k = p.age / p.life;
+          const alpha = Math.sin(k * Math.PI) * 0.2 * p.strength;
+          const start = radius * (0.92 - k * 0.52);
+          const end = radius * (0.75 - k * 0.56);
+          ctx.strokeStyle = `rgba(184, 221, 255, ${alpha})`;
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.moveTo(cx + Math.cos(p.angle) * start, cy + Math.sin(p.angle) * start * 0.82);
+          ctx.lineTo(cx + Math.cos(p.angle) * Math.max(0, end), cy + Math.sin(p.angle) * Math.max(0, end) * 0.82);
+          ctx.stroke();
+        });
+      }
+
+      function drawParticles() {
+        ctx.globalCompositeOperation = "lighter";
+        state.particles.forEach((p) => {
+          const alpha = (0.08 + p.brightness * 0.3) * (0.42 + p.z * 0.58);
+          const size = p.radius * (0.55 + p.z * 1.22);
+          ctx.fillStyle = `rgba(232, 246, 255, ${alpha})`;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      }
+
+      function drawCore(cx, cy, radius, t) {
+        ctx.globalCompositeOperation = "lighter";
+        const pulse = 0.52 + Math.sin(t * 0.0012) * 0.12;
+        const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius * 0.28);
+        glow.addColorStop(0, `rgba(255, 255, 255, ${0.54 * pulse})`);
+        glow.addColorStop(0.18, `rgba(218, 238, 255, ${0.24 * pulse})`);
+        glow.addColorStop(0.56, `rgba(143, 200, 255, ${0.052 * pulse})`);
+        glow.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(cx, cy, radius * 0.3, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = `rgba(246, 247, 241, ${0.58 * pulse})`;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 1.6 + pulse * 1.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      function draw(t) {
+        state.raf = 0;
+        if (state.hidden) return;
+
+        const cx = state.width / 2;
+        const cy = state.height / 2;
+        const radius = state.size * 0.49;
+
+        drawBackground(cx, cy, radius, t);
+
+        if (!state.reduced) {
+          state.particles.forEach((p) => updateParticle(p, cx, cy, radius, t));
+          maybeSpawnStreak(cx, cy, radius);
+        }
+
+        drawConnections(radius);
+        drawStreaks(cx, cy, radius);
+        drawPulses(cx, cy, radius);
+        drawParticles();
+        drawCore(cx, cy, radius, t);
+
+        state.raf = requestAnimationFrame(draw);
+      }
+
+      const resizeObserver = new ResizeObserver(resize);
+      resizeObserver.observe(host);
+      window.addEventListener("archive:sphere-pulse", onPulse);
+      document.addEventListener("visibilitychange", onVisibility);
+      reduceMotion.addEventListener?.("change", () => {
+        state.reduced = reduceMotion.matches;
+      });
+      mobileQuery.addEventListener?.("change", seedParticles);
+
+      resize();
+      state.raf = requestAnimationFrame(draw);
+
+      return () => {
+        resizeObserver.disconnect();
+        window.removeEventListener("archive:sphere-pulse", onPulse);
+        document.removeEventListener("visibilitychange", onVisibility);
+        if (state.raf) cancelAnimationFrame(state.raf);
+      };
+    }).filter(Boolean);
+
+    return () => cleanups.forEach((cleanup) => cleanup?.());
+  });
+</script>
+
+<style>
+  .archive-sphere {
+    position: relative;
+    width: min(68vw, 620px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: transparent;
+    -webkit-mask-image: radial-gradient(circle, #000 0 73%, rgba(0, 0, 0, 0.9) 84%, rgba(0, 0, 0, 0.36) 96%, transparent 100%);
+    mask-image: radial-gradient(circle, #000 0 73%, rgba(0, 0, 0, 0.9) 84%, rgba(0, 0, 0, 0.36) 96%, transparent 100%);
+    box-shadow:
+      inset 0 0 42px rgba(255, 255, 255, 0.032),
+      inset 0 0 118px rgba(0, 2, 5, 0.28),
+      0 0 82px rgba(184, 221, 255, 0.045);
+  }
+
+  .archive-sphere__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .archive-sphere__veil {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 1px solid rgba(218, 238, 255, 0.045);
+    background:
+      radial-gradient(circle at 50% 50%, transparent 0 62%, rgba(218, 238, 255, 0.022) 78%, rgba(0, 2, 5, 0.16) 94%, transparent 100%),
+      repeating-conic-gradient(from 11deg, rgba(255, 255, 255, 0.028) 0deg 0.28deg, transparent 0.28deg 7deg);
+    opacity: 0.34;
+  }
+
+  @media (max-width: 720px) {
+    .archive-sphere {
+      width: min(86vw, 390px);
+    }
+  }
+ </style>

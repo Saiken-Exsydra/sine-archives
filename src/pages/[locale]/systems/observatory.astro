@@ -1,0 +1,9 @@
+---
+import SystemsObservatoryPage from "../../../components/systems/SystemsObservatoryPage.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<SystemsObservatoryPage locale="pt-br" />

@@ -73,9 +73,47 @@ const sectionMeta: Record<string, { image: string; desc: string }> = {
 };
 
 const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
+const observatoryHref = localizedPath(locale, "/systems/observatory/");
+const searchHref = localizedPath(locale, "/search/");
 ---
 
 <MainLayout active="home" pageTitle="SiNE Archives" locale={locale}>
+  <Fragment slot="head">
+    <link rel="prefetch" href={observatoryHref} as="document" />
+    <link rel="prerender" href={observatoryHref} />
+    <link rel="prefetch" href={searchHref} as="document" />
+    <link rel="prerender" href={searchHref} />
+  </Fragment>
+
+  <a
+    class="observatory-gate"
+    href={observatoryHref}
+    aria-label="Open the Systems Observatory"
+    data-astro-prefetch="load"
+    data-transition-trigger="observatory-handle"
+  >
+    <span class="observatory-gate__seam" aria-hidden="true"></span>
+    <span class="observatory-gate__glow" aria-hidden="true"></span>
+    <span class="observatory-gate__label" aria-hidden="true">
+      <span class="observatory-gate__arrow"></span>
+      <span>Open the Observatory</span>
+    </span>
+  </a>
+
+  <a
+    class="observatory-gate search-gate"
+    href={searchHref}
+    aria-label="Open Search"
+    data-astro-prefetch="load"
+    data-transition-trigger="search-handle"
+  >
+    <span class="observatory-gate__seam" aria-hidden="true"></span>
+    <span class="observatory-gate__glow" aria-hidden="true"></span>
+    <span class="observatory-gate__label" aria-hidden="true">
+      <span>Open Search</span>
+      <span class="observatory-gate__arrow"></span>
+    </span>
+  </a>
 
   <!-- ── HERO ── -->
   <div class="hero">
@@ -199,10 +237,247 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
 
     return () => controller.abort();
   });
+
+  window.registerPageInit?.("edge-gate-transition", () => {
+    const gates = document.querySelectorAll(".observatory-gate");
+    if (!gates.length) return;
+
+    const controller = new AbortController();
+
+    const warmed = new WeakSet();
+    const warmGate = (gate) => {
+      if (!(gate instanceof HTMLAnchorElement) || warmed.has(gate)) return;
+      warmed.add(gate);
+      try {
+        fetch(gate.href, {
+          credentials: "same-origin",
+          mode: "same-origin",
+          cache: "force-cache",
+        }).catch(() => {});
+      } catch {}
+    };
+
+    gates.forEach((gate) => {
+      warmGate(gate);
+
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(() => warmGate(gate), { timeout: 1200 });
+      } else {
+        window.setTimeout(() => warmGate(gate), 300);
+      }
+
+      gate.addEventListener("pointerdown", () => warmGate(gate), { signal: controller.signal });
+      gate.addEventListener("pointerenter", () => warmGate(gate), { signal: controller.signal });
+      gate.addEventListener("focus", () => warmGate(gate), { signal: controller.signal });
+    });
+
+    return () => controller.abort();
+  });
 </script>
 
 <style>
   /* ── HERO ── */
+  .observatory-gate {
+    position: fixed;
+    left: 0;
+    top: 58px;
+    bottom: 0;
+    z-index: 70;
+    display: flex;
+    align-items: center;
+    width: 124px;
+    color: rgba(232, 228, 220, 0.62);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .search-gate {
+    left: auto;
+    right: 0;
+    justify-content: flex-end;
+  }
+
+  .observatory-gate::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 260px;
+    opacity: 0.42;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at left center, rgba(219, 69, 58, 0.22), rgba(102, 20, 24, 0.1) 34%, transparent 70%),
+      linear-gradient(90deg, rgba(226, 92, 70, 0.18), transparent 62%);
+    transform: scaleX(0.58);
+    transform-origin: left center;
+    transition: opacity 0.46s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .search-gate::before {
+    inset: 0 0 0 auto;
+    background:
+      radial-gradient(ellipse at right center, rgba(219, 69, 58, 0.22), rgba(102, 20, 24, 0.1) 34%, transparent 70%),
+      linear-gradient(270deg, rgba(226, 92, 70, 0.18), transparent 62%);
+    transform-origin: right center;
+  }
+
+  .observatory-gate::after {
+    content: "";
+    position: absolute;
+    left: -78px;
+    top: 12%;
+    width: 160px;
+    height: 76%;
+    border-right: 1px solid rgba(234, 118, 102, 0.24);
+    border-radius: 50%;
+    filter: blur(0.2px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-18px);
+    transition: opacity 0.46s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .search-gate::after {
+    left: auto;
+    right: -78px;
+    border-right: 0;
+    border-left: 1px solid rgba(234, 118, 102, 0.24);
+    transform: translateX(18px);
+  }
+
+  .observatory-gate:hover,
+  .observatory-gate:focus,
+  .observatory-gate:focus-visible {
+    color: rgba(232, 228, 220, 0.92);
+    outline: none;
+  }
+
+  .observatory-gate:hover::before,
+  .observatory-gate:focus::before,
+  .observatory-gate:focus-visible::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .observatory-gate:hover::after,
+  .observatory-gate:focus::after,
+  .observatory-gate:focus-visible::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .observatory-gate__seam {
+    position: absolute;
+    left: 0;
+    top: 8%;
+    bottom: 8%;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, rgba(255, 180, 158, 0.78) 18%, rgba(229, 74, 56, 1) 50%, rgba(255, 180, 158, 0.72) 82%, transparent);
+    box-shadow:
+      0 0 16px rgba(235, 91, 68, 0.68),
+      0 0 42px rgba(177, 58, 52, 0.38);
+    opacity: 0.94;
+    transition: opacity 0.4s ease, box-shadow 0.4s ease, width 0.4s ease;
+  }
+
+  .search-gate .observatory-gate__seam {
+    left: auto;
+    right: 0;
+  }
+
+  .observatory-gate:hover .observatory-gate__seam,
+  .observatory-gate:focus .observatory-gate__seam,
+  .observatory-gate:focus-visible .observatory-gate__seam {
+    width: 3px;
+    opacity: 1;
+    box-shadow:
+      0 0 18px rgba(241, 133, 104, 0.78),
+      0 0 58px rgba(177, 58, 52, 0.44);
+  }
+
+  .observatory-gate__glow {
+    position: absolute;
+    left: 0;
+    top: 18%;
+    width: 82px;
+    height: 64%;
+    opacity: 0.44;
+    background: linear-gradient(90deg, rgba(220, 72, 58, 0.34), transparent);
+    filter: blur(18px);
+    transform: translateX(-36px);
+    transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .search-gate .observatory-gate__glow {
+    left: auto;
+    right: 0;
+    background: linear-gradient(270deg, rgba(220, 72, 58, 0.34), transparent);
+    transform: translateX(36px);
+  }
+
+  .observatory-gate:hover .observatory-gate__glow,
+  .observatory-gate:focus .observatory-gate__glow,
+  .observatory-gate:focus-visible .observatory-gate__glow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .observatory-gate__label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-14px);
+    transition: opacity 0.32s ease, transform 0.54s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .search-gate .observatory-gate__label {
+    margin-left: 0;
+    margin-right: 24px;
+    transform: translateX(14px);
+  }
+
+  .observatory-gate:hover .observatory-gate__label,
+  .observatory-gate:focus .observatory-gate__label,
+  .observatory-gate:focus-visible .observatory-gate__label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .observatory-gate__arrow {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(237, 139, 118, 0.38);
+    border-radius: 50%;
+    background: rgba(7, 13, 24, 0.46);
+    box-shadow: inset 0 0 18px rgba(177, 58, 52, 0.16);
+  }
+
+  .observatory-gate__arrow::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 10px;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid rgba(255, 224, 218, 0.82);
+    border-right: 1px solid rgba(255, 224, 218, 0.82);
+    transform: rotate(45deg);
+  }
+
+  .search-gate .observatory-gate__arrow::before {
+    left: 11px;
+    transform: rotate(225deg);
+  }
+
   .hero {
     position: relative;
     height: 100vh;
@@ -619,6 +894,27 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
   }
 
   @media (max-width: 640px) {
+    .observatory-gate {
+      top: 58px;
+      bottom: 0;
+      width: 96px;
+    }
+
+    .search-gate {
+      right: 0;
+    }
+
+    .observatory-gate__label {
+      margin-left: 18px;
+      font-size: 9px;
+      letter-spacing: 0.16em;
+    }
+
+    .search-gate .observatory-gate__label {
+      margin-left: 0;
+      margin-right: 18px;
+    }
+
     .hero { height: 88svh; min-height: 480px; }
     .hero__logo { width: 280px; }
     .hero__sub { font-size: 13px; line-height: 1.7; }
@@ -636,5 +932,17 @@ const FALLBACK_IMG = "/uploads/ui-stars-fallback.jpg";
     .list-row__label { font-size: 26px; }
     .list-row__num { width: 22px; font-size: 9px; }
     .list-row__count { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .observatory-gate,
+    .observatory-gate::before,
+    .observatory-gate::after,
+    .observatory-gate__seam,
+    .observatory-gate__glow,
+    .observatory-gate__label {
+      transition: none;
+    }
+
   }
 </style>

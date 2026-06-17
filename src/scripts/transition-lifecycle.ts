@@ -5,7 +5,7 @@ import {
   isTransitionBeforePreparationEvent,
   isTransitionBeforeSwapEvent,
 } from "astro:transitions/client";
-import { isSearchPath } from "../utils/transition-routes";
+import { isHomePath, isObservatoryPath, isSearchPath } from "../utils/transition-routes";
 
 type PageCleanup = () => void;
 type PageInit = () => void | PageCleanup;
@@ -19,6 +19,22 @@ type SearchIntent = {
   y: number;
 };
 
+type ObservatoryHandleIntent = {
+  type: "observatory-handle";
+  direction: "open" | "close";
+  fromPath: string;
+  href: string;
+};
+
+type SearchHandleIntent = {
+  type: "search-handle";
+  direction: "open" | "close";
+  fromPath: string;
+  href: string;
+};
+
+type TransitionIntent = SearchIntent | ObservatoryHandleIntent | SearchHandleIntent;
+
 type TransitionDebugEvent = {
   direction: string;
   event: string;
@@ -30,19 +46,19 @@ type TransitionDebugEvent = {
 };
 
 type TransitionRuntimeState = {
-  activeIntent: SearchIntent | null;
+  activeIntent: TransitionIntent | null;
   cleanups: Map<string, PageCleanup>;
   debugEvents: TransitionDebugEvent[];
   initializers: Map<string, PageInit>;
   isPageReady: boolean;
-  lastIntent: SearchIntent | null;
+  lastIntent: TransitionIntent | null;
   lastNavigation: {
     direction: string;
     from: string;
     navigationType: string;
     to: string;
   } | null;
-  pendingIntent: SearchIntent | null;
+  pendingIntent: TransitionIntent | null;
 };
 
 declare global {
@@ -129,18 +145,28 @@ function setLifecycleClasses(
 function clearTransitionIntent(doc: Document = document) {
   const root = doc.documentElement;
   root.removeAttribute("data-transition-intent");
+  root.removeAttribute("data-observatory-transition");
+  root.removeAttribute("data-search-handle-transition");
   root.style.removeProperty("--search-vt-x");
   root.style.removeProperty("--search-vt-y");
 }
 
-function applyTransitionIntent(doc: Document, intent: SearchIntent | null) {
+function applyTransitionIntent(doc: Document, intent: TransitionIntent | null) {
   clearTransitionIntent(doc);
   if (!intent) return;
 
   const root = doc.documentElement;
   root.dataset.transitionIntent = intent.type;
-  root.style.setProperty("--search-vt-x", `${intent.x}px`);
-  root.style.setProperty("--search-vt-y", `${intent.y}px`);
+  if (intent.type === "search") {
+    root.style.setProperty("--search-vt-x", `${intent.x}px`);
+    root.style.setProperty("--search-vt-y", `${intent.y}px`);
+    return;
+  }
+  if (intent.type === "observatory-handle") {
+    root.dataset.observatoryTransition = intent.direction;
+    return;
+  }
+  root.dataset.searchHandleTransition = intent.direction;
 }
 
 function cleanupInitializers() {
@@ -223,6 +249,30 @@ function getSearchTriggerLink(target: EventTarget | null) {
   return link;
 }
 
+function getObservatoryTriggerLink(target: EventTarget | null) {
+  if (!(target instanceof Element)) return null;
+
+  const link = target.closest<HTMLAnchorElement>("[data-transition-trigger=\"observatory-handle\"]");
+  if (!(link instanceof HTMLAnchorElement)) return null;
+
+  const url = new URL(link.href, location.href);
+  if (url.origin !== location.origin || !isObservatoryPath(url.pathname)) return null;
+
+  return link;
+}
+
+function getSearchHandleTriggerLink(target: EventTarget | null) {
+  if (!(target instanceof Element)) return null;
+
+  const link = target.closest<HTMLAnchorElement>("[data-transition-trigger=\"search-handle\"]");
+  if (!(link instanceof HTMLAnchorElement)) return null;
+
+  const url = new URL(link.href, location.href);
+  if (url.origin !== location.origin || !isSearchPath(url.pathname)) return null;
+
+  return link;
+}
+
 function buildSearchIntentFromLink(link: HTMLAnchorElement): SearchIntent {
   const rect = link.getBoundingClientRect();
   return {
@@ -231,6 +281,24 @@ function buildSearchIntentFromLink(link: HTMLAnchorElement): SearchIntent {
     href: link.href,
     x: rect.left + rect.width / 2,
     y: rect.top + rect.height / 2,
+  };
+}
+
+function buildObservatoryIntentFromLink(link: HTMLAnchorElement): ObservatoryHandleIntent {
+  return {
+    type: "observatory-handle",
+    direction: "open",
+    fromPath: location.pathname,
+    href: link.href,
+  };
+}
+
+function buildSearchHandleIntentFromLink(link: HTMLAnchorElement): SearchHandleIntent {
+  return {
+    type: "search-handle",
+    direction: "open",
+    fromPath: location.pathname,
+    href: link.href,
   };
 }
 
@@ -295,16 +363,96 @@ function animateSearchReveal(intent: SearchIntent) {
   );
 }
 
-function resolveNavigationIntent(event: TransitionBeforePreparationEvent) {
+function resolveNavigationIntent(event: TransitionBeforePreparationEvent): TransitionIntent | null {
   const state = getRuntimeState();
+  const searchHandleTriggered = isSearchPath(event.to.pathname)
+    && (
+      getSearchHandleTriggerLink(event.sourceElement ?? null)
+      || state.pendingIntent?.type === "search-handle"
+    );
+
+  if (searchHandleTriggered) {
+    return state.pendingIntent?.type === "search-handle"
+      ? state.pendingIntent
+      : buildSearchHandleIntentFromLink(event.sourceElement as HTMLAnchorElement);
+  }
+
   const searchTriggered = isSearchPath(event.to.pathname)
     && (
       getSearchTriggerLink(event.sourceElement ?? null)
-      || (state.pendingIntent && new URL(state.pendingIntent.href, location.href).pathname === event.to.pathname)
+      || (state.pendingIntent?.type === "search" && new URL(state.pendingIntent.href, location.href).pathname === event.to.pathname)
     );
 
-  if (!searchTriggered) return null;
-  return state.pendingIntent ?? buildSearchIntentFromLink(event.sourceElement as HTMLAnchorElement);
+  if (searchTriggered) {
+    return state.pendingIntent?.type === "search"
+      ? state.pendingIntent
+      : buildSearchIntentFromLink(event.sourceElement as HTMLAnchorElement);
+  }
+
+  const observatoryTriggered = isObservatoryPath(event.to.pathname)
+    && (
+      getObservatoryTriggerLink(event.sourceElement ?? null)
+      || state.pendingIntent?.type === "observatory-handle"
+    );
+
+  if (observatoryTriggered) {
+    return state.pendingIntent?.type === "observatory-handle"
+      ? state.pendingIntent
+      : buildObservatoryIntentFromLink(event.sourceElement as HTMLAnchorElement);
+  }
+
+  const observatoryForwardFromHome = isHomePath(event.from.pathname)
+    && isObservatoryPath(event.to.pathname);
+
+  if (observatoryForwardFromHome) {
+    return {
+      type: "observatory-handle",
+      direction: "open",
+      fromPath: event.from.pathname,
+      href: event.to.pathname,
+    };
+  }
+
+  const observatoryBackHome = isObservatoryPath(event.from.pathname)
+    && isHomePath(event.to.pathname)
+    && String(event.direction) === "back";
+
+  if (observatoryBackHome) {
+    return {
+      type: "observatory-handle",
+      direction: "close",
+      fromPath: event.from.pathname,
+      href: event.to.pathname,
+    };
+  }
+
+  const searchForwardFromHome = isHomePath(event.from.pathname)
+    && isSearchPath(event.to.pathname)
+    && String(event.navigationType) === "traverse";
+
+  if (searchForwardFromHome) {
+    return {
+      type: "search-handle",
+      direction: "open",
+      fromPath: event.from.pathname,
+      href: event.to.pathname,
+    };
+  }
+
+  const searchBackHome = isSearchPath(event.from.pathname)
+    && isHomePath(event.to.pathname)
+    && String(event.direction) === "back";
+
+  if (searchBackHome) {
+    return {
+      type: "search-handle",
+      direction: "close",
+      fromPath: event.from.pathname,
+      href: event.to.pathname,
+    };
+  }
+
+  return null;
 }
 
 function handleBeforePreparation(event: Event) {
@@ -341,22 +489,27 @@ function handleBeforeSwap(event: Event) {
   if (!isTransitionBeforeSwapEvent(event)) return;
 
   const state = getRuntimeState();
+  const activeIntent = state.activeIntent;
   setLifecycleClasses(["is-swapping", "is-transitioning"], ["is-preparing-transition", "is-swap-pending", "is-page-ready"]);
-  applyTransitionIntent(document, state.activeIntent);
-  applyTransitionIntent(event.newDocument, state.activeIntent);
+  applyTransitionIntent(document, activeIntent);
+  applyTransitionIntent(event.newDocument, activeIntent);
   cleanupInitializers();
 
-  if (state.activeIntent?.type === "search") {
+  if (activeIntent?.type === "search") {
     event.viewTransition.finished.finally(() => {
       clearTransitionIntent(document);
     });
 
     event.viewTransition.ready.then(() => {
       if (prefersReducedMotion()) return;
-      animateSearchReveal(state.activeIntent!);
+      animateSearchReveal(activeIntent);
     }).catch(() => {
       clearTransitionIntent(document);
     });
+  } else if (activeIntent?.type === "observatory-handle" || activeIntent?.type === "search-handle") {
+    const clearHandleIntent = () => clearTransitionIntent(document);
+    event.viewTransition.finished.finally(clearHandleIntent);
+    window.setTimeout(clearHandleIntent, 900);
   }
 
   logTransitionEvent("astro:before-swap");
@@ -369,13 +522,15 @@ function handleAfterSwap() {
 
 function handlePageLoad() {
   const state = getRuntimeState();
+  const keepIntentUntilTransitionFinished = state.lastIntent?.type === "observatory-handle"
+    || state.lastIntent?.type === "search-handle";
   state.isPageReady = true;
   state.pendingIntent = null;
 
   flushPendingRegistrations();
   runInitializers();
   setLifecycleClasses(["is-page-ready"], ["is-preparing-transition", "is-swap-pending", "is-swapping", "is-transitioning"]);
-  clearTransitionIntent(document);
+  if (!keepIntentUntilTransitionFinished) clearTransitionIntent(document);
   logTransitionEvent("astro:page-load");
 
   document.dispatchEvent(new CustomEvent("sine:page-ready", {
@@ -389,14 +544,38 @@ function handlePageLoad() {
 function installSearchIntentCapture() {
   document.addEventListener("pointerdown", (event) => {
     const link = getSearchTriggerLink(event.target);
-    if (!link || !isPlainLeftClick(event)) return;
-    getRuntimeState().pendingIntent = buildSearchIntentFromLink(link);
+    if (link && isPlainLeftClick(event)) {
+      getRuntimeState().pendingIntent = buildSearchIntentFromLink(link);
+      return;
+    }
+
+    const observatoryLink = getObservatoryTriggerLink(event.target);
+    if (observatoryLink && isPlainLeftClick(event)) {
+      getRuntimeState().pendingIntent = buildObservatoryIntentFromLink(observatoryLink);
+      return;
+    }
+
+    const searchHandleLink = getSearchHandleTriggerLink(event.target);
+    if (!searchHandleLink || !isPlainLeftClick(event)) return;
+    getRuntimeState().pendingIntent = buildSearchHandleIntentFromLink(searchHandleLink);
   }, true);
 
   document.addEventListener("click", (event) => {
     const link = getSearchTriggerLink(event.target);
-    if (!link || !isPlainLeftClick(event)) return;
-    getRuntimeState().pendingIntent = buildSearchIntentFromLink(link);
+    if (link && isPlainLeftClick(event)) {
+      getRuntimeState().pendingIntent = buildSearchIntentFromLink(link);
+      return;
+    }
+
+    const observatoryLink = getObservatoryTriggerLink(event.target);
+    if (observatoryLink && isPlainLeftClick(event)) {
+      getRuntimeState().pendingIntent = buildObservatoryIntentFromLink(observatoryLink);
+      return;
+    }
+
+    const searchHandleLink = getSearchHandleTriggerLink(event.target);
+    if (!searchHandleLink || !isPlainLeftClick(event)) return;
+    getRuntimeState().pendingIntent = buildSearchHandleIntentFromLink(searchHandleLink);
   }, true);
 }
 

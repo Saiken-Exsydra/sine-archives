@@ -1,0 +1,969 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
+import ArchiveField from "./ArchiveField.astro";
+import ArchiveSphere from "./ArchiveSphere.astro";
+import SystemNode from "./SystemNode.astro";
+import DestinationPanel from "./DestinationPanel.astro";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+const navLabels = getArchiveNavLabels(locale);
+const redactoryHref = localizedPath(locale, "/systems/redactory/");
+const observatoryHref = localizedPath(locale, "/systems/observatory/");
+
+const systems = [
+  {
+    id: "redactory",
+    title: "Redactory",
+    logo: "/uploads/observatory-white/Redactory_symbol.png",
+    summary: "Human operational magic through directed routing.",
+    mechanism: "Anchor-mediated indexing and recursive compression.",
+    agent: "Redactor",
+    interface: "Dive",
+    failure: "Collapse, recoil, Sinking, Drowning, Shorefall.",
+    destination: redactoryHref,
+    angle: 3.14,
+    x: 20,
+    y: 50,
+  },
+  {
+    id: "resonance",
+    title: "Resonance",
+    logo: "/uploads/observatory-white/Resonance_symbol.png",
+    summary: "Structural relation, not indexing, not energy, not magic by itself.",
+    mechanism: "Passive mutual coherence pressure.",
+    agent: "None",
+    interface: "Resonance gradients / fields",
+    failure: "Cascade, saturation, void, disturbance.",
+    angle: -2.42,
+    x: 20,
+    y: 22,
+  },
+  {
+    id: "harmonics",
+    title: "Harmonics",
+    logo: "/uploads/observatory-white/Harmonics_symbol.png",
+    summary: "Persistent resonance becoming legible as recurrence under Time.",
+    mechanism: "Resonance under Time.",
+    agent: "None required, though systems may regulate or perceive it.",
+    interface: "Time-ordered traversal",
+    failure: "Surge, cascade, saturation, false attribution, harmonic burn.",
+    angle: -0.72,
+    x: 80,
+    y: 22,
+  },
+  {
+    id: "divination",
+    title: "Divination",
+    logo: "/uploads/observatory-white/Divination_symbol.png",
+    summary: "Divine or demonic domain expression through mortal vessels.",
+    mechanism: "Fragment-vessel fusion pressure.",
+    agent: "Fragment + vessel",
+    interface: "Dive-contact alignment / domain compatibility",
+    failure: "Identity erosion, possession, sanctification, corruption, vessel collapse.",
+    angle: 0,
+    x: 80,
+    y: 50,
+  },
+  {
+    id: "bloom",
+    title: "Bloom",
+    logo: "/uploads/observatory-white/Bloom_symbol.png",
+    summary: "Living organisms conducting resonance through host biology.",
+    mechanism: "Biological resonance integration.",
+    agent: "Symbiont + host",
+    interface: "Tissue, blood, nerve, memory, growth, recursive proximity.",
+    failure: "Overbloom, Murmuring, consumption, outbreak.",
+    angle: 0.72,
+    x: 80,
+    y: 78,
+  },
+  {
+    id: "shores",
+    title: "Shores",
+    logo: "/uploads/observatory-white/Shores_symbol.png",
+    summary: "Terra-local conceptual borderlands.",
+    mechanism: "Spatialized conceptual pressure where Terra's strata meet Archive-adjacent pressure.",
+    agent: "None required, accessed by compatible systems.",
+    interface: "Shorefall, Shorewalking, Dive access, Divination alignment, Bloom Rooting, Calling exposure.",
+    failure: "Stranding, Returnwake, Shore-Breach, identity contamination.",
+    angle: 2.42,
+    x: 20,
+    y: 78,
+  },
+];
+
+const defaultSystem = systems[0];
+---
+
+<MainLayout
+  active="systems"
+  pageTitle="The Systems Observatory - SiNE Archives"
+  locale={locale}
+  navVariant="section"
+  pageClass="systems-observatory-page"
+  routeKind="section-index"
+  transitionProfile="section-index"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel(locale, "systems"), href: localizedPath(locale, "/systems/") },
+    { label: "Observatory" },
+  ]}
+>
+  <section class="observatory-root" data-observatory-root data-observatory-href={observatoryHref}>
+    <ArchiveField />
+    <div class="observatory-noise" aria-hidden="true"></div>
+
+    <header class="observatory-hero">
+      <p class="observatory-kicker">Systems Index / Archive Interface</p>
+      <h1>The Systems Observatory</h1>
+      <p class="observatory-subtitle">Magic is not one thing. It is a family of misread mechanisms.</p>
+      <p class="observatory-support">
+        Redactory routes. Divination fuses. Bloom conducts. Shores spatialize. Harmonics reveal recurrence. Resonance explains pressure. The Archive defines what can exist.
+      </p>
+    </header>
+
+    <div class="observatory-stage" data-active-system={defaultSystem.id}>
+      <div class="observatory-stage__halo" aria-hidden="true"></div>
+
+      <div class="observatory-aperture">
+        <ArchiveSphere />
+
+        <svg class="observatory-svg" viewBox="0 0 1000 1000" aria-hidden="true">
+          <defs>
+            <radialGradient id="observatory-ring-fade" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+              <stop offset="72%" stop-color="rgba(143,200,255,0.055)" />
+              <stop offset="100%" stop-color="rgba(0,2,5,0.1)" />
+            </radialGradient>
+          </defs>
+          <circle class="observatory-svg__wash" cx="500" cy="500" r="420" fill="url(#observatory-ring-fade)" />
+          <g class="observatory-svg__ring observatory-svg__ring--one">
+            <circle cx="500" cy="500" r="338" />
+            <circle cx="500" cy="500" r="414" />
+          </g>
+          <g class="observatory-svg__ring observatory-svg__ring--two">
+            <path d="M120 500a380 380 0 0 1 648-268" />
+            <path d="M246 785a398 398 0 0 1 520-598" />
+            <path d="M800 556a305 305 0 0 1-515 184" />
+          </g>
+          <g class="observatory-svg__ticks">
+            {Array.from({ length: 48 }, (_, index) => {
+              const rotate = index * 7.5;
+              const tall = index % 6 === 0;
+              return <line x1="500" y1={tall ? "70" : "88"} x2="500" y2="104" transform={`rotate(${rotate} 500 500)`} />;
+            })}
+          </g>
+          <g class="observatory-svg__connectors">
+            {systems.map((system) => (
+              <path
+                data-svg-connector={system.id}
+                d={`M500 500 C ${500 + Math.cos(system.angle) * 165} ${500 + Math.sin(system.angle) * 138}, ${system.x * 10} ${system.y * 10}, ${system.x * 10} ${system.y * 10}`}
+              />
+            ))}
+          </g>
+          <g class="observatory-svg__glyphs">
+            <text x="500" y="104">ARCHIVE</text>
+            <text x="730" y="210">TIME</text>
+            <text x="214" y="790">TERRA SYSTEMS</text>
+            <text x="168" y="248">RESONANCE</text>
+          </g>
+        </svg>
+
+        <div class="observatory-nodes" aria-label="System nodes">
+          {systems.map((system) => (
+            <SystemNode
+              id={system.id}
+              title={system.title}
+              summary={system.summary}
+              logo={system.logo}
+              angle={system.angle}
+              x={system.x}
+              y={system.y}
+            />
+          ))}
+        </div>
+      </div>
+
+      <aside class="observatory-panel" aria-live="polite">
+        <p class="observatory-panel__eyebrow">Selected Mechanism</p>
+        <div class="observatory-panel__symbol" aria-hidden="true">
+          <img src={defaultSystem.logo} alt="" data-system-logo loading="eager" decoding="async" />
+        </div>
+        <h2 data-system-title>{defaultSystem.title}</h2>
+        <p data-system-summary>{defaultSystem.summary}</p>
+        <dl>
+          <div>
+            <dt>Mechanism</dt>
+            <dd data-system-mechanism>{defaultSystem.mechanism}</dd>
+          </div>
+          <div>
+            <dt>Agent</dt>
+            <dd data-system-agent>{defaultSystem.agent}</dd>
+          </div>
+          <div>
+            <dt>Interface</dt>
+            <dd data-system-interface>{defaultSystem.interface}</dd>
+          </div>
+          <div>
+            <dt>Failure Modes</dt>
+            <dd data-system-failure>{defaultSystem.failure}</dd>
+          </div>
+        </dl>
+        <a class="observatory-panel__link" href={redactoryHref} data-redactory-link>
+          Open Redactory Desk
+        </a>
+      </aside>
+    </div>
+
+    <section class="observatory-destinations" aria-labelledby="observatory-destinations-title">
+      <div class="observatory-destinations__head">
+        <p>Archive Destinations</p>
+        <h2 id="observatory-destinations-title">Filed Access Points</h2>
+      </div>
+      <div class="observatory-destinations__grid">
+        <DestinationPanel
+          title="The Redactory Desk"
+          subtitle="Enter the Dive through the scholar's working surface."
+          status="ACTIVE DESK"
+          cta="Open Desk"
+          href={redactoryHref}
+          active
+        />
+        <DestinationPanel
+          title="The Harmonic Array"
+          subtitle="Recurrence, Calling pressure, and resonance disturbance."
+          status="SEALED"
+        />
+        <DestinationPanel
+          title="The Vessel Chapel"
+          subtitle="Fragment pressure, domain contact, and indexed vessels."
+          status="PENDING RECONSTRUCTION"
+        />
+        <DestinationPanel
+          title="The Bloom Cabinet"
+          subtitle="Roots, blood, memory, and biological resonance."
+          status="ACCESS NOT YET FILED"
+        />
+        <DestinationPanel
+          title="The Shoreline"
+          subtitle="The place where concept becomes terrain."
+          status="SEALED"
+        />
+      </div>
+    </section>
+  </section>
+</MainLayout>
+
+<script is:inline define:vars={{ systems, redactoryHref }}>
+  window.registerPageInit?.("systems-observatory", () => {
+    const root = document.querySelector("[data-observatory-root]");
+    if (!root) return;
+
+    const controller = new AbortController();
+    const { signal } = controller;
+    const stage = root.querySelector(".observatory-stage");
+    const nodes = Array.from(root.querySelectorAll("[data-system-node]"));
+    const connectors = Array.from(root.querySelectorAll("[data-svg-connector]"));
+    const fields = {
+      title: root.querySelector("[data-system-title]"),
+      logo: root.querySelector("[data-system-logo]"),
+      summary: root.querySelector("[data-system-summary]"),
+      mechanism: root.querySelector("[data-system-mechanism]"),
+      agent: root.querySelector("[data-system-agent]"),
+      interface: root.querySelector("[data-system-interface]"),
+      failure: root.querySelector("[data-system-failure]"),
+      link: root.querySelector("[data-redactory-link]"),
+    };
+    const byId = new Map(systems.map((system) => [system.id, system]));
+
+    function emitPulse(system, strength) {
+      window.dispatchEvent(new CustomEvent("archive:sphere-pulse", {
+        detail: { angle: system.angle, strength },
+      }));
+    }
+
+    function setActive(id, strength = 0) {
+      const system = byId.get(id);
+      if (!system) return;
+      stage?.setAttribute("data-active-system", id);
+      nodes.forEach((node) => {
+        const active = node.getAttribute("data-system-node") === id;
+        node.classList.toggle("is-active", active);
+        node.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      connectors.forEach((path) => {
+        path.classList.toggle("is-active", path.getAttribute("data-svg-connector") === id);
+      });
+      if (fields.title) fields.title.textContent = system.title;
+      if (fields.logo instanceof HTMLImageElement) {
+        fields.logo.src = system.logo;
+        fields.logo.alt = "";
+      }
+      if (fields.summary) fields.summary.textContent = system.summary;
+      if (fields.mechanism) fields.mechanism.textContent = system.mechanism;
+      if (fields.agent) fields.agent.textContent = system.agent;
+      if (fields.interface) fields.interface.textContent = system.interface;
+      if (fields.failure) fields.failure.textContent = system.failure;
+      if (fields.link instanceof HTMLAnchorElement) {
+        const activeRoute = system.destination === redactoryHref;
+        fields.link.hidden = !activeRoute;
+        fields.link.href = redactoryHref;
+      }
+      if (strength > 0) emitPulse(system, strength);
+    }
+
+    nodes.forEach((node) => {
+      const id = node.getAttribute("data-system-node");
+      if (!id) return;
+      node.addEventListener("mouseenter", () => setActive(id), { signal });
+      node.addEventListener("focus", () => setActive(id), { signal });
+      node.addEventListener("click", () => setActive(id, 0.55), { signal });
+    });
+
+    setActive("redactory");
+
+    return () => controller.abort();
+  });
+</script>
+
+<style>
+  :global(.systems-observatory-page) {
+    background: #000205;
+  }
+
+  .observatory-root {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 62px max(24px, env(safe-area-inset-right)) 96px max(24px, env(safe-area-inset-left));
+    background-image:
+      radial-gradient(ellipse at 43% 47%, rgba(184, 221, 255, 0.045), transparent 42rem),
+      radial-gradient(ellipse at 58% 45%, rgba(49, 91, 134, 0.048), transparent 36rem),
+      radial-gradient(ellipse at 66% 47%, rgba(3, 8, 14, 0.34), transparent 42rem),
+      radial-gradient(circle at 14% 74%, rgba(143, 200, 255, 0.026), transparent 34rem);
+    background-color: #000205;
+    background-position: center, center, center, center;
+    background-repeat: no-repeat;
+    background-size: auto, auto, auto, auto;
+    color: var(--text);
+  }
+
+  .observatory-root::before,
+  .observatory-root::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .observatory-root::before {
+    background:
+      radial-gradient(circle at 43% 45%, transparent 0 58%, rgba(0, 0, 0, 0.16) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.36), transparent 15rem, transparent calc(100% - 12rem), rgba(0, 0, 0, 0.44));
+  }
+
+  .observatory-root::after {
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.08));
+  }
+
+  .observatory-noise {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.032;
+    background-image:
+      repeating-radial-gradient(circle at 17% 23%, rgba(255, 255, 255, 0.64) 0 0.7px, transparent 0.7px 2.8px),
+      repeating-linear-gradient(107deg, rgba(218, 238, 255, 0.1) 0 1px, transparent 1px 5px);
+  }
+
+  .observatory-hero,
+  .observatory-stage,
+  .observatory-destinations {
+    position: relative;
+    z-index: 3;
+  }
+
+  .observatory-hero {
+    max-width: 960px;
+    margin: 0 auto 34px;
+    text-align: center;
+  }
+
+  .observatory-kicker,
+  .observatory-destinations__head p,
+  .observatory-panel__eyebrow {
+    margin: 0 0 12px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(218, 238, 255, 0.76);
+  }
+
+  .observatory-hero h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(46px, 6.8vw, 88px);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: 0;
+    text-shadow: 0 0 42px rgba(218, 238, 255, 0.18);
+  }
+
+  .observatory-subtitle {
+    margin: 20px auto 0;
+    max-width: 720px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3.2vw, 34px);
+    font-style: italic;
+    line-height: 1.18;
+    color: rgba(232, 228, 220, 0.78);
+  }
+
+  .observatory-support {
+    margin: 18px auto 0;
+    max-width: 820px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.78;
+    color: rgba(232, 228, 220, 0.52);
+  }
+
+  .observatory-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+    gap: clamp(24px, 4vw, 54px);
+    align-items: start;
+    max-width: 1320px;
+    margin: 0 auto;
+    min-height: 700px;
+  }
+
+  .observatory-stage__halo {
+    position: absolute;
+    left: 36%;
+    top: 50%;
+    width: min(70vw, 760px);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 48% 48%, rgba(255, 255, 255, 0.045), transparent 38%),
+      radial-gradient(circle at 58% 52%, rgba(143, 200, 255, 0.04), transparent 62%),
+      radial-gradient(circle at 70% 48%, rgba(0, 2, 5, 0.18), transparent 72%);
+    filter: blur(8px);
+    pointer-events: none;
+  }
+
+  .observatory-aperture {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 680px;
+    margin-top: 10px;
+  }
+
+  .observatory-svg,
+  .observatory-nodes {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .observatory-svg {
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .observatory-svg__ring,
+  .observatory-svg__ticks,
+  .observatory-svg__connectors,
+  .observatory-svg__glyphs {
+    fill: none;
+    stroke: rgba(218, 238, 255, 0.19);
+    stroke-width: 1;
+  }
+
+  .observatory-svg__ring--one {
+    transform-origin: 500px 500px;
+  }
+
+  .observatory-svg__ring--two {
+    transform-origin: 500px 500px;
+    stroke: rgba(218, 238, 255, 0.12);
+  }
+
+  .observatory-svg__ticks line {
+    stroke: rgba(232, 228, 220, 0.13);
+  }
+
+  .observatory-svg__connectors path {
+    stroke: rgba(218, 238, 255, 0.18);
+    stroke-dasharray: 4 10;
+    transition: stroke 0.24s ease, stroke-width 0.24s ease, opacity 0.24s ease;
+  }
+
+  .observatory-svg__connectors path.is-active {
+    stroke: rgba(255, 255, 255, 0.72);
+    stroke-width: 1.5;
+    opacity: 1;
+  }
+
+  .observatory-svg__glyphs {
+    fill: rgba(232, 228, 220, 0.24);
+    stroke: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.28em;
+  }
+
+  .observatory-svg__glyphs text {
+    text-anchor: middle;
+  }
+
+  .observatory-nodes {
+    pointer-events: none;
+  }
+
+  :global(.observatory-node) {
+    position: absolute;
+    left: var(--node-x);
+    top: var(--node-y);
+    width: clamp(104px, 9vw, 132px);
+    aspect-ratio: 1;
+    min-height: 0;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    pointer-events: auto;
+    color: rgba(232, 228, 220, 0.72);
+    text-align: center;
+    background:
+      radial-gradient(circle at 50% 45%, rgba(218, 238, 255, 0.075), transparent 58%),
+      rgba(1, 5, 10, 0.78);
+    border: 1px solid rgba(218, 238, 255, 0.22);
+    border-radius: 8px;
+    backdrop-filter: blur(10px) saturate(1.08);
+    cursor: pointer;
+    box-shadow:
+      inset 0 0 24px rgba(218, 238, 255, 0.025),
+      0 12px 34px rgba(0, 0, 0, 0.28);
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  :global(.observatory-node:hover),
+  :global(.observatory-node:focus-visible),
+  :global(.observatory-node.is-active) {
+    color: rgba(255, 255, 255, 0.94);
+    border-color: rgba(255, 255, 255, 0.62);
+    background:
+      radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.16), transparent 58%),
+      rgba(2, 8, 14, 0.94);
+    box-shadow:
+      inset 0 0 30px rgba(218, 238, 255, 0.05),
+      0 0 26px rgba(218, 238, 255, 0.18),
+      0 14px 38px rgba(0, 0, 0, 0.32);
+    transform: translate(-50%, -50%) translateY(-3px);
+    outline: none;
+  }
+
+  :global(.observatory-node__dot) {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(218, 238, 255, 0.9);
+    box-shadow: 0 0 14px rgba(218, 238, 255, 0.66);
+  }
+
+  :global(.observatory-node__mark) {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  :global(.observatory-node__mark img) {
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(218, 238, 255, 0.24));
+    transform: scale(1);
+    transition: opacity 0.18s ease, filter 0.18s ease;
+    backface-visibility: hidden;
+  }
+
+  :global(.observatory-node:hover .observatory-node__mark img),
+  :global(.observatory-node:focus-visible .observatory-node__mark img),
+  :global(.observatory-node.is-active .observatory-node__mark img) {
+    opacity: 0.98;
+    filter: drop-shadow(0 0 10px rgba(218, 238, 255, 0.34));
+  }
+
+  :global(.observatory-node__label) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  :global(.observatory-node__summary) {
+    display: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    line-height: 1.35;
+    color: rgba(232, 228, 220, 0.48);
+  }
+
+  .observatory-panel {
+    position: relative;
+    align-self: start;
+    margin-top: 27px;
+    padding: 24px;
+    border: 1px solid rgba(218, 238, 255, 0.2);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 12% 0%, rgba(49, 91, 134, 0.08), transparent 42%),
+      radial-gradient(circle at 92% 10%, rgba(143, 200, 255, 0.08), transparent 44%),
+      linear-gradient(145deg, rgba(1, 5, 10, 0.94), rgba(0, 2, 5, 0.88));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .observatory-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(218, 238, 255, 0.04), transparent 44%, rgba(218, 238, 255, 0.07));
+    pointer-events: none;
+  }
+
+  .observatory-panel > * {
+    position: relative;
+  }
+
+  .observatory-panel__symbol {
+    width: clamp(140px, 11vw, 168px);
+    aspect-ratio: 1;
+    margin: 2px auto 20px;
+    border: 1px solid rgba(218, 238, 255, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 48%, rgba(218, 238, 255, 0.09), transparent 62%),
+      rgba(0, 2, 5, 0.38);
+    box-shadow:
+      inset 0 0 32px rgba(218, 238, 255, 0.04),
+      0 0 28px rgba(110, 183, 255, 0.07);
+  }
+
+  .observatory-panel__symbol img {
+    display: block;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    object-fit: contain;
+    opacity: 0.96;
+    filter: drop-shadow(0 0 16px rgba(218, 238, 255, 0.34));
+  }
+
+  .observatory-panel h2 {
+    margin: 0 0 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  .observatory-panel p {
+    margin: 0 0 20px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.72;
+    color: rgba(232, 228, 220, 0.62);
+  }
+
+  .observatory-panel dl {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .observatory-panel dl div {
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .observatory-panel dt {
+    margin-bottom: 5px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(218, 238, 255, 0.66);
+  }
+
+  .observatory-panel dd {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.52;
+    color: rgba(232, 228, 220, 0.58);
+  }
+
+  .observatory-panel__link {
+    display: inline-flex;
+    margin-top: 20px;
+    padding: 10px 14px;
+    border: 1px solid rgba(155, 59, 70, 0.62);
+    border-radius: 4px;
+    color: rgba(242, 223, 218, 0.9);
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .observatory-panel__link:hover,
+  .observatory-panel__link:focus-visible {
+    background: rgba(122, 42, 56, 0.22);
+    outline: none;
+  }
+
+  .observatory-destinations {
+    max-width: 1180px;
+    margin: 12px auto 0;
+  }
+
+  .observatory-destinations__head {
+    margin-bottom: 22px;
+  }
+
+  .observatory-destinations__head h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1;
+  }
+
+  .observatory-destinations__grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  :global(.observatory-destination) {
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 18px;
+    border: 1px solid rgba(218, 238, 255, 0.14);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 20% 16%, rgba(218, 238, 255, 0.08), transparent 42%),
+      linear-gradient(180deg, rgba(2, 8, 14, 0.42), rgba(0, 2, 5, 0.12));
+    color: rgba(232, 228, 220, 0.72);
+    text-decoration: none;
+    transition: transform 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+  }
+
+  :global(.observatory-destination--active:hover),
+  :global(.observatory-destination--active:focus-visible) {
+    transform: translateY(-3px);
+    border-color: rgba(155, 59, 70, 0.66);
+    background:
+      radial-gradient(circle at 20% 16%, rgba(155, 59, 70, 0.24), transparent 42%),
+      linear-gradient(180deg, rgba(7, 17, 31, 0.36), rgba(5, 9, 18, 0.1));
+    outline: none;
+  }
+
+  :global(.observatory-destination__status) {
+    margin-bottom: auto;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(218, 238, 255, 0.62);
+  }
+
+  :global(.observatory-destination--active .observatory-destination__status) {
+    color: rgba(221, 106, 116, 0.9);
+  }
+
+  :global(.observatory-destination h3) {
+    margin: 42px 0 9px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    line-height: 1.02;
+  }
+
+  :global(.observatory-destination p) {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.55;
+    color: rgba(232, 228, 220, 0.52);
+  }
+
+  :global(.observatory-destination__cta) {
+    margin-top: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(242, 223, 218, 0.86);
+  }
+
+  @keyframes observatoryDrift {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes observatoryDriftReverse {
+    to { transform: rotate(-360deg); }
+  }
+
+  @keyframes observatoryDash {
+    to { stroke-dashoffset: -28; }
+  }
+
+  @media (max-width: 1100px) {
+    .observatory-stage {
+      grid-template-columns: 1fr;
+      min-height: 0;
+    }
+
+    .observatory-stage__halo {
+      left: 50%;
+      top: 38%;
+    }
+
+    .observatory-panel {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .observatory-destinations__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 720px) {
+    .observatory-root {
+      padding: 38px 16px 64px;
+    }
+
+    .observatory-hero {
+      text-align: left;
+    }
+
+    .observatory-hero h1 {
+      font-size: clamp(42px, 14vw, 64px);
+    }
+
+    .observatory-aperture {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 0;
+      padding: 12px 0 0;
+    }
+
+    .observatory-svg {
+      display: none;
+    }
+
+    .observatory-nodes {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      width: 100%;
+      height: auto;
+    }
+
+    :global(.observatory-node) {
+      position: relative;
+      left: auto;
+      top: auto;
+      width: 100%;
+      min-height: 0;
+      transform: none;
+    }
+
+    :global(.observatory-node:hover),
+    :global(.observatory-node:focus-visible),
+    :global(.observatory-node.is-active) {
+      transform: translateY(-1px);
+    }
+
+    .observatory-panel {
+      padding: 18px;
+      border-radius: 6px;
+    }
+
+    .observatory-panel h2 {
+      font-size: 34px;
+    }
+
+    .observatory-panel__symbol {
+      width: min(140px, 56%);
+      margin: 0 auto 16px;
+    }
+
+    .observatory-destinations__grid {
+      grid-template-columns: 1fr;
+    }
+
+    :global(.observatory-destination) {
+      min-height: 168px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .observatory-nodes {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .observatory-svg__ring--one,
+    .observatory-svg__ring--two,
+    .observatory-svg__connectors path.is-active {
+      animation: none;
+    }
+
+    :global(.observatory-node),
+    :global(.observatory-destination) {
+      transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+  }
+</style>

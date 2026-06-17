@@ -22,7 +22,10 @@ body {
 
 html {
   scroll-padding-top: calc(var(--nav-height, 56px) + 18px);
+  scrollbar-width: none;
 }
+
+html::-webkit-scrollbar { width: 0; height: 0; }
 
 body {
   background: var(--bg);
@@ -38,10 +41,10 @@ body {
   color: var(--text);
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: rgba(177, 58, 52, 0.3); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(177, 58, 52, 0.5); }
+*::-webkit-scrollbar { width: 6px; }
+*::-webkit-scrollbar-track { background: var(--bg); }
+*::-webkit-scrollbar-thumb { background: rgba(177, 58, 52, 0.3); border-radius: 3px; }
+*::-webkit-scrollbar-thumb:hover { background: rgba(177, 58, 52, 0.5); }
 
 img { display: block; max-width: 100%; }
 button { font-family: inherit; }

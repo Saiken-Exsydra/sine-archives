@@ -1,0 +1,362 @@
+<canvas class="archive-field" data-archive-field aria-hidden="true"></canvas>
+
+<script is:inline>
+  window.registerPageInit?.("archive-field-canvas", () => {
+    const canvas = document.querySelector("[data-archive-field]");
+    const root = document.querySelector("[data-observatory-root]");
+    const aperture = document.querySelector(".observatory-aperture");
+    if (!(canvas instanceof HTMLCanvasElement) || !root || !aperture) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const mobileQuery = window.matchMedia("(max-width: 720px)");
+    const state = {
+      width: 0,
+      height: 0,
+      dpr: 1,
+      centerX: 0,
+      centerY: 0,
+      fieldRadius: 420,
+      points: [],
+      strands: [],
+      links: [],
+      raf: 0,
+      lastFrame: 0,
+      hidden: document.hidden,
+      reduced: reduceMotion.matches,
+      renderedOnce: false,
+    };
+
+    function rand(min, max) {
+      return min + Math.random() * (max - min);
+    }
+
+    function rootPointFromViewport(x, y) {
+      const rootRect = root.getBoundingClientRect();
+      return { x: x - rootRect.left, y: y - rootRect.top };
+    }
+
+    function readGeometry() {
+      const previous = {
+        width: state.width,
+        height: state.height,
+        dpr: state.dpr,
+        centerX: state.centerX,
+        centerY: state.centerY,
+        fieldRadius: state.fieldRadius,
+      };
+      const rootRect = root.getBoundingClientRect();
+      const apertureRect = aperture.getBoundingClientRect();
+      state.width = Math.max(1, Math.ceil(rootRect.width));
+      state.height = Math.max(window.innerHeight, Math.ceil(root.scrollHeight || rootRect.height));
+      state.dpr = mobileQuery.matches ? 0.72 : 0.54;
+      const canvasWidth = Math.floor(state.width * state.dpr);
+      const canvasHeight = Math.floor(state.height * state.dpr);
+      if (canvas.width !== canvasWidth) canvas.width = canvasWidth;
+      if (canvas.height !== canvasHeight) canvas.height = canvasHeight;
+      canvas.style.width = `${state.width}px`;
+      canvas.style.height = `${state.height}px`;
+      ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+
+      const center = rootPointFromViewport(
+        apertureRect.left + apertureRect.width * 0.5,
+        apertureRect.top + apertureRect.height * 0.52,
+      );
+      state.centerX = center.x;
+      state.centerY = center.y;
+      state.fieldRadius = Math.max(280, Math.min(apertureRect.width, apertureRect.height) * 0.68);
+
+      return (
+        !state.points.length ||
+        Math.abs(state.width - previous.width) > 32 ||
+        Math.abs(state.dpr - previous.dpr) > 0.01 ||
+        Math.abs(state.centerX - previous.centerX) > 24 ||
+        Math.abs(state.centerY - previous.centerY) > 24 ||
+        Math.abs(state.fieldRadius - previous.fieldRadius) > 16
+      );
+    }
+
+    function makePoint(index, count) {
+      const clustered = index > count * 0.42;
+      let x;
+      let y;
+      if (clustered) {
+        const angle = rand(0, Math.PI * 2);
+        const radius = Math.pow(Math.random(), 0.96) * state.fieldRadius * rand(0.5, 2.9);
+        x = state.centerX + Math.cos(angle) * radius;
+        y = state.centerY + Math.sin(angle) * radius * rand(0.62, 0.98);
+      } else {
+        x = rand(0, state.width);
+        y = rand(0, state.height);
+      }
+      return {
+        x,
+        y,
+        baseX: x,
+        baseY: y,
+        density: 0,
+        phase: rand(0, Math.PI * 2),
+        speed: rand(0.000045, 0.00018),
+        radius: rand(0.38, 1.25),
+        brightness: rand(0.22, 0.88),
+      };
+    }
+
+    function makeStrand(index, count) {
+      const angle = (index / count) * Math.PI * 2 + rand(-0.16, 0.16);
+      const pageReach = Math.max(state.width, state.height);
+      const outer = Math.max(state.fieldRadius * 1.4, pageReach * rand(0.3, 0.78));
+      const inner = state.fieldRadius * rand(0.36, 0.82);
+      return {
+        angle,
+        outer,
+        inner,
+        bend: rand(-0.22, 0.22),
+        phase: rand(0, Math.PI * 2),
+        warm: false,
+        density: 0,
+      };
+    }
+
+    function buildLinks() {
+      const maxDist = mobileQuery.matches ? 146 : 236;
+      const links = [];
+      for (let i = 0; i < state.points.length; i += 1) {
+        const a = state.points[i];
+        let linked = 0;
+        for (let j = i + 1; j < state.points.length && linked < 5; j += 3) {
+          const b = state.points[j];
+          const density = (a.density + b.density) * 0.5;
+          const threshold = maxDist * (0.62 + density * 2.05);
+          const dist = Math.hypot(a.baseX - b.baseX, a.baseY - b.baseY);
+          if (dist > threshold) continue;
+          links.push({
+            a: i,
+            b: j,
+            alpha: (1 - dist / threshold) * (0.09 + density * 0.48),
+            width: 0.3 + density * 0.34,
+          });
+          linked += 1;
+        }
+      }
+      state.links = links;
+    }
+
+    function seed() {
+      const count = mobileQuery.matches ? 92 : 260;
+      state.points = Array.from({ length: count }, (_, index) => makePoint(index, count));
+      state.points.forEach((point) => {
+        point.density = densityAt(point.baseX, point.baseY);
+      });
+      const strandCount = mobileQuery.matches ? 32 : 74;
+      state.strands = Array.from({ length: strandCount }, (_, index) => makeStrand(index, strandCount));
+      state.strands.forEach((strand) => {
+        const ex = state.centerX + Math.cos(strand.angle + strand.bend) * strand.inner;
+        const ey = state.centerY + Math.sin(strand.angle + strand.bend) * strand.inner * 0.72;
+        strand.density = densityAt(ex, ey);
+      });
+      buildLinks();
+    }
+
+    function resize() {
+      const shouldSeed = readGeometry();
+      if (shouldSeed) seed();
+      state.renderedOnce = false;
+      if (!state.raf) state.raf = requestAnimationFrame(draw);
+    }
+
+    function densityAt(x, y) {
+      const dx = x - state.centerX;
+      const dy = (y - state.centerY) * 1.12;
+      const d = Math.hypot(dx, dy);
+      const near = Math.max(0, 1 - d / (state.fieldRadius * 3.2));
+      return 0.18 + Math.pow(near, 1.42) * 0.82;
+    }
+
+    function drawArchiveStrands(t) {
+      state.strands.forEach((strand, index) => {
+        const wobble = state.reduced ? 0 : Math.sin(t * 0.00008 + strand.phase) * 0.045;
+        const angle = strand.angle + wobble;
+        const normal = angle + Math.PI * 0.5;
+        const sx = state.centerX + Math.cos(angle) * strand.outer;
+        const sy = state.centerY + Math.sin(angle) * strand.outer * 0.72;
+        const ex = state.centerX + Math.cos(angle + strand.bend) * strand.inner;
+        const ey = state.centerY + Math.sin(angle + strand.bend) * strand.inner * 0.72;
+        const mx = (sx + ex) * 0.5 + Math.cos(normal) * state.fieldRadius * strand.bend * 0.34;
+        const my = (sy + ey) * 0.5 + Math.sin(normal) * state.fieldRadius * strand.bend * 0.22;
+        const density = strand.density;
+        const baseAlpha = 0.026 + density * 0.24;
+        ctx.strokeStyle = `rgba(226, 241, 255, ${baseAlpha})`;
+        ctx.lineWidth = 0.3 + density * 0.42;
+        ctx.setLineDash(index % 4 === 0 ? [2, 16] : []);
+        ctx.beginPath();
+        ctx.moveTo(sx, sy);
+        ctx.quadraticCurveTo(mx, my, ex, ey);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      });
+    }
+
+    function drawCoreBurst(t) {
+      const pulse = state.reduced ? 0.9 : 0.82 + Math.sin(t * 0.001) * 0.12;
+      const core = ctx.createRadialGradient(
+        state.centerX,
+        state.centerY,
+        0,
+        state.centerX,
+        state.centerY,
+        state.fieldRadius * 0.5,
+      );
+      core.addColorStop(0, `rgba(255, 255, 255, ${0.24 * pulse})`);
+      core.addColorStop(0.08, `rgba(221, 240, 255, ${0.14 * pulse})`);
+      core.addColorStop(0.34, `rgba(143, 200, 255, ${0.045 * pulse})`);
+      core.addColorStop(1, "rgba(0, 0, 0, 0)");
+      ctx.fillStyle = core;
+      ctx.fillRect(0, 0, state.width, state.height);
+
+      ctx.strokeStyle = `rgba(238, 248, 255, ${0.032 * pulse})`;
+      ctx.lineWidth = 0.46;
+      for (let i = 0; i < 28; i += 1) {
+        const angle = (i / 28) * Math.PI * 2 + Math.sin(t * 0.00008 + i) * 0.04;
+        const seeded = 0.5 + Math.sin(i * 12.9898) * 0.5;
+        const inner = state.fieldRadius * (0.03 + seeded * 0.07);
+        const outer = state.fieldRadius * (0.28 + ((i * 17) % 28) / 28 * 0.56);
+        ctx.beginPath();
+        ctx.moveTo(state.centerX + Math.cos(angle) * inner, state.centerY + Math.sin(angle) * inner * 0.78);
+        ctx.lineTo(state.centerX + Math.cos(angle) * outer, state.centerY + Math.sin(angle) * outer * 0.78);
+        ctx.stroke();
+      }
+    }
+
+    function draw(t = 0) {
+      state.raf = 0;
+      if (state.hidden) return;
+      if (state.reduced && state.renderedOnce) return;
+      if (!state.reduced && t - state.lastFrame < 20) {
+        state.raf = requestAnimationFrame(draw);
+        return;
+      }
+      state.lastFrame = t;
+
+      ctx.clearRect(0, 0, state.width, state.height);
+      ctx.globalCompositeOperation = "source-over";
+      ctx.fillStyle = "#000205";
+      ctx.fillRect(0, 0, state.width, state.height);
+
+      const centerWash = ctx.createRadialGradient(
+        state.centerX,
+        state.centerY,
+        state.fieldRadius * 0.1,
+        state.centerX,
+        state.centerY,
+        state.fieldRadius * 3.15,
+      );
+      centerWash.addColorStop(0, "rgba(184, 221, 255, 0.09)");
+      centerWash.addColorStop(0.26, "rgba(49, 91, 134, 0.08)");
+      centerWash.addColorStop(0.68, "rgba(7, 17, 31, 0.05)");
+      centerWash.addColorStop(1, "rgba(0, 0, 0, 0)");
+      ctx.fillStyle = centerWash;
+      ctx.fillRect(0, 0, state.width, state.height);
+
+      const outerBlue = ctx.createRadialGradient(
+        state.centerX - state.fieldRadius * 0.55,
+        state.centerY + state.fieldRadius * 0.12,
+        state.fieldRadius * 0.35,
+        state.centerX,
+        state.centerY,
+        state.fieldRadius * 4,
+      );
+      outerBlue.addColorStop(0, "rgba(49, 91, 134, 0.045)");
+      outerBlue.addColorStop(0.56, "rgba(7, 17, 31, 0.055)");
+      outerBlue.addColorStop(1, "rgba(0, 0, 0, 0)");
+      ctx.fillStyle = outerBlue;
+      ctx.fillRect(0, 0, state.width, state.height);
+
+      const darkEdgeWash = ctx.createRadialGradient(
+        state.centerX + state.fieldRadius * 1.05,
+        state.centerY - state.fieldRadius * 0.1,
+        state.fieldRadius * 0.25,
+        state.centerX + state.fieldRadius * 0.7,
+        state.centerY + state.fieldRadius * 0.12,
+        state.fieldRadius * 3.25,
+      );
+      darkEdgeWash.addColorStop(0, "rgba(0, 2, 5, 0.08)");
+      darkEdgeWash.addColorStop(0.44, "rgba(0, 2, 5, 0.04)");
+      darkEdgeWash.addColorStop(1, "rgba(0, 0, 0, 0)");
+      ctx.fillStyle = darkEdgeWash;
+      ctx.fillRect(0, 0, state.width, state.height);
+
+      state.points.forEach((point) => {
+        const drift = state.reduced ? 0 : 2 + point.density * 7;
+        point.x = point.baseX + Math.cos(t * point.speed + point.phase) * drift;
+        point.y = point.baseY + Math.sin(t * point.speed * 0.72 + point.phase) * drift * 0.55;
+      });
+
+      ctx.globalCompositeOperation = "lighter";
+      drawArchiveStrands(t || 0);
+
+      state.links.forEach((link) => {
+        const a = state.points[link.a];
+        const b = state.points[link.b];
+        ctx.strokeStyle = `rgba(226, 241, 255, ${link.alpha * 0.5})`;
+        ctx.lineWidth = link.width;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      });
+
+      state.points.forEach((point) => {
+        const density = point.density;
+        ctx.fillStyle = `rgba(232, 246, 255, ${(0.13 + density * 0.42) * point.brightness})`;
+        ctx.beginPath();
+        ctx.arc(point.x, point.y, point.radius * (0.75 + density), 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      drawCoreBurst(t || 0);
+      state.renderedOnce = true;
+      canvas.hidden = false;
+      ctx.globalCompositeOperation = "source-over";
+      if (!state.reduced) state.raf = requestAnimationFrame(draw);
+    }
+
+    function onVisibility() {
+      state.hidden = document.hidden;
+      if (!state.hidden && !state.raf) state.raf = requestAnimationFrame(draw);
+    }
+
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(root);
+    resizeObserver.observe(aperture);
+    document.addEventListener("visibilitychange", onVisibility);
+    reduceMotion.addEventListener?.("change", () => {
+      state.reduced = reduceMotion.matches;
+      state.renderedOnce = false;
+      if (!state.raf) state.raf = requestAnimationFrame(draw);
+    });
+    mobileQuery.addEventListener?.("change", resize);
+
+    resize();
+
+    return () => {
+      resizeObserver.disconnect();
+      document.removeEventListener("visibilitychange", onVisibility);
+      if (state.raf) cancelAnimationFrame(state.raf);
+    };
+  });
+</script>
+
+<style>
+  .archive-field {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+  }
+</style>
