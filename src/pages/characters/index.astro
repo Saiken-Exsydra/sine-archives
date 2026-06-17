@@ -113,6 +113,10 @@ const charData = await Promise.all(
     };
   })
 );
+const requestedSlug = Astro.url.searchParams.get("char");
+const initialCharacterIndex = Math.max(0, charData.findIndex((char) => char.slug === requestedSlug));
+const initialCharacter = charData[initialCharacterIndex] ?? charData[0];
+const initialImage = initialCharacter?.images[0];
 const sectionEyebrow = locale === "pt-br"
   ? `Secao - ${charData.length} Dossies`
   : `Section - ${charData.length} Dossiers`;
@@ -909,13 +913,13 @@ const sectionEyebrow = locale === "pt-br"
         <div class="sidebar__list" id="sidebar-list">
           {charData.map((c, i) => (
             <button
-              class={`sidebar__item${i === 0 ? " is-active" : ""}`}
+              class={`sidebar__item${i === initialCharacterIndex ? " is-active" : ""}`}
               data-idx={i}
               id={`sidebar-item-${i}`}
             >
               <div class="sidebar__item-num">
                 <span>{String(i + 1).padStart(2, "0")}</span>
-                {i === 0 && <span class="sidebar__item-num-line"></span>}
+                {i === initialCharacterIndex && <span class="sidebar__item-num-line"></span>}
               </div>
               <div class="sidebar__item-name">{c.title}</div>
               {c.designation && (
@@ -939,32 +943,32 @@ const sectionEyebrow = locale === "pt-br"
 
         <!-- Portrait layer -->
         <div class="stage__portrait is-in" id="stage-portrait">
-          {charData[0].images[0] ? (
+          {initialImage ? (
             <picture id="stage-picture">
-              {charData[0].images[0].avifSrcset && (
+              {initialImage.avifSrcset && (
                 <source
                   id="stage-source-avif"
-                  srcset={charData[0].images[0].avifSrcset}
-                  sizes={charData[0].images[0].sizes}
+                  srcset={initialImage.avifSrcset}
+                  sizes={initialImage.sizes}
                   type="image/avif"
                 />
               )}
-              {charData[0].images[0].webpSrcset && (
+              {initialImage.webpSrcset && (
                 <source
                   id="stage-source-webp"
-                  srcset={charData[0].images[0].webpSrcset}
-                  sizes={charData[0].images[0].sizes}
+                  srcset={initialImage.webpSrcset}
+                  sizes={initialImage.sizes}
                   type="image/webp"
                 />
               )}
               <img
                 class="stage__portrait-img"
                 id="stage-img"
-                src={charData[0].images[0].fallbackSrc}
-                srcset={charData[0].images[0].fallbackSrcset || undefined}
-                sizes={charData[0].images[0].sizes}
-                width={charData[0].images[0].width || undefined}
-                height={charData[0].images[0].height || undefined}
+                src={initialImage.fallbackSrc}
+                srcset={initialImage.fallbackSrcset || undefined}
+                sizes={initialImage.sizes}
+                width={initialImage.width || undefined}
+                height={initialImage.height || undefined}
                 alt=""
                 loading="eager"
                 decoding="async"
@@ -1017,7 +1021,7 @@ const sectionEyebrow = locale === "pt-br"
 
         <!-- Watermark -->
         <div class="stage__watermark is-in" id="stage-watermark">
-          {charData[0].title.split(" ").map((word) => (
+          {initialCharacter.title.split(" ").map((word) => (
             <div class="stage__watermark-word">{word}</div>
           ))}
         </div>
@@ -1025,11 +1029,11 @@ const sectionEyebrow = locale === "pt-br"
         <!-- Top row -->
         <div class="stage__top">
           <div class="stage__counter is-in" id="stage-counter">
-            <span class="stage__counter-num" id="stage-counter-num">01</span>
+            <span class="stage__counter-num" id="stage-counter-num">{String(initialCharacterIndex + 1).padStart(2, "0")}</span>
             <span style="font-size:10px">/ {String(charData.length).padStart(2, "0")}</span>
           </div>
           <div class="stage__tags is-in" id="stage-tags">
-            {charData[0].tags.slice(0, 3).map((t) => (
+            {initialCharacter.tags.slice(0, 3).map((t) => (
               <span class="stage__tag">{t}</span>
             ))}
           </div>
@@ -1040,24 +1044,32 @@ const sectionEyebrow = locale === "pt-br"
           <div class="stage__rule is-in" id="stage-rule"></div>
 
           <div class="stage__type-label is-in" id="stage-type">
-            {charData[0].type} - {copy.filed} {charData[0].updated}
+            {initialCharacter.type} - {copy.filed} {initialCharacter.updated}
           </div>
 
-          <h1 class="stage__name is-in" id="stage-name">{charData[0].title}</h1>
+          <h1 class="stage__name is-in" id="stage-name">{initialCharacter.title}</h1>
 
           <div class="stage__designation is-in" id="stage-designation">
-            {charData[0].designation}
+            {initialCharacter.designation}
           </div>
 
-          <p class="stage__summary is-in" id="stage-summary">{charData[0].summary}</p>
+          <p class="stage__summary is-in" id="stage-summary">{initialCharacter.summary}</p>
 
           <div class="stage__actions is-in" id="stage-actions">
-            <a class="stage__cta" id="stage-cta" href={charData[0].href}>{copy.openDossier}</a>
-            <div class="stage__gallery" id="stage-gallery" hidden={charData[0].images.length < 2}>
+            <a
+              class="stage__cta"
+              id="stage-cta"
+              href={initialCharacter.href}
+              data-astro-prefetch="load"
+              data-transition-trigger="character-dossier"
+            >
+              {copy.openDossier}
+            </a>
+            <div class="stage__gallery" id="stage-gallery" hidden={initialCharacter.images.length < 2}>
               <div class="stage__gallery-count">
                 <span id="stage-gallery-current">01</span>
                 <span>&nbsp;/&nbsp;</span>
-                <span id="stage-gallery-total">{String(Math.max(charData[0].images.length, 1)).padStart(2, "0")}</span>
+                <span id="stage-gallery-total">{String(Math.max(initialCharacter.images.length, 1)).padStart(2, "0")}</span>
               </div>
               <button
                 class="stage__gallery-btn"
@@ -1090,7 +1102,7 @@ const sectionEyebrow = locale === "pt-br"
         <div class="stage__dots" id="stage-dots">
           {charData.map((_, i) => (
             <button
-              class={`stage__dot${i === 0 ? " is-active" : ""}`}
+              class={`stage__dot${i === initialCharacterIndex ? " is-active" : ""}`}
               data-idx={i}
               id={`dot-${i}`}
               title={charData[i].title}
@@ -1109,7 +1121,7 @@ const sectionEyebrow = locale === "pt-br"
       <div class="filmstrip" id="filmstrip">
         {charData.map((c, i) => (
           <button
-            class={`filmstrip__item${i === 0 ? " is-active" : ""}`}
+            class={`filmstrip__item${i === initialCharacterIndex ? " is-active" : ""}`}
             data-idx={i}
             aria-label={c.title}
           >
@@ -1141,7 +1153,7 @@ const sectionEyebrow = locale === "pt-br"
     </div>
   </main>
 
-  <script define:vars={{ charData, copy }} is:inline>
+  <script define:vars={{ charData, copy, serverInitialCharacterIndex: initialCharacterIndex }} is:inline>
       const chars = charData;
 
       const initializeCharactersPage = () => {
@@ -1495,6 +1507,7 @@ const sectionEyebrow = locale === "pt-br"
         }
 
         stageRoot.addEventListener("mousemove", (event) => {
+          if (document.documentElement.classList.contains("is-transitioning")) return;
           const rect = stageRoot.getBoundingClientRect();
           const x = (event.clientX - rect.left) / rect.width - 0.5;
           const y = (event.clientY - rect.top) / rect.height - 0.5;
@@ -1583,11 +1596,11 @@ const sectionEyebrow = locale === "pt-br"
         }, { passive: true, signal });
 
         syncOverlayToggle();
-        if (initialIdx !== 0) {
+        if (initialIdx !== serverInitialCharacterIndex) {
           updateContent(initialIdx);
         } else {
-          sessionStorage.setItem(storageKey, chars[0].slug);
-          syncGalleryUi(chars[0]);
+          sessionStorage.setItem(storageKey, chars[initialIdx].slug);
+          syncGalleryUi(chars[initialIdx]);
           scheduleGallery();
         }
         applySearch(searchInput?.value || "");

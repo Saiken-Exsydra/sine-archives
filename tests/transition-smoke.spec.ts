@@ -140,6 +140,27 @@ test("sine panels stay interactive across client navigation", async ({ page }) =
   expect(errors).toEqual([]);
 });
 
+test("character dossier opens and returns smoothly", async ({ page }) => {
+  const errors = trackClientErrors(page);
+  await disableBrowserCache(page);
+
+  await page.goto("/characters/", { waitUntil: "networkidle" });
+  await expect(page.locator("#stage-cta")).toBeVisible();
+
+  await page.locator("#stage-cta").click();
+  await expect(page).toHaveURL(/\/characters\/[^/]+\/?(\?.*)?$/);
+  await expect(page.locator(".char-page")).toBeVisible();
+  await expect(page.locator("[data-character-main]")).toBeVisible();
+  await waitForTransitionSequence(page);
+
+  await page.getByRole("link", { name: "Characters", exact: true }).click();
+  await expect(page).toHaveURL(/\/characters\/?\?char=[^&]+$/);
+  await expect(page.locator("#stage-cta")).toBeVisible();
+  await waitForTransitionSequence(page);
+
+  expect(errors).toEqual([]);
+});
+
 test("systems panels stay interactive after returning from Redactory desk", async ({ page }) => {
   const errors = trackClientErrors(page);
 

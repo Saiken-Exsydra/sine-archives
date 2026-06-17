@@ -287,6 +287,7 @@ const archiveNote = explicitArchiveNote?.text
 
 const codex = await getCharacterCodexRecord(entry);
 const codexHref = localizedPath(locale, `/characters/${entry.slug}/codex/`);
+const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIComponent(entry.slug)}`);
 ---
 
 <SiteShell
@@ -1383,7 +1384,7 @@ const codexHref = localizedPath(locale, `/characters/${entry.slug}/codex/`);
         <div class="char-nav__crumbs">
           <a class="char-nav__crumb-link" href={localizedPath(locale, "/")}>{copy.index}</a>
           <span class="char-nav__crumb-sep">></span>
-          <a class="char-nav__crumb-link" href={localizedPath(locale, "/characters/")}>{copy.section}</a>
+          <a class="char-nav__crumb-link" href={characterIndexHref}>{copy.section}</a>
           <span class="char-nav__crumb-sep">></span>
           <span class="char-nav__crumb-current">{title}</span>
         </div>

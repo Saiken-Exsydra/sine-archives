@@ -5,7 +5,13 @@ import {
   isTransitionBeforePreparationEvent,
   isTransitionBeforeSwapEvent,
 } from "astro:transitions/client";
-import { isHomePath, isObservatoryPath, isSearchPath } from "../utils/transition-routes";
+import {
+  isCharacterDetailPath,
+  isCharacterIndexPath,
+  isHomePath,
+  isObservatoryPath,
+  isSearchPath,
+} from "../utils/transition-routes";
 
 type PageCleanup = () => void;
 type PageInit = () => void | PageCleanup;
@@ -33,7 +39,14 @@ type SearchHandleIntent = {
   href: string;
 };
 
-type TransitionIntent = SearchIntent | ObservatoryHandleIntent | SearchHandleIntent;
+type CharacterDossierIntent = {
+  type: "character-dossier";
+  direction: "open" | "close";
+  fromPath: string;
+  href: string;
+};
+
+type TransitionIntent = SearchIntent | ObservatoryHandleIntent | SearchHandleIntent | CharacterDossierIntent;
 
 type TransitionDebugEvent = {
   direction: string;
@@ -59,6 +72,7 @@ type TransitionRuntimeState = {
     to: string;
   } | null;
   pendingIntent: TransitionIntent | null;
+  warmedRoutes: Set<string>;
 };
 
 declare global {
@@ -71,8 +85,11 @@ declare global {
 }
 
 const DEBUG_PREFIX = "[sine-transitions]";
-const SEARCH_TRANSITION_DURATION = 1500;
-const SEARCH_TRANSITION_EASING = "cubic-bezier(.16, 1, .3, 1)";
+const SEARCH_TRANSITION_DURATION = 1800;
+const SEARCH_TRANSITION_EASING = "cubic-bezier(0.2, 0.82, 0.22, 1)";
+const TRANSITION_PREPARE_TIMEOUT = 700;
+const ROUTE_WARMUP_TIMEOUT = 900;
+const HANDLE_INTENT_CLEAR_DELAY = 1300;
 const STATE_CLASSES = [
   "is-preparing-transition",
   "is-swap-pending",
@@ -92,6 +109,7 @@ function getRuntimeState(): TransitionRuntimeState {
       lastIntent: null,
       lastNavigation: null,
       pendingIntent: null,
+      warmedRoutes: new Set(),
     };
   }
 
@@ -147,6 +165,7 @@ function clearTransitionIntent(doc: Document = document) {
   root.removeAttribute("data-transition-intent");
   root.removeAttribute("data-observatory-transition");
   root.removeAttribute("data-search-handle-transition");
+  root.removeAttribute("data-character-dossier-transition");
   root.style.removeProperty("--search-vt-x");
   root.style.removeProperty("--search-vt-y");
 }
@@ -164,6 +183,10 @@ function applyTransitionIntent(doc: Document, intent: TransitionIntent | null) {
   }
   if (intent.type === "observatory-handle") {
     root.dataset.observatoryTransition = intent.direction;
+    return;
+  }
+  if (intent.type === "character-dossier") {
+    root.dataset.characterDossierTransition = intent.direction;
     return;
   }
   root.dataset.searchHandleTransition = intent.direction;
@@ -304,6 +327,175 @@ function buildSearchHandleIntentFromLink(link: HTMLAnchorElement): SearchHandleI
 
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function shouldWarmTransitionResources() {
+  const connection = navigator as Navigator & {
+    connection?: { saveData?: boolean };
+  };
+
+  return !connection.connection?.saveData;
+}
+
+function scheduleIdleTask(callback: () => void) {
+  const idleWindow = window as Window & {
+    requestIdleCallback?: (task: () => void, options?: { timeout?: number }) => number;
+  };
+
+  if (typeof idleWindow.requestIdleCallback === "function") {
+    idleWindow.requestIdleCallback(callback, { timeout: ROUTE_WARMUP_TIMEOUT });
+    return;
+  }
+
+  window.setTimeout(callback, 120);
+}
+
+function waitForTimeout(ms: number, signal?: AbortSignal) {
+  return new Promise<void>((resolve) => {
+    if (signal?.aborted) {
+      resolve();
+      return;
+    }
+
+    const timer = window.setTimeout(resolve, ms);
+    signal?.addEventListener("abort", () => {
+      window.clearTimeout(timer);
+      resolve();
+    }, { once: true });
+  });
+}
+
+function normalizeWarmupUrl(src: string, base = location.href) {
+  try {
+    const url = new URL(src, base);
+    if (url.origin !== location.origin) return null;
+    if (url.protocol !== "http:" && url.protocol !== "https:") return null;
+    return url.href;
+  } catch {
+    return null;
+  }
+}
+
+function addWarmupSource(sources: Set<string>, src: string | null | undefined, base?: string) {
+  if (!src || src.startsWith("data:") || src.startsWith("blob:")) return;
+
+  const normalized = normalizeWarmupUrl(src, base);
+  if (normalized) sources.add(normalized);
+}
+
+function collectWarmupImageSources(doc: Document, max = 4) {
+  const sources = new Set<string>();
+  const selectors = [
+    "main img[fetchpriority=\"high\"]",
+    "main img[loading=\"eager\"]",
+    "main picture source[srcset]",
+    "main img[src]",
+    "#page-content img[src]",
+    "aside img[src]",
+    "img[fetchpriority=\"high\"]",
+    "img[loading=\"eager\"]",
+  ];
+
+  for (const selector of selectors) {
+    for (const element of doc.querySelectorAll(selector)) {
+      if (sources.size >= max) return [...sources];
+
+      if (element instanceof HTMLImageElement) {
+        addWarmupSource(sources, element.currentSrc || element.src || element.getAttribute("src"));
+        continue;
+      }
+
+      if (element instanceof HTMLSourceElement) {
+        const firstCandidate = element.srcset.split(",")[0]?.trim().split(/\s+/)[0];
+        addWarmupSource(sources, firstCandidate);
+      }
+    }
+  }
+
+  return [...sources];
+}
+
+async function warmImageSource(src: string, signal?: AbortSignal) {
+  if (signal?.aborted) return;
+
+  await Promise.race([
+    new Promise<void>((resolve) => {
+      const image = new Image();
+      const finish = () => resolve();
+      image.decoding = "async";
+      image.onload = finish;
+      image.onerror = finish;
+      signal?.addEventListener("abort", finish, { once: true });
+      image.src = src;
+      if (image.complete) finish();
+      void image.decode?.().then(finish, finish);
+    }),
+    waitForTimeout(TRANSITION_PREPARE_TIMEOUT, signal),
+  ]);
+}
+
+async function warmDocumentImages(doc: Document, signal?: AbortSignal) {
+  if (!shouldWarmTransitionResources()) return;
+
+  const sources = collectWarmupImageSources(doc);
+  if (!sources.length) return;
+
+  await Promise.race([
+    Promise.allSettled(sources.map((src) => warmImageSource(src, signal))),
+    waitForTimeout(TRANSITION_PREPARE_TIMEOUT, signal),
+  ]);
+}
+
+function getWarmupRouteLinks() {
+  const links = new Set<string>();
+
+  for (const link of document.querySelectorAll<HTMLAnchorElement>("a[data-astro-prefetch=\"load\"][href]")) {
+    const href = normalizeWarmupUrl(link.href);
+    if (!href) continue;
+
+    const url = new URL(href);
+    if (url.pathname === location.pathname) continue;
+    links.add(url.href);
+  }
+
+  return [...links].slice(0, 3);
+}
+
+async function warmRouteDocument(href: string) {
+  const state = getRuntimeState();
+  if (state.warmedRoutes.has(href) || !shouldWarmTransitionResources()) return;
+  state.warmedRoutes.add(href);
+
+  try {
+    const response = await fetch(href, {
+      cache: "force-cache",
+      credentials: "same-origin",
+      priority: "low",
+    } as RequestInit & { priority?: "low" });
+    if (!response.ok) return;
+
+    const html = await response.text();
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    await Promise.race([
+      warmDocumentImages(doc),
+      waitForTimeout(ROUTE_WARMUP_TIMEOUT),
+    ]);
+    logTransitionEvent("route:warm", { to: new URL(href).pathname });
+  } catch (error) {
+    if (import.meta.env.DEV) {
+      console.debug(DEBUG_PREFIX, "route warm failed", href, error);
+    }
+  }
+}
+
+function scheduleRouteWarmup() {
+  if (!shouldWarmTransitionResources()) return;
+
+  scheduleIdleTask(() => {
+    for (const href of getWarmupRouteLinks()) {
+      void warmRouteDocument(href);
+    }
+  });
 }
 
 function getRevealRadius(x: number, y: number) {
@@ -452,6 +644,30 @@ function resolveNavigationIntent(event: TransitionBeforePreparationEvent): Trans
     };
   }
 
+  const characterDossierOpen = isCharacterIndexPath(event.from.pathname)
+    && isCharacterDetailPath(event.to.pathname);
+
+  if (characterDossierOpen) {
+    return {
+      type: "character-dossier",
+      direction: "open",
+      fromPath: event.from.pathname,
+      href: event.to.pathname,
+    };
+  }
+
+  const characterDossierClose = isCharacterDetailPath(event.from.pathname)
+    && isCharacterIndexPath(event.to.pathname);
+
+  if (characterDossierClose) {
+    return {
+      type: "character-dossier",
+      direction: "close",
+      fromPath: event.from.pathname,
+      href: event.to.pathname,
+    };
+  }
+
   return null;
 }
 
@@ -459,6 +675,7 @@ function handleBeforePreparation(event: Event) {
   if (!isTransitionBeforePreparationEvent(event)) return;
 
   const state = getRuntimeState();
+  const defaultLoader = event.loader;
   state.isPageReady = false;
   state.activeIntent = resolveNavigationIntent(event);
   state.lastIntent = state.activeIntent;
@@ -467,6 +684,11 @@ function handleBeforePreparation(event: Event) {
     from: event.from.pathname,
     navigationType: String(event.navigationType),
     to: event.to.pathname,
+  };
+
+  event.loader = async () => {
+    await defaultLoader();
+    await warmDocumentImages(event.newDocument, event.signal);
   };
 
   applyTransitionIntent(document, state.activeIntent);
@@ -506,10 +728,14 @@ function handleBeforeSwap(event: Event) {
     }).catch(() => {
       clearTransitionIntent(document);
     });
-  } else if (activeIntent?.type === "observatory-handle" || activeIntent?.type === "search-handle") {
+  } else if (
+    activeIntent?.type === "observatory-handle"
+    || activeIntent?.type === "search-handle"
+    || activeIntent?.type === "character-dossier"
+  ) {
     const clearHandleIntent = () => clearTransitionIntent(document);
     event.viewTransition.finished.finally(clearHandleIntent);
-    window.setTimeout(clearHandleIntent, 900);
+    window.setTimeout(clearHandleIntent, HANDLE_INTENT_CLEAR_DELAY);
   }
 
   logTransitionEvent("astro:before-swap");
@@ -523,7 +749,8 @@ function handleAfterSwap() {
 function handlePageLoad() {
   const state = getRuntimeState();
   const keepIntentUntilTransitionFinished = state.lastIntent?.type === "observatory-handle"
-    || state.lastIntent?.type === "search-handle";
+    || state.lastIntent?.type === "search-handle"
+    || state.lastIntent?.type === "character-dossier";
   state.isPageReady = true;
   state.pendingIntent = null;
 
@@ -531,6 +758,7 @@ function handlePageLoad() {
   runInitializers();
   setLifecycleClasses(["is-page-ready"], ["is-preparing-transition", "is-swap-pending", "is-swapping", "is-transitioning"]);
   if (!keepIntentUntilTransitionFinished) clearTransitionIntent(document);
+  scheduleRouteWarmup();
   logTransitionEvent("astro:page-load");
 
   document.dispatchEvent(new CustomEvent("sine:page-ready", {

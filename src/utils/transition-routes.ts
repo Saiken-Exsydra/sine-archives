@@ -44,6 +44,14 @@ export function isHomePath(pathname: string) {
   return /^\/(?:pt-br\/)?$/i.test(pathname);
 }
 
+export function isCharacterIndexPath(pathname: string) {
+  return /^\/(?:pt-br\/)?characters\/?$/i.test(pathname);
+}
+
+export function isCharacterDetailPath(pathname: string) {
+  return /^\/(?:pt-br\/)?characters\/(?![^/]+\/codex\/?$)[^/]+\/?$/i.test(pathname);
+}
+
 export function getDefaultTransitionProfile(routeKind: RouteKind): TransitionProfile {
   switch (routeKind) {
     case "search":
