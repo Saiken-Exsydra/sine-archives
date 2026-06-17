@@ -188,7 +188,10 @@
         const my = (sy + ey) * 0.5 + Math.sin(normal) * state.fieldRadius * strand.bend * 0.22;
         const density = strand.density;
         const baseAlpha = 0.026 + density * 0.24;
-        ctx.strokeStyle = `rgba(226, 241, 255, ${baseAlpha})`;
+        const warmLift = index % 7 === 0;
+        ctx.strokeStyle = warmLift
+          ? `rgba(235, 209, 150, ${baseAlpha * 0.82})`
+          : `rgba(226, 241, 255, ${baseAlpha})`;
         ctx.lineWidth = 0.3 + density * 0.42;
         ctx.setLineDash(index % 4 === 0 ? [2, 16] : []);
         ctx.beginPath();
@@ -242,7 +245,7 @@
 
       ctx.clearRect(0, 0, state.width, state.height);
       ctx.globalCompositeOperation = "source-over";
-      ctx.fillStyle = "#000205";
+      ctx.fillStyle = "#050407";
       ctx.fillRect(0, 0, state.width, state.height);
 
       const centerWash = ctx.createRadialGradient(
@@ -253,9 +256,10 @@
         state.centerY,
         state.fieldRadius * 3.15,
       );
-      centerWash.addColorStop(0, "rgba(184, 221, 255, 0.09)");
-      centerWash.addColorStop(0.26, "rgba(49, 91, 134, 0.08)");
-      centerWash.addColorStop(0.68, "rgba(7, 17, 31, 0.05)");
+      centerWash.addColorStop(0, "rgba(246, 239, 226, 0.12)");
+      centerWash.addColorStop(0.22, "rgba(176, 141, 60, 0.085)");
+      centerWash.addColorStop(0.42, "rgba(84, 133, 166, 0.08)");
+      centerWash.addColorStop(0.72, "rgba(7, 17, 31, 0.07)");
       centerWash.addColorStop(1, "rgba(0, 0, 0, 0)");
       ctx.fillStyle = centerWash;
       ctx.fillRect(0, 0, state.width, state.height);
@@ -268,8 +272,9 @@
         state.centerY,
         state.fieldRadius * 4,
       );
-      outerBlue.addColorStop(0, "rgba(49, 91, 134, 0.045)");
-      outerBlue.addColorStop(0.56, "rgba(7, 17, 31, 0.055)");
+      outerBlue.addColorStop(0, "rgba(84, 133, 166, 0.06)");
+      outerBlue.addColorStop(0.46, "rgba(177, 58, 52, 0.034)");
+      outerBlue.addColorStop(0.66, "rgba(7, 17, 31, 0.062)");
       outerBlue.addColorStop(1, "rgba(0, 0, 0, 0)");
       ctx.fillStyle = outerBlue;
       ctx.fillRect(0, 0, state.width, state.height);
@@ -282,8 +287,8 @@
         state.centerY + state.fieldRadius * 0.12,
         state.fieldRadius * 3.25,
       );
-      darkEdgeWash.addColorStop(0, "rgba(0, 2, 5, 0.08)");
-      darkEdgeWash.addColorStop(0.44, "rgba(0, 2, 5, 0.04)");
+      darkEdgeWash.addColorStop(0, "rgba(0, 2, 5, 0.12)");
+      darkEdgeWash.addColorStop(0.44, "rgba(0, 2, 5, 0.06)");
       darkEdgeWash.addColorStop(1, "rgba(0, 0, 0, 0)");
       ctx.fillStyle = darkEdgeWash;
       ctx.fillRect(0, 0, state.width, state.height);
@@ -300,7 +305,7 @@
       state.links.forEach((link) => {
         const a = state.points[link.a];
         const b = state.points[link.b];
-        ctx.strokeStyle = `rgba(226, 241, 255, ${link.alpha * 0.5})`;
+        ctx.strokeStyle = `rgba(232, 228, 220, ${link.alpha * 0.58})`;
         ctx.lineWidth = link.width;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
@@ -310,7 +315,11 @@
 
       state.points.forEach((point) => {
         const density = point.density;
-        ctx.fillStyle = `rgba(232, 246, 255, ${(0.13 + density * 0.42) * point.brightness})`;
+        const warm = point.phase > Math.PI * 1.68;
+        const alpha = (0.14 + density * 0.46) * point.brightness;
+        ctx.fillStyle = warm
+          ? `rgba(235, 209, 150, ${alpha * 0.78})`
+          : `rgba(232, 246, 255, ${alpha})`;
         ctx.beginPath();
         ctx.arc(point.x, point.y, point.radius * (0.75 + density), 0, Math.PI * 2);
         ctx.fill();

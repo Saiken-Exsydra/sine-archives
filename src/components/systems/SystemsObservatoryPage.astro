@@ -24,8 +24,8 @@ const systems = [
     failure: "Collapse, recoil, Sinking, Drowning, Shorefall.",
     destination: redactoryHref,
     angle: 3.14,
-    x: 20,
-    y: 50,
+    x: 22,
+    y: 53,
   },
   {
     id: "resonance",
@@ -37,8 +37,8 @@ const systems = [
     interface: "Resonance gradients / fields",
     failure: "Cascade, saturation, void, disturbance.",
     angle: -2.42,
-    x: 20,
-    y: 22,
+    x: 30,
+    y: 24,
   },
   {
     id: "harmonics",
@@ -50,8 +50,8 @@ const systems = [
     interface: "Time-ordered traversal",
     failure: "Surge, cascade, saturation, false attribution, harmonic burn.",
     angle: -0.72,
-    x: 80,
-    y: 22,
+    x: 70,
+    y: 24,
   },
   {
     id: "divination",
@@ -76,8 +76,8 @@ const systems = [
     interface: "Tissue, blood, nerve, memory, growth, recursive proximity.",
     failure: "Overbloom, Murmuring, consumption, outbreak.",
     angle: 0.72,
-    x: 80,
-    y: 78,
+    x: 70,
+    y: 77,
   },
   {
     id: "shores",
@@ -89,8 +89,8 @@ const systems = [
     interface: "Shorefall, Shorewalking, Dive access, Divination alignment, Bloom Rooting, Calling exposure.",
     failure: "Stranding, Returnwake, Shore-Breach, identity contamination.",
     angle: 2.42,
-    x: 20,
-    y: 78,
+    x: 30,
+    y: 77,
   },
 ];
 
@@ -129,6 +129,16 @@ const defaultSystem = systems[0];
 
       <div class="observatory-aperture">
         <ArchiveSphere />
+        <div class="observatory-mist-words" aria-hidden="true">
+          <span style="--word-x: 49%; --word-y: 15%; --word-delay: -8s;">Archive</span>
+          <span style="--word-x: 67%; --word-y: 33%; --word-delay: -21s;">Time</span>
+          <span style="--word-x: 32%; --word-y: 36%; --word-delay: -13s;">Resonance</span>
+          <span style="--word-x: 35%; --word-y: 72%; --word-delay: -28s;">Systems</span>
+          <span style="--word-x: 61%; --word-y: 78%; --word-delay: -17s;">Bloom</span>
+          <span style="--word-x: 23%; --word-y: 57%; --word-delay: -34s;">Index</span>
+          <span style="--word-x: 76%; --word-y: 61%; --word-delay: -5s;">Shores</span>
+          <span style="--word-x: 50%; --word-y: 50%; --word-delay: -25s;">Interface</span>
+        </div>
 
         <svg class="observatory-svg" viewBox="0 0 1000 1000" aria-hidden="true">
           <defs>
@@ -168,6 +178,9 @@ const defaultSystem = systems[0];
             <text x="730" y="210">TIME</text>
             <text x="214" y="790">TERRA SYSTEMS</text>
             <text x="168" y="248">RESONANCE</text>
+            <text x="816" y="676">BLOOM</text>
+            <text x="284" y="604">INDEX</text>
+            <text x="642" y="820">SHORES</text>
           </g>
         </svg>
 
@@ -339,11 +352,12 @@ const defaultSystem = systems[0];
     min-height: 100vh;
     padding: 62px max(24px, env(safe-area-inset-right)) 96px max(24px, env(safe-area-inset-left));
     background-image:
-      radial-gradient(ellipse at 43% 47%, rgba(184, 221, 255, 0.045), transparent 42rem),
-      radial-gradient(ellipse at 58% 45%, rgba(49, 91, 134, 0.048), transparent 36rem),
-      radial-gradient(ellipse at 66% 47%, rgba(3, 8, 14, 0.34), transparent 42rem),
-      radial-gradient(circle at 14% 74%, rgba(143, 200, 255, 0.026), transparent 34rem);
-    background-color: #000205;
+      radial-gradient(ellipse at 44% 50%, rgba(239, 227, 196, 0.07), transparent 35rem),
+      radial-gradient(ellipse at 58% 45%, rgba(177, 58, 52, 0.075), transparent 42rem),
+      radial-gradient(ellipse at 38% 58%, rgba(84, 133, 166, 0.09), transparent 48rem),
+      radial-gradient(ellipse at 70% 44%, rgba(3, 8, 14, 0.58), transparent 42rem),
+      linear-gradient(180deg, #050407 0%, #030407 42%, #050407 100%);
+    background-color: #050407;
     background-position: center, center, center, center;
     background-repeat: no-repeat;
     background-size: auto, auto, auto, auto;
@@ -361,13 +375,16 @@ const defaultSystem = systems[0];
 
   .observatory-root::before {
     background:
-      radial-gradient(circle at 43% 45%, transparent 0 58%, rgba(0, 0, 0, 0.16) 100%),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.36), transparent 15rem, transparent calc(100% - 12rem), rgba(0, 0, 0, 0.44));
+      radial-gradient(circle at 43% 45%, transparent 0 52%, rgba(0, 0, 0, 0.22) 100%),
+      radial-gradient(circle at 57% 48%, rgba(177, 58, 52, 0.07), transparent 34rem),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.34), transparent 15rem, transparent calc(100% - 12rem), rgba(0, 0, 0, 0.54));
   }
 
   .observatory-root::after {
     z-index: 2;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.08));
+    background:
+      linear-gradient(90deg, rgba(177, 58, 52, 0.035), transparent 18%, transparent 82%, rgba(176, 141, 60, 0.025)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
   }
 
   .observatory-noise {
@@ -375,7 +392,7 @@ const defaultSystem = systems[0];
     inset: 0;
     pointer-events: none;
     z-index: 2;
-    opacity: 0.032;
+    opacity: 0.045;
     background-image:
       repeating-radial-gradient(circle at 17% 23%, rgba(255, 255, 255, 0.64) 0 0.7px, transparent 0.7px 2.8px),
       repeating-linear-gradient(107deg, rgba(218, 238, 255, 0.1) 0 1px, transparent 1px 5px);
@@ -403,7 +420,8 @@ const defaultSystem = systems[0];
     font-weight: 600;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: rgba(218, 238, 255, 0.76);
+    color: rgba(176, 141, 60, 0.88);
+    text-shadow: 0 0 18px rgba(177, 58, 52, 0.12);
   }
 
   .observatory-hero h1 {
@@ -413,7 +431,10 @@ const defaultSystem = systems[0];
     font-weight: 700;
     line-height: 0.98;
     letter-spacing: 0;
-    text-shadow: 0 0 42px rgba(218, 238, 255, 0.18);
+    color: rgba(246, 239, 226, 0.98);
+    text-shadow:
+      0 0 34px rgba(176, 141, 60, 0.16),
+      0 0 74px rgba(177, 58, 52, 0.1);
   }
 
   .observatory-subtitle {
@@ -423,7 +444,7 @@ const defaultSystem = systems[0];
     font-size: clamp(22px, 3.2vw, 34px);
     font-style: italic;
     line-height: 1.18;
-    color: rgba(232, 228, 220, 0.78);
+    color: rgba(232, 228, 220, 0.84);
   }
 
   .observatory-support {
@@ -432,30 +453,31 @@ const defaultSystem = systems[0];
     font-family: "DM Sans", sans-serif;
     font-size: 13px;
     line-height: 1.78;
-    color: rgba(232, 228, 220, 0.52);
+    color: rgba(232, 228, 220, 0.62);
   }
 
   .observatory-stage {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-    gap: clamp(24px, 4vw, 54px);
+    grid-template-columns: minmax(620px, 900px) minmax(280px, 360px);
+    gap: clamp(28px, 4.5vw, 70px);
     align-items: start;
-    max-width: 1320px;
+    max-width: 1420px;
     margin: 0 auto;
     min-height: 700px;
   }
 
   .observatory-stage__halo {
     position: absolute;
-    left: 36%;
+    left: 40%;
     top: 50%;
     width: min(70vw, 760px);
     aspect-ratio: 1;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background:
-      radial-gradient(circle at 48% 48%, rgba(255, 255, 255, 0.045), transparent 38%),
-      radial-gradient(circle at 58% 52%, rgba(143, 200, 255, 0.04), transparent 62%),
+      radial-gradient(circle at 48% 48%, rgba(246, 239, 226, 0.07), transparent 36%),
+      radial-gradient(circle at 58% 52%, rgba(176, 141, 60, 0.045), transparent 54%),
+      radial-gradient(circle at 42% 50%, rgba(177, 58, 52, 0.04), transparent 62%),
       radial-gradient(circle at 70% 48%, rgba(0, 2, 5, 0.18), transparent 72%);
     filter: blur(8px);
     pointer-events: none;
@@ -465,8 +487,36 @@ const defaultSystem = systems[0];
     position: relative;
     display: grid;
     place-items: center;
-    min-height: 680px;
+    min-height: 760px;
     margin-top: 10px;
+  }
+
+  .observatory-mist-words {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .observatory-mist-words span {
+    position: absolute;
+    left: var(--word-x);
+    top: var(--word-y);
+    transform: translate(-50%, -50%);
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(9px, 1vw, 12px);
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.24);
+    text-shadow:
+      0 0 18px rgba(218, 238, 255, 0.22),
+      0 0 34px rgba(176, 141, 60, 0.08);
+    mix-blend-mode: screen;
+    opacity: 0.42;
+    animation: observatoryWordDrift 42s linear infinite;
+    animation-delay: var(--word-delay);
   }
 
   .observatory-svg,
@@ -493,35 +543,42 @@ const defaultSystem = systems[0];
 
   .observatory-svg__ring--one {
     transform-origin: 500px 500px;
+    animation: observatoryDrift 90s linear infinite;
   }
 
   .observatory-svg__ring--two {
     transform-origin: 500px 500px;
-    stroke: rgba(218, 238, 255, 0.12);
+    stroke: rgba(232, 228, 220, 0.16);
+    animation: observatoryDriftReverse 118s linear infinite;
   }
 
   .observatory-svg__ticks line {
-    stroke: rgba(232, 228, 220, 0.13);
+    stroke: rgba(232, 228, 220, 0.18);
   }
 
   .observatory-svg__connectors path {
-    stroke: rgba(218, 238, 255, 0.18);
-    stroke-dasharray: 4 10;
+    stroke: rgba(232, 228, 220, 0.2);
+    stroke-dasharray: 3 12;
+    opacity: 0.62;
+    animation: observatoryDash 11s linear infinite;
     transition: stroke 0.24s ease, stroke-width 0.24s ease, opacity 0.24s ease;
   }
 
   .observatory-svg__connectors path.is-active {
-    stroke: rgba(255, 255, 255, 0.72);
-    stroke-width: 1.5;
+    stroke: rgba(246, 239, 226, 0.86);
+    stroke-width: 1.65;
     opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(176, 141, 60, 0.26));
   }
 
   .observatory-svg__glyphs {
-    fill: rgba(232, 228, 220, 0.24);
+    fill: rgba(232, 228, 220, 0.25);
     stroke: none;
     font-family: "DM Sans", sans-serif;
     font-size: 13px;
     letter-spacing: 0.28em;
+    filter: drop-shadow(0 0 12px rgba(218, 238, 255, 0.1));
+    animation: observatoryGlyphBreath 16s ease-in-out infinite alternate;
   }
 
   .observatory-svg__glyphs text {
@@ -536,7 +593,7 @@ const defaultSystem = systems[0];
     position: absolute;
     left: var(--node-x);
     top: var(--node-y);
-    width: clamp(104px, 9vw, 132px);
+    width: clamp(92px, 7.6vw, 118px);
     aspect-ratio: 1;
     min-height: 0;
     transform: translate(-50%, -50%);
@@ -547,32 +604,54 @@ const defaultSystem = systems[0];
     color: rgba(232, 228, 220, 0.72);
     text-align: center;
     background:
-      radial-gradient(circle at 50% 45%, rgba(218, 238, 255, 0.075), transparent 58%),
-      rgba(1, 5, 10, 0.78);
-    border: 1px solid rgba(218, 238, 255, 0.22);
+      radial-gradient(circle at 50% 45%, rgba(232, 228, 220, 0.12), transparent 58%),
+      radial-gradient(circle at 50% 86%, rgba(177, 58, 52, 0.08), transparent 60%),
+      rgba(1, 5, 10, 0.82);
+    border: 1px solid rgba(232, 228, 220, 0.24);
     border-radius: 8px;
     backdrop-filter: blur(10px) saturate(1.08);
     cursor: pointer;
     box-shadow:
-      inset 0 0 24px rgba(218, 238, 255, 0.025),
-      0 12px 34px rgba(0, 0, 0, 0.28);
+      inset 0 0 24px rgba(218, 238, 255, 0.035),
+      0 12px 34px rgba(0, 0, 0, 0.34);
     transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  :global(.observatory-node)::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 12px;
+    border: 1px solid rgba(176, 141, 60, 0.08);
+    opacity: 0.62;
+    pointer-events: none;
+    transform: rotate(0deg);
+    transition: opacity 0.22s ease, border-color 0.22s ease;
   }
 
   :global(.observatory-node:hover),
   :global(.observatory-node:focus-visible),
   :global(.observatory-node.is-active) {
     color: rgba(255, 255, 255, 0.94);
-    border-color: rgba(255, 255, 255, 0.62);
+    border-color: rgba(246, 239, 226, 0.72);
     background:
-      radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.16), transparent 58%),
+      radial-gradient(circle at 50% 45%, rgba(246, 239, 226, 0.18), transparent 58%),
+      radial-gradient(circle at 50% 88%, rgba(177, 58, 52, 0.18), transparent 60%),
       rgba(2, 8, 14, 0.94);
     box-shadow:
-      inset 0 0 30px rgba(218, 238, 255, 0.05),
-      0 0 26px rgba(218, 238, 255, 0.18),
+      inset 0 0 30px rgba(218, 238, 255, 0.06),
+      0 0 24px rgba(176, 141, 60, 0.18),
+      0 0 34px rgba(177, 58, 52, 0.1),
       0 14px 38px rgba(0, 0, 0, 0.32);
     transform: translate(-50%, -50%) translateY(-3px);
     outline: none;
+  }
+
+  :global(.observatory-node:hover::before),
+  :global(.observatory-node:focus-visible::before),
+  :global(.observatory-node.is-active::before) {
+    border-color: rgba(176, 141, 60, 0.34);
+    opacity: 1;
   }
 
   :global(.observatory-node__dot) {
@@ -582,8 +661,10 @@ const defaultSystem = systems[0];
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: rgba(218, 238, 255, 0.9);
-    box-shadow: 0 0 14px rgba(218, 238, 255, 0.66);
+    background: rgba(246, 239, 226, 0.94);
+    box-shadow:
+      0 0 14px rgba(218, 238, 255, 0.56),
+      0 0 22px rgba(176, 141, 60, 0.24);
   }
 
   :global(.observatory-node__mark) {
@@ -599,8 +680,11 @@ const defaultSystem = systems[0];
     width: 88%;
     height: 88%;
     object-fit: contain;
-    opacity: 0.9;
-    filter: drop-shadow(0 0 8px rgba(218, 238, 255, 0.24));
+    opacity: 0.92;
+    filter:
+      sepia(0.08)
+      drop-shadow(0 0 8px rgba(218, 238, 255, 0.24))
+      drop-shadow(0 0 16px rgba(176, 141, 60, 0.08));
     transform: scale(1);
     transition: opacity 0.18s ease, filter 0.18s ease;
     backface-visibility: hidden;
@@ -610,7 +694,10 @@ const defaultSystem = systems[0];
   :global(.observatory-node:focus-visible .observatory-node__mark img),
   :global(.observatory-node.is-active .observatory-node__mark img) {
     opacity: 0.98;
-    filter: drop-shadow(0 0 10px rgba(218, 238, 255, 0.34));
+    filter:
+      sepia(0.1)
+      drop-shadow(0 0 10px rgba(218, 238, 255, 0.34))
+      drop-shadow(0 0 18px rgba(176, 141, 60, 0.18));
   }
 
   :global(.observatory-node__label) {
@@ -641,15 +728,17 @@ const defaultSystem = systems[0];
   .observatory-panel {
     position: relative;
     align-self: start;
-    margin-top: 27px;
+    margin-top: 54px;
     padding: 24px;
-    border: 1px solid rgba(218, 238, 255, 0.2);
+    border: 1px solid rgba(232, 228, 220, 0.2);
     border-radius: 8px;
     background:
-      radial-gradient(circle at 12% 0%, rgba(49, 91, 134, 0.08), transparent 42%),
-      radial-gradient(circle at 92% 10%, rgba(143, 200, 255, 0.08), transparent 44%),
-      linear-gradient(145deg, rgba(1, 5, 10, 0.94), rgba(0, 2, 5, 0.88));
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      radial-gradient(circle at 12% 0%, rgba(176, 141, 60, 0.09), transparent 42%),
+      radial-gradient(circle at 94% 8%, rgba(177, 58, 52, 0.11), transparent 46%),
+      linear-gradient(145deg, rgba(7, 8, 13, 0.95), rgba(1, 4, 8, 0.9));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.045),
+      0 20px 60px rgba(0, 0, 0, 0.28);
   }
 
   .observatory-panel::before {
@@ -855,6 +944,35 @@ const defaultSystem = systems[0];
     to { stroke-dashoffset: -28; }
   }
 
+  @keyframes observatoryGlyphBreath {
+    from {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0.82;
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes observatoryWordDrift {
+    0% {
+      opacity: 0.16;
+      transform: translate(-50%, -50%) translate3d(-14px, 8px, 0) scale(0.96);
+    }
+    28% {
+      opacity: 0.5;
+    }
+    58% {
+      opacity: 0.28;
+      transform: translate(-50%, -50%) translate3d(16px, -10px, 0) scale(1.04);
+    }
+    100% {
+      opacity: 0.16;
+      transform: translate(-50%, -50%) translate3d(-14px, 8px, 0) scale(0.96);
+    }
+  }
+
   @media (max-width: 1100px) {
     .observatory-stage {
       grid-template-columns: 1fr;
@@ -895,6 +1013,10 @@ const defaultSystem = systems[0];
       gap: 12px;
       min-height: 0;
       padding: 12px 0 0;
+    }
+
+    .observatory-mist-words {
+      display: none;
     }
 
     .observatory-svg {
@@ -957,7 +1079,9 @@ const defaultSystem = systems[0];
   @media (prefers-reduced-motion: reduce) {
     .observatory-svg__ring--one,
     .observatory-svg__ring--two,
-    .observatory-svg__connectors path.is-active {
+    .observatory-svg__connectors path,
+    .observatory-svg__glyphs,
+    .observatory-mist-words span {
       animation: none;
     }
 
