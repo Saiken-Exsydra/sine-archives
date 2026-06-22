@@ -11,6 +11,7 @@ import {
   isHomePath,
   isObservatoryPath,
   isSearchPath,
+  isSystemInteractivePath,
 } from "../utils/transition-routes";
 
 type PageCleanup = () => void;
@@ -46,7 +47,19 @@ type CharacterDossierIntent = {
   href: string;
 };
 
-type TransitionIntent = SearchIntent | ObservatoryHandleIntent | SearchHandleIntent | CharacterDossierIntent;
+type ObservatorySystemIntent = {
+  type: "observatory-system";
+  systemId: string;
+  fromPath: string;
+  href: string;
+};
+
+type TransitionIntent =
+  | SearchIntent
+  | ObservatoryHandleIntent
+  | SearchHandleIntent
+  | CharacterDossierIntent
+  | ObservatorySystemIntent;
 
 type TransitionDebugEvent = {
   direction: string;
@@ -164,6 +177,7 @@ function clearTransitionIntent(doc: Document = document) {
   const root = doc.documentElement;
   root.removeAttribute("data-transition-intent");
   root.removeAttribute("data-observatory-transition");
+  root.removeAttribute("data-observatory-system");
   root.removeAttribute("data-search-handle-transition");
   root.removeAttribute("data-character-dossier-transition");
   root.style.removeProperty("--search-vt-x");
@@ -183,6 +197,10 @@ function applyTransitionIntent(doc: Document, intent: TransitionIntent | null) {
   }
   if (intent.type === "observatory-handle") {
     root.dataset.observatoryTransition = intent.direction;
+    return;
+  }
+  if (intent.type === "observatory-system") {
+    root.dataset.observatorySystem = intent.systemId;
     return;
   }
   if (intent.type === "character-dossier") {
@@ -284,6 +302,18 @@ function getObservatoryTriggerLink(target: EventTarget | null) {
   return link;
 }
 
+function getObservatorySystemTriggerLink(target: EventTarget | null) {
+  if (!(target instanceof Element)) return null;
+
+  const link = target.closest<HTMLAnchorElement>("[data-transition-trigger=\"observatory-system\"]");
+  if (!(link instanceof HTMLAnchorElement)) return null;
+
+  const url = new URL(link.href, location.href);
+  if (url.origin !== location.origin || !isSystemInteractivePath(url.pathname)) return null;
+
+  return link;
+}
+
 function getSearchHandleTriggerLink(target: EventTarget | null) {
   if (!(target instanceof Element)) return null;
 
@@ -320,6 +350,16 @@ function buildSearchHandleIntentFromLink(link: HTMLAnchorElement): SearchHandleI
   return {
     type: "search-handle",
     direction: "open",
+    fromPath: location.pathname,
+    href: link.href,
+  };
+}
+
+function buildObservatorySystemIntentFromLink(link: HTMLAnchorElement): ObservatorySystemIntent {
+  const systemId = link.dataset.systemLaunch || "system";
+  return {
+    type: "observatory-system",
+    systemId,
     fromPath: location.pathname,
     href: link.href,
   };
@@ -557,6 +597,19 @@ function animateSearchReveal(intent: SearchIntent) {
 
 function resolveNavigationIntent(event: TransitionBeforePreparationEvent): TransitionIntent | null {
   const state = getRuntimeState();
+  const observatorySystemTriggered = isObservatoryPath(event.from.pathname)
+    && isSystemInteractivePath(event.to.pathname)
+    && (
+      getObservatorySystemTriggerLink(event.sourceElement ?? null)
+      || state.pendingIntent?.type === "observatory-system"
+    );
+
+  if (observatorySystemTriggered) {
+    return state.pendingIntent?.type === "observatory-system"
+      ? state.pendingIntent
+      : buildObservatorySystemIntentFromLink(event.sourceElement as HTMLAnchorElement);
+  }
+
   const searchHandleTriggered = isSearchPath(event.to.pathname)
     && (
       getSearchHandleTriggerLink(event.sourceElement ?? null)
@@ -732,6 +785,7 @@ function handleBeforeSwap(event: Event) {
     activeIntent?.type === "observatory-handle"
     || activeIntent?.type === "search-handle"
     || activeIntent?.type === "character-dossier"
+    || activeIntent?.type === "observatory-system"
   ) {
     const clearHandleIntent = () => clearTransitionIntent(document);
     event.viewTransition.finished.finally(clearHandleIntent);
@@ -750,7 +804,8 @@ function handlePageLoad() {
   const state = getRuntimeState();
   const keepIntentUntilTransitionFinished = state.lastIntent?.type === "observatory-handle"
     || state.lastIntent?.type === "search-handle"
-    || state.lastIntent?.type === "character-dossier";
+    || state.lastIntent?.type === "character-dossier"
+    || state.lastIntent?.type === "observatory-system";
   state.isPageReady = true;
   state.pendingIntent = null;
 
@@ -783,6 +838,12 @@ function installSearchIntentCapture() {
       return;
     }
 
+    const observatorySystemLink = getObservatorySystemTriggerLink(event.target);
+    if (observatorySystemLink && isPlainLeftClick(event)) {
+      getRuntimeState().pendingIntent = buildObservatorySystemIntentFromLink(observatorySystemLink);
+      return;
+    }
+
     const searchHandleLink = getSearchHandleTriggerLink(event.target);
     if (!searchHandleLink || !isPlainLeftClick(event)) return;
     getRuntimeState().pendingIntent = buildSearchHandleIntentFromLink(searchHandleLink);
@@ -798,6 +859,12 @@ function installSearchIntentCapture() {
     const observatoryLink = getObservatoryTriggerLink(event.target);
     if (observatoryLink && isPlainLeftClick(event)) {
       getRuntimeState().pendingIntent = buildObservatoryIntentFromLink(observatoryLink);
+      return;
+    }
+
+    const observatorySystemLink = getObservatorySystemTriggerLink(event.target);
+    if (observatorySystemLink && isPlainLeftClick(event)) {
+      getRuntimeState().pendingIntent = buildObservatorySystemIntentFromLink(observatorySystemLink);
       return;
     }
 

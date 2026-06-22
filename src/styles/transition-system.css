@@ -4,6 +4,7 @@
   --handle-transition-duration: 980ms;
   --handle-transition-return-duration: 900ms;
   --character-dossier-transition-duration: 860ms;
+  --observatory-system-transition-duration: 1180ms;
   --redactory-transition-duration: 1040ms;
   --search-vt-duration: 1800ms;
   --search-vt-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
@@ -108,6 +109,59 @@ html[data-transition-intent="search"]::view-transition {
       rgba(5, 4, 7, 0.98) 42%,
       #050407 100%
     );
+}
+
+html[data-transition-intent="observatory-system"]::view-transition {
+  background:
+    radial-gradient(circle at 50% 52%, rgba(176, 141, 60, 0.12), transparent 24rem),
+    radial-gradient(circle at 50% 52%, rgba(177, 58, 52, 0.1), transparent 38rem),
+    #050407;
+}
+
+html[data-transition-intent="observatory-system"]::view-transition-group(root),
+html[data-transition-intent="observatory-system"]::view-transition-group(page-content) {
+  animation-duration: var(--observatory-system-transition-duration);
+  animation-timing-function: var(--page-transition-ease);
+  overflow: clip;
+}
+
+html[data-transition-intent="observatory-system"]::view-transition-old(root),
+html[data-transition-intent="observatory-system"]::view-transition-new(root) {
+  animation: none !important;
+  mix-blend-mode: normal !important;
+}
+
+html[data-transition-intent="observatory-system"]::view-transition-old(page-content),
+html[data-transition-intent="observatory-system"]::view-transition-new(page-content) {
+  backface-visibility: hidden;
+  mix-blend-mode: normal;
+  transform-origin: 50% 54%;
+}
+
+html[data-transition-intent="observatory-system"]::view-transition-old(page-content) {
+  animation: observatorySystemOut var(--observatory-system-transition-duration) var(--page-transition-ease) both;
+}
+
+html[data-transition-intent="observatory-system"]::view-transition-new(page-content) {
+  animation: observatorySystemIn var(--observatory-system-transition-duration) var(--page-transition-ease) both;
+}
+
+::view-transition-group(observatory-redactory-symbol),
+::view-transition-group(observatory-resonance-symbol),
+::view-transition-group(observatory-harmonics-symbol) {
+  animation-duration: var(--observatory-system-transition-duration);
+  animation-timing-function: var(--page-transition-ease);
+  z-index: 6;
+}
+
+::view-transition-old(observatory-redactory-symbol),
+::view-transition-new(observatory-redactory-symbol),
+::view-transition-old(observatory-resonance-symbol),
+::view-transition-new(observatory-resonance-symbol),
+::view-transition-old(observatory-harmonics-symbol),
+::view-transition-new(observatory-harmonics-symbol) {
+  mix-blend-mode: plus-lighter;
+  filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.28));
 }
 
 html[data-transition-intent="observatory-handle"]::view-transition {
@@ -292,6 +346,45 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   }
 }
 
+@keyframes observatorySystemOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1) saturate(1);
+  }
+  44% {
+    opacity: 0.9;
+    transform: scale(1.035);
+    filter: brightness(1.08) saturate(1.06);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.22);
+    filter: brightness(0.38) saturate(0.72) blur(2px);
+  }
+}
+
+@keyframes observatorySystemIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.84) translateY(20px);
+    filter: brightness(0.42) saturate(0.76);
+  }
+  34% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 1;
+    transform: scale(1.008) translateY(0);
+    filter: brightness(1.08) saturate(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
 @keyframes observatoryHandlePullIn {
   from {
     opacity: 1;
@@ -451,6 +544,12 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   html[data-transition-intent="character-dossier"]::view-transition-old(page-content),
   html[data-transition-intent="character-dossier"]::view-transition-new(page-content),
   html[data-transition-intent="character-dossier"]::view-transition-group(page-content),
+  html[data-transition-intent="observatory-system"]::view-transition-old(root),
+  html[data-transition-intent="observatory-system"]::view-transition-new(root),
+  html[data-transition-intent="observatory-system"]::view-transition-group(root),
+  html[data-transition-intent="observatory-system"]::view-transition-old(page-content),
+  html[data-transition-intent="observatory-system"]::view-transition-new(page-content),
+  html[data-transition-intent="observatory-system"]::view-transition-group(page-content),
   html[data-transition-profile="redactory-desk"]::view-transition-new(page-content),
   html[data-transition-profile="redactory-dive"]::view-transition-new(page-content),
   html[data-transition-profile="redactory-profile"]::view-transition-new(page-content),
@@ -481,7 +580,16 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   html[data-transition-intent="character-dossier"]::view-transition-group(root),
   html[data-transition-intent="character-dossier"]::view-transition-old(page-content),
   html[data-transition-intent="character-dossier"]::view-transition-new(page-content),
-  html[data-transition-intent="character-dossier"]::view-transition-group(page-content) {
+  html[data-transition-intent="character-dossier"]::view-transition-group(page-content),
+  html[data-transition-intent="observatory-system"]::view-transition-old(root),
+  html[data-transition-intent="observatory-system"]::view-transition-new(root),
+  html[data-transition-intent="observatory-system"]::view-transition-group(root),
+  html[data-transition-intent="observatory-system"]::view-transition-old(page-content),
+  html[data-transition-intent="observatory-system"]::view-transition-new(page-content),
+  html[data-transition-intent="observatory-system"]::view-transition-group(page-content),
+  ::view-transition-group(observatory-redactory-symbol),
+  ::view-transition-group(observatory-resonance-symbol),
+  ::view-transition-group(observatory-harmonics-symbol) {
     animation: none !important;
     clip-path: none !important;
     filter: none !important;

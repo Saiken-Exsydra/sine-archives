@@ -1,0 +1,9 @@
+---
+import HarmonicsPage from "../../../systems/harmonics/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<HarmonicsPage locale="pt-br" />

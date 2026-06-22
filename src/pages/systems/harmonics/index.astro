@@ -1,0 +1,19 @@
+---
+import SystemInterfaceScaffold from "../../../components/systems/SystemInterfaceScaffold.astro";
+import type { SiteLocale } from "../../../i18n/config";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+---
+
+<SystemInterfaceScaffold
+  locale={locale}
+  id="harmonics"
+  title="Harmonic Array"
+  pageTitle="Harmonic Array - SiNE Archives"
+  logo="/uploads/observatory-white/Harmonics_symbol.png"
+  eyebrow="Systems Interface / Harmonics"
+  summary="Persistent resonance becoming legible as recurrence under Time."
+  mechanism="Resonance under Time."
+  interfaceLabel="Time-ordered traversal"
+  transitionName="observatory-harmonics-symbol"
+/>

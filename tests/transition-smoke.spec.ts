@@ -190,6 +190,34 @@ test("systems panels stay interactive after returning from Redactory desk", asyn
   expect(errors).toEqual([]);
 });
 
+test("observatory launches system interfaces", async ({ page }) => {
+  const errors = trackClientErrors(page);
+  await disableBrowserCache(page);
+
+  await page.goto("/systems/observatory/", { waitUntil: "networkidle" });
+  await expect(page.locator("[data-system-node='redactory']")).toBeVisible();
+
+  await page.locator("[data-system-node='redactory']").click();
+  await expect(page).toHaveURL(/\/systems\/redactory\/?$/);
+  await expect(page.locator(".redactory-desk")).toBeVisible();
+  await waitForTransitionSequence(page);
+
+  await page.getByRole("link", { name: /Systems Observatory/i }).first().click();
+  await expect(page).toHaveURL(/\/systems\/observatory\/?$/);
+  await expect(page.locator("[data-system-node='harmonics']")).toBeVisible();
+
+  await page.locator("[data-system-node='harmonics']").click();
+  await expect(page).toHaveURL(/\/systems\/harmonics\/?$/);
+  await expect(page.locator("[data-system-interface='harmonics']")).toBeVisible();
+
+  await page.goto("/systems/observatory/", { waitUntil: "networkidle" });
+  await page.locator("[data-system-node='resonance']").click();
+  await expect(page).toHaveURL(/\/systems\/resonance-field\/?$/);
+  await expect(page.locator("[data-system-interface='resonance']")).toBeVisible();
+
+  expect(errors).toEqual([]);
+});
+
 test("apparatus filters survive return navigation", async ({ page }) => {
   const errors = trackClientErrors(page);
 

@@ -10,6 +10,8 @@ import DestinationPanel from "./DestinationPanel.astro";
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const navLabels = getArchiveNavLabels(locale);
 const redactoryHref = localizedPath(locale, "/systems/redactory/");
+const resonanceHref = localizedPath(locale, "/systems/resonance-field/");
+const harmonicsHref = localizedPath(locale, "/systems/harmonics/");
 const observatoryHref = localizedPath(locale, "/systems/observatory/");
 
 const systems = [
@@ -23,6 +25,8 @@ const systems = [
     interface: "Dive",
     failure: "Collapse, recoil, Sinking, Drowning, Shorefall.",
     destination: redactoryHref,
+    action: "Open Redactory Desk",
+    transitionName: "observatory-redactory-symbol",
     angle: 3.14,
     x: 22,
     y: 53,
@@ -36,6 +40,9 @@ const systems = [
     agent: "None",
     interface: "Resonance gradients / fields",
     failure: "Cascade, saturation, void, disturbance.",
+    destination: resonanceHref,
+    action: "Open Resonance Field",
+    transitionName: "observatory-resonance-symbol",
     angle: -2.42,
     x: 30,
     y: 24,
@@ -49,6 +56,9 @@ const systems = [
     agent: "None required, though systems may regulate or perceive it.",
     interface: "Time-ordered traversal",
     failure: "Surge, cascade, saturation, false attribution, harmonic burn.",
+    destination: harmonicsHref,
+    action: "Open Harmonic Array",
+    transitionName: "observatory-harmonics-symbol",
     angle: -0.72,
     x: 70,
     y: 24,
@@ -62,6 +72,9 @@ const systems = [
     agent: "Fragment + vessel",
     interface: "Dive-contact alignment / domain compatibility",
     failure: "Identity erosion, possession, sanctification, corruption, vessel collapse.",
+    destination: undefined,
+    action: undefined,
+    transitionName: undefined,
     angle: 0,
     x: 80,
     y: 50,
@@ -75,6 +88,9 @@ const systems = [
     agent: "Symbiont + host",
     interface: "Tissue, blood, nerve, memory, growth, recursive proximity.",
     failure: "Overbloom, Murmuring, consumption, outbreak.",
+    destination: undefined,
+    action: undefined,
+    transitionName: undefined,
     angle: 0.72,
     x: 70,
     y: 77,
@@ -88,6 +104,9 @@ const systems = [
     agent: "None required, accessed by compatible systems.",
     interface: "Shorefall, Shorewalking, Dive access, Divination alignment, Bloom Rooting, Calling exposure.",
     failure: "Stranding, Returnwake, Shore-Breach, identity contamination.",
+    destination: undefined,
+    action: undefined,
+    transitionName: undefined,
     angle: 2.42,
     x: 30,
     y: 77,
@@ -194,6 +213,9 @@ const defaultSystem = systems[0];
               angle={system.angle}
               x={system.x}
               y={system.y}
+              href={system.destination}
+              action={system.action}
+              transitionName={system.transitionName}
             />
           ))}
         </div>
@@ -224,8 +246,15 @@ const defaultSystem = systems[0];
             <dd data-system-failure>{defaultSystem.failure}</dd>
           </div>
         </dl>
-        <a class="observatory-panel__link" href={redactoryHref} data-redactory-link>
-          Open Redactory Desk
+        <a
+          class="observatory-panel__link"
+          href={defaultSystem.destination}
+          data-system-panel-link
+          data-system-launch={defaultSystem.id}
+          data-transition-trigger="observatory-system"
+          data-astro-prefetch="load"
+        >
+          {defaultSystem.action}
         </a>
       </aside>
     </div>
@@ -242,12 +271,29 @@ const defaultSystem = systems[0];
           status="ACTIVE DESK"
           cta="Open Desk"
           href={redactoryHref}
+          systemId="redactory"
+          transitionTrigger="observatory-system"
           active
         />
         <DestinationPanel
           title="The Harmonic Array"
           subtitle="Recurrence, Calling pressure, and resonance disturbance."
-          status="SEALED"
+          status="SCAFFOLD READY"
+          cta="Open Array"
+          href={harmonicsHref}
+          systemId="harmonics"
+          transitionTrigger="observatory-system"
+          active
+        />
+        <DestinationPanel
+          title="The Resonance Field"
+          subtitle="Structural pressure, coherence gradients, and relation mapping."
+          status="SCAFFOLD READY"
+          cta="Open Field"
+          href={resonanceHref}
+          systemId="resonance"
+          transitionTrigger="observatory-system"
+          active
         />
         <DestinationPanel
           title="The Vessel Chapel"
@@ -269,7 +315,7 @@ const defaultSystem = systems[0];
   </section>
 </MainLayout>
 
-<script is:inline define:vars={{ systems, redactoryHref }}>
+<script is:inline define:vars={{ systems }}>
   window.registerPageInit?.("systems-observatory", () => {
     const root = document.querySelector("[data-observatory-root]");
     if (!root) return;
@@ -287,7 +333,7 @@ const defaultSystem = systems[0];
       agent: root.querySelector("[data-system-agent]"),
       interface: root.querySelector("[data-system-interface]"),
       failure: root.querySelector("[data-system-failure]"),
-      link: root.querySelector("[data-redactory-link]"),
+      link: root.querySelector("[data-system-panel-link]"),
     };
     const byId = new Map(systems.map((system) => [system.id, system]));
 
@@ -304,7 +350,11 @@ const defaultSystem = systems[0];
       nodes.forEach((node) => {
         const active = node.getAttribute("data-system-node") === id;
         node.classList.toggle("is-active", active);
-        node.setAttribute("aria-pressed", active ? "true" : "false");
+        if (node instanceof HTMLButtonElement) {
+          node.setAttribute("aria-pressed", active ? "true" : "false");
+        } else {
+          node.removeAttribute("aria-pressed");
+        }
       });
       connectors.forEach((path) => {
         path.classList.toggle("is-active", path.getAttribute("data-svg-connector") === id);
@@ -320,9 +370,13 @@ const defaultSystem = systems[0];
       if (fields.interface) fields.interface.textContent = system.interface;
       if (fields.failure) fields.failure.textContent = system.failure;
       if (fields.link instanceof HTMLAnchorElement) {
-        const activeRoute = system.destination === redactoryHref;
+        const activeRoute = typeof system.destination === "string" && system.destination.length > 0;
         fields.link.hidden = !activeRoute;
-        fields.link.href = redactoryHref;
+        if (activeRoute) {
+          fields.link.href = system.destination;
+          fields.link.textContent = system.action || `Open ${system.title}`;
+          fields.link.dataset.systemLaunch = system.id;
+        }
       }
       if (strength > 0) emitPulse(system, strength);
     }
@@ -603,6 +657,7 @@ const defaultSystem = systems[0];
     pointer-events: auto;
     color: rgba(232, 228, 220, 0.72);
     text-align: center;
+    text-decoration: none;
     background:
       radial-gradient(circle at 50% 45%, rgba(232, 228, 220, 0.12), transparent 58%),
       radial-gradient(circle at 50% 86%, rgba(177, 58, 52, 0.08), transparent 60%),
@@ -863,7 +918,7 @@ const defaultSystem = systems[0];
 
   .observatory-destinations__grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 12px;
   }
 

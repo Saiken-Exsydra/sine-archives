@@ -6,15 +6,20 @@ type Props = {
   href?: string;
   cta?: string;
   active?: boolean;
+  systemId?: string;
+  transitionTrigger?: string;
 };
 
-const { title, subtitle, status, href, cta, active = false } = Astro.props;
+const { title, subtitle, status, href, cta, active = false, systemId, transitionTrigger } = Astro.props;
 const Tag = active && href ? "a" : "article";
 ---
 
 <Tag
   class:list={["observatory-destination", active && "observatory-destination--active"]}
   href={active && href ? href : undefined}
+  data-system-launch={active && href && systemId ? systemId : undefined}
+  data-transition-trigger={active && href && transitionTrigger ? transitionTrigger : undefined}
+  data-astro-prefetch={active && href ? "load" : undefined}
   aria-label={active && cta ? `${title}: ${cta}` : undefined}
 >
   <span class="observatory-destination__status">{status}</span>

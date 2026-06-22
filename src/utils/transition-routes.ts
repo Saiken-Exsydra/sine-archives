@@ -40,6 +40,10 @@ export function isObservatoryPath(pathname: string) {
   return /^\/(?:pt-br\/)?systems\/observatory\/?$/i.test(pathname);
 }
 
+export function isSystemInteractivePath(pathname: string) {
+  return /^\/(?:pt-br\/)?systems\/(?:redactory|resonance-field|harmonics)\/?$/i.test(pathname);
+}
+
 export function isHomePath(pathname: string) {
   return /^\/(?:pt-br\/)?$/i.test(pathname);
 }

@@ -1,0 +1,9 @@
+---
+import ResonanceFieldPage from "../../../systems/resonance-field/index.astro";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "pt-br" } }];
+}
+---
+
+<ResonanceFieldPage locale="pt-br" />

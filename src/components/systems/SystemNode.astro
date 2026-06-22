@@ -7,23 +7,36 @@ type Props = {
   angle: number;
   x: number;
   y: number;
+  href?: string;
+  action?: string;
+  transitionName?: string;
 };
 
-const { id, title, summary, logo, angle, x, y } = Astro.props;
+const { id, title, summary, logo, angle, x, y, href, action, transitionName } = Astro.props;
+const Tag = href ? "a" : "button";
+const label = action ? `${action}: ${summary}` : `${title}: ${summary}`;
 ---
 
-<button
+<Tag
   class="observatory-node"
-  type="button"
+  type={href ? undefined : "button"}
+  href={href}
   data-system-node={id}
+  data-system-launch={href ? id : undefined}
+  data-transition-trigger={href ? "observatory-system" : undefined}
+  data-astro-prefetch={href ? "load" : undefined}
   data-angle={angle}
   style={`--node-x: ${x}%; --node-y: ${y}%;`}
-  aria-label={`${title}: ${summary}`}
+  aria-label={label}
 >
   <span class="observatory-node__dot" aria-hidden="true"></span>
-  <span class="observatory-node__mark" aria-hidden="true">
+  <span
+    class="observatory-node__mark"
+    style={transitionName ? `view-transition-name: ${transitionName};` : undefined}
+    aria-hidden="true"
+  >
     <img src={logo} alt="" loading="eager" decoding="async" />
   </span>
   <span class="observatory-node__label">{title}</span>
   <span class="observatory-node__summary">{summary}</span>
-</button>
+</Tag>

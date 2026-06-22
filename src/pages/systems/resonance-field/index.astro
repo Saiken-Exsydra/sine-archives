@@ -1,0 +1,19 @@
+---
+import SystemInterfaceScaffold from "../../../components/systems/SystemInterfaceScaffold.astro";
+import type { SiteLocale } from "../../../i18n/config";
+
+const { locale = "en" } = Astro.props as { locale?: SiteLocale };
+---
+
+<SystemInterfaceScaffold
+  locale={locale}
+  id="resonance"
+  title="Resonance Field"
+  pageTitle="Resonance Field - SiNE Archives"
+  logo="/uploads/observatory-white/Resonance_symbol.png"
+  eyebrow="Systems Interface / Resonance"
+  summary="Structural relation, not indexing, not energy, not magic by itself."
+  mechanism="Passive mutual coherence pressure."
+  interfaceLabel="Resonance gradients / fields"
+  transitionName="observatory-resonance-symbol"
+/>
