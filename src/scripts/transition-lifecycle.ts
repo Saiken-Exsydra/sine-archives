@@ -103,6 +103,7 @@ const SEARCH_TRANSITION_EASING = "cubic-bezier(0.2, 0.82, 0.22, 1)";
 const TRANSITION_PREPARE_TIMEOUT = 700;
 const ROUTE_WARMUP_TIMEOUT = 900;
 const HANDLE_INTENT_CLEAR_DELAY = 1300;
+const OBSERVATORY_SYMBOL_RESET_DELAY = 1600;
 const STATE_CLASSES = [
   "is-preparing-transition",
   "is-swap-pending",
@@ -363,6 +364,25 @@ function buildObservatorySystemIntentFromLink(link: HTMLAnchorElement): Observat
     fromPath: location.pathname,
     href: link.href,
   };
+}
+
+function prepareObservatorySystemSymbol(link: HTMLAnchorElement) {
+  const systemId = link.dataset.systemLaunch;
+  const root = document.querySelector("[data-observatory-root]");
+  if (!systemId || !root) return;
+
+  const node = [...root.querySelectorAll<HTMLElement>("[data-system-node]")]
+    .find((candidate) => candidate.dataset.systemNode === systemId);
+  const mark = node?.querySelector<HTMLElement>("[data-system-mark]");
+  const transitionName = node?.dataset.systemTransitionName;
+  if (!mark || !transitionName) return;
+
+  mark.style.viewTransitionName = transitionName;
+  window.setTimeout(() => {
+    if (mark.isConnected) {
+      mark.style.removeProperty("view-transition-name");
+    }
+  }, OBSERVATORY_SYMBOL_RESET_DELAY);
 }
 
 function prefersReducedMotion() {
@@ -840,6 +860,7 @@ function installSearchIntentCapture() {
 
     const observatorySystemLink = getObservatorySystemTriggerLink(event.target);
     if (observatorySystemLink && isPlainLeftClick(event)) {
+      prepareObservatorySystemSymbol(observatorySystemLink);
       getRuntimeState().pendingIntent = buildObservatorySystemIntentFromLink(observatorySystemLink);
       return;
     }
@@ -864,6 +885,7 @@ function installSearchIntentCapture() {
 
     const observatorySystemLink = getObservatorySystemTriggerLink(event.target);
     if (observatorySystemLink && isPlainLeftClick(event)) {
+      prepareObservatorySystemSymbol(observatorySystemLink);
       getRuntimeState().pendingIntent = buildObservatorySystemIntentFromLink(observatorySystemLink);
       return;
     }

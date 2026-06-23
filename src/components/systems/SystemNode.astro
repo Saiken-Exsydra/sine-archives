@@ -23,6 +23,7 @@ const label = action ? `${action}: ${summary}` : `${title}: ${summary}`;
   href={href}
   data-system-node={id}
   data-system-launch={href ? id : undefined}
+  data-system-transition-name={transitionName}
   data-transition-trigger={href ? "observatory-system" : undefined}
   data-astro-prefetch={href ? "load" : undefined}
   data-angle={angle}
@@ -32,7 +33,7 @@ const label = action ? `${action}: ${summary}` : `${title}: ${summary}`;
   <span class="observatory-node__dot" aria-hidden="true"></span>
   <span
     class="observatory-node__mark"
-    style={transitionName ? `view-transition-name: ${transitionName};` : undefined}
+    data-system-mark
     aria-hidden="true"
   >
     <img src={logo} alt="" loading="eager" decoding="async" />

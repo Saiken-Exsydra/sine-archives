@@ -30,6 +30,151 @@ const {
 } = Astro.props;
 const navLabels = getArchiveNavLabels(locale);
 const observatoryHref = localizedPath(locale, "/systems/observatory/");
+
+const interfaceData = {
+  harmonics: {
+    status: "Time-readable resonance",
+    thesis: "Resonance is the quiet pull between things that are built alike. Harmonics are what that pull looks like once Time turns it into rhythm, surge, fade, or warning pattern.",
+    instrumentTitle: "Follow the Rhythm",
+    instrumentLabel: "Resonance, watched over time",
+    instruction: "Pick a rhythm. The reader explains what is repeating, what it affects, and what people might wrongly assume.",
+    metrics: [
+      { label: "Starts with", value: "Resonance" },
+      { label: "Time adds", value: "Rhythm" },
+      { label: "Risk", value: "Wrong cause" },
+    ],
+    readings: [
+      {
+        name: "World Rhythm",
+        marker: "G-00",
+        level: "Normal recurrence",
+        description: "Some patterns repeat because the world is stable enough to keep doing the same lawful thing: orbit, season, pressure, cycle.",
+        output: "Usually this is just baseline behavior. It becomes interesting only when the rhythm gets louder, faster, or easier to conduct.",
+        x: 15,
+        y: 68,
+        height: 31,
+      },
+      {
+        name: "Calling Surge",
+        marker: "S-17",
+        level: "Crown pressure",
+        description: "A Calling is the big local example: pressure from the Lunar Crown's containment struggle becomes a periodic surge the world can feel.",
+        output: "Check thin places, BrightCrystal, Anchor stress, and institutional bias before calling it omen, prophecy, or divine speech.",
+        x: 32,
+        y: 39,
+        height: 72,
+      },
+      {
+        name: "Routing Echo",
+        marker: "O-41",
+        level: "Repeated Dive trace",
+        description: "Repeated Redactory work can leave a pattern that shows up over time, like footsteps in dust after someone keeps taking the same route.",
+        output: "The echo proves repeated disturbance. It does not reveal the Redactor's thoughts, and it does not make Redactory a harmonic system.",
+        x: 51,
+        y: 55,
+        height: 49,
+      },
+      {
+        name: "Living Conductor",
+        marker: "B-09",
+        level: "Biological response",
+        description: "Bloom or other resonance-active life can carry a repeating pressure through tissue, blood, memory, or growth.",
+        output: "Read it as a living response to resonance under Time. Do not turn Bloom into divinity or generic magic by default.",
+        x: 69,
+        y: 27,
+        height: 86,
+      },
+      {
+        name: "Shore Pulse",
+        marker: "R-62",
+        level: "Borderland recurrence",
+        description: "Near a Shore, conceptual pressure can repeat strongly enough to create exposure rhythms, return problems, or local instability.",
+        output: "Read it as boundary pressure becoming rhythmic. The Shore is not the Archive, the Dive, or a harmonic author.",
+        x: 86,
+        y: 49,
+        height: 58,
+      },
+    ],
+    cautions: [
+      "A loud pattern is not automatically an important source.",
+      "A repeating pattern still needs context: what is being read, and under what timing conditions?",
+      "A predicted Calling is incomplete without checking what will conduct or amplify it.",
+    ],
+  },
+  resonance: {
+    status: "Passive coherence field",
+    thesis: "Some things are built alike. When they are alike enough, they begin to lean on each other. That quiet leaning is resonance.",
+    tags: ["Similarity", "Pressure", "Stability"],
+    instrumentTitle: "When Patterns Lean",
+    instrumentLabel: "Invisible pattern pressure",
+    instruction: "Click any dot to see why it matters.",
+    metrics: [
+      { label: "Reads", value: "Gradient" },
+      { label: "Stabilizes", value: "Density" },
+      { label: "Fails as", value: "Cascade" },
+    ],
+    readings: [
+      {
+        name: "Similarity Threshold",
+        marker: "01",
+        level: "Gradient source",
+        description: "Two configurations begin to pressure one another when structural similarity exceeds a passive interaction threshold.",
+        output: "Below threshold: relation exists without meaningful consequence. Above threshold: local stability begins to answer.",
+        x: 18,
+        y: 38,
+        height: 48,
+      },
+      {
+        name: "Density Reinforcement",
+        marker: "02",
+        level: "Field support",
+        description: "Configurations in mutual support resist perturbation better than isolated configurations of equal individual coherence.",
+        output: "Dense fields stabilize what belongs there and resist foreign translation pressure.",
+        x: 39,
+        y: 22,
+        height: 67,
+      },
+      {
+        name: "Thinness Conduit",
+        marker: "03",
+        level: "Transmission hazard",
+        description: "Thin regions are easier to perturb, easier to index through, and more conductive to incoming disturbance.",
+        output: "Cascade risk rises when similarity, narrow stability margins, and weak local reinforcement coincide.",
+        x: 63,
+        y: 42,
+        height: 56,
+      },
+      {
+        name: "Recursive Pressure",
+        marker: "04",
+        level: "Self-model field",
+        description: "Recursive singularities continually resemble themselves. Many minds aligned around one attractor amplify local coherence.",
+        output: "Worship, ideology, and mass fear can gain structural weight without becoming messages or magic commands.",
+        x: 49,
+        y: 70,
+        height: 41,
+      },
+      {
+        name: "Cascade Edge",
+        marker: "05",
+        level: "Disturbance overflow",
+        description: "A configuration change shifts resonance relationships, then propagates through dependent similar structures.",
+        output: "Dense coherence dampens it. Thin medium carries it. BrightCrystal and Calling events can escalate quickly.",
+        x: 82,
+        y: 61,
+        height: 76,
+      },
+    ],
+    cautions: [
+      "Resonance is not indexing.",
+      "Resonance is not energy, signal, force, or magic by itself.",
+      "Resonance amplifies, dampens, stabilizes, or destabilizes what is already valid.",
+    ],
+  },
+} as const;
+
+const activeData = interfaceData[id];
+const firstReading = activeData.readings[0];
 ---
 
 <MainLayout
@@ -48,55 +193,738 @@ const observatoryHref = localizedPath(locale, "/systems/observatory/");
     { label: title },
   ]}
 >
-  <section class="system-interface" data-system-interface={id}>
+  <section class:list={["system-interface", `system-interface--${id}`]} data-interface-root={id}>
     <div class="system-interface__field" aria-hidden="true"></div>
+    <div class="system-interface__grain sine-grain" aria-hidden="true"></div>
+    <div class="system-interface__scan sine-scanline" aria-hidden="true"></div>
+
     <header class="system-interface__header">
       <p>{eyebrow}</p>
       <h1>{title}</h1>
-      <span>Interactive interface scaffold</span>
+      <span>{activeData.status}</span>
+      <p class="system-interface__thesis">{activeData.thesis}</p>
+      {id === "resonance" ? (
+        <ul class="system-interface__tags" aria-label="Resonance concepts">
+          {activeData.tags.map((tag) => <li>{tag}</li>)}
+        </ul>
+      ) : (
+        <dl class="system-interface__metrics" aria-label={`${title} interface readings`}>
+          {activeData.metrics.map((metric) => (
+            <div>
+              <dt>{metric.label}</dt>
+              <dd>{metric.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
     </header>
 
-    <div class="system-interface__stage">
-      <div class="system-interface__orb" aria-hidden="true">
-        <span
-          class="system-interface__symbol"
-          style={`view-transition-name: ${transitionName};`}
-        >
-          <img src={logo} alt="" loading="eager" decoding="async" />
-        </span>
-      </div>
+    {id === "resonance" ? (
+      <div class="resonance-lab-shell" data-resonance-lab style="--similarity: 0.62; --field-strength: 0.28;">
+        <section class="resonance-lab" aria-labelledby="resonance-field-title">
+          <div class="resonance-lab__head">
+            <p>{activeData.instrumentLabel}</p>
+            <h2 id="resonance-field-title">{activeData.instrumentTitle}</h2>
+            <span>{activeData.instruction}</span>
+          </div>
 
-      <aside class="system-interface__panel" aria-labelledby={`${id}-interface-title`}>
-        <p class="system-interface__kicker">Filed Mechanism</p>
-        <h2 id={`${id}-interface-title`}>{mechanism}</h2>
-        <p>{summary}</p>
-        <dl>
-          <div>
-            <dt>Interface</dt>
-            <dd>{interfaceLabel}</dd>
+          <div class="resonance-fieldboard" data-fieldboard>
+            <svg
+              class="resonance-map"
+              viewBox="0 0 760 460"
+              role="img"
+              aria-labelledby="resonance-map-title resonance-map-desc"
+              data-resonance-map
+            >
+              <title id="resonance-map-title">Interactive resonance node field</title>
+              <desc id="resonance-map-desc">A quiet node diagram showing similarity pressure, field overlap, dense damping, and thin transmission.</desc>
+              <defs>
+                <filter id="resonance-soft-glow" x="-70%" y="-70%" width="240%" height="240%">
+                  <feGaussianBlur stdDeviation="4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <g class="resonance-grid" aria-hidden="true">
+                <ellipse cx="346" cy="222" rx="286" ry="166" />
+                <ellipse cx="540" cy="322" rx="132" ry="112" />
+                <path d="M96 228 C 210 104, 400 88, 638 126" />
+              </g>
+
+              <ellipse
+                class="resonance-field-halo"
+                data-lab-action="field"
+                role="button"
+                tabindex="0"
+                aria-label="Explain overlapping resonance field"
+                cx="300"
+                cy="218"
+                rx="224"
+                ry="138"
+              />
+
+              <g class="resonance-links" aria-hidden="true">
+                <path class="resonance-line resonance-line--primary" data-line="primary" />
+                <path class="resonance-line resonance-line--distant" data-line="distant" />
+                <path class="resonance-line resonance-line--dense" data-line="dense" />
+                <path class="resonance-line resonance-line--orbit" data-line="orbit" />
+              </g>
+              <path
+                class="resonance-link-hit"
+                data-lab-action="gradient"
+                aria-hidden="true"
+              />
+              <circle
+                class="resonance-line-touch"
+                data-lab-action="gradient"
+                data-gradient-touch
+                role="button"
+                tabindex="0"
+                aria-label="Explain the line between First Pattern and Almost the Same"
+                r="18"
+              />
+              <g class="resonance-added-links" data-added-links aria-hidden="true"></g>
+              <circle class="resonance-ripple" data-ripple cx="190" cy="220" r="1" />
+
+              <g class="resonance-node resonance-node--a" data-node-id="a" data-lab-node="match" data-panel-state="first" data-node-kind="core" role="button" tabindex="0" aria-label="First Pattern">
+                <circle r="54" />
+                <text y="-7">First</text>
+                <text y="9">Pattern</text>
+              </g>
+
+              <g class="resonance-node resonance-node--similar" data-node-id="similar" data-lab-node="match" data-panel-state="same" data-node-kind="similar" role="button" tabindex="0" aria-label="Almost the Same">
+                <circle r="58" />
+                <text y="-12">Almost</text>
+                <text y="4">the Same</text>
+              </g>
+
+              <g class="resonance-node resonance-node--distant" data-node-id="distant" data-lab-node="different" data-panel-state="different" data-node-kind="distant" role="button" tabindex="0" aria-label="Too Different">
+                <circle r="46" />
+                <text y="-5">Too</text>
+                <text y="11">Different</text>
+              </g>
+
+              <g class="resonance-node resonance-node--dense" data-node-id="dense" data-lab-node="heavy" data-panel-state="heavy" data-node-kind="dense" role="button" tabindex="0" aria-label="The Heavy Pattern">
+                <circle r="70" />
+                <circle class="resonance-node__core" r="16" />
+                <text y="-12">The Heavy</text>
+                <text y="5">Pattern</text>
+              </g>
+
+              <g class="resonance-node resonance-node--orbit" data-node-id="orbit" data-lab-node="nearby" data-panel-state="nearby" data-node-kind="orbiting" role="button" tabindex="0" aria-label="Caught Nearby">
+                <circle r="34" />
+                <text y="-5">Caught</text>
+                <text y="10">Nearby</text>
+              </g>
+
+              <g class="resonance-added-nodes" data-added-nodes aria-hidden="true"></g>
+            </svg>
+            <p class="resonance-field-note">In this diagram, distance means similarity. Close dots are not physically close. They are alike.</p>
           </div>
-          <div>
-            <dt>Status</dt>
-            <dd>Interactive archive pending reconstruction.</dd>
+
+          <div class="resonance-gradient-control">
+            <label for="resonance-similarity">Similarity</label>
+            <input id="resonance-similarity" type="range" min="15" max="100" value="62" data-similarity-slider />
+            <span data-similarity-label>Similarity: medium</span>
           </div>
-        </dl>
-        <a href={observatoryHref} data-astro-prefetch="load">Return to Observatory</a>
-      </aside>
-    </div>
+        </section>
+
+        <aside class="resonance-panel" aria-labelledby="resonance-panel-title" aria-live="polite">
+          <p class="system-interface__kicker" data-panel-kicker>What you clicked</p>
+          <h2 id="resonance-panel-title" data-panel-title>Start with the dots</h2>
+          <p data-panel-text>Each dot is a structure. Some are built almost the same way. Some are not. When two structures are similar enough, they start to pressure each other without meaning to.</p>
+          <dl>
+            <div>
+              <dt>What this is not</dt>
+              <dd data-panel-not>Nothing is being sent. Nobody is speaking. No power is traveling between them.</dd>
+            </div>
+            <div data-panel-rule-wrap hidden>
+              <dt data-panel-rule-label>Rule</dt>
+              <dd data-field-state></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    ) : (
+      <div class="system-interface__stage">
+        <section class="system-interface__instrument" aria-labelledby={`${id}-instrument-title`}>
+          <div class="system-interface__instrument-head">
+            <p>{activeData.instrumentLabel}</p>
+            <h2 id={`${id}-instrument-title`}>{activeData.instrumentTitle}</h2>
+          </div>
+
+          <div class="system-interface__display" style={`--active-x: ${firstReading.x}%; --active-y: ${firstReading.y}%;`}>
+            <span
+              class="system-interface__symbol"
+              style={`view-transition-name: ${transitionName};`}
+              aria-hidden="true"
+            >
+              <img src={logo} alt="" loading="eager" decoding="async" />
+            </span>
+
+            <div class="harmonic-array" aria-label="Harmonic bands">
+              <div class="harmonic-array__rings" aria-hidden="true"></div>
+              <div class="harmonic-array__baseline" aria-hidden="true"></div>
+              {activeData.readings.map((reading, index) => (
+                <button
+                  class="harmonic-array__band"
+                  type="button"
+                  data-reading-jump={index}
+                  aria-pressed={index === 0 ? "true" : "false"}
+                  aria-label={`Tune ${reading.name}`}
+                  style={`--band-x: ${reading.x}%; --band-y: ${reading.y}%; --band-h: ${reading.height}%;`}
+                >
+                  <span>{reading.marker}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <aside class="system-interface__panel" aria-labelledby={`${id}-mechanism-title`}>
+          <p class="system-interface__kicker">Filed Mechanism</p>
+          <h2 id={`${id}-mechanism-title`}>{mechanism}</h2>
+          <p>{summary}</p>
+          <dl>
+            <div>
+              <dt>Interface</dt>
+              <dd>{interfaceLabel}</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>{activeData.status}. Reconstructed for observatory transition access.</dd>
+            </div>
+            <div>
+              <dt>Boundary</dt>
+              <dd>Reads recurrence. Does not create futures or override Time.</dd>
+            </div>
+          </dl>
+          <a href={observatoryHref} data-astro-prefetch="load">Return to Observatory</a>
+        </aside>
+      </div>
+    )}
+
+    {id === "resonance" ? (
+      <section class="resonance-experiment" aria-labelledby="resonance-experiment-title">
+        <div>
+          <p>Try breaking the field</p>
+          <h2 id="resonance-experiment-title">Test the Field</h2>
+          <span data-experiment-status>Add patterns, then shake the field. Watch what holds and what passes the disturbance onward.</span>
+          <details class="resonance-codex-term">
+            <summary>Want the codex term?</summary>
+            <p>Resonance is the relation itself. Harmonics are what that relation looks like when Time reads it as rhythm, recurrence, surge, or decay.</p>
+          </details>
+        </div>
+        <div class="resonance-experiment__actions">
+          <button type="button" data-lab-action="add-similar">Add Matching Pattern</button>
+          <button type="button" data-lab-action="add-thin">Add Fragile Pattern</button>
+          <button type="button" data-lab-action="disturb">Shake the Field</button>
+        </div>
+      </section>
+    ) : (
+      <>
+        <section class="system-interface__reader" aria-labelledby={`${id}-reader-title`}>
+          <div class="system-interface__reader-head">
+            <p>Operational Reader</p>
+            <h2 id={`${id}-reader-title`}>{activeData.instruction}</h2>
+          </div>
+
+          <div class="system-interface__reader-grid">
+            <div class="system-interface__cards" aria-label={`${title} selectable readings`}>
+              {activeData.readings.map((reading, index) => (
+                <button
+                  class:list={["system-interface__card", index === 0 && "is-active"]}
+                  type="button"
+                  data-reading-card={index}
+                  aria-pressed={index === 0 ? "true" : "false"}
+                >
+                  <span>{reading.marker}</span>
+                  <strong>{reading.name}</strong>
+                  <small>{reading.level}</small>
+                </button>
+              ))}
+            </div>
+
+            <article class="system-interface__output" aria-live="polite">
+              <p class="system-interface__output-marker" data-reading-marker>{firstReading.marker}</p>
+              <h3 data-reading-name>{firstReading.name}</h3>
+              <p class="system-interface__output-level" data-reading-level>{firstReading.level}</p>
+              <p data-reading-description>{firstReading.description}</p>
+              <div>
+                <span>Archive Reading</span>
+                <p data-reading-output>{firstReading.output}</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="system-interface__cautions" aria-labelledby={`${id}-cautions-title`}>
+          <p>Misclassification Guard</p>
+          <h2 id={`${id}-cautions-title`}>What the instrument refuses to claim</h2>
+          <ul>
+            {activeData.cautions.map((caution) => <li>{caution}</li>)}
+          </ul>
+        </section>
+      </>
+    )}
   </section>
 </MainLayout>
 
+<script is:inline define:vars={{ id, readings: activeData.readings }}>
+  window.registerPageInit?.(`system-interface-${id}`, () => {
+    const root = document.querySelector(`[data-interface-root="${id}"]`);
+    if (!root) return;
+
+    const controller = new AbortController();
+    const { signal } = controller;
+    const cards = Array.from(root.querySelectorAll("[data-reading-card]"));
+    const jumps = Array.from(root.querySelectorAll("[data-reading-jump]"));
+    const display = root.querySelector(".system-interface__display");
+    const fields = {
+      marker: root.querySelector("[data-reading-marker]"),
+      name: root.querySelector("[data-reading-name]"),
+      level: root.querySelector("[data-reading-level]"),
+      description: root.querySelector("[data-reading-description]"),
+      output: root.querySelector("[data-reading-output]"),
+    };
+
+    function setPressed(elements, activeIndex) {
+      elements.forEach((element) => {
+        const index = Number(element.getAttribute("data-reading-card") ?? element.getAttribute("data-reading-jump"));
+        const active = index === activeIndex;
+        element.classList.toggle("is-active", active);
+        element.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+    }
+
+    function setActive(index) {
+      const reading = readings[index];
+      if (!reading) return;
+
+      setPressed(cards, index);
+      setPressed(jumps, index);
+      display?.style.setProperty("--active-x", `${reading.x}%`);
+      display?.style.setProperty("--active-y", `${reading.y}%`);
+      if (fields.marker) fields.marker.textContent = reading.marker;
+      if (fields.name) fields.name.textContent = reading.name;
+      if (fields.level) fields.level.textContent = reading.level;
+      if (fields.description) fields.description.textContent = reading.description;
+      if (fields.output) fields.output.textContent = reading.output;
+    }
+
+    [...cards, ...jumps].forEach((element) => {
+      element.addEventListener("click", () => {
+        const index = Number(element.getAttribute("data-reading-card") ?? element.getAttribute("data-reading-jump"));
+        setActive(index);
+      }, { signal });
+    });
+
+    setActive(0);
+
+    return () => controller.abort();
+  });
+</script>
+
+<script is:inline>
+  window.registerPageInit?.("resonance-field-lab", () => {
+    const root = document.querySelector("[data-resonance-lab]");
+    if (!root) return;
+    const pageRoot = root.closest("[data-interface-root='resonance']") || root;
+
+    const controller = new AbortController();
+    const { signal } = controller;
+    const field = root.querySelector("[data-fieldboard]");
+    const map = root.querySelector("[data-resonance-map]");
+    const slider = root.querySelector("[data-similarity-slider]");
+    const sliderLabel = root.querySelector("[data-similarity-label]");
+    const addedNodes = root.querySelector("[data-added-nodes]");
+    const addedLinks = root.querySelector("[data-added-links]");
+    const ripple = root.querySelector("[data-ripple]");
+    const gradientTouch = root.querySelector("[data-gradient-touch]");
+    const experimentStatus = pageRoot.querySelector("[data-experiment-status]");
+    const fieldState = root.querySelector("[data-field-state]");
+    const panel = {
+      kicker: root.querySelector("[data-panel-kicker]"),
+      title: root.querySelector("[data-panel-title]"),
+      text: root.querySelector("[data-panel-text]"),
+      ruleWrap: root.querySelector("[data-panel-rule-wrap]"),
+      ruleLabel: root.querySelector("[data-panel-rule-label]"),
+      not: root.querySelector("[data-panel-not]"),
+    };
+
+    const copy = {
+      default: {
+        title: "Start with the dots",
+        text: "Each dot is a structure. Some are built almost the same way. Some are not. When two structures are similar enough, they start to pressure each other without meaning to.",
+        not: "Nothing is being sent. Nobody is speaking. No power is traveling between them.",
+      },
+      first: {
+        title: "This one has a near-match",
+        text: "This dot shares a hidden shape with the one beside it. They are not copies. They simply have enough in common for resonance to begin.",
+        rule: "Similar enough means: they start to matter to each other.",
+      },
+      same: {
+        title: "Almost the same is enough",
+        text: "Resonance does not need perfection. Two things can be different on the outside and still share the same deep arrangement underneath.",
+        rule: "The more they match, the stronger the quiet pressure between them.",
+      },
+      line: {
+        title: "The line is not a message",
+        text: "This line does not mean something is traveling. It only shows that the two patterns are leaning on each other.",
+        rule: "Stronger similarity makes a stronger connection.",
+      },
+      slider: {
+        title: "Try making them more alike",
+        text: "Move the slider left, and the dots stop caring about each other. Move it right, and the connection wakes up.",
+        rule: "Resonance begins only after enough similarity gathers in one place.",
+      },
+      different: {
+        title: "This one is quiet",
+        text: "This dot may share a little with the others, but not enough. It sits near the field without joining it.",
+        rule: "A weak resemblance is not always enough to create resonance.",
+      },
+      heavy: {
+        title: "This one holds its shape",
+        text: "Some patterns are harder to disturb. They have more internal support, so nearby weaker patterns tend to settle around them.",
+        ruleLabel: "Important",
+        rule: "It is not commanding the others. It is simply harder to ignore.",
+      },
+      nearby: {
+        title: "Following without being told",
+        text: "This smaller pattern has fallen into the heavy pattern's neighborhood. It keeps circling because that relation is easier to hold than drifting away.",
+        rule: "Resonance can organize without intention.",
+      },
+      field: {
+        title: "One connection becomes a field",
+        text: "Two similar patterns make a line. Many similar patterns make a field. The shared pattern becomes steadier because many pieces are holding it together.",
+        rule: "A group can resist disturbance better than a lonely dot.",
+      },
+      addMatching: {
+        title: "The field gets steadier",
+        text: "Another similar pattern has joined. The shared shape is now reinforced from one more angle.",
+        rule: "More matching pieces make the field harder to shake.",
+      },
+      addFragile: {
+        title: "This one is easy to shake",
+        text: "This pattern does not have much support inside itself. If disturbance reaches it, it passes the shake onward instead of swallowing it.",
+        rule: "Fragile patterns transmit disturbance.",
+      },
+      cascade: {
+        title: "The shake runs loose",
+        text: "One fragile pattern shakes the next. Then that one shakes another. The field stops being quiet and starts answering itself.",
+        rule: "That is a cascade.",
+      },
+      damping: {
+        title: "The field absorbs the shake",
+        text: "The disturbance spreads out and loses its bite. The stronger patterns share the burden, so nothing breaks.",
+        rule: "Dense fields dampen disturbance.",
+      },
+    };
+
+    let similarCount = 0;
+    let thinCount = 0;
+    let similarityValue = 62;
+    let orbitFrame = 0;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const nodes = {
+      a: { x: 190, y: 220 },
+      similar: { x: 366, y: 218 },
+      distant: { x: 616, y: 132 },
+      dense: { x: 530, y: 298 },
+      orbit: { x: 652, y: 298 },
+    };
+    const similarSlots = [
+      { x: 280, y: 126 },
+      { x: 262, y: 304 },
+      { x: 428, y: 286 },
+      { x: 352, y: 112 },
+      { x: 154, y: 318 },
+      { x: 454, y: 146 },
+      { x: 344, y: 342 },
+      { x: 128, y: 134 },
+    ];
+    const thinSlots = [
+      { x: 126, y: 342 },
+      { x: 486, y: 106 },
+      { x: 666, y: 244 },
+      { x: 232, y: 92 },
+      { x: 646, y: 386 },
+      { x: 88, y: 254 },
+      { x: 422, y: 390 },
+      { x: 706, y: 156 },
+    ];
+
+    function setPanel(key) {
+      const next = copy[key] || copy.default;
+      const hasRule = Boolean(next.rule);
+      if (panel.kicker) panel.kicker.textContent = "What you clicked";
+      if (panel.title) panel.title.textContent = next.title;
+      if (panel.text) panel.text.textContent = next.text;
+      if (panel.not && next.not) panel.not.textContent = next.not;
+      if (panel.ruleWrap instanceof HTMLElement) panel.ruleWrap.hidden = !hasRule;
+      if (panel.ruleLabel) panel.ruleLabel.textContent = next.ruleLabel || "Rule";
+      if (fieldState) fieldState.textContent = next.rule || "";
+      root.dataset.lesson = key;
+    }
+
+    function pulse(kind) {
+      root.dataset.pulse = kind;
+      window.setTimeout(() => {
+        if (root.dataset.pulse === kind) root.removeAttribute("data-pulse");
+      }, 760);
+    }
+
+    function curve(from, to, lift = -18) {
+      const midX = (from.x + to.x) / 2;
+      const midY = (from.y + to.y) / 2 + lift;
+      return `M ${from.x} ${from.y} Q ${midX} ${midY} ${to.x} ${to.y}`;
+    }
+
+    function setNodePosition(id, x, y) {
+      nodes[id] = { x, y };
+      root.querySelector(`[data-node-id="${id}"]`)?.setAttribute("transform", `translate(${x} ${y})`);
+    }
+
+    function setPath(name, value) {
+      root.querySelector(`[data-line="${name}"]`)?.setAttribute("d", value);
+    }
+
+    function drawField() {
+      setPath("primary", curve(nodes.a, nodes.similar, -34));
+      setPath("distant", curve(nodes.a, nodes.distant, -92));
+      setPath("dense", curve(nodes.similar, nodes.dense, 42));
+      setPath("orbit", curve(nodes.dense, nodes.orbit, -18));
+      root.querySelector("[data-lab-action='gradient']")?.setAttribute("d", curve(nodes.a, nodes.similar, -34));
+      const touchX = (nodes.a.x + nodes.similar.x) / 2;
+      const touchY = (nodes.a.y + nodes.similar.y) / 2 - 34;
+      gradientTouch?.setAttribute("cx", String(touchX));
+      gradientTouch?.setAttribute("cy", String(touchY));
+      ripple?.setAttribute("cx", String(nodes.a.x));
+      ripple?.setAttribute("cy", String(nodes.a.y));
+    }
+
+    function updateSimilarity(value) {
+      const numeric = Number(value) || 62;
+      similarityValue = numeric;
+      const normalized = numeric / 100;
+      const similarX = 452 - numeric * 1.36;
+      const similarY = 238 - numeric * 0.2;
+      setNodePosition("similar", similarX, similarY);
+      root.style.setProperty("--similarity", normalized.toFixed(2));
+      root.style.setProperty("--line-strength", normalized.toFixed(2));
+      root.style.setProperty("--field-strength", String(Math.min(0.88, 0.18 + normalized * 0.5 + similarCount * 0.08)));
+      drawField();
+      if (sliderLabel) {
+        sliderLabel.textContent = numeric < 38
+          ? "Similarity: low"
+          : numeric < 76
+            ? "Similarity: medium"
+            : "Similarity: high";
+      }
+      setPanel("slider");
+    }
+
+    function svgElement(name) {
+      return document.createElementNS("http://www.w3.org/2000/svg", name);
+    }
+
+    function drawAddedLink(kind, point) {
+      if (!addedLinks) return;
+      const link = svgElement("path");
+      link.setAttribute("class", `resonance-added-link resonance-added-link--${kind}`);
+      link.setAttribute("d", curve(kind === "thin" ? nodes.distant : nodes.similar, point, kind === "thin" ? 24 : -14));
+      link.setAttribute("fill", "none");
+      link.setAttribute("stroke", kind === "thin" ? "rgba(166, 184, 196, 0.26)" : "rgba(232, 228, 220, 0.32)");
+      link.setAttribute("stroke-width", "0.8");
+      link.setAttribute("stroke-linecap", "round");
+      link.setAttribute("opacity", "0.32");
+      if (kind === "thin") link.setAttribute("stroke-dasharray", "2 8");
+      addedLinks.append(link);
+    }
+
+    function tuneThinNodes(cascades) {
+      addedNodes?.querySelectorAll(".resonance-added-node--thin circle").forEach((circle) => {
+        circle.setAttribute("stroke", cascades ? "rgba(177, 58, 52, 0.62)" : "rgba(232, 228, 220, 0.2)");
+        circle.style.filter = cascades ? "drop-shadow(0 0 14px rgba(177, 58, 52, 0.2))" : "none";
+      });
+    }
+
+    function addNode(kind) {
+      if (!addedNodes) return;
+      const index = kind === "thin" ? thinCount : similarCount;
+      const slot = kind === "thin"
+        ? thinSlots[index % thinSlots.length]
+        : similarSlots[index % similarSlots.length];
+      const point = {
+        x: slot.x + Math.floor(index / 8) * 12,
+        y: slot.y + Math.floor(index / 8) * 10,
+      };
+      const node = svgElement("g");
+      const circle = svgElement("circle");
+      const title = svgElement("title");
+      node.setAttribute("class", `resonance-added-node resonance-added-node--${kind}`);
+      node.setAttribute("transform", `translate(${point.x} ${point.y})`);
+      circle.setAttribute("r", kind === "thin" ? "13" : "19");
+      circle.setAttribute("fill", "rgba(2, 6, 10, 0.86)");
+      circle.setAttribute("stroke", "rgba(232, 228, 220, 0.2)");
+      circle.setAttribute("stroke-width", "1");
+      if (kind === "similar") circle.style.filter = "drop-shadow(0 0 10px rgba(232, 228, 220, 0.12))";
+      if (kind === "thin") {
+        node.setAttribute("opacity", "0.75");
+        node.style.animation = "thinFlicker 3.2s steps(2, end) infinite";
+      }
+      title.textContent = kind === "thin" ? "Fragile Pattern" : "Matching Pattern";
+      node.append(title, circle);
+      addedNodes.append(node);
+      drawAddedLink(kind, point);
+
+      if (kind === "thin") {
+        thinCount += 1;
+        setPanel("addFragile");
+        if (experimentStatus) experimentStatus.textContent = "Fragile pattern added. It passes shaking onward more easily.";
+      } else {
+        similarCount += 1;
+        root.style.setProperty("--field-strength", String(Math.min(0.74, 0.28 + similarCount * 0.12)));
+        root.classList.add("is-field-visible");
+        setPanel("addMatching");
+        if (experimentStatus) experimentStatus.textContent = "Matching pattern added. The field grows steadier.";
+      }
+    }
+
+    function disturb() {
+      const densityBuffer = 2 + similarCount + (similarityValue >= 76 ? 1 : 0);
+      const cascades = thinCount > densityBuffer;
+      root.classList.remove("is-damped", "is-cascade", "is-disturbed");
+      root.classList.add("is-disturbed", cascades ? "is-cascade" : "is-damped");
+      tuneThinNodes(cascades);
+      setPanel(cascades ? "cascade" : "damping");
+      if (experimentStatus) {
+        experimentStatus.textContent = cascades
+          ? "The shake runs loose."
+          : "The field absorbs the shake.";
+      }
+      window.setTimeout(() => {
+        root.classList.remove("is-disturbed");
+        tuneThinNodes(false);
+      }, 1400);
+    }
+
+    root.querySelectorAll("[data-lab-node]").forEach((node) => {
+      const key = node.getAttribute("data-lab-node");
+      const panelKey = node.getAttribute("data-panel-state") || key;
+      node.addEventListener("mouseenter", () => {
+        root.dataset.hover = key || "";
+      }, { signal });
+      node.addEventListener("mouseleave", () => {
+        root.removeAttribute("data-hover");
+      }, { signal });
+      node.addEventListener("focus", () => {
+        root.dataset.hover = key || "";
+      }, { signal });
+      node.addEventListener("blur", () => {
+        root.removeAttribute("data-hover");
+      }, { signal });
+      node.addEventListener("click", () => {
+        if (key === "match") pulse("similarity");
+        if (key === "heavy") {
+          root.classList.add("is-density-drift");
+          window.setTimeout(() => root.classList.remove("is-density-drift"), 2200);
+        }
+        setPanel(panelKey);
+      }, { signal });
+      node.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        node.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      }, { signal });
+    });
+
+    pageRoot.querySelectorAll("[data-lab-action]").forEach((control) => {
+      control.addEventListener("click", () => {
+        const action = control.getAttribute("data-lab-action");
+        if (action === "gradient") {
+          root.classList.add("is-gradient-visible");
+          pulse("gradient");
+          setPanel("line");
+        } else if (action === "field") {
+          root.classList.add("is-field-visible");
+          setPanel("field");
+        } else if (action === "add-similar") {
+          addNode("similar");
+        } else if (action === "add-thin") {
+          addNode("thin");
+        } else if (action === "disturb") {
+          disturb();
+        }
+      }, { signal });
+      control.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        control.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      }, { signal });
+    });
+
+    if (slider instanceof HTMLInputElement) {
+      slider.addEventListener("input", () => updateSimilarity(slider.value), { signal });
+    }
+
+    field?.addEventListener("pointerdown", (event) => {
+      if (event.target === field || event.target === map) disturb();
+    }, { signal });
+
+    function orbit(time) {
+      const angle = time / 7600;
+      const x = nodes.dense.x + Math.cos(angle) * 122;
+      const y = nodes.dense.y + Math.sin(angle) * 118;
+      setNodePosition("orbit", x, y);
+      drawField();
+      orbitFrame = window.requestAnimationFrame(orbit);
+    }
+
+    setNodePosition("a", nodes.a.x, nodes.a.y);
+    setNodePosition("distant", nodes.distant.x, nodes.distant.y);
+    setNodePosition("dense", nodes.dense.x, nodes.dense.y);
+    updateSimilarity(similarityValue);
+    if (!prefersReducedMotion) orbitFrame = window.requestAnimationFrame(orbit);
+    else {
+      setNodePosition("orbit", nodes.orbit.x, nodes.orbit.y);
+      drawField();
+    }
+    setPanel("default");
+    return () => {
+      controller.abort();
+      if (orbitFrame) window.cancelAnimationFrame(orbitFrame);
+    };
+  });
+</script>
+
 <style>
+  :global(.system-interface-page) {
+    background: #050407;
+  }
+
   .system-interface {
     position: relative;
     min-height: calc(100svh - var(--nav-height, 56px));
     overflow: hidden;
-    padding: clamp(48px, 6vw, 84px) clamp(18px, 5vw, 72px) 78px;
+    padding: clamp(42px, 6vw, 78px) clamp(16px, 5vw, 72px) 82px;
     background:
-      radial-gradient(circle at 48% 48%, rgba(232, 228, 220, 0.08), transparent 26rem),
-      radial-gradient(circle at 58% 42%, rgba(177, 58, 52, 0.08), transparent 38rem),
+      radial-gradient(circle at 48% 20%, rgba(176, 141, 60, 0.08), transparent 25rem),
+      radial-gradient(circle at 74% 38%, rgba(177, 58, 52, 0.1), transparent 34rem),
+      radial-gradient(circle at 18% 58%, rgba(104, 142, 166, 0.08), transparent 38rem),
       linear-gradient(180deg, #050407, #030407 52%, #050407);
     color: var(--text);
+  }
+
+  .system-interface--resonance {
+    background:
+      radial-gradient(circle at 46% 18%, rgba(232, 228, 220, 0.055), transparent 25rem),
+      radial-gradient(circle at 66% 42%, rgba(104, 132, 150, 0.11), transparent 35rem),
+      radial-gradient(circle at 20% 68%, rgba(166, 184, 196, 0.045), transparent 38rem),
+      linear-gradient(180deg, #050407, #030407 52%, #050407);
   }
 
   .system-interface__field,
@@ -109,39 +937,50 @@ const observatoryHref = localizedPath(locale, "/systems/observatory/");
   }
 
   .system-interface__field {
-    opacity: 0.44;
+    opacity: 0.42;
     background:
-      repeating-radial-gradient(circle at 48% 52%, rgba(232, 228, 220, 0.11) 0 1px, transparent 1px 16px),
-      repeating-linear-gradient(112deg, rgba(232, 228, 220, 0.055) 0 1px, transparent 1px 34px);
-    mask-image: radial-gradient(circle at 48% 52%, #000 0 34%, transparent 68%);
+      repeating-radial-gradient(circle at 50% 48%, rgba(232, 228, 220, 0.12) 0 1px, transparent 1px 18px),
+      repeating-linear-gradient(112deg, rgba(232, 228, 220, 0.05) 0 1px, transparent 1px 36px);
+    mask-image: radial-gradient(circle at 50% 42%, #000 0 34%, transparent 70%);
   }
 
   .system-interface::before {
     background:
-      radial-gradient(circle at 18% 12%, rgba(176, 141, 60, 0.08), transparent 24rem),
-      radial-gradient(circle at 90% 70%, rgba(84, 133, 166, 0.08), transparent 26rem);
+      linear-gradient(90deg, rgba(177, 58, 52, 0.05), transparent 18%, transparent 82%, rgba(176, 141, 60, 0.035)),
+      radial-gradient(circle at 50% 46%, transparent 0 38%, rgba(0, 0, 0, 0.36) 100%);
   }
 
   .system-interface::after {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.16), transparent 28%, rgba(0, 0, 0, 0.34));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.22), transparent 30%, rgba(0, 0, 0, 0.42));
   }
 
-  .system-interface__header,
-  .system-interface__stage {
-    position: relative;
+  .system-interface__grain,
+  .system-interface__scan {
     z-index: 1;
   }
 
+  .system-interface__header,
+  .system-interface__stage,
+  .system-interface__reader,
+  .system-interface__cautions {
+    position: relative;
+    z-index: 2;
+  }
+
   .system-interface__header {
-    max-width: 900px;
-    margin: 0 auto clamp(30px, 5vw, 58px);
+    max-width: 1120px;
+    margin: 0 auto clamp(28px, 5vw, 54px);
     text-align: center;
   }
 
-  .system-interface__header p,
+  .system-interface__header p:first-child,
   .system-interface__header span,
   .system-interface__kicker,
-  .system-interface dt {
+  .system-interface dt,
+  .system-interface__instrument-head p,
+  .system-interface__reader-head p,
+  .system-interface__cautions > p,
+  .system-interface__output div span {
     font-family: "DM Sans", sans-serif;
     font-size: 9px;
     font-weight: 700;
@@ -149,123 +988,914 @@ const observatoryHref = localizedPath(locale, "/systems/observatory/");
     text-transform: uppercase;
   }
 
-  .system-interface__header p,
+  .system-interface__header p:first-child,
   .system-interface__kicker,
-  .system-interface dt {
-    color: rgba(176, 141, 60, 0.84);
+  .system-interface__instrument-head p,
+  .system-interface__reader-head p,
+  .system-interface__cautions > p,
+  .system-interface__output div span {
+    color: rgba(176, 141, 60, 0.88);
   }
 
   .system-interface__header h1 {
     margin: 10px 0;
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(54px, 8vw, 104px);
-    line-height: 0.92;
+    font-size: clamp(52px, 8.6vw, 112px);
+    line-height: 0.9;
     color: rgba(246, 239, 226, 0.98);
+    text-shadow:
+      0 0 36px rgba(176, 141, 60, 0.14),
+      0 0 74px rgba(177, 58, 52, 0.1);
+  }
+
+  .system-interface--harmonics .system-interface__header h1 {
+    font-size: clamp(46px, 7.5vw, 96px);
   }
 
   .system-interface__header span {
+    color: rgba(232, 228, 220, 0.48);
+  }
+
+  .system-interface__thesis {
+    max-width: 780px;
+    margin: 20px auto 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-style: italic;
+    line-height: 1.18;
+    color: rgba(232, 228, 220, 0.82);
+  }
+
+  .system-interface--harmonics .system-interface__thesis {
+    max-width: 840px;
+    font-size: clamp(20px, 2.5vw, 30px);
+    line-height: 1.22;
+  }
+
+  .system-interface__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    max-width: 740px;
+    margin: 26px auto 0;
+    border: 1px solid rgba(232, 228, 220, 0.14);
+    background: rgba(232, 228, 220, 0.08);
+  }
+
+  .system-interface__metrics div {
+    padding: 14px 12px;
+    background: rgba(5, 4, 7, 0.72);
+  }
+
+  .system-interface__metrics dt {
+    color: rgba(176, 141, 60, 0.72);
+  }
+
+  .system-interface__metrics dd {
+    margin: 6px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: 1;
+    color: rgba(246, 239, 226, 0.96);
+  }
+
+  .system-interface__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+  }
+
+  .system-interface__tags li {
+    padding: 8px 12px;
+    border: 1px solid rgba(232, 228, 220, 0.16);
+    border-radius: 999px;
+    background: rgba(2, 6, 10, 0.58);
+    color: rgba(232, 228, 220, 0.68);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .system-interface--resonance .system-interface__header h1 {
+    text-shadow:
+      0 0 34px rgba(232, 228, 220, 0.12),
+      0 0 70px rgba(104, 132, 150, 0.12);
+  }
+
+  .resonance-lab-shell {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(610px, 1fr) minmax(300px, 390px);
+    gap: clamp(18px, 3vw, 34px);
+    align-items: stretch;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .resonance-lab,
+  .resonance-panel,
+  .resonance-experiment {
+    position: relative;
+    border: 1px solid rgba(232, 228, 220, 0.15);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 24% 0%, rgba(232, 228, 220, 0.045), transparent 34%),
+      linear-gradient(145deg, rgba(6, 8, 13, 0.94), rgba(1, 4, 8, 0.92));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.035),
+      0 24px 70px rgba(0, 0, 0, 0.24);
+  }
+
+  .resonance-lab {
+    min-height: clamp(620px, 57vw, 740px);
+    overflow: hidden;
+  }
+
+  .resonance-lab::before,
+  .resonance-panel::before,
+  .resonance-experiment::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.028) 0 1px, transparent 1px 8px),
+      linear-gradient(90deg, rgba(232, 228, 220, 0.03), transparent 48%, rgba(166, 184, 196, 0.04));
+    pointer-events: none;
+  }
+
+  .resonance-lab__head {
+    position: relative;
+    z-index: 3;
+    padding: 22px 24px 0;
+  }
+
+  .resonance-lab__head p,
+  .resonance-lab__head span,
+  .resonance-experiment > div:first-child p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(176, 141, 60, 0.78);
+  }
+
+  .resonance-lab__head h2,
+  .resonance-panel h2,
+  .resonance-experiment h2 {
+    margin: 8px 0;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1;
+    color: rgba(246, 239, 226, 0.96);
+  }
+
+  .resonance-lab__head h2 {
+    font-size: clamp(38px, 5.4vw, 66px);
+  }
+
+  .resonance-lab__head span {
+    display: block;
     color: rgba(232, 228, 220, 0.42);
+  }
+
+  .resonance-fieldboard {
+    position: absolute;
+    inset: 126px 18px 86px;
+    overflow: hidden;
+    border: 1px solid rgba(232, 228, 220, 0.11);
+    border-radius: 6px;
+    background:
+      radial-gradient(circle at 39% 48%, rgba(232, 228, 220, calc(var(--field-strength, 0.48) * 0.14)), transparent 16rem),
+      radial-gradient(circle at 70% 72%, rgba(166, 184, 196, 0.08), transparent 14rem),
+      rgba(0, 2, 5, 0.42);
+  }
+
+  .resonance-fieldboard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(232, 228, 220, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 228, 220, 0.018) 1px, transparent 1px);
+    background-size: 100% 34px, 42px 100%;
+    mask-image: radial-gradient(circle at 50% 50%, #000 0 48%, transparent 82%);
+    pointer-events: none;
+  }
+
+  .resonance-field-note {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 14px;
+    z-index: 3;
+    margin: 0;
+    padding: 8px 10px;
+    border: 1px solid rgba(232, 228, 220, 0.1);
+    border-radius: 4px;
+    background: rgba(1, 4, 8, 0.7);
+    color: rgba(232, 228, 220, 0.58);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .resonance-map {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    overflow: visible;
+  }
+
+  .resonance-grid ellipse,
+  .resonance-grid path {
+    fill: none;
+    stroke: rgba(232, 228, 220, 0.08);
+    stroke-width: 1;
+  }
+
+  .resonance-field-halo {
+    fill: rgba(232, 228, 220, calc(var(--field-strength, 0.48) * 0.055));
+    stroke: rgba(232, 228, 220, calc(var(--field-strength, 0.48) * 0.28));
+    stroke-width: 1;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.24s ease, fill 0.24s ease, stroke 0.24s ease;
+  }
+
+  .resonance-lab-shell.is-field-visible .resonance-field-halo,
+  .resonance-field-halo:hover,
+  .resonance-field-halo:focus-visible {
+    opacity: 1;
+  }
+
+  .resonance-line,
+  .resonance-added-link {
+    fill: none;
+    stroke: rgba(232, 228, 220, 0.22);
+    stroke-linecap: round;
+    stroke-width: 1;
+    pointer-events: none;
+  }
+
+  .resonance-line--primary {
+    stroke: rgba(246, 247, 241, calc(0.16 + var(--line-strength, 0.62) * 0.66));
+    stroke-width: calc(0.75px + var(--line-strength, 0.62) * 2px);
+    filter: drop-shadow(0 0 8px rgba(232, 228, 220, calc(var(--line-strength, 0.62) * 0.22)));
+  }
+
+  .resonance-line--distant {
+    stroke-dasharray: 4 10;
+    opacity: 0.32;
+  }
+
+  .resonance-line--dense {
+    opacity: 0.58;
+  }
+
+  .resonance-line--orbit {
+    stroke-dasharray: 2 7;
+    opacity: 0.4;
+  }
+
+  .resonance-link-hit {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.001);
+    stroke-linecap: round;
+    stroke-width: 14;
+    cursor: pointer;
+    pointer-events: stroke;
+  }
+
+  .resonance-line-touch {
+    fill: rgba(232, 228, 220, 0.001);
+    stroke: rgba(232, 228, 220, 0.12);
+    stroke-width: 1;
+    cursor: pointer;
+    opacity: 0.42;
+    transition: opacity 0.2s ease, stroke 0.2s ease, fill 0.2s ease;
+  }
+
+  .resonance-line-touch:hover,
+  .resonance-line-touch:focus-visible {
+    fill: rgba(232, 228, 220, 0.05);
+    stroke: rgba(246, 247, 241, 0.56);
+    opacity: 1;
+  }
+
+  .resonance-lab-shell.is-gradient-visible .resonance-line--primary {
+    stroke-dasharray: 6 12;
+    animation: pressureDrift 5s linear infinite;
+  }
+
+  .resonance-ripple {
+    fill: none;
+    stroke: rgba(232, 228, 220, 0);
+    stroke-width: 1.2;
+    pointer-events: none;
+  }
+
+  .resonance-lab-shell.is-disturbed .resonance-ripple {
+    animation: resonanceRipple 1.35s ease-out;
+  }
+
+  .resonance-lab-shell.is-cascade .resonance-ripple {
+    stroke: rgba(177, 58, 52, 0.72);
+  }
+
+  .resonance-lab-shell.is-damped .resonance-ripple {
+    stroke: rgba(232, 228, 220, 0.58);
+  }
+
+  .resonance-node {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .resonance-node circle {
+    fill: rgba(2, 6, 10, 0.9);
+    stroke: rgba(232, 228, 220, 0.2);
+    stroke-width: 1;
+    filter: drop-shadow(0 0 14px rgba(166, 184, 196, 0.06));
+    transition: fill 0.22s ease, stroke 0.22s ease, stroke-width 0.22s ease, filter 0.22s ease;
+  }
+
+  .resonance-node text {
+    fill: rgba(232, 228, 220, 0.74);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-anchor: middle;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .resonance-node__small {
+    fill: rgba(232, 228, 220, 0.42);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: none;
+  }
+
+  .resonance-node--dense circle:first-child {
+    fill: rgba(2, 6, 10, 0.95);
+    stroke: rgba(232, 228, 220, 0.32);
+    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.12));
+  }
+
+  .resonance-node__core {
+    fill: rgba(246, 247, 241, 0.16);
+    stroke: rgba(246, 247, 241, 0.34);
+  }
+
+  .resonance-node--distant {
+    opacity: 0.68;
+  }
+
+  .resonance-node--orbit text {
+    font-size: 8px;
+  }
+
+  .resonance-node:hover circle,
+  .resonance-node:focus-visible circle,
+  .resonance-link-hit:focus-visible,
+  .resonance-field-halo:focus-visible {
+    stroke: rgba(246, 247, 241, 0.82);
+    stroke-width: 1.8;
+    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.18));
+  }
+
+  .resonance-lab-shell[data-hover="match"] .resonance-node--a circle,
+  .resonance-lab-shell[data-hover="match"] .resonance-node--similar circle,
+  .resonance-lab-shell[data-pulse="similarity"] .resonance-node--a circle,
+  .resonance-lab-shell[data-pulse="similarity"] .resonance-node--similar circle {
+    stroke: rgba(246, 247, 241, 0.78);
+    filter: drop-shadow(0 0 22px rgba(232, 228, 220, 0.2));
+  }
+
+  .resonance-lab-shell[data-hover="heavy"] .resonance-node--dense circle,
+  .resonance-lab-shell.is-density-drift .resonance-node--dense circle,
+  .resonance-lab-shell.is-density-drift .resonance-node--orbit circle {
+    stroke: rgba(246, 247, 241, 0.76);
+    filter: drop-shadow(0 0 24px rgba(166, 184, 196, 0.2));
+  }
+
+  .resonance-lab-shell[data-hover="different"] .resonance-node--distant circle,
+  .resonance-lab-shell.is-cascade .resonance-added-node--thin circle {
+    stroke: rgba(177, 58, 52, 0.62);
+    filter: drop-shadow(0 0 14px rgba(177, 58, 52, 0.2));
+  }
+
+  .resonance-lab-shell.is-density-drift .resonance-node--similar,
+  .resonance-lab-shell.is-density-drift .resonance-added-node--thin {
+    animation: densityDrift 2.2s ease-in-out;
+  }
+
+  .resonance-added-link {
+    opacity: 0.32;
+    stroke-width: 0.8;
+  }
+
+  .resonance-added-link--similar {
+    stroke: rgba(232, 228, 220, 0.32);
+  }
+
+  .resonance-added-link--thin {
+    stroke: rgba(166, 184, 196, 0.26);
+    stroke-dasharray: 2 8;
+  }
+
+  .resonance-added-node circle {
+    fill: rgba(2, 6, 10, 0.86);
+    stroke: rgba(232, 228, 220, 0.2);
+    stroke-width: 1;
+  }
+
+  .resonance-added-node--similar circle {
+    filter: drop-shadow(0 0 10px rgba(232, 228, 220, 0.12));
+  }
+
+  .resonance-added-node--thin {
+    opacity: 0.75;
+    animation: thinFlicker 3.2s steps(2, end) infinite;
+  }
+
+  .resonance-gradient-control {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+    z-index: 8;
+    display: grid;
+    grid-template-columns: auto minmax(160px, 1fr) minmax(165px, auto);
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid rgba(232, 228, 220, 0.12);
+    border-radius: 6px;
+    background: rgba(1, 4, 8, 0.82);
+  }
+
+  .resonance-gradient-control label,
+  .resonance-gradient-control span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(232, 228, 220, 0.58);
+  }
+
+  .resonance-gradient-control input {
+    width: 100%;
+    accent-color: rgba(232, 228, 220, 0.86);
+  }
+
+  .resonance-panel {
+    position: relative;
+    align-self: stretch;
+    padding: 24px;
+  }
+
+  .resonance-panel > * {
+    position: relative;
+  }
+
+  .resonance-panel h2 {
+    font-size: clamp(36px, 4.4vw, 54px);
+  }
+
+  .resonance-panel p,
+  .resonance-panel dd,
+  .resonance-experiment span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.78;
+    color: rgba(232, 228, 220, 0.66);
+  }
+
+  .resonance-panel dl {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0 0;
+  }
+
+  .resonance-panel dl div {
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .resonance-panel dt {
+    margin-bottom: 4px;
+    color: rgba(176, 141, 60, 0.78);
+  }
+
+  .resonance-panel dd {
+    margin: 0;
+  }
+
+  .resonance-experiment {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) auto;
+    gap: 20px;
+    align-items: center;
+    max-width: 1240px;
+    margin: 18px auto 0;
+    padding: 22px 24px;
+  }
+
+  .resonance-experiment > * {
+    position: relative;
+  }
+
+  .resonance-experiment h2 {
+    font-size: clamp(30px, 4vw, 46px);
+  }
+
+  .resonance-codex-term {
+    max-width: 640px;
+    margin-top: 12px;
+    color: rgba(232, 228, 220, 0.58);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .resonance-codex-term summary {
+    width: fit-content;
+    cursor: pointer;
+    color: rgba(176, 141, 60, 0.82);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .resonance-codex-term summary:focus-visible {
+    outline: 2px solid rgba(232, 228, 220, 0.66);
+    outline-offset: 4px;
+  }
+
+  .resonance-codex-term p {
+    margin: 8px 0 0;
+  }
+
+  .resonance-experiment__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .resonance-experiment button {
+    min-height: 44px;
+    padding: 10px 13px;
+    border: 1px solid rgba(232, 228, 220, 0.18);
+    border-radius: 4px;
+    background: rgba(2, 6, 10, 0.72);
+    color: rgba(232, 228, 220, 0.76);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .resonance-experiment button:hover,
+  .resonance-experiment button:focus-visible {
+    border-color: rgba(246, 247, 241, 0.72);
+    background: rgba(5, 10, 15, 0.92);
+    outline: 2px solid rgba(232, 228, 220, 0.66);
+    outline-offset: 4px;
   }
 
   .system-interface__stage {
     display: grid;
-    grid-template-columns: minmax(320px, 1fr) minmax(280px, 390px);
-    gap: clamp(28px, 5vw, 78px);
-    align-items: center;
-    max-width: 1180px;
+    grid-template-columns: minmax(420px, 1fr) minmax(280px, 390px);
+    gap: clamp(24px, 4vw, 58px);
+    align-items: stretch;
+    max-width: 1240px;
     margin: 0 auto;
   }
 
-  .system-interface__orb {
-    position: relative;
-    display: grid;
-    place-items: center;
-    min-height: clamp(360px, 50vw, 620px);
+  .system-interface__instrument,
+  .system-interface__panel,
+  .system-interface__reader,
+  .system-interface__cautions {
+    border: 1px solid rgba(232, 228, 220, 0.16);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 12% 0%, rgba(176, 141, 60, 0.08), transparent 38%),
+      linear-gradient(145deg, rgba(7, 8, 13, 0.94), rgba(1, 4, 8, 0.9));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 24px 70px rgba(0, 0, 0, 0.24);
   }
 
-  .system-interface__orb::before,
-  .system-interface__orb::after {
+  .system-interface__instrument {
+    position: relative;
+    min-height: clamp(440px, 52vw, 650px);
+    overflow: hidden;
+  }
+
+  .system-interface__instrument::before,
+  .system-interface__panel::before,
+  .system-interface__reader::before {
     content: "";
     position: absolute;
-    width: min(62vw, 560px);
+    inset: 0;
+    border-radius: inherit;
+    background:
+      linear-gradient(90deg, rgba(232, 228, 220, 0.04), transparent 42%, rgba(232, 228, 220, 0.06)),
+      repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 7px);
+    pointer-events: none;
+    opacity: 0.56;
+  }
+
+  .system-interface__instrument-head {
+    position: relative;
+    z-index: 2;
+    padding: 22px 24px 0;
+  }
+
+  .system-interface__instrument-head h2,
+  .system-interface__panel h2,
+  .system-interface__reader-head h2,
+  .system-interface__cautions h2,
+  .system-interface__output h3 {
+    margin: 8px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1;
+    color: rgba(246, 239, 226, 0.96);
+  }
+
+  .system-interface__instrument-head h2 {
+    font-size: clamp(36px, 5vw, 62px);
+  }
+
+  .system-interface__display {
+    position: absolute;
+    inset: 78px 18px 18px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(232, 228, 220, 0.1);
+    border-radius: 6px;
+    background:
+      radial-gradient(circle at var(--active-x) var(--active-y), rgba(246, 239, 226, 0.16), transparent 12rem),
+      radial-gradient(circle at 50% 50%, rgba(82, 132, 164, 0.1), transparent 24rem),
+      rgba(0, 2, 5, 0.42);
+    transition: background 0.24s ease;
+  }
+
+  .system-interface__display::before,
+  .system-interface__display::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .system-interface__display::before {
+    inset: 7%;
+    border: 1px solid rgba(232, 228, 220, 0.14);
+    border-radius: 50%;
+    box-shadow:
+      inset 0 0 70px rgba(232, 228, 220, 0.03),
+      0 0 58px rgba(176, 141, 60, 0.08);
+  }
+
+  .system-interface__display::after {
+    left: var(--active-x);
+    top: var(--active-y);
+    width: clamp(86px, 20%, 138px);
     aspect-ratio: 1;
     border-radius: 50%;
-  }
-
-  .system-interface__orb::before {
-    border: 1px solid rgba(232, 228, 220, 0.18);
-    box-shadow:
-      inset 0 0 80px rgba(232, 228, 220, 0.035),
-      0 0 70px rgba(176, 141, 60, 0.08);
-  }
-
-  .system-interface__orb::after {
-    width: min(48vw, 430px);
-    background:
-      radial-gradient(circle, rgba(246, 239, 226, 0.16), transparent 18%),
-      conic-gradient(from 20deg, transparent, rgba(232, 228, 220, 0.16), transparent, rgba(177, 58, 52, 0.14), transparent);
-    filter: blur(0.2px);
-    opacity: 0.72;
-    animation: scaffoldOrbit 36s linear infinite;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(246, 239, 226, 0.18), transparent 64%);
+    filter: blur(2px);
+    transition: left 0.28s ease, top 0.28s ease;
   }
 
   .system-interface__symbol {
-    position: relative;
+    position: absolute;
     z-index: 1;
     display: grid;
     place-items: center;
-    width: clamp(190px, 24vw, 300px);
+    width: min(26vw, 230px);
     aspect-ratio: 1;
-    border: 1px solid rgba(232, 228, 220, 0.22);
-    border-radius: 8px;
-    background:
-      radial-gradient(circle at 50% 48%, rgba(246, 239, 226, 0.15), transparent 60%),
-      rgba(3, 6, 10, 0.72);
-    box-shadow:
-      inset 0 0 42px rgba(232, 228, 220, 0.04),
-      0 22px 70px rgba(0, 0, 0, 0.34);
+    opacity: 0.09;
+    filter: drop-shadow(0 0 22px rgba(232, 228, 220, 0.22));
   }
 
   .system-interface__symbol img {
-    width: 84%;
-    height: 84%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    opacity: 0.96;
-    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.22));
+  }
+
+  .harmonic-array,
+  .resonance-field {
+    position: relative;
+    z-index: 2;
+    width: min(90%, 620px);
+    height: min(78%, 420px);
+  }
+
+  .harmonic-array__rings {
+    position: absolute;
+    inset: 11%;
+    border-radius: 50%;
+    opacity: 0.7;
+    background:
+      repeating-radial-gradient(circle, transparent 0 11%, rgba(232, 228, 220, 0.11) 11.2% 11.55%, transparent 11.9% 17%),
+      conic-gradient(from 8deg, transparent, rgba(176, 141, 60, 0.14), transparent 28%, rgba(177, 58, 52, 0.14), transparent 58%, rgba(232, 228, 220, 0.09), transparent);
+    mask-image: radial-gradient(circle, transparent 0 22%, #000 23% 70%, transparent 72%);
+    animation: interfaceDrift 72s linear infinite;
+  }
+
+  .harmonic-array__baseline {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    top: 68%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232, 228, 220, 0.46), transparent);
+  }
+
+  .harmonic-array__band {
+    position: absolute;
+    left: var(--band-x);
+    top: var(--band-y);
+    width: clamp(48px, 6.8vw, 72px);
+    height: clamp(48px, 6.8vw, 72px);
+    padding: 0;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(232, 228, 220, 0.22);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, rgba(246, 239, 226, 0.22), rgba(177, 58, 52, 0.18) 42%, rgba(0, 2, 5, 0.08) 68%),
+      rgba(1, 5, 10, 0.66);
+    color: rgba(246, 239, 226, 0.8);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .harmonic-array__band::before,
+  .harmonic-array__band::after {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border: 1px solid rgba(176, 141, 60, 0.16);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .harmonic-array__band::after {
+    inset: -20px;
+    border-color: rgba(177, 58, 52, 0.08);
+    opacity: 0.72;
+  }
+
+  .harmonic-array__band span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .harmonic-array__band:hover,
+  .harmonic-array__band:focus-visible,
+  .harmonic-array__band.is-active {
+    transform: translate(-50%, -50%) scale(1.08);
+    border-color: rgba(246, 239, 226, 0.78);
+    background:
+      radial-gradient(circle, rgba(246, 239, 226, 0.34), rgba(177, 58, 52, 0.26) 52%, rgba(176, 141, 60, 0.08)),
+      rgba(5, 8, 14, 0.88);
+    box-shadow: 0 0 24px rgba(176, 141, 60, 0.2);
+    outline: none;
+  }
+
+  .resonance-field svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .resonance-field path {
+    fill: none;
+    stroke: rgba(232, 228, 220, 0.26);
+    stroke-width: 0.35;
+    stroke-dasharray: 2 4;
+    animation: fieldDash 12s linear infinite;
+  }
+
+  .resonance-field__cursor {
+    position: absolute;
+    left: var(--active-x);
+    top: var(--active-y);
+    width: clamp(72px, 11vw, 116px);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(246, 239, 226, 0.46);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(246, 239, 226, 0.12), transparent 68%);
+    box-shadow: 0 0 30px rgba(176, 141, 60, 0.18);
+    transition: left 0.28s ease, top 0.28s ease;
+  }
+
+  .resonance-field__node {
+    position: absolute;
+    left: var(--node-x);
+    top: var(--node-y);
+    display: grid;
+    place-items: center;
+    width: clamp(46px, 6.5vw, 70px);
+    aspect-ratio: 1;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(232, 228, 220, 0.26);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, rgba(246, 239, 226, 0.15), transparent 60%),
+      rgba(1, 5, 10, 0.84);
+    color: rgba(246, 239, 226, 0.84);
+    cursor: pointer;
+    box-shadow: inset 0 0 22px rgba(232, 228, 220, 0.04);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .resonance-field__node span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .resonance-field__node:hover,
+  .resonance-field__node:focus-visible,
+  .resonance-field__node.is-active {
+    transform: translate(-50%, -50%) scale(1.08);
+    border-color: rgba(246, 239, 226, 0.82);
+    background:
+      radial-gradient(circle, rgba(246, 239, 226, 0.24), transparent 62%),
+      rgba(3, 9, 15, 0.94);
+    box-shadow:
+      inset 0 0 26px rgba(232, 228, 220, 0.08),
+      0 0 24px rgba(176, 141, 60, 0.18);
+    outline: none;
   }
 
   .system-interface__panel {
     position: relative;
     padding: 24px;
-    border: 1px solid rgba(232, 228, 220, 0.18);
-    border-radius: 8px;
-    background:
-      radial-gradient(circle at 8% 0%, rgba(176, 141, 60, 0.09), transparent 38%),
-      linear-gradient(145deg, rgba(7, 8, 13, 0.94), rgba(1, 4, 8, 0.88));
+  }
+
+  .system-interface__panel > * {
+    position: relative;
   }
 
   .system-interface__panel h2 {
-    margin: 8px 0 12px;
-    font-family: "Cormorant Garamond", serif;
     font-size: clamp(34px, 4vw, 48px);
-    line-height: 1;
   }
 
   .system-interface__panel p,
-  .system-interface dd {
+  .system-interface dd,
+  .system-interface__output p,
+  .system-interface__cautions li {
     font-family: "DM Sans", sans-serif;
     font-size: 13px;
     line-height: 1.7;
     color: rgba(232, 228, 220, 0.64);
   }
 
-  .system-interface dl {
+  .system-interface__panel dl {
     display: grid;
     gap: 12px;
     margin: 20px 0 0;
   }
 
-  .system-interface dl div {
+  .system-interface__panel dl div {
     padding-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
@@ -296,27 +1926,348 @@ const observatoryHref = localizedPath(locale, "/systems/observatory/");
     outline-offset: 4px;
   }
 
-  @keyframes scaffoldOrbit {
+  .system-interface__reader {
+    max-width: 1240px;
+    margin: 18px auto 0;
+    padding: 24px;
+  }
+
+  .system-interface__reader-head h2 {
+    max-width: 780px;
+    font-size: clamp(28px, 4vw, 46px);
+  }
+
+  .system-interface__reader-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 410px);
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .system-interface__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    align-self: start;
+  }
+
+  .system-interface__card {
+    min-height: 138px;
+    padding: 16px;
+    border: 1px solid rgba(232, 228, 220, 0.14);
+    border-radius: 6px;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(232, 228, 220, 0.08), transparent 42%),
+      rgba(0, 2, 5, 0.4);
+    color: rgba(232, 228, 220, 0.76);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .system-interface__card span,
+  .system-interface__card small {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .system-interface__card span {
+    color: rgba(176, 141, 60, 0.84);
+  }
+
+  .system-interface__card strong {
+    display: block;
+    margin: 24px 0 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(23px, 2.2vw, 28px);
+    line-height: 1.04;
+    color: rgba(246, 239, 226, 0.94);
+  }
+
+  .system-interface__card small {
+    color: rgba(232, 228, 220, 0.42);
+  }
+
+  .system-interface__card:hover,
+  .system-interface__card:focus-visible,
+  .system-interface__card.is-active {
+    transform: translateY(-3px);
+    border-color: rgba(246, 239, 226, 0.5);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(177, 58, 52, 0.18), transparent 44%),
+      rgba(3, 7, 13, 0.8);
+    outline: none;
+  }
+
+  .system-interface__card:focus-visible,
+  .harmonic-array__band:focus-visible,
+  .resonance-field__node:focus-visible {
+    outline: 2px solid rgba(232, 228, 220, 0.82);
+    outline-offset: 4px;
+  }
+
+  .system-interface__output {
+    min-height: 100%;
+    padding: 22px;
+    border: 1px solid rgba(232, 228, 220, 0.14);
+    border-radius: 6px;
+    background:
+      radial-gradient(circle at 10% 0%, rgba(176, 141, 60, 0.11), transparent 38%),
+      rgba(1, 4, 8, 0.64);
+  }
+
+  .system-interface__output-marker {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(176, 141, 60, 0.86);
+  }
+
+  .system-interface__output h3 {
+    font-size: clamp(34px, 4vw, 50px);
+  }
+
+  .system-interface__output-level {
+    margin: 8px 0 18px;
+    color: rgba(232, 228, 220, 0.46);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  .system-interface__output div {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .system-interface__cautions {
+    max-width: 1240px;
+    margin: 18px auto 0;
+    padding: 22px 24px 24px;
+  }
+
+  .system-interface__cautions h2 {
+    font-size: clamp(28px, 4vw, 42px);
+  }
+
+  .system-interface__cautions ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+  }
+
+  .system-interface__cautions li {
+    min-height: 92px;
+    padding: 14px;
+    border: 1px solid rgba(232, 228, 220, 0.11);
+    border-radius: 6px;
+    background: rgba(0, 2, 5, 0.36);
+  }
+
+  @keyframes interfaceDrift {
     to { transform: rotate(360deg); }
   }
 
-  @media (max-width: 820px) {
+  @keyframes pressureDrift {
+    to { stroke-dashoffset: -24; }
+  }
+
+  @keyframes resonanceRipple {
+    0% {
+      opacity: 0;
+      r: 4;
+    }
+    14% {
+      opacity: 0.72;
+    }
+    100% {
+      opacity: 0;
+      r: 78;
+    }
+  }
+
+  @keyframes orbitTurn {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  @keyframes orbitCounterTurn {
+    to { transform: translate(-50%, -50%) rotate(-360deg); }
+  }
+
+  @keyframes thinFlicker {
+    0%, 100% { opacity: 0.64; }
+    50% { opacity: 0.96; }
+  }
+
+  @keyframes densityDrift {
+    0%, 100% { filter: none; }
+    50% { filter: drop-shadow(0 0 14px rgba(232, 228, 220, 0.18)); }
+  }
+
+  @keyframes fieldDash {
+    to { stroke-dashoffset: -24; }
+  }
+
+  @media (max-width: 1040px) {
+    .system-interface__stage,
+    .system-interface__reader-grid,
+    .resonance-lab-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .system-interface__panel,
+    .resonance-panel {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .system-interface__cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 720px) {
     .system-interface {
-      padding-inline: 16px;
+      padding: 34px 16px 64px;
     }
 
     .system-interface__header {
       text-align: left;
     }
 
-    .system-interface__stage {
+    .system-interface__tags {
+      justify-content: flex-start;
+    }
+
+    .system-interface__metrics,
+    .system-interface__cautions ul {
       grid-template-columns: 1fr;
+    }
+
+    .system-interface__instrument {
+      min-height: 500px;
+    }
+
+    .system-interface__display {
+      inset: 92px 12px 12px;
+    }
+
+    .harmonic-array,
+    .resonance-field {
+      width: 96%;
+      height: 80%;
+    }
+
+    .system-interface__cards {
+      grid-template-columns: 1fr;
+    }
+
+    .system-interface__card {
+      min-height: 118px;
+    }
+
+    .system-interface__card strong {
+      margin-top: 22px;
+    }
+
+    .resonance-lab {
+      min-height: 620px;
+    }
+
+    .resonance-fieldboard {
+      inset: 116px 12px 104px;
+    }
+
+    .resonance-map {
+      min-width: 100%;
+      transform: none;
+    }
+
+    .resonance-node__small {
+      display: none;
+    }
+
+    .resonance-gradient-control {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .resonance-experiment {
+      grid-template-columns: 1fr;
+    }
+
+    .resonance-experiment__actions {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .system-interface__instrument {
+      min-height: 440px;
+    }
+
+    .harmonic-array__band {
+      width: 42px;
+      height: 42px;
+    }
+
+    .resonance-field__node {
+      width: 44px;
+    }
+
+    .resonance-lab {
+      min-height: 560px;
+    }
+
+    .resonance-lab__head {
+      padding-inline: 16px;
+    }
+
+    .resonance-fieldboard {
+      inset: 116px 10px 128px;
+    }
+
+    .resonance-map {
+      min-width: 100%;
+      transform: none;
+    }
+
+    .resonance-panel,
+    .resonance-experiment {
+      padding: 18px;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .system-interface__orb::after {
+    .harmonic-array__rings,
+    .resonance-lab-shell.is-gradient-visible .resonance-line--primary,
+    .resonance-lab-shell.is-disturbed .resonance-ripple,
+    .resonance-added-node--thin,
+    .resonance-lab-shell.is-density-drift .resonance-node--similar,
+    .resonance-lab-shell.is-density-drift .resonance-added-node--thin {
       animation: none;
+    }
+
+    .system-interface__display,
+    .system-interface__display::after,
+    .harmonic-array__band,
+    .resonance-field__cursor,
+    .resonance-field__node,
+    .system-interface__card,
+    .resonance-node,
+    .resonance-field-halo,
+    .resonance-node circle {
+      transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
     }
   }
 </style>
