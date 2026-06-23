@@ -6,6 +6,13 @@ dist/
 playwright-report/
 test-results/
 open-design/
+open design prototypes/
+tmp-layout-check/
+preview-test*.log
+*.artifact.json
+.agents/
+.od-skills/
+src/content/config.ts
 The Archive/*
 !The Archive/Characters/
 !The Archive/Characters/**

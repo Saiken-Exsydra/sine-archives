@@ -63,3 +63,12 @@ If a command fails, explain the failure in plain English before trying fixes. Do
 - Do not connect to Cloudflare.
 - Do not change Cloudflare Pages, Workers, DNS, secrets, environment variables, or production settings unless explicitly asked.
 - Deployment-related files such as `public/_headers`, `public/robots.txt`, `astro.config.mjs`, `package.json`, and `package-lock.json` require extra care and a clear reason before editing.
+
+## Open Design
+
+- This repo supports Open Design through project-local skills in `skills/`.
+- The Open Design design system lives at `design-systems/redactory/DESIGN.md`; `DESIGN_SYSTEM.md` remains the project source of truth.
+- Do not assume a root `DESIGN.md` exists; this repository uses root `DESIGN_SYSTEM.md`.
+- Before visual edits, Codex should read this file, `DESIGN_SYSTEM.md`, the active Open Design skill, and the target route/component.
+- Use browser or Playwright inspection when visual changes affect layout, motion, responsiveness, or interaction.
+- Keep Open Design work scoped; do not rewrite unrelated files, routes, layouts, assets, or deployment settings.
