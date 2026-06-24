@@ -10,6 +10,36 @@
     "cover": "/music/covers/tracks--Glass%20Server%20Archive.jpg"
   },
   {
+    "title": "LEn'Ore iS HerE*^!",
+    "artist": "vaeltheryn",
+    "album": "LEn'Ore iS HerE_^!",
+    "year": null,
+    "track": null,
+    "duration": 162.26,
+    "src": "/music/tracks/LEn'Ore%20iS%20HerE_%5E!.mp3",
+    "cover": "/music/source-covers/lenore-is-here-cover.png"
+  },
+  {
+    "title": "Le'nore",
+    "artist": "vaeltheryn",
+    "album": "Le'nore",
+    "year": null,
+    "track": null,
+    "duration": 113.54,
+    "src": "/music/tracks/Le'nore.mp3",
+    "cover": "/music/source-covers/lenore-cover.png"
+  },
+  {
+    "title": "Left Unsaid (Lenore's Memoir)",
+    "artist": "vaeltheryn",
+    "album": "Left Unsaid",
+    "year": null,
+    "track": null,
+    "duration": 125.54,
+    "src": "/music/tracks/Left%20Unsaid%20(Lenore's%20Memoir).mp3",
+    "cover": "/music/source-covers/left-unsaid-cover.png"
+  },
+  {
     "title": "Moonsick",
     "artist": "Skadi",
     "album": "Moonsick",
@@ -30,6 +60,16 @@
     "cover": "/music/source-covers/sistera-no-1-cover.png"
   },
   {
+    "title": "Sol'ytra",
+    "artist": "vaeltheryn",
+    "album": "Sol'ytra",
+    "year": null,
+    "track": null,
+    "duration": 298.03,
+    "src": "/music/tracks/Sol'ytra.mp3",
+    "cover": "/music/source-covers/solytra-cover.png"
+  },
+  {
     "title": "Tacet Lapis",
     "artist": null,
     "album": null,
@@ -38,5 +78,15 @@
     "duration": 288,
     "src": "/music/tracks/Tacet%20Lapis.mp3",
     "cover": "/music/source-covers/tacet-lapis-cover.png"
+  },
+  {
+    "title": "Wounded Crown Authority",
+    "artist": "vaeltheryn",
+    "album": "Wounded Crown Authority",
+    "year": null,
+    "track": null,
+    "duration": 174.96,
+    "src": "/music/tracks/Wounded%20Crown%20Authority.mp3",
+    "cover": "/music/source-covers/wounded-crown-authority-cover.png"
   }
 ]

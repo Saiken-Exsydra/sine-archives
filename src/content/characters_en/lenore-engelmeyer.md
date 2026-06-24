@@ -33,7 +33,7 @@ tags:
   - "Voren"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-11"
+updated: "2026-06-24"
 codex_file: "Lenore Engelmeyer Dossier.md"
 ---
 
@@ -50,15 +50,17 @@ That surface is real. It is also incomplete.
 
 The official system calls her a **Deception Anchor** case because that is the nearest safe category for what she lets institutions see. In reality, her condition reaches much farther than misdirection or illusion. It touches hunger, body structure, memory, and identity in ways the official label does not begin to cover.
 
+The deeper truth is not possession, corruption, or divine use. Le'nore is not being driven by an outside will. The Quiet Moon-derived grammar in her is native to her recursive structure, which means her warmth, hunger, restraint, cruelty, humor, and affection are all part of one coherent person.
+
 ## Identity
 
 **Public Identity:** An easy-to-like young Redactor whose warmth makes her file sound far safer than it is.
 
 **Institutional Identity:** A sealed-leaf [[quill|Quill]] case formally categorized under Deception and kept under specialist review because the official label is only partially true.
 
-**Private Truth:** Le'nore's condition reaches beyond illusion into hunger, identity, body-logic, and the controlled folding together of incompatible selves.
+**Private Truth:** Le'nore is a completed compatibility event between human recursive singularity and Quiet Moon-derived biological grammar.
 
-**Primary Tension:** She appears most stable when she is already curating what other people are allowed to understand about her.
+**Primary Tension:** She appears most stable when she is already curating what other people are allowed to understand about her, and the curation feels like everyone else's good judgment.
 
 ## Personality
 
@@ -66,7 +68,7 @@ Le'nore is warm, careful, and frighteningly self-integrated. She does not feel l
 
 She is also quietly methodical. She studies people, follows patterns, and treats uncertainty as information rather than panic.
 
-That is part of what makes her dangerous. She does not need to become visibly monstrous to control a room.
+That is part of what makes her dangerous. She does not need to become visibly monstrous to control a room. Her presence applies passive interpretive pressure: uncertainty resolves in her favor, fear arrives late, and people often mistake their softened resistance for their own conclusion.
 
 ## Background
 
@@ -103,10 +105,13 @@ The deeper problem is that those effects are only the part institutions can safe
 
 Le'nore also appears able to:
 
+- bias social interpretation without issuing commands or overriding will;
 - alter her own body far beyond normal human limits;
 - move, heal, and physically respond in ways her visible frame should not support;
 - consume a person and retain something of that person's pattern;
 - later reproduce voice, movement, or behavior from what was taken;
+- reveal a brief, deliberate smile that exposes too much mouth, too many teeth, and too much depth before returning to civility;
+- alter nearby conditions during high expression in ways that favor isolation, pursuit, or concealment;
 - manage a steady predatory hunger without becoming irrational.
 
 The simplest way to understand this is that Deception is not the whole truth. It is the safest mask for a much stranger condition.
@@ -115,9 +120,11 @@ The simplest way to understand this is that Deception is not the whole truth. It
 
 Le'nore is not "just" an illusionist, but she is also not an indiscriminate predator.
 
-One of the most disturbing things about her is that her hunger is rational. She plans around it. She restrains it. She appears to target people whose disappearance is least likely to trigger serious institutional pursuit.
+One of the most disturbing things about her is that her hunger is rational. She plans around it. She restrains it. She follows a private predatory ethic that favors people she has judged violent, abusive, corrupt, predatory, or otherwise deserving. The code is sincere. It is also private, appetite-bearing, and dangerous.
 
-Her biggest limits seem to be personal rather than technical. She does not use every part of what she carries equally. The clearest example is her mother. She has never reproduced Re'lha's pattern, which suggests there are truths inside herself she can technically reach but still refuses to touch.
+Her biggest limits seem to be personal and experiential rather than technical. She has not spent her life fighting peers, Archtypes, artifact-bearers, or prepared institutions. She can be forced back by exceptional environmental leverage, specialized tools, or opponents who survive first contact. She can also be made careless by attachment, grief, and the temptation to play with prey.
+
+She does not use every part of what she carries equally. The clearest example is her mother. She has never reproduced Re'lha's pattern, which suggests there are truths inside herself she can technically reach but still refuses to touch.
 
 ## Important Relationships
 
@@ -134,5 +141,7 @@ Her biggest limits seem to be personal rather than technical. She does not use e
 Le'nore matters because she exposes the limits of classification, morality, and ordinary social reading all at once.
 
 She reminds the reader that not every dangerous being announces danger through spectacle. Some of them are charming, patient, kind-seeming, and socially fluent. Some of them have built a stable self out of truths the world still has no category for.
+
+For threat purposes, the Quill label is catastrophically incomplete. Le'nore is operationally Archtype-level without being a conventional Archtype, and any institution that tries to treat her as a merely unusual Deception practitioner is already late to the danger.
 
 ## Deeper Lore

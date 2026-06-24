@@ -20,11 +20,31 @@ const TRACK_OVERRIDES = {
     album: "Moonsick",
     cover: "/music/source-covers/gravitas-cover.png",
   },
+  "/music/tracks/LEn'Ore%20iS%20HerE_%5E!.mp3": {
+    album: "LEn'Ore iS HerE_^!",
+    cover: "/music/source-covers/lenore-is-here-cover.png",
+  },
+  "/music/tracks/Le'nore.mp3": {
+    album: "Le'nore",
+    cover: "/music/source-covers/lenore-cover.png",
+  },
+  "/music/tracks/Left%20Unsaid%20(Lenore's%20Memoir).mp3": {
+    album: "Left Unsaid",
+    cover: "/music/source-covers/left-unsaid-cover.png",
+  },
   "/music/tracks/Sistera%20N%C2%B0%201.mp3": {
     cover: "/music/source-covers/sistera-no-1-cover.png",
   },
+  "/music/tracks/Sol'ytra.mp3": {
+    album: "Sol'ytra",
+    cover: "/music/source-covers/solytra-cover.png",
+  },
   "/music/tracks/Tacet%20Lapis.mp3": {
     cover: "/music/source-covers/tacet-lapis-cover.png",
+  },
+  "/music/tracks/Wounded%20Crown%20Authority.mp3": {
+    album: "Wounded Crown Authority",
+    cover: "/music/source-covers/wounded-crown-authority-cover.png",
   },
 };
 

@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getLocalizedMusicCatalog } from "../../data/music";
+import { SHOW_HIDDEN_MUSIC_TRACKS, getLocalizedMusicCatalog } from "../../data/music";
 import songs from "../../data/songs.json";
 import { localizedPath, type SiteLocale } from "../../i18n/config";
 import { getArchiveNavLabels } from "../../i18n/ui";
@@ -16,6 +16,7 @@ const formatDurationLabel = (duration?: number | null) => {
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const navLabels = getArchiveNavLabels(locale);
 const tracks = getLocalizedMusicCatalog(locale);
+const allTracks = getLocalizedMusicCatalog(locale, { includeHidden: true });
 
 const copy = locale === "pt-br"
   ? {
@@ -23,6 +24,11 @@ const copy = locale === "pt-br"
       featuredTrack: "Faixa em destaque",
       audioCatalog: "Catalogo de audio",
       title: "Trilhas Sonoras",
+      subtitle: "Console de escuta para faixas indexadas no arquivo.",
+      libraryAccess: "Biblioteca sonora",
+      nowPlaying: "Agora no canal",
+      source: "Fonte",
+      classification: "Classificacao",
       countSingular: "faixa",
       countPlural: "faixas",
       track: "Faixa",
@@ -56,6 +62,11 @@ const copy = locale === "pt-br"
       featuredTrack: "Featured track",
       audioCatalog: "Audio catalog",
       title: "Soundtracks",
+      subtitle: "Listening console for indexed archive recordings.",
+      libraryAccess: "Sound library",
+      nowPlaying: "Now playing",
+      source: "Source",
+      classification: "Classification",
       countSingular: "track",
       countPlural: "tracks",
       track: "Track",
@@ -85,10 +96,14 @@ const copy = locale === "pt-br"
       unclassifiedMood: "Recorded piece",
     };
 
-const metadataEntries = songs.map((song, index) => {
-  const linkedTrack = tracks.find((track) => track.audioSrc === song.src);
+const metadataEntries = songs.flatMap((song, index) => {
+  const linkedTrack = allTracks.find((track) => track.audioSrc === song.src);
 
-  return {
+  if (linkedTrack?.hidden && !SHOW_HIDDEN_MUSIC_TRACKS) {
+    return [];
+  }
+
+  return [{
     id: linkedTrack?.id ?? `song-${index + 1}`,
     kind: linkedTrack?.kind ?? "song",
     kindLabel: linkedTrack?.kindLabel ?? copy.song,
@@ -102,7 +117,7 @@ const metadataEntries = songs.map((song, index) => {
     summary: linkedTrack?.summary ?? song.album ?? "",
     trackId: linkedTrack?.id ?? null,
     mood: linkedTrack?.mood ?? copy.unclassifiedMood,
-  };
+  }];
 });
 
 const metadataSrcSet = new Set(metadataEntries.map((entry) => entry.src));
@@ -167,8 +182,11 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
     <div class="sine-grain"></div>
 
     <div class="sound-shell">
-      <aside class="sound-feature" data-sound-deck>
-        <div class="sound-feature__header">{copy.featuredTrack}</div>
+      <aside class="sound-feature" data-sound-deck aria-label={copy.nowPlaying}>
+        <div class="sound-feature__header">
+          <span>{copy.nowPlaying}</span>
+          <span data-deck-status>{copy.playerReady}</span>
+        </div>
 
         <div class="sound-feature__artwrap">
           <img
@@ -180,6 +198,10 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
             decoding="async"
           />
           <div class="sound-feature__artshade"></div>
+          <div class="sound-feature__scope" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
         </div>
 
         <div class="sound-feature__body">
@@ -243,8 +265,6 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
             <span>{copy.viewAlbum}</span>
             <span aria-hidden="true">→</span>
           </a>
-
-          <div class="sound-feature__status" data-deck-status>{copy.playerReady}</div>
         </div>
       </aside>
 
@@ -253,9 +273,11 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
           <div class="sound-catalog__lead">
             <div class="sound-catalog__eyebrow">{copy.audioCatalog}</div>
             <h1 class="sound-catalog__title">{copy.title}</h1>
+            <p class="sound-catalog__subtitle">{copy.subtitle}</p>
             <div class="sound-catalog__ornament"></div>
-            <div class="sound-catalog__count" id="sound-count-body">
-              {total} {total === 1 ? copy.countSingular : copy.countPlural}
+            <div class="sound-catalog__summary">
+              <span>{copy.libraryAccess}</span>
+              <span id="sound-count-body">{total} {total === 1 ? copy.countSingular : copy.countPlural}</span>
             </div>
           </div>
         </header>
@@ -263,7 +285,8 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
         <div class="sound-table">
           <div class="sound-table__head">
             <div>{copy.track}</div>
-            <div>{copy.artistAlbum}</div>
+            <div>{copy.source}</div>
+            <div>{copy.classification}</div>
             <div>{copy.duration}</div>
           </div>
 
@@ -297,7 +320,14 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
                   style={`--sound-delay: ${0.06 * index}s;`}
                 >
                   <div class="sound-row__track">
-                    <div class="sound-row__accent"></div>
+                    <div class="sound-row__index" aria-hidden="true">
+                      <span class="sound-row__number">{String(index + 1).padStart(2, "0")}</span>
+                      <span class="sound-row__signal">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </span>
+                    </div>
                     <div class="sound-row__cover">
                       <img src={entry.cover} alt="" loading="lazy" decoding="async" />
                     </div>
@@ -313,6 +343,10 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
                     <span class="sound-row__album">{entry.album}</span>
                   </div>
 
+                  <div class="sound-row__classification">
+                    <span>{entry.mood}</span>
+                  </div>
+
                   <div class="sound-row__actions">
                     <button
                       class="sound-row__play"
@@ -326,12 +360,6 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
                     </button>
 
                     <span class="sound-row__duration">{entry.durationLabel ?? "00:00"}</span>
-
-                    <button class="sound-row__more" type="button" aria-label={copy.moreOptions} title={copy.moreOptions}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </button>
                   </div>
                 </article>
               );
@@ -341,18 +369,6 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
         <div class="sound-empty" id="sound-empty" hidden>{copy.noResults}</div>
 
-        <div class="sound-pagination" aria-label="Pagination">
-          <span class="sound-pagination__count">01 / 01</span>
-          <div class="sound-pagination__controls">
-            <button class="sound-pagination__btn" type="button" aria-label={copy.previous} disabled>
-              <img src="/uploads/previous.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-            </button>
-            <button class="sound-pagination__btn sound-pagination__btn--current" type="button" aria-current="page">1</button>
-            <button class="sound-pagination__btn" type="button" aria-label={copy.next} disabled>
-              <img src="/uploads/next.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -491,6 +507,12 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
           const isActive = trackId === activeTrackId;
 
           card.classList.toggle('is-active-track', isActive);
+          card.classList.toggle('is-playing-track', isActive && activePlaying);
+          if (isActive) {
+            card.setAttribute('aria-current', 'true');
+          } else {
+            card.removeAttribute('aria-current');
+          }
 
           if (!button || !icon) {
             return;
@@ -1602,6 +1624,531 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       .sound-row__album {
         font-size: 9px;
         letter-spacing: 0.18em;
+      }
+    }
+
+    /* Archive music console polish */
+    @keyframes soundSignalPulse {
+      0%, 100% { transform: scaleY(0.32); opacity: 0.48; }
+      45% { transform: scaleY(1); opacity: 0.95; }
+    }
+
+    :global(body.page--soundtracks) {
+      background:
+        radial-gradient(circle at 78% 12%, rgba(177, 58, 52, 0.12), transparent 24%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018), transparent 18%, transparent 82%, rgba(176, 141, 60, 0.035)),
+        #050407;
+    }
+
+    .sound-archive {
+      padding: clamp(18px, 2.4vw, 34px);
+    }
+
+    .sound-archive__veil {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 210px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 96px);
+      opacity: 0.56;
+    }
+
+    .sound-archive__glow {
+      background:
+        radial-gradient(circle at 82% 18%, rgba(177, 58, 52, 0.16), transparent 20%),
+        radial-gradient(circle at 12% 82%, rgba(176, 141, 60, 0.08), transparent 24%);
+    }
+
+    .sound-shell {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 392px);
+      gap: clamp(24px, 3vw, 44px);
+      max-width: 1500px;
+      margin: 0 auto;
+      min-height: calc(100vh - var(--nav-height) - 54px);
+    }
+
+    .sound-catalog {
+      order: 1;
+      padding-top: clamp(10px, 2vw, 28px);
+      gap: 22px;
+    }
+
+    .sound-feature {
+      order: 2;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 26%),
+        rgba(6, 6, 11, 0.92);
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.045),
+        0 34px 76px rgba(0, 0, 0, 0.42);
+    }
+
+    .sound-feature::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(177, 58, 52, 0.72), rgba(176, 141, 60, 0.26), transparent);
+      pointer-events: none;
+    }
+
+    .sound-feature__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px 14px;
+      color: rgba(232, 228, 220, 0.68);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .sound-feature__header span:first-child,
+    .sound-catalog__eyebrow,
+    .sound-catalog__summary,
+    .sound-table__head,
+    .sound-row__kind,
+    .sound-row__artist,
+    .sound-row__album,
+    .sound-row__duration,
+    .sound-row__classification,
+    .sound-feature__kind,
+    .sound-feature__artist,
+    .sound-feature__album,
+    .sound-feature__time,
+    .sound-feature__volume-value {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+    }
+
+    .sound-feature__header span:first-child,
+    .sound-catalog__eyebrow,
+    .sound-feature__kind,
+    .sound-row__kind {
+      color: rgba(176, 141, 60, 0.86);
+    }
+
+    .sound-feature__header span:last-child {
+      color: rgba(177, 58, 52, 0.82);
+      text-align: right;
+    }
+
+    .sound-feature__artwrap {
+      margin: 22px 22px 0;
+      aspect-ratio: 1 / 0.82;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.018);
+    }
+
+    .sound-feature__art {
+      filter: brightness(0.78) saturate(0.86) contrast(1.08);
+      transition: transform 0.32s ease, filter 0.32s ease;
+    }
+
+    .sound-feature.is-playing .sound-feature__art {
+      transform: scale(1.018);
+      filter: brightness(0.92) saturate(0.94) contrast(1.12);
+    }
+
+    .sound-feature__artshade {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 34%),
+        linear-gradient(0deg, rgba(5, 4, 7, 0.48), transparent 44%);
+    }
+
+    .sound-feature__scope {
+      position: absolute;
+      inset: 16px;
+      pointer-events: none;
+    }
+
+    .sound-feature__scope span {
+      position: absolute;
+      border: 1px solid rgba(232, 228, 220, 0.2);
+    }
+
+    .sound-feature__scope span:first-child {
+      inset: 0;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    .sound-feature__scope span:last-child {
+      right: 0;
+      bottom: 0;
+      width: 38%;
+      height: 38%;
+      border-left-color: transparent;
+      border-top-color: transparent;
+    }
+
+    .sound-feature__body {
+      gap: 13px;
+      padding: 22px;
+    }
+
+    .sound-feature__title {
+      font-size: clamp(32px, 3vw, 46px);
+      line-height: 0.95;
+      letter-spacing: -0.018em;
+    }
+
+    .sound-feature__summary {
+      color: rgba(232, 228, 220, 0.66);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .sound-feature__progress,
+    .sound-feature__volume-input {
+      accent-color: var(--crimson);
+    }
+
+    .sound-feature__transport,
+    .sound-feature__volume-toggle,
+    .sound-row__play {
+      border-radius: 2px;
+      border-color: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .sound-feature__transport--primary,
+    .sound-row__play {
+      border-color: rgba(177, 58, 52, 0.48);
+      background: rgba(177, 58, 52, 0.13);
+    }
+
+    .sound-feature__transport:focus-visible,
+    .sound-feature__volume-toggle:focus-visible,
+    .sound-row:focus-visible,
+    .sound-row__play:focus-visible,
+    .sound-feature__progress:focus-visible,
+    .sound-feature__volume-input:focus-visible {
+      outline: 1px solid rgba(176, 141, 60, 0.72);
+      outline-offset: 3px;
+    }
+
+    .sound-catalog__hero {
+      padding: 0 0 10px;
+    }
+
+    .sound-catalog__lead {
+      max-width: 780px;
+      gap: 12px;
+    }
+
+    .sound-catalog__title {
+      font-size: clamp(62px, 7vw, 98px);
+      letter-spacing: -0.028em;
+      text-wrap: balance;
+    }
+
+    .sound-catalog__subtitle {
+      max-width: 52ch;
+      color: rgba(232, 228, 220, 0.68);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .sound-catalog__ornament {
+      width: min(360px, 56vw);
+      background: linear-gradient(90deg, rgba(177, 58, 52, 0.7), rgba(176, 141, 60, 0.28), transparent);
+    }
+
+    .sound-catalog__summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: rgba(232, 228, 220, 0.52);
+      text-transform: uppercase;
+    }
+
+    .sound-catalog__summary span + span::before {
+      content: "/";
+      margin-right: 12px;
+      color: rgba(232, 228, 220, 0.28);
+    }
+
+    .sound-table {
+      border-top-color: rgba(255, 255, 255, 0.12);
+      background: rgba(4, 4, 8, 0.42);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.028);
+    }
+
+    .sound-table__head,
+    .sound-row {
+      grid-template-columns: minmax(280px, 1.45fr) minmax(150px, 0.62fr) minmax(150px, 0.52fr) 128px;
+      gap: 18px;
+    }
+
+    .sound-table__head {
+      padding: 13px 16px;
+      color: rgba(232, 228, 220, 0.4);
+    }
+
+    .sound-row {
+      min-height: 92px;
+      padding: 12px 16px;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .sound-row:last-child {
+      border-bottom: 0;
+    }
+
+    .sound-row:hover,
+    .sound-row:focus-visible {
+      background: rgba(255, 255, 255, 0.035);
+      border-color: rgba(255, 255, 255, 0.12);
+      transform: none;
+    }
+
+    .sound-row.is-active-track {
+      background:
+        linear-gradient(90deg, rgba(177, 58, 52, 0.16), rgba(255, 255, 255, 0.025) 42%, transparent),
+        rgba(255, 255, 255, 0.018);
+      box-shadow:
+        inset 1px 0 0 rgba(177, 58, 52, 0.84),
+        inset 0 0 0 1px rgba(177, 58, 52, 0.12);
+    }
+
+    .sound-row__track {
+      grid-template-columns: 42px 56px minmax(0, 1fr);
+      gap: 14px;
+    }
+
+    .sound-row__index {
+      min-height: 56px;
+      display: grid;
+      place-items: center;
+      color: rgba(232, 228, 220, 0.36);
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+    .sound-row__signal {
+      display: none;
+      align-items: end;
+      gap: 3px;
+      height: 18px;
+    }
+
+    .sound-row__signal span {
+      width: 2px;
+      height: 18px;
+      transform-origin: bottom;
+      background: rgba(176, 141, 60, 0.86);
+      animation: soundSignalPulse 0.9s ease-in-out infinite;
+    }
+
+    .sound-row__signal span:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .sound-row__signal span:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .sound-row.is-playing-track .sound-row__number {
+      display: none;
+    }
+
+    .sound-row.is-playing-track .sound-row__signal {
+      display: inline-flex;
+    }
+
+    .sound-row__cover {
+      width: 56px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sound-row__cover img {
+      filter: brightness(0.72) saturate(0.82) contrast(1.08);
+    }
+
+    .sound-row:hover .sound-row__cover img,
+    .sound-row.is-active-track .sound-row__cover img {
+      filter: brightness(0.92) saturate(0.94) contrast(1.12);
+    }
+
+    .sound-row__copy {
+      gap: 5px;
+    }
+
+    .sound-row__title {
+      font-size: clamp(25px, 2.2vw, 34px);
+      line-height: 1;
+      letter-spacing: -0.014em;
+    }
+
+    .sound-row__meta {
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .sound-row__artist,
+    .sound-row__album,
+    .sound-row__duration,
+    .sound-row__classification {
+      color: rgba(232, 228, 220, 0.58);
+    }
+
+    .sound-row__classification span {
+      display: inline-flex;
+      width: fit-content;
+      max-width: 100%;
+      padding: 6px 9px;
+      border: 1px solid rgba(176, 141, 60, 0.2);
+      color: rgba(232, 228, 220, 0.62);
+      background: rgba(176, 141, 60, 0.055);
+    }
+
+    .sound-row__actions {
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      justify-content: end;
+    }
+
+    .sound-row__play {
+      min-height: 42px;
+      width: 42px;
+    }
+
+    .sound-row__duration {
+      justify-self: end;
+    }
+
+    @media (max-width: 1180px) {
+      .sound-shell {
+        grid-template-columns: 1fr;
+        max-width: 860px;
+      }
+
+      .sound-feature {
+        order: 1;
+        position: relative;
+        top: 0;
+      }
+
+      .sound-catalog {
+        order: 2;
+      }
+
+      .sound-feature__artwrap {
+        aspect-ratio: 16 / 7;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .sound-table__head {
+        display: none;
+      }
+
+      .sound-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 15px 14px;
+      }
+
+      .sound-row__meta,
+      .sound-row__classification,
+      .sound-row__actions {
+        padding-left: 112px;
+      }
+
+      .sound-row__actions {
+        justify-content: start;
+        grid-template-columns: 42px auto;
+      }
+
+      .sound-row__duration {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .sound-archive {
+        padding: 12px;
+      }
+
+      .sound-catalog__title {
+        font-size: clamp(42px, 14vw, 58px);
+      }
+
+      .sound-catalog__subtitle {
+        font-size: 14px;
+      }
+
+      .sound-feature__header,
+      .sound-feature__body,
+      .sound-feature__artwrap {
+        margin-left: 14px;
+        margin-right: 14px;
+      }
+
+      .sound-feature__header {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .sound-row__track {
+        grid-template-columns: 34px 50px minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .sound-row__cover {
+        width: 50px;
+      }
+
+      .sound-row__title {
+        font-size: clamp(23px, 8vw, 30px);
+      }
+
+      .sound-row__meta,
+      .sound-row__classification,
+      .sound-row__actions {
+        padding-left: 94px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .sound-feature__artwrap {
+        aspect-ratio: 1 / 0.78;
+      }
+
+      .sound-feature__controls {
+        grid-template-columns: 46px minmax(0, 1fr) 46px;
+      }
+
+      .sound-row {
+        padding: 14px 10px;
+      }
+
+      .sound-row__meta,
+      .sound-row__classification,
+      .sound-row__actions {
+        padding-left: 0;
+      }
+
+      .sound-row__classification span {
+        max-width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sound-feature,
+      .sound-row,
+      .sound-catalog__hero,
+      .sound-row__signal span {
+        animation: none;
+      }
+
+      .sound-feature__art {
+        transition: none;
       }
     }
   </style>

@@ -24,6 +24,7 @@ type MusicTrackEditorial = {
   summary?: LocalizedString;
   mood?: LocalizedString;
   year?: string;
+  hidden?: boolean;
 };
 
 export type LocalizedMusicTrack = {
@@ -39,9 +40,11 @@ export type LocalizedMusicTrack = {
   duration: string;
   year: string;
   audioSrc: string | null;
+  hidden: boolean;
 };
 
 export const DEFAULT_MUSIC_TRACK_ID = "glass-server-archive";
+export const SHOW_HIDDEN_MUSIC_TRACKS = false;
 
 const KIND_LABELS: Record<SiteLocale, Record<MusicTrackKind, string>> = {
   en: {
@@ -72,20 +75,76 @@ const EDITORIAL_BY_SRC: Record<string, MusicTrackEditorial> = {
     },
     year: "1127",
   },
+  "/music/tracks/LEn'Ore%20iS%20HerE_%5E!.mp3": {
+    id: "lenore-is-here",
+    kind: "song",
+    title: {
+      en: "LEn'Ore iS HerE_^!",
+      "pt-br": "LEn'Ore iS HerE_^!",
+    },
+    subtitle: {
+      en: "Lenore signal file",
+      "pt-br": "Arquivo de sinal de Lenore",
+    },
+    summary: {
+      en: "A volatile Lenore recording indexed from the recovered upload set, paired with its dedicated eclipse cover.",
+      "pt-br": "Uma gravacao volatil de Lenore indexada do conjunto recuperado, pareada com sua capa de eclipse dedicada.",
+    },
+    mood: {
+      en: "Signal intrusion",
+      "pt-br": "Intrusao de sinal",
+    },
+    year: "1127",
+  },
+  "/music/tracks/Le'nore.mp3": {
+    id: "lenore",
+    kind: "song",
+    subtitle: {
+      en: "Lenore track file",
+      "pt-br": "Faixa de Lenore",
+    },
+    summary: {
+      en: "A compact Lenore theme from the recovered upload set, cataloged with its matching archive cover.",
+      "pt-br": "Um tema compacto de Lenore vindo do conjunto recuperado, catalogado com sua capa correspondente.",
+    },
+    mood: {
+      en: "Veiled presence",
+      "pt-br": "Presenca velada",
+    },
+    year: "1127",
+  },
+  "/music/tracks/Left%20Unsaid%20(Lenore's%20Memoir).mp3": {
+    id: "left-unsaid-lenores-memoir",
+    kind: "song",
+    hidden: true,
+    subtitle: {
+      en: "Lenore memoir fragment",
+      "pt-br": "Fragmento de memoria de Lenore",
+    },
+    summary: {
+      en: "A quieter Lenore memoir piece, cataloged from the upload set with its pale eclipse artwork.",
+      "pt-br": "Uma peca mais quieta de memoria de Lenore, catalogada do conjunto enviado com sua arte de eclipse palida.",
+    },
+    mood: {
+      en: "Unsent confession",
+      "pt-br": "Confissao nao enviada",
+    },
+    year: "1127",
+  },
   "/music/tracks/Moonsick.mp3": {
     id: "moonsick",
     kind: "song",
     subtitle: {
-      en: "Standalone single",
-      "pt-br": "Single independente",
+      en: "Quiet Moon motif",
+      "pt-br": "Motivo da Quiet Moon",
     },
     summary: {
-      en: "A song for the Quiet Moon: a distant scar, red rivers in the dark, and the slow warmth of something impossibly far away still looking back.",
-      "pt-br": "Uma cancao para a Quiet Moon: uma cicatriz distante, rios vermelhos no escuro e o calor lento de algo impossivelmente remoto que ainda olha de volta.",
+      en: "A song for the Quiet Moon layer: red rivers, distant attention, and the invitation behind Le'nore's final question.",
+      "pt-br": "Uma cancao para a camada da Quiet Moon: rios vermelhos, atencao distante e o convite por tras da pergunta final de Le'nore.",
     },
     mood: {
-      en: "Moonlit pull",
-      "pt-br": "Atracao lunar",
+      en: "Cursed revelation",
+      "pt-br": "Revelacao maldita",
     },
     year: "1127",
   },
@@ -110,6 +169,24 @@ const EDITORIAL_BY_SRC: Record<string, MusicTrackEditorial> = {
     },
     year: "1127",
   },
+  "/music/tracks/Sol'ytra.mp3": {
+    id: "solytra",
+    kind: "song",
+    hidden: true,
+    subtitle: {
+      en: "Sol'ytra track file",
+      "pt-br": "Faixa de Sol'ytra",
+    },
+    summary: {
+      en: "A Sol'ytra recording indexed from the recovered upload set and paired with its crystalline cover artwork.",
+      "pt-br": "Uma gravacao de Sol'ytra indexada do conjunto recuperado e pareada com sua arte cristalina.",
+    },
+    mood: {
+      en: "Frozen ascent",
+      "pt-br": "Ascensao congelada",
+    },
+    year: "1127",
+  },
   "/music/tracks/Tacet%20Lapis.mp3": {
     id: "tacet-lapis",
     kind: "song",
@@ -124,6 +201,23 @@ const EDITORIAL_BY_SRC: Record<string, MusicTrackEditorial> = {
     mood: {
       en: "Low-lit lament",
       "pt-br": "Lamento em baixa luz",
+    },
+    year: "1127",
+  },
+  "/music/tracks/Wounded%20Crown%20Authority.mp3": {
+    id: "wounded-crown-authority",
+    kind: "song",
+    subtitle: {
+      en: "Authority track file",
+      "pt-br": "Faixa de autoridade",
+    },
+    summary: {
+      en: "A recovered recording cataloged with the Wounded Crown cover, carrying the pressure of ritual authority and fracture.",
+      "pt-br": "Uma gravacao recuperada catalogada com a capa Wounded Crown, carregando a pressao de autoridade ritual e fratura.",
+    },
+    mood: {
+      en: "Crowned fracture",
+      "pt-br": "Fratura coroada",
     },
     year: "1127",
   },
@@ -173,11 +267,17 @@ const TRACKS = (songMetadata as SongMetadataEntry[]).map((song) => {
     duration: formatDurationLabel(song.duration),
     year: editorial?.year ?? (song.year ? String(song.year) : "1127"),
     audioSrc: song.src,
+    hidden: editorial?.hidden ?? false,
   };
 });
 
-export function getLocalizedMusicCatalog(locale: SiteLocale): LocalizedMusicTrack[] {
-  return TRACKS.map((track) => ({
+export function getLocalizedMusicCatalog(
+  locale: SiteLocale,
+  options: { includeHidden?: boolean } = {},
+): LocalizedMusicTrack[] {
+  const includeHidden = options.includeHidden ?? SHOW_HIDDEN_MUSIC_TRACKS;
+
+  return TRACKS.filter((track) => includeHidden || !track.hidden).map((track) => ({
     id: track.id,
     kind: track.kind,
     kindLabel: KIND_LABELS[locale][track.kind],
@@ -190,5 +290,6 @@ export function getLocalizedMusicCatalog(locale: SiteLocale): LocalizedMusicTrac
     duration: track.duration,
     year: track.year,
     audioSrc: track.audioSrc,
+    hidden: track.hidden,
   }));
 }

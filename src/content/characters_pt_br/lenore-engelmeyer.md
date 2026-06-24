@@ -21,7 +21,7 @@ summary: "Encantadora, cuidadosa, impossivel de comover; veste a civilidade como
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-06-24"
 codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
@@ -93,6 +93,8 @@ A classificação explica a ausência de assinaturas normais de Dive, os efeitos
 
 *O trecho abaixo não aparece em nenhum arquivo institucional.*
 
+Le'nore não está possuída pela Quiet Moon. Não é serva, filha, profeta, recipiente controlado ou vessel divino. A gramática da Quiet Moon é nativa à arquitetura recursiva dela. Sua fome, sua afeição, seu humor, sua gentileza, sua crueldade e seu prazer predatório pertencem à mesma pessoa coerente.
+
 ### Transformação Biológica
 
 Le'nore consegue alterar estruturalmente o próprio corpo. Seu substrato biológico opera segundo uma gramática que não segue parâmetros biológicos normais — um vocabulário formado por toda configuração que matéria biológica baseada em carbono já alcançou, além de configurações que nenhum processo evolutivo natural jamais produziu. Ela consegue expandir e modificar sua estrutura esquelética, gerar massa que se move segundo regras que a física do seu corpo normal não governa e alterar propriedades funcionais e sensoriais do próprio tecido para formas que matéria biológica simplesmente não alcança naturalmente.
@@ -115,9 +117,27 @@ Um sinal fraco, porém consistente, de ressonância aparece nos locais onde ocor
 
 A Fome não é patológica. Faz parte do que ela é da mesma forma que sua altura ou a cor do cabelo fazem parte dela: algo constante, presente e que não sente necessidade de justificar a própria existência.
 
-Ela administra isso de forma prática, cuidadosa e sem culpa. Escolhe pessoas cujo desaparecimento gera o mínimo possível de resposta institucional — indivíduos socialmente marginalizados, perigosos ou cuja ausência tende a produzir mais alívio do que luto quando finalmente é percebida. Isso não é penitência. É organização pragmática de algo que ela não considera errado, conduzido com o mesmo cuidado meticuloso que dedica a tudo que decide que importa.
+Ela administra isso de forma prática, cuidadosa e sem culpa. Escolhe pessoas cujo desaparecimento gera o mínimo possível de resposta institucional — indivíduos socialmente marginalizados, perigosos, abusivos, exploradores ou cuja ausência tende a produzir mais alívio do que luto quando finalmente é percebida. Isso não é penitência. É organização pragmática de algo que ela não considera errado, conduzido com o mesmo cuidado meticuloso que dedica a tudo que decide que importa.
+
+O código particular dela pode ser chamado, em termos internos, de **Regra dos Não-Saudados**: não tomar inocentes, não tomar crianças, pesquisar antes de se alimentar, confirmar culpa por padrão, testemunho, observação e oportunidade, preferir predadores protegidos por poder e não revelar o eu completo a ninguém que ela ainda não tenha condenado. O código é sincero. Também é privado, carregado de apetite e vulnerável à raiva, ao luto e à racionalização.
 
 As pessoas próximas dela às vezes experimentam um instante de desconforto sem origem definida — uma percepção animal de algo que a mente consciente não consegue nomear, surgindo sem aviso e desaparecendo sem explicação. Ela sabe que isso acontece. Entende como uma percepção correta tentando atravessar um canal que não possui vocabulário suficiente para ser mais específico.
+
+### Pressão Interpretativa Passiva
+
+Le'nore não precisa controlar a mente de ninguém para tornar uma sala mais favorável a ela. Na presença dela, a ambiguidade tende a se resolver a seu favor. Suspeita amolece. O medo chega tarde. Curiosidade demora mais do que deveria. As pessoas interpretam sua cordialidade como sinceridade, sua estranheza como charme, suas evasivas como privacidade e seu perigo como intriga.
+
+Isso não elimina agência, não emite ordens e não funciona como hipnose. Apenas altera o clima em que a agência interpreta o que já percebeu. A resistência é possível, mas costuma chegar tarde demais.
+
+### Sorriso e Revelação
+
+O sorriso de Le'nore é sua menor revelação deliberada: uma abertura breve demais para virar prova, longa demais para ser esquecida. Boca larga demais, dentes demais, profundidade demais, e então o retorno imediato à civilidade.
+
+A revelação completa é terminal. Ela não mostra o todo de si mesma a testemunhas que pretende deixar vivas. Quem não está sendo consumido pode ver sangue, movimento impossível, silhuetas parciais, fragmentos de carne vermelha, uma mulher no centro da violência. O todo pertence apenas à presa.
+
+### Avaliação de Ameaça
+
+Para fins operacionais, Le'nore deve ser tratada como ameaça de nível Archtype, apesar de não ser uma Archtype convencional formada por desenvolvimento normal de Redactory. Sua maior limitação não é falta de poder, mas inexperiência: ela não passou a vida lutando contra iguais, doutrina de batalha de alto nível, artefatos ou instituições preparadas especificamente para sobreviver ao primeiro contato.
 
 ---
 

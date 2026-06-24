@@ -175,6 +175,21 @@ const interfaceData = {
 
 const activeData = interfaceData[id];
 const firstReading = activeData.readings[0];
+const activeTags = id === "resonance" ? interfaceData.resonance.tags : [];
+
+const harmonicVariables = [
+  { label: "Resonance strength", note: "Underlying coherence pressure before Time makes it legible." },
+  { label: "Traversal conditions", note: "Local timing conditions under which the relation is read." },
+  { label: "Amplitude + interval", note: "How loud the expression is, and how far apart the pulses arrive." },
+  { label: "Conductivity + damping", note: "Whether the medium carries the disturbance onward or absorbs it." },
+] as const;
+
+const harmonicPropagation = [
+  { label: "Source strain", value: "Lunar Crown containment conflict intensifies." },
+  { label: "Distributed load", value: "Lunar Ring and Precursor infrastructure spread the surge." },
+  { label: "Conductive media", value: "BrightCrystal and thin regions carry the pulse efficiently." },
+  { label: "Local reading", value: "Institutions see omen, turbulence, instability, or recurrence." },
+] as const;
 ---
 
 <MainLayout
@@ -193,7 +208,7 @@ const firstReading = activeData.readings[0];
     { label: title },
   ]}
 >
-  <section class:list={["system-interface", `system-interface--${id}`]} data-interface-root={id}>
+  <section class:list={["system-interface", `system-interface--${id}`]} data-interface-root={id} data-system-interface={id}>
     <div class="system-interface__field" aria-hidden="true"></div>
     <div class="system-interface__grain sine-grain" aria-hidden="true"></div>
     <div class="system-interface__scan sine-scanline" aria-hidden="true"></div>
@@ -205,7 +220,7 @@ const firstReading = activeData.readings[0];
       <p class="system-interface__thesis">{activeData.thesis}</p>
       {id === "resonance" ? (
         <ul class="system-interface__tags" aria-label="Resonance concepts">
-          {activeData.tags.map((tag) => <li>{tag}</li>)}
+          {activeTags.map((tag) => <li>{tag}</li>)}
         </ul>
       ) : (
         <dl class="system-interface__metrics" aria-label={`${title} interface readings`}>
@@ -220,7 +235,7 @@ const firstReading = activeData.readings[0];
     </header>
 
     {id === "resonance" ? (
-      <div class="resonance-lab-shell" data-resonance-lab style="--similarity: 0.62; --field-strength: 0.28;">
+      <div class="resonance-lab-shell" data-resonance-lab data-selected="default" style="--similarity: 0.62; --field-strength: 0.28;">
         <section class="resonance-lab" aria-labelledby="resonance-field-title">
           <div class="resonance-lab__head">
             <p>{activeData.instrumentLabel}</p>
@@ -248,6 +263,28 @@ const firstReading = activeData.readings[0];
                 </filter>
               </defs>
 
+              <g class="resonance-aperture" aria-hidden="true">
+                <circle class="resonance-aperture__outer" cx="380" cy="230" r="190" />
+                <circle class="resonance-aperture__mid" cx="380" cy="230" r="128" />
+                <circle class="resonance-aperture__inner" cx="380" cy="230" r="66" />
+                <path class="resonance-aperture__axis" d="M190 230 H570" />
+                <path class="resonance-aperture__axis resonance-aperture__axis--vertical" d="M380 58 V402" />
+                <image
+                  class="resonance-aperture__symbol"
+                  href={logo}
+                  x="322"
+                  y="172"
+                  width="116"
+                  height="116"
+                  preserveAspectRatio="xMidYMid meet"
+                />
+              </g>
+
+              <g class="resonance-signal-sweep" aria-hidden="true">
+                <path d="M126 338 C 246 170, 428 118, 648 176" />
+                <path d="M114 246 C 244 310, 422 356, 642 266" />
+              </g>
+
               <g class="resonance-grid" aria-hidden="true">
                 <ellipse cx="346" cy="222" rx="286" ry="166" />
                 <ellipse cx="540" cy="322" rx="132" ry="112" />
@@ -259,6 +296,7 @@ const firstReading = activeData.readings[0];
                 data-lab-action="field"
                 role="button"
                 tabindex="0"
+                aria-pressed="false"
                 aria-label="Explain overlapping resonance field"
                 cx="300"
                 cy="218"
@@ -283,38 +321,39 @@ const firstReading = activeData.readings[0];
                 data-gradient-touch
                 role="button"
                 tabindex="0"
+                aria-pressed="false"
                 aria-label="Explain the line between First Pattern and Almost the Same"
                 r="18"
               />
               <g class="resonance-added-links" data-added-links aria-hidden="true"></g>
               <circle class="resonance-ripple" data-ripple cx="190" cy="220" r="1" />
 
-              <g class="resonance-node resonance-node--a" data-node-id="a" data-lab-node="match" data-panel-state="first" data-node-kind="core" role="button" tabindex="0" aria-label="First Pattern">
+              <g class="resonance-node resonance-node--a" data-node-id="a" data-lab-node="match" data-panel-state="first" data-node-kind="core" role="button" tabindex="0" aria-pressed="false" aria-label="First Pattern">
                 <circle r="54" />
                 <text y="-7">First</text>
                 <text y="9">Pattern</text>
               </g>
 
-              <g class="resonance-node resonance-node--similar" data-node-id="similar" data-lab-node="match" data-panel-state="same" data-node-kind="similar" role="button" tabindex="0" aria-label="Almost the Same">
+              <g class="resonance-node resonance-node--similar" data-node-id="similar" data-lab-node="match" data-panel-state="same" data-node-kind="similar" role="button" tabindex="0" aria-pressed="false" aria-label="Almost the Same">
                 <circle r="58" />
                 <text y="-12">Almost</text>
                 <text y="4">the Same</text>
               </g>
 
-              <g class="resonance-node resonance-node--distant" data-node-id="distant" data-lab-node="different" data-panel-state="different" data-node-kind="distant" role="button" tabindex="0" aria-label="Too Different">
+              <g class="resonance-node resonance-node--distant" data-node-id="distant" data-lab-node="different" data-panel-state="different" data-node-kind="distant" role="button" tabindex="0" aria-pressed="false" aria-label="Too Different">
                 <circle r="46" />
                 <text y="-5">Too</text>
                 <text y="11">Different</text>
               </g>
 
-              <g class="resonance-node resonance-node--dense" data-node-id="dense" data-lab-node="heavy" data-panel-state="heavy" data-node-kind="dense" role="button" tabindex="0" aria-label="The Heavy Pattern">
+              <g class="resonance-node resonance-node--dense" data-node-id="dense" data-lab-node="heavy" data-panel-state="heavy" data-node-kind="dense" role="button" tabindex="0" aria-pressed="false" aria-label="The Heavy Pattern">
                 <circle r="70" />
                 <circle class="resonance-node__core" r="16" />
                 <text y="-12">The Heavy</text>
                 <text y="5">Pattern</text>
               </g>
 
-              <g class="resonance-node resonance-node--orbit" data-node-id="orbit" data-lab-node="nearby" data-panel-state="nearby" data-node-kind="orbiting" role="button" tabindex="0" aria-label="Caught Nearby">
+              <g class="resonance-node resonance-node--orbit" data-node-id="orbit" data-lab-node="nearby" data-panel-state="nearby" data-node-kind="orbiting" role="button" tabindex="0" aria-pressed="false" aria-label="Caught Nearby">
                 <circle r="34" />
                 <text y="-5">Caught</text>
                 <text y="10">Nearby</text>
@@ -335,6 +374,10 @@ const firstReading = activeData.readings[0];
         <aside class="resonance-panel" aria-labelledby="resonance-panel-title" aria-live="polite">
           <p class="system-interface__kicker" data-panel-kicker>What you clicked</p>
           <h2 id="resonance-panel-title" data-panel-title>Start with the dots</h2>
+          <div class="resonance-panel__signal" aria-hidden="true">
+            <span></span>
+            <strong data-panel-signal>Passive relation</strong>
+          </div>
           <p data-panel-text>Each dot is a structure. Some are built almost the same way. Some are not. When two structures are similar enough, they start to pressure each other without meaning to.</p>
           <dl>
             <div>
@@ -349,57 +392,114 @@ const firstReading = activeData.readings[0];
         </aside>
       </div>
     ) : (
-      <div class="system-interface__stage">
-        <section class="system-interface__instrument" aria-labelledby={`${id}-instrument-title`}>
-          <div class="system-interface__instrument-head">
+      <div class="harmonics-lab-shell" data-harmonics-lab>
+        <section class="harmonics-lab" aria-labelledby={`${id}-instrument-title`}>
+          <div class="harmonics-lab__head">
             <p>{activeData.instrumentLabel}</p>
             <h2 id={`${id}-instrument-title`}>{activeData.instrumentTitle}</h2>
+            <span>{activeData.instruction}</span>
           </div>
 
-          <div class="system-interface__display" style={`--active-x: ${firstReading.x}%; --active-y: ${firstReading.y}%;`}>
-            <span
-              class="system-interface__symbol"
-              style={`view-transition-name: ${transitionName};`}
-              aria-hidden="true"
+          <div class="harmonics-diagram system-interface__display" style={`--active-x: ${firstReading.x}%; --active-y: ${firstReading.y}%;`}>
+            <svg
+              class="harmonics-diagram__map"
+              viewBox="0 0 920 560"
+              role="img"
+              aria-labelledby="harmonics-map-title harmonics-map-desc"
             >
-              <img src={logo} alt="" loading="eager" decoding="async" />
-            </span>
+              <title id="harmonics-map-title">Harmonics explanatory array</title>
+              <desc id="harmonics-map-desc">A diagram showing resonance relations becoming temporal expression, then signatures, propagation, regulation, and failure modes.</desc>
+              <defs>
+                <linearGradient id="harmonic-wave" x1="0%" x2="100%" y1="0%" y2="0%">
+                  <stop offset="0%" stop-color="rgba(176, 141, 60, 0.1)" />
+                  <stop offset="42%" stop-color="rgba(232, 228, 220, 0.72)" />
+                  <stop offset="100%" stop-color="rgba(177, 58, 52, 0.28)" />
+                </linearGradient>
+                <filter id="harmonic-glow" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
 
-            <div class="harmonic-array" aria-label="Harmonic bands">
-              <div class="harmonic-array__rings" aria-hidden="true"></div>
-              <div class="harmonic-array__baseline" aria-hidden="true"></div>
-              {activeData.readings.map((reading, index) => (
-                <button
-                  class="harmonic-array__band"
-                  type="button"
-                  data-reading-jump={index}
-                  aria-pressed={index === 0 ? "true" : "false"}
-                  aria-label={`Tune ${reading.name}`}
-                  style={`--band-x: ${reading.x}%; --band-y: ${reading.y}%; --band-h: ${reading.height}%;`}
-                >
-                  <span>{reading.marker}</span>
-                </button>
-              ))}
-            </div>
+              <g class="harmonics-diagram__grid" aria-hidden="true">
+                <path d="M90 278 H830" />
+                <path d="M460 66 V498" />
+                <ellipse cx="460" cy="282" rx="318" ry="178" />
+                <ellipse cx="460" cy="282" rx="226" ry="126" />
+                <ellipse cx="460" cy="282" rx="136" ry="76" />
+              </g>
+
+              <g class="harmonics-diagram__source" aria-hidden="true">
+                <circle cx="168" cy="282" r="70" />
+                <circle cx="254" cy="282" r="70" />
+                <path d="M168 282 C 194 236, 228 236, 254 282 C 228 328, 194 328, 168 282" />
+                <text x="212" y="390">Resonance relation</text>
+              </g>
+
+              <g class="harmonics-diagram__time" aria-hidden="true">
+                <path class="harmonics-diagram__wave" d="M292 282 C 326 214, 368 214, 402 282 S 478 350, 512 282 S 588 214, 622 282 S 698 350, 732 282" />
+                <path class="harmonics-diagram__wave harmonics-diagram__wave--echo" d="M292 316 C 326 278, 368 278, 402 316 S 478 354, 512 316 S 588 278, 622 316 S 698 354, 732 316" />
+                <text x="506" y="202">Time orders traversal</text>
+              </g>
+
+              <g class="harmonics-diagram__symbol" style={`view-transition-name: ${transitionName};`} aria-hidden="true">
+                <image href={logo} x="402" y="222" width="116" height="116" preserveAspectRatio="xMidYMid meet" />
+              </g>
+
+              <g class="harmonics-diagram__output" aria-hidden="true">
+                <path d="M748 172 L826 172 L826 392 L748 392" />
+                <text x="760" y="142">Temporal expression</text>
+                <text x="762" y="201">interval</text>
+                <text x="762" y="248">pulse</text>
+                <text x="762" y="295">surge</text>
+                <text x="762" y="342">damping</text>
+              </g>
+            </svg>
+
+            {activeData.readings.map((reading, index) => (
+              <button
+                class:list={["harmonics-diagram__node", index === 0 && "is-active"]}
+                type="button"
+                data-reading-jump={index}
+                aria-pressed={index === 0 ? "true" : "false"}
+                aria-label={`Tune ${reading.name}`}
+                style={`--band-x: ${reading.x}%; --band-y: ${reading.y}%; --band-h: ${reading.height}%;`}
+              >
+                <span>{reading.marker}</span>
+                <strong>{reading.name}</strong>
+              </button>
+            ))}
           </div>
         </section>
 
-        <aside class="system-interface__panel" aria-labelledby={`${id}-mechanism-title`}>
-          <p class="system-interface__kicker">Filed Mechanism</p>
-          <h2 id={`${id}-mechanism-title`}>{mechanism}</h2>
-          <p>{summary}</p>
+        <aside class="harmonics-reader system-interface__output" aria-live="polite" aria-labelledby={`${id}-reader-title`}>
+          <p class="system-interface__output-marker" data-reading-marker>{firstReading.marker}</p>
+          <h2 id={`${id}-reader-title`} data-reading-name>{firstReading.name}</h2>
+          <p class="system-interface__output-level" data-reading-level>{firstReading.level}</p>
+          <p data-reading-description>{firstReading.description}</p>
+          <div>
+            <span>Codex Reading</span>
+            <p data-reading-output>{firstReading.output}</p>
+          </div>
           <dl>
             <div>
               <dt>Interface</dt>
               <dd>{interfaceLabel}</dd>
             </div>
             <div>
-              <dt>Status</dt>
-              <dd>{activeData.status}. Reconstructed for observatory transition access.</dd>
+              <dt>Core mechanism</dt>
+              <dd>{mechanism}</dd>
+            </div>
+            <div>
+              <dt>Summary</dt>
+              <dd>{summary}</dd>
             </div>
             <div>
               <dt>Boundary</dt>
-              <dd>Reads recurrence. Does not create futures or override Time.</dd>
+              <dd>Harmonics read temporal recurrence. They do not create information, author futures, or override Time.</dd>
             </div>
           </dl>
           <a href={observatoryHref} data-astro-prefetch="load">Return to Observatory</a>
@@ -426,37 +526,43 @@ const firstReading = activeData.readings[0];
       </section>
     ) : (
       <>
-        <section class="system-interface__reader" aria-labelledby={`${id}-reader-title`}>
-          <div class="system-interface__reader-head">
-            <p>Operational Reader</p>
-            <h2 id={`${id}-reader-title`}>{activeData.instruction}</h2>
+        <section class="harmonics-codex" aria-labelledby={`${id}-codex-title`}>
+          <div class="harmonics-codex__head">
+            <p>Codex Matrix</p>
+            <h2 id={`${id}-codex-title`}>How to read a harmonic event without misnaming it</h2>
           </div>
 
-          <div class="system-interface__reader-grid">
-            <div class="system-interface__cards" aria-label={`${title} selectable readings`}>
-              {activeData.readings.map((reading, index) => (
-                <button
-                  class:list={["system-interface__card", index === 0 && "is-active"]}
-                  type="button"
-                  data-reading-card={index}
-                  aria-pressed={index === 0 ? "true" : "false"}
-                >
-                  <span>{reading.marker}</span>
-                  <strong>{reading.name}</strong>
-                  <small>{reading.level}</small>
-                </button>
-              ))}
-            </div>
-
-            <article class="system-interface__output" aria-live="polite">
-              <p class="system-interface__output-marker" data-reading-marker>{firstReading.marker}</p>
-              <h3 data-reading-name>{firstReading.name}</h3>
-              <p class="system-interface__output-level" data-reading-level>{firstReading.level}</p>
-              <p data-reading-description>{firstReading.description}</p>
-              <div>
-                <span>Archive Reading</span>
-                <p data-reading-output>{firstReading.output}</p>
+          <div class="harmonics-codex__grid">
+            <article class="harmonics-codex__panel harmonics-codex__panel--wide">
+              <p>Variables</p>
+              <h3>No single reading is enough</h3>
+              <div class="harmonics-variable-list">
+                {harmonicVariables.map((variable) => (
+                  <div>
+                    <strong>{variable.label}</strong>
+                    <span>{variable.note}</span>
+                  </div>
+                ))}
               </div>
+            </article>
+
+            <article class="harmonics-codex__panel">
+              <p>Calling propagation</p>
+              <h3>Lunar Crown surge path</h3>
+              <ol class="harmonics-chain">
+                {harmonicPropagation.map((step) => (
+                  <li>
+                    <strong>{step.label}</strong>
+                    <span>{step.value}</span>
+                  </li>
+                ))}
+              </ol>
+            </article>
+
+            <article class="harmonics-codex__panel">
+              <p>BrightCrystal clause</p>
+              <h3>The same help creates risk</h3>
+              <p>BrightCrystal lowers resistance to routing and conducts pressure efficiently. Under Calling conditions, that conductivity can transmit disturbance into cascade.</p>
             </article>
           </div>
         </section>
@@ -553,72 +659,86 @@ const firstReading = activeData.readings[0];
       ruleWrap: root.querySelector("[data-panel-rule-wrap]"),
       ruleLabel: root.querySelector("[data-panel-rule-label]"),
       not: root.querySelector("[data-panel-not]"),
+      signal: root.querySelector("[data-panel-signal]"),
     };
 
     const copy = {
       default: {
         title: "Start with the dots",
+        signal: "Passive relation",
         text: "Each dot is a structure. Some are built almost the same way. Some are not. When two structures are similar enough, they start to pressure each other without meaning to.",
         not: "Nothing is being sent. Nobody is speaking. No power is traveling between them.",
       },
       first: {
         title: "This one has a near-match",
+        signal: "Threshold approaching",
         text: "This dot shares a hidden shape with the one beside it. They are not copies. They simply have enough in common for resonance to begin.",
         rule: "Similar enough means: they start to matter to each other.",
       },
       same: {
         title: "Almost the same is enough",
+        signal: "Pressure increasing",
         text: "Resonance does not need perfection. Two things can be different on the outside and still share the same deep arrangement underneath.",
         rule: "The more they match, the stronger the quiet pressure between them.",
       },
       line: {
         title: "The line is not a message",
+        signal: "Gradient visible",
         text: "This line does not mean something is traveling. It only shows that the two patterns are leaning on each other.",
         rule: "Stronger similarity makes a stronger connection.",
       },
       slider: {
         title: "Try making them more alike",
+        signal: "Similarity tuning",
         text: "Move the slider left, and the dots stop caring about each other. Move it right, and the connection wakes up.",
         rule: "Resonance begins only after enough similarity gathers in one place.",
       },
       different: {
         title: "This one is quiet",
+        signal: "Below threshold",
         text: "This dot may share a little with the others, but not enough. It sits near the field without joining it.",
         rule: "A weak resemblance is not always enough to create resonance.",
       },
       heavy: {
         title: "This one holds its shape",
+        signal: "Density anchor",
         text: "Some patterns are harder to disturb. They have more internal support, so nearby weaker patterns tend to settle around them.",
         ruleLabel: "Important",
         rule: "It is not commanding the others. It is simply harder to ignore.",
       },
       nearby: {
         title: "Following without being told",
+        signal: "Orbit captured",
         text: "This smaller pattern has fallen into the heavy pattern's neighborhood. It keeps circling because that relation is easier to hold than drifting away.",
         rule: "Resonance can organize without intention.",
       },
       field: {
         title: "One connection becomes a field",
+        signal: "Field overlap",
         text: "Two similar patterns make a line. Many similar patterns make a field. The shared pattern becomes steadier because many pieces are holding it together.",
         rule: "A group can resist disturbance better than a lonely dot.",
       },
       addMatching: {
         title: "The field gets steadier",
+        signal: "Coherence reinforced",
         text: "Another similar pattern has joined. The shared shape is now reinforced from one more angle.",
         rule: "More matching pieces make the field harder to shake.",
       },
       addFragile: {
         title: "This one is easy to shake",
+        signal: "Thin conduit",
         text: "This pattern does not have much support inside itself. If disturbance reaches it, it passes the shake onward instead of swallowing it.",
         rule: "Fragile patterns transmit disturbance.",
       },
       cascade: {
         title: "The shake runs loose",
+        signal: "Cascade edge",
         text: "One fragile pattern shakes the next. Then that one shakes another. The field stops being quiet and starts answering itself.",
         rule: "That is a cascade.",
       },
       damping: {
         title: "The field absorbs the shake",
+        signal: "Disturbance damped",
         text: "The disturbance spreads out and loses its bite. The stronger patterns share the burden, so nothing breaks.",
         rule: "Dense fields dampen disturbance.",
       },
@@ -664,10 +784,31 @@ const firstReading = activeData.readings[0];
       if (panel.title) panel.title.textContent = next.title;
       if (panel.text) panel.text.textContent = next.text;
       if (panel.not && next.not) panel.not.textContent = next.not;
+      if (panel.signal) panel.signal.textContent = next.signal || "Passive relation";
       if (panel.ruleWrap instanceof HTMLElement) panel.ruleWrap.hidden = !hasRule;
       if (panel.ruleLabel) panel.ruleLabel.textContent = next.ruleLabel || "Rule";
       if (fieldState) fieldState.textContent = next.rule || "";
       root.dataset.lesson = key;
+      if (!prefersReducedMotion) {
+        root.classList.remove("is-panel-shifting");
+        window.requestAnimationFrame(() => {
+          root.classList.add("is-panel-shifting");
+          window.setTimeout(() => root.classList.remove("is-panel-shifting"), 520);
+        });
+      }
+    }
+
+    function setSelected(target) {
+      root.dataset.selected = target || "default";
+      pageRoot.querySelectorAll("[data-lab-node], [data-lab-action]").forEach((element) => {
+        const nodeId = element.getAttribute("data-node-id");
+        const action = element.getAttribute("data-lab-action");
+        const isSelected = Boolean(target && (nodeId === target || action === target));
+        element.classList.toggle("is-selected", isSelected);
+        if (element.hasAttribute("aria-pressed")) {
+          element.setAttribute("aria-pressed", isSelected ? "true" : "false");
+        }
+      });
     }
 
     function pulse(kind) {
@@ -828,11 +969,13 @@ const firstReading = activeData.readings[0];
         root.removeAttribute("data-hover");
       }, { signal });
       node.addEventListener("click", () => {
+        const nodeId = node.getAttribute("data-node-id") || "";
         if (key === "match") pulse("similarity");
         if (key === "heavy") {
           root.classList.add("is-density-drift");
           window.setTimeout(() => root.classList.remove("is-density-drift"), 2200);
         }
+        setSelected(nodeId);
         setPanel(panelKey);
       }, { signal });
       node.addEventListener("keydown", (event) => {
@@ -848,15 +991,20 @@ const firstReading = activeData.readings[0];
         if (action === "gradient") {
           root.classList.add("is-gradient-visible");
           pulse("gradient");
+          setSelected("gradient");
           setPanel("line");
         } else if (action === "field") {
           root.classList.add("is-field-visible");
+          setSelected("field");
           setPanel("field");
         } else if (action === "add-similar") {
+          setSelected("add-similar");
           addNode("similar");
         } else if (action === "add-thin") {
+          setSelected("add-thin");
           addNode("thin");
         } else if (action === "disturb") {
+          setSelected("disturb");
           disturb();
         }
       }, { signal });
@@ -894,6 +1042,7 @@ const firstReading = activeData.readings[0];
       drawField();
     }
     setPanel("default");
+    setSelected("default");
     return () => {
       controller.abort();
       if (orbitFrame) window.cancelAnimationFrame(orbitFrame);
@@ -921,9 +1070,10 @@ const firstReading = activeData.readings[0];
 
   .system-interface--resonance {
     background:
-      radial-gradient(circle at 46% 18%, rgba(232, 228, 220, 0.055), transparent 25rem),
-      radial-gradient(circle at 66% 42%, rgba(104, 132, 150, 0.11), transparent 35rem),
-      radial-gradient(circle at 20% 68%, rgba(166, 184, 196, 0.045), transparent 38rem),
+      radial-gradient(circle at 46% 18%, rgba(232, 228, 220, 0.06), transparent 24rem),
+      radial-gradient(circle at 66% 42%, rgba(177, 58, 52, 0.08), transparent 30rem),
+      radial-gradient(circle at 20% 68%, rgba(176, 141, 60, 0.055), transparent 38rem),
+      linear-gradient(110deg, rgba(232, 228, 220, 0.035) 0 1px, transparent 1px 18%),
       linear-gradient(180deg, #050407, #030407 52%, #050407);
   }
 
@@ -962,7 +1112,9 @@ const firstReading = activeData.readings[0];
   .system-interface__header,
   .system-interface__stage,
   .system-interface__reader,
-  .system-interface__cautions {
+  .system-interface__cautions,
+  .harmonics-lab-shell,
+  .harmonics-codex {
     position: relative;
     z-index: 2;
   }
@@ -1106,11 +1258,13 @@ const firstReading = activeData.readings[0];
     border: 1px solid rgba(232, 228, 220, 0.15);
     border-radius: 8px;
     background:
-      radial-gradient(circle at 24% 0%, rgba(232, 228, 220, 0.045), transparent 34%),
-      linear-gradient(145deg, rgba(6, 8, 13, 0.94), rgba(1, 4, 8, 0.92));
+      radial-gradient(circle at 24% 0%, rgba(232, 228, 220, 0.052), transparent 34%),
+      radial-gradient(circle at 85% 12%, rgba(177, 58, 52, 0.055), transparent 24rem),
+      linear-gradient(145deg, rgba(6, 8, 13, 0.96), rgba(1, 4, 8, 0.94));
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.035),
-      0 24px 70px rgba(0, 0, 0, 0.24);
+      inset 0 0 0 1px rgba(0, 0, 0, 0.36),
+      0 24px 70px rgba(0, 0, 0, 0.28);
   }
 
   .resonance-lab {
@@ -1173,9 +1327,13 @@ const firstReading = activeData.readings[0];
     border: 1px solid rgba(232, 228, 220, 0.11);
     border-radius: 6px;
     background:
-      radial-gradient(circle at 39% 48%, rgba(232, 228, 220, calc(var(--field-strength, 0.48) * 0.14)), transparent 16rem),
-      radial-gradient(circle at 70% 72%, rgba(166, 184, 196, 0.08), transparent 14rem),
-      rgba(0, 2, 5, 0.42);
+      radial-gradient(circle at 50% 52%, rgba(232, 228, 220, calc(var(--field-strength, 0.48) * 0.18)), transparent 15rem),
+      radial-gradient(circle at 39% 48%, rgba(176, 141, 60, calc(var(--field-strength, 0.48) * 0.13)), transparent 18rem),
+      radial-gradient(circle at 72% 70%, rgba(177, 58, 52, 0.1), transparent 13rem),
+      linear-gradient(180deg, rgba(3, 5, 10, 0.94), rgba(0, 2, 5, 0.72));
+    box-shadow:
+      inset 0 0 72px rgba(0, 0, 0, 0.62),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.025);
   }
 
   .resonance-fieldboard::before {
@@ -1188,6 +1346,21 @@ const firstReading = activeData.readings[0];
     background-size: 100% 34px, 42px 100%;
     mask-image: radial-gradient(circle at 50% 50%, #000 0 48%, transparent 82%);
     pointer-events: none;
+  }
+
+  .resonance-fieldboard::after {
+    content: "";
+    position: absolute;
+    inset: 9%;
+    border: 1px solid rgba(232, 228, 220, 0.075);
+    border-radius: 50%;
+    background:
+      conic-gradient(from 28deg, transparent, rgba(176, 141, 60, 0.12), transparent 20%, rgba(177, 58, 52, 0.1), transparent 48%, rgba(232, 228, 220, 0.08), transparent 68%),
+      radial-gradient(circle, transparent 0 58%, rgba(232, 228, 220, 0.05) 58.4% 58.8%, transparent 59.2%);
+    mask-image: radial-gradient(circle, transparent 0 24%, #000 25% 72%, transparent 73%);
+    opacity: 0.66;
+    pointer-events: none;
+    animation: resonanceApertureTurn 54s linear infinite;
   }
 
   .resonance-field-note {
@@ -1209,12 +1382,71 @@ const firstReading = activeData.readings[0];
 
   .resonance-map {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: block;
     width: 100%;
     height: 100%;
     min-height: 390px;
     overflow: visible;
+  }
+
+  .resonance-aperture {
+    opacity: 0.88;
+    transform-origin: 380px 230px;
+    animation: resonanceInstrumentBreathe 8.4s var(--page-transition-ease, cubic-bezier(0.2, 0.82, 0.22, 1)) infinite;
+  }
+
+  .resonance-aperture__outer,
+  .resonance-aperture__mid,
+  .resonance-aperture__inner {
+    fill: none;
+    stroke: rgba(232, 228, 220, 0.11);
+    stroke-width: 1;
+  }
+
+  .resonance-aperture__outer {
+    stroke-dasharray: 1 10;
+    filter: drop-shadow(0 0 18px rgba(176, 141, 60, 0.1));
+  }
+
+  .resonance-aperture__mid {
+    stroke: rgba(176, 141, 60, 0.18);
+    stroke-dasharray: 38 18 2 18;
+  }
+
+  .resonance-aperture__inner {
+    stroke: rgba(177, 58, 52, 0.22);
+    filter: drop-shadow(0 0 14px rgba(177, 58, 52, 0.14));
+  }
+
+  .resonance-aperture__axis {
+    fill: none;
+    stroke: rgba(232, 228, 220, 0.09);
+    stroke-dasharray: 2 12;
+    stroke-width: 1;
+  }
+
+  .resonance-aperture__symbol {
+    opacity: 0.13;
+    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.24));
+    mix-blend-mode: screen;
+  }
+
+  .resonance-signal-sweep path {
+    fill: none;
+    stroke: rgba(176, 141, 60, 0.18);
+    stroke-width: 0.85;
+    stroke-dasharray: 3 16;
+    stroke-linecap: round;
+    opacity: 0.56;
+    filter: drop-shadow(0 0 8px rgba(176, 141, 60, 0.08));
+    animation: pressureDrift 13s linear infinite;
+  }
+
+  .resonance-signal-sweep path + path {
+    stroke: rgba(177, 58, 52, 0.14);
+    animation-duration: 17s;
+    animation-direction: reverse;
   }
 
   .resonance-grid ellipse,
@@ -1234,6 +1466,7 @@ const firstReading = activeData.readings[0];
   }
 
   .resonance-lab-shell.is-field-visible .resonance-field-halo,
+  .resonance-field-halo.is-selected,
   .resonance-field-halo:hover,
   .resonance-field-halo:focus-visible {
     opacity: 1;
@@ -1287,7 +1520,8 @@ const firstReading = activeData.readings[0];
   }
 
   .resonance-line-touch:hover,
-  .resonance-line-touch:focus-visible {
+  .resonance-line-touch:focus-visible,
+  .resonance-line-touch.is-selected {
     fill: rgba(232, 228, 220, 0.05);
     stroke: rgba(246, 247, 241, 0.56);
     opacity: 1;
@@ -1320,14 +1554,18 @@ const firstReading = activeData.readings[0];
   .resonance-node {
     cursor: pointer;
     outline: none;
+    transform-box: fill-box;
+    transform-origin: center;
   }
 
   .resonance-node circle {
-    fill: rgba(2, 6, 10, 0.9);
+    fill: rgba(2, 6, 10, 0.92);
     stroke: rgba(232, 228, 220, 0.2);
     stroke-width: 1;
-    filter: drop-shadow(0 0 14px rgba(166, 184, 196, 0.06));
-    transition: fill 0.22s ease, stroke 0.22s ease, stroke-width 0.22s ease, filter 0.22s ease;
+    filter:
+      drop-shadow(0 0 14px rgba(166, 184, 196, 0.06))
+      drop-shadow(0 8px 18px rgba(0, 0, 0, 0.3));
+    transition: fill 0.22s ease, stroke 0.22s ease, stroke-width 0.22s ease, filter 0.22s ease, opacity 0.22s ease;
   }
 
   .resonance-node text {
@@ -1352,7 +1590,9 @@ const firstReading = activeData.readings[0];
   .resonance-node--dense circle:first-child {
     fill: rgba(2, 6, 10, 0.95);
     stroke: rgba(232, 228, 220, 0.32);
-    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.12));
+    filter:
+      drop-shadow(0 0 18px rgba(232, 228, 220, 0.12))
+      drop-shadow(0 14px 28px rgba(0, 0, 0, 0.36));
   }
 
   .resonance-node__core {
@@ -1370,11 +1610,27 @@ const firstReading = activeData.readings[0];
 
   .resonance-node:hover circle,
   .resonance-node:focus-visible circle,
+  .resonance-node.is-selected circle,
   .resonance-link-hit:focus-visible,
   .resonance-field-halo:focus-visible {
     stroke: rgba(246, 247, 241, 0.82);
     stroke-width: 1.8;
-    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.18));
+    filter:
+      drop-shadow(0 0 18px rgba(232, 228, 220, 0.24))
+      drop-shadow(0 0 34px rgba(176, 141, 60, 0.12));
+  }
+
+  .resonance-node.is-selected circle:first-child {
+    fill: rgba(7, 9, 14, 0.98);
+    stroke: rgba(176, 141, 60, 0.78);
+  }
+
+  .resonance-node.is-selected text {
+    fill: rgba(246, 239, 226, 0.96);
+  }
+
+  .resonance-node:focus-visible {
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
   }
 
   .resonance-lab-shell[data-hover="match"] .resonance-node--a circle,
@@ -1396,6 +1652,25 @@ const firstReading = activeData.readings[0];
   .resonance-lab-shell.is-cascade .resonance-added-node--thin circle {
     stroke: rgba(177, 58, 52, 0.62);
     filter: drop-shadow(0 0 14px rgba(177, 58, 52, 0.2));
+  }
+
+  .resonance-lab-shell[data-selected="distant"] .resonance-line--distant,
+  .resonance-lab-shell[data-selected="dense"] .resonance-line--dense,
+  .resonance-lab-shell[data-selected="orbit"] .resonance-line--orbit,
+  .resonance-lab-shell[data-selected="gradient"] .resonance-line--primary {
+    opacity: 1;
+    stroke-width: 1.8;
+    filter: drop-shadow(0 0 16px rgba(232, 228, 220, 0.18));
+  }
+
+  .resonance-lab-shell[data-selected="dense"] .resonance-line--dense,
+  .resonance-lab-shell[data-selected="orbit"] .resonance-line--orbit {
+    stroke: rgba(176, 141, 60, 0.48);
+  }
+
+  .resonance-lab-shell[data-selected="distant"] .resonance-line--distant,
+  .resonance-lab-shell.is-cascade .resonance-line--distant {
+    stroke: rgba(177, 58, 52, 0.45);
   }
 
   .resonance-lab-shell.is-density-drift .resonance-node--similar,
@@ -1421,6 +1696,7 @@ const firstReading = activeData.readings[0];
     fill: rgba(2, 6, 10, 0.86);
     stroke: rgba(232, 228, 220, 0.2);
     stroke-width: 1;
+    transition: stroke 0.22s ease, filter 0.22s ease, opacity 0.22s ease;
   }
 
   .resonance-added-node--similar circle {
@@ -1445,7 +1721,10 @@ const firstReading = activeData.readings[0];
     padding: 12px;
     border: 1px solid rgba(232, 228, 220, 0.12);
     border-radius: 6px;
-    background: rgba(1, 4, 8, 0.82);
+    background:
+      linear-gradient(90deg, rgba(176, 141, 60, 0.08), transparent 36%, rgba(177, 58, 52, 0.06)),
+      rgba(1, 4, 8, 0.86);
+    box-shadow: 0 -18px 42px rgba(0, 0, 0, 0.26);
   }
 
   .resonance-gradient-control label,
@@ -1466,7 +1745,26 @@ const firstReading = activeData.readings[0];
   .resonance-panel {
     position: relative;
     align-self: stretch;
-    padding: 24px;
+    padding: 26px 24px;
+    overflow: hidden;
+    border-color: rgba(232, 228, 220, 0.18);
+    background:
+      radial-gradient(circle at 0% 22%, rgba(176, 141, 60, 0.105), transparent 17rem),
+      radial-gradient(circle at 90% 74%, rgba(177, 58, 52, 0.07), transparent 16rem),
+      linear-gradient(155deg, rgba(9, 9, 15, 0.97), rgba(1, 3, 8, 0.95));
+  }
+
+  .resonance-panel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background:
+      linear-gradient(180deg, transparent, rgba(176, 141, 60, 0.54), rgba(232, 228, 220, 0.28), transparent);
+    box-shadow: 0 0 24px rgba(176, 141, 60, 0.18);
+    opacity: 0.9;
   }
 
   .resonance-panel > * {
@@ -1475,6 +1773,37 @@ const firstReading = activeData.readings[0];
 
   .resonance-panel h2 {
     font-size: clamp(36px, 4.4vw, 54px);
+  }
+
+  .resonance-panel__signal {
+    position: relative;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: center;
+    margin: 18px 0;
+    padding: 12px 0;
+    border-block: 1px solid rgba(232, 228, 220, 0.09);
+  }
+
+  .resonance-panel__signal span {
+    width: 44px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(176, 141, 60, 0.9), rgba(232, 228, 220, 0.18));
+    box-shadow: 0 0 16px rgba(176, 141, 60, 0.24);
+  }
+
+  .resonance-panel__signal strong {
+    color: rgba(176, 141, 60, 0.86);
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .resonance-lab-shell.is-panel-shifting .resonance-panel__signal span {
+    animation: panelSignal 520ms var(--page-transition-ease, cubic-bezier(0.2, 0.82, 0.22, 1));
   }
 
   .resonance-panel p,
@@ -1566,7 +1895,9 @@ const firstReading = activeData.readings[0];
     padding: 10px 13px;
     border: 1px solid rgba(232, 228, 220, 0.18);
     border-radius: 4px;
-    background: rgba(2, 6, 10, 0.72);
+    background:
+      linear-gradient(180deg, rgba(232, 228, 220, 0.035), transparent),
+      rgba(2, 6, 10, 0.72);
     color: rgba(232, 228, 220, 0.76);
     font-family: "DM Sans", sans-serif;
     font-size: 9px;
@@ -1574,12 +1905,21 @@ const firstReading = activeData.readings[0];
     letter-spacing: 0.17em;
     text-transform: uppercase;
     cursor: pointer;
+    transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .resonance-experiment button:hover,
+  .resonance-experiment button:focus-visible,
+  .resonance-experiment button.is-selected {
+    border-color: rgba(246, 247, 241, 0.72);
+    background: rgba(5, 10, 15, 0.92);
+    color: rgba(246, 239, 226, 0.96);
+    box-shadow: 0 0 20px rgba(176, 141, 60, 0.12);
   }
 
   .resonance-experiment button:hover,
   .resonance-experiment button:focus-visible {
-    border-color: rgba(246, 247, 241, 0.72);
-    background: rgba(5, 10, 15, 0.92);
+    transform: translateY(-1px);
     outline: 2px solid rgba(232, 228, 220, 0.66);
     outline-offset: 4px;
   }
@@ -1596,7 +1936,10 @@ const firstReading = activeData.readings[0];
   .system-interface__instrument,
   .system-interface__panel,
   .system-interface__reader,
-  .system-interface__cautions {
+  .system-interface__cautions,
+  .harmonics-lab,
+  .harmonics-reader,
+  .harmonics-codex__panel {
     border: 1px solid rgba(232, 228, 220, 0.16);
     border-radius: 8px;
     background:
@@ -1605,6 +1948,371 @@ const firstReading = activeData.readings[0];
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.04),
       0 24px 70px rgba(0, 0, 0, 0.24);
+  }
+
+  .harmonics-lab-shell {
+    display: grid;
+    grid-template-columns: minmax(560px, 1fr) minmax(320px, 420px);
+    gap: clamp(20px, 3vw, 34px);
+    align-items: stretch;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .harmonics-lab,
+  .harmonics-reader {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .harmonics-lab {
+    min-height: clamp(620px, 62vw, 760px);
+  }
+
+  .harmonics-lab::before,
+  .harmonics-reader::before,
+  .harmonics-codex__panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background:
+      linear-gradient(90deg, rgba(232, 228, 220, 0.04), transparent 42%, rgba(232, 228, 220, 0.06)),
+      repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 8px);
+    pointer-events: none;
+    opacity: 0.58;
+  }
+
+  .harmonics-lab__head {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(210px, 310px);
+    gap: 18px;
+    align-items: end;
+    padding: 24px 26px 0;
+  }
+
+  .harmonics-lab__head p,
+  .harmonics-lab__head span,
+  .harmonics-codex__head p,
+  .harmonics-codex__panel > p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+
+  .harmonics-lab__head p,
+  .harmonics-codex__head p,
+  .harmonics-codex__panel > p {
+    color: rgba(176, 141, 60, 0.88);
+  }
+
+  .harmonics-lab__head h2,
+  .harmonics-reader h2,
+  .harmonics-codex__head h2,
+  .harmonics-codex__panel h3 {
+    margin: 8px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    line-height: 1;
+    color: rgba(246, 239, 226, 0.96);
+  }
+
+  .harmonics-lab__head h2 {
+    font-size: clamp(34px, 4.4vw, 62px);
+  }
+
+  .harmonics-lab__head span {
+    max-width: 34ch;
+    color: rgba(232, 228, 220, 0.52);
+    line-height: 1.7;
+  }
+
+  .harmonics-diagram {
+    inset: 108px 22px 22px;
+    background:
+      radial-gradient(circle at var(--active-x) var(--active-y), rgba(246, 239, 226, 0.17), transparent 10rem),
+      radial-gradient(circle at 28% 50%, rgba(176, 141, 60, 0.1), transparent 18rem),
+      radial-gradient(circle at 77% 45%, rgba(177, 58, 52, 0.16), transparent 19rem),
+      linear-gradient(180deg, rgba(232, 228, 220, 0.035), transparent 40%),
+      rgba(0, 2, 5, 0.5);
+  }
+
+  .harmonics-diagram::before {
+    inset: 6%;
+    border-radius: 8px;
+    background:
+      linear-gradient(90deg, transparent 0 19%, rgba(232, 228, 220, 0.08) 19.1% 19.25%, transparent 19.35% 39%, rgba(232, 228, 220, 0.08) 39.1% 39.25%, transparent 39.35% 59%, rgba(232, 228, 220, 0.08) 59.1% 59.25%, transparent 59.35% 79%, rgba(232, 228, 220, 0.08) 79.1% 79.25%, transparent 79.35%),
+      repeating-linear-gradient(180deg, rgba(232, 228, 220, 0.06) 0 1px, transparent 1px 34px);
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.42);
+  }
+
+  .harmonics-diagram__map {
+    position: absolute;
+    inset: 6% 3% 7%;
+    width: 94%;
+    height: 87%;
+    z-index: 2;
+    overflow: visible;
+  }
+
+  .harmonics-diagram__grid path,
+  .harmonics-diagram__grid ellipse,
+  .harmonics-diagram__source circle,
+  .harmonics-diagram__source path,
+  .harmonics-diagram__output path {
+    fill: none;
+    stroke: rgba(232, 228, 220, 0.17);
+    stroke-width: 1;
+  }
+
+  .harmonics-diagram__grid ellipse {
+    stroke-dasharray: 3 12;
+  }
+
+  .harmonics-diagram__source circle {
+    stroke: rgba(176, 141, 60, 0.44);
+    filter: url(#harmonic-glow);
+  }
+
+  .harmonics-diagram__source path {
+    stroke: rgba(246, 239, 226, 0.52);
+    stroke-width: 1.4;
+  }
+
+  .harmonics-diagram__wave {
+    fill: none;
+    stroke: url(#harmonic-wave);
+    stroke-width: 4;
+    stroke-linecap: round;
+    filter: url(#harmonic-glow);
+    stroke-dasharray: 16 18;
+    animation: harmonicPulse 14s linear infinite;
+  }
+
+  .harmonics-diagram__wave--echo {
+    opacity: 0.36;
+    stroke-width: 1.4;
+    animation-duration: 22s;
+  }
+
+  .harmonics-diagram__symbol {
+    opacity: 0.16;
+    filter: drop-shadow(0 0 28px rgba(232, 228, 220, 0.22));
+  }
+
+  .harmonics-diagram text {
+    fill: rgba(232, 228, 220, 0.52);
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .harmonics-diagram__node {
+    position: absolute;
+    z-index: 4;
+    left: var(--band-x);
+    top: var(--band-y);
+    display: grid;
+    gap: 5px;
+    width: clamp(96px, 12vw, 140px);
+    min-height: 68px;
+    padding: 11px 12px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(232, 228, 220, 0.2);
+    border-radius: 6px;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(246, 239, 226, 0.12), transparent 56%),
+      linear-gradient(180deg, rgba(2, 7, 12, 0.92), rgba(0, 2, 5, 0.72));
+    color: rgba(246, 239, 226, 0.82);
+    text-align: left;
+    cursor: pointer;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 calc(var(--band-h) * 0.12) 36px rgba(0, 0, 0, 0.2);
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .harmonics-diagram__node::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: -10px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(176, 141, 60, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.22s ease;
+  }
+
+  .harmonics-diagram__node span,
+  .harmonics-diagram__node strong {
+    font-family: "DM Sans", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .harmonics-diagram__node span {
+    color: rgba(176, 141, 60, 0.92);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+  }
+
+  .harmonics-diagram__node strong {
+    color: rgba(246, 239, 226, 0.92);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    line-height: 1.28;
+  }
+
+  .harmonics-diagram__node:hover,
+  .harmonics-diagram__node:focus-visible,
+  .harmonics-diagram__node.is-active {
+    transform: translate(-50%, -50%) translateY(-3px);
+    border-color: rgba(246, 239, 226, 0.68);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(177, 58, 52, 0.22), transparent 58%),
+      linear-gradient(180deg, rgba(8, 12, 17, 0.98), rgba(2, 5, 8, 0.88));
+    box-shadow: 0 0 34px rgba(176, 141, 60, 0.16);
+    outline: none;
+  }
+
+  .harmonics-diagram__node:hover::before,
+  .harmonics-diagram__node:focus-visible::before,
+  .harmonics-diagram__node.is-active::before {
+    opacity: 1;
+  }
+
+  .harmonics-reader {
+    padding: 26px;
+  }
+
+  .harmonics-reader > * {
+    position: relative;
+  }
+
+  .harmonics-reader h2 {
+    font-size: clamp(38px, 4.8vw, 58px);
+  }
+
+  .harmonics-reader dl {
+    display: grid;
+    gap: 13px;
+    margin-top: 22px;
+  }
+
+  .harmonics-reader dl div {
+    padding-top: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .harmonics-codex {
+    max-width: 1320px;
+    margin: 18px auto 0;
+  }
+
+  .harmonics-codex__head {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 14px;
+  }
+
+  .harmonics-codex__head h2 {
+    font-size: clamp(30px, 4vw, 48px);
+  }
+
+  .harmonics-codex__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr) minmax(260px, 0.76fr);
+    gap: 12px;
+  }
+
+  .harmonics-codex__panel {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    padding: 22px;
+  }
+
+  .harmonics-codex__panel > * {
+    position: relative;
+  }
+
+  .harmonics-codex__panel h3 {
+    font-size: clamp(28px, 3.2vw, 40px);
+  }
+
+  .harmonics-codex__panel p,
+  .harmonics-codex__panel li,
+  .harmonics-variable-list span {
+    color: rgba(232, 228, 220, 0.64);
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .harmonics-variable-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .harmonics-variable-list div,
+  .harmonics-chain li {
+    padding: 14px;
+    border: 1px solid rgba(232, 228, 220, 0.11);
+    border-radius: 5px;
+    background: rgba(0, 2, 5, 0.38);
+  }
+
+  .harmonics-variable-list strong,
+  .harmonics-chain strong {
+    display: block;
+    margin-bottom: 5px;
+    color: rgba(246, 239, 226, 0.9);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .harmonics-variable-list span,
+  .harmonics-chain span {
+    display: block;
+  }
+
+  .harmonics-chain {
+    display: grid;
+    gap: 9px;
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+    counter-reset: harmonic-chain;
+  }
+
+  .harmonics-chain li {
+    position: relative;
+    padding-left: 46px;
+    counter-increment: harmonic-chain;
+  }
+
+  .harmonics-chain li::before {
+    content: counter(harmonic-chain, decimal-leading-zero);
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: rgba(176, 141, 60, 0.86);
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
   }
 
   .system-interface__instrument {
@@ -2004,6 +2712,7 @@ const firstReading = activeData.readings[0];
   }
 
   .system-interface__card:focus-visible,
+  .harmonics-diagram__node:focus-visible,
   .harmonic-array__band:focus-visible,
   .resonance-field__node:focus-visible {
     outline: 2px solid rgba(232, 228, 220, 0.82);
@@ -2078,6 +2787,36 @@ const firstReading = activeData.readings[0];
     to { transform: rotate(360deg); }
   }
 
+  @keyframes harmonicPulse {
+    to { stroke-dashoffset: -68; }
+  }
+
+  @keyframes resonanceApertureTurn {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes resonanceInstrumentBreathe {
+    0%, 100% {
+      opacity: 0.78;
+      transform: scale(0.992);
+    }
+    48% {
+      opacity: 1;
+      transform: scale(1.008);
+    }
+  }
+
+  @keyframes panelSignal {
+    0% {
+      transform: scaleX(0.28);
+      opacity: 0.28;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
   @keyframes pressureDrift {
     to { stroke-dashoffset: -24; }
   }
@@ -2121,14 +2860,19 @@ const firstReading = activeData.readings[0];
   @media (max-width: 1040px) {
     .system-interface__stage,
     .system-interface__reader-grid,
-    .resonance-lab-shell {
+    .resonance-lab-shell,
+    .harmonics-lab-shell,
+    .harmonics-codex__grid,
+    .harmonics-codex__head {
       grid-template-columns: 1fr;
     }
 
     .system-interface__panel,
-    .resonance-panel {
+    .resonance-panel,
+    .harmonics-reader {
       max-width: 760px;
       margin: 0 auto;
+      width: 100%;
     }
 
     .system-interface__cards {
@@ -2154,6 +2898,19 @@ const firstReading = activeData.readings[0];
       grid-template-columns: 1fr;
     }
 
+    .harmonics-lab {
+      min-height: 620px;
+    }
+
+    .harmonics-lab__head,
+    .harmonics-variable-list {
+      grid-template-columns: 1fr;
+    }
+
+    .harmonics-lab__head span {
+      max-width: none;
+    }
+
     .system-interface__instrument {
       min-height: 500px;
     }
@@ -2166,6 +2923,20 @@ const firstReading = activeData.readings[0];
     .resonance-field {
       width: 96%;
       height: 80%;
+    }
+
+    .harmonics-diagram {
+      inset: 142px 12px 12px;
+    }
+
+    .harmonics-diagram__map {
+      width: 118%;
+      min-width: 118%;
+      transform: translateX(-8%);
+    }
+
+    .harmonics-diagram__node {
+      width: 104px;
     }
 
     .system-interface__cards {
@@ -2189,8 +2960,9 @@ const firstReading = activeData.readings[0];
     }
 
     .resonance-map {
-      min-width: 100%;
-      transform: none;
+      width: 124%;
+      min-width: 124%;
+      transform: translateX(-10%);
     }
 
     .resonance-node__small {
@@ -2200,6 +2972,7 @@ const firstReading = activeData.readings[0];
     .resonance-gradient-control {
       grid-template-columns: 1fr;
       gap: 8px;
+      bottom: 16px;
     }
 
     .resonance-experiment {
@@ -2212,6 +2985,37 @@ const firstReading = activeData.readings[0];
   }
 
   @media (max-width: 460px) {
+    .harmonics-lab {
+      min-height: 560px;
+    }
+
+    .harmonics-lab__head,
+    .harmonics-reader,
+    .harmonics-codex__panel {
+      padding-inline: 16px;
+    }
+
+    .harmonics-diagram {
+      inset: 156px 10px 10px;
+    }
+
+    .harmonics-diagram__map {
+      width: 142%;
+      min-width: 142%;
+      transform: translateX(-17%);
+    }
+
+    .harmonics-diagram__node {
+      width: 86px;
+      min-height: 58px;
+      padding: 8px;
+    }
+
+    .harmonics-diagram__node strong {
+      font-size: 8px;
+      letter-spacing: 0.08em;
+    }
+
     .system-interface__instrument {
       min-height: 440px;
     }
@@ -2238,8 +3042,14 @@ const firstReading = activeData.readings[0];
     }
 
     .resonance-map {
-      min-width: 100%;
-      transform: none;
+      width: 136%;
+      min-width: 136%;
+      transform: translateX(-14%);
+    }
+
+    .resonance-node text {
+      font-size: 8px;
+      letter-spacing: 0.08em;
     }
 
     .resonance-panel,
@@ -2250,8 +3060,13 @@ const firstReading = activeData.readings[0];
 
   @media (prefers-reduced-motion: reduce) {
     .harmonic-array__rings,
+    .harmonics-diagram__wave,
+    .resonance-fieldboard::after,
+    .resonance-aperture,
+    .resonance-signal-sweep path,
     .resonance-lab-shell.is-gradient-visible .resonance-line--primary,
     .resonance-lab-shell.is-disturbed .resonance-ripple,
+    .resonance-lab-shell.is-panel-shifting .resonance-panel__signal span,
     .resonance-added-node--thin,
     .resonance-lab-shell.is-density-drift .resonance-node--similar,
     .resonance-lab-shell.is-density-drift .resonance-added-node--thin {
@@ -2261,12 +3076,14 @@ const firstReading = activeData.readings[0];
     .system-interface__display,
     .system-interface__display::after,
     .harmonic-array__band,
+    .harmonics-diagram__node,
     .resonance-field__cursor,
     .resonance-field__node,
     .system-interface__card,
     .resonance-node,
     .resonance-field-halo,
-    .resonance-node circle {
+    .resonance-node circle,
+    .resonance-experiment button {
       transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
     }
   }
