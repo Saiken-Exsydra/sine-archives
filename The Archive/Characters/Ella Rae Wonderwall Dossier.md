@@ -38,7 +38,7 @@
 | **House Status** | Wonderwall, primary line placement |
 | **Redactory Classification** | Radiance-class. Confirmed stable under ordinary and controlled high-depth conditions. |
 | **Anchor Classification** | **Light**. Abyssal Anchor. |
-| **Shore Relevance** | Catastrophic premature Luminant Shore contact during the White Desert incident. Current status: latent / intermittent Shorewalking potential. |
+| **Shore Relevance** | Catastrophic premature Luminant Shorefall during the White Desert incident. Current status: latent Shorewalking potential under strict continuity risk. |
 | **Kaleidoscope Status** | **Active singular convergence.** Project Kaleidoscope is not merely her origin record; it is a continuing resonance condition uniquely centered on her. |
 | **Remainder Status** | Structurally outside recognition. The Remainder does not recognize her because Project Kaleidoscope reconstructed Light, not the living Wonderwall interval-echo carried by natural descent. |
 | **Institutional Position** | Internal successor candidate to the Wonderwall Seat and to the Company's executive function. |
@@ -90,7 +90,7 @@ For this reason, the most precise private classification is not that E'lla *has*
 
 It is that E'lla **is Project Kaleidoscope** in its living, walking, survivable form.
 
-This is not a title. It is not an ability category. It is not a repeatable Shorewalking subtype. It is not a technique. It cannot be taught, inherited, or reproduced by ordinary metaphysical means. It is the unique consequence of six hundred and fifty-three years of reconstruction, eighty-two prior subject outcomes, an Abyssal Anchor of Light, catastrophic White Desert Shore contact, and the current presence of the Luminant Shore's Tidebound matriarchal continuity.
+This is not a title. It is not an ability category. It is not a repeatable Shorewalking subtype. It is not a technique. It cannot be taught, inherited, or reproduced by ordinary metaphysical means. It is the unique consequence of six hundred and fifty-three years of reconstruction, eighty-two prior subject outcomes, an Abyssal Anchor of Light, catastrophic White Desert Shorefall, and the presence of the Luminant Shore's Tidebound matriarchal continuity.
 
 She does not know this.
 
@@ -162,8 +162,6 @@ E'lla did not suffer possession. She did not manifest the Remainder. She did not
 
 What occurred was a Sinking event culminating in premature contact with the Luminant Shore through the strata of Light.
 
-The previous version of this file described the event as contact with the strata. That remains technically correct. It is now clear that the description stopped one layer too early.
-
 The Dive is an interface. The strata are the conceptual bedrock of the Page. The Shore is where that bedrock meets Archive-adjacent pressure strongly enough to become spatially experienceable by a recursive singularity. During the White Desert incident, E'lla did not merely reach Light at true Anchor-depth. She reached the coastline of Light: the place where Light ceases to be only an Anchor-route and becomes a worldlike borderland.
 
 She did not stabilize there.
@@ -228,7 +226,7 @@ It is an Abyssal Anchor. The problem is not merely that it is powerful. The prob
 
 This is why she is so dangerous in the White Desert. Aurora's southern territory is already structurally conditioned by the passive presence of the Instrument of Light. Most practitioners entering that environment are pressured from outside. E'lla resonates with it.
 
-The newer classification must add: because her Anchor touches the Luminant Shore under catastrophic conditions, her deepest risk is not merely Anchor inversion. It is **identity-luminous Shorefall**: uncontrolled arrival at the Luminant Shore in a state where the concept of Light attempts to reveal every hidden structure she contains, including structures she has not been told exist.
+Because her Anchor touches the Luminant Shore under catastrophic conditions, her deepest risk is not merely Anchor inversion. It is **identity-luminous Shorefall**: uncontrolled arrival at the Luminant Shore in a state where the concept of Light attempts to reveal every hidden structure she contains, including structures she has not been told exist.
 
 This is dangerous for an ordinary Abyssal Light Redactor.
 
@@ -266,17 +264,17 @@ Under the Shores framework, E'lla is a potential **Luminant Shorewalker**.
 
 This statement requires immediate restriction.
 
-A Luminant Shorewalker is a general category: one who reaches the Luminant Shore, stabilizes there temporarily, and expresses its pressure through body, power, and identity. E'lla may become this.
+A Luminant Shorewalker is a general category: one who remains Page-side, internalizes Luminant Shore pressure, and expresses that pressure through body, power, and identity without falling. E'lla may become this.
 
 Project Kaleidoscope is not that category.
 
 Project Kaleidoscope is her unique condition inside that category.
 
-A different Light Abyssal Anchor might reach the Luminant Shore and experience revelation, identity exposure, conceptual clarity, and dangerous Light pressure. E'lla reaches the Luminant Shore and the Shore reads not one person, but a prism of attempted persons built around one surviving center.
+A different Light Abyssal Anchor might approach Luminant Shore pressure and experience revelation, identity exposure, conceptual clarity, and dangerous Light pressure. When E'lla approaches that pressure, the Shore reads not one person, but a prism of attempted persons built around one surviving center.
 
-When she Shorewalks, she does not merely stand at Light's coastline.
+When she Shorewalks, she does not bring Light's coastline into the world.
 
-She stands there with every unresolved refraction of the program that made her.
+She holds its pressure inside a self already surrounded by every unresolved refraction of the program that made her.
 
 ---
 
@@ -304,7 +302,7 @@ It required:
 
 Remove any one of these and the condition does not exist.
 
-The term **Project Kaleidoscope** therefore names both the program and the metaphysical condition produced when that program's unresolved resonance becomes locally real through KL-83 during Shorewalking.
+The term **Project Kaleidoscope** therefore names both the program and the metaphysical condition produced when that program's unresolved resonance becomes locally real through KL-83 as Translation Wake during Shorewalking or as Shore spatialization during Shorefall.
 
 ### VI.2 The Sibling-Signatures
 
@@ -356,7 +354,7 @@ Clean speech would be a warning sign. If one of the sibling-signatures begins sp
 
 ### VI.3 Partial Agency
 
-During Shorewalking, the sibling-signatures may act on E'lla's behalf.
+During Shorewalking or Shore-proximal Translation Wake, the sibling-signatures may appear to act on E'lla's behalf.
 
 This does not mean they are separate operators. It means Project Kaleidoscope's resonance field can distribute perception and response across partial expressions.
 
@@ -620,7 +618,7 @@ The succession question has become more complicated.
 
 Previously, the relevant private question was whether she could inherit the Company's executive function while lacking the Remainder's recognition. That remains unresolved.
 
-The new question is whether a living Project Kaleidoscope convergence with Luminant Shore access can safely inherit an institution whose hidden infrastructure includes Clepsydran equivalence, Entropy anomalous research, Stasis continuity work, and enough BrightCrystal mass to make every reflective surface in the Company a potential diagnostic hazard.
+The active question is whether a living Project Kaleidoscope convergence with Luminant Shore access can safely inherit an institution whose hidden infrastructure includes Clepsydran equivalence, Entropy anomalous research, Stasis continuity work, and enough BrightCrystal mass to make every reflective surface in the Company a potential diagnostic hazard.
 
 I do not know the answer.
 

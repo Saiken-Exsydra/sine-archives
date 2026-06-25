@@ -365,6 +365,22 @@ Uma Abyssal Anchor representa potencial extraordinário — não supremacia auto
 
 ---
 
+## Shore Contact
+
+Redactory reaches the Shores through Dive-depth.
+
+The Dive is the Redactory interface. The Shore is not the Dive. At ordinary depths, the Anchor remains a route. At extreme depths, the concept can cease functioning only as a route and become a marginal condition where Page-real expression meets Archive-adjacent pressure.
+
+Redactor **Shorefall** occurs when the Redactor's recursive singularity collapses through extreme Dive-depth and falls into a compatible Shore. The Anchor swallows the Redactor.
+
+Redactor **Shorewalking** occurs when the Redactor refuses to fall and holds the aperture Page-side. The Redactor internalizes Shore pressure through the Anchor, body, perception, and continuity.
+
+That state can massively amplify Anchor expression, transform the body, alter perception, and produce Translation Wake in nearby Page-real conditions. Environmental effects are wake, residue, leakage, pressure, or failure. They are not the primary mechanism.
+
+Redactor Shorewalking remains routing-adjacent. It does not grant grammar authorship, native syntax authority, creation ex nihilo, absolute destruction, or ownership of the Shore.
+
+---
+
 ## Sovereign Depth e Archtypes
 
 No topo absoluto do sistema existe a **Sovereign Depth**.

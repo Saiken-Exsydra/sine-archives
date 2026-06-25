@@ -212,6 +212,22 @@ A silence field is the Mirror expressed as airless surface-state.
 
 The complete Mirror is the source. Her other techniques are lesser reflections.
 
+### VII.A Shorefall Suppression
+
+Sol'ytra is not a normal Shorewalker.
+
+Wound Crown Authority does not give her ownership over any Shore. She does not overwrite the Luminant Shore, Abyssal Shore, Incalescent Shore, or any other Shore in totality.
+
+At full authority, she can suppress local Shorefall by commanding the wound-condition through which the fall is occurring.
+
+This may appear as aperture sealing, forced Page-real alignment, local coherence intensification, containment syntax over the boundary condition, body-and-self pinning into one address, or severance of Translation Wake before it becomes Shore-Breach.
+
+The doctrinal form is precise:
+
+> Sol'ytra does not command the Shore. She commands the wound-condition through which the fall is locally occurring.
+
+Her ultimate authority is containment, not conquest.
+
 ---
 
 ## VIII. Syntax-Level Combat

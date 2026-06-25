@@ -150,7 +150,7 @@ Her body ceased. The public rites were performed. The records closed around an e
 
 What did not occur was dispersal.
 
-The current theory, assembled from later Church analysis, my own Interval investigation, and Al’ithia’s recovered memory, is as follows
+Later Church analysis, my own Interval investigation, and Al'ithia's recovered memory all converge on the same structure.
 
 At death, A’licia’s recursive singularity did not collapse into ordinary post-biological dissipation. Her lifelong alignment with Light, intensified by the density of her Redactory work, her ancestral reverence in life, and the conceptual weight she had already acquired within the Wonderwall line, produced a stabilization event. Her identity did not remain mortal. It did not remain embodied. It did not become a ghost.
 
@@ -176,11 +176,9 @@ Not because they would have understood her.
 
 Because I did not.
 
-### III.2.A The Luminant Shore Interpretation
+### III.2.A Luminant Shore Continuity
 
-The older language of this file describes the First Radiance through divine-attractor and Divination terminology. This was not wrong under the available framework. It was incomplete.
-
-Under current Shore doctrine, A’licia Rae Wonderwall’s biological death did not result in ordinary dispersal. Her Light-domain alignment, the density of her work, and the conceptual weight she had already acquired within the Wonderwall line produced a stabilization event at the Luminant Shore.
+A’licia Rae Wonderwall’s biological death did not result in ordinary dispersal. Her Light-domain alignment, the density of her work, and the conceptual weight she had already acquired within the Wonderwall line produced a stabilization event at the Luminant Shore.
 
 A’licia reached the Luminant Shore and did not fully leave.
 

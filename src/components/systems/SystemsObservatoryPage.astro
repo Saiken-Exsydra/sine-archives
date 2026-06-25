@@ -12,6 +12,10 @@ const navLabels = getArchiveNavLabels(locale);
 const redactoryHref = localizedPath(locale, "/systems/redactory/");
 const resonanceHref = localizedPath(locale, "/systems/resonance-field/");
 const harmonicsHref = localizedPath(locale, "/systems/harmonics/");
+const divinationHref = localizedPath(locale, "/systems/divinationsystem/");
+const bloomHref = localizedPath(locale, "/systems/bloom/");
+const shoresHref = localizedPath(locale, "/systems/shores/");
+const continuityHref = localizedPath(locale, "/systems/continuity/");
 const observatoryHref = localizedPath(locale, "/systems/observatory/");
 
 const systems = [
@@ -72,24 +76,40 @@ const systems = [
     agent: "Fragment + vessel",
     interface: "Dive-contact alignment / domain compatibility",
     failure: "Identity erosion, possession, sanctification, corruption, vessel collapse.",
-    destination: undefined,
-    action: undefined,
+    destination: divinationHref,
+    action: "Open Divination Codex",
     transitionName: undefined,
     angle: 0,
     x: 80,
     y: 50,
   },
   {
+    id: "continuity",
+    title: "Continuity",
+    logo: "/favicon.svg",
+    summary: "Identity-persistence across traversal and transformation.",
+    mechanism: "Self-address and local self-agreement.",
+    agent: "Structure, person, site, or continuity-sensitive observer.",
+    interface: "Continuity mapping, continuity locks, traversal stability.",
+    failure: "Drift, rupture, collapse, self-disagreement, aperture widening.",
+    destination: continuityHref,
+    action: "Open Continuity Codex",
+    transitionName: undefined,
+    angle: 0.18,
+    x: 52,
+    y: 82,
+  },
+  {
     id: "bloom",
     title: "Bloom",
     logo: "/uploads/observatory-white/Bloom_symbol.png",
-    summary: "Living organisms conducting resonance through host biology.",
-    mechanism: "Biological resonance integration.",
+    summary: "Living Shore ecology rooting through host biology.",
+    mechanism: "Biological resonance integration and Rootline pressure.",
     agent: "Symbiont + host",
-    interface: "Tissue, blood, nerve, memory, growth, recursive proximity.",
-    failure: "Overbloom, Murmuring, consumption, outbreak.",
-    destination: undefined,
-    action: undefined,
+    interface: "Host-symbiont Rootline through tissue, blood, nerve, memory, growth, and recursive proximity.",
+    failure: "Overbloom, Murmuring, consumption, Root-Stranding, biological Shore-Breach.",
+    destination: bloomHref,
+    action: "Open Bloom Codex",
     transitionName: undefined,
     angle: 0.72,
     x: 70,
@@ -99,13 +119,13 @@ const systems = [
     id: "shores",
     title: "Shores",
     logo: "/uploads/observatory-white/Shores_symbol.png",
-    summary: "Terra-local conceptual borderlands.",
-    mechanism: "Spatialized conceptual pressure where Terra's strata meet Archive-adjacent pressure.",
+    summary: "Shared final Terra-local limit-condition.",
+    mechanism: "Marginal condition where deep strata meet Archive-adjacent pressure.",
     agent: "None required, accessed by compatible systems.",
-    interface: "Shorefall, Shorewalking, Dive access, Divination alignment, Bloom Rooting, Calling exposure.",
-    failure: "Stranding, Returnwake, Shore-Breach, identity contamination.",
-    destination: undefined,
-    action: undefined,
+    interface: "Shorefall and Shorewalking through Dive-depth, fusion, Rootline, or continuity instability.",
+    failure: "Stranding, Returnwake, Shore-Breach, Translation Wake, continuity collapse.",
+    destination: shoresHref,
+    action: "Open Shores Codex",
     transitionName: undefined,
     angle: 2.42,
     x: 30,
@@ -137,9 +157,9 @@ const defaultSystem = systems[0];
     <header class="observatory-hero">
       <p class="observatory-kicker">Systems Index / Archive Interface</p>
       <h1>The Systems Observatory</h1>
-      <p class="observatory-subtitle">Magic is not one thing. It is a family of misread mechanisms.</p>
+      <p class="observatory-subtitle">There are not many magics. There are many interfaces with one substrate.</p>
       <p class="observatory-support">
-        Redactory routes. Divination fuses. Bloom conducts. Shores spatialize. Harmonics reveal recurrence. Resonance explains pressure. The Archive defines what can exist.
+        The Archive permits. Time traverses. Resonance pressures. Continuity holds. Harmonics recur. Redactory routes. Divination fuses. Bloom roots. The Shores wait.
       </p>
     </header>
 
@@ -152,7 +172,7 @@ const defaultSystem = systems[0];
           <span style="--word-x: 49%; --word-y: 15%; --word-delay: -8s;">Archive</span>
           <span style="--word-x: 67%; --word-y: 33%; --word-delay: -21s;">Time</span>
           <span style="--word-x: 32%; --word-y: 36%; --word-delay: -13s;">Resonance</span>
-          <span style="--word-x: 35%; --word-y: 72%; --word-delay: -28s;">Systems</span>
+          <span style="--word-x: 35%; --word-y: 72%; --word-delay: -28s;">Continuity</span>
           <span style="--word-x: 61%; --word-y: 78%; --word-delay: -17s;">Bloom</span>
           <span style="--word-x: 23%; --word-y: 57%; --word-delay: -34s;">Index</span>
           <span style="--word-x: 76%; --word-y: 61%; --word-delay: -5s;">Shores</span>
@@ -198,7 +218,7 @@ const defaultSystem = systems[0];
             <text x="214" y="790">TERRA SYSTEMS</text>
             <text x="168" y="248">RESONANCE</text>
             <text x="816" y="676">BLOOM</text>
-            <text x="284" y="604">INDEX</text>
+            <text x="284" y="604">CONTINUITY</text>
             <text x="642" y="820">SHORES</text>
           </g>
         </svg>
@@ -296,19 +316,44 @@ const defaultSystem = systems[0];
           active
         />
         <DestinationPanel
+          title="The Continuity Codex"
+          subtitle="Self-address, continuity locks, and traversal stability."
+          status="ACTIVE CODEX"
+          cta="Open Codex"
+          href={continuityHref}
+          systemId="continuity"
+          transitionTrigger="observatory-system"
+          active
+        />
+        <DestinationPanel
           title="The Vessel Chapel"
           subtitle="Fragment pressure, domain contact, and indexed vessels."
-          status="PENDING RECONSTRUCTION"
+          status="ACTIVE CODEX"
+          cta="Open Codex"
+          href={divinationHref}
+          systemId="divination"
+          transitionTrigger="observatory-system"
+          active
         />
         <DestinationPanel
           title="The Bloom Cabinet"
           subtitle="Roots, blood, memory, and biological resonance."
-          status="ACCESS NOT YET FILED"
+          status="ACTIVE CODEX"
+          cta="Open Codex"
+          href={bloomHref}
+          systemId="bloom"
+          transitionTrigger="observatory-system"
+          active
         />
         <DestinationPanel
           title="The Shoreline"
           subtitle="The place where concept becomes terrain."
-          status="SEALED"
+          status="ACTIVE CODEX"
+          cta="Open Codex"
+          href={shoresHref}
+          systemId="shores"
+          transitionTrigger="observatory-system"
+          active
         />
       </div>
     </section>

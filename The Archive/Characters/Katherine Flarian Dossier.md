@@ -216,6 +216,8 @@ The discipline Katherine founded inside S-AE is now known internally as **Stabil
 
 Stabilistics is not Redactory, Divination, or conventional engineering. It is the operational grammar that emerged when Katherine's condition was combined with Entropy signal theory, Evanote systems design, S-AE breach data, and BrightCrystal continuity buffering. It is the study of how to keep a contradiction from becoming a habitat.
 
+In Shore-adjacent terms, Stabilistics concerns prevention rather than expression. Katherine does not Shorewalk and does not Shorefall by default. Her work keeps rooms, systems, and people in forced self-agreement long enough that Shorefall-like collapse, aperture widening, or Shore-Breach conditions do not become locally available.
+
 She is still the branch's best practitioner. She has spent the last decade ensuring she is not the only one.
 
 ---

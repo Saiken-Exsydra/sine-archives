@@ -9,7 +9,7 @@ updated: "2026-05-22"
 image: "../../assets/uploads/sys-divination.png"
 ---
 
-**Divination** is the expression of divine coherence through recursive fusion between a mortal vessel and a stabilized attractor, or one of that attractor's fragments, by means of the Dive interface.
+**Divination** is the expression of divine coherence through recursive fusion between a mortal vessel and a stabilized attractor, or one of that attractor's fragments.
 
 Short version:
 
@@ -133,26 +133,15 @@ Church terms like **Beatification** and the Church's possession-stage taxonomy d
 
 ## Divination and the Shores
 
-The Shores doctrine added an important clarification.
+Divination reaches the Shores through fusion.
 
-A divine vessel may reach a Shore if the fragment's domain aligns with that Shore's conceptual ecology.
+A divine vessel may reach a Shore if the fragment's domain aligns with that Shore's conceptual ecology. That does not make the Shore identical to the god, make the god creator of the Shore, or make Shore contact a stronger miracle state.
 
-That does **not** mean:
+Stable Divine **Shorewalking** is total compatible fusion without vessel continuity annihilation. The fragment, god, angel, demon, saint, domain-attractor, or divine pressure fully steps into Page-real expression through the vessel. The vessel remains. If the vessel is erased, devoured, replaced, or rendered irrelevant, the state is possession, collapse, consumption, or failed fusion.
 
-- the Shore is the god;
-- the god created the Shore;
-- Shore contact is just a stronger miracle state.
+Divine **Shorefall** is the reverse direction. The vessel falls into the fragment's domain-depth or domain-adjacent Shore ecology, potentially dragging others with them. This may be experienced through a culturally legible divine architecture: Heaven, Hell, Purgatory, a judgment court, a demonic hunting ground, a sacred garden, a saintly field, or another domain-shell.
 
-It means divine fusion can be one route of access.
-
-Examples:
-
-- a light-domain vessel may be drawn toward the **Luminant Shore**;
-- a grief, blood, burial, or memory line may be drawn toward an **Abyssal** or grave-adjacent Shore.
-
-The fragment may know how to reach the Shore.
-
-It is still not identical to the Shore.
+The divine domain-shell is not automatically the Shore. It may be the corridor, mask, architecture, ecology, or interpretive shell through which the vessel experiences the Shore.
 
 ---
 

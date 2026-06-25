@@ -129,30 +129,27 @@ An **Archtype** is something else entirely. Archtype status means permanent stab
 
 ## Shore Contact
 
-The Shores update added an important limit clause to Redactory.
+Redactory reaches the Shores through Dive-depth.
 
-A Redactor may reach a Shore through extreme Dive-depth, Sinking, environmental thinness, Abyssal Anchor resonance, or exposure to relevant infrastructure fields.
+The Dive is the Redactory interface. The Shore is not the Dive. At ordinary depths, the Anchor remains a route. At extreme depths, the concept can cease functioning only as a route and become a marginal condition where Page-real expression meets Archive-adjacent pressure.
 
-That does **not** make Shore contact a new form of grammar authorship.
+Redactor **Shorefall** occurs when the Redactor's recursive singularity collapses through extreme Dive-depth and falls into a compatible Shore. The Anchor swallows the Redactor.
 
-Even at a Shore, the practitioner still routes Archive-valid configurations. The difference is proximity:
+Redactor **Shorewalking** occurs when the Redactor refuses to fall and holds the aperture Page-side. The Redactor internalizes Shore pressure through the Anchor, body, perception, and continuity.
 
-- an ordinary Redactor routes through the Anchor;
-- a Shorewalker routes while standing at the concept's coastline.
+That state can massively amplify Anchor expression, transform the body, alter perception, and produce Translation Wake in nearby Page-real conditions. Environmental effects are wake, residue, leakage, pressure, or failure. They are not the primary mechanism.
 
-That proximity can massively amplify expression, transform the body, destabilize identity, and invert operator into vessel-state.
-
-It still does not make the practitioner sovereign over reality.
+Redactor Shorewalking remains routing-adjacent. It does not grant grammar authorship, native syntax authority, creation ex nihilo, absolute destruction, or ownership of the Shore.
 
 ---
 
 ## Simulacra and Shorewalking
 
-Two terms now matter for advanced failures and advanced survivals.
+Two terms matter for advanced failures and advanced survivals.
 
 **Simulacra** is the uncontrolled or semi-controlled inversion state where the deep concept begins expressing itself through the practitioner.
 
-**Shorewalker state** is what happens if agency survives inside that pressure long enough to act.
+**Shorewalker state** begins only if agency and continuity survive inside Shore pressure without falling into the Shore.
 
 Shorewalker state is:
 
@@ -160,7 +157,7 @@ Shorewalker state is:
 - costly;
 - not equivalent to Archtype transition;
 - not automatically repeatable;
-- one of the most dangerous releases of deep Redactory available to a mortal frame.
+- one of the most dangerous survivals of deep Redactory available to a mortal frame.
 
 ---
 
@@ -176,7 +173,7 @@ The Apocachynthion exists because:
 
 That does not mean the Apocachynthion governs Redactory's metaphysics. It governs practitioners. In institutional doctrine, **Rank** names the Redactor's standing, while **Mark** names the level of practice the institution permits. The Dive, the Anchor, Depth, Reach, and Shore-risk remain structural facts whether the current Mark is broad, narrow, open, or blotted.
 
-The Shores doctrine only sharpens this. A catastrophic Dive failure is no longer merely a question of burnout or uncontrolled manifestation. In rare cases it may be Shorefall.
+A catastrophic Dive failure is not merely a question of burnout or uncontrolled manifestation. In rare cases it may be Shorefall.
 
 ---
 

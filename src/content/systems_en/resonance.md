@@ -5,7 +5,7 @@ summary: "The Archive's passive coherence condition: not energy, not signal, but
 tags: ["systems", "Resonance", "Redactory", "Divination", "Shores", "Anchors", "Coherence", "Thinness", "Callings"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-22"
+updated: "2026-06-25"
 image: ""
 ---
 
@@ -117,8 +117,6 @@ Callings are resonance conflict made periodic under Time. The Lunar Crown's cont
 
 ## Resonance and the Shores
 
-The Shores doctrine adds a new application rather than a contradiction.
-
 Shores emerge where:
 
 - the Page's deepest conceptual strata approach primitive form;
@@ -128,6 +126,8 @@ Shores emerge where:
 So a Shore is not "pure resonance," but no Shore can exist without resonance making deep similarity, thinness, and pressure mutually legible.
 
 The Luminant Shore, for example, is not just bright metaphysical scenery. It is a borderland where Light as primitive, Revelation as consequence, and Terra's local thinness produce a coherent resonance ecology strong enough to be encountered as place.
+
+Resonance may amplify, dampen, or make Shore-adjacent pressure easier to read. It does not replace continuity mechanics, cause Shorefall by itself, or make Shorewalking an environmental projection.
 
 ---
 

@@ -152,7 +152,7 @@ Her body ceased. The public rites were performed. The records closed around an e
 
 What did not occur was dispersal.
 
-The current theory, assembled from later Church analysis, my own Interval investigation, and Al’ithia’s recovered memory, is as follows
+Later Church analysis, my own Interval investigation, and Al'ithia's recovered memory all converge on the same structure.
 
 At death, A’licia’s recursive singularity did not collapse into ordinary post-biological dissipation. Her lifelong alignment with Light, intensified by the density of her Redactory work, her ancestral reverence in life, and the conceptual weight she had already acquired within the Wonderwall line, produced a stabilization event. Her identity did not remain mortal. It did not remain embodied. It did not become a ghost.
 

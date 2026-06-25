@@ -5,7 +5,7 @@ summary: "The structural physics underlying everything. What Redactory actually 
 tags: ["systems", "Resonance", "Redactory", "Divination", "Anchors", "Callings", "BrightCrystal", "Coherence", "Substrate"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-06-25"
 image: ""
 ---
 
@@ -121,6 +121,16 @@ Where Redactory is self-generated resonance interface, Divination involves a dif
 Identity erosion under prolonged possession follows the same principle. The fragment's resonance field progressively restructures the vessel's recursion toward greater similarity with itself. Once the vessel's recursion has been sufficiently restructured, its own internal resonance reinforces the new configuration. The change becomes self-sustaining because the vessel now resonates with its altered state more strongly than with its original one. This is the structural basis for irreversibility.
 
 The two frameworks — the Church's theological account and the Apocachynthion's resonance account — describe the same substrate events from different explanatory positions. Their incompatibility is more institutional than empirical. Both are observing real phenomena. Neither has a complete account of the substrate that produces both.
+
+---
+
+## Resonance and the Shores
+
+Shores emerge where the Page's deepest conceptual strata approach primitive form, Terra's local grammar is thin enough for Archive-adjacent pressure to spatialize, and resonance density makes that contact experienceable to recursive singularities.
+
+A Shore is not pure resonance. Resonance makes deep similarity, thinness, and pressure mutually legible, but it does not replace Continuity, author Shorefall, or make Shorewalking an environmental projection.
+
+Harmonics may reveal Shore-adjacent recurrence, warning rhythms, exposure cadence, Returnwake patterns, Calling overlap, and aperture instability. They can signal, amplify, dampen, or pattern Shore-adjacent phenomena. They do not cause Shorefall by themselves.
 
 ---
 

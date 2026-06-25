@@ -5,7 +5,7 @@ summary: "Não é uma lei da física. Não é uma dimensão. É um fragmento inf
 tags: ["Cosmology", "Tempo", "Archive", "Traversal", "Entropy", "Book of Humanity", "Callings", "Redactory", "Precursors"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-06-25"
 image: "../../assets/uploads/cosmology/cosm-time.png"
 ---
 
@@ -73,6 +73,20 @@ Parou porque a entidade responsável pela ordem de travessia escolheu, por um in
 Fragmentos do Tempo podem aparecer como pessoas, aparições ou qualquer outra forma culturalmente compreensível. A aparência é apenas uma interface. Isso não significa que o Fragment tenha se tornado uma singularidade recursiva mortal. Eles continuam sendo Tempo — apenas reduzido, direcionado e operando dentro de um mundo por um propósito estratégico específico antes de desaparecer novamente.
 
 Se existem Fragmentos do Tempo ativos no mundo atualmente não é uma informação presente em nenhum registro institucional conhecido.
+
+---
+
+## Traversal Pinning
+
+Time Fragments may prevent or interrupt Shorefall under rare strategic conditions.
+
+This intervention is usually classified as **Traversal Pinning**: the restoration or enforcement of readable interval before a recursive singularity completes zero-interval collapse into a Shore.
+
+Traversal Pinning does not create futures, erase causes, author new information, or rewrite the person being pinned. It acts by restoring interval, pinning traversal, isolating continuity, suspending local traversal, or forcing the recursive singularity back into readable sequence before collapse completes.
+
+Other acceptable technical or archaic terms include **Interval Pinning**, **Interval Restoration**, **Continuity Isolation**, and **Cadence Reassertion**. "Interval Nail" appears in older poetic usage, but technical records prefer Traversal Pinning.
+
+Time and its Fragments do not intervene every time Shorefall threatens. Excessive intervention reduces traversal novelty, increases signal risk, and may create strategic vulnerability at higher cosmological scales.
 
 ---
 

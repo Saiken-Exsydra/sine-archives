@@ -293,6 +293,18 @@ experiências próximas de profecia
 
 É aqui que conceitos da Church como o Gift of Sight entram na estrutura da Divination.
 
+Divination and the Shores
+
+Divination reaches the Shores through fusion.
+
+A divine vessel may reach a Shore if the fragment's domain aligns with that Shore's conceptual ecology. That does not make the Shore identical to the god, make the god creator of the Shore, or make Shore contact a stronger miracle state.
+
+Stable Divine **Shorewalking** is total compatible fusion without vessel continuity annihilation. The fragment, god, angel, demon, saint, domain-attractor, or divine pressure fully steps into Page-real expression through the vessel. The vessel remains. If the vessel is erased, devoured, replaced, or rendered irrelevant, the state is possession, collapse, consumption, or failed fusion.
+
+Divine **Shorefall** is the reverse direction. The vessel falls into the fragment's domain-depth or domain-adjacent Shore ecology, potentially dragging others with them. This may be experienced through a culturally legible divine architecture: Heaven, Hell, Purgatory, a judgment court, a demonic hunting ground, a sacred garden, a saintly field, or another domain-shell.
+
+The divine domain-shell is not automatically the Shore. It may be the corridor, mask, architecture, ecology, or interpretive shell through which the vessel experiences the Shore.
+
 Heaven, Hell e Purgatory
 
 O Codex trata esses lugares como domínios estruturalmente reais ligados à hierarquia divina:
