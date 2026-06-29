@@ -53,8 +53,14 @@
 
 **Registry Status:** Unregistered  
 **Rank:** Unranked  
-**Mark:** No Mark  
+**Mark:** None  
 **Anchor:** Unassessed; non-applicable  
+**Point:** Not applicable  
+**CAS Access:** Not applicable  
+**Leaf Permissions:** Not applicable  
+**Point Register:** Not applicable  
+**Anchor Depth:** Not applicable  
+**Reach:** Not applicable  
 **Pager Note:** None
 
 ---

@@ -42,6 +42,7 @@
 | **Kaleidoscope Status** | **Active singular convergence.** Project Kaleidoscope is not merely her origin record; it is a continuing resonance condition uniquely centered on her. |
 | **Remainder Status** | Structurally outside recognition. The Remainder does not recognize her because Project Kaleidoscope reconstructed Light, not the living Wonderwall interval-echo carried by natural descent. |
 | **Institutional Position** | Internal successor candidate to the Wonderwall Seat and to the Company's executive function. |
+| **Point Status** | Cloister-issued Point carried under Company custody; Point register access restricted by Seat authority and applicable Apocachynthion compact process. |
 | **Current Residence** | Primary Wonderwall holdings, with extended operational presence in Kalt'sen and Hora'veil as required by Company work. |
 | **Public Standing** | Wonderwall heiress, high-value Company Redactor, unusually visible primary-line young executive. |
 | **Private Standing (Seat's Assessment)** | Extraordinary practitioner with an Abyssal Anchor of Light; successful Project Kaleidoscope release subject; latent Luminant Shorewalker; living convergence point for unresolved Project Kaleidoscope sibling-signatures; psychologically disciplined, operationally useful, and increasingly difficult to classify without telling her the truth. |

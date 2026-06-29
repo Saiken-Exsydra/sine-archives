@@ -8,6 +8,11 @@ affiliation: "House Wonderwall (primary line); SiNE"
 house: "Wonderwall (primary line placement)"
 rank: "Stylus - Light Anchor; Mark 5 standing recognized"
 registry_status: "Registered - Stylus, Light Anchor. KL-83 in restricted files"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "The Luminant Ataraxia"
 height: "170 cm"
 build: "Very thin; long-fingered; superficially delicate"
@@ -38,7 +43,7 @@ tags:
   - "Aurora"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-11"
+updated: "2026-06-26"
 codex_file: "Ella Rae Wonderwall Dossier.md"
 ---
 

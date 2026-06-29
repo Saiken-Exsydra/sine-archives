@@ -8,6 +8,11 @@ affiliation: "SiNE Integrated Forces (cover); Wonderwall Seat (actual)"
 house: "Ex'sydra (erased pre-Imperial theoretical house; restored to Sai'ken by E.W. in 2194)"
 rank: ""
 registry_status: "Active - Wonderwall cadet-branch estate detail, assigned 2197"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "The Name Returned Too Late"
 height: "1.80 m"
 build: "Lean - proportioned for speed of action over force of impact"
@@ -21,7 +26,7 @@ summary: "A borderlands operative carrying the restored Ex'sydra name without ye
 tags: ["SiNE", "Wonderwall", "KT-Exs", "Interval-adjacent", "Northern Region", "Ex'sydra Lineage"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-05-24"
+updated: "2026-06-26"
 image: "../../assets/uploads/characters/char-saiken-exsydra.webp"
 hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 ---

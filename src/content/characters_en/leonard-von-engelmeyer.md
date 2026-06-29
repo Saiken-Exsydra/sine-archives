@@ -8,6 +8,11 @@ affiliation: "Apocachynthion - Kalt'sen Academy"
 house: "House Engelmeyer (expatriate branch, formally estranged)"
 rank: "Stylus"
 registry_status: "Registered - Stylus, Mark 4; asylum intake 2163; instructional standing current"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "The Hearth After the Blast"
 height: ""
 build: ""
@@ -31,7 +36,7 @@ tags:
   - "Kalt'sen"
 status: "public"
 created: "2026-05-10"
-updated: "2026-06-11"
+updated: "2026-06-26"
 codex_file: "Leonard von Engelmeyer Dossier.md"
 ---
 

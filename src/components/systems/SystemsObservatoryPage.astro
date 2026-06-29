@@ -15,7 +15,6 @@ const harmonicsHref = localizedPath(locale, "/systems/harmonics/");
 const divinationHref = localizedPath(locale, "/systems/divinationsystem/");
 const bloomHref = localizedPath(locale, "/systems/bloom/");
 const shoresHref = localizedPath(locale, "/systems/shores/");
-const continuityHref = localizedPath(locale, "/systems/continuity/");
 const observatoryHref = localizedPath(locale, "/systems/observatory/");
 
 const systems = [
@@ -23,11 +22,11 @@ const systems = [
     id: "redactory",
     title: "Redactory",
     logo: "/uploads/observatory-white/Redactory_symbol.png",
-    summary: "Human operational magic through directed routing.",
-    mechanism: "Anchor-mediated indexing and recursive compression.",
+    summary: "Human operational magic through directed routing, not grammar authorship.",
+    mechanism: "Anchor-mediated indexing: Depth is vertical, Reach is lateral.",
     agent: "Redactor",
-    interface: "Dive",
-    failure: "Collapse, recoil, Sinking, Drowning, Shorefall.",
+    interface: "Dive; Points, CAS, and Leaves assist lawful routing but do not perform Redactory.",
+    failure: "Overreach, collapse, recoil, Sinking, Drowning, Shorefall.",
     destination: redactoryHref,
     action: "Open Redactory Desk",
     transitionName: "observatory-redactory-symbol",
@@ -39,10 +38,10 @@ const systems = [
     id: "resonance",
     title: "Resonance",
     logo: "/uploads/observatory-white/Resonance_symbol.png",
-    summary: "Structural relation, not indexing, not energy, not magic by itself.",
-    mechanism: "Passive mutual coherence pressure.",
+    summary: "Mutual coherence pressure between similar configurations; not indexing or magic by itself.",
+    mechanism: "Passive mutual coherence pressure, precondition rather than act.",
     agent: "None",
-    interface: "Resonance gradients / fields",
+    interface: "Gradients and fields; Point instruments may compare signatures, not source effects.",
     failure: "Cascade, saturation, void, disturbance.",
     destination: resonanceHref,
     action: "Open Resonance Field",
@@ -84,22 +83,6 @@ const systems = [
     y: 50,
   },
   {
-    id: "continuity",
-    title: "Continuity",
-    logo: "/favicon.svg",
-    summary: "Identity-persistence across traversal and transformation.",
-    mechanism: "Self-address and local self-agreement.",
-    agent: "Structure, person, site, or continuity-sensitive observer.",
-    interface: "Continuity mapping, continuity locks, traversal stability.",
-    failure: "Drift, rupture, collapse, self-disagreement, aperture widening.",
-    destination: continuityHref,
-    action: "Open Continuity Codex",
-    transitionName: undefined,
-    angle: 0.18,
-    x: 52,
-    y: 82,
-  },
-  {
     id: "bloom",
     title: "Bloom",
     logo: "/uploads/observatory-white/Bloom_symbol.png",
@@ -119,10 +102,10 @@ const systems = [
     id: "shores",
     title: "Shores",
     logo: "/uploads/observatory-white/Shores_symbol.png",
-    summary: "Shared final Terra-local limit-condition.",
-    mechanism: "Marginal condition where deep strata meet Archive-adjacent pressure.",
+    summary: "Shared final Terra-local limit-condition, not a deeper ordinary Dive.",
+    mechanism: "A marginal condition where conceptual strata meet Archive-adjacent pressure.",
     agent: "None required, accessed by compatible systems.",
-    interface: "Shorefall and Shorewalking through Dive-depth, fusion, Rootline, or continuity instability.",
+    interface: "Shorefall descends into a compatible Shore; Shorewalking holds Shore pressure Page-side.",
     failure: "Stranding, Returnwake, Shore-Breach, Translation Wake, continuity collapse.",
     destination: shoresHref,
     action: "Open Shores Codex",
@@ -172,7 +155,6 @@ const defaultSystem = systems[0];
           <span style="--word-x: 49%; --word-y: 15%; --word-delay: -8s;">Archive</span>
           <span style="--word-x: 67%; --word-y: 33%; --word-delay: -21s;">Time</span>
           <span style="--word-x: 32%; --word-y: 36%; --word-delay: -13s;">Resonance</span>
-          <span style="--word-x: 35%; --word-y: 72%; --word-delay: -28s;">Continuity</span>
           <span style="--word-x: 61%; --word-y: 78%; --word-delay: -17s;">Bloom</span>
           <span style="--word-x: 23%; --word-y: 57%; --word-delay: -34s;">Index</span>
           <span style="--word-x: 76%; --word-y: 61%; --word-delay: -5s;">Shores</span>
@@ -218,7 +200,6 @@ const defaultSystem = systems[0];
             <text x="214" y="790">TERRA SYSTEMS</text>
             <text x="168" y="248">RESONANCE</text>
             <text x="816" y="676">BLOOM</text>
-            <text x="284" y="604">CONTINUITY</text>
             <text x="642" y="820">SHORES</text>
           </g>
         </svg>
@@ -282,7 +263,7 @@ const defaultSystem = systems[0];
     <section class="observatory-destinations" aria-labelledby="observatory-destinations-title">
       <div class="observatory-destinations__head">
         <p>Archive Destinations</p>
-        <h2 id="observatory-destinations-title">Filed Access Points</h2>
+        <h2 id="observatory-destinations-title">Filed Destinations</h2>
       </div>
       <div class="observatory-destinations__grid">
         <DestinationPanel
@@ -316,16 +297,6 @@ const defaultSystem = systems[0];
           active
         />
         <DestinationPanel
-          title="The Continuity Codex"
-          subtitle="Self-address, continuity locks, and traversal stability."
-          status="ACTIVE CODEX"
-          cta="Open Codex"
-          href={continuityHref}
-          systemId="continuity"
-          transitionTrigger="observatory-system"
-          active
-        />
-        <DestinationPanel
           title="The Vessel Chapel"
           subtitle="Fragment pressure, domain contact, and indexed vessels."
           status="ACTIVE CODEX"
@@ -347,7 +318,7 @@ const defaultSystem = systems[0];
         />
         <DestinationPanel
           title="The Shoreline"
-          subtitle="The place where concept becomes terrain."
+          subtitle="Where Shorefall descends and Shorewalking holds Page-side pressure."
           status="ACTIVE CODEX"
           cta="Open Codex"
           href={shoresHref}

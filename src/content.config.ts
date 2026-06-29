@@ -70,6 +70,12 @@ const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) =>
       label: z.string().optional(),
       text: z.string(),
     }).optional(),
+    point_profile: z.object({
+      status: z.string().optional(),
+      cas_access: z.string().optional(),
+      leaf_permissions: z.string().optional(),
+      register_access: z.string().optional(),
+    }).optional(),
     // Allow incremental rollout: migrated entries use Astro images, untouched ones keep legacy URLs.
     image: z.union([image(), z.string()]).optional(),
     hero_image: z.union([image(), z.string()]).optional(),

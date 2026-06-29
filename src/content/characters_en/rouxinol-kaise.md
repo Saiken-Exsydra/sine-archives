@@ -8,6 +8,11 @@ affiliation: "Independent contractor (Apocachynthion-registered, Mark 4)"
 house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
 registry_status: "Registered - compelled intake 2192; dual certification recognized in 2197 as the closest available institutional notation; Mark 4 under sealed Margins"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "She Who Keeps the Dead at the Threshold"
 height: ""
 build: "Compact; tensile"
@@ -31,7 +36,7 @@ tags:
   - "Bifurcated"
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-12"
+updated: "2026-06-26"
 codex_file: "Rouxinol Kaise Dossier.md"
 ---
 

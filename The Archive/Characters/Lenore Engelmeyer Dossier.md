@@ -37,16 +37,23 @@
 
 ### I.1 — Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf  
+**File Type:** Sealed File  
 **Registry Status:** Registered  
 **Rank:** Quill  
 **Mark:** Mark 2  
 **Open Mark:** None  
 **Margins:** Disclosure required for non-consenting perceptual influence; Depth assessments every eight months at Hora'veil; no operational engagement near Apocachynthion-monitored diplomatic or Senate events without prior registry notice  
+**Restrictions:** Disclosure required for non-consenting perceptual influence; no undisclosed operational engagement near monitored diplomatic or Senate events  
+**Point:** Academy-issued; carried  
+**CAS Access:** Basic CAS; perceptual protocols restricted by disclosure Margin  
+**Leaf Permissions:** Common Leaves; Licensed Leaves by Mark permission  
+**Point Register:** Protected; no open review  
 **Anchor:** Deception  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Mid  
-**Reach Reading:** Broad, monitored  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Wide Reach  
+**Overreach History:** Managed biological Overreach; no formal Blot  
+**Apparatus Permissions:** Ordinary Apparati; no martial apparati  
 **Registration Tenure:** 7 years  
 **Academy Record:** Hora'veil intake 2193; specialist panel confirmation 2194; Quill certification 2195  
 **Practice Record:** Independent civic and contractor work under western-band inter-registry compact  
@@ -404,7 +411,7 @@ This is the moral paradox of her hunger: she may preserve the shape of a person 
 
 ### VI.1 The Standard Reach Problem
 
-In Redactory mechanics, Reach is temporary operation beyond primary Anchor alignment. A practitioner whose Anchor is *Ignition* can, at cost, route work through adjacent domains — thermal diffusion, combustion, the behavior of heat in materials. The further from the Anchor, the higher the instability cost. Overreach — pushing too far, too fast, beyond what the architecture can sustain — produces recursive damage: memory fragmentation, identity erosion, routing failure.
+In Redactory mechanics, Reach is lateral operation beyond immediate Anchor alignment while the Anchor remains the stabilizing handhold. A practitioner whose Anchor is *Ignition* can, at cost, route work through adjacent domains — thermal diffusion, combustion, the behavior of heat in materials. The further from the Anchor, the higher the instability cost. Overreach — pushing too far, too fast, beyond what the architecture can sustain — can misinstance, collapse, recoil through the Redactor, bruise the Anchor, or fray the route itself.
 
 Le'nore Reaches when she operates on other people's biology directly. Her Anchor is perceptual hijacking — the interception and rewriting of sensory feeds. Biology is adjacent. The nervous system she intercepts is biological. The sensory architecture she reads in Layer one of the Dive is biological. The conceptual distance between *what a person perceives* and *the body that does the perceiving* is real but not large. She can Reach into that adjacent domain at moderate cost.
 

@@ -8,6 +8,11 @@ affiliation: "Lyrene Pharmaceuticals; Vitrified Wing (secret program)"
 house: ""
 rank: "Quill-ranked Redactor"
 registry_status: "Auroran-compact Redactor; Quill, Mark 2 under conditional Margins"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "The Girl the Machine Answered"
 height: ""
 build: "Tall, slim, and precise; naturally athletic without looking strong"
@@ -33,7 +38,7 @@ tags:
   - "CLOCKWORK"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-11"
+updated: "2026-06-26"
 codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 ---
 

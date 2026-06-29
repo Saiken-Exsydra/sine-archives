@@ -5,8 +5,13 @@ summary: "O mundo. Um projeto-laboratório dos Precursors — criado, estabiliza
 tags: ["Terra", "Cosmology", "Precursors", "Twilight Band", "Vael'Khar", "World", "Page"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-06-26"
 image: "../../assets/uploads/cosm-terra.png"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 ---
 
 > *"Um mundo orbitando um buraco negro. Preso por acoplamento de maré. Metade eternamente escura. E, de alguma forma, habitado. As pessoas que construíram isso sabiam exatamente o que estavam fazendo. As pessoas que vivem aqui já nem sabem mais que isso foi construído."*

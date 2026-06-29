@@ -83,16 +83,23 @@ This sentence will remain in the file.
 
 ### I.1 — Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf  
+**File Type:** Sealed File  
 **Registry Status:** Registered  
 **Rank:** Quill, provisional  
 **Mark:** Mark 1  
 **Open Mark:** None  
 **Margins:** No independent field work; high-output practice only under specialist supervision; restricted retention at Lon'drina; lethal contingency separately sealed  
+**Restrictions:** No independent field work; no unsupervised Reach testing; no apparati outside supervised training  
+**Point:** Academy-issued; carried under supervision  
+**CAS Access:** Basic CAS under supervision; restricted CAS locked  
+**Leaf Permissions:** Common Leaves under supervision; no Licensed or Restricted Leaves without specialist seal  
+**Point Register:** Protected; specialist review window sealed for high-output practice  
 **Anchor:** Stilllight, carried institutionally as unresolved Inkless Radiance anomaly  
 **Anchor Reading:** Inkless / disputed  
-**Depth Reading:** Shallow-to-mid under stable conditions; Shore-facing risk under escalation  
-**Reach Reading:** Narrow in ordinary practice; unstable under sink pressure  
+**Anchor Depth:** Shallow Anchor  
+**Reach:** Bound Reach  
+**Overreach History:** None formally recorded; sink-pressure escalation risk monitored  
+**Apparatus Permissions:** No apparati outside supervised training  
 **Registration Tenure:** 4 years  
 **Academy Record:** Lon'drina intake 2196; specialist review ongoing  
 **Practice Record:** Calibration assistance; supervised Radiance Annex work  

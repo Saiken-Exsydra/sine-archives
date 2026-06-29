@@ -5,7 +5,7 @@ summary: "Terra-local marginal conditions where the Page's deep conceptual strat
 tags: ["systems", "Shores", "Shorefall", "Shorewalking", "Shore-Breach", "Translation Wake", "Continuity", "Luminant Shore", "Abyssal Shore", "Redactory", "Divination", "Bloom"]
 status: "public"
 created: "2026-05-22"
-updated: "2026-06-25"
+updated: "2026-06-26"
 image: ""
 ---
 
@@ -117,6 +117,10 @@ Redactory reaches the Shores through Dive-depth. The Dive is the Redactory inter
 At ordinary depths, the Anchor remains a route. At extreme depths, the concept ceases to function only as a route and becomes a marginal condition. Redactor Shorefall occurs when the Redactor's recursive singularity collapses through extreme Dive-depth and falls into a compatible Shore. The Anchor swallows the Redactor.
 
 Redactor Shorewalking occurs when the Redactor refuses to fall and holds the aperture Page-side. The Redactor internalizes Shore pressure through the Anchor, body, perception, and continuity. Redactor Shorewalking does not rewrite grammar and does not grant native syntax authority.
+
+Reach e Shorewalking nao devem ser tratados como a mesma categoria. Reach estende o roteamento do Redactor alem do conforto comum da Anchor, mas continua sendo um ato de Redactory. Shorewalking so comeca quando a pressao da Shore e internalizada e mediada por uma singularidade recursiva que sobrevive.
+
+Abyssal Anchors aumentam o risco dessa fronteira porque sua verdadeira Anchor-depth repousa na strata. Elas nao tornam Shorewalking automatico, seguro, repetivel ou proprietario.
 
 ### Divination
 

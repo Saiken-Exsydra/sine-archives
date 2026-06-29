@@ -34,16 +34,23 @@
 
 ### I.1 — Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf  
+**File Type:** Sealed File  
 **Registry Status:** Registered  
 **Rank:** Stylus (Mirror Anchor) / Quill (Threshold Anchor)  
 **Mark:** Mark 4  
 **Open Mark:** None  
 **Margins:** Assignment disclosure within forty-eight hours; lethal outcomes and impression acquisition reported on review schedule; blade impression count change reported immediately; scheduled Depth assessments every six months  
+**Restrictions:** Blade impression count reporting; scheduled Depth assessments every six months; restricted artifact terms apply  
+**Point:** Academy-issued; carried; restricted artifact interface separately logged  
+**CAS Access:** Basic CAS; professional and martial CAS under Mark 4 sealed Margins  
+**Leaf Permissions:** Licensed Leaves by Mark permission; Restricted Leaves by explicit seal only  
+**Point Register:** Protected; specialist review windows tied to assignment disclosure and artifact reporting  
 **Anchor:** Mirror / Threshold  
 **Anchor Reading:** Confirmed / Confirmed  
-**Depth Reading:** Deep in Mirror; Abyssal-adjacent review pending in Threshold  
-**Reach Reading:** Broad, bifurcated, monitored  
+**Anchor Depth:** Deep Anchor / Abyssal review pending  
+**Reach:** Wide Reach  
+**Overreach History:** Concurrent dual-Anchor Overreach risk under review  
+**Apparatus Permissions:** Martial Apparati under Mark 4 sealed Margins; restricted artifact separately logged  
 **Registration Tenure:** 8 years  
 **Academy Record:** Compelled intake 2192; dual-track formation; dual certification 2197  
 **Practice Record:** Contractor field work under specialist review  

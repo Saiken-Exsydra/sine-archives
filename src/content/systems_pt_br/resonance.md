@@ -5,7 +5,7 @@ summary: "The structural physics underlying everything. What Redactory actually 
 tags: ["systems", "Resonance", "Redactory", "Divination", "Anchors", "Callings", "BrightCrystal", "Coherence", "Substrate"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-25"
+updated: "2026-06-26"
 image: ""
 ---
 
@@ -33,6 +33,10 @@ The resonance substrate is not a field that exists separately from the physical 
 Organized complexity is the relevant factor. Simple physical systems — a rock, an unstructured gas cloud — participate in the substrate minimally. Highly organized systems — living organisms, structured energy states, the kind of mental organization a Redactor develops in the Dive — participate in it significantly. The more organizationally complex a system is, the more it both generates and responds to resonance-mediated influence.
 
 This is why Redactory is possible. A trained Redactor in the Dive has developed a specific quality of mental organization that interfaces with the substrate in a way that untrained cognition does not. The Dive is not simply intense focus. It is the particular quality of focus that produces resonance interface — the mental state in which the practitioner's organized cognition and the resonance substrate of the local environment are in a relationship that allows influence.
+
+Instrumentos de Point do Apocachynthion usam comparacao de resonance signature como uma de suas funcoes praticas. Eles podem ajudar a relacionar praticante, padrao de Anchor, Point registrado e assinatura de evento arquivada. Isso nao torna o Point a fonte do efeito; torna o Point um instrumento regulado para ler e registrar evidencia adjacente a resonance.
+
+Redactory fora de rota de Point ainda pode deixar assinatura. Ela e mais dificil de atribuir dentro dos sistemas institucionais comuns porque nao chega com a trilha esperada de identidade, CAS e register.
 
 ---
 

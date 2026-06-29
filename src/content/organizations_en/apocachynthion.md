@@ -11,7 +11,7 @@ summary: "The imperial institution responsible for Redactor training, registrati
 tags: ["Synus", "Redactor", "Institution", "Governance", "Pagers", "Academy", "Kalt'sen", "Observation"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-12"
+updated: "2026-06-26"
 image: "../../assets/uploads/org-apocachynthion.png"
 ---
 
@@ -102,6 +102,8 @@ The Council of Volumes meets in the Apocachynthion's seat of governance in the c
 The Apocachynthion administers a network of Imperial Redactor Academies distributed across all three macro-regions. The largest and most prestigious is located in **Vrenne**, a city whose entire civic identity has been shaped by the Academy's presence over centuries of institutional history.
 
 Academies handle the detection and evaluation of newly manifested Redactors, foundational training in Dive discipline and Anchor stabilization, safety protocols, specialization pathway assessment, formal rank certification, and Mark review at each stage of progression. Entry is mandatory upon detection and registration. Refusal is treated as a violation of imperial law.
+
+Academies also issue the Redactor's **Point**: a regulated BrightCrystal device that carries identity, practice credentials, access state, and the technical interface used by Academy and Registry systems. Foundational training now includes Point handling, CAS authentication, Leaf access discipline, and the rule that Point-routed records do not define the Redactor's metaphysics. They define the institution's ability to recognize, permit, and audit the work.
 
 ---
 
@@ -216,6 +218,14 @@ An **Open Mark** is a temporary emergency widening of a Redactor's permitted sco
 #### Leaf {#leaf}
 
 The registry records carrying these facts are called **Leaves**. Registry Leaves, Formation Leaves, Practice Leaves, Sealed Leaves, Pager Leaves, Black Leaves, and Folio-Sealed Leaves are not ornamental naming. They are the filing structure by which the institution remembers what it has permitted and what it has learned to fear.
+
+#### Point, CAS, and Register Access {#point}
+
+A **Point** is issued by the Academy after intake and remains tied to the practitioner's institutional identity. It is not a magical source, rank badge, or proof of metaphysical capacity. It is the regulated apparatus through which the Association confirms who is working, which files they may access, what their current Mark permits, and where an event record should be written.
+
+The associated **CAS** layer handles authentication, synchronization, and access control between the Point and institutional systems. A Redactor may carry a Point while having limited or suspended CAS access. A restricted file may exist while remaining unavailable through ordinary Point credentials.
+
+**Point Register** access is therefore a legal and archival question. Registry Branch, Academy assessors, Pagers, and Council-sealed processes may see different portions of the same practitioner history. The Point makes that segmentation enforceable without pretending that bureaucracy is the source of Redactory.
 
 ### III.4 - Deployment Logic
 

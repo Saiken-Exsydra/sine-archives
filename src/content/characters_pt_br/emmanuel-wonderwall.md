@@ -9,6 +9,11 @@ affiliation: "SiNE (fundador e principal); Apocachynthion (registrado — classi
 house: "Wonderwall (figura fundadora, linhagem principal); nascido Ex'sydra"
 rank: "Archtype"
 registry_status: "Registrado — Archtype, âncora de Spatial Coherence (institucional); licença operacional incondicional"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "O homem que enterrou o primeiro nome"
 height: "185 cm"
 build: "Largo, sem pressa; a postura de alguém que nunca encontrou uma sala na qual não pudesse esperar"
@@ -23,7 +28,7 @@ summary: "Construiu casas, imperios e silencios com a mesma paciencia, e viveu o
 tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "Remainder", "Cadence", "Project Kaleidoscope", "Kalt'sen", "Founder"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-04-28"
+updated: "2026-06-26"
 codex_file: "Em'manuel Kael Wonderwall Dossier.md"
 image: "../../assets/uploads/char-emmanuel-wonderwall.png"
 hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"

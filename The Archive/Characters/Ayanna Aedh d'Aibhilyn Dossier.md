@@ -75,16 +75,23 @@ Stable canon:
 
 ### I.1 — Apocachynthion Registry
 
-**Leaf Type:** Practice Leaf  
+**File Type:** Practice File  
 **Registry Status:** Registered under Auroran compact  
 **Rank:** Quill  
 **Mark:** Mark 2  
 **Open Mark:** None  
 **Margins:** Auroran-territory practice only under compact recognition; no combat deployment; no deep-site or anomaly-adjacent work without supplemental seal  
+**Restrictions:** No combat deployment; no deep-site or anomaly-adjacent work without supplemental seal  
+**Point:** Compact-recognized Point; carried  
+**CAS Access:** Basic CAS; professional CAS limited to research diagnostics  
+**Leaf Permissions:** Common Leaves; Licensed Leaves by Mark permission  
+**Point Register:** Protected; compact process required for access  
 **Anchor:** Mechanism  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Mid  
-**Reach Reading:** Disciplined  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Working Reach  
+**Overreach History:** Assessment symptoms recorded during mechanism suspension  
+**Apparatus Permissions:** Ordinary Apparati; no martial apparati  
 **Practice Record:** Research, diagnostics, and controlled civic-industrial work  
 **Pager Note:** None  
 **Current Seal:** Auroran embassy assessment under Apocachynthion recognition

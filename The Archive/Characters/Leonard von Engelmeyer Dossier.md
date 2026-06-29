@@ -28,16 +28,23 @@ Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus e
 
 ### I.1 — Apocachynthion Registry
 
-**Leaf Type:** Sealed Leaf  
+**File Type:** Sealed File  
 **Registry Status:** Registered  
 **Rank:** Stylus  
 **Mark:** Mark 4  
 **Open Mark:** None  
 **Margins:** Pager notice for Stase-adjacent field return; no standing military deployment without Council request  
+**Restrictions:** Pager notice for Stase-adjacent field return; no standing military deployment without Council request  
+**Point:** Academy-issued; carried  
+**CAS Access:** Professional CAS under instructional standing  
+**Leaf Permissions:** Licensed Leaves by instructional authority; Restricted Leaves by Council request  
+**Point Register:** Protected; instructional review authority limited to training windows  
 **Anchor:** Thermodynamic  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Deep  
-**Reach Reading:** Disciplined  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Working Reach  
+**Overreach History:** None recorded  
+**Apparatus Permissions:** Professional Apparati under instructional standing; martial deployment only by Council request  
 **Registration Tenure:** 37 years  
 **Academy Record:** Asylum intake 1090; central formation track; Stylus elevation recorded 1105  
 **Practice Record:** Academy instruction; restricted hazardous consultation  

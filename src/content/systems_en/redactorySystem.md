@@ -5,7 +5,7 @@ summary: "The deliberate routing of local reality through the Dive: powerful, te
 tags: ["systems", "Redactory", "Dive", "Anchor", "Strata", "Abyssal", "Archtype", "Shores"]
 status: "public"
 created: "2026-02-12"
-updated: "2026-05-27"
+updated: "2026-06-26"
 image: "../../assets/uploads/sys-redactory.png"
 ---
 
@@ -49,6 +49,8 @@ Examples:
 - maintained blades, tools, or vessels.
 
 These are real while present, but they are not self-sustaining. When the routing ends, they collapse.
+
+Apparatus instancing uses the same logic through a prepared object, tool, garment, weapon, or vessel. The apparatus can stabilize output, shape expression, or make a route easier to hold, but it does not replace the Redactor's Anchor or make the effect self-authoring.
 
 ### Stable reconfiguration
 
@@ -113,6 +115,12 @@ When Reach becomes structurally unsustainable, it becomes **Overreach**. Typical
 
 The world does not care whether the practitioner meant well. Collapse is still collapse.
 
+Current classification separates **Anchor Depth** from **Dive Depth**. Anchor Depth names where the Anchor naturally sits in relation to the strata: shallow, deep, or abyssal. Dive Depth names how far the practitioner descends in a specific act. A shallow Anchor can be forced into a dangerous Dive, and an abyssal Anchor can be used at safer operating heights.
+
+Reach is also recorded as a rating, not a moral judgment. Bound Reach stays inside the Anchor's natural route. Near Reach extends into adjacent configurations. Working Reach can sustain non-native routes with discipline. Wide Reach can carry major cross-domain work. Unmoored Reach is the warning state where the route has outrun the Redactor's stable self-address.
+
+Overreach is the failure ladder beyond that warning state: strain, distortion, tear, rupture, and collapse. The names are institutional shorthand for escalating damage to the recursive structure that holds the Dive together.
+
 ---
 
 ## Abyssal Anchors and Archtypes
@@ -172,6 +180,10 @@ The Apocachynthion exists because:
 - gifted Redactors can create disasters faster than ordinary institutions can describe them.
 
 That does not mean the Apocachynthion governs Redactory's metaphysics. It governs practitioners. In institutional doctrine, **Rank** names the Redactor's standing, while **Mark** names the level of practice the institution permits. The Dive, the Anchor, Depth, Reach, and Shore-risk remain structural facts whether the current Mark is broad, narrow, open, or blotted.
+
+Modern practice also depends on **Points**: Academy-issued BrightCrystal devices that identify a Redactor, carry access credentials, and interface with institutional records. A Point is not the source of Redactory. It is the regulated tool that lets the Apocachynthion route identity, permission, file access, and event logs through a controlled support system.
+
+The associated **CAS** layer handles authentication and synchronization, while **Leaves** are the formal record types attached to a practitioner: registry, formation, practice, sealed, Pager, black, and Folio-sealed files. Non-Point-routed Redactory can still occur, but in regulated territory it is operationally suspicious because it bypasses the apparatus built to keep Rank, Mark, Margins, and incident history legible.
 
 A catastrophic Dive failure is not merely a question of burnout or uncontrolled manifestation. In rare cases it may be Shorefall.
 

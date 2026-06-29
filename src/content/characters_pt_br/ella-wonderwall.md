@@ -8,6 +8,11 @@ affiliation: "House Wonderwall (linha principal); SiNE (Redactor operacional, ca
 house: "Wonderwall (posição na linha principal)"
 rank: "Stylus — Anchor de Light, licença operacional irrestrita"
 registry_status: "Registrada — Stylus, Anchor de Light. KL-83 (designação interna, não divulgada publicamente)"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "A luz que voltou diferente"
 height: "170 cm"
 build: "Magra; dedos longos; uma fragilidade aparente que não corresponde à realidade"
@@ -27,7 +32,7 @@ summary: "Feita de um anseio antigo e obrigada a sobreviver a ele, brilha como r
 tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora", "Successor"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-06-26"
 codex_file: "Ella Rae Wonderwall Dossier.md"
 ---
 

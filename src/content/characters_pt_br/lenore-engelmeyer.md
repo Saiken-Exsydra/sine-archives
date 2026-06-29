@@ -8,6 +8,11 @@ affiliation: "Apocachynthion (licenciada); Casa Engelmeyer (linhagem principal r
 house: "Engelmeyer (linhagem principal, reintegrada em 2199 — anteriormente ramo cadete Voren)"
 rank: "Quill"
 registry_status: "Registrada — admissão em 2193; certificação Quill emitida em 2195; licença operacional condicional ativa"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "Fome palida de lua"
 height: "169 cm"
 build: "Leve; compacta sem parecer frágil; se move como alguém que já decidiu antes quanto espaço pretende ocupar"
@@ -21,7 +26,7 @@ summary: "Encantadora, cuidadosa, impossivel de comover; veste a civilidade como
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-24"
+updated: "2026-06-26"
 codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"

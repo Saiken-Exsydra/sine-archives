@@ -8,6 +8,11 @@ affiliation: "Apocachynthion (sealed file, Mark 2); House Engelmeyer (reintegrat
 house: "Engelmeyer (main line, reintegrated 2199 - formerly cadet Voren branch)"
 rank: "Quill"
 registry_status: "Registered - Quill, Mark 2; intake 2193; sealed Margins active"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "The Hunger in Silk"
 height: "169 cm"
 build: "Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy"
@@ -33,7 +38,7 @@ tags:
   - "Voren"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-24"
+updated: "2026-06-26"
 codex_file: "Lenore Engelmeyer Dossier.md"
 ---
 

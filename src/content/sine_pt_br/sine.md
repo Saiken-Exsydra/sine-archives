@@ -11,7 +11,7 @@ summary: "Sete divisões. Uma organização. Mais antiga do que a maioria das in
 tags: ["SiNE", "Wonderwall", "Organization", "CLOCKWORK", "HourGlass", "StaSis", "Clepsydra", "Em'manuel", "Kalt'sen", "Military", "Research"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-06-26"
 image: "../../assets/uploads/ui-sine-logo.png"
 ---
 
@@ -55,6 +55,8 @@ A Clepsydra não possui natureza militar, embora praticamente toda campanha mili
 A Magi administra a população interna de Redactors da SiNE — certificação de praticantes afiliados à instituição, programas de treinamento que operam paralelamente, mas separados, do sistema acadêmico da [[apocachynthion|Apocachynthion]] e toda a máquina administrativa que regula como praticantes registrados atuam dentro da estrutura institucional da SiNE.
 
 A relação entre a Magi e a [[apocachynthion|Apocachynthion]] é tecnicamente cooperativa e pragmaticamente complicada. Praticantes registrados empregados pela SiNE respondem às duas hierarquias institucionais ao mesmo tempo, e isso gera conflitos de obrigação com frequência suficiente para manter os departamentos jurídicos das duas organizações constantemente ocupados.
+
+A Magi mantem padroes internos de manuseio de Point, checagens de compatibilidade CAS e forensica de eventos para Redactors sob contrato da Company. Esses padroes nao dao a SiNE autoridade independente sobre registros do Apocachynthion. Um Point register continua sendo objeto legal e arquivistico do Apocachynthion mesmo quando infraestrutura da SiNE ajuda a ler, preservar ou comparar evidencia ao redor dele.
 
 ### S-LG: Evanote (Jurídico e Governança)
 

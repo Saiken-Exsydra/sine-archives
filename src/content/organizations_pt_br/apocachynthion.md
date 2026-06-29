@@ -11,7 +11,7 @@ summary: "A associação imperial de Redactors"
 tags: ["Synus", "Redactor", "Institution", "Governance", "Pagers", "Academy", "Kalt'sen"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-12"
+updated: "2026-06-26"
 image: "../../assets/uploads/org-apocachynthion.png"
 ---
 
@@ -75,6 +75,8 @@ As Academies são o principal ponto de contato entre o Apocachynthion e a popula
 
 As Academies conduzem o processo formal pelo qual as habilidades de um Redactor são avaliadas, categorizadas e direcionadas para trajetórias de atuação apropriadas após a certificação. A avaliação é realizada por membros de rank Stylus e serve como base para o registro classificatório construído pelo Registry Branch para cada Redactor.
 
+As Academies tambem emitem o **Point** do Redactor: um dispositivo regulado de BrightCrystal que carrega identidade, credenciais de pratica, estado de acesso e a interface tecnica usada pelos sistemas da Academy e do Registry. O treinamento fundamental inclui manuseio do Point, autenticacao CAS, disciplina de acesso a Leaf e a regra de que registros roteados pelo Point nao definem a metafisica do Redactor. Eles definem a capacidade institucional de reconhecer, permitir e auditar o trabalho.
+
 ---
 
 ## O Sistema de Ranks
@@ -122,6 +124,14 @@ Um **Open Mark** e a ampliacao temporaria do Mark normal durante uma emergencia 
 ### Leaf {#leaf}
 
 **Leaf** nomeia o tipo de arquivo sob o qual o praticante e registrado. O termo preserva a metafora de escrita que o Apocachynthion usa desde a fundacao.
+
+### Point, CAS e Point Register {#point}
+
+Um **Point** e emitido pela Academy apos o intake e permanece ligado a identidade institucional do praticante. Ele nao e fonte magica, badge de rank ou prova de capacidade metafisica. Ele e o apparatus regulado pelo qual a associacao confirma quem esta trabalhando, quais arquivos podem ser acessados, o que o Mark atual permite e onde um registro de evento deve ser escrito.
+
+A camada **CAS** associada cuida de autenticacao, sincronizacao e controle de acesso entre o Point e os sistemas institucionais. Um Redactor pode carregar um Point com acesso CAS limitado ou suspenso. Um arquivo restrito pode existir e ainda assim permanecer indisponivel por credenciais comuns de Point.
+
+O **Point Register** e, portanto, uma questao legal e arquivistica. Registry Branch, avaliadores da Academy, Pagers e processos selados pelo Council podem enxergar partes diferentes da mesma historia do praticante. O Point torna essa segmentacao aplicavel sem fingir que a burocracia e a fonte da Redactory.
 
 ### A Designação Inkless {#inkless}
 

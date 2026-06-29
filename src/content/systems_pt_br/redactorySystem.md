@@ -5,7 +5,7 @@ summary: A arte disciplinada de conduzir a realidade para formas permitidas.
 tags: ["systems", "magic", "Redactory", "Redactors", "Dive", "Anchor"]
 status: public
 created: "2026-02-12"
-updated: "2026-05-10"
+updated: "2026-06-26"
 image: "../../assets/uploads/sys-redactory.png"
 ---
 
@@ -57,6 +57,8 @@ Exemplos:
 - Água condensada em uma forma utilizável que se desfaz quando a concentração acaba
 
 Esses efeitos são reais enquanto existem. Eles podem cortar, queimar, bloquear, cegar, afogar ou salvar vidas. Mas não se sustentam sozinhos. Quando o Redactor solta o efeito, ele colapsa.
+
+Instancing por Apparatus segue a mesma logica atraves de um objeto preparado: ferramenta, roupa, arma, vessel ou instrumento. O apparatus pode estabilizar saida, moldar expressao ou tornar uma rota mais facil de sustentar, mas nao substitui a Anchor do Redactor e nao transforma o efeito em autoria propria.
 
 ### 2. Reconfiguração estável
 
@@ -238,6 +240,8 @@ Um Redactor pode possuir uma Anchor relativamente rasa, mas forçar um Dive extr
 
 Da mesma forma, um veterano pode passar anos empurrando a própria Anchor para mais perto da strata, fazendo com que todo Dive futuro já comece de uma posição naturalmente mais profunda.
 
+A classificacao atual separa **Anchor Depth** de **Dive Depth**. Anchor Depth nomeia onde a Anchor naturalmente fica em relacao a strata: shallow, deep ou abyssal. Dive Depth nomeia o quanto o praticante desce em um ato especifico. Uma Anchor rasa pode ser forcada para um Dive perigoso, e uma Abyssal Anchor pode ser usada em alturas operacionais mais seguras.
+
 ---
 
 ## Reach, Overreach e Collapse
@@ -248,9 +252,13 @@ Isso é chamado de **Reach**.
 
 Reach é comum. É assim que praticantes experientes deixam de ser limitados.
 
+O Reach tambem e registrado como rating. **Bound** permanece dentro da rota natural da Anchor. **Near** alcanca configuracoes adjacentes. **Working** sustenta rotas nao nativas com disciplina. **Wide** carrega trabalho importante entre dominios. **Unmoored** e o estado de aviso em que a rota ultrapassou a auto-coerencia estavel do Redactor.
+
 O perigo real é o **Overreach**.
 
 É o ponto onde esse avanço deixa de ser controlado e começa a destruir o próprio praticante.
+
+A escada de Overreach e descrita como strain, distortion, tear, rupture e collapse. Esses nomes sao atalho institucional para dano crescente na estrutura recursiva que mantem o Dive unido.
 
 Sinais comuns de Overreach:
 
@@ -455,6 +463,10 @@ O trabalho deles é decidir:
 - até que profundidade
 - sob qual supervisão
 - e quais consequências existem caso algo dê errado
+
+Na pratica moderna, isso tambem passa pelos **Points**: dispositivos de BrightCrystal emitidos pela Academy que identificam um Redactor, carregam credenciais de acesso e fazem interface com registros institucionais. Um Point nao e a fonte da Redactory. Ele e a ferramenta regulada que permite ao Apocachynthion manter identidade, permissao, acesso a arquivos e logs de evento legiveis.
+
+A camada associada de **CAS** cuida de autenticacao e sincronizacao, enquanto **Leaves** sao os tipos formais de arquivo presos ao praticante: registry, formation, practice, sealed, Pager, black e Folio-sealed. Redactory fora de rota de Point ainda pode acontecer, mas em territorio regulado ela e suspeita porque passa ao redor do apparatus feito para manter Rank, Mark, Margins e historico de incidentes visiveis.
 
 Essa cautela existe porque a Redactory escala muito mal quando não é controlada.
 

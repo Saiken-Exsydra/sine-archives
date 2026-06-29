@@ -8,6 +8,11 @@ affiliation: "House Wonderwall; Empire of Synus; SiNE"
 house: "Wonderwall (Rae branch origin; primary line by marriage)"
 rank: "Stylus - Revelation Anchor"
 registry_status: "Publicly held as House Wonderwall's principal representative; privately recognized as a stable composite continuity"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "The Second Radiance"
 height: "Not publicly recorded"
 build: "Fine-boned, poised, deliberately still"
@@ -36,7 +41,7 @@ tags:
   - "A'licia"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-11"
+updated: "2026-06-26"
 codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 ---
 

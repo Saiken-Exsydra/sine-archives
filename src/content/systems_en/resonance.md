@@ -5,7 +5,7 @@ summary: "The Archive's passive coherence condition: not energy, not signal, but
 tags: ["systems", "Resonance", "Redactory", "Divination", "Shores", "Anchors", "Coherence", "Thinness", "Callings"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-25"
+updated: "2026-06-26"
 image: ""
 ---
 
@@ -104,6 +104,10 @@ Resonance underlies multiple systems without making them identical.
 ### Redactory
 
 Redactory is directed routing through indexed alignment. The practitioner selects among Archive-valid configurations and forces local expression. Resonance supplies the gradients and environmental conditions that make that routing easier, harder, safer, or catastrophic.
+
+Apocachynthion Point instruments use resonance-signature comparison as one of their practical functions. They can help match a practitioner, an Anchor pattern, a registered Point, and a recorded event signature. This does not make the Point the source of the effect; it makes the Point a regulated instrument for reading and logging resonance-adjacent evidence.
+
+Non-Point-routed Redactory can still leave a signature. It is harder to attribute inside ordinary institutional systems because it does not arrive with the expected identity, CAS, and register trail.
 
 ### Divination
 

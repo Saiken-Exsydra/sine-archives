@@ -5,7 +5,7 @@ summary: "Curvature-Compressed Radiant Silicate. The world's primary energy subs
 tags: ["systems", "BrightCrystal", "Energy", "Resonance", "Callings", "Precursors", "Economy", "Redactory", "Divination"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-06-26"
 image: "../../assets/uploads/sys-bright-crystal.png"
 ---
 
@@ -31,6 +31,8 @@ BrightCrystal's core functional property is its relationship to resonance. The c
 **Energy transmission:** BrightCrystal transfers energy efficiently through contact and through resonance-mediated proximity. Installations built around BrightCrystal conduction can transmit energy across distances that conventional means cannot match.
 
 **Redactory interaction:** For practitioners in the Dive, BrightCrystal's resonance organization creates a medium through which effects can be amplified, extended, or made more precise. Working within a BrightCrystal-rich environment changes the texture of what the Dive feels like and what can be accomplished within it. High-level Redactory research — the kind conducted at the Academy of Syr'lene and the other major academies — relies on BrightCrystal infrastructure in its most demanding experimental work.
+
+**Point apparatus:** Apocachynthion Points are regulated BrightCrystal devices built for identification, access control, CAS synchronization, and resonance-signature comparison. They support Redactory governance and forensics; they do not generate the Redactor's Anchor or authorize Redactory as a metaphysical fact.
 
 ---
 

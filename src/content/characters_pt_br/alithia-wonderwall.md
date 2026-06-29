@@ -8,6 +8,11 @@ affiliation: "House Wonderwall (linha principal, líder política de facto); Imp
 house: "Wonderwall (origem no ramo Rae; linha principal por casamento)"
 rank: "Stylus - Anchor de Revelation"
 registry_status: "Publicamente reconhecida como principal representante da House Wonderwall; em privado, reconhecida pela revisão da Casa e da Church como um caso estável de fusão divina sem precedentes conhecidos"
+point_profile:
+  status: ""
+  cas_access: ""
+  leaf_permissions: ""
+  register_access: ""
 designation: "A Segunda Radiancia"
 height: "Não registrado publicamente"
 build: "Estrutura delicada, postura precisa e imóvel de propósito; se move como alguém que nunca desperdiça ênfase"
@@ -21,7 +26,7 @@ summary: "Feita de memoria, mas humana ate o fim; calor onde sua casa esperava m
 tags: ["Wonderwall", "Rae", "SiNE", "Radiance", "Revelation", "First Radiance", "Senate", "Kalt'sen", "Divine Vessel", "A'licia"]
 status: "public" 
 created: "2026-05-14"
-updated: "2026-05-14"
+updated: "2026-06-26"
 codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"

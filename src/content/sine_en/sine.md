@@ -11,7 +11,7 @@ summary: "Seven divisions. One organization. Older than most institutions that b
 tags: ["SiNE", "Wonderwall", "Organization", "CLOCKWORK", "HourGlass", "StaSis", "Clepsydra", "Em'manuel", "Kalt'sen", "Military", "Research"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-27"
+updated: "2026-06-26"
 image: "../../assets/uploads/ui-sine-logo.png"
 ---
 
@@ -57,6 +57,8 @@ Clepsydra is not military in character, though nearly every military campaign of
 Magi handles SiNE's internal Redactor population - placement management for SiNE-affiliated practitioners, compact-side coordination with the [[apocachynthion|Apocachynthion]]'s registry, and the administrative machinery that governs how registered practitioners operate within SiNE's institutional structure.
 
 The relationship between Magi and the [[apocachynthion|Apocachynthion]] is technically cooperative and practically complicated. Registered practitioners in SiNE's employ report to both institutional hierarchies in ways that produce conflicting obligations often enough to keep both institutions' legal divisions occupied. In imperial territory, Magi can place a Redactor only within the scope of that practitioner's current [[mark|Mark]] and [[margins|Margins]], unless an emergency [[open-mark|Open Mark]] is recognized through [[pagers|Apocachynthion authority]].
+
+Magi maintains SiNE-side Point handling standards, CAS compatibility checks, and internal event forensics for Redactors under Company contract. Those standards do not grant SiNE independent authority over Apocachynthion records. A Point register remains an Apocachynthion legal and archival object even when SiNE infrastructure helps read, preserve, or compare the evidence around it.
 
 ### S-LG: Evanote (Legal and Governance)
 
