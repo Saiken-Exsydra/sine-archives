@@ -1,7 +1,7 @@
 # PERSONAL DOSSIER - RESTRICTED
 ## HALK'EN ORVETH
-*Filed and maintained by the Diaconate of the Interior, restricted duplicate held under Obsidian Rite seal*
-*Access class: Arch-Patriarch, Diaconate Council, Rector-Ascendant, Ecclesiastic Surgeon, Keepers of Before by direct authorization only*
+*Filed and maintained by the Interior Council, restricted duplicate held under Obsidian seal*
+*Access class: Primus, Council of Bishops, Rector-Ascendant, Ecclesiastic Surgeon, Keepers of Before by direct authorization only*
 
 ---
 
@@ -14,11 +14,11 @@
 
 *This is not the ordinary service record of Rector-Ascendant Halk'en Orveth. That document exists, is formally complete, and is almost useless for the questions that matter.*
 
-*It records postings, investitures, field actions, commendations, disciplinary exemptions, and sealed deployments. It does not adequately record the central fact: Father Orveth is one of the Answered. He is not merely a powerful Rector-Ascendant. He is a living point of contact between the One Church and one of the seven answering Seraphim recognized in the restricted theology of the Diaconate of the Interior.*
+*It records postings, investitures, field actions, commendations, disciplinary exemptions, and sealed deployments. It does not adequately record the central fact: Father Orveth is one of the Answered. He is not merely a powerful Rector-Ascendant. He is a living point of contact between the Church and one of the seven answering Seraphim recognized in the restricted theology of the Interior Council.*
 
-*This file exists because the categories that contain ordinary members of the Obsidian Rite do not contain him cleanly. Divine vessels carry angelic fragments. Some carry them more deeply than ordinary Votaries. Halk'en Orveth is a rarer Cynosure-contact case: a Seraphic fusion so deep and so cleanly stabilized that the pressure in him is treated institutionally as immediate Auctoriel. Every report that treats the Sevenfold Hand as a spectacular variation of authority-domain expression has already misunderstood the problem.*
+*This file exists because the categories that contain ordinary members of Obsidian do not contain him cleanly. Divine Vessels carry angelic Presence. Some bear it more deeply than ordinary Votaries. Halk'en Orveth is a rarer Cynosure-contact case: a Seraphic fusion so deep and so cleanly stabilized that the Weight in him is treated institutionally as immediate Auctoriel. Every report that treats the Sevenfold Hand as a spectacular variation of authority-domain expression has already misunderstood the problem.*
 
-*The Church requires him. The Rite trusts him. The Ecclesiastic Surgeons monitor him. The Keepers of Before have requested his removal from three separate cases and his deployment to two others. None of these positions contradict each other. They describe the only honest institutional posture toward a man through whom Dominion can touch the world directly.*
+*The Church requires him. Obsidian trusts him. The Ecclesiastic Surgeons monitor him. The Keepers of Before have requested his removal from three separate cases and his deployment to two others. None of these positions contradict each other. They describe the only honest institutional posture toward a man through whom Dominion can touch the world directly.*
 
 *- D.I. restricted compilation note, year 2200*
 
@@ -33,31 +33,31 @@
 | **Common Titles** | **The Red-Handed Rector**; **Bearer of the Sevenfold Hand** |
 | **Year of Birth** | 1801 (age 399 at time of filing, 2200) |
 | **Birth Status** | Natural birth; Northern Region parish registry; parentage unremarkable in surviving record |
-| **Civil Standing** | Consecrated priest of the One Church; permanent member of the Obsidian Rite |
-| **Rite Position** | Rector-Ascendant of the Obsidian Rite; one of the Answered |
+| **Civil Standing** | Consecrated priest of the Church; permanent member of Obsidian |
+| **Obsidian Position** | Rector-Ascendant of Obsidian; one of the Answered |
 | **Years of Active Service** | 376 years of documented service, 1824-present |
-| **Divine Status** | Confirmed Beatified vessel; central-star Seraphic fusion |
+| **Divine Status** | Confirmed Crowned vessel; central-star Seraphic fusion |
 | **Seraphic Alignment** | **Auctoriel**, Seraphim of Dominion; Cynosure of the Dominion Constellation |
-| **Operational Classification** | Authority-domain Seraphic vessel; severe-domain Beatified; maximum restricted deployment |
+| **Operational Classification** | Authority-domain Seraphic vessel; severe-domain Crowned; maximum restricted deployment |
 | **Primary Manifestation** | **The Sevenfold Hand** |
 | **Artifact Bearing** | **Sundersaint, the Parting Mercy** |
-| **Current Residence** | Variable; principal quarters within the Obsidian Rite fortress-priory of Saint Veyran in Kalt'sen, with long-term absences by sealed order |
-| **Public Standing** | Revered senior Rector-Ascendant, living pillar of the Rite, rarely seen outside major ecclesiastical action |
-| **Private Standing (Diaconate Assessment)** | Strategically irreplaceable, pastorally stable by current measures, structurally dangerous beyond ordinary vessel categories |
+| **Current Residence** | Variable; principal quarters within Obsidian fortress-priory of Saint Veyran in Kalt'sen, with long-term absences by sealed order |
+| **Public Standing** | Revered senior Rector-Ascendant, living pillar of Obsidian, rarely seen outside major ecclesiastical action |
+| **Private Standing (Interior Council Assessment)** | Strategically irreplaceable, pastorally stable by current measures, structurally dangerous beyond ordinary vessel categories |
 
 ---
 
 ## II. WHAT HE IS
 
-Halk'en Orveth is one of the seven living Rector-Ascendants recognized within restricted ecclesiastical doctrine as an Answered-class Beatified vessel.
+Halk'en Orveth is one of the seven living Rector-Ascendants recognized within restricted ecclesiastical doctrine as an Answered-class Crowned vessel.
 
-This must be distinguished from ordinary Beatified status.
+This must be distinguished from ordinary Beatification and from lesser Magnitudes of Crowned status.
 
-Most divine vessels within the Obsidian Rite carry angelic fragments. A Votary may bear a light-domain fragment, a protection-domain fragment, a healing-domain fragment, or some rarer expression through which the Sovereign's authority becomes operationally useful in the field. In the Rite's own formal language, the stable and non-erosive version of this condition is fragment fusion: transformation rather than possession, integration rather than displacement. This is already dangerous. It is already transformative. It already requires formation, confession, surgical monitoring, and the permanent acceptance that the vessel will not remain entirely what they were before investiture.
+Most Divine Vessels processed into Obsidian carry angelic Presence at lesser Magnitudes. A Votary may bear light-domain Presence, protection-domain Presence, healing-domain Presence, or some rarer expression through which the Sovereign's authority becomes operationally useful in the field. In Obsidian's own formal language, the stable and non-erosive version of this condition is sanctified Bearing: transformation rather than possession, integration rather than displacement. This is already dangerous. It is already transformative. It already requires formation, confession, surgical monitoring, and the permanent acceptance that the vessel will not remain entirely what they were before investiture.
 
 The Answered are not that.
 
-The Answered carry contact with the Seraphic **Cynosure** from which the rest of a constellation proceeds. They do not contain the Seraphim in full. No mortal recursive singularity could. What they carry is central-star pressure expressed through fragment fusion at unusual depth: a continuous and stabilized Divinatory alignment deep enough that subordinate angelic offices within that constellation may express through them without requiring separate vessel contact.
+The Answered carry contact with the Seraphic **Cynosure** from which the rest of a constellation proceeds. They do not contain the Seraphim in full. No mortal recursive singularity could. What they carry is central-star Weight expressed through Presence at unusual depth: a continuous and stabilized Divinatory alignment deep enough that subordinate angelic offices within that constellation may express through them without requiring separate vessel contact.
 
 In Halk'en Orveth's case, the central star expressed through that fusion is **Auctoriel, Seraphim of Dominion**.
 
@@ -89,7 +89,7 @@ In clerical dress, he favors plain black cassock, iron rosary, and no visible or
 
 In armor, he becomes difficult to look away from.
 
-His field plate is blackened steel of pre-modern form, maintained through Rite artificers and adjusted across centuries rather than replaced. It is not modern military equipment and does not attempt to be. The silhouette is medieval: high gorget, layered pauldrons, reinforced breast, articulated gauntlets, sabatons, and a narrow visor helm whose faceplate gives only a vertical slit of visibility. Red enamel fills the incised lines across the backplate, where seven palm-marks radiate from the spine like an inverted halo. When the Sevenfold Hand manifests, the hands emerge through those marks as if the armor has been built less to contain him than to provide the correct doors.
+His field plate is blackened steel of pre-modern form, maintained through Obsidian artificers and adjusted across centuries rather than replaced. It is not modern military equipment and does not attempt to be. The silhouette is medieval: high gorget, layered pauldrons, reinforced breast, articulated gauntlets, sabatons, and a narrow visor helm whose faceplate gives only a vertical slit of visibility. Red enamel fills the incised lines across the backplate, where seven palm-marks radiate from the spine like an inverted halo. When the Sevenfold Hand manifests, the hands emerge through those marks as if the armor has been built less to contain him than to provide the correct doors.
 
 His ordinary physical manner is restrained. He does not touch casually. This is not coldness. It is discipline. He asks permission before laying a hand on a penitent outside sacramental requirement. He removes his gauntlets before blessing children. He does not shake hands with civilians unless they offer first, and even then he does so with a care that younger clergy sometimes mistake for awkwardness.
 
@@ -111,9 +111,9 @@ He forgives slowly, but when he does, the forgiveness has weight.
 
 ### IV.1 Auctoriel as Cynosure
 
-Auctoriel is one of the **Seven Answers**; Orveth is one of the **Answered** recognized in the restricted doctrine of the Diaconate of the Interior.
+Auctoriel is one of the **Seven Answers**; Orveth is one of the **Answered** recognized in the restricted doctrine of the Interior Council.
 
-Public Church teaching does not enumerate the Seven Answers, and it does not publicly name the Answered as a mortal category. Sermons speak of the Sovereign's high attendants, the burning offices of Heaven, and the great powers by which His will is expressed. The full Seraphic taxonomy is not taught to ordinary clergy. It is held within the Diaconate's interior theology because the difference between worship, fragment contact, and uncontrolled Seraphic fascination has killed enough people to justify silence.
+Public Church teaching does not enumerate the Seven Answers, and it does not publicly name the Answered as a mortal category. Sermons speak of the Sovereign's high attendants, the burning offices of Heaven, and the great powers by which His will is expressed. The full Seraphic taxonomy is not taught to ordinary clergy. It is held within the Interior Council's restricted theology because the difference between worship, fragment contact, and uncontrolled Seraphic fascination has killed enough people to justify silence.
 
 Auctoriel's domain is Dominion.
 
@@ -146,7 +146,7 @@ Auctoriel is the terrible hinge between command and reality: the instant at whic
 
 The Seraphim's pressure expresses through Father Orveth as seven distinguishable hands. These hands are not separate angels in the ordinary fragment taxonomy, though lesser angelic offices of Dominion may be understood through them. They are contact-aspects of a single Seraphic Cynosure and its constellation.
 
-Their visibility correlates with strength, conceptual depth, and operational authority. Lower expressions may be present without ordinary witnesses seeing them. Higher expressions are visible, tangible, and measurable by every instrument the Rite has yet placed near them.
+Their visibility correlates with strength, conceptual depth, and operational authority. Lower expressions may be present without ordinary witnesses seeing them. Higher expressions are visible, tangible, and measurable by every instrument Obsidian has yet placed near them.
 
 The Ecclesiastic Surgeons use the term **hand-count** as shorthand for active expression level. This is useful in field records and inadequate in theology.
 
@@ -271,7 +271,7 @@ It may also be the first sign of Dominion becoming pastorally dangerous.
 
 The sixth hand is fully tangible.
 
-This is not a poetic description. Every measurement method the Rite has approved for divine manifestation has registered the sixth hand as present in a way lower expressions are not. It has measurable resistance, pressure, temperature variance, mass-like interaction, and structural density sufficient to interfere with Redactory readings, BrightCrystal instrumentation, acoustic mapping, and ordinary physical contact.
+This is not a poetic description. Every measurement method Obsidian has approved for divine manifestation has registered the sixth hand as present in a way lower expressions are not. It has measurable resistance, pressure, temperature variance, mass-like interaction, and structural density sufficient to interfere with Redactory readings, BrightCrystal instrumentation, acoustic mapping, and ordinary physical contact.
 
 It appears as a large right hand of deep opaque red, neither rough like the third nor elegant like the second. It is exact. The proportions are human enough to be intelligible and wrong enough to be distressing. When it closes around something, witnesses often report the impression that the closing happened first and the movement followed.
 
@@ -285,7 +285,7 @@ Effects associated with the Hand of Mandate include:
 - forcing a possessing entity to release a body part, voice, memory, or threshold;
 - halting a violent vessel without destroying the vessel;
 - compelling a hostile rite-state to stabilize long enough to be cut, named, or expelled;
-- overriding lesser angelic or demonic fragment pressure in direct contest;
+- overriding lesser angelic or demonic Weight in direct contest;
 - making an oathbreaker experience the structural weight of the violated oath.
 
 This is the point at which Father Orveth ceases to resemble even an unusually powerful Rector-Ascendant.
@@ -317,13 +317,13 @@ Effects associated with the Sovereign Palm include:
 
 This hand carries unacceptable risk.
 
-Every confirmed manifestation has been followed by no fewer than thirty days of Ecclesiastic Surgical assessment, seven consecutive confessions, and Diaconate review. The concern is not that Father Orveth will become demonic. That category is not useful here. The concern is that a mortal vessel who expresses Dominion at seventh-hand depth may eventually stop experiencing his own restraint as separate from Auctoriel's will.
+Every confirmed manifestation has been followed by no fewer than thirty days of Ecclesiastic Surgical assessment, seven consecutive confessions, and Interior Council review. The concern is not that Father Orveth will become demonic. That category is not useful here. The concern is that a mortal vessel who expresses Dominion at seventh-hand depth may eventually stop experiencing his own restraint as separate from Auctoriel's will.
 
 Father Orveth himself has written only one sentence on the matter:
 
 > *"The seventh hand is not mine, and therefore I must answer for it more carefully than if it were."*
 
-The Diaconate considers this a healthy statement.
+The Interior Council considers this a healthy statement.
 
 It is also the kind of statement a man makes when he knows the edge is real.
 
@@ -333,7 +333,7 @@ It is also the kind of statement a man makes when he knows the edge is real.
 
 ### VI.1 Identity of the Artifact
 
-Father Orveth bears the greater artifact sword known in common Rite usage as **Sundersaint**.
+Father Orveth bears the greater artifact sword known in common Obsidian usage as **Sundersaint**.
 
 Its formal restricted designation is:
 
@@ -407,7 +407,7 @@ Nothing in the surviving record indicates noble standing, Redactory lineage, or 
 
 The apostrophe position in his first name is ordinary for the working population. This fact has been remarked upon by later commentators with more interest than it deserves. Halk'en Orveth did not come from a House. He did not need to. The Church has always preferred to remember this when it is useful and forget it when aristocratic donors are present.
 
-His earliest recorded distinction was physical courage, though this is less illuminating than later hagiographic sketches suggest. Northern children in Black Mere learned early that cold water, bad roads, injured animals, and frightened adults did not wait for courage to become spiritually meaningful. At twelve, he pulled a younger child from a millrace during Low Radiance flood. At fourteen, he struck a possessed horse with a shovel until it stopped trampling a Deacon. At fifteen, he carried an injured priest through snow to Saint Deyr's hospice and collapsed with frostbite in three toes.
+His earliest recorded distinction was physical courage, though this is less illuminating than later hagiographic sketches suggest. Northern children in Black Mere learned early that cold water, bad roads, injured animals, and frightened adults did not wait for courage to become spiritually meaningful. At twelve, he pulled a younger child from a millrace during Low Radiance flood. At fourteen, he struck a possessed horse with a shovel until it stopped trampling a priest. At fifteen, he carried an injured priest through snow to Saint Deyr's hospice and collapsed with frostbite in three toes.
 
 The priest survived.
 
@@ -433,13 +433,13 @@ It remains accurate.
 
 ### VIII.1 The Mornhallow Incident
 
-The event that brought Halk'en Orveth to the Obsidian Rite occurred in 1823, during what later became known as the **Mornhallow possession riots**.
+The event that brought Halk'en Orveth to Obsidian occurred in 1823, during what later became known as the **Mornhallow possession riots**.
 
 Mornhallow was a market town built around three bridges and a small ecclesiastical hospital. Over thirteen days, a demonic pressure event moved through the town's sickrooms, attaching first to fever patients, then to attendants, then to family members keeping vigil. The local clergy misclassified the event as sequential possession. It was not. Later review determined that the pressure had formed a distributed vessel-network across multiple weakened bodies, using grief as the connective tissue.
 
 Orveth was twenty-two, recently ordained, and present only because he had been assigned to assist in flood-season funerary overflow.
 
-The first Rite unit arrived too late and under strength. The senior Warden was killed within an hour. Two Deacons lost speech. The hospital's west ward became structurally contested and could not be entered without immediate vocal mimicry from the patients inside.
+The first Obsidian unit arrived too late and under strength. The senior Warden was killed within an hour. Two priests lost speech. The hospital's west ward became structurally contested and could not be entered without immediate vocal mimicry from the patients inside.
 
 The surviving account from Sister Aveline Mor, then a junior Ecclesiastic Surgeon, records the decisive moment:
 
@@ -451,11 +451,11 @@ Sister Aveline described it only as a pressure behind him shaped like a hand tha
 
 The ward was entered. Eleven patients survived who should not have.
 
-The Obsidian Rite removed Orveth from ordinary parish assignment within the month.
+Obsidian removed Orveth from ordinary parish assignment within the month.
 
 ### VIII.2 Early Warden Formation
 
-Orveth entered Rite formation in 1824 under **Rector-Ascendant Mael Orison**, a light-domain field commander whose patience for unusual candidates was famous and not always wise. Orison's early assessments repeatedly note that Orveth did not respond like a candidate seeking power. He responded like a man irritated by power until someone told him where to put it.
+Orveth entered Obsidian formation in 1824 under **Rector-Ascendant Mael Orison**, a light-domain field commander whose patience for unusual candidates was famous and not always wise. Orison's early assessments repeatedly note that Orveth did not respond like a candidate seeking power. He responded like a man irritated by power until someone told him where to put it.
 
 He was poor at radiance projection. He was adequate in formal ward geometry. He was excellent in vessel restraint, contested-threshold entry, and post-expulsion stabilization. He showed no appetite for display and little interest in advancement. He repeatedly requested assignments to practical containment units rather than theological study houses.
 
@@ -465,7 +465,7 @@ This changed after first confirmed Auctoriel contact.
 
 In 1831, during the failed expulsion of **Anrek Voss**, a thirteen-year-old vessel in the Central Region, Orveth manifested the third hand in visible form.
 
-Anrek's possession had reached a late stage but remained theoretically recoverable. The demon had learned to exploit the attending priests' fear of killing the boy and repeatedly forced the body into positions where restraint would cause injury. Orveth entered after two failed attempts, removed his gauntlets, and restrained the boy with his own hands for nine minutes while the Rite prepared a third Naming sequence.
+Anrek's possession had reached a late stage but remained theoretically recoverable. The demon had learned to exploit the attending priests' fear of killing the boy and repeatedly forced the body into positions where restraint would cause injury. Orveth entered after two failed attempts, removed his gauntlets, and restrained the boy with his own hands for nine minutes while Obsidian prepared a third Naming sequence.
 
 Witnesses report the appearance of a large red hand emerging over Orveth's left shoulder and pinning Anrek's shadow to the floor.
 
@@ -477,7 +477,7 @@ The expulsion succeeded. Anrek survived with permanent voice damage and later be
 
 The Ecclesiastic Surgeons began special monitoring in 1831.
 
-The Diaconate began restricted theological inquiry in 1834.
+The Interior Council began restricted theological inquiry in 1834.
 
 The term **Auctoriel** first appears in Orveth's own handwriting in 1836.
 
@@ -491,7 +491,7 @@ Halk'en Orveth was not elevated quickly.
 
 This is sometimes explained as caution regarding his unusual manifestation. That is true, but incomplete. The other reason is simpler: he refused advancement twice.
 
-He argued in 1849 and again in 1862 that his authority was most useful in direct field work and that administrative elevation would waste him. The first refusal was accepted. The second was recorded with irritation by Arch-Deacon Pel Varas, who wrote:
+He argued in 1849 and again in 1862 that his authority was most useful in direct field work and that administrative elevation would waste him. The first refusal was accepted. The second was recorded with irritation by Bishop Pel Varas, who wrote:
 
 > *"Father Orveth has mistaken humility for the right to decide where the Church requires him."*
 
@@ -503,13 +503,13 @@ Orveth entered the nave alone for seven minutes.
 
 When the doors opened, seventeen choir members were alive, six were dead, and the possessing structure had been forced into a single answerable center point. Sundersaint, then held in the reliquary vault of Saint Veyran and not yet assigned to him, was brought in afterward to complete the severance.
 
-The Diaconate stopped treating his elevation as optional.
+The Interior Council stopped treating his elevation as optional.
 
 He was made Rector-Ascendant in 1878.
 
 ### IX.2 Receiving Sundersaint
 
-Sundersaint was given to Father Orveth in 1881 after three years of review, two failed objections from the Keepers of Before, and one private meeting with the Arch-Patriarch whose record remains sealed.
+Sundersaint was given to Father Orveth in 1881 after three years of review, two failed objections from the Keepers of Before, and one private meeting with the Primus whose record remains sealed.
 
 The assignment was controversial.
 
@@ -529,7 +529,7 @@ The condition was recorded. It has never been tested openly.
 
 The title **one of the Answered** was not formally attached to him until 1906.
 
-This date is later than the reality. By then the Diaconate already understood that Orveth was not merely a severe authority-domain vessel. Other Seraphic contacts had been identified across the Church in fragmentary fashion. The theology of the Answered was being consolidated, quietly and with substantial disagreement.
+This date is later than the reality. By then the Interior Council already understood that Orveth was not merely a severe authority-domain vessel. Other Seraphic contacts had been identified across the Church in fragmentary fashion. The theology of the Answered was being consolidated, quietly and with substantial disagreement.
 
 Orveth's recognition followed the **Trial of Saint Kaldrin's Gate**, a sealed Grand Expulsion in which the sixth hand manifested tangibly for the first time before more than twenty authorized witnesses. The hostile presence, later classified as a high-order demonic fragment with distributed claim over a military hospice, had resisted all ordinary jurisdictional address by arguing through the dying soldiers' own vows of service.
 
@@ -541,7 +541,7 @@ The entire building rang once.
 
 The expulsion became possible.
 
-Afterward, the Diaconate's language changed. Not publicly. Never publicly.
+Afterward, the Interior Council's language changed. Not publicly. Never publicly.
 
 Internally, he was no longer a powerful Rector-Ascendant.
 
@@ -565,7 +565,7 @@ When asked why, he said:
 
 > *"It was still mine to fix."*
 
-This sentence is frequently cited by those who argue that his identity remains properly human beneath Seraphic pressure. It should be cited carefully. The same instinct that repairs a parish door because it remains his to fix can, under greater pressure, command a broken person to stand because he has decided they remain his to correct.
+This sentence is frequently cited by those who argue that his identity remains properly human beneath Seraphic Weight. It should be cited carefully. The same instinct that repairs a parish door because it remains his to fix can, under greater Weight, command a broken person to stand because he has decided they remain his to correct.
 
 ### X.2 The Severance of Halvorn Bridge
 
@@ -607,7 +607,7 @@ Orveth did not speak for nine days afterward except in confession.
 
 ### X.4 The Orison Dispute
 
-In 2059, Father Orveth publicly contradicted Rector-Ascendant Delian Orison during a Diaconate review concerning the forced investiture of a protection-domain candidate who had repeatedly refused permanent Rite formation.
+In 2059, Father Orveth publicly contradicted Rector-Ascendant Delian Orison during an Interior Council review concerning the forced investiture of a protection-domain candidate who had repeatedly refused permanent Obsidian formation.
 
 Orison argued that the candidate's capacity created obligation.
 
@@ -619,13 +619,13 @@ The statement has become central to modern formation ethics and is often used by
 
 The same review records that Orveth recommended the candidate be released to ordinary parish oversight under monitoring.
 
-The candidate survived, never joined the Rite, and later became a schoolmaster.
+The candidate survived, never joined Obsidian, and later became a schoolmaster.
 
 Father Orveth visited him once, forty years later, and blessed his retirement.
 
 ### X.5 The Silent Procession
 
-In 2166, during a major ecclesiastical procession in Kalt'sen, all visible members of the Obsidian Rite within the route fell silent at the same moment. Civilians assumed this was ceremonial. It was not.
+In 2166, during a major ecclesiastical procession in Kalt'sen, all visible members of Obsidian within the route fell silent at the same moment. Civilians assumed this was ceremonial. It was not.
 
 A demonic mimic had entered the procession by wearing the grief of a woman whose son had died in Threshold service. The mimic carried no body of its own and moved through sympathetic attention. Speaking its presence aloud would have spread it.
 
@@ -641,7 +641,7 @@ The woman never learned the full nature of what occurred. Orveth arranged for he
 
 ### X.6 Consultation Regarding Father Viktor
 
-The Diaconate requested Father Orveth's private opinion on Vaey Viktor in 2198.
+The Interior Council requested Father Orveth's private opinion on Vaey Viktor in 2198.
 
 The meeting lasted sixteen minutes.
 
@@ -657,7 +657,7 @@ This is one of several reasons Father Orveth's current loyalty to the Church sho
 
 ## XI. PSYCHOLOGICAL AND PASTORAL PROFILE
 
-Father Orveth has endured four centuries of Seraphic pressure without entering the known failure states associated with severe-domain Beatified vessels. This is remarkable. It is not miraculous enough to remove concern.
+Father Orveth has endured four centuries of Seraphic Weight without entering the known failure states associated with severe-domain Crowned vessels. This is remarkable. It is not miraculous enough to remove concern.
 
 His stabilizing traits are consistent:
 
@@ -693,13 +693,13 @@ This is the drift being monitored.
 
 ## XII. RELATIONSHIP WITH THE ARCH-PATRIARCH
 
-The public doctrine surrounding the Arch-Patriarch states that the office stands in unique relation to the Sovereign. It does not define this relation with technical precision. Restricted discourse is less certain than public liturgy.
+The public doctrine surrounding the Primus states that the office stands in unique relation to the Sovereign. It does not define this relation with technical precision. Restricted discourse is less certain than public liturgy.
 
-Father Orveth has never publicly questioned the Arch-Patriarch's status.
+Father Orveth has never publicly questioned the status of the Primus.
 
 Privately, he is careful.
 
-Three Arch-Patriarchs have held office during Orveth's service. He has served all three. He obeyed **Arch-Patriarch Soren IV** with visible ease, argued frequently with **Arch-Patriarch Melchis Vey**, and appears to regard the current Arch-Patriarch, **Caldrin II**, with a form of wary respect that neither side has attempted to warm into affection.
+Three holders of the office of Primus have held office during Orveth's service. He has served all three. He obeyed **Primus Soren IV** with visible ease, argued frequently with **Primus Melchis Vey**, and appears to regard the current Primus, **Caldrin II**, with a form of wary respect that neither side has attempted to warm into affection.
 
 In 2187, during a closed council concerning the Answered, Caldrin II reportedly asked Orveth whether Auctoriel recognized the papal office.
 
@@ -761,7 +761,7 @@ It may not be enough.
 
 ## XV. CURRENT ASSESSMENT
 
-Rector-Ascendant Halk'en Orveth remains one of the most powerful living assets of the One Church and one of the few individuals capable of resolving authority-resistant possession structures without catastrophic civilian loss. His control remains acceptable by current Ecclesiastic Surgical standards. His confessor reports continued humility, though the term should be handled carefully when applied to a man whose humility includes allowing himself to be used as a Seraphic instrument of command.
+Rector-Ascendant Halk'en Orveth remains one of the most powerful living assets of the Church and one of the few individuals capable of resolving authority-resistant possession structures without catastrophic civilian loss. His control remains acceptable by current Ecclesiastic Surgical standards. His confessor reports continued humility, though the term should be handled carefully when applied to a man whose humility includes allowing himself to be used as a Seraphic instrument of command.
 
 The Sevenfold Hand has not destabilized beyond documented limits. The seventh expression remains rare. Sundersaint remains cooperative under his bearing and has not shown signs of Severance-pressure overriding his judgment. The relationship between Dominion and Severance continues to require review after every major deployment.
 
@@ -769,7 +769,7 @@ He is not to be deployed for political intimidation, public demonstration, relic
 
 He is not to be asked to bless institutional cowardice by inaction.
 
-He is not to be left alone with a severe-domain Beatified under active moral dispute unless at least one Ecclesiastic Surgeon and one confessor-priest are present.
+He is not to be left alone with a severe-domain Crowned under active moral dispute unless at least one Ecclesiastic Surgeon and one confessor priest are present.
 
 He is not to be allowed to decide, without review, that the Church has failed to bear its own office.
 
@@ -789,7 +789,7 @@ He should never be mistaken for safe.
 
 ---
 
-*END OF RECORD - Current Revision*
+*END OF RECORD*
 
 *Filed: Year 2200, fourth quarter.*
 

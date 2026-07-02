@@ -34,7 +34,7 @@ It is not a private security firm in any sense that term usually implies. It is 
 
 Threshold Command is HourGlass's ground force. It conducts all land-based operations, from conventional military engagements to specialized operations in support of [[apocachynthion|Apocachynthion]] or [[the-church|Church]] field work. Threshold Command maintains the largest standing personnel count of the three commands and has the most extensive operational record at the northern frontier. Embedded Redactor roles in this command usually require [[mark-3|Mark 3]] for field work and [[mark-4|Mark 4]] when operations push into thinness-heavy engineering or extreme environmental response.
 
-Standard Threshold Command doctrine integrates conventional infantry and armored formations with Cloister-attached Redactor units and, in frontier operations, [[obsidian-rite|Church Obsidian Rite]] elements. The integration protocols were developed over generations of working alongside both institutions and have been refined to a point where they mostly run without active management.
+Standard Threshold Command doctrine integrates conventional infantry and armored formations with Cloister-attached Redactor units and, in frontier operations, [[obsidian-rite|Church Obsidian]] elements. The integration protocols were developed over generations of working alongside both institutions and have been refined to a point where they mostly run without active management.
 
 In the War of the Threshold's ground theatre, Threshold Command is typically the sustained presence element - holding the line while specialized elements address specific threats.
 

@@ -28,6 +28,8 @@ It was founded by **Em'manuel Kael Wonderwall**, whose personal operational hist
 
 SiNE is also one of the clearest expressions of **post-Fracture science as survival under partial ignorance**. It is an institution that can build infrastructure, route armies, classify anomalies, and prove that many things about Terra should not still be working - without being able to supply a complete explanation for why the world remains survivable anyway.
 
+Its technical culture treats Redactory as empirical before it treats it as mystical. SiNE uses the Index Theorem, continuity theory, Point records, lattice behavior, and field forensics because those models produce usable predictions. At the edge of those models sits a class of reports SiNE does not pretend to own: Shore-class displacement, extreme continuity breach, and events that seem to move beyond what current Redactory or lattice theory can safely forecast.
+
 ---
 
 ## The Seven Divisions

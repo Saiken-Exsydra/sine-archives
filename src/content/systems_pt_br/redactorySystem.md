@@ -240,7 +240,7 @@ Um Redactor pode possuir uma Anchor relativamente rasa, mas forçar um Dive extr
 
 Da mesma forma, um veterano pode passar anos empurrando a própria Anchor para mais perto da strata, fazendo com que todo Dive futuro já comece de uma posição naturalmente mais profunda.
 
-A classificacao atual separa **Anchor Depth** de **Dive Depth**. Anchor Depth nomeia onde a Anchor naturalmente fica em relacao a strata: shallow, deep ou abyssal. Dive Depth nomeia o quanto o praticante desce em um ato especifico. Uma Anchor rasa pode ser forcada para um Dive perigoso, e uma Abyssal Anchor pode ser usada em alturas operacionais mais seguras.
+A classificação atual separa **Anchor Depth** de **Dive Depth**. Anchor Depth nomeia onde a Anchor naturalmente fica em relação a strata: shallow, deep ou abyssal. Dive Depth nomeia o quanto o praticante desce em um ato específico. Uma Anchor rasa pode ser forçada para um Dive perigoso, e uma Abyssal Anchor pode ser usada em alturas operacionais mais seguras.
 
 ---
 
@@ -258,7 +258,7 @@ O perigo real é o **Overreach**.
 
 É o ponto onde esse avanço deixa de ser controlado e começa a destruir o próprio praticante.
 
-A escada de Overreach e descrita como strain, distortion, tear, rupture e collapse. Esses nomes sao atalho institucional para dano crescente na estrutura recursiva que mantem o Dive unido.
+A escada de Overreach é descrita como strain, distortion, tear, rupture e collapse. Esses nomes são atalho institucional para dano crescente na estrutura recursiva que mantém o Dive unido.
 
 Sinais comuns de Overreach:
 
@@ -375,17 +375,19 @@ Uma Abyssal Anchor representa potencial extraordinário — não supremacia auto
 
 ## Shore Contact
 
-Redactory reaches the Shores through Dive-depth.
+A Redactory alcança as Shores através de Dive-depth.
 
-The Dive is the Redactory interface. The Shore is not the Dive. At ordinary depths, the Anchor remains a route. At extreme depths, the concept can cease functioning only as a route and become a marginal condition where Page-real expression meets Archive-adjacent pressure.
+O Dive é a interface da Redactory. A Shore não é o Dive. Em profundidades comuns, a Anchor permanece uma rota. Em profundidades extremas, o conceito pode deixar de funcionar apenas como rota e se tornar uma condição marginal onde a expressão Page-real encontra pressão Archive-adjacent.
 
-Redactor **Shorefall** occurs when the Redactor's recursive singularity collapses through extreme Dive-depth and falls into a compatible Shore. The Anchor swallows the Redactor.
+Redactory mantém **Shores**, **Shorefall** e **Shorewalking** como sua linguagem técnica de limite. Na doutrina comum, esses são termos Redactory-facing para perigo extremo de Dive-depth e Anchor-interface, não uma ponte pública para outras tradições mágicas.
 
-Redactor **Shorewalking** occurs when the Redactor refuses to fall and holds the aperture Page-side. The Redactor internalizes Shore pressure through the Anchor, body, perception, and continuity.
+**Shorefall** de Redactor ocorre quando a singularidade recursiva do Redactor colapsa através de Dive-depth extrema e cai para dentro de uma Shore compatível. A Anchor engole o Redactor.
 
-That state can massively amplify Anchor expression, transform the body, alter perception, and produce Translation Wake in nearby Page-real conditions. Environmental effects are wake, residue, leakage, pressure, or failure. They are not the primary mechanism.
+**Shorewalking** de Redactor ocorre quando o Redactor se recusa a cair e mantém a abertura Page-side. O Redactor internaliza a pressão da Shore através da Anchor, do corpo, da percepção e da continuidade.
 
-Redactor Shorewalking remains routing-adjacent. It does not grant grammar authorship, native syntax authority, creation ex nihilo, absolute destruction, or ownership of the Shore.
+Esse estado pode amplificar massivamente a expressão da Anchor, transformar o corpo, alterar a percepção e produzir Translation Wake em condições Page-real próximas. Efeitos ambientais são esteira, resíduo, vazamento, pressão ou falha. Eles não são o mecanismo primário.
+
+Shorewalking de Redactor permanece routing-adjacent. Ele não concede autoria de gramática, autoridade de sintaxe nativa, criação ex nihilo, destruição absoluta ou posse da Shore.
 
 ---
 
@@ -398,6 +400,8 @@ Isso não significa “mergulhar muito fundo uma vez”.
 Significa estabilização permanente em profundidade extrema.
 
 Um Redactor que alcança esse estado é chamado de **Archtype**.
+
+Nota de terminologia: **Archtype** é a classificação técnica para Redactors. **Archtype-level** descreve escala ou efeitos comparáveis; isso não estende a classificação para não-Redactors.
 
 Isso é separado das Abyssal Anchors.
 
@@ -466,7 +470,7 @@ O trabalho deles é decidir:
 
 Na pratica moderna, isso tambem passa pelos **Points**: dispositivos de BrightCrystal emitidos pela Academy que identificam um Redactor, carregam credenciais de acesso e fazem interface com registros institucionais. Um Point nao e a fonte da Redactory. Ele e a ferramenta regulada que permite ao Apocachynthion manter identidade, permissao, acesso a arquivos e logs de evento legiveis.
 
-A camada associada de **CAS** cuida de autenticacao e sincronizacao, enquanto **Leaves** sao os tipos formais de arquivo presos ao praticante: registry, formation, practice, sealed, Pager, black e Folio-sealed. Redactory fora de rota de Point ainda pode acontecer, mas em territorio regulado ela e suspeita porque passa ao redor do apparatus feito para manter Rank, Mark, Margins e historico de incidentes visiveis.
+A camada associada de **CAS** cuida de autenticação e sincronização, enquanto **Leaves** são os tipos formais de arquivo presos ao praticante: registry, formation, practice, sealed, Pager, black e Folio-sealed. Redactory fora de rota de Point ainda pode acontecer, mas em território regulado ela é suspeita porque passa ao redor do apparatus feito para manter Rank, Mark, Margins e histórico de incidentes visíveis.
 
 Essa cautela existe porque a Redactory escala muito mal quando não é controlada.
 
@@ -494,9 +498,9 @@ A Divination:
 - expressa um domínio através de um vessel
 - depende da compatibilidade entre hospedeiro e fragmento
 
-As duas utilizam a interface do Dive.
+Na linguagem da Divination, o acesso é o **Pathway** e o contato ativo é **Communion**.
 
-O que acontece através dessa interface é completamente diferente.
+A leitura restrita da Apocachynthion pode relacionar Pathway e Dive como arquitetura profunda aparentada, mas o que cada sistema faz ali é completamente diferente.
 
 ---
 

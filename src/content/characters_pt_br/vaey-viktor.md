@@ -4,18 +4,18 @@ type: "Character"
 age: "66 (na data do registro, 2200)"
 birth_year: "2134"
 birthplace: "Distrito fluvial menor ao nordeste de Kalt'sen, Região Central, Império de Synus"
-affiliation: "Igreja do Soberano; Obsidian Rite (assessor-sacerdote aposentado)"
-rank: "Beatificado confirmado - vessel de Meruel, Measurement of Potential / Completion"
-registry_status: "Sacerdote aposentado em boa posição pública; avaliado privadamente como um Beatificado de domínio severo e suspeito de assassinatos em série sob proteção institucional"
+affiliation: "Igreja do Soberano; Obsidian (assessor-sacerdote aposentado)"
+rank: "Crowned confirmado - vessel de Meruel, Measurement of Potential / Completion"
+registry_status: "Sacerdote aposentado em boa posição pública; avaliado privadamente como um Crowned de domínio severo e suspeito de assassinatos em série sob proteção institucional"
 designation: "O santo que caca os inacabados"
 build: "Alto, magro e severo; a idade o curvou levemente para frente sem fazê-lo parecer fraco"
 hair: "Carmesim atravessado por fios brancos, cuidadosamente mantido"
-eyes: "Muito claros; sob a pressão de Meruel, empalidecem para um vermelho-esbranquiçado frio"
+eyes: "Muito claros; sob a Presence de Meruel, empalidecem para um vermelho-esbranquiçado frio"
 dress: "Vestuário clerical preto mantido com precisão obsessiva; corrente estreita de medição em prata escondida sob a manga esquerda"
 residence: "Alojamento eclesiástico privado em Kalt'sen; viagens irregulares pela Região Central e distritos selecionados do norte"
-occupation: "Ex-assessor do Obsidian Rite e consultor informal em casos difíceis de manifestação"
+occupation: "Ex-assessor do Obsidian e consultor informal em casos difíceis de manifestação"
 summary: "Confunde um unico feixe terrivel do ceu com o juizo inteiro, e mata em nome daquilo que uma vida falhou em se tornar."
-tags: ["Igreja", "Obsidian Rite", "Beatificado", "Meruel", "Kalt'sen", "Soberano", "Avaliação", "Potencial"]
+tags: ["Igreja", "Obsidian", "Crowned", "Meruel", "Kalt'sen", "Soberano", "Avaliação", "Potencial"]
 status: "public"
 created: "2026-05-14"
 updated: "2026-05-20"
@@ -32,11 +32,11 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 
 ## Identidade
 
-Vaey Viktor é um sacerdote aposentado do [[obsidian-rite|Obsidian Rite]], ex-avaliador de candidatos à santidade e um Beatificado confirmado — vessel de Meruel, a manifestação angelical de Measurement of Potential and Completion. Durante quarenta anos, a [[the-church|Igreja]] o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a pressão dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
+Vaey Viktor é um sacerdote aposentado do [[obsidian-rite|Obsidian]], ex-avaliador de candidatos à santidade e um Crowned confirmado — vessel de Meruel, a manifestação angelical de Measurement of Potential and Completion. Durante quarenta anos, a [[the-church|Igreja]] o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a Presence dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
 
 Ele era extraordinariamente bom nesse trabalho. E esse fato é justamente o começo do problema.
 
-Viktor não ascendeu dentro do Rite como um Votary de linha de frente ou como um daqueles membros heroicos do clero que inspiram histórias. O dom dele era discernimento: a capacidade rara e fria de entender que tipo de pressão havia entrado na vida de alguém e no que aquela vida poderia se transformar se a pressão fosse conduzida corretamente. A [[the-church|Igreja]] confiava nele porque ele acertava vezes demais para ser ignorado. E continuou confiando tempo suficiente para que o próprio trabalho começasse a deformá-lo.
+Viktor não ascendeu dentro de Obsidian como um Votary de linha de frente ou como um daqueles membros heroicos do clero que inspiram histórias. O dom dele era discernimento: a capacidade rara e fria de entender que tipo de Presence havia entrado na vida de alguém e no que aquela vida poderia se transformar se o Weight fosse conduzido corretamente. A [[the-church|Igreja]] confiava nele porque ele acertava vezes demais para ser ignorado. E continuou confiando tempo suficiente para que o próprio trabalho começasse a deformá-lo.
 
 Hoje ele ocupa a categoria impossível que a Igreja mais teme nomear claramente: um vessel angelical genuíno cujo fragmento é real, cujo histórico de serviço contém bondade verdadeira e cujos atos atuais são assassinato.
 
@@ -46,7 +46,7 @@ Hoje ele ocupa a categoria impossível que a Igreja mais teme nomear claramente:
 
 Meruel pertence a uma constelação Seráfica ligada à medida, não à misericórdia. Seu domínio não envolve justiça cívica, punição ou absolvição. Ele mede a distância entre aquilo que uma pessoa é e aquilo que ela poderia coerentemente se tornar através de coragem, disciplina, oportunidade, treinamento e alinhamento com sua arquitetura interna mais profunda.
 
-O caso de Viktor é uma integração Beatificada genuína, não uma possessão demoníaca e não um dos extremos Seráficos de classe [[answered|Answered]] ou [[lucent|Lucent]] do [[obsidian-rite|Obsidian Rite]]. O que existe nele é um fragmento angelical real, fundido de forma permanente o bastante para reordenar caráter, percepção e vocação sem retirar da pessoa a responsabilidade moral por aquilo que escolhe fazer com essa mudança.
+O caso de Viktor é uma integração Crowned genuína, não uma possessão demoníaca e não um dos extremos Seráficos de classe [[answered|Answered]] ou [[lucent|Lucent]] do [[obsidian-rite|Obsidian]]. O que existe nele é uma Presence angelical real, fundida de forma permanente o bastante para reordenar caráter, percepção e vocação sem retirar da pessoa a responsabilidade moral por aquilo que escolhe fazer com essa mudança.
 
 Por meio de Meruel, Viktor enxerga aquilo que um dia chamou de **silhueta completa**: não o futuro, nem destino, mas uma versão possível e coerente do indivíduo existindo em relação à pessoa viva diante dele. No trabalho de avaliação isso o tornava indispensável. Ele conseguia distinguir um vessel genuíno, mas assustado, de um impostor vazio. Conseguia identificar quando a instabilidade atual de alguém escondia uma capacidade espiritual gigantesca. Conseguia perceber se uma vida havia sido danificada, atrasada ou apenas mal compreendida pelas pessoas ao redor.
 
@@ -60,23 +60,23 @@ Ele passou a acreditar que desperdiçar potencial não é tragédia — é blasf
 
 Vaey aparenta a própria idade. Meruel não o preservou em uma falsa juventude nem em beleza santa. Em vez disso, tornou tudo nele preciso. É alto, magro e levemente curvado por décadas inclinadas sobre registros, camas hospitalares, confessionários e mesas de avaliação. O cabelo, antes escuro, hoje é atravessado por fios carmesins e brancos. As mãos são longas, secas e cuidadosas. Quase toda testemunha lembra dos olhos dele antes de lembrar qualquer coisa que ele tenha dito.
 
-Veste-se com roupas clericais pretas simples mantidas em ordem quase perfeita. O colarinho está sempre correto. Os punhos estão sempre impecáveis. Não usa ornamentos públicos de santos nem relíquias extravagantes. O único objeto consistentemente presente em seu corpo é uma corrente estreita de prata enrolada no pulso esquerdo, escondida sob a manga. Não é um instrumento oficial do Rite. Com o tempo e o uso repetido, acabou se tornando ao mesmo tempo ferramenta devocional e instrumento de assassinato.
+Veste-se com roupas clericais pretas simples mantidas em ordem quase perfeita. O colarinho está sempre correto. Os punhos estão sempre impecáveis. Não usa ornamentos públicos de santos nem relíquias extravagantes. O único objeto consistentemente presente em seu corpo é uma corrente estreita de prata enrolada no pulso esquerdo, escondida sob a manga. Não é um instrumento oficial de Obsidian. Com o tempo e o uso repetido, acabou se tornando ao mesmo tempo ferramenta devocional e instrumento de assassinato.
 
-Seu comportamento social é silencioso, educado e genuinamente gentil no momento presente. Lembra o nome de membros mais jovens do clero. Consegue acalmar famílias aterrorizadas. É capaz de passar horas ao lado de uma criança sofrendo pressão de manifestação sem qualquer condescendência ou impaciência visível. Essa gentileza é real. E justamente por isso ele é tão difícil de classificar. Não parece um homem que sente prazer na crueldade.
+Seu comportamento social é silencioso, educado e genuinamente gentil no momento presente. Lembra o nome de membros mais jovens do clero. Consegue acalmar famílias aterrorizadas. É capaz de passar horas ao lado de uma criança sofrendo Weight de manifestação sem qualquer condescendência ou impaciência visível. Essa gentileza é real. E justamente por isso ele é tão difícil de classificar. Não parece um homem que sente prazer na crueldade.
 
 Quando Meruel se manifesta fortemente através dele, o tremor desaparece das mãos, sua postura se endireita e os olhos empalidecem até um dourado-esbranquiçado frio. Algumas testemunhas relatam enxergar geometrias incompletas atrás dele: arcos, círculos, proporções e linhas suspensas que lembram menos auréolas ou asas e mais um instrumento tentando se passar por algo sagrado.
 
 ---
 
-## Os Anos no Obsidian Rite
+## Os Anos no Obsidian
 
-Vaey entrou cedo na formação da [[the-church|Igreja]] e rapidamente chamou atenção por um dom que inicialmente causava desconforto antes de provocar admiração. Ele conseguia ouvir aquilo que as pessoas não estavam dizendo. Conseguia separar milagre de medo, medo de expectativa litúrgica e pressão espiritual das histórias criadas por comunidades assustadas. Esse talento o levou até Kalt'sen e depois ao [[obsidian-rite|Obsidian Rite]] como especialista em avaliação, não como agente de campo.
+Vaey entrou cedo na formação da [[the-church|Igreja]] e rapidamente chamou atenção por um dom que inicialmente causava desconforto antes de provocar admiração. Ele conseguia ouvir aquilo que as pessoas não estavam dizendo. Conseguia separar milagre de medo, medo de expectativa litúrgica e Weight espiritual das histórias criadas por comunidades assustadas. Esse talento o levou até Kalt'sen e depois ao [[obsidian-rite|Obsidian]] como especialista em avaliação, não como agente de campo.
 
 Durante quatro décadas percorreu as consequências de pequenos milagres, Crownings fracassados, suspeitas de santidade, mimetismos demoníacos e rumores paroquiais. Descobriu santos verdadeiros ainda vivos. Expôs cultos falsos. Evitou diversas classificações incorretas graves. Também desenvolveu uma obsessão crescente pelas pessoas que quase se tornaram algo maior — e então falharam, recuaram, quebraram ou desistiram.
 
 Esses quase-santos o moldaram mais profundamente do que os bem-sucedidos. Com o tempo, seus relatórios endureceram. Fracasso deixou de aparecer em sua linguagem como instabilidade, medo ou dano recuperável e começou a surgir como traição. A Igreja tolerou essa mudança porque ela vinha acompanhada de precisão profissional. Ele continuava acertando. Quando seus superiores finalmente perceberam que precisão e deformação espiritual estavam avançando juntas, Meruel já havia encontrado um vessel ideal na mente construída por Viktor ao longo de quarenta anos de julgamento comparativo.
 
-Sua aposentadoria em 2196 foi oficialmente voluntária. Na prática, foi um acordo. Parte de seus superiores estava alarmada com o tom punitivo de suas recomendações; outra parte temia as consequências políticas e teológicas de romper abertamente com um vessel angelical confirmado que havia descoberto santos hoje venerados pela própria instituição. A aposentadoria removeu sua autoridade formal sem obrigar a Igreja a pronunciar a frase que mais queria evitar: que um Beatificado genuíno pode se tornar uma atrocidade sem deixar de ser angelical.
+Sua aposentadoria em 2196 foi oficialmente voluntária. Na prática, foi um acordo. Parte de seus superiores estava alarmada com o tom punitivo de suas recomendações; outra parte temia as consequências políticas e teológicas de romper abertamente com um vessel angelical confirmado que havia descoberto santos hoje venerados pela própria instituição. A aposentadoria removeu sua autoridade formal sem obrigar a Igreja a pronunciar a frase que mais queria evitar: que um Crowned genuíno pode se tornar uma atrocidade sem deixar de ser angelical.
 
 ---
 
@@ -86,7 +86,7 @@ Viktor não mata indiscriminadamente. Essa contenção é parte do motivo pelo q
 
 Suas vítimas conhecidas ou suspeitas compartilham um padrão. São pessoas que um dia carregaram potencial excepcional e depois se afastaram dele: candidatos à santidade que resistiram à custódia da Igreja, indivíduos talentosos que abandonaram seus dons, antigos praticantes que escolheram uma vida comum após terem sua capacidade reconhecida, herdeiros que recusaram obrigações ligadas ao próprio talento e prodígios traumatizados que, no julgamento dele, confundiram sobrevivência ou paz com conclusões aceitáveis.
 
-Os assassinatos frequentemente parecem avaliações levadas até o veredito final. Ele reconstrói a silhueta completa do alvo. Organiza contato privado. Às vezes força temporariamente a pessoa em direção àquele eu não realizado através da pressão de Meruel, permitindo que um dom enterrado brilhe uma última vez com clareza insuportável. Se conclui que a distância entre o eu possível e o eu atual já não pode mais ser explicada por trauma, medo ou atraso, ele mata.
+Os assassinatos frequentemente parecem avaliações levadas até o veredito final. Ele reconstrói a silhueta completa do alvo. Organiza contato privado. Às vezes força temporariamente a pessoa em direção àquele eu não realizado através do Weight de Meruel, permitindo que um dom enterrado brilhe uma última vez com clareza insuportável. Se conclui que a distância entre o eu possível e o eu atual já não pode mais ser explicada por trauma, medo ou atraso, ele mata.
 
 A própria violência assume a forma do domínio fracassado. A mão de um acadêmico se quebra como punição por obras nunca escritas. A garganta de uma cantora se abre em um corte limpo demais para parecer humano. O corpo de um vessel fracassado fica marcado por geometrias sagradas inacabadas. Não são ferimentos aleatórios. São vereditos transformados em anatomia.
 
@@ -110,9 +110,9 @@ Ele entrega morte nos lugares onde misericórdia exigiria contenção.
 
 ## Estado Atual
 
-Publicamente, Padre Vaey Viktor continua sendo um assessor-sacerdote aposentado honrado e em boa posição institucional. Descobriu santos. Serviu o Rite por quarenta anos. Ainda mantém o respeito de membros do clero e Beatificados que acreditam ter sido salvos por ele de classificações incorretas ou do caos de manifestações descontroladas. Continua podendo ser chamado para consultas em casos difíceis. Ainda viaja usando o próprio nome.
+Publicamente, Padre Vaey Viktor continua sendo um assessor-sacerdote aposentado honrado e em boa posição institucional. Descobriu santos. Serviu Obsidian por quarenta anos. Ainda mantém o respeito de membros do clero e Beatificados que acreditam ter sido salvos por ele de classificações incorretas ou do caos de manifestações descontroladas. Continua podendo ser chamado para consultas em casos difíceis. Ainda viaja usando o próprio nome.
 
-Privadamente, a Igreja sabe muito mais do que admite. Registros restritos o descrevem como um Beatificado de domínio severo passando por reponderação avançada e o conectam a múltiplas mortes envolvendo candidatos talentosos, fracassados ou afastados. Mesmo assim, nenhum departamento escolheu agir de maneira decisiva. Sua proteção surgiu da vergonha institucional, covardia teológica, cautela política, gratidão pelo trabalho passado e da conveniência de tratar vítimas comprometidas como administrativamente descartáveis.
+Privadamente, a Igreja sabe muito mais do que admite. Registros restritos o descrevem como um Crowned de domínio severo passando por reponderação avançada e o conectam a múltiplas mortes envolvendo candidatos talentosos, fracassados ou afastados. Mesmo assim, nenhum departamento escolheu agir de maneira decisiva. Sua proteção surgiu da vergonha institucional, covardia teológica, cautela política, gratidão pelo trabalho passado e da conveniência de tratar vítimas comprometidas como administrativamente descartáveis.
 
 Por isso, ele não é apenas um assassino escondido da Igreja. Ele também é um teste que a Igreja continua falhando miseravelmente.
 

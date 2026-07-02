@@ -2,7 +2,7 @@
 ## EC'LESIA YALARA WONDERWALL
 *Filed and maintained by Em'manuel Kael Wonderwall, Wonderwall Seat*  
 *Seat's private archive — no institutional copy exists in this form*  
-*Revision replacing prior Light-domain / Inkless assessment with Stilllight doctrine, revised Academy status, Remainder-Shore vector, and Sai'ken termination mandate*
+*Stilllight doctrine, Academy status, Remainder-Shore vector, and Sai'ken termination mandate*
 
 ---
 
@@ -11,11 +11,11 @@
 
 ---
 
-## PREAMBLE — A NOTE ON THIS REVISION
+## PREAMBLE — CLASSIFICATION NOTE
 
-This file supersedes the earlier Ec'lesia Yalara Wonderwall dossier in several material respects.
+This dossier turns on several material facts.
 
-The previous version described her as a Radiance-class Light-domain Inkless whose true Anchor rested on the same foundational stratum as A'licia Rae Wonderwall and E'lla Rae Wonderwall. That assessment was useful at the time because it corrected the Apocachynthion's more serious error: the belief that an absent institutional reading meant an absent Anchor. It was nevertheless wrong in the most important particular.
+Some Wonderwall archive assumptions describe her as a Radiance-class Light-domain Inkless whose true Anchor rests on the same foundational stratum as A'licia Rae Wonderwall and E'lla Rae Wonderwall. That assessment remains useful only as a record of the Apocachynthion's more serious error: the belief that an absent institutional reading means an absent Anchor. It is wrong in the most important particular.
 
 Ec'lesia does not carry Light itself.
 
@@ -29,7 +29,7 @@ This does not make her less dangerous than a Light-bearing practitioner. It make
 
 The Remainder recognizes her not because she is the cleanest Light-bearer in the bloodline. She is not. It recognizes her because Stilllight is Light made compatible with gap-space: radiance arrested at the interval where motion should continue, brightness held where passage should have already completed, illumination that remains after the source has moved on. This is the first architecture in the cadet branches where the Remainder's echo and A'licia's Light inheritance have met in a form that does not merely reveal the gap but gives the gap something to adhere to.
 
-I am writing this revision because the distinction is no longer theoretical. Her current condition is not ordinary instability. Her Stilllight is developing cleanly enough that the Apocachynthion has retained her under restricted study rather than dismissing her as unclassifiable. Her social life, institutional placement, and practical development are now significant. The old file, in describing a withdrawn young woman isolated in dark rooms by an unstable Light condition, recorded a version of her that existed only partially and increasingly inaccurately.
+This distinction is no longer theoretical. Her condition is not ordinary instability. Her Stilllight is developing cleanly enough that the Apocachynthion has retained her under restricted study rather than dismissing her as unclassifiable. Her social life, institutional placement, and practical development are now significant. Any description of her as a withdrawn young woman isolated in dark rooms by an unstable Light condition records only a partial and increasingly inaccurate version of what she has become.
 
 Ec'lesia is not hidden in a room.
 
@@ -550,7 +550,7 @@ Therefore it seeks to be seen.
 
 The Luminant Shore reveals what cannot remain hidden.
 
-This is not metaphor at the level relevant to Ec'lesia. A Shore is a spatialized conceptual borderland where a foundational concept reaches terrain. The Luminant Shore is Light's coastline: recognition, exposure, revelation, truth, identity under radiance, concealment failing. A presence that cannot know itself in the gap would logically seek the Shore where hidden structures are forced into visibility.
+This is not metaphor at the level relevant to Ec'lesia. A Shore is a final endpoint condition that may become spatially experienceable as terrain. The Luminant Shore is Light's coastline: recognition, exposure, revelation, truth, identity under radiance, concealment failing. A presence that cannot know itself in the gap would logically seek the Shore where hidden structures are forced into visibility.
 
 But visibility alone may not stabilize identity.
 

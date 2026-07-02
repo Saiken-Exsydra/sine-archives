@@ -46,7 +46,7 @@ Her True Form — the direct expression of the Instrument of Verum through the P
 
 When the rebellion struck the Intact Seal, the resonance lattice binding Sciel to the Instrument of Verum failed. The Precursor architecture, built for a whole world, could not sustain the incompatibility of a fractured one. The Page Primordial fragment at her core dispersed into the world's grammar — no longer coherent, no longer shaped around an Instrument, but present as residual structural influence distributed through a world twelve eras of her governance had shaped.
 
-The Church calls this *completion*. The Diaconate of the Interior calls it *interruption*. The difference between these descriptions is where one places emphasis on the same irreducible fact.
+The Church calls this *completion*. The Interior Council calls it *interruption*. The difference between these descriptions is where one places emphasis on the same irreducible fact.
 
 ---
 

@@ -40,7 +40,7 @@ The others maintained different aspects of Terra's stability, from gravitational
 
 ## The Unintended Consequence: The Thinning
 
-Over millions of years of Archtype-scale Redactory applied in the same location, the Precursors produced a consequence they did not initially understand they were producing.
+Over millions of years of Archtype-level Redactory applied in the same location, the Precursors produced a consequence they did not initially understand they were producing.
 
 The translation boundary between Terra's Page and what lies beyond it is not uniform across all locations. The presence of Vael'Khar already interacted with this boundary in unusual ways. What the Precursors' accumulated Redactory work did, over sufficient duration, was thin this boundary at Terra's specific location further still.
 
@@ -82,7 +82,7 @@ The **Reverse Genesis Protocol** is not a contingency. It was executed.
 
 The Precursors possessed awareness of structure beyond Terra's immediate world: awareness that Terra exists within a larger compatibility region, that this region exists within a Book, and that the Book of Humanity is under translation pressure from an external entity of near-terminal coherence. They determined that unchecked human transcendence across the Chapter was amplifying the Chapter's detectability at supra-Chapter scale.
 
-The Protocol consisted of systematic eradication of advanced human civilizations across the Chapter, termination of Archetypal saturation, controlled reseeding of humanity via panspermia, implementation of genomic dampening safeguards, and delegation of long-term oversight to Page Primordial fragments. The objective was signal reduction and survivability - not extinction.
+The Protocol consisted of systematic eradication of advanced human civilizations across the Chapter, termination of Archtype-level saturation, controlled reseeding of humanity via panspermia, implementation of genomic dampening safeguards, and delegation of long-term oversight to Page Primordial fragments. The objective was signal reduction and survivability - not extinction.
 
 ---
 

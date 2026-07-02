@@ -6,7 +6,7 @@
 ---
 
 > *"She has been made for a purpose she does not know, placed inside a life she believes she chose, and surrounded by people whose love is real enough to make the lie worse. The question is no longer whether she is useful. The question is what becomes of the structure around her when she learns to see it."*
-> - C.W. analytical notation, current revision
+> - C.W. analytical notation
 
 ---
 
@@ -22,7 +22,7 @@
 
 *The methodological problem is also obvious. The available record is contaminated by institutional concealment, deliberate social placement, false family history, and hostile suppression activity. The file should therefore be read as a character dossier first and a program analysis second.*
 
-*- C.W. archival note, current revision*
+*- C.W. archival note*
 
 ---
 
@@ -400,6 +400,6 @@ She is beginning to see it.
 
 ---
 
-*END OF RECORD - Current Revision*
+*END OF RECORD*
 
 *Cross-reference: Aurora Codex, Redactory Codex, Precursors Codex, Terra Codex, Apocachynthion Codex, SiNE Codex, Wonderwall Lineage Codex. Broad institutional histories and full cosmological explanations should remain in those codices rather than in this character dossier.*

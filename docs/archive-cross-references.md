@@ -4,7 +4,7 @@ Use wiki-style refs inside archive Markdown:
 
 ```md
 [[obsidian-rite]]
-[[obsidian-rite|Obsidian Rite]]
+[[obsidian-rite|Obsidian]]
 [[answered|Answered]]
 [[the-church#gift-of-sight|Gift of Sight]]
 [[places:ardeatus|Ardeatus]]

@@ -4,7 +4,7 @@ type: "Character"
 age: "399 (as of 2200)"
 birth_year: "1801"
 birthplace: "Black Mere, Northern Region"
-affiliation: "The Church - Obsidian Rite"
+affiliation: "The Church - Obsidian"
 house: ""
 rank: "Rector-Ascendant"
 registry_status: "Maximum restricted deployment - Answered-class vessel of Auctoriel"
@@ -16,7 +16,7 @@ hair: "Black gone mostly iron-grey; beard kept close"
 eyes: "Dark brown under ordinary conditions; deep red-gold at fourth-hand intensity or higher"
 dress: "Plain black cassock, iron rosary, red cord of office at left wrist; blackened pre-modern plate in the field"
 residence: "Saint Veyran fortress-priory, Kalt'sen, when not deployed under sealed order"
-occupation: "Rector-Ascendant of the Obsidian Rite; one of the Church's most restricted Seraphic field assets"
+occupation: "Rector-Ascendant of Obsidian; one of the Church's most restricted Seraphic field assets"
 summary: "Gentle until judgment is required; then even the air around him remembers how to kneel."
 image: "../../assets/uploads/characters/char-halken-orveth.png"
 hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
@@ -24,12 +24,12 @@ portrait_gallery: []
 hero_gallery: []
 tags:
   - "Church"
-  - "Obsidian Rite"
+  - "Obsidian"
   - "Auctoriel"
   - "Seven Answers"
   - "Answered"
   - "Dominion"
-  - "Beatified"
+  - "Crowned"
   - "Sundersaint"
   - "Kalt'sen"
 status: "public"
@@ -55,7 +55,7 @@ In simple terms, Orveth is one of the [[the-church|Church]]'s strongest proofs t
 
 **Public Identity:** A severe but gentle priest whose presence makes the Church's language about holy authority feel physically real.
 
-**Institutional Identity:** One of the Obsidian Rite's maximum-restriction Rector-Ascendant deployments, reserved for cases where ordinary clergy and ordinary force are no longer enough.
+**Institutional Identity:** One of Obsidian's maximum-restriction Rector-Ascendant deployments, reserved for cases where ordinary clergy and ordinary force are no longer enough.
 
 **Private Truth:** Orveth remains usable partly because he refuses to confuse Dominion with universal permission, even while carrying a force built around rightful command.
 
@@ -73,7 +73,7 @@ That care is part of what keeps him usable. He understands that Dominion is not 
 
 Orveth was born in **1801** in **Black Mere** and did not begin life with extraordinary bloodline importance. His defining emergence came during the **Mornhallow possession riots** in **1823**, when he entered a hospital ward others could not stabilize and insisted that the place belonged to the sick, not to what had invaded it.
 
-That event pulled him into the [[obsidian-rite|Obsidian Rite]]. Over time, his bond with Auctoriel deepened until he became one of the [[the-church|Church]]'s tiny number of the **Answered**.
+That event pulled him into the [[obsidian-rite|Obsidian]]. Over time, his bond with Auctoriel deepened until he became one of the [[the-church|Church]]'s tiny number of the **Answered**.
 
 He is now deployed only in the kinds of cases where ordinary clergy, ordinary soldiers, and even many holy vessels are not enough.
 
@@ -90,7 +90,7 @@ He is now deployed only in the kinds of cases where ordinary clergy, ordinary so
 **Depth Reading:** Extraordinary  
 **Reach Reading:** Operational  
 **Registration Tenure:** Not applicable  
-**Academy Record:** Church formation and Obsidian Rite induction  
+**Academy Record:** Church formation and Obsidian induction  
 **Practice Record:** High-risk ecclesial deployment, possession response, and answered-vessel intervention  
 **[[blots|Blots]]:** None publicly filed  
 **Pager Note:** Maximum restriction deployment only  
@@ -121,7 +121,7 @@ There is also a deeper danger. If a mortal vessel carries Dominion too fully for
 
 ## Important Relationships
 
-[[obsidian-rite|The Obsidian Rite]] formed him, deploys him, and fears him in the practical way institutions fear their rarest weapons.
+[[obsidian-rite|Obsidian]] formed him, deploys him, and fears him in the practical way institutions fear their rarest weapons.
 
 **Auctoriel** is not just the source of his power but the pressure shaping his habits, limits, and sense of duty.
 
@@ -129,7 +129,7 @@ There is also a deeper danger. If a mortal vessel carries Dominion too fully for
 
 ## Story Role
 
-Orveth matters because he makes difficult [[the-church|Church]] lore suddenly understandable. Through him, readers can feel the difference between general holiness, Beatified status, and the far more dangerous depth of an Answered vessel.
+Orveth matters because he makes difficult [[the-church|Church]] lore suddenly understandable. Through him, readers can feel the difference between general holiness, Beatification, Crowned state, and the far more dangerous depth of a Crowned Answered vessel.
 
 He also embodies one of the setting's recurring tensions: a power can be holy, lawful, and still dangerous to the person carrying it if that power is too narrow to equal the whole good.
 

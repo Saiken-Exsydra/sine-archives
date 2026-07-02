@@ -43,7 +43,7 @@ Before the Fifteen Founding Houses reorganized governance, the region of the Twi
 
 No authority above them had the power to say otherwise. No institution existed with the capability to hold them back.
 
-What they attempted is recorded in the Apocachynthion's own restricted archive under the designation **the Rite of Selia**, and in the restricted theological record of the One Church as *the First Heresy.* The twelve houses proposed and executed a collective act of Redactory at a scale and depth never attempted before or since in the kingdom's history: a unified Dive drawing upon all twelve traditions simultaneously, aimed at building something — a vessel of combined resonance vast enough to invite into the world a presence that existed on the other side of a threshold mortal Redactors were never meant to open. They dressed this ambition in the language of restoration and high purpose. Some of them believed their own justifications.
+What they attempted is recorded in the Apocachynthion's own restricted archive under the designation **the Rite of Selia**, and in the restricted theological record of the Church as *the First Heresy.* The twelve houses proposed and executed a collective act of Redactory at a scale and depth never attempted before or since in the kingdom's history: a unified Dive drawing upon all twelve traditions simultaneously, aimed at building something — a vessel of combined resonance vast enough to invite into the world a presence that existed on the other side of a threshold mortal Redactors were never meant to open. They dressed this ambition in the language of restoration and high purpose. Some of them believed their own justifications.
 
 The rite failed in what it intended to accomplish.
 
@@ -67,7 +67,7 @@ Established in the immediate aftermath of the Sundering of Selia — the catastr
 
 The Sundering had demonstrated that Redactory without institutional oversight was not merely a social problem but a structural one — capable of threatening the coherence of an entire region when practiced collectively, without limit, and without anyone capable of refusal. The fifteen houses, chastened by what survivors of the rite had lived through, agreed to submit their practice to this new governance. Some did so out of genuine conviction. Others did so because they understood that the political moment demanded it, and that refusing would look like an intention to try again.
 
-The One Church regarded the Apocachynthion's creation with what its own restricted theological record describes as *cautious approval.* The institution's mandate was legitimate. The problem it was built to solve was real. The Church's private reservation — never stated in open sermon then or since — was that the Apocachynthion chose to govern the practice of Redactory without confronting the particular reasoning that had led the twelve houses to Selia. The names of the twelve houses were quietly restricted in the Apocachynthion's own records. The full account of what they had attempted was limited to internal files. The institution was built to prevent the structural catastrophe. It declined to make public the account of what had caused it.
+The Church regarded the Apocachynthion's creation with what its own restricted theological record describes as *cautious approval.* The institution's mandate was legitimate. The problem it was built to solve was real. The Church's private reservation — never stated in open sermon then or since — was that the Apocachynthion chose to govern the practice of Redactory without confronting the particular reasoning that had led the twelve houses to Selia. The names of the twelve houses were quietly restricted in the Apocachynthion's own records. The full account of what they had attempted was limited to internal files. The institution was built to prevent the structural catastrophe. It declined to make public the account of what had caused it.
 
 This remains an old disagreement between the two institutions. It has never been formally aired. It has never been resolved.
 
@@ -243,6 +243,8 @@ Needlefall support follows the same logic. Redactors assigned to GlassNeedle tar
 
 The association's technical language increasingly treats major Calling periods as harmonic-disturbance conditions affecting Dive behavior, Anchor stress, and BrightCrystal risk. This is an applied classification, not a claim that Redactory itself is a harmonic system.
 
+The most restricted Index Theorem work also preserves a Shorewalking hypothesis. This is not routine deployment doctrine. Within the Association, it occupies the same tier of discussion as a speculative grand theory: mathematically and metaphysically useful, but too rare and dangerous to treat as a practical model. Researchers may use it to explain why certain extreme Dive-depth reports stop behaving like ordinary Redactory, but they do not brief ordinary field teams as if Shorewalking were a reachable technique.
+
 The Empire may request a practitioner. SiNE may contract one. A House may petition for one. None of those requests alter the Mark on file. If a military commander wants Mark 4 work from a Mark 2 practitioner, the correct answer is not improvisation. It is refusal, or an emergency opening written and sealed by recognized Apocachynthion authority.
 
 ## PART IV - THE INKLESS {#inkless}
@@ -406,7 +408,7 @@ Members of the Apocachynthion carry the institution's insignia with a pride that
 
 ---
 
-*End of the Apocachynthion Codex — Current Revision*
+*End of the Apocachynthion Codex*
 
 ---
 

@@ -38,7 +38,7 @@ The Stase produced two categories of entity that represent distinct problems.
 
 **Stase Residuals** - referred to colloquially as **Dark Ends** in military doctrine - are what happens when a biological organism enters the Stase zone and becomes caught in traversal suspension. The organism does not die in the way it would outside. It persists in a state that is not life in any meaningful sense but is not death either.
 
-**Traversal-Independent Entities** - **SOEs**, in StaSis and Obsidian Rite classification - are a different problem. These are entities that do not originate from biological organisms caught in the Stase. They are native to the altered traversal environment, or they arrived through it from wherever the threshold compromise allowed access to.
+**Traversal-Independent Entities** - **SOEs**, in StaSis and Obsidian classification - are a different problem. These are entities that do not originate from biological organisms caught in the Stase. They are native to the altered traversal environment, or they arrived through it from wherever the threshold compromise allowed access to.
 
 The practical distinction matters operationally: northern-front doctrine is calibrated for Dark Ends as the primary threat category. SOE engagement requires different doctrine, different resources, and different authorization.
 
@@ -70,7 +70,7 @@ The **War of the Threshold** is the Empire's ongoing military campaign at the Da
 
 The frontier has not moved dramatically in living memory. That does not mean the situation is stable. It means the world has developed a method of maintaining an unstable problem at tolerable distance. The War of the Threshold is not a war that can be won cleanly. It is a war that can be maintained.
 
-The Church's field operations at the northern front exist because Dark Ends and higher-order SOEs require intervention tools military doctrine alone does not provide. The Obsidian Rite's presence in the theatre is operational necessity, not ceremony.
+The Church's field operations at the northern front exist because Dark Ends and higher-order SOEs require intervention tools military doctrine alone does not provide. Obsidian's presence in the theatre is operational necessity, not ceremony.
 
 ---
 

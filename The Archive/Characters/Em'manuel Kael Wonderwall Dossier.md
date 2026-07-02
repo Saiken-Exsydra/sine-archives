@@ -418,9 +418,9 @@ The institutional relationship has coexisted for the full span of the Apocachynt
 
 The Apocachynthion does not know the Remainder exists. It does not know the full structural truth of what its Inkless classification describes in the cadet-branch case currently under monitoring. It does not know that the framework gap in its monitoring capability is a gap Em'manuel has not seen fit to close. He has not corrected these things. The reasons are recorded in this document and in the relevant individual files.
 
-### VIII.2 The One Church
+### VIII.2 The Church
 
-Operationally cordial. Theologically irrelevant to Em'manuel's actual priorities, though not without institutional consequence. The Church's Obsidian Rite coordinates with HourGlass assets along the Dark-Side threshold. The Church's theological account of what it monitors at the threshold is inaccurate in ways that do not, at present, produce containment failures. Em'manuel does not intend to correct the inaccuracy while it produces containment-equivalent outcomes.
+Operationally cordial. Theologically irrelevant to Em'manuel's actual priorities, though not without institutional consequence. The Church's Obsidian coordinates with HourGlass assets along the Dark-Side threshold. The Church's theological account of what it monitors at the threshold is inaccurate in ways that do not, at present, produce containment failures. Em'manuel does not intend to correct the inaccuracy while it produces containment-equivalent outcomes.
 
 ### VIII.3 The Empire
 

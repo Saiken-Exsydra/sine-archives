@@ -2,7 +2,7 @@
 title: "StaSis"
 type: "Organization"
 designation: "SiNE Anomalous Entity Division - S-AE"
-affiliation: "SiNE (S-AE branch) - operational relationships with Obsidian Rite, HourGlass, and Clepsydra"
+affiliation: "SiNE (S-AE branch) - operational relationships with Obsidian, HourGlass, and Clepsydra"
 headquarters: "Pluribus Hill, Kalt'sen - field operations distributed"
 founded: "Date not established in accessible records"
 jurisdiction: "Twilight Band and Dark Side frontier - anomalous entity classification and response"
@@ -68,11 +68,11 @@ This produces one of StaSis's core methodological cautions: a **blank return is 
 
 ---
 
-## Relationship to the Obsidian Rite
+## Relationship to Obsidian
 
-StaSis's closest institutional working relationship is with the Obsidian Rite's Victorian Rite formation at the northern frontier. The two organizations are doing adjacent work - the Rite engages what emerges from the Dark Side through theological and ritual tools; StaSis classifies what the Rite engages and provides analytical support that the Rite's own classification systems do not cover for the SOE category.
+StaSis's closest institutional working relationship is with Obsidian's Victorian Formation formation at the northern frontier. The two organizations are doing adjacent work - Obsidian engages what emerges from the Dark Side through theological and ritual tools; StaSis classifies what Obsidian engages and provides analytical support that Obsidian's own classification systems do not cover for the SOE category.
 
-The Victorian Rite's archive and StaSis's catalogue have, over generations of parallel operation, developed into complementary rather than redundant resources.
+The Victorian Formation's archive and StaSis's catalogue have, over generations of parallel operation, developed into complementary rather than redundant resources.
 
 ---
 

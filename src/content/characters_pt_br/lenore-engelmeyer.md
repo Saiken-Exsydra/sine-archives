@@ -142,7 +142,7 @@ A revelação completa é terminal. Ela não mostra o todo de si mesma a testemu
 
 ### Avaliação de Ameaça
 
-Para fins operacionais, Le'nore deve ser tratada como ameaça de nível Archtype, apesar de não ser uma Archtype convencional formada por desenvolvimento normal de Redactory. Sua maior limitação não é falta de poder, mas inexperiência: ela não passou a vida lutando contra iguais, doutrina de batalha de alto nível, artefatos ou instituições preparadas especificamente para sobreviver ao primeiro contato.
+Para fins operacionais, Le'nore deve ser tratada como ameaça de nível Archtype, apesar de não ser uma Archtype de Redactory. Sua maior limitação não é falta de poder, mas inexperiência: ela não passou a vida lutando contra iguais, doutrina de batalha de alto nível, artefatos ou instituições preparadas especificamente para sobreviver ao primeiro contato.
 
 ---
 

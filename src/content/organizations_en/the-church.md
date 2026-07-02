@@ -7,8 +7,8 @@ headquarters: "Saint Her'chell Cathedral - Kalt'sen"
 founded: "Pre-imperial - predates the Empire of Synus by an unspecified margin"
 jurisdiction: "Twilight Band - operational presence across all three macro-regions and Dark Side frontier"
 status_label: "Active - treaty-bound (Compact of the Two Houses)"
-summary: "The Church is Terra's dominant faith institution and the main authority on rites, possession, Beatification, and regulated Seraphic hierarchy within the Twilight Band."
-tags: ["Church", "Synus", "Faith", "Obsidian Rite", "Demonic", "Institution", "Sovereign", "Twilight Band", "Intact Seal"]
+summary: "The Church is Terra's dominant faith institution and the main authority on rites, possession, Presence-bearing vessels, Obsidian, and regulated Seraphic hierarchy within the Twilight Band."
+tags: ["Church", "Synus", "Faith", "Obsidian", "Demonic", "Institution", "Sovereign", "Twilight Band", "Intact Seal", "Divine Vessel", "Diviner", "Oracles"]
 status: "public"
 created: "2026-03-17"
 updated: "2026-06-12"
@@ -22,7 +22,7 @@ image: "../../assets/uploads/org-church.png"
 ---
 
 > *"God did not speak creation into being and then fall silent. He left His voice behind. It is locked inside every vessel that breathes. The question is whether what breathes inside you is His voice, or something else's."*
-> — Attributed to the First Deacon, Epigraph of the Vesper Lectionary
+> — Attributed to the First Priest, Epigraph of the Vesper Lectionary
 
 ---
 
@@ -105,7 +105,7 @@ The Church holds the Skyphons with a peculiar sorrow.
 
 They are not condemned. They are not venerated. They occupy in Church theology the category the learned priests call **the Rightly Unmade**: creatures whose purpose was total, whose dissolution when the instruments were scattered was not punishment but conclusion. The Church teaches that they did not suffer. They completed. This phrase is recited at the funerary rites of those who died entirely given over to service — a reference most of the faithful do not recognize for what it is.
 
-A minority position within the Diaconate of the Interior — never officially condemned but never officially blessed — argues that the First Bearers were not concluded but interrupted. That the longing felt in the presence of ancient and resonant objects — that pull, that sense of something half-remembered — is what remains of the Bearers' incompletion, distributed into the human species like seed scattered on broken ground. This is considered a theological curiosity. It is watched.
+A minority position within the Interior Council — never officially condemned but never officially blessed — argues that the First Bearers were not concluded but interrupted. That the longing felt in the presence of ancient and resonant objects — that pull, that sense of something half-remembered — is what remains of the Bearers' incompletion, distributed into the human species like seed scattered on broken ground. This is considered a theological curiosity. It is watched.
 
 The Church does not permit, under any interpretation, the deliberate reconstruction of a Skyphon. This is one of its very few doctrinal positions that aligns exactly with Apocachynthion prohibition. Both institutions arrived at it from entirely different directions. Both regard anyone who approaches the subject with interest rather than caution as a matter of serious concern.
 
@@ -152,7 +152,7 @@ This event is the **Sundering of Selia**. The Church calls it **the First Heresy
 
 The Church's doctrinal position is precise:
 
-The twelve houses committed heresy not because they practiced Redactory — the Church acknowledges that Redactory is real, that it touches something genuine in the world's structure, and that it is not in itself a sin to possess or practice. They committed heresy because they used that practice as the mechanism for a demonic invitation. They attempted to accomplish, through a capacity the Sovereign built into the structure of the world, what He explicitly forbids: the deliberate opening of the Passageway to admit what belongs on the other side of it. The theoretical house that furnished the rite's sequence architecture shares in that guilt in the Church's restricted accounting, whether or not later political history found it convenient to let the ruling houses bury that share beneath a simpler public story.
+The twelve houses committed heresy not because they practiced Redactory — the Church acknowledges that Redactory is real, that it touches something genuine in the world's structure, and that it is not in itself a sin to possess or practice. They committed heresy because they used that practice as the mechanism for a demonic invitation. They attempted to accomplish, through a capacity the Sovereign built into the structure of the world, what He explicitly forbids: the deliberate opening of the Pathway to admit what belongs on the other side of it. The theoretical house that furnished the rite's sequence architecture shares in that guilt in the Church's restricted accounting, whether or not later political history found it convenient to let the ruling houses bury that share beneath a simpler public story.
 
 The rite was not misdirected ambition. It was a misdirected door.
 
@@ -195,15 +195,21 @@ From the fallen, lesser fragments propagated. What the Church calls demons are t
 
 ---
 
-### III.2 Possession — The Passageway and What Uses It
+### III.2 Possession — The Pathway and What Uses It
 
 The Church has documented, across centuries of pastoral encounter and expulsion record, a detailed and practically accurate account of how demonic presence operates in the world.
 
 Its account is as follows:
 
-Demons do not possess bodies the way a person enters a room. They enter the threshold between the inner life of a mortal and the world's structure — what the Church calls **the Passageway** — and from there they exert pressure inward, reweighting the vessel's character, memory, and will toward their own nature. The more the vessel's existing nature aligns with the demon's domain, the faster this process advances. A person already disposed toward cruelty is more easily entered by a cruelty-domain presence than someone disposed toward generosity. The Church teaches this carefully: this is not because the person is guilty. It is because alignment reduces resistance, and resistance is all that stands between a mortal and the full weight of what presses against the Passageway.
+Demons do not possess bodies the way a person enters a room. They enter the threshold between the inner life of a mortal and the world's structure — what the Church calls **the Pathway** — and from there they exert pressure inward, reweighting the vessel's character, memory, and will toward their own nature. The more the vessel's existing nature aligns with the demon's domain, the faster this process advances. A person already disposed toward cruelty is more easily entered by a cruelty-domain presence than someone disposed toward generosity. The Church teaches this carefully: this is not because the person is guilty. It is because alignment reduces resistance, and resistance is all that stands between a mortal and the full weight of what presses against the Pathway.
 
-The Church understands that the Passageway is also what its Heralds use when the Gift of Sight operates — and understands that what angels do in the world involves the same threshold. However, the Church does not teach, and has never arrived at the position, that the mechanism by which a demon presses inward and the mechanism by which the Gift of Sight or an angelic Crowning operates are structurally related. In Church theology, these are categorically different operations: one is the Sovereign's authority expressed outward through a willing instrument, the other is an unauthorized forcing of entry from the outside in. The theology maintains this distinction absolutely and sincerely. The Church has not looked for what connects them, because its doctrinal categories have never required it to.
+The Church teaches that every person is born with a Pathway. In ordinary life, the Pathway is not meant to stand open. The **Naming**, performed shortly after birth, is taught as the rite by which the child is blessed in the Sovereign's name, claimed by the Church's protection, and placed under a proper sealing. In common teaching this is called the locking of the Pathway: not its removal, not the destruction of spiritual possibility, but the correct closure of a threshold that should not be left exposed.
+
+The rite's protection is real, but the Church overstates its absoluteness in ordinary doctrine. The Naming provides a small reinforcement to the child's recursive density, making accidental demonic contact, early-stage possession, and accidental Redactory instability less likely. It is not a guarantee. It does not prevent every case of possession, and it usually does not prevent someone who is going to become a vessel from becoming one.
+
+The Church understands that the Pathway is also what its Oracles use when the Gift of Sight operates — and understands that what angels do in the world involves the same threshold. However, the Church does not teach, and has never arrived at the public doctrinal position, that the mechanism by which a demon presses inward and the mechanism by which the Gift of Sight or an angelic Crowning operates are structurally related. In Church theology, these are categorically different operations: one is the Sovereign's authority expressed outward through a willing instrument, the other is an unauthorized forcing of entry from the outside in. The theology maintains this distinction absolutely and sincerely.
+
+The deepest echelon of the Church, including senior bishops, the restricted theological offices, and some Rector-Ascendants, has noted the resemblance between the Pathway and what Apocachynthion theory calls the Dive. This suspicion is not admitted in open teaching. The Church has no concrete proof it is willing to recognize publicly, and its doctrinal categories do not require the connection.
 
 ---
 
@@ -211,7 +217,7 @@ The Church understands that the Passageway is also what its Heralds use when the
 
 The Church has developed its own taxonomy for the progression of demonic presence through a vessel, built from centuries of field observation and case record maintained in the **Apothecarium** — the Church's own archive of possession documentation, separate from anything the Apocachynthion holds.
 
-**The Whispering** — First stage. The demonic presence has made contact with the Passageway but has not yet established stable entry. The vessel experiences intrusive thoughts, emotional distortions inconsistent with their character, and occasional sensory anomalies. Spiritual intervention at this stage — intensive prayer, the Rite of Warding, the presence of a confessor-priest — is sufficient in most cases to break the contact before it deepens.
+**The Whispering** — First stage. The demonic presence has made contact with the Pathway but has not yet established stable entry. The vessel experiences intrusive thoughts, emotional distortions inconsistent with their character, and occasional sensory anomalies. Spiritual intervention at this stage — intensive prayer, the Rite of Warding, the presence of a confessor priest — is sufficient in most cases to break the contact before it deepens.
 
 **The Tenant** — Partial, sustained presence. The demon has established a foothold and is actively reweighting the vessel's character toward its own domain. The vessel is still present and still recognizable, but their behavior is increasingly inflected by what inhabits them. Many vessels are aware of what is happening at this stage, and many reach for help. The Rite of Expulsion is most effective here, with good outcomes for vessel recovery.
 
@@ -223,15 +229,15 @@ The Church has developed its own taxonomy for the progression of demonic presenc
 
 ---
 
-### III.4 Angels in the World — The Crowning
+### III.4 Angels in the World — Presence, Beatification, and Crowning
 
-The Church teaches that angels do not enter the world in the same manner demons do. Where a demon presses itself inward through the Passageway, forcing what was never authorized, an angel acts as an extension of the Sovereign's will expressed outward — through the structure of the world itself, rather than against it.
+The Church teaches that angels do not enter the world in the same manner demons do. Where a demon presses itself inward through the Pathway, forcing what was never authorized, an angel acts as an extension of the Sovereign's will expressed outward — through the structure of the world itself, rather than against it.
 
-However: the Church acknowledges documented cases of angelic presence manifesting through or within a person. These are not called possession. They are called **the Crowning** — the temporary expression of angelic authority through a willing and prepared vessel, for a specific purpose aligned with the Sovereign's will.
+However: the Church acknowledges documented cases of angelic Presence manifesting through or within a person. These are not called possession. They are treated as visitation, Beatification, Crowning, or saintly saturation according to severity, duration, and the vessel's Bearing.
 
-The Church strictly regulates the Crowning. It does not permit unregulated angelic invitation. A person who claims to have undergone a Crowning outside of supervised Church rite is regarded with significant pastoral concern, regardless of whether the experience seemed positive. The doctrinal basis for this caution is: an angel authorized by the Sovereign to act through a vessel does not need the vessel to call for it. It arrives. If something came in response to a call, the Church recommends asking — very carefully — what it actually is.
+The Church strictly regulates all deliberate invitations of angelic Presence. A person who claims to have undergone Beatification or Crowning outside supervised Church care is regarded with significant pastoral concern, regardless of whether the experience seemed positive. The doctrinal basis for this caution is simple: an angel authorized by the Sovereign to act through a vessel does not need the vessel to call for it. It arrives. If something came in response to a call, the Church recommends asking — very carefully — what it actually is.
 
-The **Beatified** are those in whom angelic presence has significantly and permanently reoriented the person's character toward the Sovereign's expressed domain. This is the category into which formally canonized saints fall. The Church teaches that the Beatified are not diminished — they are enlarged, carrying more of the Sovereign's expressed will and less of their own particular smallness. This is held as a theological horizon, not a daily obligation for the ordinary faithful.
+The Church calls the manifestation itself **Presence**. Its operational intensity is **Weight**. The vessel's ability to remain themselves while carrying that Weight is **Bearing**. A vessel may be Touched without being Beatified, Beatified without being Crowned, and Crowned without being safe.
 
 ---
 
@@ -282,92 +288,124 @@ SERAPHIC CONSTELLATION
             `-- Motes / Sparks / Gleams
 ```
 
-This full taxonomy is not public teaching. Ordinary clergy are taught to speak of angels, saints, and the Sovereign's will. The deeper constellation doctrine is held by the Diaconate of the Interior because unguarded fascination with the Seraphim has a long history of maiming vessels, priests, and houses of formation.
+This full taxonomy is not public teaching. Ordinary clergy are taught to speak of angels, saints, and the Sovereign's will. The deeper constellation doctrine is held by the Interior Council because unguarded fascination with the Seraphim has a long history of maiming vessels, priests, and houses of formation.
 
-#### III.4.B The Beatified
+#### III.4.B Divine Vessels, Beatification, and Crowning
 
 The Church does not describe sustained angelic contact using the language of possession.
 
 Possession is what demons do.
 
-When angelic presence briefly expresses through a vessel, the Church calls it **the Crowning**.
+A **Divine Vessel** is any person who carries angelic Presence. A Divine Vessel may be discovered anywhere: hidden, frightened, unstable, exploited, misclassified, or already altered before any priest knows their name. Divine Vessel status is not office, rank, obedience, or Church membership. Once discovered, a Divine Vessel becomes an Obsidian matter.
 
-When angelic presence remains, deepens, and permanently reorients a person toward the Sovereign's expressed domain, the Church calls the result **Beatification**.
+When angelic Presence first settles into a repeatable and partially formative state, the Church calls the vessel **Beatified**. Beatification is real Presence, but it is not the deepest state.
 
-Those who carry this condition are called **the Beatified**.
+When angelic Presence becomes deep, stable, and identity-reorienting, the Church calls the condition **Crowned**. A Crowned vessel carries more Weight, requires more careful supervision, and is never treated as ordinary clergy by default.
 
 The Church teaches the progression in pastoral language:
 
 | Structural Condition | Angelic Church Term | Demonic Church Term |
 |---|---|---|
 | Initial contact | Touched / Visited | Marked / Pressed |
-| Partial fusion | Crowned | Worn |
-| Deep fusion | Beatified | Hollowing |
-| Saturation | Saint / Living Relic / severe Beatified | Hollowed / Consumed |
-| Stable altered state | Beatified state | Hollowed state / Consumed state |
+| Partial fusion | Beatified | Worn |
+| Deep fusion | Crowned | Hollowing |
+| Saturation | Saint / Living Relic / severe Crowned | Hollowed / Consumed |
+| Stable altered state | Crowned state | Hollowed state / Consumed state |
 
-A Beatified vessel is not described, in Church language, as possessed. The Church treats this distinction as doctrinally absolute even when the Divination Codex observes that angelic Beatification and demonic Hollowing are structurally related forms of fragment-vessel fusion.
+A Beatified or Crowned vessel is not described, in Church language, as possessed. The Church treats this distinction as doctrinally absolute. Restricted theologians may observe similarities in Weight, Bearing, and alteration without teaching that holy Presence and demonic ingress are the same kind of event.
 
-The Church further teaches that Beatification is additive rather than predatory. The angelic fragment does not consume the vessel as a demon does. It enlarges the vessel along the axis of divine domain. The Church also teaches this carefully, because enlargement is not the same thing as safety.
+The Church further teaches that lawful Presence is additive rather than predatory. It enlarges the vessel along the axis of divine domain. The Church also teaches this carefully, because enlargement is not the same thing as safety.
 
-Saints, living relics, and severe-domain Beatified all belong to this family of outcomes.
+Saints, living relics, and severe Crowned outcomes all belong to this family of outcomes.
+
+#### III.4.C Theophany
+
+The Church's restricted record uses **Theophany** for the rare sealed-theology category in which a divine, angelic, saintly, or demonic presence appears to step into the world through a vessel without erasing that vessel.
+
+In Church interpretation, a lawful Theophany is not merely a person using power. It is the Sovereign's permitted order expressing through a prepared vessel. A demonic equivalent may be called false Theophany, abyssal ingress, or possession-adjacent blasphemy depending on the case, but the underlying fear is the same: something larger than the vessel has reached the threshold of expression.
+
+This doctrine is not public teaching and is not ordinary clerical vocabulary. Most priests will never handle a case where the term is appropriate. Even within the Church's hierarchy it belongs to the sealed record: senior bishops, the Interior Council, Rector-Ascendants, and carefully supervised Oracles.
+
+The Church can mistake overwhelming Divination for Theophany. Final classification requires investigation, testimony, comparison against the Apothecarium, and often the Gift of Sight. Until then, the safer pastoral language remains Crowning, Beatification, possession, false Theophany, or abyssal ingress.
 
 ---
 
 ### III.5 The Gift of Sight {#gift-of-sight}
 
-The Church calls what its Heralds experience **the Gift of Sight**, or in formal liturgy, **the Opening**. Its theology around it is deliberate.
+The Church calls what its Oracles experience **the Gift of Sight**, or in formal liturgy, **the Opening**. Its theology around it is deliberate.
 
-The Sovereign does not show Himself as a rule. He is beneath the world's structure, not upon it. But the Church teaches that there are individuals in whom the distance between ordinary perception and the world's deeper reality is narrower than usual. This narrowness is not something they made. It is given. The Gift of Sight is receptive, not projective: the Herald does not reach toward the Sovereign's will. The Sovereign's will, or something acting on His behalf, reaches through them.
+The Sovereign does not show Himself as a rule. He is beneath the world's structure, not upon it. But the Church teaches that there are individuals in whom the distance between ordinary perception and the world's deeper reality is narrower than usual. This narrowness is not something they made. It is given. The Gift of Sight is receptive, not projective: the Oracle does not reach toward the Sovereign's will. The Sovereign's will, or something acting on His behalf, reaches through them.
 
-A Herald who claims to produce visions at will, to summon divine presence through technique, or to manufacture prophecy through effort is treated with serious pastoral concern. The Church's experience is that things which come in response to deliberate summoning are not always what they present themselves to be.
+An Oracle who claims to produce visions at will, to summon divine Presence through technique, or to manufacture prophecy through effort is treated with serious pastoral concern. The Church's experience is that things which come in response to deliberate summoning are not always what they present themselves to be.
 
-The Church's own Heralds are distinguished not by the quality of their visions but by the consistency of their testimony with the Sovereign's documented nature across the theological record, and by years of ongoing assessment by their confessors.
+The Church's own Oracles are distinguished not by the quality of their visions but by the consistency of their testimony with the Sovereign's documented nature across the theological record, and by years of ongoing assessment by their confessors.
 
-Oraculants who operate outside the Church's structure — whose sight functions through means the Church considers structurally distinct from the Gift of Sight — are regarded with pastoral ambivalence. The Church does not condemn them. It maintains **the Covenant of the Open Eye**: a formal arrangement through which an Oraculant can submit their visions for theological review, receive ongoing spiritual guidance from an assigned confessor-priest, and in exchange receive the Church's institutional protection if something goes wrong during a deep reading. Many accept. Those who do not are watched, not pursued — unless reading the veil begins to look like the veil reading them.
+Oraculants who operate outside the Church's structure — whose sight functions through means the Church considers structurally distinct from the Gift of Sight — are regarded with pastoral ambivalence. The Church does not condemn them. It maintains **the Covenant of the Open Eye**: a formal arrangement through which an Oraculant can submit their visions for theological review, receive ongoing spiritual guidance from an assigned confessor priest, and in exchange receive the Church's institutional protection if something goes wrong during a deep reading. Many accept. Those who do not are watched, not pursued — unless reading the veil begins to look like the veil reading them.
 
 ---
 
-## PART IV: THE HIERARCHY OF THE ONE CHURCH
+## PART IV: THE HIERARCHY OF THE CHURCH
 ### Structure, Orders, and Offices
 
 ---
 
 ### IV.1 Governance Structure
 
-The Church is governed by a hierarchical body of consecrated clergy from the parish level to the supreme office of the **Arch-Patriarch**. Advancement is by consecration: a candidate must be affirmed by a quorum of superiors already holding their rank, through a rite that includes a supervised expression of the Gift of Sight. The Church teaches that the Sovereign confirms appointments through the rite's outcome.
+The Church is governed by a hierarchical body of consecrated clergy from local priests to bishops and the supreme office of the **Primus**. Advancement is by consecration: a candidate must be affirmed by a quorum of superiors already holding the relevant clerical degree, through a rite that includes a supervised expression of the Gift of Sight. The Church teaches that the Sovereign confirms appointments through the rite's outcome.
+
+Governance is not vessel status. A priest, bishop, or Primus may be entirely non-vessel. A Divine Vessel may be unordained. A Diviner may also be a priest, but vesselhood and ordination remain separate claims.
 
 ---
 
-### IV.2 The Clergy — Hierarchical Degrees
+### IV.2 The Clergy — Clerical Degrees
 
-**Parish Priests** — The foundational presence of the Church in every settlement of the Twilight Band. Responsible for regular liturgy, pastoral care, the administration of the seven formal rites, and the first identification of demonic incidents in their parish. Parish priests are not trained in major expulsion. They are trained to recognize, to report, and to hold what they can hold while properly equipped clergy are summoned. The parish network is the most geographically extensive intelligence system the Church possesses.
+**Priests** — The foundational presence of the Church in every settlement of the Twilight Band. Responsible for regular liturgy, pastoral care, the administration of the seven formal rites, and the first identification of demonic incidents in their parish. Priests are not trained in major expulsion by default. They are trained to recognize, to report, and to hold what they can hold while properly equipped clergy are summoned. The parish network is the most geographically extensive intelligence system the Church possesses.
 
-**Deacons** — Senior administrative clergy overseeing districts of several parishes. Deacons are the first level of clergy who may legally carry a Church-sealed instrument approved for use against minor manifestations, and the first level with access to restricted archive tiers.
+**Bishops** — Governing clergy of a region, corresponding roughly to an imperial province in territorial scope. Bishops maintain the regional Obsidian formations, manage relations with imperial governance, approve the carrying of Church-sealed instruments by trained clergy, and hold the authority to formally declare a **Desolation Event** — the Church's designation for a region experiencing demonic saturation significant enough to require full mobilization.
 
-**Arch-Deacons** — Governing clergy of a region, corresponding roughly to an imperial province in territorial scope. Arch-Deacons maintain the regional Obsidian Rite formations, manage relations with imperial governance, and hold the authority to formally declare a **Desolation Event** — the Church's designation for a region experiencing demonic saturation significant enough to require full mobilization.
+**The Council of Bishops** — A body of approximately thirty senior bishops governing the Church's doctrinal and operational decisions collectively. The council operates by quorum vote on matters of doctrine and by unanimous consent on matters of heresy declaration.
 
-**The Diaconate Council** — A body of approximately thirty senior Arch-Deacons governing the Church's doctrinal and operational decisions collectively. The Diaconate operates by quorum vote on matters of doctrine and by unanimous consent on matters of heresy declaration.
-
-**The Arch-Patriarch** — The supreme office. A single figure, consecrated for life, serving as the formal voice of the Church's unified theological position. The Arch-Patriarch holds exclusive authority over four things: the opening and closing of the Church's most restricted archive; the issuance of formal letters to the Emperor or Empress; the consecration of new Arch-Deacons; and the convening of a General Council — a gathering of all Arch-Deacons, convened six times in the Church's recorded history, always in response to events the Diaconate considered civilizationally significant.
+**The Primus** — The supreme office. A single figure, consecrated for life, serving as the formal voice of the Church's unified theological position. The Primus holds exclusive authority over four things: the opening and closing of the Church's most restricted archive; the issuance of formal letters to the Emperor or Empress; the consecration of new bishops; and the convening of a General Council — a gathering of all bishops, convened six times in the Church's recorded history, always in response to events the Council of Bishops considered civilizationally significant.
 
 ---
 
-### IV.3 The Specialized Orders
+### IV.3 Obsidian
 
-**The Obsidian Rite** — The Church's operational arm in the field. Members of the Obsidian Rite are clergy who have completed both standard priestly formation and an extended course of training in the identification, containment, and expulsion of demonic manifestation at every stage from early Whispering through advanced Wearing. They are not soldiers. Their primary instruments are Church-sealed relics approved by the Arch-Patriarch's office, the formal rites of expulsion, the Gift of Sight practiced under operational conditions, and what the tradition calls **the Naming** — the technique of addressing a possessing presence by its proper domain within the Sovereign's ordering of creation. The Church teaches that the Naming causes genuine disruption to lower-tier demonic manifestation. Against higher-tier presences, the Naming is insufficient alone, but it remains the opening movement of every formal rite of major expulsion.
+**Obsidian** is the Church branch responsible for Divine Vessels, Diviners, possession cases, demonic incidents, vessel training, expulsion operations, Oracles, Ecclesiastic Surgeons, Menders, Keepers, restricted theologians, investigators, field operatives, and the Presence-facing doctrine ordinary clergy are not trained to hold.
 
-Members of the Obsidian Rite distinguish rank from contact-depth. Their rank and office ladder is **Postulant**, **Votary**, **Votary-Principal**, **Prelate**, and **Rector-Ascendant** — the last reserved for those few whose field record and theological standing qualify them for independent command of a full operation. Operations are conducted in units of three: a primary expulsor, a confessor-priest responsible for the spiritual preparation and aftercare of the vessel, and an **Ecclesiastic Surgeon** — a specialist responsible for evaluating the physical and psychological condition of the vessel and determining whether the possession has progressed beyond the point where expulsion remains a rescue.
+All recognized Church Diviners serve in Obsidian. No other branch of the Church independently trains, deploys, classifies, or supervises Diviners.
 
-**The Choir Penitent** — The Church's body of formally organized Heralds: those who carry the Gift of Sight and have submitted it to Church oversight. They serve as the intelligence arm of the Obsidian Rite — identifying the tier and domain-signature of a demonic presence before the expulsor unit engages, reading the character of claimed angelic manifestations to assess their nature, and providing advance warning of demonic concentrations before a Desolation Event escalates to its most dangerous stage. The Choir Penitent do not carry expulsion instruments. Protecting them during operations is the responsibility of the Votary or Votary-Principal assigned to accompany them.
+Not everyone in Obsidian is a Diviner. Obsidian includes Diviners, non-vessel priests, non-vessel Ecclesiastic Surgeons, non-vessel confessors, Oracles, Menders, Keepers, expulsors, administrators, investigators, restricted theologians, field commanders, archivists, and support personnel.
 
-The name of the order comes from its founding doctrine: the Gift of Sight is not earned. It is given. Those who carry it serve in penance not for sin but for privilege — in recognition that they see things no one asked to see, and that the seeing carries a cost.
+A **Divine Vessel** is a person carrying angelic Presence who has not necessarily been recognized, processed, trained, disciplined, or assigned by the Church. A **Diviner** is a Church-recognized, trained, Obsidian-assigned Divine Vessel. A priest outside Obsidian is usually not a Diviner. A priest assigned to Obsidian may still be non-vessel. A Divine Vessel outside Obsidian is not yet a Diviner.
+
+### IV.4 Obsidian Rank
+
+Obsidian rank is command seniority, not vessel power. The institutional ladder is:
+
+- **Postulant** — newly invested candidate in formation.
+- **Votary** — standard operational member cleared for field service.
+- **Votary-Principal** — senior Votary trusted with leadership and formation duties.
+- **Prelate** — regional or formation command office below Rector-Ascendant.
+- **Rector-Ascendant** — highest regular field office, reserved for those qualified for independent command of a full operation.
+
+### IV.5 Offices and Specialized Bodies
+
+An **office** is a function, not proof of vesselhood. Obsidian offices include priest, confessor, Ecclesiastic Surgeon, Expulsor, Oracle, Mender, Keeper, investigator, field commander, and archivist. A Stellate-level Diviner may serve as an Ecclesiastic Surgeon. A non-vessel priest may serve as a confessor inside Obsidian. A Crowned Diviner may hold no clerical degree at all unless separately ordained.
+
+**The Oracles** are Obsidian's sight-bearing intelligence body: those who carry the Gift of Sight and have submitted it to Church oversight. They identify the tier and domain-signature of demonic presences before expulsor engagement, read the character of claimed angelic manifestations, and provide warning when a Desolation Event approaches escalation. The Oracles do not carry expulsion instruments by default. Protecting them during operations is the responsibility of the Votary or Votary-Principal assigned to accompany them.
 
 **The Menders** — Formally titled the **Order of the Interior Wound**. Specialists in the restoration of vessels that have survived demonic possession. The work is simultaneously physical, psychological, and theological: a person who has experienced even partial demonic presence carries something that the Church teaches requires not merely time but active treatment — a supervised process of reorienting the identity back toward the vessel's own coherence and away from the demonic residue that lingers even after successful expulsion. The Menders maintain the **Apothecarium** — the most detailed case archive of possession events in the Church's history, more practically useful than anything the Apocachynthion holds, because the Menders are concerned with what survival looks like rather than with classifying the phenomenon itself.
 
-**The Keepers of Before** — The archivists of the restricted record: the theological account of the First Heresy, the documentation of the twelve houses and their rite, the accumulated case record of every formally declared Desolation Event since the Church's founding, and the theological material pertaining to the Instruments of the Intact Seal. The Keepers of Before do not investigate the field. They document, preserve, and serve as the institutional memory of the Church's precedents. When the Diaconate must rule on a question without clear precedent, it is the Keepers who locate whatever parallel the archive contains.
+**The Keepers of Before** — The archivists of the restricted record: the theological account of the First Heresy, the documentation of the twelve houses and their rite, the accumulated case record of every formally declared Desolation Event since the Church's founding, and the theological material pertaining to the Instruments of the Intact Seal. The Keepers of Before do not investigate the field. They document, preserve, and serve as the institutional memory of the Church's precedents. When the Council of Bishops must rule on a question without clear precedent, it is the Keepers who locate whatever parallel the archive contains.
 
-**The Confessor-Priests** — Present at every level of the Church, from parish ministry through embedded assignment in Obsidian Rite units. Their function is to hear. The seal of the confessional runs in both directions: a priest who breaks it is expelled. No one can be compelled to speak. The Confessor-Priests accumulate more practical intelligence about demonic infiltration of ordinary civilian life than any other order, because they receive what no other record does: the individual account told in privacy by someone who needed to tell it. This information is protected and is not shared with the Apocachynthion, the Empire, or any other body. The Diaconate Council can, in formal session, lift the seal for a specific account if it believes a civilizational threat requires it. This has occurred twice in the Church's recorded history.
+**The Confessor Priests** — Present at every level of the Church, from ordinary ministry through embedded assignment in Obsidian units. Their function is to hear. The seal of the confessional runs in both directions: a priest who breaks it is expelled. No one can be compelled to speak. The Confessor Priests accumulate more practical intelligence about demonic infiltration of ordinary civilian life than any other order, because they receive what no other record does: the individual account told in privacy by someone who needed to tell it. This information is protected and is not shared with the Apocachynthion, the Empire, or any other body. The Council of Bishops can, in formal session, lift the seal for a specific account if it believes a civilizational threat requires it. This has occurred twice in the Church's recorded history.
+
+### IV.6 Magnitude and State
+
+**Magnitude** describes the scale of angelic Presence or source contact. It is not rank. Obsidian's restricted vocabulary uses **Gleam**, **Spark**, **Mote**, **Stellate**, **Cardinal**, and **Cynosure** for increasing vessel or source scale. These terms describe Weight and source proximity, not command authority.
+
+**State** describes how deeply Presence has altered the vessel: **Touched / Visited**, **Beatified**, **Crowned**, and saturation-adjacent outcomes such as **Saint**, **Living Relic**, or severe **Crowned** condition. A Crowned Diviner must remain under Obsidian supervision unless formally cleared for independent service.
 
 ---
 
@@ -380,7 +418,7 @@ The name of the order comes from its founding doctrine: the Gift of Sight is not
 
 The Church did not found the Empire. The Empire did not found the Church. They have coexisted since before the Fifteen Houses reorganized governance into an imperial structure, and the working relationship between them is built as much on pragmatism as on shared theology.
 
-The Empire tolerates the Church not because the reigning Emperor or Empress is necessarily devout — faith in the ruling house varies by generation — but because the Church performs functions the Empire cannot efficiently replicate. No state institution understands demonic manifestation and possession with the Church's operational depth. No state intelligence service has the geographic penetration of the parish network. No state medical corps has the Menders' experience with what it takes for a person to recover from contact with what lives on the other side of the Passageway.
+The Empire tolerates the Church not because the reigning Emperor or Empress is necessarily devout — faith in the ruling house varies by generation — but because the Church performs functions the Empire cannot efficiently replicate. No state institution understands demonic manifestation and possession with the Church's operational depth. No state intelligence service has the geographic penetration of the parish network. No state medical corps has the Menders' experience with what it takes for a person to recover from contact with what lives on the other side of the Pathway.
 
 The Church tolerates imperial oversight not because it considers itself subordinate to the state — it does not, in its own theology — but because the Empire's military and administrative infrastructure is the only structure capable of maintaining enough order in the Twilight Band for the Church to do its actual work. The Church's theology holds that civil order is one of the Sovereign's practical gifts to the world: not the highest gift, not unconditional, but real.
 
@@ -396,9 +434,9 @@ The Church may operate freely within the Empire's territory in the exercise of i
 
 The Church may not impose legal penalties on civilian citizens without imperial referral. It may identify, name, and spiritually treat demonic possession. It may not imprison, execute, or permanently restrict the movement of civilians without an imperial magistrate's co-signature. This provision is observed more strictly in the capital than in remote regions. Both institutions are aware of this.
 
-Imperial authorities must refer active demonic incidents to the nearest Arch-Deacon within a specified period of recognition. When a region reports possession events, anomalous veil disturbances, or behavior consistent with escalating Desolation, the relevant imperial governor is legally obligated to notify the Church. The Arch-Deacon then determines whether to deploy the Obsidian Rite, request military support, or declare a formal Desolation Event. If a formal Desolation Event is declared, the Church assumes operational primacy in the affected region for the duration of containment.
+Imperial authorities must refer active demonic incidents to the nearest bishop within a specified period of recognition. When a region reports possession events, anomalous veil disturbances, or behavior consistent with escalating Desolation, the relevant imperial governor is legally obligated to notify the Church. The bishop then determines whether to deploy Obsidian, request military support, or declare a formal Desolation Event. If a formal Desolation Event is declared, the Church assumes operational primacy in the affected region for the duration of containment.
 
-The Empire provides logistical and military support upon Church request during declared Desolation Events. This is a treaty obligation, not a voluntary contribution. Arch-Deacons invoke it. The relationship grows tense when the declaration's scope conflicts with imperial military priorities elsewhere, but the legal obligation has not been formally challenged.
+The Empire provides logistical and military support upon Church request during declared Desolation Events. This is a treaty obligation, not a voluntary contribution. Bishops invoke it. The relationship grows tense when the declaration's scope conflicts with imperial military priorities elsewhere, but the legal obligation has not been formally challenged.
 
 The Church does not involve itself in the Empire's military doctrine except as pastoral care to soldiers and as spiritual advisor on matters touching the **War of the Threshold** — the ongoing campaign against entities emerging from the Dark Side boundary. This is the one area where Church involvement in military affairs is not merely welcomed but considered structurally necessary by the imperial command, because what emerges from the Dark Side includes presences that Redactor military doctrine alone is not sufficient to address.
 
@@ -406,11 +444,15 @@ The Church does not involve itself in the Empire's military doctrine except as p
 
 ### V.3 Limits on Church Authority
 
-The Church cannot regulate Redactory directly. This belongs to the Apocachynthion. The Church can offer theological opinion on Redactory practice and provide pastoral guidance to Redactors. It cannot issue binding academic credentials or formally classify any form of Redactory as safe or dangerous. The two institutions share incident reports on Redactors who exhibit signs of demonic indexing or structural anomaly. The cooperation is functional and frequently uncomfortable, because their explanatory frameworks for the same events are systematically different.
+The Church cannot regulate Redactory directly. This belongs to the Apocachynthion. The Church can offer theological opinion on Redactory practice and provide pastoral guidance to Redactors. It cannot issue binding academic credentials or formally classify any form of Redactory as safe or dangerous.
+
+Openly, the Church treats Redactory as an anomaly within the Sovereign's world, not as proof against the Sovereign. If Redactors exist, then in Church theology they exist because God permitted such a capacity to be woven into creation. The danger is not that Redactory exists. The danger is that its practice can approach blasphemy when it treats access to the world's deep structure as a mortal entitlement rather than a responsibility under God. For that reason, the Church prefers Redactors to be regulated, spiritually supervised, and, where possible, brought into faithful service.
+
+The two institutions share incident reports on Redactors who exhibit signs of demonic indexing or structural anomaly. The cooperation is functional and frequently uncomfortable, because their explanatory frameworks for the same events are systematically different.
 
 The Church cannot alter imperial law.
 
-The Church cannot access the Apocachynthion's vaults. The restricted archive in the Sanctum Vaults is not accessible to Church representatives. The Church has formally requested access to the Obscurial documentation twice in the last four centuries. Both requests were declined. The current Arch-Patriarch has not renewed the request, on the grounds that renewing it reveals more about the depth of the Church's interest than is wise to disclose.
+The Church cannot access the Apocachynthion's vaults. The restricted archive in the Sanctum Vaults is not accessible to Church representatives. The Church has formally requested access to the Obscurial documentation twice in the last four centuries. Both requests were declined. The current Primus has not renewed the request, on the grounds that renewing it reveals more about the depth of the Church's interest than is wise to disclose.
 
 The Church cannot compel confession. The seal runs in both directions. No one is forced to speak. This is theologically grounded and practically significant: the Church's most valuable intelligence network is entirely voluntary.
 
@@ -422,11 +464,11 @@ The ongoing conflict along the Dark Side boundary is not classified by the Churc
 
 The Church identifies three broad categories of what emerges from the Dark Side:
 
-Entities in terminal metamorphic stages — the Consumed — who have moved away from habitable territory and follow the resonance gradient of life toward the Twilight Band. These are addressed primarily by the Obsidian Rite with military support.
+Entities in terminal metamorphic stages — the Consumed — who have moved away from habitable territory and follow the resonance gradient of life toward the Twilight Band. These are addressed primarily by Obsidian with military support.
 
-High-tier demonic presences operating without permanent mortal vessels, moving through the structure of the world as mobile manifestations rather than through individual hosts. Significantly more dangerous, requiring coordinated response. The Choir Penitent are critical here: early identification of an approaching presence allows containment before it establishes a foothold in civilian density.
+High-tier demonic presences operating without permanent mortal vessels, moving through the structure of the world as mobile manifestations rather than through individual hosts. Significantly more dangerous, requiring coordinated response. The Oracles are critical here: early identification of an approaching presence allows containment before it establishes a foothold in civilian density.
 
-And a small number of entities at the boundary that the Church, through decades of observation and theological assessment, has classified as fallen angel-tier: not merely demonic but fallen from a height that grants them a form of authority in the world that lower presences do not possess. These are not formally named in public record. Their designations are held in the Arch-Patriarch's restricted files. The Diaconate considers them the most dangerous ongoing fact in the world short of a general Desolation of the full Twilight Band — which the Church's theological archive lists as the worst conceivable scenario, surpassed only by the possibility of a successful full-scale opening of the Passageway that the twelve houses failed to force open at Selia.
+And a small number of entities at the boundary that the Church, through decades of observation and theological assessment, has classified as fallen angel-tier: not merely demonic but fallen from a height that grants them a form of authority in the world that lower presences do not possess. These are not formally named in public record. Their designations are held in the restricted files of the Primus. The Council of Bishops considers them the most dangerous ongoing fact in the world short of a general Desolation of the full Twilight Band — which the Church's theological archive lists as the worst conceivable scenario, surpassed only by the possibility of a successful full-scale opening of the Pathway that the twelve houses failed to force open at Selia.
 
 ---
 
@@ -435,7 +477,7 @@ And a small number of entities at the boundary that the Church, through decades 
 
 ---
 
-**The Naming** — Performed within a month of a child's birth. The Church teaches that giving a name in the rite is a formal declaration to whatever inhabits the world's structure that this individual is under the Sovereign's claim. The Church documents a reduced frequency of early-stage Whispering incidents among Named individuals in early childhood, when a person's own coherence is at its most fragile.
+**The Naming** — Performed shortly after a child's birth. The child is brought before a priest, blessed in the Sovereign's name, and given a name within the Church's keeping. The Church teaches that this rite locks the child's Pathway: a formal declaration to whatever inhabits the world's structure that this individual is under the Sovereign's claim and should not be open to unauthorized contact. The protection is real but not absolute. It gives a small reinforcement to recursive density, reducing early vulnerability to Whispering, possession pressure, and accidental Redactory instability during the years when a person's own coherence is most fragile.
 
 **The Confirmation** — Performed in early adulthood, when the individual formally affirms their own faith. Includes a supervised expression of the Gift of Sight — the only such experience outside specialist training that ordinary faithful are expected to attempt. What most people perceive is described as warmth, pressure, and a quality of being recognized. The Church teaches this is real.
 
@@ -445,9 +487,9 @@ And a small number of entities at the boundary that the Church, through decades 
 
 **The Last Rite** — Administered to the dying. The period surrounding death is one of elevated threshold vulnerability. The Last Rite is a formal sealing — a closing of the individual's structure that the Church teaches makes the body inhospitable to late-stage demonic approach.
 
-**The Rite of Expulsion** — Three versions by tier. The minor Rite is within the capability of a trained Deacon and addresses the Whispering and early Tenant stage. The major Rite is performed by Obsidian Rite Votaries and addresses Tenant through Wearing stage. The **Grand Expulsion** has been performed seven times in the Church's recorded history. It requires the physical presence of an Arch-Deacon or above, a full Rite cell, at least two Choir Penitent members, and a quorum of the regional Diaconate available for consultation. A Grand Expulsion takes a minimum of three days. Its documented mortality rate among officiants is approximately one in five.
+**The Rite of Expulsion** — Three versions by tier. The minor Rite is within the capability of a trained priest and addresses the Whispering and early Tenant stage. The major Rite is performed by Obsidian Votaries and addresses Tenant through Wearing stage. The **Grand Expulsion** has been performed seven times in the Church's recorded history. It requires the physical presence of a bishop or above, a full Obsidian cell, at least two Oracles, and a quorum of regional bishops available for consultation. A Grand Expulsion takes a minimum of three days. Its documented mortality rate among officiants is approximately one in five.
 
-**The Consecration of Place** — The ritual marking of a location as formally under the Church's spiritual jurisdiction. A consecrated space has measurably reduced threshold vulnerability to demonic entry. Major churches, hospitals, the formal chambers of imperial governance in the capital, and every documented point of contact between the Twilight Band and the Dark Side boundary along the War of the Threshold front lines are consecrated. Maintaining those front-line consecrations under sustained pressure is one of the Obsidian Rite's most resource-intensive ongoing obligations.
+**The Consecration of Place** — The ritual marking of a location as formally under the Church's spiritual jurisdiction. A consecrated space has measurably reduced threshold vulnerability to demonic entry. Major churches, hospitals, the formal chambers of imperial governance in the capital, and every documented point of contact between the Twilight Band and the Dark Side boundary along the War of the Threshold front lines are consecrated. Maintaining those front-line consecrations under sustained pressure is one of Obsidian's most resource-intensive ongoing obligations.
 
 ---
 
@@ -457,7 +499,7 @@ And a small number of entities at the boundary that the Church, through decades 
 
 **On the Intact Seal and its restoration:** The Church does not teach that the Seal can be restored by mortal action. Senior theological record includes speculation that the twelve Instruments must be reassembled as a precondition of any restoration. This is not doctrine. It is documented.
 
-**On the Skyphons:** The minority position of the Diaconate of the Interior — that the First Bearers were interrupted rather than concluded, and that their incompletion is distributed through the human species — is documented and flagged for continued observation. It is not condemned.
+**On the Skyphons:** The minority position of the Interior Council — that the First Bearers were interrupted rather than concluded, and that their incompletion is distributed through the human species — is documented and flagged for continued observation. It is not condemned.
 
 **On the Apocachynthion:** The Church's private assessment is that the Apocachynthion's greatest long-term risk is selective memory. The more completely it buries the account of what the twelve houses did at Selia and why, the less equipped it becomes to recognize when that pattern begins to reconstitute. The Church considers itself the institutional memory the Apocachynthion has chosen not to keep.
 

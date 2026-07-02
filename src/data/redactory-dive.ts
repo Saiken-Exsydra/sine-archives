@@ -34,7 +34,6 @@ export type DiveSectionData = {
     | "anchor-basics"
     | "shallow"
     | "practical"
-    | "deepening"
     | "deep-anchor"
     | "near-strata"
     | "strata"
@@ -63,7 +62,7 @@ const englishSeals = [
   {
     label: "Shallow Anchor",
     eyebrow: "Registry depth reading",
-    summary: "A specific derived handle near the surface. Clear enough for early training and routine work.",
+    summary: "A foundational Anchor Depth category for specific, derived handles near the surface. Clear enough for early training and routine work.",
     depth: "Near-surface route",
     asset: redactoryAssets.shallowAnchorSeal,
     symbolAsset: redactoryAssets.shallowAnchorSymbol,
@@ -75,7 +74,7 @@ const englishSeals = [
   {
     label: "Deep Anchor",
     eyebrow: "Registry depth reading",
-    summary: "A distinct lower-rank route seated beneath surface derivatives. Wider structural access, higher strain.",
+    summary: "A foundational Anchor Depth category for lower routes seated beneath surface derivatives. Wider structural access, higher strain.",
     depth: "Deep route",
     asset: redactoryAssets.deepAnchorSeal,
     symbolAsset: redactoryAssets.deepAnchorSymbol,
@@ -87,7 +86,7 @@ const englishSeals = [
   {
     label: "Abyssal Anchor",
     eyebrow: "Registry depth reading",
-    summary: "A handle that begins at bedrock. The destination is set; surviving the descent is the question.",
+    summary: "A foundational Anchor Depth category for routes that begin at bedrock. The destination is set; surviving the descent is the question.",
     depth: "Stratal route",
     asset: redactoryAssets.abyssalAnchorSeal,
     symbolAsset: redactoryAssets.abyssalAnchorSymbol,
@@ -102,7 +101,7 @@ const portugueseSeals = [
   {
     label: "Anchor Rasa",
     eyebrow: "Leitura de profundidade",
-    summary: "Um apoio derivado e especifico perto da superficie. Claro o bastante para treino inicial e trabalho comum.",
+    summary: "Uma categoria fundacional de Anchor Depth para apoios derivados e especificos perto da superficie. Clara o bastante para treino inicial e trabalho comum.",
     depth: "Rota de superficie",
     asset: redactoryAssets.shallowAnchorSeal,
     symbolAsset: redactoryAssets.shallowAnchorSymbol,
@@ -114,7 +113,7 @@ const portugueseSeals = [
   {
     label: "Anchor Profunda",
     eyebrow: "Leitura de profundidade",
-    summary: "Uma rota distinta assentada abaixo das derivacoes de superficie. Acesso estrutural maior, tensao maior.",
+    summary: "Uma categoria fundacional de Anchor Depth para rotas assentadas abaixo das derivacoes de superficie. Acesso estrutural maior, tensao maior.",
     depth: "Rota profunda",
     asset: redactoryAssets.deepAnchorSeal,
     symbolAsset: redactoryAssets.deepAnchorSymbol,
@@ -126,7 +125,7 @@ const portugueseSeals = [
   {
     label: "Anchor Abissal",
     eyebrow: "Leitura de profundidade",
-    summary: "Um apoio que comeca no alicerce. O destino esta definido; sobreviver a descida e a pergunta.",
+    summary: "Uma categoria fundacional de Anchor Depth para rotas que comecam no alicerce. O destino esta definido; sobreviver a descida e a pergunta.",
     depth: "Rota estratal",
     asset: redactoryAssets.abyssalAnchorSeal,
     symbolAsset: redactoryAssets.abyssalAnchorSymbol,
@@ -140,21 +139,21 @@ const portugueseSeals = [
 const english: DiveContent = {
   eyebrow: "A guided descent",
   title: "The Dive",
-  intro: "Follow how Anchor Depth, Dive Depth, Reach, and risk fit together. Redactory never makes something from nothing; it chooses a possible version of the local world and makes that version hold for a while.",
+  intro: "Follow how shallow, deep, and abyssal Anchors form the three Anchor Depth categories, then how Dive Depth, Reach, Overreach, and Shorewalking fit around them. Redactory never makes something from nothing; it chooses a possible version of the local world and makes that version hold for a while.",
   scrollLabel: "Begin descent",
   returnLabel: "Return to Desk",
   legendTitle: "The descent at a glance",
   legend: [
     { term: "Surface", explanation: "entering the Dive" },
-    { term: "Shallow Anchor", explanation: "Anchor Depth near the surface" },
-    { term: "Deep Anchor", explanation: "Anchor Depth seated lower in the grammar" },
-    { term: "Near-Strata", explanation: "close to bedrock" },
-    { term: "Strata", explanation: "bedrock ideas" },
-    { term: "Abyssal Anchor", explanation: "a route born at bedrock" },
-    { term: "Shore", explanation: "beyond this lesson" },
+    { term: "Shallow Anchor", explanation: "near-surface Anchor category" },
+    { term: "Deep Anchor", explanation: "lower foundational Anchor category" },
+    { term: "Abyssal Anchor", explanation: "Anchor category born at bedrock" },
+    { term: "Dive Depth", explanation: "how far a specific act descends" },
+    { term: "Reach / Overreach", explanation: "lateral extension and failure" },
+    { term: "Shorewalking", explanation: "boundary survival, not bigger Reach" },
   ],
   sealTitle: "Apocachynthion Depth Seals",
-  sealIntro: "Depth Reading is the institution's shorthand for where an Anchor sits in the Page's vertical grammar. These are the three seals used for ordinary registry classification.",
+  sealIntro: "Depth Reading is the institution's shorthand for which foundational Anchor Depth category a route belongs to: shallow, deep, or abyssal. Dive Depth is recorded separately for individual acts.",
   seals: englishSeals,
   sections: [
     {
@@ -245,17 +244,17 @@ const english: DiveContent = {
       eyebrow: "DEEP ANCHOR",
       title: "Deeper Route, Greater Risk",
       copy: [
-        "A Deep Anchor is not a Shallow Anchor pushed lower. It is its own foundational rank.",
-        "Its stable route forms around broader, lower concepts such as Combustion or Heat rather than a surface-near threshold like Ignition.",
+        "A Deep Anchor is not a stronger version of a Shallow Anchor. It is its own foundational Anchor Depth category.",
+        "Its stable route forms around broader, lower concepts such as Combustion, Heat, or Structural Momentum rather than a surface-near threshold like Ignition.",
         "But it is also harder to use safely. The deeper the Redactor goes, the less the world wants to cooperate.",
       ],
       depthLabel: "Deep Anchor",
       depthMeter: { term: "Deep depth", explanation: "Resistance can throw the Redactor out of the Dive. Collapse may leave memory gaps, dissociation, or internal damage to mind and body." },
       panelTitle: "Different ranks, different routes",
-      panelNote: "Anchors can sometimes deepen through dangerous refinement, but registry rank is not a simple upgrade path.",
+      panelNote: "A practitioner can refine control over time, but shallow, deep, and abyssal are classification categories, not training stages.",
       comparison: [
         { term: "Shallow Ignition", explanation: "Open plasma through air or ignite many prepared targets at once." },
-        { term: "Deep Combustion", explanation: "Carry burning through hostile conditions, sustain linked combustion, or address the behavior of heat at a broader level." },
+        { term: "Deep Combustion", explanation: "Carry burning through hostile conditions, sustain linked combustion, or address heat at a broader level." },
         { term: "Beyond control", explanation: "The route collapses. The effect ends, but damage already caused to the world or the Redactor remains." },
       ],
       plateLabel: "Depth grows faster than safety",
@@ -270,11 +269,12 @@ const english: DiveContent = {
         "Near the strata, the small doorway starts opening onto something enormous.",
         "This is where examples stop behaving like tricks.",
         "Ignition is no longer just a spark. It is standing close to the question: why can fire begin at all?",
+        "This is Dive Depth, not Reach. Reach moves sideways from the Anchor into adjacent or non-native configurations; Overreach begins when that lateral route outruns the Redactor's stable self-address.",
       ],
       depthLabel: "Near-Strata",
       depthMeter: { term: "Extreme depth", explanation: "Memory can fragment and identity can begin to erode. Involuntary Sinking may pull the Redactor deeper than intended." },
       panelTitle: "The doorway opens wider",
-      panelNote: "Most Redactors do not work here casually.",
+      panelNote: "Depth moves downward. Reach moves outward. Overreach is the failure state when the outward route stops holding.",
       progression: ["A plasma path opens", "Combustion crosses matter that should resist it", "Heat behaves across an entire system", "The root of burning comes into view"],
       plateLabel: "Close to conceptual bedrock",
       visualVariant: "near-strata",
@@ -309,7 +309,7 @@ const english: DiveContent = {
       title: "Born at Bedrock",
       copy: [
         "Most Redactors begin with a small handle near the surface.",
-        "An Abyssal Anchor is different. Its route is already at the bottom.",
+        "An Abyssal Anchor is different. Its route is already at the bottom as its own foundational category.",
         "A Fire Abyssal Anchor is not Ignition, Combustion, Heat, or Flame. It is Fire itself, down where burning begins.",
         "At full capacity, that doorway could make stone, sea, or sky express burning across a region. That is potential, not automatic control.",
       ],
@@ -336,7 +336,7 @@ const english: DiveContent = {
       depthMeter: { term: "Survival limit", explanation: "At full capacity, Fire could make stone, sea, or sky express burning across a region. Holding that answer may destroy the person forcing it." },
       panelTitle: "Potential is not control",
       comparison: [
-        { term: "Shallow or Deep Redactor", explanation: "Works from a route closer to ordinary operating height. The Anchor may sometimes deepen, but that is training history, not the rank itself." },
+        { term: "Shallow or Deep Redactor", explanation: "Works from a route closer to ordinary operating height. Training may improve control, but that history is not the Anchor Depth category itself." },
         { term: "Abyssal Redactor", explanation: "The handle is already deep. They must learn to survive the trip." },
       ],
       plateLabel: "A long route to your own Anchor",
@@ -349,10 +349,10 @@ const english: DiveContent = {
       copy: [
         "At the bottom, the Dive stops feeling like a tunnel.",
         "The idea becomes a coastline.",
-        "That is not part of this lesson yet.",
+        "Shorewalking is not an upgrade to Reach. It is refusing Shorefall and holding Shore pressure Page-side through Anchor, body, perception, and surviving continuity.",
       ],
       depthLabel: "Shore",
-      depthMeter: { term: "Descent ends", explanation: "The vertical route is over. What follows is a boundary condition, not a deeper ordinary Dive." },
+      depthMeter: { term: "Descent ends", explanation: "The vertical route is over. What follows is a boundary condition, not a deeper ordinary Dive or greater Reach." },
       panelTitle: "The Shore threshold",
       progression: ["The downward route ends", "The line opens into a horizon", "The Shore begins beyond this lesson"],
       plateLabel: "End of the guided descent",
@@ -364,21 +364,21 @@ const english: DiveContent = {
 const portuguese: DiveContent = {
   eyebrow: "Uma descida guiada",
   title: "O Dive",
-  intro: "Siga como Anchor Depth, Dive Depth, Reach e risco se encaixam. Redactory nunca cria algo do nada; ela escolhe uma versao possivel do mundo local e faz essa versao durar por algum tempo.",
+  intro: "Siga como Anchors rasas, profundas e abissais formam as tres categorias de Anchor Depth, e como Dive Depth, Reach, Overreach e Shorewalking se encaixam ao redor delas. Redactory nunca cria algo do nada; ela escolhe uma versao possivel do mundo local e faz essa versao durar por algum tempo.",
   scrollLabel: "Iniciar descida",
   returnLabel: "Voltar a Mesa",
   legendTitle: "A descida em resumo",
   legend: [
     { term: "Superficie", explanation: "entrada no Dive" },
-    { term: "Anchor Rasa", explanation: "Anchor Depth perto da superficie" },
-    { term: "Anchor Profunda", explanation: "Anchor Depth assentada mais abaixo na gramatica" },
-    { term: "Near-Strata", explanation: "perto do alicerce" },
-    { term: "Strata", explanation: "ideias fundamentais" },
-    { term: "Anchor Abissal", explanation: "uma rota nascida no alicerce" },
-    { term: "Shore", explanation: "alem desta licao" },
+    { term: "Anchor Rasa", explanation: "categoria de Anchor perto da superficie" },
+    { term: "Anchor Profunda", explanation: "categoria fundacional mais baixa" },
+    { term: "Anchor Abissal", explanation: "categoria nascida no alicerce" },
+    { term: "Dive Depth", explanation: "ate onde um ato especifico desce" },
+    { term: "Reach / Overreach", explanation: "extensao lateral e falha" },
+    { term: "Shorewalking", explanation: "sobrevivencia de limite, nao Reach maior" },
   ],
   sealTitle: "Selos de Profundidade da Apocachynthion",
-  sealIntro: "Depth Reading e o atalho institucional para indicar onde uma Anchor se assenta na gramatica vertical da Page. Estes sao os tres selos usados na classificacao comum do registro.",
+  sealIntro: "Depth Reading e o atalho institucional para indicar a qual categoria fundacional de Anchor Depth uma rota pertence: rasa, profunda ou abissal. Dive Depth e registrado separadamente para atos individuais.",
   seals: portugueseSeals,
   sections: [
     {
@@ -469,14 +469,14 @@ const portuguese: DiveContent = {
       eyebrow: "ANCHOR PROFUNDA",
       title: "Rota Mais Profunda, Maior Risco",
       copy: [
-        "Uma Anchor Profunda nao e uma Anchor Rasa empurrada para baixo. Ela e seu proprio rank fundacional.",
-        "Sua rota estavel se forma em torno de conceitos mais amplos e baixos, como Combustion ou Heat, em vez de um limiar perto da superficie como Ignition.",
+        "Uma Anchor Profunda nao e uma versao mais forte de uma Anchor Rasa. Ela e sua propria categoria fundacional de Anchor Depth.",
+        "Sua rota estavel se forma em torno de conceitos mais amplos e baixos, como Combustion, Heat ou Structural Momentum, em vez de um limiar perto da superficie como Ignition.",
         "Mas tambem e mais dificil de usar com seguranca. Quanto mais fundo o Redactor vai, menos o mundo quer cooperar.",
       ],
       depthLabel: "Anchor Profunda",
       depthMeter: { term: "Profundidade alta", explanation: "A resistencia pode expulsar o Redactor do Dive. O colapso pode deixar falhas de memoria, dissociacao ou dano interno a mente e ao corpo." },
       panelTitle: "Ranks diferentes, rotas diferentes",
-      panelNote: "Anchors as vezes podem se aprofundar por refinamento perigoso, mas o rank de registro nao e uma simples rota de upgrade.",
+      panelNote: "Um praticante pode refinar controle ao longo do tempo, mas rasa, profunda e abissal sao categorias de classificacao, nao etapas de treino.",
       comparison: [
         { term: "Ignition rasa", explanation: "Abre plasma no ar ou acende muitos alvos preparados ao mesmo tempo." },
         { term: "Combustion profunda", explanation: "Leva queima por condicoes hostis, sustenta combustao ligada ou trata o comportamento de Heat em escala mais ampla." },
@@ -494,11 +494,12 @@ const portuguese: DiveContent = {
         "Perto dos strata, a pequena porta comeca a se abrir para algo enorme.",
         "Aqui, os exemplos deixam de parecer truques.",
         "Ignition ja nao e apenas uma faisca. E estar perto da pergunta: por que o fogo pode comecar?",
+        "Isso e Dive Depth, nao Reach. Reach se move de lado a partir da Anchor para configuracoes adjacentes ou nao nativas; Overreach comeca quando essa rota lateral ultrapassa a auto-coerencia estavel do Redactor.",
       ],
       depthLabel: "Near-Strata",
       depthMeter: { term: "Profundidade extrema", explanation: "A memoria pode se fragmentar e a identidade pode se desgastar. Sinking involuntario pode puxar o Redactor alem do planejado." },
       panelTitle: "A porta se abre",
-      panelNote: "A maioria dos Redactors nao trabalha aqui por acaso.",
+      panelNote: "Depth se move para baixo. Reach se move para fora. Overreach e o estado de falha quando a rota externa para de se sustentar.",
       progression: ["Um caminho de plasma se abre", "Combustion cruza materia resistente", "Heat age sobre um sistema inteiro", "A raiz da queima aparece"],
       plateLabel: "Perto do alicerce conceitual",
       visualVariant: "near-strata",
@@ -533,7 +534,7 @@ const portuguese: DiveContent = {
       title: "Nascida no Alicerce",
       copy: [
         "A maioria dos Redactors comeca com um pequeno apoio perto da superficie.",
-        "Uma Anchor Abissal e diferente. Sua rota ja esta no fundo.",
+        "Uma Anchor Abissal e diferente. Sua rota ja esta no fundo como sua propria categoria fundacional.",
         "Uma Anchor Abissal de Fire nao e Ignition, Combustion, Heat ou Flame. E Fire em si, onde a queima comeca.",
         "Em plena capacidade, essa porta poderia fazer pedra, mar ou ceu expressarem queima por uma regiao. Isso e potencial, nao controle automatico.",
       ],
@@ -560,7 +561,7 @@ const portuguese: DiveContent = {
       depthMeter: { term: "Limite de sobrevivencia", explanation: "Em plena capacidade, Fire poderia fazer pedra, mar ou ceu expressarem queima por uma regiao. Sustentar essa resposta pode destruir quem a forca." },
       panelTitle: "Potencial nao e controle",
       comparison: [
-        { term: "Redactor raso ou profundo", explanation: "Trabalha a partir de uma rota mais perto da altura operacional comum. A Anchor as vezes pode se aprofundar, mas isso e historico de treino, nao o proprio rank." },
+        { term: "Redactor raso ou profundo", explanation: "Trabalha a partir de uma rota mais perto da altura operacional comum. Treino pode melhorar controle, mas esse historico nao e a categoria de Anchor Depth em si." },
         { term: "Redactor abissal", explanation: "O apoio ja esta fundo. Precisa aprender a sobreviver a viagem." },
       ],
       plateLabel: "Uma longa rota ate sua propria Anchor",
@@ -573,10 +574,10 @@ const portuguese: DiveContent = {
       copy: [
         "No fundo, o Dive deixa de parecer um tunel.",
         "A ideia se torna uma costa.",
-        "Isso ainda nao faz parte desta licao.",
+        "Shorewalking nao e uma evolucao de Reach. E recusar Shorefall e segurar pressao da Shore do lado da Page atraves da Anchor, do corpo, da percepcao e da continuidade sobrevivente.",
       ],
       depthLabel: "Shore",
-      depthMeter: { term: "A descida termina", explanation: "A rota vertical acabou. O que vem depois e uma condicao de limite, nao um Dive comum mais profundo." },
+      depthMeter: { term: "A descida termina", explanation: "A rota vertical acabou. O que vem depois e uma condicao de limite, nao um Dive comum mais profundo nem Reach maior." },
       panelTitle: "O limiar da Shore",
       progression: ["A rota para baixo termina", "A linha se abre num horizonte", "A Shore comeca alem desta licao"],
       plateLabel: "Fim da descida guiada",

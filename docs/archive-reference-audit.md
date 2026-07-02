@@ -1,4 +1,4 @@
-﻿# Archive Reference Audit
+# Archive Reference Audit
 
 Generated from current `src/content/**/*.md` bodies.
 
@@ -13,7 +13,7 @@ Notes:
 | --- | --- | ---: | ---: |
 | Apocachynthion | `apocachynthion` | 278 | 73 |
 | BrightCrystal | `brightcrystal` | 161 | 37 |
-| Obsidian Rite | `obsidian-rite` | 53 | 21 |
+| Obsidian | `obsidian-rite` | 53 | 21 |
 | The Church | `the-church` | 47 | 20 |
 | Mark | `mark` | 45 | 7 |
 | Stylus | `stylus` | 32 | 12 |
@@ -60,13 +60,13 @@ Notes:
 - `src/content/characters_pt_br/emmanuel-wonderwall.md:116` Uma bengala de qualidade ostensivamente refinada — composta por BrightCrystal e uma liga ferrosa escura fundidos em um nível que sugere ou uma técnica de fabricação muito além da capacidade industrial atual do Império ou um período extremamente longo de modificação estrutural produzindo um composto emergente que nenhum processo único de fabricação conseguiria criar.
 - ...and 156 more hit(s).
 
-### Obsidian Rite (`obsidian-rite`)
+### Obsidian (`obsidian-rite`)
 
-- `src/content/characters_en/halken-orveth.md:27` That event pulled him into the Obsidian Rite. Over time, his bond with Auctoriel deepened until he became one of the Church's tiny number of the
-- `src/content/characters_en/vaey-viktor.md:11` Obsidian Rite
-- `src/content/characters_en/vaey-viktor.md:53` The Obsidian Rite
-- `src/content/characters_pt_br/halken-orveth.md:7` respondeu. A maior parte do clero do Obsidian Rite opera como Votaries de contato Stellate. Orveth pertence a uma categoria mais rara e mais perigosa. A pressão nele não é tratada como simples manifestação angelical de ordem inferior, mas como contato estabilizado com o próprio
-- `src/content/characters_pt_br/halken-orveth.md:39` Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do Obsidian Rite. Separou um estado ritualístico da Ponte Halvorn em 1968 sem derrubar a estrutura. Manifestou a
+- `src/content/characters_en/halken-orveth.md:27` That event pulled him into Obsidian. Over time, his bond with Auctoriel deepened until he became one of the Church's tiny number of the
+- `src/content/characters_en/vaey-viktor.md:11` Obsidian
+- `src/content/characters_en/vaey-viktor.md:53` Obsidian
+- `src/content/characters_pt_br/halken-orveth.md:7` respondeu. A maior parte do clero do Obsidian opera como Votaries de contato Stellate. Orveth pertence a uma categoria mais rara e mais perigosa. A pressão nele não é tratada como simples manifestação angelical de ordem inferior, mas como contato estabilizado com o próprio
+- `src/content/characters_pt_br/halken-orveth.md:39` Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do Obsidian. Separou um estado ritualístico da Ponte Halvorn em 1968 sem derrubar a estrutura. Manifestou a
 - ...and 48 more hit(s).
 
 ### The Church (`the-church`)
@@ -117,7 +117,7 @@ Notes:
 ### Answered (`answered`)
 
 - `src/content/characters_en/halken-orveth.md:27` Answered
-- `src/content/characters_en/halken-orveth.md:64` Orveth matters because he makes difficult Church lore suddenly understandable. Through him, readers can feel the difference between general holiness, Beatified status, and the far more dangerous depth of an Answered vessel.
+- `src/content/characters_en/halken-orveth.md:64` Orveth matters because he makes difficult Church lore suddenly understandable. Through him, readers can feel the difference between general holiness, Beatification, Crowned state, and the far more dangerous depth of an Answered vessel.
 - `src/content/characters_pt_br/halken-orveth.md:37` Answered
 - `src/content/organizations_en/obsidian-rite.md:41` Answered
 - `src/content/organizations_en/obsidian-rite.md:43` Answered
@@ -146,7 +146,7 @@ Notes:
 - `src/content/organizations_en/obsidian-rite.md:40` Lucent
 - `src/content/organizations_en/obsidian-rite.md:43` That distinction matters. A Lucent is not automatically a commander. A Prelate is not automatically Lucent. A Rector-Ascendant is an office.
 - `src/content/organizations_en/obsidian-rite.md:43` That distinction matters. A Lucent is not automatically a commander. A Prelate is not automatically Lucent. A Rector-Ascendant is an office.
-- `src/content/organizations_en/obsidian-rite.md:105` It is not only liturgical language. It is the act of addressing a hostile presence by its proper domain within the Sovereign's ordering of creation, using the Beatified coherence of a Votary, Lucent, or Rector-Ascendant to make that address carry force.
+- `src/content/organizations_en/obsidian-rite.md:105` It is not only liturgical language. It is the act of addressing a hostile presence by its proper domain within the Sovereign's ordering of creation, using the Crowned Bearing of a Diviner, Lucent, or Answered vessel to make that address carry force.
 - `src/content/organizations_en/obsidian-rite.md:132` Lucent {#lucent}
 - ...and 8 more hit(s).
 
@@ -174,7 +174,7 @@ Notes:
 - `src/content/organizations_en/the-church.md:104` Crowning, Beatification, and the Gift of Sight
 - `src/content/organizations_en/the-church.md:116` The Gift of Sight {#gift-of-sight}
 - `src/content/organizations_en/the-church.md:118` Gift of Sight
-- `src/content/organizations_pt_br/the-church.md:108` A Igreja entende que o Passageway também é o meio utilizado pelos Heralds quando o Gift of Sight se manifesta, e reconhece que aquilo que angels fazem no mundo envolve o mesmo limiar estrutural. Mesmo assim, a instituição nunca ensinou — nem jamais chegou oficialmente à conclusão — de que o mecanismo da possessão demoníaca e o mecanismo do Gift of Sight ou do Crowning sejam estruturalmente relacionados. Dentro da teologia da Igreja, essas operações pertencem a categorias completamente distintas: uma é a autoridade do Sovereign se expressando através de um instrumento disposto; a outra é uma invasão não autorizada vinda de fora para dentro. A teologia mantém essa distinção de maneira absoluta e sincera. A Igreja nunca procurou aquilo que conecta os dois processos porque suas categorias doutrinárias jamais exigiram isso.
+- `src/content/organizations_pt_br/the-church.md:108` A Igreja entende que o Passageway também é o meio utilizado pelos Oracles quando o Gift of Sight se manifesta, e reconhece que aquilo que angels fazem no mundo envolve o mesmo limiar estrutural. Mesmo assim, a instituição nunca ensinou — nem jamais chegou oficialmente à conclusão — de que o mecanismo da possessão demoníaca e o mecanismo do Gift of Sight ou do Crowning sejam estruturalmente relacionados. Dentro da teologia da Igreja, essas operações pertencem a categorias completamente distintas: uma é a autoridade do Sovereign se expressando através de um instrumento disposto; a outra é uma invasão não autorizada vinda de fora para dentro. A teologia mantém essa distinção de maneira absoluta e sincera. A Igreja nunca procurou aquilo que conecta os dois processos porque suas categorias doutrinárias jamais exigiram isso.
 - ...and 6 more hit(s).
 
 ### Shorefall (`shorefall`)

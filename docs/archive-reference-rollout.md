@@ -103,7 +103,7 @@ These appear often enough to be worth wiring next, and they already have either 
 | BrightCrystal | `systems:brightcrystal` | Direct entry already exists; broaden editorial adoption. |
 | Apocachynthion | `organizations:apocachynthion` | Very high-frequency institutional mention; best next broad editorial pass. |
 | The Church | `organizations:the-church` | Very high-frequency institutional mention; best next broad editorial pass. |
-| Obsidian Rite | `organizations:obsidian-rite` | Strong candidate across frontier and character pages. |
+| Obsidian | `organizations:obsidian-rite` | Strong candidate across frontier and character pages. |
 | Academy of Syr'lene | `places:vrenne#academy-of-syrlene` | Strong candidate across training-city and certification pages. |
 
 ## Deferred until better canon landing page exists
@@ -120,7 +120,7 @@ These are strong glossary candidates, but they should not be mass-linked yet unl
 
 ## Recommended implementation order
 
-1. Use `docs/archive-reference-audit.md` to sweep the highest-frequency public institutions: `Apocachynthion`, `BrightCrystal`, `Obsidian Rite`, `The Church`.
+1. Use `docs/archive-reference-audit.md` to sweep the highest-frequency public institutions: `Apocachynthion`, `BrightCrystal`, `Obsidian`, `The Church`.
 2. Continue Wonderwall-specific passes in Al'ithia, Em'manuel, and Ec'lesia using `Project Kaleidoscope`, `White Desert`, `Luminant Shore`, and `Shorefall`.
 3. Expand institutional-place links like `Academy of Syr'lene` and `The Binding` where training or administration is discussed.
 4. Only after that, decide which deferred concepts deserve new canonical public entries instead of codex-only landings.

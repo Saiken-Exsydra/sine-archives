@@ -11,7 +11,7 @@ church_name: "The Instrument of Foresight"
 principle: "Forðgesceaft"
 keeper_name: "That Which Knew Before It Was Asked"
 summary: "Nao profecia, mas o quase-sussurro do mundo inclinando-se para o que vem."
-tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Foresight", "Clairvoyance", "Divination", "Choir Penitent", "Keepers of Before"]
+tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Foresight", "Clairvoyance", "Divination", "Oracles", "Keepers of Before"]
 status: "private"
 created: "2026-03-17"
 updated: "2026-03-17"
@@ -44,7 +44,7 @@ What she did with that knowledge is not recorded in any source the Keepers of Be
 
 ## Post-Fracture Condition
 
-Divination on Terra — the capacity exhibited by a small number of individuals in each generation to receive impressions relating to future configurations — is not explicable under the Index Theorem. The Theorem acknowledges this. The **Choir Penitent** exists because this capacity exists and must be managed.
+Divination on Terra — the capacity exhibited by a small number of individuals in each generation to receive impressions relating to future configurations — is not explicable under the Index Theorem. The Theorem acknowledges this. The **Oracles of Obsidian** exist because this capacity exists and must be managed.
 
 The Keepers of Before's restricted position: Divination is a residual function of the Instrument of Foresight, distributed into the world's structure when Oracle's bearing was interrupted. Those who experience genuine Divination are not accessing an alternative mechanism. They are experiencing a **diminished, ungoverned, fractured form** of what the Instrument of Foresight governed when it was whole and borne.
 
@@ -52,4 +52,4 @@ The Keepers of Before's restricted position: Divination is a residual function o
 
 ## Cultural Echo
 
-The Choir Penitent. Every theory of Divination, every dispute about its mechanism, every recorded instance of genuine foresight — all of it is working within the domain the Instrument of Foresight once governed. None of it knows this. It thinks it is describing a gift or an anomaly or a theoretical problem. It is describing the shape of a law that was once whole and is now scattered.
+The Oracles of Obsidian. Every theory of Divination, every dispute about its mechanism, every recorded instance of genuine foresight — all of it is working within the domain the Instrument of Foresight once governed. None of it knows this. It thinks it is describing a gift or an anomaly or a theoretical problem. It is describing the shape of a law that was once whole and is now scattered.

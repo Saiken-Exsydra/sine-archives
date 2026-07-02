@@ -164,7 +164,7 @@ A Flower não se manifestou externamente nenhuma vez desde sua chegada. Nos regi
 
 O Apocachynthion não sabe que ela existe como qualquer coisa além de uma trabalhadora doméstica estrangeira com uma pequena irregularidade circulatória registrada na imigração. Os instrumentos de triagem da instituição não detectam a Flower. Ela não existe em nenhum registro.
 
-A Igreja a classificaria como uma Bloom Heretic sob a doutrina do Crowning caso a simbiose fosse descoberta — comunhão com um organismo de Resonance não divino, criando pressão de fusão não sancionada sobre um receptáculo mortal. Os Heralds of Sight da Igreja detectam presenças do tipo fragmento; a Flower não é um fragmento. O risco de classificação só existe caso ocorra uma ativação visível diante de alguém que saiba exatamente o que está observando.
+A Igreja a classificaria como uma Bloom Heretic sob a doutrina do Crowning caso a simbiose fosse descoberta — comunhão com um organismo de Resonance não divino, criando pressão de fusão não sancionada sobre um receptáculo mortal. Os Oracles da Igreja detectam presenças do tipo fragmento; a Flower não é um fragmento. O risco de classificação só existe caso ocorra uma ativação visível diante de alguém que saiba exatamente o que está observando.
 
 A StaSis detectaria a anomalia em uma varredura de curta distância, algo que não possui motivo algum para realizar.
 

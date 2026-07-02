@@ -11,8 +11,8 @@ export const ARCHIVE_REF_AUDIT_TERMS = [
   },
   {
     ref: "obsidian-rite",
-    label: "Obsidian Rite",
-    patterns: ["\\bObsidian Rite\\b"],
+    label: "Obsidian",
+    patterns: ["\\bObsidian\\b"],
   },
   {
     ref: "brightcrystal",

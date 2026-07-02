@@ -2,7 +2,7 @@
 title: "The Darkmargin"
 type: "Place"
 summary: "The northern frontier. Where the Twilight Band ends, the dark begins, and the War of the Threshold is fought."
-tags: ["Places", "Darkmargin", "War of the Threshold", "Cold Fleet", "Dark Ends", "SOE", "Northern Front", "Victorian Rite", "HourGlass", "Black Shores", "Drowned Shelf"]
+tags: ["Places", "Darkmargin", "War of the Threshold", "Cold Fleet", "Dark Ends", "SOE", "Northern Front", "Victorian Formation", "HourGlass", "Black Shores", "Drowned Shelf"]
 priority: 1
 status: "public"
 created: "2026-03-30"
@@ -47,9 +47,9 @@ The campaign's primary adversarial elements are:
 
 **Dark Ends** — Stase Residuals, what happens when biological organisms enter the Stase zone and become caught in its traversal suspension. They persist in ways that unaltered biological organisms do not. They do not behave in ways that standard biological threat assessment predicts. They are dangerous, strange, and numerous enough that their containment constitutes the core workload of the frontier military presence.
 
-**SOEs** — Traversal-Independent Entities, the classification that StaSis maintains and that the Victorian Rite's northern archive documents. These are categorically different from Dark Ends — not altered organisms but entities that do not have biological signatures, whose behavior cannot be mapped onto biological frameworks, and whose engagement requires tools and doctrine that the standard military presence does not carry. SOE engagements require Victorian Rite involvement and, above certain threat classifications, StaSis specialist support.
+**SOEs** — Traversal-Independent Entities, the classification that StaSis maintains and that the Victorian Formation's northern archive documents. These are categorically different from Dark Ends — not altered organisms but entities that do not have biological signatures, whose behavior cannot be mapped onto biological frameworks, and whose engagement requires tools and doctrine that the standard military presence does not carry. SOE engagements require Victorian Formation involvement and, above certain threat classifications, StaSis specialist support.
 
-The War of the Threshold has not advanced the frontier significantly in any direction in living memory. Whether this represents successful containment or the specific quality of equilibrium that occurs when a threat is large enough to hold the frontier but not large enough to break through it is a question that StaSis analysts and Victorian Rite Votaries-Principal with long frontier service have professional opinions about and institutional reasons not to publish.
+The War of the Threshold has not advanced the frontier significantly in any direction in living memory. Whether this represents successful containment or the specific quality of equilibrium that occurs when a threat is large enough to hold the frontier but not large enough to break through it is a question that StaSis analysts and Victorian Formation Votaries-Principal with long frontier service have professional opinions about and institutional reasons not to publish.
 
 ---
 
@@ -61,7 +61,7 @@ Cold Fleet vessels — **WVS hulls** — are purpose-built for these conditions.
 
 Cold Fleet crews develop, after sufficient frontier service, a specific set of professional characteristics: very good situational awareness in conditions with limited information, high tolerance for uncertainty combined with very fast threat classification, and the particular fatalism that comes from sustained operation in an environment where things can go wrong in ways that preparation alone doesn't prevent.
 
-Standard Cold Fleet complement includes Victorian Rite personnel — typically a two-person Rite team for vessels operating in medium-threat zones, expanded to a full three-person unit for high-threat zones or known SOE waters. The working relationship between Cold Fleet crews and Victorian Rite attachments has been developed through sustained joint operation and is one of the closer inter-institutional working relationships in the frontier theatre.
+Standard Cold Fleet complement includes Victorian Formation personnel — typically a two-person Obsidian team for vessels operating in medium-threat zones, expanded to a full three-person unit for high-threat zones or known SOE waters. The working relationship between Cold Fleet crews and Victorian Formation attachments has been developed through sustained joint operation and is one of the closer inter-institutional working relationships in the frontier theatre.
 
 ---
 
@@ -69,7 +69,7 @@ Standard Cold Fleet complement includes Victorian Rite personnel — typically a
 
 The Darkmargin's settled communities exist in a relationship with the frontier that shapes them in ways that interior communities are not shaped. They are not all military installations. Many are ordinary towns, fishing ports, agricultural communities making use of the Outer Band's viable land. But the frontier is their context in a way that it is not the interior's context.
 
-Cold Fleet vessels depart from and return to Darkmargin ports. Obsidian Rite field units are based in Darkmargin towns. The Church parishes along the frontier maintain a more intensive pastoral presence than interior parishes — more Menders, more Confessors, more of the specific care work that communities experiencing regular direct contact with the War of the Threshold require.
+Cold Fleet vessels depart from and return to Darkmargin ports. Obsidian field units are based in Darkmargin towns. The Church parishes along the frontier maintain a more intensive pastoral presence than interior parishes — more Menders, more Confessors, more of the specific care work that communities experiencing regular direct contact with the War of the Threshold require.
 
 The communities know the war in its domestic texture: the specific kind of grief for missing persons whose disappearance is sometimes combat death and sometimes something the official casualty lists don't fully account for; the economic structure built around military supply and frontier service; the specific relationship with the Church that comes from regular parish experience with possession recovery and Dark End contact.
 
@@ -83,8 +83,8 @@ Every major institution maintains a specific Darkmargin presence shaped by what 
 
 **HourGlass** maintains Threshold Command ground forces at frontier installations across the Band's northern edge, Corridor Command rapid deployment capacity for frontier surge events, and the Cold Fleet as the maritime element.
 
-**The Church** maintains the Victorian Rite as its northern formation, parish infrastructure in all Darkmargin settlements, and the specific Mender deployments that frontier community care requires.
+**The Church** maintains the Victorian Formation as its northern formation, parish infrastructure in all Darkmargin settlements, and the specific Mender deployments that frontier community care requires.
 
 **The Apocachynthion** maintains monitoring infrastructure at the frontier focused on Calling detection and on tracking the resonance signature anomalies that SOE activity produces — which are useful as early warning indicators of incursion preparation.
 
-**StaSis** maintains a presence that is not documented in standard institutional records. StaSis field teams in the Darkmargin zone work in the space between what HourGlass's doctrine covers and what the Victorian Rite's doctrine covers — specifically, the SOE engagements above the threat classification threshold that require specialist assessment and response. They are there. They are not on the official order of battle.
+**StaSis** maintains a presence that is not documented in standard institutional records. StaSis field teams in the Darkmargin zone work in the space between what HourGlass's doctrine covers and what the Victorian Formation's doctrine covers — specifically, the SOE engagements above the threat classification threshold that require specialist assessment and response. They are there. They are not on the official order of battle.

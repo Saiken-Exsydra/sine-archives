@@ -114,7 +114,7 @@ Os Callings.
 
 A Stase.
 
-A existência do Obsidian Rite como uma ordem militar-teológica prática em vez de apenas cerimonial.
+A existência do Obsidian como uma ordem militar-teológica prática em vez de apenas cerimonial.
 
 Tudo isso começou na noite em que a Lua se partiu.
 

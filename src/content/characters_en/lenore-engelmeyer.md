@@ -147,6 +147,6 @@ Le'nore matters because she exposes the limits of classification, morality, and 
 
 She reminds the reader that not every dangerous being announces danger through spectacle. Some of them are charming, patient, kind-seeming, and socially fluent. Some of them have built a stable self out of truths the world still has no category for.
 
-For threat purposes, the Quill label is catastrophically incomplete. Le'nore is operationally Archtype-level without being a conventional Archtype, and any institution that tries to treat her as a merely unusual Deception practitioner is already late to the danger.
+For threat purposes, the Quill label is catastrophically incomplete. Le'nore is an Archtype-level threat, not a Redactory Archtype, and any institution that tries to treat her as a merely unusual Deception practitioner is already late to the danger.
 
 ## Deeper Lore

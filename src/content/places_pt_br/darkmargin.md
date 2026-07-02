@@ -2,7 +2,7 @@
 title: "The Darkmargin"
 type: "Place"
 summary: "A fronteira setentrional: onde a Twilight Band termina, a escuridão começa e a War of the Threshold é travada."
-tags: ["Places", "Darkmargin", "War of the Threshold", "Cold Fleet", "Dark Ends", "SOE", "Northern Front", "Victorian Rite", "HourGlass", "Black Shores", "Drowned Shelf"]
+tags: ["Places", "Darkmargin", "War of the Threshold", "Cold Fleet", "Dark Ends", "SOE", "Northern Front", "Victorian Formation", "HourGlass", "Black Shores", "Drowned Shelf"]
 priority: 1
 status: "public"
 created: "2026-03-30"
@@ -47,9 +47,9 @@ Seus elementos adversariais principais são:
 
 **Dark Ends**: Stase Residuals, isto é, o que acontece quando organismos biológicos entram na zona de Stase e ficam presos em suspensão de travessia. Eles persistem de maneiras que organismos biológicos inalterados não persistem. Não se comportam de modos previstos por avaliação biológica padrão. São perigosos, estranhos e numerosos o bastante para que sua contenção constitua a carga central do aparato militar da fronteira.
 
-**SOEs**: Traversal-Independent Entities, a classificação mantida pela StaSis e documentada pelo arquivo norte do Victorian Rite. Eles são categoricamente diferentes dos Dark Ends: não organismos alterados, mas entidades sem assinatura biológica, cujo comportamento não pode ser mapeado por frameworks biológicos e cujo enfrentamento exige ferramentas e doutrina que a presença militar padrão não carrega. Engajamentos com SOEs exigem envolvimento do Victorian Rite e, acima de certos limiares de ameaça, suporte especializado da StaSis.
+**SOEs**: Traversal-Independent Entities, a classificação mantida pela StaSis e documentada pelo arquivo norte do Victorian Formation. Eles são categoricamente diferentes dos Dark Ends: não organismos alterados, mas entidades sem assinatura biológica, cujo comportamento não pode ser mapeado por frameworks biológicos e cujo enfrentamento exige ferramentas e doutrina que a presença militar padrão não carrega. Engajamentos com SOEs exigem envolvimento do Victorian Formation e, acima de certos limiares de ameaça, suporte especializado da StaSis.
 
-A War of the Threshold não avançou significativamente a fronteira em nenhuma direção dentro da memória viva. Se isso representa contenção bem-sucedida ou aquele equilíbrio específico em que a ameaça é grande demais para ser empurrada para trás, mas não grande o bastante para romper a linha, é o tipo de pergunta sobre a qual analistas da StaSis e Votaries-Principal do Victorian Rite com longos anos de serviço possuem opiniões profissionais e razões institucionais para não publicá-las.
+A War of the Threshold não avançou significativamente a fronteira em nenhuma direção dentro da memória viva. Se isso representa contenção bem-sucedida ou aquele equilíbrio específico em que a ameaça é grande demais para ser empurrada para trás, mas não grande o bastante para romper a linha, é o tipo de pergunta sobre a qual analistas da StaSis e Votaries-Principal do Victorian Formation com longos anos de serviço possuem opiniões profissionais e razões institucionais para não publicá-las.
 
 ---
 
@@ -59,7 +59,7 @@ A **Cold Fleet** da HourGlass é a força marítima que opera nas águas de The 
 
 Seus navios desenvolvem, após tempo suficiente de serviço, um conjunto bastante específico de características profissionais: excelente percepção situacional em condições de informação limitada, alta tolerância à incerteza combinada com classificação de ameaça muito rápida e aquele fatalismo particular que surge quando se trabalha por tempo demais em um ambiente onde preparação reduz risco, mas nunca o elimina.
 
-A presença do Victorian Rite é parte constitutiva dessa realidade. Em navios compactados pelo tratado e nas zonas mais severas da fronteira, as complementações do Rite seguem o cânone revisado: **Votaries**, **Votaries-Principal**, **Choir Penitent**, **Ecclesiastic Surgeons** e, nos postos mais pesados, **Rector-Ascendants** ou autoridades vinculadas ao **Vicar of the Darkmargin**. A relação de trabalho entre tripulações da Cold Fleet e destacamentos do Victorian Rite foi construída por operação conjunta sustentada ao longo de gerações e hoje figura entre as cooperações interinstitucionais mais próximas de toda a fronteira.
+A presença do Victorian Formation é parte constitutiva dessa realidade. Em navios compactados pelo tratado e nas zonas mais severas da fronteira, as complementações do Obsidian seguem o protocolo restrito: **Votaries**, **Votaries-Principal**, **Oracles**, **Ecclesiastic Surgeons** e, nos postos mais pesados, **Rector-Ascendants** ou autoridades vinculadas ao **Vicar of the Darkmargin**. A relação de trabalho entre tripulações da Cold Fleet e destacamentos do Victorian Formation foi construída por operação conjunta sustentada ao longo de gerações e hoje figura entre as cooperações interinstitucionais mais próximas de toda a fronteira.
 
 ---
 
@@ -67,7 +67,7 @@ A presença do Victorian Rite é parte constitutiva dessa realidade. Em navios c
 
 As comunidades assentadas de The Darkmargin existem em uma relação com a fronteira que as molda de maneiras que o interior não compartilha. Nem todas são instalações militares. Muitas são cidades comuns, portos pesqueiros e comunidades agrícolas aproveitando a terra habitável da Outer Band. Mas a fronteira é seu contexto de um modo que não é o contexto do interior.
 
-Navios da Cold Fleet partem e retornam por portos de The Darkmargin. Unidades de campo do Obsidian Rite são baseadas em cidades da região. As paróquias da Igreja ao longo da fronteira mantêm presença pastoral mais intensiva do que as paróquias do interior: mais Menders, mais Confessor-Priests e mais do tipo específico de cuidado exigido por comunidades que convivem regularmente com possessão, recuperação e contato com Dark Ends.
+Navios da Cold Fleet partem e retornam por portos de The Darkmargin. Unidades de campo do Obsidian são baseadas em cidades da região. As paróquias da Igreja ao longo da fronteira mantêm presença pastoral mais intensiva do que as paróquias do interior: mais Menders, mais Confessor Priests e mais do tipo específico de cuidado exigido por comunidades que convivem regularmente com possessão, recuperação e contato com Dark Ends.
 
 Essas comunidades conhecem a guerra em sua textura doméstica: o luto específico por desaparecidos cujo destino às vezes é morte em combate e às vezes algo que as listas oficiais nunca conseguem registrar direito; a economia construída ao redor de suprimento militar e serviço de fronteira; e a relação particular com a Igreja que nasce de vida paroquial sob pressão real.
 
@@ -81,8 +81,8 @@ Toda grande instituição mantém uma presença específica em The Darkmargin mo
 
 **HourGlass** mantém forças terrestres do Threshold Command em instalações ao longo da borda norte da Band, capacidade de resposta do Corridor Command para surtos de fronteira e a Cold Fleet como braço marítimo.
 
-**A Igreja** mantém o Victorian Rite como formação setentrional, infraestrutura paroquial em todos os assentamentos de The Darkmargin e os destacamentos de Menders de que o cuidado comunitário da fronteira precisa.
+**A Igreja** mantém o Victorian Formation como formação setentrional, infraestrutura paroquial em todos os assentamentos de The Darkmargin e os destacamentos de Menders de que o cuidado comunitário da fronteira precisa.
 
 **The Apocachynthion** mantém infraestrutura de monitoramento voltada para detecção de Callings e rastreamento de anomalias de assinatura de Resonance úteis como alerta antecipado para preparação de incursões de SOEs.
 
-**StaSis** mantém uma presença que não aparece em registros institucionais padrão. Equipes de campo da StaSis trabalham no espaço entre aquilo que a doutrina da HourGlass cobre e aquilo que a doutrina do Victorian Rite cobre, especialmente nos engajamentos com SOEs acima do limiar de ameaça que exigem avaliação e resposta especializadas. Elas estão lá. Não estão na ordem de batalha oficial.
+**StaSis** mantém uma presença que não aparece em registros institucionais padrão. Equipes de campo da StaSis trabalham no espaço entre aquilo que a doutrina da HourGlass cobre e aquilo que a doutrina do Victorian Formation cobre, especialmente nos engajamentos com SOEs acima do limiar de ameaça que exigem avaliação e resposta especializadas. Elas estão lá. Não estão na ordem de batalha oficial.

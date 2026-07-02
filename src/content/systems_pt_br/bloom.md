@@ -1,85 +1,89 @@
 ---
 title: "Bloom"
 type: "System"
-summary: "Biological resonance and living Shore ecology expressed through symbiont, host biology, tissue, memory, blood, nerve, growth, and Rootline."
-tags: ["systems", "Bloom", "Rootline", "Abyssal Flower", "Murmuring", "Shorefall", "Shorewalking", "Shores", "Continuity", "Biological Resonance"]
+summary: "Ressonância biológica expressa por simbionte, biologia do hospedeiro, tecido, memória, sangue, nervo, crescimento e rara herança de Rootline."
+tags: ["systems", "Bloom", "Rootline", "Abyssal Flower", "Murmuring", "Continuity", "Biological Resonance", "Symbiosis", "Lineage"]
 status: "public"
 created: "2026-06-25"
 updated: "2026-06-25"
 image: ""
 ---
 
-> *"Bloom does not Dive. Bloom does not fuse. Bloom roots."*
-> - Bloom systems notation
+> *"Bloom não faz Dive. Bloom não se funde. Bloom cria raízes."*
+> - notação de sistemas Bloom
 
 ---
 
-## Definition
+## Definição
 
-**Bloom** is biological resonance expressed through symbiont, host biology, tissue, memory, blood, nerve, growth, and recursive proximity.
+**Bloom** é ressonância biológica expressa por simbionte, biologia do hospedeiro, tecido, memória, sangue, nervo, crescimento e proximidade recursiva.
 
-Bloom is not Redactory, not Divination, and not generic life magic. It is living Shore ecology growing into Page-real biology under specific compatibility conditions.
+Bloom não é Redactory, não é Divination e não é magia de vida genérica. É ressonância viva crescendo para dentro da biologia Page-real sob condições específicas de compatibilidade.
 
 ---
 
 ## Rootline
 
-A **Rootline** is the persistent Shore-address carried by a Bloom organism or floritic symbiont.
+Uma **Rootline** é o root-address persistente carregado por um organismo Bloom ou simbionte florítico.
 
-Not every Bloom is actively Shorewalking. Not every Bloom host is Shore-adjacent in the same intensity. True Shore-descended or Shore-rooted Bloom strains carry an ancestral root-address. Their oldest growth remembers the Shore from which the strain emerged, rooted, or became entangled.
+Nem todo Bloom está ativamente em Shorewalking. Nem todo hospedeiro Bloom é Shore-adjacent com a mesma intensidade. Cepas Bloom verdadeiramente descendentes da Shore ou enraizadas na Shore carregam um root-address ancestral. Seu crescimento mais antigo lembra a Shore de onde a cepa emergiu, criou raízes ou se emaranhou.
 
-The Rootline is not a route selected by a Redactor and not a fragment fused into a vessel. It is a living address held through growth.
+A Rootline não é uma rota selecionada por um Redactor e não é um fragmento fundido a um vessel. É um endereço vivo mantido através do crescimento.
 
 ---
 
 ## Bloom Shorefall
 
-Bloom Shorefall occurs when the Rootline pulls downward.
+Algumas tradições Bloom-facing chamam a atração descendente catastrófica de **Rootfall**.
 
-The host, symbiont, and nearby recursive singularities may be dragged through the Bloom's root-address into the Shore ecology. The falling axis may not be the host's singularity alone. It may be the root, the symbiont, the host-symbiont composite, prior host impressions, Murmuring pressure, or a rooted Shore ecology using the host as access.
+Rootfall ocorre quando a Rootline puxa para baixo.
 
-This makes Bloom Shorefall uniquely dangerous.
+O hospedeiro, o simbionte e singularidades recursivas próximas podem ser arrastados pelo root-address do Bloom para dentro da ecologia da Shore. O eixo da queda pode não ser apenas a singularidade do hospedeiro. Pode ser a raiz, o simbionte, o composto hospedeiro-simbionte, impressões de hospedeiros anteriores, pressão do Murmuring ou uma ecologia de Shore enraizada usando o hospedeiro como acesso.
 
-The core question in Bloom Shorefall is: **is the host falling through the Bloom, or is the Bloom dragging the host home?**
+Isso torna o Bloom Shorefall singularmente perigoso.
+
+A pergunta central no Bloom Shorefall é: **o hospedeiro está caindo através do Bloom, ou o Bloom está arrastando o hospedeiro para casa?**
 
 ---
 
 ## Bloom Shorewalking
 
-Bloom Shorewalking is the reverse direction.
+Bloom Shorewalking é a direção inversa na análise técnica do Bloom.
 
-The host does not fall through the root. The host internalizes the Rootline.
+Algumas linhagens Bloom podem chamar um estado estável de **the Walking Root**, mas as tradições Bloom não são padronizadas. Uma dinastia ligada a uma flor, fungo, root-agent ou anomalia biológica específica pode construir seus próprios nomes em torno da experiência.
 
-The Bloom's Shore-root fully grows inside the host's body, continuity, and recursive proximity without dragging the host down into the Shore. The body becomes the walking garden, root-mouth, blood-soil, or flowering aperture.
+O hospedeiro não cai através da raiz. O hospedeiro internaliza a Rootline.
 
-Stable Bloom Shorewalking requires host primacy. If the host ceases to remain primary, the state becomes Overbloom, consumption, Murmuring takeover, Root-Stranding, or biological Shore-Breach.
+A Shore-root do Bloom cresce plenamente dentro do corpo, da continuidade e da proximidade recursiva do hospedeiro sem arrastar o hospedeiro para baixo, para dentro da Shore. O corpo se torna o jardim ambulante, a boca-raiz, o sangue-solo ou a abertura florida.
 
-Bloom Shorefall is being pulled down by the root. Bloom Shorewalking is becoming the root without becoming soil.
+Bloom Shorewalking estável exige primazia do hospedeiro. Se o hospedeiro deixa de permanecer primário, o estado se torna Overbloom, consumo, tomada pelo Murmuring, Root-Stranding ou Shore-Breach biológica.
 
----
-
-## Continuity Requirements
-
-Bloom survival is a continuity problem before it is a power problem.
-
-The host must remain identifiable as the same person across symbiotic growth, biological alteration, memory pressure, Murmuring influence, and Shore-root proximity. A Bloom expression that erases the host is not stable Shorewalking. It is consumption or takeover.
-
-Continuity mapping and continuity locks may help detect or delay Bloom failure states. They do not command the Rootline.
+Rootfall é ser puxado para baixo pela raiz. The Walking Root é tornar-se a raiz sem tornar-se solo.
 
 ---
 
-## Failure States
+## Requisitos de Continuidade
 
-Bloom failure states include:
+A sobrevivência Bloom é um problema de continuidade antes de ser um problema de poder.
 
-- **Overbloom**: growth exceeds host mediation.
-- **Consumption**: the host ceases to remain primary.
-- **Murmuring takeover**: distributed Bloom pressure speaks through or over the host.
-- **Root-Stranding**: the host remains caught along the root-address without stable return.
-- **Biological Shore-Breach**: Shore pressure expresses through living tissue without adequate mediation.
+O hospedeiro deve permanecer identificável como a mesma pessoa através de crescimento simbiótico, alteração biológica, pressão de memória, influência do Murmuring e proximidade com a Shore-root. Uma expressão Bloom que apaga o hospedeiro não é Shorewalking estável. É consumo ou tomada.
+
+Mapeamento de continuidade e continuity locks podem ajudar a detectar ou atrasar estados de falha Bloom. Eles não comandam a Rootline.
 
 ---
 
-## In One Sentence
+## Estados de Falha
 
-Bloom roots: it is biological resonance carrying Shore-address through living tissue, and its highest survivable state depends on the host becoming the root without becoming soil.
+Estados de falha Bloom incluem:
+
+- **Overbloom**: o crescimento excede a mediação do hospedeiro.
+- **Consumption**: o hospedeiro deixa de permanecer primário.
+- **Murmuring takeover**: pressão Bloom distribuída fala através do hospedeiro ou por cima dele.
+- **Root-Stranding**: o hospedeiro permanece preso ao longo do root-address sem retorno estável.
+- **Biological Shore-Breach**: a pressão da Shore se expressa através de tecido vivo sem mediação adequada.
+
+---
+
+## Em Uma Frase
+
+Bloom cria raízes: é ressonância biológica carregando root-address através de tecido vivo, e seus estados mais altos de sobrevivência dependem de o hospedeiro tornar-se a raiz sem tornar-se solo.

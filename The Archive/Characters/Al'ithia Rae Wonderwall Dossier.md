@@ -53,24 +53,24 @@ I am writing the file anyway.
 
 ## I. VITAL RECORD
 
- Field                                             Entry                                                                                                                                                                                
- ------------------------------------------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
- Current Name                                  Al’ithia Rae Wonderwall                                                                                                                                                              
- Birth Name                                    Athena Rae                                                                                                                                                                           
- Lineage                                       Rae branch of the Wonderwall family; same ancestral family branch from which A’licia Rae Wonderwall descended                                                                        
- Year of Birth                                 2111                                                                                                                                                                                 
- Current Age                                   89 as of Year 2200                                                                                                                                                                   
- Apparent Age                                  Early to mid-thirties; stabilized Redactory longevity and post-fusion reconfiguration have preserved a young adult presentation                                                      
- Redactory Classification                      Radiance-class                                                                                                                                                                       
- Anchor                                        Revelation                                                                                                                                                                           
- Anchor Type                                   Deep-derived Radiance-class Anchor; functionally intensified by divine fusion                                                                                                        
- Divination Status                             Former Indexed Vessel of the First Radiance; now stable composite continuity                                                                                                         
- Composite Identity Status                     Complete fusion achieved at age 38, Year 2150                                                                                                                                        
- Marital Status                                Wife of Em’manuel Kael Wonderwall                                                                                                                                                    
- Relationship to E’lla Rae Wonderwall  KL-83  Non-biological mother; primary maternal figure from E’lla’s transfer out of Project Kaleidoscope until approximately age 17, and continuing emotional confidante thereafter          
- House Status                                  De facto political head of the Wonderwall family                                                                                                                                     
- Formal Public Role                            Senate representative and principal state-facing authority of House Wonderwall                                                                                                       
- Private Standing                              The living continuity of A’licia Rae Wonderwall through Athena Rae; the present mother of E’lla; the only person I have loved twice without either love being reducible to the other 
+ Field                                             Entry
+ ------------------------------------------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Current Name                                  Al’ithia Rae Wonderwall
+ Birth Name                                    Athena Rae
+ Lineage                                       Rae branch of the Wonderwall family; same ancestral family branch from which A’licia Rae Wonderwall descended
+ Year of Birth                                 2111
+ Current Age                                   89 as of Year 2200
+ Apparent Age                                  Early to mid-thirties; stabilized Redactory longevity and post-fusion reconfiguration have preserved a young adult presentation
+ Redactory Classification                      Radiance-class
+ Anchor                                        Revelation
+ Anchor Type                                   Deep-derived Radiance-class Anchor; functionally intensified by divine fusion
+ Divination Status                             Former Indexed Vessel of the First Radiance; now stable composite continuity
+ Composite Identity Status                     Complete fusion achieved at age 38, Year 2150
+ Marital Status                                Wife of Em’manuel Kael Wonderwall
+ Relationship to E’lla Rae Wonderwall  KL-83  Non-biological mother; primary maternal figure from E’lla’s transfer out of Project Kaleidoscope until approximately age 17, and continuing emotional confidante thereafter
+ House Status                                  De facto political head of the Wonderwall family
+ Formal Public Role                            Senate representative and principal state-facing authority of House Wonderwall
+ Private Standing                              The living continuity of A’licia Rae Wonderwall through Athena Rae; the present mother of E’lla; the only person I have loved twice without either love being reducible to the other
 
 ---
 
@@ -108,7 +108,7 @@ A’licia Rae Wonderwall was, in public historical terms, the first great Wonder
 
 The formulation is inadequate.
 
-She was born into the Rae branch of the Wonderwall family in the northern coastal region, when the Wonderwall name still referred to a scholarly line of technical value rather than one of the central political and infrastructural pillars of the Empire. The family’s work concerned BrightCrystal structural behavior, Scorch interface theory, and the practical problem of building survivable systems in a world that had been made hostile to survivability. Existing records already identify the pre-Imperial Wonderwalls as a minor scholarly family focused on BrightCrystal structural behavior before I entered the line through marriage. 
+She was born into the Rae branch of the Wonderwall family in the northern coastal region, when the Wonderwall name still referred to a scholarly line of technical value rather than one of the central political and infrastructural pillars of the Empire. The family’s work concerned BrightCrystal structural behavior, Scorch interface theory, and the practical problem of building survivable systems in a world that had been made hostile to survivability. Existing records already identify the pre-Imperial Wonderwalls as a minor scholarly family focused on BrightCrystal structural behavior before I entered the line through marriage.
 
 The word minor is one of history’s lazy cruelties.
 
@@ -160,7 +160,7 @@ The Wonderwall family’s private reverence completed what death had begun.
 
 Across centuries, descendants did not merely remember A’licia. They invoked her. They treated her as origin, as source, as proof that the family’s Light had a face and a first name. They told their children the House had survived because the First Radiance had made survival visible. They preserved her notes. They repeated her phrases. They touched her preserved instruments before assessment days, marriages, oaths, Senate confirmations, and funerals. The rituals varied. The direction did not.
 
-The Archive does not create from nothing. Gods are not invented by belief. But belief functions as indexing, and repeated indexing strengthens the alignment between mortal recursion and divine attractor. The Archive Codex defines gods as pre-existing informational attractors strengthened and shaped by collective indexing; religion amplifies coherence rather than creating ex nihilo. 
+The Archive does not create from nothing. Gods are not invented by belief. But belief functions as indexing, and repeated indexing strengthens the alignment between mortal recursion and divine attractor. The Archive Codex defines gods as pre-existing informational attractors strengthened and shaped by collective indexing; religion amplifies coherence rather than creating ex nihilo.
 
 A’licia became the First Radiance because there was enough of her left to answer.
 
@@ -238,7 +238,7 @@ Their compatibility was not accidental, though no one arranged it.
 
 Athena was both Redactor and divine vessel.
 
-This combination is rare and dangerous because Redactory and Divination use related but distinct mechanisms. Redactory routes local expression through directed indexing. Divination is not routing in the same sense; it is recursive fusion between a mortal vessel and a stabilized informational attractor or fragment through the Dive. The Divination Codex specifically defines divine vesselhood as active fusion pressure between a mortal singularity and a divine fragment or attractor. 
+This combination is rare and dangerous because Redactory and Divination use related but distinct mechanisms. Redactory routes local expression through directed indexing. Divination is not routing in the same sense; it is recursive fusion between a mortal vessel and a stabilized informational attractor or fragment through the Pathway. The Divination Codex specifically defines divine vesselhood as active fusion pressure between a mortal singularity and a divine fragment or attractor.
 
 Athena’s case began as vesselhood.
 
@@ -466,7 +466,7 @@ Not because the facts are unclear.
 
 Because they are not.
 
-E’lla Rae Wonderwall, KL-83, was transferred out of Project Kaleidoscope before age five and placed into the actual primary Wonderwall family line. Existing records already identify her as the eighty-third subject of the program, born in Year 2175, biologically reconstructed from the first E’lla Rae Wonderwall’s Redactory profile, and carrying an Abyssal Anchor of Light without the Remainder’s recognition.  
+E’lla Rae Wonderwall, KL-83, was transferred out of Project Kaleidoscope before age five and placed into the actual primary Wonderwall family line. Existing records already identify her as the eighty-third subject of the program, born in Year 2175, biologically reconstructed from the first E’lla Rae Wonderwall’s Redactory profile, and carrying an Abyssal Anchor of Light without the Remainder’s recognition.
 
 When E’lla came home, Al’ithia withdrew from active politics.
 
@@ -498,7 +498,7 @@ Al’ithia remembers A’licia’s first daughter.
 
 She remembers the first E’lla’s birth, her childhood, her Light, her brilliance, her refusal, and her death. She remembers the girl whose profile I spent six centuries trying to rebuild. She remembers loving a daughter whose face now looks back at her again with differences subtle enough to be merciful to strangers and devastating to anyone who knows what to look for.
 
-Modern E’lla is not the first E’lla. Existing records are explicit on this point she is not merely an appendage to old failures, and she is not what Project Kaleidoscope was built to solve, but herself. 
+Modern E’lla is not the first E’lla. Existing records are explicit on this point she is not merely an appendage to old failures, and she is not what Project Kaleidoscope was built to solve, but herself.
 
 Al’ithia understands this more cleanly than I do.
 
@@ -764,5 +764,5 @@ It is nevertheless true.
 
 ---
 
-END OF RECORD — Current Revision
+END OF RECORD
 Filed Year 2200, fourth quarter

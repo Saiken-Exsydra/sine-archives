@@ -2,7 +2,7 @@
 title: "StaSis"
 type: "Organização"
 designation: "Divisão de Entidades Anômalas da SiNE - S-AE"
-affiliation: "SiNE (ramo S-AE) - relações operacionais com Obsidian Rite, HourGlass e Clepsydra"
+affiliation: "SiNE (ramo S-AE) - relações operacionais com Obsidian, HourGlass e Clepsydra"
 headquarters: "Pluribus Hill, Kalt'sen - operações de campo distribuídas"
 founded: "Data não estabelecida nos registros acessíveis"
 jurisdiction: "Twilight Band e fronteira do Dark Side - classificação e resposta a entidades anômalas"
@@ -54,13 +54,13 @@ O catálogo SOE documenta tudo que a StaSis observou sobre eles: tipologias comp
 
 ---
 
-## Relação com o Obsidian Rite
+## Relação com o Obsidian
 
-A relação operacional mais próxima da StaSis é com a formação **Victorian Rite** do Obsidian Rite, na fronteira norte. As duas organizações trabalham em áreas adjacentes: o Rite lida com o que emerge do Dark Side usando ferramentas teológicas e rituais; a StaSis classifica aquilo com que o Rite interage e fornece suporte analítico que os próprios sistemas de classificação do Rite não conseguem cobrir no caso dos SOEs.
+A relação operacional mais próxima da StaSis é com a formação **Victorian Formation** do Obsidian, na fronteira norte. As duas organizações trabalham em áreas adjacentes: o Obsidian lida com o que emerge do Dark Side usando ferramentas teológicas e rituais; a StaSis classifica aquilo com que o Obsidian interage e fornece suporte analítico que os próprios sistemas de classificação do Obsidian não conseguem cobrir no caso dos SOEs.
 
-Ao longo de gerações operando em paralelo, o arquivo norte do Victorian Rite e o catálogo SOE da StaSis se transformaram em recursos complementares, e não redundantes. O Rite possui registros mais ricos sobre como entidades específicas respondem a intervenções específicas do Obsidian Rite. A StaSis possui análises mais amplas de padrões e classificações cruzadas entre incidentes — algo que o modelo de registro operacional do Rite não foi projetado para produzir.
+Ao longo de gerações operando em paralelo, o arquivo norte do Victorian Formation e o catálogo SOE da StaSis se transformaram em recursos complementares, e não redundantes. O Obsidian possui registros mais ricos sobre como entidades específicas respondem a intervenções específicas do Obsidian. A StaSis possui análises mais amplas de padrões e classificações cruzadas entre incidentes — algo que o modelo de registro operacional do Obsidian não foi projetado para produzir.
 
-As duas organizações compartilham dados de maneira funcionalmente cooperativa, mas sem formalização institucional. Não existe nenhum acordo oficial de compartilhamento de dados reconhecido pelas divisões jurídicas das organizações-mãe. O compartilhamento acontece porque os praticantes no nível operacional — Votaries-Principal do Victorian Rite e analistas de campo da StaSis destacados para a fronteira — consideram isso necessário para o trabalho e desenvolveram mecanismos informais para fazer funcionar.
+As duas organizações compartilham dados de maneira funcionalmente cooperativa, mas sem formalização institucional. Não existe nenhum acordo oficial de compartilhamento de dados reconhecido pelas divisões jurídicas das organizações-mãe. O compartilhamento acontece porque os praticantes no nível operacional — Votaries-Principal do Victorian Formation e analistas de campo da StaSis destacados para a fronteira — consideram isso necessário para o trabalho e desenvolveram mecanismos informais para fazer funcionar.
 
 ---
 
@@ -68,7 +68,7 @@ As duas organizações compartilham dados de maneira funcionalmente cooperativa,
 
 As operações de campo da StaSis funcionam com pequenas equipes especializadas — não com a presença militar massiva e contínua mantida pelos comandos da HourGlass. Uma equipe de campo da StaSis normalmente possui entre duas e quatro pessoas com especializações específicas em avaliação de entidades anômalas: praticantes treinados em análise de Resonance capazes de identificar assinaturas SOE, pessoal com capacidade de engajamento direto adequada para entidades que armas convencionais não conseguem enfrentar e pelo menos um indivíduo capaz de produzir documentação em condições de campo compatível com integração ao catálogo.
 
-A StaSis não possui uma força militar própria permanente. Quando uma operação exige mais do que uma pequena equipe especializada consegue lidar, a StaSis trabalha através do Threshold Command e dos recursos da Cold Fleet da HourGlass, além da formação Victorian do Obsidian Rite. Quando um evento envolve risco de continuidade, contaminação de sink, comportamento de roteamento não sequencial ou qualquer uso da lattice que possa propagar contradição em vez de contê-la, a StaSis também atua através dos canais de autorização da Clepsydra. Essas relações de coordenação já são praticadas há tempo suficiente para funcionarem sem atrito, apesar da base informal.
+A StaSis não possui uma força militar própria permanente. Quando uma operação exige mais do que uma pequena equipe especializada consegue lidar, a StaSis trabalha através do Threshold Command e dos recursos da Cold Fleet da HourGlass, além da formação Victorian do Obsidian. Quando um evento envolve risco de continuidade, contaminação de sink, comportamento de roteamento não sequencial ou qualquer uso da lattice que possa propagar contradição em vez de contê-la, a StaSis também atua através dos canais de autorização da Clepsydra. Essas relações de coordenação já são praticadas há tempo suficiente para funcionarem sem atrito, apesar da base informal.
 
 Nos níveis mais críticos do mandato operacional da StaSis — encontros com tipos de SOE acima de determinados limiares de classificação — a autorização sobe para o Meridian Council e, em alguns casos, para parâmetros que o próprio Meridian Council documenta apenas em registros internos restritos. Esses engajamentos são incomuns. Mas já aconteceram.
 

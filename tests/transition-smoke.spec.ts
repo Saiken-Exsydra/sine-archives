@@ -247,9 +247,13 @@ test("section index controls survive leaving and returning", async ({ page }) =>
   await page.goto("/organizations/", { waitUntil: "networkidle" });
   await page.locator(".nav__logo").click();
   await page.locator('a[href="/organizations/"]').first().click();
-  await page.locator("[data-open-entry]").first().click();
-  await expect(page.locator("#org-overlay")).toHaveClass(/is-open/);
-  await page.locator("#org-modal-close").click();
+  await page.locator('a.org-spread__cta[href="/organizations/apocachynthion/"]').click();
+  await expect(page).toHaveURL(/\/organizations\/apocachynthion\/?$/);
+  await expect(page.locator(".org-dossier")).toBeVisible();
+  await expect(page.locator(".org-dossier__header h1")).toHaveText("The Apocachynthion");
+  await expect(page.locator("#org-overlay")).toHaveCount(0);
+  await page.locator(".org-dossier__back").click();
+  await expect(page).toHaveURL(/\/organizations\/?$/);
 
   await page.goto("/places/", { waitUntil: "networkidle" });
   await page.locator(".nav__logo").click();

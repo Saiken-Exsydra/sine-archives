@@ -448,7 +448,7 @@ Daniel understands the official distinction between Divination and Redactory bet
 
 Redactory routes local expression through directed indexing and Anchor-mediated selection. Divination expresses divine coherence through fusion with a stabilized attractor or fragment. The distinction is structurally real. Daniel knows this. He has seen Redactors work. He has felt the difference in the room. A Redactor imposes configuration. A diviner becomes a place where domain pressure answers.
 
-The problem is that both use the Dive.
+The problem is that the resemblance is not imaginary. Redactory uses the Dive. Divination uses the Pathway and Communion. At the deepest theoretical level, both touch adjacent access architecture, and frightened institutions rarely care about the distinction as much as the people endangered by misclassification need them to.
 
 The deeper problem is that frightened institutions tend to care less about structural distinction than about social meaning. A child who bends metal in Ardeatus is terrifying whether the mechanism is Redactory, Ashborne pressure, or unsupervised divine emergence. The old system resolved terror by choosing the most punishable name.
 
@@ -560,6 +560,6 @@ He is, however, the person currently keeping it in tune.
 
 ---
 
-*END OF RECORD - Current Revision*
+*END OF RECORD*
 
 *Filed: second half of 2200.*

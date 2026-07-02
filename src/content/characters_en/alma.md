@@ -44,7 +44,7 @@ Alma bore this Instrument with care. She understood what sentience was — she w
 
 The human beings who survived the Fracture and built the civilizations that followed possessed a quality of recursive resilience that should not have been structurally available to them, given the conditions of a world that had just lost its governing framework.
 
-The Diaconate of the Interior's minority position attributes this, at least in part, to the residual distribution of the Instrument of Mindscape into human recursive structure — a **ghost of governance** embedded in the very thing being governed, sustaining cohesion it no longer formally maintains.
+The Interior Council's minority position attributes this, at least in part, to the residual distribution of the Instrument of Mindscape into human recursive structure — a **ghost of governance** embedded in the very thing being governed, sustaining cohesion it no longer formally maintains.
 
 ---
 

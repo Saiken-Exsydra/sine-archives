@@ -1,5 +1,5 @@
 ---
-import EntryLayout from "../../../layouts/EntryLayout.astro";
+import OrganizationDossierLayout from "../../../layouts/OrganizationDossierLayout.astro";
 import { getLocalizedCollection } from "../../../i18n/content";
 
 export async function getStaticPaths() {
@@ -15,4 +15,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<EntryLayout active="organizations" entry={entry} locale="en" />
+<OrganizationDossierLayout entry={entry} locale="en" />

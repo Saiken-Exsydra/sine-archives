@@ -35,7 +35,7 @@
 
 Katherine Flarian matters to S-AE precisely because she is not legible to the existing power systems.
 
-She is not a Redactor. She cannot Dive, does not carry an Anchor, and has never produced routed output of any kind. She is not an Indexed Vessel under the Divination framework. No fragment pressure has ever been detected around her. She is, in the blunt language the branch used before it developed a more careful one, an ordinary human being who spent too long too close to an extraordinary failure and did not come back ordinary.
+She is not a Redactor. She cannot Dive, does not carry an Anchor, and has never produced routed output of any kind. She is not an Indexed Vessel under the Divination framework. No Divination fusion pressure has ever been detected around her. She is, in the blunt language the branch used before it developed a more careful one, an ordinary human being who spent too long too close to an extraordinary failure and did not come back ordinary.
 
 S-AE's current internal term is **Continuity-Sensitive**. The category did not exist before her. It exists because her post-Himmelreich condition proved reproducible enough, in observed consequences if not in safe induction, to require a name.
 

@@ -101,4 +101,4 @@ Today, Master von-Engelmeyer is one of the most respected and heavily attended i
 **ASSESSOR'S NOTE:** Leonard von-Engelmeyer is a man who survived the absence of Time by offering the universe an alternative it could not ignore. He asks for very little from the Empire, entirely eschews his House’s politics, and dedicates his life to ensuring that young Redactors do not burn themselves alive in the dark. He is a profound asset. We will continue to refuse all Ardeatan extradition requests regarding him.
 
 ***
-END OF FILE — Current Revision Filed: Year 1127. Internal distribution only. Not for civilian circulation.
+END OF FILE — Filed: Year 1127. Internal distribution only. Not for civilian circulation.

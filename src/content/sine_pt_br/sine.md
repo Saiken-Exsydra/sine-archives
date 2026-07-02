@@ -28,6 +28,8 @@ Ela foi fundada por **Em'manuel Kael Wonderwall** — uma figura cuja história 
 
 A SiNE estabeleceu sua sede em **Pluribus Hill**, em Kalt'sen, capital imperial — não porque o Império exigiu isso, mas porque operar no centro da geografia política do mundo produz certas vantagens que simplesmente não existem quando se trabalha a partir de uma base periférica. O edifício é enorme, antigo e já passou por mudanças suficientes ao longo dos séculos para que a configuração atual pareça permanente da mesma forma que certas coisas parecem permanentes apenas porque sobreviveram a tudo que poderia substituí-las.
 
+A cultura tecnica da SiNE trata Redactory como empirica antes de trata-la como mistica. A empresa usa o Index Theorem, teoria de continuidade, Point records, comportamento de lattice e field forensics porque esses modelos produzem previsoes utilizaveis. No limite desses modelos existe uma classe de relatos que a SiNE nao finge possuir: Shore-class displacement, extreme continuity breach e eventos que parecem ir alem do que a Redactory atual ou a lattice theory conseguem prever com seguranca.
+
 ---
 
 ## As Sete Divisões

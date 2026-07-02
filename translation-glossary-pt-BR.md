@@ -139,7 +139,7 @@ Translator decision rule:
 | vessel | recipiente/vessel humano | variable by person | keep unchanged |
 | Divine Vessel | vessel divino | variable by person | keep unchanged |
 | Indexed Vessel | vessel indexado | variable by person | keep unchanged |
-| Herald | arauto/vidente | variable by person | keep unchanged |
+| Oracle | oraculo/vidente | variable by person | keep unchanged |
 | the Gift of Sight | dom da visao | masculine singular | keep unchanged |
 | Covenant of the Open Eye | Pacto do Olho Aberto | masculine singular | keep unchanged |
 | the Sovereign | Soberano | masculine singular | keep unchanged |
@@ -190,8 +190,8 @@ Translator decision rule:
 | The Field Branch | ramo de campo | feminine singular | keep unchanged |
 | The Registry Branch | ramo de registro | feminine singular | keep unchanged |
 | The Review Branch | ramo de revisao | feminine singular | keep unchanged |
-| The Obsidian Rite | Rito Obsidiano | masculine singular | keep unchanged |
-| Choir Penitent | Coro Penitente | masculine singular | keep unchanged |
+| Obsidian | ramo Obsidian da Igreja | masculine singular | keep unchanged |
+| Oracles | Oracles / oraculos de Obsidian | masculine plural | keep unchanged |
 | Order of the Interior Wound | Ordem da Ferida Interior | feminine singular | keep unchanged |
 | Apothecarium | arquivo/apotecario de casos | masculine singular | keep unchanged |
 | Keepers of Before | Guardioes do Antes | masculine plural | keep unchanged |
@@ -264,7 +264,7 @@ Translator decision rule:
 Use person-based agreement in Portuguese:
 - masculine referent: `o`, `um`, `ele`, `nascido`, `alinhado`, etc.
 - feminine referent: `a`, `uma`, `ela`, `nascida`, `alinhada`, etc.
-- titles like `Redactor`, `Archtype`, `Inkless`, `Beatified`, `Warden`, `Herald` should agree with the character, not with English morphology.
+- titles like `Redactor`, `Archtype`, `Inkless`, `Beatified`, `Warden`, `Oracle` should agree with the character, not with English morphology.
 
 | Canon term | PT-BR sense | Gender/article | Policy |
 |---|---|---|---|
@@ -316,7 +316,7 @@ Use person-based agreement in Portuguese:
 - `Dive` is masculine. Use `o Dive`.
 - `Reach`, `Overreach`, `Collapse`, `Book`, `Chapter`, `Time`, `Empire`, `Council`, `Rite`, `Gift`, `Seal`, `Ring`, `Corridor`, and `Index Theorem` should take masculine agreement in pt-BR.
 - `Church`, `Resonance`, `Thinness`, `Stase`, `Crown`, `Fracture`, `Passageway`, `Confirmation`, `Bonding`, `Ordination`, `Consecration`, `Heresy`, and `Containment` should take feminine agreement in pt-BR.
-- For ranks and role labels attached to people, agree with the person: `a Redactor`, `o Redactor`, `uma Herald`, `um Herald`, `uma Inkless`, `um Inkless`, if the sentence structure requires an article before the unchanged term.
+- For ranks and role labels attached to people, agree with the person: `a Redactor`, `o Redactor`, `uma Oracle`, `um Oracle`, `uma Inkless`, `um Inkless`, if the sentence structure requires an article before the unchanged term.
 - For place names and personal names, the name itself does not translate; only articles, prepositions, and nearby adjectives adapt to Portuguese syntax.
 - If a term appears here inside a longer phrase, preserve the canon term and apply gender agreement to the Portuguese frame around it.
 - Terms like `light`, `luminance`, `fire`, `flame`, `atmosphere`, `heat`, and similar conceptual nouns are translatable by default unless the source is clearly using them as a protected formal canon label.

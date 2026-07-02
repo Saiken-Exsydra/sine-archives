@@ -52,7 +52,7 @@ E é extremamente perigosa.
 
 Dark Ends não se comportam de maneiras previsíveis por modelos biológicos normais de ameaça. Eles representam o principal elemento hostil enfrentado nas operações da frente norte da War of the Threshold.
 
-As **Traversal-Independent Entities** — chamadas de **SOEs** dentro da classificação da StaSis e do Obsidian Rite — representam um problema completamente diferente.
+As **Traversal-Independent Entities** — chamadas de **SOEs** dentro da classificação da StaSis e do Obsidian — representam um problema completamente diferente.
 
 Essas entidades não se originam de organismos biológicos alterados pela Stase. Elas são nativas do ambiente de travessia alterada ou chegaram através dele vindas de qualquer lugar ao qual a ruptura do threshold tenha permitido acesso.
 
@@ -62,7 +62,7 @@ Não possuem assinaturas biológicas residuais de organismos alterados pela Stas
 
 Essa distinção possui importância operacional real.
 
-A doutrina do Obsidian Rite e as estratégias militares da frente norte foram desenvolvidas principalmente para enfrentar Dark Ends. Engajamentos contra SOEs exigem protocolos diferentes, recursos diferentes e níveis completamente distintos de autorização — e acontecem com uma frequência muito maior do que os registros públicos admitem.
+A doutrina do Obsidian e as estratégias militares da frente norte foram desenvolvidas principalmente para enfrentar Dark Ends. Engajamentos contra SOEs exigem protocolos diferentes, recursos diferentes e níveis completamente distintos de autorização — e acontecem com uma frequência muito maior do que os registros públicos admitem.
 
 ---
 
@@ -86,7 +86,7 @@ Não é uma guerra que pode ser vencida.
 
 É uma guerra que precisa ser mantida.
 
-As operações de campo da Igreja na frente norte existem porque Dark Ends e SOEs de classificações mais elevadas exigem ferramentas de intervenção que a doutrina militar sozinha não consegue fornecer. A presença do Obsidian Rite no teatro de operações não é suporte cerimonial.
+As operações de campo da Igreja na frente norte existem porque Dark Ends e SOEs de classificações mais elevadas exigem ferramentas de intervenção que a doutrina militar sozinha não consegue fornecer. A presença do Obsidian no teatro de operações não é suporte cerimonial.
 
 É necessidade operacional reconhecida formalmente em tratados.
 
@@ -102,7 +102,7 @@ A **StaSis** — divisão de entidades anômalas da SiNE, designação S-AE — 
 
 Como esse sistema foi desenvolvido, e quanto dele surgiu de registros de combate versus outras fontes de inteligência, não aparece na documentação pública da organização.
 
-A Igreja guarda o que sabe dentro de registros teológicos restritos sob custódia dos Keepers of Before. Seu entendimento da relação entre a Stase, a Fracture e a ruptura do threshold é mais completo do que o do Apocachynthion, e sua doutrina prática de engajamento — construída a partir da experiência acumulada pelo Obsidian Rite em campo — é proporcionalmente mais sofisticada diante das ameaças mais extremas da taxonomia.
+A Igreja guarda o que sabe dentro de registros teológicos restritos sob custódia dos Keepers of Before. Seu entendimento da relação entre a Stase, a Fracture e a ruptura do threshold é mais completo do que o do Apocachynthion, e sua doutrina prática de engajamento — construída a partir da experiência acumulada pelo Obsidian em campo — é proporcionalmente mais sofisticada diante das ameaças mais extremas da taxonomia.
 
 Nenhuma das instituições que possui partes desse quadro conseguiu ainda reuni-las em uma explicação única e coerente.
 

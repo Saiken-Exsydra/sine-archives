@@ -50,6 +50,8 @@ The Index Theorem's account of the Dive is consistent with practitioner phenomen
 
 The Theorem's account of Sovereign Depth — the permanent stabilization of extreme recursive density that defines an Archtype — is one of its most contested contributions.
 
+Terminology note: **Archtype** is the technical Redactory classification. **Archtype-level** describes comparable scale or effects; it does not extend the classification to non-Redactors.
+
 Earlier frameworks treated Archtypes as exceptional practitioners: beings who had developed their Anchor further than most, with access to effects most practitioners could not achieve. The Index Theorem's analysis suggests something more fundamental: Sovereign Depth is not simply high Anchor development. It is the permanent stabilization of the practitioner's recursive architecture at a density that removes the ceiling that governs non-Sovereign practitioners.
 
 The difference between a skilled Stylus-level practitioner and an Archtype is not, in Theorem terms, purely a difference of training. It is a structural difference in the practitioner's recursive organization. The Archtype operates at a permanently higher density. The Anchor's domain no longer strictly limits their accessible configuration pathways. The cost structure changes fundamentally.
@@ -66,9 +68,17 @@ The Index Theorem is explicit about its own limits — a quality that its practi
 
 It does not explain **why the structural substrate that underlies Redactory exists**: why configurations can be indexed, why some practitioners have the recursive density to perform indexing, why Anchors organize around the specific thematic domains they organize around rather than some other set.
 
-It does not explain the **relationship between Redactory and Divination** at the structural level. Both operate through the Dive. The Theorem models them as different phenomena using the same interface — Redactory as self-generated configuration routing, Divination as external coherence pressure exerted through the Dive interface — but why they both use the same interface, and what the Dive actually is at the fundamental level, remains unresolved.
+It does not explain the **relationship between Redactory and Divination** at the structural level. The Theorem suspects that Redactory's Dive and Divination's Pathway may touch related deep-interface architecture. It models them as different phenomena: Redactory as self-generated configuration routing through Anchor-mediated Dive work, Divination as external coherence pressure exerted through Pathway contact and Communion. Why adjacent architecture can support such different operations remains unresolved.
 
 It does not explain why the **Callings** affect Dive access in the way they do. The correlation is documented and consistent: strong Callings shift the configuration landscape accessible to Dive-state practitioners. The mechanism — how containment-conflict resonance propagation alters the accessible configuration pathways — is not in the Theorem's current working papers.
+
+It does not fully explain **Shorewalking**. The most restricted Index Theorem models treat Shorewalking as a theoretical extreme of recursive compression: the practitioner reduces the active reach of the self until the recursive singularity behaves like a single inward point of meaning. At that density, ordinary Dive architecture stops being the useful description. The person is no longer merely selecting through the Dive; they are collapsing identity inward hard enough to tear through ordinary metaphysical layers.
+
+This is not ordinary research language. Within the Apocachynthion, Shorewalking theory belongs beside the most speculative parts of the Index Theorem: useful as a possible account of reality, dangerous to mistake for a field protocol. Most researchers do not discuss it freely, and most Redactors will never encounter a confirmed case.
+
+The working hypothesis is severe: nothing reaches the Archive and survives. What survives such compression, if anything survives, reaches a liminal Shore condition instead. The All-Mother's influence over Terra's thinness and density is one reason the state is so difficult to force. The world itself resists the opening.
+
+Known or suspected Shorewalking states are brief, catastrophic, and individual-specific. They usually last less than a minute; extreme cases may approach one or two minutes before collapse, resolution, interruption, or return. A Redactor does not express "generic Shorewalking." The concept at the center of that person comes to the surface through them.
 
 The Theorem's most honest statement of its limits, from the Apocachynthion's 1087 working papers: *"We have a precise description of what practitioners do. We have an incomplete account of the structure they do it in. We have almost no account of why that structure has the properties it has. The precision of the first is real. The incompleteness of the second and third is also real. A framework that does not know what it does not know is more dangerous than one that does."*
 

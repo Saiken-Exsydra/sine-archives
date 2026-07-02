@@ -17,7 +17,7 @@
 
 *It is not the Wonderwall Lineage Record. That document contains the bloodline problem in its full scale, which is not the same thing as containing this woman.*
 
-*It is not the Shores Codex. That document defines the metaphysical borderlands now necessary to understand what happened to A'licia, what Athena reached, what Al'ithia became, and what E'lla is beginning to approach.*
+*It is not the Shores Codex. That document defines the endpoint conditions now necessary to understand what happened to A'licia, what Athena reached, what Al'ithia became, and what E'lla is beginning to approach.*
 
 *This file exists because E'lla has become too significant, too specific, and too active in the present tense to be held only as an appendage to older failures. She now requires a dossier that treats her as a living person with a history of her own, as the eighty-third answer to a question I asked six centuries ago, and as the first known case in which a controlled biological reconstruction program has become a Shore-expressive resonance field through its surviving center.*
 

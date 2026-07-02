@@ -48,7 +48,7 @@ The Binding and Pluribus Hill are within walking distance of each other. The ins
 
 ## Saint Her'chell Cathedral
 
-**Saint Her'chell Cathedral** is the [[the-church|Church]]'s central address - the primary seat of the Arch-Patriarch, the administrative center of the Diaconate Council, and the most significant single church building in the Twilight Band.
+**Saint Her'chell Cathedral** is the [[the-church|Church]]'s central address - the primary seat of the Primus, the administrative center of the Council of Bishops, and the most significant single church building in the Twilight Band.
 
 It is also where the Keepers of Before maintain their primary archive and the Church's deepest restricted theological record. The Cathedral's lower levels extend into structures that predate the current building significantly, and it is in those lower levels that the most restricted theological records are held.
 

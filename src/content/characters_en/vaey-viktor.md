@@ -4,10 +4,10 @@ type: "Character"
 age: "66 (at time of filing, 2200)"
 birth_year: "2134"
 birthplace: "Minor river district northeast of Kalt'sen, Central Region, Empire of Synus"
-affiliation: "The Church; Obsidian Rite (retired assessor-priest)"
+affiliation: "The Church; Obsidian (retired assessor-priest)"
 house: ""
-rank: "Confirmed Beatified vessel - Meruel, Measurement of Potential / Completion"
-registry_status: "Retired priest in good public standing; privately assessed as a severe-domain Beatified vessel and suspected serial killer under institutional protection"
+rank: "Confirmed Crowned vessel - Meruel, Measurement of Potential / Completion"
+registry_status: "Retired priest in good public standing; privately assessed as a severe-domain Crowned vessel and suspected serial killer under institutional protection"
 designation: "The Saint of Unlived Lives"
 height: ""
 build: "Tall, thin, and severe; age has bent him slightly forward without making him seem weak"
@@ -16,7 +16,7 @@ hair: "Crimson threaded with white, neatly kept"
 eyes: "Very clear; under Meruel's pressure they pale toward a cold red-white"
 dress: "Meticulously maintained black clerical dress; narrow silver measuring chain hidden beneath left sleeve"
 residence: "Private ecclesiastical lodging in Kalt'sen; irregular travel through the Central Region and select northern districts"
-occupation: "Retired Obsidian Rite assessor-priest and informal consultant in difficult manifestation cases"
+occupation: "Retired Obsidian assessor-priest and informal consultant in difficult manifestation cases"
 summary: "He mistakes one terrible sliver of heaven for the whole of judgment, and kills in the name of what a life failed to become."
 image: "../../assets/uploads/char-vaey-viktor.png"
 hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
@@ -24,8 +24,8 @@ portrait_gallery: []
 hero_gallery: []
 tags:
   - "Church"
-  - "Obsidian Rite"
-  - "Beatified"
+  - "Obsidian"
+  - "Crowned"
   - "Meruel"
   - "Kalt'sen"
   - "Sovereign"
@@ -47,7 +47,7 @@ image_position: "center top"
 
 Vaey Viktor is one of the setting's most disturbing reminders that real holiness does not automatically produce moral safety.
 
-He is a retired priest of the [[obsidian-rite|Obsidian Rite]] and a confirmed Beatified vessel of **Meruel**, an angelic force associated with measurement, potential, and completion. For decades he helped the [[the-church|Church]] assess saint-candidates and difficult manifestation cases. Now he kills people he believes have betrayed what they were meant to become.
+He is a retired priest of the [[obsidian-rite|Obsidian]] and a confirmed Crowned vessel of **Meruel**, an angelic force associated with measurement, potential, and completion. For decades he helped the [[the-church|Church]] assess saint-candidates and difficult manifestation cases. Now he kills people he believes have betrayed what they were meant to become.
 
 The horror of Vaey is not that he is fake. It is that he is real.
 
@@ -55,7 +55,7 @@ The horror of Vaey is not that he is fake. It is that he is real.
 
 **Public Identity:** A retired priest whose gentleness still makes him look, at first glance, like a trustworthy holy elder.
 
-**Institutional Identity:** A Beatified Church assessor whose long usefulness let warning signs hide behind reverence, clerical protection, and the Rite's reluctance to denounce one of its own.
+**Institutional Identity:** A Crowned Church assessor whose long usefulness let warning signs hide behind reverence, clerical protection, and Obsidian's reluctance to denounce one of its own.
 
 **Private Truth:** Vaey's murders are not a betrayal of fake holiness. They are the result of genuine contact with **Meruel** hardening into a theology that punishes wasted potential.
 
@@ -80,21 +80,21 @@ The [[the-church|Church]]'s role matters here too. Vaey was allowed to stay usef
 ## Apocachynthion Registry
 
 **[[leaf|Leaf Type]]:** No Apocachynthion practitioner leaf issued  
-**Registry Status:** Beatified vessel tolerated under sealed Church review; retired from formal Obsidian Rite assessment authority  
+**Registry Status:** Crowned vessel tolerated under sealed Church review; retired from formal Obsidian assessment authority  
 **Rank:** Not applicable  
 **[[mark|Mark]]:** None  
 **[[open-mark|Open Mark]]:** None  
 **[[margins|Margins]]:** Ecclesial  
 **Anchor:** Not applicable  
 **Anchor Reading:** Not applicable  
-**Depth Reading:** Beatified vessel  
+**Depth Reading:** Crowned vessel  
 **Reach Reading:** Person-scale evaluative reading  
-**Registration Tenure:** Retired from formal Obsidian Rite assessment  
+**Registration Tenure:** Retired from formal Obsidian assessment  
 **Academy Record:** Church formation and saint-case assessment service  
 **Practice Record:** Manifestation review and unsanctioned vigilante targeting  
 **[[blots|Blots]]:** Multiple killings under sealed review  
 **Pager Note:** Do not treat apparent gentleness as disarming  
-**[[seal|Current Seal]]:** Church restricted review; Obsidian Rite access by direct authorization
+**[[seal|Current Seal]]:** Church restricted review; Obsidian access by direct authorization
 
 ## Abilities
 
@@ -118,7 +118,7 @@ Vaey's greatest weakness is therefore theological. He mistakes a sharp partial t
 
 **Meruel** is the defining pressure in his life. Vaey has let one fragment of Heaven become his entire moral vocabulary.
 
-**[[obsidian-rite|The Obsidian Rite]]** formed him, used him, and now has to live with what it helped create.
+**[[obsidian-rite|Obsidian]]** formed him, used him, and now has to live with what it helped create.
 
 **[[the-church|The Church]]** still matters because parts of it continue protecting him out of shame, gratitude, and fear of scandal.
 

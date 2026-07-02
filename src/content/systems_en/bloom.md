@@ -1,8 +1,8 @@
 ---
 title: "Bloom"
 type: "System"
-summary: "Biological resonance and living Shore ecology expressed through symbiont, host biology, tissue, memory, blood, nerve, growth, and Rootline."
-tags: ["systems", "Bloom", "Rootline", "Abyssal Flower", "Murmuring", "Shorefall", "Shorewalking", "Shores", "Continuity", "Biological Resonance"]
+summary: "Biological resonance expressed through symbiont, host biology, tissue, memory, blood, nerve, growth, and rare Rootline inheritance."
+tags: ["systems", "Bloom", "Rootline", "Abyssal Flower", "Murmuring", "Continuity", "Biological Resonance", "Symbiosis", "Lineage"]
 status: "public"
 created: "2026-06-25"
 updated: "2026-06-25"
@@ -18,13 +18,13 @@ image: ""
 
 **Bloom** is biological resonance expressed through symbiont, host biology, tissue, memory, blood, nerve, growth, and recursive proximity.
 
-Bloom is not Redactory, not Divination, and not generic life magic. It is living Shore ecology growing into Page-real biology under specific compatibility conditions.
+Bloom is not Redactory, not Divination, and not generic life magic. It is living resonance growing into Page-real biology under specific compatibility conditions.
 
 ---
 
 ## Rootline
 
-A **Rootline** is the persistent Shore-address carried by a Bloom organism or floritic symbiont.
+A **Rootline** is the persistent root-address carried by a Bloom organism or floritic symbiont.
 
 Not every Bloom is actively Shorewalking. Not every Bloom host is Shore-adjacent in the same intensity. True Shore-descended or Shore-rooted Bloom strains carry an ancestral root-address. Their oldest growth remembers the Shore from which the strain emerged, rooted, or became entangled.
 
@@ -34,7 +34,9 @@ The Rootline is not a route selected by a Redactor and not a fragment fused into
 
 ## Bloom Shorefall
 
-Bloom Shorefall occurs when the Rootline pulls downward.
+Some Bloom-facing traditions call catastrophic downward pull **Rootfall**.
+
+Rootfall occurs when the Rootline pulls downward.
 
 The host, symbiont, and nearby recursive singularities may be dragged through the Bloom's root-address into the Shore ecology. The falling axis may not be the host's singularity alone. It may be the root, the symbiont, the host-symbiont composite, prior host impressions, Murmuring pressure, or a rooted Shore ecology using the host as access.
 
@@ -46,7 +48,9 @@ The core question in Bloom Shorefall is: **is the host falling through the Bloom
 
 ## Bloom Shorewalking
 
-Bloom Shorewalking is the reverse direction.
+Bloom Shorewalking is the reverse direction in technical Bloom analysis.
+
+Some Bloom lineages may call a stable state **the Walking Root**, but Bloom traditions are not standardized. A dynasty bound to one flower, fungus, root-agent, or biological anomaly may build its own names around the experience.
 
 The host does not fall through the root. The host internalizes the Rootline.
 
@@ -54,7 +58,7 @@ The Bloom's Shore-root fully grows inside the host's body, continuity, and recur
 
 Stable Bloom Shorewalking requires host primacy. If the host ceases to remain primary, the state becomes Overbloom, consumption, Murmuring takeover, Root-Stranding, or biological Shore-Breach.
 
-Bloom Shorefall is being pulled down by the root. Bloom Shorewalking is becoming the root without becoming soil.
+Rootfall is being pulled down by the root. The Walking Root is becoming the root without becoming soil.
 
 ---
 
@@ -82,4 +86,4 @@ Bloom failure states include:
 
 ## In One Sentence
 
-Bloom roots: it is biological resonance carrying Shore-address through living tissue, and its highest survivable state depends on the host becoming the root without becoming soil.
+Bloom roots: it is biological resonance carrying root-address through living tissue, and its highest survivable states depend on the host becoming the root without becoming soil.

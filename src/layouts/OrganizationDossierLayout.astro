@@ -1,0 +1,653 @@
+---
+import "../styles/archive-refs.css";
+import MainLayout from "./MainLayout.astro";
+import { localizedPath, type SiteLocale } from "../i18n/config";
+import { getArchiveNavLabels, getEntryLayoutLabels, sectionLabel as getSectionLabel } from "../i18n/ui";
+import { getImageUrl } from "../utils/optimized-images";
+
+const { entry, locale = "en" } = Astro.props as { entry: any; locale?: SiteLocale };
+const { Content, headings } = await entry.render();
+
+const navLabels = getArchiveNavLabels(locale);
+const labels = getEntryLayoutLabels(locale);
+const sectionLabel = getSectionLabel(locale, "organizations");
+const sectionHref = localizedPath(locale, "/organizations/");
+
+const str = (value: unknown) => String(value ?? "").trim();
+const designation = str(entry.data?.designation);
+const summary = str(entry.data?.summary);
+const affiliation = str(entry.data?.affiliation);
+const headquarters = str(entry.data?.headquarters);
+const founded = str(entry.data?.founded);
+const jurisdiction = str(entry.data?.jurisdiction);
+const statusLabel = str(entry.data?.status_label);
+const imageUrl = getImageUrl(entry.data?.image);
+
+const ACCENTS: Record<string, string> = {
+  "apocachynthion": "#b13a34",
+  "the-church": "#b08d3c",
+  "obsidian-rite": "#6a5a9a",
+};
+
+const OBJECT_POSITION: Record<string, string> = {
+  "apocachynthion": "center 35%",
+  "the-church": "center 40%",
+};
+
+const accent = ACCENTS[entry.slug] || "#b13a34";
+const objectPosition = str(entry.data?.image_position) || OBJECT_POSITION[entry.slug] || "center 40%";
+const tags = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
+
+const copy = locale === "pt-br"
+  ? {
+      dossier: "DOSSIE INSTITUCIONAL",
+      back: "Voltar ao registro",
+      access: "Distribuicao restrita",
+      fields: {
+        status: "Estado",
+        headquarters: "Sede",
+        founded: "Fundacao",
+        affiliation: "Afiliacao",
+        jurisdiction: "Jurisdicao",
+      },
+    }
+  : {
+      dossier: "INSTITUTIONAL DOSSIER",
+      back: "Return to registry",
+      access: "Restricted distribution",
+      fields: {
+        status: "Status",
+        headquarters: "Headquarters",
+        founded: "Founded",
+        affiliation: "Affiliation",
+        jurisdiction: "Jurisdiction",
+      },
+    };
+
+type Field = { label: string; value: string; wide?: boolean };
+const fields: Field[] = [];
+if (statusLabel) fields.push({ label: copy.fields.status, value: statusLabel, wide: true });
+if (headquarters) fields.push({ label: copy.fields.headquarters, value: headquarters });
+if (founded) fields.push({ label: copy.fields.founded, value: founded });
+if (affiliation) fields.push({ label: copy.fields.affiliation, value: affiliation });
+if (jurisdiction) fields.push({ label: copy.fields.jurisdiction, value: jurisdiction, wide: true });
+
+const toc = (headings as { depth: number; slug: string; text: string }[] | undefined)
+  ?.filter((heading) => heading.depth === 2 || heading.depth === 3) ?? [];
+---
+
+<MainLayout
+  active="organizations"
+  pageTitle={`${entry.data.title} - ${sectionLabel} - SiNE Archives`}
+  locale={locale}
+  navVariant="entry"
+  routeKind="entry-detail"
+  transitionProfile="entry-detail"
+  navTrail={[
+    { label: navLabels.index, href: localizedPath(locale, "/") },
+    { label: sectionLabel, href: sectionHref },
+    { label: entry.data.title },
+  ]}
+>
+  <article class="org-dossier" style={`--org-entry-accent: ${accent};`}>
+    <aside class="org-dossier__rail">
+      <a class="org-dossier__back" href={sectionHref}>
+        <span aria-hidden="true">←</span>
+        <span>{copy.back}</span>
+      </a>
+
+      <div class="org-dossier__image-panel">
+        {imageUrl ? (
+          <img
+            class="org-dossier__image"
+            src={imageUrl}
+            alt=""
+            aria-hidden="true"
+            style={`object-position: ${objectPosition};`}
+          />
+        ) : (
+          <div class="org-dossier__image-fallback"></div>
+        )}
+        <div class="org-dossier__image-wash"></div>
+        <div class="org-dossier__scanline" aria-hidden="true"></div>
+        <div class="org-dossier__grain" aria-hidden="true"></div>
+        <div class="org-dossier__seal" aria-hidden="true">{entry.data.title.slice(0, 1)}</div>
+      </div>
+
+      <div class="org-dossier__rail-footer">
+        <div class="org-dossier__rail-label">{copy.access}</div>
+        <div class="org-dossier__rail-date">{labels.filed}: {entry.data.updated}</div>
+      </div>
+    </aside>
+
+    <main class="org-dossier__main">
+      <header class="org-dossier__header">
+        <div class="org-dossier__eyebrow">
+          <span>{copy.dossier}</span>
+          <span aria-hidden="true">/</span>
+          <span>{entry.data.type ?? sectionLabel}</span>
+        </div>
+        <h1>{entry.data.title}</h1>
+        {designation && <p class="org-dossier__designation">{designation}</p>}
+        {summary && <p class="org-dossier__summary">{summary}</p>}
+        {tags.length ? (
+          <div class="org-dossier__tags" aria-label="Tags">
+            {tags.map((tag: string) => <span>{tag}</span>)}
+          </div>
+        ) : null}
+      </header>
+
+      <div class="org-dossier__body-grid">
+        <aside class="org-dossier__file">
+          {fields.length ? (
+            <section class="org-dossier__file-card" aria-label={labels.fileData}>
+              <h2>{labels.fileData}</h2>
+              <dl>
+                {fields.map((field) => (
+                  <div class:list={["org-dossier__field", { "org-dossier__field--wide": field.wide }]}>
+                    <dt>{field.label}</dt>
+                    <dd set:html={field.value} />
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ) : null}
+
+          {toc.length >= 3 ? (
+            <section class="org-dossier__toc" aria-label={labels.onThisPage}>
+              <h2>{labels.onThisPage}</h2>
+              <nav>
+                {toc.map((heading) => (
+                  <a class:list={["org-dossier__toc-link", `org-dossier__toc-link--d${heading.depth}`]} href={`#${heading.slug}`}>
+                    {heading.text}
+                  </a>
+                ))}
+              </nav>
+            </section>
+          ) : null}
+        </aside>
+
+        <div class="org-dossier__reading">
+          <div class="org-dossier__rule" aria-hidden="true"></div>
+          <section class="org-dossier__prose" data-entry-body>
+            <Content />
+          </section>
+        </div>
+      </div>
+    </main>
+  </article>
+</MainLayout>
+
+<style>
+  .org-dossier {
+    min-height: calc(100svh - var(--nav-height, 56px));
+    display: grid;
+    grid-template-columns: minmax(320px, 38vw) minmax(0, 1fr);
+    background:
+      radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--org-entry-accent) 12%, transparent), transparent 30%),
+      linear-gradient(110deg, #040407 0%, var(--bg) 58%, color-mix(in srgb, var(--org-entry-accent) 5%, #050407) 100%);
+    color: var(--text);
+  }
+
+  .org-dossier__rail {
+    position: sticky;
+    top: var(--nav-height, 56px);
+    height: calc(100svh - var(--nav-height, 56px));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    background: #040407;
+    overflow: hidden;
+  }
+
+  .org-dossier__back {
+    position: relative;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 22px 24px;
+    color: rgba(232, 228, 220, 0.55);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .org-dossier__back:hover,
+  .org-dossier__back:focus-visible {
+    color: var(--text);
+  }
+
+  .org-dossier__image-panel {
+    position: relative;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .org-dossier__image,
+  .org-dossier__image-fallback {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .org-dossier__image {
+    object-fit: cover;
+    filter: saturate(0.64) brightness(0.48);
+    transform: scale(1.01);
+  }
+
+  .org-dossier__image-fallback {
+    background:
+      radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--org-entry-accent) 30%, transparent), transparent 34%),
+      linear-gradient(150deg, #080812, #030306);
+  }
+
+  .org-dossier__image-wash {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(5, 4, 7, 0.7) 0%, transparent 30%, rgba(5, 4, 7, 0.92) 100%),
+      linear-gradient(to right, transparent 50%, rgba(5, 4, 7, 0.5) 100%);
+  }
+
+  .org-dossier__scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  .org-dossier__grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .org-dossier__seal {
+    position: absolute;
+    right: clamp(18px, 4vw, 42px);
+    bottom: clamp(18px, 4vw, 42px);
+    width: clamp(82px, 12vw, 136px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border: 1px solid color-mix(in srgb, var(--org-entry-accent) 45%, rgba(255, 255, 255, 0.12));
+    border-radius: 50%;
+    color: color-mix(in srgb, var(--org-entry-accent) 75%, var(--text));
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(46px, 7vw, 82px);
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.42;
+  }
+
+  .org-dossier__rail-footer {
+    position: relative;
+    z-index: 5;
+    padding: 20px 24px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .org-dossier__rail-label,
+  .org-dossier__rail-date,
+  .org-dossier__eyebrow,
+  .org-dossier__file h2,
+  .org-dossier__toc h2,
+  .org-dossier__field dt,
+  .org-dossier__tags span {
+    font-family: "DM Sans", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .org-dossier__rail-label {
+    margin-bottom: 6px;
+    color: var(--org-entry-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+  }
+
+  .org-dossier__rail-date {
+    color: rgba(232, 228, 220, 0.32);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .org-dossier__main {
+    min-width: 0;
+    padding: clamp(42px, 6vw, 78px) clamp(24px, 5vw, 72px) 80px;
+  }
+
+  .org-dossier__header {
+    max-width: 960px;
+    padding-bottom: clamp(32px, 5vw, 54px);
+  }
+
+  .org-dossier__eyebrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: var(--org-entry-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    margin-bottom: 16px;
+  }
+
+  .org-dossier__header h1 {
+    max-width: 850px;
+    margin: 0;
+    color: var(--text);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(54px, 8vw, 112px);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: 0;
+  }
+
+  .org-dossier__designation {
+    max-width: 720px;
+    margin: 18px 0 0;
+    color: color-mix(in srgb, var(--org-entry-accent) 75%, var(--gold));
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(19px, 2vw, 28px);
+    font-style: italic;
+    line-height: 1.35;
+  }
+
+  .org-dossier__summary {
+    max-width: 740px;
+    margin: 28px 0 0;
+    color: rgba(232, 228, 220, 0.68);
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(15px, 1.35vw, 18px);
+    line-height: 1.85;
+  }
+
+  .org-dossier__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 28px;
+  }
+
+  .org-dossier__tags span {
+    border: 1px solid color-mix(in srgb, var(--org-entry-accent) 30%, rgba(255, 255, 255, 0.08));
+    background: rgba(255, 255, 255, 0.025);
+    color: rgba(232, 228, 220, 0.5);
+    border-radius: 2px;
+    padding: 5px 9px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+
+  .org-dossier__body-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 760px);
+    gap: clamp(28px, 5vw, 64px);
+    align-items: start;
+  }
+
+  .org-dossier__file {
+    position: sticky;
+    top: calc(var(--nav-height, 56px) + 24px);
+    display: grid;
+    gap: 14px;
+  }
+
+  .org-dossier__file-card,
+  .org-dossier__toc {
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-left-color: color-mix(in srgb, var(--org-entry-accent) 48%, rgba(255, 255, 255, 0.07));
+    background: rgba(10, 10, 18, 0.62);
+  }
+
+  .org-dossier__file h2,
+  .org-dossier__toc h2 {
+    margin: 0;
+    padding: 13px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--org-entry-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+  }
+
+  .org-dossier__file dl {
+    display: grid;
+    margin: 0;
+  }
+
+  .org-dossier__field {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .org-dossier__field:last-child {
+    border-bottom: 0;
+  }
+
+  .org-dossier__field dt {
+    margin-bottom: 4px;
+    color: var(--text-dim);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  .org-dossier__field dd {
+    margin: 0;
+    color: rgba(232, 228, 220, 0.66);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .org-dossier__toc nav {
+    display: grid;
+    padding: 8px;
+  }
+
+  .org-dossier__toc-link {
+    display: block;
+    padding: 7px 8px;
+    color: rgba(232, 228, 220, 0.56);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+
+  .org-dossier__toc-link--d3 {
+    padding-left: 20px;
+    color: rgba(232, 228, 220, 0.42);
+    font-size: 11px;
+  }
+
+  .org-dossier__toc-link:hover,
+  .org-dossier__toc-link:focus-visible {
+    background: color-mix(in srgb, var(--org-entry-accent) 10%, transparent);
+    color: var(--text);
+  }
+
+  .org-dossier__reading {
+    min-width: 0;
+  }
+
+  .org-dossier__rule {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, var(--org-entry-accent), rgba(255, 255, 255, 0.06), transparent);
+  }
+
+  .org-dossier__prose {
+    max-width: 760px;
+    color: var(--text-muted);
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+  }
+
+  .org-dossier__prose :global(p) {
+    margin: 0 0 16px;
+  }
+
+  .org-dossier__prose :global(h2) {
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0;
+    scroll-margin-top: calc(var(--nav-height, 56px) + 18px);
+  }
+
+  .org-dossier__prose :global(h3) {
+    margin: 30px 0 10px;
+    color: rgba(232, 228, 220, 0.88);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(21px, 2vw, 26px);
+    font-weight: 650;
+    line-height: 1.22;
+    letter-spacing: 0;
+    scroll-margin-top: calc(var(--nav-height, 56px) + 18px);
+  }
+
+  .org-dossier__prose :global(strong) {
+    color: rgba(232, 228, 220, 0.94);
+    font-weight: 700;
+  }
+
+  .org-dossier__prose :global(em) {
+    color: color-mix(in srgb, var(--org-entry-accent) 40%, var(--gold));
+  }
+
+  .org-dossier__prose :global(hr) {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 34px 0;
+  }
+
+  .org-dossier__prose :global(blockquote) {
+    margin: 28px 0;
+    padding: 18px 22px;
+    border-left: 2px solid var(--org-entry-accent);
+    background: color-mix(in srgb, var(--org-entry-accent) 8%, transparent);
+  }
+
+  .org-dossier__prose :global(blockquote p) {
+    margin: 0;
+    color: rgba(232, 228, 220, 0.68);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .org-dossier__prose :global(ul),
+  .org-dossier__prose :global(ol) {
+    margin: 0 0 18px;
+    padding-left: 24px;
+  }
+
+  .org-dossier__prose :global(li) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 1040px) {
+    .org-dossier {
+      grid-template-columns: 1fr;
+    }
+
+    .org-dossier__rail {
+      position: relative;
+      top: auto;
+      height: min(62svh, 540px);
+      min-height: 360px;
+      border-right: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .org-dossier__body-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .org-dossier__file {
+      position: static;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 680px) {
+    .org-dossier__rail {
+      height: 48svh;
+      min-height: 310px;
+    }
+
+    .org-dossier__back {
+      margin: 16px 18px;
+      font-size: 9px;
+    }
+
+    .org-dossier__rail-footer {
+      padding: 16px 18px 18px;
+    }
+
+    .org-dossier__main {
+      padding: 34px 18px calc(58px + env(safe-area-inset-bottom));
+    }
+
+    .org-dossier__header h1 {
+      font-size: clamp(46px, 14vw, 72px);
+    }
+
+    .org-dossier__body-grid {
+      gap: 30px;
+    }
+
+    .org-dossier__file {
+      grid-template-columns: 1fr;
+    }
+
+    .org-dossier__toc {
+      display: none;
+    }
+
+    .org-dossier__prose {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .org-dossier__back,
+    .org-dossier__toc-link {
+      transition: none;
+    }
+  }
+</style>

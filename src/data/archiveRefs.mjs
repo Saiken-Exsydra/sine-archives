@@ -5,7 +5,7 @@ export const ARCHIVE_REF_OVERRIDES = {
       label: "Answered",
       previewTitle: "Answered",
       preview:
-        "A rare Obsidian Rite vessel whose fusion reaches the Cynosure itself rather than a lesser Seraphic contact-depth.",
+        "A rare Obsidian Diviner whose Magnitude reaches the Cynosure itself rather than a lesser Seraphic contact.",
       target: "organizations:obsidian-rite#answered",
       aliases: ["the answered"],
     },
@@ -14,7 +14,7 @@ export const ARCHIVE_REF_OVERRIDES = {
       label: "Gift of Sight",
       previewTitle: "Gift of Sight",
       preview:
-        "The Church's term for receptive heraldic or visionary perception: received, not self-generated.",
+        "The Church's term for receptive Oracle sight: received, not self-generated.",
       target: "organizations:the-church#gift-of-sight",
       aliases: ["the gift of sight"],
     },
@@ -23,7 +23,7 @@ export const ARCHIVE_REF_OVERRIDES = {
       label: "Lucent",
       previewTitle: "Lucent",
       preview:
-        "An Obsidian Rite vessel whose fusion reaches stable Seraphic contact-depth without rising to Cynosure-class Answered status.",
+        "An Obsidian Diviner whose Magnitude reaches stable Cardinal contact without rising to Cynosure-class Answered status.",
       target: "organizations:obsidian-rite#lucent",
       aliases: ["the lucent"],
     },
@@ -250,7 +250,7 @@ export const ARCHIVE_REF_OVERRIDES = {
       label: "Answered",
       previewTitle: "Answered",
       preview:
-        "Categoria rara de vessel do Obsidian Rite cuja fusao alcanca o proprio Cynosure, e nao apenas contatos Seraficos menores.",
+        "Categoria rara de Diviner do Obsidian cuja Magnitude alcanca o proprio Cynosure, e nao apenas contatos Seraficos menores.",
       target: "organizations:obsidian-rite#answered",
       aliases: ["os answered"],
     },
@@ -259,7 +259,7 @@ export const ARCHIVE_REF_OVERRIDES = {
       label: "Gift of Sight",
       previewTitle: "Gift of Sight",
       preview:
-        "Termo da Igreja para percepcao heraldica ou visionaria receptiva: recebida, nao fabricada.",
+        "Termo da Igreja para visao receptiva de Oracle: recebida, nao fabricada.",
       target: "organizations:the-church#gift-of-sight",
       aliases: ["the gift of sight", "dom da visao"],
     },
@@ -268,7 +268,7 @@ export const ARCHIVE_REF_OVERRIDES = {
       label: "Lucent",
       previewTitle: "Lucent",
       preview:
-        "Vessel do Obsidian Rite cuja fusao alcanca contato Serafico estavel sem subir ao nivel Cynosure dos Answered.",
+        "Diviner do Obsidian cuja Magnitude alcanca contato Cardinal estavel sem subir ao nivel Cynosure dos Answered.",
       target: "organizations:obsidian-rite#lucent",
       aliases: ["the lucent"],
     },

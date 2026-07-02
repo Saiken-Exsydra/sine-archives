@@ -66,7 +66,7 @@ The **Rite of Radiance** is Aurora's majority religious institution, born from t
 
 The Rite's theology rests on three pillars. **Custodianship**: Aurora does not own *Leóhtmæl* — it is responsible for it. **The Anchored Radiance**: the Instrument was not scattered at the Fracture but deliberately placed, because light requires a ground that can receive it without diminishing it. **The Obligation of Light**: proximity to the Instrument carries obligations, not privileges, producing an aesthetic theology where building well and building for light are acts of devotion.
 
-The Rite is in **formal schism** with the One Church but not in the militant separation that defines Ardeatus's Covenant. It does not reject the Sovereign, the Twelve, or the Church's broad framework. It rejects one specific claim: that no mortal institution may hold custodianship of an Instrument. The Church and the Rite maintain diplomatic contact, exchange scholars, and disagree — sometimes bitterly — while continuing anyway.
+The Rite is in **formal schism** with the Church but not in the militant separation that defines Ardeatus's Covenant. It does not reject the Sovereign, the Twelve, or the Church's broad framework. It rejects one specific claim: that no mortal institution may hold custodianship of an Instrument. The Church and the Rite maintain diplomatic contact, exchange scholars, and disagree — sometimes bitterly — while continuing anyway.
 
 ---
 
@@ -76,7 +76,7 @@ Aurora produces more Redactors per capita than demographic models alone would pr
 
 Aurora does not impose internal certification requirements on Redactors. The Apocachynthion has **embassy authority only** in Aurora — a diplomatic presence with no enforcement power on Auroran soil. Auroran Redactors who wish to operate within the Empire must obtain certification through the embassy. Those seeking employment contracts most commonly access the market through **MAGI** — SiNE's Redactor placement apparatus.
 
-The Rite's theological framing gives Aurora's general population a framework for understanding Redactors that does not default to awe or anxiety. Redactors are treated as citizens with an unusual skill set and an occupational relationship with the world's deeper structure. The warmth of this relationship is notably different from the One Church's guardedness and incomparably different from the Covenant's hostility.
+The Rite's theological framing gives Aurora's general population a framework for understanding Redactors that does not default to awe or anxiety. Redactors are treated as citizens with an unusual skill set and an occupational relationship with the world's deeper structure. The warmth of this relationship is notably different from the Church's guardedness and incomparably different from the Covenant's hostility.
 
 ---
 
@@ -90,6 +90,6 @@ The network is entirely domestic. **Outside Aurora's borders, the network ends.*
 
 ## The Revolution
 
-The federation was born from crisis. When a major **Calling event** struck the Twilight Band, its resonance surge interacted with the Instrument's passive presence in the White Desert, producing a cascading resonance reflection that pushed north into the populated corridor. The monarchy's response produced three failures: deferring entirely to the One Church while populations needed material assistance, withholding emergency resources from damaged cities, and forbidding Luminant clergy from operating in the affected zones.
+The federation was born from crisis. When a major **Calling event** struck the Twilight Band, its resonance surge interacted with the Instrument's passive presence in the White Desert, producing a cascading resonance reflection that pushed north into the populated corridor. The monarchy's response produced three failures: deferring entirely to the Church while populations needed material assistance, withholding emergency resources from damaged cities, and forbidding Luminant clergy from operating in the affected zones.
 
 The canton councils acted without authorization. They coordinated the relief. They fed, housed, and stabilized the affected populations while the monarchy issued proclamations from Valerie. The revolution that followed was organized, not spontaneous. The monarchy fell within two years. The last monarch was **exiled rather than executed** — a deliberate precedent built into the founding charter: *we govern through legitimacy, not through vengeance.*

@@ -2,7 +2,7 @@
 ## SAI'KEN EXSYDRA
 *Filed and maintained by Em'manuel Kael Wonderwall, Wonderwall Seat*  
 *KT-Exs operational archive — Seat's direct custody; no Meridian Council access*  
-*Current Revision: Year 2200, third quarter*  
+*Filed: Year 2200, third quarter*  
 
 ---
 

@@ -80,8 +80,8 @@ This doctrine has not won the war in seven centuries. It has also not lost it. A
 
 ## The Cisma
 
-The theological separation between the Covenant and the One Church is not a dispute about scripture. It is a dispute about what the Sundering of Selia proved.
+The theological separation between the Covenant and the Church is not a dispute about scripture. It is a dispute about what the Sundering of Selia proved.
 
-The One Church holds that the Sundering proved Redactory without institutional governance is catastrophic — proving the necessity of the Apocachynthion. The Covenant holds that the Sundering proved the practice of Redactory itself is the catastrophe — not a governance failure, but a fundamental violation of the Architect's ordered structure.
+The Church holds that the Sundering proved Redactory without institutional governance is catastrophic — proving the necessity of the Apocachynthion. The Covenant holds that the Sundering proved the practice of Redactory itself is the catastrophe — not a governance failure, but a fundamental violation of the Architect's ordered structure.
 
-Neither institution can prove the other wrong. The structural irony neither sees is that the Covenant's Tempered and the Church's divine vessels both operate through the same Dive interface, developing domain-specific abilities, experiencing identity erosion, and occasionally reaching metamorphic saturation. The mechanism is identical. Neither institution knows this.
+Neither institution can prove the other wrong. At codex-truth depth, the structural irony neither sees is that the Covenant's Tempered and the Church's Divine Vessels and Diviners all move through a deeper Divination ecology than either doctrine can fully name: Pathway contact, Communion, fusion pressure, domain-specific abilities, identity erosion, and occasional metamorphic saturation. The Covenant does not know its Tempered are structurally adjacent to Church vessels. The Church does not know its Diviners are structurally adjacent to the Tempered. Their theologies disagree sharply, but the underlying pattern is closer than either institution knows.

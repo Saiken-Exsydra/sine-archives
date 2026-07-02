@@ -1,7 +1,7 @@
-﻿# PERSONAL DOSSIER - RESTRICTED
+# PERSONAL DOSSIER - RESTRICTED
 ## VAEY VIKTOR
-*Filed and maintained by the Diaconate of the Interior, restricted duplicate held under Obsidian Rite seal*
-*Access class: Arch-Deacon, Rector-Ascendant, Ecclesiastic Surgeon, Keepers of Before by direct authorization only*
+*Filed and maintained by the Interior Council, restricted duplicate held under Obsidian seal*
+*Access class: Bishop, Rector-Ascendant, Ecclesiastic Surgeon, Keepers of Before by direct authorization only*
 
 ---
 
@@ -12,13 +12,13 @@
 
 ## PREAMBLE - WHAT THIS FILE IS FOR
 
-*This is not the Obsidian Rite service record of Father Vaey Viktor. That document exists and remains formally unblemished, which is itself part of the problem this file exists to preserve.*
+*This is not Father Vaey Viktor's Obsidian service record. That document exists and remains formally unblemished, which is itself part of the problem this file exists to preserve.*
 
 *It is not the canonization record. No formal canonization has occurred. No formal censure has occurred either. The absence of both outcomes should not be mistaken for neutrality.*
 
-*This file exists because Father Viktor has become too significant, too dangerous, and too institutionally protected to remain distributed across incident reports, retired-assessor notes, confessor summaries, and sealed homicide correspondences that do not name themselves as such. He requires a dossier that treats him as a living person, a former priest of long service, a confirmed Beatified vessel, and a serial killer operating beneath the tolerance of the Church's own reluctance.*
+*This file exists because Father Viktor has become too significant, too dangerous, and too institutionally protected to remain distributed across incident reports, retired-assessor notes, confessor summaries, and sealed homicide correspondences that do not name themselves as such. He requires a dossier that treats him as a living person, a former priest of long service, a confirmed Crowned vessel, and a serial killer operating beneath the tolerance of the Church's own reluctance.*
 
-*The methodological problem is obvious. The Church made use of him for forty years. The Rite trained him, trusted him, consulted him, and sent him into rooms where frightened families were told that his judgment could decide whether a child was blessed, endangered, possessed, or worth removing from ordinary life. He was useful before he became holy. He was holy before he became intolerable. No one in this archive should pretend those were unrelated stages.*
+*The methodological problem is obvious. The Church made use of him for forty years. Obsidian trained him, trusted him, consulted him, and sent him into rooms where frightened families were told that his judgment could decide whether a child was blessed, endangered, possessed, or worth removing from ordinary life. He was useful before he became holy. He was holy before he became intolerable. No one in this archive should pretend those were unrelated stages.*
 
 *- D.I. restricted compilation note, year 2200*
 
@@ -29,29 +29,29 @@
 | Field | Entry |
 |---|---|
 | **Full Name** | Vaey Viktor |
-| **Ecclesiastical Style** | Father Viktor; retired Assessor-Priest of the Obsidian Rite |
+| **Ecclesiastical Style** | Father Viktor; retired Assessor-Priest of Obsidian |
 | **Year of Birth** | 2134 (age 66 at time of filing, 2200) |
 | **Birth Status** | Natural birth; provincial ecclesiastical registry; parentage unremarkable in surviving record |
 | **Civil Standing** | Retired priest in good public standing; not formally censured |
-| **Former Rite Position** | Ecclesiastic Assessor of Beatification Candidates, Obsidian Rite |
+| **Former Obsidian Position** | Ecclesiastic Assessor of Beatification Candidates, Obsidian |
 | **Years of Active Service** | Forty years of documented assessment work, 2156-2196 |
-| **Divine Status** | Confirmed Beatified vessel; sustained angelic fusion |
+| **Divine Status** | Confirmed Crowned vessel; sustained angelic fusion |
 | **Fragment Alignment** | **Meruel**, angelic Measurement of Potential / Completion |
 | **Parent Seraphic Line** | Unnamed Seraphim of Just Measure; Seraphic Constellation of Just Measure; incomplete formal theology |
-| **Operational Classification** | Saint-adjacent, uncanonized; internally marked as severe-domain Beatified; publicly treated with deference appropriate to retired Rite clergy |
+| **Operational Classification** | Saint-adjacent, uncanonized; internally marked as severe-domain Crowned; publicly treated with deference appropriate to retired Obsidian clergy |
 | **Current Residence** | Private ecclesiastical lodging in Kalt'sen, with unregistered travel throughout the Central Region and select Northern districts |
 | **Public Standing** | Honored former assessor, discoverer of several living saints, valued consultant in difficult alignment cases |
-| **Private Standing (Diaconate Assessment)** | Confirmed angelic vessel undergoing advanced domain reweighting; suspected or confirmed perpetrator in multiple deaths of gifted, failed, or withdrawn candidates; institutionally shielded by the political and theological consequences of naming him criminal |
+| **Private Standing (Interior Council Assessment)** | Confirmed angelic vessel undergoing advanced domain reweighting; suspected or confirmed perpetrator in multiple deaths of gifted, failed, or withdrawn candidates; institutionally shielded by the political and theological consequences of naming him criminal |
 
 ---
 
 ## II. WHAT HE IS
 
-Vaey Viktor is a retired priest of the Obsidian Rite, a former assessor of saint-candidates, and a confirmed vessel of Meruel, the angelic Measurement of Potential. He spent the greater part of his adult life looking at people after miracles had touched them and deciding what the Church should do with what remained.
+Vaey Viktor is a retired priest of Obsidian, a former assessor of saint-candidates, and a confirmed vessel of Meruel, the angelic Measurement of Potential. He spent the greater part of his adult life looking at people after miracles had touched them and deciding what the Church should do with what remained.
 
 This fact cannot be separated from what he has become.
 
-He did not enter the Rite as a front-line Votary. He was not known first for strength, radiance, exorcistic authority, or heroic conduct along the Threshold. His gift was colder and rarer: discernment. He could enter a room where a child had spoken in a voice not their own, where a dying woman had healed by accident, where a soldier had survived something no body should survive, where a minor saint-cult had begun forming around a frightened young man in a rural parish, and he could determine what sort of pressure had entered the vessel.
+He did not enter Obsidian as a front-line Votary. He was not known first for strength, radiance, exorcistic authority, or heroic conduct along the Threshold. His gift was colder and rarer: discernment. He could enter a room where a child had spoken in a voice not their own, where a dying woman had healed by accident, where a soldier had survived something no body should survive, where a minor saint-cult had begun forming around a frightened young man in a rural parish, and he could determine what sort of Presence had entered the vessel.
 
 Angelic. Demonic. Sight-adjacent. False. Unstable. Politically convenient but spiritually empty. Genuinely holy but psychologically unready. Recoverable. Dangerous. Worth taking. Worth watching. Worth burying.
 
@@ -63,7 +63,7 @@ The repeated act shaped him. Each assessment required him to reconstruct the dis
 
 By the end of his service, Father Viktor was no longer merely assessing potential. His recursive singularity had become organized around the act of measurement itself. Meruel did not fall upon an unprepared man. Meruel found a mind that had spent four decades becoming a suitable instrument.
 
-What followed was not possession. It was not demonic erosion. It was not one of the Obsidian Rite's rare Answered-class or Lucent-class Seraphic extremes. It was not even, in the Church's most comfortable language, corruption. It was Beatified stabilization along a real angelic fragment-integration the Church did not know how to pastor once it became severe.
+What followed was not possession. It was not demonic erosion. It was not one of Obsidian's rare Answered-class or Lucent-class Seraphic extremes. It was not even, in the Church's most comfortable language, corruption. It was Crowned stabilization under genuine angelic Presence the Church did not know how to pastor once it became severe.
 
 Father Viktor did not stop believing.
 
@@ -79,7 +79,7 @@ He is tall, though age has introduced a slight forward inclination to his postur
 
 His hair is crimson with strands of white, formerly dark, worn neatly and without vanity. His face is lined most deeply around the mouth and eyes. The lines do not soften him. They make his expressions more legible, which is not always the same thing as making them kinder. His eyes remain very clear. Witnesses frequently describe them before they describe anything he says.
 
-In ordinary dress he favors black clerical clothing, old but meticulously maintained. His collar is always correct. His sleeves are always clean. He wears no ostentatious relics and no public saint's adornment. The only consistent object on his person is a narrow silver measuring chain, worn wound twice around the left wrist beneath the sleeve. The chain is not an official instrument of the Rite. It has become, through use, a devotional habit and a killing implement.
+In ordinary dress he favors black clerical clothing, old but meticulously maintained. His collar is always correct. His sleeves are always clean. He wears no ostentatious relics and no public saint's adornment. The only consistent object on his person is a narrow silver measuring chain, worn wound twice around the left wrist beneath the sleeve. The chain is not an official instrument of Obsidian. It has become, through use, a devotional habit and a killing implement.
 
 His physical manner is quiet. He does not intrude upon rooms. He arranges himself within them. He speaks softly, never quickly, and with the slightly old-fashioned diction of a priest trained before the current generation of Obsidian formation reforms. Younger clergy often find him reassuring before they learn enough to fear him.
 
@@ -154,7 +154,7 @@ It was correct.
 
 Dalen Orr was removed from ordinary formation and later confirmed as a minor protection-domain vessel. He survived. The priests who had initially mishandled the case did not forgive Viktor quickly.
 
-The Obsidian Rite noticed.
+Obsidian noticed.
 
 ---
 
@@ -162,7 +162,7 @@ The Obsidian Rite noticed.
 
 ### VI.1 Entry Into Assessment Work
 
-Vaey Viktor was ordained at twenty-two and attached to the Obsidian Rite within the year, not as a candidate for field Votary formation but as an assessment specialist. His first superior was Rector-Ascendant Halvek Sorn, a protection-domain veteran of the northern formations whose surviving notes show early irritation with Viktor's lack of battlefield instinct and later reliance on precisely the same quality.
+Vaey Viktor was ordained at twenty-two and attached to Obsidian within the year, not as a candidate for field Votary formation but as an assessment specialist. His first superior was Rector-Ascendant Halvek Sorn, a protection-domain veteran of the northern formations whose surviving notes show early irritation with Viktor's lack of battlefield instinct and later reliance on precisely the same quality.
 
 Halvek's third-year evaluation contains the sentence most often quoted in internal summaries:
 
@@ -173,7 +173,7 @@ His early work placed him in the aftermath of minor miracles, uncontrolled Crown
 Several names recur in his service period and should be preserved here:
 
 - **Rector-Ascendant Halvek Sorn**, first Obsidian superior; protection-domain vessel; later died in Threshold service.
-- **Mother Calienne Voss**, confessor-priest and later Diaconate critic; one of the first to warn that Viktor's assessment language had become punitive.
+- **Mother Calienne Voss**, confessor priest and later Interior Council critic; one of the first to warn that Viktor's assessment language had become punitive.
 - **Sister Aramina Thale**, Ecclesiastic Surgeon; collaborated with Viktor on twenty-seven candidate examinations and privately opposed his final retirement classification.
 - **Saint Ilyra of Veyr**, living mercy-domain saint first identified by Viktor at age nine.
 - **Tomas Ren**, failed Beatification candidate; disappeared after Viktor recommended immediate removal from family custody and later became one of the earliest suspected private victims.
@@ -204,7 +204,7 @@ He stopped asking only whether a candidate was touched by an angel.
 
 He began asking whether they were worthy of the angel that had touched them.
 
-The Rite tolerated this because it produced results. He identified real saints. He prevented several demonic misclassifications. He saw through two politically manufactured miracle cults before they could embarrass the Church. He correctly marked a beloved parish healer as carrying a fragment that was angelic in origin but degrading through self-worship. He was right too often for his superiors to recognize the spiritual deformation hiding inside the accuracy.
+Obsidian tolerated this because it produced results. He identified real saints. He prevented several demonic misclassifications. He saw through two politically manufactured miracle cults before they could embarrass the Church. He correctly marked a beloved parish healer as carrying a fragment that was angelic in origin but degrading through self-worship. He was right too often for his superiors to recognize the spiritual deformation hiding inside the accuracy.
 
 By 2190, Sister Aramina Thale's private notes describe him as *"not cruel, but increasingly unable to distinguish mercy from diagnostic contamination."*
 
@@ -218,7 +218,7 @@ No formal action followed.
 
 The first confirmed Meruel-contact occurred during the assessment of **Liora Venn**, a seventeen-year-old saint-candidate from the Central Region whose involuntary manifestations had gathered a local following before the Church intervened. The case record remains sealed because Liora survived and later entered protected ecclesiastical custody under a different name.
 
-Viktor's report states that during the third interview he perceived, not merely inferred, the completed form of Liora's possible Beatified state. Witnesses observed a pale geometric ring behind him, visible only in reflection. Liora stopped crying and answered seven questions before he asked them.
+Viktor's report states that during the third interview he perceived, not merely inferred, the completed form of Liora's possible Crowned state. Witnesses observed a pale geometric ring behind him, visible only in reflection. Liora stopped crying and answered seven questions before he asked them.
 
 He wrote afterward:
 
@@ -260,11 +260,11 @@ This is the doctrine beneath the murders.
 
 ### VIII.1 Departure From Active Service
 
-Father Viktor retired from active Obsidian Rite service in 2196 after forty years of assessment work. The official language records voluntary retirement following confirmed Beatified stabilization, with continued advisory availability in exceptional cases.
+Father Viktor retired from active Obsidian service in 2196 after forty years of assessment work. The official language records voluntary retirement following confirmed Crowned stabilization, with continued advisory availability in exceptional cases.
 
 The official language is accurate as far as it goes.
 
-It does not include the final review meeting in which Mother Calienne Voss argued that his recent case recommendations had become spiritually punitive. It does not include Sister Aramina Thale's objection to allowing an uncontained Potential-domain Beatified to retain private consultative access. It does not include the Arch-Deacon's decision that a public dispute over a confirmed angelic vessel would damage the Rite at a moment when two living saints discovered by Viktor were already under political pressure from their home districts.
+It does not include the final review meeting in which Mother Calienne Voss argued that his recent case recommendations had become spiritually punitive. It does not include Sister Aramina Thale's objection to allowing an uncontained Potential-domain Crowned vessel to retain private consultative access. It does not include the Bishop's decision that a public dispute over a confirmed angelic vessel would damage Obsidian at a moment when two living saints discovered by Viktor were already under political pressure from their home districts.
 
 The compromise was retirement.
 
@@ -321,7 +321,7 @@ At several scenes, investigators or Church intermediaries have recovered narrow 
 
 The civil authorities do not possess a complete comparison file.
 
-The Diaconate does.
+The Interior Council does.
 
 ---
 
@@ -385,7 +385,7 @@ It is also why her defense of him has become difficult to challenge.
 
 ### XI.2 Tomas Ren
 
-Tomas Ren was assessed at sixteen after repeated sight-adjacent manifestations and one probable angelic contact. Viktor marked him as a high-potential candidate with unstable discipline and unusually strong resistance to external authority. The family refused removal. The district Arch-Deacon declined to press the matter because the case had become public and politically delicate.
+Tomas Ren was assessed at sixteen after repeated sight-adjacent manifestations and one probable angelic contact. Viktor marked him as a high-potential candidate with unstable discipline and unusually strong resistance to external authority. The family refused removal. The district bishop declined to press the matter because the case had become public and politically delicate.
 
 Tomas disappeared at twenty-eight.
 
@@ -397,7 +397,7 @@ This is the earliest case Mother Calienne Voss believed to be Viktor's work.
 
 Liora Venn survived. Her case matters because Meruel first stabilized through Viktor during her assessment.
 
-She remains under protected name and does not receive visitors without Diaconate authorization. Her current file records recurring nightmares of Father Viktor standing beside a version of her made of white architecture. She does not accuse him of harming her.
+She remains under protected name and does not receive visitors without Interior Council authorization. Her current file records recurring nightmares of Father Viktor standing beside a version of her made of white architecture. She does not accuse him of harming her.
 
 She has refused to be in the same building with him since 2194.
 
@@ -486,7 +486,7 @@ That sentence is the shame of this file.
 
 ---
 
-*END OF RECORD - Current Revision*
+*END OF RECORD*
 
 *Filed: Year 2200, fourth quarter.*
 

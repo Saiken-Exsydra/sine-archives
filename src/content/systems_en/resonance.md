@@ -129,7 +129,7 @@ Shores emerge where:
 
 So a Shore is not "pure resonance," but no Shore can exist without resonance making deep similarity, thinness, and pressure mutually legible.
 
-The Luminant Shore, for example, is not just bright metaphysical scenery. It is a borderland where Light as primitive, Revelation as consequence, and Terra's local thinness produce a coherent resonance ecology strong enough to be encountered as place.
+The Luminant Shore, for example, is not just bright metaphysical scenery. It is an endpoint condition where Light as primitive, Revelation as consequence, and Terra's local thinness produce a coherent resonance ecology strong enough to be experienced as terrain.
 
 Resonance may amplify, dampen, or make Shore-adjacent pressure easier to read. It does not replace continuity mechanics, cause Shorefall by itself, or make Shorewalking an environmental projection.
 

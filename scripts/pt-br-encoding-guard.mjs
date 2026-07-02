@@ -51,12 +51,13 @@ const TARGETS = [
   path.join("src", "i18n"),
   path.join("src", "layouts"),
   path.join("src", "pages"),
+  path.join("src", "data"),
   "translation-glossary-pt-BR.md",
 ];
 
 const CONTENT_ALLOWED_LOCALES = ["_pt_br", "pt-br-translation-guide"];
 
-const SUSPICIOUS_RE = /Ã[\u0080-\u00bf]|Â(?=[^A-Za-zÀ-ÿ]|$).|â[\u0080-\u00bf\u2018-\u201f\u20ac]|ï»¿|�/u;
+const SUSPICIOUS_RE = /\u00c3[\u0080-\u00bf]|\u00c2(?=[^A-Za-z\u00c0-\u00ff]|$).|\u00e2[\u0080-\u00bf\u2018-\u201f\u2020-\u2022\u20ac]|\ufeff|\ufffd/u;
 
 function isTargetFile(relPath) {
   const ext = path.extname(relPath).toLowerCase();
@@ -183,6 +184,12 @@ if (mode === "fix") {
   }
 }
 
+if (mode === "check" && changedFiles.length) {
+  console.error("Mojibake fixes needed:");
+  for (const file of changedFiles) console.error(`- ${file}`);
+  process.exitCode = 1;
+}
+
 if (remainingIssues.length) {
   console.error("Suspicious text remains:");
   for (const issue of remainingIssues) {
@@ -195,5 +202,7 @@ if (remainingIssues.length) {
   }
   process.exit(1);
 }
+
+if (process.exitCode) process.exit(process.exitCode);
 
 console.log("Encoding check passed.");

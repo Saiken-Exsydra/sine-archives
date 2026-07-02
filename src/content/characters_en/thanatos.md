@@ -28,7 +28,7 @@ The last of the twelve, and in one sense the most forward-facing.
 
 Where Alma governed the emergence and coherence of sentient recursion, Thanatos governed **what sentient recursion was capable of becoming**. The Instrument of Elysium was the law governing the conditions under which a sentient being developed toward its fullest density: not achievement in the mortal sense, but the structural completion of what a recursive singularity is oriented toward at its deepest level — the expression of its maximum coherence without collapse.
 
-In structural terms, this Instrument describes the path toward what the Redactory Codex calls **Sovereign Depth**: the permanent stabilization of extreme recursive density, the state that Archetypes on Terra have independently approximated through Precursor-developed practice. The Instrument of Elysium was the law that made this path inherent to sentient structure — not as an achievement individual beings accomplished by their own effort alone, but as a direction **encoded into sentience itself**, available to be moved toward because it was structurally present as a possibility.
+In structural terms, this Instrument describes the path toward what the Redactory Codex calls **Sovereign Depth**: the permanent stabilization of extreme recursive density, the state that Archtypes on Terra have independently approximated through Precursor-developed practice. The Instrument of Elysium was the law that made this path inherent to sentient structure — not as an achievement individual beings accomplished by their own effort alone, but as a direction **encoded into sentience itself**, available to be moved toward because it was structurally present as a possibility.
 
 ---
 
@@ -42,9 +42,9 @@ Thanatos bore this Instrument with **patient orientation**. He was not urgent. H
 
 ## Post-Fracture Condition
 
-The **Archetypes of Terra** — the fully stabilized human recursive singularities who have achieved Sovereign Depth through the Redactory practice the Precursors developed and transmitted — are the most visible living expression of the domain the Instrument of Elysium governed. They did not arrive at their state through the Instrument's governance, which no longer operates. They arrived through millions of years of developed practice.
+The **Archtypes of Terra** — the fully stabilized human recursive singularities who have achieved Sovereign Depth through the Redactory practice the Precursors developed and transmitted — are the most visible living expression of the domain the Instrument of Elysium governed. They did not arrive at their state through the Instrument's governance, which no longer operates. They arrived through millions of years of developed practice.
 
-Whether Archetypal stabilization achieved through that framework is equivalent to Archetypal stabilization as the Instrument of Elysium would have governed it — whether the destination differs in the absence of the governing law — is a question the Keepers of Before consider one of the most significant open problems in the restricted record.
+Whether Archtype-level stabilization achieved through that framework is equivalent to Archtype-level stabilization as the Instrument of Elysium would have governed it — whether the destination differs in the absence of the governing law — is a question the Keepers of Before consider one of the most significant open problems in the restricted record.
 
 ---
 
@@ -52,4 +52,4 @@ Whether Archetypal stabilization achieved through that framework is equivalent t
 
 Every tradition that has articulated a vision of what a person is capable of becoming — not what they are, but what they could be at their fullest — operates in the domain the Instrument of Elysium defined.
 
-The Church's teachings on spiritual development, the **Apocachynthion's** understanding of Archetypal stabilization, and every school of thought in between that has ever asked what a life at its fullest would look like: all of them are reaching toward the same domain. None of them know they share a common architecture. The Keepers of Before know.
+The Church's teachings on spiritual development, the **Apocachynthion's** understanding of Archtype-level stabilization, and every school of thought in between that has ever asked what a life at its fullest would look like: all of them are reaching toward the same domain. None of them know they share a common architecture. The Keepers of Before know.

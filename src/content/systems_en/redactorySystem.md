@@ -133,6 +133,8 @@ That is not free power. It means the Redactor's natural route terminates at a de
 
 An **Archtype** is something else entirely. Archtype status means permanent stabilization at extreme recursive density. An Abyssal Anchor can help produce that ceiling, but does not guarantee survival long enough to reach it.
 
+Terminology note: **Archtype** is the technical classification for Redactors. **Archtype-level** describes comparable scale or effects; it does not extend the classification to non-Redactors.
+
 ---
 
 ## Shore Contact
@@ -140,6 +142,8 @@ An **Archtype** is something else entirely. Archtype status means permanent stab
 Redactory reaches the Shores through Dive-depth.
 
 The Dive is the Redactory interface. The Shore is not the Dive. At ordinary depths, the Anchor remains a route. At extreme depths, the concept can cease functioning only as a route and become a marginal condition where Page-real expression meets Archive-adjacent pressure.
+
+Redactory retains **Shores**, **Shorefall**, and **Shorewalking** as its technical boundary language. In ordinary doctrine, these are Redactory-facing terms for extreme Dive-depth and Anchor-interface danger, not a public bridge into other magical traditions.
 
 Redactor **Shorefall** occurs when the Redactor's recursive singularity collapses through extreme Dive-depth and falls into a compatible Shore. The Anchor swallows the Redactor.
 

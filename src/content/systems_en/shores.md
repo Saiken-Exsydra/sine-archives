@@ -2,7 +2,7 @@
 title: "Shores"
 type: "System"
 summary: "Terra-local marginal conditions where the Page's deep conceptual strata meet Archive-adjacent pressure strongly enough to become spatially experienceable to recursive singularities."
-tags: ["systems", "Shores", "Shorefall", "Shorewalking", "Shore-Breach", "Translation Wake", "Continuity", "Luminant Shore", "Abyssal Shore", "Redactory", "Divination", "Bloom"]
+tags: ["systems", "Shores", "Shorefall", "Shorewalking", "Shore-Breach", "Translation Wake", "Continuity", "Luminant Shore", "Abyssal Shore", "Redactory"]
 status: "public"
 created: "2026-05-22"
 updated: "2026-06-26"
@@ -16,7 +16,7 @@ image: ""
 
 ## Essential Definition
 
-**The Shores** is the ancient canonical umbrella name for the final Terra-local limit-condition encountered when ordinary Page-real expression, deep conceptual strata, Time-ordered traversal, continuity, and Archive-adjacent pressure meet.
+**The Shores** is the ancient Redactory-facing umbrella name for rare Terra-local marginal conditions encountered when ordinary Page-real expression, deep conceptual strata, Time-ordered traversal, continuity, and Archive-adjacent pressure meet.
 
 A **Shore** is not a physical coastline, an alternate world, a pocket dimension, a god's domain, the Dive, the Archive, native syntax, or a space created by the person who reaches it.
 
@@ -68,13 +68,9 @@ Shorewalking is a controlled surface-side aperture state in which a recursive si
 
 The body, power, perception, and identity become the controlled aperture. Shorewalking alters the walker first. Environmental distortion may occur as residue, translation wake, symbolic pressure, collateral distortion, leakage, or early failure, but it is not the defining mechanism.
 
-Shorewalking is the ultimate expression available to Terra-local magical systems. It is not a separate school of magic. It is the final shared limit-state of multiple magical branches:
+In Redactory-facing doctrine, Shorewalking is a near-mythic extreme of Shore contact. It is not a separate school of magic and not routine high-rank practice.
 
-- Redactors reach it through Dive-depth and Anchor interface.
-- Divine vessels reach it through total compatible fusion.
-- Bloom Bearers reach it through Rootline internalization.
-- Continuity-sensitive systems may stabilize, pin, delay, or prevent the conditions around it rather than express it as ordinary magic.
-- Archetypes may endure more Shore proximity because their recursive singularities are more stabilized, but they do not own the Shores.
+Apocachynthion restricted theory treats Shorewalking as one of the most dangerous edges of the Index Theorem. Ordinary researchers do not discuss it freely. Most working Redactors will never see a confirmed case.
 
 Shorewalking does not grant native syntax authority, make the practitioner a Primordial, allow creation ex nihilo, allow absolute destruction, or make the walker owner of the Shore.
 
@@ -114,6 +110,8 @@ Translation Wake is not the Shore itself entering the world. If environmental ef
 
 Redactory reaches the Shores through Dive-depth. The Dive is the Redactory interface. The Shore is not the Dive.
 
+Redactory retains **Shores**, **Shorefall**, and **Shorewalking** as its technical language for this boundary.
+
 At ordinary depths, the Anchor remains a route. At extreme depths, the concept ceases to function only as a route and becomes a marginal condition. Redactor Shorefall occurs when the Redactor's recursive singularity collapses through extreme Dive-depth and falls into a compatible Shore. The Anchor swallows the Redactor.
 
 Redactor Shorewalking occurs when the Redactor refuses to fall and holds the aperture Page-side. The Redactor internalizes Shore pressure through the Anchor, body, perception, and continuity. Redactor Shorewalking does not rewrite grammar and does not grant native syntax authority.
@@ -122,23 +120,23 @@ Reach and Shorewalking must not be collapsed into one category. Reach extends th
 
 Abyssal Anchors increase the risk of this boundary because their true Anchor-depth rests at the strata. They do not make Shorewalking automatic, safe, repeatable, or proprietary.
 
-### Divination
+### Divination-Adjacent Reports
 
-Divination reaches the Shores through fusion.
+Some Divine Vessel events resemble Shore contact from the outside, especially when Presence Weight or codex-level fusion pressure becomes extreme.
 
-Stable Divine Shorewalking is total compatible fusion without vessel continuity annihilation. The fragment, god, angel, demon, saint, domain-attractor, or divine pressure steps into Page-real expression through the vessel, and the vessel remains.
+Church investigators do not normally call such cases Shores. They may describe them through Beatification, Crowning, possession, false heaven, abyssal ingress, or other theological categories.
 
-Divine Shorefall is the reverse direction: the vessel falls into the fragment's domain-depth or domain-adjacent Shore ecology, potentially dragging others with them. Divine domains may act as corridors, masks, architectures, ecologies, or interpretive shells through which the vessel experiences the Shore. The god or fragment is not automatically the Shore.
+Whether these reports belong beside Redactory Shore doctrine is a restricted theoretical question, not ordinary public teaching.
 
 ### Bloom
 
-Bloom reaches the Shores through root.
+Some Bloom strains appear to carry a persistent root-address toward marginal ecology.
 
-A **Rootline** is the persistent Shore-address carried by a Bloom organism or floritic symbiont. Bloom does not Dive like Redactory and does not fuse like Divination. Bloom roots.
+A **Rootline** is the persistent address carried by a Bloom organism or floritic symbiont. Bloom does not Dive like Redactory and does not fuse like Divination. Bloom roots.
 
-Bloom Shorefall occurs when the Rootline pulls downward. The host, symbiont, and nearby recursive singularities may be dragged through the Bloom's root-address into the Shore ecology. The falling axis may be the host, the root, the symbiont, the host-symbiont composite, prior host impressions, Murmuring pressure, or the rooted Shore ecology using the host as access.
+Bloom lineages are rare and often dynastic. A bloodline, household, or closed tradition may inherit contact with a specific flower, fungal agent, root-organism, or biological anomaly, then build its own names around the experience.
 
-Bloom Shorewalking occurs when the host internalizes the Rootline. The Bloom's Shore-root fully grows inside the host's body, continuity, and recursive proximity without dragging the host down into the Shore. Stable Bloom Shorewalking requires host primacy. Failure states include Overbloom, consumption, Murmuring takeover, Root-Stranding, and biological Shore-Breach.
+Because of that, Bloom-facing terminology is not standardized. One lineage may describe a root pulling downward; another may describe first soil, buried flowering, ancestral mycelium, blood-garden contact, or the host becoming a living root. Outside observers should not assume those names all mean the same event.
 
 ### Continuity-Sensitive Phenomena
 
@@ -146,9 +144,9 @@ Continuity-sensitive phenomena are not a fourth standard magical branch in the s
 
 Continuity locks do not defeat a Shore. They force local self-agreement long enough to prevent collapse, evacuation failure, contradiction spread, or aperture widening.
 
-### Archetypes
+### Archtypes
 
-Archetypes can endure longer, descend deeper, recover from greater Returnwake, and hold more severe aperture strain than ordinary practitioners. They remain finite under Archive law, Time traversal, continuity pressure, and macro-agency limits.
+Archtypes can endure longer, descend deeper, recover from greater Returnwake, and hold more severe aperture strain than ordinary practitioners. They remain finite under Archive law, Time traversal, continuity pressure, and macro-agency limits.
 
 ---
 
@@ -156,9 +154,9 @@ Archetypes can endure longer, descend deeper, recover from greater Returnwake, a
 
 Different traditions disagree about what the Shores are, how they are reached, and what should be done with them.
 
-Redactors may speak of the Deep Margin, Strata Coast, Sovereign Depth Limit, or related names. Divine traditions may speak of Heaven, Hell, Purgatory, courts, gardens, pits, celestial houses, demonic domains, or sacred thresholds. Bloom traditions may speak of the Underroot, First Soil, Root-Sea, Blood-Garden, or buried flower-fields. SiNE and Stasis may speak of Shore-class displacement, continuity breach interfaces, or marginal continuity failure.
+Redactors may speak of the Deep Margin, Strata Coast, Sovereign Depth Limit, or related names, but formal Redactory doctrine still uses Shores, Shorefall, and Shorewalking. Divine traditions may speak of Heaven, Hell, Purgatory, courts, gardens, pits, celestial houses, demonic domains, sacred thresholds, Beatification, Crowning, possession, or divine manifestation. SiNE and Stasis may speak of Shore-class displacement, continuity breach interfaces, or marginal continuity failure. Bloom traditions may speak of the Underroot, First Soil, Root-Sea, Blood-Garden, buried flower-fields, ancestral roots, or lineage-specific names.
 
-Those names may be culturally valid. Codex truth recognizes the underlying class as **The Shores**.
+Those names may be culturally valid. This public entry preserves the Redactory-facing term **Shores** without claiming that every institution is naming the same thing.
 
 ---
 

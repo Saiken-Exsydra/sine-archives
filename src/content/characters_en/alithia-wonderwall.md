@@ -54,7 +54,7 @@ codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 
 Al'ithia is the public face of House Wonderwall. She handles the House's political life, carries its promises into the Senate, and gives one of the Empire's most intimidating families a presence other people can actually speak to.
 
-She is also one of the strangest people in the Wonderwall line. She began life as **Athena Rae**, a woman from the same family branch that once produced **A'licia Rae Wonderwall**, the House's first great Light-bearer. Over time Athena became bound to what the family called the **First Radiance**: the part of A'licia that still answers from the **Luminant Shore**, a metaphysical borderland tied to Light, revelation, and impossible visibility.
+She is also one of the strangest people in the Wonderwall line. She began life as **Athena Rae**, a woman from the same family branch that once produced **A'licia Rae Wonderwall**, the House's first great Light-bearer. Over time Athena became bound to what the family called the **First Radiance**: the part of A'licia that still answers from the **Luminant Shore**, an endpoint condition tied to Light, revelation, and impossible visibility.
 
 The important part is that Al'ithia is not a resurrection and not a possession case. She is a new person shaped from Athena's life and A'licia's remaining presence. That miracle could easily have become a tragedy. Instead, it became one of the most human lives in the House.
 

@@ -136,7 +136,7 @@ const english = {
     copy: [
       "The Index Theorem is powerful. It is not complete.",
       "Some phenomena do not fit neatly inside it. Divination, Bloom conditions, Shore-contact, ancient Instruments, Callings, and certain cosmic anomalies may touch similar language, but they are not simply Redactory.",
-      "The theory describes what Redactors do with unusual precision. It does not fully explain why the Archive can be reached, why Anchors take the shapes they do, or why the Dive is shared by other kinds of power.",
+      "The theory describes what Redactors do with unusual precision. It does not fully explain why the Archive can be reached, why Anchors take the shapes they do, or why other kinds of power appear near related deep-access architecture.",
       "The Apocachynthion knows this. A good theory explains much. A dangerous theory pretends to explain everything.",
     ],
     note: "Do not use the Index Theorem as a universal answer. It is the best theory for Redactory, not the skeleton key for the whole world.",

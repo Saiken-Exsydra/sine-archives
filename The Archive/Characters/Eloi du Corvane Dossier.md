@@ -14,7 +14,7 @@
 
 *This is not a political history of the Corvane killings. That file exists in canton archives under a name chosen to make the matter sound smaller than it was.*
 
-*It is not a theological assessment of the Nevermore. That document remains incomplete because the subject resists ordinary placement within the Rite of Radiance's doctrinal categories, and because the One Church's terminology is not always useful when applied to a non-Sovereign attractor operating through grief rather than through formal devotion.*
+*It is not a theological assessment of the Nevermore. That document remains incomplete because the subject resists ordinary placement within the Rite of Radiance's doctrinal categories, and because the Church's terminology is not always useful when applied to a non-Sovereign attractor operating through grief rather than through formal devotion.*
 
 *This file exists because Éloi du Corvane can no longer be treated as an isolated cultural criminal, an unstable artist, or an unregistered vessel requiring ordinary containment. He is a Divine Vessel in active fusion with a powerful stabilized attractor-fragment whose domain expresses through absence, dread, painted night, raven-symbolism, and the refusal of return. He is also a person whose life can be understood without excusing what he has done.*
 
@@ -630,6 +630,6 @@ He is a man teaching the world to grieve before it has finished living.
 
 ---
 
-*END OF RECORD - Current Revision*
+*END OF RECORD*
 
 *Filed: Year 2200 equivalent; restricted circulation pending further theological classification of the Nevermore attractor.*

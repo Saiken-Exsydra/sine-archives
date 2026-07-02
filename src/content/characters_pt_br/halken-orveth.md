@@ -4,7 +4,7 @@ type: "Character"
 age: "399 (em 2200)"
 birth_year: "1801"
 birthplace: "Black Mere, Região Norte"
-affiliation: "Igreja Una - Obsidian Rite"
+affiliation: "Igreja - Obsidian"
 rank: "Rector-Ascendant"
 registry_status: "Implantação máxima restrita - vessel da classe Answered de Auctoriel"
 designation: "Dominio em forma humana"
@@ -15,9 +15,9 @@ hair: "Preto já tomado em grande parte pelo cinza metálico; barba curta"
 eyes: "Castanho-escuros em condições normais; vermelho-dourado intenso durante manifestações elevadas"
 dress: "Batina preta simples, rosário de ferro, cordão vermelho do ofício preso ao pulso esquerdo; armadura de placas enegrecida de estilo pré-moderno em campo"
 residence: "Fortaleza-priorado de Saint Veyran, Kalt'sen, quando não está mobilizado sob ordens seladas"
-occupation: "Rector-Ascendant do Obsidian Rite; ativo estratégico exorcístico da Igreja Una"
+occupation: "Rector-Ascendant do Obsidian; ativo estratégico exorcístico da Igreja"
 summary: "Gentil ate o instante do juizo; depois disso, ate o ar ao redor dele se lembra de se ajoelhar."
-tags: ["Igreja", "Obsidian Rite", "Auctoriel", "Seven Answers", "Answered", "Dominion", "Beatificado", "Sundersaint", "Kalt'sen"]
+tags: ["Igreja", "Obsidian", "Auctoriel", "Seven Answers", "Answered", "Dominion", "Crowned", "Sundersaint", "Kalt'sen"]
 status: "public"
 created: "2026-05-15"
 updated: "2026-05-20"
@@ -31,7 +31,7 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 
 ## O Que Ele É
 
-Halk'en Orveth é um dos raros [[answered|Answered]] vivos reconhecidos pela doutrina restrita da [[the-church|Igreja]]: um Rector-Ascendant e vessel Beatificado de contato **Cynosure** através do qual um dos **Seven Answers** respondeu. A maior parte do clero do [[obsidian-rite|Obsidian Rite]] opera como Votaries de contato Stellate. Orveth pertence a uma categoria mais rara e mais perigosa. A pressão nele não é tratada como simples manifestação angelical de ordem inferior, mas como contato estabilizado com o próprio **Auctoriel, Seraphim de Dominion**, no nível do Cynosure.
+Halk'en Orveth é um dos raros [[answered|Answered]] vivos reconhecidos pela doutrina restrita da [[the-church|Igreja]]: um Rector-Ascendant e vessel Crowned de contato **Cynosure** através do qual um dos **Seven Answers** respondeu. A maior parte do clero do [[obsidian-rite|Obsidian]] opera como Votaries de contato Stellate. Orveth pertence a uma categoria mais rara e mais perigosa. A Presence nele não é tratada como simples manifestação angelical de ordem inferior, mas como contato estabilizado com o próprio **Auctoriel, Seraphim de Dominion**, no nível do Cynosure.
 
 Essa distinção define tudo no arquivo dele. Ele não é apenas um exorcista veterano com uma manifestação de domínio de autoridade anormalmente severa. Ele é um ponto de contato humano estabilizado através do qual Dominion consegue operar no mundo em escala estratégica sem ser confundido com possessão demoníaca nem com apagamento humano.
 
@@ -53,9 +53,9 @@ Halk'en Orveth nasceu em 1801, em Black Mere, uma paróquia fluvial do norte sem
 
 Entrou no seminário menor aos dezesseis anos. Os registros de formação não descrevem um prodígio. Descrevem um garoto grande, quieto, de memória excelente, disciplina litúrgica impecável, pouca paciência para teologia ornamental e uma tendência de enxergar doutrina como obrigação, não abstração. Se destacou em ritos funerários, cuidado de crise e preparação exorcística muito antes de qualquer suspeita de contato Seráfico direto.
 
-A mudança veio em **1823**, durante os **Motins de Possessão de Mornhallow**. Um evento de pressão demoníaca atravessou um hospital usando pacientes e atendentes tomados pelo luto como uma rede distribuída de vessels. Quando a ala se tornou contestada e membros experientes do clero não conseguiam entrar sem provocar mimetismo imediato e escalada, o recém-ordenado Orveth caminhou até as portas, colocou a mão nua sobre a verga e declarou que aquele lugar havia sido entregue aos doentes e que o invasor não recebera permissão para entrar. As vozes cessaram tempo suficiente para que a ala fosse retomada. Onze pacientes sobreviveram graças a isso. Revisões posteriores identificaram o episódio como a primeira manifestação documentada da mão.
+A mudança veio em **1823**, durante os **Motins de Possessão de Mornhallow**. Um evento de Weight demoníaco atravessou um hospital usando pacientes e atendentes tomados pelo luto como uma rede distribuída de vessels. Quando a ala se tornou contestada e membros experientes do clero não conseguiam entrar sem provocar mimetismo imediato e escalada, o recém-ordenado Orveth caminhou até as portas, colocou a mão nua sobre a verga e declarou que aquele lugar havia sido entregue aos doentes e que o invasor não recebera permissão para entrar. As vozes cessaram tempo suficiente para que a ala fosse retomada. Onze pacientes sobreviveram graças a isso. Revisões posteriores identificaram o episódio como a primeira manifestação documentada da mão.
 
-[[obsidian-rite|O Obsidian Rite]] o retirou das funções paroquiais comuns menos de um mês depois. Ele entrou formalmente na formação do Rite em 1824 e demonstrou muito menos interesse em poder do que em entender onde o poder precisava ser aplicado. Em **1831**, durante o exorcismo de um vessel de treze anos chamado Anrek Voss, manifestou visivelmente a **terceira mão** pela primeira vez, contendo o garoto e imobilizando a estrutura de possessão tempo suficiente para que o Naming acontecesse corretamente. O monitoramento de Cirurgiões Eclesiásticos começou naquele mesmo ano. Investigações teológicas restritas vieram logo depois. O nome **Auctoriel** aparece na própria caligrafia de Orveth já em **1836**.
+[[obsidian-rite|O Obsidian]] o retirou das funções paroquiais comuns menos de um mês depois. Ele entrou formalmente na formação do Obsidian em 1824 e demonstrou muito menos interesse em poder do que em entender onde o poder precisava ser aplicado. Em **1831**, durante o exorcismo de um vessel de treze anos chamado Anrek Voss, manifestou visivelmente a **terceira mão** pela primeira vez, contendo o garoto e imobilizando a estrutura de possessão tempo suficiente para que o Naming acontecesse corretamente. O monitoramento de Cirurgiões Eclesiásticos começou naquele mesmo ano. Investigações teológicas restritas vieram logo depois. O nome **Auctoriel** aparece na própria caligrafia de Orveth já em **1836**.
 
 Ele não foi elevado rapidamente. Recusou promoção duas vezes, argumentando que sua utilidade estava no trabalho de campo direto, não em cargos institucionais. Essa posição se tornou impossível depois do **Evento do Coro Vermelho** de **1877**, quando manifestou cinco mãos simultaneamente dentro de um coro paroquial colapsado que havia se tornado uma rede harmônica de vessels. Entrou sozinho na nave. Quando as portas foram abertas, toda a estrutura havia sido forçada a responder como um único centro identificável. Foi elevado a **Rector-Ascendant** em **1878**.
 
@@ -63,7 +63,7 @@ Em **1881**, recebeu **Sundersaint**, a espada artefato superior conhecida como 
 
 Em **1906**, após o **Julgamento do Portão de Saint Kaldrin** e a primeira manifestação tangível amplamente testemunhada da sexta mão, o Diaconato deixou de tratá-lo como apenas um Rector-Ascendant excepcional. Internamente, passou a ser reconhecido como um dos **Answered**: um dos raríssimos vessels mortais de contato Cynosure através dos quais um dos Seven Answers respondeu ao mundo.
 
-Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do [[obsidian-rite|Obsidian Rite]]. Separou um estado ritualístico da Ponte Halvorn em 1968 sem derrubar a estrutura. Manifestou a **sétima mão** em **Vaul Mourne** em 2013 e transformou um desastre de possessão que havia tomado um hospice inteiro em um tribunal responsivo, pagando um custo enorme por isso. Mais tarde ajudou a moldar a ética moderna do Rite ao se opor à investidura forçada, defendendo que um fardo colocado sem consentimento legítimo não é ofício — é tomada à força. Em 2200, tornou-se ao mesmo tempo um dos pilares vivos da [[the-church|Igreja]] e uma das provas mais claras de que poder sagrado pode continuar perigoso sem necessariamente se corromper.
+Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do [[obsidian-rite|Obsidian]]. Separou um estado ritualístico da Ponte Halvorn em 1968 sem derrubar a estrutura. Manifestou a **sétima mão** em **Vaul Mourne** em 2013 e transformou um desastre de possessão que havia tomado um hospice inteiro em um tribunal responsivo, pagando um custo enorme por isso. Mais tarde ajudou a moldar a ética moderna do Obsidian ao se opor à investidura forçada, defendendo que um fardo colocado sem consentimento legítimo não é ofício — é tomada à força. Em 2200, tornou-se ao mesmo tempo um dos pilares vivos da [[the-church|Igreja]] e uma das provas mais claras de que poder sagrado pode continuar perigoso sem necessariamente se corromper.
 
 ## A Mão Sétupla
 
@@ -103,7 +103,7 @@ Ela não executa a sentença final. Ela identifica o ponto que precisa responder
 
 A sexta mão é completamente tangível. Instrumentos registram sua presença como algo estrutural, dotado de massa e capaz de interferir em leituras normais. Seu domínio é **Comando**.
 
-Nesse nível, Orveth consegue impor instruções vinculantes desde que possua autoridade legítima para isso. Ele não pode ordenar impossibilidades nem reescrever a verdade moral. Não pode tornar inocentes culpados nem fazer mortos voltarem à vida. Pode, porém, interromper um vessel violento, forçar uma entidade possessiva a abandonar um limiar ou uma voz, obrigar uma estrutura contestada a responder ao comando que vinha evitando e sobrepor a pressão de fragmentos inferiores em confronto direto. É nesse nível que os Keepers of Before o classificam como um instrumento estratégico.
+Nesse nível, Orveth consegue impor instruções vinculantes desde que possua autoridade legítima para isso. Ele não pode ordenar impossibilidades nem reescrever a verdade moral. Não pode tornar inocentes culpados nem fazer mortos voltarem à vida. Pode, porém, interromper um vessel violento, forçar uma entidade possessiva a abandonar um limiar ou uma voz, obrigar uma estrutura contestada a responder ao comando que vinha evitando e sobrepor o Weight de presenças inferiores em confronto direto. É nesse nível que os Keepers of Before o classificam como um instrumento estratégico.
 
 ### Sétima Mão - A Palma Soberana
 

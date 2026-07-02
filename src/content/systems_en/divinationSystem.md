@@ -2,7 +2,7 @@
 title: "Divination"
 type: "System"
 summary: "Recursive fusion between a mortal vessel and divine coherence: not routing, but shared load under domain pressure."
-tags: ["systems", "Divination", "Vessel", "Fragments", "Constellations", "Beatification", "Fusion", "Shores"]
+tags: ["systems", "Divination", "Vessel", "Fragments", "Constellations", "Beatification", "Crowning", "Fusion", "Pathway", "Communion", "Covenant", "Magnitude", "Obsidian"]
 status: "public"
 created: "2026-02-12"
 updated: "2026-05-22"
@@ -17,7 +17,7 @@ Short version:
 - Divination fuses.
 
 A Redactor changes what reality is doing.
-A diviner becomes a place where domain-pressure answers.
+A vessel becomes a place where domain-pressure answers.
 
 ---
 
@@ -40,7 +40,7 @@ Divine effects fall into two broad classes.
 
 ### Sustained manifestation
 
-These expressions persist only while active fragment pressure is being expressed.
+These expressions persist only while active fusion pressure is being expressed.
 
 Examples:
 
@@ -58,7 +58,7 @@ Long contact can alter the vessel permanently enough that the change remains aft
 Examples:
 
 - saint-state;
-- Beatified states;
+- Crowned states;
 - relic-like bodies;
 - lasting sensory or emotional shifts;
 - stable monstrous or sanctified morphologies.
@@ -75,10 +75,34 @@ A vessel forms when four conditions coincide:
 
 - a coherent fragment is present;
 - the host is conceptually compatible;
-- Dive-interface contact stabilizes;
+- Pathway contact stabilizes;
 - resistance fails, permits, or is repurposed.
 
 Compatibility can come from faith, obsession, ritual exposure, psychology, crisis-state resonance, or institutional conditioning. Not everyone can host every fragment. Domain fit is real and unforgiving.
+
+Church-facing terms sit on top of this structural category.
+
+A **Divine Vessel** is a person carrying active angelic Presence who may not yet be recognized, processed, trained, or assigned by the Church.
+
+A **Diviner** is a Church-recognized, trained, Obsidian-assigned Divine Vessel. There are no recognized Church Diviners outside Obsidian, and not everyone in Obsidian is a Diviner.
+
+In codex-truth contexts, **Indexed Vessel** remains the neutral structural term for the broader phenomenon, including cases no Church office would classify correctly.
+
+---
+
+## Pathway, Communion, and Covenant
+
+Diviners and Divine Vessels generally do not describe their work as diving.
+
+The access term is the **Pathway**. First stable contact with a fragment is **Pathway contact**. Active contact is **Communion**: the vessel contacts the deity, fragment, saintly continuity, demonic pressure, or domain source they are bound to, and fusion pressure moves through that relationship.
+
+In Divination language, **Communion** is the active state. Apocachynthion theorists may compare it to a Redactor entering the Dive, but the experience is different. A Redactor descends to select and route. A vessel enters contact and bears domain pressure.
+
+At codex-truth depth, Pathway and the Redactory Dive may be read as related deep-interface architecture. The systems use that depth differently. Redactory routes through Dive and Anchor. Divination fuses through Pathway and Communion. Bloom roots. Shores are the shared Terra-local endpoint class where these pressures can become spatially experienceable.
+
+A **Covenant** is a controlled summoning-request event. The vessel asks the connected fragment for a specific level or expression of power. If the request is conceded, the grant is temporary and may appear as an ability, passive state, burst of force, protection, perception shift, or broad amplification of existing manifestations.
+
+A Covenant is powerful because it is granted. It can be refused, narrowed, withdrawn, or answered in a form the fragment considers appropriate rather than the form the vessel wanted.
 
 ---
 
@@ -93,9 +117,20 @@ A high-order line may externalize as a **constellation**:
 - lesser expressions beneath them;
 - tiny motes, sparks, ashes, or equivalent residues below that.
 
-This matters because what ordinary observers call "one angel" or "one demon" may actually be an internal hierarchy of aligned but non-identical fragment pressures.
+This matters because what ordinary observers call "one angel" or "one demon" may actually be an internal hierarchy of aligned but non-identical fusion pressures.
 
 It also matters for vessel depth. Contact with a minor mote is not the same event as direct alignment with a central star, even if both belong to the same divine family.
+
+**Magnitude** is the vessel/source scale. It is not institutional rank.
+
+- **Gleam**: minimal, brief, or almost entirely perceptual contact.
+- **Spark**: minor but repeatable contact with limited Weight.
+- **Mote**: small fragment contact capable of stable effects under pressure.
+- **Stellate**: lesser angelic or demonic office capable of forming a stable vessel.
+- **Cardinal**: major star contact, broader domain Weight, and higher erosion risk.
+- **Cynosure**: central-star contact with the governing identity of the constellation.
+
+Church rank belongs to Obsidian command. Magnitude belongs to vessel/source scale.
 
 ---
 
@@ -127,38 +162,50 @@ Typical progression:
 
 At extreme depth, the vessel may settle into a new stable state or cease to remain the dominant organizing self.
 
-Church terms like **Beatification** and the Church's possession-stage taxonomy describe parts of this process, but the structural mechanics beneath them are broader than any one institution's doctrine.
+Church terms map onto this progression without exhausting it:
+
+| Structural Condition | Angelic Church Term | Demonic Church Term |
+|---|---|---|
+| Initial contact | Touched / Visited | Marked / Pressed |
+| Partial fusion | Beatified | Worn |
+| Deep fusion | Crowned | Hollowing |
+| Saturation | Saint / Living Relic / severe Crowned | Hollowed / Consumed |
+| Stable altered state | Crowned state | Hollowed state / Consumed state |
+
+Beatification is lower than Crowning. Crowning is the deeper, stable, identity-reorienting state. The structural mechanics beneath these terms are broader than any one institution's doctrine.
 
 ---
 
-## Divination and the Shores
+## Extreme Fusion and Theophany
 
-Divination reaches the Shores through fusion.
+The Church's restricted theological record contains a near-mythic category for full divine expression through a surviving vessel: **Theophany**.
 
-A divine vessel may reach a Shore if the fragment's domain aligns with that Shore's conceptual ecology. That does not make the Shore identical to the god, make the god creator of the Shore, or make Shore contact a stronger miracle state.
+Theophany is not ordinary powerful Divination. It is not the same thing as a spectacular manifestation, a deep Crowned state, or a vessel using a strong ability.
 
-Stable Divine **Shorewalking** is total compatible fusion without vessel continuity annihilation. The fragment, god, angel, demon, saint, domain-attractor, or divine pressure fully steps into Page-real expression through the vessel. The vessel remains. If the vessel is erased, devoured, replaced, or rendered irrelevant, the state is possession, collapse, consumption, or failed fusion.
+In Church language, Theophany is the terrifying possibility that the god, angel, saint, demon, fragment, or domain pressure has stepped into the world through the vessel while the vessel remains present enough not to be classified as simple possession or collapse.
 
-Divine **Shorefall** is the reverse direction. The vessel falls into the fragment's domain-depth or domain-adjacent Shore ecology, potentially dragging others with them. This may be experienced through a culturally legible divine architecture: Heaven, Hell, Purgatory, a judgment court, a demonic hunting ground, a sacred garden, a saintly field, or another domain-shell.
+Theophany is not a Covenant. A **Covenant** is a granted request for power. The vessel asks; the fragment concedes, refuses, narrows, or answers in its own form.
 
-The divine domain-shell is not automatically the Shore. It may be the corridor, mask, architecture, ecology, or interpretive shell through which the vessel experiences the Shore.
+A large Covenant may look Theophany-adjacent if it asks too much of the vessel. Covenants are not sliders that can simply be used at half strength. A Covenant is a concept granted by the fragment and must express in the form the fragment permits. If that concept demands too much aperture, it may kill the vessel, permanently damage them, or be mistaken for Theophany by observers.
+
+Classification is difficult. The Church can mistake powerful Divination for Theophany, and a final verdict requires investigation by the right theological authorities, often with Oracles or other Gift of Sight practitioners involved.
 
 ---
 
 ## Why the Distinction From Redactory Matters
 
-Redactory and Divination both use the Dive, which is why outsiders confuse them.
+Redactory and Divination can appear adjacent because both touch deep access architecture, and Apocachynthion theorists may model them with related terminology.
 
 But their mechanics differ at the core:
 
 - Redactory is self-generated routing through selected configuration.
-- Divination is coherence-sharing under domain pressure.
+- Divination is Pathway contact, Communion, and fusion under domain pressure.
 
 This leads to different failure states.
 
 A Redactor risks collapse, overreach, or catastrophic routing error.
 
-A vessel risks drift, saturation, overwrite, false sanctity, demonic predation, or Shore contact through the wrong domain door.
+A vessel risks drift, saturation, overwrite, false sanctity, demonic predation, or domain-depth contact that no ordinary doctrine can safely classify.
 
 ---
 
@@ -176,8 +223,10 @@ This includes:
 
 The theology may vary. The fusion mechanics remain real underneath it.
 
+Within the Church, recognized Diviners are exclusive to Obsidian. A Divine Vessel outside Obsidian is an unprocessed Presence-bearing person, not a recognized Church operative. Oracles are the sight-bearing Obsidian role associated with the Gift of Sight; they are not to be confused with Oracle, the Skyphon of Foresight.
+
 ---
 
 ## In One Sentence
 
-Divination is recursive fusion between a mortal vessel and divine coherence through the Dive, organized by domain compatibility and fragment hierarchy rather than by freeform magical technique.
+Divination is recursive fusion between a mortal vessel and divine coherence through the Pathway, stabilized by Communion and organized by domain compatibility and fragment hierarchy rather than by freeform magical technique.

@@ -172,7 +172,7 @@ Guardam o relato da Fracture em seu arquivo mais restrito e conhecem a escolha d
 
 A Igreja sabe que existe algo dentro da Lua — e sua teologia sobre o Intact Seal e a Fracture está estruturalmente correta sobre o que aconteceu. Mas o relato da Igreja descreve aquilo como ação divina e como a presença de um guardião sagrado.
 
-Não se sabe se os registros teológicos mais restritos do Arch-Patriarch contêm uma versão mais próxima da verdade.
+Não se sabe se os registros teológicos mais restritos do Primus contêm uma versão mais próxima da verdade.
 
 O Apocachynthion sabe que os Callings são reais, estruturais e conectados à posição orbital.
 

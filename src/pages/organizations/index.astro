@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getLocalizedCollection } from "../../i18n/content";
-import { localizedPath, type SiteLocale } from "../../i18n/config";
+import { localizedEntryPath, localizedPath, type SiteLocale } from "../../i18n/config";
 import { getArchiveNavLabels, sectionLabel } from "../../i18n/ui";
 import { getImageUrl } from "../../utils/optimized-images";
 
@@ -94,6 +94,7 @@ type Panel = {
   objectPosition: string;
   tags:           string[];
   fields:         Record<string, string>;
+  href:           string;
 };
 
 const buildPanel = async (e: Entry, idx: number): Promise<Panel> => {
@@ -120,6 +121,7 @@ const buildPanel = async (e: Entry, idx: number): Promise<Panel> => {
     objectPosition: OBJECT_POSITION[e.slug] || "center 40%",
     tags:           Array.isArray(d.tags) ? d.tags.slice(0, 5) : [],
     fields:         allFields,
+    href:           localizedEntryPath(locale, "organizations", e.slug),
   };
 };
 
@@ -239,12 +241,12 @@ const entryBasePath = localizedPath(locale, "/organizations/");
 
               <p class="org-spread__summary">{p.summary}</p>
 
-              <button class="org-spread__cta" type="button" data-open-entry={p.slug}>
+              <a class="org-spread__cta" href={p.href} data-astro-reload>
                 {copy.openDossier}
                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
                   <path d="M1 5.5h9M5.5 1l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </article>
@@ -878,6 +880,7 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     font-weight: 600;
     letter-spacing: 0.24em;
     text-transform: uppercase;
+    text-decoration: none;
     padding: 11px 24px;
     border-radius: 2px;
     cursor: pointer;

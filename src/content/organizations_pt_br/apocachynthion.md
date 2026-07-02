@@ -133,6 +133,8 @@ A camada **CAS** associada cuida de autenticacao, sincronizacao e controle de ac
 
 O **Point Register** e, portanto, uma questao legal e arquivistica. Registry Branch, avaliadores da Academy, Pagers e processos selados pelo Council podem enxergar partes diferentes da mesma historia do praticante. O Point torna essa segmentacao aplicavel sem fingir que a burocracia e a fonte da Redactory.
 
+Em registros teoricos de acesso restrito, o Index Theorem tambem preserva uma hipotese sobre **Shorewalking**. Isso nao e doutrina operacional comum. Dentro da associacao, fica no mesmo nivel de uma teoria especulativa de grande escala: util para explicar por que certos relatos de Dive-depth extremo deixam de se comportar como Redactory ordinaria, mas perigoso demais para ser ensinado como tecnica alcancavel.
+
 ### A Designação Inkless {#inkless}
 
 Além dos três ranks fundamentais, o Apocachynthion mantém uma designação paralela chamada **Inkless**. Um Redactor Inkless é alguém cujo perfil de habilidade não pode ser mapeado para nenhum domínio consistente através dos procedimentos padrões de avaliação — independentemente dos instrumentos ou avaliadores utilizados. Todo Redactor possui um caminho conceitual estabilizador através do qual sua prática opera. O caminho de um Inkless é real e comprovadamente existe. Ele apenas não pode ser lido externamente.

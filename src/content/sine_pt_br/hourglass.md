@@ -34,7 +34,7 @@ Ela não é uma empresa de segurança privada em nenhum sentido convencional do 
 
 O Threshold Command é a força terrestre da HourGlass. Ele conduz todo tipo de operação em solo, desde confrontos militares convencionais até operações especializadas de suporte ao [[apocachynthion|Apocachynthion]] ou ao trabalho de campo da [[the-church|Igreja]]. O Threshold Command mantém o maior efetivo permanente entre os três comandos e possui o histórico operacional mais extenso na fronteira norte.
 
-A doutrina padrão do Threshold Command integra infantaria convencional e formações blindadas com unidades de Redactors vinculadas ao Cloister e, em operações de fronteira, elementos do [[obsidian-rite|Obsidian Rite da Igreja]]. Os protocolos de integração foram desenvolvidos ao longo de gerações de cooperação entre essas instituições e já chegaram a um ponto em que quase funcionam sozinhos, sem necessidade de supervisão ativa.
+A doutrina padrão do Threshold Command integra infantaria convencional e formações blindadas com unidades de Redactors vinculadas ao Cloister e, em operações de fronteira, elementos do [[obsidian-rite|Obsidian da Igreja]]. Os protocolos de integração foram desenvolvidos ao longo de gerações de cooperação entre essas instituições e já chegaram a um ponto em que quase funcionam sozinhos, sem necessidade de supervisão ativa.
 
 No teatro terrestre da War of the Threshold, o Threshold Command normalmente atua como a força de presença sustentada — segurando a linha enquanto elementos especializados lidam com ameaças específicas.
 
