@@ -45,6 +45,83 @@ Use npm for project commands because this repository has `package-lock.json`.
 - Preserve existing slugs, frontmatter, routes, anchors, collection names, and locale structure unless the user asks for a change.
 - Prefer moving or reconciling existing material over deleting meaningful content.
 
+## Markdown Diagram System
+
+The site supports two special Markdown fenced block languages for lore diagrams. Do not use plain `txt`, `text`, or unlabeled code fences for doctrine trees, rank structures, cosmology maps, or other archive diagrams.
+
+### Supported fenced blocks
+
+Use `diagram` for small ASCII, hierarchy, doctrine, rank, and archive-style textual maps where spacing matters:
+
+````md
+```diagram
+THE SOVEREIGN
+|
+`-- THE TENFOLD FIRMAMENT
+    |
+    |-- THE SEVEN ANSWERS
+    |   `-- known, contacted Seraphim
+    |
+    `-- THE MISSING FIRMAMENT
+        `-- Seraphim named in scripture but not answering
+```
+````
+
+Use `mermaid` for visual graph diagrams, flowcharts, system relationships, cosmology layers, institutional structures, branching mechanics, or diagrams with arrows and clusters:
+
+````md
+```mermaid
+flowchart TD
+  Sovereign["THE SOVEREIGN"]
+  Tenfold["THE TENFOLD FIRMAMENT"]
+  Sovereign --> Tenfold
+```
+````
+
+### Rules
+
+- Use `diagram` for sacred, archival, raw hierarchy blocks.
+- Use `mermaid` for diagrams with multiple relationships or directional flow.
+- Keep diagram language clean and sparse.
+- Do not globally restyle ordinary code blocks.
+- Keep ordinary code blocks plain and readable.
+- Make diagrams readable on mobile; long `diagram` blocks should rely on horizontal scroll.
+- Test diagram pages in dark mode.
+- Do not invent lore or rename canonical terms while converting diagrams.
+
+### Example conversion
+
+Before:
+
+````md
+```text
+THE SOVEREIGN
+|
+`-- THE TENFOLD FIRMAMENT
+```
+````
+
+After:
+
+````md
+```diagram
+THE SOVEREIGN
+|
+`-- THE TENFOLD FIRMAMENT
+```
+````
+
+Mermaid version:
+
+````md
+```mermaid
+flowchart TD
+  Sovereign["THE SOVEREIGN"]
+  Tenfold["THE TENFOLD FIRMAMENT"]
+  Sovereign --> Tenfold
+```
+````
+
 ## Local Checks
 
 After changes, run the safest available local checks based on `package.json` scripts.

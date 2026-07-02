@@ -87,7 +87,7 @@ That distinction matters. A Lucent is not automatically a commander. A Prelate i
 
 Obsidian explains its restricted angelic taxonomy through **Seraphic Constellations**.
 
-```text
+```diagram
 Cynosure
 `-- the Seraphim itself
     `-- mortal vessel designation: Answered

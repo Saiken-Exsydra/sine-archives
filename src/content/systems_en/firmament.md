@@ -41,7 +41,7 @@ Of these ten, seven maintain stable, repeated, survivable contact with the Churc
 
 The remaining three are the **Missing Firmament**: preserved in scripture, absent from present regulated contact, and not publicly explained.
 
-```text
+```diagram
 THE SOVEREIGN
 |
 `-- THE TENFOLD FIRMAMENT
@@ -53,6 +53,22 @@ THE SOVEREIGN
         `-- Seraphim named in scripture but not answering
 ```
 
+```mermaid
+flowchart TD
+  Sovereign["THE SOVEREIGN"]
+  Tenfold["THE TENFOLD FIRMAMENT"]
+  Seven["THE SEVEN ANSWERS"]
+  Missing["THE MISSING FIRMAMENT"]
+  Stable["Seraphim with stable Church contact"]
+  Silent["Named in scripture, not answering"]
+
+  Sovereign --> Tenfold
+  Tenfold --> Seven
+  Seven --> Stable
+  Tenfold --> Missing
+  Missing --> Silent
+```
+
 The Church does not understand this as fragment ecology. It understands it as ordered heavenly attendance.
 
 ---
@@ -61,7 +77,7 @@ The Church does not understand this as fragment ecology. It understands it as or
 
 A **Seraphic Constellation** is the ordered Divination ecology descending from one Seraphim.
 
-```text
+```diagram
 SERAPHIC CONSTELLATION
 |
 `-- CYNOSURE
@@ -85,7 +101,7 @@ The **Cynosure** is the central star. **Cardinal Stars** are major descending fr
 
 An **Abyssal Constellation** is the corrupted or demonic counterpart to Seraphic ordering.
 
-```text
+```diagram
 ABYSSAL CONSTELLATION
 |
 `-- ABYSSARCH / BLACK NEXUS

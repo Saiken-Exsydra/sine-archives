@@ -41,7 +41,7 @@ Desses dez, sete mantêm contato estável, repetido e sobrevivível com a Igreja
 
 Os três restantes são o **Missing Firmament**: preservados nas escrituras, ausentes do contato regulado atual e não explicados publicamente.
 
-```text
+```diagram
 THE SOVEREIGN
 |
 `-- THE TENFOLD FIRMAMENT
@@ -61,7 +61,7 @@ A Igreja não entende isso como ecologia de fragmentos. Ela entende como assist�
 
 Uma **Seraphic Constellation** é a ecologia ordenada de Divination que descende de um Seraphim.
 
-```text
+```diagram
 SERAPHIC CONSTELLATION
 |
 `-- CYNOSURE
@@ -85,7 +85,7 @@ O **Cynosure** é a estrela central. **Cardinal Stars** são fragmentos descende
 
 Uma **Abyssal Constellation** é a contraparte corrompida ou demoníaca da ordenação Seraphic.
 
-```text
+```diagram
 ABYSSAL CONSTELLATION
 |
 `-- ABYSSARCH / BLACK NEXUS

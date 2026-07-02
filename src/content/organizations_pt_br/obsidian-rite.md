@@ -64,7 +64,7 @@ Essa distinção importa. Um Lucent não é automaticamente comandante. Um Prela
 
 Obsidian explica sua taxonomia divina por meio de **Seraphic Constellations**.
 
-```text
+```diagram
 Cynosure
 `-- o próprio Seraphim
     `-- designação mortal: Answered

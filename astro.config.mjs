@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import remarkArchiveHeadingIds from "./src/utils/remark-archive-heading-ids.mjs";
 import remarkArchiveWikiLinks from "./src/utils/remark-archive-wiki-links.mjs";
+import rehypeCodexDiagrams from "./src/utils/rehype-codex-diagrams.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +15,12 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
   markdown: {
+    syntaxHighlight: {
+      type: "shiki",
+      excludeLangs: ["diagram", "mermaid"],
+    },
     remarkPlugins: [remarkArchiveHeadingIds, remarkArchiveWikiLinks],
+    rehypePlugins: [rehypeCodexDiagrams],
   },
   vite: {
     resolve: {

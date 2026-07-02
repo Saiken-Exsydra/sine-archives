@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "../styles/transition-system.css";
+import "../styles/diagrams.css";
 import { ClientRouter } from "astro:transitions";
 import { getHtmlLang, type SiteLocale } from "../i18n/config";
 import {
@@ -58,6 +59,7 @@ const siteLocale = locale as SiteLocale;
     </script>
     <script>
       import "../scripts/transition-lifecycle";
+      import "../scripts/codex-diagrams";
     </script>
   </head>
 

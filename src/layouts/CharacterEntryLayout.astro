@@ -10,6 +10,7 @@ import CharacterFieldIcon from "../components/CharacterFieldIcon.astro";
 import "../styles/archive-refs.css";
 import remarkArchiveHeadingIds from "../utils/remark-archive-heading-ids.mjs";
 import remarkArchiveWikiLinks from "../utils/remark-archive-wiki-links.mjs";
+import rehypeCodexDiagrams from "../utils/rehype-codex-diagrams.mjs";
 import { localizedPath, type SiteLocale } from "../i18n/config";
 import { getImageKind, getImageUrl } from "../utils/optimized-images";
 import { getCharacterCodexRecord } from "../utils/character-codex";
@@ -161,6 +162,7 @@ async function renderCharacterMarkdown(markdown: string, sourcePath: string): Pr
     .use(remarkArchiveHeadingIds)
     .use(remarkArchiveWikiLinks)
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeCodexDiagrams)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process({ value: markdown, path: sourcePath });
 

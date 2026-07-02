@@ -249,7 +249,7 @@ Of these ten, the Church has stable, repeated, doctrinally regulated contact wit
 
 The remaining three are called **the Missing Firmament**. This does not mean the Church teaches them dead, fallen, or destroyed. It means only that scripture preserves them while present Church contact does not.
 
-```text
+```diagram
 THE SOVEREIGN
 |
 `-- THE TENFOLD FIRMAMENT
@@ -270,7 +270,7 @@ Within that constellation:
 * beneath the Cardinal Stars descend lesser angelic fragments called **Stellates**
 * beneath them appear smaller lights: **motes**, **sparks**, and **gleams**
 
-```text
+```diagram
 SERAPHIC CONSTELLATION
 |
 `-- CYNOSURE / CENTRAL STAR
