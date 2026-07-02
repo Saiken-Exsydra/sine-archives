@@ -83,7 +83,7 @@ function createMermaidFigure(source, id) {
       ariaLabel: "Mermaid diagram",
     },
     [
-      element("figcaption", { className: ["mermaid-diagram__label"] }, [text("SYSTEM MAP")]),
+      element("figcaption", { className: ["mermaid-diagram__label"] }, [text("Mermaid")]),
       element("div", { className: ["mermaid-diagram__viewport"], tabIndex: 0 }, [
         element("pre", { className: ["mermaid-diagram__source-pre"] }, [
           element("code", { className: ["mermaid-diagram__source-code"] }, [text(source)]),

@@ -59,8 +59,8 @@ flowchart TD
   Tenfold["THE TENFOLD FIRMAMENT"]
   Seven["THE SEVEN ANSWERS"]
   Missing["THE MISSING FIRMAMENT"]
-  Stable["Seraphim with stable Church contact"]
-  Silent["Named in scripture, not answering"]
+  Stable["known, contacted <br/> Seraphim"]
+  Silent["Seraphim named in <br/> scripture but not answering"]
 
   Sovereign --> Tenfold
   Tenfold --> Seven

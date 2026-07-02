@@ -23,7 +23,6 @@ function token(name: string, fallback: string) {
 
 function mermaidConfig() {
   const text = token("--text", "#e8e4dc");
-  const surface = token("--surface", "#0a0a14");
 
   return {
     startOnLoad: false,
@@ -31,23 +30,26 @@ function mermaidConfig() {
     theme: "base",
     themeVariables: {
       background: "transparent",
-      primaryColor: surface,
+      primaryColor: "#202020",
       primaryTextColor: text,
-      primaryBorderColor: "#9fb8d8",
-      lineColor: "#b9cfe8",
-      secondaryColor: "#080b14",
-      tertiaryColor: "#111827",
+      primaryBorderColor: "#a9a9a9",
+      lineColor: "#d0d0d0",
+      secondaryColor: "#202020",
+      tertiaryColor: "#151515",
       textColor: text,
-      mainBkg: surface,
-      nodeBorder: "#9fb8d8",
-      clusterBkg: "#080b14",
-      clusterBorder: "#6f8daa",
-      edgeLabelBackground: "#080b14",
+      mainBkg: "#202020",
+      nodeBorder: "#a9a9a9",
+      clusterBkg: "#0b0b0b",
+      clusterBorder: "#777777",
+      edgeLabelBackground: "#000000",
       fontFamily: "DM Sans, ui-sans-serif, system-ui, sans-serif",
     },
     flowchart: {
       curve: "basis",
       htmlLabels: false,
+      nodeSpacing: 60,
+      rankSpacing: 58,
+      padding: 18,
       useMaxWidth: true,
     },
   } as const;
