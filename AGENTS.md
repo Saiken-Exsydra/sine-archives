@@ -49,9 +49,11 @@ Use npm for project commands because this repository has `package-lock.json`.
 
 The site supports two special Markdown fenced block languages for lore diagrams. Do not use plain `txt`, `text`, or unlabeled code fences for doctrine trees, rank structures, cosmology maps, or other archive diagrams.
 
+The canonical visual template is the Mermaid black-stage diagram style: a flat black canvas, plain white `Mermaid` label, charcoal rectangular nodes, pale gray connectors, sparse text, and restrained archive chrome. Public lore hierarchy maps should normally use `mermaid` so they render in that style.
+
 ### Supported fenced blocks
 
-Use `diagram` for small ASCII, hierarchy, doctrine, rank, and archive-style textual maps where spacing matters:
+Use `diagram` only for small raw textual maps where exact monospace alignment matters more than visual nodes:
 
 ````md
 ```diagram
@@ -67,7 +69,7 @@ THE SOVEREIGN
 ```
 ````
 
-Use `mermaid` for visual graph diagrams, flowcharts, system relationships, cosmology layers, institutional structures, branching mechanics, or diagrams with arrows and clusters:
+Use `mermaid` for visual graph diagrams, hierarchy diagrams, flowcharts, system relationships, cosmology layers, institutional structures, branching mechanics, or diagrams with arrows and clusters:
 
 ````md
 ```mermaid
@@ -80,8 +82,9 @@ flowchart TD
 
 ### Rules
 
-- Use `diagram` for sacred, archival, raw hierarchy blocks.
-- Use `mermaid` for diagrams with multiple relationships or directional flow.
+- Use `mermaid` as the default for public visual diagrams and doctrine maps.
+- Use `diagram` only for intentionally raw archival text blocks where ASCII spacing is the point.
+- Follow the black-stage visual template: black canvas, gray lines, charcoal nodes, pale text, and sparse labels.
 - Keep diagram language clean and sparse.
 - Do not globally restyle ordinary code blocks.
 - Keep ordinary code blocks plain and readable.
@@ -101,7 +104,7 @@ THE SOVEREIGN
 ```
 ````
 
-After:
+After, for a raw archival text map:
 
 ````md
 ```diagram
@@ -111,7 +114,7 @@ THE SOVEREIGN
 ```
 ````
 
-Mermaid version:
+Preferred Mermaid version:
 
 ````md
 ```mermaid

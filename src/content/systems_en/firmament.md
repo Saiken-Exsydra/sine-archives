@@ -41,18 +41,6 @@ Of these ten, seven maintain stable, repeated, survivable contact with the Churc
 
 The remaining three are the **Missing Firmament**: preserved in scripture, absent from present regulated contact, and not publicly explained.
 
-```diagram
-THE SOVEREIGN
-|
-`-- THE TENFOLD FIRMAMENT
-    |
-    |-- THE SEVEN ANSWERS
-    |   `-- Seraphim with stable Church contact
-    |
-    `-- THE MISSING FIRMAMENT
-        `-- Seraphim named in scripture but not answering
-```
-
 ```mermaid
 flowchart TD
   Sovereign["THE SOVEREIGN"]
@@ -77,20 +65,26 @@ The Church does not understand this as fragment ecology. It understands it as or
 
 A **Seraphic Constellation** is the ordered Divination ecology descending from one Seraphim.
 
-```diagram
-SERAPHIC CONSTELLATION
-|
-`-- CYNOSURE
-    `-- the central Seraphic identity
-        |
-        |-- CARDINAL STARS
-        |   `-- major descending fragments
-        |
-        `-- STELLATES
-            `-- lesser angelic offices
-                |
-                `-- MOTES / SPARKS / GLEAMS
-                    `-- minor contacts, residues, or brief lights
+```mermaid
+flowchart TD
+  Constellation["SERAPHIC CONSTELLATION"]
+  Cynosure["CYNOSURE"]
+  Identity["the central Seraphic identity"]
+  Cardinal["CARDINAL STARS"]
+  Major["major descending fragments"]
+  Stellates["STELLATES"]
+  Lesser["lesser angelic offices"]
+  Motes["MOTES / SPARKS / GLEAMS"]
+  Minor["minor contacts, residues, or brief lights"]
+
+  Constellation --> Cynosure
+  Cynosure --> Identity
+  Identity --> Cardinal
+  Cardinal --> Major
+  Identity --> Stellates
+  Stellates --> Lesser
+  Lesser --> Motes
+  Motes --> Minor
 ```
 
 The **Cynosure** is the central star. **Cardinal Stars** are major descending fragments beneath it. **Stellates** are lesser offices or fragments. **Motes**, **Sparks**, and **Gleams** are smaller contact points, residues, or brief lights.
@@ -101,20 +95,26 @@ The **Cynosure** is the central star. **Cardinal Stars** are major descending fr
 
 An **Abyssal Constellation** is the corrupted or demonic counterpart to Seraphic ordering.
 
-```diagram
-ABYSSAL CONSTELLATION
-|
-`-- ABYSSARCH / BLACK NEXUS
-    `-- central corrupted identity
-        |
-        |-- BLACK STARS
-        |   `-- major descending fragments
-        |
-        `-- CINDERS
-            `-- lesser demonic fragments
-                |
-                `-- ASHES / BLACK MOTES
-                    `-- residual or minor contacts
+```mermaid
+flowchart TD
+  Constellation["ABYSSAL CONSTELLATION"]
+  Abyssarch["ABYSSARCH / BLACK NEXUS"]
+  Identity["central corrupted identity"]
+  BlackStars["BLACK STARS"]
+  Major["major descending fragments"]
+  Cinders["CINDERS"]
+  Lesser["lesser demonic fragments"]
+  Ashes["ASHES / BLACK MOTES"]
+  Residual["residual or minor contacts"]
+
+  Constellation --> Abyssarch
+  Abyssarch --> Identity
+  Identity --> BlackStars
+  BlackStars --> Major
+  Identity --> Cinders
+  Cinders --> Lesser
+  Lesser --> Ashes
+  Ashes --> Residual
 ```
 
 Demons proper are demonic presences or infernal entities. Demonic creatures are mortal, postmortem, bodily, or residual structures altered by demonic Presence or saturation. Vampires, ghouls, ghosts, werewolves, Hollowed, Worn, and Consumed cases are derivative afterstates or haunt-states, not automatically demons proper.

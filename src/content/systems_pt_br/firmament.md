@@ -41,16 +41,20 @@ Desses dez, sete mantêm contato estável, repetido e sobrevivível com a Igreja
 
 Os três restantes são o **Missing Firmament**: preservados nas escrituras, ausentes do contato regulado atual e não explicados publicamente.
 
-```diagram
-THE SOVEREIGN
-|
-`-- THE TENFOLD FIRMAMENT
-    |
-    |-- THE SEVEN ANSWERS
-    |   `-- Seraphim com contato estável com a Igreja
-    |
-    `-- THE MISSING FIRMAMENT
-        `-- Seraphim nomeados nas escrituras, mas que não respondem
+```mermaid
+flowchart TD
+  Sovereign["THE SOVEREIGN"]
+  Tenfold["THE TENFOLD FIRMAMENT"]
+  Seven["THE SEVEN ANSWERS"]
+  Missing["THE MISSING FIRMAMENT"]
+  Stable["Seraphim com contato <br/> estável com a Igreja"]
+  Silent["Seraphim nomeados nas <br/> escrituras, mas que não respondem"]
+
+  Sovereign --> Tenfold
+  Tenfold --> Seven
+  Seven --> Stable
+  Tenfold --> Missing
+  Missing --> Silent
 ```
 
 A Igreja não entende isso como ecologia de fragmentos. Ela entende como assistência celestial ordenada.
@@ -61,20 +65,26 @@ A Igreja não entende isso como ecologia de fragmentos. Ela entende como assist�
 
 Uma **Seraphic Constellation** é a ecologia ordenada de Divination que descende de um Seraphim.
 
-```diagram
-SERAPHIC CONSTELLATION
-|
-`-- CYNOSURE
-    `-- a identidade Seraphic central
-        |
-        |-- CARDINAL STARS
-        |   `-- fragmentos descendentes principais
-        |
-        `-- STELLATES
-            `-- ofícios angelicais menores
-                |
-                `-- MOTES / SPARKS / GLEAMS
-                    `-- contatos menores, resíduos ou luzes breves
+```mermaid
+flowchart TD
+  Constellation["SERAPHIC CONSTELLATION"]
+  Cynosure["CYNOSURE"]
+  Identity["a identidade Seraphic central"]
+  Cardinal["CARDINAL STARS"]
+  Major["fragmentos descendentes principais"]
+  Stellates["STELLATES"]
+  Lesser["ofícios angelicais menores"]
+  Motes["MOTES / SPARKS / GLEAMS"]
+  Minor["contatos menores, resíduos ou luzes breves"]
+
+  Constellation --> Cynosure
+  Cynosure --> Identity
+  Identity --> Cardinal
+  Cardinal --> Major
+  Identity --> Stellates
+  Stellates --> Lesser
+  Lesser --> Motes
+  Motes --> Minor
 ```
 
 O **Cynosure** é a estrela central. **Cardinal Stars** são fragmentos descendentes principais abaixo dele. **Stellates** são ofícios ou fragmentos menores. **Motes**, **Sparks** e **Gleams** são pontos de contato, resíduos ou luzes breves menores.
@@ -85,20 +95,26 @@ O **Cynosure** é a estrela central. **Cardinal Stars** são fragmentos descende
 
 Uma **Abyssal Constellation** é a contraparte corrompida ou demoníaca da ordenação Seraphic.
 
-```diagram
-ABYSSAL CONSTELLATION
-|
-`-- ABYSSARCH / BLACK NEXUS
-    `-- identidade corrompida central
-        |
-        |-- BLACK STARS
-        |   `-- fragmentos descendentes principais
-        |
-        `-- CINDERS
-            `-- fragmentos demoníacos menores
-                |
-                `-- ASHES / BLACK MOTES
-                    `-- contatos residuais ou menores
+```mermaid
+flowchart TD
+  Constellation["ABYSSAL CONSTELLATION"]
+  Abyssarch["ABYSSARCH / BLACK NEXUS"]
+  Identity["identidade corrompida central"]
+  BlackStars["BLACK STARS"]
+  Major["fragmentos descendentes principais"]
+  Cinders["CINDERS"]
+  Lesser["fragmentos demoníacos menores"]
+  Ashes["ASHES / BLACK MOTES"]
+  Residual["contatos residuais ou menores"]
+
+  Constellation --> Abyssarch
+  Abyssarch --> Identity
+  Identity --> BlackStars
+  BlackStars --> Major
+  Identity --> Cinders
+  Cinders --> Lesser
+  Lesser --> Ashes
+  Ashes --> Residual
 ```
 
 Demons propriamente ditos são presenças demoníacas ou entidades infernais. Criaturas demoníacas são estruturas mortais, pós-morte, corporais ou residuais alteradas por Presence demoníaca ou saturação. Vampiros, ghouls, ghosts, werewolves, casos Hollowed, Worn e Consumed são afterstates derivados ou haunt-states, não automaticamente demons propriamente ditos.

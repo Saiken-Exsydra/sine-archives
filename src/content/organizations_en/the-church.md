@@ -249,16 +249,20 @@ Of these ten, the Church has stable, repeated, doctrinally regulated contact wit
 
 The remaining three are called **the Missing Firmament**. This does not mean the Church teaches them dead, fallen, or destroyed. It means only that scripture preserves them while present Church contact does not.
 
-```diagram
-THE SOVEREIGN
-|
-`-- THE TENFOLD FIRMAMENT
-    |
-    |-- THE SEVEN ANSWERS
-    |   `-- known, contacted Seraphim
-    |
-    `-- THE MISSING FIRMAMENT
-        `-- Seraphim named in scripture but not answering
+```mermaid
+flowchart TD
+  Sovereign["THE SOVEREIGN"]
+  Tenfold["THE TENFOLD FIRMAMENT"]
+  Seven["THE SEVEN ANSWERS"]
+  Missing["THE MISSING FIRMAMENT"]
+  Known["known, contacted <br/> Seraphim"]
+  Named["Seraphim named in <br/> scripture but not answering"]
+
+  Sovereign --> Tenfold
+  Tenfold --> Seven
+  Seven --> Known
+  Tenfold --> Missing
+  Missing --> Named
 ```
 
 Each Seraphim possesses its own **Seraphic Constellation**.
@@ -270,22 +274,20 @@ Within that constellation:
 * beneath the Cardinal Stars descend lesser angelic fragments called **Stellates**
 * beneath them appear smaller lights: **motes**, **sparks**, and **gleams**
 
-```diagram
-SERAPHIC CONSTELLATION
-|
-`-- CYNOSURE / CENTRAL STAR
-    The Seraphim itself
-    |
-    |-- Cardinal Star I
-    |-- Cardinal Star II
-    |-- Cardinal Star III
-    |-- Cardinal Star IV
-    |-- Cardinal Star V
-    `-- Cardinal Star VI
-        |
-        `-- Stellates
-            |
-            `-- Motes / Sparks / Gleams
+```mermaid
+flowchart TD
+  Constellation["SERAPHIC CONSTELLATION"]
+  Cynosure["CYNOSURE / CENTRAL STAR"]
+  Seraphim["The Seraphim itself"]
+  Cardinals["CARDINAL STARS I-VI"]
+  Stellates["STELLATES"]
+  Lights["MOTES / SPARKS / GLEAMS"]
+
+  Constellation --> Cynosure
+  Cynosure --> Seraphim
+  Seraphim --> Cardinals
+  Cardinals --> Stellates
+  Stellates --> Lights
 ```
 
 This full taxonomy is not public teaching. Ordinary clergy are taught to speak of angels, saints, and the Sovereign's will. The deeper constellation doctrine is held by the Interior Council because unguarded fascination with the Seraphim has a long history of maiming vessels, priests, and houses of formation.

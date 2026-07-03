@@ -64,21 +64,32 @@ Essa distinção importa. Um Lucent não é automaticamente comandante. Um Prela
 
 Obsidian explica sua taxonomia divina por meio de **Seraphic Constellations**.
 
-```diagram
-Cynosure
-`-- o próprio Seraphim
-    `-- designação mortal: Answered
+```mermaid
+flowchart TD
+  Ladder["ESCADA SERÁFICA"]
+  Cynosure["CYNOSURE"]
+  Seraphim["o próprio Seraphim"]
+  Answered["designação mortal: Answered"]
+  Cardinal["CARDINAL STAR"]
+  Major["grande estrela governante abaixo do Seraphim"]
+  Lucent["designação mortal: Lucent"]
+  Stellate["STELLATE"]
+  Lesser["ofício angelical menor ou fragmento"]
+  Votary["designação mortal: Votary"]
+  Mote["MOTE / SPARK / GLEAM"]
+  Minor["contato menor, Beatification, ou fenômeno visionário"]
 
-Cardinal Star
-`-- grande estrela governante abaixo do Seraphim
-    `-- designação mortal: Lucent
-
-Stellate
-`-- ofício angelical menor ou fragmento
-    `-- designação mortal: Votary
-
-Mote / Spark / Gleam
-`-- contato menor, Beatification ou fenômeno visionário
+  Ladder --> Cynosure
+  Cynosure --> Seraphim
+  Seraphim --> Answered
+  Seraphim --> Cardinal
+  Cardinal --> Major
+  Major --> Lucent
+  Major --> Stellate
+  Stellate --> Lesser
+  Lesser --> Votary
+  Lesser --> Mote
+  Mote --> Minor
 ```
 
 Os **Seven Answers** são os sete Seraphim com contato estável com a Igreja.

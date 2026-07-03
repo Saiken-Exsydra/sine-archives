@@ -87,21 +87,32 @@ That distinction matters. A Lucent is not automatically a commander. A Prelate i
 
 Obsidian explains its restricted angelic taxonomy through **Seraphic Constellations**.
 
-```diagram
-Cynosure
-`-- the Seraphim itself
-    `-- mortal vessel designation: Answered
+```mermaid
+flowchart TD
+  Ladder["SERAPHIC LADDER"]
+  Cynosure["CYNOSURE"]
+  Seraphim["the Seraphim itself"]
+  Answered["mortal vessel designation: Answered"]
+  Cardinal["CARDINAL STAR"]
+  Major["major governing star beneath the Seraphim"]
+  Lucent["mortal vessel designation: Lucent"]
+  Stellate["STELLATE"]
+  Lesser["lesser angelic office or fragment"]
+  Diviner["common operational designation: Stellate Diviner"]
+  Mote["MOTE / SPARK / GLEAM"]
+  Minor["minor contact, Beatification, or visionary phenomenon"]
 
-Cardinal Star
-`-- major governing star beneath the Seraphim
-    `-- mortal vessel designation: Lucent
-
-Stellate
-`-- lesser angelic office or fragment
-    `-- common operational designation: Stellate Diviner
-
-Mote / Spark / Gleam
-`-- minor contact, Beatification, or visionary phenomenon
+  Ladder --> Cynosure
+  Cynosure --> Seraphim
+  Seraphim --> Answered
+  Seraphim --> Cardinal
+  Cardinal --> Major
+  Major --> Lucent
+  Major --> Stellate
+  Stellate --> Lesser
+  Lesser --> Diviner
+  Lesser --> Mote
+  Mote --> Minor
 ```
 
 The **Seven Answers** are the seven Seraphim with stable Church contact. The **Answered** are mortal vessels through whom one of those Seven Answers has answered.

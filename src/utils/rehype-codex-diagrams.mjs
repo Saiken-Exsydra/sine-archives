@@ -62,7 +62,7 @@ function createDiagramFigure(source) {
       ariaLabel: "Codex diagram",
     },
     [
-      element("figcaption", { className: ["codex-diagram__label"] }, [text("CODEX DIAGRAM")]),
+      element("figcaption", { className: ["codex-diagram__label"] }, [text("Codex Diagram")]),
       element("div", { className: ["codex-diagram__scroll"] }, [
         element("pre", { className: ["codex-diagram__pre"] }, [
           element("code", { className: ["codex-diagram__code"] }, [text(source)]),
