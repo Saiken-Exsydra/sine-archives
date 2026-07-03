@@ -79,6 +79,7 @@ function createMermaidFigure(source, id) {
       className: ["mermaid-diagram"],
       dataMermaidDiagram: "",
       dataMermaidId: id,
+      dataState: "loading",
       role: "group",
       ariaLabel: "Mermaid diagram",
     },

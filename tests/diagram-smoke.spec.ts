@@ -36,6 +36,21 @@ test("Markdown diagrams render as black-stage Mermaid panels", async ({ page }) 
   expect(errors).toEqual([]);
 });
 
+test("Obsidian ladder renders as a diagram instead of Mermaid source", async ({ page }) => {
+  const errors = trackClientErrors(page);
+
+  await page.goto("/organizations/obsidian-rite/", { waitUntil: "networkidle" });
+
+  const diagram = page.locator(".mermaid-diagram").first();
+  await expect(diagram).toBeVisible();
+  await expect(diagram.locator("svg")).toBeVisible();
+  await expect(diagram).toHaveAttribute("data-state", "rendered");
+
+  await expect(diagram.locator(".mermaid-diagram__viewport > pre")).toBeHidden();
+  await expect(diagram.locator(".mermaid-diagram__viewport")).not.toContainText("flowchart TD");
+  expect(errors).toEqual([]);
+});
+
 test("Markdown diagrams contain overflow on mobile", async ({ browser }) => {
   const context = await browser.newContext({
     viewport: { width: 390, height: 844 },
