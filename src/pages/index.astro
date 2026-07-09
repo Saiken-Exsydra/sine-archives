@@ -41,10 +41,17 @@ const indexSections = [
 ] as const;
 
 const totalPublic = indexSections.reduce((sum, s) => sum + s.count, 0);
+const notebookHref = "https://notebooklm.google.com/notebook/49ddad83-b67a-43aa-b35d-b76e94bb57e5";
+const showNotebookCta = false;
 const copy = locale === "pt-br"
   ? {
       heroSub: "Compêndio de registros classificados, avaliações de campo e estruturas teóricas originadas no Império de Synus e em suas estruturas cosmológicas adjacentes.",
       heroMeta: `ANO DE ARQUIVO 1127 · NÍVEL DE ACESSO: PÚBLICO · ${totalPublic} REGISTROS`,
+      notebookKicker: "Anexo de pesquisa",
+      notebookTitle: "Caderno vivo do mundo",
+      notebookText: "Abrir os arquivos-fonte no NotebookLM",
+      notebookAction: "Abrir NotebookLM",
+      notebookAria: "Abrir o NotebookLM dos arquivos do mundo em uma nova aba",
       scroll: "Índice",
       sections: "Seções Classificadas",
       sectionTag: "Seção",
@@ -54,6 +61,11 @@ const copy = locale === "pt-br"
   : {
       heroSub: "A compendium of classified records, field assessments, and theoretical frameworks originating from within the Empire of Synus and its adjacent cosmological structures.",
       heroMeta: `FILING YEAR 1127 · ACCESS LEVEL: PUBLIC · ${totalPublic} RECORDS`,
+      notebookKicker: "Research annex",
+      notebookTitle: "Living World Notebook",
+      notebookText: "Open the source files in NotebookLM",
+      notebookAction: "Open NotebookLM",
+      notebookAria: "Open the SiNE Archives NotebookLM world file in a new tab",
       scroll: "Index",
       sections: "Classified Sections",
       sectionTag: "Section",
@@ -129,6 +141,26 @@ const searchHref = localizedPath(locale, "/search/");
       <p class="hero__sub">{copy.heroSub}</p>
       <div class="hero__divider"></div>
       <p class="hero__meta">{copy.heroMeta}</p>
+      {showNotebookCta && (
+        <a
+          class="hero-notebook"
+          href={notebookHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={copy.notebookAria}
+        >
+          <span class="hero-notebook__seal" aria-hidden="true">LM</span>
+          <span class="hero-notebook__copy">
+            <span class="hero-notebook__kicker">{copy.notebookKicker}</span>
+            <span class="hero-notebook__title">{copy.notebookTitle}</span>
+            <span class="hero-notebook__text">{copy.notebookText}</span>
+          </span>
+          <span class="hero-notebook__action">
+            <span>{copy.notebookAction}</span>
+            <span class="hero-notebook__arrow" aria-hidden="true"></span>
+          </span>
+        </a>
+      )}
     </div>
 
     <div class="hero__scroll">
@@ -563,6 +595,150 @@ const searchHref = localizedPath(locale, "/search/");
     animation: fadeSlideUp 0.8s 1.8s ease both;
   }
 
+  .hero-notebook {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    width: min(100%, 520px);
+    margin-top: 4px;
+    padding: 14px 16px;
+    color: var(--text);
+    text-align: left;
+    text-decoration: none;
+    border: 1px solid rgba(176, 141, 60, 0.28);
+    border-radius: 3px;
+    background:
+      linear-gradient(90deg, rgba(176, 141, 60, 0.11), rgba(177, 58, 52, 0.08), rgba(10, 10, 20, 0.44)),
+      rgba(5, 4, 7, 0.42);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+      0 18px 48px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    animation: fadeSlideUp 0.8s 2.05s ease both;
+    transition:
+      border-color 0.28s ease,
+      background 0.28s ease,
+      box-shadow 0.28s ease,
+      transform 0.28s ease;
+  }
+
+  .hero-notebook::before,
+  .hero-notebook::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(176, 141, 60, 0.5), transparent);
+    opacity: 0.42;
+    pointer-events: none;
+  }
+
+  .hero-notebook::before { top: 0; }
+  .hero-notebook::after { bottom: 0; }
+
+  .hero-notebook:hover,
+  .hero-notebook:focus-visible {
+    border-color: rgba(176, 141, 60, 0.58);
+    background:
+      linear-gradient(90deg, rgba(176, 141, 60, 0.16), rgba(177, 58, 52, 0.12), rgba(10, 10, 20, 0.5)),
+      rgba(5, 4, 7, 0.56);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+      0 22px 64px rgba(0, 0, 0, 0.34),
+      0 0 46px rgba(176, 141, 60, 0.08);
+    transform: translateY(-2px);
+    outline: none;
+  }
+
+  .hero-notebook:focus-visible {
+    outline: 1px solid rgba(232, 228, 220, 0.5);
+    outline-offset: 4px;
+  }
+
+  .hero-notebook__seal {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(176, 141, 60, 0.42);
+    border-radius: 50%;
+    color: rgba(232, 228, 220, 0.64);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    background:
+      radial-gradient(circle, rgba(176, 141, 60, 0.18), transparent 66%),
+      rgba(5, 4, 7, 0.44);
+    box-shadow: inset 0 0 18px rgba(176, 141, 60, 0.1);
+  }
+
+  .hero-notebook__copy {
+    min-width: 0;
+    display: grid;
+    gap: 3px;
+  }
+
+  .hero-notebook__kicker,
+  .hero-notebook__action {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .hero-notebook__kicker {
+    color: rgba(176, 141, 60, 0.72);
+  }
+
+  .hero-notebook__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(232, 228, 220, 0.9);
+  }
+
+  .hero-notebook__text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.45;
+    color: rgba(232, 228, 220, 0.48);
+  }
+
+  .hero-notebook__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: rgba(232, 228, 220, 0.66);
+    white-space: nowrap;
+  }
+
+  .hero-notebook__arrow {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(177, 58, 52, 0.42);
+    border-radius: 50%;
+    background: rgba(177, 58, 52, 0.1);
+  }
+
+  .hero-notebook__arrow::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: rotate(45deg);
+  }
+
   .hero__scroll {
     position: absolute;
     bottom: 34px;
@@ -919,6 +1095,22 @@ const searchHref = localizedPath(locale, "/search/");
     .hero__logo { width: min(210px, 56vw); }
     .hero__sub { font-size: 13px; line-height: 1.7; }
     .hero__meta { font-size: 9px; letter-spacing: 0.22em; }
+    .hero-notebook {
+      grid-template-columns: auto minmax(0, 1fr);
+      width: min(100%, 420px);
+      gap: 13px;
+      padding: 13px 14px;
+    }
+    .hero-notebook__seal {
+      width: 38px;
+      height: 38px;
+    }
+    .hero-notebook__title { font-size: 21px; }
+    .hero-notebook__action {
+      grid-column: 2;
+      font-size: 8px;
+      letter-spacing: 0.18em;
+    }
     .hero__scroll { bottom: 22px; }
 
     .preview-panel { height: 42vh; min-height: 280px; }
@@ -941,6 +1133,10 @@ const searchHref = localizedPath(locale, "/search/");
     .observatory-gate__seam,
     .observatory-gate__glow,
     .observatory-gate__label {
+      transition: none;
+    }
+
+    .hero-notebook {
       transition: none;
     }
 

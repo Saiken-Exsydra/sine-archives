@@ -38,15 +38,58 @@ const CP1252_REVERSE = new Map([
 const TEXT_EXTENSIONS = new Set([
   ".astro",
   ".css",
+  ".html",
   ".js",
   ".json",
   ".md",
   ".mjs",
+  ".svg",
+  ".txt",
   ".ts",
   ".tsx",
+  ".xml",
+  ".yaml",
+  ".yml",
+]);
+
+const TEXT_FILENAMES = new Set([
+  ".editorconfig",
+  ".gitignore",
+  "public/_headers",
 ]);
 
 const TARGETS = [
+  "src",
+  "scripts",
+  "docs",
+  "skills",
+  "design-systems",
+  "The Archive",
+  "public",
+  "AGENTS.md",
+  "CONTENT_IMAGE_WORKFLOW.md",
+  "DESIGN_SYSTEM.md",
+  "OPEN_DESIGN.md",
+  "brand-spec.md",
+  "package.json",
+  "playwright.config.mjs",
+  "translation-glossary-pt-BR.md",
+  "tsconfig.json",
+];
+
+const IGNORED_DIRS = new Set([
+  ".astro",
+  ".git",
+  "dist",
+  "node_modules",
+  "test-results",
+]);
+
+const GENERATED_FILES = new Set([
+  "package-lock.json",
+]);
+
+const LEGACY_TARGETS = [
   path.join("src", "content"),
   path.join("src", "i18n"),
   path.join("src", "layouts"),
@@ -60,10 +103,14 @@ const CONTENT_ALLOWED_LOCALES = ["_pt_br", "pt-br-translation-guide"];
 const SUSPICIOUS_RE = /\u00c3[\u0080-\u00bf]|\u00c2(?=[^A-Za-z\u00c0-\u00ff]|$).|\u00e2[\u0080-\u00bf\u2018-\u201f\u2020-\u2022\u20ac]|\ufeff|\ufffd/u;
 
 function isTargetFile(relPath) {
+  const normalized = relPath.replaceAll(path.sep, "/");
+  if (GENERATED_FILES.has(normalized)) return false;
+  if (TEXT_FILENAMES.has(normalized)) return true;
+
   const ext = path.extname(relPath).toLowerCase();
   if (!TEXT_EXTENSIONS.has(ext)) return false;
 
-  if (relPath.startsWith(path.join("src", "content"))) {
+  if (process.argv.includes("--legacy-targets") && relPath.startsWith(path.join("src", "content"))) {
     return CONTENT_ALLOWED_LOCALES.some((segment) => relPath.includes(segment));
   }
 
@@ -80,7 +127,7 @@ function walk(dirPath, relBase = "") {
 
   const out = [];
   for (const entry of fs.readdirSync(fullPath, { withFileTypes: true })) {
-    if (entry.name === "node_modules" || entry.name === ".git" || entry.name === "dist" || entry.name === ".astro") {
+    if (IGNORED_DIRS.has(entry.name)) {
       continue;
     }
     const nextRel = path.join(dirPath, entry.name);
@@ -99,7 +146,7 @@ function countMatches(str) {
 }
 
 function replacementCount(str) {
-  return (str.match(/�/g) ?? []).length;
+  return (str.match(/\uFFFD/g) ?? []).length;
 }
 
 function score(str) {
@@ -139,10 +186,26 @@ function repairLine(line) {
 
 function processFile(relPath, mode) {
   const absPath = path.join(ROOT, relPath);
-  const original = fs.readFileSync(absPath, "utf8");
+  const rawFile = fs.readFileSync(absPath);
+  const rawHadBom = rawFile.length >= 3 && rawFile[0] === 0xef && rawFile[1] === 0xbb && rawFile[2] === 0xbf;
+  let original;
+  try {
+    original = decoder.decode(rawFile);
+  } catch {
+    return {
+      changed: false,
+      findings: [{ line: 1, preview: "File is not valid UTF-8." }],
+    };
+  }
   const normalized = original.replace(/^\uFEFF/, "");
-  const lines = normalized.split(/\r?\n/);
-  const repairedLines = lines.map(repairLine);
+  const segments = normalized.match(/[^\r\n]*(?:\r\n|\n|\r|$)/g) ?? [normalized];
+  const repairedSegments = segments.map((segment) => {
+    if (segment === "") return segment;
+    const ending = segment.match(/\r\n|\n|\r$/u)?.[0] ?? "";
+    const body = ending ? segment.slice(0, -ending.length) : segment;
+    return `${repairLine(body)}${ending}`;
+  });
+  const repairedLines = repairedSegments.join("").split(/\r\n|\n|\r/);
 
   const findings = [];
   repairedLines.forEach((line, index) => {
@@ -151,8 +214,8 @@ function processFile(relPath, mode) {
     }
   });
 
-  const repaired = repairedLines.join("\n");
-  const changed = repaired !== original;
+  const repaired = repairedSegments.join("");
+  const changed = repaired !== normalized || rawHadBom;
 
   if (mode === "fix" && changed) {
     fs.writeFileSync(absPath, repaired, "utf8");
@@ -162,7 +225,8 @@ function processFile(relPath, mode) {
 }
 
 const mode = process.argv.includes("--fix") ? "fix" : "check";
-const files = TARGETS.flatMap((target) => walk(target));
+const activeTargets = process.argv.includes("--legacy-targets") ? LEGACY_TARGETS : TARGETS;
+const files = [...new Set(activeTargets.flatMap((target) => walk(target)))];
 
 const changedFiles = [];
 const remainingIssues = [];

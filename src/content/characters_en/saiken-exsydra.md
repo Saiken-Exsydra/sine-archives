@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Sai'ken Ex'sydra"
 type: "Character"
 age: "25 (as of 2200)"

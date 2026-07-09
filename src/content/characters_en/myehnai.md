@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Myehnai"
 type: "Skyphon"
 rank: "Light Regulation"

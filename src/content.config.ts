@@ -1,7 +1,17 @@
 import { defineCollection, z } from "astro:content";
 import { CONTENT_KEYS } from "./content-keys";
 
-const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) =>
+const pointProfileSchema = z.object({
+  status: z.string().optional(),
+  cas_access: z.string().optional(),
+  leaf_permissions: z.string().optional(),
+  register_access: z.string().optional(),
+});
+
+const createEntrySchema = (
+  { image }: { image: () => z.ZodTypeAny },
+  { allowPointProfile = false }: { allowPointProfile?: boolean } = {}
+) =>
   z.object({
     title: z.string(),
     type: z.string(),
@@ -70,12 +80,7 @@ const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) =>
       label: z.string().optional(),
       text: z.string(),
     }).optional(),
-    point_profile: z.object({
-      status: z.string().optional(),
-      cas_access: z.string().optional(),
-      leaf_permissions: z.string().optional(),
-      register_access: z.string().optional(),
-    }).optional(),
+    point_profile: allowPointProfile ? pointProfileSchema.optional() : z.never().optional(),
     // Allow incremental rollout: migrated entries use Astro images, untouched ones keep legacy URLs.
     image: z.union([image(), z.string()]).optional(),
     hero_image: z.union([image(), z.string()]).optional(),
@@ -89,7 +94,11 @@ const createEntrySchema = ({ image }: { image: () => z.ZodTypeAny }) =>
 
 export const collections = Object.fromEntries(
   CONTENT_KEYS.flatMap((key) => [
-    [`${key}_en`, defineCollection({ schema: createEntrySchema })],
-    [`${key}_pt_br`, defineCollection({ schema: createEntrySchema })],
+    [`${key}_en`, defineCollection({
+      schema: ({ image }) => createEntrySchema({ image }, { allowPointProfile: key === "characters" }),
+    })],
+    [`${key}_pt_br`, defineCollection({
+      schema: ({ image }) => createEntrySchema({ image }, { allowPointProfile: key === "characters" }),
+    })],
   ])
 );

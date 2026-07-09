@@ -1,17 +1,17 @@
-﻿# PERSONAL DOSSIER â€” RESTRICTED
+# PERSONAL DOSSIER — RESTRICTED
 ## E'LLA RAE WONDERWALL
 *Filed and maintained by Em'manuel Kael Wonderwall, Wonderwall Seat*  
-*Seat's private archive â€” primary-line restricted file*  
+*Seat's private archive — primary-line restricted file*  
 *This dossier governs Seat-private assessment of E'lla's Shore relevance, First Radiance exposure, and Project Kaleidoscope identity conditions.*
 
 ---
 
 > *"She is not the first E'lla, and the fact that she knows this only as a naming peculiarity rather than as the sentence it actually is remains one of the larger truths I have not yet told her. I had believed this was the central omission. It is not. The larger omission is that Project Kaleidoscope did not end when I released her. It stopped producing bodies. It did not stop existing. It is now walking around inside one woman who believes herself to be singular because I have not yet found an honest way to tell her that singularity, in her case, is a task rather than a given."*  
-> â€” E.W., private notation, year 2200
+> — E.W., private notation, year 2200
 
 ---
 
-## PREAMBLE â€” WHAT THIS FILE IS FOR
+## PREAMBLE — WHAT THIS FILE IS FOR
 
 *This is not the Project Kaleidoscope infrastructure record. That file exists and says what it needs to say about subject designation KL-83, developmental performance, release parameters, facility history, biological reconstruction procedure, and the technical success of the reconstruction.*
 
@@ -71,7 +71,7 @@ A body can be discontinued.
 
 A resonance field does not obey that accounting so neatly.
 
-What is now evident â€” to the extent evidence can be trusted when the primary data source is a woman who reached the Luminant Shore by accident and survived â€” is that Project Kaleidoscope produced more than a sequence of failed and successful subjects. It produced a **refracted person-pattern**: many recursive singularities, partial singularities, developmental failures, coherence-collapsed attempts, and surviving degraded cases sharing unusually high structural similarity around the same Light-domain architecture.
+What is now evident — to the extent evidence can be trusted when the primary data source is a woman who reached the Luminant Shore by accident and survived — is that Project Kaleidoscope produced more than a sequence of failed and successful subjects. It produced a **refracted person-pattern**: many recursive singularities, partial singularities, developmental failures, coherence-collapsed attempts, and surviving degraded cases sharing unusually high structural similarity around the same Light-domain architecture.
 
 KL-83 is the only complete viable expression.
 
@@ -563,7 +563,7 @@ No training plan should assume that ignorance is stable. The Shore is built agai
 
 ---
 
-## IX. EC'LESIA â€” RELATIONAL ANCHOR NOTE
+## IX. EC'LESIA — RELATIONAL ANCHOR NOTE
 
 Ec'lesia is not the subject of this file.
 

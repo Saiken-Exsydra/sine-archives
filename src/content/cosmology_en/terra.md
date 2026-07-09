@@ -7,11 +7,6 @@ status: "public"
 created: "2026-03-30"
 updated: "2026-06-26"
 image: "../../assets/uploads/cosm-terra.png"
-point_profile:
-  status: ""
-  cas_access: ""
-  leaf_permissions: ""
-  register_access: ""
 ---
 
 > *"A world orbiting a black hole. Tidally locked. Perpetually half-dark. Somehow inhabited. The people who built it knew exactly what they were doing. The people who live on it no longer know how much of the sky was once part of the machine."*
