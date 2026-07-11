@@ -21,6 +21,7 @@
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
       const mobileQuery = window.matchMedia("(max-width: 720px)");
+      const frameInterval = 1000 / 30;
       const state = {
         width: 0,
         height: 0,
@@ -31,8 +32,11 @@
         pulses: [],
         frame: 0,
         raf: 0,
+        lastFrame: 0,
         hidden: document.hidden,
+        visible: true,
         reduced: reduceMotion.matches,
+        renderedOnce: false,
       };
 
       function rand(min, max) {
@@ -81,6 +85,8 @@
         canvas.style.height = `${nextSize}px`;
         ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
         seedParticles();
+        state.renderedOnce = false;
+        if (!state.hidden && state.visible && !state.raf) state.raf = requestAnimationFrame(draw);
       }
 
       function addPulse(angle, strength = 0.7) {
@@ -95,7 +101,21 @@
 
       function onVisibility() {
         state.hidden = document.hidden;
-        if (!state.hidden && !state.raf) state.raf = requestAnimationFrame(draw);
+        if (state.hidden && state.raf) { cancelAnimationFrame(state.raf); state.raf = 0; }
+        if (!state.hidden && state.visible && !state.raf) state.raf = requestAnimationFrame(draw);
+      }
+
+      function onReducedMotionChange() {
+        state.reduced = reduceMotion.matches;
+        state.renderedOnce = false;
+        if (state.raf) cancelAnimationFrame(state.raf);
+        state.raf = state.hidden || !state.visible ? 0 : requestAnimationFrame(draw);
+      }
+
+      function onMobileChange() {
+        seedParticles();
+        state.renderedOnce = false;
+        if (!state.hidden && state.visible && !state.raf) state.raf = requestAnimationFrame(draw);
       }
 
       function drawBackground(cx, cy, radius, t) {
@@ -264,7 +284,13 @@
 
       function draw(t) {
         state.raf = 0;
-        if (state.hidden) return;
+        if (state.hidden || !state.visible) return;
+        if (state.reduced && state.renderedOnce) return;
+        if (!state.reduced && t - state.lastFrame < frameInterval) {
+          state.raf = requestAnimationFrame(draw);
+          return;
+        }
+        state.lastFrame = t;
 
         const cx = state.width / 2;
         const cy = state.height / 2;
@@ -283,26 +309,34 @@
         drawParticles();
         drawCore(cx, cy, radius, t);
 
-        state.raf = requestAnimationFrame(draw);
+        state.renderedOnce = true;
+        if (!state.reduced) state.raf = requestAnimationFrame(draw);
       }
 
       const resizeObserver = new ResizeObserver(resize);
+      const visibilityObserver = new IntersectionObserver((entries) => {
+        state.visible = entries.some((entry) => entry.isIntersecting);
+        if (!state.visible && state.raf) { cancelAnimationFrame(state.raf); state.raf = 0; }
+        if (state.visible && !state.hidden && !state.raf) state.raf = requestAnimationFrame(draw);
+      }, { rootMargin: "120px" });
       resizeObserver.observe(host);
+      visibilityObserver.observe(host);
       window.addEventListener("archive:sphere-pulse", onPulse);
       document.addEventListener("visibilitychange", onVisibility);
-      reduceMotion.addEventListener?.("change", () => {
-        state.reduced = reduceMotion.matches;
-      });
-      mobileQuery.addEventListener?.("change", seedParticles);
+      reduceMotion.addEventListener?.("change", onReducedMotionChange);
+      mobileQuery.addEventListener?.("change", onMobileChange);
 
       resize();
-      state.raf = requestAnimationFrame(draw);
 
       return () => {
         resizeObserver.disconnect();
+        visibilityObserver.disconnect();
         window.removeEventListener("archive:sphere-pulse", onPulse);
         document.removeEventListener("visibilitychange", onVisibility);
+        reduceMotion.removeEventListener?.("change", onReducedMotionChange);
+        mobileQuery.removeEventListener?.("change", onMobileChange);
         if (state.raf) cancelAnimationFrame(state.raf);
+        state.raf = 0;
       };
     }).filter(Boolean);
 

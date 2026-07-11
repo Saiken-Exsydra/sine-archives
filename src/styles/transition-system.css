@@ -1,12 +1,12 @@
 :root {
-  --page-transition-duration: 720ms;
+  --page-transition-duration: 480ms;
   --page-transition-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
-  --handle-transition-duration: 980ms;
-  --handle-transition-return-duration: 900ms;
-  --character-dossier-transition-duration: 860ms;
-  --observatory-system-transition-duration: 1180ms;
-  --redactory-transition-duration: 1040ms;
-  --search-vt-duration: 1800ms;
+  --handle-transition-duration: 720ms;
+  --handle-transition-return-duration: 640ms;
+  --character-dossier-transition-duration: 680ms;
+  --observatory-system-transition-duration: 820ms;
+  --redactory-transition-duration: 760ms;
+  --search-vt-duration: 1050ms;
   --search-vt-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
   --transition-bg: #050407;
 }

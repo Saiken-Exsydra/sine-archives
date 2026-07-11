@@ -270,41 +270,6 @@ const searchHref = localizedPath(locale, "/search/");
     return () => controller.abort();
   });
 
-  window.registerPageInit?.("edge-gate-transition", () => {
-    const gates = document.querySelectorAll(".observatory-gate");
-    if (!gates.length) return;
-
-    const controller = new AbortController();
-
-    const warmed = new WeakSet();
-    const warmGate = (gate) => {
-      if (!(gate instanceof HTMLAnchorElement) || warmed.has(gate)) return;
-      warmed.add(gate);
-      try {
-        fetch(gate.href, {
-          credentials: "same-origin",
-          mode: "same-origin",
-          cache: "force-cache",
-        }).catch(() => {});
-      } catch {}
-    };
-
-    gates.forEach((gate) => {
-      warmGate(gate);
-
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(() => warmGate(gate), { timeout: 1200 });
-      } else {
-        window.setTimeout(() => warmGate(gate), 300);
-      }
-
-      gate.addEventListener("pointerdown", () => warmGate(gate), { signal: controller.signal });
-      gate.addEventListener("pointerenter", () => warmGate(gate), { signal: controller.signal });
-      gate.addEventListener("focus", () => warmGate(gate), { signal: controller.signal });
-    });
-
-    return () => controller.abort();
-  });
 </script>
 
 <style>

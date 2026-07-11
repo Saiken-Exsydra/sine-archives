@@ -40,6 +40,7 @@ window.registerPageInit?.("my-page-key", () => {
 ```
 
 That hook runs on first load and again after Astro client-side navigation.
+Page initializers are route-scoped and removed after leaving their route. Shared persisted controllers must opt in with `{ persistent: true }`. Navigation must never await image warming; rely on Astro prefetching instead.
 
 ## How Search flicker was fixed
 
@@ -99,6 +100,8 @@ If you add a new large motion effect:
 - Do not scatter `::view-transition` CSS across multiple files.
 - Do not rely only on `DOMContentLoaded` for page features that must survive Astro navigation.
 - Do not bring back manual click interception for Search unless whole transition architecture changes.
+- Do not add parallel fetch warmers for links already using Astro prefetching.
+- Remove media-query listeners, observers, timers, and animation frames in cleanup.
 
 ## Quick checklist for Codex
 

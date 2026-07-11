@@ -757,7 +757,7 @@ const copy = locale === "pt-br"
     window.addEventListener("pageshow", window[initKey]);
   }
 
-  window.registerPageInit?.("music-player", window[initKey] || initializeMusicPlayer);
+  window.registerPageInit?.("music-player", window[initKey] || initializeMusicPlayer, { persistent: true });
 </script>
 
 <style>

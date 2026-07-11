@@ -12,6 +12,7 @@
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const mobileQuery = window.matchMedia("(max-width: 720px)");
+    const frameInterval = 1000 / 30;
     const state = {
       width: 0,
       height: 0,
@@ -34,8 +35,7 @@
     }
 
     function rootPointFromViewport(x, y) {
-      const rootRect = root.getBoundingClientRect();
-      return { x: x - rootRect.left, y: y - rootRect.top };
+      return { x, y };
     }
 
     function readGeometry() {
@@ -47,10 +47,9 @@
         centerY: state.centerY,
         fieldRadius: state.fieldRadius,
       };
-      const rootRect = root.getBoundingClientRect();
       const apertureRect = aperture.getBoundingClientRect();
-      state.width = Math.max(1, Math.ceil(rootRect.width));
-      state.height = Math.max(window.innerHeight, Math.ceil(root.scrollHeight || rootRect.height));
+      state.width = Math.max(1, window.innerWidth);
+      state.height = Math.max(1, window.innerHeight);
       state.dpr = mobileQuery.matches ? 0.72 : 0.54;
       const canvasWidth = Math.floor(state.width * state.dpr);
       const canvasHeight = Math.floor(state.height * state.dpr);
@@ -237,7 +236,7 @@
       state.raf = 0;
       if (state.hidden) return;
       if (state.reduced && state.renderedOnce) return;
-      if (!state.reduced && t - state.lastFrame < 20) {
+      if (!state.reduced && t - state.lastFrame < frameInterval) {
         state.raf = requestAnimationFrame(draw);
         return;
       }
@@ -334,33 +333,42 @@
 
     function onVisibility() {
       state.hidden = document.hidden;
+      if (state.hidden && state.raf) { cancelAnimationFrame(state.raf); state.raf = 0; }
       if (!state.hidden && !state.raf) state.raf = requestAnimationFrame(draw);
     }
+
+    function onReducedMotionChange() {
+      state.reduced = reduceMotion.matches;
+      state.renderedOnce = false;
+      if (state.raf) cancelAnimationFrame(state.raf);
+      state.raf = state.hidden ? 0 : requestAnimationFrame(draw);
+    }
+
+    function onMobileChange() { resize(); }
 
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(root);
     resizeObserver.observe(aperture);
     document.addEventListener("visibilitychange", onVisibility);
-    reduceMotion.addEventListener?.("change", () => {
-      state.reduced = reduceMotion.matches;
-      state.renderedOnce = false;
-      if (!state.raf) state.raf = requestAnimationFrame(draw);
-    });
-    mobileQuery.addEventListener?.("change", resize);
+    reduceMotion.addEventListener?.("change", onReducedMotionChange);
+    mobileQuery.addEventListener?.("change", onMobileChange);
 
     resize();
 
     return () => {
       resizeObserver.disconnect();
       document.removeEventListener("visibilitychange", onVisibility);
+      reduceMotion.removeEventListener?.("change", onReducedMotionChange);
+      mobileQuery.removeEventListener?.("change", onMobileChange);
       if (state.raf) cancelAnimationFrame(state.raf);
+      state.raf = 0;
     };
   });
 </script>
 
 <style>
   .archive-field {
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: 1;
     width: 100%;

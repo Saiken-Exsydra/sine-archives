@@ -53,8 +53,8 @@ const siteLocale = locale as SiteLocale;
     <ClientRouter />
     <script is:inline>
       window.__sinePendingPageInits = window.__sinePendingPageInits || [];
-      window.registerPageInit = window.registerPageInit || function registerPageInit(key, init) {
-        window.__sinePendingPageInits.push([key, init]);
+      window.registerPageInit = window.registerPageInit || function registerPageInit(key, init, options) {
+        window.__sinePendingPageInits.push([key, init, options]);
       };
     </script>
     <script>

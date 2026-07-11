@@ -49,9 +49,9 @@ Canonical transition variables live in `src/styles/transition-system.css`.
 
 ```css
 :root {
-  --page-transition-duration: 460ms;
+  --page-transition-duration: 480ms;
   --page-transition-ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --search-vt-duration: 1500ms;
+  --search-vt-duration: 1050ms;
   --search-vt-ease: cubic-bezier(.16, 1, .3, 1);
   --transition-bg: #050407;
 }

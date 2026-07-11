@@ -16,7 +16,9 @@ import {
 
 type PageCleanup = () => void;
 type PageInit = () => void | PageCleanup;
-type PendingPageInit = [key: string, init: PageInit];
+type PageInitOptions = { persistent?: boolean };
+type PendingPageInit = [key: string, init: PageInit, options?: PageInitOptions];
+type PageInitializerRecord = { init: PageInit; persistent: boolean; route: string };
 
 type SearchIntent = {
   type: "search";
@@ -67,6 +69,7 @@ type TransitionDebugEvent = {
   from: string;
   intent: string | null;
   navigationType: string;
+  navigationId: number;
   timestamp: number;
   to: string;
 };
@@ -75,7 +78,7 @@ type TransitionRuntimeState = {
   activeIntent: TransitionIntent | null;
   cleanups: Map<string, PageCleanup>;
   debugEvents: TransitionDebugEvent[];
-  initializers: Map<string, PageInit>;
+  initializers: Map<string, PageInitializerRecord>;
   isPageReady: boolean;
   lastIntent: TransitionIntent | null;
   lastNavigation: {
@@ -85,6 +88,7 @@ type TransitionRuntimeState = {
     to: string;
   } | null;
   pendingIntent: TransitionIntent | null;
+  navigationId: number;
   warmedRoutes: Set<string>;
 };
 
@@ -93,17 +97,17 @@ declare global {
     __sinePendingPageInits?: PendingPageInit[];
     __sineTransitionLifecycleInstalled?: boolean;
     __sineTransitionState?: TransitionRuntimeState;
-    registerPageInit?: (key: string, init: PageInit) => void;
+    registerPageInit?: (key: string, init: PageInit, options?: PageInitOptions) => void;
   }
 }
 
 const DEBUG_PREFIX = "[sine-transitions]";
-const SEARCH_TRANSITION_DURATION = 1800;
+const SEARCH_TRANSITION_DURATION = 1050;
 const SEARCH_TRANSITION_EASING = "cubic-bezier(0.2, 0.82, 0.22, 1)";
 const TRANSITION_PREPARE_TIMEOUT = 700;
 const ROUTE_WARMUP_TIMEOUT = 900;
-const HANDLE_INTENT_CLEAR_DELAY = 1300;
-const OBSERVATORY_SYMBOL_RESET_DELAY = 1600;
+const HANDLE_INTENT_CLEAR_DELAY = 950;
+const OBSERVATORY_SYMBOL_RESET_DELAY = 1100;
 const STATE_CLASSES = [
   "is-preparing-transition",
   "is-swap-pending",
@@ -123,6 +127,7 @@ function getRuntimeState(): TransitionRuntimeState {
       lastIntent: null,
       lastNavigation: null,
       pendingIntent: null,
+      navigationId: 0,
       warmedRoutes: new Set(),
     };
   }
@@ -139,6 +144,7 @@ function logTransitionEvent(event: string, detail?: Partial<TransitionDebugEvent
     from: detail?.from ?? nav?.from ?? location.pathname,
     intent: detail?.intent ?? state.lastIntent?.type ?? null,
     navigationType: detail?.navigationType ?? nav?.navigationType ?? "traverse",
+    navigationId: detail?.navigationId ?? state.navigationId,
     timestamp: performance.now(),
     to: detail?.to ?? nav?.to ?? location.pathname,
   };
@@ -223,7 +229,7 @@ function cleanupInitializers() {
   state.cleanups.clear();
 }
 
-function runInitializer(key: string, init: PageInit) {
+function runInitializer(key: string, record: PageInitializerRecord) {
   const state = getRuntimeState();
   const existingCleanup = state.cleanups.get(key);
   if (existingCleanup) {
@@ -234,7 +240,7 @@ function runInitializer(key: string, init: PageInit) {
     }
   }
 
-  const cleanup = init();
+  const cleanup = record.init();
   if (typeof cleanup === "function") {
     state.cleanups.set(key, cleanup);
   } else {
@@ -244,17 +250,30 @@ function runInitializer(key: string, init: PageInit) {
 
 function runInitializers() {
   const state = getRuntimeState();
-  for (const [key, init] of state.initializers) {
-    runInitializer(key, init);
+  for (const [key, record] of state.initializers) {
+    runInitializer(key, record);
   }
 }
 
-export function registerPageInit(key: string, init: PageInit) {
+function currentRoute() {
+  return document.documentElement.dataset.route || location.pathname;
+}
+
+function pruneInactiveInitializers() {
   const state = getRuntimeState();
-  state.initializers.set(key, init);
+  const route = currentRoute();
+  for (const [key, record] of state.initializers) {
+    if (!record.persistent && record.route !== route) state.initializers.delete(key);
+  }
+}
+
+export function registerPageInit(key: string, init: PageInit, options: PageInitOptions = {}) {
+  const state = getRuntimeState();
+  const record = { init, persistent: options.persistent === true, route: currentRoute() };
+  state.initializers.set(key, record);
 
   if (state.isPageReady) {
-    runInitializer(key, init);
+    runInitializer(key, record);
   }
 }
 
@@ -263,8 +282,8 @@ function flushPendingRegistrations() {
   if (!queue?.length) return;
 
   while (queue.length > 0) {
-    const [key, init] = queue.shift()!;
-    registerPageInit(key, init);
+    const [key, init, options] = queue.shift()!;
+    registerPageInit(key, init, options);
   }
 }
 
@@ -575,17 +594,10 @@ function animateSearchReveal(intent: SearchIntent) {
     {
       clipPath: [
         `circle(0px at ${origin})`,
-        `circle(${radius * 0.22}px at ${origin})`,
-        `circle(${radius * 0.62}px at ${origin})`,
+        `circle(${radius * 0.42}px at ${origin})`,
         `circle(${radius}px at ${origin})`,
       ],
-      filter: [
-        "brightness(0.82) saturate(0.9)",
-        "brightness(0.9) saturate(1)",
-        "brightness(1) saturate(1.08)",
-        "brightness(1) saturate(1)",
-      ],
-      opacity: [1, 1, 1, 1],
+      opacity: [0.86, 1, 1],
     },
     {
       duration: SEARCH_TRANSITION_DURATION,
@@ -597,14 +609,8 @@ function animateSearchReveal(intent: SearchIntent) {
 
   document.documentElement.animate(
     {
-      filter: [
-        "brightness(1)",
-        "brightness(0.82)",
-        "brightness(0.58)",
-        "brightness(0.35)",
-      ],
-      opacity: [1, 0.72, 0.4, 0.18],
-      transform: ["scale(1)", "scale(0.997)", "scale(0.992)", "scale(0.985)"],
+      opacity: [1, 0.62, 0.18],
+      transform: ["scale(1)", "scale(0.995)", "scale(0.985)"],
     },
     {
       duration: SEARCH_TRANSITION_DURATION,
@@ -615,54 +621,67 @@ function animateSearchReveal(intent: SearchIntent) {
   );
 }
 
+function pendingIntentMatches(intent: TransitionIntent | null, destination: URL) {
+  if (!intent) return false;
+  try {
+    const intended = new URL(intent.href, location.href);
+    return intended.origin === destination.origin
+      && intended.pathname === destination.pathname
+      && intended.search === destination.search;
+  } catch {
+    return false;
+  }
+}
+
 function resolveNavigationIntent(event: TransitionBeforePreparationEvent): TransitionIntent | null {
   const state = getRuntimeState();
+  const matchingPendingIntent = pendingIntentMatches(state.pendingIntent, event.to) ? state.pendingIntent : null;
   const observatorySystemTriggered = isObservatoryPath(event.from.pathname)
     && isSystemInteractivePath(event.to.pathname)
     && (
       getObservatorySystemTriggerLink(event.sourceElement ?? null)
-      || state.pendingIntent?.type === "observatory-system"
+      || matchingPendingIntent?.type === "observatory-system"
     );
 
   if (observatorySystemTriggered) {
-    return state.pendingIntent?.type === "observatory-system"
-      ? state.pendingIntent
+    return matchingPendingIntent?.type === "observatory-system"
+      ? matchingPendingIntent
       : buildObservatorySystemIntentFromLink(event.sourceElement as HTMLAnchorElement);
   }
 
   const searchHandleTriggered = isSearchPath(event.to.pathname)
     && (
       getSearchHandleTriggerLink(event.sourceElement ?? null)
-      || state.pendingIntent?.type === "search-handle"
+      || matchingPendingIntent?.type === "search-handle"
     );
 
   if (searchHandleTriggered) {
-    return state.pendingIntent?.type === "search-handle"
-      ? state.pendingIntent
+    return matchingPendingIntent?.type === "search-handle"
+      ? matchingPendingIntent
       : buildSearchHandleIntentFromLink(event.sourceElement as HTMLAnchorElement);
   }
 
   const searchTriggered = isSearchPath(event.to.pathname)
     && (
       getSearchTriggerLink(event.sourceElement ?? null)
-      || (state.pendingIntent?.type === "search" && new URL(state.pendingIntent.href, location.href).pathname === event.to.pathname)
+      || matchingPendingIntent?.type === "search"
     );
 
   if (searchTriggered) {
-    return state.pendingIntent?.type === "search"
-      ? state.pendingIntent
+    return matchingPendingIntent?.type === "search"
+      ? matchingPendingIntent
       : buildSearchIntentFromLink(event.sourceElement as HTMLAnchorElement);
   }
 
   const observatoryTriggered = isObservatoryPath(event.to.pathname)
     && (
       getObservatoryTriggerLink(event.sourceElement ?? null)
-      || state.pendingIntent?.type === "observatory-handle"
+      || matchingPendingIntent?.type === "observatory-handle"
     );
 
   if (observatoryTriggered) {
-    return state.pendingIntent?.type === "observatory-handle"
-      ? state.pendingIntent
+    return matchingPendingIntent?.type === "observatory-handle"
+      ? matchingPendingIntent
       : buildObservatoryIntentFromLink(event.sourceElement as HTMLAnchorElement);
   }
 
@@ -748,20 +767,16 @@ function handleBeforePreparation(event: Event) {
   if (!isTransitionBeforePreparationEvent(event)) return;
 
   const state = getRuntimeState();
-  const defaultLoader = event.loader;
+  state.navigationId += 1;
   state.isPageReady = false;
   state.activeIntent = resolveNavigationIntent(event);
+  state.pendingIntent = null;
   state.lastIntent = state.activeIntent;
   state.lastNavigation = {
     direction: String(event.direction),
     from: event.from.pathname,
     navigationType: String(event.navigationType),
     to: event.to.pathname,
-  };
-
-  event.loader = async () => {
-    await defaultLoader();
-    await warmDocumentImages(event.newDocument, event.signal);
   };
 
   applyTransitionIntent(document, state.activeIntent);
@@ -830,10 +845,10 @@ function handlePageLoad() {
   state.pendingIntent = null;
 
   flushPendingRegistrations();
+  pruneInactiveInitializers();
   runInitializers();
   setLifecycleClasses(["is-page-ready"], ["is-preparing-transition", "is-swap-pending", "is-swapping", "is-transitioning"]);
   if (!keepIntentUntilTransitionFinished) clearTransitionIntent(document);
-  scheduleRouteWarmup();
   logTransitionEvent("astro:page-load");
 
   document.dispatchEvent(new CustomEvent("sine:page-ready", {

@@ -4,7 +4,7 @@ export {};
 
 declare global {
   interface Window {
-    registerPageInit?: (key: string, init: () => void | (() => void)) => void;
+    registerPageInit?: (key: string, init: () => void | (() => void), options?: { persistent?: boolean }) => void;
   }
 }
 
@@ -126,4 +126,4 @@ window.registerPageInit?.("codex-diagrams", () => {
   }
 
   return () => observer.disconnect();
-});
+}, { persistent: true });

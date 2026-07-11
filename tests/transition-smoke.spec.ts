@@ -30,13 +30,22 @@ async function disableBrowserCache(page: import("@playwright/test").Page) {
   await client.send("Network.setCacheDisabled", { cacheDisabled: true });
 }
 
-async function waitForTransitionSequence(page: import("@playwright/test").Page) {
+async function getNavigationId(page: import("@playwright/test").Page) {
+  return page.evaluate(() => (window as any).__sineTransitionState?.navigationId ?? 0);
+}
+
+async function waitForTransitionSequence(page: import("@playwright/test").Page, previousNavigationId: number) {
   await expect.poll(async () => {
-    return page.evaluate((expected) => {
+    return page.evaluate(({ expected, previousId }) => {
       const transitionState = (window as any).__sineTransitionState;
-      const events = transitionState?.debugEvents?.map((entry: { event: string }) => entry.event) ?? [];
-      return expected.every((event) => events.includes(event));
-    }, EXPECTED_EVENTS);
+      const navigationId = transitionState?.navigationId ?? 0;
+      if (navigationId <= previousId) return false;
+      const events = transitionState?.debugEvents
+        ?.filter((entry: { navigationId: number }) => entry.navigationId === navigationId)
+        .map((entry: { event: string }) => entry.event) ?? [];
+      let cursor = -1;
+      return expected.every((event) => (cursor = events.indexOf(event, cursor + 1)) >= 0);
+    }, { expected: EXPECTED_EVENTS, previousId: previousNavigationId });
   }).toBe(true);
 }
 
@@ -44,6 +53,7 @@ async function openSearch(page: import("@playwright/test").Page, path: string) {
   await page.goto(path, { waitUntil: "networkidle" });
   await expect(page.locator(".nav__search-btn").first()).toBeVisible();
 
+  const previousNavigationId = await getNavigationId(page);
   await page.locator(".nav__search-btn").first().click();
   await page.waitForURL(/\/search\/?$/);
   await expect(page.locator("[data-search-root]")).toBeVisible();
@@ -56,7 +66,7 @@ async function openSearch(page: import("@playwright/test").Page, path: string) {
     }).toBe(true);
   }
 
-  await waitForTransitionSequence(page);
+  await waitForTransitionSequence(page, previousNavigationId);
 }
 
 test("home to search first click and repeat stay healthy", async ({ page }) => {
@@ -112,7 +122,7 @@ test("sine panels stay interactive across client navigation", async ({ page }) =
   await page.locator('a[href="/sine/"]').first().click();
   await expect(page).toHaveURL(/\/sine\/?$/);
   await expect(page.locator(".sine-panel").first()).toBeVisible();
-  await waitForTransitionSequence(page);
+  await waitForTransitionSequence(page, 0);
 
   await page.locator(".sine-panel").first().click();
   await expect(page.locator("#sine-overlay")).toHaveClass(/is-open/);
@@ -128,7 +138,7 @@ test("sine panels stay interactive across client navigation", async ({ page }) =
   await page.locator('a[href="/sine/"]').first().click();
   await expect(page).toHaveURL(/\/sine\/?$/);
   await expect(page.locator(".sine-panel").nth(1)).toBeVisible();
-  await waitForTransitionSequence(page);
+  await waitForTransitionSequence(page, 0);
 
   await page.locator(".sine-panel").nth(1).click();
   await expect(page.locator("#sine-overlay")).toHaveClass(/is-open/);
@@ -151,12 +161,12 @@ test("character dossier opens and returns smoothly", async ({ page }) => {
   await expect(page).toHaveURL(/\/characters\/[^/]+\/?(\?.*)?$/);
   await expect(page.locator(".char-page")).toBeVisible();
   await expect(page.locator("[data-character-main]")).toBeVisible();
-  await waitForTransitionSequence(page);
+  await waitForTransitionSequence(page, 0);
 
   await page.getByRole("link", { name: "Characters", exact: true }).click();
   await expect(page).toHaveURL(/\/characters\/?\?char=[^&]+$/);
   await expect(page.locator("#stage-cta")).toBeVisible();
-  await waitForTransitionSequence(page);
+  await waitForTransitionSequence(page, 0);
 
   expect(errors).toEqual([]);
 });
@@ -200,7 +210,7 @@ test("observatory launches system interfaces", async ({ page }) => {
   await page.locator("[data-system-node='redactory']").click();
   await expect(page).toHaveURL(/\/systems\/redactory\/?$/);
   await expect(page.locator(".redactory-desk")).toBeVisible();
-  await waitForTransitionSequence(page);
+  await waitForTransitionSequence(page, 0);
 
   await page.getByRole("link", { name: /Systems Observatory/i }).first().click();
   await expect(page).toHaveURL(/\/systems\/observatory\/?$/);

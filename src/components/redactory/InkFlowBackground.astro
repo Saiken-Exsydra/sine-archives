@@ -93,6 +93,14 @@ const noiseAsset = hasRedactoryAsset(redactoryAssets.inkNoise) ? redactoryAssets
 
     const handleVisibility = () => {
       cancelAnimationFrame(frame);
+      frame = 0;
+      if (!document.hidden && !reducedMotion.matches) frame = requestAnimationFrame(tick);
+    };
+
+    const handleReducedMotion = () => {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      paint(performance.now());
       if (!document.hidden && !reducedMotion.matches) frame = requestAnimationFrame(tick);
     };
 
@@ -102,9 +110,11 @@ const noiseAsset = hasRedactoryAsset(redactoryAssets.inkNoise) ? redactoryAssets
     if (!reducedMotion.matches) frame = requestAnimationFrame(tick);
     window.addEventListener("resize", resize, { signal: controller.signal });
     document.addEventListener("visibilitychange", handleVisibility, { signal: controller.signal });
+    reducedMotion.addEventListener?.("change", handleReducedMotion, { signal: controller.signal });
 
     return () => {
       cancelAnimationFrame(frame);
+      frame = 0;
       controller.abort();
     };
   });
