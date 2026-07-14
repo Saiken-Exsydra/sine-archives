@@ -28,7 +28,7 @@ summary: "Construiu casas, imperios e silencios com a mesma paciencia, e viveu o
 tags: ["Wonderwall", "Ex'sydra", "SiNE", "Archtype", "Interval", "Em'manuel", "Remainder", "Cadence", "Project Kaleidoscope", "Kalt'sen", "Founder"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Em'manuel Kael Wonderwall Dossier.md"
 image: "../../assets/uploads/char-emmanuel-wonderwall.png"
 hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
@@ -43,7 +43,7 @@ hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 
 ### Antes da Fundação — A Casa Ex'sydra
 
-O nome Wonderwall existe desde antes da Casa. Antes de pertencer a Em'manuel, pertenceu a uma mulher chamada A'licia Rae Wonderwall, e antes dela, a uma pequena linhagem acadêmica sem grande importância política baseada na costa norte — focada no comportamento estrutural do [[brightcrystal|BrightCrystal]] na interface da Scorch. Úteis. Não importantes.
+A House Wonderwall existe desde antes do Império e da Fratura. Antes de pertencer a Em'manuel, o nome pertenceu a A'licia Rae Wonderwall e à sua família: um dos Old Twelve, politicamente menor diante das dinastias dominantes, mas tecnicamente importante e lembrado em Selia por ter recusado o Rito.
 
 Em'manuel não nasceu nessa família. Nasceu em outra completamente diferente.
 
@@ -55,7 +55,7 @@ Al'uxxios Ex'sydra — nascido entre a geração mais jovem da casa, visto inter
 
 ### A Fratura — O Que Sua Casa Fez e Quanto Custou
 
-Os Ex'sydra foram os autores da estrutura teórica que sustentou o elemento mais catastrófico do Rito de Selia: a Doutrina Sequencial. O Dive coletivo das doze casas exigia, segundo os cálculos deles, uma convergência sequencial perfeitamente sincronizada — cada tradição iniciando seu Dive em um intervalo específico, seguindo a ordem que a leitura do fio indicava como estruturalmente correta. Três gerações de trabalho com a Anchor produziram um conjunto de matrizes temporais de [[brightcrystal|BrightCrystal]] — amplificadores e condutores projetados para sincronizar a sensibilidade de travessia de múltiplos praticantes em um único mapa de trajetória. As matrizes eram a contribuição dos Ex'sydra.
+Os Ex'sydra foram os autores da estrutura teórica que sustentou o elemento mais catastrófico do Rito de Selia: a Doutrina Sequencial. O Dive proposto para doze Casas exigia uma convergência sequencial perfeitamente sincronizada. Faldryn, Wonderwall e Whitechurch recusaram antes da execução; a coalizão corrigiu a cadência e prosseguiu com nove Casas, ainda reivindicando a autoridade das Doze.
 
 A análise estava errada de uma forma extremamente específica e absolutamente fatal: o que eles estavam lendo não era sequência temporal. Era trajetória — a tendência estrutural de configurações presentes evoluírem para configurações adjacentes, a inclinação do que existe em direção ao que vem depois. Ler uma inclinação corretamente não significa ter autoridade sobre ela. As matrizes, projetadas para sincronizar e amplificar, fizeram exatamente o que deveriam fazer usando exatamente os dados errados. Amplificaram a perturbação de Resonance. Sincronizaram a cascata. O colapso que veio depois foi mais rápido e mais absoluto por causa delas.
 
@@ -390,7 +390,7 @@ Está trabalhando nisso há oitocentos anos.
 
 ## A Linhagem Ex'sydra — Quinhentos Anos Depois
 
-No ano quinhentos e trinta e sete do Império, uma análise estrutural da CLOCKWORK sobre fenômenos anômalos de Thinness no norte retornou um perfil de arquitetura recursiva pertencente a uma família em Ael'keth que Em'manuel inicialmente não conseguiu compreender.
+No ano quatrocentos e setenta e um do Império, uma pesquisa predecessora dos Wonderwall sobre fenômenos anômalos de Thinness no norte retornou um perfil de arquitetura recursiva pertencente a uma família em Ael'keth que Em'manuel inicialmente não conseguiu compreender. O registro mais tarde entrou no Project Seam; ele é anterior à fundação da CLOCKWORK em 1682.
 
 Leu o relatório duas vezes.
 
@@ -446,7 +446,7 @@ Porque permitir que ele desaparecesse completamente significaria conceder às Ca
 
 E existe uma parte de Em'manuel — a parte que sobreviveu à Fratura como um Ex'sydra antes de concordar em se tornar outra pessoa — que simplesmente se recusa a permitir isso.
 
-O perfil mais recente da CLOCKWORK sobre a linhagem de Ael'keth retornou, no ano 2182, dados que ele segurou por um dia inteiro antes de finalmente anotar.
+O perfil mais recente do Project Seam sobre a linhagem de Ael'keth retornou, no ano 2182, dados que ele segurou por um dia inteiro antes de finalmente anotar.
 
 A anomalia estrutural documentada pelo relatório excedia qualquer manifestação anterior já registrada naquela linhagem.
 
@@ -626,7 +626,7 @@ Ninguém perguntou por quê.
 
 ### Origem e Mandato
 
-O programa de pesquisa que mais tarde se tornaria o [[project-kaleidoscope|Project Kaleidoscope]] foi autorizado no ano oitocentos e quarenta e um do Império, quatorze anos após a dispersão de Ju'llian.
+O Continuance Inquiry começou após a morte da primeira E'lla, em 1267. A produção biológica numerada do [[project-kaleidoscope|Project Kaleidoscope]] ocorreu entre 1547 e o nascimento de KL-83, em 2175.
 
 A perda esclareceu algo que Em'manuel vinha ponderando desde a morte de E'lla:
 
@@ -636,7 +636,7 @@ Ele não esperaria indefinidamente por algo que poderia construir.
 
 O mandato oficial do programa:
 
-Replicar o perfil Redactory de E'lla Rae Wonderwall — especificamente sua manifestação de Anchor de Light e a arquitetura recursiva responsável pelos efeitos documentados no substrato — através de reconstrução biológica precisa usando material genético e configurações de coerência arquivadas em armazenamento estabilizado por [[brightcrystal|BrightCrystal]] desde o ano de sua morte.
+Estudar a recorrência do perfil Redactory de E'lla Rae Wonderwall por meio de condições biológicas e configurações de coerência orientadas por arquivos estabilizados em [[brightcrystal|BrightCrystal]]. Nenhuma formulação administrativa poderia transformar uma vida criada na mulher perdida.
 
 O verdadeiro mandato do programa, conhecido apenas por Em'manuel:
 
@@ -678,39 +678,9 @@ Qualquer que fosse o custo do programa, os próprios sujeitos não carregariam e
 
 ### O Registro
 
-O programa operou por aproximadamente duzentos e oitenta e cinco anos.
+O programa numerou oitenta e três pessoas entre 1547 e 2175. As oitenta e duas anteriores a E'lla tiveram resultados diferentes: algumas morreram por idade, doença, procedimentos, negligência ou falhas de contenção; outras foram libertadas sob identidades protegidas; algumas ainda dependem de cuidado não divulgado. KL-81 e KL-82 permanecem casos vivos sob gestão clínica.
 
-Oitenta e três sujeitos.
-
-Dos oitenta e três, quarenta e nove não sobreviveram aos estágios iniciais de desenvolvimento.
-
-Dos trinta e quatro que sobreviveram a essa fase, vinte e seis não chegaram aos treze anos de idade.
-
-O limiar crítico ocorre entre os dez e os doze anos — o período em que a Anchor da singularidade recursiva inicia sua primeira estabilização.
-
-Em'manuel esteve presente em todas as mortes.
-
-Impôs isso a si mesmo como reconhecimento do que o programa realmente era.
-
-Ele havia decidido que aquele trabalho era necessário.
-
-O mínimo que devia às pessoas sacrificadas por ele era permanecer presente quando tudo terminasse, garantir que o fim acontecesse sem dor dentro do que seus recursos e sua Redactory permitiam e dizer a cada uma delas:
-
-Que sentia muito.
-
-Que a decisão tinha sido dele.
-
-Que a responsabilidade também era dele.
-
-Ele não é um homem maligno.
-
-Acredita, com a firmeza específica que apenas doze séculos de paciência conseguem produzir, que os fins justificam os meios — e acredita nisso não como racionalização, mas como uma conclusão examinada cuidadosamente, revisada inúmeras vezes e sustentada pela clareza de algo que ele observou de todos os ângulos disponíveis sem encontrar motivo suficiente para abandoná-lo.
-
-Ele não gosta do custo.
-
-Apenas decidiu que o custo era necessário.
-
-E, depois de decidir isso, não hesitou.
+Tratá-las como fracassos técnicos foi parte da violência do programa. Eram pessoas. Em'manuel impediu uma purga final dos sobreviventes, mas isso não apaga sua responsabilidade como autoridade do sistema que as criou.
 
 ### A Falha Crítica
 
@@ -734,25 +704,25 @@ Aquilo que realmente precisava estava crescendo em uma casa comum de Kalt'sen se
 
 ### Sujeitos Atuais
 
-O programa possui atualmente três sujeitos vivos.
+A produção biológica terminou permanentemente em 2179. Permanecem obrigações de cuidado, reparações, defesa independente, preservação de arquivos e divulgação protegida. Há três casos vivos conhecidos sob essas obrigações.
 
 Os três foram removidos da instalação antes dos cinco anos de idade.
 
 Nenhum deles se lembra do lugar.
 
-**KL-83** — E'lla Wonderwall, vinte e cinco anos.
+**KL-83** — E'lla Rae Wonderwall, vinte e cinco anos.
 
-Inserida na linhagem principal da família Wonderwall.
+Transferida da custódia do projeto em 2179 e adotada irrevogavelmente pela House Wonderwall.
 
 Conhece Em'manuel pessoalmente.
 
-Designada como candidata oficial à sucessão.
+Possui standing familiar sem atribuição corporativa. Não foi treinada nem nomeada para o Assento.
 
 Anchor de Light confirmadamente estável.
 
 Não carrega o Remainder.
 
-Não sabe que foi criada.
+Não conhece a designação KL-83 nem o registro completo da série.
 
 **KL-77** — Vinte e três anos, designação omitida.
 
@@ -870,13 +840,13 @@ Ainda não percebeu que a porta fechada do quarto da irmã representa uma condi�
 
 ## A Avaliação Atual
 
-A questão sucessória, em seu estado atual, está estruturada ao redor de duas pessoas que sequer sabem da existência uma da outra da maneira que realmente importa.
+A questão sucessória permanece sem resposta institucional fechada.
 
-E'lla — vinte e cinco anos, operacionalmente estável, carregando a manifestação de Anchor de Light que o [[project-kaleidoscope|Project Kaleidoscope]] passou duzentos e oitenta e cinco anos tentando reproduzir, atualmente treinando ativamente como sucessora designada de Em'manuel — é a resposta institucional para o problema da sucessão.
+E'lla — vinte e cinco anos, operacionalmente estável e portadora de uma manifestação singular de Light — é filha adotiva da Casa, não resposta institucional para a sucessão. O treinamento sucessório foi suspenso e repudiado; sua mentoria atual é técnica.
 
-No sentido técnico mais relevante possível, a reconstrução biológica funcionou.
+O Project Kaleidoscope não reconstruiu uma pessoa perdida nem fabricou o eco hereditário que buscava.
 
-Ela é exatamente aquilo que foi criada para ser.
+E'lla é uma pessoa que emergiu além da teoria que tentou defini-la.
 
 E é invisível para o Remainder.
 

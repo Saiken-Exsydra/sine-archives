@@ -1,7 +1,7 @@
 # PERSONNEL DOSSIER - RESTRICTED
 ## KATHERINE FLARIAN
 **SiNE Stasis (S-AE) - Continuity Architect - Type None - Post-Entry Resonance Scar - Meridian-tier internal clearance**
-*Filed by: SiNE Anomalous Engagement branch, Continuity Office - Entropy hire 2185 - unauthorized Himmelreich contact event 2188 - Stasis transfer 2188 - permanent placement 2189 - file active, Year 2200*
+*Filed by: SiNE Anticipatory Evaluation branch, Continuity Office - Entropy hire 2185 - unauthorized Himmelreich contact event 2188 - Stasis transfer 2188 - permanent placement 2189 - file active, Year 2200*
 
 ---
 

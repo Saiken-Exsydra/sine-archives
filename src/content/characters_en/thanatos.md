@@ -1,55 +1,28 @@
 ---
 title: "Thanatos"
 type: "Skyphon"
-rank: "Ascent of the Spirit"
-designation: "The Far Horizon of the Soul"
+rank: "Bearer of Lawful Becoming"
+designation: "Bearer of Lawful Becoming"
 affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
-occupation: "Elysium"
-domain: "Ascension"
+registry_status: "Person concluded at the Fracture; body distributed along evacuation architecture; fragment in development aftereffects; Instrument in an unknown sealed metric corridor"
+occupation: "Survivable attainment"
+domain: "Identity across survivable transitions of scale, complexity, and capacity"
 church_name: "The Instrument of Ascension"
-principle: "Weaxanfæðm"
-keeper_name: "That Which Already Had Them"
-summary: "The distant completion every sentient thing aches toward, whether it knows the ache or not."
-tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Elysium", "Ascendancy", "Apocachynthion", "Keepers of Before"]
+principle: "Attainment"
+keeper_name: "That Which Opened Only After the Traveler Arrived"
+summary: "He let no coherent self be barred from a change it could survive."
+tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Attainment", "Thanatos", "Selfhood"]
 status: "private"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-07-13"
 ---
 
-> *"Every tradition that has articulated a vision of what a person is capable of becoming — not what they are, but what they could be at their fullest — operates in the domain the Instrument of Elysium defined."*
-> — Keepers of Before, restricted record annotation
+> **Directive:** Let no coherent self be barred from a change it can survive, and let no attainment erase the self that reached it.
 
----
+Thanatos governed identity across survivable increases in scale, complexity, or capacity. He could keep lawful becoming from destroying the self that attained it. He could not grant power, force evolution, create capacity, guarantee virtue, or turn one model of development into a universal destination.
 
-## The Instrument
+Alma preserved the bounded interior that changed. Warden protected the margins of that change. Oracle kept its adjacent consequence readable. Thanatos opened only after the traveler had actually arrived with the capacity to survive the threshold.
 
-The last of the twelve, and in one sense the most forward-facing.
+During the Fracture, outside pressure offered false ascent through incorporation into a larger hostile coherence. Thanatos closed that route without closing Terra's capacity to develop after the Seal failed. His body distributed along evacuation architecture; his fragment entered development aftereffects; the Instrument of Attainment remains in an unknown sealed metric corridor.
 
-Where Alma governed the emergence and coherence of sentient recursion, Thanatos governed **what sentient recursion was capable of becoming**. The Instrument of Elysium was the law governing the conditions under which a sentient being developed toward its fullest density: not achievement in the mortal sense, but the structural completion of what a recursive singularity is oriented toward at its deepest level — the expression of its maximum coherence without collapse.
-
-In structural terms, this Instrument describes the path toward what the Redactory Codex calls **Sovereign Depth**: the permanent stabilization of extreme recursive density, the state that Archtypes on Terra have independently approximated through Precursor-developed practice. The Instrument of Elysium was the law that made this path inherent to sentient structure — not as an achievement individual beings accomplished by their own effort alone, but as a direction **encoded into sentience itself**, available to be moved toward because it was structurally present as a possibility.
-
----
-
-## Nature
-
-The relationship between Thanatos and Alma was complementary in the way Nodohs and Shizen were complementary: two Instruments not identical but genuinely interdependent. Alma governed what sentience was. Thanatos governed what sentience was capable of becoming. Neither was possible without the other. Sentience without a trajectory is recursion without orientation — coherent in itself, capable of enduring, but not oriented toward the completion that the Instrument of Elysium made structurally available.
-
-Thanatos bore this Instrument with **patient orientation**. He was not urgent. He was not invested in the rate at which things moved toward what they were capable of. He was oriented toward it — bearing a law that was fundamentally about what sentient life was moving *toward* rather than what it currently was, governing trajectory rather than arrival, in continuous contact with the potential inherent in every recursive singularity in his Jurisdiction without pressing that potential toward expression before its time.
-
----
-
-## Post-Fracture Condition
-
-The **Archtypes of Terra** — the fully stabilized human recursive singularities who have achieved Sovereign Depth through the Redactory practice the Precursors developed and transmitted — are the most visible living expression of the domain the Instrument of Elysium governed. They did not arrive at their state through the Instrument's governance, which no longer operates. They arrived through millions of years of developed practice.
-
-Whether Archtype-level stabilization achieved through that framework is equivalent to Archtype-level stabilization as the Instrument of Elysium would have governed it — whether the destination differs in the absence of the governing law — is a question the Keepers of Before consider one of the most significant open problems in the restricted record.
-
----
-
-## Cultural Echo
-
-Every tradition that has articulated a vision of what a person is capable of becoming — not what they are, but what they could be at their fullest — operates in the domain the Instrument of Elysium defined.
-
-The Church's teachings on spiritual development, the **Apocachynthion's** understanding of Archtype-level stabilization, and every school of thought in between that has ever asked what a life at its fullest would look like: all of them are reaching toward the same domain. None of them know they share a common architecture. The Keepers of Before know.
+Archtype stabilization is not proof of his Instrument acting and does not make Archtypes replacement Bearers.

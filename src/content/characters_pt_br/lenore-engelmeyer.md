@@ -4,8 +4,8 @@ type: "Personagem"
 age: "23 (na época do registro, 2200)"
 birth_year: "2177"
 birthplace: "Drevholt, interior da faixa ocidental"
-affiliation: "Apocachynthion (licenciada); Casa Engelmeyer (linhagem principal reintegrada, 2199)"
-house: "Engelmeyer (linhagem principal, reintegrada em 2199 — anteriormente ramo cadete Voren)"
+affiliation: "Apocachynthion (licenciada); Casa Engelmeyer (blood Seat, administração pelo Furnace Council)"
+house: "Engelmeyer (origem Voren; blood Seat desde a reintegração em 2199)"
 rank: "Quill"
 registry_status: "Registrada — admissão em 2193; certificação Quill emitida em 2195; licença operacional condicional ativa"
 point_profile:
@@ -26,7 +26,7 @@ summary: "Encantadora, cuidadosa, impossivel de comover; veste a civilidade como
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
@@ -43,7 +43,7 @@ hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
 
 A Casa Engelmeyer está entre as Quinze Casas originais da estrutura fundadora do Império. Sua linhagem principal carrega uma herança de Anchor de forja — gerações de Redactors alinhados à transformação térmica e resistência estrutural, úteis de um jeito tão prático que sobreviveram intactos a doze séculos de reorganizações políticas.
 
-O ramo Voren se separou da linhagem principal em algum momento dos séculos intermediários do Império e se estabeleceu em Drevholt — uma pequena cidade quarenta quilômetros a leste de Vel'hara, escolhida especificamente pela distância que oferecia dos centros políticos da Casa. Mantiveram o nome Engelmeyer porque o nome não podia simplesmente ser abandonado, e eles nunca foram importantes o bastante para justificar uma expulsão formal.
+O Great Cisma dividiu a herança Engelmeyer. Os Voren tentaram manter neutralidade armada nos Voren Works, destruídos em 1043. Sobreviventes do campo familiar foram para Drevholt e para Ardeatus, carregando uma cicatriz de lattice que preservava informação parcial da família. O ramo manteve o nome Engelmeyer depois de perder propriedade, avanço dentro da Casa e uma explicação socialmente utilizável do desastre.
 
 O que esse ramo carregava, geração após geração, era uma anomalia recorrente que nenhuma instituição conseguia explicar direito: fenômenos auditivos persistentes, distúrbios perceptivos e a experiência — descrita separadamente, mas de forma assustadoramente parecida por diferentes membros da família ao longo das gerações — de *algo observando de um lugar que eu não consigo ver*. O Apocachynthion avaliou o ramo quatro vezes ao longo de cento e sessenta anos. Todas as avaliações registraram os resultados como degradação hereditária de coerência e seguiram em frente. A Igreja avaliou o ramo três vezes. Nenhuma avaliação encontrou sinais de possessão, e todas recomendaram apenas acompanhamento pastoral.
 
@@ -71,9 +71,9 @@ A Academia de Syr'lene enviou um avaliador de campo após o segundo incidente. E
 
 Um painel especializado composto por quatro avaliadores seniores conduziu três sessões ao longo de seis semanas em 2194 e chegou à classificação por eliminação: nenhuma Anchor primária padrão produzia um quadro consistente. Restou apenas uma categoria — a classificação de Anchor de Deception, aplicada a praticantes cuja Anchor não é um conteúdo específico, mas a própria alteração da percepção. Rara. Documentada em menos de uma dúzia de praticantes registrados em todo o histórico do Apocachynthion.
 
-A classificação explica a ausência de assinaturas normais de Dive, os efeitos de ruptura perceptiva e a arquitetura incomum de coerência. Está confirmada e não se encontra em revisão.
+A classificação de Deception é genuína, confirmada e não está em revisão. Ela explica o roteamento perceptivo produzido pela Anchor, mas não a arquitetura biológica separada e integrada ao lado dela.
 
-**Essa classificação é uma caixa que a própria Le'nore construiu.** Desde a primeira sessão em que a hipótese surgiu, ela percebeu exatamente a direção para onde o painel estava indo e passou a reproduzir precisamente o que aquela estrutura teórica previa. Ela entregou a eles um recipiente conceitual. E passou a viver dentro dele. Ela conhece os fundamentos dessa teoria melhor do que a maioria dos praticantes conhece a própria taxonomia de Anchor, porque a caixa só funciona quando você sabe exatamente onde ficam as paredes dela.
+Os efeitos de Le'nore alteram entradas sensoriais roteadas em vez de construir uma ilusão independente no ambiente. Por isso podem não deixar sinais visíveis, mas um Point sensível ou uma matriz harmônica preparada ainda consegue detectar a perturbação de Dive e roteamento.
 
 ## Apocachynthion Registry
 
@@ -182,7 +182,7 @@ Ela cumpriu todos os termos ao longo de cinco anos de licença.
 
 ### Vel'hara — 2199 até o Presente
 
-A reintegração à linhagem principal da Casa Engelmeyer foi concluída em 2199, após um representante concluir que a insistência do ramo Voren em manter o nome Engelmeyer havia, afinal, se mostrado justificável. Le'nore foi transferida para Vel'hara por arranjo da Casa principal — uma cidade porto-livre situada na borda do alcance prático de monitoramento do Apocachynthion.
+A reintegração foi concluída em 2199 por meio do Voren Reserve, instrumento que preservava o direito contingente dos sobreviventes ocidentais. O Senado reconhece Le'nore como blood Seat; o Furnace Council continua administrando as jurisdições industriais diárias. Ela foi transferida para Vel'hara sob o compacto inter-registro, que permite revisão do Apocachynthion com consentimento vel'harano, não jurisdição unilateral.
 
 A principal instalação do Corvel Institute fica em Vel'hara.
 

@@ -17,7 +17,7 @@ Example:
 - `the Anchor` -> `a Anchor`
 - `an Abyssal Anchor` -> `uma Abyssal Anchor`
 - `the Dive` -> `o Dive`
-- `Skyphon of luminance` -> `Skyphon de luminancia`
+- `Bearer of Legible Radiance` -> `Bearer of Legible Radiance`
 - `Anchor of light` -> `Anchor de luz`
 
 ## Agreement Guide
@@ -44,7 +44,7 @@ Keep unchanged:
 - technical terms that the glossary explicitly marks as protected
 
 Examples:
-- `Skyphon of luminance` -> keep `Skyphon`, translate `luminance`
+- `Bearer of Legible Radiance` -> keep the complete formal designation unchanged
 - `Anchor of light` -> keep `Anchor`, translate `light`
 - `fire-domain vessel` -> translate `fire-domain`, keep `vessel`
 - `Light` as a named canonical Anchor or foundational expression may stay unchanged if the source is clearly using it as a formal title-level term rather than a descriptive noun

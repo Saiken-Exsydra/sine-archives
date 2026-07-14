@@ -1,55 +1,28 @@
 ---
 title: "Oracle"
 type: "Skyphon"
-rank: "Prophet of Gaia"
-designation: "She Who Read the Slope of Things"
+rank: "Bearer of Adjacent Consequence"
+designation: "Bearer of Adjacent Consequence"
 affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
-occupation: "Foresight"
-domain: "Foresight"
+registry_status: "Person concluded at the Fracture; body fixed across failing frames; fragment in cadence scars; Instrument phase-lost in Ksy'rion timing"
+occupation: "Immediately adjacent consequence"
+domain: "Relation between a current state and its next traversable states"
 church_name: "The Instrument of Foresight"
-principle: "Forðgesceaft"
-keeper_name: "That Which Knew Before It Was Asked"
-summary: "Not prophecy, but the almost-heard lean of the world toward what comes next."
-tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Foresight", "Clairvoyance", "Divination", "Oracles", "Keepers of Before"]
+principle: "Consequence"
+keeper_name: "That Which Heard the Next Step Before It Fell"
+summary: "She kept consequence readable without allowing tendency to become decree."
+tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Consequence", "Oracle", "Time"]
 status: "private"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-07-13"
 ---
 
-> *"Oracle knew, with the precision that the Instrument she bore permitted, that the Fracture was not impossible. She knew it before it occurred."*
-> — Keepers of Before, restricted record annotation
+> **Directive:** Keep consequence readable without allowing tendency to become decree.
 
----
+Oracle governed the relation between the present configuration and its immediately adjacent traversable states. She could perceive causal inclination and make a next step legible. She could not see a completed distant future, choose an outcome, command Time, or make tendency inevitable.
 
-## The Instrument
+Her work depended on Sciel for accurate present support, Warden for bounded branches, and Time for ordered traversal. That dependency is why her Principle is **Consequence**, not prophecy.
 
-The Instrument of Foresight was not the law governing what would happen. The Archive does not contain futures as things that will be created — it contains configurations that already exist and that Time traverses in order. The Instrument of Foresight governed the **relationship between present configurations and adjacent ones** in the traversal sequence: the law describing how what currently exists is inclined to develop, given its own structure, into what comes next.
+When the twelve clauses lost simultaneity at Year 0, Oracle identified one adjacent survivable order. A Time Fragment independently preserved that order as the Twelve-Beat Hold. Oracle did not summon or direct it. Her body fixed across the failing cadence frames; her fragment remains in timing scars; the Instrument of Consequence is phase-lost within Ksy'rion's damaged cadence lattice.
 
-This is not prediction. A prediction is a claim about a specific future configuration. Oracle did not see specific future configurations. She saw the structural tendency of present configurations to resolve toward certain kinds of adjacent ones rather than others — the **slope of the world**, at any given moment, toward what came next. Slopes can be interrupted. The Instrument of Foresight was not the Instrument of Inevitability. It was the Instrument of *trajectory*.
-
----
-
-## Nature
-
-The Page Primordial fragment at Oracle's core was unique among the twelve. A Page Primordial is omniscient within its Page — aware of all internal states, histories, and possible internal futures. The Instrument of Foresight was, in a domain-constrained form, a law about a specific application of that native awareness.
-
-The Precursor architecture built around the fragment had to manage the tension between the fragment's native universe-scale awareness and the specific, Jurisdiction-bound governance the Instrument required. This architecture is the **most complex constraint specification** of the twelve, and the most consequential failure point if lost.
-
-Oracle knew, with the precision that the Instrument she bore permitted, that the Fracture was not impossible. She knew it **before it occurred**.
-
-What she did with that knowledge is not recorded in any source the Keepers of Before have recovered. Whether she communicated it, whether she was heard, whether the information reached anything capable of acting on it within the time available — the record is silent. The Keepers of Before do not know whether this reflects a failure of record-keeping or a fact about what happened.
-
----
-
-## Post-Fracture Condition
-
-Divination on Terra — the capacity exhibited by a small number of individuals in each generation to receive impressions relating to future configurations — is not explicable under the Index Theorem. The Theorem acknowledges this. The **Oracles of Obsidian** exist because this capacity exists and must be managed.
-
-The Keepers of Before's restricted position: Divination is a residual function of the Instrument of Foresight, distributed into the world's structure when Oracle's bearing was interrupted. Those who experience genuine Divination are not accessing an alternative mechanism. They are experiencing a **diminished, ungoverned, fractured form** of what the Instrument of Foresight governed when it was whole and borne.
-
----
-
-## Cultural Echo
-
-The Oracles of Obsidian. Every theory of Divination, every dispute about its mechanism, every recorded instance of genuine foresight — all of it is working within the domain the Instrument of Foresight once governed. None of it knows this. It thinks it is describing a gift or an anomaly or a theoretical problem. It is describing the shape of a law that was once whole and is now scattered.
+Oracle is not the origin of Divination, Church Oracles, the Pathway, or human foresight traditions.

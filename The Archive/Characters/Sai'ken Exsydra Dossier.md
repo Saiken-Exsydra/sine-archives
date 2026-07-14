@@ -7,7 +7,7 @@
 ---
 
 > *"The Exsydra were never wrong because they saw nothing. They were wrong because they mistook the sound of the page turning for the page itself."*  
-> — E.W., private notation, appended after CLOCKWORK cross-comparison, year 2199
+> — E.W., private notation, appended after Project Seam cross-comparison, year 2199
 
 ---
 
@@ -66,10 +66,11 @@ And cadence is Time's tolerance of an Exsydra recursion perceiving the margin be
 | **Anchor Status** | No conventional Anchor has been confirmed. Subject is not an Interval Anchor in the manner of Em'manuel Kael Wonderwall. Subject's architecture is better described as cadence-authorized traversal architecture: a recursive singularity able to perceive and enter the unread margin produced by Time's ordered traversal. |
 | **Point Status** | Academy-recognized Point carried for regulated practice; register access restricted under Seat custody and Apocachynthion process. |
 | **Biological Status** | Ordinary human continuation. No Archtype modification. No controlled recursive self-modification. Unclear long-term metabolic modulation if trained at depth. |
-| **Institutional Affiliation** | KT-Exs operative, Wonderwall Seat's direct intelligence apparatus. Current posting: personal protective and terminal-contingency function, Wonderwall cadet-branch household, Kalt'sen eastern residential quarter. |
-| **Current Assignment** | Assigned to observe, protect, and if necessary terminate Ec'lesia Yalara Wonderwall under escalation conditions involving Remainder-pressure, involuntary Shorefall, or catastrophic loss of agency. The subject does not possess the power to stabilize her condition. He is stationed because he can perceive escalation before ordinary observers can name it. |
+| **Institutional Affiliation** | KT-Exs protected-service officer under a sealed House and Compact warrant. Current posting: protective and terminal-contingency function, Yalara household, Kalt'sen eastern residential quarter. He is not a general intelligence asset. |
+| **Current Assignment** | Protect Ec'lesia Yalara Wonderwall, identify cadence escalation, support evacuation and rescue, and act as terminal contingency only after verified catastrophic loss of agency and failure or impossibility of less destructive intervention. He cannot stabilize her condition or privately adjudicate her life. |
 | **Lineage Designation** | Exsydra by blood — surviving expression of the erased theoretical lineage, seven generations from the executed architect, carrying the cadence-sensitive recursive architecture that survived under the Las'gall name. |
-| **CLOCKWORK Relationship** | Subject of CLOCKWORK structural survey, year 2182. Anomaly flag escalated to Seat access. Subsequent monitoring, years 2182–present. |
+| **Project Seam Relationship** | Subject of Project Seam structural review, year 2182. Anomaly flag escalated to Seat access. Subsequent monitoring, years 2182–present. Clockwork has no standing claim over him. |
+| **House Standing** | Exsydra is a restored lineage name, not automatic Wonderwall membership, corporate title, or sovereign claim. |
 | **Time Relationship** | No fusion, no vessel-state, no worship contract, no direct command. Subject is readable to Time while briefly off-sequence. This constitutes tolerance, not empowerment. |
 | **Remainder Relationship** | No known Remainder attachment. High risk of notice. His traversal enters the habitat in which the Remainder persists. His presence near Ec'lesia may become catalytic under stress. |
 
@@ -702,7 +703,7 @@ He had a broken wrist, a cut under the ribs, and no explanation for how he had c
 
 The incident entered regional youth assessment records as evidence of unusual threat response.
 
-CLOCKWORK acquired the record within six months.
+Project Seam acquired the record within six months.
 
 ## VIII.4 Training
 
@@ -749,9 +750,9 @@ He believes this was the result of standard talent identification.
 
 This is an acceptable public explanation.
 
-The private chain began twelve years earlier, when CLOCKWORK flagged the Las'gall family profile. The initial survey did not identify Sai'ken as the singular point of interest. He was seven. What it identified was a household architecture carrying an interval-sensitive signature with lineage consistency too precise to be environmental alone.
+The private chain began twelve years earlier, when Project Seam flagged the Las'gall family profile. The initial survey did not identify Sai'ken as the singular point of interest. He was seven. What it identified was a household architecture carrying an interval-sensitive signature with lineage consistency too precise to be environmental alone.
 
-The result reached my desk because I instructed CLOCKWORK, in year 1895, to send me all anomalous interval-sensitive family patterns within historic Exsydra dispersal zones.
+The result reached my desk because the older Ael'keth survey record had been transferred into Project Seam's cross-jurisdictional archive. My Year 1895 Clockwork order concerned custody handoffs, not family surveillance; using the later Seam apparatus to observe the Las'gall line was a separate choice.
 
 For five centuries, that instruction produced noise.
 
@@ -840,13 +841,13 @@ His reports are concise, thorough, and more useful than he knows.
 
 His actual function has three layers.
 
-First, he is there to protect Ec'lesia from ordinary threats. This is the simplest part of the assignment and the least important.
+First, he is there to protect Ec'lesia from ordinary threats and preserve her agency. This is the simplest layer of the assignment and the one that governs every later intervention.
 
 Second, he is there to notice Remainder escalation before ordinary observers can distinguish it from Redactory instability, stress, illness, or autonomous manifestation. His cadence sense reacts to threshold conversion, wrong pauses, gap-pressure, and sequence narrowing. This makes him one of the only living operatives who can perceive the beginning of an event involving Ec'lesia before the event has selected its public form.
 
 Third, he is there as terminal contingency.
 
-If Ec'lesia loses agency in a manner that threatens catastrophic Shorefall, if the Remainder turns her into a passage without the possibility of choice, or if a misclassified autonomous manifestation event reaches the point at which delay would endanger the city, Sai'ken is authorized to kill her.
+If Ec'lesia loses agency in a manner that threatens catastrophic Shorefall, if the Remainder turns her into a passage without the possibility of choice, or if a misclassified autonomous manifestation event reaches the point at which delay would endanger the city, Sai'ken carries a terminal-intervention warrant. The warrant is not a private license to kill: it is valid only after rescue, evacuation, restraint, clinical intervention, and available Shore-capable response have failed or cannot arrive, and it remains subject to sealed civil review.
 
 This is not because he can defeat what she carries.
 
@@ -1262,6 +1263,10 @@ The delay is ending.
 18. His terminal contingency role remains canon.
 19. Proximity between Sai'ken and Ec'lesia is structurally meaningful and potentially catalytic.
 20. The Time Fragment's interest in the Exsydra line should remain rare, cold, structural, and difficult to personalize.
+21. Exsydra is a terminal contingency and cadence inheritance, not a project for conquering Time.
+22. Sai'ken is not owned by the Seat, Clockwork, House Wonderwall, Ec'lesia, or the name restored to him.
+23. The terminal clause is subordinate to rescue, evacuation, restraint, clinical intervention, and Shore-capable response wherever any remains possible.
+24. Sai'ken's proximity to Ec'lesia may become chosen loyalty; its origin in undisclosed surveillance remains an ethical wound rather than proof of destiny.
 
 ---
 

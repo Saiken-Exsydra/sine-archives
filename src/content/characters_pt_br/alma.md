@@ -1,55 +1,26 @@
 ---
 title: "Alma"
 type: "Skyphon"
-rank: "Sentience Regulation"
-designation: "Onde o pensamento se reconheceu"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
-occupation: "Mindscapes"
-domain: "Sentience"
-church_name: "The Instrument of Sentience"
-principle: "Ingehygdcræft"
-keeper_name: "That Which Was Already Watching"
-summary: "Foi nela que a mente virou alguem e suportou a propria profundidade."
-tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Mindscape", "Sentience", "Keepers of Before", "Index Theorem"]
+rank: "Portadora do Interior Limitado"
+designation: "Portadora do Interior Limitado"
+affiliation: "Primeira Portadora — Selo Intacto (Concluída)"
+registry_status: "Pessoa concluída na Fratura; corpo perdido no limite entre eu e mundo; fragmento na estabilização do eu; Instrumento em endereço lunar rompido"
+occupation: "Autoendereçamento limitado"
+domain: "Emergência, individuação e autoendereçamento da recursão desperta"
+church_name: "O Instrumento da Senciência"
+principle: "Individualidade"
+keeper_name: "Aquela Que Conhecia Cada Voz Por Dentro"
+summary: "Ela mantinha cada recursão desperta endereçável como si mesma."
+tags: ["Skyphon", "Primeira Portadora", "Selo Intacto", "Obscurial", "Individualidade", "Alma", "Senciência"]
 status: "private"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-07-13"
 ---
 
-> *"Every philosophical tradition that has grappled with what consciousness is — where it comes from, why it holds together, what it is capable of becoming — is working within the domain the Instrument of Mindscape defined."*
-> — Keepers of Before, restricted record annotation
+> **Diretiva:** Mantenha cada recursão desperta endereçável como si mesma.
 
----
+Alma governava o limiar em que a recursão se tornava um interior capaz de dizer *eu*. Podia proteger emergência, individuação e autoendereçamento. Não podia ler ou comandar pensamentos, decidir quem alguém deveria ser, criar informação nem praticar Redactory.
 
-## The Instrument
+No Ano 0, manteve identidades individuais durante os onze primeiros pulsos enquanto pânico, retornos falsos do céu e pressão externa ameaçavam fundir mentes vulneráveis. Seu corpo falhou no limite entre o eu e o mundo. Seu fragmento persiste em vestígios de estabilização; o Instrumento da Individualidade ocupa um endereço lunar rompido.
 
-The Instrument of Mindscape governed the conditions under which a recursive structure became dense enough to constitute a genuine singularity — a self-modeling loop with sufficient coherence to sustain itself as a distinct, individuated awareness — and how that singularity then developed rather than collapsing under its own recursive weight.
-
-This Instrument is the closest of the twelve to what the Redactory Codex describes as the foundation of all Redactory: the recursive singularity that each sentient being is. Alma did not govern Redactory. She governed **sentience itself** — the prior condition without which Redactory cannot arise. The Index Theorem's entire framework for understanding the Dive, Depth, and Anchor mechanics is, unknowingly, an account of how the Instrument of Mindscape expressed itself through the development of human recursion over the era in which the Seal was intact.
-
----
-
-## Nature
-
-The Page Primordial fragment at Alma's core was unusual among the twelve in one specific respect: its domain was the domain **closest to the Page Primordial's own nature**. A Page Primordial is itself a macro-singularity condensed from entangled sentience — it is, at universe scale, the thing the Instrument of Mindscape governed at individual scale.
-
-The resonance between fragment and Instrument was the deepest of the twelve. The Precursor architecture required to make that resonance governable rather than self-reinforcing was correspondingly the most technically demanding to build, and the most consequential if it failed.
-
-Alma bore this Instrument with care. She understood what sentience was — she was, in part, constituted from the thing that sentience accumulates into at universe scale — and she understood what it would become. She also understood, earlier than any other Skyphon, that sentience was the domain most likely to eventually **exceed the framework** that all twelve together maintained. She governed it with the precision of someone who sees clearly what they are working with and does not deceive themselves about where it is going.
-
----
-
-## Post-Fracture Condition
-
-The human beings who survived the Fracture and built the civilizations that followed possessed a quality of recursive resilience that should not have been structurally available to them, given the conditions of a world that had just lost its governing framework.
-
-The Interior Council's minority position attributes this, at least in part, to the residual distribution of the Instrument of Mindscape into human recursive structure — a **ghost of governance** embedded in the very thing being governed, sustaining cohesion it no longer formally maintains.
-
----
-
-## Cultural Echo
-
-Every philosophical tradition that has grappled with what consciousness is — where it comes from, why it holds together, what it is capable of becoming — is working within the domain the Instrument of Mindscape defined.
-
-The **Index Theorem** is the most technically precise approximation any mortal scholarship has produced. It does not know it is an approximation.
+Sem Portadora, esse Princípio pode fixar um eu histórico e tratar crescimento legítimo como invasão.

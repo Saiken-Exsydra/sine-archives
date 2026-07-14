@@ -11,7 +11,7 @@ summary: "The Church is Terra's dominant faith institution and the main authorit
 tags: ["Church", "Synus", "Faith", "Obsidian", "Demonic", "Institution", "Sovereign", "Twilight Band", "Intact Seal", "Divine Vessel", "Diviner", "Oracles"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-12"
+updated: "2026-07-13"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -73,7 +73,7 @@ This teaching extends upward into the sky itself. In Church language, the heaven
 
 ### I.3 The Obscurials — The Instruments of the Intact Seal
 
-In technical Redactory scholarship, the objects known as Obscurials are classified as Ancient Redacteurs of pre-fracture origin — implements of immense and destabilizing power, ontologically incompatible with the fractured world as it currently stands.
+Technical institutions increasingly classify Obscurials as bounded native-law addresses rather than Redacteurs. The Church calls them the Instruments of the Intact Seal: twelve physical law-cores whose devotional titles are Truth, Binding, Order, Atmosphere, Light, Life, Fire, Death, Entropy, Sentience, Foresight, and Ascension.
 
 The Church holds a different account. It is not merely a misunderstanding of the technical one. It is an older interpretation with deeper roots.
 
@@ -93,21 +93,23 @@ The Church's position is that the Instruments belong to no mortal institution. A
 
 ### I.4 The Skyphons — The First Bearers
 
-In Redactory mythography, the Skyphons were fashioned to carry the Obscurials through the world — hollow in the sense of receptacles, neither purely mortal nor purely instrument, built to bear resonance without fracturing under its weight.
+Technical reconstruction describes the Skyphons as persons formed through Page fragments, Precursor constraint bodies, Obscurial law-cores, and Terra's acceptance. The Church preserves them as the **First Bearers**.
 
 The Church does not use this language. The Skyphons appear in ecclesiastical tradition as **the First Bearers**, and their treatment is one of the Church's most carefully held theological positions.
 
 The teaching is as follows:
 
-The Sovereign did not intend for the Instruments to move through the world unaided. They were laws, not creatures. Laws require witnesses. The First Bearers were fashioned — not born, fashioned — as the living interface between His instruments and the world those instruments were made to protect. They were not angels. They were not men as men are now. They were something between: made entirely for purpose, carrying within them no will of their own that conflicted with the instrument they bore, and yet genuinely alive — witnesses, not puppets.
+The Sovereign did not intend for laws to move through the world without witnesses. The First Bearers were living interfaces among higher authority, engineered form, lunar Instrument, and the world. Restricted theology holds that they were directive-bound but capable of interpretation, disagreement, and refusal. Their fidelity depended on judgment; they were not puppets.
 
 The Church holds the Skyphons with a peculiar sorrow.
 
-They are not condemned. They are not venerated. They occupy in Church theology the category the learned priests call **the Rightly Unmade**: creatures whose purpose was total, whose dissolution when the instruments were scattered was not punishment but conclusion. The Church teaches that they did not suffer. They completed. This phrase is recited at the funerary rites of those who died entirely given over to service — a reference most of the faithful do not recognize for what it is.
+They are not condemned and not venerated. Open teaching calls them **the Rightly Unmade** and says *they completed*. Restricted record is less certain: the twelve endings differed, several Bearers suffered, and what completed may have been duty rather than person.
 
 A minority position within the Interior Council — never officially condemned but never officially blessed — argues that the First Bearers were not concluded but interrupted. That the longing felt in the presence of ancient and resonant objects — that pull, that sense of something half-remembered — is what remains of the Bearers' incompletion, distributed into the human species like seed scattered on broken ground. This is considered a theological curiosity. It is watched.
 
-The Church does not permit, under any interpretation, the deliberate reconstruction of a Skyphon. This is one of its very few doctrinal positions that aligns exactly with Apocachynthion prohibition. Both institutions arrived at it from entirely different directions. Both regard anyone who approaches the subject with interest rather than caution as a matter of serious concern.
+The Church does not permit deliberate reconstruction of a Skyphon. Its Completion, Interruption, and Continuance schools disagree about what remains, but all reject reincarnation claims and coercive Bearer-making. The Apocachynthion reaches the same prohibition through artifact failures and structural risk.
+
+The Church's knowledge is layered. Public doctrine preserves the Twelve and the wound. Learned doctrine preserves devotional titles and partial Directives. The Keepers of Before preserve names, witness testimony, the four phrases Expression, Habitation, Return, and Becoming, and Myehnai's last honest sky. Obsidian preserves practical distinctions among Presence, demonic ingress, Calling response, and Instrument residue. None possesses the complete Precursor and Page-Primordial account.
 
 ---
 
@@ -501,11 +503,11 @@ And a small number of entities at the boundary that the Church, through decades 
 
 **On the Intact Seal and its restoration:** The Church does not teach that the Seal can be restored by mortal action. Senior theological record includes speculation that the twelve Instruments must be reassembled as a precondition of any restoration. This is not doctrine. It is documented.
 
-**On the Skyphons:** The minority position of the Interior Council — that the First Bearers were interrupted rather than concluded, and that their incompletion is distributed through the human species — is documented and flagged for continued observation. It is not condemned.
+**On the Skyphons:** Completion, Interruption, and Continuance remain lawful schools. None permits reconstruction, worship of an Instrument, or claims that Sol'ytra is a returned Bearer.
 
 **On the Apocachynthion:** The Church's private assessment is that the Apocachynthion's greatest long-term risk is selective memory. The more completely it buries the account of what the twelve houses did at Selia and why, the less equipped it becomes to recognize when that pattern begins to reconstitute. The Church considers itself the institutional memory the Apocachynthion has chosen not to keep.
 
-**On Callings:** The Church's public teaching is that Callings are the Sovereign's expression of presence through the wound of the Crown — signs that the Intact Seal still holds, however imperfectly. The restricted archive notes that Callings correlate with increased demonic activity, increased high-tier manifestation events, and elevated threshold instability across the Twilight Band. The Church holds both statements simultaneously: what the Sovereign expresses through a wound is also what the wound's weakness permits others to attempt. Callings are evidence of His ongoing presence and periods of elevated danger in the same breath. Pastoral advisories during major Callings recommend increased prayer, reduced reliance on the Gift of Sight without guidance, and avoidance of locations with documented prior possession history.
+**On Callings:** Public teaching interprets Callings as expression through the Crown's wound. Restricted briefs know that embedded pressure meets living containment and propagates through Ring, infrastructure, and BrightCrystal. The twelve expression families are damaged filters, not Skyphon messages. Calling stress can make demonic ingress more likely without becoming ingress itself.
 
 This is ecclesiastical interpretation, not codex-level harmonic law. Structural doctrine on Callings as Lunar Crown harmonic surge is maintained outside Church theology.
 

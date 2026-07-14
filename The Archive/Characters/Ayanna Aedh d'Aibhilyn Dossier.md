@@ -1,6 +1,6 @@
 # PERSONAL DOSSIER - RESTRICTED
 ## AYANNA AEDH d'AIBHILYN
-*Filed under CLOCKWORK observational archive - anomalous Auroran subject file*
+*Filed under Project Seam observational archive - anomalous Auroran subject file*
 *Restricted circulation: Seat-level review, Aurora-pattern irregularity desk, external-institutional watchlist*
 
 ---
@@ -48,7 +48,7 @@ Stable canon:
 - Her registered Redactor classification is **Mechanism Anchor**.
 - Her Anchor expression is structurally related to the perceptual capacity that will eventually let her interface with the Sibyl Fragment.
 - The Apocachynthion knows her as an unusual registered Auroran Redactor.
-- CLOCKWORK is aware of her existence, and Em'manuel Wonderwall has been briefed.
+- Project Seam is aware of her existence, and Em'manuel Wonderwall has been briefed.
 
 ---
 
@@ -242,7 +242,7 @@ Ayanna was engineered to be such a receiver.
 
 The Fragment was built for probabilistic site assessment: it returns structured information about coherence anomalies, thinness fluctuations, resonance events, and related structural conditions. Its output was meant for a Precursor-class observer. Ayanna's engineered substrate and Mechanism Anchor make her an accidental modern approximation of that role.
 
-At sustained coupling, she may eventually perceive more than the Wing expects: not just local anomaly data, but traces of the wider Precursor stabilization network, the Lunar Crown's containment work, Vael'Theryn's modeling activity, and the Instrument of Light in the White Desert.
+At sustained coupling, she may eventually perceive more than the Wing expects: not just local anomaly data, but traces of the wider Precursor stabilization network, the Lunar Crown's containment work, Vael'Theryn's modeling activity, and Myehnai's expelled Instrument of Legibility in the White Desert.
 
 She will not understand all of what she sees.
 
@@ -282,11 +282,11 @@ He has authorized killings and suppressions around Ayanna's investigation. He ha
 
 Lacroix is the senior researcher attached to the Sibyl Fragment. He has studied it longer than any other living person and understands less than he once believed he did. He is likely to become important when Ayanna is brought into direct contact with the Fragment.
 
-### VIII.6 Em'manuel Wonderwall / CLOCKWORK
+### VIII.6 Em'manuel Wonderwall / Project Seam
 
-CLOCKWORK has identified Ayanna as anomalous through the institutional pattern around her: intake irregularity, Lyréne proximity, developmental profile, and non-standard trajectory. A brief reached Em'manuel Wonderwall eleven months ago.
+Project Seam identified Ayanna as anomalous through the institutional pattern around her: intake irregularity, Lyréne proximity, developmental profile, and non-standard trajectory. A brief reached Em'manuel Wonderwall eleven months ago.
 
-CLOCKWORK has not intervened. It is passively observing. The Vitrified Wing does not know this.
+Project Seam has not intervened. It is passively observing. The Vitrified Wing does not know this. Clockwork has no valid seam while competent Auroran and civil jurisdictions remain available.
 
 ---
 
@@ -361,7 +361,7 @@ Likely narrative trajectories:
 1. **Managed Revelation:** The Wing brings Ayanna into the Sibyl Fragment program early, revealing only enough truth to convert her into a cooperating asset.
 2. **External Exposure:** Solène or another outside vector uncovers enough to trigger federal, Apocachynthion, Church, or corporate attention.
 3. **Anchor Recognition:** Ayanna's Mechanism perception deepens until she can perceive the manipulative architecture around her without needing documents.
-4. **CLOCKWORK Intervention:** Em'manuel decides the pattern around Ayanna requires action, collapsing the Wing's model from outside.
+4. **External Seam Intervention:** Em'manuel decides the pattern around Ayanna requires lawful disclosure or protection, collapsing the Wing's model from outside.
 5. **Apocachynthion Escalation:** Ayanna's deepening Anchor expression triggers institutional review, exposing irregularities the Wing cannot suppress.
 
 The Wing is betting it can execute the first trajectory before any of the others complete.
@@ -392,7 +392,7 @@ She is beginning to see it.
 
 3. **What does the Fragment do in proximity to her?** It may align toward her, respond across distance, or begin producing output before the activation phase begins.
 
-4. **Does CLOCKWORK act first?** The Wing does not know it is being watched. If CLOCKWORK intervenes, the entire containment architecture may collapse without warning.
+4. **Does Project Seam escalate first?** The Wing does not know it is being watched. If Seam alerts a competent Auroran, Apocachynthion, or civil authority, the entire containment architecture may collapse without warning.
 
 5. **What becomes of the second subject?** The child under the same program is the Wing's institutional fallback. Ayanna does not know she exists.
 

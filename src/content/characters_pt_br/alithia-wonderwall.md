@@ -4,7 +4,7 @@ type: "Personagem"
 age: "89 (em 2200); aparenta ter entre trinta e poucos anos"
 birth_year: "2111"
 birthplace: "Territórios costeiros do norte do ramo Rae, Império de Synus"
-affiliation: "House Wonderwall (linha principal, líder política de facto); Império de Synus (representante no Senado); SiNE (autoridade da Casa, supervisão indireta)"
+affiliation: "House Wonderwall (First Hearth; Hearth Meridian; líder política de facto); Império de Synus; SiNE"
 house: "Wonderwall (origem no ramo Rae; linha principal por casamento)"
 rank: "Stylus - Anchor de Revelation"
 registry_status: "Publicamente reconhecida como principal representante da House Wonderwall; em privado, reconhecida pela revisão da Casa e da Church como um caso estável de fusão divina sem precedentes conhecidos"
@@ -21,12 +21,12 @@ hair: "Escuro, mantido com formalidade contida"
 eyes: "Normalmente dentro dos padrões humanos; sob Revelation ativa, brilham em uma luminância metálica que parece menos uma cor e mais uma decisão"
 dress: "Branco, prata, azul discreto e preto formal - nobre sem teatralidade"
 residence: "Propriedades principais dos Wonderwall; presença frequente do Estado em Kalt'sen"
-occupation: "Representante do Senado e principal autoridade pública da House Wonderwall"
+occupation: "First Hearth e líder política da House Wonderwall diante do Senado"
 summary: "Feita de memoria, mas humana ate o fim; calor onde sua casa esperava milagre, vida onde o luto queria retorno."
 tags: ["Wonderwall", "Rae", "SiNE", "Radiance", "Revelation", "First Radiance", "Senate", "Kalt'sen", "Divine Vessel", "A'licia"]
 status: "public" 
 created: "2026-05-14"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
@@ -47,7 +47,7 @@ Al'ithia Rae Wonderwall é uma das poucas pessoas vivas no Império cuja existê
 
 O que ela é, na linguagem mais precisa disponível, é um eu composto estável.
 
-Athena Rae nasceu em 2111 dentro do ramo Rae da família Wonderwall — o mesmo ramo do qual A'licia surgiu antes de a House Wonderwall se tornar uma das grandes potências dinásticas centrais do Império. A'licia morreu séculos antes. O que restou dela não se dissipou por completo. Pela densidade do trabalho de sua Light Anchor, pela força do papel histórico que ocupou e por gerações de veneração Wonderwall direcionadas a ela como origem e modelo, sua continuidade pós-morte acabou se estabilizando em algo que a Casa passou a conhecer em privado como a Primeira Radiance.
+Athena Rae nasceu em 2111 dentro do ramo Rae da família Wonderwall — um dos Old Twelve e um Refuser de Selia, embora ainda politicamente menor e conhecido sobretudo pelo trabalho técnico. A'licia morreu séculos antes. O que restou dela não se dissipou por completo. Pela densidade do trabalho de sua Light Anchor, pela força do papel histórico que ocupou e por gerações de veneração Wonderwall direcionadas a ela como origem e modelo, sua continuidade pós-morte acabou se estabilizando em algo que a Casa passou a conhecer em privado como a Primeira Radiance.
 
 Athena cresceu dentro dessa reverência. Para ela, a Primeira Radiance nunca foi uma doutrina abstrata, mas uma presença familiar ao redor da qual oração, memória e identidade da família haviam orbitado por gerações. Aos quinze anos, o contato começou. Vieram sonhos, correções, acessos inexplicáveis a memórias e formas de reconhecimento muito além do que qualquer jovem Redactor deveria possuir. E aquilo nunca parou.
 
@@ -100,7 +100,7 @@ Al'ithia simplesmente é mais adequada para essa função do que ele.
 
 Em'manuel governa sistemas. Constrói estruturas tão grandes que a maioria das pessoas só percebe que elas existem quando falham. Al'ithia governa visibilidade, confiança e memória política. Ela lembra quem prometeu o quê, durante qual crise, diante de quais testemunhas e qual compromisso continuou valendo depois que os discursos terminaram. É por causa dela que a House Wonderwall consegue permanecer ao mesmo tempo temida e acessível. Ela dá à Casa um rosto humano sem jamais permitir que esse rosto se torne decorativo.
 
-Entre as Grandes Casas, isso transformou Al'ithia em uma das operadoras políticas mais importantes do Império, mesmo sem ocupar formalmente o Assento.
+Entre as Grandes Casas, isso transformou Al'ithia em uma das operadoras políticas mais importantes do Império. Ela ocupa o Hearth Meridian como Al'ithia e exerce a função de First Hearth, mas não ocupa o Assento nem foi nomeada sucessora.
 
 ---
 
@@ -122,7 +122,7 @@ O fato doméstico mais importante da vida de Al'ithia é que ela é a mãe de E'
 
 Não simbolicamente. Não como parte de um acordo político. Nem apenas como esposa do pai de E'lla. Mas no sentido real e cotidiano que define se uma criança cresce se sentindo amada ou apenas administrada.
 
-Quando E'lla foi retirada do Project Kaleidoscope e transferida para a linha principal dos Wonderwall antes dos cinco anos de idade, Al'ithia se afastou da política ativa por anos para criá-la pessoalmente. Ela cuidou dos tutores, das refeições, das roupas, da disciplina inicial de Redactory, da rotina da casa, dos medos, das febres, da etiqueta e de todos os pequenos atos repetitivos através dos quais a maternidade se torna algo real. Isso importa ainda mais porque a vida de E'lla poderia facilmente ter sido reduzida à lógica de um programa por todos ao redor dela. Nas mãos de Em'manuel, ela corria constantemente o risco de virar várias coisas ao mesmo tempo: filha, projeto, possível sucessora e eco de um luto antigo. Nas mãos de Al'ithia, ela era antes de tudo apenas uma criança.
+Em 2179, Al'ithia patrocinou a adoção irrevogável de E'lla pela House Wonderwall, encerrou a produção biológica do Project Kaleidoscope e recusou a destruição dos sujeitos vivos. E'lla recebeu standing familiar sem atribuição corporativa. Al'ithia então se afastou da política ativa por anos para criá-la pessoalmente: tutores, refeições, roupas, disciplina inicial de Redactory, medos, febres e todos os atos repetitivos pelos quais a maternidade se torna real.
 
 A relação entre as duas é complicada por memórias de uma forma que poucas famílias sobreviveriam. Através de A'licia, Al'ithia se lembra da primeira E'lla — seu nascimento, sua vida e sua morte. Através de Athena, ela conheceu a E'lla atual como uma menina assustada que precisava de café da manhã, paciência e alguém sentado ao lado dela depois de pesadelos. Essas duas verdades poderiam ter produzido uma catástrofe. Em vez disso, produziram um dos vínculos mais saudáveis de toda a família.
 

@@ -4,7 +4,7 @@ type: "Character"
 age: "25 (as of 2200)"
 birth_year: "2175"
 birthplace: "Ael'keth, eastern borderlands, Northern Region"
-affiliation: "SiNE Integrated Forces (cover); Wonderwall Seat (actual)"
+affiliation: "SiNE Integrated Forces (cover); protected service under sealed House and Compact warrant"
 house: "Ex'sydra (erased pre-Imperial theoretical house; restored to Sai'ken by E.W. in 2194)"
 rank: ""
 registry_status: "Active - Wonderwall cadet-branch estate detail, assigned 2197"
@@ -21,12 +21,12 @@ hair: "Black, long, bound back"
 eyes: "Pale grey, reading as silver in certain light"
 dress: "Close-fitted coats in black, grey, and deep blue; nothing that draws attention"
 residence: "Wonderwall cadet-branch estate, eastern residential quarter, Kalt'sen"
-occupation: "Physical security specialist - SiNE protective-services contract (public); Wonderwall Seat direct report (actual)"
+occupation: "Physical security specialist (public); protective officer and cadence sentinel (sealed)"
 summary: "A borderlands operative carrying the restored Ex'sydra name without yet knowing what it means. His instincts are unusually sharp, his power seems tied to thresholds and transition, and his presence near Ec'lesia may matter more than he has been told."
 tags: ["SiNE", "Wonderwall", "KT-Exs", "Interval-adjacent", "Northern Region", "Ex'sydra Lineage"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-26"
+updated: "2026-07-13"
 image: "../../assets/uploads/characters/char-saiken-exsydra.webp"
 hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 ---
@@ -44,7 +44,7 @@ Publicly, he is a quiet security specialist assigned to the Wonderwall cadet-bra
 
 Privately, he is much more significant than he knows.
 
-He was born **Sai'ken Las'gall** in the eastern borderlands near Ael'keth. In 2194, Em'manuel Wonderwall recruited him into the Seat's direct apparatus and gave him a restored House name: **Exsydra**. Sai'ken accepted it as a procedural designation. He noticed that older institutions reacted to it. He was never told why.
+He was born **Sai'ken Las'gall** in the eastern borderlands near Ael'keth. In 2194, Em'manuel Wonderwall brought him into protected service under a sealed House and Compact warrant and restored the lineage name **Exsydra**. The name grants no automatic Wonderwall membership, corporate title, or sovereign claim. Sai'ken was never told its full history.
 
 That missing explanation matters because Ex'sydra is not just a formal label. It is the erased name of a pre-Imperial theoretical house whose work helped make the Rite of Selia possible and helped make its collapse catastrophic. Sai'ken does not know that he is one of the bloodline's surviving expressions.
 
@@ -81,7 +81,7 @@ In everyday work, he may notice that a corridor feels wrong before any instrumen
 
 In a protective role, that means he often reacts to danger very early. He may not be able to explain why a place is bad, only that it is. The story treats that instinct as real, not as lucky guessing.
 
-Near unusual configurations, especially around **Ec'lesia Wonderwall**, his sensitivity appears to do more than warn him. It may help him read or stabilize patterns that other people around him do not fully perceive.
+Near unusual configurations, especially around **Ec'lesia Wonderwall**, his sensitivity helps him read escalation early and support evacuation. It does not let him stabilize her condition or command what answers through her.
 
 The visible effect is usually subtle. Sai'ken is not flashy. His power reads through timing, positioning, steadiness, and the eerie accuracy of someone who keeps standing in the right place before anyone else knows it is the right place.
 
@@ -99,7 +99,9 @@ The other major limit is informational. Sai'ken is operating inside a story abou
 
 **Ec'lesia Wonderwall** is the center of his current posting. Publicly he protects her household. Privately, his presence near her may be structurally important because of how his threshold-sensitive architecture interacts with her condition.
 
-**Em'manuel Kael Wonderwall** is the person who restored the Ex'sydra name to him and recruited him directly. Sai'ken knows him as a credible superior. He does not know the far deeper personal and historical reasons behind that relationship.
+**Em'manuel Kael Wonderwall** restored the Ex'sydra name and placed him under sealed protected service. Sai'ken knows him as a credible superior, not an owner. He does not know the deeper personal and historical reasons behind that relationship.
+
+**Ec'lesia Wonderwall** is the center of his present assignment. His warrant makes protection and preservation of her agency primary. Terminal intervention is permitted only if catastrophic loss of agency is verified and every available lesser response has failed or cannot arrive, followed by sealed civil review.
 
 **Hisui Kirasagi** is one of the few people in the household with whom he seems to share real ease. Their connection works partly because both of them live with inherited conditions they did not choose and both have learned to keep complicated inner architecture behind a professional exterior.
 
@@ -112,4 +114,3 @@ Sai'ken matters because he links several hidden threads at once.
 He is the surviving continuation of the erased Ex'sydra house. He is one of the clearest examples of inherited structural sensitivity surviving outside official archives. He is also positioned directly beside one of the Wonderwall line's most unstable modern cases.
 
 For readers, he is important because he gives the setting a grounded way to show how hidden bloodline history can survive as instinct before it survives as knowledge. He is standing inside a legacy older institutions thought they had buried, and the story is partly about when he will finally be told what he already is.
-

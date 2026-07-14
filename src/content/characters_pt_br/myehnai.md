@@ -1,53 +1,26 @@
 ---
 title: "Myehnai"
 type: "Skyphon"
-rank: "Light Regulation"
-designation: "Cantora da medida lunar"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
-occupation: "Luminescent Aria"
-domain: "Light"
-church_name: "The Instrument of Light"
-principle: "Leóhtmæl"
-keeper_name: "That Which Filled What Was Dark"
-summary: "Na guarda dela, a luz nunca foi so brilho, mas ritmo, hora e a ternura da recorrencia."
-tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Luminescent Aria", "Light", "Luminance", "Keepers of Before"]
+rank: "Portadora da Radiância Legível"
+designation: "Portadora da Radiância Legível"
+affiliation: "Primeira Portadora — Selo Intacto (Concluída)"
+registry_status: "Pessoa concluída ou interrompida na Fratura; corpo perdido na rota óptica de Ksy'rion; fragmento em vestígios ópticos; Instrumento expulso para o Deserto Branco"
+occupation: "Iluminação legível e sobrevivível"
+domain: "Propagação, refração, perceptibilidade e sincronização circadiana"
+church_name: "O Instrumento da Luz"
+principle: "Legibilidade"
+keeper_name: "Aquela Que Deixou o Mundo Ser Visto Sem Ser Exposto"
+summary: "Ela mantinha a iluminação fiel ao que atravessava e misericordiosa com quem a recebia."
+tags: ["Skyphon", "Primeira Portadora", "Selo Intacto", "Obscurial", "Legibilidade", "Myehnai", "Deserto Branco", "Ksy'rion"]
 status: "private"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-07-13"
 ---
 
-> *"Every tradition that distinguishes between kinds of illumination — that registers moonrise as a different quality of being-in-the-world rather than merely a change in light level — is working with a sensitivity the Instrument of Luminescent Aria trained into every perceptive structure that developed while the Seal was intact."*
-> — Keepers of Before, restricted record annotation
+> **Diretiva:** Mantenha a iluminação fiel ao que atravessa e misericordiosa com quem a recebe.
 
----
+Myehnai governava a **Legibilidade**, não apenas o brilho. Não criava luz, revelava verdades sem suporte, lia mentes nem podia manter um ocultamento que tornasse o mundo estruturalmente falso.
 
-## The Instrument
+Quando Ksy'rion passou a mostrar uma Lua que já não existia daquele modo, ela abriu o **último céu honesto**: uma visão estreita, suficiente para Syr'lene agir sem expor Terra a toda a geometria hostil externa. Seu corpo falhou na rota óptica; seu fragmento entrou nos ritmos e vestígios de visão; o Instrumento da Legibilidade foi expulso para o Deserto Branco.
 
-Every moonrise — every pink-silver brightening at the horizon, every deepening of the sky toward its full deep blue, every zenith of silver-white illumination — is the shape of what the Instrument of Luminescent Aria governed. Not because Myehnai produced the Moon's light. But because the law she bore governed how **light moved through the world**: how it refracted through the atmosphere Aesis maintained, how it organized the rhythms by which biological processes calibrated themselves, how the quality of illumination at any moment related to the larger diurnal structure that made biospheric life possible.
-
-This was a law of extraordinary granularity. Light changes constantly — angle, intensity, refraction, the particular interaction between a given quality of illumination and the atmospheric conditions it passes through. The Instrument governed all of that variation, continuously, as a sustained active presence rather than a static rule.
-
----
-
-## Nature
-
-The Precursor architecture built around the Page Primordial fragment in Myehnai's core was optimized for **sustained, granular, continuously varying governance**. It was not built for force. It was built for attention.
-
-Among all the Skyphons, she was the one whose Jurisdiction was most directly and continuously experienced by everything that lived on the planet. Every organism with sensitivity to light was, in a functional sense, in **continuous contact** with Myehnai's governance without knowing it. She was the most intimately known Skyphon — known by every living thing, known without being recognized as known.
-
-She inhabited her domain as a musician inhabits sound: not producing it from outside but moving within it, responsive to its conditions, in continuous dialogue with what the Instrument expressed through contact with actual conditions. She was moved by the particular quality of light in ways that the other Skyphons found, from the outside, as close to joy as they could interpret.
-
----
-
-## Post-Fracture Condition
-
-What the Instrument of Luminescent Aria governed was more than the physical production of light. It was the law of light's behavior in a world built to receive it whole. The current world receives light in a world that is not whole. The light is functional. It is not, in the deepest structural sense, quite what it was.
-
-The world's oldest biologically evolved structures, which calibrated to light during the era when the Instrument was active, carry that calibration still — in the way every creature's body is organized around a rhythm that predates any creature's memory.
-
----
-
-## Cultural Echo
-
-Every tradition that distinguishes between kinds of illumination — that registers moonrise as a different quality of being-in-the-world rather than merely a change in light level — is working with a sensitivity the Instrument of Luminescent Aria trained into every perceptive structure that developed while the Seal was intact.
+Aurora o chama de **Leóhtmæl**. O resgate de E'lla foi um reflexo de reconhecimento do Instrumento, não prova de que Myehnai sobrevive conscientemente. Se ela viu a Lua Silenciosa permanece um mistério.

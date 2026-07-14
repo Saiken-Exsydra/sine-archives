@@ -5,7 +5,7 @@ summary: "The federal republic of light and marble. A nation built around custod
 tags: ["Places", "Aurora", "Federation", "Rite of Radiance", "Valerie", "White Desert", "Leóhtmæl", "The Spire", "Luminants"]
 status: "public"
 created: "2026-03-31"
-updated: "2026-03-31"
+updated: "2026-07-13"
 image: "../../assets/uploads/places/place-aurora.png"
 ---
 
@@ -18,7 +18,7 @@ image: "../../assets/uploads/places/place-aurora.png"
 
 Aurora is a **federal republic** of moderate size, situated to the north-west of the Empire of Synus along the Twilight Band. It is not a military power on the scale of Synus or Ardeatus, not an industrial colossus, not a nation that has defined itself through war. Aurora defines itself through three things: **light, governance, and the responsibility of what it keeps.**
 
-Aurora's territory contains the **Instrument of Light** — *Leóhtmæl*, That Which Filled What Was Dark — resting inaccessible in the deep White Desert to the south. The nation's entire theological, cultural, and political identity has organized around this fact. The Rite of Radiance, the revolution that produced the federation, and the peculiar relationship Aurora has with Redactors and with the broader world all flow from the presence of that object in Auroran ground.
+Aurora's territory contains the expelled **Instrument of Legibility** — devotionally named *Leóhtmæl*, That Which Filled What Was Dark — resting inaccessible in the deep White Desert. Its Principle is not light as substance but the faithful passage of illumination and the survivable relation between visibility and concealment.
 
 The federation is governed by a **Council of Cantons** — semi-autonomous territorial units, each with its own elected administration, bound under a common federal charter. The federal executive, the **Chancellor**, is elected by the Council, one vote per canton regardless of population. Coalition politics is permanent and expected. The founding memory is not a glorious war but an act of institutional competence in the face of monarchical failure.
 
@@ -64,7 +64,7 @@ The **Spire** is Valerie's defining landmark — the tallest fixed structure on 
 
 The **Rite of Radiance** is Aurora's majority religious institution, born from the **Luminant** movement — centuries of scholars, desert hermits, and Redactors organized around one persistent intuition: *something sacred lives in the White Desert, and we are responsible for it.*
 
-The Rite's theology rests on three pillars. **Custodianship**: Aurora does not own *Leóhtmæl* — it is responsible for it. **The Anchored Radiance**: the Instrument was not scattered at the Fracture but deliberately placed, because light requires a ground that can receive it without diminishing it. **The Obligation of Light**: proximity to the Instrument carries obligations, not privileges, producing an aesthetic theology where building well and building for light are acts of devotion.
+The Rite's theology rests on three pillars. **Custodianship**: Aurora does not own *Leóhtmæl* — it is responsible for proximity to it. **The Anchored Radiance** teaches deliberate placement; codex truth is that Myehnai's Instrument was expelled during the Fracture and the desert became the ground that received it. **The Obligation of Light** preserves the stronger maxim: *show enough to save; veil enough to spare*.
 
 The Rite is in **formal schism** with the Church but not in the militant separation that defines Ardeatus's Covenant. It does not reject the Sovereign, the Twelve, or the Church's broad framework. It rejects one specific claim: that no mortal institution may hold custodianship of an Instrument. The Church and the Rite maintain diplomatic contact, exchange scholars, and disagree — sometimes bitterly — while continuing anyway.
 

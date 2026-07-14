@@ -4,8 +4,8 @@ type: "Character"
 age: "23 (at time of filing, 2200)"
 birth_year: "2177"
 birthplace: "Drevholt, western band interior"
-affiliation: "Apocachynthion (sealed file, Mark 2); House Engelmeyer (reintegrated main line, 2199)"
-house: "Engelmeyer (main line, reintegrated 2199 - formerly cadet Voren branch)"
+affiliation: "Apocachynthion (sealed file, Mark 2); House Engelmeyer (current blood Seat, Furnace Council administration)"
+house: "Engelmeyer (Voren origin; blood Seat since reintegration in 2199)"
 rank: "Quill"
 registry_status: "Registered - Quill, Mark 2; intake 2193; sealed Margins active"
 point_profile:
@@ -38,7 +38,7 @@ tags:
   - "Voren"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Lenore Engelmeyer Dossier.md"
 ---
 
@@ -53,7 +53,7 @@ Le'nore is deeply unsettling precisely because she does not feel chaotic. She is
 
 That surface is real. It is also incomplete.
 
-The official system calls her a **Deception Anchor** case because that is the nearest safe category for what she lets institutions see. In reality, her condition reaches much farther than misdirection or illusion. It touches hunger, body structure, memory, and identity in ways the official label does not begin to cover.
+Le'nore has a genuine **Deception Anchor**. The classification correctly explains her Anchor-mediated perceptual routing, but it cannot explain the separate Quiet Moon-derived biological architecture integrated beside it: hunger, body structure, retained memory, and identity.
 
 The deeper truth is not possession, corruption, or divine use. Le'nore is not being driven by an outside will. The Quiet Moon-derived grammar in her is native to her recursive structure, which means her warmth, hunger, restraint, cruelty, humor, and affection are all part of one coherent person.
 
@@ -61,7 +61,7 @@ The deeper truth is not possession, corruption, or divine use. Le'nore is not be
 
 **Public Identity:** An easy-to-like young Redactor whose warmth makes her file sound far safer than it is.
 
-**Institutional Identity:** A sealed-leaf [[quill|Quill]] case formally categorized under Deception and kept under specialist review because the official label is only partially true.
+**Institutional Identity:** A sealed-leaf [[quill|Quill]] with a confirmed Deception Anchor; the classification is correct and incomplete.
 
 **Private Truth:** Le'nore is a completed compatibility event between human recursive singularity and Quiet Moon-derived biological grammar.
 
@@ -77,7 +77,7 @@ That is part of what makes her dangerous. She does not need to become visibly mo
 
 ## Background
 
-Le'nore comes from the **Voren branch** of House Engelmeyer, a line that carried odd disturbances and recurring unease across generations without any institution understanding the pattern properly.
+Le'nore comes from the **Voren branch** of House Engelmeyer. The branch descends from western survivors of the Voren Works disaster in 1043, whose family-keyed lattice scar carried partial family information across generations.
 
 Her father, **Al'tair Aldhor**, was secretly a Corvel Institute researcher sent into the branch under cover of an ordinary life. Her mother, **Re'lha Voren Engelmeyer**, disappeared when Le'nore was nine.
 
@@ -119,7 +119,7 @@ Le'nore also appears able to:
 - alter nearby conditions during high expression in ways that favor isolation, pursuit, or concealment;
 - manage a steady predatory hunger without becoming irrational.
 
-The simplest way to understand this is that Deception is not the whole truth. It is the safest mask for a much stranger condition.
+The simplest way to understand this is that Deception is genuine and not the whole truth. Her edits may lack visible external tells, but a sensitive Point or prepared harmonic array can still detect the routing disturbance.
 
 ## Limitations
 
@@ -139,7 +139,7 @@ She does not use every part of what she carries equally. The clearest example is
 
 **The Apocachynthion** Marks her by accepting the version of her that fits inside a known box. Le'nore cooperates because that arrangement benefits her.
 
-**House Engelmeyer** is useful to her, but not fully trusted.
+**House Engelmeyer** recognizes her as its blood Seat, while the Furnace Council administers daily industry. Its factions variously seek protection, containment, restitution, succession, or obedience; she does not fully trust any of them.
 
 ## Story Role
 

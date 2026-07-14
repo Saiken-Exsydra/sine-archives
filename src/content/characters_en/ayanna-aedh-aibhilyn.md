@@ -35,15 +35,15 @@ tags:
   - "Mechanism"
   - "Redactor"
   - "Precursor"
-  - "CLOCKWORK"
+  - "Project Seam"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 ---
 
 > *"She was made to read a machine no modern mind should be able to read."*
-> - CLOCKWORK notation
+> - Project Seam notation
 
 ---
 
@@ -133,6 +133,8 @@ The other major risk is the Sibyl Fragment itself. If she truly is the human key
 **Elise** represents one of the least manufactured parts of Ayanna's life, which makes her especially important.
 
 **Cael Rouvelle** is the project's hard edge in human form. If Ayanna stops being manageable, he is one of the people most likely to enforce that reality.
+
+**Em'manuel Wonderwall / Project Seam** identified the pattern around her life and continues to observe it. CLOCKWORK has no valid seam while Aurora and the competent civil jurisdictions remain capable of response.
 
 ## Story Role
 

@@ -3,9 +3,9 @@ title: "E'lla Rae Wonderwall"
 type: "Personagem"
 age: "25 anos (na época do registro, 2200)"
 birth_year: "2175"
-birthplace: "Instalação do Project Kaleidoscope — transferida para a linha principal dos Wonderwall antes dos cinco anos"
-affiliation: "House Wonderwall (linha principal); SiNE (Redactor operacional, candidata à sucessão)"
-house: "Wonderwall (posição na linha principal)"
+birthplace: "Instalação do Project Kaleidoscope — adotada pela House Wonderwall antes dos cinco anos"
+affiliation: "House Wonderwall (standing familiar por adoção); SiNE"
+house: "Wonderwall (adoção irrevogável; sem obrigação corporativa)"
 rank: "Stylus — Anchor de Light, licença operacional irrestrita"
 registry_status: "Registrada — Stylus, Anchor de Light. KL-83 (designação interna, não divulgada publicamente)"
 point_profile:
@@ -21,7 +21,7 @@ hair: "Preto — natural; mantido pela própria Redactory em absorção quase to
 eyes: "Traços delicados; assumem um tom metálico claro entre rosa e azul durante o uso ativo da Redactory — o que acontece quase o tempo todo"
 dress: "Somente preto — tecidos responsivos à luz desenvolvidos em pesquisas próprias de materiais ao lado do Professor Lionheart; roupas que funcionam tanto como identidade quanto aparato de treinamento"
 residence: "Propriedades principais dos Wonderwall; presença operacional prolongada em Kalt'sen e Hora'veil conforme o trabalho na Company exige"
-occupation: "Redactor operacional da SiNE; candidata interna à sucessão do Assento Wonderwall e da função executiva da SiNE"
+occupation: "Redactor operacional da SiNE e especialista em materiais"
 image: "../../assets/uploads/characters/char-ella-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
 portrait_gallery:
@@ -29,10 +29,10 @@ portrait_gallery:
 hero_gallery:
   - "../../assets/uploads/characters/char-ella-wonderwall-hero-2.png"
 summary: "Feita de um anseio antigo e obrigada a sobreviver a ele, brilha como retorno e vive como alguem ainda em formacao."
-tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora", "Successor"]
+tags: ["Wonderwall", "E'lla", "SiNE", "Light", "Radiance", "Abyssal", "Project Kaleidoscope", "KL-83", "Kalt'sen", "Hora'veil", "Aurora"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Ella Rae Wonderwall Dossier.md"
 ---
 
@@ -43,23 +43,23 @@ codex_file: "Ella Rae Wonderwall Dossier.md"
 
 ## O Que Ela É
 
-E'lla é o produto final do [[project-kaleidoscope|Project Kaleidoscope]] e, na prática, a única que ainda importa.
+E'lla é uma pessoa singular que se desenvolveu sob condições de Light projetadas pelo [[project-kaleidoscope|Project Kaleidoscope]]. Ela não é o produto final, a recriação de uma herdeira ou uma identidade retornada.
 
-O objetivo do programa era reconstruir biologicamente o perfil de Redactory da primeira E'lla Rae Wonderwall: a Anchor de Luz, a arquitetura recursiva associada aos efeitos documentados de organização do substrate e a precisão de desenvolvimento que séculos de refinamento finalmente permitiram alcançar. Em termos técnicos, o programa funcionou. Nos termos específicos que motivaram sua criação, fracassou. Ela carrega a própria Luz. Não carrega o eco estrutural acumulado da linhagem. O Remainder não sabe que ela existe.
+O programa impôs um perfil de Light arquivado sobre as condições de seu desenvolvimento. E'lla carrega a própria Light, mas não o eco hereditário pelo qual o Remainder reconhece certos Wonderwalls. Isso faz dela uma convergência viva e ainda não resolvida, não uma replicação bem-sucedida.
 
-Na prática, isso transformou E'lla em resposta para uma pergunta diferente daquela que o programa originalmente tentava responder. Como seria a linhagem Wonderwall sem a interferência do Remainder, destilada até a expressão mais pura possível da herança de A'licia? E'lla é essa resposta. O resultado não é inferior. Apenas não é aquilo que o programa inicialmente queria produzir.
+Em 2179, Al'ithia patrocinou sua adoção irrevogável pela House Wonderwall e encerrou a produção biológica do projeto. E'lla possui standing familiar sem obrigação corporativa. Os demais sujeitos continuam sendo pessoas a quem se devem cuidado, reparações, defesa independente, preservação de evidências e controle sobre a própria divulgação.
 
 Ela não sabe disso.
 
-Tudo que sabe é que sempre existiu uma expectativa de que se tornasse alguém importante — e que, nos últimos três anos, Em'manuel deixou de fingir que essa expectativa era abstrata.
+Tudo que sabe é que sempre existiu uma expectativa de que se tornasse alguém importante. Ela ainda não recebeu o registro completo que tem direito de conhecer por meio de uma defensoria independente.
 
 ---
 
 ## Família
 
-**Pai:** Em'manuel Kael Wonderwall — fundador e principal nome da SiNE, presidente do Meridian Council, Archtype. Foi ele quem moldou todas as condições importantes da vida dela, quem a treinou por três anos com a intenção declarada de colocar seu trabalho em suas mãos e quem ainda não revelou o peso completo do que esse trabalho realmente é. Com E'lla, ele demonstra um tipo específico de afeto: o de alguém que passou vinte e cinco anos observando uma pessoa crescer e acabou genuinamente emocionado com o resultado. Ela sabe que está sendo preparada para algo maior do que consegue enxergar. Não sabe há quanto tempo essa preparação vem acontecendo.
+**Pai:** Em'manuel Kael Wonderwall — fundador e principal nome da SiNE, presidente do Meridian Council, Archtype. Ele moldou muitas das condições da vida dela e ainda não revelou o registro completo do projeto. O treinamento voltado à sucessão foi suspenso e repudiado; qualquer mentoria atual é técnica, não preparação para o Assento.
 
-**Mãe:** Al'ithia Rae Wonderwall — do ramo Rae, a mesma linhagem de onde veio A'licia Rae Wonderwall quando Em'manuel entrou para a família Wonderwall quase mil anos atrás. O padrão não é coincidência e ninguém comenta sobre ele. Al'ithia sabe mais do que demonstra. Ela lida com isso com a tranquilidade de alguém que entendeu, no momento em que se casou com ele, que passaria a carregar silenciosamente uma longa lista de coisas impossíveis de comentar em voz alta.
+**Mãe:** Al'ithia Rae Wonderwall — patrocinou a adoção irrevogável de E'lla, encerrou a produção biológica do Kaleidoscope e recusou a destruição dos sujeitos vivos. Sua maternidade é real; também é real o conflito criado por ainda reter parte do registro.
 
 Publicamente, E'lla é filha deles. E isso é verdade em todos os sentidos que o mundo consegue enxergar — e em todos os sentidos que aquela família viveu de verdade. Ela foi colocada na linha principal dos Wonderwall antes mesmo de ter idade para formar memórias de qualquer outra coisa. Cresceu na casa deles, estudou sob o teto deles e recebeu o sobrenome sem qualquer ressalva. Em'manuel viu ela aprender a andar. Al'ithia foi a primeira pessoa que ela chamou quando sentiu medo. Independentemente do que o [[project-kaleidoscope|Project Kaleidoscope]] tenha sido na origem, a família que surgiu dele não é uma encenação. É a única família que E'lla já conheceu — e é real.
 
@@ -87,13 +87,13 @@ A versão pública de E'lla parece controlada, sofisticada, difícil de constran
 
 ## O Deserto Branco
 
-Aos dezessete anos, durante uma passagem de observação alinhada à SiNE nas estações desérticas do norte de Aurora, E'lla entrou no perímetro do [[white-desert|White Desert]] em condições que deveriam permanecer controláveis. Oficialmente, o comboio estava ali para troca de materiais e observação de campo em cooperação com o pessoal das estações aurorianas. Extraoficialmente, o objetivo era de Em'manuel: coletar dados de proximidade sobre como o perfil dela reagia em um território estruturalmente condicionado pelo Instrument of Light — a lei ancestral que governa a luz em todas as suas formas, seu movimento pelo mundo e seu papel na organização de ritmo biológico, atmosfera e iluminação em toda Terra.
+Aos dezessete anos, durante uma passagem de observação alinhada à SiNE nas estações desérticas do norte de Aurora, E'lla entrou no perímetro do [[white-desert|White Desert]] em condições que deveriam permanecer controláveis. Oficialmente, o comboio estava ali para troca de materiais e observação de campo em cooperação com o pessoal das estações aurorianas. Extraoficialmente, o objetivo era de Em'manuel: coletar dados de proximidade sobre como o perfil dela reagia em um território condicionado pelo Instrument of Legibility, que a Igreja chama de Instrument of Light. A lei não governa toda luz ou toda atmosfera: ela preserva propagação, refração, perceptibilidade e ritmos circadianos dentro de limites suportáveis.
 
-Durante o trajeto, formou-se uma tempestade fotônica anormal. Os registros da estação descrevem um evento de brilho extremo, instabilidade direcional no campo de luz refletida e degradação rápida da estabilização de Redactory entre os praticantes de escolta do comboio. Mais tarde, E'lla descreveu o deserto dizendo que ele *"parou de refletir luz e começou a decidir ela."* A frase é mais precisa do que parece. O White Desert não é apenas brilhante. Durante séculos, viveu sob a presença passiva, a pressão e a ressonância do Instrument of Light. Toda a região está saturada pelo campo residual dessa lei.
+Durante o trajeto, formou-se uma tempestade fotônica anormal. Os registros da estação descrevem um evento de brilho extremo, instabilidade direcional no campo de luz refletida e degradação rápida da estabilização de Redactory entre os praticantes de escolta do comboio. Mais tarde, E'lla descreveu o deserto dizendo que ele *"parou de refletir luz e começou a decidir ela."* A frase é mais precisa do que parece. O White Desert não é apenas brilhante. Durante séculos, viveu sob a pressão passiva do Instrument of Legibility expulso da Lua. Toda a região está saturada pelo campo residual dessa lei.
 
 Ela tentou executar um Dive raso de limpeza — algo automático, econômico, parte normal da maneira como vive. Em condições normais, isso seria apenas uma ação superficial: uma descida breve e controlada para limpar contestabilidade visual, estabilizar a legibilidade imediata do ambiente e facilitar seu trabalho. No White Desert, virou o gatilho.
 
-Sua Anchor não encontrou apenas um ambiente hostil. Ela entrou em ressonância com uma região já saturada pelo campo passivo do Instrument of Light. A lei presente no deserto, a pressão residual deixada pelo Instrument e a natureza da própria Abyssal Anchor dela se alinharam ao mesmo tempo. O que deveria ter permanecido um Dive superficial deixou de se comportar como um. A passagem superficial abriu espaço para uma descida muito mais profunda do que ela pretendia; a distância normal entre uso casual e verdadeira profundidade da Anchor colapsou; uma instabilidade localizada análoga à Thinness surgiu ao redor dela; e a descida deixou de ser voluntária. Ela não escolheu ir mais fundo. Ela afundou.
+Sua Anchor não encontrou apenas um ambiente hostil. Ela entrou em ressonância com uma região já saturada pelo campo passivo do Instrument of Legibility. A lei presente no deserto, a pressão residual deixada pelo Instrument e a natureza da própria Abyssal Anchor dela se alinharam ao mesmo tempo. O que deveria ter permanecido um Dive superficial deixou de se comportar como um. A passagem superficial abriu espaço para uma descida muito mais profunda do que ela pretendia; a distância normal entre uso casual e verdadeira profundidade da Anchor colapsou; uma instabilidade localizada análoga à Thinness surgiu ao redor dela; e a descida deixou de ser voluntária. Ela não escolheu ir mais fundo. Ela afundou.
 
 Oito pessoas morreram. Sessenta e oito ficaram feridas. A embarcação não se desintegrou — e esse é o único motivo de o número não ter sido pior. O relatório oficial atribui as perdas a uma tempestade anômala de radiância do White Desert. O relatório está incompleto.
 
@@ -103,7 +103,7 @@ Na strata, a lógica familiar da Redactory se inverteu. Ela deixou de manifestar
 
 Os efeitos visíveis foram extremos. Seu corpo adquiriu um brilho metálico. Seu cabelo mudou de forma e cor. O que permaneceu dentro do transporte durante o evento não parecia uma jovem perdendo o controle. Parecia uma manifestação eldritch usando um corpo humano como estrutura, mantendo humanidade suficiente apenas para tornar a visão ainda pior.
 
-A pressão primordial predominante entre os fragmentos era o fragmento da Luz. Isso deveria ter matado E'lla. Não matou porque Myehnai agiu — o Skyphon que um dia carregou o Instrument of Light e expressou sua lei através de uma forma viva. No instante em que a pressão residual do White Desert arrastou E'lla para contato com essa mesma lei na profundidade máxima, Myehnai a empurrou de volta para cima, interrompendo uma descida que deveria terminar em morte.
+A pressão predominante era a assinatura de Legibility deixada pelo Instrument. Isso deveria ter matado E'lla. Não matou porque o Instrument executou um reflexo danificado de reconhecimento: diante de uma recursão capaz de receber Light sem estabilizá-la, rejeitou a fusão fatal e empurrou a descida para fora de sua zona mais profunda. O episódio não prova que Myehnai sobreviveu ou agiu conscientemente.
 
 O que ela lembra é acordar entre metal destruído, brilho refletido e corpos que não conseguia parar de contar.
 
@@ -119,7 +119,7 @@ Sua Anchor é **Light**. Não reflexão, não refração, não feixe direcionado
 
 É uma Abyssal Anchor. O problema não é apenas o poder. O problema é que ela repousa na strata, onde a luz existe como um conceito primitivo. Em condições normais, E'lla opera muito acima disso, usando impressões superficiais e intermediárias como qualquer jovem Redactor funcional faria. Sob ressonância extrema, a distância entre sua Depth operacional e sua verdadeira profundidade na strata onde sua Anchor se encontra pode colapsar mais rápido do que sua capacidade de controlar a descida.
 
-É por isso que ela é tão perigosa no White Desert. O território de Aurora foi estruturalmente condicionado pela presença passiva do Instrument of Light — não apenas seu nome, mas sua lei, sua pressão e o campo de ressonância que essa lei deixou para trás no deserto. A maioria dos praticantes sofre pressão externa ao entrar nesse ambiente. E'lla faz mais do que suportar essa pressão. Ela ressoa com ela.
+É por isso que ela é tão perigosa no White Desert. O território de Aurora foi estruturalmente condicionado pela presença passiva do Instrument of Legibility — sua lei, sua pressão e o campo de ressonância que deixou no deserto. A maioria dos praticantes sofre pressão externa ao entrar nesse ambiente. E'lla faz mais do que suportar essa pressão. Ela ressoa com ela.
 
 ### Efeito no Dive
 
@@ -151,10 +151,10 @@ Isso a torna mais lenta para agir em situações-limite. Também reduz drasticam
 **Reach Reading:** catastrophic  
 **Registration Tenure:** Nao divulgado  
 **Academy Record:** Formacao dirigida pela House; recuperacao controlada pos-Aurora e treino de precisao  
-**Practice Record:** Trabalho operacional da SiNE, controle de materiais e preparacao de sucessao  
+**Practice Record:** Trabalho operacional da SiNE, controle de materiais e mentoria técnica
 **[[blots|Blots]]:** [[white-desert|White Desert]] Incident  
 **Pager Note:** Review  
-**[[seal|Current Seal]]:** Arquivo restrito Wonderwall; standing interno de sucessora mantido
+**[[seal|Current Seal]]:** Arquivo restrito Wonderwall; sem nomeação sucessória ou atribuição corporativa
 
 ## Moda, Materiais e a Questão do Controle
 
@@ -170,13 +170,13 @@ Ela costuma carregar um kit de costura consigo. Não é um hábito decorativo. �
 
 ## Posição Dentro da SiNE
 
-Atualmente, ela ocupa um cargo que é metade aprendizado, metade ensaio informal de sucessão.
+Atualmente, ela recebe mentoria técnica em materiais, logística e trabalho operacional. Isso não constitui treinamento sucessório.
 
 Dentro da SiNE, está sendo apresentada às partes da máquina que realmente importam: logística de [[brightcrystal|BrightCrystal]], governança de materiais restritos, revisão de projetos especiais, triagem interna de pesquisa e a arte política de fazer uma sala inteira acreditar que uma decisão foi coletiva quando, na prática, ela era estruturalmente inevitável desde o início. E'lla aprende rápido.
 
 Hora'veil importa mais para ela do que Kalt'sen. Não por ideologia, mas por temperamento. Kalt'sen recompensa paciência, abstração e peso institucional. Hora'veil recompensa velocidade, entendimento industrial e tolerância para máquinas, ruído e compromissos práticos. É lá que ela parece mais viva.
 
-Sua imagem pública atual — uma herdeira Wonderwall elegante, tecnicamente instruída e interessada em materiais de nicho — funciona como camuflagem perfeita para o fato de que está sendo preparada para herdar um aparato cuja existência a maioria das pessoas daquela cidade sequer entende completamente. Vista de fora, a SiNE é uma empresa. Vista de dentro, na profundidade à qual E'lla está começando a ter acesso, é algo muito maior do que isso.
+Sua imagem pública atual é a de uma jovem Wonderwall elegante, tecnicamente instruída e interessada em materiais de nicho. Ela não é candidata, herdeira designada ou sucessora do Assento e pode recusar a vida corporativa por inteiro.
 
 ---
 
@@ -187,7 +187,7 @@ Ela não sabe:
 - que é a KL-83;
 - que oitenta e dois sujeitos vieram antes dela;
 - que carrega o nome de uma mulher morta cuja vida — e cuja recusa — ainda organiza essa linhagem;
-- que o [[project-kaleidoscope|Project Kaleidoscope]] foi encerrado por causa dela;
+- que a produção biológica do [[project-kaleidoscope|Project Kaleidoscope]] foi encerrada em 2179;
 - que o incidente do White Desert assustou Em'manuel mais do que ele permitiu que qualquer pessoa percebesse;
 - que aquilo que falta nela em comparação aos casos mais perigosos da linhagem talvez seja justamente o que pode salvá-la.
 

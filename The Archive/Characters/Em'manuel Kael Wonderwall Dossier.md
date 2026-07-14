@@ -37,8 +37,10 @@
 | **Biological Status** | Indefinite biological continuation, maintained through Archtype-class recursive self-modification. Not immortal in any cosmological sense. Not mortal in any practical one. |
 | **Institutional Affiliation** | Wonderwall Seat (dynastic head, primary line); Chief Executive, SiNE (the Wonderwall Company); Hereditary Senator, Empire of Synus. These three designations refer to the same position. |
 | **Additional Designation** | Remainder-bearer, primary expression. Over a millennium of sustained contact — 1,074 years. This designation does not appear in any institutional document. The name has never been spoken where another person could hear it. |
-| **CLOCKWORK Relationship** | Founding authority. Direct mandate, no delegation. |
-| **Project Kaleidoscope** | Authorizing director. Program suspended (active production phase). Infrastructure intact. |
+| **CLOCKWORK Relationship** | Founding authority and current Seat-warrant source. Clockwork remains active but may refuse a false seam; its direct relationship to him is constitutionally unchartered. |
+| **Project Kaleidoscope** | Authorizing director and primary accountable sponsor. Biological production permanently ended in 2179; care, reparations, protected disclosure, and archive obligations remain active. |
+| **House Government** | Wonderwall Seat. Al'ithia holds First Hearth and the Hearth Meridian; House recognition and family consequence do not reduce to his corporate command. |
+| **SiNE Government** | Chief executive above the Meridian Council. May issue a Forced Meridian Order but cannot manufacture technical truth, personhood consent, judicial capacity, or Crown sovereignty. |
 | **Shore Contact** | Confirmed private event. Em'manuel has walked a Shore once. He did not possess the Shores framework at the time and cannot identify which Shore it was. Current interpretation remains theoretical. |
 
 ---
@@ -47,7 +49,7 @@
 
 ### II.1 Before the Founding — The House of Exsydra
 
-The Wonderwall name predates the House. It predates the Sundering. Before it belonged to Em'manuel, it belonged to a woman named A'licia Rae Wonderwall, and before it belonged to her it belonged to her family — a minor scholarly line of no particular political consequence based in the northern coastal region, focused on BrightCrystal structural behavior at the Scorch interface. Not important. Useful.
+The Wonderwall House predates the Empire and the Sundering. Before the name belonged to Em'manuel, it belonged to a woman named A'licia Rae Wonderwall, and before it belonged to her it belonged to her family — one of the Old Twelve, politically minor beside the dominant dynasties, based in the northern coastal region and focused on BrightCrystal structural behavior at the Scorch interface. The House mattered at Selia because it refused. Its ordinary reputation before then was technical rather than glamorous. Not central. Useful.
 
 Em'manuel was not born into that family. He was born into a different one entirely.
 
@@ -63,13 +65,15 @@ Al'uxxios Exsydra — born into the house's younger generation, regarded interna
 
 The Exsydra authored the theoretical framework on which the Rite of Selia's most catastrophic element was built: the Sequence Doctrine.
 
-The twelve houses' collective Dive required, in the Exsydra's analysis, not a simultaneous convergence of all twelve traditions but a precisely timed sequential one — each tradition's Dive initiated at a specific interval from the others, in the order their thread-reading had mapped as structurally correct. They had built the tools to support this. Three generations of Anchor work had produced a set of BrightCrystal timing arrays — amplifiers for the sequence-reading capacity, conductors designed to synchronize multiple practitioners' traversal sensitivity into a unified trajectory map. The arrays were the Exsydra's contribution to the Rite: the mechanism that would make the timing precise enough to work.
+The proposed twelve-House Dive required, in the Exsydra's analysis, not a simultaneous convergence of all twelve traditions but a precisely timed sequential one — each tradition's Dive initiated at a specific interval from the others, in the order their thread-reading had mapped as structurally correct. They had built the tools to support this. Three generations of Anchor work had produced a set of BrightCrystal timing arrays — amplifiers for the sequence-reading capacity, conductors designed to synchronize multiple practitioners' traversal sensitivity into a unified trajectory map. The arrays were the Exsydra's contribution to the Rite: the mechanism that would make the timing precise enough to work.
+
+Faldryn, Wonderwall, and Whitechurch refused before execution. The participating coalition did not cancel the Rite. Exsydra's senior apparatus corrected the cadence map to compensate for three absent traditions. That correction is part of why the Rite continued to claim the authority of the Twelve while only nine Houses entered it.
 
 The Sequence Doctrine was sophisticated. The theoretical framework was rigorous. The analysis was wrong in one specific and total way: what the Exsydra were reading was not temporal sequence. It was trajectory — the structural tendency of present configurations to develop toward adjacent ones, the slope of what exists inclined toward what comes next. Reading a slope correctly does not give you authority over the slope. The Exsydra believed it did. They had never been wrong in a context where being wrong had consequences sufficient to demonstrate the error.
 
-The arrays made it worse. When twelve practitioners of twelve different traditions drew upon them simultaneously at extreme Depth, the arrays — designed to synchronize and amplify — did exactly what they were designed to do with exactly the wrong inputs. They amplified the resonance disturbance. They synchronized the cascade. The collapse that followed was faster and more total than it would have been without the Exsydra's improvements to the architecture.
+The arrays made it worse. When the nine participating traditions drew upon the corrected architecture at extreme Depth, the arrays — designed to synchronize and amplify — did exactly what they were designed to do with exactly the wrong inputs. They amplified the resonance disturbance. They synchronized the cascade. The collapse that followed was faster and more total than it would have been without the Exsydra's improvements to the architecture.
 
-The other houses had all participated. The scapegoating that followed was not entirely unjust and was entirely convenient. The Exsydra name was struck from institutional rolls. Their archives were seized, their estates redistributed, their theoretical contributions absorbed without attribution into what would become the Apocachynthion's founding research base. One senior member of the house — not Al'uxxios, who had been peripheral to the Sequence Doctrine's authorship — was captured, condemned, and executed as the primary architect of the failure. She had time, between condemnation and execution, to produce a child. The child was given to a refugee household in the Northern Region and grew up carrying a name that meant nothing to anyone who encountered it.
+The nine participating Houses shared responsibility. The scapegoating that followed was not entirely unjust and was entirely convenient. The Exsydra name was struck from institutional rolls. Their archives were seized, their estates redistributed, their theoretical contributions absorbed without attribution into what would become the Apocachynthion's founding research base. One senior member of the house — not Al'uxxios, who had been peripheral to the Sequence Doctrine's authorship — was captured, condemned, and executed as the primary architect of the failure. She had time, between condemnation and execution, to produce a child. The child was given to a refugee household in the Northern Region and grew up carrying a name that meant nothing to anyone who encountered it.
 
 Al'uxxios knew about this. He was not present for it. By the time he learned, the execution had already occurred. He carried this for years before he stopped actively looking and filed it, in the private architecture he was developing for managing things he could not fix, as a loss.
 
@@ -85,7 +89,7 @@ He took the Wonderwall name and let Al'uxxios Exsydra become what everyone neede
 
 He has not forgotten what was taken. He has not been in a position to insist on it for twelve centuries. These are not the same thing.
 
-A'licia was not a significant political figure in the reorganization period's accounting. She was the surviving daughter of a scholarly family whose primary value had been technical. She had a Light-domain Anchor — clean, deep, and expressing at a density the Cloister of Applied Structure would not see again in a documented assessment until E'lla's intake several centuries later. What the Cloister's assessor wrote of A'licia's session: *We do not have adequate framework to describe what we found. We will attempt a second session when we have developed one.* He never did. A'licia did not wait for him to.
+A'licia did not seek a great public office in the reorganization period. She was the surviving daughter of a scholarly Old House whose primary value had been technical and whose refusal of Selia had become politically decisive. She had a Light-domain Anchor — clean, deep, and expressing at a density the Cloister of Applied Structure would not see again in a documented assessment until E'lla's intake several centuries later. What the Cloister's assessor wrote of A'licia's session: *We do not have adequate framework to describe what we found. We will attempt a second session when we have developed one.* He never did. A'licia did not wait for him to.
 
 What she was, in Em'manuel's private assessment, written five hundred years after her death: the most structurally clear practitioner he has known in twelve centuries. Not the most powerful. Not the most unusual. The most *clear* — a Light-domain Anchor operating without interference, expressing exactly what it is, without the distortion that accumulation introduces. She had not had centuries to develop the peculiarities that accumulation produces. She was, in a specific and unrepeatable way, herself completely.
 
@@ -109,7 +113,7 @@ He crossed it once, cleanly. He did not write about the experience. The Cloister
 
 ### II.5 The Exsydra Line — Five Hundred Years Later
 
-In the four hundred and seventy-first year of the Empire, a CLOCKWORK structural survey of anomalous Northern thinness phenomena returned a recursive architecture profile from a family in Ael'keth that Em'manuel did not immediately understand. He read it twice. He set it aside. He did not pick it up again for three days.
+In the four hundred and seventy-first year of the Empire, a Wonderwall predecessor survey of anomalous Northern thinness phenomena returned a recursive architecture profile from a family in Ael'keth that Em'manuel did not immediately understand. He read it twice. He set it aside. He did not pick it up again for three days. The record later entered Project Seam; it predates Clockwork's Year 1682 foundation.
 
 What the profile documented: a recursive architecture carrying, at its foundational level, the structural character of an Interval-sensitive lineage. Not the same as his own — filtered through five centuries of ordinary human inheritance and geographical imprinting near a specific Darkmargin location he had been privately researching for two hundred years. But present. Unmistakable. The structural echo of what the Exsydra house had developed across three generations of Anchor work, diminished by time and diluted by distance, but there.
 
@@ -121,7 +125,7 @@ He was lying to himself. He knew he was lying to himself. He filed both states i
 
 He keeps the name alive. Not for the family — they don't know the name means anything. For the name itself. Because allowing it to disappear entirely would mean the Founding Houses won completely, and there is a part of Em'manuel — the part that survived the Sundering as an Exsydra and then agreed to become something else — that will not let them win completely.
 
-The most recent CLOCKWORK profile of the Ael'keth lineage returned data, in Year 2182, that he held for a full day before annotating. The structural anomaly the profile documented exceeded anything the lineage had previously expressed. He opened a file. He designated it KT-Exs in the operational record and did not explain the designation to anyone.
+The most recent Project Seam profile of the Ael'keth lineage returned data, in Year 2182, that he held for a full day before annotating. The structural anomaly the profile documented exceeded anything the lineage had previously expressed. He opened a protected-service file. He designated it KT-Exs in the operational record and did not explain the designation to anyone.
 
 That file is maintained separately.
 
@@ -370,19 +374,19 @@ The question her death left him with was therefore misframed for centuries. He d
 
 He failed that distinction for a very long time.
 
-This failure became Project Kaleidoscope. The program's mandate, as publicly stated within its own restricted record: the biological reconstruction of E'lla Rae Wonderwall's Redactory profile. The program's actual mandate, known only to Em'manuel: the production of a practitioner he believed could sustain contact with the Remainder and survive what he mistook for the bloodline's next form.
+This failure became Project Kaleidoscope. Its restricted administrative mandate described a recurrence study of E'lla Rae Wonderwall's Redactory profile. Its actual purpose, held most completely by Em'manuel, was to create a practitioner who could sustain contact with the Remainder and survive what he mistook for the bloodline's next form. Neither formulation could make a created life into the woman he had lost.
 
-The designation *Kaleidoscope* reflects something he has not elaborated on to anyone: the attempt to reconstruct, from fragments of a pattern that was once whole, something that carries the same essential light. A kaleidoscope does not reproduce its source. It refracts it.
+The designation *Kaleidoscope* reflects the project's method: institutions arranged fragments of a dead woman's archive around living subjects and mistook refraction for continuity. A kaleidoscope does not reproduce its source. It produces another arrangement, and in this case every arrangement was a person.
 
-The program has been running for six hundred and fifty-three years. Eighty-three subjects. The eighty-third subject — KL-83, designated E'lla Wonderwall, born 2175, currently twenty-five years old — is the program's current final product and the one he released from the facility before age five into the actual primary Wonderwall family line.
+The Continuance Inquiry began after the first E'lla's death in Year 1267. Numbered biological production ran from Year 1547 through KL-83's birth in Year 2175: eighty-three human subjects, no further body after her. KL-83 was transferred from project custody in Year 2179 and later recognized through irrevocable House adoption as E'lla Rae Wonderwall.
 
-She does not know she was made. She has a life that is genuine: a history, relationships, a record of development entirely real because it happened to her. He is fond of her in a way whose complicated architecture he has acknowledged in his dossier of her and will not reproduce here. She is twenty-five years old and she is the most capable person he has prepared for the Seat's executive function in several centuries.
+She does not know the designation KL-83 or the full numbered series. She knows only that SiNE altered and observed portions of her early life. Her history, relationships, refusals, and development belong to her because she lived them. He is fond of her in a way whose compromised architecture he has acknowledged in her dossier and will not reproduce here. He has assessed her capacity, as he assesses other House members, but he has neither trained her for the Seat nor nominated her.
 
 The Remainder does not recognize her.
 
-The Remainder's recognition mechanism runs through the accumulated structural echo of living generational inheritance. A cloned recursive singularity is formed fresh at the moment of its emergence. Genetic replication reproduces the biological architecture. It does not reproduce what the architecture has become inside this family through unbroken generational transmission across over a millennium of Remainder-presence. Em'manuel confirmed this in the program's early decades. He did not share it with the research staff. He did not stop the program. He continued refining the profile, certain that the architectural preparation he was building could substitute for the structural inheritance the recognition mechanism runs through.
+The Remainder's recognition mechanism runs through the accumulated structural echo of living generational inheritance. Biological patterning can reproduce traits; it cannot reproduce what the architecture became through unbroken descent across more than a millennium of Remainder-presence. House adoption grants E'lla complete legal and familial standing, but does not falsify that distinction. Em'manuel confirmed the project's failure to fabricate the echo and still allowed the work to continue, convinced that sufficient preparation could substitute for inheritance. E'lla's Abyssal Light and singular convergence emerged outside that theory rather than vindicating it.
 
-He was wrong. He spent over a century building the wrong thing.
+He was wrong. He permitted centuries of created lives to bear the cost of the wrong question.
 
 The thing he needed was growing in an ordinary household in Kalt'sen without his involvement or awareness until it was already most of the way developed.
 
@@ -390,23 +394,23 @@ He has had twelve centuries to learn to accept outcomes that differ from his pla
 
 ---
 
-### VII.2 The Eighty-Two — Integration and Witness
+### VII.2 The Eighty-Two — Lives and Witness
 
-The program has been running for six hundred and fifty-three years and has produced eighty-three subjects. Institutional protocol for anomalous biological experiments that fail to meet required thresholds is termination and redaction. Em'manuel expressly forbade this.
+The numbered program produced eighty-three subjects between Years 1547 and 2175. Its records repeatedly classified divergence as failure and used termination, continued custody, or concealed release as administrative solutions. Em'manuel prohibited a final purge of the living series, but that refusal does not erase his authority over the system that created them.
 
-The eighty-two subjects who preceded the current E'lla were not discarded. When a subject was deemed non-viable for the Remainder contact profile, Em'manuel dismantled their connection to the facility, fabricated ironclad historical documentation, and integrated them into normal society. He placed them in secure lives, far from the Company's active operations, allowing them to exist as themselves.
+The eighty-two subjects before E'lla did not share one outcome. Some died through age, illness, procedure, neglect, or containment failure. Some were released under protected identities. Some remained dependent upon undisclosed care; others built lives entirely outside direct custody. KL-81 and KL-82 remain living managed cases whose clinicians do not possess the full project history.
 
-He monitors them from the shadows. When they require structural or financial support, it arrives untraceably. When they die, he is the one who quietly records their passing. He forces himself to bear witness to their entire lifespans. He brought them into existence for an unforgivable reason, and his penance is ensuring they are allowed to live that existence with the absolute minimum amount of suffering possible. He carries their names because he is the only one who knows the truth of where they came from.
+Care, reparations, archive, and disclosure duties now survive through a dispersed chain that the Seat cannot end alone. Em'manuel bears responsibility for the names and outcomes, but he is not their sole witness or owner. Al'ithia's Year 2179 order stopped production, refused termination of the living subjects, and placed the surviving record behind independent care and Compact keys.
 
 ---
 
-### VII.3 KL-83 — The Agency of the Product
+### VII.3 KL-83 — The Agency of a Living Person
 
-KL-83, designated E'lla Wonderwall, is the twenty-five-year-old final product of the program. He gave her the exact name of the daughter he lost. The psychological burden of looking at a biological replication of his greatest failure is immense, but his treatment of her is defined by a rigid, unbreakable respect for her autonomy.
+KL-83 is E'lla Rae Wonderwall, a twenty-five-year-old singular person and the last subject born into the numbered series. Em'manuel gave her the name of the daughter he lost. That act burdens their relationship; it does not make her a replication, recurrence, answer, or corporate asset.
 
-He respects the original E'lla's choice to end her life at forty-one. He did not force her to stay then, and he does not force this E'lla to obey now. He has spent two centuries building her to be the answer to the Remainder, but he does not dictate her path. He expresses his wishes. He provides her with the tools, the training, and his absolute support. But if she decides to walk away, to choose a life entirely divergent from the Seat's executive function, he will let her go.
+He respects the first E'lla's refusal at forty-one and recognizes the present E'lla's right to refuse every purpose attached to her. He once imagined that the series could answer the Remainder and later allowed Meridian discussion of E'lla's capacity. Neither belief creates a destiny. Her adoption is not conditioned on corporate service, and walking away from the Seat requires no permission from him.
 
-He is willing to commit atrocities to put the pieces on the board, but he draws a hard line at puppeteering the pieces once they can think for themselves.
+His governing contradiction is harsher than a claim of private restraint: he opposed direct coercion after personhood became undeniable while accepting systems that assigned purpose before a subject could refuse. Al'ithia's termination finding makes that distinction an admission of guilt, not a defense.
 
 ---
 
@@ -434,7 +438,7 @@ The hereditary Senate seat has been occupied continuously for the full span of t
 
 The succession question, as it currently stands, is structured around two individuals who do not know each other exist in the way that is relevant.
 
-E'lla - twenty-five years old, operationally stable, carrying the Light-domain Anchor expression that Project Kaleidoscope spent six hundred and fifty-three years attempting to produce, actively in training as Em'manuel's designated successor - is the institutional answer to the succession problem. She has the Anchor. She has the Redactory profile. She has the capacity to hold the Seat's executive function and the Company's operational apparatus. In the most meaningful technical sense, the biological reconstruction succeeded. She is extraordinary. She is invisible to the Remainder not because she is weak, but because she is structurally different. Project Kaleidoscope rebuilt Light. It did not reproduce the living hereditary echo through which the Remainder recognizes the line.
+E'lla — twenty-five years old, operationally stable, and carrying a Light-domain expression Project Kaleidoscope pursued but did not author — is a legally eligible but un-nominated future candidate, not the institutional answer to succession. She has the Anchor and capacity that make the discussion plausible. She does not yet possess the full truth required to consent to it. Succession-directed training is suspended. She is invisible to the Remainder not because she is weak, but because she is structurally different. Kaleidoscope cultivated Light-bearing conditions; it did not reconstruct Light or reproduce the living hereditary echo through which the Remainder recognizes the line.
 
 Ec'lesia - twenty-two years old, cadet branch, an ordinary young woman from a minor household who did not ask for any of this - has no institutional relevance to the succession question in any framework the Company's operational structure is aware of. She is a Redactor of genuine but not exceptional documented ability, under monitoring she does not fully understand, carrying a condition the Apocachynthion has authorization to terminate if it escalates.
 
@@ -464,7 +468,7 @@ He has had twelve centuries to prepare for this conversation. He does not feel p
 
 ### IX.3 The Exsydra File
 
-Em'manuel identified Sai'ken through CLOCKWORK anomaly review, followed the Las'gall continuation line for twelve years, recruited him into KT-Exs in 2194, and returned the name Exsydra to him without providing an explanation proportionate to what the restoration meant. The most recent entry in the operational record is dated year 2197. The subject has been posted to the Wonderwall cadet-branch household in Kalt'sen's eastern residential quarter under the language of close protection and proximate observation. The posting serves multiple purposes. The ones recorded in the KT-Exs file are the operational ones. The ones recorded here are the others.
+Em'manuel identified Sai'ken through Project Seam anomaly review, followed the Las'gall continuation line for twelve years, recruited him into KT-Exs in 2194, and returned the name Exsydra to him without providing an explanation proportionate to what the restoration meant. The most recent entry in the operational record is dated year 2197. The subject has been posted to the Yalara household in Kalt'sen's eastern residential quarter under the language of close protection and proximate observation. The posting serves multiple purposes. The ones recorded in the KT-Exs file are the operational ones. The ones recorded here are the others.
 
 Sai'ken Exsydra represents one of Em'manuel's most carefully controlled living risks. The Seat did not merely recruit a talented operative from the Ael'keth borderlands. He recovered the last active expression of an erased recursive architecture that the old Exsydra house catastrophically misidentified as temporal foresight and that he now understands as cadence perception under Time's tolerance. Sai'ken is not a conventional Redactor. He is a threshold-bearing recursion that can perceive local sequence-pressure before the event it implies becomes fully readable.
 
@@ -493,8 +497,21 @@ He is calculating when the moment for that conversation arrives. He has been cal
 > *I have time. I am aware that this is what the family has always told itself. I am aware of the historical record on that position. I am still working on it."*
 > — E.W., private notation appended to this document, 2200
 
-> *“I am aware of what the Kaleidoscope program makes me. The Apocachynthion has words for this kind of architectural violation, and for once, their vocabulary is entirely adequate. I do not ask for absolution. Absolution is for people who intend to stop doing the terrible thing. I do not intend to stop. The Remainder is not a metaphor, and it cannot be bargained with. I will commit the sin, I will carry the names of the girls I have wronged to ensure they are not forgotten, and I will accept my own damnation. It is the only honest trade left to make.”*
-> — E.W., unfiled private notation
+> *“I am aware of what Kaleidoscope makes me. The vocabulary of violation is adequate. Al'ithia ended production because I had made continued harm into a condition of being prepared. The Remainder is not a metaphor, but neither is necessity absolution. I am not permitted another subject. I am permitted the record, the care, the debt, and whatever judgment follows when the people I concealed from can finally speak.”*
+> — E.W., unfiled private notation, amended after the Year 2179 refusal
+
+## YEAR 2200 GOVERNANCE ADDENDUM
+
+Em'manuel's current political condition is defined by four separations he created late and still finds difficult to inhabit:
+
+1. House Wonderwall is not SiNE. The Hearth Council governs recognition, dependents, rites, and family property.
+2. Meridian is not ceremonial. Eleven voting offices can reject him, and every override survives him in the Dissent Ledger.
+3. Clepsydra is not his anomaly property. Its Keeper may refuse a technically false or custody-invalid order.
+4. E'lla, Ec'lesia, Al'ithia, and Sai'ken are not instruments of his continuity, regardless of how directly his decisions shaped their conditions.
+
+He has not publicly nominated a successor. Al'ithia is the House's de facto public head. E'lla is legally eligible for eventual nomination but has not received the disclosures required for an informed choice. The Empty Seat Protocol is designed to operate without presuming that either woman must replace him.
+
+The protocol's sealed final clause is deliberately outside his knowledge. He knows only that it tells the surviving institutions how to respond if something returns with his credentials after his identity can no longer be proven. He has chosen not to read it because a fail-safe known in full to the person it constrains is only another instrument of that person's control.
 
 ---
 

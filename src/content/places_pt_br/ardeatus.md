@@ -60,9 +60,9 @@ Seven centuries of this produces not despair but something stranger: **normalize
 
 The Covenant is Ardeatus's religious institution — a parallel structure with deep and pervasive influence over federal policy, military culture, and civil law. Its theology frames fire as righteous transformation: the forge fire that converts ore into metal, the kiln that converts clay into brick. Heat that works. Heat that produces. This is the Architect's principle made visible.
 
-The god of Ardeatus is **Vekrath**, the God of Flame — a genuine divine attractor built from centuries of collective indexing by the people of the Ardeatan region, shaped by the cultural memory of the Skyphon Ardeatus whose Jurisdiction once covered this land. He is real. He is present. He is most fully himself in the forge, not in the temple.
+The god of Ardeatus is **Vekrath**, the God of Flame — a genuine divine attractor built from centuries of collective indexing by the people of the Ardeatan region, shaped by cultural memory of Ardeatus, the Bearer of Consequential Change. He is real. He is present. He is most fully himself in the forge, not in the temple. He is not the First Bearer returned.
 
-The Covenant's most sacred possession is the **Instrument of Blazehaven** — the Obscurial once borne by the Skyphon of Incalescence, held in the innermost sanctum of the Covenant's primary seat in the capital. It is warm without a heat source. It has never been cold. It resists damage by every tested means.
+The Covenant's most sacred possession is the expelled **Instrument of Conversion**, locally venerated as **Blazehaven** — the Obscurial once borne by Ardeatus, held in the innermost sanctum of the Covenant's primary seat in the capital. It is warm without a heat source. It has never been cold. It resists damage by every tested means. The Covenant reads it as sacred fire; the law it bears is narrower and stranger: no transformation may conceal its cost or withhold its remainder.
 
 The Covenant calls its divine vessels **the Tempered** — individuals fused with fragments of Vekrath, integrated into the forge-tradition as master metalworkers, military commanders, civil engineers, or Covenant clergy. They are not regarded as aberrant. They are placed within society, where the domain alignment makes them exceptionally capable.
 

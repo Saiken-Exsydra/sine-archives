@@ -37,7 +37,7 @@ tags:
   - "Syntax"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-11"
+updated: "2026-07-13"
 codex_file: "Sol'ytra Dossier.md"
 ---
 
@@ -70,7 +70,9 @@ Her deeper problem is that she admires sacrifice too much. She does not just res
 
 ## Background
 
-Sol'ytra came into being after the Fracture as Terra's remembered answer to Syr'lene, the Precursor who fused herself into the broken **Lunar Crown** to keep a trapped fragment contained. Instead of producing a copy of Syr'lene, the world produced a new being shaped by grief, gratitude, and planetary memory.
+Sol'ytra came into being through a singular chain: the Page Primordial's standing grant of local syntax to the All-Mother; Terra's accumulated wound-memory; the surviving coupling between Terra and the **Lunar Crown**; and Syr'lene's sacrificial image held inside that coupling. The All-Mother supplied the local act of person-making. She did not externalize a Page fragment or rebuild a Skyphon.
+
+Sol'ytra is not a Skyphon, Primordial, reincarnation, Redactor, Diviner, goddess, ordinary Elemental birth, or Obscurial bearer. She is the first and only known **Crownborn**.
 
 That origin explains why Sol'ytra feels split. She belongs to Terra, but so much of her symbolic weight comes from the Moon, the Crown, and the idea of a sacred wound. A large part of her story is whether she will keep orbiting that wound forever or become something more fully her own.
 
@@ -106,6 +108,8 @@ Her most feared expression is the **Mirror of the Wounded Crown**, where the loc
 ## Limitations
 
 Sol'ytra is powerful, but she is not limitless. She is still tied to Terra's field and does not operate as a free universal force.
+
+Wound Crown Authority is a Terra-local containment authority. It does not command Syr'lene, address the twelve Instruments, repair the Intact Seal, open the Metric Safeguard, or grant ownership of the Shores. Sol'ytra can suppress the local wound-condition through which Shorefall is occurring; she does not command the Shore itself.
 
 Her biggest weakness is psychological rather than physical. She keeps reaching toward forms of holiness built around pain, endurance, and containment. That means she can choose the answer that looks sacred instead of the answer that best protects life.
 

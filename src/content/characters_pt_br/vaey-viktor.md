@@ -18,7 +18,7 @@ summary: "Confunde um unico feixe terrivel do ceu com o juizo inteiro, e mata em
 tags: ["Igreja", "Obsidian", "Crowned", "Meruel", "Kalt'sen", "Soberano", "Avaliação", "Potencial"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-20"
+updated: "2026-07-13"
 codex_file: "Vaey Viktor Dossier.md"
 image: "../../assets/uploads/char-vaey-viktor.png"
 image_position: "center top"
@@ -32,7 +32,7 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 
 ## Identidade
 
-Vaey Viktor é um sacerdote aposentado do [[obsidian-rite|Obsidian]], ex-avaliador de candidatos à santidade e um Crowned confirmado — vessel de Meruel, a manifestação angelical de Measurement of Potential and Completion. Durante quarenta anos, a [[the-church|Igreja]] o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a Presence dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
+Vaey Viktor é um sacerdote aposentado do [[obsidian-rite|Obsidian]], ex-avaliador de candidatos à santidade e um Crowned confirmado — vessel de Meruel, uma das seis Cardinal Stars sob **Aequoriel, Seraphim of Just Measure**. Durante quarenta anos, a [[the-church|Igreja]] o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a Presence dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
 
 Ele era extraordinariamente bom nesse trabalho. E esse fato é justamente o começo do problema.
 
@@ -104,7 +104,7 @@ Ele divide fracasso em três categorias. **Insuficiência** significa que a pess
 
 Meruel fornece informações reais e sabedoria incompleta. É isso que o torna tão perigoso. Ele frequentemente consegue distinguir vazio de capacidade danificada. Frequentemente consegue perceber que algo grandioso era possível. O que ele não consegue aceitar de forma consistente é que misericórdia talvez compreenda coisas que potencial jamais compreenderá.
 
-Ele entrega morte nos lugares onde misericórdia exigiria contenção.
+Ele entrega morte nos lugares onde misericórdia exigiria contenção. A origem angelical de Meruel muda a liderança técnica do caso, mas não concede imunidade contra investigação civil, prisão, julgamento ou reconhecimento das vítimas.
 
 ---
 

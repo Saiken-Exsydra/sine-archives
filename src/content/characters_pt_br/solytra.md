@@ -18,7 +18,7 @@ summary: "Nascida de uma ferida sagrada demais para fechar, atravessa o mundo co
 tags: ["Sol'ytra", "Crownborn", "Elemental", "All-Mother", "Syr'lene", "Lunar Crown", "Fracture", "Mirror of the Wounded Crown", "Containment", "Syntax"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-05-14"
+updated: "2026-07-13"
 codex_file: "Sol'ytra Dossier.md"
 image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
@@ -35,7 +35,9 @@ hero_gallery:
 
 ## O Que Ela É
 
-Sol'ytra é o primeiro exemplo confirmado de uma **Crownborn Elemental**: não uma inteligência elemental antiga formada ao redor de rios, tempestades, montanhas ou florestas, mas uma entidade pós-Fracture gerada a partir da compreensão planetária ferida da própria All-Mother.
+Sol'ytra é o primeiro exemplo confirmado de uma **Crownborn Elemental**. Sua formação exigiu a concessão permanente de sintaxe local do Primordial da Página à All-Mother; a memória acumulada da ferida de Terra; o acoplamento sobrevivente com a **Lunar Crown**; e a imagem sacrificial de Syr'lene preservada nesse acoplamento.
+
+Ela não é Skyphon, Primordial, reencarnação, Redactor, Diviner, deusa, nascimento Elemental comum ou portadora de Obscurial. A All-Mother realizou o ato local de criação da pessoa; não externalizou um fragmento da Página nem reconstruiu um Skyphon.
 
 A All-Mother não a produziu como uma manifestação neutra da natureza. Ela a criou na imagem rememorada de **Syr'lene** — a Precursora que se incorporou à Lunar Crown e permanece ali desde a Fracture, sustentando um fragmento no lugar para que o mundo abaixo pudesse continuar existindo.
 
@@ -164,6 +166,10 @@ Ela quer se tornar digna da imagem de Syr'lene, e isso distorce seu julgamento. 
 Ela também parece relutante em depender totalmente de seu repertório elemental mais amplo quando a Wound Crown oferece uma resposta simbolicamente mais apropriada. Na prática, isso significa que às vezes ela se torna mais limitada do que realmente é porque está emocionalmente comprometida com um estilo de ação que se assemelha à ferida lunar.
 
 Outras limitações continuam relevantes:
+
+- a Wound Crown Authority é autoridade local de contenção em Terra;
+- ela não comanda Syr'lene, não endereça os doze Instrumentos, não repara o Selo Intacto e não abre a Salvaguarda Métrica;
+- pode suprimir a condição local de ferida por onde ocorre Shorefall, mas não possui nem comanda as Shores;
 
 - sua autoridade é local, não universal;
 - ela continua vinculada a Terra e ao campo planetário da All-Mother;

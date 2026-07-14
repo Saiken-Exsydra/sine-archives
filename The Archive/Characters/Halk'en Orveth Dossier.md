@@ -429,7 +429,7 @@ It remains accurate.
 
 ---
 
-## VIII. ENTRY INTO THE OBSIDIAN RITE
+## VIII. ENTRY INTO OBSIDIAN
 
 ### VIII.1 The Mornhallow Incident
 

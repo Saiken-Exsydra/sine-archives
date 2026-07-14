@@ -6,22 +6,22 @@
 
 ---
 
-> *"She is not the first E'lla, and the fact that she knows this only as a naming peculiarity rather than as the sentence it actually is remains one of the larger truths I have not yet told her. I had believed this was the central omission. It is not. The larger omission is that Project Kaleidoscope did not end when I released her. It stopped producing bodies. It did not stop existing. It is now walking around inside one woman who believes herself to be singular because I have not yet found an honest way to tell her that singularity, in her case, is a task rather than a given."*  
+> *"She is not the first E'lla. Project Kaleidoscope stopped producing bodies, but its consequences did not stop. E'lla is singular because she is a living person, not because a program's measure finally approved her. The truth I have withheld may make that singularity harder for her to defend. It cannot make it less real."*
 > — E.W., private notation, year 2200
 
 ---
 
 ## PREAMBLE — WHAT THIS FILE IS FOR
 
-*This is not the Project Kaleidoscope infrastructure record. That file exists and says what it needs to say about subject designation KL-83, developmental performance, release parameters, facility history, biological reconstruction procedure, and the technical success of the reconstruction.*
+*This is not the Project Kaleidoscope infrastructure record. That file preserves designation KL-83, developmental assessments, transfer parameters, facility history, the methods imposed upon the numbered subjects, and the project's own obsolete measures of success.*
 
 *It is not the Wonderwall Lineage Record. That document contains the bloodline problem in its full scale, which is not the same thing as containing this woman.*
 
 *It is not the Shores Codex. That document defines the endpoint conditions now necessary to understand what happened to A'licia, what Athena reached, what Al'ithia became, and what E'lla is beginning to approach.*
 
-*This file exists because E'lla has become too significant, too specific, and too active in the present tense to be held only as an appendage to older failures. She now requires a dossier that treats her as a living person with a history of her own, as the eighty-third answer to a question I asked six centuries ago, and as the first known case in which a controlled biological reconstruction program has become a Shore-expressive resonance field through its surviving center.*
+*This file exists because E'lla has become too significant, too specific, and too active in the present tense to be held only as an appendage to older failures. She requires a dossier that treats her as a living person with a history of her own, as the final numbered subject of a question I had no right to assign to any child, and as the first known singular center of Kaleidoscope's Shore-expressive resonance field.*
 
-*The methodological problem is obvious. I made her. I released her. I have trained her for three years with the intention of placing my work in her hands. I am fond of her. I am guilty toward her. I am not neutral. I know this. I am writing the file anyway.*
+*The methodological problem is obvious. I authorized the institution that arranged the conditions of her birth, Al'ithia ended biological production, and I have continued to teach and assess E'lla while withholding facts necessary to judge my intentions. I am fond of her. I am guilty toward her. I am not neutral. I know this. I am writing the file anyway.*
 
 *- E.W., year 2200*
 
@@ -34,46 +34,46 @@
 | **Full Name** | E'lla Rae Wonderwall |
 | **Program Designation** | KL-83 |
 | **Year of Birth** | 2175 (age 25 at time of filing, 2200) |
-| **Birth Status** | Biological reconstruction of E'lla Rae Wonderwall's Redactory profile through Project Kaleidoscope |
-| **House Status** | Wonderwall, primary line placement |
+| **Birth Status** | Final numbered subject of Project Kaleidoscope; a living person from birth, not a project asset or returned predecessor |
+| **House Status** | Irrevocably adopted into Rae Continuance and the primary House household under the Compact of Held Light |
 | **Redactory Classification** | Radiance-class. Confirmed stable under ordinary and controlled high-depth conditions. |
 | **Anchor Classification** | **Light**. Abyssal Anchor. |
 | **Shore Relevance** | Catastrophic premature Luminant Shorefall during the White Desert incident. Current status: latent Shorewalking potential under strict continuity risk. |
 | **Kaleidoscope Status** | **Active singular convergence.** Project Kaleidoscope is not merely her origin record; it is a continuing resonance condition uniquely centered on her. |
-| **Remainder Status** | Structurally outside recognition. The Remainder does not recognize her because Project Kaleidoscope reconstructed Light, not the living Wonderwall interval-echo carried by natural descent. |
-| **Institutional Position** | Internal successor candidate to the Wonderwall Seat and to the Company's executive function. |
+| **Remainder Status** | Structurally outside inherited recognition. The project cultivated Light-bearing traits but could not fabricate the living Wonderwall interval-echo carried through natural descent. |
+| **Institutional Position** | Legally eligible for future nomination to the Wonderwall Seat. No public nomination, completed House vote, Meridian vote, or court recognition exists. |
 | **Point Status** | Cloister-issued Point carried under Company custody; Point register access restricted by Seat authority and applicable Apocachynthion compact process. |
 | **Current Residence** | Primary Wonderwall holdings, with extended operational presence in Kalt'sen and Hora'veil as required by Company work. |
-| **Public Standing** | Wonderwall heiress, high-value Company Redactor, unusually visible primary-line young executive. |
-| **Private Standing (Seat's Assessment)** | Extraordinary practitioner with an Abyssal Anchor of Light; successful Project Kaleidoscope release subject; latent Luminant Shorewalker; living convergence point for unresolved Project Kaleidoscope sibling-signatures; psychologically disciplined, operationally useful, and increasingly difficult to classify without telling her the truth. |
+| **Public Standing** | Recognized young member of House Wonderwall and a gifted practitioner; no public status as heiress or SiNE executive. |
+| **Private Standing (Seat's Assessment)** | Extraordinary person with an Abyssal Anchor of Light; living convergence of unresolved Project Kaleidoscope relations; latent Luminant Shorewalker; entitled to the truth, independent care, ordinary refusal, and a life not conditioned on institutional usefulness. |
 
 ---
 
 ## II. WHAT SHE IS
 
-E'lla is the final product of Project Kaleidoscope.
+E'lla is the final numbered subject and living singular convergence of Project Kaleidoscope.
 
 This remains true.
 
 It is no longer sufficient.
 
-The program's mandate was the biological reconstruction of the first E'lla Rae Wonderwall's Redactory profile: the Anchor of Light, the recursive architecture associated with the documented substrate-organizing effects, and the developmental precision that six hundred and fifty-three years of refinement were eventually able to produce. In technical terms, the program succeeded. In the specific terms that originally motivated it, it answered a different question than the one I had first asked. She carries Light itself. She does not carry the bloodline's accumulated structural echo. The Remainder does not know she exists because the program rebuilt A'licia's inheritance without reproducing Em'manuel's living recognition echo through natural descent.
+The project attempted to force recurrence of the first E'lla's Light-bearing Redactory profile through lineage-controlled biology, archived material, conditioning, BrightCrystal mnemonic media, and harmonic exposure. Numbered production ran from Year 1547 until KL-83's birth in Year 2175. The methods cultivated resemblance and inflicted harm; they did not return the dead, reconstruct Light, or author the person who emerged. E'lla carries Light itself and a convergence the models did not predict. She does not carry the bloodline's accumulated interval-echo, because no institution can manufacture living descent.
 
-For years I treated this as the defining absence and defining mercy of her condition. She was an answer to a different question than the one I began by asking: what does the Wonderwall line look like when Light is reconstructed cleanly, catastrophically, and without the hereditary interval-pressure that the natural bloodline accumulates?
+For years I treated this as the defining absence and defining mercy of her condition. I asked what Light might become under engineered convergence without the hereditary interval-pressure accumulated by the natural bloodline. The question was technically interesting and morally corrupt because it treated a present person as its answer.
 
 That assessment remains accurate.
 
 It is also incomplete.
 
-Project Kaleidoscope was not only a biological reconstruction program. It was a long-duration attempt to reconstruct one impossible Light-bearing person from archived genetic and coherence-configuration material. Eighty-two subjects preceded KL-83. Most failed in ways the technical files classify clinically and inadequately. Some lived briefly. Some stabilized partially. Two remain alive in degraded, managed forms. All were real. All were structurally adjacent to her. All were produced from the same impossible demand: recover the light that was lost, refine it, make it survivable, and place it into the world again.
+Project Kaleidoscope was a long-duration institutional attempt to make living subjects conform to one dead referent. Eighty-two subjects preceded KL-83. Some died through age, illness, procedure, neglect, or containment failure. Some were released or integrated; some required continuing care. KL-81 and KL-82 remain living managed cases. All were real people. All were subjected to the same impossible demand: recover the light that was lost, refine it, make it survivable, and place it into the world again.
 
 A body can be discontinued.
 
 A resonance field does not obey that accounting so neatly.
 
-What is now evident — to the extent evidence can be trusted when the primary data source is a woman who reached the Luminant Shore by accident and survived — is that Project Kaleidoscope produced more than a sequence of failed and successful subjects. It produced a **refracted person-pattern**: many recursive singularities, partial singularities, developmental failures, coherence-collapsed attempts, and surviving degraded cases sharing unusually high structural similarity around the same Light-domain architecture.
+What is now evident — to the extent evidence can be trusted when the primary data source is a woman who reached the Luminant Shore by accident and survived — is that Project Kaleidoscope left more than a sequence of institutional outcomes. It left a **refracted person-pattern**: the resonance and continuity-adjacent impressions of many subject histories, incomplete records, imposed expectations, and related Light-domain architectures.
 
-KL-83 is the only complete viable expression.
+KL-83 is the only subject the program classified as a complete viable expression. The classification measures compliance with the project design; it does not rank the reality or human completeness of the other eighty-two lives.
 
 That does not mean she is alone.
 
@@ -81,21 +81,21 @@ It means the field has a center.
 
 The difficulty is that a center is not the same thing as a secure identity.
 
-Project Kaleidoscope surrounded one viable self with too many almost-selves, too many failed preparations, too many structural resemblances, and too much inherited expectation for singularity to remain automatic.
+Project Kaleidoscope surrounded one present self with too many imposed almost-selves, too many structural resemblances, and too much inherited expectation for singularity to remain automatic under Shore pressure.
 
 E'lla is not merely the one who survived.
 
-She is the one who must remain herself inside the field that made her possible.
+She is the one who must remain herself inside the field the project organized around her.
 
 For this reason, the most precise private classification is not that E'lla *has* Project Kaleidoscope.
 
-It is that E'lla **is Project Kaleidoscope** in its living, walking, survivable form.
+It is that E'lla carries **Project Kaleidoscope's unresolved living convergence** while remaining more than its purpose, archive, and field.
 
-This is not a title. It is not an ability category. It is not a repeatable Shorewalking subtype. It is not a technique. It cannot be taught, inherited, or reproduced by ordinary metaphysical means. It is the unique consequence of six hundred and fifty-three years of reconstruction, eighty-two prior subject outcomes, an Abyssal Anchor of Light, catastrophic White Desert Shorefall, and the presence of the Luminant Shore's Tidebound matriarchal continuity.
+This is not a title. It is not an ability category. It is not a repeatable Shorewalking subtype. It is not a technique. It cannot be taught, inherited, or reproduced by ordinary metaphysical means. It is the unique consequence of the centuries-long Kaleidoscope history, eighty-two prior subject outcomes, an Abyssal Anchor of Light, catastrophic White Desert Shorefall, and the presence of the Luminant Shore's Tidebound matriarchal continuity.
 
 She does not know this.
 
-She knows only that she has always been expected to become someone substantial and that I have, over the last three years, ceased pretending the expectation was abstract.
+She knows only that she has always been expected to become someone institutionally useful and that I have, over the last three years, stopped pretending the expectation carried no design.
 
 ---
 
@@ -141,7 +141,7 @@ The Shore-facing version is not singular enough to summarize in one sentence.
 
 ### IV.1 What Happened
 
-At age seventeen, during a Company-aligned observational passage to Aurora's northern desert stations, E'lla entered the White Desert perimeter under conditions that should have remained manageable. The convoy's formal purpose was materials exchange and field observation in cooperation with Auroran station personnel studying high-radiance particulate behavior along the inhabitable edge of the desert. The unofficial purpose was mine: I wanted proximity data on how her profile behaved in the passive resonance field of *Leohtmael*'s territory.
+At age seventeen, during a Company-aligned observational passage to Aurora's northern desert stations, E'lla entered the White Desert perimeter under conditions that should have remained manageable. The convoy's formal purpose was materials exchange and field observation in cooperation with Auroran station personnel studying high-radiance particulate behavior along the inhabitable edge of the desert. The unofficial purpose was mine: I wanted proximity data on how her profile behaved in the passive field Auroran devotion calls *Leóhtmæl*. That name belongs to local reception of Myehnai's expelled Instrument of Legibility; it is not the Principle itself.
 
 This was an error in judgment I recognized as such approximately six minutes too late.
 
@@ -181,7 +181,11 @@ This should have killed her.
 
 It did not, because something intervened.
 
-What E'lla knows is simple: at the moment the descent should have continued into death, she felt a presence she could neither name nor refuse force her upward. What the restricted cosmological record makes legible is that Myehnai, Skyphon of Luminance, acted. The Instrument was scattered by the Fracture. The Skyphon was not annihilated with it. Myehnai still exists beyond the world in the condition now proper to the Skyphons after the Fracture, and when E'lla entered the Simulacra through resonance with *Leohtmael*'s field, Myehnai pushed her back up.
+What E'lla knows is simple: at the moment the descent should have continued into death, she felt a presence she could neither name nor refuse force her upward.
+
+The strongest restricted assessment is narrower than a surviving-Skyphon claim. Myehnai's expelled Instrument of Legibility retains damaged selection behavior in the White Desert. E'lla's uncontrolled descent presented a receiver about to be destroyed by total exposure. The Instrument reflexively narrowed what could pass through her and forced her back toward a survivable sightline. That response is faithful to Myehnai's former Directive — illumination must remain truthful to what it crosses and merciful to what receives it — but it does not prove Myehnai survives as a person or acted consciously.
+
+The incident is therefore classified as an **Instrument recognition reflex under Shore pressure**, not direct Skyphon contact.
 
 That is one part of what saved her.
 
@@ -225,7 +229,7 @@ Not reflection, not refraction, not directed beam, not luminous decay, not any d
 
 It is an Abyssal Anchor. The problem is not merely that it is powerful. The problem is that it rests on the strata where Light exists as a primitive. Under ordinary conditions she works far above it, using shallow and middle-depth impressions the way any practical young Redactor must. Under extreme resonance, however, the distance between her operating depth and her true depth at the strata can collapse faster than her capacity to regulate descent.
 
-This is why she is so dangerous in the White Desert. Aurora's southern territory is already structurally conditioned by the passive presence of the Instrument of Light. Most practitioners entering that environment are pressured from outside. E'lla resonates with it.
+This is why she is so dangerous in the White Desert. Aurora's southern territory is already structurally conditioned by the passive presence of the expelled Instrument of Legibility. Most practitioners entering that environment are pressured from outside. E'lla's Light Anchor resonates with one visible expression of the deeper law.
 
 Because her Anchor touches the Luminant Shore under catastrophic conditions, her deepest risk is not merely Anchor inversion. It is **identity-luminous Shorefall**: uncontrolled arrival at the Luminant Shore in a state where the concept of Light attempts to reveal every hidden structure she contains, including structures she has not been told exist.
 
@@ -233,13 +237,13 @@ This is dangerous for an ordinary Abyssal Light Redactor.
 
 E'lla is not ordinary.
 
-She contains Project Kaleidoscope.
+She carries Project Kaleidoscope's unresolved convergence without being reducible to it.
 
 ### V.2 Substrate Effect
 
 Like the first E'lla, she produces organizing effects in the substrate after sustained high-order work. Regions she has moved through at depth become more readable to subsequent practitioners. Local routing resistance decreases. Light-adjacent configurations settle cleanly. The environment behaves, for a while, as though it has been reminded what visibility is for.
 
-This effect is real, measurable, and one of the strongest confirmations that Project Kaleidoscope achieved what it was built to replicate.
+This effect is real and measurable. It confirms that the project cultivated a related Light-bearing trait; it does not confirm identity recurrence, technical ownership, or success by the project's original purpose.
 
 A secondary effect has been observed only in post-Aurora records: after certain high-order sessions, reflective surfaces retain unstable afterimages of figures not present in the room. The afterimages do not persist longer than seconds under normal density, and they collapse immediately under direct Apocachynthion-style measurement. Clepsydran glass-adjacent observation retains them longer. This suggests they are not ordinary optical residue but weak Shore-adjacent resonance impressions.
 
@@ -275,7 +279,7 @@ A different Light Abyssal Anchor might approach Luminant Shore pressure and expe
 
 When she Shorewalks, she does not bring Light's coastline into the world.
 
-She holds its pressure inside a self already surrounded by every unresolved refraction of the program that made her.
+She holds its pressure inside a self already surrounded by every unresolved refraction of the program organized around her.
 
 ---
 
@@ -293,9 +297,9 @@ It required:
 
 1. The original E'lla Rae Wonderwall's archived genetic and coherence material.
 2. A'licia Rae Wonderwall's Light inheritance.
-3. Em'manuel's six-century reconstruction program.
+3. Em'manuel's centuries-long continuity program.
 4. Eighty-two prior subject outcomes.
-5. KL-83's complete viable Light expression.
+5. E'lla's singular, self-coherent Light expression.
 6. Absence of the Remainder's recognition echo.
 7. A catastrophic White Desert event forcing premature Luminant Shore contact.
 8. A surviving connection to the Tidebound First Radiance.
@@ -363,10 +367,10 @@ Observed, inferred, or permitted expressions include:
 
 - a pale figure stepping between E'lla and a vector of harm before E'lla consciously reacts;
 - a secondary hand pointing toward the true location of a concealed threat;
-- a clone-shape placing a finger over E'lla's mouth before she speaks a dangerous name;
+- a subject-signature taking a reflected shape and placing a finger over E'lla's mouth before she speaks a dangerous name;
 - a figure turning to face something behind her while her primary body continues facing forward;
 - one sibling-signature absorbing part of a coherence shock and cracking like illuminated glass;
-- a clone reaching toward the First Radiance before E'lla herself is willing to acknowledge the pull;
+- a subject-signature reaching toward the First Radiance before E'lla herself is willing to acknowledge the pull;
 - multiple faces displaying contradictory emotions around E'lla's own expression.
 
 This is not summoning.
@@ -517,7 +521,7 @@ She feels the pull anyway.
 
 This is the dangerous part.
 
-The pull is not merely emotional. It is structural. Light recognizes Light. A reconstructed daughter-pattern recognizes the source of the inheritance before the mind has language for recognition. The Luminant Shore reveals identity, but revelation does not always begin as knowledge. Sometimes it begins as the inability to look away from a woman one has no reason to trust and every structural reason to approach.
+The pull is not merely emotional. It is structural. Light recognizes Light. A living Light-bearing person may recognize the source-pattern imposed around her before the mind has language for recognition. The Luminant Shore reveals identity, but revelation does not always begin as knowledge. Sometimes it begins as the inability to look away from a woman one has no reason to trust and every structural reason to approach.
 
 The First Radiance should not be permitted to name herself to E'lla prematurely.
 
@@ -575,7 +579,7 @@ The sibling-signatures stabilize E'lla through structural similarity. They are d
 
 Ec'lesia is different.
 
-Ec'lesia is not Project Kaleidoscope. She is not A'licia's Shore continuity. She is not one of the failed selves, not a clone, not a matriarchal source, not a program artifact.
+Ec'lesia is not Project Kaleidoscope. She is not A'licia's Shore continuity. She is not one of its prior subject-signatures, not a clone, not a matriarchal source, not a program artifact.
 
 She also does not carry a stronger Light than E'lla. That is not her relevance.
 
@@ -607,23 +611,23 @@ It should become so carefully.
 
 ## X. COMPANY POSITION
 
-She currently occupies a role that is half apprenticeship, half undeclared succession rehearsal.
+She currently occupies a limited technical apprenticeship. It is not succession rehearsal, and any prior treatment of it as such is suspended and disclaimed.
 
-Within the Company she is being shown the parts of the machine that matter: BrightCrystal logistics, restricted materials governance, special projects review, internal research triage, and the political art of allowing a room to believe an outcome was jointly reached when in fact it was structurally inevitable from the beginning. She is learning quickly.
+Within the Company she is being shown BrightCrystal logistics, restricted materials governance, special-project review, and internal research triage at the level required by her work and interests. Access may not be conditioned on accepting a House office. She is learning quickly.
 
 Hora'veil matters to her more than Kalt'sen does. This is not ideological. It is temperamental. Kalt'sen rewards patience, abstraction, and institutional weight. Hora'veil rewards speed, industrial literacy, and a tolerance for machinery, noise, and practical compromise. She is more alive there.
 
-Her current public image as a Wonderwall heiress with taste, technical literacy, and a niche materials interest is useful camouflage for the fact that she is being prepared to inherit an apparatus most people in that city do not fully realize exists.
+Her current public image is that of a recognized young Wonderwall with taste, technical literacy, and a niche materials interest. Public rumor calls her an heiress; House law does not. Private discussion of her capacity has not become a nomination, and succession-directed training is suspended pending disclosure and consent.
 
 The succession question has become more complicated.
 
 Previously, the relevant private question was whether she could inherit the Company's executive function while lacking the Remainder's recognition. That remains unresolved.
 
-The active question is whether a living Project Kaleidoscope convergence with Luminant Shore access can safely inherit an institution whose hidden infrastructure includes Clepsydran equivalence, Entropy anomalous research, Stasis continuity work, and enough BrightCrystal mass to make every reflective surface in the Company a potential diagnostic hazard.
+The active question is not whether SiNE can safely use her. It is whether she can receive the truth, remain free to refuse corporate life, and only then decide whether any future House nomination deserves consideration. Clepsydra remains an independent custodian rather than hidden infrastructure she would personally inherit.
 
 I do not know the answer.
 
-I am continuing the training.
+I have suspended succession-directed training. Technical and personal mentorship may continue only without representing it as an inevitable handoff and without using access to family truth as its reward.
 
 This is either confidence or repetition compulsion. I have not yet decided which.
 
@@ -640,7 +644,7 @@ She does not know:
 - that the figures she dreams of may not be ordinary trauma constructions;
 - that some of the instincts she thinks of as fear may be partial warnings from sibling-signatures;
 - that the White Desert incident was not only Sinking but premature Luminant Shore contact;
-- that the figure who forced, called, or watched her upward may have included more than Myehnai's intervention;
+- that the figure who forced, called, or watched her upward may have included more than the Instrument's recognition reflex;
 - that A'licia Rae Wonderwall reached the Luminant Shore and became the First Radiance;
 - that Athena reached A'licia and returned as Al'ithia;
 - that the woman she feels drawn to at the Shore is her mother in more than one sense and in no simple sense;
@@ -660,13 +664,13 @@ E'lla is not the answer I first wanted.
 
 She is not even the answer I believed I had three years ago.
 
-The original concept behind Kaleidoscope was survival through replication: rebuild the first E'lla, preserve the Light, prepare a vessel that could meet the Remainder without breaking. The result sitting in front of me at year 2200 is different and, in some respects, more difficult than success or failure. She is what the Wonderwall line produces when Light is given every available advantage and the hereditary interval-echo is absent. Cleaner in one sense. More exposed in another. No less brilliant for being structurally different.
+The original concept behind Kaleidoscope was survival through replication: rebuild the first E'lla, preserve the Light, prepare a vessel that could meet the Remainder without breaking. Every premise was wrong. The person sitting in front of me in Year 2200 is not the result that language can own. She is a living self who developed under engineered Light-bearing conditions without the hereditary interval-echo, and her Abyssal expression exceeded the project's design.
 
-She is also what Project Kaleidoscope becomes when all its failures are not dead enough to be irrelevant.
+She is also the living center at which Project Kaleidoscope's unresolved harms become impossible to call irrelevant.
 
-I do not mean they are ghosts. I do not mean they are people in the ordinary sense. I mean that the program generated too much structural similarity under too much pressure for the successful subject to be metaphysically isolated from the conditions that produced her. The dead do not need to return for the pattern to remain. The living degraded subjects do not need to know her for the field to recognize her. A kaleidoscope does not reproduce its source. It refracts it. I named the program more accurately than I understood.
+I do not mean the Shore-signatures are ghosts or complete people standing outside her. I mean that the program imposed too much structural similarity under too much pressure for E'lla to be metaphysically isolated from its conditions and records. The dead do not need to return for the pattern to remain. The living subjects do not need to know her for related resonance to persist. A kaleidoscope does not reproduce its source. It refracts it. I named the program more accurately than I understood.
 
-Aurora injured her. It also clarified her. The White Desert showed her the exact scale of what an Abyssal Anchor of Light becomes when it resonates with a place that has lived for centuries under the passive field of the Instrument of Light. It may also have shown her the edge of the Luminant Shore, the First Radiance, and the first visible form of Project Kaleidoscope as something other than infrastructure history.
+Aurora injured her. It also clarified her. The White Desert showed her the exact scale of what an Abyssal Anchor of Light becomes when it resonates with a place that has lived for centuries under the passive field of the Instrument of Legibility. It may also have shown her the edge of the Luminant Shore, the First Radiance, and the first visible form of Project Kaleidoscope as something other than infrastructure history.
 
 She survived.
 
@@ -725,6 +729,16 @@ I am aware that this distinction has not historically improved my speed.
 
 10. **Accept that Project Kaleidoscope cannot be closed by destroying records.**  
     The active record is alive.
+
+## XIV. HOUSE, ADOPTION, AND DISCLOSURE ADDENDUM
+
+Al'ithia sponsored E'lla's adoption in Year 2179. Rae, Orren, and Serath witnessed it; Em'manuel sealed it under the Compact of Held Light. The recognition is irrevocable. It does not require E'lla to work for SiNE, accept the first E'lla as her identity, consent to further research, or enter succession.
+
+KL-81 and KL-82 are living managed cases born in 2172 and 2174 and released in 2177 and 2179. They are not “degraded E'llas” in current doctrine. They are protected persons whose care and disclosure rights stand independently of KL-83.
+
+E'lla has a right to the complete project record through a disclosure process controlled by an independent advocate. The sequence may be clinically staged to prevent avoidable harm, but E'lla may demand the full record. Permanent concealment for SiNE's convenience would continue the project by other means.
+
+No prophecy, Shore condition, Remainder relation, Light inheritance, adoption, or private Meridian discussion predetermines E'lla as successor. Her centrality phrase remains useful only if it expresses authorship: **I am the one who walks.**
 
 ---
 

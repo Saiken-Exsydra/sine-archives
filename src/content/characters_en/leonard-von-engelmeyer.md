@@ -1,13 +1,13 @@
 ---
 title: "Leonard von-Engelmeyer"
 type: "Character"
-age: "55 (as of 2200)"
-birth_year: "2145"
+age: "55 (as of 1127)"
+birth_year: "1072"
 birthplace: "Eraveth, Ardeatus (Northern Frontier Region)"
 affiliation: "Apocachynthion - Kalt'sen Academy"
 house: "House Engelmeyer (expatriate branch, formally estranged)"
 rank: "Stylus"
-registry_status: "Registered - Stylus, Mark 4; asylum intake 2163; instructional standing current"
+registry_status: "Registered - Stylus, Mark 4; asylum intake 1090; instructional standing current"
 point_profile:
   status: ""
   cas_access: ""
@@ -36,7 +36,7 @@ tags:
   - "Kalt'sen"
 status: "public"
 created: "2026-05-10"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Leonard von Engelmeyer Dossier.md"
 ---
 
@@ -73,9 +73,9 @@ He is one of the setting's clearest examples of catastrophe producing not a mons
 
 ## Background
 
-Leonard was born into an expatriate Engelmeyer branch in **Ardeatus**. His family became politically visible enough to attract enemies, and that visibility ended in disaster.
+Leonard was born into the broader Engelmeyer migration in **Ardeatus**. His grandfather left the western corridor before the Voren Works disaster and carried a damaged route ledger south. Leonard is related to that history, but he is not part of the direct hereditary sequence that later produced Re'lha and Le'nore.
 
-During the attack that killed his parents, a Stase incursion froze the event in a suspended unfinished state. Leonard survived by awakening as a Redactor inside that rupture.
+In **1087**, a suspected private-industrial attack killed his parents just as a Stase incursion froze the event in a suspended unfinished state. CLOCKWORK did not yet exist. Leonard survived by awakening as a Redactor inside that separate rupture.
 
 An anomalous mechanical crow later named **Kerz** entered that same impossible moment and has remained tied to him ever since.
 
@@ -131,7 +131,7 @@ And like many survivors, he is excellent at preventing repetition without necess
 
 **Ardeatus** remains both his place of origin and an ongoing threat. Imperial authorities have refused requests to hand him back.
 
-**Le'nore Voren Engelmeyer** matters as a distant family connection through a very different kind of Engelmeyer anomaly.
+**Le'nore Voren Engelmeyer** matters as a distant family connection through a different Engelmeyer history. Leonard does not carry the Voren recursive scar.
 
 ## Story Role
 

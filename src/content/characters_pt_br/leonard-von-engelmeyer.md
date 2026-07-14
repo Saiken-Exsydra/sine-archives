@@ -1,13 +1,13 @@
 ---
 title: "Leonard von-Engelmeyer"
 type: "Personagem"
-age: "55 (em 2200)"
-birth_year: "2145"
+age: "55 (em 1127)"
+birth_year: "1072"
 birthplace: "Eraveth, Ardeatus (Região da Fronteira Norte)"
 affiliation: "Apocachynthion — Academia Kalt'sen"
 house: "Casa Engelmeyer (ramo expatriado, formalmente afastado)"
 rank: "Stylus"
-registry_status: "Registrado — admissão de asilo em 2163; licença instrucional ativa"
+registry_status: "Registrado — admissão de asilo em 1090; licença instrucional ativa"
 point_profile:
   status: ""
   cas_access: ""
@@ -26,7 +26,7 @@ summary: "Um homem que a explosao nao conseguiu terminar, temperado em calor pel
 tags: ["Apocachynthion", "Engelmeyer", "Thermodynamic Anchor", "Stase-Survivor", "Ardeatus", "Kalt'sen"]
 status: "public"
 created: "2026-05-10"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Leonard von Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
 hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
@@ -39,11 +39,11 @@ hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
 
 ## Linhagem e o Exílio Ardeatano
 
-O nome Engelmeyer é extremamente conhecido no interior da faixa oeste do Império. Porém, o avô de Leonard rompeu relações com a casa principal durante as disputas territoriais do fim dos anos 2110 e atravessou a fronteira rumo ao estado-nação vizinho de Ardeatus. Adotando a partícula ardeatana “von-” para se integrar à gramática social local, o ramo expatriado se estabeleceu na cidade fronteiriça de Eraveth.
+O avô de Leonard deixou o corredor oeste no fim da década de 1030, antes da destruição dos Voren Works em 1043, e entrou nas comunidades que formariam Ardeatus em 1058. Leonard pertence à migração Engelmeyer mais ampla, não à sequência hereditária direta que depois produziu Re'lha e Le'nore. Um ledger de rotas danificado preservado pela família documenta alterações anteriores à catástrofe dos Works.
 
 Os pais de Leonard eram figuras muito conhecidas em Eraveth. Sua mãe, **Elara ker-Vane**, era uma brilhante cientista de materiais da Forge Academy de Kovansk, especializada em limiares térmicos em fraturas de tensão de BrightCrystal. Seu pai, **Kaelen von-Engelmeyer**, era um político ardeatano extremamente vocal que construiu sua carreira combatendo o avanço do corporativismo imperial — especificamente, Kaelen impediu que a divisão Evanote da SiNE expandisse a Ferrovia Arterial Imperial para dentro da rede logística soberana de Eraveth, argumentando que infraestrutura corporativa era apenas o primeiro passo para submissão corporativa.
 
-Em 2160, quando Leonard tinha quinze anos, seus pais morreram no que as autoridades ardeatanas classificaram oficialmente como um vazamento doméstico catastrófico de gás. Há muito tempo o braço de inteligência do Apocachynthion sustenta — embora nunca tenha investigado formalmente — a hipótese de que a explosão foi um assassinato direcionado. Muito provavelmente executado por agentes corporativos, possivelmente pela divisão não registrada CLOCKWORK da SiNE, tanto para remover um obstáculo político quanto para silenciar as pesquisas de Elara na Forge.
+Em 1087, quando Leonard tinha quinze anos, seus pais morreram no que as autoridades ardeatanas classificaram oficialmente como um vazamento doméstico catastrófico de gás. O braço de inteligência do Apocachynthion suspeita de um assassinato executado por operadores industriais privados. A CLOCKWORK ainda não existia, portanto atribuir o ataque a ela é cronologicamente impossível. A explosão doméstica e a incursão de Stase foram um evento separado da catástrofe dos Voren Works.
 
 Leonard estava chegando em casa exatamente no momento da explosão.
 

@@ -37,7 +37,7 @@
 | **Years of Active Service** | Forty years of documented assessment work, 2156-2196 |
 | **Divine Status** | Confirmed Crowned vessel; sustained angelic fusion |
 | **Fragment Alignment** | **Meruel**, angelic Measurement of Potential / Completion |
-| **Parent Seraphic Line** | Unnamed Seraphim of Just Measure; Seraphic Constellation of Just Measure; incomplete formal theology |
+| **Parent Seraphic Line** | **Aequoriel**, Seraphim of Just Measure; Seraphic Constellation of Just Measure; restricted but formally stabilized theology |
 | **Operational Classification** | Saint-adjacent, uncanonized; internally marked as severe-domain Crowned; publicly treated with deference appropriate to retired Obsidian clergy |
 | **Current Residence** | Private ecclesiastical lodging in Kalt'sen, with unregistered travel throughout the Central Region and select Northern districts |
 | **Public Standing** | Honored former assessor, discoverer of several living saints, valued consultant in difficult alignment cases |
@@ -99,11 +99,11 @@ This is more dangerous.
 
 ### IV.1 The Constellation of Just Measure
 
-The angelic fragment Meruel belongs to a Seraphic Constellation whose central Seraphim has not yet been assigned a stable formal name in Church doctrine. Restricted marginalia most often calls it **the Nameless Seraphim of Just Measure**, though this phrase is descriptive rather than liturgical.
+The angelic fragment Meruel belongs to the Seraphic Constellation of **Aequoriel, Seraphim of Just Measure**. Older restricted marginalia called the Cynosure **the Nameless Seraphim of Just Measure**; the Church–Imperial Recognized Presences Index has stabilized Aequoriel as the formal name.
 
-That Seraphim is the constellation's **Cynosure** or **central star**. It is not justice in the civic sense. It is not law, not punishment, and not mercy by itself. It is the divine principle by which a being is measured against what is true of it: what it has done, what it owes, what it could bear, what it has refused, what remains recoverable, and what has become false beyond restoration.
+Aequoriel is the constellation's **Cynosure** or **central star**. It is not justice in the civic sense. It is not law, not punishment, and not mercy by itself. It is the divine principle by which a being is measured against what is true of it: what it has done, what it owes, what it could bear, what it has refused, what remains recoverable, and what has become false beyond restoration.
 
-The constellation is understood to have six major angelic fragments, functioning as **Cardinal Stars** beneath that Cynosure. The names below are the current restricted working names used in this dossier. Only Meruel is confirmed in relation to Father Viktor.
+The constellation has six recognized major angelic fragments, functioning as **Cardinal Stars** beneath that Cynosure. Only Meruel is confirmed in relation to Father Viktor.
 
 | Cardinal Star | Measurement | Working Description |
 |---|---|---|
@@ -158,7 +158,7 @@ Obsidian noticed.
 
 ---
 
-## VI. THE OBSIDIAN RITE YEARS
+## VI. THE OBSIDIAN YEARS
 
 ### VI.1 Entry Into Assessment Work
 
@@ -475,6 +475,8 @@ Father Vaey Viktor is not a fallen priest in the simple sense. That category wou
 This is precisely why the case is intolerable.
 
 He represents a failure in the Church's own distinction between holiness and governance. The institution knows how to identify demonic corruption. It knows how to condemn false miracle-workers. It knows how to pity broken vessels and how to venerate saints whose lives make doctrine beautiful. It has far less courage when confronted with a saint whose miracles are real, whose fragment is angelic, whose service record contains genuine good, and whose present acts are murder.
+
+Under current Imperial law, Meruel's angelic origin changes the required Technical Lead and the evidence needed to understand domain pressure. It does not immunize Viktor from investigation, arrest, trial, victim accounting, or remains review. The Imperial Civic Safeguard Service may intervene against him as against any dangerous person; Obsidian retains technical authority over Meruel; the Courts determine guilt and continued coercion.
 
 He is what happens when assessment becomes worship, when worship becomes measurement, and when measurement forgets that a living person is not a failed version of an imagined one.
 

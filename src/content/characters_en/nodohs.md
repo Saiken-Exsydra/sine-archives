@@ -1,55 +1,28 @@
 ---
 title: "Nodohs"
 type: "Skyphon"
-rank: "Balance of Euthanasia"
-designation: "The Mercy of Ending"
+rank: "Bearer of the Finished Life"
+designation: "Bearer of the Finished Life"
 affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Dissolved at the Fracture — Instrument unmoored — fragment dispersed into world grammar"
-occupation: "Mortality Spectrum"
-domain: "Death"
+registry_status: "Person concluded at the Fracture; body lawfully closed; fragment in funerary and threshold aftereffects; Instrument in a Dark-Side metric fault"
+occupation: "Biological closure"
+domain: "Transition from living organism to remains after biological coherence ends"
 church_name: "The Instrument of Death"
-principle: "Endegemearc"
-keeper_name: "That Which Gave Chase"
-summary: "Death, under his hand, was not refusal but release."
-tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Pre-Fracture", "Mortality", "Death", "Keepers of Before"]
+principle: "Closure"
+keeper_name: "That Which Gave Every Life Back Without Taking Its Meaning"
+summary: "He closed each biological continuity without erasing what its ending returned."
+tags: ["Skyphon", "First Bearer", "Intact Seal", "Obscurial", "Closure", "Nodohs", "Death"]
 status: "private"
 created: "2026-03-17"
-updated: "2026-03-17"
+updated: "2026-07-13"
 ---
 
-> *"Every tradition that has intuited a difference between good death and wrong death — between an ending that closes something properly and one that breaks it before completion — is perceiving, at distance, the shape of what the Instrument of Mortality encoded."*
-> — Keepers of Before, restricted record annotation
+> **Directive:** Close each biological continuity without erasing what its ending returns.
 
----
+Nodohs governed the clean transition from a living organism to remains after biological coherence ended. He did not govern souls, afterlives, later decay, arbitrary killing, or the decision that a politically inconvenient life was finished.
 
-## The Instrument
+Shizen kept life capable of recurrence; Alma kept a living self bounded; ǩleinaptus released structure after closure. Nodohs existed between those laws so death would neither fail to finish nor erase the meaning of the life that had ended.
 
-The pairing of Nodohs with Shizen was not symbolic. It was **structural**.
+During Year 0 he closed interrupted lives against intrusion and kept the dead from becoming unbounded Pathway wounds. On the final beat he applied Closure to his own constraint body rather than leave it as a usable vessel. His fragment remains in funerary and threshold aftereffects. The Instrument of Closure occupies a frozen-ocean metric fault on the Crown's Dark Side.
 
-The Instrument of Emergence and the Instrument of Mortality were the two faces of the same system. Life, as a category of the world, requires both. An organism that arises requires the conditions for arising — Shizen's Jurisdiction. It also requires that, at the right moment, in the right pattern, it ends — Nodohs's Jurisdiction. A world in which organisms arose without ending would not be a world with more life. It would be a world in which existing life consumed the conditions for new life without releasing them: moving toward stagnation, toward a configuration incapable of producing novelty, because novelty requires that what exists releases what it holds.
-
-The Instrument of Mortality was not the Instrument of destruction. It was the Instrument governing **proportion**: the law determining when individual endings served collective continuation, what rate of dissolution maintained the system's capacity to produce new configurations, what patterns of death produced the richest return to the living systems that depended on that return.
-
----
-
-## Nature
-
-His relationship with Shizen was the deepest of the inter-Skyphon connections — not because they were similar in disposition, but because their Instruments were genuinely **interdependent**. Each one's governance was only possible within the frame the other's governance provided. They were not supplementary. They were constitutive of each other's ability to function. This produced a relationship that had no need for sentiment. The structural fact was enough.
-
-Nodohs bore the Instrument of Mortality directly. Not aestheticizing it, not apologizing for it, not maintaining appearances of detachment he did not feel. The Page Primordial fragment at his core expressed the Instrument as a quality of **clear-sightedness about endings** that other Skyphons experienced as its own kind of steadiness: a being that had fully metabolized the fact that things end, that ending well is not the same as ending badly, and that the difference between these outcomes is what he was built to maintain.
-
----
-
-## Post-Fracture Condition
-
-Death in the world since the Fracture is **ungoverned**. Organisms continue to die in patterns that vary across the ages and conditions. The principle governing what those deaths serve — what they release, what they return, whether they maintain or undermine the systems that depended on them — no longer operates.
-
-The Keepers of Before record this as the **most immediately consequential loss** among all twelve Instruments: not because death has ceased, but because death without the Instrument of Mortality is dissolution without the Instrument of Dissolution's guidance. It occurs. It accumulates. It does not serve in the way it was built to serve.
-
----
-
-## Cultural Echo
-
-Every tradition that has intuited a difference between good death and wrong death — between an ending that closes something properly and one that breaks it before completion — is perceiving, at distance, the shape of what the Instrument of Mortality encoded.
-
-The Church's funerary rites contain, within their structure, a recognition of this principle that the Church's own theology does not fully account for.
+Its danger is administrative death: a law of ending applied before the life has actually concluded.

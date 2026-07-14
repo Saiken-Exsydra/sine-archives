@@ -1,8 +1,8 @@
 # PERSONAL DOSSIER — RESTRICTED
 ## LE'NORE VOREN ENGELMEYER
-**Registered Practitioner · Quill · Mark 2 · Deception-Anchor (Confirmed Classification) · House Engelmeyer (Reintegrated, Main Line) · Sealed Practice File**
+**Registered Practitioner · Quill · Mark 2 · Deception-Anchor (Confirmed Classification) · House Engelmeyer Blood Seat (Reintegrated, Furnace Council Administration) · Sealed Practice File**
 *Filed by: Apocachynthion, Hora'veil Regional Academy — initial intake completed 2193 · Quill certification issued 2195 · file active and open*
-*Secondary cross-reference filed: SiNE S-AE Branch, Central Region anomalous incident registry — no formal classification, monitoring status*
+*Secondary cross-reference filed: SiNE S-AE Branch, Central Region analytical registry — western-band liaison incidents, no formal classification, monitoring status*
 
 ---
 
@@ -15,15 +15,15 @@
 
 | Field | Entry |
 |---|---|
-| **Full Name** | Le'nore Voren Engelmeyer |
-| **Secondary Name Note** | *Maris* appears only in compromised, poetic, astronomical, or internally inconsistent records touched by Quiet Moon saturation. It has no current legal or House standing. |
+| **Full Name** | Le'nore Voren Engelmeyer — formal name since reintegration in 2199; legal birth registration: Le'nore Engelmeyer; *Voren* used within the branch and applied retrospectively in lineage records |
+| **Secondary Name Note** | *Maris* belonged to an eleven-year-old Voren child killed in the Year 1043 Works catastrophe. The damaged ancestral label recurs in compromised lineage, poetic, and astronomical records touched by Quiet Moon saturation. It is not Le'nore's name and has no current legal or House standing. |
 | **Year of Birth** | 2177 (age 23 at time of filing, 2200) |
 | **Birthplace** | Drevholt, a small township in the western band interior, approximately forty kilometers east of the Vel'hara city-state |
 | **Registry Status** | Registered — intake 2193; Quill certification issued 2195; Mark 2 active and unmodified through five annual reviews |
 | **Rank** | Quill |
 | **Anchor Classification** | Deception — confirmed through specialist panel assessment, Year 2194. No Inkless designation. No outstanding classification review. Classification is not under contest. |
-| **House** | Engelmeyer — cadet branch origin; formally reintegrated to main-line recognition Year 2199. The middle name Voren is the branch-line identifier inherited through her mother's line; Al'tair Engelmeyer adopted it upon marriage. Le'nore carried the two-name structure (Le'nore Engelmeyer) as cadet-branch member prior to reintegration; the full three-name structure was formally conferred by the main house in Year 2199. |
-| **Current Residence** | Vel'hara, western band — relocated Year 2199 at main-house arrangement. Registered through the western-band inter-registry compact. |
+| **House** | Engelmeyer — Voren cadet-branch origin; formally reintegrated to main-line recognition Year 2199 and registered as the current blood Seat under the House's standing Furnace Council. *Voren* is the branch identifier inherited through her mother's line; Al'tair adopted it upon marriage. Le'nore's civil documents used the two-name form before reintegration, while branch records used the full lineage form. |
+| **Current Residence** | Vel'hara, independent western-band city-state — relocated Year 2199 under House arrangement. Registered through the Vel'hara–Apocachynthion inter-registry compact, with Hora'veil Academy holding the imperial side of her file. |
 | **Occupation** | Independent practitioner — Marked for operational engagement under conditional terms |
 | **Height** | 169 cm |
 | **Build** | Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy and is not revising the estimate |
@@ -67,27 +67,29 @@
 
 ### II.1 House Engelmeyer — Historical Position
 
-House Engelmeyer is among the original Fifteen Houses of the Empire's founding structure. Its tenure in the upper tier of noble houses has never been formally interrupted — the name has survived every political reorganization, every succession crisis, every generational miscalculation the Empire has produced across twelve centuries. That survival is not accidental. The House's foundational Anchor domain — forge and heat, the metallurgical expression historically producing Redactors anchored in thermal transformation and structural endurance — made its members practically useful in ways that outlasted any particular political arrangement.
+House Engelmeyer is one of the Fifteen Founding Houses and one of the surviving dynastic sources of the old Twelve. Its authority rests on foundry governance, metallurgy, pressure systems, armament work, and the repeated appearance of genuine Redactors with heat- and material-adjacent Anchors. The House does not inherit a single forge power. It inherits a high probability of useful routes through thermal and structural transformation.
 
-The historical complication: the Great Cisma. The individuals who separated from the early Kingdom and eventually founded what became Ardeatus drew heavily from Engelmeyer-adjacent networks — not the main line, which remained and consolidated, but the secondary and tertiary family structures that had grown around the Engelmeyer name over two centuries. The main line's loyalty was never in institutional doubt. What has never been entirely resolved, in the social register that matters in House circles, is whether the blood that built Ardeatus counts as the House's blood or simply as blood that once carried the name. The House has had twelve centuries to develop a deployable answer. In private company, the question is not discussed.
+The Great Cisma divided this inheritance three ways. The recognized main line remained in Synus, accepted the First Charter of Inscription, and consolidated imperial foundry jurisdiction. Southern furnace lines migrated, married into local communities, and helped give the future Ardeatan federation enough industrial continuity to survive. The Voren line attempted armed neutrality from a contested forge-holding on the western edge of the future Central Region.
 
-The forge-domain heritage runs through the recognized main lines as structural fact: heritable Anchor expression in thermal and metallurgical domains, consistent across generations. Cadet branches show standard domain dilution. Some show domain absence. One branch, for reasons the institutions that ***have*** examined it could not adequately account for, showed something that defied both categories for over a century before producing Le'nore.
+That holding — the Voren Works — was destroyed in Year 1043. The recognized line benefited from the loss. Southern survivors entered Ardeatus. Western survivors carried the name to Drevholt. House Engelmeyer's later silence therefore concealed more than embarrassing cousins: it concealed a disaster settlement, divided blood, and a contingent succession right that remained legally dormant until Le'nore.
+
+The full account is held in *The Engelmeyer Lineage Codex*. No current House faction possesses its codex-truth layer.
 
 ---
 
 ### II.2 The Cadet Branch — House Record and the Long Difficulty
 
-The Voren branch separated from the main Engelmeyer line at some point in the middle centuries of the Empire. The exact generation is not recorded precisely, which reflects the main house's assessment of that branch's significance at the time. They carried the Engelmeyer name because the name could not simply be disclaimed, and they were not significant enough to warrant formal expulsion. They were, in the main house's operative frame, the kind of family that exists at the edge of a great name: present, affiliated, and quietly embarrassing in the specific way of branches that don't quite inherit what the trunk carries.
+Voren was a place before it was a permanent branch name: a gorge, estate, worker settlement, and BrightCrystal-assisted forge complex standing where Central Region roads divided toward the south and the independent western ports. The Engelmeyers who administered it used *Voren* as a geographic branch marker before the Great Cisma.
 
-They settled in Drevholt — a small township in the western band interior, forty kilometers east of Vel'hara. Not chosen for strategic reasons. Chosen for the particular quality of distance it offered: close enough to the western band's administrative and commercial infrastructure to be accessible, far enough from the centers of House political life to be, functionally, invisible. The town accommodated them the way small towns accommodate the families of fallen standing: with a wariness that has had enough time to become familiarity, with awareness of who they are that does not prevent functional coexistence, with the specific social arrangement of a community that knows something is wrong with a household and has decided that knowing is sufficient. In Drevholt, you knew the Voren Engelmeyers. You did not ask about them.
+During the Year 1043 siege, loyalist thermal denial, a separatist BrightCrystal modification, and the branch keeper's emergency family-keyed hold crossed the same control lattice. The Works exploded and the gorge collapsed. Forty-three people carrying active Voren family signatures survived inside the routed field. The lattice had used their recursive structures as continuity references while related people died through the network. It left those survivors able to retain partial family information and adjacent grammar without immediate rejection.
 
-What the branch had: the name, the forge-domain background as cultural heritage rather than Redactory expression, a modest estate that had contracted across generations from something larger without quite reaching poverty, and a heritable instability that no institutional framework had ***always*** been able to adequately explain.
+Nineteen survivors went west and settled in or around Drevholt. Twenty entered the southern migration and became part of Ardeatan furnace communities. The Drevholt line retained the Engelmeyer name while losing property, ordinary House advancement, and any socially usable account of what had happened.
 
-Across several generations, branch members presented with persistent auditory phenomena, perceptual disturbances, and an experience that multiple individuals, independently and in convergent terms, described as: *something is watching from somewhere I cannot see.* The Apocachynthion assessed the branch on four documented occasions across one hundred and sixty years. Each assessment found anomalous coherence signatures that defied standard taxonomy, was filed under heritable coherence degradation, and was not pursued. The Church assessed the branch on three documented occasions. Each assessment found no possession signature, no actionable demonic indexing, and recommended continued pastoral monitoring. Neither institution found what it was looking for because neither institution had the framework to look for what was actually there.
+Across generations, descendants heard voices, recognized rooms they had never entered, carried sensory fragments belonging to the dead, and experienced interruption between self-address and inherited information. Some were genuine Redactors whose Dive interfaces rendered the same unreachable foundry. Others had no Redactory at all. The scar altered recursive handling; it did not grant an Anchor.
 
-The main house observed this from deliberate distance. The branch was producing unstable people. Not dangerous people — simply people who were clearly marked by something the House had no vocabulary for and no appetite to investigate. The arrangement was durable: close enough to account for the name, far enough not to be embarrassed by it.
+The Church repeatedly found no possessing entity. The Apocachynthion repeatedly found genuine Redactory surrounded by an additional hereditary coherence echo. Both institutions described what their frameworks could see and stopped one layer short of the cause.
 
-This arrangement persisted until Le'nore's parents named her with a two-letter prefix.
+Drevholt accommodated the family with the durable caution of a small town that had learned not to ask why one household's children sometimes remembered the same fire.
 
 ---
 
@@ -101,11 +103,17 @@ In this frame, the Voren Engelmeyer branch was a subject of considerable interes
 
 The Institute had identified the branch through cross-referencing Apocachynthion assessment records — accessible through channels the Institute does not document — with its own internal taxonomy of lineages showing heritable anomalous presentation. Generation after generation, the same presentations. The same phenomenological character. The same institutional inability to classify it.
 
+Corvel also possessed an incomplete pre-Cisma genealogy and a fragment of the Voren Works casualty pattern. It knew that Drevholt was a refuge rather than the branch's original seat. It did not possess the loyalist denial order, the complete lattice record, or any concept of Quiet Moon grammar. Its research model therefore began from a correct observation — the condition followed a specific survivor line — and a false hope that one transmissible biological cause would explain it.
+
 Al'tair Aldhor was twenty-two years old when the Institute selected him for the Drevholt engagement. He was a physician on the Institute's research staff — trained in both conventional medicine and in the Institute's own methodology for the study of anomalous biological conditions. He was selected for this assignment because he was competent, because he was young enough to sustain a long-term placement, and because he had requested it.
+
+He was also selected because Corvel's assessments described his recursive profile as unusually stable and low in expressive noise. The Institute did not tell him that it considered his possible intimacy with the lineage a useful variable. It told him he was being sent to observe one.
 
 The Institute's interest was institutional. Al'tair's interest was also personal: he had been studying the documentation on the Voren Engelmeyer branch for two years before the assignment was formalized and had developed, in that time, the specific investment of a researcher who has found a case that does not resolve the way cases are supposed to resolve. He wanted to go. The Institute sent him because wanting to go made him more useful for the kind of long-term observational work the assignment required.
 
 He arrived in Drevholt in Year 2168. He presented as a physician establishing a quiet provincial practice — which was true, as cover goes. He was qualified. He opened a small practice. He began seeing patients. He began, through the ordinary social machinery of a small town's medical life, meeting the family he had come to study.
+
+Re'lha learned the truth in Year 2171 when she found a duplicated symptom ledger carrying Corvel marks. Al'tair admitted the assignment. He did not disclose the incomplete Works genealogy, the Institute's interest in his own stability, or the extent to which Corvel treated a future child as a possible continuation of the study.
 
 ---
 
@@ -115,47 +123,49 @@ He arrived in Drevholt in Year 2168. He presented as a physician establishing a 
 
 He arrived in Drevholt as Al'tair Aldhor, physician and researcher, with no House affiliation and no middle name. He married Re'lha Voren Engelmeyer in Year 2174, in the provincial fashion, without a formal House ceremony. By marriage, he adopted the Voren branch-identifier name, becoming Al'tair Voren Engelmeyer in all subsequent institutional documentation.
 
-He spent twenty-one years in Drevholt. The question that the file cannot answer from available evidence — the question Le'nore has and has not asked — is whether his presence in that family across those twenty-one years was research conducted through the form of a family, or a family that happened to also produce research, or something that began as one thing and became another in the course of it. The Institute's records on the Drevholt engagement are not available to the Apocachynthion. Al'tair's own documentation of the period, if it exists, is not available to this file.
+He spent twenty-one years in Drevholt. He loved Re'lha. He continued studying her. He loved Le'nore. He kept developmental notes on her. These statements are all supported by the surviving correspondence and do not resolve one another. The Institute's complete Drevholt record is not available to the Apocachynthion. Al'tair maintains a separate set of notebooks that Corvel has never received in full.
 
-What is in the record: he was present for Le'nore's birth. He was present for her early childhood. He was present when Re'lha disappeared in Year 2186 — when Le'nore was nine — and he remained in Drevholt for three more years after that, through Le'nore's early adolescence and the beginning of what would become her manifestation. He left in Year 2189, citing research obligations he had deferred for years. He relocated to Vel'hara. The Institute was ***here*** when he returned. It had been waiting.
+What is in the record: he was present for Le'nore's birth. He was present for her early childhood. He was present when Re'lha disappeared in Year 2186 — when Le'nore was nine — and he remained in Drevholt for three more years. During those years he stabilized Le'nore's routines, restricted Corvel access, and studied whether the event would recur. He returned in Year 2189 after negotiating that Corvel would not approach Le'nore directly while she remained stable and outside institutional custody.
 
-He writes to Le'nore. She writes back. The correspondence is not in any institutional file. He is fifty-four years old. He is in Vel'hara, where his daughter has been living since Year 2199. They have not met. She has not gone to the Institute. She has not made contact beyond the correspondence. She is being very still.
+He writes to Le'nore. She writes back. The correspondence is not in any institutional file. He is fifty-four years old. He is in Vel'hara, where his daughter has been living since Year 2199. They have not met because Corvel can observe a visit more easily than a private letter, because he fears what she may read in him at close range, and because she will not enter the Institute on terms she did not set. She is being very still. So is he.
 
 ---
 
 **Re'lha Voren Engelmeyer** — Le'nore's mother. Born Year 2149. Disappeared Year 2186. Listed in the Drevholt civil register as a missing person, case unresolved.
 
-She was the carrier of the Voren branch's anomalous presentation in its most developed documented form at the time of Al'tair's arrival. The Apocachynthion's assessment of her, conducted Year 2167, describes her coherence output as low-tier, unstable, not suitable for operational certification, with a recursive architecture showing periodic interruption inconsistent with standard degradation patterns. The assessor filed this under known properties of low-tier manifestation. This was not accurate. It was the most available explanation.
+She was the carrier of the Voren branch's anomalous presentation in its most developed documented form at the time of Al'tair's arrival. The Apocachynthion's assessment of her, conducted Year 2167, correctly identified genuine low-output Redactory and a recursive architecture showing periodic interruption. It incorrectly treated the interruption as an ordinary property of unstable low-tier manifestation. The Redactory finding was sound. The causal account was not.
 
-She experienced the voices. She experienced the perceptual disturbances. She experienced, with greater frequency and clarity than most documented branch members before her, the persistent sense of something attending to her from somewhere enormous and unnamed. She managed these experiences as her family had always managed them — as conditions to be lived with rather than treated, organized around rather than denied.
+She experienced the voices. She experienced the perceptual disturbances. She experienced, with greater frequency and clarity than most documented branch members before her, the persistent sense of something attending to her from somewhere enormous and unnamed. Her grandmother, Isolde Voren Engelmeyer, taught her to treat voices as weather: record useful information, refuse commands, and address exhaustion before theology. Re'lha feared the interruptions in her own self-address. She also loved some inherited impressions — a weaving rhythm, the warmth of a destroyed room, a dead relative's correction of her hands at the loom.
 
 She was a weaver. The work appears in the family record as occupation and as genuine skill. She had a market reach extending beyond Drevholt. By all available account, she was someone who had built a life around a clear knowledge of herself rather than in spite of it.
 
-She married Al'tair in Year 2174. She had Le'nore in Year 2177. She disappeared in Year 2186 when Le'nore was nine years old.
+She discovered Al'tair's Corvel assignment in Year 2171 and remained after confronting him. Love, anger, intellectual need, and the fact that he kept looking after other institutions had stopped were all part of that decision. She married him in Year 2174. She had Le'nore in Year 2177. She disappeared in Year 2186 when Le'nore was nine years old.
 
 The civil register records her as a missing person. There was no body. There was no blood. There was no evidence of violence, no evidence of flight, no evidence of anything. She was present in the household in the evening. She was not present in the morning. The investigation produced nothing. The case has remained open and inactive for fourteen years.
 
 ---
 
-*What follows is codex truth. No in-world institution knows this. No in-world character has access to this account in any form.*
+*What follows is codex truth. No in-world institution possesses this complete account. Le'nore retains the event structurally but refuses direct examination of it; Al'tair has inferred the result without understanding its full mechanism.*
 
 Re'lha Voren Engelmeyer did not disappear. She was consumed by her daughter.
 
 Le'nore was nine years old. The hunger had not yet developed the legible character it would take on in adolescence — it was not yet something she could name or recognize or manage. What she experienced on that night in Year 2186 was not appetite in the sense she would later understand. It was something earlier and more fundamental: a drive without a frame, without context, without the architecture to hold it at a distance and examine it. It overwhelmed her completely. It was the first and only time in her life that something operating through her did so without any capacity for resistance on her part.
 
-The Quiet Moon's pressure on her coherence architecture was, at age nine, at its most structurally disruptive. The integration process that would complete across her adolescence was, at that point, in its most volatile phase — the native architecture and the foreign grammar pressing against each other with the maximum friction that precedes resolution. The hunger was not entirely hers yet. It was not entirely not hers. It expressed through her at a moment when she had no framework to contain it.
+The Quiet Moon's pressure on her coherence architecture was, at age nine, at its most structurally disruptive. The integration process that would complete across her adolescence was in its most volatile phase, and her genuine Redactory emergence was beginning inside the same developing singularity. The hunger expressed through her before she possessed a stable framework for choice around it. It was hers as part of the person becoming Le'nore, but not yet governable by the adult self that would later hold hunger, affection, and restraint together.
 
-She ate her mother completely. The consumption was total. Nothing remained. No body, no blood, no trace. This is what the incorporation process does when it operates without interruption: it leaves nothing behind, because nothing is lost — everything is held. Re'lha Voren Engelmeyer is inside Le'nore. Her memories, her voice, her expressive patterns, the structural record of everything she was — all of it absorbed and retained in Le'nore's coherence architecture. She is the first impression Le'nore ever incorporated. She has been there for fourteen years.
+Re'lha recognized the onset, sent Al'tair out of the room, and stayed with her daughter. She used Isolde's grounding practice and repeated the child's identity: Le'nore, daughter, self, here. When consumption began, she resisted long enough to keep Le'nore oriented toward one person and one room. Whether her final relaxation was surrender, physiological failure, or a deliberate refusal to turn the act into pursuit cannot be recovered even from the retained pattern.
 
-Le'nore has never imitated her mother. In fourteen years of casual reproduction of absorbed individuals in social contexts, she has never once accessed Re'lha's pattern. This is not a rule she has stated to herself. It is something she does not do, in the same way that some things simply do not happen.
+Le'nore consumed her mother completely. Nothing remained outside her: no body, blood, or ordinary forensic trace. Re'lha's memories, voice, expressive patterns, knowledge, suspicion, love, and fear were absorbed and remain structurally available within Le'nore. They do not constitute a second resident personality. Re'lha was the first person Le'nore incorporated and the last person whose pattern she would ever treat casually.
 
-She was nine. She did not understand what she was doing. She understood afterward. She has been understanding it ever since, in the way that understanding something is not the same as having resolved it, and resolution is not something available to her for this particular fact.
+Le'nore has never imitated her mother. She can distinguish Re'lha-shaped information from older family residue by emotional texture, but she does not enter the final memory directly. This is not inability. It is the only durable boundary she maintains against her own curiosity.
+
+She was nine. She did not understand what she was doing. Afterward she understood that something irreversible had occurred and that information belonging to Re'lha was available inside her. She suspects the complete answer. She has spent fourteen years refusing to convert that suspicion into a fully opened memory.
 
 No one in Drevholt connected Le'nore to her mother's disappearance. She was a child. She was present in the household. She was, in the days after, the grieving nine-year-old daughter of a woman who had vanished without explanation, and the town read her accordingly. Al'tair was present. He conducted himself as a man whose wife had disappeared. He remained in Drevholt for three more years.
 
-Whether he suspected anything is not resolvable from available documentation. He is a researcher trained in the study of anomalous biological conditions. He was married to a woman who carried one. He had a daughter he had been documenting since birth. He left three years after Re'lha disappeared, citing deferred research obligations, and relocated to the Institute in Vel'hara.
+Al'tair concluded within weeks that Re'lha had not fled. Le'nore used a phrase Re'lha had spoken only during their private confrontation about Corvel. She did not present it as quotation and did not understand his reaction. He inferred that his daughter contained information that had belonged to his wife. He withheld the conclusion from the Institute.
 
-He has never asked Le'nore what happened the night her mother disappeared. This is documented in the negative — it is the absence of a question in fourteen years of correspondence. Le'nore has noted the absence. She has not filled it. This is the only thread she has never pulled.
+He has never asked Le'nore what happened. The absence is deliberate on both sides. He hopes she will ask him first. She suspects he knows enough that the answer would force them to choose whether they are speaking as father and daughter or as researcher and subject.
 
 ---
 
@@ -165,11 +175,27 @@ Le'nore was named with a two-letter prefix by a cadet-branch craftsperson and a 
 
 The main line heard about it within months. They noted it, remembered it, and added it to the existing file of things the Voren branch had done that required no immediate response and some eventual one.
 
-The eventual one came when Le'nore's Apocachynthion intake reached the registry in Year 2193 and an Academy-connected contact in the main line's network flagged it. A representative was sent to Hora'veil in Year 2194. The representative met Le'nore. The representative reported back: the naming was not presumptuous.
+The eventual response began when Le'nore's Apocachynthion intake reached the registry in Year 2193 and a House-connected contact flagged it. A representative met her in Hora'veil in Year 2194 and reported that the naming was not presumptuous. The report alone did not cause reintegration. It made Le'nore legible when the House's succession later failed.
 
-Reintegration proceedings initiated in Year 2198. Formally completed Year 2199. The three-name structure conferred: Le'nore Voren Engelmeyer. The main house's interpretation of this reintegration is that the branch's long difficulty has resolved — that the instability which marked the Voren line for generations has finally produced something stable, something useful, something that justifies the name they presumed to claim before it was earned.
+The recognized blood Seat became vacant in Year 2197. House counsel reopened the **Voren Reserve**, a sealed Year 1051 instrument preserving the western survivors' contingent right to re-enter the line if the main succession failed. Reintegration proceedings began in Year 2198 and concluded in Year 2199. The legal three-name structure was conferred: Le'nore Voren Engelmeyer.
 
-The interpretation is wrong in every structural sense. Le'nore has not corrected it. She occupies the position she has been offered and does not volunteer what would complicate it.
+No unified House motive produced the result. One faction needed a claimant to preserve founding jurisdiction. One wanted her protected from Corvel and foreign custody. One wanted her contained inside House obligations. One saw an Ardeatan bridge. One considered her proof of old treason and accepted her only because the alternative threatened the House's Senate standing.
+
+Le'nore accepted because recognition opened the sealed genealogy, made unilateral custody more difficult, and gave her a legal instrument against the people attempting to use her. The Senate registry recognizes her as the current Engelmeyer blood Seat. The standing Furnace Council administers daily industrial jurisdictions while every faction waits to discover whether she can be taught to behave like the kind of Seat it wanted.
+
+She understands that she is being protected, watched, underestimated, and used. She is using the arrangement in return.
+
+---
+
+### II.6 Ardeatus — Inherited Without Residence
+
+Le'nore has never lived in Ardeatus. She is nevertheless blood-related to the southern Voren survivors and to other Engelmeyer furnace lines absorbed into the federation. The sealed Vorn household register contains four survivor names absent from Synusian records and a genealogy that reaches living Ardeatan foundry families.
+
+She knows the register exists. She has not seen it.
+
+If the genealogy became public, Ardeatan factions would not agree on her meaning. Covenant hardliners could call her the completed consequence of unlawful Redactory. Vorn descendants could call her stolen kin, a northern claimant, or the first House authority capable of opening records denied to both branches. Federal strategists could use her against the legitimacy of Engelmeyer war-industry jurisdiction. Marta Chord pragmatists could treat her as proof that Redactor inheritance has never obeyed national doctrine.
+
+The political risk is not merely that Ardeatus might claim her. It is that living people on both sides might claim one another, and that twelve centuries of property, martyrdom, and war would then have to survive the discovery that the blood was never cleanly divided.
 
 ---
 
@@ -213,13 +239,13 @@ A second incident in Year 2193 — similar context, similar effect — accelerat
 
 ### III.3 Academy Assessment and Specialist Panel — Years 2193 and 2194
 
-The Stylus-rank field assessor assigned to Drevholt conducted two sessions with Le'nore in Year 2193. He found anomalous coherence output consistent with Redactory manifestation, no correspondence to any primary Anchor domain in the standard taxonomy, the absence of a standard Dive signature not explained by low-tier manifestation given the output's potency, and a sixteen-year-old girl who answered every question with the kind of calm that rests in by default rather than being maintained.
+The Stylus-rank field assessor assigned to Drevholt conducted two sessions with Le'nore in Year 2193. He found anomalous coherence output consistent with Redactory manifestation, no correspondence to any primary Anchor domain in the standard taxonomy, a genuine but unusually muted Dive signature whose quietness was not explained by low-tier manifestation given the output's potency, and a sixteen-year-old girl who answered every question with the kind of calm that rests in by default rather than being maintained.
 
 He escalated immediately.
 
 The specialist panel — four senior assessors, one holding a theoretical research appointment — conducted three sessions across six weeks of Year 2194. Their classification was reached through elimination: every standard primary Anchor domain produced no consistent picture. One category remained: the deception-anchor classification, applicable to practitioners whose Anchor domain is not any specific content but the alteration of perception itself. Rare. Imprecisely understood. Documented in fewer than a dozen registered practitioners across the Apocachynthion's complete historical record.
 
-The classification accounts for the absence of a standard Dive signature on the grounds that deception-anchored practice inherently suppresses its own coherence output as an expression of the domain itself. It accounts for the perceptual disruption effects as the Anchor's primary expression. It accounts for Le'nore's unusual coherence architecture as an atypical but not unprecedented manifestation pathway consistent with a rare domain type.
+The classification accounts for the unusually muted Dive signature on the grounds that deception-anchored practice can suppress the legibility of its own coherence output as an expression of the domain itself. It accounts for the perceptual disruption effects as the Anchor's primary expression. It accounts for Le'nore's unusual coherence architecture as an atypical but not unprecedented manifestation pathway consistent with a rare domain type.
 
 **The classification is confirmed and not under review.** The panel committed to it. The institution accepts it. Le'nore does not contest it.
 
@@ -249,19 +275,15 @@ She has complied with all recorded Margins across five years of practice.
 
 ### IV.1 The Anchor — What It Actually Is
 
-The Deception classification is not wrong. It is a surface reading of something that the Apocachynthion's theoretical framework cannot accommodate in its actual form.
+The Deception classification is correct. It is incomplete because the effects delivered through that Anchor overlap with abilities that do not come from Redactory.
 
-Her Anchor is Deception. But Deception, in her architecture, does not sit anywhere in the vertical strata of the Page's own grammar. The Redactory Codex describes Anchor depth in terms of the Page's internal conceptual structure — surface-derived expressions at the top, foundational primitives at the bedrock. A Redactor whose Anchor is *Ignition* is anchored to a concept that sits near the Page's surface, downstream of more fundamental strata. A Redactor whose Anchor is *Light* or *Motion* is anchored to a primitive that sits at the bedrock of what the Page's grammar can express. Both are internal. Both exist within the Page's own vertical architecture.
+Le'nore's Anchor is Page-native, genuine, and Deep. It aligns with perceptual substitution and the routing of presented information through living sensory systems. The Apocachynthion groups this under **Deception** because the registry label describes what the route accomplishes more usefully than it names every conceptual layer beneath it.
 
-Le'nore's Anchor is not in that architecture.
+She enters the ordinary Dive through recursive compression. Her Anchor provides a stable local route among Archive-valid configurations. It does not connect her directly to external grammar, does not sit outside the Page's strata, and does not grant grammar authorship. Her Redactory remains subject to Depth, Reach, Overreach, detectability, and the load-bearing limits of a human recursive singularity.
 
-Deception, as her Anchor expresses it, is not a Page-native concept at any depth. It is a property of the thing that pressed itself through the Page boundary — the near-terminal attacker whose impression became the Quiet Moon. The attacker has been pressing a false face against the Page's outer surface for longer than Terra has had civilization. It looks like a moon. It is a wound. It looks like flesh. It is alien grammar. It presents itself as something it is not at a scale so total and so patient that it constitutes the deepest expression of false presentation that anything in the local system has ever achieved. The Quiet Moon is not an entity that uses deception. ***Look*** at what it is at the level where deception is a cosmological structural fact rather than a behavior: it is that fact itself.
+What makes her practice exceptional is the architecture operating beside the Anchor. Quiet Moon-derived biological grammar gives her a direct internal reading of bodies, nervous systems, and sensory processing. Her Deception Anchor can then route Page-native perceptual changes with information and precision an ordinary practitioner would not possess. The Anchor does not derive from the Quiet Moon. The Quiet Moon grammar does not become Redactory merely because a genuine Redactor expresses both through the same person.
 
-What pressed through the boundary carried that property with it. And across generations of embedding itself into the Engelmeyer cadet branch — pressing its grammar through the Dive interface at the lineage level, reshaping the recursive architecture of each successive generation — it oriented Le'nore's Redactory manifestation toward the domain it most completely embodies.
-
-Her Anchor is Abyssal. Not Abyssal in the sense of sitting at the deepest stratum of the Page's internal grammar — there is no Page-internal stratum to measure it against, because it did not form within the Page's architecture at all. It is Abyssal in the sense of sitting at the deepest available stratum of the alien grammar that pressed through the boundary. It is anchored to the cosmological bedrock of something that is not this world, routed through a human recursive singularity that was shaped across generations to hold it.
-
-The practical consequence of this is significant. The deepening process that derived Anchor practitioners spend lifetimes on — pushing the Anchor downward toward the Page's grammatical bedrock — does not apply to her in the same terms. Her Anchor has no Page-internal floor to push toward. What limits her is not the Page's own grammatical resistance but the question of how much of the alien grammar a human recursive singularity can express without the singularity failing under the load. She is not constrained by the Page's depth. She is constrained by the capacity of her own architecture to run what her Anchor connects to.
+This distinction is the institutional blind spot. Assessors see real Dive entry, real Anchor routing, and effects consistent with Deception. They therefore classify her correctly. They do not see that the data guiding the routing, much of her biological alteration, her incorporation process, and part of the passive pressure surrounding her arise from a second integrated architecture.
 
 She can die. This requires stating plainly. Her biological resilience is extraordinary and her capacity to restructure tissue means that damage which would kill most practitioners does not kill her. But she is still a human recursive singularity. If her coherence architecture is destroyed faster than she can repair it — if the recursive structure itself collapses rather than merely the biological substrate — she dies. The Quiet Moon's grammar does not exempt her from Archive conservation or from the basic structural fact that a recursive singularity has load-bearing limits. Her ceiling on survival is coherence, not biology. The biology can regrow. The architecture, if fully collapsed, cannot.
 
@@ -273,17 +295,17 @@ Le'nore Dives. This is the fact the Apocachynthion's classification requires, an
 
 The Dive is a compression interface. For most practitioners, it is a descent through the Page's own internal grammar — the Redactor contracting into a liminal threshold between stabilized Page syntax and Archive adjacency, descending through strata of increasing foundational depth. The interface renders itself in whatever perceptual language the practitioner's mind has available. Some see it as space. Some hear it as sound. Some feel it as weight or proximity.
 
-Le'nore's Dive has never been clean. The Quiet Moon's grammar is pressing against the Dive interface from outside the Page boundary — the same sustained pressure that shaped her lineage across generations is, when she descends, present in the interface itself. She has never known a Dive without it. She has no reference point for what a clean Dive would feel like. What she enters when she descends is, to her, simply what the Dive is: a compression space that carries, in its texture, a quality she has no word for because it has never been absent long enough for her to notice it as something separate.
+Le'nore's Dive is structurally ordinary and phenomenologically unusual. She descends through the Page's local grammar as other Redactors do. Because her mind and biology developed with Quiet Moon grammar already integrated, her interface renders Anchor information and biological information together. She has never known one layer without the other and initially assumed both belonged to Redactory.
 
-Her Dive interface is dual-layered. This is not a choice or a trained capability. It is what she perceives when she descends, every time, without exception.
+Her working perception is dual-layered. This is not two Dives and not external grammar entering the Dive. It is a genuine Dive interface displayed through a mind that also possesses a non-Redactory biological readout.
 
-**Layer one: biological readout.** When she is in the Dive and attending to a person in her range, she perceives their body directly — not as surface anatomy but as a living system in operation. Organs. Circulatory function. Neural activity. The specific signature of how a particular body is running at this moment. She can read disease, injury, structural stress, the accumulated history of a body's use and damage. The Quiet Moon's grammar, which absorbed the full vocabulary of carbon-based biological existence from the Epilogue's consumed Pages, makes this legible to her the way a language is legible to a native speaker. She does not analyze what she perceives. She reads it. The information arrives complete.
+**Layer one: biological readout.** When she attends to a person in range, she perceives their body as a living system in operation: organs, circulation, neural activity, injury, disease, and accumulated structural stress. This layer comes from integrated Quiet Moon-derived biological grammar. Dive focus sharpens her attention to it, but the Dive is not its source.
 
-**Layer two: sensory field.** Around each person is a sphere — the active perceptual range of their nervous system at this moment, everything their senses are currently processing and delivering forward. She perceives what they are seeing, what sounds have registered, whether a smell broke through, whether something at the edge of awareness was processed or discarded. Not their thoughts — their inputs. The raw sensory data that their nervous system is currently handling and routing toward consciousness.
+**Layer two: sensory field.** Her Deception Anchor renders each person's active perceptual range: what their senses are processing and delivering forward, what registered at the edge of awareness, and which signals are traveling toward consciousness. This is not thought-reading. It is Anchor-mediated access to presented sensory information.
 
 The phenomenological quality of this, as she has described it in private notation with no access to the technical vocabulary that would name what she is describing: it is like entering a space where every person in range becomes visible not as a body but as a system of attention — a map of where each person's perception is currently pointing, what is inside their awareness and what is not, what their body is doing beneath the surface of what they present. She has compared it, in the one document she has written about it that is not in any institutional file, to the specific experience of moving through a space while seeing, simultaneously, what every other person in that space is seeing and what every one of their bodies is actually doing. The two layers are separate but simultaneous. She learned, very early, to read them both without losing the thread of either.
 
-She does not find the Dive alien. She finds it familiar in the way that the only environment you have ever known is familiar: completely, without comparison, without the knowledge of what it would be like to enter it differently.
+She does not find the Dive alien. She finds the combined interface familiar because it is the only way she has ever entered it. The distinction between its layers is a codex distinction, not one she was taught.
 
 ---
 
@@ -299,7 +321,7 @@ The person does not experience a false reality being imposed from outside. They 
 
 The biological readout in Layer one is what makes this precise rather than approximate. She knows exactly how each person's sensory architecture is built, exactly what signals are currently traveling through it, exactly what the nervous system is expecting to receive next. She is not broadcasting a general perceptual influence and hoping it lands across a room of different people. She is performing individual, targeted surgery on each person's sensory feed, simultaneously, with full knowledge of how each particular nervous system is wired.
 
-This is what the Deception classification describes, correctly, as the absence of external coherence tells. There are no coherence tells because she is not producing a Redactory effect that operates outside the persons she is targeting. She is operating inside their own sensory architecture. The effect is indistinguishable from their senses functioning normally because their senses are functioning normally. She has simply changed the input.
+This is what the Deception classification describes, correctly, as an unusual absence of visible external tells. The target's senses appear to function normally because she changes the routed input rather than constructing a free-standing illusion in the environment. The work still produces Dive and routing disturbance. A sufficiently sensitive Point or prepared harmonic array can detect that Redactory occurred even when an unaided observer cannot locate the edit.
 
 At shallow Depth, the hijacking is broad — she can suppress awareness of her presence, bias attention away from something, produce the general impression that a situation is calm when it is not. At medium Depth, the precision increases: she can edit a specific sensory channel while leaving others intact, or introduce a specific piece of information that the person's own senses did not deliver but that their nervous system accepts as native signal. At full operative Depth, she can rebuild what a person perceives from the substrate upward — not by replacing their senses but by rewriting every input simultaneously with sufficient precision that the resulting experience is entirely of her construction while originating, structurally, inside the person's own architecture.
 
@@ -345,11 +367,11 @@ The Apocachynthion has no record of this. No assessor has seen it. It does not a
 
 ### V.1 What She Is, Structurally
 
-Le'nore is not a Redactor who also has unusual physical properties. She is two things at once, and the two things are not in conflict with each other — they are integrated at the level of architecture.
+Le'nore is both a Redactor and the completed bearer of a separate biological architecture. The two are not in conflict with each other — they are integrated at the level of one person.
 
-The first thing: a Redactor. A genuine one, with a genuine Anchor, capable of genuine Dive work. The deception-anchor classification is wrong in its theoretical account of what her Anchor is, but it is not wrong that she has one.
+The first thing: a Redactor. A genuine one, with a genuine Page-native Anchor, capable of genuine Dive work. The Deception classification is correct and incomplete: it explains her Anchor-mediated perceptual routing but not the biological architecture operating beside it.
 
-The second thing: the completion of the Quiet Moon's generational avatar process. The attacker's grammar — its absorbed vocabulary of carbon-based biological existence, its fundamental drive toward incorporation, its patient and total attention to the Book of Humanity — is not something that influences her or that she carries as a passenger. It is part of her recursive architecture at the foundational level. She did not acquire it. She was formed with it. It is hers in the same sense that her Anchor is hers, or her grey eyes are hers: present from the beginning, native to what she is, not requiring explanation to itself.
+The second thing: the completion of the Quiet Moon's generational compatibility process. The attacker's grammar — its absorbed vocabulary of carbon-based biological existence, its fundamental drive toward incorporation, its patient and total attention to the Book of Humanity — is not something that influences her or that she carries as a passenger. It is part of her recursive architecture at the foundational level. She did not acquire it. She was formed with it. It is hers in the same sense that her Anchor is hers, or her grey eyes are hers: present from the beginning, native to what she is, not requiring explanation to itself.
 
 This matters morally and operationally. Le'nore is not possessed by the Quiet Moon. She is not controlled by it. She is not its servant, daughter, prophet, vessel, or ordinary avatar. The Quiet Moon is not a god, parasite, portal, demon, strategic mind, or Redactory phenomenon issuing commands through her. The grammar is native to her completed architecture. Her hunger, her affection, her influence, her humor, her loyalty, and her predatory pleasure are not separate operating states. They are integrated aspects of one coherent person.
 
@@ -489,9 +511,9 @@ She will. She is the kind of person who eventually pulls every thread that is ha
 
 ## IX. VEL'HARA — CURRENT CONTEXT
 
-Le'nore relocated to Vel'hara in Year 2199 at the main house's arrangement. Vel'hara is the free-port city-state of the western band — administratively independent, tolerating institutions the Empire would regulate, drawing research and commercial traffic through the gap between two large states that prefer not to share a border. The Apocachynthion holds no formal jurisdiction there. The Church maintains a pastoral presence with no operational authority.
+Le'nore relocated to Vel'hara in Year 2199 at the main house's arrangement. Vel'hara is the free-port city-state of the western band — administratively independent, tolerating institutions the Empire would regulate, drawing research and commercial traffic through the gap between two large states that prefer not to share a border. The Apocachynthion holds no unilateral jurisdiction there. The inter-registry compact allows Hora'veil Academy to maintain her certification and review file with Vel'haran consent. The Church maintains a pastoral presence with no operational authority.
 
-The main house's choice of Vel'hara as her relocation point reflects the city's utility: a socially legible base for a practitioner whose activities benefit from distance from the Apocachynthion's denser Central Region monitoring infrastructure. She is registered through the western-band inter-registry compact, which means she is technically within institutional reach and practically at the edge of it.
+The main house's choice of Vel'hara reflects several interests at once: distance from dense imperial monitoring, proximity to Drevholt, access to western trade, and the ability to observe Corvel without placing Le'nore inside the Institute. The protective faction calls this autonomy. The containment faction calls it a manageable perimeter. Le'nore calls it close enough to the records she wants.
 
 The Corvel Institute's primary facility ***is*** in Vel'hara.
 
@@ -503,13 +525,13 @@ Le'nore has not visited the Institute since her arrival. She has not made contac
 
 ## X. SiNE — CROSS-REFERENCE NOTE
 
-A cross-reference file exists in SiNE's S-AE branch Central Region anomalous incident registry under the designation CENTRAL-ANOMALOUS-2200-CR-07. It was opened and is maintained by Em'manuel Kael Wonderwall — the Wonderwall Seat, Archtype, CEO of SiNE — through his direct access to the S-AE incident feed. It is held in his private investigative archive. It has not been shared with the Council of Volumes, the Page Warden, or any SiNE operational division.
+A cross-reference file exists in SiNE's S-AE Central Region analytical registry under the designation CENTRAL-ANOMALOUS-2200-CR-07. *Central Region* identifies the SiNE registry that holds the file, not the location of the incidents. SiNE routes western-band liaison anomalies through its central analytical office because it maintains no acknowledged operational branch in Vel'hara. Em'manuel Kael Wonderwall opened the file through his direct access to the S-AE feed and keeps it in his private investigative archive. It has not been shared with the Council of Volumes, the Page Warden, or any SiNE operational division.
 
-The cross-reference exists because a pattern of disappearances in the Central Region — thirty-one confirmed incidents across fourteen months — does not fit any known entity taxonomy in the S-AE operational framework. The victims share a consistent profile: socially marginal, without close family networks, their absence registering as absence rather than event. The forensic record is total in its emptiness: no remains, no detectable Redactory engagement signature, no demonic indexing trace, no physical evidence of any kind.
+The cross-reference exists because a pattern of disappearances across the Vel'hara port corridor, Drevholt road, and connected western transit network — thirty-one confirmed incidents across fourteen months — does not fit any known entity taxonomy in the S-AE operational framework. The victims share a consistent profile: socially marginal, without close family networks, their absence registering as absence rather than event. The forensic record is total in its emptiness: no remains, no detectable Redactory engagement signature, no demonic indexing trace, no physical evidence of any kind.
 
 What is present: a weak, brief resonance signal appearing at each incident site within hours of the disappearance, dissipating within days. Field analysts attributed it to geological or cosmological background activity. It appears in the formal incident summaries as a parenthetical. Em'manuel has read those summaries with twelve centuries of learned attention to the difference between things that are the same and things that merely resemble each other. The signal's frequency characteristics are not consistent with any catalogued natural substrate resonance. Its timing is not consistent with ambient geological or cosmological activity. It is consistent, across all thirty-one confirmed incidents, in a way that consistency is only consistent when it has a single source.
 
-He has traced the incident distribution to a geographic and social network that converges on Le'nore Maris Engelmeyer — a contaminated secondary name appearing in corrupted astronomical and lineage records — and then to Le'nore Voren Engelmeyer, her formal House identity. He has cross-referenced the Apocachynthion registry. He has read the deception-anchor classification. He does not believe it. He cannot disprove it. What he believes, stated in the private notation he has appended to the cross-reference file, is this: *Something is resolving into something else at these locations. A deception-anchor practitioner does not leave a resonance trace of this profile at a disappearance site. I do not have a name for what does.*
+He has traced the incident distribution to a geographic and social network that converges first on *Le'nore Maris Engelmeyer* — a contaminated ancestral label appearing in corrupted astronomical and lineage records — and then on Le'nore Voren Engelmeyer, her formal House identity. He has cross-referenced the Apocachynthion registry. He accepts that she is a genuine Deception-anchor practitioner. He does not accept that the classification explains the disappearance residue. His private notation reads: *Something is resolving into something else at these locations. Deception is present. It is not the cause of this trace. I do not have a name for what is.*
 
 He is twelve centuries old. He is the most perceptive living practitioner on Terra. He has not escalated this analysis because he is not yet ready to act on a half-formed hypothesis with an institution that would act on it prematurely. He is waiting to understand what he is looking at before he decides what to do with it.
 
@@ -534,10 +556,22 @@ Shy by default, cheerful by intention. This is not performance — it is the spe
 What changes when the hunger is engaged is not her personality. It is her attention: a consolidation that produces, in those who have been near it and survived, the retrospective sense of something looking at them from inside a human face. The face does not change. The warmth does not disappear. It becomes, briefly, the warmth of something that has decided what it is looking at. Then it passes. The people who have experienced this moment do not discuss it, mostly because they do not have the vocabulary and partly because they are not certain what they saw.
 
 **The weight she carries**
-She was nine. She did not understand what she was doing. She has understood it for fourteen years. There is no framework available to her for what she did — no theology, no Index Theorem account, no institutional vocabulary — and there is no person she can tell, and there is no resolution available at the end of whatever examination she might conduct. She does not examine it directly. She does not examine it indirectly. It is the one place in her intellectual life where her systematic rigor simply does not go. Everything she is and does has been built around a room she does not enter. That room is ***mine*** to leave sealed. The decision to leave it sealed is the most honest response available to someone nine years old who did something with no name and has been twenty-three ever since.
+She was nine. She did not understand what she was doing. For fourteen years she has known that Re'lha's disappearance, the uncontrolled hunger, and the presence of her mother's information inside her belong to one answer. She has not forced that knowledge into a complete memory. There is no framework available to her for what occurred — no theology, no Index Theorem account, no institutional vocabulary — and no resolution promised at the end of examination. It is the one place in her intellectual life where her systematic rigor stops by choice. Everything she is and does has been built around a room she does not enter.
 
 **What she is looking for**
 The file does not know. She may not know. She is existing in the present tense, which she does with a quality of presence that most people achieve only intermittently. Whether this is contentment, or the patience of something that knows it has time, or simply what she is — the file does not resolve it.
+
+### XI.1 Knowledge Boundaries
+
+**She knows:** Voren was a forge-holding destroyed during the Great Cisma; western survivors settled at Drevholt; southern survivors entered Ardeatus; the main House profited from the branch's loss; Re'lha inherited the voices; Al'tair came through Corvel; the House reintegrated her through a sealed succession instrument.
+
+**She suspects:** her childhood event caused Re'lha's disappearance; Al'tair recognized what happened; Corvel holds an incomplete genealogy; the information inside her includes people older than Re'lha.
+
+**She has inferred:** her genuine Deception Anchor does not explain her entire biology, hunger, resilience, or retained memory; the branch's historical condition and her own completion are one causal sequence.
+
+**She refuses to examine:** the final minutes with Re'lha. The refusal is active and personal, not evidence that the memory is unavailable.
+
+**Hidden from her:** the Valian-2 fifth-moon file; the exact Works lattice cascade; the complete survivor count; Al'tair's selection profile; the objective nature of the Quiet Moon; the extent of the Ardeatan Vorn genealogy.
 
 ---
 
@@ -552,10 +586,13 @@ The question of whether he loved her mother or studied her — whether those wer
 She does not discuss her mother in any documented context. The available record does not reach the interior of this. It is present in the file as an absence with a specific shape and a specific weight, and a specific silence that fourteen years of correspondence with her father has not broken.
 
 **House Engelmeyer — Main Line**
-A useful arrangement navigated with clarity. She does not dislike them. She does not trust them in any depth. She is learning what they are because it is useful to know the weight of what you are dealing with before you decide how much of it to carry.
+A useful arrangement navigated with clarity. She is their registered blood Seat and not yet their daily industrial governor. She does not dislike them. She does not trust them in any depth. She is learning which relatives want protection, containment, restitution, succession, or obedience before she decides how much of the House to carry.
+
+**The Vorn Descendants — Unmet Kin**
+Living Ardeatan relatives preserved in a register she has not seen. She rejects the premise that either state can convert shared ancestry into ownership of her. She has not decided whether that rejection permits her to leave the relatives themselves unanswered.
 
 **The Corvel Institute — Proximity, unaddressed**
-She is in the same city. She has not made contact. She is being very still. This is, for someone who makes a practice of pulling every available thread, a notable choice.
+She knows Al'tair came to Drevholt through Corvel and suspects the Institute holds part of the Works genealogy. She is in the same city. She has not made contact because entering the Institute would let it define the encounter. She is being very still. This is, for someone who makes a practice of pulling every available thread, a notable choice.
 
 **The Apocachynthion — Institutional**
 She registers. She attends. She cooperates within the terms she agreed to. The relationship functions and carries the specific quality that attaches to any arrangement that began with an institution classifying someone without adequate framework. She is not hostile to it. She treats it as a structural fact of the world she operates in, the way one treats weather: worth understanding, not worth arguing with.

@@ -11,7 +11,7 @@ summary: "Deus Vult"
 tags: ["Church", "Synus", "Faith", "Obsidian", "Demonic", "Institution", "Sovereign", "Twilight Band", "Divine Vessel", "Diviner", "Oracles"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-12"
+updated: "2026-07-13"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -55,7 +55,7 @@ O Ring acima — o arco disperso de destroços orbitando o mundo — é chamado 
 
 ## The Instruments of the Intact Seal
 
-Na pesquisa técnica de Redactory, os objetos conhecidos como Obscurials são classificados como Ancient Redacteurs de origem pré-Fracture — implementos de poder imenso e instável, ontologicamente incompatíveis com o estado fragmentado atual do mundo.
+Instituições técnicas classificam os Obscurials como endereços limitados de lei nativa, não como Redacteurs. A Igreja os chama de Instrumentos do Selo Intacto: doze núcleos-lei cujos títulos devocionais são Verdade, Ligação, Ordem, Atmosfera, Luz, Vida, Fogo, Morte, Entropia, Senciência, Previsão e Ascensão.
 
 A Igreja sustenta uma interpretação diferente — e muito mais antiga.
 
@@ -69,15 +69,17 @@ A posição da Igreja é que os Instruments não pertencem a nenhuma instituiç�
 
 ## The First Bearers
 
-As entidades chamadas de Skyphons na pesquisa de Redactory aparecem na tradição eclesiástica como **the First Bearers**, e a forma como a Igreja as interpreta representa uma de suas posições teológicas mais cuidadosamente preservadas.
+As entidades chamadas de Skyphons aparecem na tradição eclesiástica como **os Primeiros Portadores**. A reconstrução técnica os descreve como pessoas formadas por fragmentos da Página, corpos de contenção Precursores, núcleos-lei Obscurial e aceitação de Terra.
 
-O ensinamento diz o seguinte: o Sovereign nunca pretendeu que os Instruments circulassem pelo mundo sem auxílio. Eles eram leis, não criaturas. E leis exigem testemunhas. Os First Bearers foram moldados — não nascidos, moldados — como a interface viva entre os instrumentos e o mundo que deveriam proteger. Eles não eram angels. Também não eram humanos como os humanos existem hoje. Eram algo intermediário: seres feitos inteiramente para um propósito específico, incapazes de desenvolver vontade própria contrária ao Instrument que carregavam e, ainda assim, genuinamente vivos — testemunhas, não marionetes.
+O ensinamento afirma que leis exigem testemunhas. Os Primeiros Portadores eram interfaces vivas entre autoridade superior, forma construída, Instrumento lunar e mundo. A teologia restrita reconhece que eram limitados por Diretivas, mas capazes de interpretar, discordar e recusar. Sua fidelidade exigia julgamento; não eram marionetes.
 
-A Igreja trata os First Bearers com um tipo peculiar de tristeza. Eles não são condenados. Também não são venerados. Dentro da teologia da instituição, pertencem à categoria chamada pelos sacerdotes eruditos de **the Rightly Unmade**: criaturas cujo propósito era absoluto e cuja dissolução, após a dispersão dos Instruments, não representou punição, mas conclusão. A Igreja ensina que eles não sofreram. Eles completaram. Essa frase é recitada nos ritos funerários daqueles que morreram completamente entregues ao serviço. A maior parte dos fiéis jamais percebe sua origem.
+A Igreja não os condena nem venera. O ensino público os chama de **Corretamente Desfeitos** e diz: *eles completaram*. O registro restrito é menos certo: os doze fins foram diferentes, alguns Portadores sofreram, e talvez o que se completou tenha sido o dever, não a pessoa.
 
 Existe uma posição minoritária dentro do Interior Council — nunca oficialmente condenada, mas também jamais oficialmente aceita — que argumenta que os First Bearers não foram concluídos, apenas interrompidos: que o sentimento de anseio despertado por objetos antigos e altamente ressonantes seria o restante dessa incompletude espalhada pela humanidade como sementes lançadas sobre solo quebrado. A Igreja trata essa interpretação como curiosidade teológica. E a observa atentamente.
 
-A Igreja proíbe, sob qualquer interpretação, a reconstrução deliberada de um Skyphon. Essa é uma das raríssimas posições doutrinárias em que ela concorda perfeitamente com o Apocachynthion. As duas instituições chegaram à mesma conclusão por caminhos completamente diferentes. Ambas consideram qualquer pessoa interessada nesse assunto sem o devido temor como motivo de preocupação séria.
+A Igreja proíbe a reconstrução deliberada de um Skyphon. As escolas de Conclusão, Interrupção e Continuação discordam sobre o que resta, mas todas rejeitam reencarnação e criação coerciva de Portadores. A Apocachynthion chega à mesma proibição por falhas de artefato e risco estrutural.
+
+O conhecimento é estratificado. A doutrina pública preserva os Doze e a ferida. A doutrina erudita preserva títulos e Diretivas parciais. Os Keepers of Before guardam nomes, testemunhos, as quatro frases Expressão, Habitação, Retorno e Devir, e o último céu honesto de Myehnai. Obsidian distingue Presence, ingresso demoníaco, resposta de Calling e resíduo de Instrumento. Ninguém possui a síntese completa.
 
 ## História
 

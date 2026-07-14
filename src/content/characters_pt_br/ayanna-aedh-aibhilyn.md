@@ -21,17 +21,17 @@ dress: "Roupas profissionais auroranas limpas e discretas; vestimenta prática d
 residence: "Valerie, Aurora"
 occupation: "Pesquisadora associada júnior em diagnósticos de interface neural"
 summary: "Criada para ouvir onde nenhuma mente moderna deveria chegar; agora a maquina escondida responde por meio de todos que a fizeram."
-tags: ["Aurora", "Valerie", "Lyréne", "Vitrified Wing", "Mechanism", "Redactor", "Precursor", "CLOCKWORK"]
+tags: ["Aurora", "Valerie", "Lyréne", "Vitrified Wing", "Mechanism", "Redactor", "Precursor", "Project Seam"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn.webp"
 hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
 ---
 
 > *"Ela foi criada para ler uma máquina que nenhuma mente moderna deveria conseguir interpretar. O problema para as pessoas que criaram Ayanna é que ela começou a ler elas também."*
-> - anotação da CLOCKWORK, arquivo atual
+> - anotação do Project Seam, arquivo atual
 
 ---
 
@@ -178,7 +178,7 @@ Isso a tornou mais observadora, mais disciplinada e mais difícil de conter.
 
 **Cael Rouvelle** - Líder de segurança da Vitrified Wing. É o homem com maior probabilidade de ordenar ou executar contenção letal caso o projeto conclua que Ayanna não pode mais ser controlada.
 
-**Em'manuel Wonderwall / CLOCKWORK** - O CLOCKWORK identificou Ayanna como importante através do padrão ao redor da vida dela. Ele está observando. A Wing não sabe que está sendo observada.
+**Em'manuel Wonderwall / Project Seam** - O Project Seam identificou Ayanna como importante através do padrão ao redor da vida dela. Ele está observando. A Wing não sabe que está sendo observada. A CLOCKWORK não possui uma costura válida enquanto as autoridades de Aurora e as jurisdições civis competentes permanecerem capazes de responder.
 
 ---
 

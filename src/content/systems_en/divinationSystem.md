@@ -223,7 +223,7 @@ This includes:
 
 The theology may vary. The fusion mechanics remain real underneath it.
 
-Within the Church, recognized Diviners are exclusive to Obsidian. A Divine Vessel outside Obsidian is an unprocessed Presence-bearing person, not a recognized Church operative. Oracles are the sight-bearing Obsidian role associated with the Gift of Sight; they are not to be confused with Oracle, the Skyphon of Foresight.
+Within the Church, recognized Diviners are exclusive to Obsidian. A Divine Vessel outside Obsidian is an unprocessed Presence-bearing person, not a recognized Church operative. Oracles are the sight-bearing Obsidian role associated with the Gift of Sight; they are not to be confused with Oracle, the Bearer of Adjacent Consequence. Oracle's law did not create Divination or the Gift of Sight.
 
 ---
 

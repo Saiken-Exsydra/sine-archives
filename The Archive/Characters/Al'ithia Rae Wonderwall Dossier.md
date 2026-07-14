@@ -108,7 +108,7 @@ A’licia Rae Wonderwall was, in public historical terms, the first great Wonder
 
 The formulation is inadequate.
 
-She was born into the Rae branch of the Wonderwall family in the northern coastal region, when the Wonderwall name still referred to a scholarly line of technical value rather than one of the central political and infrastructural pillars of the Empire. The family’s work concerned BrightCrystal structural behavior, Scorch interface theory, and the practical problem of building survivable systems in a world that had been made hostile to survivability. Existing records already identify the pre-Imperial Wonderwalls as a minor scholarly family focused on BrightCrystal structural behavior before I entered the line through marriage.
+She was born into the Rae branch of the Wonderwall family in the northern coastal region, when the Wonderwall name still referred to an old but politically minor scholarly House of technical value rather than one of the central political and infrastructural pillars of the Empire. The family’s work concerned BrightCrystal structural behavior, Scorch interface theory, and the practical problem of building survivable systems in a world that had been made hostile to survivability. Existing records identify the pre-Imperial Wonderwalls as one of the Old Twelve and a Selia Refuser, but minor in political weight and focused on BrightCrystal structural behavior before I entered the line through marriage.
 
 The word minor is one of history’s lazy cruelties.
 
@@ -466,7 +466,7 @@ Not because the facts are unclear.
 
 Because they are not.
 
-E’lla Rae Wonderwall, KL-83, was transferred out of Project Kaleidoscope before age five and placed into the actual primary Wonderwall family line. Existing records already identify her as the eighty-third subject of the program, born in Year 2175, biologically reconstructed from the first E’lla Rae Wonderwall’s Redactory profile, and carrying an Abyssal Anchor of Light without the Remainder’s recognition.
+E’lla Rae Wonderwall, KL-83, was transferred out of Project Kaleidoscope before age five and brought into the primary Wonderwall household. Existing records identify her as the eighty-third subject, born in Year 2175 after the project imposed an archived Light-bearing profile upon the conditions of her development. She is a singular living person with an Abyssal Anchor of Light and without the Remainder’s inherited recognition echo.
 
 When E’lla came home, Al’ithia withdrew from active politics.
 
@@ -488,7 +488,7 @@ Al’ithia never treated her as a project.
 
 This is not a small mercy. It is the central fact of E’lla’s childhood.
 
-To me, E’lla was always in danger of being several things at once the final product of a program, the reconstruction of my daughter’s profile, the cleanest expression of A’licia’s inheritance, a possible successor, an ethical wound with a name and preferences. I have tried, with varying success, to treat her first as herself. The effort is genuine. The fact that it is effort at all condemns me more than I would prefer.
+To me, E’lla was always in danger of being assigned several meanings at once: the project’s final measure, an answer to grief, an expression of A’licia’s inheritance, a possible political solution, an ethical wound with a name and preferences. Every assignment risked obscuring the same truth: she is herself. I have tried, with varying success, to act from that truth. The fact that effort was required condemns me more than I would prefer.
 
 To Al’ithia, E’lla was her daughter.
 
@@ -761,6 +761,18 @@ I love her.
 This is not a technical conclusion.
 
 It is nevertheless true.
+
+## XVI. HOUSE AND MERIDIAN STANDING — YEAR 2200
+
+Al'ithia's present authority is her own.
+
+Under the Third Name Accord, Athena's memories and the First Radiance's A'licia-continuity may inform her testimony but do not create multiple legal persons, votes, inherited offices, or automatic property claims. She occupies the Hearth Meridian as Al'ithia Rae Wonderwall. She is First Hearth and the de facto public political head of House Wonderwall; she is not the Wonderwall Seat and has not been named successor.
+
+Her Year 2179 action ended Kaleidoscope biological production. She rejected both continuation and the proposed destruction of living subjects. The resulting duties are permanent care without compelled study, independent advocacy, preserved evidence, reparations, and subject-controlled disclosure.
+
+Al'ithia sponsored KL-83's adoption as E'lla Rae Wonderwall. Rae, Orren, and Serath witnessed it; Em'manuel sealed it. The adoption is irrevocable and gives E'lla family standing without corporate assignment. Al'ithia's motherhood is real. So is the conflict created by withholding the full project record from her daughter.
+
+Al'ithia's governing contradiction is therefore not whether she is A'licia or Athena. It is whether she can protect present persons through the House and Company without repeating Em'manuel's habit of making protection indistinguishable from controlled knowledge.
 
 ---
 

@@ -15,7 +15,11 @@ Status Singular known entity; first confirmed Crownborn Elemental
 
 Sol’ytra is a post-Fracture Elemental created by the All-Mother in the remembered image of Syr’lene, the Precursor Archtype who sacrificed herself by becoming the living Anchor of the Lunar Crown.
 
-She is not a Skyphon, not a Redactor, not a Diviner, not a goddess, and not a Primordial fragment. She is an Elemental, but not of the older kind. She belongs to a new strain of Elemental expression created after the Fracture beings not merely tied to forest, storm, river, stone, or climate, but to the All-Mother’s wounded planetary self-understanding.
+Her creation followed a singular authority chain: the Page Primordial's still-standing grant of local syntax to the All-Mother; Terra's accumulated wound-memory; the surviving coupling between Terra and the Lunar Crown; and Syr'lene's sacrificial image held inside that coupling. The All-Mother supplied the local act of person-making. She did not externalize a Page fragment or recreate Precursor architecture.
+
+She is not a Skyphon, not a Redactor, not a Diviner, not a goddess, and not a Primordial fragment. She is an Elemental, but not of the older kind. She is the first and only known **Crownborn**: a unique Elemental expression created after the Fracture from the All-Mother’s wounded planetary self-understanding and the image of Syr’lene.
+
+Crownborn is not a new race. Sol’ytra is not proof that ordinary Elemental births resumed after the Long Inbreath, and she is not a Woundbound re-embodiment of an older local self.
 
 Sol’ytra is the All-Mother’s reverence made flesh.
 
@@ -285,6 +289,8 @@ When invoked fully, she restructures the battlefield into a near-copy of the Moo
 
 She cannot truly replicate the Lunar Crown. She cannot recreate Syr’lene’s actual Anchor state, the true containment system, or the real Moon. But she can come close enough that the local battlefield begins behaving according to the reflected syntax of the wounded lunar surface.
 
+The Mirror is a Terra-local wound interface, not a restored lunar seat. It cannot address the twelve Instruments, reproduce a Skyphon Directive, open the Metric Safeguard, command Syr'lene, repair the Intact Seal, or claim a Shore. Sol'ytra may suppress the local wound-condition through which Shorefall is occurring; she does not own or rewrite the Shore itself.
+
 The area becomes
 
  pale;
@@ -387,6 +393,8 @@ Her other limits include
  extremely specific Redactory or Divination can survive individual declarations;
  Archtypes can contest her in serious combat.
 
+The Page Primordial may narrow or revoke the All-Mother's grant, but Sol'ytra is not a puppet attached to that grant. Authority may be withdrawn; her established personhood is not retroactively reduced to a tool.
+
 ---
 
 ## XIII. Character Conflict
@@ -418,6 +426,22 @@ Sol’ytra does not yet know which one she is allowed to be.
 
 ---
 
-## XIV. Summary Profile
+## XIV. Civil and Institutional Position
 
- Sol’ytra is the first Crownborn Elemental, created by the All-Mother in the image of Syr’lene after the Fracture. Tall, thin, warm light-brown skinned, with prismatic light-purple hair and white princess-like dress, she appears as a living fusion of lunar reverence and earthly nature. In society, she softens her form through common white dress, braided hair, and pale purple flowers, becoming more visibly a daughter of Terra than a reflection of the Moon. Her defining power is Wound Crown Authority every combat technique she uses is a separated fragment of The Mirror of the Wounded Crown, a supreme ability that restructures the battlefield into a near-copy of the wounded lunar surface. Ordinary Elementals command nature. Sol’ytra can do that too, but rarely chooses to. Her true obsession is Syr’lene, and her true danger is that she believes becoming a wound may be the highest form of love.
+Sol’ytra is a person under the Imperial personhood standard if and when the State can establish sustained self-address. She is not state property, All-Motheric property, a Church relic, an Apocachynthion subject, or a SiNE anomaly asset.
+
+Most institutions do not possess enough truth to classify her correctly.
+
+- the Apocachynthion would detect effects without Anchor or Dive and risk calling her Redactory-adjacent;
+- the Church would risk treating her as a lunar saint, goddess, or non-Sovereign Divine Vessel;
+- SiNE would detect planetary, BrightCrystal, and Crown-linked structural response without immediately recognizing a person;
+- the Imperial Civic Safeguard Service would begin with public danger, personhood protection, and a multi-specialist incident boundary;
+- an accredited Accord-Keeper would have the best available local language for approaching her without claiming command.
+
+Her full origin — standing Page grant, All-Motheric syntax, Terra's wound-memory, Crown coupling, and Syr’lene’s image — remains restricted codex truth, not common institutional knowledge.
+
+---
+
+## XV. Summary Profile
+
+ Sol’ytra is the first Crownborn Elemental, uniquely created by the All-Mother in the image of Syr’lene after the Fracture. Small, thin, warm light-brown skinned, with prismatic light-purple hair and white princess-like dress, she appears as a living fusion of lunar reverence and earthly nature. In society, she softens her form through common white dress, braided hair, and pale purple flowers, becoming more visibly a daughter of Terra than a reflection of the Moon. Her defining power is Wound Crown Authority every combat technique she uses is a separated fragment of The Mirror of the Wounded Crown, a supreme ability that restructures the battlefield into a near-copy of the wounded lunar surface. Ordinary Elementals command nature. Sol’ytra can do that too, but rarely chooses to. Her true obsession is Syr’lene, and her true danger is that she believes becoming a wound may be the highest form of love.

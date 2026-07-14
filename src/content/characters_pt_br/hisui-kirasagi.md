@@ -21,7 +21,7 @@ summary: "Uma lamina escondida em maneiras perfeitas, uma ternura cultivada dent
 tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregistered"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-04-26"
+updated: "2026-07-13"
 codex_file: "Hisui Kirasagi Dossier.md"
 image: "../../assets/uploads/char-hisui-kirasagi.png"
 hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
@@ -166,7 +166,9 @@ O Apocachynthion não sabe que ela existe como qualquer coisa além de uma traba
 
 A Igreja a classificaria como uma Bloom Heretic sob a doutrina do Crowning caso a simbiose fosse descoberta — comunhão com um organismo de Resonance não divino, criando pressão de fusão não sancionada sobre um receptáculo mortal. Os Oracles da Igreja detectam presenças do tipo fragmento; a Flower não é um fragmento. O risco de classificação só existe caso ocorra uma ativação visível diante de alguém que saiba exatamente o que está observando.
 
-A StaSis detectaria a anomalia em uma varredura de curta distância, algo que não possui motivo algum para realizar.
+A Stasis detectaria a anomalia em uma varredura de curta distância, algo que não possui motivo algum para realizar.
+
+Se a Flower for identificada, Hisui continua sendo residente estrangeira protegida e uma pessoa com direito a consentimento e defesa. O organismo pode sofrer restrições, mas ela não é contrabando; quarentena exige uma rota de transmissão demonstrada. O Safeguard Service e a Saúde Pública conduziriam o caso civil e médico. A Igreja não pode transformar a doutrina de Bloom Heretic em detenção ou expulsão sem processo civil.
 
 ---
 

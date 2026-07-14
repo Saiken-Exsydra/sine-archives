@@ -5,7 +5,7 @@ age: "22 (at time of filing, 2200)"
 birth_year: "2178"
 birthplace: "Kalt'sen, Central Region, Empire of Synus"
 affiliation: "Apocachynthion (restricted review; Inkless designation)"
-house: "Wonderwall (cadet branch, maternal line)"
+house: "Wonderwall (Yalara cadet branch; full House standing, no corporate office)"
 rank: "Quill (Provisional)"
 registry_status: "Registered - Quill provisional, Inkless designation, Mark 1; ordinary intake suspended under sealed review"
 point_profile:
@@ -41,7 +41,7 @@ tags:
   - "Hisui Kirasagi"
 status: "public"
 created: "2026-02-12"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Eclesia Wonderwall Dossier.md"
 image_position: "center top"
 dossier_quote:
@@ -86,7 +86,7 @@ That distinction matters. Ec'lesia is not a second E'lla. She is not another pri
 
 **Public Identity:** A bright cadet-branch Wonderwall student whose social warmth makes her look far less dangerous than her file suggests.
 
-**Institutional Identity:** A provisional [[quill|Quill]] kept under restricted review, carried institutionally as an [[inkless|Inkless]] case in the Lon'drina calibration apparatus.
+**Institutional Identity:** A provisional [[quill|Quill]] kept under restricted review, carried institutionally as an [[inkless|Inkless]] case in the Lon'drina calibration apparatus. Her observed Shore relation creates no inherited duty or institutional claim over her.
 
 **Private Truth:** Ec'lesia does have an Anchor. It is **Stilllight**, a derived Radiance condition unusually compatible with gap-structure and the Remainder.
 
@@ -102,7 +102,7 @@ Her public cheer also seems to help keep her stable. Noise, conversation, errand
 
 ## Background
 
-Ec'lesia was born in **2178** in **Kalt'sen**, in a Wonderwall cadet branch that carried the family name without carrying the power of the main line. That branch produced ordinary lives for generations: modest Redactors, non-Redactors, civil workers, household people, and then Ec'lesia.
+Ec'lesia was born in **2178** in **Kalt'sen**, in the Yalara cadet branch of House Wonderwall. The branch holds full House standing, but that standing does not grant automatic access to the Wonderwall Seat, SiNE office, Senate authority, or primary-line resources.
 
 Her father, **Gal'ahad Kjackter**, was a civil engineer with the Imperial Rail Authority. He died in the **Krel Tunnel collapse** in 2189. His influence remained anyway. He taught her to think about lamps, tunnels, support structures, and the way light tells people where the world still agrees to be. That language ended up mattering more to her Anchor than anyone understood at first.
 
@@ -157,7 +157,7 @@ She is not field-cleared. High-output practice remains restricted. But she is no
 
 ## Important Relationships
 
-**Sai'ken Ex'sydra** remains assigned to her proximity. Publicly he is household security and liaison support. In truth he is also there because his architecture can sense cadence disturbance early, and because if Ec'lesia ever reaches an unrecoverable Shore-conversion window, he may be forced to kill her before the event stabilizes.
+**Sai'ken Ex'sydra** remains assigned to her proximity as protective officer and cadence sentinel. His sealed terminal clause applies only after rescue, evacuation, restraint, clinical intervention, and available Shore-capable response have failed or cannot arrive. It is not a private license to kill.
 
 **Hisui Kirasagi** is one of the clearest forms of ordinary care in Ec'lesia's life. She sees the maintenance cost of Ec'lesia's daily stability up close.
 

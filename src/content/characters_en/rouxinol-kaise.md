@@ -137,6 +137,6 @@ And beneath all of that is the human cost: Rouxinol has had to invent her own et
 
 Rouxinol matters because she pushes directly against the assumptions built into Redactory theory. Official systems prefer one Anchor, one clean classification, and one predictable kind of usefulness. Rouxinol refuses all three.
 
-She also matters because she sits at the intersection of death, imitation, and unstable borders without collapsing into a simple necromancer archetype. She is one of the clearest examples in the setting of a person who had every reason to become only a weapon and chose not to.
+She also matters because she sits at the intersection of death, imitation, and unstable borders without collapsing into a simple necromancer pattern. She is one of the clearest examples in the setting of a person who had every reason to become only a weapon and chose not to.
 
 ## Deeper Lore

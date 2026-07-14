@@ -146,7 +146,7 @@ Um **Diviner** é um Divine Vessel reconhecido pela Igreja, treinado e designado
 
 Nem todos em Obsidian são Diviners. Obsidian também contém padres não-vessel, confessores, Ecclesiastic Surgeons, Oracles, Menders, Keepers, expulsors, investigadores, teólogos restritos, administradores, comandantes de campo, arquivistas e pessoal de suporte.
 
-Um **Oracle** é uma função sight-bearing de Obsidian associada ao Gift of Sight. Os Oracles de Obsidian não devem ser confundidos com **Oracle, the Skyphon of Foresight**.
+Um **Oracle** é uma função sight-bearing de Obsidian associada ao Gift of Sight. Os Oracles de Obsidian não devem ser confundidos com **Oracle, the Bearer of Adjacent Consequence**, cuja lei não criou Divination nem o Gift of Sight.
 
 ---
 

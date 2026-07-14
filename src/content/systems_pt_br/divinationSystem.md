@@ -223,7 +223,7 @@ Isso inclui:
 
 A teologia pode variar. As mecânicas de fusão permanecem reais por baixo dela.
 
-Dentro da Igreja, Diviners reconhecidos são exclusivos de Obsidian. Um Divine Vessel fora de Obsidian é uma pessoa Presence-bearing não processada, não uma operativa reconhecida da Igreja. Oracles são a função sight-bearing de Obsidian associada ao Gift of Sight; não devem ser confundidos com Oracle, the Skyphon of Foresight.
+Dentro da Igreja, Diviners reconhecidos são exclusivos de Obsidian. Um Divine Vessel fora de Obsidian é uma pessoa Presence-bearing não processada, não uma operativa reconhecida da Igreja. Oracles são a função sight-bearing de Obsidian associada ao Gift of Sight; não devem ser confundidos com Oracle, the Bearer of Adjacent Consequence. A lei de Oracle não criou Divination nem o Gift of Sight.
 
 ---
 

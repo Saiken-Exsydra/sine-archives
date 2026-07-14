@@ -56,13 +56,19 @@ Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus e
 
 ## II. LINEAGE AND THE ARDEATAN EXILE
 
-The name Engelmeyer is a fixture of the Empire’s western band interior (see: *Le'nore Voren Engelmeyer*). However, Leonard’s grandfather severed ties with the main house during the territorial disputes of the late 1030s, migrating across the border into the neighboring nation-state of Ardeatus. Adopting the Ardeatan "von-" particle to assimilate into their distinct social grammar, the expatriate branch established itself in the northern frontier city of Eraveth.
+House Engelmeyer held foundry jurisdictions across the old kingdom and western industrial corridors before the Great Cisma divided the family. Leonard's grandfather belonged to a southern-aligned furnace line related to the Voren branch through two marriages. He left the western corridor during the late 1030s, before the destruction of the Voren Works in Year 1043, and entered the communities that would join the Ardeatan federation in Year 1058.
+
+This distinction matters. Leonard descends from the broader Engelmeyer migration into Ardeatus. He is not descended from one of the forty-three people scarred inside the Works lattice and is not part of the direct hereditary sequence that later produced Re'lha and Le'nore.
+
+His family adopted the Ardeatan *von-* particle and established itself in the northern frontier city of Eraveth. Leonard's grandfather also carried copies of Engelmeyer furnace shipment records south. One damaged route ledger passed into Leonard's effects and returned with him to Synus in Year 1090. It proves that the Voren Works' south casting channel had been modified before the catastrophe. The Apocachynthion archived the document with Leonard's asylum material and never joined it to later Drevholt assessments.
 
 Leonard’s parents were highly visible figures in Eraveth. His mother, **Elara ker-Vane**, was a brilliant material scientist at the Forge Academy of Kovansk, researching thermal thresholds in BrightCrystal stress fractures. His father, **Kaelen von-Engelmeyer**, was a fiercely vocal Ardeatan politician who built his career fighting the encroachment of imperial corporatism. Specifically, Kaelen successfully blocked SiNE’s Evanote division from extending the Imperial Arterial Rail (the Spine) into Eraveth’s sovereign logistics network, arguing that corporate infrastructure was a prelude to corporate subjugation.
 
-In 1087, when Leonard was fifteen, his parents were killed in what the Ardeatan authorities officially classified as a catastrophic domestic gas leak. The Apocachynthion Intelligence Branch has long held, but never formally pursued, the hypothesis that the explosion was a targeted assassination—likely orchestrated by corporate actors (possibly SiNE’s unregistered CLOCKWORK division) to simultaneously remove a political obstacle and silence Elara’s Forge research.
+In 1087, when Leonard was fifteen, his parents were killed in what the Ardeatan authorities officially classified as a catastrophic domestic gas leak. The Apocachynthion Intelligence Branch has long held, but never formally pursued, the hypothesis that the explosion was a targeted assassination—possibly orchestrated by private industrial operators—to simultaneously remove a political obstacle and silence Elara’s Forge research. Clockwork did not yet exist; attributing the killing to it is chronologically impossible.
 
 Leonard was arriving home the moment the explosion occurred. He should have died. He did not.
+
+The Year 1087 household explosion is a separate Stase event. It did not destroy an Engelmeyer branch, did not create the Voren recursive scar, and did not produce Le'nore's lineage condition.
 
 ---
 

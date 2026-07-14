@@ -3,9 +3,9 @@ title: "E'lla Rae Wonderwall"
 type: "Character"
 age: "25 (at time of filing, 2200)"
 birth_year: "2175"
-birthplace: "Project Kaleidoscope facility - released to primary Wonderwall line before age five"
-affiliation: "House Wonderwall (primary line); SiNE"
-house: "Wonderwall (primary line placement)"
+birthplace: "Project Kaleidoscope facility - adopted into House Wonderwall before age five"
+affiliation: "House Wonderwall (adopted family standing); SiNE"
+house: "Wonderwall (irrevocably adopted; no corporate obligation)"
 rank: "Stylus - Light Anchor; Mark 5 standing recognized"
 registry_status: "Registered - Stylus, Light Anchor. KL-83 in restricted files"
 point_profile:
@@ -21,7 +21,7 @@ hair: "Black; Redactory-suppressed to near-total light absorption since Aurora"
 eyes: "Pale metallic pink-blue under active Light use"
 dress: "Black exclusively; light-responsive fabrics used as control apparatus"
 residence: "Primary Wonderwall holdings; extended operational presence in Kalt'sen and Hora'veil"
-occupation: "SiNE Redactor; internal successor candidate"
+occupation: "SiNE Redactor and materials specialist"
 summary: "Made from a lost girl's shape and left to survive the peace that followed; she stands at the center of many broken lights, becoming neither the return nor the ruin, but herself."
 image: "../../assets/uploads/characters/char-ella-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-ella-wonderwall-hero.png"
@@ -43,7 +43,7 @@ tags:
   - "Aurora"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Ella Rae Wonderwall Dossier.md"
 ---
 
@@ -54,21 +54,21 @@ codex_file: "Ella Rae Wonderwall Dossier.md"
 
 ## Overview
 
-E'lla is one of the strongest Light Redactors of her generation, but that description hides the most important part of her story. She is the final success of [[project-kaleidoscope|Project Kaleidoscope]], a long Wonderwall attempt to recreate an earlier lost heir and rebuild an impossible kind of Light.
+E'lla is one of the strongest Light Redactors of her generation, but that description hides the most important part of her story. Project Kaleidoscope imposed an archived Light-bearing profile on the conditions of her development. It did not recreate an earlier heir. E'lla is a singular person, not a returned identity or a successful copy.
 
-That makes her both a person and the result of a family project that lasted for centuries. She was raised as a daughter, trained as a future power inside SiNE, and shaped by a history that was already waiting for her before she was old enough to understand it.
+In 2179, Al'ithia sponsored her irrevocable adoption into House Wonderwall and ended Kaleidoscope's biological production. E'lla has full family standing without corporate obligation, and she may refuse corporate life entirely.
 
-She is also not the clean solution the family hoped for. Kaleidoscope gave her extraordinary Light, but it did not give her the exact inheritance pattern the deeper Wonderwall problem was built around. So E'lla lives in a painful middle place: brilliant, useful, loved, carefully managed, and never quite the answer the project was really trying to force into existence.
+Kaleidoscope remains an unresolved ethical wound: the surviving subjects are persons owed care, reparations, advocacy, preserved evidence, and control over disclosure. E'lla is brilliant and loved, but she has not yet received the full record of what was done around her.
 
 ## Identity
 
-**Public Identity:** A polished Wonderwall heir and elite Light Redactor whose competence makes her look like a clean family success.
+**Public Identity:** A young Wonderwall and elite Light Redactor known for disciplined operational work and materials research.
 
-**Institutional Identity:** The final working outcome of [[project-kaleidoscope|Project Kaleidoscope]] and a high-value SiNE asset shaped for controlled Light deployment.
+**Institutional Identity:** KL-83 in restricted records, now an adopted House member and SiNE practitioner rather than project property.
 
-**Private Truth:** E'lla is both fully daughter and fully project result, loved as family while also carrying the residue of generations of engineered expectation.
+**Private Truth:** E'lla is fully a daughter and fully herself, carrying a Light profile cultivated under conditions she did not choose.
 
-**Primary Tension:** She is powerful enough to justify the program that made her, but never quite the exact inheritance answer that program was actually trying to force.
+**Primary Tension:** The House claims to protect her while still withholding the record she has a right to receive through an independent advocate.
 
 ## Personality
 
@@ -100,10 +100,10 @@ The central break in her life is the [[white-desert|White Desert]]. Publicly it 
 **Reach Reading:** catastrophic  
 **Registration Tenure:** Undisclosed  
 **Academy Record:** House-directed formation; controlled post-Aurora recovery and precision training  
-**Practice Record:** SiNE operational work, materials control, and successor-track command preparation  
+**Practice Record:** SiNE operational work, materials control, and technical mentorship
 **[[blots|Blots]]:** [[white-desert|White Desert]] Incident  
 **Pager Note:** Review  
-**[[seal|Current Seal]]:** Wonderwall restricted file; internal successor standing maintained
+**[[seal|Current Seal]]:** Wonderwall restricted file; no succession nomination or corporate assignment
 
 ## Abilities
 
@@ -127,15 +127,15 @@ Light is not safe for E'lla just because it belongs to her. Bright rooms, uncont
 
 Her worst failure state is **[[shorefall|Shorefall]]**, a descent so deep that Light starts shaping itself through her instead of the other way around. The [[white-desert|White Desert]] proved that threshold is real. It was not a dramatic rumor. It happened, and people died.
 
-She also lives with a human limitation that matters just as much as the magical one: she still does not know the full truth of [[project-kaleidoscope|Project Kaleidoscope]], the earlier failed subjects, or what pieces of that long experiment may still be active around her.
+She also lives with a human limitation that matters just as much as the magical one: she still does not know the full truth of [[project-kaleidoscope|Project Kaleidoscope]], the people who came before her, or what duties remain around the surviving cases.
 
 That means E'lla is expected to carry consequences she was not allowed to fully understand in advance.
 
 ## Important Relationships
 
-**Al'ithia Rae Wonderwall** is her mother in the lived, practical, emotional sense. She raised E'lla as a daughter, not as a successful specimen.
+**Al'ithia Rae Wonderwall** is her mother in the lived, legal, and emotional sense. She sponsored E'lla's irrevocable adoption, ended further biological production, and refused the destruction of living subjects.
 
-**Em'manuel Kael Wonderwall** is protector, teacher, and one of the architects of her present life. He trained her, positioned her, and built the project that made her while still withholding some of the truth from her.
+**Em'manuel Kael Wonderwall** is protector, teacher, and one of the architects of her present life. Her succession-directed training has been suspended and disclaimed; any continuing mentorship is technical, not preparation for the Seat.
 
 **Ec'lesia Wonderwall** matters because she stands outside Kaleidoscope. In private Wonderwall thinking, that may make Ec'lesia one of the few people capable of reaching E'lla cleanly if she falls too deeply into Light again.
 

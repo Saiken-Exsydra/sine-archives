@@ -19,7 +19,7 @@ Some Wonderwall archive assumptions describe her as a Radiance-class Light-domai
 
 Ec'lesia does not carry Light itself.
 
-She carries a derived Radiance Anchor adjacent to Light, distinct from A'licia's inheritance in its deepest behavior and from E'lla's reconstruction in its practical expression. The term I am using in this file is **Stilllight**. The technical term I would expect the Apocachynthion to arrive at, after sufficient argument and several inadequate committees, is **Photonic Quiescence**.
+She carries a derived Radiance Anchor adjacent to Light, distinct from A'licia's inheritance in its deepest behavior and from E'lla's engineered Abyssal Light conditions in its practical expression. The term I am using in this file is **Stilllight**. The technical term I would expect the Apocachynthion to arrive at, after sufficient argument and several inadequate committees, is **Photonic Quiescence**.
 
 This distinction matters. If she carried Light itself, she would be a second E'lla problem: another primary Light expression in the Wonderwall field, dangerous because of depth, survivability, and Shore proximity. She is not that. She is a different kind of problem.
 
@@ -60,7 +60,7 @@ This sentence will remain in the file.
 | **Full Name** | Ec'lesia Yalara Wonderwall |
 | **Year of Birth** | 2178; age 22 at time of filing, year 2200 |
 | **Birthplace** | Kalt'sen, Central Region, Empire of Synus |
-| **House** | Wonderwall cadet branch, maternal line; two centuries diverged from primary line |
+| **House** | Yalara cadet branch of House Wonderwall, natural maternal descent; full House standing without corporate office |
 | **Residence** | Wonderwall estate, eastern residential quarter, Kalt'sen; controlled Academy residence at Lon'drina during active terms |
 | **Apocachynthion Status** | Registered; Quill provisional certification issued 2196; Mark 1 sealed for supervised practice; ordinary intake suspended; retained under restricted observational and calibration placement |
 | **Current Institutional Placement** | Academy of Lon'drina, Radiance Calibration Annex; provisional student / research assistant under specialist supervision |
@@ -73,10 +73,10 @@ This sentence will remain in the file.
 | **Remainder-Altered Expression** | Residual Radiance; not yet stable |
 | **Potential Shore-Facing Expression** | Remainder-sight |
 | **Anomalous Co-presence** | Present; external; identity: the Remainder |
-| **Shore Vector** | Active concern. The Remainder appears to be applying directed sink-pressure through Ec'lesia, attempting to convert ordinary Stilllight Dive into Luminant Shorefall and, through her, reach the First Radiance. |
+| **Observed Shore Relation** | Active concern. The Remainder appears to apply directed sink-pressure through Ec'lesia, attempting to convert ordinary Stilllight Dive into Luminant Shorefall and force passage toward the First Radiance. This condition creates no inherited duty or institutional claim upon her. |
 | **Primary Risk** | Forced Sinking event; uncontrolled Shorefall; possible Shore-breach through Stilllight-mediated Remainder access |
 | **Operational Status** | Functionally stable in daily life; supervised in high-output practice; catastrophic risk confined to high-depth, recovery-window, and Shore-resonant conditions |
-| **Assigned Proximity Asset** | Sai'ken Exsydra — KT-Exs — Seat's direct report; household liaison; cadence surveillance; interval response; lethal containment mandate |
+| **Assigned Proximity Officer** | Sai'ken Exsydra — household liaison, cadence sentinel, protective officer, and terminal contingency under narrowly defined catastrophic conditions |
 | **Personality Register** | Highly outgoing, socially fearless, affectionate, bright-tempered, talkative, emotionally direct; routinely underestimated because of warmth |
 
 ---
@@ -143,7 +143,7 @@ Her mother, Al'yana Yalara Wonderwall-Kjackter, is a practicing Redactor of mode
 
 Al'yana knows her elder daughter is unusual. She does not know the word Remainder. She knows enough to distrust institutional certainty about Ec'lesia and not enough to understand the scale of what that distrust is protecting. This is one of the many forms of ignorance I have permitted because it serves an immediate protective function while building a larger ethical debt.
 
-The cadet branch diverged from the primary Wonderwall line approximately two centuries ago. It carries no Senate authority, no executive SiNE position, no primary-line recognition beyond registry fact and the dull burden of being recognizable to anyone who reads House names correctly. It has lived ordinary Kalt'sen lives. It has produced modest Redactors, non-Redactors, capable mothers, impatient sons, quiet bureaucrats, two musicians of minor local standing, one dishonest riverbroker, and now Ec'lesia.
+The Yalara cadet branch diverged from the primary Wonderwall line approximately two centuries ago. It carries full House recognition but no automatic Senate authority, executive SiNE position, or primary-line resources. It has lived ordinary Kalt'sen lives. It has produced modest Redactors, non-Redactors, capable mothers, impatient sons, quiet bureaucrats, two musicians of minor local standing, one dishonest riverbroker, and now Ec'lesia.
 
 Her younger sister, El'ytra Yalara Wonderwall, age ten, is mentioned here because she matters to Ec'lesia and because any accurate account of Ec'lesia's daily life requires noting that she is someone's older sister before she is anyone's anomaly. El'ytra carries a faint bloodline echo and no active Remainder engagement. She is intelligent, socially watchful, and devoted to pretending she is less impressed by Ec'lesia than she is. Ec'lesia reads to her badly — by which I mean theatrically, with voices — twice each week when at home. This has no structural relevance except that a person who is loved in ordinary ways is harder to reduce to a structural event.
 
@@ -153,7 +153,7 @@ I include it for that reason.
 
 The Remainder's recognition mechanism does not propagate by genetics alone.
 
-This remains one of the central corrections Project Kaleidoscope forced me to accept. Biological reconstruction can reproduce a Redactory profile. It can reproduce tissue, developmental tendencies, broad recursive architecture, and the visible fact of a Light expression. It cannot reproduce what a family has become after centuries of living under a non-human recognition echo that threads itself through natural descent.
+This remains one of the central corrections Project Kaleidoscope forced me to accept. Engineered biology and conditioning can cultivate tissue, developmental tendencies, broad recursive traits, and the visible fact of a Light expression. They cannot reconstruct a person or reproduce what a family has become after centuries of living under a non-human recognition echo threaded through natural descent.
 
 The Kalt'sen cadet branch carried the echo quietly. No one in it had the density required for full recognition. Most had no awareness of it. Al'yana's Reflection-class Anchor reflects it in such softened form that it appears as nothing more than familial brightness in her recursion, a slight tendency for her reflective work to retain afterimages longer than expected. El'ytra carries it inertly. Ec'lesia does not.
 
@@ -685,7 +685,7 @@ It is necessary.
 
 ### XII.1 Official Assignment
 
-Sai'ken Exsydra was assigned to the Yalara Wonderwall household in 2197 as a proximity security asset and liaison attached to the Seat's private office. The official explanation is plausible: a Wonderwall cadet-branch Redactor under suspended Apocachynthion review presents reputational, personal, and institutional risks; a trained direct-report asset can coordinate household security, Academy travel, and external access.
+Sai'ken Exsydra was assigned to the Yalara Wonderwall household in 2197 as a proximity security officer and liaison under a sealed House-and-Compact warrant. The official explanation is plausible: a Wonderwall cadet-branch Redactor under suspended Apocachynthion review presents reputational, personal, and institutional risks; a trained officer can coordinate household security, Academy travel, and external access.
 
 This is true.
 
@@ -693,13 +693,13 @@ It is not the reason.
 
 ### XII.2 Actual Assignment
 
-Sai'ken is assigned because Ec'lesia may need to be killed before she completes an involuntary Shorefall.
+Sai'ken is assigned because an involuntary Shorefall may create a final interval in which terminal intervention is the only remaining protection for Ec'lesia and the city. That conclusion is lawful only after the lesser interventions named in the warrant fail or cannot arrive.
 
 He cannot absorb her resonance. He cannot suppress the Remainder. He cannot close the Luminant Shore. He cannot countermand a forced Sink by standing near her with the correct loyalty. He is not a magical solution. I did not place one there because I do not possess one.
 
 Sai'ken's function is simpler and uglier.
 
-If Ec'lesia enters an unrecoverable conversion window and the Remainder begins using her as an access vector to the Luminant Shore, he is to terminate her before Shorefall stabilizes.
+If Ec'lesia enters an unrecoverable conversion window and the Remainder begins forcing passage through her toward the Luminant Shore, the warrant permits terminal intervention only after rescue, evacuation, grounding, restraint, clinical response, and competent Shore-response options have failed or cannot arrive. The warrant is legally contestable, does not make her death a standing objective, and does not require Sai'ken to accept a falsely declared terminal condition.
 
 The authorized window is narrow. Too early, and he murders a woman who might have recovered. Too late, and killing the body may no longer stop the recursive event. This is one of several reasons I chose someone who does not enjoy simple answers.
 
@@ -743,7 +743,7 @@ This is no longer sustainable.
 
 I am aware of what I have done.
 
-I placed a young man near a young woman with orders to protect her, accompany her, understand her, and kill her if understanding arrives too late. This is the sort of arrangement old institutions call necessary because old institutions have had centuries to improve their vocabulary for cruelty.
+I placed a young man near a young woman with orders to protect her, accompany her, understand her, exhaust every rescue path, and carry a contestable terminal warrant if agency is irrecoverably lost. This is the sort of arrangement old institutions call necessary because old institutions have had centuries to improve their vocabulary for cruelty.
 
 It may be necessary.
 
@@ -970,11 +970,11 @@ She is not an Inkless anomaly.
 
 She is not a passive vessel.
 
-She is a Stilllight Redactor: bright-tempered, socially abundant, structurally precise, and uniquely compatible with the Remainder because her Anchor holds light in the very condition where the Remainder can approach it. Her danger does not arise from lack of control in ordinary terms. It arises from direction. The more controlled she becomes, the more capable she becomes of carrying the Remainder where it wants to go.
+She is a Stilllight Redactor: bright-tempered, socially abundant, structurally precise, and uniquely compatible with the Remainder because her Anchor holds light in the very condition where the Remainder can approach it. Her danger does not arise from lack of control in ordinary terms. It arises from direction. The more controlled she becomes, the more capable she becomes of approaching meaningful contact—and the more essential her right to refuse that contact becomes.
 
 This is the central paradox.
 
-Training protects her from accidental harm and brings her closer to meaningful contact. Ignorance protects her from voluntary following and leaves her vulnerable to involuntary conversion. Isolation reduces stimuli and increases inward pull. Social grounding stabilizes her and makes institutional containment less clean. E'lla may save her and may also provide the strongest available bridge to the Shore. Sai'ken may be required to kill her and may also be one of the reasons she remains alive long enough that killing her is not necessary.
+Training protects her from accidental harm and brings her closer to meaningful contact. Ignorance protects her from voluntary following and leaves her vulnerable to involuntary conversion. Isolation reduces stimuli and increases inward pull. Social grounding stabilizes her and makes institutional containment less clean. E'lla may save her and may also provide the strongest available bridge to the Shore. Sai'ken may face the terminal warrant only after every lesser path fails, and may also be one of the reasons no terminal condition is ever reached.
 
 There is no clean solution in this file.
 
@@ -1026,6 +1026,18 @@ I am aware.
 
 — Em'manuel Kael Wonderwall  
 Year 2200
+
+---
+
+## XIX. HOUSE AND PERSONHOOD ADDENDUM
+
+Ec'lesia is a natural Yalara descendant and full recognized member of House Wonderwall. She holds no SiNE office, owes no automatic service to the Seat, and is not corporate property because her Stilllight condition appears in the SiNE Anomaly Register.
+
+The Yalara line was encouraged to live at distance from the primary line and was covertly preserved and observed by Em'manuel. Ec'lesia has not been told the full history of that observation. Any future House protection must disclose enough for meaningful consent and must preserve her ability to refuse SiNE study.
+
+She is not a second E'lla, a Kaleidoscope subject, a vessel reserved for the First Radiance, or a route that the Remainder is entitled to use. If she becomes able to identify E'lla among Shore-addressable resemblances, that capacity remains a possibility rather than a duty.
+
+Sai'ken's terminal clause is a last civil-defense contingency, not private authority to judge her life. It activates only after immediate rescue, evacuation, restraint, clinical intervention, and Shore-capable response have failed or cannot arrive, when continued conversion is verified to threaten mass life and Ec'lesia has lost the capacity to refuse the process herself. The clause remains morally and legally contestable.
 
 ---
 

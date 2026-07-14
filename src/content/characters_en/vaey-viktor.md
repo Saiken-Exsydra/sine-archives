@@ -33,7 +33,7 @@ tags:
   - "Potential"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-12"
+updated: "2026-07-13"
 codex_file: "Vaey Viktor Dossier.md"
 image_position: "center top"
 ---
@@ -47,7 +47,7 @@ image_position: "center top"
 
 Vaey Viktor is one of the setting's most disturbing reminders that real holiness does not automatically produce moral safety.
 
-He is a retired priest of the [[obsidian-rite|Obsidian]] and a confirmed Crowned vessel of **Meruel**, an angelic force associated with measurement, potential, and completion. For decades he helped the [[the-church|Church]] assess saint-candidates and difficult manifestation cases. Now he kills people he believes have betrayed what they were meant to become.
+He is a retired priest of [[obsidian-rite|Obsidian]] and a confirmed Crowned vessel of **Meruel**, one of the six Cardinal Stars beneath **Aequoriel, Seraphim of Just Measure**. For decades he helped the [[the-church|Church]] assess saint-candidates and difficult manifestation cases. Now he kills people he believes have betrayed what they were meant to become.
 
 The horror of Vaey is not that he is fake. It is that he is real.
 
@@ -112,7 +112,7 @@ Vaey does not measure literal destiny. The completed silhouette is a coherent po
 
 That distinction is where his moral collapse begins. He receives real information through Meruel, but Meruel measures only one part of reality. It is far better at perceiving potential than mercy, fear, exhaustion, coercion, trauma, or the ordinary reasons people fail to become their best selves.
 
-Vaey's greatest weakness is therefore theological. He mistakes a sharp partial truth for total judgment.
+Vaey's greatest weakness is therefore theological. He mistakes a sharp partial truth for total judgment. Meruel's origin changes which specialists must interpret the case; it does not immunize Vaey from civil investigation, arrest, trial, or victim accounting.
 
 ## Important Relationships
 

@@ -40,7 +40,7 @@ tags:
   - "Shores"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Em'manuel Kael Wonderwall Dossier.md"
 birth_name: "Al'uxxios Ex'sydra"
 ---
@@ -54,7 +54,7 @@ birth_name: "Al'uxxios Ex'sydra"
 
 Em'manuel is the founder of SiNE, the patriarch of House Wonderwall, and one of the oldest active powers in the setting. From a distance he can look like the classic immortal statesman: patient, cultured, and so deeply built into the Empire that it is hard to imagine the modern order without him.
 
-Up close, he is much harder to simplify. He was born **Al'uxxios Ex'sydra**, heir to a line whose work helped cause a catastrophe large enough that history found it useful to erase the family name. After surviving that collapse, he married **A'licia Rae Wonderwall** and buried his first identity inside hers.
+Up close, he is much harder to simplify. He was born **Al'uxxios Ex'sydra**, heir to a line whose work helped cause a catastrophe large enough that history found it useful to erase the family name. The proposed Twelve-House Rite went forward with only nine participants after Faldryn, Wonderwall, and Whitechurch refused. After surviving that collapse, he married **A'licia Rae Wonderwall** and buried his first identity inside hers.
 
 That means Em'manuel is not just an old leader with hidden grief. He is one of the people who helped build the world after breaking part of the one before it.
 
@@ -74,7 +74,7 @@ In public, Em'manuel is warm, measured, and surprisingly approachable. He does n
 
 Privately, he thinks in systems, centuries, and costs. He is always asking what fails next, who inherits the damage, and whether an ugly choice now prevents a worse one later. The unsettling part is that he understands exactly how brutal some of his decisions have been and can still decide to make them.
 
-That is what separates him from a softer version of the same archetype. Em'manuel does not accidentally drift into moral damage. He sees it clearly and may proceed anyway.
+That is what separates him from a softer version of the same character pattern. Em'manuel does not accidentally drift into moral damage. He sees it clearly and may proceed anyway.
 
 ## Background
 
@@ -134,7 +134,7 @@ The human limit matters just as much. Thinking on civilizational scale helped hi
 
 **Al'ithia Rae Wonderwall** forced him to confront the difference between memory and a living person. Through her, he had to learn that not every impossible return is a restoration.
 
-**E'lla Rae Wonderwall** is the final success of [[project-kaleidoscope|Project Kaleidoscope]] and the heir he tried to build. He trains her while still withholding some of the truth about what made her.
+**E'lla Rae Wonderwall** is his adopted daughter and KL-83 in Kaleidoscope's restricted record. Biological production ended permanently in 2179, but duties of care, reparations, protected disclosure, and archival preservation remain. He has neither trained her for the Seat nor nominated her, and still owes her the full truth.
 
 **Ec'lesia Wonderwall** is the opposite kind of problem: not engineered, but possibly closer to the natural inheritance pattern the deeper Wonderwall mystery actually recognizes.
 

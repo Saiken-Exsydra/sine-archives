@@ -31,7 +31,7 @@ tags:
   - "Unregistered"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-11"
+updated: "2026-07-13"
 codex_file: "Hisui Kirasagi Dossier.md"
 ---
 
@@ -117,6 +117,8 @@ The second danger is **the Murmuring**, the pressure of inherited voices and imp
 The third and worst risk is consumption. If Hisui weakens too far, the Flower may stop behaving like a contained partner and start behaving like the thing that survives by overtaking her.
 
 That means every use of her power is tied to self-control, restraint, and the ongoing question of how much of herself she can afford to spend.
+
+If the Flower is identified, Hisui remains a protected foreign resident and a person with consent and counsel. The organism may be restricted, but she is not contraband; quarantine requires evidence of transmission. Civil Safeguard and Public Health would lead any incident, while the Church could not detain or expel her without civil process.
 
 ## Important Relationships
 

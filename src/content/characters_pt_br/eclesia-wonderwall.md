@@ -5,7 +5,7 @@ age: "22 (na epoca do registro, 2200)"
 birth_year: "2178"
 birthplace: "Kalt'sen, Regiao Central, Imperio de Synus"
 affiliation: "Apocachynthion (sob revisao restrita)"
-house: "Wonderwall (ramo cadete, linhagem materna)"
+house: "Wonderwall (ramo cadete Yalara; standing pleno da Casa, sem cargo corporativo)"
 rank: "Quill (Provisorio)"
 registry_status: "Registrada - admissao comum suspensa, retida sob observacao restrita"
 point_profile:
@@ -26,7 +26,7 @@ summary: "Afetuosa, curiosa, falante e dificil de intimidar; carrega Stilllight,
 tags: ["Synus", "Wonderwall", "Redactor", "Stilllight", "Inkless", "Kalt'sen", "Lon'drina", "Sai'ken Ex'sydra", "Hisui Kirasagi"]
 status: "public"
 created: "2026-02-12"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Eclesia Wonderwall Dossier.md"
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 image_position: "center top"
@@ -85,7 +85,7 @@ Sua alegria publica tambem parece ajuda-la a permanecer estavel. Ruido, conversa
 
 ## Origem
 
-Ec'lesia nasceu em **2178**, em **Kalt'sen**, dentro de um ramo cadete Wonderwall que mantinha o nome da familia sem manter o peso politico da linha principal. Esse ramo produziu vidas comuns por geracoes: Redactors modestos, nao-Redactors, trabalhadores civis, gente de casa - e depois Ec'lesia.
+Ec'lesia nasceu em **2178**, em **Kalt'sen**, no ramo cadete Yalara da House Wonderwall. O ramo possui standing pleno da Casa, mas isso não concede acesso automático ao Assento Wonderwall, a cargos da SiNE, à autoridade senatorial ou aos recursos da linha principal.
 
 Seu pai, **Gal'ahad Kjackter**, era engenheiro civil da Autoridade Imperial de Trilhos. Morreu no **colapso do Tunel Krel** em 2189. Sua influencia, porem, permaneceu. Foi ele quem lhe ensinou a pensar em lampadas, tuneis, estruturas de suporte e na forma como a luz diz onde o mundo ainda concorda em existir. Essa linguagem acabou importando mais para sua Anchor do que qualquer um percebeu no inicio.
 
@@ -140,7 +140,7 @@ Ela nao esta liberada para campo. Pratica de alto output continua restrita. Mas 
 
 ## Relacoes Importantes
 
-**Sai'ken Ex'sydra** continua designado para sua proximidade. Publicamente ele e seguranca domestica e apoio de ligacao. Na verdade, tambem esta ali porque sua arquitetura consegue perceber perturbacao de cadencia cedo - e porque, se Ec'lesia algum dia entrar em uma janela de conversao irreversivel, talvez ele precise mata-la antes que o evento estabilize.
+**Sai'ken Ex'sydra** continua designado para sua proximidade como oficial de proteção e sentinela de cadência. A cláusula terminal selada só se aplica depois que resgate, evacuação, contenção, intervenção clínica e resposta capaz de lidar com a Shore tenham falhado ou não possam chegar. Não é uma licença privada para matar.
 
 **Hisui Kirasagi** e uma das formas mais claras de cuidado comum na vida de Ec'lesia. Ela ve de perto o custo diario da estabilidade da garota.
 
@@ -160,6 +160,6 @@ Ela e uma jovem construindo uma vida em voz alta o suficiente para continuar hum
 
 O perigo mais fundo em torno de Ec'lesia nao e output bruto. E a relacao entre **Stilllight** e o **Remainder**.
 
-Stilllight cria radiancia interrompida: luz que permanece no intervalo em que o movimento ja deveria ter terminado. Isso torna Ec'lesia incomumente compativel com estrutura de fresta e com aquilo que os arquivos antigos Wonderwall chamam de Remainder. Em cenarios de falha mais tardios, o medo nao e apenas perda de controle. O medo e que seu Dive possa ser empurrado para **[[shorefall|Luminant Shorefall]]**, permitindo que o Remainder a use como vetor de acesso em direcao a First Radiance.
+Stilllight cria radiancia interrompida: luz que permanece no intervalo em que o movimento ja deveria ter terminado. Isso torna Ec'lesia incomumente compativel com estrutura de fresta e com aquilo que os arquivos antigos Wonderwall chamam de Remainder. Essa relação observada com a Shore não cria dever herdado nem reivindicação institucional sobre ela. Em cenarios de falha mais tardios, o medo nao e apenas perda de controle. O medo e que seu Dive possa ser empurrado para **[[shorefall|Luminant Shorefall]]**, permitindo que o Remainder a use como vetor de acesso em direcao a First Radiance.
 
 E por isso que ela e vigiada tao de perto.

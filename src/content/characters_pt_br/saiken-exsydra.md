@@ -4,7 +4,7 @@ type: "Personagem"
 age: "25 (em 2200)"
 birth_year: "2175"
 birthplace: "Ael'keth, fronteiras orientais, Regiao Norte"
-affiliation: "KT-Exs; aparato direto do Assento Wonderwall"
+affiliation: "KT-Exs (cobertura); serviço protegido sob mandado selado da Casa e do Compact"
 house: "Ex'sydra (nome legal restaurado de uma linhagem teorica pre-Imperial apagada)"
 rank: ""
 registry_status: "Ativo - operativo KT-Exs; destacamento na casa do ramo cadete Wonderwall, designado em 2197"
@@ -26,7 +26,7 @@ summary: "Um operativo quieto do KT-Exs que carrega a ultima arquitetura ativa d
 tags: ["Wonderwall", "KT-Exs", "Ex'sydra", "Cadencia", "Gap-space", "Ec'lesia Wonderwall", "Time-tolerated"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Sai'ken Exsydra Dossier.md"
 image: "../../assets/uploads/characters/char-saiken-exsydra.webp"
 hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
@@ -39,7 +39,7 @@ hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 
 ## Visao Geral
 
-Sai'ken Ex'sydra nasceu como **Sai'ken Las'gall** nas fronteiras orientais de **Ael'keth** e depois foi recrutado para o **KT-Exs**, o aparato privado do Assento Wonderwall. Em **2194**, Em'manuel devolveu a ele o nome apagado **Ex'sydra** sem explicar por inteiro o que esse nome significava.
+Sai'ken Ex'sydra nasceu como **Sai'ken Las'gall** nas fronteiras orientais de **Ael'keth** e depois entrou em serviço protegido sob um mandado selado da Casa e do Compact. Em **2194**, Em'manuel devolveu a ele o nome apagado **Ex'sydra** sem explicar por inteiro o que significava. O nome não concede filiação automática à House Wonderwall, cargo corporativo ou reivindicação soberana.
 
 A verdade nao e pequena. Sai'ken e a ultima expressao ativa confirmada de uma antiga arquitetura Ex'sydra, destruida pela erasure historica e tambem pelo proprio erro catastrofico da linhagem.
 
@@ -57,7 +57,7 @@ Ele nao e obediente por natureza. E disciplinado por escolha. Essa diferenca imp
 
 A familia Las'gall viveu por geracoes perto das ruinas de **Ksyr'eth**, nas fronteiras orientais de Ael'keth. Nao sabia que carregava a continuacao de uma linhagem pre-Imperial apagada, e tambem nao sabia que a propria regiao estava aprofundando silenciosamente aquilo que o sangue da familia podia fazer.
 
-O que a familia chamava de instinto nunca foi so instinto. Sai'ken cresceu sabendo quando salas estavam erradas, quando estruturas iam falhar e quando a violencia estava prestes a comecar. Treinou como Redactor regional, foi sinalizado pela **CLOCKWORK** e por fim chamou a atencao pessoal de **Em'manuel Kael Wonderwall**.
+O que a familia chamava de instinto nunca foi so instinto. Sai'ken cresceu sabendo quando salas estavam erradas, quando estruturas iam falhar e quando a violencia estava prestes a comecar. Treinou como Redactor regional, foi sinalizado pelo **Project Seam** e por fim chamou a atencao pessoal de **Em'manuel Kael Wonderwall**. A CLOCKWORK não possui qualquer reivindicação sobre ele.
 
 Ele aceitou o nome **Ex'sydra** como designacao operacional. Ainda nao sabe que o nome sempre foi dele por sangue.
 
@@ -83,7 +83,7 @@ Travessias profundas repetidas tambem cobram um preco. Tempo demais em gap-space
 
 **Em'manuel Kael Wonderwall** o recrutou, o renomeou e ainda oculta a verdade mais profunda sobre a linhagem Ex'sydra.
 
-**Ec'lesia Yalara Wonderwall** e o centro da sua designacao atual. Oficialmente ele e seu protetor. Na pratica, e tambem a pessoa colocada perto o bastante para perceber uma escalada cedo e, se todo o resto falhar, mata-la antes que a catastrofe se estabilize.
+**Ec'lesia Yalara Wonderwall** e o centro da sua designacao atual. Ele é seu oficial de proteção e sentinela de cadência. A cláusula terminal do mandado só vale após perda catastrófica de agência verificada e falha ou impossibilidade de resgate, evacuação, contenção, intervenção clínica e resposta capaz de lidar com a Shore. Toda intervenção permanece sujeita a revisão civil selada.
 
 **Ma'ren Keth** foi a instrutora que primeiro entendeu que os reflexos estranhos de Sai'ken nao eram panico nem trapaca, mas percepcao chegando antes do resto da sala.
 

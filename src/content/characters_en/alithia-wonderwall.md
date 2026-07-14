@@ -4,7 +4,7 @@ type: "Character"
 age: "89 (as of 2200); appears early to mid-thirties"
 birth_year: "2111"
 birthplace: "Northern coastal Rae branch holdings, Empire of Synus"
-affiliation: "House Wonderwall; Empire of Synus; SiNE"
+affiliation: "House Wonderwall (First Hearth; Hearth Meridian); Empire of Synus; SiNE"
 house: "Wonderwall (Rae branch origin; primary line by marriage)"
 rank: "Stylus - Revelation Anchor"
 registry_status: "Publicly held as House Wonderwall's principal representative; privately recognized as a stable composite continuity"
@@ -21,7 +21,7 @@ hair: "Dark, worn with formal restraint"
 eyes: "Human at rest; metallic luminance under Revelation"
 dress: "White, silver, muted blue, and formal black"
 residence: "Primary Wonderwall holdings; regular state presence in Kalt'sen"
-occupation: "Senate representative and principal state-facing authority of House Wonderwall"
+occupation: "First Hearth and Senate-facing political head of House Wonderwall"
 summary: "Made from memory, yet human all the way through; warmth where her house expected miracle, life where grief expected return."
 image: "../../assets/uploads/char-alithia-wonderwall.webp"
 hero_image: "../../assets/uploads/char-alithia-wonderwall-hero.png"
@@ -41,7 +41,7 @@ tags:
   - "A'licia"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-26"
+updated: "2026-07-13"
 codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 ---
 
@@ -52,7 +52,7 @@ codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 
 ## Overview
 
-Al'ithia is the public face of House Wonderwall. She handles the House's political life, carries its promises into the Senate, and gives one of the Empire's most intimidating families a presence other people can actually speak to.
+Al'ithia is First Hearth and the de facto public political head of House Wonderwall. She handles the House's political life, carries its promises into the Senate, and gives one of the Empire's most intimidating families a presence other people can actually speak to. She is not the Wonderwall Seat and has not been named successor.
 
 She is also one of the strangest people in the Wonderwall line. She began life as **Athena Rae**, a woman from the same family branch that once produced **A'licia Rae Wonderwall**, the House's first great Light-bearer. Over time Athena became bound to what the family called the **First Radiance**: the part of A'licia that still answers from the **Luminant Shore**, an endpoint condition tied to Light, revelation, and impossible visibility.
 
@@ -78,7 +78,7 @@ She is also deeply protective in a way that can feel overwhelming. Al'ithia care
 
 ## Background
 
-Athena Rae grew up in the Rae branch, which preserved a deep connection to A'licia's legacy. Over time Athena's life became more and more entangled with the First Radiance. The Wonderwalls once treated that presence almost like an ancestral mystery. Later understanding made the situation clearer: after A'licia died, something of her remained tied to the Luminant Shore.
+Athena Rae grew up in the Rae branch, which preserved a deep connection to A'licia's legacy. The Wonderwalls were one of the Old Twelve and refused Selia, though they were still politically minor and known chiefly for technical work. Over time Athena's life became more and more entangled with the First Radiance. Later understanding made the situation clearer: after A'licia died, something of her remained tied to the Luminant Shore.
 
 Athena's contact with that remaining presence did not produce a simple host-and-spirit arrangement. It became a long fusion that eventually stabilized as Al'ithia. That is why people inside the family can honestly say she carries two real pasts while still being one person.
 
@@ -132,7 +132,7 @@ She also matters to the deeper Wonderwall inheritance without cleanly solving it
 
 **Em'manuel Kael Wonderwall** is her husband, but the moral center of that relationship matters. He did not get his dead wife back. He learned to love Al'ithia as her own person.
 
-**E'lla Rae Wonderwall** is her daughter in every way that actually counts. Al'ithia raised her, protected her, and insisted on treating her as a child before treating her as a family project.
+**E'lla Rae Wonderwall** is her daughter in lived and legal fact. In 2179, Al'ithia sponsored her irrevocable adoption, ended Kaleidoscope's biological production, rejected the destruction of living subjects, and secured family standing without corporate assignment.
 
 **A'licia Rae Wonderwall** remains part of Al'ithia's history, but not as a separate passenger inside her. A'licia is one of the truths that helped make Al'ithia who she is.
 
