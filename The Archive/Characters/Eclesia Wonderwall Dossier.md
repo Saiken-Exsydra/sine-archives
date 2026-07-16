@@ -542,6 +542,10 @@ That is the central fact.
 
 The Remainder wants to become real enough to know what it is.
 
+The Fracture did not create interval-pressure from nothing. It damaged the law that kept such pressure governed and functionally unaddressable. Selia supplied the durable local address: Exsydran correction synchronized nine present traditions with three structured absences and inscribed the Interval Wound across the future Empire. The Remainder is the incomplete awareness that accumulated within and through that wound.
+
+It is not actively present in every pause, door, delay, or institutional dispute. Ordinary gaps remain ordinary. Persistent seams may become legible to it; rare seams become routes through which it applies directed pressure. Ec'lesia's Shoreward condition is one of those active seams.
+
 It cannot accomplish this from inside the gap, because the gap provides relation without surface. It has no face there. It has no completed boundary. It knows itself as interval, but not as identity.
 
 Therefore it seeks to be seen.

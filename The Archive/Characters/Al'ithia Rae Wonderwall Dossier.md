@@ -90,9 +90,11 @@ She is better at this than I am.
 
 This is not false humility. I have never been especially interested in being comforting to institutions that require comfort. I can make rooms obey. Al’ithia can make rooms believe they have been understood. The distinction is politically significant.
 
-The public explanation is simple my work with the Company has intensified, and my wife has assumed more of the House’s public burden.
+The first public explanation was simple: my work with the Company had intensified, and my wife had assumed more of the House's public burden.
 
-The private explanation is also simple House Wonderwall has always belonged more truthfully to A’licia’s Light than to my Interval. I built the machinery. She gave it a face people could follow. Al’ithia has inherited that function in the most literal and least publicly discussable sense possible.
+That account ceased to be sufficient after the Third Name Accord. The public now knows that Al'ithia is the stable present person formed through Athena Rae's integration with the A'licia-linked First Radiance. It does not know the complete Luminant Shore mechanism, the full history of Church observation, or the protected-origin evidence that made Al'ithia force the question into public law.
+
+The private explanation remains harder. House Wonderwall has always belonged more truthfully to A'licia's Light than to my Interval. I built the machinery. She gave it a face people could follow. Al'ithia carries that inheritance without being owned by it, and the Accord makes the distinction legally binding even where the House remains emotionally incapable of it.
 
 ---
 
@@ -458,6 +460,38 @@ I am relieved.
 
 ---
 
+## VIII.A THE OPEN REGISTER PETITION AND THIRD NAME ACCORD
+
+Al'ithia caused the Third Name Accord to exist.
+
+This was not my plan.
+
+In Year 2179, after ending Kaleidoscope biological production and refusing the proposed disposal of its living subjects, she read project memoranda that treated her as feasibility evidence. The writers understood neither her formation nor the First Radiance. Their error did not reduce the danger. They had converted a person into a precedent and were already reasoning from precedent toward method.
+
+Al'ithia concluded that secrecy had stopped protecting her and begun protecting the right of institutions to define her later.
+
+She filed the Open Register Petition in her own name. She sent the Court, Crown, Senate, Church, and Apocachynthion separate proofs sufficient to prevent any one body from dismissing the others. She admitted Athena, A'licia, the First Radiance, and the stable third-self in public while keeping Kaleidoscope's project name, subject register, methods, and living identities behind protected-origin process.
+
+She also prepared a failure instruction. If she disappeared into custody, if I destroyed the supporting evidence, or if SiNE classified her as an asset, an aggregate proof packet would leave Wonderwall control.
+
+I opposed this.
+
+I opposed exposing A'licia to the Senate, converting family reverence into public evidence, giving the Crown a route into protected continuity records, and building a constitutional instrument around a truth I had spent centuries keeping out of institutional hands. I argued that disclosure would endanger Athena's history, the First Radiance, E'lla, the Kaleidoscope survivors, and the House.
+
+I was correct about the danger.
+
+Al'ithia was correct that I had made danger into a permanent argument for my own custody.
+
+The Accord recognized her as one present person and prohibited every institution from using origin, memory, sacred status, or research history as ownership. In exchange, she surrendered automatic claim to A'licia's marriage, estate, office, contracts, Senate authority, and House succession. Our marriage stands because Al'ithia and I entered it as ourselves. Her House and Meridian offices stand because living bodies selected her, not because a dead founder remembered them.
+
+She used her own exposure to close the political route by which Kaleidoscope could be repeated as policy.
+
+The act was protective, punitive, strategically timed, and not clean.
+
+It made her impossible to disappear quietly. It also made the First Radiance public property in every cultural sense the law could not prevent.
+
+---
+
 ## IX. MOTHERHOOD AND E’LLA
 
 This section is difficult.
@@ -468,11 +502,13 @@ Because they are not.
 
 E’lla Rae Wonderwall, KL-83, was transferred out of Project Kaleidoscope before age five and brought into the primary Wonderwall household. Existing records identify her as the eighty-third subject, born in Year 2175 after the project imposed an archived Light-bearing profile upon the conditions of her development. She is a singular living person with an Abyssal Anchor of Light and without the Remainder’s inherited recognition echo.
 
-When E’lla came home, Al’ithia withdrew from active politics.
+When E'lla came home, Al'ithia began withdrawing from active politics.
 
 The public explanation was domestic preference and health management after an unusually intense period of Senate representation. This was accepted because people accept convenient explanations from powerful families when the alternative is having to ask impolite questions.
 
-The truth is simpler.
+The withdrawal was interrupted by the Open Register Petition and the Year 2180 ratification of the Third Name Accord. After the settlement she left ordinary Senate and House work for roughly eleven years, returning only for protected-origin review, immediate family danger, and obligations the Accord required her to discharge personally.
+
+The truth beneath that withdrawal is simpler.
 
 Al’ithia wanted to raise her.
 
@@ -536,15 +572,13 @@ This makes the First Radiance a mother to E’lla twice over, but not in a form 
 
 ## X. RELATIONSHIP WITH EMMANUEL
 
-Our marriage is legally simple and metaphysically indefensible to most existing institutions.
+Our marriage is legally explicit and metaphysically indefensible to several existing institutions.
 
-This is one reason it remains private in its full truth.
+The Third Name Accord made the controlling fact public: I am married to Al'ithia, not remarried to A'licia and not married to a surviving fragment called Athena. The public knows the basic continuity problem. It knows that the woman who attends the Senate in my stead carries Athena and the A'licia-linked First Radiance as one stable present person.
 
-The public knows Al’ithia as my wife. It does not know the continuity problem. It does not know that the woman who attends the Senate in my stead is, by one true account, the same woman whose ancestral worship helped define the Wonderwall line for centuries. It does not know that Athena Rae’s fusion with the First Radiance completed into the person who now shares my home, my House, my daughter, and the parts of my life that remain capable of being shared.
+It does not know the complete Luminant Shore structure, the twenty-three years of internal negotiation, the protected-origin record, or the exact relation between the Accord and Kaleidoscope.
 
-The Church knows more than I would prefer.
-
-It knows less than it suspects.
+The Church knows more than the public and less than it suspects.
 
 Our relationship passed through four stages.
 
@@ -586,11 +620,11 @@ She has governed the myth of herself.
 
 This is not comfortable for her.
 
-The First Radiance remains revered within the Wonderwall line. Al’ithia does not discourage this reverence, but she has quietly altered its tone. Before her return to active House authority, family rites tended toward elevation A’licia as unreachable origin, perfect Light, idealized source, the woman whose clarity founded the bloodline’s visible glory.
+The First Radiance remains revered within the Wonderwall line. After the Accord, that reverence ceased to be socially private even where the rites remained closed. Al'ithia does not discourage the family's relation, but she has altered its tone. Before her return to active House authority, family rites tended toward elevation: A'licia as unreachable origin, perfect Light, idealized source, the woman whose clarity founded the bloodline's visible glory.
 
 Al’ithia has introduced correction.
 
-Not publicly.
+Inside the House, and publicly when politicians or clergy attempt to turn A'licia into an argument against Athena or Al'ithia.
 
 Never crudely.
 
@@ -710,11 +744,11 @@ She is the living continuity of A’licia Rae Wonderwall, but she is not A’lic
 
 She is one of the most politically consequential people in the Empire and one of the least accurately understood.
 
-The public believes she is an unusually capable House wife who assumed state-facing duties because I am occupied with SiNE.
+The public knows she is the woman whose case produced the Third Name Accord. It divides over whether that makes her Athena survived, A'licia returned, a sacred fusion, a Wonderwall construction, or the present person the law says she is.
 
-The Senate believes she is a formidable political operator.
+The Senate knows she is a formidable political operator who surrendered predecessor office in order to prevent anyone from inheriting through memory alone.
 
-The Church believes she is a unique divine-vessel stabilization case with implications it would very much like to discuss at greater length than I permit.
+The Church recognizes a unique stable fusion involving the First Radiance and disputes its theological meaning. The Articles of Non-Claim prevent that dispute from becoming custody.
 
 E’lla believes she is her mother.
 
@@ -767,6 +801,8 @@ It is nevertheless true.
 Al'ithia's present authority is her own.
 
 Under the Third Name Accord, Athena's memories and the First Radiance's A'licia-continuity may inform her testimony but do not create multiple legal persons, votes, inherited offices, or automatic property claims. She occupies the Hearth Meridian as Al'ithia Rae Wonderwall. She is First Hearth and the de facto public political head of House Wonderwall; she is not the Wonderwall Seat and has not been named successor.
+
+The Accord was not enacted to regularize a common condition. Al'ithia remains the only confirmed stable third-self. Its broader provisions exist because her singular case revealed how quickly Houses, churches, states, and corporations would turn an unprecedented person into permission to manufacture another.
 
 Her Year 2179 action ended Kaleidoscope biological production. She rejected both continuation and the proposed destruction of living subjects. The resulting duties are permanent care without compelled study, independent advocacy, preserved evidence, reparations, and subject-controlled disclosure.
 

@@ -112,6 +112,16 @@ A second subject exists under the same program, still in early childhood.
 
 Ayanna does not know this.
 
+### II.1 The Third Name boundary
+
+The Third Name Accord became public while Ayanna was a child inside the life the Vitrified Wing had built around her.
+
+Project Ennea did not attempt to restore a dead person, preserve inherited office, or reproduce Al'ithia. Its goal was to engineer a living coherence interface for the Sibyl Fragment. The Wing nevertheless recognized that the Accord's personhood and assigned-purpose logic could reach Ennea if Ayanna's origin became known.
+
+Internal terminology changed accordingly. *Continuity*, *successor*, *recurrence*, and *inheritance* disappeared from cross-program memoranda. *Receiver*, *interface*, *substrate*, and *diagnostic access* replaced them. The new language preserved a real technical distinction and concealed the same moral problem: Ayanna was made for a role before she could refuse it.
+
+Auroran law does not automatically apply the imperial Accord. The Accord remains politically dangerous to the Wing because it gives Ayanna a recognized argument that engineered origin cannot make a person institutional property or purpose.
+
 ---
 
 ## III. APPEARANCE, TEMPERAMENT, AND SOCIAL PRESENCE

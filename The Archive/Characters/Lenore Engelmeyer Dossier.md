@@ -339,6 +339,8 @@ This is not mind control. It does not overwrite will, issue commands, compel obe
 
 The limitation is not that resistance is easy. The limitation is that resistance usually arrives late. Survivors do not tend to say *she controlled me*. They say: *I should have been more afraid. I should have left sooner. Why did staying feel like my own choice?*
 
+The pressure carries the same structural temptation as the Quiet Moon's wider attention: to mistake accurate understanding for permission. Le'nore can read fear, desire, injury, sensory expectation, and bodily need with extraordinary precision. None of that knowledge grants her the right to decide for the person known. She does not possess a doctrine stating this distinction. Her choices nevertheless turn on it repeatedly.
+
 This makes the pressure useful in hunting as well as social survival. Predators become confident around her. Liars become performative. Cruel people become amused. Guilty people explain themselves. She does not need to force confession when she can create the social weather in which certain people volunteer the shape of their own guilt.
 
 ---
@@ -494,6 +496,26 @@ Play feeding is different in tempo, not always in target selection. The prey may
 Protective killing is different again. When someone threatens a person Le'nore loves, she may remove the danger quickly, efficiently, and without feeding. This can look more human to observers because its emotional structure is recognizable loyalty rather than appetite.
 
 A wrath event is the failure state of grief. In wrath, the target category can expand from individual guilt to collective affiliation; secrecy loses priority; full assimilation may not occur; bodies, blood, structural damage, and witnesses may remain. Controlled Le'nore leaves absence. Wrathful Le'nore leaves evidence.
+
+### VII.1 Love, Separation, and Restraint
+
+The greater will expressed through the Quiet Moon treats love as complete knowledge and complete knowledge as incorporation. Anything exterior can leave, change, die, become private, or be lost. Its protection therefore abolishes separation.
+
+Le'nore inherited the grammar and not the inevitability of that conclusion.
+
+She can understand another body intimately, retain consumed patterns, experience genuine affection, desire incorporation, and choose that the beloved person's continued exteriority matters more than making them permanently available to herself.
+
+This capacity does not make her safe or morally pure. She hunts. She manipulates perception. She enjoys fear under conditions she considers justified. Her Rule of the Unmissed places private appetite in a judicial position it has no lawful right to occupy.
+
+The distinction is narrower and more consequential:
+
+> Le'nore can love someone and permit the fact that they are not hers.
+
+Her refusal to open Re'lha's final memory is the clearest example. The information is already inside her. She could know the final interval. She does not. By leaving it closed, she allows her mother to remain a loved absence rather than converting every remaining boundary into available knowledge.
+
+Her distance from Al'tair also carries this tension. She wants answers and refuses to enter the Institute on terms that would make either of them fully available to the other's fear. Their correspondence preserves relation through distance instead of treating distance as proof that love failed.
+
+Whether this human capacity can affect the larger grammar is unknown. Le'nore is not its prophet, corrective, daughter, or mouthpiece. The Quiet Moon does not require her consent to remain what it is.
 
 ---
 

@@ -14,6 +14,7 @@
     "seed:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs",
     "songs:generate": "node scripts/generate-song-metadata.mjs",
     "songs:update": "node scripts/update-song-metadata.mjs",
+    "test:characters": "playwright test tests/character-navigation.spec.ts",
     "test:transitions": "playwright test tests/transition-smoke.spec.ts",
     "preview": "astro preview",
     "astro": "astro"

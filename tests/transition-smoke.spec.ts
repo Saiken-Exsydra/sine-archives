@@ -25,6 +25,7 @@ function trackClientErrors(page: import("@playwright/test").Page) {
 }
 
 async function disableBrowserCache(page: import("@playwright/test").Page) {
+  if (page.context().browser()?.browserType().name() !== "chromium") return;
   const client = await page.context().newCDPSession(page);
   await client.send("Network.enable");
   await client.send("Network.setCacheDisabled", { cacheDisabled: true });

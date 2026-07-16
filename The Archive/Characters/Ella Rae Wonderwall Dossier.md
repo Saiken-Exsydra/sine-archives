@@ -509,13 +509,13 @@ Unfortunately, family language is exactly what the matter requires.
 
 ### VIII.2 Relationship to E'lla
 
-E'lla does not know the First Radiance's identity.
+E'lla knows the Third Name Accord's public account of the First Radiance.
 
-She does not know A'licia as an active presence.
+She knows that A'licia Rae Wonderwall remained addressable after death, that Wonderwall called the continuity the First Radiance, and that Athena's integration with it produced Al'ithia. The account is part of public law and part of her mother's public life.
 
-She does not know that the woman at the Shore is the origin of the Light inheritance she carries.
+She does not know that the woman she encounters at the Shore is that same continuity. She does not know the complete Luminant mechanism, the first E'lla's place in the family wound, or that Kaleidoscope was the protected-origin evidence that made Al'ithia force the Accord into existence.
 
-She does not know that this figure is, in a structurally defensible sense, her mother twice over: first as A'licia, matriarchal source of the Light-line from which the original E'lla emerged; second through the Al'ithia continuity, in which Athena and A'licia became a third-self whose relation to E'lla exceeds any conventional genealogical account.
+She therefore does not know that this Shore figure is, in a structurally defensible sense, her mother twice over: first as A'licia, matriarchal source of the Light-line from which the original E'lla emerged; second through the Al'ithia continuity, in which Athena and A'licia became a third-self whose relation to E'lla exceeds any conventional genealogical account.
 
 She feels the pull anyway.
 
@@ -557,7 +557,7 @@ The last one is the most like A'licia, by the limited records that survive of he
 
 ### VIII.4 Disclosure Risk
 
-If E'lla learns too quickly that the First Radiance is her mother, and also not only her mother, and also the Shore-bound origin of the inheritance for which Project Kaleidoscope was constructed, the revelation may produce an identity cascade.
+If E'lla joins the public account to the Shore figure, the first E'lla, and Project Kaleidoscope too quickly, the revelation may produce an identity cascade. Knowing names in a court summary is not the same as surviving their simultaneous structural truth at the Luminant Shore.
 
 The risk is not that she will disbelieve it.
 
@@ -645,9 +645,9 @@ She does not know:
 - that some of the instincts she thinks of as fear may be partial warnings from sibling-signatures;
 - that the White Desert incident was not only Sinking but premature Luminant Shore contact;
 - that the figure who forced, called, or watched her upward may have included more than the Instrument's recognition reflex;
-- that A'licia Rae Wonderwall reached the Luminant Shore and became the First Radiance;
-- that Athena reached A'licia and returned as Al'ithia;
-- that the woman she feels drawn to at the Shore is her mother in more than one sense and in no simple sense;
+- that Kaleidoscope's living-subject evidence was the sealed cause behind the Third Name Accord;
+- that the public description of A'licia, Athena, and Al'ithia is a deliberately incomplete account of the Luminant Shore mechanism;
+- that the woman she feels drawn to at the Shore is the First Radiance named in the Accord and therefore her mother in more than one sense and in no simple sense;
 - that the first E'lla Rae Wonderwall's life and refusal still organize this bloodline;
 - that the Remainder does not recognize her, and that this absence may be saving her from one danger while leaving her open to another;
 - that I am increasingly uncertain whether the truth should be given to her in a room, at the Shore, or in the company of someone capable of calling her back by name.

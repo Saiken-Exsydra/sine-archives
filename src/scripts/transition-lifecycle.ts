@@ -18,7 +18,7 @@ type PageCleanup = () => void;
 type PageInit = () => void | PageCleanup;
 type PageInitOptions = { persistent?: boolean };
 type PendingPageInit = [key: string, init: PageInit, options?: PageInitOptions];
-type PageInitializerRecord = { init: PageInit; persistent: boolean; route: string };
+type PageInitializerRecord = { init: PageInit; key: string; persistent: boolean; route: string };
 
 type SearchIntent = {
   type: "search";
@@ -229,9 +229,9 @@ function cleanupInitializers() {
   state.cleanups.clear();
 }
 
-function runInitializer(key: string, record: PageInitializerRecord) {
+function runInitializer(id: string, record: PageInitializerRecord) {
   const state = getRuntimeState();
-  const existingCleanup = state.cleanups.get(key);
+  const existingCleanup = state.cleanups.get(id);
   if (existingCleanup) {
     try {
       existingCleanup();
@@ -240,18 +240,27 @@ function runInitializer(key: string, record: PageInitializerRecord) {
     }
   }
 
-  const cleanup = record.init();
+  let cleanup: void | PageCleanup;
+  try {
+    cleanup = record.init();
+  } catch (error) {
+    state.cleanups.delete(id);
+    console.error(DEBUG_PREFIX, `initializer failed: ${record.key}`, error);
+    return;
+  }
   if (typeof cleanup === "function") {
-    state.cleanups.set(key, cleanup);
+    state.cleanups.set(id, cleanup);
   } else {
-    state.cleanups.delete(key);
+    state.cleanups.delete(id);
   }
 }
 
 function runInitializers() {
   const state = getRuntimeState();
-  for (const [key, record] of state.initializers) {
-    runInitializer(key, record);
+  const route = currentRoute();
+  for (const [id, record] of state.initializers) {
+    if (!record.persistent && record.route !== route) continue;
+    runInitializer(id, record);
   }
 }
 
@@ -259,21 +268,20 @@ function currentRoute() {
   return document.documentElement.dataset.route || location.pathname;
 }
 
-function pruneInactiveInitializers() {
-  const state = getRuntimeState();
-  const route = currentRoute();
-  for (const [key, record] of state.initializers) {
-    if (!record.persistent && record.route !== route) state.initializers.delete(key);
-  }
+function getInitializerId(key: string, route: string, persistent: boolean) {
+  return persistent ? `persistent:${key}` : `route:${route}:${key}`;
 }
 
 export function registerPageInit(key: string, init: PageInit, options: PageInitOptions = {}) {
   const state = getRuntimeState();
-  const record = { init, persistent: options.persistent === true, route: currentRoute() };
-  state.initializers.set(key, record);
+  const route = currentRoute();
+  const persistent = options.persistent === true;
+  const id = getInitializerId(key, route, persistent);
+  const record = { init, key, persistent, route };
+  state.initializers.set(id, record);
 
   if (state.isPageReady) {
-    runInitializer(key, record);
+    runInitializer(id, record);
   }
 }
 
@@ -806,9 +814,10 @@ function handleBeforeSwap(event: Event) {
   cleanupInitializers();
 
   if (activeIntent?.type === "search") {
-    event.viewTransition.finished.finally(() => {
+    const clearSearchIntent = () => {
       clearTransitionIntent(document);
-    });
+    };
+    void event.viewTransition.finished.then(clearSearchIntent, clearSearchIntent);
 
     event.viewTransition.ready.then(() => {
       if (prefersReducedMotion()) return;
@@ -823,7 +832,7 @@ function handleBeforeSwap(event: Event) {
     || activeIntent?.type === "observatory-system"
   ) {
     const clearHandleIntent = () => clearTransitionIntent(document);
-    event.viewTransition.finished.finally(clearHandleIntent);
+    void event.viewTransition.finished.then(clearHandleIntent, clearHandleIntent);
     window.setTimeout(clearHandleIntent, HANDLE_INTENT_CLEAR_DELAY);
   }
 
@@ -845,10 +854,10 @@ function handlePageLoad() {
   state.pendingIntent = null;
 
   flushPendingRegistrations();
-  pruneInactiveInitializers();
   runInitializers();
   setLifecycleClasses(["is-page-ready"], ["is-preparing-transition", "is-swap-pending", "is-swapping", "is-transitioning"]);
   if (!keepIntentUntilTransitionFinished) clearTransitionIntent(document);
+  assertPageReadyInvariants();
   logTransitionEvent("astro:page-load");
 
   document.dispatchEvent(new CustomEvent("sine:page-ready", {
@@ -857,6 +866,47 @@ function handlePageLoad() {
       route: location.pathname,
     },
   }));
+}
+
+function assertPageReadyInvariants() {
+  if (!import.meta.env.DEV) return;
+
+  const root = document.documentElement;
+  if (root.classList.contains("is-transitioning")) {
+    console.error(DEBUG_PREFIX, "page load settled with a transition lock still active");
+  }
+  if (root.inert || document.body.inert) {
+    console.error(DEBUG_PREFIX, "page load settled with the document left inert");
+  }
+
+  if (isCharacterIndexPath(location.pathname)) {
+    const state = getRuntimeState();
+    const route = currentRoute();
+    const id = getInitializerId("characters-page", route, false);
+    const characterRoot = document.querySelector("#chars-root");
+    if (!state.initializers.has(id) || !state.cleanups.has(id) || characterRoot?.getAttribute("data-character-controller") !== "ready") {
+      console.error(DEBUG_PREFIX, "character index settled without one active controller", {
+        cleanupActive: state.cleanups.has(id),
+        controllerRegistered: state.initializers.has(id),
+        rootConnected: characterRoot?.isConnected === true,
+      });
+    }
+  }
+}
+
+function handlePageShow(event: PageTransitionEvent) {
+  if (!event.persisted) return;
+
+  const state = getRuntimeState();
+  state.isPageReady = true;
+  state.pendingIntent = null;
+  cleanupInitializers();
+  flushPendingRegistrations();
+  runInitializers();
+  setLifecycleClasses(["is-page-ready"], ["is-preparing-transition", "is-swap-pending", "is-swapping", "is-transitioning"]);
+  clearTransitionIntent(document);
+  assertPageReadyInvariants();
+  logTransitionEvent("pageshow:persisted");
 }
 
 function installSearchIntentCapture() {
@@ -924,6 +974,7 @@ function installLifecycle() {
   document.addEventListener("astro:before-swap", handleBeforeSwap);
   document.addEventListener("astro:after-swap", handleAfterSwap);
   document.addEventListener("astro:page-load", handlePageLoad);
+  window.addEventListener("pageshow", handlePageShow);
 }
 
 installLifecycle();

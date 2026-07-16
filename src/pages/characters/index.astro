@@ -913,9 +913,12 @@ const sectionEyebrow = locale === "pt-br"
         <div class="sidebar__list" id="sidebar-list">
           {charData.map((c, i) => (
             <button
+              type="button"
               class={`sidebar__item${i === initialCharacterIndex ? " is-active" : ""}`}
               data-idx={i}
+              data-character-slug={c.slug}
               id={`sidebar-item-${i}`}
+              aria-pressed={i === initialCharacterIndex ? "true" : "false"}
             >
               <div class="sidebar__item-num">
                 <span>{String(i + 1).padStart(2, "0")}</span>
@@ -1167,7 +1170,12 @@ const sectionEyebrow = locale === "pt-br"
         const storageKey = `sine:characters:active:${document.documentElement.lang === "pt-BR" ? "pt-br" : "en"}`;
         const params = new URLSearchParams(window.location.search);
         const requestedSlug = params.get("char");
-        const storedSlug = sessionStorage.getItem(storageKey);
+        let storedSlug = null;
+        try {
+          storedSlug = sessionStorage.getItem(storageKey);
+        } catch (error) {
+          console.error("[characters-page] Failed to restore the selected character", error);
+        }
         const initialSlug = requestedSlug || storedSlug;
         const initialIdx = Math.max(0, chars.findIndex((char) => char.slug === initialSlug));
 
@@ -1190,6 +1198,7 @@ const sectionEyebrow = locale === "pt-br"
           window.clearTimeout(phaseTimer);
           filmstripObserver?.disconnect();
           filmstripObserver = null;
+          charsRoot.removeAttribute("data-character-controller");
         };
 
         const stagePortrait = charsRoot.querySelector("#stage-portrait");
@@ -1449,15 +1458,24 @@ const sectionEyebrow = locale === "pt-br"
           }
           if (stageSummary) stageSummary.textContent = c.summary;
           if (stageCta instanceof HTMLAnchorElement) stageCta.href = c.href;
-          sessionStorage.setItem(storageKey, c.slug);
+          try {
+            sessionStorage.setItem(storageKey, c.slug);
+          } catch (error) {
+            console.error("[characters-page] Failed to remember the selected character", error);
+          }
 
           const next = new URL(window.location.href);
           next.searchParams.set("char", c.slug);
-          history.replaceState(history.state || {}, "", next);
+          try {
+            history.replaceState(history.state || {}, "", next);
+          } catch (error) {
+            console.error("[characters-page] Failed to synchronize the selected character URL", error);
+          }
 
           charsRoot.querySelectorAll(".sidebar__item").forEach((el, itemIdx) => {
             const isActive = itemIdx === idx;
             el.classList.toggle("is-active", isActive);
+            el.setAttribute("aria-pressed", String(isActive));
             const numEl = el.querySelector(".sidebar__item-num");
             if (!(numEl instanceof HTMLElement)) return;
             let line = numEl.querySelector(".sidebar__item-num-line");
@@ -1481,10 +1499,15 @@ const sectionEyebrow = locale === "pt-br"
           window.clearTimeout(phaseTimer);
           setPhase("out");
           switchTimer = window.setTimeout(() => {
-            updateContent(idx);
-            phaseTimer = window.setTimeout(() => {
-              setPhase("in");
-            }, 60);
+            try {
+              updateContent(idx);
+            } catch (error) {
+              console.error("[characters-page] Character selection failed", error);
+            } finally {
+              phaseTimer = window.setTimeout(() => {
+                setPhase("in");
+              }, 60);
+            }
           }, 360);
         }
 
@@ -1599,11 +1622,16 @@ const sectionEyebrow = locale === "pt-br"
         if (initialIdx !== serverInitialCharacterIndex) {
           updateContent(initialIdx);
         } else {
-          sessionStorage.setItem(storageKey, chars[initialIdx].slug);
+          try {
+            sessionStorage.setItem(storageKey, chars[initialIdx].slug);
+          } catch (error) {
+            console.error("[characters-page] Failed to remember the selected character", error);
+          }
           syncGalleryUi(chars[initialIdx]);
           scheduleGallery();
         }
         applySearch(searchInput?.value || "");
+        charsRoot.dataset.characterController = "ready";
 
         return cleanup;
       };
@@ -1611,4 +1639,3 @@ const sectionEyebrow = locale === "pt-br"
       window.registerPageInit?.("characters-page", initializeCharactersPage);
     </script>
 </SiteShell>
-

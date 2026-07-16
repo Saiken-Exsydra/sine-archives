@@ -254,6 +254,10 @@ The Institute understood, within two years of her birth, that her anomaly was no
 
 Over a decade, they ran assessment protocols designed to develop the dual-Anchor routing capacity through controlled methods. Partial results were achieved. Simultaneous dual-Anchor routing could be demonstrated under controlled conditions. Sustained simultaneous routing at operational depth was not achievable under their conditions — as Rouxinol later understood, sustainable dual routing required coordination between the two loops, and coordination was not something the Institute could produce externally.
 
+After the Third Name hearings became public in Years 2179–2180, Corvel reclassified Rouxinol's bifurcated architecture as strategically relevant to plural-recursion research. The Institute did not possess Al'ithia's evidence and did not attempt to make Rouxinol into A'licia, Athena, or any other predecessor. Its analysts believed that two independently stable recursive loops might show where a third identity boundary could form.
+
+This analogy was false. Rouxinol is one living person with bifurcated routing, not two predecessor continuities and not a third-self. The false analogy nevertheless increased the intensity of her observation and the Institute's refusal to release her.
+
 At age fourteen, during an incident involving another subject in an adjacent facility, she left. Institute records describing the incident are not available to this office. Rouxinol does not discuss it in specific terms. The Institute's primary outer-plateau research building sustained significant structural damage during the event. She was in Vel'hara's outer district within a month.
 
 ---

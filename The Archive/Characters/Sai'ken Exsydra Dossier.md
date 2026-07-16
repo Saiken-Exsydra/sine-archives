@@ -122,13 +122,17 @@ This distinction is not minor. It is the difference between hearing the next foo
 
 The Exsydra mistook sensitivity for authority.
 
-The Rite of Selia converted that mistake into catastrophe.
+The Rite of Selia converted that mistake into catastrophe. After Faldryn, Wonderwall, and Whitechurch refused, Exsydran correction assigned the three absences operational intervals inside a sequence still claiming Twelve. The timing arrays synchronized nine active traditions and three structured vacancies at extreme Depth. They made an incomplete transition precise; they did not make it complete.
 
 Afterward, the founding institutions erased the name, seized the archives, redistributed the useful theory without attribution, and made the Exsydra into a cautionary absence. The official record, where it acknowledges the lineage at all, preserves them as dangerous theoreticians whose framework helped make the Sundering possible. This is true as far as it goes.
 
 It does not go far enough.
 
 The family was dangerous because it was wrong about something real.
+
+The Sundering also left the Interval Wound: a persistent regional topology of incomplete transition through which the Remainder later cohered. This does not make the Remainder an Exsydra creation or make living Exsydra descendants responsible for the Wound.
+
+The Twelvefold Cadence Assembly recovered at Ael'keth in Year 1680 preserved the old correction structure as physical technology. Its Year 1681 transfer repeated Selia's error in custody law when institutions gave a missing owner an operational place instead of halting the movement. The resulting deaths belong to the people and institutions that designed, narrowed, exploited, and concealed that transfer. They do not become Sai'ken's inheritance.
 
 ## III.2 The Actual Inheritance
 
@@ -137,6 +141,8 @@ The Exsydra inheritance is a recursive architecture, not a doctrine.
 The doctrine died.
 
 The architecture survived.
+
+No guilt, estate, political authority, technical ownership, or duty to complete the doctrine passes with that architecture.
 
 In the foundational structure of the Exsydra recursive singularity, self-modeling does not organize first around objects, forces, or states. It organizes around relations: before and after, near and not-yet, threshold and crossing, current and adjacent, present and almost-present.
 
@@ -1011,7 +1017,9 @@ It is also convenient for me.
 
 That convenience is not morally neutral.
 
-Sai'ken does not know that I was born Al'uxxios Exsydra. He does not know the family name I returned to him was also the name I abandoned. He does not know the Cadence I carry was the central conductor element of his ancestors' timing arrays. He does not know that the theoretical error that destroyed his line is the same error I have spent twelve centuries refusing to repeat.
+Sai'ken does not know that I was born Al'uxxios Exsydra. He does not know the family name I returned to him was also the name I abandoned. He does not know the Cadence I carry was the central conductor element of his ancestors' timing arrays. He does not know that the detached plate held by Aelvar came from the Twelvefold Cadence Assembly whose transfer killed 271 people at Kel'rath. He does not know that the theoretical error that destroyed his line is the same error I repeated politically when I permitted absence to function as a temporary holder until it became permanent structure.
+
+None of those facts makes him guilty. Concealing them prevents inherited guilt only by also preventing informed self-understanding.
 
 He will need to know.
 
