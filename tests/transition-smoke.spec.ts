@@ -172,26 +172,26 @@ test("character dossier opens and returns smoothly", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
-test("systems panels stay interactive after returning from Redactory desk", async ({ page }) => {
+test("systems panels navigate directly and stay interactive after returning", async ({ page }) => {
   const errors = trackClientErrors(page);
 
   await page.goto("/systems/", { waitUntil: "networkidle" });
-  const redactoryPanel = page.locator('.sys-panel[data-key="redactory"]');
-  await redactoryPanel.click();
-  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "redactory");
-
-  await page.getByRole("link", { name: /Enter the Redactory Desk/i }).click();
-  await expect(page).toHaveURL(/\/systems\/redactory\/?$/);
+  await expect(page.locator("a.sys-panel")).toHaveCount(3);
+  await page.locator("a.sys-panel--redactory").click();
+  await expect(page).toHaveURL(/\/systems\/redactorysystem\/?$/);
+  await expect(page.locator(".ent-main")).toBeVisible();
 
   await page.getByRole("link", { name: "Systems", exact: true }).click();
   await expect(page).toHaveURL(/\/systems\/?$/);
-  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "");
+  await expect(page.locator("a.sys-panel")).toHaveCount(3);
 
-  await page.locator('.sys-panel[data-key="divination"]').click();
-  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "divination");
+  await page.locator("a.sys-panel--divination").click();
+  await expect(page).toHaveURL(/\/systems\/divinationsystem\/?$/);
+  await page.getByRole("link", { name: "Systems", exact: true }).click();
 
-  await page.getByRole("button", { name: /All Systems/i }).click();
-  await expect(page.locator("#sys-split")).toHaveAttribute("data-active", "");
+  await page.locator("a.sys-panel--bloom").click();
+  await expect(page).toHaveURL(/\/systems\/bloom\/?$/);
+  await page.getByRole("link", { name: "Systems", exact: true }).click();
 
   await page.getByRole("button", { name: /Addendums/i }).click();
   await expect(page.locator("#sys-overlay")).toHaveClass(/is-open/);
