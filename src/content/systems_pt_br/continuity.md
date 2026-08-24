@@ -1,139 +1,77 @@
 ---
-title: "Continuity"
-type: "System"
-summary: "The structural condition by which a thing remains identifiable as itself across traversal, transformation, injury, death, fusion, collapse, and return."
-tags: ["systems", "Continuity", "Self-Address", "Stabilistics", "Katherine Flarian", "Shorefall", "Shorewalking", "Time", "Resonance", "Harmonics"]
+title: "Continuidade"
+type: "Sistema"
+summary: "A condição estrutural pela qual algo continua identificável como si mesmo através de travessia, transformação, ferimento, morte, fusão, colapso e retorno."
+tags: ["sistemas", "Continuidade", "Autoendereçamento", "Estabilística", "Katherine Flarian", "Shorefall", "Shorewalking", "Tempo", "Ressonância"]
 status: "public"
 created: "2026-06-25"
-updated: "2026-06-25"
+updated: "2026-08-23"
 image: ""
 ---
 
-> *"The question is not whether the room exists. The question is whether it can still agree to be one room."*
-> - S-AE Continuity Office notation
+> *"A pergunta não é se a sala existe. É se ela ainda consegue concordar em ser uma sala."*
+> — Nota do Setor de Continuidade S-AE
 
----
+## Definição
 
-## Definition
+**Continuidade** é a condição pela qual uma estrutura permanece identificável como si mesma através de travessia, transformação, ferimento, fusão, morte, reconfiguração, contato com uma Costa ou retorno.
 
-**Continuity** is the condition by which a structure remains identifiable as itself across traversal, transformation, injury, fusion, death, reconfiguration, Shore-contact, or return.
+Ela não é Tempo, Ressonância, Harmônicos, memória, biologia ou identidade isoladamente. Não é uma fonte de energia nem substitui outro sistema.
 
-Continuity is not Time, Resonance, Harmonics, memory alone, biology alone, identity alone, or social recognition alone. It is not a new energy source and not a replacement for any existing system.
+Continuidade responde à pergunta estrutural: **o que faz com que isto continue sendo a mesma coisa?** Para pessoas: **o que faz com que esta continue sendo a mesma pessoa?**
 
-Continuity answers the structural question: **what makes this still the same thing?**
+## Autoendereçamento
 
-For persons, the question becomes: **what makes this still the same person?**
+Para seres sencientes, continuidade é a persistência do **autoendereçamento** através da transformação recursiva.
 
----
+Uma pessoa é uma singularidade recursiva: informação que volta sobre si, recebe entrada, produz saída e incorpora essa saída ao automodelo. Continuidade permite que o eu que age, lembra, sofre e escolhe permaneça numa só linha através da travessia ordenada do Tempo.
 
-## Self-Address
+Autoendereçamento não é um objeto-alma guardado dentro do corpo. É o endereço mantido pelo qual uma singularidade continua reconhecendo seus resultados como pertencentes à mesma linha de si.
 
-For sentient beings, continuity is the persistence of **self-address** across recursive transformation.
+## Campos e Feridas
 
-A person is a recursive singularity: information folding back onto itself, consuming input, producing output, and reabsorbing that output into the self-model. Continuity is what allows the acting self, remembering self, suffering self, and choosing self to remain one self-line across Time's ordered traversal.
+Um **campo de continuidade** é a condição local na qual uma estrutura mantém autoacordo suficiente para ser lida como uma coisa contínua. Numa sala, paredes, conteúdo, registros, acessos e condições locais concordam que fazem parte do mesmo lugar. Numa pessoa, corpo, memória, agência, ferimento e transformação continuam endereçáveis como uma linha única.
 
-Self-address is not a soul-object stored inside a body. It is the maintained address by which a recursive singularity continues to identify its own outputs as belonging to the same self-line.
+Uma **ferida de continuidade** é dano ativo a esse acordo. Uma **cicatriz** é o resíduo estabilizado de uma ferida anterior. **Deriva** acontece quando a estrutura continua funcional, mas se afasta de seu autoendereço sem ruptura limpa. **Ruptura** é o evento de quebra; **colapso** é a perda terminal ou quase terminal de persistência identificável.
 
----
+## Mapeamento e Bloqueio
 
-## Continuity Fields
+**Mapeamento de continuidade** detecta onde o autoacordo se mantém, afina, contradiz ou se aproxima de ruptura.
 
-A **continuity field** is the local condition in which a structure remains in self-agreement strongly enough to be read as one continuing thing.
+Um **bloqueio de continuidade** força uma janela temporária de autoacordo. Ele não resolve permanentemente a contradição e não derrota uma Costa. Mantém condições de identidade pelo tempo necessário para impedir colapso, falha de evacuação, propagação de contradição, ampliação de abertura ou tradução catastrófica.
 
-For a room, this may mean the walls, contents, records, entry points, and local traversal conditions continue to agree that they are part of one site.
+O bloqueio pode usar tecnologia, procedimento, arquitetura e instrumentos. Não é Redatória por padrão. Equipes treinadas conseguem estabelecê-lo e mantê-lo; Katherine Flarian é sua operadora improvisadora mais capaz, não a única pessoa capaz de aplicar a doutrina.
 
-For a person, it means body, memory, agency, injury, transformation, and recursive output remain addressable as one continuing self-line.
+## Cisão de Continuidade
 
-Continuity fields can be damaged, mapped, sensed, buffered, stabilized, or exploited.
+A **Cisão de Continuidade** enfraquece o monopólio de um conjunto de eventos sobre aquilo que conta como a única continuação válida. Ela não apaga um evento, reescreve o passado, escolhe uma história preferida ou fabrica outra.
 
----
+A cisão só é usada depois que um bloqueio expõe continuações concorrentes. Ela cria um momento no qual a pessoa ou estrutura afetada deixa de ser forçada a aceitar uma sequência autorada como inevitável. O que vem depois precisa ser sustentado pela continuidade sobrevivente e, quando há uma pessoa, por sua escolha.
 
-## Wounds, Scars, Drift, Rupture, and Collapse
+A técnica é exclusiva de [[katherine-flarian|Katherine Flarian]]. Equipes podem aprender bloqueios, mapeamento e tecnologia de sustentação; não podem reproduzir sua cisão apenas seguindo um procedimento.
 
-A **continuity wound** is active damage to self-agreement. The structure continues, but it does so under contradiction.
+## Relação com Tempo e Ressonância
 
-A **continuity scar** is stabilized residue from a prior wound. It may remain legible, painful, conductive, or strategically relevant after the immediate failure has closed.
+Tempo produz travessia ordenada por configurações já estabilizadas. Continuidade permite que uma estrutura permaneça ela mesma durante essa travessia. Onde Tempo lê sequência, Continuidade preserva identidade ao longo dela.
 
-**Continuity drift** occurs when a structure remains functional but begins moving away from its prior self-address without clean rupture.
+Ressonância é pressão mútua de coerência entre estruturas semelhantes. Pode reforçar ou desestabilizar continuidade, mas não é continuidade. Harmônicos podem revelar tensão, repetição e cadência; não substituem a mecânica da identidade.
 
-**Continuity rupture** is a breaking event in which self-agreement fails across one or more critical axes.
+## Relação com Sistemas Mágicos
 
-**Continuity collapse** is a terminal or near-terminal loss of identifiable persistence. A collapsed structure may continue to exist as matter, record, residue, or pressure while no longer remaining the same thing in the continuity sense.
+Redatória exige continuidade do operador durante a compressão do Mergulho. Divinação exige continuidade do receptáculo durante a fusão. Bloom exige primazia do hospedeiro sob crescimento simbiótico e pressão do Murmuring.
 
----
+Quando o eu é apagado, devorado ou tornado irrelevante, o resultado não é uma expressão estável do sistema. É colapso, possessão, consumo ou falha.
 
-## Mapping and Locking
-
-**Continuity mapping** is the practice of detecting where self-agreement is holding, thinning, contradicting itself, or approaching rupture.
-
-**Continuity lock** is a forced self-agreement window. It does not solve a contradiction permanently and does not defeat a Shore. It holds local identity conditions long enough to prevent collapse, evacuation failure, contradiction spread, aperture widening, or catastrophic translation.
-
-A Local Continuity Lock may be technology-assisted, procedural, architectural, or instrument-calibrated. It is not Redactory by default and does not require the operator to be a magical practitioner.
-
----
-
-## Relation to Time
-
-Time produces ordered traversal across already-stabilized configurations. It does not create futures and does not author new information.
-
-Continuity is what lets a structure remain itself as Time traverses it. A person remains readable as before, during, after, consequence, memory, and next action because continuity holds the recursive process in one self-line.
-
-Where Time reads sequence, Continuity preserves identity across sequence.
-
----
-
-## Relation to Resonance and Harmonics
-
-Resonance is mutual coherence pressure between similar structures. It can reinforce or destabilize continuity, but it is not continuity itself.
-
-Harmonics are resonance under Time: recurrence, rhythm, surge, fade, warning cadence, and exposure pattern. Harmonics can reveal continuity stress, repeat it, amplify it, or dampen it. They do not replace continuity mechanics.
-
-Where Resonance pressures and Harmonics recur, Continuity holds.
-
----
-
-## Relation to Magical Systems
-
-Continuity is foundational to high-level magical survival.
-
-Redactory requires operator continuity during Dive compression. If the Redactor cannot remain self-addressed while routing, the Dive can become collapse.
-
-Divination requires vessel continuity under fragment fusion. If the vessel is erased, devoured, replaced, or rendered irrelevant, the state is possession, consumption, or failed fusion rather than stable divine expression.
-
-Bloom requires host continuity under symbiotic growth and Murmuring pressure. Without host primacy, Bloom expression can become Overbloom, consumption, Murmuring takeover, Root-Stranding, or biological Shore-Breach.
-
----
-
-## Relation to Shorefall and Shorewalking
-
-Shorefall threatens continuity by forcing the recursive singularity into zero-interval collapse. The person falls out of ordinary Page-real traversal and into a compatible Shore.
-
-Shorewalking requires continuity mastery because the walker must remain Page-side, hold the aperture, and internalize Shore pressure without becoming discontinuous.
-
-Continuity-sensitive systems may detect, resist, delay, pin, or prevent Shorefall and Shore-Breach conditions. They do not command the Shore and do not make the operator a Shorewalker.
-
----
-
-## Continuity-Sensitive Persons
-
-A **Continuity-Sensitive** is a person whose body, nervous system, perception, or recursive structure registers local continuity failure before ordinary instruments fully resolve the event.
-
-Continuity sensitivity does not make someone a Redactor, an Indexed Vessel, a Bloom host, or a conventional magical practitioner. It makes continuity failure operationally legible through the person.
-
----
+Shorewalking também exige domínio de continuidade: a pessoa precisa permanecer do lado da Página, sustentar a abertura e internalizar pressão sem se tornar descontínua. Sensibilidade à continuidade pode detectar e atrasar essas falhas; não comanda uma Costa e não transforma alguém em Shorewalker.
 
 ## Katherine Flarian
 
-Katherine Flarian is the founding institutional case for Continuity-Sensitive classification.
+Katherine Flarian é o caso fundador da classificação **Sensível à Continuidade**. Sua neurologia registra falha local como dor, pressão, arrasto temporal, atraso corporal e tensão de autoacordo antes que instrumentos a resolvam por completo.
 
-Her nervous system was structurally altered by exposure to non-sequential phenomena. She registers local continuity failure as pain, pressure, timing drag, bodily delay, and self-agreement stress before instruments fully resolve the event.
+Ela não é Redatora, Shorewalker ou Âncora humana. Seu trabalho de Estabilística, Mapeamento, bloqueios locais e Cisão demonstra que a continuidade pode ser ferida e tornada operacionalmente legível sem conceder condição de praticante comum.
 
-Her Stabilistics work, Continuity Mapping, and Local Continuity Lock procedures prove that continuity can be wounded and made operationally legible without granting ordinary practitioner status.
+Em uma intervenção clínica de continuidade sob sigilo, sua cisão interrompeu uma sequência terminal pelo tempo necessário para que o próprio paciente escolhesse o que viria depois.
 
-Katherine does not Shorewalk by default. She does not Shorefall by default. Her work concerns the conditions that keep rooms, sites, systems, and people from losing self-agreement badly enough that Shorefall-like or breach-like phenomena become possible.
+## Em uma Frase
 
----
-
-## In One Sentence
-
-Continuity is identity-persistence across transformation and traversal: the structural answer to why this remains the same thing.
+Continuidade é persistência de identidade através de transformação e travessia: a resposta estrutural para por que algo continua sendo a mesma coisa.

@@ -5,7 +5,7 @@ summary: "The Imperial capital. The city where every major institution in the wo
 tags: ["Kalt'sen", "Places", "Capital", "Empire", "SiNE", "Apocachynthion", "Church", "Pluribus Hill", "Clepsydra"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-08-23"
 image: "../../assets/uploads/places/place-kaltsen.png"
 ---
 
@@ -30,7 +30,7 @@ Population: approximately **4 to 5 million**.
 
 The building at the center of the Pluribus Hill complex is old. Not old in the way that old buildings are preserved for historical significance - old in the way that a building that has been continuously occupied and continuously adapted to operational needs for twelve hundred years becomes old: comfortable with itself, full of additions that have become load-bearing, with a few sections that predate any current employee's institutional memory.
 
-SiNE's seven formal divisions each maintain their central administrative offices here. The Meridian Council meets in the Hill's upper floor. CLOCKWORK's administrative core is not at Pluribus Hill in any record that exists - a fact consistent with CLOCKWORK's operational design.
+As sete divisões formais da SiNE mantêm seus escritórios administrativos centrais aqui. O Meridian Council se reúne no andar superior da Colina.
 
 Clepsydra's primary ground custody complex is adjacent to the Hill district, which produces an ambiance that most neighborhoods in Kalt'sen do not have: the presence of synchronization infrastructure, sink custody vaults, and lattice continuity systems creates a local resonance environment that is measurably different from the surrounding areas, something that practitioners who visit the district notice before they are told what accounts for it.
 

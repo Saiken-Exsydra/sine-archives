@@ -7,176 +7,149 @@ headquarters: "The Binding, Kalt'sen"
 founded: "Pós-Sundering of Selia — era fundadora pré-imperial"
 jurisdiction: "Empire of Synus — as três macro-regiões"
 status_label: "Ativo — vinculado por tratado (Compact of Institutional Authority)"
-summary: "A associação imperial de Redactors"
-tags: ["Synus", "Redactor", "Institution", "Governance", "Pagers", "Academy", "Kalt'sen"]
+summary: "A associação independente que torna a prática de Redactory legível, ensinável e responsável sem reivindicar propriedade sobre Redactors."
+tags: ["Synus", "Redactor", "Institution", "Governance", "Pagers", "Academy", "Kalt'sen", "Observation"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-26"
+updated: "2026-08-23"
 image: "../../assets/uploads/org-apocachynthion.png"
 ---
 
-> *Esta entrada foi escrita para leitura pública. Ela não contém dados institucionais restritos. Para registros operacionais e classificatórios, consulte diretamente o escritório público de registro do Apocachynthion.*
+> *Esta é uma explicação pública da instituição. Registros operacionais, Point registers protegidos e material disciplinar selado permanecem restritos.*
 
----
+## O que o Apocachynthion governa
 
-## O que é o Apocachynthion?
+O Apocachynthion é a autoridade profissional do Empire sobre a **prática de Redactory**. Ele registra Redactors, administra a rede de Academies, certifica Ranks, define permissões de Mark, revisa falhas técnicas, regula Points e apparati e fornece contenção especializada quando a Redactory cria perigo imediato.
 
-O Apocachynthion é a instituição imperial responsável por todos os aspectos da vida de um Redactor dentro do Empire of Synus — desde o momento em que uma pessoa manifesta os primeiros sinais de aptidão para a Redactory até todo o seu treinamento, certificação e carreira profissional.
+Esse mandato é mais estreito que a propriedade de uma vida.
 
-A instituição não faz parte do exército. Também não é uma divisão da polícia imperial. Ela existe de forma independente dos dois, vinculada ao Empire por meio de um tratado formal chamado **Compact of Institutional Authority**, renovado a cada sucessão do trono há mais de quatrocentos anos. O Apocachynthion treina Redactors, classifica seus perfis, direciona cada um para setores onde possam servir e — quando necessário — aplica medidas disciplinares ou realiza contenções. O Empire financia a instituição e pode solicitar mobilização de Redactors. Mas não exerce comando direto sobre eles.
+Uma pessoa em manifestação continua sendo cidadã, criança, mãe, pai, trabalhadora, paciente ou acusada sob a lei civil comum. Respondentes municipais controlam a cena pública. Equipes médicas controlam o cuidado clínico. Cortes controlam culpa criminal e custódia de longo prazo. O Apocachynthion controla as perguntas técnicas: o que aconteceu através do Dive, qual formação é necessária, qual prática é segura e qual permissão pode receber Seal.
 
-No cotidiano, a maior parte da população conhece o Apocachynthion por duas coisas: as **Academies**, onde seus filhos talvez um dia sejam matriculados, e os **Pagers** — o braço de execução institucional da associação, cuja insígnia é reconhecida em todas as três macro-regiões.
+A instituição é vinculada ao Empire pelo **Compact of Institutional Authority**, mas não é um braço militar nem um serviço de polícia. A Crown pode solicitar Redactors. A SiNE, uma House ou um empregador podem contratá-los. Nenhum deles pode ampliar um Mark, tomar custódia de alguém apenas porque houve manifestação ou transformar formação pública de segurança em dívida de serviço.
 
-A sede de governança da instituição fica no distrito central de Kalt'sen, em uma construção conhecida como **the Binding** — uma estrutura de arquitetura severa que abriga, entre muitas outras coisas, todo o registro institucional desde o documento original de fundação do Apocachynthion.
+## Por que ele existe
 
----
+O Apocachynthion foi construído nos escombros políticos do **Sundering of Selia**. Os relatos públicos preservam sua lição central: um ato coletivo em Depth catastrófica não encontrou autoridade compartilhada capaz de tornar a recusa vinculante. A falha destruiu a velha ordem e ensinou aos sobreviventes que poder técnico sem uma instituição capaz de dizer *pare* era uma ameaça regional. Os detalhes operacionais desses acontecimentos permanecem selados, e não pertencem à doutrina pública ou da Academia.
 
-## História
+A **First Charter of Inscription** estabeleceu três obrigações duradouras: Redactors confirmados devem ser reconhecidos em registro, todo novo Redactor deve receber formação mínima de segurança e a prática de Redactory deve responder a uma autoridade profissional independente do comando de Houses ou militares.
 
-O Apocachynthion não surgiu em tempos de estabilidade nem foi criado através de planejamento cuidadoso. Ele nasceu logo após uma catástrofe.
+A associação resultante ajudou a estabilizar a transição do antigo reino dinástico para as Fifteen Founding Houses e o Empire of Synus. Ela nunca resolveu por completo a contradição em seu centro: protege Redactors de exploração ao conceder a si mesma o poder de classificá-los, restringi-los e, algumas vezes, contê-los.
 
-Antes do Empire existir, o território que mais tarde se tornaria seu núcleo central era governado como um reino — controlado por doze dinastias de linhagem sanguínea, as casas de Redactors mais antigas do mundo conhecido. Cada uma cultivou, ao longo de gerações, suas próprias tradições de prática e acumulou concentrações extraordinárias de habilidade hereditária. Não existia nenhuma autoridade acima delas capaz de impor limites.
+## The Inscription
 
-Essas doze casas eventualmente tentaram realizar algo para o qual suas tradições vinham se preparando havia séculos. O resultado ficou conhecido como **the Sundering of Selia**. O evento fragmentou simultaneamente as doze tradições de Redactory, destruiu várias das casas por completo e remodelou a geografia política da região de maneiras que ainda podem ser vistas hoje. Três das doze recusaram participação; suas linhagens sobreviveram quase intactas. As demais precisaram se reconstruir nas décadas seguintes a partir do pouco que restou.
+**The Inscription** é a passagem reconhecida desde a primeira indicação crível até o registro civil e a formação mínima de segurança na Academy. É um ciclo de vida, não uma cerimônia.
 
-Dessas doze fontes dinásticas sobreviventes — as três casas que permaneceram afastadas e os remanescentes das outras nove — só doze Casas puderam ser recuperadas. As **Fifteen Founding Houses** exigiram mais três. Elas vieram de fora da velha ordem dinástica: três casas ricas e não políticas, cujo poder derivava não de linhagem Redactor, mas de monopólios comerciais, e que ocuparam o vazio político aberto pelo Sundering. Seus recursos ajudaram a tornar possível a construção institucional do Empire nascente, em troca do status formal que a linhagem sozinha já não bastava para garantir. Não eram casas de Redactors. Sua elevação foi transacional. Também foi permanente.
+Um caso típico passa por:
 
-A primeira coisa em que todos concordaram — antes de fronteiras, antes de governança, antes de quase qualquer outra decisão — foi que o que aconteceu em Selia jamais poderia se repetir. A instituição criada para impedir isso foi formalizada em um documento chamado **First Charter of Inscription**, escrito por Redactors seniores sobreviventes e ratificado pelo que mais tarde se tornaria o primeiro Senado Imperial. Esse documento estabeleceu três princípios fundamentais que continuam válidos até hoje:
+1. **First Indication e First Manifestation** — um sinal crível se torna um evento de Redactory confirmado.
+2. **Immediate Stabilization e First Reading** — equipes civis, médicas e do Apocachynthion tornam a cena segura e respondem apenas às perguntas técnicas urgentes.
+3. **Civil Entry** — a pessoa, seu defensor, proteções temporárias e datas de revisão entram em registros civis protegidos.
+4. **Academy Assessment e Anchor Recognition** — avaliadores estudam resposta ao Dive, saúde, Reach, recuperação, necessidades de aprendizagem e a primeira descrição defensável da Anchor.
+5. **Nib Induction, Point Issuance e Formation** — a pessoa aprende a entrar, interromper, abandonar e sobreviver ao Dive antes de decidir se Redactory será uma profissão.
+6. **Mark Hearing e First Seal** — um Nib profissionalmente competente pode se tornar Quill com um Mark independente ou condicionalmente independente.
 
-1. Todos os Redactors dentro do território imperial devem estar registrados no Apocachynthion.
-2. Todos os Redactors devem receber treinamento padronizado através de Academies administradas pelo Apocachynthion.
-3. O Apocachynthion detém autoridade institucional exclusiva sobre classificação, conduta e disciplina de Redactors dentro do território imperial.
+Quem conclui a formação de segurança e recusa certificação profissional recebe um **Safe Return Certificate**. O registro continua obrigatório; uma carreira em Redactory, não.
 
----
+O relato mais completo sobre apoio familiar, vida na Academy, escolha profissional, recusa, retorno, aposentadoria e emergência acidental aparece em [[redactor-life|A Vida de um Redactor]].
 
-## Governança
+## A rede de Academies
 
-O Apocachynthion é governado pelo **Council of Volumes**, um conselho formado por nove Redactors seniores eleitos internamente entre membros que ocuparam o rank mais alto da instituição por pelo menos quinze anos.
+O Apocachynthion administra Academies nas três macro-regiões. **Vrenne** é a maior e mais prestigiada, atraindo casos complexos e recrutadores ambiciosos. **Lon'drina** é conhecida por classificações difíceis, casos de recusa civil, segundas leituras e registros que não cabem em categorias da moda. Academies regionais compartilham um piso comum de segurança e se adaptam aos perigos locais: frio e Fog no norte, indústria e thinness de minas no sul, densidade cívica e infraestrutura no centro.
 
-O Council é liderado por uma figura eleita conhecida como **Folio** — chefe institucional do Apocachynthion e representante oficial da organização perante o governo imperial, o Senado e outras grandes instituições. O Folio exerce um mandato de doze anos com possibilidade de uma renovação. Nenhum indivíduo jamais ocupou o cargo por mais de dois mandatos.
+Academies são ao mesmo tempo escolas, clínicas, dormitórios, oficinas e cortes de julgamento profissional. Estudantes recebem um Point financiado pela Academy, o Common Apparatus Set de dez Leaves, educação comum, instrução legal e financeira e formação prática supervisionada. Residência é usada quando a segurança exige; adultos estáveis podem estudar localmente ou em regime misto.
 
-O Council se reúne no Binding, em Kalt'sen. As seções mais antigas do arquivo central da construção exigem autorização direta do Council para acesso.
-
-A Imperatriz mantém o direito de peticionar diretamente ao Council em situações de urgência nacional excepcional. Porém, ela não possui autoridade para anular decisões de classificação, processos disciplinares ou estruturas internas de rank. O Apocachynthion não pertence ao Empire. Ele é vinculado a ele. Essa distinção já impediu, em diversos momentos da história imperial, que a instituição fosse absorvida pela estrutura militar.
-
----
-
-## O Sistema de Academy
-
-O Apocachynthion não é uma Academy em si. Ele é o órgão responsável por supervisionar toda a rede delas.
-
-A **Imperial Redactor Academy** — formalmente, a instituição — é administrada pelo Apocachynthion e composta por diversas academias espalhadas pelas três macro-regiões do Empire. Cada uma dessas academias funciona como uma instalação independente, localizada em sua própria cidade, mantendo sua própria equipe de avaliadores certificados e instrutores de treinamento, além de atender a população de Redactors da região ao redor. Todas compartilham o mesmo currículo, os mesmos padrões de certificação e os mesmos protocolos — definidos e aplicados pelo Apocachynthion a partir do Binding, em Kalt'sen.
-
-A mais famosa delas — aquela que a maioria das pessoas imagina quando ouve a palavra "Academy" sem contexto adicional — é a instalação localizada em **Vrenne**. Ela é a academy em funcionamento contínuo mais antiga da rede, a maior em número de matrículas e aquela cuja presença moldou tanto a cidade ao redor que, ao longo dos séculos, a identidade de Vrenne e a presença da Academy se tornaram praticamente inseparáveis. Ela abriga funções especializadas que academias regionais menores não mantêm e recebe Redactors vindos de todo o Empire quando seus casos exigem expertise impossível de encontrar localmente.
-
-As Academies são o principal ponto de contato entre o Apocachynthion e a população geral. Quando uma pessoa manifesta aptidão para Redactory — seja identificada por monitoramento institucional, pelas próprias redes de recrutamento das Academies ou por denúncia civil — a matrícula se torna obrigatória. Não é uma escolha da pessoa nem da família. É uma exigência da lei imperial.
-
-### Avaliação
-
-As Academies conduzem o processo formal pelo qual as habilidades de um Redactor são avaliadas, categorizadas e direcionadas para trajetórias de atuação apropriadas após a certificação. A avaliação é realizada por membros de rank Stylus e serve como base para o registro classificatório construído pelo Registry Branch para cada Redactor.
-
-As Academies tambem emitem o **Point** do Redactor: um dispositivo regulado de BrightCrystal que carrega identidade, credenciais de pratica, estado de acesso e a interface tecnica usada pelos sistemas da Academy e do Registry. O treinamento fundamental inclui manuseio do Point, autenticacao CAS, disciplina de acesso a Leaf e a regra de que registros roteados pelo Point nao definem a metafisica do Redactor. Eles definem a capacidade institucional de reconhecer, permitir e auditar o trabalho.
-
----
-
-## O Sistema de Ranks
-
-A estrutura de ranks do Apocachynthion utiliza a linguagem do ofício da escrita — uma metáfora presente na instituição desde sua fundação, quando seus primeiros membros descreviam a Redactory como uma forma de inscrição sobre a estrutura física da realidade.
-
-### The Nib {#nib}
-
-Nib é o rank inicial, ocupado por todo Redactor desde o primeiro dia de matrícula em uma Academy até a conclusão do treinamento fundamental e aprovação no exame inicial de certificação. Um Nib permanece sob supervisão ativa durante todo o treinamento. Operações independentes fora dos terrenos da Academy não são permitidas. O tempo necessário nesse rank varia bastante entre indivíduos.
-
-### The Quill {#quill}
-
-O rank Quill é concedido após aprovação no exame de certificação que encerra o treinamento fundamental. Ele representa o rank operacional do Apocachynthion — a designação ocupada pela maioria dos membros ativos ao longo de suas carreiras profissionais. Um Quill é um Redactor totalmente certificado, autorizado a operar de forma independente, aceitar atribuições institucionais e utilizar suas habilidades dentro dos limites definidos pelo seu perfil avaliado. A maior parte dos Redactors se aposenta como Quill após carreiras longas e respeitadas.
-
-### The Stylus {#stylus}
-
-O rank Stylus representa domínio comprovado dentro da própria área de competência. Ele não é concedido apenas através de exames — é conferido pelo Council of Volumes após uma revisão formal de todo o histórico operacional de um Quill e dos testemunhos de membros seniores que trabalharam ao lado do candidato. Um Stylus não é necessariamente o Redactor mais poderoso da associação. Mas está entre os mais confiáveis — algo que a instituição considera igualmente importante.
+Todo instrutor que comanda Redactory ativa é um Stylus com certificação pedagógica. Quills podem auxiliar ou demonstrar, e não-Redactors podem ensinar medicina, engenharia, direito, história ou outras matérias não práticas. Quando uma aula entra no Dive, a autoridade prática passa ao Stylus qualificado. A autoridade clínica permanece com **VÆstar**, o serviço da Academy para lesões e recuperação de Redactory.
 
 ## Rank e Mark {#rank-and-mark}
 
-O Apocachynthion distingue entre **Rank** e **Mark**.
+O registro mantém separadas várias perguntas:
 
-Rank nomeia o instrumento institucional: **Nib**, **Quill** ou **Stylus**. Mark nomeia a permissao: o grau de pratica de Redactory que a instituicao permite naquele momento.
+- **Rank** registra formação e responsabilidade profissional.
+- **Mark** registra qual prática é permitida no presente.
+- **Anchor** descreve a rota conceitual estabilizadora do Redactor.
+- **Anchor Depth** descreve onde essa rota se assenta nas strata.
+- **Reach** descreve até onde a prática pode se estender lateralmente a partir dela.
+
+Papelada pode abrir permissão. Ela não pode promover uma Anchor nem fabricar controle.
+
+### Nib {#nib}
+
+Um **Nib** está em formação formal. Nib não é idade nem julgamento de poder: um adulto que manifesta aos quarenta começa como Nib, e um adolescente perigoso continua Nib até concluir a formação. O percurso comum dura cerca de cinco anos, embora existam tanto exames antecipados quanto trilhas modificadas mais longas.
+
+### Quill {#quill}
+
+Um **Quill** concluiu a certificação profissional e pode trabalhar de forma independente dentro do Mark atual. A maioria dos Redactors profissionais permanece Quill. O Rank permite prática profissional; não promete maestria, uso irrestrito de apparati ou aptidão para qualquer campo.
+
+### Stylus {#stylus}
+
+Um **Stylus** demonstrou controle maduro, julgamento confiável e fluência prática profunda. Stylus não significa apenas “mais poderoso”. O Rank reconhece o Redactor cujas rotas familiares se tornaram confiáveis o bastante para sustentar ensino, avaliação, trabalho complexo e responsabilidade institucional.
 
 ### Mark {#mark}
 
-A sequencia padrao vai de **No Mark** ate **Mark 5**. Um Redactor pode ter rank alto e Mark restrito, ou rank modesto e escopo ampliado em condicoes excepcionais.
+Marks vão de **No Mark** a **Mark 5**:
 
-### Open Mark {#open-mark}
+- **Mark 1** — formação supervisionada, reavaliação ou recuperação.
+- **Mark 2** — prática cívica independente comum.
+- **Mark 3** — trabalho de campo, militar, industrial severo ou comparável.
+- **Mark 4** — prática em thinness, perigosa, de alta Depth ou adjacente a anomalias.
+- **Mark 5** — intervenção estratégica ou catastrófica garantida individualmente.
 
-Um **Open Mark** e a ampliacao temporaria do Mark normal durante uma emergencia real. Ele nao substitui o registro de base. Ele reconhece que a situacao excedeu o escopo ordinario permitido.
+Um Stylus não recebe Mark 5 automaticamente, e um Quill pode ser restrito a Mark 1. A permissão acompanha risco demonstrado, condições e responsabilidade, não prestígio.
 
 ### Margins {#margins}
 
-**Margins** sao as restricoes em torno de um Mark: o que precisa ser reportado, o que exige supervisao e o que continua proibido.
+**Margins** escrevem os limites ao redor de um Mark: local, classe de apparatus, dever de relatório, supervisão, recuperação ou trabalho proibido. Uma capacidade ampla pode permanecer dentro de uma faixa legal estreita.
 
 ### Blots {#blots}
 
-**Blots** sao falhas registradas, eventos de ma conduta ou incidentes sem controle. Eles importam porque o sistema de Mark mede permissao e tambem confianca institucional.
+Um **Blot** é uma conclusão formal no practice record ligada a má conduta, trabalho não autorizado, evento sem controle ou falha danosa. Um acidente não se torna Blot automaticamente, e uma restrição técnica não é condenação criminal.
 
 ### Seal {#seal}
 
-**Seal** nomeia a autoridade que confirmou, renovou, restringiu ou abriu o Mark. O Seal registra quem responde por aquela permissao.
+Um **Seal** identifica a autoridade que confirmou, renovou, restringiu, abriu ou blotted um Mark. Ele responde quem aceitou responsabilidade pela permissão.
 
-### Leaf {#leaf}
+### Open Mark {#open-mark}
 
-**Leaf** nomeia o tipo de arquivo sob o qual o praticante e registrado. O termo preserva a metafora de escrita que o Apocachynthion usa desde a fundacao.
+Um **Open Mark** amplia temporariamente a permissão para uma emergência, operação, local, classe de apparatus, duração e cadeia de responsabilidade definidos. Não é promoção e termina com a condição que o justificou.
 
-### Point, CAS e Point Register {#point}
+## Files, Points, CAS e Leaves
 
-Um **Point** e emitido pela Academy apos o intake e permanece ligado a identidade institucional do praticante. Ele nao e fonte magica, badge de rank ou prova de capacidade metafisica. Ele e o apparatus regulado pelo qual a associacao confirma quem esta trabalhando, quais arquivos podem ser acessados, o que o Mark atual permite e onde um registro de evento deve ser escrito.
+A Association usa linguagem de escrita tanto para a burocracia quanto para a tecnologia, mas os termos não são intercambiáveis.
 
-A camada **CAS** associada cuida de autenticacao, sincronizacao e controle de acesso entre o Point e os sistemas institucionais. Um Redactor pode carregar um Point com acesso CAS limitado ou suspenso. Um arquivo restrito pode existir e ainda assim permanecer indisponivel por credenciais comuns de Point.
+### Point e Point register {#point}
 
-O **Point Register** e, portanto, uma questao legal e arquivistica. Registry Branch, avaliadores da Academy, Pagers e processos selados pelo Council podem enxergar partes diferentes da mesma historia do praticante. O Point torna essa segmentacao aplicavel sem fingir que a burocracia e a fonte da Redactory.
+Um **Point** é um apparatus de BrightCrystal emitido pela Academy e ligado à identidade institucional do praticante. Ele pode ser carregado ou implantado. Auxilia routing, autenticação, schematics permitidos, alertas e registros protegidos de eventos; não cria Redactory.
 
-Em registros teoricos de acesso restrito, o Index Theorem tambem preserva uma hipotese sobre **Shorewalking**. Isso nao e doutrina operacional comum. Dentro da associacao, fica no mesmo nivel de uma teoria especulativa de grande escala: util para explicar por que certos relatos de Dive-depth extremo deixam de se comportar como Redactory ordinaria, mas perigoso demais para ser ensinado como tecnica alcancavel.
+Seu **Point register** registra trabalho roteado pelo Point e histórico relevante de configuração. Não é uma transmissão ao vivo de cada ato, uma transcrição de pensamentos ou prova de motivo. O acesso exige processo formal e deve ser limitado ao evento ou período relevante.
 
-### A Designação Inkless {#inkless}
+### CAS
 
-Além dos três ranks fundamentais, o Apocachynthion mantém uma designação paralela chamada **Inkless**. Um Redactor Inkless é alguém cujo perfil de habilidade não pode ser mapeado para nenhum domínio consistente através dos procedimentos padrões de avaliação — independentemente dos instrumentos ou avaliadores utilizados. Todo Redactor possui um caminho conceitual estabilizador através do qual sua prática opera. O caminho de um Inkless é real e comprovadamente existe. Ele apenas não pode ser lido externamente.
+O **Common Apparatus Set**, ou **CAS**, é o conjunto básico de dez Leaves emitido durante a formação. Ele oferece um piso compartilhado de apparati sem tornar cada schematic igualmente compatível com cada Anchor.
 
-Essa designação aparece nos registros internos da instituição e em briefings operacionais relevantes. Em campo e na vida comum, um Redactor Inkless é visualmente indistinguível de qualquer outro membro da associação.
+### Leaves {#leaf}
 
----
+Uma **Leaf** é um substrato durável de BrightCrystal que carrega um schematic inscrito. É tecnologia, propriedade e ofício licenciado — não um dossiê de registro. Files são os registros; Leaves carregam rotas.
 
-## Os Pagers {#pagers}
+Registry Files, Formation Files, Practice Files, Sealed Files, Pager Files, Black Files e Folio-Sealed Files guardam a história institucional. Um Point pode carregar Leaves que seu dono não tem permissão legal para abrir sob o Mark atual.
 
-O braço de execução institucional do Apocachynthion é chamado de **Pagers** — um nome derivado de um antigo termo administrativo usado para definir os limites formais de uma jurisdição, a linha além da qual alguém deixa a proteção da instituição que abandonou.
+## Inkless {#inkless}
 
-### Estrutura Interna
+**Inkless** é uma designação, não um quarto Rank. Ela se aplica quando o trabalho de um Redactor é real e repetível, mas a Academy não consegue ler a Anchor através da avaliação padrão. A formação passa a enfatizar comportamento observado, estabilidade no Dive e revisão frequente, em vez de fingir que uma rota ilegível não existe.
 
-**The Registry Branch** é responsável pela detecção, registro e monitoramento de conformidade de Redactors em todas as três macro-regiões. O ramo mantém contato ativo com redes de recrutamento das Academies e gerencia o processo formal de matrícula de indivíduos recém-identificados. O Registry também mantém o sistema classificatório e os registros institucionais.
+Redactors Inkless podem se qualificar em qualquer Rank. A designação registra a incerteza da instituição, não ausência de Anchor nem uma pessoa inferior.
 
-**The Field Branch** conduz operações ativas — missões de proteção, perseguição e captura de indivíduos atuando fora da autoridade institucional, contenção de ameaças imediatas e outras funções de campo relacionadas.
+## Pagers {#pagers}
 
-**The Review Branch** conduz investigações disciplinares internas e coordena processos formais junto aos arquivistas da associação quando casos exigem geração de registro institucional.
+Os **Pagers** são o braço de execução e proteção do Apocachynthion. O Registry Branch cuida de reconhecimento e contato proporcional de conformidade; o Field Branch cuida de ameaças técnicas imediatas e operações de proteção; o Review Branch investiga má conduta profissional.
 
-Os Pagers são liderados por um **Page Warden** — um membro de rank Stylus eleito pelos próprios pares para um mandato de seis anos e confirmado pelo Council of Volumes.
+Pagers não são policiais comuns. Se Redactory for usada em um crime, autoridades civis e cortes mantêm soberania criminal enquanto Pagers cuidam de contenção técnica, evidência, restrição de Mark e disciplina profissional em paralelo. Manifestação não registrada começa como problema de proteção e registro, não como prova de fuga criminosa.
 
-### Jurisdição
+O mesmo limite se aplica à contenção. Pagers podem ordenar restrição curta e segura para Redactory e peticionar por medidas mais longas. Contenção institucional permanente exige aprovação unânime do Council, uma ordem da Imperial Court e revisão civil contínua.
 
-Os Pagers não são a polícia imperial. Sua jurisdição é especificamente institucional — relacionada a Redactors, prática de Redactory e violações da lei imperial ligadas a essas duas coisas. Em questões puramente institucionais — Redactors não registrados, violações de protocolos operacionais de conduta — os Pagers atuam com autoridade totalmente independente.
+## Governança e responsabilidade
 
-As forças militares já argumentaram, em diferentes momentos da história imperial, que Redactors incorporados a formações militares deveriam responder à lei militar durante mobilizações ativas. O Apocachynthion rejeita essa interpretação de forma consistente desde a primeira ratificação do Compact of Institutional Authority.
+Nove Styluses de longa carreira formam o **Council of Volumes**. O **Folio** eleito o preside, representa a Association diante da Crown, do Senate e da SiNE e pode cumprir no máximo dois mandatos de doze anos. O Council se reúne em **the Binding**, o complexo austero de Kalt'sen que abriga o arquivo central e os registros mais restritos da instituição.
 
-### Autoridade de Contenção
+A autoridade do Apocachynthion funciona melhor quando mantém perigo, permissão e responsabilidade legíveis. Suas falhas recorrentes começam quando verdade técnica é confundida com jurisdição total — ou quando o segredo deixa um alerta correto isolado das outras instituições capazes de agir.
 
-Os Pagers detêm a única autoridade institucional do Empire capaz de ordenar a contenção formal de um Redactor avaliado como ameaça ativa e contínua à segurança pública. Ordens de contenção exigem aprovação do Council e estão entre as decisões mais cuidadosamente revisadas de toda a instituição.
-
----
-
-## Setores de Carreira
-
-Após a certificação, Redactors são direcionados para atuação em diferentes setores com base em seu perfil avaliado, classificação e necessidades institucionais:
-
-- **Serviço militar** — suporte Redactor integrado aos teatros ativos de conflito do Empire
-- **Aplicação industrial** — uso de Redactory em manufatura, extração e processamento de materiais
-- **Gestão de infraestrutura** — manutenção e operação de sistemas cívicos dependentes de Redactory
-- **Pesquisa científica** — pesquisa teórica e aplicada conduzida através da instituição ou em parceria com ela
-- **Administração estatal** — funções de Redactor integradas à governança imperial
-
-A alocação é conduzida de forma colaborativa entre o indivíduo, a equipe de avaliação de especialização da Academy e o Registry Branch.
+Sua melhor regra moderna é também a mais simples: **um Redactor é uma pessoa antes de ser um praticante**.

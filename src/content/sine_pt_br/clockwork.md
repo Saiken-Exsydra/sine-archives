@@ -1,85 +1,112 @@
 ---
 title: "CLOCKWORK"
 type: "Organização"
-designation: "Divisão Redactor Não Registrada - Interna da SiNE"
-affiliation: "SiNE - sem registro público - negabilidade operacional absoluta"
-headquarters: "Não divulgado"
-founded: "Data não estabelecida em nenhum registro acessível"
-jurisdiction: "Twilight Band e fronteiras - parâmetros operacionais definidos internamente"
+designation: "Instrumento Redactor Clandestino Exclusivo do Seat"
+affiliation: "Wonderwall Seat - fora do comando do Meridian, da Coroa, da HourGlass, da Clepsydra e da Apocachynthion"
+headquarters: "Sem quartel-general único"
+founded: "Autoridade do Acordo: Ano 1126; Twelve Hours permanentes: Ano 1682"
+jurisdiction: "Qualquer teatro nomeado por um objetivo válido do Seat"
 status_label: "Ativa - existência não reconhecida formalmente"
-summary: "Cento e quarenta e quatro Redactors. Doze unidades operacionais. Zero presença institucional."
-tags: ["CLOCKWORK", "SiNE", "Redactory", "Unregistered", "Organization", "Hours", "Dial", "Secret"]
-status: "public"
+summary: "Exatamente 144 Redactors ativos. Doze Hours de doze. O Seat nomeia o objetivo; o Dial traduz; uma Hour desfere o golpe."
+tags: ["CLOCKWORK", "SiNE", "Redactory", "Unregistered", "Organization", "Hours", "Dial", "Secret", "Time Fragment"]
+status: "private"
 created: "2026-03-30"
-updated: "2026-05-10"
+updated: "2026-08-23"
 image: "../../assets/uploads/sine-clockwork.png"
 ---
 
-> *"O Dial gira. As Hours operam. O trabalho é concluído. Ninguém pergunta quem fez."*
-> - Designação interna, nível de classificação da fonte omitido
-
----
+> **"Há crises que a HourGlass pode resolver. Há crises que as Forças Armadas Imperiais podem resolver. Quando nenhuma das duas basta, o Dial gira e uma Hour é golpeada."**
 
 ## O Que é a CLOCKWORK
 
-A CLOCKWORK é uma divisão interna da SiNE cuja existência não é reconhecida em nenhum documento público. Ela não é registrada no [[apocachynthion|Apocachynthion]]. Seus praticantes não aparecem em nenhum registro institucional de certificação. Suas operações não existem em nenhuma cadeia de relatórios que ultrapasse as estruturas internas mais restritas da SiNE.
+A CLOCKWORK é o último instrumento militar clandestino do Wonderwall Seat. Ela é usada em objetivos cuja capacidade, sigilo ou exposição política necessária os coloca além do que a [[hourglass|HourGlass]] e as Forças Armadas Imperiais conseguem resolver.
 
-Ela consiste em **144 Redactors** organizados em **doze unidades operacionais**, cada uma identificada por um codinome temporal — DAWN, MORNING, RISE, MERIDIAN, NOON, AFTERNOON, DUSK, EVENING, FALL, ZENITH, NIGHT e uma décima segunda designação que não aparece em nenhum registro sobrevivente de comunicações internas.
+Ela não é um ramo da SiNE, um comando de ação especial da HourGlass, uma subdivisão do Meridian, um serviço de transferência legal, um tribunal humanitário, um registro de anomalias, uma agência geral de inteligência ou um departamento convencional de assassinos. Ela pode infiltrar, assassinar, sabotar, capturar, extrair e destruir porque essas funções pertencem a Hours específicas. Nenhuma delas, isoladamente, define a instituição.
 
-Três dessas doze unidades carregam a designação de **Paramount Hour** — uma classificação que indica autorização operacional elevada e que, na prática, corresponde às unidades destacadas contra alvos e condições para os quais as outras nove unidades não possuem autorização.
+A CLOCKWORK possui exatamente **144 postos ativos de Redactors**: **doze Hours de doze**, cada uma liderada por um **Hourhand**, também chamado de **Hand**. Todo agente ativo é um Redactor genuíno. Instrutores, analistas, armeiros, cirurgiões, pilotos, equipes de cobertura e candidatos não fazem parte dos 144.
 
----
+## O Seat e o Dial
 
-## O Dial
+A cadeia de comando possui três etapas:
 
-O **Dial** é a estrutura interna de autoridade de comando da CLOCKWORK — o órgão responsável por autorizar operações, designar Hours para engajamentos e manter registros que não existem para nenhuma audiência externa. A composição do Dial não é documentada fora do nível mais restrito dos registros internos da SiNE.
+1. Apenas o **Wonderwall Seat origina o objetivo**.
+2. O **Dial traduz** esse objetivo em uma Hour, uma cadência, um intervalo de entrada e uma condição terminal.
+3. O **Hourhand executa** o golpe.
 
-O Meridian Council — órgão público de governança da SiNE — sabe da existência da CLOCKWORK. Mas ele não governa as decisões operacionais do Dial. A relação entre o Meridian Council e o Dial é baseada em consciência estratégica e alinhamento institucional, não em supervisão operacional.
+O Dial não é um comitê, máquina, inteligência artificial, título ou conselho de comandantes. Ele é um único **Time Fragment** coerente com forma de pessoa: o mesmo Fragmento local que realizou o Twelve-Beat Hold no Ano 0, durante Luapside.
 
-Em'manuel Wonderwall possui uma relação com o Dial que não aparece em nenhum organograma.
+Ele não enxerga um futuro concluído, não cria informação, não concede profecia, não reverte a história e não dá poderes temporais à CLOCKWORK. Ele percebe cadência, densidade de ramificações e pressão de travessia. Em operações normais, organiza a exposição a fatos que já existem e posiciona uma Hour onde uma rota presente pode ser usada.
 
----
+Sua intervenção direta é limitada, custosa, rara e escolhida por ele. Aparições em locais incompatíveis são manifestações seletivas ao longo de sua própria ordem de travessia, não clones.
 
-## Por Que Ela Existe
+O Dial é inteligente, observador, agradável e sutilmente brincalhão por meio de ritmo e sequência. Ele não é a consciência moral da CLOCKWORK. Pode recusar um objetivo que exija posse do Tempo, um futuro fabricado, suspensão permanente ou substituição contínua da consequência humana. Ele não certifica que a violência do Seat é moralmente correta.
 
-A distância entre aquilo que a HourGlass pode fazer oficialmente e aquilo que os interesses estratégicos da SiNE ocasionalmente exigem não é pequena. Ela foi calculada.
+## O Accord of the Unspent Beat
 
-As situações em que a HourGlass não pode agir oficialmente — porque a linguagem de um tratado proíbe a operação, porque a supervisão do Apocachynthion acionaria respostas institucionais que complicariam o objetivo ou porque o alvo produziria consequências políticas caso a operação fosse atribuída oficialmente — não são exceções teóricas. São necessidades operacionais recorrentes.
+A autoridade oculta sob a CLOCKWORK começou no Ano 1126. Depois que o Anchor de Intervalo de Em'manuel dirigiu-se ao Remainder sob a Scorch Margin, o Time Fragment de Luapside apareceu diante dele em uma sala comum de planejamento. Vael'Theryn manifestou-se como testemunha de limite.
 
-A CLOCKWORK existe para esses casos. Ela atua onde as divisões formais não podem atuar, contra alvos para os quais as divisões formais não possuem autorização, utilizando uma presença operacional projetada para permanecer invisível a todos os sistemas institucionais de monitoramento voltados para implantações padrão de Redactors.
+O **Accord of the Unspent Beat** resultante concede a um Wonderwall Seat reconhecido o **Right of Striking**: o Seat pode apresentar um objetivo mortal, e o Dial pode aceitá-lo, recusá-lo ou traduzi-lo. O vínculo não cria propriedade.
 
-A infraestrutura de registro e monitoramento do Apocachynthion foi construída sobre a premissa de que todos os Redactors operacionalmente capazes estão registrados. A CLOCKWORK representa uma falha deliberada nessa premissa. Os 144 praticantes da CLOCKWORK possuem capacidade operacional — alguns deles em níveis extremamente elevados — e nenhum aparece em qualquer registro acessível ao Apocachynthion.
+Vael'Theryn não comanda o Dial nem aprova missões. O Remainder não é signatário nem fonte de poder. A CLOCKWORK não recebe habilidades temporais.
 
-Se o Apocachynthion já deduziu a existência da CLOCKWORK através de anomalias operacionais — incidentes em que a assinatura forense aponta envolvimento de Redactory sem que qualquer praticante registrado possa ser identificado como responsável — é uma questão que ambas as instituições possuem motivos para deixar sem resposta formal.
+Um sucessor legal do Wonderwall Seat não herda automaticamente o Right of Striking. O Dial precisa reconhecer separadamente a pessoa instalada. Durante um Empty Seat, aplica-se o **Unstruck Hold**: nenhum objetivo novo pode ser originado, e golpes já ativos só podem concluir, abortar, extrair ou negar sob sua última ordem válida.
 
----
+## As Doze Hours
 
-## Parâmetros Operacionais
+| Hour | Nome | Função |
+|---:|---|---|
+| I | **Dawn** | reconhecimento, desenvolvimento de alvo e verdade ambiental |
+| II | **Aurora** | infiltração, acesso, personificação e posicionamento clandestino |
+| III | **Midnight** | assassinato e remoção letal precisa |
+| IV | **Eclipse** | ação contra Redactors |
+| V | **Nova** | sabotagem, demolição e destruição de infraestrutura |
+| VI | **Twilight** | Stase, Fog, Calling, Thinness e falhas de BrightCrystal ou continuidade |
+| VII | **Apex** | ação direta contra forças superiores e ativos fortificados |
+| VIII | **Nadir** | contrainteligência, traidores, comprometimento de memória e percepção, expurgo interno |
+| IX | **Equinox** | sincronização de múltiplos Anchors e comando de várias Hours |
+| X | **Solstice** | recuperação, captura e apreensão |
+| XI | **Horizon** | extração e transporte impossível |
+| XII | **Zenith** | encerramento terminal, negação, destruição de provas e prevenção de uma segunda tentativa |
 
-A CLOCKWORK não opera sob a mesma doutrina da HourGlass. Ela não é uma força de armas combinadas. Seus engajamentos são especializados, frequentemente conduzidos por um único praticante ou pequenas equipes, focados em objetivos específicos que exigem capacidade de Redactory em vez de escala militar.
+**Twilight, Equinox e Zenith são Paramount Hours.** Zenith não é um gabinete de ética nem um órgão de dissenso interno. Ela pode destruir um local comprometido, uma cadeia de testemunhas, um objetivo ou outra Hour se isso for necessário para manter o golpe concluído.
 
-O sistema de codinomes temporais é operacional, não cerimonial: as unidades da CLOCKWORK são designadas pelo Dial de acordo com a compatibilidade entre os requisitos da missão e as capacidades dos praticantes. DAWN não é uma unidade enviada primeiro. DAWN é uma unidade cuja arquitetura específica existe para lidar com um tipo específico de problema. A lógica interna por trás dessas designações não aparece em nenhum registro acessado fora do Dial.
+## Escala de Emprego
 
-As Paramount Hours — as três unidades com autorização elevada — lidam com operações que as nove unidades padrão não podem receber. O que diferencia uma operação de Paramount Hour de uma operação convencional não é apenas o nível de ameaça. É a natureza daquilo que está sendo enfrentado e os parâmetros aceitáveis para sua resolução.
+- **Quarter-hour:** três agentes.
+- **Half-hour:** seis agentes.
+- **Striking the Hour:** os doze membros de uma Hour.
+- **Full Revolution:** várias Hours, normalmente sincronizadas pela Equinox.
 
----
+Full Revolutions são raras. Elas queimam identidades de cobertura, concentram resíduos de Redactory não registrados, pressionam o acesso a Points e a logística e criam um padrão que um adversário pode comparar.
 
-## Negabilidade Absoluta
+## Seleção e Treinamento
 
-O princípio central de design da CLOCKWORK é a negabilidade institucional absoluta. Não negabilidade plausível — não o tipo de situação em que alguém poderia investigar e encontrar rastros se procurasse o suficiente. O objetivo estrutural é outro: investigações não encontram nada porque não existe nada para encontrar.
+A CLOCKWORK não aceita candidaturas. Dawn e Nadir mantêm uma Quiet List de praticantes observados na Academy, na [[apocachynthion|Apocachynthion]], nas forças armadas, na HourGlass, em serviços das Houses, em resposta a desastres, em instituições estrangeiras e na prática independente.
 
-Isso exige manutenção constante. Os 144 praticantes da CLOCKWORK não são pessoas que simplesmente escaparam do registro do Apocachynthion por acaso. São indivíduos removidos deliberadamente da visibilidade institucional, recrutados antes de entrarem no sistema de registro ou inseridos na CLOCKWORK através de métodos que não deixaram rastros convencionais.
+Os candidatos passam pelo **Winding**, um processo de seleção criado para remover acesso a Points, status, sono, comando familiar e vantagem de Redactory. Os selecionados concluem o **Common Measure**: resistência física, combate próximo, armas de fogo, lâminas, arrombamento, demolição, sabotagem, infiltração, exfiltração, vigilância, disfarce, inteligência, resistência a interrogatório, evasão, medicina, navegação, sobrevivência, veículos, idiomas, comunicações, cativeiro, ação contra Redactors, exposição a Calling, contradição de Stase, Thinness, Shores e operações sem Redactory.
 
-Manter esse nível de negabilidade em toda a população de praticantes — ao longo de ciclos operacionais que exigem implantação contínua — representa um esforço administrativo significativo por parte de quem administra as operações internas da CLOCKWORK. Esse esforço já existe há tempo suficiente para funcionar com fluidez institucional, não como esforço ativo. A infraestrutura da invisibilidade foi construída há muito tempo e refinada continuamente desde então.
+Hour Formation testa a ecologia de Anchors, não apenas força bruta. Um Redactor precisa tornar a Hour inteira mais resiliente. O exercício real final, **the Strike**, preenche uma vaga ativa.
 
----
+Morte, aposentadoria, ferimento, CAS, colapso de Anchor, Drowning, exposição ou falha psicológica removem um agente dos 144. Uma vaga permanece vazia até que um substituto qualificado conclua todo o percurso.
 
-## O Que é Conhecido Externamente
+## Sigilo
 
-O Meridian Council sabe. Em'manuel sabe. Além disso, o conhecimento é rigidamente controlado e compartimentalizado.
+O público não sabe nada confiável. Agentes comuns da HourGlass ouvem rumores. Veteranos podem acreditar que o Seat mantém uma capacidade não declarada. O comando superior da HourGlass sabe apenas que algum instrumento direto talvez exista. O Meridian pode inferir despesas excepcionais sem ver lista de agentes ou cadeia de comando. A Apocachynthion vê praticantes desaparecidos, Marks seladas, históricos de Points bifurcados e resíduos não registrados. A Clepsydra vê artefatos adjacentes à travessia. A Coroa mantém teorias concorrentes.
 
-O Império oficialmente não sabe. Estruturas militares e de inteligência Imperiais encontraram, ao longo de uma longa história operacional, resultados que não conseguiam explicar através das atribuições institucionais disponíveis. Se alguém dentro dessas estruturas concluiu em particular que a SiNE mantém capacidades de Redactory não registradas e escolheu não perseguir as implicações disso, trata-se de julgamento individual, não de registro oficial.
+A maioria dos agentes da CLOCKWORK conhece o Dial apenas como um homem estranho e consistente. Os Hourhands sabem que ele não é humano e está ligado à travessia. Pouquíssimos sabem que ele é o Time Fragment de Luapside.
 
-[[the-church|A Igreja]] não sabe — pelo menos não de forma que possa ser confirmada pelos próprios registros institucionais. Membros individuais do [[obsidian-rite|Obsidian]] nos níveis operacionais mais altos — pessoas que atuam nos conflitos da fronteira norte há tempo suficiente para perceber padrões — podem ter desenvolvido suspeitas. Suspeita não é conhecimento, e o Obsidian não age baseado em suspeitas quando o custo institucional de errar sobre um parceiro de tratado seria significativo.
+## Operações Registradas
 
-A CLOCKWORK nunca foi confirmada por nenhuma instituição externa desde sua fundação. Essa é a evidência mais simples de que ela foi projetada corretamente.
+- **1682 - Kel'rath Black Receipt:** a primeira Full Revolution desmonta a rede de cópia de cadência por infiltração, apreensão, assassinato e negação terminal.
+- **1768 - Nine-Night Cut:** Twilight, Horizon e Equinox preservam um corredor sem Points e quebram uma rede de sabotagem enquanto as forças visíveis realizam a evacuação em massa.
+- **1895 - The Glass Measure:** Dawn e Nadir espionam a Clepsydra para testar se uma captura hostil poderia cegar os sistemas estratégicos da SiNE.
+- **2186 - Orison Relay:** Solstice apreende um núcleo estratégico e um instrumento de continuidade de uma célula de aquisição hostil; Horizon extrai o técnico sobrevivente e depois posiciona a cena dividida dentro dos sistemas legais públicos.
+- **2196 - Nacre Third Fragment:** Solstice apreende três fragmentos; dois chegam anonimamente à Clepsydra, e Zenith destrói o terceiro instável e a cadeia de comissionamento.
+
+A First Refusal de 1841 e a retirada de E'lla do Kaleidoscope em 2179 são atribuições falsas à CLOCKWORK. Ação oculta não explica todo acontecimento sob o Seat.
+
+## Limites
+
+A CLOCKWORK não pode manter território em escala militar, substituir governo civil, sustentar uma frente, fabricar boa inteligência, ignorar limites de Anchor e Dive, garantir acesso a Points, tornar verdadeira uma geometria inválida de Glass, derrotar todo Archtype ou Calling nem depender do Dial para corrigir fracassos.
+
+Seu maior risco é a prova reunida: 144 Redactors ocultos, operações em teatros imperiais sem comando da Coroa, encerramentos terminais da Zenith, um Time Fragment por trás das ordens e séculos de intervalos ausentes que o Remainder pode aprender a ler como uma única estrutura.

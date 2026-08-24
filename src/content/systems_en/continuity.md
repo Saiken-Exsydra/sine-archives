@@ -5,7 +5,7 @@ summary: "The structural condition by which a thing remains identifiable as itse
 tags: ["systems", "Continuity", "Self-Address", "Stabilistics", "Katherine Flarian", "Shorefall", "Shorewalking", "Time", "Resonance", "Harmonics"]
 status: "public"
 created: "2026-06-25"
-updated: "2026-06-25"
+updated: "2026-08-23"
 image: ""
 ---
 
@@ -68,7 +68,15 @@ A **continuity scar** is stabilized residue from a prior wound. It may remain le
 
 **Continuity lock** is a forced self-agreement window. It does not solve a contradiction permanently and does not defeat a Shore. It holds local identity conditions long enough to prevent collapse, evacuation failure, contradiction spread, aperture widening, or catastrophic translation.
 
-A Local Continuity Lock may be technology-assisted, procedural, architectural, or instrument-calibrated. It is not Redactory by default and does not require the operator to be a magical practitioner.
+A Local Continuity Lock may be technology-assisted, procedural, architectural, or instrument-calibrated. It is not Redactory by default and does not require the operator to be a magical practitioner. Trained teams can establish and maintain one; Katherine Flarian is the most capable improvisational operator, not the only person able to use lock doctrine.
+
+## Continuity Severance
+
+**Continuity Severance** weakens one event-set's monopoly on being treated as the only valid continuation. It does not erase an event, rewrite the past, choose a preferred history, or manufacture a new one.
+
+Severance is used only after a lock has exposed competing continuations. It creates a moment in which the affected person or structure is no longer forced to accept one authored sequence as inevitable. What follows must be carried by the surviving continuity and, where a person is involved, by that person's choice.
+
+The technique is unique to [[katherine-flarian|Katherine Flarian]]. Teams can train in locks, mapping, and the technology that sustains the operating window; they cannot reproduce her severance by following a procedure.
 
 ---
 
@@ -128,9 +136,9 @@ Katherine Flarian is the founding institutional case for Continuity-Sensitive cl
 
 Her nervous system was structurally altered by exposure to non-sequential phenomena. She registers local continuity failure as pain, pressure, timing drag, bodily delay, and self-agreement stress before instruments fully resolve the event.
 
-Her Stabilistics work, Continuity Mapping, and Local Continuity Lock procedures prove that continuity can be wounded and made operationally legible without granting ordinary practitioner status.
+Her Stabilistics work, Continuity Mapping, Local Continuity Lock procedures, and unique Continuity Severance prove that continuity can be wounded and made operationally legible without granting ordinary practitioner status.
 
-Katherine does not Shorewalk by default. She does not Shorefall by default. Her work concerns the conditions that keep rooms, sites, systems, and people from losing self-agreement badly enough that Shorefall-like or breach-like phenomena become possible.
+Katherine does not Shorewalk by default and is not a human Anchor. Her work concerns the conditions that keep rooms, sites, systems, and people from losing self-agreement badly enough that Shorefall-like or breach-like phenomena become possible. In a sealed clinical continuity intervention, her severance interrupted a terminal sequence long enough for the patient to choose what followed.
 
 ---
 

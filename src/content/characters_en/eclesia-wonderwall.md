@@ -4,25 +4,25 @@ type: "Character"
 age: "22 (at time of filing, 2200)"
 birth_year: "2178"
 birthplace: "Kalt'sen, Central Region, Empire of Synus"
-affiliation: "Apocachynthion (restricted review; Inkless designation)"
+affiliation: "Apocachynthion; House Wonderwall"
 house: "Wonderwall (Yalara cadet branch; full House standing, no corporate office)"
-rank: "Quill (Provisional)"
-registry_status: "Registered - Quill provisional, Inkless designation, Mark 1; ordinary intake suspended under sealed review"
+rank: "Quill (provisional)"
+registry_status: "Registered under specialist Apocachynthion review"
 point_profile:
   status: ""
   cas_access: ""
   leaf_permissions: ""
   register_access: ""
-designation: "The Inkless Color"
+designation: "Yalara Cadet"
 height: "164 cm"
 build: "Slight"
 complexion: "Very pale"
-hair: "Warm brown; pale-gold strands near the temples after Stilllight practice"
-eyes: "Brown with amber flecks; pale-gold rings during active routing"
-dress: "Warm yellows, cream, soft brown, pale green, patterned scarves; Academy greys during practice"
-residence: "Wonderwall estate, eastern residential quarter, Kalt'sen; controlled Academy residence at Lon'drina during active terms"
-occupation: "Provisional student and calibration assistant"
-summary: "Bright, affectionate, nosy, and difficult to intimidate; carries Stilllight, not Light, and stays stable by keeping close to ordinary human life."
+hair: "Warm brown, with pale-gold strands near the temples"
+eyes: "Brown with amber flecks"
+dress: "Warm yellows, cream, soft brown, pale green, and patterned scarves; Academy greys during practice"
+residence: "Wonderwall estate in Kalt'sen; supervised Academy residence at Lon'drina during active terms"
+occupation: "Provisional Academy student and calibration assistant"
+summary: "Bright, affectionate, and difficult to intimidate, Ec'lesia is a young Yalara Redactor whose unusual Radiance expression is developing under close academic supervision."
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
 portrait_gallery:
@@ -33,144 +33,29 @@ tags:
   - "Synus"
   - "Wonderwall"
   - "Redactor"
-  - "Stilllight"
-  - "Inkless"
+  - "Radiance"
   - "Kalt'sen"
   - "Lon'drina"
-  - "Sai'ken Ex'sydra"
-  - "Hisui Kirasagi"
 status: "public"
 created: "2026-02-12"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Eclesia Wonderwall Dossier.md"
-image_position: "center top"
-dossier_quote:
-  text: "She enters rooms as though the world has been waiting for her to arrive, and most rooms, to my continued inconvenience, agree with her."
-  source: "Private Wonderwall notation, year 2200"
-related_links:
-  - label: "Apocachynthion"
-    href: "/organizations/apocachynthion/"
-  - label: "Kalt'sen"
-    href: "/places/kaltsen/"
-  - label: "Lon'drina"
-    href: "/places/londrina/"
-ability_snapshot_section: "Abilities"
-ability_snapshot:
-  - eyebrow: "Anchor Class"
-    title: "Stilllight (Derived Radiance)"
-    body: "Light whose motion has been arrested. Observed rather than emitted. Interacts with perception, memory, and the spaces between events."
-  - eyebrow: "Core Abilities"
-    title: "Observed applications"
-    items:
-      - "Residual Tracing - reads what light left behind."
-      - "Stillness Weaving - arrests light patterns and holds them."
-      - "Gap Perception - senses inconsistencies in records and spaces."
-      - "Echo Anchoring - steadies others by fixing to stable memories."
-      - "Calibration Aid - assists in tuning instruments around Stilllight interference."
 ---
 
-> *"She enters rooms as though the world has been waiting for her to arrive, and most rooms, to my continued inconvenience, agree with her."*
-> - Private Wonderwall notation, year 2200
+Ec'lesia Yalara Wonderwall is a provisional Quill from House Wonderwall's Yalara cadet branch. Her Redactory does not yet fit a settled Academy classification, so her formation continues through a specialist placement at Lon'drina rather than independent field practice.
 
----
+## At Lon'drina
 
-## Overview
+Ec'lesia studies, trains, and assists calibration staff under close supervision. The public record acknowledges an unusual Radiance expression and an ongoing Apocachynthion review; it does not turn that uncertainty into a verdict about her future.
 
-Ec'lesia Yalara Wonderwall is a cadet-branch Wonderwall whose file was misread for years in exactly the way institutions tend to misread unusual people: they mistook the limits of their tools for the truth about her.
+Her status has made ordinary student life more complicated, not impossible. She spends active terms in controlled Academy residence, returns to the Wonderwall household between them, and is expected to build the same practical judgment and support network as any young practitioner learning how to live safely with a demanding Anchor.
 
-Officially she still carries the [[inkless|Inkless]] designation. That does not make Inkless her rank, and it does not mean she lacks an Anchor. It means ordinary Redactory instruments fail to read her correctly. What they call absence is actually **Stilllight**: a derived Radiance-class Anchor concerned not with light as revelation or radiant force, but with light whose motion has been arrested.
+## The Yalara Temperament
 
-That distinction matters. Ec'lesia is not a second E'lla. She is not another primary Light case. She is a different kind of Wonderwall problem altogether.
+Ec'lesia is warm, sociable, inquisitive, and almost disarmingly direct. She collects friends quickly, asks questions that more guarded people avoid, and has little patience for being treated as though caution requires her to disappear. Those habits can make older institutions nervous; they are also part of what keeps her connected to ordinary life.
 
-## Identity
+Her family standing is full but does not place her in corporate office or assign a service obligation to the House. She is a young person in formation before she is an unusual case file.
 
-**Public Identity:** A bright cadet-branch Wonderwall student whose social warmth makes her look far less dangerous than her file suggests.
+## Practice and Care
 
-**Institutional Identity:** A provisional [[quill|Quill]] kept under restricted review, carried institutionally as an [[inkless|Inkless]] case in the Lon'drina calibration apparatus. Her observed Shore relation creates no inherited duty or institutional claim over her.
-
-**Private Truth:** Ec'lesia does have an Anchor. It is **Stilllight**, a derived Radiance condition unusually compatible with gap-structure and the Remainder.
-
-**Primary Tension:** She stays most human by leaning into ordinary life, while every institution around her keeps watching for the version of her that might stop being ordinary at all.
-
-## Personality
-
-Ec'lesia is bright, affectionate, socially fearless, intrusive in the charitable sense, and almost aggressively willing to know people. She remembers names, asks too many questions, collects friends with reckless efficiency, and has a habit of deciding that lonely people should not be left lonely for long. She talks easily, laughs easily, and treats solemnity with very little automatic respect.
-
-That warmth is not shallow. She is more observant and more disciplined than her manner first suggests. Her intelligence is relational and experimental: she learns by noticing what remains after an event, asking embarrassing amounts of follow-up, and building practical models from partial information.
-
-Her public cheer also seems to help keep her stable. Noise, conversation, errands, study groups, shared meals, gossip, and ordinary human contact keep her anchored to lived reality. Silence feels wrong to her long before she can explain why.
-
-## Background
-
-Ec'lesia was born in **2178** in **Kalt'sen**, in the Yalara cadet branch of House Wonderwall. The branch holds full House standing, but that standing does not grant automatic access to the Wonderwall Seat, SiNE office, Senate authority, or primary-line resources.
-
-Her father, **Gal'ahad Kjackter**, was a civil engineer with the Imperial Rail Authority. He died in the **Krel Tunnel collapse** in 2189. His influence remained anyway. He taught her to think about lamps, tunnels, support structures, and the way light tells people where the world still agrees to be. That language ended up mattering more to her Anchor than anyone understood at first.
-
-Her mother, **Al'yana Yalara Wonderwall-Kjackter**, is a Reflection-class Redactor and former assistant instructor at the Academy of Lon'drina. She knows Ec'lesia is extraordinary. She does not fully understand what is watching her daughter through the gaps.
-
-Her younger sister, **El'ytra**, matters because Ec'lesia is not just an anomaly. She is an older sister, a reader of bad theatrical voices, and a person still tied to ordinary love.
-
-## Apocachynthion Registry
-
-**[[leaf|Leaf Type]]:** Sealed Leaf  
-**Registry Status:** Registered; Inkless designation active  
-**Rank:** [[quill|Quill]], provisional  
-**[[mark|Mark]]:** [[mark-1|Mark 1]]  
-**[[open-mark|Open Mark]]:** None  
-**[[margins|Margins]]:** Restricted  
-**Anchor:** Stilllight  
-**Anchor Reading:** Inkless / disputed  
-**Depth Reading:** Deep  
-**Reach Reading:** minimal  
-**Registration Tenure:** 4 years  
-**Academy Record:** Lon'drina intake 2196; specialist review ongoing  
-**Practice Record:** Calibration assistance; supervised Radiance Annex work  
-**[[blots|Blots]]:** None  
-**Pager Note:** Review  
-**[[seal|Current Seal]]:** Lon'drina specialist review; separate lethal seal on contingency file
-
-## Abilities
-
-Ec'lesia's true Anchor is **Stilllight**.
-
-Stilllight is not Light itself. It is radiance arrested, cooled, suspended, condensed, or preserved after it should already have dispersed. In practical terms, Ec'lesia can make light stop behaving like normal light.
-
-That can appear as:
-
-- suspended beads or dust of pale-gold light lingering after the source changes;
-- cold illumination that looks warm but feels strangely quiet;
-- thin glasslike panels, rods, or threads of condensed radiance;
-- preserved afterimages that remain in space after attention has moved on;
-- delayed reflections and luminous seams where one field of influence ends and another begins.
-
-She is strongest where light already exists and weaker in total darkness unless she brings a source with her. Her work is also more reliable in enclosed conditions than in open terrain. Stilllight is not broad elemental control. It is a highly specific and increasingly dangerous way of making radiance hold still.
-
-## Limitations
-
-Ec'lesia entered the **Academy of Lon'drina** intake process in **2196**. The Academy could detect Radiance pressure, thermal contradiction, and persistence effects, but not a conventional Anchor. So she was issued a [[quill|Quill]] provisional certification, given [[mark-1|Mark 1]] for supervised practice only, assigned the [[inkless|Inkless]] designation, and removed from ordinary progression.
-
-She was not expelled.
-
-Instead, the Academy retained her under restricted observational placement in the **Radiance Calibration Annex**, where she now serves as a provisional student and calibration assistant. Officially she helps test lenses, response plates, afterimage arrays, and other measurement equipment. Unofficially she has made herself part of the Annex's social ecology, to the annoyance of anyone who prefers tidy hierarchy.
-
-She is not field-cleared. High-output practice remains restricted. But she is not sealed away either. She studies, attends more lectures than she is technically allowed to, helps with calibration work, and keeps making herself useful in rooms that are not sure what to do with her.
-
-## Important Relationships
-
-**Sai'ken Ex'sydra** remains assigned to her proximity as protective officer and cadence sentinel. His sealed terminal clause applies only after rescue, evacuation, restraint, clinical intervention, and available Shore-capable response have failed or cannot arrive. It is not a private license to kill.
-
-**Hisui Kirasagi** is one of the clearest forms of ordinary care in Ec'lesia's life. She sees the maintenance cost of Ec'lesia's daily stability up close.
-
-**Em'manuel Kael Wonderwall** watches her carefully from a distance. He understands more of the underlying structure than almost anyone alive, which is exactly why his distance matters.
-
-**E'lla Rae Wonderwall** is not her duplicate or her template. If E'lla represents engineered Light at catastrophic depth, Ec'lesia represents a natural Wonderwall convergence that became something adjacent to Light instead.
-
-## Story Role
-
-Ec'lesia matters because she breaks every neat category around her.
-
-She is a natural Wonderwall inheritance case from the wrong branch of the family. She is socially vivid where people expected seclusion. She is emotionally direct without being simple. She is not an empty Inkless file, not a conventional Radiance user, and not another Abyssal Light repetition.
-
-She is a young woman building a life loudly enough to stay human while something in the dark keeps trying to learn how to remain through her.
-
-## Deeper Lore
+The Academy's public approach is deliberately narrow: supervised practice, careful observation, and room for Ec'lesia to develop at a pace that does not confuse curiosity with permission to take unnecessary risks. Her condition is serious enough to require attention, but it does not make her a symbol, a weapon, or a problem for someone else to solve.

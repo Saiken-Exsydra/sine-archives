@@ -7,7 +7,7 @@ birthplace: "Tsukimiya, Hikari (Darkmargin coast)"
 affiliation: "Wonderwall estate (domestic staff, Kalt'sen)"
 house: ""
 rank: ""
-registry_status: "Unregistered - not known to the Apocachynthion in any capacity"
+registry_status: "Unregistered with the Apocachynthion; lawful foreign-anomaly flag held by Stasis under the border-health compact"
 designation: "Flower from the Abyssal Shore"
 height: "1.65 m"
 build: "Compact, precise - built by a lifetime of service discipline"
@@ -16,7 +16,7 @@ hair: "Black, cut short in the Hikari working-line tradition - maintained every 
 eyes: "Deep near-black at rest; violet-crimson with fractal petal-flares under Flower activation"
 dress: "Long sleeves at all times, regardless of climate. Formal domestic attire of Hikari high-house tradition - dark colors, impeccable condition."
 residence: "Wonderwall estate, eastern residential quarter, Kalt'sen"
-occupation: "Household attendant - personal attendance to Ec'lesia Yal'ara Wonderwall"
+occupation: "Household attendant - personal attendance to Ec'lesia Yalara Wonderwall"
 summary: "A tenderness cultivated in impossible depth; graceful enough to seem harmless, and strange enough that horror blooms only after one has already leaned close."
 image: "../../assets/uploads/char-hisui-kirasagi.png"
 hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
@@ -31,7 +31,7 @@ tags:
   - "Unregistered"
 status: "public"
 created: "2026-03-30"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Hisui Kirasagi Dossier.md"
 ---
 
@@ -74,10 +74,12 @@ She is not a Redactor and not a Divine Vessel. The Flower is biological, inherit
 
 Part of her burden is that the Flower also carries traces of earlier hosts. She has lived for years with inherited murmurs, impressions, and pressure that most people around her cannot even imagine.
 
+Hisui's case was lawfully flagged through the border-health compact. That limited notice did not authorize the private observation or manipulated household placement that followed; those were choices made without Hisui's consent.
+
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** None  
-**Registry Status:** Unregistered - not known to the Apocachynthion in any capacity  
+**File Type:** None  
+**Registry Status:** Unregistered with the Apocachynthion; foreign-anomaly flag held by Stasis under lawful border-health review  
 **Rank:** Not applicable  
 **[[mark|Mark]]:** None  
 **[[open-mark|Open Mark]]:** None  
@@ -124,7 +126,7 @@ If the Flower is identified, Hisui remains a protected foreign resident and a pe
 
 **Ec'lesia Wonderwall** is the most important person in Hisui's current life. Officially she serves her. In practice she protects her, and the Flower itself seems calmer around Ec'lesia than it is anywhere else.
 
-**Sai'ken Ex'sydra** is one of the few people around whom Hisui seems genuinely at ease. Both of them are self-controlled, observant, and carrying inherited conditions they do not fully explain to outsiders.
+**Sai'ken Exsydra** is one of the few people around whom Hisui seems genuinely at ease. Both of them are self-controlled, observant, and carrying inherited conditions they do not fully explain to outsiders.
 
 **Ren'ya Kirasagi**, her older brother, remains an important tie to home and to the life she might have lived if she had not become the family traveler.
 
@@ -135,3 +137,5 @@ Hisui matters because she brings a different kind of danger into the story: not 
 She is also one of the clearest signs that the Wonderwall household is affecting strange systems around it. If the Abyssal Flower is calmer near Ec'lesia than anywhere else, that is probably not an accident.
 
 ## Deeper Lore
+
+The stable relationship between Hisui and the Abyssal Flower is symbiotic, but it is not the capital-S **Symbiogenesis** described in Bloom theory. That term belongs to a possible future Shorewalking endpoint, not her present condition.

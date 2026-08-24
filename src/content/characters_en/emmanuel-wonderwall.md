@@ -2,148 +2,59 @@
 title: "Em'manuel Kael Wonderwall"
 type: "Character"
 age: "Approximately 1,205 (as of year 2200)"
-birth_year: "Unknown - approximately forty years before the Rite of Selia"
+birth_year: "Year 995"
 birthplace: "Northern coastal region, pre-Empire"
-affiliation: "SiNE; Apocachynthion; House Wonderwall; Empire of Synus"
-house: "Wonderwall (founding figure, primary line); born Ex'sydra"
-rank: "Archtype"
-registry_status: "Registered - Archtype, Spatial Coherence anchor"
+affiliation: "SiNE; House Wonderwall; Empire of Synus"
+house: "Wonderwall (founding figure, primary line)"
+rank: "Archtype — public classification: Spatial Coherence"
+registry_status: "Publicly classified as an Archtype; detailed registry record is protected"
 point_profile:
   status: ""
   cas_access: ""
   leaf_permissions: ""
   register_access: ""
-designation: "The Patient Interval"
+designation: "Founder of SiNE"
 height: "185 cm"
 build: "Broad, unhurried"
-complexion: "Brown; even with extreme longevity stabilization"
+complexion: "Brown; unusually stable over a very long life"
 hair: "Black, greying at the temples"
 eyes: "Dark amber"
 dress: "Expensive, understated"
 residence: "Pluribus Hill, Kalt'sen"
-occupation: "Founder and principal of SiNE; Meridian Council chair; hereditary Senator"
-summary: "He built houses, empires, and silences with the same patient hand, then lived long enough for the spaces he preserved to begin answering back."
+occupation: "Founder and principal of SiNE; Wonderwall Seat; hereditary Senator"
+summary: "The long-lived founder at the center of SiNE and House Wonderwall: patient, exacting, and publicly accountable to institutions he helped build."
 image: "../../assets/uploads/char-emmanuel-wonderwall.png"
 hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 portrait_gallery: []
 hero_gallery: []
 tags:
   - "Wonderwall"
-  - "Ex'sydra"
   - "SiNE"
   - "Archtype"
-  - "Interval"
+  - "Spatial Coherence"
   - "Em'manuel"
-  - "Remainder"
-  - "Project Kaleidoscope"
-  - "Luminant Shore"
-  - "Shores"
+  - "Kalt'sen"
+  - "Founder"
 status: "public"
 created: "2026-03-30"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Em'manuel Kael Wonderwall Dossier.md"
-birth_name: "Al'uxxios Ex'sydra"
 ---
 
-> *"I am old enough that patience and cowardice have occasionally worn each other's clothes."*
-> - Private Wonderwall notation
+Em'manuel Kael Wonderwall is the founder and principal of [[sine|SiNE]], the recognized Wonderwall Seat, and a hereditary Senator of the Empire of Synus. The scale of those roles has made him one of the most enduring public figures in imperial life, but none of them places him above the law, the Court, or the consent of the people and institutions around him.
 
----
+## The Founder
 
-## Overview
+For more than a millennium, Em'manuel has been associated with the infrastructure that lets the Empire continue through crisis: material networks, institutional coordination, and the long work of keeping distant regions in communication. His public authority is substantial, but it is not solitary. SiNE's technical judgment, judicial capacity, personhood, and Crown sovereignty cannot be manufactured by a command from its founder.
 
-Em'manuel is the founder of SiNE, the patriarch of House Wonderwall, and one of the oldest active powers in the setting. From a distance he can look like the classic immortal statesman: patient, cultured, and so deeply built into the Empire that it is hard to imagine the modern order without him.
+As the Wonderwall Seat, he remains the legal holder of a House role that is older than the Company. In practice, his name is often used as shorthand for both. House governance, corporate administration, and imperial representation are related, but they are not the same institution or the same kind of obligation.
 
-Up close, he is much harder to simplify. He was born **Al'uxxios Ex'sydra**, heir to a line whose work helped cause a catastrophe large enough that history found it useful to erase the family name. The proposed Twelve-House Rite went forward with only nine participants after Faldryn, Wonderwall, and Whitechurch refused. After surviving that collapse, he married **A'licia Rae Wonderwall** and buried his first identity inside hers.
+## An Archtype in Public Record
 
-That means Em'manuel is not just an old leader with hidden grief. He is one of the people who helped build the world after breaking part of the one before it.
+Em'manuel is publicly classified as an Archtype working in Spatial Coherence. His continued health is the result of extraordinary Redactory self-modification, not divinity, invulnerability, or exemption from human consequence. He can outlast ordinary political time; he cannot make risk, loss, or responsibility disappear.
 
-## Identity
+That long life has shaped his manner. He is known for an unhurried presence, expensive but unostentatious dress, and a habit of treating a difficult room as something to be understood before it is answered. Admirers call this patience. Critics call it delay. Both descriptions have some truth in them.
 
-**Public Identity:** The patient patriarch of House Wonderwall and founder of SiNE, so old and central that the modern order seems built around him.
+## A Public Figure with Limits
 
-**Institutional Identity:** A high-level Revelation-era statesman operating as a registered Wonderwall Redactor and system architect with enormous quiet authority.
-
-**Private Truth:** He was born **Al'uxxios Ex'sydra**, heir to an erased line whose disaster still shapes the world he later helped rebuild.
-
-**Primary Tension:** Em'manuel protects the present by managing consequences he understands better than anyone, including consequences that began with him.
-
-## Personality
-
-In public, Em'manuel is warm, measured, and surprisingly approachable. He does not behave like a sealed relic or a grand tyrant.
-
-Privately, he thinks in systems, centuries, and costs. He is always asking what fails next, who inherits the damage, and whether an ugly choice now prevents a worse one later. The unsettling part is that he understands exactly how brutal some of his decisions have been and can still decide to make them.
-
-That is what separates him from a softer version of the same character pattern. Em'manuel does not accidentally drift into moral damage. He sees it clearly and may proceed anyway.
-
-## Background
-
-The Ex'sydra line studied transitions: how one state becomes another, how change moves, and how disaster propagates once it starts. They believed they understood that knowledge well enough to control it. They did not.
-
-The collapse tied to that failure destroyed more than lives. It also destroyed a name. Al'uxxios survived, married into House Wonderwall, and became Em'manuel Kael Wonderwall. That choice was practical and political, but it was also deeply personal. It let him keep living while making the first version of his life much harder for the world to see.
-
-Across the following centuries he founded SiNE, shaped policy, guarded dangerous knowledge, and turned his attention toward the strange inheritance problems growing inside the Wonderwall line.
-
-## Apocachynthion Registry
-
-**[[leaf|Leaf Type]]:** Sealed Leaf  
-**Registry Status:** Registered  
-**Rank:** Archtype  
-**[[mark|Mark]]:** None  
-**[[open-mark|Open Mark]]:** None  
-**[[margins|Margins]]:** Civic  
-**Anchor:** Spatial Coherence  
-**Anchor Reading:** Confirmed  
-**Depth Reading:** Abyssal  
-**Reach Reading:** catastrophic  
-**Registration Tenure:** Undisclosed  
-**Academy Record:** No ordinary intake; partial Archtype transition record held at the Cloister of Applied Structure  
-**Practice Record:** Statecraft, infrastructure control, SiNE leadership, and catastrophic-response authority  
-**[[blots|Blots]]:** None  
-**Pager Note:** None  
-**[[seal|Current Seal]]:** Unrestricted Archtype recognition under standing institutional classification
-
-## Abilities
-
-Em'manuel is a **Redactor**, meaning he uses the setting's structured magic through an **Anchor**, the concept his power understands best. His own name for that Anchor is **Interval**.
-
-In plain terms, Interval is power over the gap between one state and the next. Em'manuel is not mainly dangerous because he throws visible force around. He is dangerous because he can make change itself harder.
-
-In practice, that can look like:
-
-- making a collapse, charge, or chain reaction struggle to complete itself;
-- holding a failing structure in the state just before it gives way;
-- reading the likely path of a conflict, negotiation, or disaster with frightening accuracy;
-- turning a route, corridor, or battlefield into a place where movement feels wrong because every transition suddenly costs too much.
-
-Think of his power like making reality catch its foot on the step between "about to happen" and "already happening."
-
-## Limitations
-
-Em'manuel does not control time in a simple fantasy sense. He cannot casually rewind events, freeze the universe, or choose any outcome he likes.
-
-His strongest work also demands depth, concentration, and a level of mastery almost nobody else can imitate. The largest effects are not effortless even for him.
-
-He is also burdened by the **Remainder**, the strange presence tied to gaps, unfinished states, and the deeper Wonderwall problem. It has given him reach, but it has also been shaping him for centuries. This is not a clean blessing. It is an ongoing condition.
-
-The human limit matters just as much. Thinking on civilizational scale helped him build SiNE and protect people. It also helped him justify projects, bloodline management, and long-term secrecy that damaged the people closest to him.
-
-## Important Relationships
-
-**A'licia Rae Wonderwall** gave him his second life, the Wonderwall name, and the Light inheritance that later defined the line.
-
-**Al'ithia Rae Wonderwall** forced him to confront the difference between memory and a living person. Through her, he had to learn that not every impossible return is a restoration.
-
-**E'lla Rae Wonderwall** is his adopted daughter and KL-83 in Kaleidoscope's restricted record. Biological production ended permanently in 2179, but duties of care, reparations, protected disclosure, and archival preservation remain. He has neither trained her for the Seat nor nominated her, and still owes her the full truth.
-
-**Ec'lesia Wonderwall** is the opposite kind of problem: not engineered, but possibly closer to the natural inheritance pattern the deeper Wonderwall mystery actually recognizes.
-
-**Sai'ken Ex'sydra** matters because Em'manuel restored the Ex'sydra name through him and placed him near Ec'lesia's household for both protection and observation.
-
-## Story Role
-
-Em'manuel ties together a huge part of the setting's hidden history. Through him, cosmology becomes policy, grief becomes infrastructure, and family damage becomes a centuries-long project with real institutions behind it.
-
-He matters because he is both builder and wound. He founded systems that protect the world, but many of the Wonderwalls' deepest secrets, experiments, and inherited dangers also pass through his hands.
-
-## Deeper Lore
+Much of Em'manuel's earliest history belongs to a world before the Empire's present records. Public biographies preserve his founding work and political life without pretending to exhaust the person behind them. His importance to SiNE does not turn every private decision into public property, and his longevity does not turn any other person into an extension of his plans.

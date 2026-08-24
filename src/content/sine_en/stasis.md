@@ -8,10 +8,10 @@ founded: "Date not established in accessible records"
 jurisdiction: "Twilight Band and Dark Side frontier - anomalous entity classification and response"
 status_label: "Active - existence partially acknowledged"
 summary: "The division that does the work when dark-side data refuses to become ordinary data."
-tags: ["StaSis", "SiNE", "S-AE", "Organization", "SOE", "Dark Ends", "Stase", "Anomalous", "Classification", "Deniability", "Nearc", "Zone of Avoidance"]
+tags: ["StaSis", "SiNE", "S-AE", "Organization", "Dark Ends", "Stase", "Anomalous", "Classification", "Deniability", "Nearc", "Zone of Avoidance"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-05-24"
+updated: "2026-08-23"
 image: "../../assets/uploads/sine-stasis-logo.png"
 ---
 
@@ -38,13 +38,13 @@ The partial acknowledgment is deliberate. StaSis's operational mandate includes 
 
 ---
 
-## The SOE Catalogue
+## The restricted catalogue
 
-StaSis maintains the **SOE catalogue** - a classification system for Traversal-Independent Entities that represents the most comprehensive non-restricted record of this entity category in current institutional use.
+StaSis maintains a restricted catalogue for entities that do not fit biological, military, or possession-based threat models. These entities may have their own patterns, apparent objectives, and relationships to observation; the public record does not enumerate individual cases.
 
-SOEs are not altered biological organisms. They do not have biological signatures. Their behavior cannot be mapped onto altered-biology frameworks. They have their own patterns, apparent objectives, and internal logic.
+The catalogue is not one uniform book. In some situations, centralizing information can make a hazard worse. In others, a routine can grant a hazard more local stability. StaSis therefore treats archive design, naming, staff rotation, and access boundaries as parts of containment rather than administrative details.
 
-The catalogue documents what StaSis has observed about them: behavioral typologies, engagement outcomes, environmental signatures, and the degree to which SOEs show awareness of institutional response efforts.
+Its practical rule is simple: gathering more data is not automatically safer. Before joining records, an institution must ask what the act of knowing will permit the subject to become.
 
 ---
 
@@ -70,7 +70,7 @@ This produces one of StaSis's core methodological cautions: a **blank return is 
 
 ## Relationship to Obsidian
 
-StaSis's closest institutional working relationship is with Obsidian's Victorian Formation formation at the northern frontier. The two organizations are doing adjacent work - Obsidian engages what emerges from the Dark Side through theological and ritual tools; StaSis classifies what Obsidian engages and provides analytical support that Obsidian's own classification systems do not cover for the SOE category.
+StaSis's closest institutional working relationship is with Obsidian's Victorian Formation at the northern frontier. The two organizations are doing adjacent work - Obsidian engages what emerges from the Dark Side through theological and ritual tools; StaSis classifies anomalous cases and provides analytical support that Obsidian's own systems do not cover.
 
 The Victorian Formation's archive and StaSis's catalogue have, over generations of parallel operation, developed into complementary rather than redundant resources.
 

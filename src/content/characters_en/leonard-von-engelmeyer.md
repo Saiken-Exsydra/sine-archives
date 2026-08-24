@@ -3,16 +3,16 @@ title: "Leonard von-Engelmeyer"
 type: "Character"
 age: "55 (as of 1127)"
 birth_year: "1072"
-birthplace: "Eraveth, Ardeatus (Northern Frontier Region)"
+birthplace: "Eraveth, Ardeatus (Western Frontier Region)"
 affiliation: "Apocachynthion - Kalt'sen Academy"
 house: "House Engelmeyer (expatriate branch, formally estranged)"
 rank: "Stylus"
 registry_status: "Registered - Stylus, Mark 4; asylum intake 1090; instructional standing current"
 point_profile:
-  status: ""
-  cas_access: ""
-  leaf_permissions: ""
-  register_access: ""
+  status: "Academy-issued; carried"
+  cas_access: "Professional CAS under instructional standing"
+  leaf_permissions: "Licensed Leaves by instructional authority; Restricted Leaves by Council request"
+  register_access: "Protected; instructional review authority limited to training windows"
 designation: "The Hearth After the Blast"
 height: ""
 build: ""
@@ -36,7 +36,7 @@ tags:
   - "Kalt'sen"
 status: "public"
 created: "2026-05-10"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Leonard von Engelmeyer Dossier.md"
 ---
 
@@ -73,28 +73,35 @@ He is one of the setting's clearest examples of catastrophe producing not a mons
 
 ## Background
 
-Leonard was born into the broader Engelmeyer migration in **Ardeatus**. His grandfather left the western corridor before the Voren Works disaster and carried a damaged route ledger south. Leonard is related to that history, but he is not part of the direct hereditary sequence that later produced Re'lha and Le'nore.
+Leonard was born into the broader Engelmeyer migration in **Ardeatus**. His grandfather left the western corridor before the Voren Works disaster and carried a damaged route ledger east into Ardeatus. Leonard is related to that history, but he is not part of the direct hereditary sequence that later produced Re'lha and Le'nore.
 
-In **1087**, a suspected private-industrial attack killed his parents just as a Stase incursion froze the event in a suspended unfinished state. CLOCKWORK did not yet exist. Leonard survived by awakening as a Redactor inside that separate rupture.
+In **1087**, a suspected private-industrial attack killed his parents just as a Stase incursion froze the event in a suspended unfinished state. Leonard survived by awakening as a Redactor inside that separate rupture.
 
 An anomalous mechanical crow later named **Kerz** entered that same impossible moment and has remained tied to him ever since.
 
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** Sealed Leaf  
+**File Type:** Sealed File  
 **Registry Status:** Registered  
 **Rank:** [[stylus|Stylus]]  
 **[[mark|Mark]]:** [[mark-4|Mark 4]]  
 **[[open-mark|Open Mark]]:** None  
 **[[margins|Margins]]:** Instructional  
+**Restrictions:** Pager notice for Stase-adjacent field return; no standing military deployment without Council request  
+**Point:** Academy-issued; carried  
+**CAS Access:** Professional CAS under instructional standing  
+**Leaf Permissions:** Licensed Leaves by instructional authority; Restricted Leaves by Council request  
+**Point Register:** Protected; instructional review authority limited to training windows  
 **Anchor:** Thermodynamic  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Deep  
-**Reach Reading:** broad  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Working Reach  
+**Overreach History:** None recorded  
+**Apparatus Permissions:** Professional Apparati under instructional standing; martial deployment only by Council request  
 **Registration Tenure:** 37 years  
 **Academy Record:** Asylum intake 1090; central formation track; Stylus elevation recorded 1105  
 **Practice Record:** Academy instruction; restricted hazardous consultation  
-**[[blots|Blots]]:** None  
+**[[blots|Blots]]:** None recorded  
 **Pager Note:** None  
 **[[seal|Current Seal]]:** Council of Volumes instructional standing; central registry renewal
 
@@ -102,7 +109,7 @@ An anomalous mechanical crow later named **Kerz** entered that same impossible m
 
 Leonard is a thermodynamic specialist, but that means more than ordinary fire use.
 
-In plain terms, he can force a space to obey a much harsher idea of heat. He does not just create flame. He can make a room behave as if cold has stopped being allowed there.
+In plain terms, his Thermodynamic Anchor routes violent disequilibrium through a bounded space. He does not delete equilibrium, rewrite local syntax, or cast ordinary fire. He makes available differences in heat, pressure, and molecular motion resolve with catastrophic speed.
 
 In practice, that can mean:
 
@@ -111,7 +118,7 @@ In practice, that can mean:
 - controlling temperature with enough precision to prevent a student or ally from overreaching;
 - sensing stress and instability in nearby people partly because of what surviving Stase did to him.
 
-The easiest way to picture his power is not "he throws fire," but "he rewrites the argument the room is having with heat."
+The easiest way to picture his power is not "he throws fire," but "he gives thermal imbalance one brutally efficient route to resolve." His Mark 4 standing permits controlled professional use and prepared instruction, not permanent military deployment; martial field use still requires a Council request.
 
 ## Limitations
 
@@ -140,3 +147,5 @@ Leonard matters because he turns survival into instruction. He takes Stase conta
 He is also one of the best human bridges between larger cosmological ideas and ordinary institutional life. Through Leonard, Stase stops being a distant abstract horror and becomes a wound someone carried back into the classroom.
 
 ## Deeper Lore
+
+The **Kalorian Nova** became possible inside Stase because a local Time Fragment permitted a microscopic resumption of traversal. That permission let the routed thermodynamic sequence complete and break the local suspension. Leonard did not melt time or acquire authority over it.

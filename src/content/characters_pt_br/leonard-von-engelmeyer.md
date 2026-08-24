@@ -3,16 +3,16 @@ title: "Leonard von-Engelmeyer"
 type: "Personagem"
 age: "55 (em 1127)"
 birth_year: "1072"
-birthplace: "Eraveth, Ardeatus (Região da Fronteira Norte)"
+birthplace: "Eraveth, Ardeatus (Região da Fronteira Oeste)"
 affiliation: "Apocachynthion — Academia Kalt'sen"
 house: "Casa Engelmeyer (ramo expatriado, formalmente afastado)"
 rank: "Stylus"
 registry_status: "Registrado — admissão de asilo em 1090; licença instrucional ativa"
 point_profile:
-  status: ""
-  cas_access: ""
-  leaf_permissions: ""
-  register_access: ""
+  status: "Emitido pela Academy; carregado"
+  cas_access: "CAS profissional sob standing instrucional"
+  leaf_permissions: "Licensed Leaves por autoridade instrucional; Restricted Leaves por solicitação do Council"
+  register_access: "Protegido; autoridade de revisão instrucional limitada às janelas de treinamento"
 designation: "A lareira que queimou atraves da Stase"
 height: ""
 build: ""
@@ -26,10 +26,12 @@ summary: "Um homem que a explosao nao conseguiu terminar, temperado em calor pel
 tags: ["Apocachynthion", "Engelmeyer", "Thermodynamic Anchor", "Stase-Survivor", "Ardeatus", "Kalt'sen"]
 status: "public"
 created: "2026-05-10"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Leonard von Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
 hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
+portrait_gallery: []
+hero_gallery: []
 ---
 
 > *"A maioria dos praticantes impõe sua vontade sobre o mundo como um martelo. Mestre von-Engelmeyer impõe a dele como uma lareira acesa. Eu já fiquei ao lado dele durante demonstrações do que ele chama de 'Kalorian Nova'. O ar não simplesmente entra em combustão. Ele esquece que um dia teve permissão para ser frio. E ele faz isso sem levantar a voz, sem interromper uma frase sequer, e com uma empatia que torna a violência bruta da matemática quase gentil."*
@@ -39,11 +41,11 @@ hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
 
 ## Linhagem e o Exílio Ardeatano
 
-O avô de Leonard deixou o corredor oeste no fim da década de 1030, antes da destruição dos Voren Works em 1043, e entrou nas comunidades que formariam Ardeatus em 1058. Leonard pertence à migração Engelmeyer mais ampla, não à sequência hereditária direta que depois produziu Re'lha e Le'nore. Um ledger de rotas danificado preservado pela família documenta alterações anteriores à catástrofe dos Works.
+O avô de Leonard deixou o corredor oeste no fim da década de 1030, antes da destruição dos Voren Works em 1043, e viajou para leste até as comunidades que formariam Ardeatus em 1058. Leonard pertence à migração Engelmeyer mais ampla, não à sequência hereditária direta que depois produziu Re'lha e Le'nore. Um ledger de rotas danificado preservado pela família documenta alterações anteriores à catástrofe dos Works.
 
 Os pais de Leonard eram figuras muito conhecidas em Eraveth. Sua mãe, **Elara ker-Vane**, era uma brilhante cientista de materiais da Forge Academy de Kovansk, especializada em limiares térmicos em fraturas de tensão de BrightCrystal. Seu pai, **Kaelen von-Engelmeyer**, era um político ardeatano extremamente vocal que construiu sua carreira combatendo o avanço do corporativismo imperial — especificamente, Kaelen impediu que a divisão Evanote da SiNE expandisse a Ferrovia Arterial Imperial para dentro da rede logística soberana de Eraveth, argumentando que infraestrutura corporativa era apenas o primeiro passo para submissão corporativa.
 
-Em 1087, quando Leonard tinha quinze anos, seus pais morreram no que as autoridades ardeatanas classificaram oficialmente como um vazamento doméstico catastrófico de gás. O braço de inteligência do Apocachynthion suspeita de um assassinato executado por operadores industriais privados. A CLOCKWORK ainda não existia, portanto atribuir o ataque a ela é cronologicamente impossível. A explosão doméstica e a incursão de Stase foram um evento separado da catástrofe dos Voren Works.
+Em 1087, quando Leonard tinha quinze anos, seus pais morreram no que as autoridades ardeatanas classificaram oficialmente como um vazamento doméstico catastrófico de gás. O braço de inteligência do Apocachynthion suspeita de um assassinato executado por operadores industriais privados. A explosão doméstica e a incursão de Stase foram um evento separado da catástrofe dos Voren Works.
 
 Leonard estava chegando em casa exatamente no momento da explosão.
 
@@ -63,7 +65,7 @@ Ele suportou esse inferno suspenso fora da travessia por uma duração subjetiva
 
 A proximidade do núcleo de coerência localizado de Kerz catalisou a Redactory latente de Leonard. Desesperado para escapar da sobrecarga sensorial, Leonard instintivamente forçou uma base termodinâmica impossível sobre o ambiente, manifestando aquilo que mais tarde ele formalizaria como a *Kalorian Nova*.
 
-**A Autorização Temporal.** Sob a lei Tier I da Redactory, Redactors não podem alterar o Tempo. Leonard não derreteu o tempo. Em vez disso, a pressão absurda de coerência produzida pela Depth termodinâmica dele criou um paradoxo gramatical localizado. Para impedir que a *Kalorian Nova* causasse um cisalhamento estrutural catastrófico dentro da bolha de Stase, o Fragmento de Tempo realizou uma intervenção estratégica — autorizando uma retomada localizada e microscópica da travessia. Ele permitiu que o calor executasse sua sequência normalmente, forçando a explosão a se consumir instantaneamente e despedaçando a bolha local de Stase.
+**A Autorização Temporal.** Sob a lei Tier I da Redactory, Redactors não podem alterar o Tempo. Leonard não derreteu o tempo nem reescreveu sintaxe local. Sua Anchor roteou um desequilíbrio termodinâmico tão violento que, dentro da Stase, a sequência não conseguia completar. O Fragmento de Tempo autorizou uma retomada microscópica e localizada da travessia, permitindo que o processo térmico se resolvesse e rompesse a suspensão.
 
 Leonard foi arremessado para fora dos destroços.
 
@@ -77,30 +79,37 @@ E sua mente ficou ligada para sempre à Stase e a Kerz.
 
 Em Ardeatus, onde a doutrina civilizacional é profundamente ligada ao Covenant e à ortodoxia mecânica dos Forge-Keepers, um Redactor não registrado capaz de gerar calor anômalo ao ponto de romper uma Stase é considerado uma blasfêmia teológica e estrutural.
 
-Ao perceber que seria caçado pelos Ashborne Hunters ou dissecado pela Forge, Leonard pegou Kerz e fugiu de volta através da fronteira para o Império de Synus.
+Ao perceber que seria caçado pelos Ashborne Hunters ou dissecado pela Forge, Leonard pegou Kerz e fugiu para oeste através da fronteira, entrando no Império de Synus.
 
-Ele se apresentou para admissão no Apocachynthion em 2163.
+Ele se apresentou para admissão no Apocachynthion em 1090.
 
 ---
 
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** Folha selada  
+**Tipo de Arquivo:** Sealed File  
 **Registry Status:** Registrado  
 **Rank:** [[stylus|Stylus]]  
 **[[mark|Mark]]:** [[mark-4|Mark 4]]  
 **[[open-mark|Open Mark]]:** None  
-**[[margins|Margins]]:** Instrucional  
+**[[margins|Margins]]:** Instructional  
+**Restrictions:** Aviso aos Pagers para retorno a campo adjacente a Stase; sem deployment militar permanente sem solicitação do Council  
+**Point:** Emitido pela Academy; carregado  
+**CAS Access:** CAS profissional sob standing instrucional  
+**Leaf Permissions:** Licensed Leaves por autoridade instrucional; Restricted Leaves por solicitação do Council  
+**Point Register:** Protegido; autoridade de revisão instrucional limitada às janelas de treinamento  
 **Anchor:** Thermodynamic  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Deep  
-**Reach Reading:** broad  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Working Reach  
+**Overreach History:** Nenhum registro  
+**Apparatus Permissions:** Professional Apparati sob standing instrucional; deployment marcial apenas por solicitação do Council  
 **Registration Tenure:** 37 anos  
-**Academy Record:** Intake de asilo em 1090; trilha central de formacao; elevacao a Stylus registrada em 1105  
-**Practice Record:** Instrucao academica; consulta perigosa restrita  
-**[[blots|Blots]]:** Nenhum  
+**Academy Record:** Intake de asilo em 1090; trilha central de formação; elevação a Stylus registrada em 1105  
+**Practice Record:** Instrução na Academy; consulta perigosa restrita  
+**[[blots|Blots]]:** Nenhum registro  
 **Pager Note:** None  
-**[[seal|Current Seal]]:** Standing instrucional do Council of Volumes; renovacao do registro central
+**[[seal|Current Seal]]:** Standing instrucional do Council of Volumes; renovação do registro central
 
 ---
 
@@ -110,15 +119,15 @@ Ele se apresentou para admissão no Apocachynthion em 2163.
 
 A técnica característica de Leonard não é uma Redactory de fogo.
 
-Ela é a deleção temporária do conceito de equilíbrio térmico dentro de um espaço localizado.
-
-Ele reescreve a sintaxe local de um ambiente para obrigar uma vibração molecular catastrófica — impondo uma base termodinâmica impossível que o próprio espaço tenta desesperadamente resolver. O ar não simplesmente entra em combustão.
+Ela usa a Thermodynamic Anchor para rotear um desequilíbrio violento através de um espaço limitado. Leonard não apaga o conceito de equilíbrio nem reescreve a sintaxe local: faz diferenças disponíveis de calor, pressão e movimento molecular se resolverem com velocidade catastrófica. O ar não simplesmente entra em combustão.
 
 Ele esquece que um dia teve permissão para ser frio.
 
 E Leonard faz isso sem levantar a voz.
 
 Sem interromper a própria frase.
+
+Seu Mark 4 permite demonstração preparada e uso profissional controlado, não deployment militar permanente. Emprego marcial em campo continua dependendo de solicitação do Council.
 
 ### Sensibilidade de Ressonância
 

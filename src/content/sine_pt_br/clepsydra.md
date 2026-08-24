@@ -5,13 +5,13 @@ designation: "Autoridade Orbital de Continuidade da SiNE - S-CL"
 affiliation: "SiNE (divisão S-CL) - autoridade da lattice com mandato interdivisional"
 headquarters: "Complexo de custódia da lattice em Kalt'sen - presença operacional distribuída entre instalações orbitais e terrestres"
 founded: "Ano 1813 - estabelecida a partir do núcleo sobrevivente do Programa Lattice Cradle"
-jurisdiction: "Lattice orbital, Glass Sinks, autorização de Thread, doutrina de sincronização e supervisão de risco de continuidade em todas as operações da SiNE"
+jurisdiction: "Lattice orbital, instrumentos Glass e lenses, autorização de Thread, validação de Needlefall e supervisão de risco de continuidade"
 status_label: "Ativa"
 summary: "A instituição que mantém a lattice orbital coerente, autorizada e viva."
-tags: ["Clepsydra", "SiNE", "S-CL", "GlassThreaders", "GlassWatchers", "Glass Sinks", "Lattice", "Synchronization", "Continuity", "Organization"]
+tags: ["Clepsydra", "SiNE", "S-CL", "GlassThreaders", "GlassWatchers", "GlassNeedles", "Glass Sinks", "Lattice", "Synchronization", "Continuity", "Organization"]
 status: "public"
 created: "2026-05-10"
-updated: "2026-05-10"
+updated: "2026-08-23"
 image: "../../assets/uploads/sine-clepsydra.png"
 ---
 
@@ -26,7 +26,7 @@ A Clepsydra é a **autoridade orbital de continuidade** da SiNE — a instituiç
 
 Ela não é um comando militar. Não é um ramo de combate. Não existe para projetar força. A Clepsydra existe porque a lattice se tornou grande demais, delicada demais, fundamental demais e profundamente entrelaçada com todos os outros grandes sistemas de Terra para continuar sob autoridade militar sem inevitavelmente acabar sendo quebrada pela própria necessidade militar.
 
-A Clepsydra mantém custódia exclusiva dos **GlassWatchers**, **GlassThreaders** e **Glass Sinks**. Ela governa autorização de Thread, doutrina de continuidade orbital, preservação da lattice, gerenciamento dos ciclos de renovação dos Sinks, análise estratégica de continuidade, manutenção de arrays de Resonance e os protocolos de equivalência que impedem o sistema de entrar em contradição consigo mesmo sob carga.
+A Clepsydra mantém custódia exclusiva dos **GlassWatchers**, **GlassThreaders**, **GlassNeedles**, **Glass Sinks** e das lenses que tornam esses instrumentos utilizáveis. Ela governa autorização de Thread, validação de Needlefall, doutrina de continuidade orbital, ciclos de renovação dos Sinks, análise estratégica de continuidade, manutenção de arrays de Resonance e os protocolos de equivalência que impedem o sistema de entrar em contradição consigo mesmo sob carga.
 
 ---
 
@@ -48,8 +48,10 @@ As responsabilidades da Clepsydra incluem:
 
 - operação dos GlassThreaders
 - operação dos GlassWatchers
+- custódia e validação dos GlassNeedles e de suas lenses
 - custódia e governança de renovação de todos os Glass Sinks registrados
 - autorização de Thread
+- validação de Needlefall
 - doutrina de sincronização
 - gerenciamento de continuidade orbital
 - preservação da lattice
@@ -79,7 +81,7 @@ Onde outras divisões enxergam urgência, a Clepsydra faz primeiro outra pergunt
 
 A Clepsydra não se descreve usando linguagem militar. Seus escritórios internos são organizados em torno de custódia, sincronização, preservação e fluxo.
 
-Documentos públicos e semipúblicos normalmente fazem referência a estruturas como o **Synchronization Office**, **Continuity Office**, **Lattice Custody**, **Flow Chambers** e às categorias de pessoal responsáveis por **Thread Authorization**, **Sink Custody**, **Alignment Procedures** e revisão de **Equivalence Protocols**.
+Documentos públicos e semipúblicos normalmente fazem referência ao **Thread Office**, **Sink Office**, **Veil Office**, **Cradle Office** e aos Keepers que supervisionam autorização, custódia, alinhamento, manuseio de lenses e revisão de equivalência. Os nomes descrevem responsabilidades, não patentes.
 
 Esse vocabulário é preciso. A instituição não pensa em batalhões porque batalhões não são aquilo que ela movimenta. O que ela movimenta são permissões, sincronizações, alinhamentos, ciclos de renovação, restrições de roteamento orbital e as condições sob as quais o restante da SiNE tem permissão para depender de tudo isso.
 
@@ -95,13 +97,19 @@ Isso torna a Clepsydra indispensável para a guerra moderna da SiNE, ao mesmo te
 
 A relação geralmente é funcional. Também é uma fonte recorrente de atrito sempre que necessidade operacional imediata entra em conflito com regras de preservação escritas pensando na milésima repetição futura, e não na emergência atual.
 
+### Doutrina marítima setentrional
+
+As [[northern-fleets|frotas Imperial e WVS]] fazem petições à Clepsydra por meio de **Thread Bells**. Um Bell envia um pedido e um pacote de provas; não abre uma rota. Nenhuma embarcação viaja por Thread, e nenhuma carrega um GlassThreader ou Glass Sink verdadeiro. O deslocamento naval permanece físico.
+
+O apoio Glass normal exige **WhiteGlass Convergence**: observação compatível, geometria de rota, confirmação de custódia e uma resposta validada. A Clepsydra pode aceitar, modificar, adiar ou recusar uma petição. Urgência operacional pode demonstrar necessidade, mas não consegue fabricar uma rota nem transferir custódia para um capitão.
+
 ---
 
 ## Relação com a StaSis e os Ramos Restritos
 
 A StaSis trabalha muito mais próxima da Clepsydra do que a maioria dos registros públicos admite. Eventos de risco de continuidade, propagação não sequencial, comportamento anômalo de roteamento e questões de contaminação de Sink ficam exatamente na fronteira entre os mandatos das duas instituições. A Clepsydra preserva a lattice. A StaSis estuda aquilo que pode fazer essa preservação falhar de maneiras que a doutrina padrão não prevê.
 
-A Entropy depende da Clepsydra sempre que pesquisas envolvem arquitetura da lattice, tolerâncias de sincronização ou manutenção de arrays de Resonance. A Evanote depende dela sempre que custódia, responsabilidade jurídica e limites de autorização precisam ganhar forma legal. A relação da CLOCKWORK com ela, por design, não é descrita em nenhum arquivo público além do fato óbvio de que nenhuma instituição séria escondida consegue permanecer totalmente desinteressada em um sistema que vê tanta coisa sem jamais falar alto sobre isso.
+A Entropy depende da Clepsydra sempre que pesquisas envolvem arquitetura da lattice, tolerâncias de sincronização ou manutenção de arrays de Resonance. A Evanote depende dela sempre que custódia, responsabilidade jurídica e limites de autorização precisam ganhar forma legal.
 
 ---
 

@@ -1,126 +1,58 @@
 ---
-title: Redactor
-type: systems
-summary: The Pen.
-tags: ["systems", "magic"]
-status: public
+title: "Redactor"
+type: "System"
+summary: "Uma pessoa com a rara capacidade recursiva para a Redactory: registrada por segurança, jamais possuída por causa dela."
+tags: ["systems", "Redactor", "Redactory", "Dive", "Anchor", "Academy", "Apocachynthion"]
+status: "public"
 created: "2026-02-12"
-updated: "2026-02-20"
+updated: "2026-08-23"
 image: "../../assets/uploads/sys-redactor.png"
 ---
 
-A **Redactor** is a rare individual capable of performing **Redactory**—the practice of influencing how reality behaves in a specific place. Through intense mental focus, Redactors can guide the physical world toward outcomes that would normally be unlikely or difficult to occur.
+Um **Redactor** é uma pessoa cuja singularidade recursiva consegue sustentar o roteamento de alta densidade chamado [[redactorysystem|Redactory]].
 
-While these abilities often appear supernatural, most researchers believe Redactors are not breaking the laws of nature. Instead, they seem able to temporarily guide reality toward different possible states.
+Essa capacidade é rara, relevante e às vezes perigosa. Ela não torna a pessoa divina, propriedade pública ou uma ferramenta viva de uma House, das forças armadas, da SiNE ou do [[apocachynthion|Apocachynthion]].
 
-Redactors accomplish this by entering a focused mental condition known as the **Dive**. From this state they can stabilize unusual physical effects, reshape materials, generate force or heat, and occasionally manifest temporary structures.
+## Uma pessoa antes da prática
 
-Despite their capabilities, Redactors remain human. Their abilities are limited by mental strain, concentration, and environmental resistance.
+A manifestação de um Redactor é probabilisticamente hereditária, mas nenhuma linhagem a garante e nenhuma família está totalmente isenta dela. A primeira manifestação costuma ser involuntária, próxima à Anchor e moldada por medo, luto, raiva, proteção ou outro momento de forte pressão.
 
----
+Por isso, ela é tratada primeiro como um evento de segurança civil e de cuidado médico. As perguntas imediatas são se alguém está em risco, se outro Dive é provável e de que apoio a pessoa precisa — não se ela deve uma carreira ou cometeu um crime.
 
-## Overview
+## O Dive e a Anchor
 
-A **Redactor** is a person who possesses the rare cognitive ability required to perform Redactory. Only a very small portion of the population ever develops this capability.
+Todo ato de Redactory usa o **Dive**, uma interface de compressão, não um lugar físico ou uma alucinação. Por meio dele, o Redactor roteia uma expressão local válida no Archive através de uma **Anchor**: a rota conceitual que oferece seu acesso mais estável ao trabalho difícil.
 
-To outside observers, Redactors often appear capable of performing acts that resemble magic. However, researchers who study Redactory generally describe these abilities in more practical terms.
+Uma Anchor não é uma lista de feitiços nem uma permissão legal. Não é garantia de combate, objeto transferível ou categoria que o treinamento possa promover. Sua **Anchor Depth** é inerente — Shallow, Deep ou Abyssal — enquanto a **Dive Depth** descreve a faixa alcançada em um ato específico. O treinamento pode aprofundar familiaridade, tolerância, precisão e recuperação ao longo de uma rota; não move uma Anchor entre classes de profundidade.
 
-Rather than creating matter or energy from nothing, Redactors seem to guide physical systems toward different outcomes that were already possible under the right conditions.
+O **Reach** é outra medida. Ele descreve até onde um Redactor consegue trabalhar lateralmente a partir da Anchor. Conhecimento, preparação e schematics ajustados podem tornar esse percurso mais seguro e claro, mas não concedem uma permissão metafísica que o Redactor não possuía.
 
-For example, a Redactor might concentrate heat into a single location, reshape metal without tools, or generate temporary structures made of force or energy. In each case, the Redactor appears to guide reality toward a state that would normally require much more time, energy, or physical machinery.
+## Formação sem posse
 
-How this ability first emerges in a person is still debated. Some researchers believe it may be influenced by genetics, while others suspect environmental factors or exposure to extreme stress may play a role.
+Redactors confirmados são registrados e recebem formação mínima de segurança. Essa obrigação pública existe porque o roteamento sem controle pode ferir o Redactor e outras pessoas. Ela não exige prática profissional.
 
----
+O percurso reconhecido da primeira indicação até a formação segura chama-se **Inscription**. Pode incluir Civil Entry, Academy Assessment, Anchor Recognition, Nib Induction, Point Issuance, Formation, uma Mark Hearing e um First Seal ou não prática apoiada. A explicação cívica completa está em [[redactor-life|A Vida de um Redactor]].
 
-## Origins and Bloodlines
+A formação na Academy dá a cada Nib os recursos para entrar, interromper, sair e sobreviver ao Dive. Também oferece uma base prática de defesa: fuga, orientação sob ameaça, proteção de pessoas e equipamento, liberação segura e discernimento para chamar a ajuda certa. Isso não transforma todo Redactor em soldado.
 
-Redactors are extremely rare. Most estimates suggest that only a tiny fraction of the population ever develops the ability to perform Redactory.
+## Rank, Mark e domínio
 
-One of the strongest predictors appears to be **family history**. Certain ancient families across Terra are known to have produced Redactors for many generations. These lineages are often referred to informally as *Redactor bloodlines*. Children born into such families have a noticeably higher chance of developing Redactory ability later in life.
+O Apocachynthion mantém três perguntas separadas:
 
-However, inheritance does **not guarantee** that a person will become a Redactor. Many children born into these families never develop the ability at all.
+- **Rank** registra formação e responsabilidade profissional: Nib, Quill ou Stylus.
+- **Mark** registra a prática atualmente permitida e os limites escritos ao redor dela.
+- **Anchor, Depth e Reach** descrevem fatos estruturais que a burocracia não pode fabricar.
 
-Likewise, Redactors occasionally appear in families with **no known history of Redactory**. In these cases the ability seems to emerge unexpectedly, sometimes after periods of extreme stress or unusual life events.
+Um Quill pode trabalhar de forma independente dentro de um Mark. Um Stylus tem julgamento maduro e rotas familiares capazes de continuar durante atividades comuns. Um **Archtype** não é o próximo Rank da Academy; é a rara condição estrutural de estabilização em Sovereign Depth.
 
-Because of this unpredictability, most researchers believe Redactory ability is influenced by several factors rather than a single cause. Genetics may play a role, but environment, personal experience, and unknown biological conditions may also contribute.
+## Uma vida com Redactory
 
-As a result, new Redactors can appear almost anywhere in the population, even in regions where no Redactor bloodline has been recorded.
+Redactors modernos costumam usar um [[point|Ponto]], o [[common-apparatus-set|Conjunto Comum de Aparatos]] e [[leaf|Folhas]] ajustadas. Essas ferramentas podem tornar a prática mais segura, legível e repetível. Elas não entram no Dive, criam uma Anchor, eliminam o risco ou transformam uma pessoa em propriedade institucional.
 
----
+Alguns Redactors tornam-se engenheiros, profissionais clínicos, professores, pesquisadores, artesãos ou servidores públicos. Outros praticam ocasionalmente, escolhem trabalho comum ou se afastam inteiramente da prática. Uma House, empregador ou comandante pode contratar serviço de forma legal; nenhum deles pode possuir um Redactor ou apagar os limites de seu Mark.
 
-## The Dive
+## Limites que continuam reais
 
-> The **Dive** is the gateway to all Redactory — a state of extreme mental compression in which the Redactor narrows their awareness to a single point and, from there, reaches into how reality might otherwise behave.
+Todo Redactor permanece limitado por fechamento causal, saúde pessoal, relação com a Anchor, Dive Depth, Reach, recuperação, condições locais e os direitos de outras pessoas. Uma rota que falha pode colapsar, causar recoil, produzir uma instanciação defeituosa, machucar ou desgastar a Anchor, ou levar a uma perda de controle mais grave.
 
-The Dive is a mental state of extreme concentration. When entering this state, a Redactor narrows their awareness and focuses their thoughts with unusual precision.
-
-Many Redactors describe the experience as if their mind "compresses" or "sharpens," allowing them to perceive and influence physical systems in ways that are normally impossible.
-
-While in the Dive, a Redactor attempts to guide reality toward a different possible outcome. For example, a material might soften and reshape, or heat might gather in a single point instead of spreading outward.
-
-The Dive cannot be maintained indefinitely. Remaining in this state for too long can lead to exhaustion, confusion, or more serious psychological harm.
-
-Experienced Redactors learn to enter and exit the Dive quickly in order to reduce these risks.
-
----
-
-## Anchors
-
-> An **Anchor** is a Redactor's natural domain of influence — the conceptual lens through which their abilities feel most instinctive, most stable, and most controlled.
-
-Anchors often emerge early in a Redactor's training or during their first successful use of Redactory. Personal experience, emotion, and repeated practice appear to shape how an Anchor develops.
-
-Some Redactors naturally work with ideas like flame, motion, pressure, reflection, or growth. Working within an Anchor usually requires less concentration and produces more stable results. Attempting effects far outside one's Anchor is possible, but it typically demands far greater effort.
-
----
-
-## Limits and Strain
-
-Although Redactors can produce dramatic effects, their abilities are not unlimited.
-
-Several factors influence how difficult an effect will be to perform:
-
-- **Scale** — Larger effects require far greater concentration.
-- **Complexity** — Effects involving many moving parts or systems are harder to stabilize.
-- **Distance from Anchor** — Effects unrelated to a Redactor's Anchor require more effort.
-- **Environmental resistance** — Certain environments seem to resist Redactory more strongly than others.
-
-When a Redactor attempts something beyond their limits, the effect may collapse suddenly. This can result in physical backlash, mental fatigue, or in extreme cases lasting psychological harm.
-
-For this reason, most Redactors train extensively before attempting complex effects.
-
----
-
-## Environmental Conditions
-
-Researchers have observed that Redactory behaves differently depending on the surrounding environment.
-
-Some locations appear to resist Redactory strongly, making it difficult for Redactors to perform even simple effects. Other places seem to allow Redactory more easily, though they may also be less stable.
-
-The reasons for this variation are still under investigation. Some scholars suggest that large concentrations of people, strong beliefs, or repeated Redactory use may influence how resistant an environment becomes.
-
----
-
-## Training and Practice
-
-Because uncontrolled Redactory can be dangerous, most societies that recognize Redactors maintain some form of training or regulation.
-
-Training typically focuses on:
-
-- Learning to enter the Dive safely
-- Understanding personal limits
-- Developing and refining one's Anchor
-- Practicing controlled effects before attempting complex ones
-
-Even experienced Redactors continue to train throughout their lives, as the mental demands of Redactory require constant discipline.
-
----
-
-## Current Understanding
-
-Despite centuries of observation, the deeper principles behind Redactors and their abilities remain only partially understood.
-
-Most scholars agree that Redactors possess an unusual interaction between human cognition and the structure of physical reality. Exactly how this interaction works, and why only certain individuals develop it, remains one of the major unanswered questions in Redactory research.
-
-What is clear is that Redactors have played a significant role in shaping history, technology, and warfare wherever their abilities have appeared.
+O verdadeiro êxito não é fazer esses limites desaparecerem. É reconhecê-los cedo o suficiente para voltar.

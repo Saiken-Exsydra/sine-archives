@@ -1,15 +1,15 @@
 ---
-title: "Sai'ken Ex'sydra"
+title: "Sai'ken Exsydra"
 type: "Personagem"
 age: "25 (em 2200)"
 birth_year: "2175"
 birthplace: "Ael'keth, fronteiras orientais, Regiao Norte"
-affiliation: "KT-Exs (cobertura); serviço protegido sob mandado selado da Casa e do Compact"
-house: "Ex'sydra (nome legal restaurado de uma linhagem teorica pre-Imperial apagada)"
+affiliation: "SiNE Integrated Forces (cobertura pública); serviço protegido KT-Exs sob mandado selado da Casa e do Compact"
+house: "Exsydra (restauração legal moderna da linhagem pré-Imperial Ex'sydra apagada)"
 rank: ""
-registry_status: "Ativo - operativo KT-Exs; destacamento na casa do ramo cadete Wonderwall, designado em 2197"
+registry_status: "Ativo sob mandado de serviço protegido; classificação de prática pendente"
 point_profile:
-  status: ""
+  status: "Portado; restrito"
   cas_access: ""
   leaf_permissions: ""
   register_access: ""
@@ -23,10 +23,10 @@ dress: "Casacos escuros e roupas praticas, sem excesso"
 residence: "Propriedade do ramo cadete Wonderwall, distrito residencial leste, Kalt'sen"
 occupation: "Operativo KT-Exs; ativo de protecao domestica e contingencia"
 summary: "Um operativo quieto do KT-Exs que carrega a ultima arquitetura ativa de cadencia da linhagem Ex'sydra: nao um profeta, mas um homem capaz de sentir o proximo compasso errado antes que a sala saiba que ele existe."
-tags: ["Wonderwall", "KT-Exs", "Ex'sydra", "Cadencia", "Gap-space", "Ec'lesia Wonderwall", "Time-tolerated"]
+tags: ["Wonderwall", "KT-Exs", "Exsydra", "Cadencia", "Gap-space", "Ec'lesia Wonderwall", "Time-tolerated"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Sai'ken Exsydra Dossier.md"
 image: "../../assets/uploads/characters/char-saiken-exsydra.webp"
 hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
@@ -39,7 +39,7 @@ hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 
 ## Visao Geral
 
-Sai'ken Ex'sydra nasceu como **Sai'ken Las'gall** nas fronteiras orientais de **Ael'keth** e depois entrou em serviço protegido sob um mandado selado da Casa e do Compact. Em **2194**, Em'manuel devolveu a ele o nome apagado **Ex'sydra** sem explicar por inteiro o que significava. O nome não concede filiação automática à House Wonderwall, cargo corporativo ou reivindicação soberana.
+Sai'ken Exsydra nasceu como **Sai'ken Las'gall** nas fronteiras orientais de **Ael'keth** e depois entrou em serviço protegido sob um mandado selado da Casa e do Compact. Em **2194**, Em'manuel devolveu a ele o nome legal **Exsydra** sem explicar por inteiro o que significava. Essa grafia moderna restaura a linhagem pré-Imperial **Ex'sydra** sem reproduzir seu apóstrofo histórico. O nome não concede filiação automática à House Wonderwall, cargo corporativo ou reivindicação soberana.
 
 A verdade nao e pequena. Sai'ken e a ultima expressao ativa confirmada de uma antiga arquitetura Ex'sydra, destruida pela erasure historica e tambem pelo proprio erro catastrofico da linhagem.
 
@@ -57,9 +57,11 @@ Ele nao e obediente por natureza. E disciplinado por escolha. Essa diferenca imp
 
 A familia Las'gall viveu por geracoes perto das ruinas de **Ksyr'eth**, nas fronteiras orientais de Ael'keth. Nao sabia que carregava a continuacao de uma linhagem pre-Imperial apagada, e tambem nao sabia que a propria regiao estava aprofundando silenciosamente aquilo que o sangue da familia podia fazer.
 
-O que a familia chamava de instinto nunca foi so instinto. Sai'ken cresceu sabendo quando salas estavam erradas, quando estruturas iam falhar e quando a violencia estava prestes a comecar. Treinou como Redactor regional, foi sinalizado pelo **Project Seam** e por fim chamou a atencao pessoal de **Em'manuel Kael Wonderwall**. A CLOCKWORK não possui qualquer reivindicação sobre ele.
+O que a familia chamava de instinto nunca foi so instinto. Sai'ken cresceu sabendo quando salas estavam erradas, quando estruturas iam falhar e quando a violencia estava prestes a comecar. Treinou como Redactor regional e, com o tempo, chamou a atenção de autoridades maiores. A origem e o alcance dessa atenção permanecem protegidos.
 
-Ele aceitou o nome **Ex'sydra** como designacao operacional. Ainda nao sabe que o nome sempre foi dele por sangue.
+Sai'ken não é instrumento temporal, e nenhuma atenção inexplicada dirigida a ele deve ser confundida com destino, proteção ou profecia.
+
+Ele aceitou o nome **Exsydra** como designacao operacional. Ainda nao sabe que o nome sempre foi dele por sangue.
 
 ## Cadencia e Travessia
 
@@ -81,7 +83,7 @@ Travessias profundas repetidas tambem cobram um preco. Tempo demais em gap-space
 
 ## Relacoes Importantes
 
-**Em'manuel Kael Wonderwall** o recrutou, o renomeou e ainda oculta a verdade mais profunda sobre a linhagem Ex'sydra.
+**Em'manuel Kael Wonderwall** o recrutou, devolveu-lhe o nome e ainda oculta a verdade mais profunda sobre a linhagem Ex'sydra — inclusive que ele próprio foi Al'uxxios Exsydra.
 
 **Ec'lesia Yalara Wonderwall** e o centro da sua designacao atual. Ele é seu oficial de proteção e sentinela de cadência. A cláusula terminal do mandado só vale após perda catastrófica de agência verificada e falha ou impossibilidade de resgate, evacuação, contenção, intervenção clínica e resposta capaz de lidar com a Shore. Toda intervenção permanece sujeita a revisão civil selada.
 

@@ -4,14 +4,16 @@ type: "Personagem"
 age: "24 (em 2200)"
 birth_year: "2176"
 birthplace: "Valerie, Aurora"
-affiliation: "Lyréne Pharmaceuticals; Vitrified Wing (programa secreto)"
+affiliation: "Lyréne Pharmaceuticals; Vitrified Wing (rótulo provisório para um programa secreto)"
+house: ""
 rank: "Redactor de rank Quill"
+height: ""
 registry_status: "Redactor registrado pela MAGI; certificação condicional em Aurora"
 point_profile:
-  status: ""
-  cas_access: ""
-  leaf_permissions: ""
-  register_access: ""
+  status: "Point reconhecido pelo compacto; carregado"
+  cas_access: "CAS básico; CAS profissional limitado a diagnósticos de pesquisa"
+  leaf_permissions: "Leaves comuns; Leaves licenciadas por permissão de Mark"
+  register_access: "Protegido; acesso exige processo do compacto"
 designation: "A garota que ouve maquinas proibidas"
 build: "Alta, magra e precisa; naturalmente atlética sem aparentar força"
 complexion: "Pele clara média"
@@ -24,10 +26,12 @@ summary: "Criada para ouvir onde nenhuma mente moderna deveria chegar; agora a m
 tags: ["Aurora", "Valerie", "Lyréne", "Vitrified Wing", "Mechanism", "Redactor", "Precursor", "Project Seam"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn.webp"
 hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
+portrait_gallery: []
+hero_gallery: []
 ---
 
 > *"Ela foi criada para ler uma máquina que nenhuma mente moderna deveria conseguir interpretar. O problema para as pessoas que criaram Ayanna é que ela começou a ler elas também."*
@@ -44,6 +48,8 @@ Privadamente, ela é a primeira criação bem-sucedida do **Projeto Ennea**, um 
 Ayanna não sabe disso.
 
 Tudo o que ela sabe é que partes da própria vida já não parecem se encaixar direito.
+
+Os nomes **Lyréne**, **Vitrified Wing**, **Projeto Ennea**, **Sibyl Fragment** e vários nomes secundários de pessoal são rótulos provisórios de registro, extraídos de fontes seladas e inconsistentes. Servem para orientar o leitor; não garantem que o programa usasse esses nomes internamente.
 
 ---
 
@@ -95,22 +101,26 @@ O que a classificação pública não percebe é que essa Anchor provavelmente �
 
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** Folha de pratica  
+**Tipo de Arquivo:** Practice File  
 **Registry Status:** Registrada sob compacto aurorano  
 **Rank:** [[quill|Quill]]  
 **[[mark|Mark]]:** [[mark-2|Mark 2]]  
 **[[open-mark|Open Mark]]:** None  
-**[[margins|Margins]]:** Civico  
+**[[margins|Margins]]:** Civic  
+**Restrictions:** Sem deployment de combate; sem trabalho em deep sites ou adjacente a anomalias sem Seal suplementar  
+**Point:** Reconhecido pelo compacto; carregado  
+**CAS Access:** CAS básico; CAS profissional limitado a diagnósticos de pesquisa  
+**Leaf Permissions:** Common Leaves; Licensed Leaves por permissão de Mark  
+**Point Register:** Protegido; acesso exige processo do compacto  
 **Anchor:** Mechanism  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Deep  
-**Reach Reading:** broad  
-**Registration Tenure:** 5 anos  
-**Academy Record:** Avaliacao da embaixada aurorana apos a manifestacao aos dezenove anos; certificacao de compacto mantida sob reconhecimento da MAGI  
-**Practice Record:** Pesquisa, diagnostico e trabalho civico-industrial controlado  
-**[[blots|Blots]]:** Nenhum  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Working Reach  
+**Overreach History:** Sintomas de avaliação registrados durante suspensão de mechanism  
+**Apparatus Permissions:** Ordinary Apparati; sem martial apparati  
+**Practice Record:** Pesquisa, diagnóstico e trabalho cívico-industrial controlado  
 **Pager Note:** None  
-**[[seal|Current Seal]]:** Avaliacao da embaixada aurorana sob reconhecimento do Apocachynthion
+**[[seal|Current Seal]]:** Avaliação da embaixada aurorana sob reconhecimento do Apocachynthion
 
 ---
 
@@ -122,7 +132,7 @@ Ayanna foi criada para mudar isso.
 
 A Vitrified Wing acredita que a estrutura recursiva dela permitirá funcionar como receptora das saídas do Fragment. Se estiverem certos, Ayanna talvez consiga eventualmente perceber anomalias de coerência, eventos de Resonance e condições estruturais profundas que instituições modernas não conseguem interpretar sozinhas.
 
-A Wing talvez também esteja subestimando Ayanna. Se o acoplamento funcionar plenamente, ela pode acabar enxergando muito mais do que planejaram.
+A Wing talvez também esteja subestimando Ayanna. Um acoplamento pleno pode revelar sinais de uma rede Precursor mais ampla, da contenção da Lunar Crown, da modelagem de Vael'Theryn ou do remanescente expulso de uma interface de Legibility tradicionalmente associado a Myehnai. São leituras possíveis, não prova de que a Wing compreende o dispositivo.
 
 ---
 
@@ -178,7 +188,7 @@ Isso a tornou mais observadora, mais disciplinada e mais difícil de conter.
 
 **Cael Rouvelle** - Líder de segurança da Vitrified Wing. É o homem com maior probabilidade de ordenar ou executar contenção letal caso o projeto conclua que Ayanna não pode mais ser controlada.
 
-**Em'manuel Wonderwall / Project Seam** - O Project Seam identificou Ayanna como importante através do padrão ao redor da vida dela. Ele está observando. A Wing não sabe que está sendo observada. A CLOCKWORK não possui uma costura válida enquanto as autoridades de Aurora e as jurisdições civis competentes permanecerem capazes de responder.
+**Em'manuel Wonderwall** - A atenção de Em'manuel às circunstâncias de Ayanna permanece reservada. Anomalia e complexidade jurisdicional, por si só, não determinam o destino de uma pessoa.
 
 ---
 

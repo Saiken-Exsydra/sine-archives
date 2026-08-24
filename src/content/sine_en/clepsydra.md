@@ -5,13 +5,13 @@ designation: "SiNE Orbital Continuity Authority - S-CL"
 affiliation: "SiNE (S-CL division) - lattice authority with cross-division mandate"
 headquarters: "Kalt'sen lattice custody complex - operational presence distributed across orbital and ground sites"
 founded: "Year 1813 - chartered from the Lattice Cradle Program's surviving core"
-jurisdiction: "Orbital lattice, Glass Sinks, Thread authorization, synchronization doctrine, and continuity-risk oversight across all SiNE operations"
+jurisdiction: "Orbital lattice, Glass instruments and lenses, Thread authorization, Needlefall validation, and continuity-risk oversight"
 status_label: "Active"
 summary: "The institution that keeps the orbital lattice coherent, authorized, and suspicious of easy-looking data."
-tags: ["Clepsydra", "SiNE", "S-CL", "GlassThreaders", "GlassWatchers", "Glass Sinks", "Lattice", "Synchronization", "Continuity", "Organization", "Zone of Avoidance"]
+tags: ["Clepsydra", "SiNE", "S-CL", "GlassThreaders", "GlassWatchers", "GlassNeedles", "Glass Sinks", "Lattice", "Synchronization", "Continuity", "Organization", "Zone of Avoidance"]
 status: "public"
 created: "2026-05-10"
-updated: "2026-05-24"
+updated: "2026-08-23"
 image: "../../assets/uploads/sine-clepsydra.png"
 ---
 
@@ -26,7 +26,7 @@ Clepsydra is SiNE's **orbital continuity authority** - the institution responsib
 
 It is not a military command. It is not a theatre branch. It exists because the lattice became too large, too delicate, too foundational, and too entangled with every other major system on Terra to remain under military authority without eventually being broken by military necessity.
 
-Clepsydra holds sole custody of the **GlassWatchers**, **GlassThreaders**, and **Glass Sinks**. It governs Thread authorization, orbital continuity doctrine, lattice preservation, Sink refresh-cycle management, strategic continuity analysis, resonance-array maintenance, and the equivalence protocols that keep the system from disagreeing with itself under load.
+Clepsydra holds sole custody of the **GlassWatchers**, **GlassThreaders**, **GlassNeedles**, **Glass Sinks**, and the lenses through which those instruments become usable. It governs Thread authorization, Needlefall validation, orbital continuity doctrine, Sink refresh cycles, strategic continuity analysis, resonance-array maintenance, and the equivalence protocols that keep the system from disagreeing with itself under load.
 
 ---
 
@@ -46,8 +46,10 @@ Clepsydra's responsibilities include:
 
 - operation of the GlassThreaders
 - operation of the GlassWatchers
+- custody and validation of GlassNeedles and their lenses
 - custody and refresh governance of all registered Glass Sinks
 - Thread authorization
+- Needlefall validation
 - synchronization doctrine
 - orbital continuity management
 - lattice preservation
@@ -85,7 +87,7 @@ This produces a core Clepsydran caution: a **blank return is not clean data**. I
 
 Clepsydra does not describe itself in military language. Its internal offices are organized around custody, synchronization, preservation, and flow.
 
-Public and semi-public documentation most often refers to bodies such as the **Synchronization Office**, **Continuity Office**, **Lattice Custody**, **Flow Chambers**, and the personnel classes responsible for **Thread Authorization**, **Sink Custody**, **Alignment Procedures**, and **Equivalence Protocol** review.
+Public and semi-public documentation most often refers to the **Thread Office**, **Sink Office**, **Veil Office**, **Cradle Office**, and the Keepers who supervise authorization, custody, alignment, lens handling, and equivalence review. The names describe responsibilities rather than ranks.
 
 ---
 
@@ -96,6 +98,12 @@ HourGlass does not command the orbital lattice.
 Threshold Command requests Threads through Clepsydra when movement, insertion, extraction, or continuity-sensitive support requires lattice use. Corridor Command receives Watcher-derived surveillance interpretation and route-clearance support through Clepsydra. Margin Command coordinates long-range synchronization and northern maritime routing through the same authority.
 
 This makes Clepsydra indispensable to modern SiNE warfighting while keeping it institutionally outside warfighting doctrine.
+
+### Northern maritime doctrine
+
+The [[northern-fleets|Imperial and WVS fleets]] petition Clepsydra through **Thread Bells**. A Bell sends a request and an evidence package; it does not open a route. No vessel travels by Thread, and no vessel carries a GlassThreader or true Glass Sink. Fleet movement remains physical.
+
+Normal Glass support requires **WhiteGlass Convergence**: compatible observation, route geometry, custody confirmation, and a validated answer. Clepsydra can accept, modify, defer, or refuse a petition. Operational urgency can establish need, but it cannot manufacture a route or transfer custody to a captain.
 
 ---
 

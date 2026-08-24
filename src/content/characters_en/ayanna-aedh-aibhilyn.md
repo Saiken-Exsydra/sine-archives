@@ -4,15 +4,15 @@ type: "Character"
 age: "24 (as of 2200)"
 birth_year: "2176"
 birthplace: "Valerie, Aurora"
-affiliation: "Lyrene Pharmaceuticals; Vitrified Wing (secret program)"
+affiliation: "Lyréne Pharmaceuticals; Vitrified Wing (provisional record label for a secret program)"
 house: ""
 rank: "Quill-ranked Redactor"
 registry_status: "Auroran-compact Redactor; Quill, Mark 2 under conditional Margins"
 point_profile:
-  status: ""
-  cas_access: ""
-  leaf_permissions: ""
-  register_access: ""
+  status: "Compact-recognized Point; carried"
+  cas_access: "Basic CAS; professional CAS limited to research diagnostics"
+  leaf_permissions: "Common Leaves; Licensed Leaves by Mark permission"
+  register_access: "Protected; compact process required for access"
 designation: "The Girl the Machine Answered"
 height: ""
 build: "Tall, slim, and precise; naturally athletic without looking strong"
@@ -30,7 +30,7 @@ hero_gallery: []
 tags:
   - "Aurora"
   - "Valerie"
-  - "Lyrene"
+  - "Lyréne"
   - "Vitrified Wing"
   - "Mechanism"
   - "Redactor"
@@ -38,7 +38,7 @@ tags:
   - "Project Seam"
 status: "public"
 created: "2026-05-14"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 ---
 
@@ -54,6 +54,8 @@ Ayanna is a young researcher in Valerie with a rare gift for understanding machi
 The truth is worse and more interesting. Ayanna was designed as part of **Project Ennea**, a hidden program meant to create a human being capable of interfacing with the **Sibyl Fragment**, a Precursor device modern people are not supposed to understand cleanly.
 
 The important part is that Ayanna is still fully a person. Her story is not about fake humanity. It is about a real life being built for a purpose she never agreed to.
+
+The names **Lyréne**, **Vitrified Wing**, **Project Ennea**, **Sibyl Fragment**, and several secondary personnel names are provisional record labels drawn from sealed and inconsistent evidence. They are useful handles for the reader, not a guarantee that the program used those exact names internally.
 
 ## Identity
 
@@ -83,20 +85,24 @@ That means the central horror in her story is not that she is unreal. It is that
 
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** Practice Leaf  
+**File Type:** Practice File  
 **Registry Status:** Registered under Auroran compact  
 **Rank:** [[quill|Quill]]  
 **[[mark|Mark]]:** [[mark-2|Mark 2]]  
 **[[open-mark|Open Mark]]:** None  
 **[[margins|Margins]]:** Civic  
+**Restrictions:** No combat deployment; no deep-site or anomaly-adjacent work without supplemental Seal  
+**Point:** Compact-recognized Point; carried  
+**CAS Access:** Basic CAS; professional CAS limited to research diagnostics  
+**Leaf Permissions:** Common Leaves; Licensed Leaves by Mark permission  
+**Point Register:** Protected; compact process required for access  
 **Anchor:** Mechanism  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Deep  
-**Reach Reading:** broad  
-**Registration Tenure:** 5 years  
-**Academy Record:** Auroran embassy assessment after manifestation at nineteen; compact certification maintained through MAGI recognition  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Working Reach  
+**Overreach History:** Assessment symptoms recorded during mechanism suspension  
+**Apparatus Permissions:** Ordinary Apparati; no martial apparati  
 **Practice Record:** Research, diagnostics, and controlled civic-industrial work  
-**[[blots|Blots]]:** None  
 **Pager Note:** None  
 **[[seal|Current Seal]]:** Auroran embassy assessment under Apocachynthion recognition
 
@@ -122,7 +128,7 @@ Ayanna's biggest weakness is missing information. Other people know more about h
 
 Her Anchor also does not make her all-knowing. She can read systems brilliantly, but she still has to test ideas, gather evidence, and survive people who may choose violence over exposure.
 
-The other major risk is the Sibyl Fragment itself. If she truly is the human key the project wanted, then success may be much more dangerous than failure. The people who built her may not actually control what happens if the lock opens.
+The other major risk is the Sibyl Fragment itself. If she truly is the human key the project wanted, then success may be much more dangerous than failure. A full coupling could expose more than local diagnostics: traces of a wider Precursor network, Lunar Crown containment, Vael'Theryn's modeling, or the expelled Legibility-interface remnant traditionally associated with Myehnai. These are possible readings, not promises that the Wing understands the device.
 
 ## Important Relationships
 
@@ -134,7 +140,7 @@ The other major risk is the Sibyl Fragment itself. If she truly is the human key
 
 **Cael Rouvelle** is the project's hard edge in human form. If Ayanna stops being manageable, he is one of the people most likely to enforce that reality.
 
-**Em'manuel Wonderwall / Project Seam** identified the pattern around her life and continues to observe it. CLOCKWORK has no valid seam while Aurora and the competent civil jurisdictions remain capable of response.
+**Em'manuel Wonderwall** has taken a guarded interest in the circumstances around Ayanna's life. Anomaly and jurisdictional complexity alone do not determine a person's fate.
 
 ## Story Role
 
@@ -143,3 +149,5 @@ Ayanna matters because she turns a huge setting question into a personal one: wh
 She is also not just a victim. The same gift that made her useful is starting to make her dangerous to the people who planned her life. She was meant to read one forbidden machine. Now she is learning to read the whole system that built her.
 
 ## Deeper Lore
+
+Because the source record is sealed and internally inconsistent, Ayanna's entry distinguishes between confirmed conditions and the labels used to discuss them. Her personhood and engineered purpose are firmer than the program's surviving organizational vocabulary.

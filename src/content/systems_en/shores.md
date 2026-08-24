@@ -5,7 +5,7 @@ summary: "Terra-local marginal conditions where the Page's deep conceptual strat
 tags: ["systems", "Shores", "Shorefall", "Shorewalking", "Shore-Breach", "Translation Wake", "Continuity", "Luminant Shore", "Abyssal Shore", "Redactory"]
 status: "public"
 created: "2026-05-22"
-updated: "2026-06-26"
+updated: "2026-08-23"
 image: ""
 ---
 
@@ -72,7 +72,7 @@ In Redactory-facing doctrine, Shorewalking is a near-mythic extreme of Shore con
 
 Apocachynthion restricted theory treats Shorewalking as one of the most dangerous edges of the Index Theorem. Ordinary researchers do not discuss it freely. Most working Redactors will never see a confirmed case.
 
-Shorewalking does not grant native syntax authority, make the practitioner a Primordial, allow creation ex nihilo, allow absolute destruction, or make the walker owner of the Shore.
+Shorewalking grants **temporary, bounded aperture authority**: direct syntax access inside the compatible jurisdiction opened by the person, system, relation, and Shore. It does not grant native syntax sovereignty, make the practitioner a Primordial, allow creation ex nihilo or absolute destruction, or make the walker owner of the Shore.
 
 Shorewalking internalizes the Shore into the self. The person does not fall. The person holds the aperture. The Shore acts through body, continuity, and system interface.
 
@@ -114,7 +114,7 @@ Redactory retains **Shores**, **Shorefall**, and **Shorewalking** as its technic
 
 At ordinary depths, the Anchor remains a route. At extreme depths, the concept ceases to function only as a route and becomes a marginal condition. Redactor Shorefall occurs when the Redactor's recursive singularity collapses through extreme Dive-depth and falls into a compatible Shore. The Anchor swallows the Redactor.
 
-Redactor Shorewalking occurs when the Redactor refuses to fall and holds the aperture Page-side. The Redactor internalizes Shore pressure through the Anchor, body, perception, and continuity. Redactor Shorewalking does not rewrite grammar and does not grant native syntax authority.
+Redactor Shorewalking is **Palimpsest**. It occurs when the Redactor refuses to fall, holds the aperture Page-side, and crosses from routing a concept to legitimately altering syntax through it. The authority lasts only while the aperture and self-address hold. It is not native syntax sovereignty.
 
 Reach and Shorewalking must not be collapsed into one category. Reach extends the Redactor's routing beyond ordinary Anchor comfort while remaining a Redactory act. Shorewalking begins only when Shore pressure is internalized and mediated through a surviving recursive singularity.
 
@@ -126,7 +126,9 @@ Some Divine Vessel events resemble Shore contact from the outside, especially wh
 
 Church investigators do not normally call such cases Shores. They may describe them through Beatification, Crowning, possession, false heaven, abyssal ingress, or other theological categories.
 
-Whether these reports belong beside Redactory Shore doctrine is a restricted theoretical question, not ordinary public teaching.
+Stable Divination Shorewalking is **Theophany**: total compatible manifestation through a vessel whose self-address remains. Presence steps into Page-real expression through the vessel; the vessel is not erased. If the host is devoured, replaced, or rendered irrelevant, the state is possession rather than successful Shorewalking.
+
+Theophany carries temporary aperture authority through its compatible divine relation. It does not prove that the Shore itself is divine and does not grant the vessel native sovereignty. Whether a reported manifestation truly crossed that threshold remains a restricted theoretical question, not ordinary public teaching.
 
 ### Bloom
 
@@ -136,7 +138,9 @@ A **Rootline** is the persistent address carried by a Bloom organism or floritic
 
 Bloom lineages are rare and often dynastic. A bloodline, household, or closed tradition may inherit contact with a specific flower, fungal agent, root-organism, or biological anomaly, then build its own names around the experience.
 
-Because of that, Bloom-facing terminology is not standardized. One lineage may describe a root pulling downward; another may describe first soil, buried flowering, ancestral mycelium, blood-garden contact, or the host becoming a living root. Outside observers should not assume those names all mean the same event.
+Stable Bloom Shorewalking is **Symbiogenesis**. The host-symbiont interface ceases to be an interface and becomes one syntax-bearing living structure while the host's self-address remains. The folk name **the Walking Root** describes the same endpoint in some lineages.
+
+Because Bloom-facing terminology is not standardized, one lineage may describe a root pulling downward; another may describe first soil, buried flowering, ancestral mycelium, blood-garden contact, or the host becoming a living root. Outside observers should not assume those names all mean the same event—or mistake stable symbiosis for Symbiogenesis before the syntax-bearing threshold is crossed.
 
 ### Continuity-Sensitive Phenomena
 
@@ -166,7 +170,7 @@ Those names may be culturally valid. This public entry preserves the Redactory-f
 
 The Luminant Shore is the Shore most directly associated with Light, revelation, visibility, recognition, and the painful legibility of hidden structure.
 
-It frames A'licia's post-death addressability, Al'ithia's stable composite continuity, E'lla's White Desert Shorefall, and several Wonderwall anomalies around Project Kaleidoscope and the First Radiance.
+Its public doctrine describes a Shore condition, not a catalogue of people. Individual personhood records, incident files, and institutional interpretations remain subject to their own protections.
 
 ### The Abyssal Shore
 
@@ -178,18 +182,6 @@ It is the central interpretive frame for the Abyssal Flower and related Bloom-ro
 
 ## Known and Suspected Cases
 
-### E'lla Rae Wonderwall
-
-E'lla's White Desert incident is catastrophic premature Luminant Shorefall. The Luminant Shore already existed. E'lla did not create it and did not master it. She fell into it.
-
-Project Kaleidoscope's failed, partial, collapsed, and adjacent subject-signatures interact with her there because the Luminant Shore reveals hidden structures, and because E'lla is the living center of a refracted person-pattern produced by Project Kaleidoscope. Her Shorefall reveals the continuity wound Project Kaleidoscope already made.
-
-### A'licia and Al'ithia Rae Wonderwall
-
-A'licia's post-death persistence is best described through continuity, Light, reverence, indexing, and Luminant Shore relation. She did not simply resurrect, merely possess Athena, or remain a normal ghost.
-
-Al'ithia is a stable third-self: a new stable composite continuity produced by Athena and A'licia, not possession and not simple replacement.
-
 ### Sol'ytra
 
 Sol'ytra is not a normal Shorewalker. In her ultimate stage, Wound Crown Authority may stop or suppress Shorefall by sealing the local aperture, forcing recursive singularity back into Page-real alignment, imposing containment syntax over the boundary condition, or pinning body and selfhood back into one address.
@@ -200,12 +192,8 @@ She does not command the Shore. She commands the wound-condition through which t
 
 The Abyssal Flower and related Bloom phenomena are best handled through Rootline doctrine. The central question in Bloom Shorefall is whether the host is falling through the Bloom, or the Bloom is dragging the host home.
 
-### Em'manuel Kael Wonderwall
-
-Em'manuel's private Shore contact remains unresolved in classification. His Interval-domain work may have brought him to a Shore whose conceptual ecology he could not name under the framework available to him at the time.
-
 ---
 
 ## In One Sentence
 
-Shores are Terra-local marginal conditions where deep concept, continuity pressure, Time-ordered traversal, and Archive-adjacent pressure become spatially experienceable to recursive singularities.
+Shores are Terra-local marginal conditions where deep concept, continuity pressure, Time-ordered traversal, and Archive-adjacent pressure become spatially experienceable—and, for a surviving Shorewalker, temporarily syntax-addressable—to recursive singularities. See [[syntax-authority|Syntax Authority and Recursive Sovereignty]].

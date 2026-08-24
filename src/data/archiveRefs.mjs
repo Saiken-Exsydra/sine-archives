@@ -118,15 +118,6 @@ export const ARCHIVE_REF_OVERRIDES = {
       aliases: ["current seal"],
     },
     {
-      id: "leaf",
-      label: "Leaf",
-      previewTitle: "Leaf",
-      preview:
-        "The Apocachynthion record type or filing category under which a practitioner's registry status is carried.",
-      target: "organizations:apocachynthion#leaf",
-      aliases: ["leaf type", "sealed leaf"],
-    },
-    {
       id: "inkless",
       label: "Inkless",
       previewTitle: "Inkless",
@@ -170,15 +161,6 @@ export const ARCHIVE_REF_OVERRIDES = {
         "The Apocachynthion's enforcement arm, responsible for compliance, pursuit, review, and formal containment authority.",
       target: "organizations:apocachynthion#pagers",
       aliases: ["the pagers"],
-    },
-    {
-      id: "project-kaleidoscope",
-      label: "Project Kaleidoscope",
-      previewTitle: "Project Kaleidoscope",
-      preview:
-        "The Wonderwall biological reconstruction program that produced KL-83 and, in deeper doctrine, the living resonance condition centered on E'lla.",
-      target: "codex:ella-wonderwall#project-kaleidoscope",
-      aliases: ["project kaleidoscope"],
     },
     {
       id: "white-desert",
@@ -363,15 +345,6 @@ export const ARCHIVE_REF_OVERRIDES = {
       aliases: ["current seal"],
     },
     {
-      id: "leaf",
-      label: "Leaf",
-      previewTitle: "Leaf",
-      preview:
-        "Tipo de registro ou categoria de arquivamento sob a qual o status institucional de um praticante e mantido.",
-      target: "organizations:apocachynthion#leaf",
-      aliases: ["leaf type", "sealed leaf"],
-    },
-    {
       id: "inkless",
       label: "Inkless",
       previewTitle: "Inkless",
@@ -415,15 +388,6 @@ export const ARCHIVE_REF_OVERRIDES = {
         "Braco de execucao do Apocachynthion, responsavel por conformidade, perseguicao, revisao e autoridade formal de contencao.",
       target: "organizations:apocachynthion#pagers",
       aliases: ["the pagers"],
-    },
-    {
-      id: "project-kaleidoscope",
-      label: "Project Kaleidoscope",
-      previewTitle: "Project Kaleidoscope",
-      preview:
-        "Programa Wonderwall de reconstrucao biologica que produziu KL-83 e, na doutrina mais funda, a condicao de ressonancia viva centrada em E'lla.",
-      target: "codex:ella-wonderwall#project-kaleidoscope",
-      aliases: ["project kaleidoscope"],
     },
     {
       id: "white-desert",

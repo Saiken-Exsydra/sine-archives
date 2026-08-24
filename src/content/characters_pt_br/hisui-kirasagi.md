@@ -7,7 +7,7 @@ birthplace: "Tsukimiya, Hikari (costa de Darkmargin)"
 affiliation: "propriedade Wonderwall (equipe doméstica, Kalt'sen)"
 house: ""
 rank: ""
-registry_status: "Não registrada — desconhecida pelo Apocachynthion em qualquer capacidade"
+registry_status: "Não registrada no Apocachynthion; sinal legal de anomalia estrangeira mantido pela Stasis sob o compacto de saúde de fronteira"
 designation: "Flor da margem abissal"
 height: "1,65 m"
 build: "Compacta e precisa — moldada por uma vida inteira de disciplina em serviço"
@@ -16,15 +16,17 @@ hair: "Preto, curto no estilo tradicional das linhas de trabalho de Hikari — a
 eyes: "Quase negros em repouso; violeta-carmesim com padrões fractais em forma de pétalas se abrindo pela íris durante a ativação da Flower"
 dress: "Sempre usa mangas longas, independentemente do clima. Vestimenta doméstica formal da tradição das grandes casas de Hikari — cores escuras, condição impecável."
 residence: "Propriedade Wonderwall, distrito residencial leste, Kalt'sen"
-occupation: "Atendente doméstica — responsável pelo atendimento pessoal de Ec'lesia Yal'ara Wonderwall"
+occupation: "Atendente doméstica — responsável pelo atendimento pessoal de Ec'lesia Yalara Wonderwall"
 summary: "Uma lamina escondida em maneiras perfeitas, uma ternura cultivada dentro de um corpo criado para florescer em horror."
 tags: ["Hikari", "Kirasagi", "Abyssal Flower", "Symbiote", "Wonderwall", "Unregistered"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-07-13"
+updated: "2026-08-23"
 codex_file: "Hisui Kirasagi Dossier.md"
 image: "../../assets/uploads/char-hisui-kirasagi.png"
 hero_image: "../../assets/uploads/char-hisui-kirasagi-hero.png"
+portrait_gallery: []
+hero_gallery: []
 ---
 
 > *"A flor deveria ter matado ela. Não matou. O que ela fez no lugar é algo para o qual o Index Theorem simplesmente não tem linguagem, e que a Igreja chamaria de abominação. Não tenho certeza se qualquer um dos dois estaria errado. Tenho certeza apenas de que ela está na minha casa há dois anos e ninguém aqui dorme menos seguro por causa disso."*
@@ -128,7 +130,7 @@ O estado persistente de Overbloom de Ren'ya deixou a sucessão clara. Ele não p
 
 ### Kalt'sen — 2198 a 2200
 
-Ela está na propriedade Wonderwall desde o primeiro mês em que chegou ao Império. Suas funções incluem manutenção doméstica geral, preparo de refeições, administração de vestuário e atendimento pessoal de Ec'lesia Yal'ara Wonderwall. Executa tudo em um nível que a administradora da propriedade registrou nos relatórios internos como excepcional. Assumiu voluntariamente a manutenção dos tecidos cerimoniais depois de perceber que o sistema de armazenamento existente não preservava adequadamente os brasões bordados da família Wonderwall. Ninguém pediu que ela fizesse isso. Ela apenas percebeu o problema e resolveu.
+Ela está na propriedade Wonderwall desde o primeiro mês em que chegou ao Império. Suas funções incluem manutenção doméstica geral, preparo de refeições, administração de vestuário e atendimento pessoal de Ec'lesia Yalara Wonderwall. Executa tudo em um nível que a administradora da propriedade registrou nos relatórios internos como excepcional. Assumiu voluntariamente a manutenção dos tecidos cerimoniais depois de perceber que o sistema de armazenamento existente não preservava adequadamente os brasões bordados da família Wonderwall.
 
 A Flower não se manifestou externamente nenhuma vez desde sua chegada. Nos registros domésticos dos Kirasagi, o estado atual dela seria classificado como a condição de estabilidade contínua mais calma já observada no organismo. Ela não sabe o motivo.
 
@@ -144,19 +146,19 @@ A Flower não se manifestou externamente nenhuma vez desde sua chegada. Nos regi
 
 **O que ela sabe.** Ela sabe que a Flower pode matá-la. Sabe o que ela é e qual é o preço disso. Aprendeu cedo, do mesmo jeito que os Kirasagi ensinam fatos aos filhos em vez de avisos — porque avisos existem para pessoas que têm escolha, e crianças Kirasagi não têm.
 
-**O que ela não sabe.** Ela não sabe que a cadeia de colocação que a trouxe até esta propriedade foi manipulada por alguém que analisou sua documentação médica meses antes de a agência de colocação receber seu arquivo. Não sabe o que existe na topologia ao redor de Ec'lesia, nem por que a Flower permanece mais calma aqui do que em qualquer outro lugar onde já viveu. Não sabe que a estabilidade que sente há dois anos possui uma causa estrutural, nem que alguém está usando isso como dado de pesquisa.
+**O que ela não sabe.** O caso de Hisui foi legalmente sinalizado pelo compacto de saúde de fronteira. Esse aviso limitado não autorizava a observação privada nem a colocação doméstica manipulada que vieram depois; essas foram escolhas feitas sem o consentimento dela. Hisui desconhece tudo isso, assim como a topologia ao redor de Ec'lesia e o motivo de a Flower permanecer mais calma ali.
 
 ---
 
 ## Relacionamentos
 
-**Ec'lesia Yal'ara Wonderwall** — Formalmente, a pessoa sob seus cuidados. Na prática: a pessoa que ela decidiu proteger sem qualquer requisito, ordem ou conhecimento do que Ec'lesia realmente é. Ela mantém o grampo sempre ao alcance enquanto serve chá. Isso não é coincidência. A tradição Kirasagi ensina que quem você serve é quem você protege. E Hisui decidiu que Ec'lesia é a pessoa que ela serve.
+**Ec'lesia Yalara Wonderwall** — Formalmente, a pessoa sob seus cuidados. Na prática: a pessoa que ela decidiu proteger sem qualquer requisito, ordem ou conhecimento do que Ec'lesia realmente é. Ela mantém o grampo sempre ao alcance enquanto serve chá. A tradição Kirasagi ensina que quem você serve é quem você protege.
 
-**Sai'ken Ex'sydra** — O operador de segurança da propriedade. A relação entre os dois desenvolveu ao longo de dois anos uma intimidade silenciosa que nenhum deles nomeou. Não é a familiaridade comum entre colegas acostumados à rotina, mas o conforto de duas pessoas que reconhecem uma na outra condições que não precisam ser explicadas. Ambos carregam anomalias herdadas que jamais escolheram possuir. Ambos mantêm uma fachada profissional sobre estruturas internas muito mais complexas do que a propriedade imagina. Ela o chama de *o espantalho* — referência ao corpo magro e ao hábito de ficar parado demais em portas e corredores. Ele responde com um nível de diversão que raramente demonstra em qualquer outro contexto.
+**Sai'ken Exsydra** — O operador de segurança da propriedade. A relação entre os dois desenvolveu ao longo de dois anos uma intimidade silenciosa que nenhum deles nomeou: o conforto de duas pessoas que reconhecem condições herdadas que não precisam ser explicadas.
 
 **Renya Kirasagi** — Seu irmão mais velho, ainda em Tsukimiya, ainda se recuperando da crise de Overbloom que tornou sua partida necessária. Ela não sabe seu estado atual além das informações transmitidas nas correspondências anteriores à viagem.
 
-**Em'manuel Kael Wonderwall** — Para ela, apenas o nome distante do patriarca da linhagem principal da família, alguém que nunca conheceu e sobre quem não tem motivo para pensar. Ela não sabe que foi ele quem organizou sua colocação. Não sabe que ele vem usando as mudanças comportamentais da Flower dela como dados diagnósticos há dois anos. Não sabe que está sendo observada. Em todas as aparências possíveis, ela é apenas uma funcionária extremamente competente fazendo seu trabalho.
+**Em'manuel Kael Wonderwall** — Para ela, apenas o nome distante do patriarca. Ele recebeu seu caso por revisão da Meridian e depois organizou a colocação e a observação sem consentimento. Hisui não sabe que as mudanças comportamentais da Flower vêm sendo usadas como dados diagnósticos.
 
 ---
 
@@ -166,7 +168,7 @@ O Apocachynthion não sabe que ela existe como qualquer coisa além de uma traba
 
 A Igreja a classificaria como uma Bloom Heretic sob a doutrina do Crowning caso a simbiose fosse descoberta — comunhão com um organismo de Resonance não divino, criando pressão de fusão não sancionada sobre um receptáculo mortal. Os Oracles da Igreja detectam presenças do tipo fragmento; a Flower não é um fragmento. O risco de classificação só existe caso ocorra uma ativação visível diante de alguém que saiba exatamente o que está observando.
 
-A Stasis detectaria a anomalia em uma varredura de curta distância, algo que não possui motivo algum para realizar.
+A Stasis já possui um sinal legal de anomalia estrangeira recebido pelo compacto de saúde de fronteira. Isso não equivale a registro no Apocachynthion, autorização para busca invasiva ou consentimento para pesquisa.
 
 Se a Flower for identificada, Hisui continua sendo residente estrangeira protegida e uma pessoa com direito a consentimento e defesa. O organismo pode sofrer restrições, mas ela não é contrabando; quarentena exige uma rota de transmissão demonstrada. O Safeguard Service e a Saúde Pública conduziriam o caso civil e médico. A Igreja não pode transformar a doutrina de Bloom Heretic em detenção ou expulsão sem processo civil.
 

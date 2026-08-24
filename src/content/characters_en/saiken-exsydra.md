@@ -1,15 +1,15 @@
 ---
-title: "Sai'ken Ex'sydra"
+title: "Sai'ken Exsydra"
 type: "Character"
 age: "25 (as of 2200)"
 birth_year: "2175"
 birthplace: "Ael'keth, eastern borderlands, Northern Region"
 affiliation: "SiNE Integrated Forces (cover); protected service under sealed House and Compact warrant"
-house: "Ex'sydra (erased pre-Imperial theoretical house; restored to Sai'ken by E.W. in 2194)"
+house: "Exsydra (modern legal restoration of the erased pre-Imperial Ex'sydra lineage)"
 rank: ""
-registry_status: "Active - Wonderwall cadet-branch estate detail, assigned 2197"
+registry_status: "Active under sealed protected-service warrant; practicing classification pending"
 point_profile:
-  status: ""
+  status: "Carried; restricted"
   cas_access: ""
   leaf_permissions: ""
   register_access: ""
@@ -22,11 +22,12 @@ eyes: "Pale grey, reading as silver in certain light"
 dress: "Close-fitted coats in black, grey, and deep blue; nothing that draws attention"
 residence: "Wonderwall cadet-branch estate, eastern residential quarter, Kalt'sen"
 occupation: "Physical security specialist (public); protective officer and cadence sentinel (sealed)"
-summary: "A borderlands operative carrying the restored Ex'sydra name without yet knowing what it means. His instincts are unusually sharp, his power seems tied to thresholds and transition, and his presence near Ec'lesia may matter more than he has been told."
-tags: ["SiNE", "Wonderwall", "KT-Exs", "Interval-adjacent", "Northern Region", "Ex'sydra Lineage"]
+summary: "A borderlands operative carrying the restored Exsydra name without yet knowing what it means. He reads cadence, crosses gap-space, and stands near Ec'lesia for reasons no one has fully explained to him."
+tags: ["SiNE", "Wonderwall", "KT-Exs", "Cadence", "Gap-space", "Northern Region", "Exsydra Lineage"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-07-13"
+updated: "2026-08-23"
+codex_file: "Sai'ken Exsydra Dossier.md"
 image: "../../assets/uploads/characters/char-saiken-exsydra.webp"
 hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 ---
@@ -46,7 +47,7 @@ Privately, he is much more significant than he knows.
 
 He was born **Sai'ken Las'gall** in the eastern borderlands near Ael'keth. In 2194, Em'manuel Wonderwall brought him into protected service under a sealed House and Compact warrant and restored the lineage name **Exsydra**. The name grants no automatic Wonderwall membership, corporate title, or sovereign claim. Sai'ken was never told its full history.
 
-That missing explanation matters because Ex'sydra is not just a formal label. It is the erased name of a pre-Imperial theoretical house whose work helped make the Rite of Selia possible and helped make its collapse catastrophic. Sai'ken does not know that he is one of the bloodline's surviving expressions.
+That missing explanation matters because **Exsydra** is not just a formal label. It is the modern legal restoration of **Ex'sydra**, the erased name of a pre-Imperial theoretical house whose work helped make the Rite of Selia possible and helped make its collapse catastrophic. Sai'ken does not know that he is one of the bloodline's surviving expressions.
 
 ## Personality and Role
 
@@ -60,18 +61,13 @@ Inside the Wonderwall orbit, this makes him valuable in two ways. He protects pe
 
 ## Abilities in Plain Language
 
-Sai'ken's power has not been fully named by ordinary institutional standards.
+Sai'ken's inheritance appears in three connected abilities.
 
-The clearest reader-facing explanation is that he seems **Interval-adjacent** and **threshold-sensitive**. He is unusually aware of transitions, edges, and the unstable space between one state and another.
+- **Cadence perception:** he feels the pressure of the present leaning toward its next legible beat. This warns him that a room, route, or confrontation is becoming dangerous without telling him exactly what will happen.
+- **Gap-space traversal:** he can enter the unreadable margin between one crossed state and the next, disappear from ordinary continuity for a few subjective seconds, move, and return.
+- **Vector reconciliation:** while crossing that margin, his body can redirect movement and recover force on re-entry in ways that look impossible from outside.
 
-In practice, that shows up as:
-
-- instinctive awareness of danger before it fully declares itself;
-- sensitivity to thinness, altered topology, active Dive pressure, and environmental wrongness;
-- unusually strong judgment about routes, crossings, timing, and moments where a situation is about to tip;
-- a passive effect around him that sometimes makes strange environments easier to read or traverse.
-
-He is not using Em'manuel's full Interval Anchor. He is not warping reality at Archtype scale. What he carries feels more like inherited structural sensitivity that has not yet been given full theory or training.
+Together, these abilities make him exceptionally dangerous at close range. He does not overpower a prepared response; he steps outside it and returns from the angle it did not cover. This is not Em'manuel's full Interval Anchor, reality-warping at Archtype scale, or knowledge of the future.
 
 ## What His Abilities Look Like
 
@@ -83,7 +79,7 @@ In a protective role, that means he often reacts to danger very early. He may no
 
 Near unusual configurations, especially around **Ec'lesia Wonderwall**, his sensitivity helps him read escalation early and support evacuation. It does not let him stabilize her condition or command what answers through her.
 
-The visible effect is usually subtle. Sai'ken is not flashy. His power reads through timing, positioning, steadiness, and the eerie accuracy of someone who keeps standing in the right place before anyone else knows it is the right place.
+The visible effect is usually subtle until he traverses gap-space. Sai'ken is not flashy. His power reads through timing, positioning, sudden absence, and the eerie accuracy of someone who keeps standing in the right place before anyone else knows it is the right place.
 
 ## Limits and Misconceptions
 
@@ -91,7 +87,9 @@ Sai'ken is not a prophet.
 
 He does not literally see the future, and one of the core historical mistakes around the Ex'sydra line was confusing trajectory-reading with authority over time. His story inherits that danger even if he does not yet know it.
 
-He is also not fully trained in what he carries. A lot of his effectiveness comes from instinct, field experience, and inherited architecture rather than a complete formal framework. That makes him useful, but it also means he does not fully understand the larger mechanism acting through his life.
+Sai'ken is not a temporal instrument, and no unexplained attention paid to him should be mistaken for destiny, protection, or prophecy.
+
+He cannot remain absent indefinitely, attack while fully out of sequence, or safely carry another person through the interval. Repeated deep crossings can blur memory order and his sense of self. He is also not fully trained in what he carries. A lot of his effectiveness comes from instinct, field experience, and inherited architecture rather than a complete formal framework.
 
 The other major limit is informational. Sai'ken is operating inside a story about him that he has not been allowed to read. He does not know what his name means, what KT-Exs fully is, or why Em'manuel watches him so closely.
 
@@ -99,9 +97,9 @@ The other major limit is informational. Sai'ken is operating inside a story abou
 
 **Ec'lesia Wonderwall** is the center of his current posting. Publicly he protects her household. Privately, his presence near her may be structurally important because of how his threshold-sensitive architecture interacts with her condition.
 
-**Em'manuel Kael Wonderwall** restored the Ex'sydra name and placed him under sealed protected service. Sai'ken knows him as a credible superior, not an owner. He does not know the deeper personal and historical reasons behind that relationship.
+**Em'manuel Kael Wonderwall** restored the Exsydra name and placed him under sealed protected service. Sai'ken knows him as a credible superior, not an owner. He does not know that Em'manuel was once Al'uxxios Exsydra, or the deeper personal and historical reasons behind that relationship.
 
-**Ec'lesia Wonderwall** is the center of his present assignment. His warrant makes protection and preservation of her agency primary. Terminal intervention is permitted only if catastrophic loss of agency is verified and every available lesser response has failed or cannot arrive, followed by sealed civil review.
+His warrant makes protection and preservation of **Ec'lesia Wonderwall's** agency primary. Terminal intervention is permitted only if catastrophic loss of agency is verified and every available lesser response has failed or cannot arrive, followed by sealed civil review.
 
 **Hisui Kirasagi** is one of the few people in the household with whom he seems to share real ease. Their connection works partly because both of them live with inherited conditions they did not choose and both have learned to keep complicated inner architecture behind a professional exterior.
 

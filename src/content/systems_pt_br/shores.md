@@ -5,7 +5,7 @@ summary: "Condições marginais Terra-local onde os estratos conceituais profund
 tags: ["systems", "Shores", "Shorefall", "Shorewalking", "Shore-Breach", "Translation Wake", "Continuity", "Luminant Shore", "Abyssal Shore", "Redactory"]
 status: "public"
 created: "2026-05-22"
-updated: "2026-06-26"
+updated: "2026-08-23"
 image: ""
 ---
 
@@ -72,7 +72,7 @@ Na doutrina Redactory-facing, Shorewalking é um extremo quase mítico de contat
 
 A teoria restrita do Apocachynthion trata Shorewalking como uma das bordas mais perigosas do Index Theorem. Pesquisadores comuns não o discutem livremente. A maioria dos Redactors em atividade nunca verá um caso confirmado.
 
-Shorewalking não concede autoridade de sintaxe nativa, não transforma o praticante em Primordial, não permite criação ex nihilo, não permite destruição absoluta e não torna o walker dono da Shore.
+Shorewalking concede **autoridade temporária e delimitada de abertura**: acesso direto à sintaxe dentro da jurisdição compatível aberta pela pessoa, sistema, relação e Shore. Não concede soberania de sintaxe nativa, não transforma o praticante em Primordial, não permite criação ex nihilo ou destruição absoluta e não torna o walker dono da Shore.
 
 Shorewalking internaliza a Shore no self. A pessoa não cai. A pessoa sustenta a abertura. A Shore age através do corpo, da continuidade e da interface do sistema.
 
@@ -114,7 +114,7 @@ Redactory mantém **Shores**, **Shorefall** e **Shorewalking** como sua linguage
 
 Em profundidades comuns, a Anchor permanece uma rota. Em profundidades extremas, o conceito deixa de funcionar apenas como rota e se torna uma condição marginal. Shorefall de Redactor ocorre quando a singularidade recursiva do Redactor colapsa através de Dive-depth extrema e cai em uma Shore compatível. A Anchor engole o Redactor.
 
-Shorewalking de Redactor ocorre quando o Redactor se recusa a cair e sustenta a abertura Page-side. O Redactor internaliza pressão da Shore através da Anchor, do corpo, da percepção e da continuidade. Shorewalking de Redactor não reescreve gramática e não concede autoridade de sintaxe nativa.
+Shorewalking de Redactor é **Palimpsest**. Ocorre quando o Redactor se recusa a cair, sustenta a abertura do lado da Página e atravessa do roteamento de um conceito para a alteração legítima de sintaxe através dele. A autoridade dura apenas enquanto abertura e autoendereço permanecem. Não é soberania de sintaxe nativa.
 
 Reach e Shorewalking não devem ser tratados como a mesma categoria. Reach estende o roteamento do Redactor além do conforto comum da Anchor, mas continua sendo um ato de Redactory. Shorewalking só começa quando a pressão da Shore é internalizada e mediada por uma singularidade recursiva que sobrevive.
 
@@ -126,7 +126,9 @@ Alguns eventos de Divine Vessel se parecem com contato com Shore vistos de fora,
 
 Investigadores da Igreja normalmente não chamam esses casos de Shores. Eles podem descrevê-los por Beatification, Crowning, possessão, falso céu, ingresso abissal ou outras categorias teológicas.
 
-Se esses relatos pertencem ao lado da doutrina Redactory de Shore é uma questão teórica restrita, não ensino público comum.
+Shorewalking estável de Divination é **Theophany**: manifestação compatível total através de um vessel cujo autoendereço permanece. Presence entra na expressão real da Página através do vessel; o vessel não é apagado. Se o hospedeiro é devorado, substituído ou tornado irrelevante, o estado é possessão, não Shorewalking bem-sucedido.
+
+Theophany carrega autoridade temporária de abertura através de sua relação divina compatível. Não prova que a própria Shore seja divina e não concede soberania nativa ao vessel. Determinar se uma manifestação relatada realmente cruzou esse limiar continua sendo questão teórica restrita, não ensino público comum.
 
 ### Bloom
 
@@ -136,7 +138,9 @@ Uma **Rootline** é o endereço persistente carregado por um organismo Bloom ou 
 
 Linhagens Bloom são raras e frequentemente dinásticas. Uma linhagem de sangue, casa ou tradição fechada pode herdar contato com uma flor específica, agente fúngico, organismo-raiz ou anomalia biológica, e então construir seus próprios nomes em torno da experiência.
 
-Por causa disso, a terminologia Bloom-facing não é padronizada. Uma linhagem pode descrever uma raiz puxando para baixo; outra pode descrever primeiro solo, floração enterrada, micélio ancestral, contato com jardim-de-sangue ou o hospedeiro tornando-se uma raiz viva. Observadores externos não devem presumir que todos esses nomes significam o mesmo evento.
+Shorewalking estável de Bloom é **Symbiogenesis**. A interface entre hospedeiro e simbionte deixa de ser interface e se torna uma única estrutura viva portadora de sintaxe enquanto o autoendereço do hospedeiro permanece. O nome popular **the Walking Root** descreve o mesmo endpoint em algumas linhagens.
+
+Como a terminologia Bloom-facing não é padronizada, uma linhagem pode descrever uma raiz puxando para baixo; outra pode descrever primeiro solo, floração enterrada, micélio ancestral, contato com jardim-de-sangue ou o hospedeiro tornando-se uma raiz viva. Observadores externos não devem presumir que todos esses nomes significam o mesmo evento — nem confundir simbiose estável com Symbiogenesis antes que o limiar portador de sintaxe seja cruzado.
 
 ### Fenômenos Continuity-Sensitive
 
@@ -168,7 +172,7 @@ A diferença entre esses nomes é interpretativa, não ontológica. Eles descrev
 
 The Luminant Shore é a Shore mais diretamente associada a Light, revelação, visibilidade, reconhecimento e a legibilidade dolorosa de estrutura oculta.
 
-Ela enquadra a addressability pós-morte de A'licia, a continuidade composta estável de Al'ithia, o Shorefall do White Desert de E'lla e várias anomalias Wonderwall ao redor do Project Kaleidoscope e da First Radiance.
+Sua doutrina pública descreve uma condição de Shore, não um catálogo de pessoas. Registros individuais de personalidade, arquivos de incidente e interpretações institucionais permanecem sujeitos às suas próprias proteções.
 
 ### The Abyssal Shore
 
@@ -180,18 +184,6 @@ Ela é o enquadramento interpretativo central para a Abyssal Flower e fenômenos
 
 ## Casos Conhecidos e Suspeitos
 
-### E'lla Rae Wonderwall
-
-O incidente do White Desert de E'lla é um Luminant Shorefall prematuro e catastrófico. The Luminant Shore já existia. E'lla não a criou e não a dominou. Ela caiu nela.
-
-Assinaturas de sujeitos falhos, parciais, colapsados e adjacentes do Project Kaleidoscope interagem com ela ali porque The Luminant Shore revela estruturas ocultas, e porque E'lla é o centro vivo de um padrão-pessoa refratado produzido pelo Project Kaleidoscope. Seu Shorefall revela a ferida de continuidade que o Project Kaleidoscope já produziu.
-
-### A'licia e Al'ithia Rae Wonderwall
-
-A persistência pós-morte de A'licia é melhor descrita por continuidade, Light, reverência, indexação e relação com The Luminant Shore. Ela não simplesmente ressuscitou, não apenas possuiu Athena e não permaneceu um fantasma comum.
-
-Al'ithia é um third-self estável: uma nova continuidade composta estável produzida por Athena e A'licia, não possessão e não simples substituição.
-
 ### Sol'ytra
 
 Sol'ytra não é uma Shorewalker normal. Em seu estágio último, Wound Crown Authority pode interromper ou suprimir Shorefall ao selar a abertura local, forçar a singularidade recursiva de volta ao alinhamento Page-real, impor sintaxe de contenção sobre a condição de limite ou fixar corpo e selfhood de volta em um único endereço.
@@ -202,12 +194,8 @@ Ela não comanda a Shore. Ela comanda a condição de ferida através da qual a 
 
 A Abyssal Flower e fenômenos Bloom relacionados são melhor tratados pela doutrina da Rootline. A pergunta central no Bloom Shorefall é se o hospedeiro está caindo através do Bloom, ou se o Bloom está arrastando o hospedeiro para casa.
 
-### Em'manuel Kael Wonderwall
-
-O contato privado de Em'manuel com Shore permanece não resolvido em classificação. Seu trabalho com domínio Interval pode tê-lo levado a uma Shore cuja ecologia conceitual ele não conseguia nomear dentro do enquadramento disponível a ele na época.
-
 ---
 
 ## Em Uma Frase
 
-Shores são condições marginais Terra-local onde conceito profundo, pressão de continuidade, travessia ordenada por Time e pressão Archive-adjacent tornam-se espacialmente experienciáveis por singularidades recursivas.
+Shores são condições marginais Terra-local onde conceito profundo, pressão de continuidade, travessia ordenada por Time e pressão Archive-adjacent tornam-se espacialmente experienciáveis — e, para um Shorewalker sobrevivente, temporariamente endereçáveis em sintaxe — por singularidades recursivas. Consulte [[syntax-authority|Autoridade de Sintaxe e Soberania Recursiva]].
