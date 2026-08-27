@@ -101,6 +101,7 @@ const searchHref = localizedPath(locale, "/search/");
     class="observatory-gate"
     href={observatoryHref}
     aria-label="Open the Systems Observatory"
+    data-edge-gate="left"
     data-astro-prefetch="load"
     data-transition-trigger="observatory-handle"
   >
@@ -116,6 +117,7 @@ const searchHref = localizedPath(locale, "/search/");
     class="observatory-gate search-gate"
     href={searchHref}
     aria-label="Open Search"
+    data-edge-gate="right"
     data-astro-prefetch="load"
     data-transition-trigger="search-handle"
   >
@@ -270,11 +272,93 @@ const searchHref = localizedPath(locale, "/search/");
     return () => controller.abort();
   });
 
+  window.registerPageInit?.("home-edge-gates", () => {
+    const leftGate = document.querySelector('[data-edge-gate="left"]');
+    const rightGate = document.querySelector('[data-edge-gate="right"]');
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    if (!leftGate || !rightGate) return;
+
+    const controller = new AbortController();
+    const { signal } = controller;
+    const detectionFraction = 0.42;
+    let pointerX = window.innerWidth / 2;
+    let frame = 0;
+    let observatoryEnabled = null;
+
+    const getObservatoryScrollThreshold = () => Math.min(320, Math.max(144, Math.round(window.innerHeight * 0.25)));
+
+    const setProximity = (gate, value) => {
+      gate.style.setProperty("--gate-proximity", value.toFixed(3));
+    };
+
+    const updateObservatoryState = () => {
+      const enabled = window.scrollY < getObservatoryScrollThreshold();
+      if (enabled === observatoryEnabled) return;
+
+      observatoryEnabled = enabled;
+      leftGate.classList.toggle("is-scroll-disabled", !enabled);
+      if (enabled) {
+        leftGate.removeAttribute("aria-disabled");
+        leftGate.removeAttribute("tabindex");
+      } else {
+        leftGate.setAttribute("aria-disabled", "true");
+        leftGate.setAttribute("tabindex", "-1");
+        setProximity(leftGate, 0);
+      }
+      scheduleRender();
+    };
+
+    const render = () => {
+      frame = 0;
+      const detectionWidth = window.innerWidth * detectionFraction;
+      const leftProximity = Math.max(0, Math.min(1, (detectionWidth - pointerX) / detectionWidth));
+      const rightProximity = Math.max(0, Math.min(1, (pointerX - (window.innerWidth - detectionWidth)) / detectionWidth));
+      setProximity(leftGate, observatoryEnabled ? leftProximity : 0);
+      setProximity(rightGate, rightProximity);
+    };
+
+    const scheduleRender = () => {
+      if (!frame) frame = window.requestAnimationFrame(render);
+    };
+
+    const reset = () => {
+      pointerX = window.innerWidth / 2;
+      scheduleRender();
+    };
+
+    leftGate.addEventListener("click", (event) => {
+      if (!observatoryEnabled) event.preventDefault();
+    }, { signal });
+    window.addEventListener("scroll", updateObservatoryState, { signal, passive: true });
+    window.addEventListener("resize", () => {
+      updateObservatoryState();
+      scheduleRender();
+    }, { signal, passive: true });
+
+    if (finePointer.matches) {
+      document.addEventListener("pointermove", (event) => {
+        pointerX = event.clientX;
+        scheduleRender();
+      }, { signal, passive: true });
+      document.documentElement.addEventListener("mouseleave", reset, { signal });
+      window.addEventListener("blur", reset, { signal });
+    }
+
+    updateObservatoryState();
+    render();
+
+    return () => {
+      controller.abort();
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  });
+
 </script>
 
 <style>
   /* ── HERO ── */
   .observatory-gate {
+    --gate-proximity: 0;
     position: fixed;
     left: 0;
     top: 58px;
@@ -294,17 +378,27 @@ const searchHref = localizedPath(locale, "/search/");
     justify-content: flex-end;
   }
 
+  .observatory-gate:not(.search-gate).is-scroll-disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .observatory-gate:not(.search-gate).is-scroll-disabled .observatory-gate__label {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+
   .observatory-gate::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
     width: 260px;
-    opacity: 0.42;
+    opacity: calc(0.42 + (var(--gate-proximity) * 0.58));
     pointer-events: none;
     background:
       radial-gradient(ellipse at left center, rgba(219, 69, 58, 0.22), rgba(102, 20, 24, 0.1) 34%, transparent 70%),
       linear-gradient(90deg, rgba(226, 92, 70, 0.18), transparent 62%);
-    transform: scaleX(0.58);
+    transform: scaleX(calc(0.58 + (var(--gate-proximity) * 0.42)));
     transform-origin: left center;
     transition: opacity 0.46s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -327,9 +421,9 @@ const searchHref = localizedPath(locale, "/search/");
     border-right: 1px solid rgba(234, 118, 102, 0.24);
     border-radius: 50%;
     filter: blur(0.2px);
-    opacity: 0;
+    opacity: var(--gate-proximity);
     pointer-events: none;
-    transform: translateX(-18px);
+    transform: translateX(calc(-18px + (var(--gate-proximity) * 18px)));
     transition: opacity 0.46s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
@@ -338,7 +432,7 @@ const searchHref = localizedPath(locale, "/search/");
     right: -78px;
     border-right: 0;
     border-left: 1px solid rgba(234, 118, 102, 0.24);
-    transform: translateX(18px);
+    transform: translateX(calc(18px - (var(--gate-proximity) * 18px)));
   }
 
   .observatory-gate:hover,
@@ -397,10 +491,10 @@ const searchHref = localizedPath(locale, "/search/");
     top: 18%;
     width: 82px;
     height: 64%;
-    opacity: 0.44;
+    opacity: calc(0.44 + (var(--gate-proximity) * 0.56));
     background: linear-gradient(90deg, rgba(220, 72, 58, 0.34), transparent);
     filter: blur(18px);
-    transform: translateX(-36px);
+    transform: translateX(calc(-36px + (var(--gate-proximity) * 36px)));
     transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
@@ -408,7 +502,7 @@ const searchHref = localizedPath(locale, "/search/");
     left: auto;
     right: 0;
     background: linear-gradient(270deg, rgba(220, 72, 58, 0.34), transparent);
-    transform: translateX(36px);
+    transform: translateX(calc(36px - (var(--gate-proximity) * 36px)));
   }
 
   .observatory-gate:hover .observatory-gate__glow,
@@ -430,15 +524,15 @@ const searchHref = localizedPath(locale, "/search/");
     letter-spacing: 0.2em;
     text-transform: uppercase;
     white-space: nowrap;
-    opacity: 0;
-    transform: translateX(-14px);
+    opacity: min(1, calc(var(--gate-proximity) * 2.75));
+    transform: translateX(calc(-14px + (var(--gate-proximity) * 14px)));
     transition: opacity 0.32s ease, transform 0.54s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .search-gate .observatory-gate__label {
     margin-left: 0;
     margin-right: 24px;
-    transform: translateX(14px);
+    transform: translateX(calc(14px - (var(--gate-proximity) * 14px)));
   }
 
   .observatory-gate:hover .observatory-gate__label,

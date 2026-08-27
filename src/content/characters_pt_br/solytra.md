@@ -18,7 +18,7 @@ summary: "Born from a wound, she keeps mistaking sacrifice for holiness."
 tags: ["Sol'ytra", "Crownborn", "Elemental", "All-Mother", "Syr'lene", "Lunar Crown", "Fracture", "Mirror of the Wounded Crown", "Containment", "Syntax"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-08-26"
+updated: "2026-08-27"
 codex_file: "Sol'ytra Dossier.md"
 image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
@@ -26,6 +26,7 @@ portrait_gallery:
   - "../../assets/uploads/characters/char-solytra-portrait-2.png"
 hero_gallery:
   - "../../assets/uploads/characters/char-solytra-hero-2.png"
+  - "../../assets/uploads/characters/char-solytra-final-form-hero.png"
 ---
 
 > *"Ela nasceu da reverência. É isso que a torna perigosa. Reverência não para onde um amor mais saudável pararia."*

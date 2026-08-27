@@ -13,6 +13,11 @@ dress: "White; ranges from simple terrestrial dress to a formal lunar ceremonial
 summary: "Born from a wound, she keeps mistaking sacrifice for holiness."
 image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
+portrait_gallery:
+  - "../../assets/uploads/characters/char-solytra-portrait-2.png"
+hero_gallery:
+  - "../../assets/uploads/characters/char-solytra-hero-2.png"
+  - "../../assets/uploads/characters/char-solytra-final-form-hero.png"
 tags:
   - "Sol'ytra"
   - "Elemental"
@@ -24,7 +29,7 @@ tags:
   - "Wound Crown"
 status: "public"
 created: "2026-08-24"
-updated: "2026-08-26"
+updated: "2026-08-27"
 codex_file: "Sol'ytra Dossier.md"
 ---
 
