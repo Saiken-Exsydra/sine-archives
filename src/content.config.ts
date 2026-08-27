@@ -8,21 +8,42 @@ const pointProfileSchema = z.object({
   register_access: z.string().optional(),
 });
 
+const characterDesignationSchema = z.string()
+  .trim()
+  .min(1, "Character designation cannot be empty")
+  .max(80, "Character designation must remain a compact title");
+
+const characterSummarySchema = z.string()
+  .trim()
+  .min(1, "Character summary cannot be empty")
+  .max(300, "Character summary must remain compact enough for the hero");
+
 const createEntrySchema = (
   { image }: { image: () => z.ZodTypeAny },
-  { allowPointProfile = false }: { allowPointProfile?: boolean } = {}
+  {
+    allowPointProfile = false,
+    requireCharacterHeroCopy = false,
+  }: {
+    allowPointProfile?: boolean;
+    requireCharacterHeroCopy?: boolean;
+  } = {}
 ) =>
   z.object({
     title: z.string(),
     type: z.string(),
-    summary: z.string(),
+    summary: requireCharacterHeroCopy ? characterSummarySchema : z.string(),
     affiliation: z.string().optional(),
     age: z.union([z.string(), z.number()]).optional(),
     height: z.union([z.string(), z.number()]).optional(),
-    designation: z.string().optional(),
+    designation: requireCharacterHeroCopy ? characterDesignationSchema : z.string().optional(),
     birth_year: z.union([z.string(), z.number()]).optional(),
     birthplace: z.string().optional(),
     rank: z.string().optional(),
+    system: z.string().optional(),
+    redactory: z.object({
+      anchor: z.string(),
+      anchor_depth: z.enum(["Shallow", "Deep", "Abyssal"]),
+    }).optional(),
     house: z.string().optional(),
     registry_status: z.string().optional(),
     build: z.string().optional(),
@@ -95,10 +116,16 @@ const createEntrySchema = (
 export const collections = Object.fromEntries(
   CONTENT_KEYS.flatMap((key) => [
     [`${key}_en`, defineCollection({
-      schema: ({ image }) => createEntrySchema({ image }, { allowPointProfile: key === "characters" }),
+      schema: ({ image }) => createEntrySchema({ image }, {
+        allowPointProfile: key === "characters",
+        requireCharacterHeroCopy: key === "characters",
+      }),
     })],
     [`${key}_pt_br`, defineCollection({
-      schema: ({ image }) => createEntrySchema({ image }, { allowPointProfile: key === "characters" }),
+      schema: ({ image }) => createEntrySchema({ image }, {
+        allowPointProfile: key === "characters",
+        requireCharacterHeroCopy: key === "characters",
+      }),
     })],
   ])
 );

@@ -9,23 +9,23 @@ house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
 registry_status: "Registrada — intake compulsório em 2192; certificação dupla em 2197; licença condicional ativa"
 point_profile:
-  status: ""
-  cas_access: ""
-  leaf_permissions: ""
-  register_access: ""
-designation: "Aquela que guarda os mortos no limiar"
+  status: "Emitido pela Academy; carregado; interface de artefato restrita registrada separadamente"
+  cas_access: "CAS básico; CAS profissional e marcial sob Margins seladas de Mark 4"
+  leaf_permissions: "Licensed Leaves por permissão de Mark; Restricted Leaves apenas por Seal explícito"
+  register_access: "Protegido; janelas de revisão especialista ligadas à divulgação de assignments e relatórios do artefato"
+designation: "Ghostglass"
 build: "Compacta; resistente"
 complexion: "Oliva pálida"
 hair: "Preto, liso, na altura dos ombros; normalmente preso durante operações"
 eyes: "Castanho-escuro (passivo); reflexo em camadas sob estado de roteamento duplo"
 dress: "Roupas escuras ajustadas ao corpo, com painéis protetivos em camadas; instrumento-artefato de lâmina longa carregado em bainha nas costas"
-residence: "Vrenne, Região Sul — sem endereço fixo registrado"
+residence: "Hora'veil — sem endereço fixo registrado"
 occupation: "Contratada independente — licenciada para operações sob termos condicionais"
-summary: "Metade espelho, metade travessia; caminha com os mortos ao ombro e ainda assim nao responde a lei alguma alem da propria."
+summary: "Nothing dead follows her. Only the shape it left behind."
 tags: ["Vel'hara", "Redactor", "Mirror", "Threshold", "Contractor", "Bifurcated"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-06-26"
+updated: "2026-08-26"
 codex_file: "Rouxinol Kaise Dossier.md"
 image: "../../assets/uploads/Rouxinol Portrait (2).png"
 hero_image: "../../assets/uploads/Rouxinol HERO.png"
@@ -38,7 +38,7 @@ hero_image: "../../assets/uploads/Rouxinol HERO.png"
 
 ## Origem — Vel'hara e o Corvel Institute
 
-Vel'hara é uma cidade-estado na extensão longitudinal oeste da Twilight Band, localizada no território de transição entre o Império de Synus e a nação de Aurora — uma faixa de território intermediário que nenhum dos dois estados jamais tentou absorver formalmente. A cidade se sustenta como porto livre e enclave de pesquisa, tolerando instituições que o Império regularia e atividades que Aurora proibiria.
+Vel'hara é uma cidade-estado na extensão longitudinal oeste da Twilight Band, a sudoeste da fronteira de planalto que o Império de Synus compartilha com Aurora. Ela ocupa uma faixa intermediária de porto livre que nenhum dos dois estados tentou absorver formalmente. A cidade se sustenta como enclave comercial e de pesquisa, tolerando instituições que o Império regularia e atividades que Aurora proibiria, sem interromper a fronteira terrestre real entre os dois países mais ao norte.
 
 Dentro de Vel'hara, operando sob uma carta comercial vel'harana, existe uma organização conhecida como **Corvel Institute** — oficialmente, um centro de pesquisa dedicado ao estudo de fenômenos anômalos da Redactory em regiões estruturalmente rarefeitas da Outer Band. O instituto não publica descobertas em nenhum órgão acadêmico reconhecido. Não envia documentação ao Apocachynthion. Recruta discretamente, mantém indivíduos de interesse sem qualquer processo legal formal e opera instalações nas zonas de planalto externo que não aparecem em nenhum mapa reconhecido publicamente.
 
@@ -72,22 +72,29 @@ A certificação da Threshold Anchor foi emitida simultaneamente à promoção p
 
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** Folha selada  
+**Tipo de Arquivo:** Sealed File  
 **Registry Status:** Registrada  
 **Rank:** [[stylus|Stylus]] (Mirror Anchor) / [[quill|Quill]] (Threshold Anchor)  
 **[[mark|Mark]]:** [[mark-4|Mark 4]]  
 **[[open-mark|Open Mark]]:** None  
-**[[margins|Margins]]:** Militar  
+**[[margins|Margins]]:** Military  
+**Restrictions:** Relatório da contagem de impressões da lâmina; avaliações de Depth a cada seis meses; termos de artefato restrito em vigor  
+**Point:** Emitido pela Academy; carregado; interface de artefato restrita registrada separadamente  
+**CAS Access:** CAS básico; CAS profissional e marcial sob Margins seladas de Mark 4  
+**Leaf Permissions:** Licensed Leaves por permissão de Mark; Restricted Leaves apenas por Seal explícito  
+**Point Register:** Protegido; janelas de revisão especialista ligadas à divulgação de assignments e relatórios do artefato  
 **Anchor:** Mirror / Threshold  
 **Anchor Reading:** Confirmed / Confirmed  
-**Depth Reading:** Deep / Abyssal  
-**Reach Reading:** broad  
+**Anchor Depth:** Deep Anchor / revisão Abyssal pendente  
+**Reach:** Wide Reach  
+**Overreach History:** Risco de Overreach simultâneo nas duas Anchors sob revisão  
+**Apparatus Permissions:** Martial Apparati sob Margins seladas de Mark 4; artefato restrito registrado separadamente  
 **Registration Tenure:** 8 anos  
-**Academy Record:** Intake compulsorio em 2192; formacao de trilha dupla; certificacao dupla em 2197  
-**Practice Record:** Trabalho de campo como contratada sob revisao especialista  
-**[[blots|Blots]]:** Incidente de Intake Compulsorio  
+**Academy Record:** Intake compulsório em 2192; formação de trilha dupla; certificação dupla em 2197  
+**Practice Record:** Trabalho de campo como contratada sob revisão especialista  
+**[[blots|Blots]]:** Intake compulsório iniciado após incidente de dual-routing pré-registro; uma morte civil no relatório original de campo  
 **Pager Note:** Review  
-**[[seal|Current Seal]]:** Notacao de certificacao dupla do Council of Volumes; contrassinatura do painel especialista de Hora'veil
+**[[seal|Current Seal]]:** Notação de certificação dupla do Council of Volumes; contrassinatura do painel especialista de Hora'veil
 
 ## Classificação Redactory
 
@@ -157,7 +164,7 @@ Aos quatorze anos, durante um incidente envolvendo outro sujeito em uma instala�
 
 Aldric Vonn a encontrou poucas semanas depois. Ela tinha quinze anos. Ele fez uma proposta apresentada como trabalho e estruturada — como ela entenderia mais tarde — como um investimento de longo prazo. Ela aceitou.
 
-Durante quatro anos ele ensinou disciplina operacional, avaliação de ameaças, leitura de contratos e, principalmente, uma compreensão prática do que sua arquitetura realmente produzia — além de entregar a lâmina no terceiro ano. Ele a apresentou com uma única frase que ela memorizou palavra por palavra:
+Vonn havia sido oficial de uma formação licenciada de retentores de uma Founding House: segurança legal da House, não Redactor nem exército independente. Durante quatro anos ele ensinou disciplina operacional, avaliação de ameaças, leitura de contratos e, principalmente, uma compreensão prática do que sua arquitetura realmente produzia. Entregou a lâmina no terceiro ano com uma única explicação:
 
 *"Isso foi feito para carregar aquilo que ele toma. Eu não sei o que ele toma. Você vai descobrir."*
 
@@ -167,11 +174,11 @@ Um Pager de campo operando no distrito industrial inferior de Vrenne registrou u
 
 Quarenta e um dias na instalação de retenção de Vrenne. Ela começou a cooperar no segundo dia. Revelou voluntariamente a existência da lâmina e sua função de retenção já na primeira semana — antes mesmo de os avaliadores identificarem o mecanismo de retenção de impressões por conta própria.
 
-Cinco anos de treinamento estruturado vieram em seguida, dentro de um programa desenvolvido especificamente para este caso. A certificação de Stylus na Mirror Anchor e de Quill na Threshold Anchor foram emitidas simultaneamente em 2197. A licença operacional condicional veio menos de um mês depois.
+Cinco anos de treinamento estruturado vieram em seguida, dentro de um programa desenvolvido especificamente para este caso. A Academy não criou sua competência de combate; regularizou, limitou e documentou uma especialista de operações próximas já formada por Corvel e Vonn. A certificação de Stylus na Mirror Anchor e de Quill na Threshold Anchor foram emitidas simultaneamente em 2197.
 
 ### Condição Atual — 2198 a 2200
 
-Rouxinol opera em Vrenne sob sua licença condicional. Ela aceita trabalhos. Ela os conclui. E se recusa a aceitar trabalhos que exijam que ela funcione como ferramenta de instituições nas quais não confia.
+Rouxinol opera a partir de Hora'veil, sem endereço fixo. Aceita trabalhos, conclui o que aceita e recusa qualquer contrato que exija que funcione como ferramenta de instituições nas quais não confia.
 
 Desde a emissão da licença, recusou duas propostas formais de recrutamento — uma de uma milícia ligada às Casas Fundadoras e outra de uma contratada privada associada à estrutura corporativa indireta da SiNE. Nenhuma das recusas foi hostil. Foram apenas extremamente claras.
 
@@ -193,7 +200,7 @@ A contagem de impressões do loop secundário permanece inalterada desde 2197.
 
 ## Relacionamentos
 
-**Aldric Vonn** — Ex-handler e treinador. Ela deve a ele a lâmina, a compreensão do que a lâmina realmente significa e a disciplina operacional que transformou a anomalia descontrolada capturada pelos Pagers em 2192 na Redactor descrita neste arquivo. Ela não deve a ele suas escolhas. Ele entendia isso enquanto a treinava. Status atual desconhecido.
+**Aldric Vonn** — Ex-oficial de uma formação licenciada de retentores de Founding House, isto é, segurança legal da House e não exército independente. Não era Redactor. Rouxinol deve a ele a lâmina e parte de sua disciplina operacional, mas sua competência de operações próximas já existia antes da Academy e suas escolhas nunca pertenceram a Vonn.
 
 **Corvel Institute** — Ela não voltou para Vel'hara desde que fugiu em 2187. Se o instituto ainda está operando, se a pesquisa envolvendo ela continua através de outros sujeitos, ou se ainda estão procurando por ela — são perguntas que ela considera regularmente. Nenhuma das respostas possíveis a tranquiliza.
 

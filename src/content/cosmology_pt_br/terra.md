@@ -5,7 +5,7 @@ summary: "O mundo. Um projeto-laboratório dos Precursors — criado, estabiliza
 tags: ["Terra", "Cosmology", "Precursors", "Twilight Band", "Vael'Khar", "World", "Page"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-08-14"
 image: "../../assets/uploads/cosm-terra.png"
 ---
 
@@ -28,9 +28,33 @@ Por causa disso, Terra é um mundo **preso por acoplamento de maré**. Um hemisf
 
 Entre o hemisfério iluminado e o hemisfério escuro existe uma faixa com cerca de dois mil quilômetros de largura onde a vida consegue existir. Essa região é a **Twilight Band** — o anel civilizacional onde toda a história conhecida aconteceu.
 
-A Twilight Band não possui um único clima uniforme. As condições variam drasticamente ao longo de sua extensão e da orientação mutável do anel em relação ao disco de acreção, produzindo o que pesquisadores classificam como **seis estações distintas de radiação**. Elas não são causadas por inclinação axial ou períodos orbitais da maneira convencional, mas pela relação angular entre a posição orbital de Terra ao redor de Vael'Khar e a geometria de emissão do disco. Algumas estações despejam quantidades muito maiores de energia radiante na borda interna da Faixa; outras reduzem essa intensidade. A variação é previsível o suficiente para agricultura e ciclos sazonais. Mas não previsível o bastante para ser ignorada.
+A bússola de Terra segue essa geometria fixa. O **Polo Norte** ocupa o centro do Dark Side, o **Polo Sul** ocupa o centro do Bright Side e a Twilight Band atravessa a região equatorial entre ambos. Viajar para o norte leva a condições mais escuras; viajar para o sul leva a condições mais radiantes. Leste e oeste percorrem a circunferência habitada da Band e não descrevem um gradiente de luminosidade. Mapas imperiais convencionais mantêm o norte no topo, o leste à direita e a Band estendida principalmente da esquerda para a direita.
+
+A Twilight Band não possui um único clima uniforme. As condições variam ao longo do gradiente norte-sul de radiância e da extensão leste-oeste por causa do relevo, altitude, correntes e estabilização engenheirada. Separadamente, pesquisadores classificam o ano em **seis estações distintas de radiação**. Elas não são causadas por inclinação axial, direção cardinal ou ciclo diário de luz, mas pela relação entre a posição orbital de Terra ao redor de Vael'Khar e a geometria de emissão do disco. Algumas estações despejam quantidades muito maiores de energia radiante na borda sul da Faixa; outras reduzem essa intensidade. A variação é previsível o suficiente para agricultura e ciclos sazonais, mas não o bastante para ser ignorada.
 
 A borda interna da Faixa — conhecida como **Terminal Zones** — recebe os níveis mais extremos de radiação vindos do disco e abriga ambientes mais áridos e energeticamente hostis. Já a borda externa transita gradualmente para o frio e a escuridão da **Darkmargin**, onde o clima organizado da Faixa desaparece lentamente em direção à noite polar permanente. O centro da região, chamado de **Central Twilight Corridor**, concentra a maior parte da população e da infraestrutura do Império.
+
+O nome **Twilight Band** descreve o equilíbrio geográfico entre os extremos hemisféricos permanentes. Não significa que o céu habitado permaneça em crepúsculo.
+
+---
+
+## O Dia Lunar
+
+Terra é presa por acoplamento de maré, mas a Twilight Band vive uma sequência comum e repetida de dia e noite. A Lua engenheirada atravessa cada céu local em cerca de vinte e quatro horas, produzindo moonrise, ascensão matinal, zênite lunar ou meio-dia, descida vespertina, moonset, crepúsculo e noite.
+
+Sob céu limpo ao meio-dia, a Lunar Crown fornece aproximadamente a mesma iluminação prática de superfície que Old Earth recebia de seu Sol. O espectro é mais frio: a luz do dia é branca ou branco-prateada, o céu limpo é azul-prateado e os objetos não recebem um tom solar dourado. Moonrise e moonset levam rosa, violeta e púrpura pelo céu baixo.
+
+Depois de moonset, a luz civil direta termina. Noites de baixa radiância ficam realmente escuras. Perto do periapsis, o pós-brilho do disco de acreção e o Ring luminoso podem deixar horizontes rosa-violeta ou luz prateada suficiente para navegação sem abolir a noite.
+
+---
+
+## O Céu Administrado
+
+Antes da Fratura, a Lua era o **Selo Intacto**: a arquitetura lunar completa construída para proteger Terra onde sua fronteira de tradução era mais fina. Sua camada voltada para o céu era **Ksy'rion**, não uma cúpula falsa separada, mas a expressão exterior do Selo vista pelo mundo abaixo.
+
+O Selo tornava doze [[obscurials|vestígios exteriores à gramática]] localmente endereçáveis através de assentos, interfaces, relays e intérpretes Skyphons vivos. Os Precursores construíram essa arquitetura, não os Obscurials. Todos os doze Obscurials reais desapareceram da configuração lunar durante a Fratura; a Crown atual contém apenas os sistemas nativos feridos deixados ao redor da ausência deles.
+
+A civilização pré-Fratura estudava o céu regulado de Ksy'rion, não todo o firmamento distante de modo direto. A Quiet Moon já existia, mas só se tornou progressivamente descobrível depois que a Fratura rompeu a completude daquela máscara celeste.
 
 ---
 
@@ -40,7 +64,17 @@ A estabilidade da Twilight Band não é natural em nenhum sentido relevante. Man
 
 Na era mais antiga do mundo, esse gerenciamento era realizado diretamente pelos Precursors e seus instrumentos. **Aesis**, a Skyphon cuja Jurisdiction abrangia a coerência atmosférica, mantinha as condições da Faixa funcionando através de sua própria presença nelas — não manipulando a atmosfera de fora, mas existindo dentro de suas dinâmicas e corrigindo desvios antes que eles se transformassem em instabilidade.
 
-Depois que a Fracture encerrou aquela era, a infraestrutura remanescente dos Precursors assumiu essa função: uma rede distribuída de sistemas de estabilização embutidos na própria estrutura de Terra, mantendo artificialmente aquilo que os Instruments antes sustentavam através de presença ativa. Esses sistemas continuam operando há toda a extensão da história registrada — e provavelmente muito antes disso. As civilizações que vivem no mundo normalmente nem sabem que eles existem. E não precisam saber. Os sistemas continuam funcionando independentemente disso.
+Depois que a Fracture encerrou aquela era, a infraestrutura remanescente dos Precursores assumiu essa função: uma rede distribuída de sistemas de estabilização embutidos na própria estrutura de Terra, mantendo condições que os Skyphons antes interpretavam através de presença ativa. Esses sistemas continuam operando há toda a extensão da história registrada — e provavelmente muito antes disso. As civilizações que vivem no mundo normalmente nem sabem que eles existem. E não precisam saber. Os sistemas continuam funcionando independentemente disso.
+
+---
+
+## Um Mundo Vivo
+
+Terra não é apenas terreno engenheirado. É uma singularidade recursiva planetária: um mundo vivo cuja autoafirmação contínua se expressa através da All-Mother.
+
+O **Worldright** da All-Mother é autoridade de sintaxe completa dentro da jurisdição planetária de Terra, delegada pelo Primordial da Página. Essa proveniência torna a concessão revogável; não a torna parcial enquanto permanece vigente. Sintaxe estrangeira ou um Shorewalker agindo sobre Terra encontra, portanto, um mundo capaz de responder **isto sou eu**.
+
+Worldright não torna o planeta invulnerável nem transforma todo evento ambiental em intervenção consciente. Explica por que autoria direta sobre Terra é conflito jurisdicional com um corpo soberano vivo, não trabalho sobre matéria sem dono. Consulte [[syntax-authority|Autoridade de Sintaxe e Soberania Recursiva]].
 
 ---
 
@@ -66,6 +100,6 @@ A versão resumida que a maioria da população conhece é simples: o Dark Side 
 
 Os Precursors construíram Terra como um **Laboratório Astrológico** — um ambiente em escala planetária criado para estudar condições específicas que lhes interessavam. A civilização que surgiu na Twilight Band nunca foi algo incidental. Complexidade biológica e social fazia parte do objeto de estudo dos Precursors de maneiras que as instituições atuais ainda não conseguem compreender plenamente.
 
-Essa origem não invalida nada sobre a vida em Terra. As pessoas nascem, vivem e morrem na Twilight Band sem qualquer relação consciente com quem construiu o mundo ou por quê. O fato de o mundo ter sido projetado artificialmente não torna os pores do sol menos reais. Não torna a dor de perder alguém menos real. Os Precursors criaram um mundo. O que cresceu nele passou a pertencer a si mesmo.
+Essa origem não invalida nada sobre a vida em Terra. As pessoas nascem, vivem e morrem na Twilight Band sem qualquer relação consciente com quem construiu o mundo ou por quê. O fato de o mundo ter sido projetado artificialmente não torna moonrise e moonset menos reais. Não torna a dor de perder alguém menos real. Os Precursors criaram um mundo. O que cresceu nele passou a pertencer a si mesmo.
 
 O que essa verdade realmente altera é a forma como certos observadores extremamente antigos e extremamente cautelosos — os Keepers of Before e algumas figuras ligadas aos Precursors que observam este mundo desde antes de qualquer instituição existir — enxergam o futuro desta Page específica.

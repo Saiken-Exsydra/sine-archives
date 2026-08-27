@@ -71,7 +71,7 @@ Daniel Degurechaff is the living hinge of an agreement neither Ardeatus nor Synu
 
 Ardeatus produces Redactors. It has always produced Redactors. The official fiction, maintained for centuries through theological pressure and civil violence, was that such people were not a population but a deviation: isolated errors in the order of transformation, to be punished, contained, purified, or erased before the social body learned to accommodate them. The Covenant's doctrine made that fiction morally legible. The Federal Council's courts made it administrative. The Covenant Guard made it physical.
 
-The Long War made the fiction useful. The existence of the Empire's Redactor institutions on the northern side of the frontier allowed Ardeatus to define Redactory as a foreign sickness even when it manifested in Ardeatan children, Ardeatan soldiers, Ardeatan foundries, Ardeatan farms, and Ardeatan families who had never seen an imperial uniform except across artillery distance.
+The Long War made the fiction useful. The existence of the Empire's Redactor institutions on the western side of the frontier allowed Ardeatus to define Redactory as a foreign sickness even when it manifested in Ardeatan children, Ardeatan soldiers, Ardeatan foundries, Ardeatan farms, and Ardeatan families who had never seen an imperial uniform except across artillery distance.
 
 Daniel was not born opposing this system. He was formed by it.
 

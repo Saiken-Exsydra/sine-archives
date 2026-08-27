@@ -5,7 +5,7 @@ summary: "A camada voltada para o céu do Intact Seal: o firmamento curado que a
 tags: ["Cosmology", "Ksy'rion", "Intact Seal", "Lunar Crown", "Fracture", "Skyphons", "Quiet Moon", "Moon"]
 status: "public"
 created: "2026-05-24"
-updated: "2026-05-24"
+updated: "2026-08-14"
 image: ""
 ---
 
@@ -28,7 +28,7 @@ A civilização pré-Fracture, portanto, estudava **Ksy'rion** quando estudava o
 
 Ksy'rion não deve ser descrita como um sistema separado de "céu falso".
 
-Ela fazia parte da mesma arquitetura total que incluía a própria Lua, os Obscurials, os Skyphons e a rede mais ampla de proteção construída pelos Precursors.
+Ela participava da mesma função total que incluía a Lua, as doze relações Obscurials, os Skyphons e a rede de proteção construída pelos Precursores. A distinção é precisa: Ksy'rion e a arquitetura local de interface foram engenheiradas; os [[obscurials|Obscurials]] não foram.
 
 Sem Ksy'rion, o Intact Seal parece apenas uma barreira liminar. Com Ksy'rion, fica claro que o Seal também tinha uma face voltada para o mundo: um céu regulado, legível e protegido.
 
@@ -48,6 +48,8 @@ Quando a Fracture rompeu essa completude, a descoberta passou a ser possível de
 
 A Fracture quebrou mais do que pedra lunar.
 
-Ela encerrou a manutenção viva dos Skyphons e rompeu Ksy'rion como **céu explicativo completo**. O mundo não perdeu apenas uma máquina defensiva. Perdeu também o céu que, até então, ensinava o que o próprio céu era.
+Ela encerrou a manutenção viva dos Skyphons, rompeu todos os acoplamentos Obscurials completos e quebrou Ksy'rion como **céu explicativo completo**. Todos os doze Obscurials reais desapareceram da configuração lunar; os restos danificados e nativos da Página de Ksy'rion continuaram integrando a Crown ferida.
 
-É por isso que a astronomia antiga se tornou instável em um sentido muito mais profundo do que simples dano instrumental: o céu deixou de devolver as respostas antigas.
+O mundo não perdeu apenas uma máquina defensiva. Perdeu também o céu que, até então, ensinava o que o próprio céu era.
+
+É por isso que a astronomia antiga se tornou instável em um sentido muito mais profundo do que simples dano instrumental: o céu deixou de devolver as respostas antigas. Ksy'rion continua sendo parte da [[lunar-crown|Lunar Crown]] que torna a ferida sobrevivível, sem conter os Obscurials desaparecidos.

@@ -13,7 +13,7 @@ point_profile:
   cas_access: "Professional CAS under instructional standing"
   leaf_permissions: "Licensed Leaves by instructional authority; Restricted Leaves by Council request"
   register_access: "Protected; instructional review authority limited to training windows"
-designation: "The Hearth After the Blast"
+designation: "Gentle Nova"
 height: ""
 build: ""
 complexion: ""
@@ -22,7 +22,7 @@ eyes: ""
 dress: ""
 residence: "Kalt'sen, Apocachynthion Academy Quarters"
 occupation: "Senior Instructor of Kinetic and Thermodynamic Redactory"
-summary: "The catastrophe failed to hollow him; what remained was not softness, but warmth made durable by surviving what should have ended him."
+summary: "He teaches catastrophe with the patience of a hearth."
 image: "../../assets/uploads/char-leonard-von-engelmeyer.jpg"
 hero_image: "../../assets/uploads/char-leonard-von-engelmeyer-hero.png"
 portrait_gallery: []
@@ -36,7 +36,7 @@ tags:
   - "Kalt'sen"
 status: "public"
 created: "2026-05-10"
-updated: "2026-08-23"
+updated: "2026-08-26"
 codex_file: "Leonard von Engelmeyer Dossier.md"
 ---
 

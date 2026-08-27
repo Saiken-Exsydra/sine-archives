@@ -1,0 +1,328 @@
+---
+import CharacterFieldIcon from "./CharacterFieldIcon.astro";
+
+type MetadataFieldIcon =
+  | "registry"
+  | "affiliation"
+  | "house"
+  | "year"
+  | "age"
+  | "build"
+  | "birthplace"
+  | "residence"
+  | "occupation";
+
+export type DossierMetadataField = {
+  label: string;
+  value: string;
+  icon: MetadataFieldIcon;
+};
+
+export type DossierClassification = {
+  title: string;
+  primary?: string;
+  visualSrc?: string;
+  details: Array<{ label: string; value: string }>;
+};
+
+const {
+  classification,
+  registryFields = [],
+  personalFields = [],
+  labels,
+} = Astro.props as {
+  classification: DossierClassification | null;
+  registryFields?: DossierMetadataField[];
+  personalFields?: DossierMetadataField[];
+  labels: {
+    classification: string;
+    registry: string;
+    personalRecord: string;
+  };
+};
+
+const hasMetadata = !!classification || registryFields.length > 0 || personalFields.length > 0;
+---
+
+{hasMetadata && (
+  <div class="dossier-metadata" data-character-metadata>
+    {classification && (
+      <section class="dossier-module dossier-module--classification" aria-labelledby="character-classification-title">
+        <header class="dossier-module__header">
+          <h2 id="character-classification-title" class="dossier-module__eyebrow">{labels.classification}</h2>
+        </header>
+
+        <div class="dossier-classification">
+          {classification.visualSrc && (
+            <div class="dossier-classification__visual" aria-hidden="true">
+              <img
+                src={classification.visualSrc}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="1254"
+                height="1254"
+              />
+            </div>
+          )}
+
+          <div class="dossier-classification__identity">
+            <div class="dossier-classification__title">{classification.title}</div>
+            {classification.primary && <div class="dossier-classification__primary">{classification.primary}</div>}
+          </div>
+
+          {classification.details.length > 0 && (
+            <dl class="dossier-classification__details">
+              {classification.details.map((field) => (
+                <div class="dossier-classification__detail">
+                  <dt>{field.label}</dt>
+                  <dd>{field.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+        </div>
+      </section>
+    )}
+
+    {registryFields.length > 0 && (
+      <section class="dossier-module dossier-module--registry" aria-labelledby="character-registry-title">
+        <header class="dossier-module__header">
+          <h2 id="character-registry-title" class="dossier-module__eyebrow">{labels.registry}</h2>
+        </header>
+        <dl class="dossier-module__fields">
+          {registryFields.map((field) => (
+            <div class="dossier-module__field">
+              <CharacterFieldIcon class="dossier-module__icon" icon={field.icon} />
+              <div class="dossier-module__field-copy">
+                <dt>{field.label}</dt>
+                <dd>{field.value}</dd>
+              </div>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {personalFields.length > 0 && (
+      <section class="dossier-module dossier-module--personal" aria-labelledby="character-personal-record-title">
+        <header class="dossier-module__header">
+          <h2 id="character-personal-record-title" class="dossier-module__eyebrow">{labels.personalRecord}</h2>
+        </header>
+        <dl class="dossier-module__fields">
+          {personalFields.map((field) => (
+            <div class="dossier-module__field">
+              <CharacterFieldIcon class="dossier-module__icon" icon={field.icon} />
+              <div class="dossier-module__field-copy">
+                <dt>{field.label}</dt>
+                <dd>{field.value}</dd>
+              </div>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+  </div>
+)}
+
+<style>
+  .dossier-metadata {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .dossier-module {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--char-border, rgba(255, 255, 255, 0.07));
+    border-radius: 14px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.008)),
+      rgba(9, 9, 16, 0.82);
+    box-shadow: 0 14px 42px rgba(0, 0, 0, 0.2);
+  }
+
+  .dossier-module--classification {
+    border-color: rgba(176, 141, 60, 0.18);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(176, 141, 60, 0.075), transparent 42%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.034), rgba(255, 255, 255, 0.008)),
+      rgba(8, 8, 14, 0.88);
+  }
+
+  .dossier-module--personal {
+    background: rgba(8, 8, 14, 0.68);
+    box-shadow: none;
+  }
+
+  .dossier-module__header {
+    padding: 14px 16px 11px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+  }
+
+  .dossier-module__eyebrow {
+    margin: 0;
+    color: rgba(232, 228, 220, 0.38);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.61rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .dossier-classification {
+    display: grid;
+    gap: 14px;
+    padding: 14px 16px 16px;
+  }
+
+  .dossier-classification__visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 6.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(176, 141, 60, 0.11);
+    background:
+      radial-gradient(circle at 50% 48%, rgba(176, 141, 60, 0.09), transparent 54%),
+      rgba(4, 4, 8, 0.58);
+  }
+
+  .dossier-classification__visual::after {
+    content: "";
+    position: absolute;
+    inset: 50% 10px auto;
+    border-top: 1px solid rgba(177, 58, 52, 0.16);
+  }
+
+  .dossier-classification__visual img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: min(70%, 6.5rem);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    opacity: 0.76;
+    filter: drop-shadow(0 0 1.4rem rgba(176, 141, 60, 0.08));
+  }
+
+  .dossier-classification__identity {
+    display: grid;
+    gap: 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .dossier-classification__title {
+    color: rgba(232, 228, 220, 0.92);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.42rem, 1.25rem + 0.32vw, 1.7rem);
+    letter-spacing: 0.035em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+
+  .dossier-classification__primary {
+    color: var(--char-gold, #b08d3c);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .dossier-classification__details,
+  .dossier-module__fields {
+    display: grid;
+    gap: 0;
+    margin: 0;
+  }
+
+  .dossier-classification__detail {
+    display: grid;
+    gap: 4px;
+    padding: 9px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .dossier-classification__detail:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .dossier-classification__detail:last-child {
+    padding-bottom: 0;
+  }
+
+  .dossier-classification__detail dt,
+  .dossier-module__field dt {
+    margin: 0;
+    color: rgba(232, 228, 220, 0.34);
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .dossier-classification__detail dd,
+  .dossier-module__field dd {
+    min-width: 0;
+    margin: 0;
+    color: rgba(232, 228, 220, 0.68);
+    font-size: 0.77rem;
+    line-height: 1.48;
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+  }
+
+  .dossier-module__field {
+    display: grid;
+    grid-template-columns: 19px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .dossier-module__field:first-child {
+    border-top: 0;
+  }
+
+  .dossier-module__icon {
+    width: 17px;
+    height: 17px;
+    margin-top: 1px;
+    color: rgba(176, 141, 60, 0.48);
+  }
+
+  .dossier-module__field-copy {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  @container character-stage (min-width: 98rem) {
+    .dossier-metadata {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .dossier-classification__visual {
+      min-height: 9rem;
+    }
+
+    .dossier-classification__visual img {
+      width: min(82%, 11rem);
+    }
+  }
+
+  @media (max-width: 860px) {
+    .dossier-metadata {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

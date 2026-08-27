@@ -97,7 +97,13 @@ Translator decision rule:
 | StaSis | nome institucional de estase | feminine singular | keep unchanged |
 | SiNE | nome institucional | masculine singular | keep unchanged |
 | HourGlass | nome institucional | feminine singular | keep unchanged |
-| CLOCKWORK | nome institucional | masculine singular | keep unchanged |
+| CLOCKWORK | nome institucional | feminine singular | keep unchanged |
+| Dial | entidade / interface pessoal de Time | masculine singular | keep unchanged |
+| Hour | unidade operacional da CLOCKWORK | feminine singular | keep unchanged |
+| Hourhand / Hand | líder de uma Hour | variable by person | keep unchanged |
+| Accord of the Unspent Beat | pacto temporal oculto | masculine singular | keep unchanged |
+| Right of Striking | prerrogativa da Seat Wonderwall | masculine singular | keep unchanged |
+| Unstruck Hold | postura de sucessão sem reconhecimento | masculine singular | keep unchanged |
 | Clepsydra | nome proprio/artefato | feminine singular | keep unchanged |
 | The Clepsydra Apparatus | Aparato Clepsydra | masculine singular | keep unchanged |
 

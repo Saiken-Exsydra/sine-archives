@@ -5,7 +5,7 @@ summary: "The federal republic of light and marble. A nation built around custod
 tags: ["Places", "Aurora", "Federation", "Rite of Radiance", "Valerie", "White Desert", "Leóhtmæl", "The Spire", "Luminants"]
 status: "public"
 created: "2026-03-31"
-updated: "2026-07-13"
+updated: "2026-08-14"
 image: "../../assets/uploads/places/place-aurora.png"
 ---
 
@@ -18,7 +18,7 @@ image: "../../assets/uploads/places/place-aurora.png"
 
 Aurora is a **federal republic** of moderate size, situated to the north-west of the Empire of Synus along the Twilight Band. It is not a military power on the scale of Synus or Ardeatus, not an industrial colossus, not a nation that has defined itself through war. Aurora defines itself through three things: **light, governance, and the responsibility of what it keeps.**
 
-Aurora's territory contains the expelled **Instrument of Legibility** — devotionally named *Leóhtmæl*, That Which Filled What Was Dark — resting inaccessible in the deep White Desert. Its Principle is not light as substance but the faithful passage of illumination and the survivable relation between visibility and concealment.
+Aurora's territory contains an expelled **Legibility interface remnant**—devotionally named *Leóhtmæl*, That Which Filled What Was Dark—resting inaccessible in the deep White Desert. It preserves pressure from the Principle of Legibility: not light as substance, but the faithful passage of illumination and the survivable relation between visibility and concealment. The actual [[obscurials|Obscurial]] vanished from the lunar configuration with the other eleven during the Fracture.
 
 The federation is governed by a **Council of Cantons** — semi-autonomous territorial units, each with its own elected administration, bound under a common federal charter. The federal executive, the **Chancellor**, is elected by the Council, one vote per canton regardless of population. Coalition politics is permanent and expected. The founding memory is not a glorious war but an act of institutional competence in the face of monarchical failure.
 
@@ -30,7 +30,7 @@ Aurora occupies approximately **4,000 km of longitudinal Twilight Band**, north-
 
 The **northern coast** faces the Dark-Side ocean — partially navigable, cold, and subject to seasonal ice. Aurora maintains a cold-water port tradition here with harbor cities built into sheltered coastal positions.
 
-The **central corridor** is where the majority of Aurora's population lives. It is temperate, moderately rainy, and somewhat colder than the Empire's Central Region — the White Desert's atmospheric dynamics pull warmer air south and allow cooler Darkmargin air to penetrate further into the corridor than geography alone would predict. The result is a nation that runs slightly colder than its latitude suggests, with clearer skies and more vivid High Radiance seasons.
+The **central corridor** is where the majority of Aurora's population lives. It is temperate, moderately rainy, and somewhat colder than the Empire's Central Region — the southern White Desert's atmospheric dynamics drive heated air north while allowing cooler Darkmargin air to penetrate farther south into the corridor than geography alone would predict. The result is a nation that runs slightly colder than its latitude suggests, with clearer skies and more vivid High Radiance seasons.
 
 Aurora shares a **land border** with Synus to the east through the forested highland zone. The primary legal crossing is the **Greygate Pass**, permanently staffed by an imperial garrison. To the west, Aurora borders **Hikari**.
 
@@ -40,9 +40,9 @@ Aurora shares a **land border** with Synus to the east through the forested high
 
 The **White Desert** occupies Aurora's southern territory in its entirety below a certain latitude. Its extreme conditions are not thermal but **photonic**. The desert's composition — fine white silicate sand formed over geological time by Bright-Side radiation acting on the mineral-rich substrate — reflects accretion-disk radiation with an efficiency far beyond what dark earth or stone would produce. Standing at the desert's edge during High Radiance, the light comes from below as much as above.
 
-Near the Instrument's location, light behaves in ways that cannot be fully explained by the sand's composition alone. Refraction patterns at low angles. Luminosity during Low Radiance periods that should be darker than they are. The particular quality of the light at the desert's edge during moonrise — something the Rite calls *first radiance* — that Redactors and non-Redactors alike describe as feeling different from ordinary illumination.
+Near the remnant's location, light behaves in ways that cannot be fully explained by the sand's composition alone. Refraction patterns at low angles. Luminosity during Low Radiance periods that should be darker than they are. The particular quality of the light at the desert's edge during moonrise—something the Rite calls *first radiance*—that Redactors and non-Redactors alike describe as feeling different from ordinary illumination.
 
-The deep desert is inaccessible. Every Redactor who has entered it has reported increasing Dive pressure with proximity — routing becoming difficult, coherence loops destabilizing, the sensation of something vast and structurally dense pulling at perception without hostility. There is no record of a Redactor reaching the Instrument. The Rite of Radiance maintains **Desert Stations** — permanently staffed observation posts at the desert's inhabitable northern edge. They do not attempt to advance. They watch.
+The deep desert is inaccessible. Every Redactor who has entered it has reported increasing Dive pressure with proximity—routing becoming difficult, coherence loops destabilizing, the sensation of something vast and structurally dense pulling at perception without hostility. There is no record of a Redactor reaching the remnant's core. The Rite of Radiance maintains **Desert Stations**—permanently staffed observation posts at the desert's inhabitable northern edge. They do not attempt to advance. They watch.
 
 The White Desert also serves as **natural defensive depth** on Aurora's southern flank — no conventional army can cross it at pace, and supply lines through it collapse quickly.
 
@@ -64,7 +64,7 @@ The **Spire** is Valerie's defining landmark — the tallest fixed structure on 
 
 The **Rite of Radiance** is Aurora's majority religious institution, born from the **Luminant** movement — centuries of scholars, desert hermits, and Redactors organized around one persistent intuition: *something sacred lives in the White Desert, and we are responsible for it.*
 
-The Rite's theology rests on three pillars. **Custodianship**: Aurora does not own *Leóhtmæl* — it is responsible for proximity to it. **The Anchored Radiance** teaches deliberate placement; codex truth is that Myehnai's Instrument was expelled during the Fracture and the desert became the ground that received it. **The Obligation of Light** preserves the stronger maxim: *show enough to save; veil enough to spare*.
+The Rite's theology rests on three pillars. **Custodianship**: Aurora does not own *Leóhtmæl*—it is responsible for proximity to it. **The Anchored Radiance** teaches deliberate placement; restricted structural reconstruction identifies an expelled piece of Myehnai's Legibility interface, not the missing Obscurial itself. **The Obligation of Light** preserves the stronger maxim: *show enough to save; veil enough to spare*.
 
 The Rite is in **formal schism** with the Church but not in the militant separation that defines Ardeatus's Covenant. It does not reject the Sovereign, the Twelve, or the Church's broad framework. It rejects one specific claim: that no mortal institution may hold custodianship of an Instrument. The Church and the Rite maintain diplomatic contact, exchange scholars, and disagree — sometimes bitterly — while continuing anyway.
 
@@ -72,7 +72,7 @@ The Rite is in **formal schism** with the Church but not in the militant separat
 
 ## Redactors in Aurora
 
-Aurora produces more Redactors per capita than demographic models alone would predict — a documented statistical anomaly acknowledged by both the Rite and the Apocachynthion. The Rite interprets this as the structural consequence of generations living near an Instrument of the Intact Seal. The Apocachynthion's technical assessment does not dispute the anomaly.
+Aurora produces more Redactors per capita than demographic models alone would predict—a documented statistical anomaly acknowledged by both the Rite and the Apocachynthion. The Rite interprets this as the consequence of generations living near an Instrument of the Intact Seal. Technical assessment agrees that the interface remnant is active without treating it as an actual Obscurial.
 
 Aurora does not impose internal certification requirements on Redactors. The Apocachynthion has **embassy authority only** in Aurora — a diplomatic presence with no enforcement power on Auroran soil. Auroran Redactors who wish to operate within the Empire must obtain certification through the embassy. Those seeking employment contracts most commonly access the market through **MAGI** — SiNE's Redactor placement apparatus.
 
@@ -90,6 +90,6 @@ The network is entirely domestic. **Outside Aurora's borders, the network ends.*
 
 ## The Revolution
 
-The federation was born from crisis. When a major **Calling event** struck the Twilight Band, its resonance surge interacted with the Instrument's passive presence in the White Desert, producing a cascading resonance reflection that pushed north into the populated corridor. The monarchy's response produced three failures: deferring entirely to the Church while populations needed material assistance, withholding emergency resources from damaged cities, and forbidding Luminant clergy from operating in the affected zones.
+The federation was born from crisis. When a major **Calling event** struck the Twilight Band, its resonance surge interacted with the Legibility remnant's passive field in the White Desert, producing a cascading resonance reflection that pushed north into the populated corridor. The monarchy's response produced three failures: deferring entirely to the Church while populations needed material assistance, withholding emergency resources from damaged cities, and forbidding Luminant clergy from operating in the affected zones.
 
 The canton councils acted without authorization. They coordinated the relief. They fed, housed, and stabilized the affected populations while the monarchy issued proclamations from Valerie. The revolution that followed was organized, not spontaneous. The monarchy fell within two years. The last monarch was **exiled rather than executed** — a deliberate precedent built into the founding charter: *we govern through legitimacy, not through vengeance.*

@@ -9,7 +9,7 @@ import { getArchiveNavLabels, sectionLabel } from "../../../i18n/ui";
 //  Update MAP_ASPECT (width x height) if the new image has different dimensions.
 // ---------------------------------------------------------------------------
 const MAP_IMAGE  = "/uploads/map-empire.png";
-const MAP_ALT    = "Illustrated map of the Empire of Synus, showing the northern, central, and southern regions with Aurora to the west and Ardeatus to the east.";
+const MAP_ALT    = "North-up map of the Empire of Synus: the Dark Side is north at the top, the Bright Side is south at the bottom, Aurora lies west, and Ardeatus lies east.";
 const MAP_ASPECT = 1534 / 1025; // natural image width x height ~= 1.497
 const { locale = "en" } = Astro.props as { locale?: SiteLocale };
 const navLabels = getArchiveNavLabels(locale);
@@ -48,10 +48,10 @@ const dossier = {
     subhead: "The green administrative basin where rivers, academies, and capital authority collect.",
     accent: "#b13a34",
     summary:
-      "The central region is the Empire's most integrated landscape. Roads converge around Kalt'sen, the Vel'zaya River cuts across the basin, and academy cities sit close enough to the capital to feel like part of the same administrative weather. This is where Synus becomes legible as a state rather than a collection of frontiers.",
+      "The central region is the Empire's most integrated landscape. Roads converge around Kalt'sen, the Velz'kaya River runs south across the basin, and academy cities sit close enough to the capital to feel like part of the same administrative weather. This is where Synus becomes legible as a state rather than a collection of frontiers.",
     stats: [
       ["Capital",           "Kalt'sen"],
-      ["Primary corridor",  "Vel'zaya River"],
+      ["Primary corridor",  "Velz'kaya River"],
       ["Urban pattern",     "Capital satellites"],
     ],
     facts: [
@@ -76,7 +76,7 @@ const dossier = {
     summary:
       "The south is the Empire's industrial slope. It begins at the central green belt, drops through the Scorch Escarpment, and ends in cracked extraction country. Lu'mia, Hora'veil, Cal'thas, and Sarn Pell make the southern geography feel engineered around fuel, armament, and frontier supply.",
     stats: [
-      ["Northern lip",    "Scorch Escarpment"],
+      ["Southern break",  "Scorch Escarpment"],
       ["Industrial axis", "Hora'veil - Cal'thas"],
       ["Deep feature",    "Vael Mouth"],
     ],
@@ -97,24 +97,24 @@ const dossier = {
   west: {
     eyebrow: "Western Border",
     title: "Aurora Approach",
-    subhead: "The western cold frontier of mountains, passes, and white desert routes.",
+    subhead: "The western Auroran frontier, from northern highlands and passes to the southern White Desert.",
     accent: "#88abc5",
     summary:
-      "The western side of the map is dominated by Aurora, the White Desert, and the mountain approach into the Empire. It reads as altitude, snow, passes, and watchful distance. Greygate Pass and the fortified line around Valerie make the border legible as a controlled crossing rather than a continuous furnace front.",
+      "The western side of the map is dominated by Aurora and its north-south contrast: Darkward highlands and snow in the north, the White Desert toward the Bright Side in the south, and the mountain approach into the Empire between them. Greygate Pass and the highland stations make the border legible as a controlled crossing rather than a continuous furnace front.",
     stats: [
       ["Counterpower", "Aurora"],
       ["Key crossing",  "Greygate Pass"],
-      ["Terrain type",  "Snow desert"],
+      ["Terrain type",  "Highlands / White Desert"],
     ],
     facts: [
-      { title: "Aurora",        text: "A neighboring power whose geography is defined by snow fields, mountain roads, and guarded approaches.", href: "/places/aurora/" },
+      { title: "Aurora",        text: "A western neighbor spanning cold Darkward coasts, central mountain roads, and the Brightward White Desert.", href: "/places/aurora/" },
       { title: "Greygate Pass", text: "The western pass compresses travel, diplomacy, and defense into one narrow route." },
       { title: "White Desert",  text: "The silicate flats make the western approach visually open but logistically severe." },
     ],
     routes: [
       ["Mountain entry",    "The border is easiest to understand through the pass system, not through open field movement."],
-      ["Cold pressure",     "The west presses on Synus through weather, elevation, and distance."],
-      ["Imperial response", "Valerie and Vel'hara mark the Empire's effort to hold the approach with settlements and roads."],
+      ["Terrain pressure",  "Aurora's northern approaches are cold because of latitude and elevation, not western longitude."],
+      ["Imperial response", "Greygate and the highland stations monitor the approach while preserving the non-adversarial border."],
     ],
     quote:  "The western frontier is quiet only from a distance; every road across it is a decision point.",
     byline: "Western geography",
@@ -126,7 +126,7 @@ const dossier = {
     subhead: "The eastern fortified edge where foundries, walls, and frontier roads dominate the map.",
     accent: "#c75b43",
     summary:
-      "The eastern side is the map's hard border. Ardeatus rises beyond the wall, with Velitrachsen, state foundries, the Iron Bastion, and Kovansk forming an industrial frontier opposite the Empire's southern and central roads. This edge is visually warmer, harsher, and more militarized than the west.",
+      "The eastern side is the map's hard border. Ardeatus rises beyond the wall, with Velitrachsen, state foundries, the Iron Bastion, and Kovansk forming an industrial frontier opposite the Empire's southern and central roads. Its southern plateaus and industrial haze make this part of the east appear warmer and harsher; eastern longitude itself does not increase radiance.",
     stats: [
       ["Counterpower",   "Ardeatus"],
       ["Border identity","Iron Bastion"],

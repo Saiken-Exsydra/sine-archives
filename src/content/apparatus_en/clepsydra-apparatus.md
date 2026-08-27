@@ -11,13 +11,13 @@ summary: "A pre-Fracture service apparatus that tests whether a presented state 
 tags: ["Apparatus", "Precursor", "Intact Seal", "Determinacy", "Clepsydra", "Sciel", "Apocachynthion", "Church"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-07-13"
+updated: "2026-08-14"
 image: "../../assets/uploads/app-clepsydra-apparatus.png"
 ---
 
 ## Primary Correction
 
-Clepsydra is **not** an Obscurial, Sciel's Instrument, or a portable copy of the Instrument of Truth. It is a Precursor-built service apparatus once coupled to Sciel's jurisdiction of **Determinacy**. Sciel's Instrument law-core remains seat-fast in the Lunar Crown.
+Clepsydra is **not** an [[obscurials|Obscurial]], Sciel's Instrument, or a portable copy of the Instrument of Truth. It is a Precursor-built service apparatus once coupled to Sciel's jurisdiction of **Determinacy**. The actual Obscurial associated with that relation vanished from the lunar configuration during the Fracture. What survives is Clepsydra's service logic and its damaged relation to the old Determinacy interface—not a law-core still seated in the Crown.
 
 ## Form and Purpose
 
@@ -37,6 +37,6 @@ The Five Oaths are recurring interlocks, not stages of permanent unsealing:
 
 ## Post-Fracture Behavior
 
-Clepsydra refuses many hands and has crossed failed custody boundaries to reach selected operators. Three explanations remain viable: damaged interlock matching, bias from Sciel's local fragment-scars, or a narrow remote refusal through the old lunar coupling. None proves that Sciel survives as a person inside the apparatus.
+Clepsydra refuses many hands and has crossed failed custody boundaries to reach selected operators. Three explanations remain viable: damaged interlock matching, bias carried by Sciel's co-address scars, or narrow refusal behavior preserved in the old service coupling. None proves that Sciel survives as a person inside the apparatus, and none places the vanished Obscurial inside it.
 
 Its greatest misuse is **forced correspondence**: treating one operator's model as the only admissible world. This would invert Sciel's Directive and is prohibited by the Church, the Apocachynthion, and imperial compact.

@@ -1,11 +1,11 @@
 ---
 title: "The Lunar Crown"
 type: "Cosmology"
-summary: "A coroa lunar. Uma ferida no céu que nunca cicatrizou — e a razão de o mundo ser como é."
+summary: "A Lua depois da Fratura: uma arquitetura ferida cujo fragmento, Ring e salvaguardas remanescentes ainda mantêm Terra viva."
 tags: ["Cosmology", "Lunar Crown", "Fracture", "Callings", "Syr'lene", "Moon", "Intact Seal", "Precursors"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-08-14"
 image: "../../assets/uploads/cosm-lunar-crown.png"
 ---
 
@@ -30,13 +30,15 @@ Esse é o evento que a Igreja chama de **Fracture** — ou, em liturgias mais an
 
 ## O Selo Intacto
 
-Antes da Fracture, a Lunar Crown era o **Selo Intacto** — um instrumento dos Precursors cuja função era manter o limiar entre o mundo e aquilo que existe além dele.
+Antes da Fracture, a Lua era o **Selo Intacto** — a arquitetura lunar completa cuja função era manter o limiar entre o mundo e aquilo que existe além dele. O nome Lunar Crown pertence corretamente ao estado ferido que veio depois.
 
 Não era uma barreira passiva.
 
 Era uma presença governante ativa.
 
 A teologia da Igreja entende isso corretamente em sua estrutura essencial, mesmo sem compreender todos os detalhes técnicos. O ensinamento de que a Lua já foi uma lâmpada guardiã, que ela mantinha o limiar fechado e que sua fratura comprometeu essa proteção descreve corretamente o que aconteceu. A interpretação teológica e a realidade técnica divergem em terminologia e mecanismo explicativo, mas o evento central é o mesmo.
+
+O sistema unia doze [[obscurials|Obscurials]] reais, assentos e interfaces locais da Página, os Skyphons como intérpretes vivos, a participação de Terra e do Primordial da Página, Ksy'rion e a estabilização dos Precursores. Os Precursores construíram os assentos, relays, interfaces, corpos e reforços. Não criaram os Obscurials.
 
 O Selo Intacto não era infinito. O ataque contra ele foi forte o bastante para quebrá-lo. E desde então o limiar permanece comprometido.
 
@@ -72,21 +74,31 @@ Ela nunca corrigiu nenhuma das interpretações.
 
 ---
 
+## O Que a Fratura Realmente Rompeu
+
+A Fratura quebrou tanto a Lua quanto o céu regulado.
+
+Ela encerrou a manutenção viva dos Skyphons, rompeu Ksy'rion como máscara celeste completa e separou todos os acoplamentos Obscurials. **Todos os doze Obscurials reais desapareceram da configuração lunar.** Sua condição e seu paradeiro atuais permanecem desconhecidos.
+
+O que sobreviveu foi a arquitetura nativa ferida ao redor deles: assentos, relays e interfaces danificados, topologia residual Twelvefold, a macro-Âncora lunar, restos de Ksy'rion e o endereço vivo de contenção de Syr'lene. A Lunar Crown atual não contém nenhum Obscurial real.
+
+---
+
 ## O Lunar Ring
 
 O anel de destroços ao redor da Crown fraturada não existe apenas por estética. Ele funciona como um amortecedor — um campo distribuído de matéria lunar destruída que captura, difunde e absorve parcialmente a energia produzida pelo conflito de contenção acontecendo dentro da Crown.
 
-Sem o anel, as ondas de Resonance geradas pela contenção atingiriam a superfície de Terra com intensidade muito maior. Com ele, essas ondas são amortecidas — não anuladas, mas reduzidas a níveis que infraestrutura e praticantes treinados ainda conseguem administrar.
+Sem o anel, as perturbações harmônicas geradas pela contenção atingiriam a superfície de Terra com intensidade muito maior. Com ele, essas perturbações são amortecidas — não anuladas, mas reduzidas a níveis que infraestrutura e praticantes treinados ainda conseguem administrar.
 
-Os **Callings** — os eventos de Resonance sentidos por toda a Twilight Band — são justamente aquilo que atravessa o anel.
+Os **Callings** — os eventos de Resonance sentidos por toda a Twilight Band — são justamente aquilo que atravessa o anel: pressão de contenção e intrusão filtrada pela memória Twelvefold da Crown ferida.
 
-Eles são o conflito de contenção, ouvido à distância.
+Eles são o conflito de contenção, ouvido à distância, não mensagens dos Obscurials desaparecidos nem dos Skyphons encerrados.
 
 ---
 
 ## Os Callings
 
-Os **Callings** são surtos periódicos de energia ressonante vindos da Lunar Crown. Eles não são o fragmento se manifestando diretamente no mundo. São a assinatura do conflito contínuo — o atrito entre contenção e pressão irradiando para fora.
+Os **Callings** são eventos periódicos de pressão e perturbação harmônica vindos da Lunar Crown. Eles não são o fragmento se manifestando diretamente no mundo nem mensagens dos Obscurials desaparecidos ou dos Skyphons encerrados. São a assinatura do conflito contínuo — o atrito entre contenção e pressão de intrusão — filtrada por assentos, relays e doze jurisdições desiguais que a Crown ainda recorda.
 
 A intensidade varia.
 

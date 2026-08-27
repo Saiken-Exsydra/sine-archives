@@ -5,7 +5,7 @@ summary: "The world. A Precursor laboratory page engineered to survive beneath a
 tags: ["Terra", "Cosmology", "Precursors", "Twilight Band", "Vael'Khar", "World", "Page", "Ksy'rion", "Intact Seal"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-08-14"
 image: "../../assets/uploads/cosm-terra.png"
 ---
 
@@ -28,9 +28,23 @@ As a result, Terra is **tidally locked**. One hemisphere faces Vael'Khar permane
 
 Between the bright hemisphere and the dark lies a band roughly two thousand kilometres wide where life is possible. This is the **Twilight Band** - the ring civilization that all known history has unfolded within.
 
-The Twilight Band is not a single climate. It varies considerably across its length and the ring's shifting orientation relative to the accretion disk, producing what researchers divide into **six distinct radiation seasons** - not driven by axial tilt or conventional day-night cycles, but by the angular relationship between Terra's orbital position around Vael'Khar and the disc's output geometry. Some seasons bring more intense radiant energy to the band's inner edge; others ease it. The variation is predictable enough for agriculture. It is not predictable enough to ignore.
+Terra's compass follows that fixed geometry. The **North Pole** is the center of the Dark Side, the **South Pole** is the center of the Bright Side, and the Twilight Band occupies the equatorial region between them. Northward travel grows darker; southward travel grows brighter. East and west run around the Band's inhabited circumference and do not describe a radiance gradient. Standard Imperial maps keep north at the top, east to the right, and the Band running primarily left to right.
+
+The Twilight Band is not a single climate. Conditions vary across its north-south radiance gradient and along its east-west length because of terrain, altitude, currents, and engineered stabilization. Separately, researchers divide the year into **six distinct radiation seasons**. The seasons are not driven by axial tilt, cardinal direction, or the daily light cycle; they follow Terra's orbital position around Vael'Khar and the disc's output geometry. Some bring more intense radiant energy to the band's southern edge; others ease it. The variation is predictable enough for agriculture. It is not predictable enough to ignore.
 
 The Band's inner edge - the **Terminal Zones** - experiences the heaviest disc-side radiation and hosts more arid, high-energy environments. The outer edge transitions gradually toward the cold and dark of the **Darkmargin**, where the band's organized climate gives way to polar night. The center, the **Central Twilight Corridor**, is where most of the Empire's population and infrastructure concentrates.
+
+The name **Twilight Band** describes this geographic balance between permanent hemispheric extremes. It does not mean that the inhabited sky remains in twilight.
+
+---
+
+## The Lunar Day
+
+Terra is tidally locked, but the Twilight Band experiences an ordinary repeating day and night. The engineered Moon crosses each local sky in roughly twenty-four hours, producing moonrise, morning ascent, lunar zenith or noon, afternoon descent, moonset, evening twilight, and night.
+
+Under a clear sky at noon, the Lunar Crown provides approximately the same practical surface illumination Old Earth received from its Sun. Its spectrum is colder: daylight is white or silver-white, the clear sky is silver-blue, and ordinary objects receive no golden solar cast. Moonrise and moonset carry pink, rose, violet, and purple through the lower sky.
+
+After moonset, direct civil daylight ends. Low-radiance nights become meaningfully dark. Near periapsis, accretion-disc afterglow and the bright Ring can leave rose-violet horizons or enough silver light for unaided navigation without abolishing night.
 
 ---
 
@@ -38,7 +52,9 @@ The Band's inner edge - the **Terminal Zones** - experiences the heaviest disc-s
 
 Terra's habitable surface was not prepared only from below. The world was also prepared from above.
 
-Before the Fracture, the Moon was not merely a moon. In structural terms it was the **Intact Seal**: the complete lunar threshold architecture built to protect Terra at the point where its translation boundary was thinnest. Its sky-facing layer was **Ksy'rion** - not a separate false dome, but the outward-facing expression of the Seal as experienced from the world below.
+Before the Fracture, the Moon was not merely a moon. In structural terms it was the **Intact Seal**: the complete lunar threshold architecture built to protect Terra at the point where its translation boundary was thinnest. Its sky-facing layer was **Ksy'rion**—not a separate false dome, but the outward-facing expression of the Seal as experienced from the world below.
+
+The Seal made twelve [[obscurials|grammar-exterior vestiges]] locally addressable through engineered seats, interfaces, relays, and living Skyphon interpreters. The Precursors built that architecture, not the Obscurials. All twelve actual Obscurials vanished from the lunar configuration during the Fracture; the present Crown contains only the wounded native systems left around their absence.
 
 This matters because pre-Fracture civilization did not study the farther heaven directly. It studied **Ksy'rion's curated sky**: a bounded, regulated visible cosmos through which the world could be measured safely. The heavens people inherited were real as experience and lawful as environment, but they were not a neutral window onto everything beyond Terra. They were part of the protection system.
 
@@ -54,7 +70,17 @@ In the earliest era of the world, this management was performed directly by the 
 
 The Moon's complete architecture mattered here too. The Intact Seal did not merely hold the threshold. Through Ksy'rion and the broader lunar lattice, it provided the regulated sky conditions within which climate, measurement, and inherited cosmology remained mutually legible.
 
-After the Fracture ended that era, the Precursors' remaining infrastructure took over: a distributed network of stabilization systems embedded in Terra's structure, maintaining what the Instruments once governed through active presence. These systems have operated for the entire span of recorded history and for an indeterminate period before it. The civilizations that use the world do not generally know they exist. They do not need to. The systems continue regardless.
+After the Fracture ended that era, the Precursors' remaining infrastructure took over: a distributed network of stabilization systems embedded in Terra's structure, maintaining conditions the Skyphons once interpreted through active presence. These systems have operated for the entire span of recorded history and for an indeterminate period before it. The civilizations that use the world do not generally know they exist. They do not need to. The systems continue regardless.
+
+---
+
+## A Living World
+
+Terra is not only engineered terrain. It is a planetary recursive singularity: a living world whose continuing self-claim is expressed through the All-Mother.
+
+The All-Mother's **Worldright** is complete syntax authority within Terra's planetary jurisdiction, delegated by the Page Primordial. That provenance makes it revocable; it does not make it partial while the grant stands. Foreign syntax or a Shorewalker acting upon Terra therefore meets a world that can answer **this is me**.
+
+Worldright does not make the planet invulnerable or turn every environmental event into conscious intervention. It explains why direct authorship upon Terra is a jurisdictional conflict with a living sovereign body rather than work upon ownerless material. See [[syntax-authority|Syntax Authority and Recursive Sovereignty]].
 
 ---
 

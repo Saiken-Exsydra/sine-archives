@@ -36,11 +36,11 @@
 | **Year of Birth** | 2175 (age 25 at time of filing, 2200) |
 | **Birth Status** | Final numbered subject of Project Kaleidoscope; a living person from birth, not a project asset or returned predecessor |
 | **House Status** | Irrevocably adopted into Rae Continuance and the primary House household under the Compact of Held Light |
-| **Redactory Classification** | Radiance-class. Confirmed stable under ordinary and controlled high-depth conditions. |
+| **Redactory Classification** | Radiance-class; experienced Quill. Confirmed stable under ordinary and controlled high-depth conditions, with post-Aurora restrictions on serious native-Light work. |
 | **Anchor Classification** | **Light**. Abyssal Anchor. |
 | **Shore Relevance** | Catastrophic premature Luminant Shorefall during the White Desert incident. Current status: latent Shorewalking potential under strict continuity risk. |
 | **Kaleidoscope Status** | **Active singular convergence.** Project Kaleidoscope is not merely her origin record; it is a continuing resonance condition uniquely centered on her. |
-| **Remainder Status** | Structurally outside inherited recognition. The project cultivated Light-bearing traits but could not fabricate the living Wonderwall interval-echo carried through natural descent. |
+| **Remainder Status** | Perceptible but unresolved. She lacks the living Wonderwall interval-echo that would make her an immediately recognized hereditary route, yet her Light, White Desert scar, Shore contact, First Radiance relation, and Kaleidoscope convergence make her intensely legible to the Remainder without giving it one stable address for the living woman. |
 | **Institutional Position** | Legally eligible for future nomination to the Wonderwall Seat. No public nomination, completed House vote, Meridian vote, or court recognition exists. |
 | **Point Status** | Cloister-issued Point carried under Company custody; Point register access restricted by Seat authority and applicable Apocachynthion compact process. |
 | **Current Residence** | Primary Wonderwall holdings, with extended operational presence in Kalt'sen and Hora'veil as required by Company work. |
@@ -61,9 +61,11 @@ The project attempted to force recurrence of the first E'lla's Light-bearing Red
 
 For years I treated this as the defining absence and defining mercy of her condition. I asked what Light might become under engineered convergence without the hereditary interval-pressure accumulated by the natural bloodline. The question was technically interesting and morally corrupt because it treated a present person as its answer.
 
-That assessment remains accurate.
+The missing echo still matters. It is why the Remainder cannot immediately recognize and pressure E'lla as an established living route in the manner it can Ec'lesia. It does not make E'lla invisible, irrelevant, or safe. The Remainder perceives the Light she expresses, the Shore-trace she carries, the institutional absences arranged around her, and the many supported identity-relations Kaleidoscope made structurally difficult to separate. What it cannot do is resolve those relations into one recursive address and identify that address as the living woman.
 
-It is also incomplete.
+The absence is therefore not of perception.
+
+It is of resolution.
 
 Project Kaleidoscope was a long-duration institutional attempt to make living subjects conform to one dead referent. Eighty-two subjects preceded KL-83. Some died through age, illness, procedure, neglect, or containment failure. Some were released or integrated; some required continuing care. KL-81 and KL-82 remain living managed cases. All were real people. All were subjected to the same impossible demand: recover the light that was lost, refine it, make it survivable, and place it into the world again.
 
@@ -93,9 +95,9 @@ It is that E'lla carries **Project Kaleidoscope's unresolved living convergence*
 
 This is not a title. It is not an ability category. It is not a repeatable Shorewalking subtype. It is not a technique. It cannot be taught, inherited, or reproduced by ordinary metaphysical means. It is the unique consequence of the centuries-long Kaleidoscope history, eighty-two prior subject outcomes, an Abyssal Anchor of Light, catastrophic White Desert Shorefall, and the presence of the Luminant Shore's Tidebound matriarchal continuity.
 
-She does not know this.
+She does not know this in its complete form.
 
-She knows only that she has always been expected to become someone institutionally useful and that I have, over the last three years, stopped pretending the expectation carried no design.
+She knows Project Kaleidoscope existed. She knows it studied, conditioned, and altered parts of her childhood; that its purpose concerned House Wonderwall and the historical E'lla; and that adults around her continue to withhold material facts. She believes the project found something unusual in the biological daughter of Al'ithia and Em'manuel and then made that daughter its subject. She does not know that the project came first, that it produced the child designated KL-83, or that Al'ithia and Em'manuel became her parents afterward.
 
 ---
 
@@ -103,11 +105,17 @@ She knows only that she has always been expected to become someone institutional
 
 She is striking in the uncomplicated way that attracts attention before people have decided what they think about her. The resemblance to the first E'lla is not exact enough to register as repetition to anyone who does not know what to look for. To me it is exact in different places each year, which is worse.
 
+Her fundamental temperament is warm. Before Aurora she was cheerful, affectionate, playful, aesthetically expressive, quick to seek closeness, and unusually responsive to another person's pain. The White Desert did not reveal a colder nature. It injured an open person until openness began to feel dangerous. Her later severity, guardedness, and seclusion are acquired defenses around the same capacity for love.
+
 She is approximately 170 centimeters tall, very thin in build, pale-skinned, long-fingered, and delicate-featured in a way that gives the superficial impression of fragility. This impression is inaccurate. Her face is fine-boned and unnervingly composed. She looks, at first glance, like a princess from a story told by people who have never had to survive anything themselves.
 
 Her hair is naturally black. Since Aurora, she uses her own Redactory continuously to suppress its reflectivity to near-total absorption. The result is not merely dark hair. It is a black so complete that it appears to swallow surrounding light rather than receive it. Her clothing is treated the same way. She dresses almost entirely in black, usually at or above the threshold where the fabric is absorbing the overwhelming majority of visible light. The only persistent white on her person is the sclera of her eyes and her skin.
 
 When she is using her abilities, her eyes shift toward a light metallic hue between pale pink and pale blue. Because she is almost always sustaining the optical suppression shaping her clothes and hair, the hue is almost always present. It gives her a continuous appearance of restrained activation, as though some part of her never fully left the edge of operational state.
+
+The blackness is Light Redactory, not Darkness and not ordinary dye. She alters absorption, reflection, and transmission so chosen surfaces return almost no visible light. Highlights disappear, folds become difficult to read, and moving hair is legible chiefly through silhouette, occlusion, and the failure of surrounding light to return. The visual fact is exact: **E'lla is a Light Redactor who does not want light returned from her.**
+
+The route has crossed from extreme familiarity into confirmed burn-in. During supervised attempts at ordinary release, the suppression closed briefly and then reopened without conscious intention once she could support it again. It now occupies active capacity even when attentionless, and ordinary release no longer ends it reliably. This does not make the blackness permanent matter or stable reconfiguration: interruption returns her hair and garments to their Page-native optical behavior, and the route must resume to restore the effect. E'lla has not chosen route-breaking.
 
 That was the older explanation.
 
@@ -123,7 +131,7 @@ The working phrase in this file is **Shore-face displacement**.
 
 It is not an illusion. It is not possession. It is not the Remainder. It is the first visible sign that Project Kaleidoscope's residual sibling-signatures can partially surface through her when her recursion approaches the Luminant Shore's threshold. Under these conditions, anatomy and identity cease aligning perfectly. E'lla remains the central body, but the field around her begins expressing additional emotional states and partial agency through her surface.
 
-Before Aurora, she knew how to perform Wonderwall elegance socially. After Aurora, the performance became effortful. Her social manner is still polished, but it now reads as managed rather than natural. She can go out, speak clearly, conduct business, and move through high-value rooms without embarrassment. She does it because she must. Left to preference, she would remain alone.
+Before Aurora, Wonderwall elegance sat lightly on her because sociability itself was easy. After Aurora, the performance became effortful. Her social manner is still polished, but it now reads as managed rather than natural. She can go out, speak clearly, conduct business, and move through high-value rooms without embarrassment. She does it because she must. Left to preference, she often remains alone—not because she dislikes people, but because closeness now carries too many possible consequences.
 
 Her anger expresses with the exact character her Anchor would predict. It does not read first as heat, noise, or volatility. It reads as increased legibility. When E'lla is truly angry, what she turns toward feels exposed. The room sharpens around the target of her attention. Her temper is not fire. Her temper is light.
 
@@ -131,7 +139,7 @@ She dislikes crowds, not out of contempt for people but out of fear. Dense envir
 
 The public version of her reads as composed, expensive, difficult to embarrass, and probably safer than she is.
 
-The private version is quieter, lonelier, and under much more continuous strain.
+The private version is quieter, lonelier, and under much more continuous strain. With Al'ithia, and at rarer unguarded moments with Em'manuel, the earlier warmth remains visible in physical affection, dry jokes, shared aesthetic attention, and the relief of being allowed to care without first becoming an operational problem.
 
 The Shore-facing version is not singular enough to summarize in one sentence.
 
@@ -141,7 +149,7 @@ The Shore-facing version is not singular enough to summarize in one sentence.
 
 ### IV.1 What Happened
 
-At age seventeen, during a Company-aligned observational passage to Aurora's northern desert stations, E'lla entered the White Desert perimeter under conditions that should have remained manageable. The convoy's formal purpose was materials exchange and field observation in cooperation with Auroran station personnel studying high-radiance particulate behavior along the inhabitable edge of the desert. The unofficial purpose was mine: I wanted proximity data on how her profile behaved in the passive field Auroran devotion calls *Leóhtmæl*. That name belongs to local reception of Myehnai's expelled Instrument of Legibility; it is not the Principle itself.
+At age seventeen, during a Company-aligned observational passage to the stations along the northern edge of Aurora's southern White Desert, E'lla entered the desert perimeter under conditions that should have remained manageable. The convoy's formal purpose was materials exchange and field observation in cooperation with Auroran station personnel studying high-radiance particulate behavior along the inhabitable edge of the desert. The unofficial purpose was mine: I wanted proximity data on how her profile behaved in the passive field Auroran devotion calls *Leóhtmæl*. That name belongs to local reception of the expelled Legibility interface remnant associated with Myehnai; it is not the Principle itself and not the vanished Obscurial.
 
 This was an error in judgment I recognized as such approximately six minutes too late.
 
@@ -183,9 +191,13 @@ It did not, because something intervened.
 
 What E'lla knows is simple: at the moment the descent should have continued into death, she felt a presence she could neither name nor refuse force her upward.
 
-The strongest restricted assessment is narrower than a surviving-Skyphon claim. Myehnai's expelled Instrument of Legibility retains damaged selection behavior in the White Desert. E'lla's uncontrolled descent presented a receiver about to be destroyed by total exposure. The Instrument reflexively narrowed what could pass through her and forced her back toward a survivable sightline. That response is faithful to Myehnai's former Directive — illumination must remain truthful to what it crosses and merciful to what receives it — but it does not prove Myehnai survives as a person or acted consciously.
+The strongest restricted assessment is narrower than a surviving-Skyphon claim. The expelled Legibility interface remnant retains damaged selection behavior in the White Desert. E'lla's uncontrolled descent presented a receiver about to be destroyed by total exposure. The old interface reflexively narrowed what could pass through her and forced her back toward a survivable sightline. That response preserves Myehnai's former Directive — illumination must remain truthful to what it crosses and merciful to what receives it — but it does not prove Myehnai survives as a person or acted consciously.
 
-The incident is therefore classified as an **Instrument recognition reflex under Shore pressure**, not direct Skyphon contact.
+The reflex also left a persistent selection condition in the continuity scar produced by her Shorefall. It is not continuously active, does not hide her from ordinary observers, and does not prevent a person from recognizing E'lla through ordinary relation. It becomes relevant when an observer capable of perceiving several of her supported identity-relations attempts to select one relation as the whole. Under that pressure, the old reflex refuses unsupported resolution: the first E'lla, KL-83, A'licia's inheritance, a sibling-signature, a House purpose, or a useful Shore-function cannot be made to stand for the living person merely because the observer can see it.
+
+This is the persistent mercy of the event. It is also why the Remainder's attention became possible and unstable at the same time.
+
+The incident is therefore classified as a **Legibility-interface recognition reflex under Shore pressure**, not direct Skyphon contact or present Obscurial action.
 
 That is one part of what saved her.
 
@@ -203,7 +215,7 @@ The event divided her life cleanly.
 
 Before Aurora, E'lla's development followed the program's most optimistic trajectory: disciplined, curious, increasingly confident in her own control, and willing to let her capability be visible. After Aurora, her personality changed so sharply that anyone who knew her well before the incident speaks of it as if a border had been crossed.
 
-She did not stop developing. She became someone more solitary, more effortful in company, more suspicious of any condition she cannot fully map before entering it.
+She did not stop developing. She became someone more solitary, more effortful in company, more suspicious of any condition she cannot fully map before entering it. The solitude is a consequence of compassion as much as fear: if proximity creates another chance to harm someone, withdrawal can feel like protection.
 
 She does not trust the path between shallow usage and catastrophic depth-loss anymore. This caution is not cowardice. It is earned intelligence.
 
@@ -229,7 +241,7 @@ Not reflection, not refraction, not directed beam, not luminous decay, not any d
 
 It is an Abyssal Anchor. The problem is not merely that it is powerful. The problem is that it rests on the strata where Light exists as a primitive. Under ordinary conditions she works far above it, using shallow and middle-depth impressions the way any practical young Redactor must. Under extreme resonance, however, the distance between her operating depth and her true depth at the strata can collapse faster than her capacity to regulate descent.
 
-This is why she is so dangerous in the White Desert. Aurora's southern territory is already structurally conditioned by the passive presence of the expelled Instrument of Legibility. Most practitioners entering that environment are pressured from outside. E'lla's Light Anchor resonates with one visible expression of the deeper law.
+This is why she is so dangerous in the White Desert. Aurora's southern territory is already structurally conditioned by the passive field of the expelled Legibility interface remnant. Most practitioners entering that environment are pressured from outside. E'lla's Light Anchor resonates with one visible expression of the deeper law.
 
 Because her Anchor touches the Luminant Shore under catastrophic conditions, her deepest risk is not merely Anchor inversion. It is **identity-luminous Shorefall**: uncontrolled arrival at the Luminant Shore in a state where the concept of Light attempts to reveal every hidden structure she contains, including structures she has not been told exist.
 
@@ -257,7 +269,9 @@ They do not speak.
 
 Her greatest current weakness is not power. It is the lingering behavioral consequence of Aurora and the unacknowledged structural fact that some of her survival instincts may no longer belong exclusively to her conscious self.
 
-She can still Dive deeply. She can still stabilize difficult fields. She can still outperform almost any practitioner of her age currently in circulation through the Company's internal apparatus. What she no longer does willingly is perform casual shallow-use habits in any environment she has not already tested for resonance behavior, nor will she approach the strata through her own Anchor without redundant safeguards, layered environmental control, and an exit architecture she trusts.
+She is an experienced Quill, not a practitioner whose trauma has erased competence. She can still Dive deeply. She can still stabilize difficult fields. She can still outperform almost any practitioner of her age currently in circulation through the Company's internal apparatus. What she no longer does willingly is trust serious native-Light work in an environment she has not already tested for resonance behavior, nor will she approach the strata through her own Anchor without redundant safeguards, layered environmental control, and an exit architecture she trusts.
+
+She has therefore invested years in bounded, fitted practice: telekinesis; her Point and private Leaf library; garment and thread schematics; controlled self-redaction; and apparatus whose failure behavior she has studied. The distinction is not that she stopped practicing Redactory. She stopped trusting the native expression that bears her name and inheritance most directly.
 
 This makes her slower to commit at the edge.
 
@@ -265,11 +279,11 @@ It also makes her far less likely to kill everyone in the room by accident, whic
 
 ### V.4 Shorewalking Potential
 
-Under the Shores framework, E'lla is a potential **Luminant Shorewalker**.
+Under the Shores framework, E'lla is a potential **Luminant Palimpsest**: a Redactory Shorewalker whose Light Anchor would temporarily become a syntax aperture.
 
 This statement requires immediate restriction.
 
-A Luminant Shorewalker is a general category: one who remains Page-side, internalizes Luminant Shore pressure, and expresses that pressure through body, power, and identity without falling. E'lla may become this.
+A Luminant Palimpsest crosses the same threshold as Luminant Shorefall but preserves the self-address "This is me." The writer becomes text while remaining the writer, and may alter syntax directly through the Light aperture's compatible jurisdiction. E'lla may become this.
 
 Project Kaleidoscope is not that category.
 
@@ -277,9 +291,9 @@ Project Kaleidoscope is her unique condition inside that category.
 
 A different Light Abyssal Anchor might approach Luminant Shore pressure and experience revelation, identity exposure, conceptual clarity, and dangerous Light pressure. When E'lla approaches that pressure, the Shore reads not one person, but a prism of attempted persons built around one surviving center.
 
-When she Shorewalks, she does not bring Light's coastline into the world.
+If she reaches Palimpsest, she does not bring Light's coastline into the world or gain native Page sovereignty.
 
-She holds its pressure inside a self already surrounded by every unresolved refraction of the program organized around her.
+She holds a bounded syntax aperture inside a self already surrounded by every unresolved refraction of the program organized around her. Whether the sibling-signatures strengthen that self-address or answer in her place remains the central risk.
 
 ---
 
@@ -287,7 +301,7 @@ She holds its pressure inside a self already surrounded by every unresolved refr
 
 ### VI.1 Non-Generalization Clause
 
-The following section must not be exported into general Shorewalker doctrine without explicit revision.
+The following section governs E'lla alone and does not define general Shorewalker doctrine.
 
 Project Kaleidoscope is not a school, rank, talent, hereditary trait, or repeatable metaphysical process.
 
@@ -300,7 +314,7 @@ It required:
 3. Em'manuel's centuries-long continuity program.
 4. Eighty-two prior subject outcomes.
 5. E'lla's singular, self-coherent Light expression.
-6. Absence of the Remainder's recognition echo.
+6. Absence of the inherited Remainder recognition echo that would otherwise provide an immediate living route.
 7. A catastrophic White Desert event forcing premature Luminant Shore contact.
 8. A surviving connection to the Tidebound First Radiance.
 9. E'lla's continued psychological capacity to remain herself under conditions where the Shore reveals that "herself" is not as simple as she believes.
@@ -422,7 +436,7 @@ The sibling-signatures begin solving threats faster than E'lla can choose to act
 A sibling-signature becomes too coherent. This may create the false appearance of personhood or, under sufficiently dangerous Shore pressure, become the beginning of actual stabilization. Either outcome would be ethically and operationally catastrophic.
 
 **Revelation Cascade.**  
-The Luminant Shore forces too many hidden truths into simultaneous visibility: KL-83, the prior subjects, the first E'lla, A'licia, Athena, Al'ithia, the First Radiance, and the Remainder's absence. If this occurs without preparation, E'lla may not reject the truth. She may fracture around it.
+The Luminant Shore forces too many hidden truths into simultaneous visibility: KL-83, the prior subjects, the first E'lla, A'licia, Athena, Al'ithia, the First Radiance, and the Remainder's unresolved attention. If this occurs without preparation, E'lla may not reject the truth. She may fracture around it.
 
 **Maternal Pull.**  
 See Section VIII. This is not a conventional psychological vulnerability. It is a structural attraction between E'lla's Light inheritance and the Tidebound origin of that inheritance. It is loving, if that word can be used at this scale. It is also dangerous.
@@ -447,33 +461,63 @@ These are not the same thing.
 
 ## VII. FASHION, MATERIALS, AND THE MATTER OF CONTROL
 
-The least institutionally appreciated and most personally revealing thing about E'lla is that she redirected a substantial portion of her post-incident recovery into garment construction and adaptive material design.
-
-This began, publicly, as a private eccentricity. It is no longer reasonable to call it that.
+The least institutionally appreciated and most personally revealing thing about E'lla is that she redirected a substantial portion of her post-incident recovery into garment construction and adaptive material design. This began, publicly, as a private eccentricity. It is no longer reasonable to call it that.
 
 Working through a quiet SiNE materials channel and, later, with an Auroran optical-materials specialist operating under the professional title Professor Lionheart, she began developing light-responsive fabrics capable of controlled color shift, texture shift, silhouette suppression, and partial field disappearance under directed Redactory input. The dresses are beautiful. They are also training apparatus.
 
-They allow her to practice precision rather than magnitude.
+They let her practice precision rather than magnitude and treat Light as surface, permission, concealment, and selective revelation rather than involuntary descent. They also let her construct a social identity in which austerity is chosen on her own terms rather than imposed by an event that taught her what uncontrolled visibility costs.
 
-They allow her to work with Light as surface, permission, concealment, and selective revelation rather than involuntary descent.
+### VII.1 Garment Logic
 
-They also, not incidentally, allow her to construct a social identity in which she appears to be choosing austerity on her own terms rather than recovering from an event that taught her what uncontrolled visibility costs.
+Her garments are psychological recovery tools, precision apparatus, and identity-management architecture at once. E'lla clothes herself in controlled darkness because uncontrolled Light reveals too much. Her black fabrics are not rejection of her Anchor. They are a discipline of consent: not every surface may show me; not every room may read me; not every reflection is allowed to answer.
 
-The newer interpretation is that her garments are not merely psychological recovery tools or Redactory precision apparatus. They are identity-management architecture.
+This matters because Project Kaleidoscope responds to surfaces. Her clothing reduces uncontrolled reflective noise and gives her chosen lines, silhouettes, folds, and vectors through which expression must pass.
 
-E'lla clothes herself in controlled darkness because uncontrolled Light reveals too much. Her black fabrics are not rejection of her Anchor. They are a discipline of consent. They say: not every surface may show me. Not every room may read me. Not every reflection is allowed to answer.
+Tailoring also supplies the causal grammar through which she reads space. She notices tension, seams, drape, load, folds, fastenings, and the point at which one small connection changes the behavior of the whole. In a confrontation she asks what carries weight, what can be pinned, where motion remains free, and which apparent freedom depends upon one unclosed seam. Her private formulation is concise:
 
-This matters because Project Kaleidoscope responds to surfaces.
+> **A battlefield is badly tailored.**
 
-Her clothing gives her fewer uncontrolled surfaces through which Shore-face displacement can express. It reduces reflective noise. It gives her chosen lines, chosen silhouettes, chosen folds, chosen vectors. It teaches the field that expression must pass through form.
+This is metaphor and trained attention, not a new Redactory law.
 
-I consider this one of the healthiest things she has done, which is not a sentence I expected to write about couture.
+### VII.2 Advanced Telekinetic Practice
 
-She frequently carries a sewing kit on her person. This is not decorative habit. It is reassurance, tool discipline, and weapon selection all at once.
+E'lla's principal secondary practice is a deeply fitted telekinetic schematic. Years of ordinary sewing, retrieval, measuring, and multi-object control have internalized it into her body-map until a supported tool can function like an additional finger. She favors exact paths, abrupt stops, and tactile return over spectacle. The practice remains Anchor-distant, route-dependent, bandwidth-limited, and subject to Reach, Depth, and closure. Familiarity does not make it free.
 
-Like any competent Redactor, she is capable of routing outside the immediate natural expression of her own Anchor when circumstance requires it, though at greater cost and with narrower tolerance than work close to Anchor. The kit's needles give her something she trusts: small, precise, controllable vectors that can be used as catalysts, conductors, or weapons without requiring broad environmental output. This matters to her. She does not want magnitude unless magnitude is unavoidable. She wants precision because precision is the difference, in her mind, between function and another Aurora.
+She frequently carries a functional sewing kit containing five high-quality needles. She actually sews with them. They are not enchanted artifacts, five independent magical systems, or a replacement Anchor. They are personal tools around which she has fitted a coordinated set of existing Redactory techniques.
 
-A further recommendation follows: any future controlled Shore-proximal training should incorporate textile, thread, needle, and seam as stabilizing motifs. This is not aesthetic indulgence. It is her existing self-regulation system. If Project Kaleidoscope is a prism, her craft is the frame.
+### VII.3 The Five Needles
+
+| Needle function | Fitted use | Governing limit |
+|---|---|---|
+| **Primary handling** | Her most internalized telekinetic tool: passes through fabric, draws thread, holds folds, retrieves tools, changes direction in flight, stops immediately, or passes through clothing without touching skin. | Its precision comes from practice and low attention cost, not independent will. |
+| **Effective resistance** | Alters the supported relation between the needle and acceleration or displacement so a small pin can hold a sleeve, coat, strap, weapon, or joined garments against removal. | The route bears the causal and bandwidth cost; small size does not create unlimited mass or force. |
+| **Point interaction** | Varies how much material resistance the point acknowledges, from ordinary cloth through progressively more demanding leather, wood, structural material, or metal. | It does not cut anything. Armor and metal require greater Reach, Depth, output, and stabilization. She can stop after an outer layer, including through a coat before skin. |
+| **Thread control** | Carries ordinary or instanced thread whose supported friction, elasticity, stiffness, visibility, absorption, conductivity, insulation, release, or tensile response can be fitted to the task. | Every property remains constrained by route count, bandwidth, Reach, Depth, duration, and causal closure. |
+| **Structural feedback** | Returns tactile information about force, resistance, deformation, imbalance, tension, load transfer, joints, fastenings, machinery, weapons, walls, cables, and suspended weight. | It is refined physical feedback, not omniscience or automatic knowledge of a whole structure. |
+
+The developmental functions are not necessarily names E'lla uses. The tools remain ordinary enough to mend a hem and specific enough to become dangerous in her hands.
+
+She can govern all five through one difficult multi-target composite route. This reduces separately maintained route count while increasing design, following, adaptation, and common-mode-failure risk: if the composition collapses, every needle on it may release together. She may instead place selected needles on independent routes for redundancy at greater bandwidth cost. Her competence lies in fitting and practice, not in ignoring Quill limits.
+
+### VII.4 Threadwork and Escalation
+
+E'lla fights like a tailor controlling a problem rather than an artillery Redactor. Her usual order is to observe, measure, place, pin, restrict, redirect, and cut only when necessary. She pins clothing rather than flesh; joins sleeves, hems, straps, furniture, curtains, and doorways; uses thread geometry to narrow safe movement; and moves her tools around recursive singularities rather than trying to control another person's body directly.
+
+Her compassion changes the order of escalation. It does not make the Needles harmless. Precision makes a warning credible because she can place a point through a coat and stop before skin—and because she is capable of not stopping when protection genuinely requires it.
+
+This precision is personal formation beyond the Academy's common defensive floor, shaped by Wonderwall protection culture, Company resources, trauma, and her own craft. It does not make her a soldier or grant military authority. The dossier does not disclose her full Rank, Mark, or Margins; weapon use remains governed by the protected practice record rather than by her House name, Abyssal Anchor, or strategic value.
+
+### VII.5 Emergency Shears
+
+The oversized scissors are an exceptional instanced apparatus, not a sixth daily weapon. E'lla forms them only when she is fighting for life, protecting another person, exhausting lesser restraint, or using decisive intimidation to prevent worse escalation.
+
+The five needles serve as physical control points and structural references: blade spines, pivot, locks, and traveling pins around which the route instances the remaining blade mass, handles, and mechanical geometry. The apparatus obeys ordinary instancing and release. Its size, force, duration, stabilization, and precision all impose cost, while telekinesis lets E'lla float, rotate, reposition, or close it from angles ordinary biomechanics could not support.
+
+At full expression the shears resemble industrial cutting machinery interpreted through couture. They should appear only after needles, thread, pinned equipment, and structural feedback have already reduced the field to a choice E'lla understands.
+
+> **The battlefield was tailored before the cut was made.**
+
+Any future Shore-proximal training should incorporate textile, thread, needle, and seam as stabilizing motifs. This is not aesthetic indulgence. It is her existing self-regulation system. If Project Kaleidoscope is a prism, her craft is the frame.
 
 ---
 
@@ -522,6 +566,8 @@ She feels the pull anyway.
 This is the dangerous part.
 
 The pull is not merely emotional. It is structural. Light recognizes Light. A living Light-bearing person may recognize the source-pattern imposed around her before the mind has language for recognition. The Luminant Shore reveals identity, but revelation does not always begin as knowledge. Sometimes it begins as the inability to look away from a woman one has no reason to trust and every structural reason to approach.
+
+The First Radiance may be able to recognize E'lla without reducing her because she is a stabilized Light-aligned recursive address rather than an incomplete observer reaching from within a gap. Capacity does not create obligation. She may refuse any recognition that would force E'lla into A'licia's lineage, the first E'lla's place, or a Shore-purpose the living woman has not chosen.
 
 The First Radiance should not be permitted to name herself to E'lla prematurely.
 
@@ -609,6 +655,71 @@ It should become so carefully.
 
 ---
 
+## IX.A THE REMAINDER — UNRESOLVED ADDRESS
+
+### IX.A.1 Perceived, Not Resolved
+
+The Remainder perceives E'lla Rae Wonderwall.
+
+It cannot resolve her as a stable recursive address.
+
+The inherited interval-echo would allow it to recognize one living descent-route immediately, as it recognizes Ec'lesia. E'lla does not carry that echo. What she does carry is worse for an observer without a stable self-position: Light at Abyssal depth, the first E'lla's dead referential burden, A'licia's inheritance, eighty-two prior subject histories, mnemonic and harmonic records, imposed institutional purposes, displaced Shore-faces, the Tidebound pull of the First Radiance, and her own living refusal to be interchangeable with any of them.
+
+These relations are not equal and are not all persons. They are supported strongly enough by history, memory, resonance, institutional action, Light, and Shore pressure that the Remainder cannot dismiss them as noise. When it looks toward E'lla, it sees every trace, resemblance, gap, consequence, and almost-self. It cannot determine which boundary encloses the woman unless E'lla identifies herself or voluntarily answers the observer.
+
+This is excessive, merciful legibility: nothing necessary is hidden, but no incomplete observer is permitted to reduce the whole to the relation it finds most useful.
+
+The private formulation is exact enough to preserve:
+
+> **The Remainder cannot see E'lla clearly because it does not know who is looking. E'lla cannot see the Remainder clearly because it has not yet determined what can be seen.**
+
+Myehnai's reflex supplies the refusal of destructive resolution. Alma's broader law explains why stable self-address matters to reciprocal recognition. Kaleidoscope supplies the supported multiplicity. The Remainder supplies the incomplete observer. These are interacting jurisdictions, not one mechanism.
+
+### IX.A.2 When the Relation Began
+
+Before the White Desert incident, the Remainder may have perceived Project Kaleidoscope as a dispersed set of Light-bearing traces, institutional gaps, and failed handoffs. No evidence shows it joined those traces into one target or understood that one living person centered them.
+
+The Year 2192 Shorefall changed that. E'lla's Light reached the Luminant Shore, the Instrument's reflex marked the resulting continuity scar, and every Kaleidoscope relation briefly became visible around one surviving center. From that point, the Remainder could compare later absences and consequences against the same unresolved concentration. It became aware of her not as a conventional person-route, but as the recurring place where too many supported answers refused to become one.
+
+E'lla's awareness developed in the opposite direction. She does not hear a voice or see an apparition. She notices negative space:
+
+- reflections leaving room for a figure that never resolves;
+- illumination bending around an absent observer;
+- shadows separating around something that casts none;
+- photographs and lens records containing perfectly exposed empty areas;
+- Shore-face displacement tracking a vector her physical eyes cannot locate;
+- pauses acquiring visual weight;
+- rooms becoming more legible everywhere except one impossible absence;
+- Light behaving as though it encountered something and cannot report what it encountered.
+
+One anomaly proves nothing. The distinguishing pattern is reciprocal failure: several independent light-bearing surfaces orient toward the same absence while becoming more accurate everywhere else.
+
+### IX.A.3 Pressure and Indirect Experiment
+
+The Remainder cannot solve E'lla by looking harder.
+
+Pressure increases refraction. More sibling-signatures surface. More records, imposed identities, emotional states, displaced faces, and historical relations become locally legible. A single sibling-signature may temporarily become more visible than E'lla, especially when one archived fear or imposed resemblance matches the immediate pressure, but dominance is not centrality and cannot lawfully be treated as identity.
+
+The Remainder may therefore attempt indirect experiments: arranging contradictory records in one context, exposing concealed project history, drawing surviving subjects or Ec'lesia's Stilllight near E'lla, activating seams around the first E'lla's legacy, or pressing her toward a Shore-state that demands self-identification. These are not completed future events. They are the likely methods of an incomplete awareness that mistakes identity for a configuration it can solve. The motive is intelligible. The harm would remain real.
+
+E'lla's centrality is protected by no automatic immunity. It is supported by her living body, continuous self-address, chosen relationships, ordinary memories, garment discipline, the right to name herself, and the repeated act of answering from the present rather than from an assigned resemblance. She can strengthen her singular address by choosing which relations she acknowledges and the terms on which they may speak. She weakens it when she delegates authorship to a signature, institution, predecessor, or observer merely because it claims a clearer account.
+
+### IX.A.4 Witness, Not Passage
+
+E'lla is not the Remainder's conventional route to the Luminant Shore. Ec'lesia remains the viable living passage because she carries the inherited recognition echo and can bring gap-space toward Light.
+
+E'lla's possible function is the one beyond the route. Kaleidoscope has taught her that accumulated resemblance does not constitute a person. If Ec'lesia carries the Remainder to the Shore, E'lla may be able to judge whether what arrives has become one presence capable of accepting boundary and consequence, or remains an accumulation of seams seeking a convenient name.
+
+She may also acknowledge it before that culmination without completing it. The truthful first address is not a name or definition:
+
+> **Seeing where something is does not mean knowing what it is.**
+
+Such acknowledgment would give the Remainder relation without granting it a finished identity. It may experience the act as refusal and nourishment at once.
+
+Forced recognition would repeat Kaleidoscope's foundational error. If E'lla selects one fragment, desire, seam, or pressure and declares it the whole Remainder, she may overdefine that part into a false address while erasing the rest. Recognition is therefore not passive validation. It creates limit, responsibility, and consequence for observer and observed alike.
+
+---
+
 ## X. COMPANY POSITION
 
 She currently occupies a limited technical apprenticeship. It is not succession rehearsal, and any prior treatment of it as such is suspended and disclaimed.
@@ -633,13 +744,18 @@ This is either confidence or repetition compulsion. I have not yet decided which
 
 ---
 
-## XI. WHAT SHE DOES NOT KNOW
+## XI. DISCLOSURE BOUNDARY — WHAT SHE KNOWS AND DOES NOT KNOW
+
+E'lla knows that Project Kaleidoscope existed; that she was experimented upon, observed, conditioned, and developmentally managed; that the project concerned House Wonderwall and an earlier E'lla; and that Al'ithia and Em'manuel have withheld important information. She knows the first E'lla existed, but only through oral tradition, House fragments, partial writings and technical consequences. She has no complete biography or verified complete visual archive. She knows Em'manuel remembers the woman directly, and the intimacy of that memory makes every pause in his recognition difficult to interpret.
+
+Her controlling belief is that she was born the biological daughter of Al'ithia and Em'manuel, after which Kaleidoscope identified, studied, and harmed something unusual in their child. Within that mistaken chronology she can truthfully say, **I know what you did to me**, while misunderstanding the deepest institutional meaning of *me*.
 
 She does not know:
 
-- that she is KL-83;
+- that she is the project subject designated KL-83;
 - that eighty-two subjects preceded her;
-- that Project Kaleidoscope stopped producing bodies because of her, not because it ceased to matter;
+- that Project Kaleidoscope arranged the conditions of her existence before Al'ithia and Em'manuel became her parents;
+- that Project Kaleidoscope stopped producing bodies after her birth, not because it ceased to matter;
 - that Project Kaleidoscope may now be active through her as a living resonance condition;
 - that the figures she dreams of may not be ordinary trauma constructions;
 - that some of the instincts she thinks of as fear may be partial warnings from sibling-signatures;
@@ -648,11 +764,13 @@ She does not know:
 - that Kaleidoscope's living-subject evidence was the sealed cause behind the Third Name Accord;
 - that the public description of A'licia, Athena, and Al'ithia is a deliberately incomplete account of the Luminant Shore mechanism;
 - that the woman she feels drawn to at the Shore is the First Radiance named in the Accord and therefore her mother in more than one sense and in no simple sense;
-- that the first E'lla Rae Wonderwall's life and refusal still organize this bloodline;
-- that the Remainder does not recognize her, and that this absence may be saving her from one danger while leaving her open to another;
+- the complete life of the first E'lla Rae Wonderwall, the reasons her surviving record is intentionally incomplete, or the extent to which her refusal still organizes this bloodline;
+- that the Remainder perceives her but cannot resolve her, and that its failed attempts may be protecting her from immediate use while creating a different and increasingly active danger;
+- that the White Desert reflex left a conditional limit on unsupported recognition rather than an immunity or concealment;
+- that the structured failures of Light she has noticed since Aurora may be indirect contact rather than ordinary optical damage;
 - that I am increasingly uncertain whether the truth should be given to her in a room, at the Shore, or in the company of someone capable of calling her back by name.
 
-She knows I am preparing her for something larger than I have named.
+She knows I understand more of Kaleidoscope than I admit and am preparing her for something larger than I have named.
 
 She is correct.
 
@@ -670,7 +788,7 @@ She is also the living center at which Project Kaleidoscope's unresolved harms b
 
 I do not mean the Shore-signatures are ghosts or complete people standing outside her. I mean that the program imposed too much structural similarity under too much pressure for E'lla to be metaphysically isolated from its conditions and records. The dead do not need to return for the pattern to remain. The living subjects do not need to know her for related resonance to persist. A kaleidoscope does not reproduce its source. It refracts it. I named the program more accurately than I understood.
 
-Aurora injured her. It also clarified her. The White Desert showed her the exact scale of what an Abyssal Anchor of Light becomes when it resonates with a place that has lived for centuries under the passive field of the Instrument of Legibility. It may also have shown her the edge of the Luminant Shore, the First Radiance, and the first visible form of Project Kaleidoscope as something other than infrastructure history.
+Aurora injured her. It also clarified her. The White Desert showed her the exact scale of what an Abyssal Anchor of Light becomes when it resonates with a place that has lived for centuries under the passive field of the Legibility interface remnant. It also gave the Remainder its first repeatable awareness of her as an unresolved Shore-relevant concentration, and gave E'lla the first negative-space evidence that an observer she could not see was trying to locate her. It may also have shown her the edge of the Luminant Shore, the First Radiance, and the first visible form of Project Kaleidoscope as something other than infrastructure history.
 
 She survived.
 
@@ -678,7 +796,7 @@ The people around her did not all do the same.
 
 The girls before her did not all receive even that much.
 
-She has been living honestly with one asymmetry and unknowingly carrying the rest.
+She has been living honestly with one asymmetry and unknowingly carrying the rest. The Remainder sees everything around her except the boundary she alone can affirm. She sees every place its attention fails except the self it has not yet built.
 
 Her problem is not only power.
 
@@ -716,7 +834,7 @@ I am aware that this distinction has not historically improved my speed.
    Tactical advantage is not worth identity weakening.
 
 6. **Prepare a disclosure sequence.**  
-   The sequence must include KL-83, Project Kaleidoscope, the first E'lla, the prior subjects, the Remainder's absence, the White Desert's Shore relevance, A'licia, Athena, Al'ithia, and the First Radiance. This cannot be done all at once unless no alternative remains.
+   The sequence must include KL-83, Project Kaleidoscope, the first E'lla, the prior subjects, the Remainder's unresolved attention, the White Desert's Shore relevance, Myehnai's conditional recognition reflex, A'licia, Athena, Al'ithia, and the First Radiance. This cannot be done all at once unless no alternative remains.
 
 7. **Assess Ec'lesia's role carefully.**  
    Do not reduce her to an instrument. Do not ignore her structural relevance because she is inconvenient to institutional planning.
@@ -730,9 +848,15 @@ I am aware that this distinction has not historically improved my speed.
 10. **Accept that Project Kaleidoscope cannot be closed by destroying records.**  
     The active record is alive.
 
+11. **Do not manufacture a resolution event.**
+    Bringing records, surviving subjects, Ec'lesia's Stilllight, or Shore pressure into one context may strengthen the Remainder's experiments and the refracted person-pattern at the same time.
+
+12. **Record negative-space manifestations separately from ordinary optical symptoms.**
+    A valid case requires multiple independent light-bearing surfaces orienting toward one absence while local legibility increases elsewhere.
+
 ## XIV. HOUSE, ADOPTION, AND DISCLOSURE ADDENDUM
 
-Al'ithia sponsored E'lla's adoption in Year 2179. Rae, Orren, and Serath witnessed it; Em'manuel sealed it under the Compact of Held Light. The recognition is irrevocable. It does not require E'lla to work for SiNE, accept the first E'lla as her identity, consent to further research, or enter succession.
+Al'ithia sponsored E'lla's adoption in Year 2179. Rae, Orren, and Serath witnessed it; Em'manuel sealed it under the Compact of Held Light. E'lla was taught to understand the instrument as formal House recognition of an already biological daughter, not as the act by which Al'ithia and Em'manuel became her parents. The recognition is irrevocable. It does not require E'lla to work for SiNE, accept the first E'lla as her identity, consent to further research, or enter succession.
 
 KL-81 and KL-82 are living managed cases born in 2172 and 2174 and released in 2177 and 2179. They are not “degraded E'llas” in current doctrine. They are protected persons whose care and disclosure rights stand independently of KL-83.
 
@@ -746,6 +870,6 @@ No prophecy, Shore condition, Remainder relation, Light inheritance, adoption, o
 
 *Filed: Year 2200, fourth quarter.*
 
-*Restricted addendum flag: Cross-reference with the Project Kaleidoscope infrastructure record, the Wonderwall Lineage Record, the Shores Codex, and the Remainder Codex before operational use.*
+*Restricted addendum flag: Cross-reference with the Project Kaleidoscope infrastructure record, the Wonderwall Lineage Record, SOE-001, the Shores Codex, and the Remainder Codex before operational use.*
 
 

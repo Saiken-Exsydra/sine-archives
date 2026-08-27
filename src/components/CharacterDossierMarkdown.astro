@@ -6,6 +6,8 @@ const { html } = Astro.props as { html: string };
 
 <style>
   .dossier-prose {
+    container-name: dossier-prose;
+    container-type: inline-size;
     counter-reset: dossier-section;
     color: var(--char-text-muted, rgba(232, 228, 220, 0.68));
     overflow-wrap: anywhere;
@@ -90,6 +92,17 @@ const { html } = Astro.props as { html: string };
     color: rgba(232, 228, 220, 0.78);
   }
 
+  /* Restricted/deeper-lore sections remain ordinary headings so they are
+     readable and linkable, but receive an archival distinction when marked by
+     the entry layout. */
+  .dossier-prose :global(h2.is-restricted-record) {
+    margin-top: 5rem;
+  }
+
+  .dossier-prose :global(h2.is-restricted-record)::before {
+    color: var(--char-gold, #b08d3c);
+  }
+
   .dossier-prose :global(strong) {
     color: rgba(232, 228, 220, 0.92);
     font-weight: 650;
@@ -98,6 +111,25 @@ const { html } = Astro.props as { html: string };
   .dossier-prose :global(em) {
     color: rgba(176, 141, 60, 0.86);
     font-style: italic;
+  }
+
+  /* Markdown <mark> denotes an archival correction or retained fragment.
+     Keep the signal visible without falling back to the browser-yellow marker. */
+  .dossier-prose :global(mark) {
+    padding: 0.02em 0.14em 0.05em;
+    margin-inline: -0.04em;
+    border-bottom: 1px solid rgba(176, 141, 60, 0.5);
+    background:
+      linear-gradient(
+        180deg,
+        transparent 42%,
+        rgba(176, 141, 60, 0.1) 42%,
+        rgba(177, 58, 52, 0.14) 100%
+      );
+    color: rgba(235, 222, 193, 0.96);
+    font-weight: 600;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
   .dossier-prose :global(a:not(.archive-ref__link)) {
@@ -324,6 +356,26 @@ const { html } = Astro.props as { html: string };
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0.9rem;
     background: rgba(9, 9, 16, 0.94);
+  }
+
+  @container dossier-prose (min-width: 54rem) {
+    .dossier-prose :global(h2) {
+      margin-top: 4.2rem;
+      margin-bottom: 1.55rem;
+      font-size: clamp(2.35rem, 4.2cqi, 3.05rem);
+    }
+
+    .dossier-prose :global(p),
+    .dossier-prose :global(li),
+    .dossier-prose :global(td),
+    .dossier-prose :global(dd) {
+      font-size: clamp(1rem, 0.91rem + 0.18cqi, 1.08rem);
+      line-height: 1.92;
+    }
+
+    .dossier-prose :global(p) {
+      margin-bottom: 1.15rem;
+    }
   }
 
   .dossier-prose :global(pre code) {

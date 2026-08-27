@@ -5,7 +5,7 @@ summary: "Não é uma lei da física. Não é uma dimensão. É um fragmento inf
 tags: ["Cosmology", "Tempo", "Archive", "Traversal", "Entropy", "Book of Humanity", "Callings", "Redactory", "Precursors"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-25"
+updated: "2026-08-14"
 image: "../../assets/uploads/cosmology/cosm-time.png"
 ---
 
@@ -55,6 +55,20 @@ Tempo não consegue criar configurações inexistentes dentro do Archive. Não c
 Intervenções são estratégicas e raras.
 
 O custo de interferir demais é extremamente alto: reduzir a novidade da travessia diminui a diversidade informacional que sustenta a densidade recursiva de um mundo, uma das principais defesas contra pressão externa. Tempo entende isso. Ele só interfere quando o benefício estratégico supera o prejuízo causado pela redução da novidade de travessia.
+
+---
+
+## Tempo e Autoridade de Sintaxe
+
+Tempo não é o membro mais alto de uma hierarquia de sintaxe. É uma agência ortogonal com jurisdição diferente.
+
+**Sintaxe define a configuração atravessada. Tempo ordena como essa configuração passa por antes, durante, depois, intervalo, cadência e consequência.** Uma Autoridade pode mudar um corpo para que o envelhecimento comum deixe de se aplicar; isso muda a configuração que Tempo atravessa. Não comanda Tempo.
+
+Uma reivindicação entra na jurisdição de Tempo quando tenta governar a própria travessia: sequência, parada, reversão, suspensão, entropia como passagem ordenada ou a ordem em que configuração se torna consequência. Tempo pode permitir ou recusar essa reivindicação sem que qualquer resposta a transforme em autoria de sintaxe.
+
+Essa distinção também explica a relação de Tempo com os [[obscurials|Obscurials]]. Tempo não consegue ler para trás através de um deles até uma origem, primeiro estado ou idade, porque a existência do próprio vestígio não pertence à travessia comum. Ainda assim, Tempo consegue ordenar toda interação nativa da Página ao redor dele: detecção, assentamento, interpretação, ruptura e o momento em que sua ausência se tornou evidente.
+
+Para o modelo jurisdicional mais amplo, consulte [[syntax-authority|Autoridade de Sintaxe e Soberania Recursiva]].
 
 ---
 

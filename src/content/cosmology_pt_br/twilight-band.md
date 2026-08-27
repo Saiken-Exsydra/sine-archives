@@ -22,6 +22,8 @@ Terra possui travamento de maré — um lado permanentemente voltado para Vael'K
 
 Entre esses dois extremos existe a Band: cerca de dois mil quilômetros de território habitável distribuídos ao longo de oitenta mil quilômetros de circunferência, onde a luz do disco chega em ângulos e intensidades que a biosfera — projetada, dentro do modelo dos Precursores, exatamente para funcionar nessas condições — consegue ocupar.
 
+A Band ocupa a região equatorial de Terra e se estende de leste a oeste ao redor do planeta. Norte é a direção polar verdadeira rumo ao centro do Dark Side; sul é a direção polar verdadeira rumo ao centro do Bright Side. Viajar no eixo leste-oeste acompanha a circunferência habitável e, por si só, não torna as condições mais escuras ou mais brilhantes. Em mapas convencionais orientados com o norte no topo, a escuridão fica acima, a radiância abaixo, o leste à direita e o oeste à esquerda.
+
 É aqui que todo mundo vive.
 
 É aqui que tudo aconteceu.
@@ -52,7 +54,7 @@ As estações possuem nomes próprios e são acompanhadas de perto. Elas afetam 
 
 ## A Darkmargin
 
-A borda norte da Band — onde “norte”, na geografia local, significa “em direção ao hemisfério escuro” e não a um polo geográfico — é chamada de **Darkmargin**: a fronteira costeira onde as condições habitáveis terminam e a escuridão permanente começa.
+A borda norte da Band — voltada para o Polo Norte no centro do Dark Side — é chamada de **Darkmargin**: a fronteira costeira onde as condições habitáveis terminam e a escuridão permanente começa.
 
 As águas da Darkmargin são frias, escuras e permanentemente assim. A luz do disco chega em ângulos rasos demais para aquecê-las, e a escuridão que começa poucos quilômetros além da costa pertence a um hemisfério voltado para longe de qualquer fonte de luz disponível.
 

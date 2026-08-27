@@ -13,7 +13,7 @@ point_profile:
   cas_access: "Basic CAS; professional CAS limited to research diagnostics"
   leaf_permissions: "Common Leaves; Licensed Leaves by Mark permission"
   register_access: "Protected; compact process required for access"
-designation: "The Girl the Machine Answered"
+designation: "First Glass"
 height: ""
 build: "Tall, slim, and precise; naturally athletic without looking strong"
 complexion: "Medium-fair"
@@ -22,7 +22,7 @@ eyes: "Verdant-gold"
 dress: "Clean Auroran professional wear; practical research clothing off duty"
 residence: "Valerie, Aurora"
 occupation: "Junior research associate in neural-interface diagnostics"
-summary: "Built to listen where no modern mind should reach; now the hidden mechanism speaks through everyone who made her."
+summary: "Built to answer a machine, she learned to question the hands that built her."
 image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn.webp"
 hero_image: "../../assets/uploads/characters/char-ayanna-aedh-aibhilyn-hero.png"
 portrait_gallery: []
@@ -38,7 +38,7 @@ tags:
   - "Project Seam"
 status: "public"
 created: "2026-05-14"
-updated: "2026-08-23"
+updated: "2026-08-26"
 codex_file: "Ayanna Aedh d'Aibhilyn Dossier.md"
 ---
 

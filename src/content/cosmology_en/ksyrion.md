@@ -5,7 +5,7 @@ summary: "The sky-facing layer of the Intact Seal: the curated heaven pre-Fractu
 tags: ["Cosmology", "Ksy'rion", "Intact Seal", "Lunar Crown", "Fracture", "Skyphons", "Quiet Moon", "Moon"]
 status: "public"
 created: "2026-05-24"
-updated: "2026-05-24"
+updated: "2026-08-14"
 image: ""
 ---
 
@@ -28,7 +28,7 @@ Pre-Fracture civilization therefore studied **Ksy'rion** when it studied the sky
 
 Ksy'rion must not be described as a detached "fake-sky system."
 
-It belonged to the same total architecture as the lunar body, the Obscurials, the Skyphons, and the broader Precursor protection lattice. To speak of the Intact Seal without Ksy'rion is to describe only the inward or structural side of a system that also had a world-facing expression.
+It belonged to the same total function as the lunar body, the twelve Obscurial relations, the Skyphons, and the broader Precursor protection lattice. The distinction is precise: Ksy'rion and the local interface architecture were engineered; the [[obscurials|Obscurials]] were not. To speak of the Intact Seal without Ksy'rion is to describe only the inward side of a system that also had a world-facing expression.
 
 This is why the loss of Ksy'rion after the Fracture mattered so much culturally. The world did not only lose a defensive machine it barely understood. It lost the sky that had been teaching it what the sky was.
 
@@ -48,7 +48,9 @@ When the Fracture broke Ksy'rion's completeness, discovery became possible gradu
 
 The Fracture broke more than stone.
 
-It ended the Skyphons' living maintenance and broke Ksy'rion as a **complete explanatory sky**. Post-Fracture observers still had heaven above them, but not the same governed agreement between appearance, measurement, inheritance, and meaning.
+It ended the Skyphons' living maintenance, broke every complete Obscurial coupling, and broke Ksy'rion as a **complete explanatory sky**. All twelve actual Obscurials vanished from the lunar configuration; Ksy'rion's damaged, Page-native remnants remained part of the wounded Crown.
+
+Post-Fracture observers still had heaven above them, but not the same governed agreement between appearance, measurement, inheritance, and meaning.
 
 That is why old astronomy became unreliable in a deeper sense than simple instrument damage. The sky stopped returning the old answers because the thing that had once made those answers safe and coherent was no longer whole.
 
@@ -66,4 +68,4 @@ Without it, the Intact Seal is reduced to a threshold barrier only, the Fracture
 - the Fracture ended that completeness
 - post-Fracture science inherited a sky it could interrogate more dangerously than it could fully explain
 
-Ksy'rion is therefore not marginal lore. It is part of how the world above Terra used to work.
+Ksy'rion is therefore not marginal lore. It is part of how the world above Terra used to work—and part of the [[lunar-crown|Lunar Crown]] that still keeps the wound survivable without containing the vanished Obscurials themselves.

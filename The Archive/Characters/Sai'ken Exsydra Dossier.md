@@ -758,7 +758,7 @@ This is an acceptable public explanation.
 
 The private chain began twelve years earlier, when Project Seam flagged the Las'gall family profile. The initial survey did not identify Sai'ken as the singular point of interest. He was seven. What it identified was a household architecture carrying an interval-sensitive signature with lineage consistency too precise to be environmental alone.
 
-The result reached my desk because the older Ael'keth survey record had been transferred into Project Seam's cross-jurisdictional archive. My Year 1895 Clockwork order concerned custody handoffs, not family surveillance; using the later Seam apparatus to observe the Las'gall line was a separate choice.
+The result reached my desk because the older Ael'keth survey record had been transferred into Project Seam's cross-jurisdictional archive. My Year 1895 Clockwork strike, the Glass Measure, mapped Clepsydra against hostile capture; it did not concern the Las'gall family. Using the later Seam apparatus to observe the line was a separate choice.
 
 For five centuries, that instruction produced noise.
 
@@ -1017,7 +1017,7 @@ It is also convenient for me.
 
 That convenience is not morally neutral.
 
-Sai'ken does not know that I was born Al'uxxios Exsydra. He does not know the family name I returned to him was also the name I abandoned. He does not know the Cadence I carry was the central conductor element of his ancestors' timing arrays. He does not know that the detached plate held by Aelvar came from the Twelvefold Cadence Assembly whose transfer killed 271 people at Kel'rath. He does not know that the theoretical error that destroyed his line is the same error I repeated politically when I permitted absence to function as a temporary holder until it became permanent structure.
+Sai'ken does not know that I was born Al'uxxios Exsydra. He does not know the family name I returned to him was also the name I abandoned. He does not know the Cadence I carry was the central conductor element of his ancestors' timing arrays. He does not know that the detached plate held by Aelvar came from the Twelvefold Cadence Assembly whose transfer killed 271 people at Kel'rath. He does not know that I answered the failure by turning the exploitable interval into a permanent covert architecture—and that Time's local Fragment agreed to translate its strikes without ever making that choice righteous.
 
 None of those facts makes him guilty. Concealing them prevents inherited guilt only by also preventing informed self-understanding.
 
@@ -1097,9 +1097,9 @@ He has not exposed the arrangement.
 
 ## XIII.1 The Local Time Fragment Hypothesis
 
-Current cosmological doctrine permits Time to externalize fragments: scale-reduced expressions of Time capable of operating within a Page as agents while remaining unable to author futures or create information. Terra almost certainly hosts at least one such fragment or fragmentary agency. Whether it is continuously manifest, intermittently present, or distributed through traversal conditions remains unresolved.
+Terra hosts one known local Time Fragment: the coherent person-presenting individual Clockwork calls the **Dial**, the same Fragment that performed the Year 0 Twelve-Beat Hold. This is not an open hypothesis to me. It remains unknown to Sai'ken, Meridian, the Apocachynthion, and nearly every Clockwork operative.
 
-The Exsydra line may have interacted with this fragment before the Sundering.
+The Exsydra line interacted with the conditions the Fragment could read before the Sundering.
 
 Not consciously.
 
@@ -1107,7 +1107,7 @@ Not as worship.
 
 Not through a covenant.
 
-The interaction would have been structural: the timing arrays generated a cadence pattern sufficiently close to Time's traversal rhythm that the local fragment noticed the family architecture producing it. The family interpreted the resulting tolerance as evidence that their doctrine was correct.
+The interaction was structural: the timing arrays generated a cadence pattern sufficiently close to ordered traversal that the local Fragment noticed the family architecture producing it. The family interpreted the resulting tolerance as evidence that their doctrine was correct.
 
 It was not.
 
@@ -1149,7 +1149,7 @@ Several future development paths are possible.
 
 **Remainder Boundary Recognition.** He learns to distinguish ordinary gap-space from Remainder-active gap-space. This is necessary if he remains near Ec'lesia.
 
-**Time Fragment Contact.** He becomes aware, directly or indirectly, that something counts him in the interval. This is dangerous. Human minds interpret attention as relationship. Time is not safe to personalize.
+**Time Fragment Contact.** He becomes aware, directly or indirectly, that the Dial counts him in the interval. The Dial is already a coherent person, but that does not make his attention intimacy, protection, destiny, or permission. Sai'ken is especially vulnerable to reading ancestral recognition as a relationship owed to him.
 
 **Exsydra Doctrine Recovery.** He learns what his ancestors built, why they were wrong, and how to use the correct portion without repeating the catastrophic one.
 
@@ -1270,7 +1270,7 @@ The delay is ending.
 17. Em'manuel assigned him to Ec'lesia because he can perceive escalation before others can, not because he can save her.
 18. His terminal contingency role remains canon.
 19. Proximity between Sai'ken and Ec'lesia is structurally meaningful and potentially catalytic.
-20. The Time Fragment's interest in the Exsydra line should remain rare, cold, structural, and difficult to personalize.
+20. The Dial's interest in the Exsydra line remains rare and structural; his personable interface does not make that attention safe, intimate, or prophetic.
 21. Exsydra is a terminal contingency and cadence inheritance, not a project for conquering Time.
 22. Sai'ken is not owned by the Seat, Clockwork, House Wonderwall, Ec'lesia, or the name restored to him.
 23. The terminal clause is subordinate to rescue, evacuation, restraint, clinical intervention, and Shore-capable response wherever any remains possible.

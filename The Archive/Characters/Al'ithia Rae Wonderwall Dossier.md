@@ -562,11 +562,17 @@ In this family, it does.
 
 Al’ithia’s relationship to E’lla Rae Wonderwall KL-83 is now complicated by Shore doctrine in a way E’lla does not yet understand.
 
-To E’lla, Al’ithia is the woman who raised her after Project Kaleidoscope released her into the household.
+To E’lla, Al’ithia is her biological mother: the woman who bore or ordinarily conceived the daughter whom Project Kaleidoscope later identified, studied, and harmed. That chronology is false. Al’ithia became her mother after the project produced KL-83 and transferred the child into the household, but allowed E’lla to believe the family came first.
 
 At the Luminant Shore, however, the First Radiance is also A’licia: the original source of the Wonderwall Light inheritance and the maternal origin-point of the first E’lla-pattern.
 
 This makes the First Radiance a mother to E’lla twice over, but not in a form E’lla has language for. E’lla experiences the pull before she understands the relationship.
+
+Al'ithia's ordinary motherhood remains as important as that Shore relation. She recognizes E'lla through breakfasts, arguments, illness, clothing, work, fear, and twenty-one years of chosen life rather than through one imposed resemblance. Those bounded relations are why Myehnai's White Desert condition does not obstruct her. She does not need to select one hidden E'lla from the whole Kaleidoscope field in order to know her daughter.
+
+Around Al'ithia, more of E'lla's pre-Aurora warmth survives in easy physical affection, private humor, fashion conversation, practical disagreement, and the freedom to be less guarded without becoming less adult. The later biological disclosure will injure this bond because the bond is real. Chosen motherhood answers whether Al'ithia is truly her mother; it does not excuse allowing her daughter to live inside a false origin story.
+
+The First Radiance may possess the deeper structural stability required to recognize E'lla under Shore pressure without reducing her. That capacity is not a maternal entitlement. Recognition would be invalid if it forced E'lla into A'licia's lineage, the first E'lla's place, or a purpose the living woman had not accepted.
 
 ---
 
@@ -664,13 +670,15 @@ The Remainder notices her.
 
 This is my assessment, not yet a conclusion.
 
-It does not reach for her in the way it reached for the first E’lla. It does not fail to perceive her in the way it fails to perceive KL-83. Its relationship to Al’ithia is closer to pressure at a boundary awareness without obvious route, recognition without entitlement.
+It does not reach for her in the way it reached for the first E’lla. It perceives KL-83 intensely but cannot resolve her as one recursive address; Al'ithia presents a different problem. The First Radiance within her is a stabilized Light-aligned address and a possible witness, while Al'ithia remains one living person with no inherited duty to provide that witness. The Remainder's relationship to her is therefore closer to pressure at a boundary: awareness without obvious route, recognition without entitlement.
 
 Al’ithia’s own description is more useful
 
 “It looks at me like a door it cannot remember building.”
 
 I have not improved on this.
+
+E'lla may eventually stand in a related but distinct position. Ec'lesia can carry the Remainder toward the door. E'lla may be able to determine whether what arrives is one presence capable of accepting a boundary or merely accumulated pressure asking another woman to choose its identity for it. Neither function belongs to Al'ithia, E'lla, or Ec'lesia by inheritance or office.
 
 ---
 
@@ -806,7 +814,7 @@ The Accord was not enacted to regularize a common condition. Al'ithia remains th
 
 Her Year 2179 action ended Kaleidoscope biological production. She rejected both continuation and the proposed destruction of living subjects. The resulting duties are permanent care without compelled study, independent advocacy, preserved evidence, reparations, and subject-controlled disclosure.
 
-Al'ithia sponsored KL-83's adoption as E'lla Rae Wonderwall. Rae, Orren, and Serath witnessed it; Em'manuel sealed it. The adoption is irrevocable and gives E'lla family standing without corporate assignment. Al'ithia's motherhood is real. So is the conflict created by withholding the full project record from her daughter.
+Al'ithia sponsored KL-83's adoption as E'lla Rae Wonderwall. Rae, Orren, and Serath witnessed it; Em'manuel sealed it. E'lla was taught to read that act as House recognition of an existing biological daughter rather than the beginning of the parentage she now remembers as natural. The adoption is irrevocable and gives E'lla family standing without corporate assignment. Al'ithia's motherhood is real. So is the injury created by withholding the full project record and allowing a false biological origin to organize her daughter's childhood.
 
 Al'ithia's governing contradiction is therefore not whether she is A'licia or Athena. It is whether she can protect present persons through the House and Company without repeating Em'manuel's habit of making protection indistinguishable from controlled knowledge.
 

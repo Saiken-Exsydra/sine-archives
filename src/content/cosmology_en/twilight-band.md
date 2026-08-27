@@ -22,6 +22,8 @@ Terra is tidally locked — one face pointed permanently at Vael'Khar, the other
 
 Between these two extremes is the Band: approximately two thousand kilometres of territory, eighty thousand kilometres around, where the disc's light arrives at angles and intensities that the biosphere — designed, in the Precursor framework, to function under exactly these conditions — can inhabit.
 
+The Band occupies Terra's equatorial region and extends east-west around the planet. North is the true polar direction toward the center of the Dark Side; south is the true polar direction toward the center of the Bright Side. East-west travel follows the habitable circumference and does not by itself make conditions darker or brighter. On standard north-up maps, darkness lies toward the top, radiance toward the bottom, east to the right, and west to the left.
+
 This is where everyone lives. This is where everything has ever happened.
 
 ---
@@ -50,7 +52,7 @@ The seasons are named and tracked. They are relevant to agriculture, to BrightCr
 
 ## The Darkmargin
 
-The northern edge of the Band — where "north" in the Band's geography means "toward the dark hemisphere" rather than toward a geographic pole — is the **Darkmargin**: the coastal frontier zone where habitable conditions end and the permanent dark begins.
+The northern edge of the Band — facing the Dark-Side North Pole — is the **Darkmargin**: the coastal frontier zone where habitable conditions end and the permanent dark begins.
 
 The waters of the Darkmargin are cold, dark, and permanently so. The light from the disc reaches them at too shallow an angle to warm them, and the darkness that begins a few kilometres offshore is the darkness of a hemisphere that faces away from all available light sources.
 

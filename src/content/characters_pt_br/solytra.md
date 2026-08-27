@@ -3,7 +3,7 @@ title: "Sol'ytra"
 type: "Personagem"
 affiliation: "All-Mother; derivada da ferida rememorada da Lunar Crown; sem lealdade institucional fixa"
 rank: "Crownborn Elemental"
-designation: "Filha de um mundo enlutado"
+designation: "Crownborn Princess"
 registry_status: "Não registrada - entidade singular pós-Fracture; primeira Crownborn Elemental confirmada; resposta nível-Archtype recomendada em condições hostis"
 height: "150 cm"
 build: "Pequena, esguia e delicada"
@@ -14,11 +14,11 @@ dress: "Exclusivamente branco - vestido lunar real em manifestações formais; v
 birthplace: "Terra - surgida dentro do campo planetário da All-Mother na imagem rememorada de Syr'lene"
 residence: "Sem residência fixa; mais frequentemente vista próxima de jardins-santuário, plantações exaustas, estradas após tempestades e locais tocados por atividade de Callings"
 occupation: "Intervenção ecológica, proteção errante e resposta de contenção"
-summary: "Nascida de uma ferida sagrada demais para fechar, atravessa o mundo com a maciez do luto que ainda escolhe curar."
+summary: "Born from a wound, she keeps mistaking sacrifice for holiness."
 tags: ["Sol'ytra", "Crownborn", "Elemental", "All-Mother", "Syr'lene", "Lunar Crown", "Fracture", "Mirror of the Wounded Crown", "Containment", "Syntax"]
 status: "public"
 created: "2026-05-14"
-updated: "2026-07-13"
+updated: "2026-08-26"
 codex_file: "Sol'ytra Dossier.md"
 image: "../../assets/uploads/characters/char-solytra.jpg"
 hero_image: "../../assets/uploads/characters/char-solytra-hero.png"
@@ -101,7 +101,7 @@ Essa contenção não é incapacidade. É preferência. Seus poderes naturais pa
 
 ## Wound Crown Authority
 
-O poder definidor de Sol'ytra é a **Wound Crown Authority** — uma expressão em nível de syntax derivada da syntax planetária da All-Mother, filtrada através da ferida conceitual da Lunar Crown.
+O poder definidor de Sol'ytra é a **Wound Crown Authority** — uma autoridade derivada do Worldright completo da All-Mother e filtrada pela ferida conceitual da Lunar Crown. Não é uma fração mais fraca: é completa dentro da jurisdição estreita onde memória da ferida de Terra e acoplamento da Crown coincidem.
 
 Isso não é Redactory. Não é overlay. Não é conjuração. Ela não está canalizando efeitos através de configurações pré-existentes de dentro do Archive como um praticante de redactory ou divination comum faria. Ela está impondo fragmentos de uma condição lunar rememorada diretamente sobre a realidade local.
 
@@ -119,7 +119,7 @@ Quando invocado plenamente, Sol'ytra remodela o campo de batalha local em uma ap
 
 Dentro do Mirror, todas as suas declarações menores se tornam mais fáceis e mais absolutas porque o próprio ambiente passou a cooperar com elas. Fratura, contenção, impacto, falsa superfície lunar e silêncio deixam de ser técnicas isoladas e passam a funcionar como condições atmosféricas do espaço.
 
-Contra praticamente qualquer oponente abaixo do nível Archtype, uma implantação completa do Mirror não é uma escalada dramática dentro de um combate em andamento. É o momento em que a luta funcionalmente acabou e apenas sua conclusão formal ainda não aconteceu.
+Uma implantação completa do Mirror torna as declarações de Sol'ytra muito mais difíceis de contestar, mas não decide o confronto apenas pelo rank. O resultado depende de jurisdição exata, procedência, soberania recursiva, acesso, continuidade e da participação de Time no evento.
 
 ---
 
@@ -168,7 +168,7 @@ Ela também parece relutante em depender totalmente de seu repertório elemental
 Outras limitações continuam relevantes:
 
 - a Wound Crown Authority é autoridade local de contenção em Terra;
-- ela não comanda Syr'lene, não endereça os doze Instrumentos, não repara o Selo Intacto e não abre a Salvaguarda Métrica;
+- ela não comanda Syr'lene, não endereça as doze relações Obscurial desaparecidas, não repara o Selo Intacto e não abre a Salvaguarda Métrica;
 - pode suprimir a condição local de ferida por onde ocorre Shorefall, mas não possui nem comanda as Shores;
 
 - sua autoridade é local, não universal;

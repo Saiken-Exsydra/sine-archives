@@ -15,7 +15,7 @@ Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus e
 | :--- | :--- |
 | **Full Name** | Leonard von-Engelmeyer |
 | **Year of Birth** | 1072 (age 55 at time of filing, 1127) |
-| **Birthplace** | Eraveth, Ardeatus (Northern Frontier Region) |
+| **Birthplace** | Eraveth, Ardeatus (Western Frontier Region) |
 | **Registry Status** | Registered — asylum intake 1090; Sealed instructional file current |
 | **Rank** | Stylus (Thermodynamic Anchor) |
 | **Designation** | STASE-SURVIVOR (Restricted Classification) |
@@ -60,9 +60,9 @@ House Engelmeyer held foundry jurisdictions across the old kingdom and western i
 
 This distinction matters. Leonard descends from the broader Engelmeyer migration into Ardeatus. He is not descended from one of the forty-three people scarred inside the Works lattice and is not part of the direct hereditary sequence that later produced Re'lha and Le'nore.
 
-His family adopted the Ardeatan *von-* particle and established itself in the northern frontier city of Eraveth. Leonard's grandfather also carried copies of Engelmeyer furnace shipment records south. One damaged route ledger passed into Leonard's effects and returned with him to Synus in Year 1090. It proves that the Voren Works' south casting channel had been modified before the catastrophe. The Apocachynthion archived the document with Leonard's asylum material and never joined it to later Drevholt assessments.
+His family adopted the Ardeatan *von-* particle and established itself in the western frontier city of Eraveth. Leonard's grandfather also carried copies of Engelmeyer furnace shipment records east into Ardeatus. One damaged route ledger passed into Leonard's effects and returned west with him to Synus in Year 1090. It proves that the Voren Works' south casting channel had been modified before the catastrophe. The Apocachynthion archived the document with Leonard's asylum material and never joined it to later Drevholt assessments.
 
-Leonard’s parents were highly visible figures in Eraveth. His mother, **Elara ker-Vane**, was a brilliant material scientist at the Forge Academy of Kovansk, researching thermal thresholds in BrightCrystal stress fractures. His father, **Kaelen von-Engelmeyer**, was a fiercely vocal Ardeatan politician who built his career fighting the encroachment of imperial corporatism. Specifically, Kaelen successfully blocked SiNE’s Evanote division from extending the Imperial Arterial Rail (the Spine) into Eraveth’s sovereign logistics network, arguing that corporate infrastructure was a prelude to corporate subjugation.
+Leonard’s parents were highly visible figures in Eraveth. His mother, **Elara ker-Vane**, was a brilliant material scientist at the Forge Academy of Kovansk, researching thermal thresholds in BrightCrystal stress fractures. His father, **Kaelen von-Engelmeyer**, was a fiercely vocal Ardeatan politician who built his career fighting the encroachment of imperial corporatism. Specifically, Kaelen successfully blocked an Evanote-backed extension of the public Imperial Arterial Railway into Eraveth’s sovereign logistics network, arguing that a nominally public corridor built around SiNE standards was a prelude to corporate subjugation.
 
 In 1087, when Leonard was fifteen, his parents were killed in what the Ardeatan authorities officially classified as a catastrophic domestic gas leak. The Apocachynthion Intelligence Branch has long held, but never formally pursued, the hypothesis that the explosion was a targeted assassination—possibly orchestrated by private industrial operators—to simultaneously remove a political obstacle and silence Elara’s Forge research. Clockwork did not yet exist; attributing the killing to it is chronologically impossible.
 
@@ -90,7 +90,7 @@ Time *authorized* a local, micro-scale resumption of traversal. It allowed the h
 
 ## IV. THE BLASPHEMY AND SYNUS INTEGRATION
 
-In Ardeatus, where civilizational doctrine is tightly bound to the Covenant and the mechanical orthodoxy of the Forge-Keepers, an unregistered Redactor capable of anomalous, Stase-breaking thermal generation is considered a theological and structural blasphemy. Realizing he would be hunted by the Ashborne Hunters or dissected by the Forge, Leonard took Kerz and fled across the border back into the Empire of Synus.
+In Ardeatus, where civilizational doctrine is tightly bound to the Covenant and the mechanical orthodoxy of the Forge-Keepers, an unregistered Redactor capable of anomalous, Stase-breaking thermal generation is considered a theological and structural blasphemy. Realizing he would be hunted by the Ashborne Hunters or dissected by the Forge, Leonard took Kerz and fled west across the border into the Empire of Synus.
 
 He presented himself for intake at the Apocachynthion in 1090.
 
@@ -102,7 +102,7 @@ Today, Master von-Engelmeyer is one of the most respected and heavily attended i
 
 * **Resonance Sensitivity:** Because he survived a deep-Stase suspension, Leonard possesses profound Resonance-sensitivity. He can passively "read" the structural and emotional coherence of those around him. This makes him a quiet, introverted, but exceptionally empathetic teacher; he frequently senses his students' Depth-strain or emotional distress long before it physically manifests.
 * **The Companion (Kerz):** The mechanical crow, Kerz, remains permanently at his side. Due to their shared origin in the Stase, Leonard and Kerz share a closed-loop Resonance link (telepathy). Because Leonard is naturally quiet and often finds vocalization taxing after prolonged Dives, Kerz acts as his voice, communicating his intent through structural resonance that others perceive as spoken word. 
-* **The Kalorian Nova:** Leonard's signature technique is not a fire spell. It is the temporary deletion of the concept of "thermal equilibrium" in a localized space. He rewrites the local syntax of a room to mandate catastrophic molecular vibration. 
+* **The Kalorian Nova:** Leonard's signature technique is not a fire spell and does not delete a concept or rewrite local syntax. Through his Thermodynamic Anchor, he routes a localized configuration violently away from equilibrium and sustains the resulting temperature and pressure differential long enough to produce catastrophic molecular motion. The name belongs to Leonard's practiced method, not to a transferable Engelmeyer power. His Mark 4 supports hazardous instructional and field work; martial deployment still requires the Council authority recorded in his apparatus permissions.
 
 **ASSESSOR'S NOTE:** Leonard von-Engelmeyer is a man who survived the absence of Time by offering the universe an alternative it could not ignore. He asks for very little from the Empire, entirely eschews his House’s politics, and dedicates his life to ensuring that young Redactors do not burn themselves alive in the dark. He is a profound asset. We will continue to refuse all Ardeatan extradition requests regarding him.
 

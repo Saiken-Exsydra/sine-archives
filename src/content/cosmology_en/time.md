@@ -5,7 +5,7 @@ summary: "Not a law of physics. Not a dimension. A sentient hyper-coherent infor
 tags: ["Cosmology", "Time", "Archive", "Traversal", "Entropy", "Book of Humanity", "Callings", "Redactory", "Precursors"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-25"
+updated: "2026-08-14"
 image: "../../assets/uploads/cosmology/cosm-time.png"
 ---
 
@@ -45,6 +45,20 @@ Time has agency. It can choose among multiple traversal strategies — it can bi
 This agency does not extend to authorship. Time cannot create configurations that do not exist in the Archive. It cannot write new futures. It can only choose which already-existing futures are traversed, and in what order. The distinction between *ordering* and *authoring* is the hardest practical boundary in Time's operation — and the one that matters most for understanding what Redactory does and does not access.
 
 Intervention is strategic and rare. The cost of excessive intervention is significant: suppressing the novelty of traversal reduces the informational diversity that sustains a world's recursive density, which is one of the primary defenses against external pressure. Time understands this. It intervenes when the strategic benefit of intervention exceeds the cost of reducing traversal novelty.
+
+---
+
+## Time and Syntax Authority
+
+Time is not the highest member of a syntax hierarchy. It is an orthogonal agency with a different jurisdiction.
+
+**Syntax defines the configuration being traversed. Time orders how that configuration passes through before, during, after, interval, cadence, and consequence.** An Authority may change a body so ordinary aging no longer applies; that changes the configuration Time traverses. It does not command Time.
+
+A claim enters Time's jurisdiction when it attempts to govern traversal itself: sequence, arrest, reversal, suspension, entropy as ordered passage, or the order in which configuration becomes consequence. Time may permit or refuse that claim without either answer converting it into syntax authorship.
+
+This distinction also explains Time's relation to the [[obscurials|Obscurials]]. Time cannot read backward through one to an origin, first state, or age because the vestige's own existence does not belong to ordinary traversal. Time can still order every Page-native interaction around it: detection, seating, interpretation, breakage, and the moment its absence became evident.
+
+For the larger jurisdictional model, see [[syntax-authority|Syntax Authority and Recursive Sovereignty]].
 
 ---
 

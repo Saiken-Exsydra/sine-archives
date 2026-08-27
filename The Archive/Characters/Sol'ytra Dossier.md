@@ -15,7 +15,7 @@ Status Singular known entity; first confirmed Crownborn Elemental
 
 Sol’ytra is a post-Fracture Elemental created by the All-Mother in the remembered image of Syr’lene, the Precursor Archtype who sacrificed herself by becoming the living Anchor of the Lunar Crown.
 
-Her creation followed a singular authority chain: the Page Primordial's still-standing grant of local syntax to the All-Mother; Terra's accumulated wound-memory; the surviving coupling between Terra and the Lunar Crown; and Syr'lene's sacrificial image held inside that coupling. The All-Mother supplied the local act of person-making. She did not externalize a Page fragment or recreate Precursor architecture.
+Her creation followed a singular authority chain: the Page Primordial's still-standing **Worldright** grant to the All-Mother; Terra's accumulated wound-memory; the surviving coupling between Terra and the Lunar Crown; and Syr'lene's sacrificial image held inside that coupling. The All-Mother supplied the local act of person-making. She did not externalize a Page fragment or recreate Precursor architecture.
 
 She is not a Skyphon, not a Redactor, not a Diviner, not a goddess, and not a Primordial fragment. She is an Elemental, but not of the older kind. She is the first and only known **Crownborn**: a unique Elemental expression created after the Fracture from the All-Mother’s wounded planetary self-understanding and the image of Syr’lene.
 
@@ -195,7 +195,7 @@ This means she is far broader than she appears in combat. An opponent who surviv
 
 Wound Crown Authority is Sol’ytra’s defining power.
 
-It is a syntax-level authority descended from the All-Mother’s delegated planetary syntax, shaped through the conceptual wound of the Lunar Crown. The All-Mother’s authority is not Redactory; Redactory is overlay routing, while the All-Mother acts as Terra’s local planetary syntax within her own body. 
+It is **derivative authority** descended from the All-Mother’s complete Worldright over Terra and shaped through the conceptual wound of the Lunar Crown. The All-Mother’s authority is not Redactory; ordinary Redactory routes, while Worldright directly governs Terra’s syntax. Wound Crown Authority is not a weaker fraction of that grant. It is complete inside a much narrower jurisdiction: Terra's wound, Crown-coupled containment, and threats to their continuity.
 
 Sol’ytra’s authority is therefore not spellcasting.
 
@@ -289,7 +289,7 @@ When invoked fully, she restructures the battlefield into a near-copy of the Moo
 
 She cannot truly replicate the Lunar Crown. She cannot recreate Syr’lene’s actual Anchor state, the true containment system, or the real Moon. But she can come close enough that the local battlefield begins behaving according to the reflected syntax of the wounded lunar surface.
 
-The Mirror is a Terra-local wound interface, not a restored lunar seat. It cannot address the twelve Instruments, reproduce a Skyphon Directive, open the Metric Safeguard, command Syr'lene, repair the Intact Seal, or claim a Shore. Sol'ytra may suppress the local wound-condition through which Shorefall is occurring; she does not own or rewrite the Shore itself.
+The Mirror is a Terra-local wound interface, not a restored lunar seat. It cannot restore or address the twelve vanished Obscurial relations, reproduce a Skyphon Directive, open the Metric Safeguard, command Syr'lene, repair the Intact Seal, or claim a Shore. Sol'ytra may suppress the local wound-condition through which Shorefall is occurring; she does not own or rewrite the Shore itself.
 
 The area becomes
 
@@ -349,7 +349,7 @@ A perception technique. Sol’ytra sees wounds, fractures, pressure, foreignness
 
 ---
 
-## XI. Power Scale
+## XI. Authority in Conflict
 
 Sol’ytra is not balanced against ordinary combatants.
 
@@ -359,11 +359,13 @@ Most Redactors cannot truly counter her. At best, they may survive specific atta
 
 Most Diviners cannot counter her either. A Diviner with a suitable fragment may survive her, especially if their domain involves protection, refusal, binding, mercy, identity, or sacrificial substitution. But survival is not victory.
 
-Specific Redactors and Diviners can endure isolated expressions of Wound Crown Authority. They can redirect, delay, confuse, or survive. They cannot generally overpower it.
+Specific Redactors and Diviners can endure isolated expressions of Wound Crown Authority. They may redirect, delay, confuse, survive, or defeat a particular act by controlling the jurisdictional question on which it depends. Raw force alone does not decide the conflict.
 
 The only beings who can truly put up a fight are Archtypes.
 
-This is because Archtype-level Redactory operates at such extreme depth and intrinsic self-modification that, while still technically Redactory, it begins to rival Sol’ytra’s authority in practical force. Precursors, for example, are fully stabilized human Archtypes and masters of lawful Redactory at scales far beyond mortal practice.  Archtypes do not possess Sol’ytra’s native planetary syntax, but their Redactory is deep enough, dense enough, and self-integrated enough to contest her rather than merely react.
+Archtype-level Redactory can contest Sol’ytra through extreme Depth, recursive sovereignty, causal preparation, experience, and routes that do not enter the Wound Crown's exact jurisdiction. Precursors are fully stabilized human Archtypes with millions of years of lawful routing practice. They do not possess Wound Crown Authority, yet may survive, redirect, out-position, or contain an act whose jurisdiction does not cleanly settle the conflict.
+
+The result is not determined by rank. It depends on jurisdiction, provenance, recursive sovereignty, compatible access, continuity, scale, opposing Authorities, and Time.
 
 Even then, an Archtype does not casually defeat her.
 
@@ -389,7 +391,7 @@ Her other limits include
  she remains bound to Terra and the All-Mother’s planetary field;
  her syntax depends on intention and can weaken under emotional contradiction;
  the full Mirror imposes psychological and harmonic strain;
- higher Page-level authority could theoretically restrict the All-Mother-derived grant;
+ the Page Primordial may narrow or revoke the Worldright permission from which her derivative authority descends;
  extremely specific Redactory or Divination can survive individual declarations;
  Archtypes can contest her in serious combat.
 
@@ -438,7 +440,7 @@ Most institutions do not possess enough truth to classify her correctly.
 - the Imperial Civic Safeguard Service would begin with public danger, personhood protection, and a multi-specialist incident boundary;
 - an accredited Accord-Keeper would have the best available local language for approaching her without claiming command.
 
-Her full origin — standing Page grant, All-Motheric syntax, Terra's wound-memory, Crown coupling, and Syr’lene’s image — remains restricted codex truth, not common institutional knowledge.
+Her full origin — Worldright, All-Motheric syntax, Terra's wound-memory, Crown coupling, and Syr’lene’s image — remains restricted codex truth, not common institutional knowledge.
 
 ---
 

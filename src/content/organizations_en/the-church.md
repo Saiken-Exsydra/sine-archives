@@ -11,7 +11,7 @@ summary: "The Church is Terra's dominant faith institution and the main authorit
 tags: ["Church", "Synus", "Faith", "Obsidian", "Demonic", "Institution", "Sovereign", "Twilight Band", "Intact Seal", "Divine Vessel", "Diviner", "Oracles"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-07-13"
+updated: "2026-08-14"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -73,7 +73,7 @@ This teaching extends upward into the sky itself. In Church language, the heaven
 
 ### I.3 The Obscurials — The Instruments of the Intact Seal
 
-Technical institutions increasingly classify Obscurials as bounded native-law addresses rather than Redacteurs. The Church calls them the Instruments of the Intact Seal: twelve physical law-cores whose devotional titles are Truth, Binding, Order, Atmosphere, Light, Life, Fire, Death, Entropy, Sentience, Foresight, and Ascension.
+The deepest technical reconstruction distinguishes the actual [[obscurials|Obscurials]]—twelve grammar-exterior vestiges once seated in the Moon—from the Principles, interfaces, and remnants through which Terra addressed them. All twelve actual Obscurials vanished from the lunar configuration during the Fracture. The Church does not possess that complete synthesis. It calls the Twelve the Instruments of the Intact Seal, with the devotional titles Truth, Binding, Order, Atmosphere, Light, Life, Fire, Death, Entropy, Sentience, Foresight, and Ascension.
 
 The Church holds a different account. It is not merely a misunderstanding of the technical one. It is an older interpretation with deeper roots.
 
@@ -87,19 +87,19 @@ He counted twelve of them. This number is not coincidence, and the Church does n
 
 Each instrument was complete in its domain, and together they composed the architecture of what the world was made to be. When the rebellion struck the Intact Seal, the instruments were unmoored. The Church teaches: *the Instruments no longer fit the broken world, because they were made for the world as it was meant to be.* To hold one now is to carry something the world cannot currently contain. This does not make them evil. It makes them dangerous in the way that a flame brought indoors during a storm is dangerous — not malicious, but capable of burning down everything around it.
 
-The Church's position is that the Instruments belong to no mortal institution. Any who claim custody — including the Apocachynthion — do so in error at best and in sacrilege at worst. The Church does not publicly demand their return. It notes the situation in restricted pastoral letters and waits.
+The Church's position is that the Instruments belong to no mortal institution. Any who claim custody—including the Apocachynthion—do so in error at best and in sacrilege at worst. It applies that claim to objects and sites that restricted technical doctrine identifies as interface cores, address remnants, or scars rather than the vanished Obscurials themselves. The Church does not publicly demand their return. It notes the situation in restricted pastoral letters and waits.
 
 ---
 
 ### I.4 The Skyphons — The First Bearers
 
-Technical reconstruction describes the Skyphons as persons formed through Page fragments, Precursor constraint bodies, Obscurial law-cores, and Terra's acceptance. The Church preserves them as the **First Bearers**.
+Technical reconstruction describes the Skyphons as persons formed through localized Page syntax, Precursor constraint bodies, a co-addressed Obscurial relation through the lunar interface, and Terra's acceptance. The Church preserves them as the **First Bearers**.
 
 The Church does not use this language. The Skyphons appear in ecclesiastical tradition as **the First Bearers**, and their treatment is one of the Church's most carefully held theological positions.
 
 The teaching is as follows:
 
-The Sovereign did not intend for laws to move through the world without witnesses. The First Bearers were living interfaces among higher authority, engineered form, lunar Instrument, and the world. Restricted theology holds that they were directive-bound but capable of interpretation, disagreement, and refusal. Their fidelity depended on judgment; they were not puppets.
+The Sovereign did not intend for laws to move through the world without witnesses. The First Bearers were living interfaces among higher authority, engineered form, a co-addressed lunar relation, and the world. Restricted theology holds that they were directive-bound but capable of interpretation, disagreement, and refusal. Their fidelity depended on judgment; they were not puppets.
 
 The Church holds the Skyphons with a peculiar sorrow.
 

@@ -36,9 +36,9 @@ The academies are visible from the city below. Their presence gives Hal'vorn a s
 
 ## The Hal'vorn Ridge System
 
-The city gives its name to the **Hal'vorn Ridge System** — a series of ancient glaciated ridgelines running roughly east-west across the upper Northern Region, forming the natural northern spine of the Empire's defensive geography against Aurora. The ridges are not impossibly tall, but they are continuous, heavily forested on their southern faces, and laced with narrow river-cut passes that funnel any large-scale movement into predictable corridors.
+The city gives its name to the **Hal'vorn Ridge System** — a series of ancient glaciated ridgelines running roughly east-west across the upper Northern Region and forming the climatic and defensive spine of the Darkward provinces. The ridges are not impossibly tall, but they are continuous, heavily forested on their southern faces, and laced with narrow river-cut passes. Their western reaches structure the Auroran approaches and funnel cross-border movement into predictable corridors.
 
-The **Greygate Pass**, east of Hal'vorn, is the primary legitimate land crossing between Aurora and the Empire — permanently staffed by an imperial garrison and the primary legal crossing point for trade and diplomatic transit. Two smaller passes to the west are monitored by highland stations rather than permanent garrisons.
+The **Greygate Pass**, in the western ridge approaches, is the primary legitimate land crossing between Aurora and the Empire — permanently staffed by an imperial garrison and the primary legal crossing point for trade and diplomatic transit. Two lesser crossings on the same border are monitored by highland stations rather than permanent garrisons.
 
 ---
 

@@ -30,7 +30,7 @@ Population: approximately **2 to 3 million**.
 
 Hora'veil's population includes a substantial proportion of active-duty soldiers rotating between front deployment and city-based rest cycles, along with the largest concentration of **Redactor military personnel** in the Empire outside of Kalt'sen. The city is simultaneously a factory, a garrison, and a logistics hub — the point where BrightCrystal from the extraction belts becomes the equipment that the frontier legions carry.
 
-The **Southern Supply Corridor** — a dedicated military freight line running from Cal'thas south through Hora'veil to the frontier supply depots at Sarn Pell — is entirely state-controlled and not accessible to civilian freight. The underground sections of this line branch from the primary corridor at several points and extend into the defended zone beyond Sarn Pell, forming the concealed rail network that enables the Empire's mobile defense doctrine on the Ardeatus frontier.
+The **Southern Supply Corridor** — a dedicated military freight line crossing the Southern Region from Hora'veil through Cal'thas toward Sarn Pell and the eastern frontier depots — is entirely state-controlled and not accessible to civilian freight. The underground sections of this line branch from the primary corridor at several points and extend east into the defended zone beyond Sarn Pell, forming the concealed rail network that enables the Empire's mobile defense doctrine on the Ardeatus frontier.
 
 ---
 

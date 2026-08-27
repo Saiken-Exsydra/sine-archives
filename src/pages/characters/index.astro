@@ -99,11 +99,14 @@ const charData = await Promise.all(
       )
     ).filter(Boolean);
 
+    const designation = String((c.data as any).designation ?? "");
+
     return {
       slug: c.slug,
       title: c.data.title,
       type: c.data.type ?? (locale === "pt-br" ? "Personagem" : "Character"),
-      designation: (c.data as any).designation ?? "",
+      designation,
+      designationTier: designation.length <= 12 ? "short" : designation.length >= 19 ? "long" : "standard",
       summary: c.data.summary,
       images: stageImages,
       thumbImage: stageImages[0] ? { ...stageImages[0], sizes: FILMSTRIP_IMAGE_SIZES } : null,
@@ -575,7 +578,7 @@ const sectionEyebrow = locale === "pt-br"
         font-family: 'Cormorant Garamond', serif;
         font-size: clamp(46px, 5.5vw, 84px); font-weight: 700;
         color: var(--text);
-        margin: 0 0 14px 0; line-height: 0.92;
+        margin: 0 0 12px 0; line-height: 0.92;
         letter-spacing: -0.01em; max-width: 640px;
         transition: opacity 0.55s ease 0.2s, transform 0.55s ease 0.2s;
       }
@@ -583,17 +586,26 @@ const sectionEyebrow = locale === "pt-br"
       .stage__name.is-in  { opacity: 1; transform: translateY(0); }
 
       .stage__designation {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 12px; color: var(--gold);
-        letter-spacing: 0.08em; margin-bottom: 18px;
+        max-width: min(100%, 28ch);
+        margin: clamp(12px, 1vw, 16px) 0 clamp(10px, 0.9vw, 14px);
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(1.8rem, 2.25vw, 2.6rem);
+        font-style: italic;
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: -0.012em;
+        line-height: 1.02;
+        text-wrap: balance;
         transition: opacity 0.5s ease 0.28s, transform 0.5s ease 0.28s;
       }
       .stage__designation.is-out { opacity: 0; transform: translateY(12px); }
-      .stage__designation.is-in  { opacity: 0.82; transform: translateY(0); }
+      .stage__designation.is-in  { opacity: 1; transform: translateY(0); }
+      .stage__designation--short { font-size: clamp(2.1rem, 2.7vw, 3rem); }
+      .stage__designation--long { font-size: clamp(1.55rem, 1.9vw, 2.2rem); }
 
       .stage__summary {
         font-family: 'DM Sans', sans-serif;
-        font-size: 14px; color: rgba(232,228,220,0.58);
+        font-size: 16px; color: rgba(232,228,220,0.58);
         line-height: 1.75; margin: 0 0 30px 0; max-width: 500px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -769,10 +781,18 @@ const sectionEyebrow = locale === "pt-br"
           right: 0;
           padding: 0 20px 24px;
         }
-        .stage__name { font-size: clamp(38px, 9vw, 56px); }
-        .stage__designation { font-size: 11px; margin-bottom: 12px; }
+        .stage__name {
+          font-size: clamp(38px, 9vw, 56px);
+          margin-bottom: 10px;
+        }
+        .stage__designation {
+          margin: 10px 0;
+          font-size: clamp(1.45rem, 6vw, 2.1rem);
+        }
+        .stage__designation--short { font-size: clamp(1.7rem, 7.2vw, 2.35rem); }
+        .stage__designation--long { font-size: clamp(1.35rem, 5.2vw, 1.75rem); }
         .stage__summary {
-          font-size: 13px;
+          font-size: 15px;
           margin: 0 0 18px;
           -webkit-line-clamp: 2;
         }
@@ -1052,7 +1072,7 @@ const sectionEyebrow = locale === "pt-br"
 
           <h1 class="stage__name is-in" id="stage-name">{initialCharacter.title}</h1>
 
-          <div class="stage__designation is-in" id="stage-designation">
+          <div class={`stage__designation stage__designation--${initialCharacter.designationTier} is-in`} id="stage-designation">
             {initialCharacter.designation}
           </div>
 
@@ -1455,6 +1475,12 @@ const sectionEyebrow = locale === "pt-br"
           if (stageDesignation) {
             stageDesignation.textContent = c.designation;
             stageDesignation.style.display = c.designation ? "" : "none";
+            stageDesignation.classList.remove(
+              "stage__designation--short",
+              "stage__designation--standard",
+              "stage__designation--long",
+            );
+            stageDesignation.classList.add(`stage__designation--${c.designationTier}`);
           }
           if (stageSummary) stageSummary.textContent = c.summary;
           if (stageCta instanceof HTMLAnchorElement) stageCta.href = c.href;

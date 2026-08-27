@@ -1,0 +1,145 @@
+
+> sine-archives@0.0.1 dev
+> astro dev --host 127.0.0.1
+
+[2m16:31:11[22m [34m[types][39m Generated [2m1ms[22m
+[2m16:31:12[22m [34m[content][39m Syncing content
+[2m16:31:12[22m [34m[content][39m Content config changed
+[2m16:31:12[22m [34m[content][39m Clearing content store
+[2m16:31:18[22m [34m[content][39m Synced content
+[2m16:31:18[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+
+[42m[1m astro [22m[49m [32mv5.18.1[39m [2mready in[22m 7978 [2mms[22m
+
+[2m┃[22m Local    [36mhttp://127.0.0.1:4321/[39m
+
+[2m16:31:18[22m [32mwatching for file changes...[39m
+[2m16:33:06[22m [34m[200][39m / [2m1306ms[22m
+[2m16:33:08[22m [34m[200][39m /systems/observatory/ [2m31ms[22m
+[2m16:33:08[22m [34m[200][39m /systems/observatory/ [2m27ms[22m
+[2m16:33:08[22m [34m[200][39m /search/ [2m162ms[22m
+[2m16:33:08[22m [34m[200][39m /search/ [2m113ms[22m
+[2m16:33:09[22m [34m[200][39m /_image [2m759ms[22m
+[2m16:33:09[22m [34m[200][39m /_image [2m1082ms[22m
+[2m16:33:09[22m [34m[200][39m /_image [2m1141ms[22m
+[2m16:33:09[22m [34m[200][39m /_image [2m1196ms[22m
+[2m16:33:15[22m [34m[200][39m / [2m12ms[22m
+[2m16:33:16[22m [34m[200][39m /systems/observatory/ [2m34ms[22m
+[2m16:33:16[22m [34m[200][39m /search/ [2m230ms[22m
+[2m16:33:17[22m [34m[200][39m /characters/ [2m20ms[22m
+[2m16:33:18[22m [34m[200][39m /characters/alithia-wonderwall/ [2m187ms[22m
+[2m16:33:25[22m [34m[200][39m /_image [2m1928ms[22m
+[2m16:33:30[22m [34m[200][39m /_image [2m2233ms[22m
+[2m16:33:34[22m [34m[200][39m /_image [2m1737ms[22m
+[2m16:34:27[22m [34m[200][39m /_image [2m369ms[22m
+[2m16:34:27[22m [34m[200][39m /_image [2m382ms[22m
+[2m16:34:27[22m [34m[200][39m /_image [2m386ms[22m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "alithia-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\alithia-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32malithia-wonderwall.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "ayanna-aedh-aibhilyn" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\ayanna-aedh-aibhilyn.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32mayanna-aedh-aibhilyn.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "daniel-degurechaff" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\daniel-degurechaff.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32mdaniel-degurechaff.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "eclesia-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\eclesia-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32meclesia-wonderwall.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "eloi-du-corvane" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\eloi-du-corvane.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32meloi-du-corvane.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "ella-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\ella-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32mella-wonderwall.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "emmanuel-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\emmanuel-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32memmanuel-wonderwall.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "halken-orveth" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\halken-orveth.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32mhalken-orveth.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "hisui-kirasagi" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\hisui-kirasagi.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:48[22m [34m[glob-loader][39m Reloaded data from [32mhisui-kirasagi.md[39m
+[33m[1m17:59:48[22m [WARN] [glob-loader][39m Duplicate id "katherine-flarian" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\katherine-flarian.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mkatherine-flarian.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "leonard-von-engelmeyer" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\leonard-von-engelmeyer.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mleonard-von-engelmeyer.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "lenore-engelmeyer" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\lenore-engelmeyer.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mlenore-engelmeyer.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "alithia-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\alithia-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32malithia-wonderwall.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "rouxinol-kaise" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\rouxinol-kaise.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mrouxinol-kaise.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "saiken-exsydra" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\saiken-exsydra.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32msaiken-exsydra.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "solytra" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\solytra.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32msolytra.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "syralene" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\syralene.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32msyralene.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "vaey-viktor" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\vaey-viktor.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mvaey-viktor.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "vaeltheryn" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_en\vaeltheryn.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mvaeltheryn.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "ayanna-aedh-aibhilyn" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\ayanna-aedh-aibhilyn.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mayanna-aedh-aibhilyn.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "daniel-degurechaff" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\daniel-degurechaff.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mdaniel-degurechaff.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "eclesia-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\eclesia-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32meclesia-wonderwall.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "eloi-du-corvane" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\eloi-du-corvane.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32meloi-du-corvane.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "ella-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\ella-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mella-wonderwall.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "emmanuel-wonderwall" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\emmanuel-wonderwall.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32memmanuel-wonderwall.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "halken-orveth" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\halken-orveth.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mhalken-orveth.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "katherine-flarian" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\katherine-flarian.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mkatherine-flarian.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "lenore-engelmeyer" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\lenore-engelmeyer.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mlenore-engelmeyer.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "leonard-von-engelmeyer" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\leonard-von-engelmeyer.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mleonard-von-engelmeyer.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "saiken-exsydra" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\saiken-exsydra.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32msaiken-exsydra.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "solytra" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\solytra.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32msolytra.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "syralene" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\syralene.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32msyralene.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "rouxinol-kaise" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\rouxinol-kaise.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mrouxinol-kaise.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "vaeltheryn" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\vaeltheryn.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mvaeltheryn.md[39m
+[33m[1m17:59:49[22m [WARN] [glob-loader][39m Duplicate id "vaey-viktor" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\vaey-viktor.md. Later items with the same id will overwrite earlier ones.
+[2m17:59:49[22m [34m[glob-loader][39m Reloaded data from [32mvaey-viktor.md[39m
+[2m17:59:51[22m [34m[200][39m /characters/ [2m230ms[22m
+[2m17:59:52[22m [34m[200][39m /search/ [2m124ms[22m
+[2m17:59:52[22m [34m[200][39m /characters/alithia-wonderwall/ [2m9ms[22m
+[33m[1m18:00:36[22m [WARN] [glob-loader][39m Duplicate id "hisui-kirasagi" found in C:\Users\Ksy'luer\Desktop\CC Design\sine-archives\src\content\characters_pt_br\hisui-kirasagi.md. Later items with the same id will overwrite earlier ones.
+[2m18:00:36[22m [34m[glob-loader][39m Reloaded data from [32mhisui-kirasagi.md[39m
+[2m18:00:38[22m [34m[200][39m /characters/ [2m274ms[22m
+[2m18:01:32[22m [34m[200][39m /characters/ [2m113ms[22m
+[2m18:14:23[22m [34m[200][39m /_image [2m1354ms[22m
+[2m18:14:39[22m [34m[200][39m /_image [2m1810ms[22m
+[2m18:14:48[22m [34m[200][39m /_image [2m3027ms[22m
+[2m18:15:02[22m [34m[200][39m /_image [2m1868ms[22m
+[2m18:15:26[22m [34m[200][39m /_image [2m1921ms[22m
+[2m18:15:54[22m [34m[200][39m /_image [2m2031ms[22m
+[2m18:16:22[22m [34m[200][39m /_image [2m1798ms[22m
+[2m18:21:32[22m [34m[200][39m /_image [2m315ms[22m
+[2m18:21:32[22m [34m[200][39m /_image [2m343ms[22m
+[2m18:21:32[22m [34m[200][39m /_image [2m383ms[22m
+[2m18:21:33[22m [34m[200][39m /_image [2m435ms[22m
+[2m18:21:33[22m [34m[200][39m /_image [2m280ms[22m
+[2m18:21:33[22m [34m[200][39m /_image [2m385ms[22m
+[2m18:21:33[22m [34m[200][39m /_image [2m1137ms[22m
+[2m18:21:33[22m [34m[200][39m /_image [2m1272ms[22m
+[2m18:32:12[22m [34m[200][39m /characters/alithia-wonderwall/ [2m25ms[22m
+[2m18:32:13[22m [34m[200][39m /_image [2m962ms[22m
+[2m18:32:13[22m [34m[200][39m /_image [2m1104ms[22m
+[2m18:33:10[22m [34m[watch][39m /src/layouts/CharacterEntryLayout.astro?astro&type=style&index=0&lang.css
+[2m18:33:10[22m [34m[200][39m /characters/alithia-wonderwall/ [2m62ms[22m
+[2m18:33:11[22m [34m[200][39m /characters/ [2m19ms[22m
+[2m18:33:11[22m [34m[200][39m /search/ [2m151ms[22m
+[2m18:33:11[22m [34m[200][39m /characters/alithia-wonderwall/ [2m25ms[22m
+[2m18:33:21[22m [34m[200][39m /characters/alithia-wonderwall/ [2m55ms[22m
+[2m18:33:21[22m [34m[200][39m /characters/ [2m26ms[22m
+[2m18:33:26[22m [34m[200][39m / [2m18ms[22m
+[2m18:33:26[22m [34m[200][39m /systems/observatory/ [2m12ms[22m
+[2m18:33:58[22m [34m[200][39m /characters/alithia-wonderwall/ [2m12ms[22m
+[2m18:34:15[22m [34m[200][39m /characters/alithia-wonderwall/ [2m19ms[22m
+[2m18:34:38[22m [34m[200][39m /characters/alithia-wonderwall/ [2m18ms[22m
+[2m18:34:51[22m [34m[200][39m /characters/alithia-wonderwall/ [2m15ms[22m
+[2m18:35:12[22m [34m[200][39m /characters/alithia-wonderwall/ [2m13ms[22m

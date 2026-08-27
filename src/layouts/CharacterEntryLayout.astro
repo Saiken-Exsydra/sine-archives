@@ -6,14 +6,15 @@ import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import SiteShell from "./SiteShell.astro";
 import CharacterDossierMarkdown from "../components/CharacterDossierMarkdown.astro";
-import CharacterFieldIcon from "../components/CharacterFieldIcon.astro";
+import CharacterDossierMetadata from "../components/CharacterDossierMetadata.astro";
 import "../styles/archive-refs.css";
 import remarkArchiveHeadingIds from "../utils/remark-archive-heading-ids.mjs";
 import remarkArchiveWikiLinks from "../utils/remark-archive-wiki-links.mjs";
 import rehypeCodexDiagrams from "../utils/rehype-codex-diagrams.mjs";
 import { localizedPath, type SiteLocale } from "../i18n/config";
-import { getImageKind, getImageUrl } from "../utils/optimized-images";
+import { buildOptimizedImageBundle, getImageKind, getImageUrl } from "../utils/optimized-images";
 import { getCharacterCodexRecord } from "../utils/character-codex";
+import { getCharacterClassificationVisual } from "../utils/character-classification";
 
 type QuoteData = {
   text: string;
@@ -64,13 +65,25 @@ const copy = locale === "pt-br"
       section: "Personagens",
       pageTitle: "Personagens",
       dossier: "Dossie - Arquivos SiNE - Ano de Arquivo 1127",
-      fileData: "Dados do Registro",
       fullRecord: "Registro Completo",
       contents: "Conteudo",
       sectionsLabel: "secoes",
+      classification: "Classificacao",
+      registry: "Registro",
+      personalRecord: "Registro Pessoal",
+      rank: "Patente",
+      system: "Sistema",
+      redactory: "Redactory",
+      anchor: "Ancora",
+      anchorDepth: "Profundidade da Ancora",
+      house: "Casa",
+      affiliation: "Afiliacao",
+      registryStatus: "Status de Registro",
       relatedLinks: "Links Relacionados",
       gallery: "Galeria",
       notes: "Notas",
+      yearOfBirth: "Ano de Nascimento",
+      age: "Idade",
       heightBuild: "Altura / Porte",
       birthplace: "Local de Nascimento",
       residence: "Residencia",
@@ -88,13 +101,25 @@ const copy = locale === "pt-br"
       section: "Characters",
       pageTitle: "Characters",
       dossier: "Dossier - SiNE Archives Filing Year 1127",
-      fileData: "File Data",
       fullRecord: "Full Record",
       contents: "Contents",
       sectionsLabel: "sections",
+      classification: "Classification",
+      registry: "Registry",
+      personalRecord: "Personal Record",
+      rank: "Rank",
+      system: "System",
+      redactory: "Redactory",
+      anchor: "Anchor",
+      anchorDepth: "Anchor Depth",
+      house: "House",
+      affiliation: "Affiliation",
+      registryStatus: "Registry Status",
       relatedLinks: "Related Links",
       gallery: "Gallery",
       notes: "Notes",
+      yearOfBirth: "Year of Birth",
+      age: "Age",
       heightBuild: "Height / Build",
       birthplace: "Birthplace",
       residence: "Residence",
@@ -198,6 +223,17 @@ const portraitImages = portraitCandidates
   })
   .filter((item, index, list) => list.findIndex((entry) => entry.url === item.url) === index);
 
+const portraitMedia = await Promise.all(
+  portraitImages.map(async (item) => ({
+    ...item,
+    bundle: await buildOptimizedImageBundle(item.value, {
+      widths: [520, 1040],
+      sizes: "(max-width: 860px) calc(100vw - 40px), (min-width: 1568px) 520px, clamp(360px, 29vw, 520px)",
+      quality: 86,
+    }),
+  })),
+);
+
 const railUrls = new Set(portraitImages.map((item) => item.url));
 const extraGalleryImages = [
   entry.data?.hero_image,
@@ -211,28 +247,56 @@ const extraGalleryImages = [
 
 const tags: string[] = Array.isArray(entry.data?.tags) ? entry.data.tags : [];
 
+const rank = str(entry.data?.rank);
+const system = str(entry.data?.system);
+const anchor = str(entry.data?.redactory?.anchor);
+const anchorDepth = str(entry.data?.redactory?.anchor_depth);
+const classificationVisual = getCharacterClassificationVisual({ anchorDepth, system });
+
+const classificationTitle = anchorDepth
+  ? `${anchorDepth} ${copy.anchor}`
+  : system || (anchor ? copy.redactory : rank);
+const classificationPrimary = anchor || "";
+const classificationDetails = [
+  ...(rank && rank !== classificationTitle ? [{ label: copy.rank, value: rank }] : []),
+  ...(system && system !== classificationTitle ? [{ label: copy.system, value: system }] : []),
+];
+const classification = classificationTitle
+  ? {
+      title: classificationTitle,
+      primary: classificationPrimary,
+      visualSrc: classificationVisual?.src,
+      details: classificationDetails,
+    }
+  : null;
+
 type Field = { label: string; value: string; icon: FieldIconName };
-const fields: Field[] = [];
-const push = (label: string, key: string, icon: FieldIconName) => {
+const fieldFrom = (label: string, key: string, icon: FieldIconName): Field | null => {
   const value = str((entry.data as Record<string, unknown>)?.[key]);
-  if (value) fields.push({ label, value, icon });
+  return value ? { label, value, icon } : null;
 };
 
-push(locale === "pt-br" ? "Status de Registro" : "Registry Status", "registry_status", "registry");
-push(locale === "pt-br" ? "Afiliacao" : "Affiliation", "affiliation", "affiliation");
-push(locale === "pt-br" ? "Casa" : "House", "house", "house");
-push(locale === "pt-br" ? "Ano de Nascimento" : "Year of Birth", "birth_year", "year");
-push(locale === "pt-br" ? "Idade" : "Age", "age", "age");
+const registryFields = [
+  fieldFrom(copy.registryStatus, "registry_status", "registry"),
+  fieldFrom(copy.affiliation, "affiliation", "affiliation"),
+  fieldFrom(copy.house, "house", "house"),
+  fieldFrom(copy.occupation, "occupation", "occupation"),
+].filter((field): field is Field => !!field);
 
 const height = str(entry.data?.height);
 const build = str(entry.data?.build);
-if (height) {
-  fields.push({ label: copy.heightBuild, value: [height, build].filter(Boolean).join(" - "), icon: "build" });
-}
+const heightBuildField = height || build
+  ? { label: copy.heightBuild, value: [height, build].filter(Boolean).join(" — "), icon: "build" as const }
+  : null;
+const personalFields = [
+  fieldFrom(copy.yearOfBirth, "birth_year", "year"),
+  fieldFrom(copy.age, "age", "age"),
+  heightBuildField,
+  fieldFrom(copy.birthplace, "birthplace", "birthplace"),
+  fieldFrom(copy.residence, "residence", "residence"),
+].filter((field): field is Field => !!field);
 
-push(copy.birthplace, "birthplace", "birthplace");
-push(copy.residence, "residence", "residence");
-push(copy.occupation, "occupation", "occupation");
+const showMetadata = !!classification || registryFields.length > 0 || personalFields.length > 0;
 
 const sourcePath = `src/content/characters_${locale === "pt-br" ? "pt_br" : "en"}/${entry.slug}.md`;
 const rawBody = String(entry.body ?? "");
@@ -251,8 +315,11 @@ const contentHeadings = (Array.isArray(headings) ? headings : [])
   }))
   .filter((heading) => heading.text && heading.slug);
 
-const tocEnabled = false;
+// Character articles are written for progressive disclosure. Keep the section guide
+// available once an entry has enough material to support non-linear reading.
+const tocEnabled = true;
 const showToc = tocEnabled && contentHeadings.length > 0;
+const showContext = showToc || showMetadata;
 
 const relatedLinks: RelatedLink[] = Array.isArray(entry.data?.related_links)
   ? entry.data.related_links
@@ -405,6 +472,18 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       color: var(--char-text);
     }
 
+    .char-nav__brand:focus-visible,
+    .char-nav__crumb-link:focus-visible,
+    .char-nav__fullscreen:focus-visible,
+    .char-rail__next:focus-visible,
+    .char-links__item:focus-visible,
+    .char-main__codex:focus-visible,
+    .char-toc__item a:focus-visible,
+    .char-toc__summary:focus-visible {
+      outline: 2px solid rgba(176, 141, 60, 0.82);
+      outline-offset: 3px;
+    }
+
     .char-nav__crumb-sep {
       color: var(--char-crimson);
       font-size: 13px;
@@ -437,10 +516,17 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       background: rgba(255, 255, 255, 0.04);
     }
 
+    .char-stage {
+      container-name: character-stage;
+      container-type: inline-size;
+      min-width: 0;
+    }
+
     .char-page {
-      --char-rail-col: clamp(380px, 29vw, 540px);
+      --char-rail-col: clamp(380px, 29vw, 520px);
       --char-tools-col: clamp(208px, 13vw, 248px);
       display: grid;
+      grid-template-areas: "character document";
       grid-template-columns: minmax(360px, var(--char-rail-col)) minmax(0, 1fr);
       min-height: 100dvh;
       padding-top: var(--char-nav-height);
@@ -450,13 +536,12 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
     }
 
     .char-page[data-has-tools="true"] {
-      grid-template-columns:
-        minmax(360px, var(--char-rail-col))
-        minmax(200px, var(--char-tools-col))
-        minmax(0, 1fr);
+      grid-template-areas: "character document";
+      grid-template-columns: minmax(360px, var(--char-rail-col)) minmax(0, 1fr);
     }
 
     .char-rail {
+      grid-area: character;
       position: sticky;
       top: var(--char-nav-height);
       height: calc(100dvh - var(--char-nav-height));
@@ -622,7 +707,6 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
     .char-rail__tag,
     .char-card__eyebrow,
     .char-main__eyebrow,
-    .char-field__label,
     .char-gallery__eyebrow {
       font-size: 10px;
       font-weight: 600;
@@ -681,25 +765,25 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
     }
 
     .char-tools {
-      position: sticky;
-      top: var(--char-nav-height);
-      height: calc(100dvh - var(--char-nav-height));
-      overflow: auto;
-      padding: 24px 16px 36px;
-      border-right: 1px solid rgba(255, 255, 255, 0.05);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 180px),
-        rgba(7, 7, 13, 0.86);
-      scrollbar-width: thin;
-      scrollbar-color: rgba(177, 58, 52, 0.22) transparent;
+      position: static;
+      width: 100%;
+      height: auto;
+      margin: 26px 0 34px;
+      overflow: visible;
     }
 
     .char-tools__inner {
       display: grid;
+      grid-template-columns: minmax(0, 1fr);
       align-content: start;
-      gap: 18px;
+      align-items: start;
+      gap: 12px;
       width: 100%;
-      max-width: 280px;
+      max-width: none;
+    }
+
+    .char-tools__metadata {
+      min-width: 0;
     }
 
     .char-card {
@@ -787,7 +871,8 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
-    .char-toc__item a:hover {
+    .char-toc__item a:hover,
+    .char-toc__item a:focus-visible {
       color: var(--char-text);
       border-color: rgba(177, 58, 52, 0.42);
       background: rgba(177, 58, 52, 0.06);
@@ -871,7 +956,8 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease, transform 0.18s ease;
     }
 
-    .char-links__item:hover {
+    .char-links__item:hover,
+    .char-links__item:focus-visible {
       transform: translateY(-1px);
       border-color: rgba(177, 58, 52, 0.28);
       color: var(--char-text);
@@ -879,6 +965,7 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
     }
 
     .char-main {
+      grid-area: document;
       min-width: 0;
       height: calc(100dvh - var(--char-nav-height));
       overflow: auto;
@@ -936,7 +1023,8 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
-    .char-main__codex:hover {
+    .char-main__codex:hover,
+    .char-main__codex:focus-visible {
       transform: translateY(-1px);
       border-color: rgba(176, 141, 60, 0.42);
       background:
@@ -977,67 +1065,6 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       font-size: 16px;
       line-height: 1.85;
       color: rgba(232, 228, 220, 0.74);
-      text-wrap: pretty;
-    }
-
-    .char-fields {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      border: 1px solid var(--char-border);
-      border-radius: 16px;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
-        var(--char-surface);
-      box-shadow: var(--char-shadow);
-    }
-
-    .char-field {
-      position: relative;
-      padding: 15px 16px 14px 50px;
-      border-right: 1px solid rgba(255, 255, 255, 0.05);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      min-height: 72px;
-      transition: background 0.18s ease, border-color 0.18s ease;
-    }
-
-    .char-field:hover {
-      background: linear-gradient(180deg, rgba(177, 58, 52, 0.06), transparent 72%);
-    }
-
-    .char-field:nth-child(2n) {
-      border-right: none;
-    }
-
-    .char-field:nth-last-child(-n + 2) {
-      border-bottom: none;
-    }
-
-    .char-field__icon {
-      position: absolute;
-      top: 15px;
-      left: 18px;
-      width: 18px;
-      height: 18px;
-      color: rgba(232, 228, 220, 0.5);
-      transition: color 0.18s ease;
-    }
-
-    .char-field:hover .char-field__icon {
-      color: rgba(176, 141, 60, 0.74);
-    }
-
-    .char-field__label {
-      display: block;
-      color: var(--char-text-dim);
-      margin-bottom: 4px;
-    }
-
-    .char-field__value {
-      display: block;
-      font-size: 15px;
-      line-height: 1.45;
-      color: var(--char-text-muted);
       text-wrap: pretty;
     }
 
@@ -1199,10 +1226,18 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       text-transform: uppercase;
     }
 
-    @media (min-width: 1600px) {
-      .char-page {
-        --char-rail-col: clamp(460px, 30vw, 620px);
-        --char-tools-col: clamp(220px, 13vw, 260px);
+    @container character-stage (min-width: 98rem) {
+      .char-page[data-has-tools="true"] {
+        --char-rail-col: clamp(460px, 28cqi, 520px);
+        --char-tools-col: clamp(288px, 18cqi, 360px);
+        grid-template-areas: "character document context";
+        grid-template-columns:
+          minmax(420px, var(--char-rail-col))
+          minmax(45rem, 1fr)
+          minmax(280px, var(--char-tools-col));
+        width: 100%;
+        max-width: 172rem;
+        margin-inline: auto;
       }
 
       .char-rail__hero {
@@ -1216,33 +1251,96 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       .char-rail__body {
         padding: 28px 34px 42px;
       }
-    }
 
-    @media (min-width: 1900px) {
-      .char-page {
-        --char-rail-col: clamp(520px, 31vw, 700px);
-        --char-tools-col: clamp(230px, 12vw, 280px);
+      .char-tools {
+        position: fixed;
+        z-index: 6;
+        top: var(--char-nav-height);
+        right: max(0px, calc((100vw - 172rem) / 2));
+        width: var(--char-tools-col);
+        height: calc(100dvh - var(--char-nav-height));
+        margin: 0;
+        overflow: auto;
+        padding: 30px 24px 44px;
+        border-right: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 180px),
+          rgba(7, 7, 13, 0.78);
+        scrollbar-width: thin;
+        scrollbar-color: rgba(177, 58, 52, 0.22) transparent;
       }
 
-      .char-rail__hero {
-        min-height: clamp(620px, 74vh, 980px);
+      .char-tools__inner {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 360px;
       }
 
       .char-main__header {
-        padding-left: clamp(36px, 3.1vw, 84px);
-        padding-right: clamp(36px, 3.1vw, 84px);
+        padding-left: clamp(42px, 4cqi, 92px);
+        padding-right: clamp(42px, 4cqi, 92px);
+      }
+
+      .char-main__header-row {
+        width: 100%;
+        max-width: 70rem;
+        margin-inline: auto;
       }
 
       .char-main__body {
-        padding-left: clamp(36px, 3.1vw, 84px);
-        padding-right: clamp(36px, 3.1vw, 84px);
+        max-width: 70rem;
+        margin-inline: auto;
+        padding-left: clamp(42px, 4cqi, 92px);
+        padding-right: clamp(42px, 4cqi, 92px);
+      }
+
+      .char-main__summary {
+        font-size: clamp(1rem, 0.94rem + 0.12cqi, 1.08rem);
       }
     }
 
-    @media (max-width: 1180px) {
-      .char-page {
+    @media (max-width: 1240px) {
+      body.character-stage-ready {
+        overflow: auto;
+      }
+
+      .char-page[data-has-tools="true"] {
         --char-rail-col: clamp(320px, 34vw, 420px);
-        --char-tools-col: clamp(188px, 18vw, 220px);
+        grid-template-areas:
+          "character document";
+        grid-template-columns: minmax(320px, var(--char-rail-col)) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .char-rail {
+        grid-row: auto;
+      }
+
+      .char-tools {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 24px 0 32px;
+        overflow: visible;
+        padding: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        background: transparent;
+      }
+
+      .char-tools__inner {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: none;
+      }
+
+      .char-main {
+        height: auto;
+        overflow: visible;
+      }
+
+      .char-main__header {
+        top: var(--char-nav-height);
       }
 
       .char-main__header,
@@ -1258,8 +1356,19 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       }
 
       .char-page {
-        display: block;
+        display: grid;
+        grid-template-areas:
+          "character"
+          "document";
+        grid-template-columns: minmax(0, 1fr);
         min-height: auto;
+      }
+
+      .char-page[data-has-tools="true"] {
+        grid-template-areas:
+          "character"
+          "document";
+        grid-template-columns: minmax(0, 1fr);
       }
 
       .char-rail,
@@ -1271,19 +1380,28 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       }
 
       .char-rail {
+        grid-row: auto;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       }
 
       .char-tools {
-        padding: 0 28px 20px;
+        width: 100%;
+        margin: 22px 0 30px;
+        padding: 0;
+        border-left: none;
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: none;
         background: transparent;
       }
 
       .char-tools__inner {
         max-width: none;
+      }
+
+      .char-toc {
+        grid-column: 1 / -1;
+        width: 100%;
       }
 
       .char-main__header {
@@ -1324,7 +1442,8 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       }
 
       .char-tools {
-        padding: 0 20px 18px;
+        margin-top: 20px;
+        margin-bottom: 28px;
       }
 
       .char-main__header,
@@ -1333,30 +1452,23 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
         padding-right: 20px;
       }
 
-      .char-fields,
       .char-ability,
       .char-gallery__grid {
         grid-template-columns: 1fr;
       }
 
-      .char-field {
-        border-right: none;
-      }
-
-      .char-field:not(:last-child) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
-      .char-field:nth-last-child(-n + 2) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
-      .char-field:last-child {
-        border-bottom: none;
-      }
-
       .char-note__text {
         font-size: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .char-rail__img,
+      .char-toc__summary svg,
+      .char-rail__next,
+      .char-links__item,
+      .char-main__codex {
+        transition-duration: 0.01ms !important;
       }
     }
 
@@ -1375,7 +1487,7 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
     }
   </style>
 
-  <main id="page-content" transition:name="page-content">
+  <main id="page-content" class="char-stage" transition:name="page-content">
     <nav class="char-nav">
       <a class="char-nav__brand" href={localizedPath(locale, "/")}>
         <img src="/uploads/ui-sine-logo.png" alt="SiNE" />
@@ -1407,10 +1519,10 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       </div>
     </nav>
 
-    <div class="char-page" data-has-tools={showToc ? "true" : "false"}>
+    <div class="char-page" data-has-tools={showContext ? "true" : "false"}>
       <aside class="char-rail">
         <div class="char-rail__hero">
-          {portraitImages.length > 0 ? (
+          {portraitMedia.length > 0 ? (
             <div
               class="char-rail__gallery"
               data-portrait-gallery
@@ -1418,25 +1530,35 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
               data-autoplay={galleryAutoplay ? "true" : "false"}
               data-interval="5000"
             >
-              {portraitImages.map((item, index) => (
-                <img
-                  class="char-rail__img"
-                  data-portrait-slide
-                  data-state={index === 0 ? "active" : "idle"}
-                  src={item.url ?? ""}
-                  alt=""
-                  style={`object-position:${imagePosition};`}
-                />
+              {portraitMedia.map((item, index) => (
+                <picture>
+                  {item.bundle?.avifSrcset && <source type="image/avif" srcset={item.bundle.avifSrcset} sizes={item.bundle.sizes} />}
+                  {item.bundle?.webpSrcset && <source type="image/webp" srcset={item.bundle.webpSrcset} sizes={item.bundle.sizes} />}
+                  <img
+                    class="char-rail__img"
+                    data-portrait-slide
+                    data-state={index === 0 ? "active" : "idle"}
+                    src={item.bundle?.fallbackSrc ?? item.url ?? ""}
+                    srcset={item.bundle?.fallbackSrcset || undefined}
+                    sizes={item.bundle?.sizes}
+                    width={item.bundle?.width || undefined}
+                    height={item.bundle?.height || undefined}
+                    alt={copy.imageAlt(title, index)}
+                    fetchpriority={index === 0 ? "high" : "auto"}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    style={`object-position:${imagePosition};`}
+                  />
+                </picture>
               ))}
             </div>
           ) : (
             <div class="char-rail__placeholder" aria-hidden="true"></div>
           )}
 
-          {portraitImages.length > 1 && (
+          {portraitMedia.length > 1 && (
             <div class="char-rail__controls">
               <div class="char-rail__counter">
-                <span data-portrait-current>1</span> / <span>{portraitImages.length}</span>
+                <span data-portrait-current>1</span> / <span>{portraitMedia.length}</span>
               </div>
               <button
                 class="char-rail__next"
@@ -1500,34 +1622,6 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
         </div>
       </aside>
 
-      {showToc && (
-        <aside class="char-tools">
-          <div class="char-tools__inner">
-            <details class="char-card char-toc" open>
-              <summary class="char-toc__summary">
-                <span class="char-toc__summary-copy">
-                  <span class="char-card__eyebrow">{copy.contents}</span>
-                  <span class="char-toc__meta">{String(contentHeadings.length).padStart(2, "0")} {copy.sectionsLabel}</span>
-                </span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M4 6.25L8 10.25L12 6.25" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </summary>
-              <ol class="char-toc__list" data-character-toc>
-                {contentHeadings.map((heading, index) => (
-                  <li class="char-toc__item" data-toc-item data-heading-id={heading.slug}>
-                    <a href={`#${heading.slug}`}>
-                      <span class="char-toc__number">{String(index + 1).padStart(2, "0")}</span>
-                      <span class="char-toc__label">{heading.text}</span>
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </details>
-          </div>
-        </aside>
-      )}
-
       <section class="char-main" data-character-main>
         <div class="char-main__header">
           <div class="char-main__header-row">
@@ -1550,19 +1644,49 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
         <div class="char-main__body">
           {summary && <p class="char-main__summary">{summary}</p>}
 
-          {fields.length > 0 && (
-            <section class="char-section-block">
-              <div class="char-card__eyebrow">{copy.fileData}</div>
-              <div class="char-fields">
-                {fields.map((field) => (
-                  <div class="char-field">
-                    <CharacterFieldIcon class="char-field__icon" icon={field.icon} />
-                    <span class="char-field__label">{field.label}</span>
-                    <span class="char-field__value">{field.value}</span>
+          {showContext && (
+            <aside class="char-tools" aria-label={locale === "pt-br" ? "Orientacao do dossie" : "Dossier orientation"}>
+              <div class="char-tools__inner">
+                {showToc && (
+                  <details class="char-card char-toc" open>
+                    <summary class="char-toc__summary">
+                      <span class="char-toc__summary-copy">
+                        <span class="char-card__eyebrow">{copy.contents}</span>
+                        <span class="char-toc__meta">{String(contentHeadings.length).padStart(2, "0")} {copy.sectionsLabel}</span>
+                      </span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M4 6.25L8 10.25L12 6.25" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </summary>
+                    <ol class="char-toc__list" data-character-toc>
+                      {contentHeadings.map((heading, index) => (
+                        <li class="char-toc__item" data-toc-item data-heading-id={heading.slug}>
+                          <a href={`#${heading.slug}`}>
+                            <span class="char-toc__number">{String(index + 1).padStart(2, "0")}</span>
+                            <span class="char-toc__label">{heading.text}</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                )}
+
+                {showMetadata && (
+                  <div class="char-tools__metadata">
+                    <CharacterDossierMetadata
+                      classification={classification}
+                      registryFields={registryFields}
+                      personalFields={personalFields}
+                      labels={{
+                        classification: copy.classification,
+                        registry: copy.registry,
+                        personalRecord: copy.personalRecord,
+                      }}
+                    />
                   </div>
-                ))}
+                )}
               </div>
-            </section>
+            </aside>
           )}
 
           <section class="char-section-block">
@@ -1648,6 +1772,12 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
               .replace(/\\s+/g, "-")
               .replace(/-+/g, "-");
           }
+
+          const headingText = (heading.textContent || "").trim();
+          heading.classList.toggle(
+            "is-restricted-record",
+            /^(restricted record|deeper lore)/i.test(headingText)
+          );
         });
 
         prose.querySelectorAll("h3").forEach((heading) => {
@@ -1690,15 +1820,17 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       }
 
       const mainPane = document.querySelector("[data-character-main]");
+      const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const independentPaneQuery = window.matchMedia("(min-width: 1241px)");
+      const persistentToolsQuery = window.matchMedia("(min-width: 1568px)");
       const tocDetails = document.querySelector(".char-toc");
       if (tocDetails instanceof HTMLDetailsElement) {
-        const mobileQuery = window.matchMedia("(max-width: 860px)");
         const syncTocMode = () => {
-          tocDetails.open = !mobileQuery.matches;
+          tocDetails.open = persistentToolsQuery.matches;
         };
 
         syncTocMode();
-        mobileQuery.addEventListener("change", syncTocMode, { signal });
+        persistentToolsQuery.addEventListener("change", syncTocMode, { signal });
       }
 
       const tocItems = Array.from(document.querySelectorAll("[data-toc-item]"));
@@ -1718,30 +1850,37 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
             const target = prose.querySelector(`#${CSS.escape(targetId)}`);
             if (!(target instanceof HTMLElement)) return;
             event.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            target.scrollIntoView({ behavior: reducedMotionQuery.matches ? "auto" : "smooth", block: "start" });
           }, { signal });
         });
 
         const observedHeadings = Array.from(prose.querySelectorAll("h2[id]"));
         if (observedHeadings.length > 0) {
-          const observer = new IntersectionObserver((entries) => {
-            const visible = entries
-              .filter((entry) => entry.isIntersecting)
-              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          let observer = null;
+          const connectTocObserver = () => {
+            observer?.disconnect();
+            observer = new IntersectionObserver((entries) => {
+              const visible = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-            if (visible?.target instanceof HTMLElement) {
-              syncToc(visible.target.id);
-            }
-          }, {
-            root: window.matchMedia("(max-width: 860px)").matches ? null : (mainPane instanceof HTMLElement ? mainPane : null),
-            rootMargin: "-16% 0px -58% 0px",
-            threshold: [0.1, 0.35, 0.7],
-          });
+              if (visible?.target instanceof HTMLElement) {
+                syncToc(visible.target.id);
+              }
+            }, {
+              root: independentPaneQuery.matches && mainPane instanceof HTMLElement ? mainPane : null,
+              rootMargin: "-16% 0px -58% 0px",
+              threshold: [0.1, 0.35, 0.7],
+            });
 
-          observedHeadings.forEach((heading) => observer.observe(heading));
+            observedHeadings.forEach((heading) => observer?.observe(heading));
+          };
+
+          connectTocObserver();
           syncToc(observedHeadings[0].id);
+          independentPaneQuery.addEventListener("change", connectTocObserver, { signal });
 
-          listenerScope.signal.addEventListener("abort", () => observer.disconnect(), { once: true });
+          listenerScope.signal.addEventListener("abort", () => observer?.disconnect(), { once: true });
         }
       }
 
@@ -1786,7 +1925,7 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
         const transition = portraitGallery.getAttribute("data-transition") === "slide" ? "slide" : "fade";
         const autoplay = portraitGallery.getAttribute("data-autoplay") !== "false";
         const interval = Number(portraitGallery.getAttribute("data-interval") || "5000");
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const reducedMotion = reducedMotionQuery.matches;
         let activeIndex = 0;
         let locked = false;
 

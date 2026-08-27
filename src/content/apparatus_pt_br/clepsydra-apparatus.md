@@ -11,13 +11,13 @@ summary: "Um aparato Precursor que testa se um estado apresentado é sustentado 
 tags: ["Aparato", "Precursor", "Selo Intacto", "Determinação", "Clepsydra", "Sciel", "Apocachynthion", "Igreja"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-07-13"
+updated: "2026-08-14"
 image: "../../assets/uploads/app-clepsydra-apparatus.png"
 ---
 
 ## Correção principal
 
-Clepsydra **não** é um Obscurial, o Instrumento de Sciel ou uma cópia portátil do Instrumento da Verdade. É um aparato de serviço construído pelos Precursores e antes acoplado à jurisdição da **Determinação**. O núcleo-lei do Instrumento de Sciel permanece fixo na Coroa Lunar.
+Clepsydra **não** é um [[obscurials|Obscurial]], o Instrumento de Sciel ou uma cópia portátil do Instrumento da Verdade. É um aparato de serviço construído pelos Precursores e antes acoplado à jurisdição da **Determinação**. O Obscurial real associado àquela relação desapareceu da configuração lunar durante a Fratura. O que sobrevive é a lógica de serviço de Clepsydra e sua relação danificada com a antiga interface de Determinação — não um núcleo-lei ainda assentado na Crown.
 
 ## Forma e função
 
@@ -37,6 +37,6 @@ São intertravamentos repetidos em cada uso:
 
 ## Depois da Fratura
 
-Clepsydra recusa muitas mãos e atravessa falhas de custódia para alcançar alguns operadores. Isso pode ser intertravamento danificado, influência das cicatrizes de Sciel ou recusa remota pelo antigo acoplamento lunar. Nenhuma hipótese prova que Sciel sobreviva dentro do aparato.
+Clepsydra recusa muitas mãos e atravessa falhas de custódia para alcançar alguns operadores. Isso pode ser correspondência de intertravamento danificado, influência carregada pelas cicatrizes de coendereço de Sciel ou comportamento estreito de recusa preservado no antigo acoplamento de serviço. Nenhuma hipótese prova que Sciel sobreviva dentro do aparato ou coloca o Obscurial desaparecido dentro dele.
 
 Seu pior uso é a **correspondência forçada**: tratar o modelo de um operador como o único mundo admissível.

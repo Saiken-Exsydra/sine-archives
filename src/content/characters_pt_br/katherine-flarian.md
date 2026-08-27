@@ -8,7 +8,7 @@ affiliation: "SiNE Stasis — Escritório de Continuidade (S-AE)"
 house: ""
 rank: "Arquiteta de Continuidade"
 registry_status: "Interno da SiNE — liberação nível Meridian; sem associação pública com Stasis"
-designation: "Aquela que ouve a parede ceder"
+designation: "World Nerve"
 height: ""
 build: "Alta, magra — se move com uma economia de movimentos deliberada; a dor crônica mudou a forma como ela ocupa o próprio corpo"
 complexion: "Pele clara; fadiga acinzentada recorrente ao redor dos olhos durante períodos de crise"
@@ -17,11 +17,11 @@ eyes: "Cinza, frios e nítidos; em baixa luz parecem quase sem cor"
 dress: "Jalecos sob medida feitos tanto para movimentação em campo quanto para ambientes formais; roupas escuras ajustadas por baixo; luvas em locais ativos; carrega consigo medicação, blocos de anotação analógicos e instrumentos de isolamento"
 residence: "Alojamentos seguros de Kalt'sen, no anel administrativo inferior de Pluribus Hill; rotação frequente por locais de campo da Stasis"
 occupation: "Arquiteta de Continuidade, Escritório de Continuidade da SiNE Stasis (S-AE)"
-summary: "Aprendeu o som que a realidade faz quando comeca a discordar de si mesma, e transformou isso em oficio."
+summary: "Reality hurts first in her body."
 tags: ["SiNE", "Stasis", "Continuity-Sensitive", "Vel'hara", "Himmelreich", "Stabilistics"]
 status: "public"
 created: "2026-05-10"
-updated: "2026-05-10"
+updated: "2026-08-26"
 codex_file: "Katherine Flarian Dossier.md"
 image: "../../assets/uploads/char-katherine-flarian.webp"
 hero_image: "../../assets/uploads/char-katherine-flarian-hero.png"
@@ -90,6 +90,8 @@ Primeiro, identificou que o próprio relay sink estava funcionando como amplific
 
 Depois, cortou manualmente o corredor de sincronização da instalação com a espinha dorsal da lattice Clepsydra — impedindo que o padrão de contradição se espalhasse para uma rede de comunicações ativa com alcance urbano.
 
+Esse corte foi isolamento manual de sistemas sob condições impossíveis. Não foi Continuity Severance.
+
 Por fim, permaneceu dentro da instalação tempo suficiente para concluir o corte.
 
 Esse último detalhe é justamente o que o corpo dela nunca perdoou.
@@ -132,13 +134,21 @@ Na prática, o Mapeamento de Continuidade é usado para previsão de rupturas em
 
 A segunda capacidade dela é mais limitada — e muito mais cara.
 
-Katherine não consegue impor ordem a um local pela força de vontade. O que ela consegue fazer, com equipamento preparado, é usar a própria leitura distorcida como Anchor humana para um arranjo de contenção projetado para forçar um ambiente a entrar temporariamente em auto-coerência.
+Katherine não consegue impor ordem a um local pela força de vontade. Com equipamento preparado, sua leitura distorcida serve como **referência humana** para um arranjo de contenção projetado para forçar um ambiente a entrar temporariamente em auto-coerência. Ela não possui Anchor.
 
 A trava exige placas de lattice de BrightCrystal calibradas, relógios analógicos de isolamento que não corrigem automaticamente o horário pela rede, buffers de contradição embutidos na rede elétrica local e Katherine fisicamente posicionada dentro da geometria de controle.
 
 Quando a trava funciona, uma sala ou câmara de relay se torna temporariamente mais difícil de ser bifurcada por uma entidade independente de travessia. Essa janela normalmente dura minutos, não horas.
 
 A trava sempre cobra um preço dela. Dor severa após o procedimento, vômito, tremores e perda de concentração são consequências padrão. Depois de duas travas em um único dia, Katherine é retirada de campo por ordem médica — concordando ou não.
+
+Equipes treinadas do Continuity Office conseguem executar travas preparadas com assistência técnica sem Katherine. Ela continua sendo a operadora mais precisa e improvisacional, não a única pessoa capaz de fazer o procedimento.
+
+### Continuity Severance
+
+**Continuity Severance** não é uma trava mais forte, uma forma de Redactory nem um efeito que o equipamento consiga reproduzir sozinho. Katherine usa o dano inscrito em seu sistema nervoso para enfraquecer o monopólio local de um único conjunto de eventos. Pessoas afetadas podem então recordar sequências concorrentes que continuavam presentes, mas haviam sido suprimidas.
+
+Isso devolve agência; não escolhe um passado preferido nem reescreve o que aconteceu. **Operation WHITE BED** é o caso de controle: uma vítima recusou uma sequência authored que terminava em self-redaction fatal, e Katherine abriu espaço suficiente para que essa recusa continuasse real. O procedimento lhe custou colapso físico severo e dano à própria memória. É uma intervenção de emergência, não uma cura repetível.
 
 ### Stabilistics
 

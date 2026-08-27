@@ -14,7 +14,7 @@
 
 *The file that led to Hisui Kirasagi was not one I opened. It was opened for me.*
 
-*Stasis receives lawfully reportable foreign-anomaly flags through the imperial border-health compact when physiological markers in an applicant's medical intake fall outside standard profiles. Protected health detail remains subject to sealed review and purpose limits. The flags arrive quarterly. Most are unremarkable — metabolic anomalies, inherited resonance sensitivity in lineages that never produced practitioners, or minor Dive complications recorded without a complete framework. The Hisui brief reached me through Meridian anomaly review, not Clockwork; immigration screening is not an interstitial-custody mandate.*
+*Stasis receives lawfully reportable foreign-anomaly flags through the imperial border-health compact when physiological markers in an applicant's medical intake fall outside standard profiles. Protected health detail remains subject to sealed review and purpose limits. The flags arrive quarterly. Most are unremarkable — metabolic anomalies, inherited resonance sensitivity in lineages that never produced practitioners, or minor Dive complications recorded without a complete framework. The Hisui brief reached me through Meridian anomaly review, not Clockwork; immigration screening is not a covert military objective.*
 
 *The flag for Hisui Kirasagi arrived in the second quarter of 2197. The physiological profile the border physicians had recorded — because they are trained to be thorough, and she was thorough enough in her own presentation that nothing in her manner prompted them to be less so — contained structural markers they classified as a minor circulatory irregularity. It was not a circulatory irregularity. What they had measured, without knowing what they were measuring, was the vascular integration of a resonance-active organism that had been symbiotic with its host's blood for longer than she had been alive.*
 
@@ -86,6 +86,8 @@ The Kirasagi have served them for five hundred years. At some point in the early
 ### III.2 What the Abyssal Flower Is
 
 The Abyssal Flower is a resonance-active organism. Not a divine fragment. Not a Redactory construct. It is biological — or was, at some point, biological in a way that has since been complicated by centuries of sustained resonance integration.
+
+Hisui's current stable symbiosis is not yet **Symbiogenesis**. That term belongs to Bloom Shorewalking: the threshold at which host and symbiont cease to meet across an interface and become one syntax-bearing living structure while the host's self-address remains. The Abyssal Flower's Rootline makes that endpoint structurally relevant, not inevitable.
 
 It exists as a symbiotic presence within the bloodline. Each generation inherits it through *seeding* — exposure of the newborn to the previous host's resonance signature at a specific developmental window. If the child's recursive architecture is compatible, the organism takes root. If not, the child dies. The mortality rate across documented Kirasagi generations is approximately thirty percent. The family has maintained the practice for five hundred years.
 

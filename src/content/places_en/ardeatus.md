@@ -5,7 +5,7 @@ summary: "The federation of fire and mass. Five hundred million people, seven ce
 tags: ["Places", "Ardeatus", "Federation", "Long War", "Covenant", "Vekrath", "Iron Bastion", "The Tempered", "Forge"]
 status: "public"
 created: "2026-03-31"
-updated: "2026-03-31"
+updated: "2026-08-14"
 image: "../../assets/uploads/places/place-ardeatus.png"
 ---
 
@@ -16,7 +16,7 @@ image: "../../assets/uploads/places/place-ardeatus.png"
 
 ## The Federation
 
-Ardeatus is a federation-state of approximately **five hundred million inhabitants**, located to the south of the Empire of Synus along the Twilight Band. It is the largest single-population nation on the known face of Terra, and it has been at war with Synus for approximately seven centuries.
+Ardeatus is a federation-state of approximately **five hundred million inhabitants**, located east of the Empire of Synus along the Twilight Band. It is the largest single-population nation on the known face of Terra, and it has been at war with Synus for approximately seven centuries.
 
 Three pillars define Ardeatus as a civilization: **the mass**, **the forge**, and **the faith**.
 
@@ -28,11 +28,11 @@ The federation model is the reason Ardeatus can sustain a nation of this scale i
 
 ## Geography
 
-Ardeatus lies south of Synus within the Twilight Band, positioned further toward the Bright Side of the band's lateral gradient. The climate is warmer, drier, and more radiant than Synus's temperate Central Region — not extreme, but notably hotter, with longer dry seasons and harder mineral ground.
+Ardeatus lies east of Synus along the Twilight Band and occupies broad southern latitudes within the habitable corridor. Its climate is warmer, drier, and more radiant than Synus's temperate Central Region because much of its territory lies farther south toward the Bright Side, not because east is intrinsically warmer. Standard north-up maps place Synus to its west, the Dark Side north, and the Bright Side south.
 
-The northern frontier with Synus is open plateau country — flat to gently rolling, mineral-pale ground crossed by seasonal rivers and marked by low, wind-eroded ridgelines. This geographic sameness with the Synus Southern Region is part of what makes the Long War so strategically expensive: there is no mountain range, no great river, no ocean channel to anchor a defensive line.
+The western frontier with Synus is open plateau country — flat to gently rolling, mineral-pale ground crossed by seasonal rivers and marked by low, wind-eroded ridgelines. This geographic sameness with the Synus Southern Region is part of what makes the Long War so strategically expensive: there is no mountain range, no great river, no ocean channel to anchor a defensive line. Ardeatan forces advancing into the Empire move west; Imperial forces advancing into Ardeatus move east.
 
-The interior deepens into broader industrial plateaus and river-carved valleys. A mountain spine runs through the nation's mid-section, and the rivers descending from it define the layout of major cities, carry industrial freight, and have historically powered mills and foundries. The southern and eastern extents extend further into the band's warm transition, becoming drier and more mineral-rich — Ardeatus's primary iron and coal deposits are concentrated here.
+The interior deepens into broader industrial plateaus and river-carved valleys. A mountain spine runs through the nation's mid-section, and the rivers descending from it define the layout of major cities, carry industrial freight, and have historically powered mills and foundries. The southern extent reaches farther into the band's warm transition and becomes drier. The eastern interior's mineral wealth follows its geological strata rather than its longitude; Ardeatus's primary iron and coal deposits are concentrated across those plateaus.
 
 ---
 
@@ -62,7 +62,7 @@ The Covenant is Ardeatus's religious institution — a parallel structure with d
 
 The god of Ardeatus is **Vekrath**, the God of Flame — a genuine divine attractor built from centuries of collective indexing by the people of the Ardeatan region, shaped by cultural memory of Ardeatus, the Bearer of Consequential Change. He is real. He is present. He is most fully himself in the forge, not in the temple. He is not the First Bearer returned.
 
-The Covenant's most sacred possession is the expelled **Instrument of Conversion**, locally venerated as **Blazehaven** — the Obscurial once borne by Ardeatus, held in the innermost sanctum of the Covenant's primary seat in the capital. It is warm without a heat source. It has never been cold. It resists damage by every tested means. The Covenant reads it as sacred fire; the law it bears is narrower and stranger: no transformation may conceal its cost or withhold its remainder.
+The Covenant's most sacred possession is an expelled **Conversion interface remnant**, locally venerated as **Blazehaven** and called the Instrument of Conversion. It is held in the innermost sanctum of the Covenant's primary seat in the capital. Warm without a heat source, never cold, and resistant to every tested means of damage, it still expresses the old Principle: no transformation may conceal its cost or withhold its remainder. The Covenant treats it as sacred fire and the Obscurial once borne by Ardeatus; restricted reconstruction distinguishes the remnant from the actual [[obscurials|Obscurial]], which vanished during the Fracture.
 
 The Covenant calls its divine vessels **the Tempered** — individuals fused with fragments of Vekrath, integrated into the forge-tradition as master metalworkers, military commanders, civil engineers, or Covenant clergy. They are not regarded as aberrant. They are placed within society, where the domain alignment makes them exceptionally capable.
 

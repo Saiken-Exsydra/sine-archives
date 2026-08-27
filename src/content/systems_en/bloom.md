@@ -5,7 +5,7 @@ summary: "Biological resonance expressed through symbiont, host biology, tissue,
 tags: ["systems", "Bloom", "Rootline", "Abyssal Flower", "Murmuring", "Continuity", "Biological Resonance", "Symbiosis", "Lineage"]
 status: "public"
 created: "2026-06-25"
-updated: "2026-06-25"
+updated: "2026-08-14"
 image: ""
 ---
 
@@ -48,17 +48,17 @@ The core question in Bloom Shorefall is: **is the host falling through the Bloom
 
 ## Bloom Shorewalking
 
-Bloom Shorewalking is the reverse direction in technical Bloom analysis.
+Stable Bloom Shorewalking is **Symbiogenesis**.
 
-Some Bloom lineages may call a stable state **the Walking Root**, but Bloom traditions are not standardized. A dynasty bound to one flower, fungus, root-agent, or biological anomaly may build its own names around the experience.
+Some Bloom lineages call the same endpoint **the Walking Root**, but Bloom traditions are not standardized. A dynasty bound to one flower, fungus, root-agent, or biological anomaly may build its own names around the experience.
 
-The host does not fall through the root. The host internalizes the Rootline.
+The host does not fall through the root. The host internalizes the Rootline until the host-symbiont interface ceases to be an interface.
 
-The Bloom's Shore-root fully grows inside the host's body, continuity, and recursive proximity without dragging the host down into the Shore. The body becomes the walking garden, root-mouth, blood-soil, or flowering aperture.
+Host and symbiont become one syntax-bearing living structure—an organ not born with the host yet no longer separable into user and tool—without dragging the host into the Shore. Host self-address remains. The body becomes the walking garden, root-mouth, blood-soil, or flowering aperture.
 
-Stable Bloom Shorewalking requires host primacy. If the host ceases to remain primary, the state becomes Overbloom, consumption, Murmuring takeover, Root-Stranding, or biological Shore-Breach.
+Symbiogenesis carries temporary **aperture authority** within the compatible jurisdiction of host, symbiont, Rootline, place, relation, and Shore. It is not native sovereignty. Stable Bloom Shorewalking requires host primacy. If the host ceases to remain primary, the state becomes Overbloom, consumption, Murmuring takeover, Root-Stranding, or biological Shore-Breach.
 
-Rootfall is being pulled down by the root. The Walking Root is becoming the root without becoming soil.
+Rootfall is being pulled down by the root. Symbiogenesis is becoming one living grammar without becoming soil.
 
 ---
 
@@ -86,4 +86,4 @@ Bloom failure states include:
 
 ## In One Sentence
 
-Bloom roots: it is biological resonance carrying root-address through living tissue, and its highest survivable states depend on the host becoming the root without becoming soil.
+Bloom roots: it is biological resonance carrying root-address through living tissue, and Symbiogenesis is the rare aperture state in which host and symbiont become one living grammar while the host remains. See [[syntax-authority|Syntax Authority and Recursive Sovereignty]].

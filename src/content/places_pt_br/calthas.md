@@ -16,7 +16,7 @@ image: "../../assets/uploads/places/place-calthas.png"
 
 ## The Armory City
 
-Cal'thas is the primary **weapons-manufacturing center** of the Empire, positioned at the junction of the main northern freight rail and the southern supply corridor that runs to Hora'veil and the frontier. Everything produced by the Empire's military-industrial complex converges here — steel, BrightCrystal components, munitions, vehicle chassis, and the rail artillery platforms that are assembled in the vast workshops on the city's western industrial flank.
+Cal'thas is the primary **weapons-manufacturing center** of the Empire, positioned where the Imperial Arterial's trans-band trunk meets the Southern Supply Corridor linking Hora'veil, Sarn Pell, and the eastern frontier. Everything produced by the Empire's military-industrial complex converges here — steel, BrightCrystal components, munitions, vehicle chassis, and the rail artillery platforms that are assembled in the vast workshops on the city's western industrial flank.
 
 The city is loud, efficient, and defined by the rhythm of its factories. The air carries grit from the metal processing plants and the faint chemical tang of BrightCrystal refinement. The industrial boulevards are wide — designed for the movement of heavy freight and the shift-change floods of workers that pulse through them at regular intervals.
 
@@ -34,6 +34,6 @@ The culture of Cal'thas is production culture. Status is measured in output. The
 
 ## Strategic Position
 
-Cal'thas sits at a critical logistics junction. The **Imperial Spine** — the great arterial rail running the full length of the Empire — passes through Cal'thas, connecting it to Kalt'sen and the northern supply chain. The **Southern Supply Corridor** branches south from here toward Hora'veil and the frontier depots. Raw materials flow in from the mining belts. Finished weapons and materiel flow out toward the war.
+Cal'thas sits at a critical logistics junction. The **Imperial Spine** — the protected arterial rail linking the Empire's regions — passes through Cal'thas, connecting it to Kalt'sen and the northern supply chain. The **Southern Supply Corridor** crosses the Southern Region through Hora'veil and Cal'thas before bending southeast toward Sarn Pell and the eastern frontier depots. Raw materials flow north from the mining belts. Finished weapons and materiel flow east toward the war.
 
 This junction position makes Cal'thas one of the most strategically significant cities in the Empire. It is not a frontier city — it is well behind the active zone — but the frontier cannot function without what Cal'thas produces. The Empire's ability to sustain a seven-century war is, in material terms, the ability to keep Cal'thas running.

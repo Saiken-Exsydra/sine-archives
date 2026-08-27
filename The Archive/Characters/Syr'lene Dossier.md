@@ -12,7 +12,7 @@
 
 Syr'lene was one of the five Precursors operating on Terra during the last intact period of the lunar system. She specialized in integration: the relation among local Anchors, planetary infrastructure, the twelve-seat Seal, and the failure loads those systems could carry together.
 
-She was not a Skyphon, Page fragment, Elemental, or lunar goddess. She was a Precursor Archtype whose own Anchor allowed recursive projection into external structures.
+She was not an Obscurial, Skyphon, Page fragment, Elemental, or lunar goddess. She was a Precursor Archtype whose own Anchor allowed recursive projection into external structures.
 
 At Year 0 she used that Anchor to become the living containment address of the surviving Lunar Fragment. She did not simply die to save Terra. She entered an ongoing commitment and remains conscious inside it.
 
@@ -20,7 +20,7 @@ At Year 0 she used that Anchor to become the living containment address of the s
 
 ## II. Before Luapside
 
-Syr'lene understood the lunar lattice as a system of relationships rather than a machine with interchangeable parts. She knew that the macro-Anchor, Ksy'rion, the twelve co-addressed Instruments, the climate regulators, and Terra's planetary body could not be loaded independently.
+Syr'lene understood the lunar lattice as a system of relationships rather than a machine with interchangeable parts. She knew that the lunar macro-Anchor, Ksy'rion, the twelve actual Obscurials seated through distinct Page-native interfaces, the Skyphon co-addresses, the climate regulators, and Terra's planetary body could not be loaded independently. She also knew that the macro-Anchor, the Intact Seal, and the Obscurials were not interchangeable structures.
 
 The five Precursors knew a foreign fragment had gained purchase during an earlier high-Depth calibration. They believed the Intact Seal held it as a locally isolated state. Syr'lene's surviving records show the strongest concern that the state remained coupled to pressure outside the Page, but no complete Precursor model proved the coupling before Year 0.
 
@@ -41,7 +41,7 @@ Syr'lene entered the handoff on the eleventh beat:
 5. the intrusion fragment met active living resistance rather than an empty lattice;
 6. the final beat released and the Moon completed its physical shear.
 
-Time did not choose for her. Oracle did not see a future in which she acted. The Skyphons did not create her capacity. Their work made the handoff possible; her decision made it real.
+Time did not choose for her. Oracle did not see a future in which she acted. The Skyphons did not create her capacity. Their work made the handoff possible; her decision made it real. She projected into the Precursor macro-Anchor and surviving lunar infrastructure, not into an Obscurial.
 
 ---
 
@@ -55,7 +55,7 @@ Syr'lene perceives through the architecture to which she is bound:
 - Precursor infrastructure coupled to the Crown;
 - BrightCrystal amplification reaching the lunar network;
 - large Redactory disturbances as overlay-class anomaly;
-- the damaged twelve-seat filters as unequal jurisdictions rather than living voices.
+- the damaged seats, interfaces, relays, scars, harmonic filters, and loads as unequal jurisdictions rather than living voices.
 
 She does not possess omniscience. The apparatus defines her senses. A condition outside its coupling can remain unknown to her. The Quiet Moon is not automatically present to her as an intelligible object merely because it exists in the same system.
 
@@ -63,7 +63,7 @@ She does not possess omniscience. The apparatus defines her senses. A condition 
 
 ## V. Callings
 
-Syr'lene does not send Callings.
+Syr'lene does not send Callings. They are not Obscurial speech or Skyphon messages either.
 
 Pressure from the embedded intrusion fragment meets her containment. Time makes that conflict occur in sequence. The resulting harmonic surge passes through the Ring, Precursor infrastructure, and BrightCrystal before becoming a surface event. The damaged twelve-seat architecture filters the surge into recurring expression families.
 
@@ -84,6 +84,7 @@ She cannot:
 - command Time;
 - restore the Skyphons;
 - reassemble the Intact Seal;
+- locate, replace, or speak for the missing Obscurials;
 - author Callings as messages;
 - open the Moon to approach through the Metric Safeguard;
 - end the intrusion fragment by simple force.
@@ -125,7 +126,9 @@ No institution possesses the complete dossier.
 6. Her intervention does not override the Metric Safeguard.
 7. Sol'ytra is a separate Crownborn person, not Syr'lene returned.
 8. Syr'lene cannot restore the twelve Bearers or the Intact Seal.
+9. She projected into the lunar macro-Anchor and surviving Precursor infrastructure, not into an Obscurial.
+10. She did not merge with, become, replace, or inherit the temporal status of an Obscurial.
 
 ---
 
-*Cross-reference: The Lunar Crown Codex; The Terra Codex; The Skyphons Codex; The Precursors Codex; The Harmonic Systems Codex; Sol'ytra Dossier.*
+*Cross-reference: The Obscurials Codex; The Lunar Crown Codex; The Terra Codex; The Skyphons Codex; The Precursors Codex; The Harmonic Systems Codex; Sol'ytra Dossier.*

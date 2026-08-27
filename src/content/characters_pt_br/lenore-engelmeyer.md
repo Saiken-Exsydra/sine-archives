@@ -7,26 +7,26 @@ birthplace: "Drevholt, interior da faixa ocidental"
 affiliation: "Apocachynthion (licenciada); Casa Engelmeyer (blood Seat, administração pelo Furnace Council)"
 house: "Engelmeyer (origem Voren; blood Seat desde a reintegração em 2199)"
 rank: "Quill"
-registry_status: "Registrada — admissão em 2193; certificação Quill emitida em 2195; licença operacional condicional ativa"
+registry_status: "Registrada — admissão em 2193; Quill desde 2195; prática cívica independente, sem colocação marcial"
 point_profile:
-  status: ""
-  cas_access: ""
-  leaf_permissions: ""
-  register_access: ""
-designation: "Fome palida de lua"
+  status: "Emitido pela Academy; carregado"
+  cas_access: "CAS básico; protocolos perceptivos restritos pela disclosure Margin"
+  leaf_permissions: "Common Leaves; Licensed Leaves por permissão de Mark"
+  register_access: "Protegido; sem revisão aberta"
+designation: "Hunger and Silk"
 height: "169 cm"
 build: "Leve; compacta sem parecer frágil; se move como alguém que já decidiu antes quanto espaço pretende ocupar"
 complexion: "Clara; uniforme — sem sinais superficiais de coerência durante expressão de habilidade. A ausência de sinais é, por si só, um sinal para quem sabe procurar."
-hair: "Loiro quase branco — a cor de linho antigo sob luz direta. Cortado em um bob assimétrico preciso, com o lado mais longo caindo sobre a testa."
+hair: "Loiro quase branco — bob shaggy curto e suavemente repicado, com curtain bangs e pontas levemente viradas para fora"
 eyes: "Cinza muito claro — quase sem cor em ambientes pouco iluminados. Todo avaliador que passou tempo suficiente sentado diante dela comentou sobre os olhos, e nenhum encontrou uma descrição que encerrasse o assunto."
 dress: "Branco por preferência — linhos claros, lãs leves, materiais que não chamam atenção para si"
 residence: "Vel'hara, faixa ocidental (realocada em 2199)"
-occupation: "Praticante independente — licenciada para atuação operacional sob termos condicionais"
-summary: "Encantadora, cuidadosa, impossivel de comover; veste a civilidade como seda sobre uma fome de paciencia exemplar."
+occupation: "Praticante cívica independente — sem colocação marcial"
+summary: "Her kindness is real. So is what she keeps hungry."
 tags: ["Engelmeyer", "Deception", "Redactor", "Quill", "Vel'hara", "Corvel", "Hunger", "Voren"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-07-13"
+updated: "2026-08-26"
 codex_file: "Lenore Engelmeyer Dossier.md"
 image: "../../assets/uploads/char-lenore-engelmeyer.png"
 hero_image: "../../assets/uploads/char-lenore-engelmeyer-hero.png"
@@ -77,22 +77,29 @@ Os efeitos de Le'nore alteram entradas sensoriais roteadas em vez de construir u
 
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** Folha selada  
+**Tipo de Arquivo:** Sealed File  
 **Registry Status:** Registrada  
 **Rank:** [[quill|Quill]]  
 **[[mark|Mark]]:** [[mark-2|Mark 2]]  
 **[[open-mark|Open Mark]]:** None  
-**[[margins|Margins]]:** Civico  
+**[[margins|Margins]]:** Civic  
+**Restrictions:** Divulgação obrigatória para influência perceptiva sem consentimento; sem colocação marcial; sem ampliação além de Mark 2  
+**Point:** Emitido pela Academy; carregado  
+**CAS Access:** CAS básico; protocolos perceptivos restritos pela disclosure Margin  
+**Leaf Permissions:** Common Leaves; Licensed Leaves por permissão de Mark  
+**Point Register:** Protegido; sem revisão aberta  
 **Anchor:** Deception  
 **Anchor Reading:** Confirmed  
-**Depth Reading:** Deep  
-**Reach Reading:** broad  
+**Anchor Depth:** Deep Anchor  
+**Reach:** Wide Reach  
+**Overreach History:** Overreach biológico administrado; sem Blot formal  
+**Apparatus Permissions:** Ordinary Apparati; sem martial apparati  
 **Registration Tenure:** 7 anos  
-**Academy Record:** Intake de Hora'veil em 2193; confirmacao do painel especialista em 2194; certificacao Quill em 2195  
-**Practice Record:** Trabalho civico e de contratada sob compacto inter-registro da faixa oeste  
-**[[blots|Blots]]:** Nenhum  
+**Academy Record:** Intake de Hora'veil em 2193; confirmação do painel especialista em 2194; certificação Quill em 2195  
+**Practice Record:** Trabalho cívico e como contratada sob compacto inter-registro da faixa oeste  
+**[[blots|Blots]]:** Nenhum registro formal  
 **Pager Note:** None  
-**[[seal|Current Seal]]:** Autoridade regional de Hora'veil; revisao de avaliador senior
+**[[seal|Current Seal]]:** Autoridade regional de Hora'veil; revisão de avaliador sênior
 
 ## Verdadeira Natureza — O Que a Classificação Não Contém
 
@@ -134,6 +141,10 @@ Le'nore não precisa controlar a mente de ninguém para tornar uma sala mais fav
 
 Isso não elimina agência, não emite ordens e não funciona como hipnose. Apenas altera o clima em que a agência interpreta o que já percebeu. A resistência é possível, mas costuma chegar tarde demais.
 
+### Resistência à Redactory
+
+A arquitetura recursiva mortal de Le'nore possui soberania incomumente coerente. Isso a torna difícil de alterar, prender ou redefinir por Redactory externa, mas não imune. Preparação, força suficiente e jurisdição apropriada ainda podem superá-la. A resistência não lhe concede autoridade nativa de Page, alcance planetário nem status de Archtype.
+
 ### Sorriso e Revelação
 
 O sorriso de Le'nore é sua menor revelação deliberada: uma abertura breve demais para virar prova, longa demais para ser esquecida. Boca larga demais, dentes demais, profundidade demais, e então o retorno imediato à civilidade.
@@ -142,7 +153,7 @@ A revelação completa é terminal. Ela não mostra o todo de si mesma a testemu
 
 ### Avaliação de Ameaça
 
-Para fins operacionais, Le'nore deve ser tratada como ameaça de nível Archtype, apesar de não ser uma Archtype de Redactory. Sua maior limitação não é falta de poder, mas inexperiência: ela não passou a vida lutando contra iguais, doutrina de batalha de alto nível, artefatos ou instituições preparadas especificamente para sobreviver ao primeiro contato.
+Para planejamento de ameaça, Le'nore pode exigir resposta de nível Archtype sem ser uma Archtype de Redactory nem possuir sua jurisdição. Sua maior limitação não é falta de poder, mas inexperiência: não concluiu curso de combate da House nem passou a vida lutando contra iguais, artefatos ou instituições preparadas especificamente para sobreviver ao primeiro contato.
 
 ---
 
@@ -150,7 +161,7 @@ Para fins operacionais, Le'nore deve ser tratada como ameaça de nível Archtype
 
 Le'nore é marcadamente atraente de um jeito que as pessoas percebem antes de qualquer outra coisa. Primeiro notam o rosto. Depois percebem outra coisa. E normalmente, quando tentam entender o que exatamente foi essa segunda coisa, já sorriram de volta para ela sem perceber.
 
-Leve e compacta, se move com uma economia muito específica — como alguém que já decidiu previamente quanto espaço pretende ocupar e não vê motivo para revisar a estimativa. Seu cabelo é loiro ao ponto de quase branco, cortado em um bob assimétrico preciso. Seus olhos são cinza muito claros — quase sem cor em baixa iluminação. Todo avaliador que passou tempo suficiente sentado diante dela comentou sobre os olhos e nenhum conseguiu encerrar o assunto com uma descrição satisfatória. O primeiro avaliador de campo que a encontrou escreveu: *a cor não é a parte que realmente chama atenção.* Ele não elaborou.
+Leve e compacta, se move com uma economia muito específica — como alguém que já decidiu previamente quanto espaço pretende ocupar e não vê motivo para revisar a estimativa. Seu cabelo é loiro ao ponto de quase branco, cortado em um bob shaggy curto e suavemente repicado, com curtain bangs amplas e pontas levemente viradas para fora. Seus olhos são cinza muito claros — quase sem cor em baixa iluminação. Todo avaliador que passou tempo suficiente sentado diante dela comentou sobre os olhos e nenhum conseguiu encerrar o assunto com uma descrição satisfatória.
 
 Ela prefere branco: linhos claros, lãs leves, materiais que não anunciam a própria presença. A preferência é consistente o bastante ao longo de cinco anos de registros para funcionar como assinatura, sem jamais virar regra explícita.
 
@@ -224,7 +235,7 @@ Ele nunca perguntou o que aconteceu na noite em que a mãe dela desapareceu. Ela
 
 ## Condição Atual — 2200
 
-Le'nore está em Vel'hara, operando sob sua licença condicional, navegando sua reintegração a uma Casa principal que entende menos sobre ela do que acredita entender e permanecendo extremamente silenciosa sobre os dois fatos que mais exigem silêncio.
+Le'nore está em Vel'hara, exercendo prática cívica independente e navegando sua reintegração a uma Casa principal que entende menos sobre ela do que acredita entender. Não concluiu curso de combate da House, não possui permissão para martial apparati e não recebeu ampliação além de Mark 2. O direito sucessório não pode ser convertido em autoridade militar.
 
 Ela lê. Segue fios. Existe no presente com um nível de presença que a maioria das pessoas só alcança ocasionalmente. Se isso é contentamento, ou a paciência de algo que sabe que tem tempo, ou simplesmente a natureza dela — o arquivo não chega a uma conclusão.
 

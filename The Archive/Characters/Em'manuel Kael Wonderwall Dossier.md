@@ -37,7 +37,7 @@
 | **Biological Status** | Indefinite biological continuation, maintained through Archtype-class recursive self-modification. Not immortal in any cosmological sense. Not mortal in any practical one. |
 | **Institutional Affiliation** | Wonderwall Seat (dynastic head, primary line); Chief Executive, SiNE (the Wonderwall Company); Hereditary Senator, Empire of Synus. These three designations refer to the same position. |
 | **Additional Designation** | Remainder-bearer, primary expression. Over a millennium of sustained contact — 1,074 years. This designation does not appear in any institutional document. The name has never been spoken where another person could hear it. |
-| **CLOCKWORK Relationship** | Founding authority and current Seat-warrant source. Clockwork remains active but may refuse a false seam; its direct relationship to him is constitutionally unchartered. |
+| **CLOCKWORK Relationship** | Sole objective authority as the Wonderwall Seat under the Accord of the Unspent Beat. The Dial translates; twelve Hourhands execute 144 active Redactor seats. Meridian, Crown, HourGlass, Clepsydra, and Apoc hold no command. |
 | **Project Kaleidoscope** | Authorizing director and primary accountable sponsor. Biological production permanently ended in 2179; care, reparations, protected disclosure, and archive obligations remain active. |
 | **House Government** | Wonderwall Seat. Al'ithia holds First Hearth and the Hearth Meridian; House recognition and family consequence do not reduce to his corporate command. |
 | **SiNE Government** | Chief executive above the Meridian Council. May issue a Forced Meridian Order but cannot manufacture technical truth, personhood consent, judicial capacity, or Crown sovereignty. |
@@ -49,7 +49,7 @@
 
 ### II.1 Before the Founding — The House of Exsydra
 
-The Wonderwall House predates the Empire and the Sundering. Before the name belonged to Em'manuel, it belonged to a woman named A'licia Rae Wonderwall, and before it belonged to her it belonged to her family — one of the Old Twelve, politically minor beside the dominant dynasties, based in the northern coastal region and focused on BrightCrystal structural behavior at the Scorch interface. The House mattered at Selia because it refused. Its ordinary reputation before then was technical rather than glamorous. Not central. Useful.
+The Wonderwall House predates the Empire and the Sundering. Before the name belonged to Em'manuel, it belonged to a woman named A'licia Rae Wonderwall, and before it belonged to her it belonged to her family — one of the Old Twelve, politically minor beside the dominant dynasties, based in the northern coastal region and focused on BrightCrystal specimens and structural records brought north from the southern Scorch interface. The House mattered at Selia because it refused. Its ordinary reputation before then was technical rather than glamorous. Not central. Useful.
 
 Em'manuel was not born into that family. He was born into a different one entirely.
 
@@ -147,7 +147,7 @@ The domain is Interval. His designation. Not theirs.
 
 Interval is not spatial distance. It is the relational property of the gap between configurations — spatial, sequential, structural. The space between where something is and where it is not. The pause between one configuration's existence and the next one's. The structural fact that every state that has ever existed has existed in relation to adjacent states, and those relations are themselves a property of the Archive's grammar — present, quantifiable, and, for a practitioner whose recursive architecture stabilizes around them, accessible.
 
-No other practitioner in the Apocachynthion's twelve-century record holds an Interval Anchor. The domain has been documented twice in pre-Imperial scholarship, in records whose theoretical framework was insufficient to name what they were describing. The Exsydra house's sequence-reading tradition was the closest approach to formal articulation — three generations of practitioners whose inherited Interval sensitivity had been developed into a working methodology, however misinterpreted in its theoretical framing. They called it time-reading. They were reading trajectory: the slope of present configurations toward adjacent ones, governed before the Fracture by *Forðgesceaft*, the Instrument of Foresight's law, scattered into residual influence when the bearing ended. The Exsydra accessed something real. They understood it imprecisely. The Sequence Doctrine was the catastrophic expression of that imprecision at scale.
+No other practitioner in the Apocachynthion's twelve-century record holds an Interval Anchor. The domain has been documented twice in pre-Imperial scholarship, in records whose theoretical framework was insufficient to name what they were describing. The Exsydra house's sequence-reading tradition was the closest approach to formal articulation — three generations of practitioners whose inherited Interval sensitivity had been developed into a working methodology, however misinterpreted in its theoretical framing. They called it time-reading. They were reading trajectory: the slope of present configurations toward adjacent ones, governed before the Fracture through *Forðgesceaft*, the Consequence Principle and its complete Bearer-interface relation, then left as residual influence when that bearing ended. The Exsydra accessed something real. They understood it imprecisely. The Sequence Doctrine was the catastrophic expression of that imprecision at scale.
 
 Em'manuel named the domain himself, in the century after the Sundering, when he had sufficient distance from the Exsydra's errors to understand what they had been reaching toward without making the same interpretive mistake. He has never used the name in any institutional context. The Apocachynthion calls it Spatial Coherence and he accepts the designation without comment. He does not need them to know what he is. He needs them to accept that he is useful. These requirements are not the same.
 
@@ -155,23 +155,23 @@ Em'manuel named the domain himself, in the century after the Sundering, when he 
 
 Interval is an Abyssal Anchor. This is the structural fact that the Apocachynthion's framework cannot accommodate and the one that makes Em'manuel's profile unclassifiable within any taxonomy the institution has developed.
 
-The Page's grammar has depth. Any concept that a Redactor can anchor to exists somewhere along a vertical descent — surface expressions near the top, increasingly foundational expressions below, until at the bedrock you find concepts that do not themselves derive from anything else in the Page's own structure. These are bedrock primitives: the irreducible grammatical foundations from which all surface expressions above them are ultimately built. An Anchor formed near the surface is specific, derived, particular. The practitioner who manifests *Ignition* as their Anchor is anchored to a real and useful thing — but it is a downstream expression of something more foundational. They spend careers pushing the Anchor deeper toward that foundation.
+The Page's grammar has depth. Any concept that a Redactor can anchor to exists somewhere along a vertical descent — surface expressions near the top, increasingly foundational expressions below, until at the bedrock you find concepts that do not themselves derive from anything else in the Page's own structure. These are bedrock primitives: the irreducible grammatical foundations from which all surface expressions above them are ultimately built. An Anchor formed near the surface is specific, derived, particular. The practitioner who manifests *Ignition* as their Anchor is anchored to a real and useful thing — but it is a downstream expression of something more foundational. They may spend careers deepening their route, extending their Dive tolerance, and learning to descend toward that foundation, but the Ignition Anchor itself remains Shallow.
 
 Interval does not derive from anything that exists in the Page's own grammar. The relational property of the gap between configurations is not downstream of any other concept. It is the structural condition within which all other configurations exist in relation to each other — not a phenomenon the Page expresses, but a property of how the Page's expressions relate at the grammatical level that underlies all of them. It sits at the bedrock not because Em'manuel pushed it there across decades of dangerous incremental work, but because that is where Interval exists. The Anchor formed there at the moment of first manifestation.
 
-This means what an Abyssal Anchor always means: the decades of deepening work that a derived Anchor practitioner must accumulate across a lifetime are simply absent from the path. Em'manuel's Anchor has never needed to be pushed deeper. It has never sat anywhere but the bottom. What that costs is not the incremental risk of each deepening session — it is the requirement that every session of full-capacity Anchor-adjacent work requires descending to the strata of the Page's conceptual structure, every time, without the intermediate training ground that a derived Anchor practitioner develops across years of progressively greater depth.
+This means what an Abyssal Anchor always means: Em'manuel's conceptual home has never sat anywhere but the bottom. It does not mean that route training, Dive tolerance, or ascent discipline are absent from his path, and it does not mean that a practitioner with a derived Anchor could turn that Anchor Abyssal through decades of work. What it costs is that every session of full-capacity Anchor-adjacent work requires an Abyssal Dive to the strata of the Page's conceptual structure, every time. He must still learn to cross the Shallow and Deep bands and return from them, but he does so without the intermediate conceptual home that a Shallow- or Deep-Anchor practitioner possesses.
 
-The shallow-Dive capability gap is pronounced. At shallow Depth, the Interval Anchor is far below him. He is not near it. The configurations available at shallow depth are surface impressions of a domain whose natural home is the bedrock — distant from the routing pathway, disconnected from the structural depth where Interval actually lives. A derived Anchor practitioner at shallow Depth is working close to their home depth. Em'manuel at shallow Depth is working in conditions his Anchor was never built to optimize for.
+The Shallow-Dive capability gap is pronounced. During a Shallow Dive, the Interval Anchor is far below him. He is not near it. The configurations available in the Shallow band are surface impressions of a domain whose natural home is the bedrock — distant from the routing pathway, disconnected from the structural depth where Interval actually lives. A Shallow-Anchor practitioner in a Shallow Dive is working close to their home depth. Em'manuel in a Shallow Dive is working in conditions his Anchor was never built to optimize for.
 
-The Apocachynthion's Spatial Coherence classification describes what shallow-Dive Interval work looks like from the outside. It does not describe what Interval is.
+The Apocachynthion's Spatial Coherence classification describes what Shallow-Dive Interval work looks like from the outside. It does not describe what Interval is.
 
 **On Formation**
 
 Abyssal Anchors are exceptional because the process that forms Anchors should not produce them. Anchor formation converges on specificity — the particular way a particular person encountered a particular thing. That convergence almost always produces something derived and near-surface. A bedrock-level Anchor implies a recursive bias that organized not around any specific expression of a concept but around the concept's deepest grammatical form.
 
-In Em'manuel's case, the formation history is legible in retrospect, though he did not understand it in these terms at the time. The Exsydra house had spent three generations developing Interval sensitivity — practitioners whose inherited recursive bias consistently oriented toward the relational gap between configurations, across multiple individuals, across decades of compounding Anchor work and theoretical development. Al'uxxios Exsydra was born into the third generation of that accumulated orientation. His first significant Redaction did not anchor to any specific expression of the gap-space. It anchored to the gap-space itself, on the strata where it exists as a foundational primitive, because that was the level at which three generations of concentrated recursive bias had prepared him to stabilize.
+In Em'manuel's case, the formation history is legible in retrospect, though he did not understand it in these terms at the time. The Exsydra house had spent three generations developing Interval sensitivity — practitioners whose inherited recursive bias consistently oriented toward the relational gap between configurations, across multiple individuals, across decades of compounding practice and theoretical development. Al'uxxios Exsydra was born into the third generation of that accumulated orientation. His first significant Redaction did not anchor to any specific expression of the gap-space. It anchored to the gap-space itself, on the strata where it exists as a foundational primitive, because that was the level at which three generations of concentrated recursive bias had prepared him to stabilize.
 
-The Exsydra's theoretical framework was wrong about what they were reading. Their accumulation of Anchor depth across the family was not wrong at all. It produced, in the lineage's youngest adult practitioner, exactly the result that three generations of compounding Interval orientation was structurally capable of producing. He did not understand this until long after the Sundering. By the time he did, there was no Exsydra house left to explain it to.
+The Exsydra's theoretical framework was wrong about what they were reading. Their accumulation of Interval-directed recursive bias across the family was not wrong at all. It produced, in the lineage's youngest adult practitioner, exactly the result that three generations of compounding Interval orientation was structurally capable of producing. He did not understand this until long after the Sundering. By the time he did, there was no Exsydra house left to explain it to.
 
 ---
 
@@ -217,6 +217,18 @@ At medium Depth, the picture changes. By routing into the interval properties be
 At Archtype Depth, amplified by the Cadence: the Interval Anchor approaches its deepest operational expression. The relational properties of a bounded region — the structural facts governing how every configuration within it relates to its adjacent ones — can be forced to express at a specified state, making any transition out of that state require structural cost the region cannot support. The effect, from outside: the region holds. Everything within it holds the configuration it occupied when the expression was imposed. Time continues to traverse the region — it reads what is there, advances to the next configuration, finds the same configuration, reads it again. The region does not stop. It simply has nothing new to offer.
 
 This is not what a Time Fragment does. A Time Fragment stops the reading. He stops the availability of the next page. The mechanism is categorically different. The cost to him is real and significant. He cannot maintain it indefinitely.
+
+### III.4.A Ordinary Spatial Fluency
+
+Sovereign Depth did not make Interval irrelevant by allowing Em'manuel to operate outside it. The opposite occurred. After twelve centuries, Interval has become the conceptual language through which he solves even problems that do not appear spatial.
+
+He can instance ordinary objects, alter light or sound, maintain protection, perform material work, and route through distant configuration domains. When several methods would answer the same need, he usually changes the relation instead of manufacturing the result. A requested file becomes adjacent to his hand. A corridor ceases to require its full walking distance. A chair occupies the place the conversation requires without visibly crossing the room. A distant listener is no longer adjacent to the path by which the conversation's sound would reach them. A threshold opens onto a bounded interior whose available rooms are not metrically contained behind the visible wall.
+
+His private working environments may therefore include folded or standing interiors maintained as ordinary habit: storage, meeting space, records, instruments, controlled access, and stable environmental conditions carried beneath the task occupying his conscious attention. Their persistence is not permanent matter and not another universe. They remain inside the Page and Time, depend upon defined spatial support, and are released through conditions established before anyone enters them.
+
+This fluency is older than most institutions that attempt to measure it. Observers often notice only the missing inconvenience: the document was already present, the route was shorter, the room admitted no distant hearing, the rain never reached the guest, the required instrument occupied the correct hand. A newly stabilized Archtype with equivalent structural status could force many of the same results and still need to construct, track, and release them deliberately. Em'manuel's distinction is that the supporting relations usually disappear beneath the conversation.
+
+He does not use route-dependent matter carelessly. Food, drink, medicine, blood, and other substances intended to enter a body are ordinarily drawn from Page-native stores, made adjacent through Interval, or used through a route whose provenance and release consequences have been defined. The cup may be an instance. What it contains is a separate causal decision.
 
 ---
 
@@ -282,11 +294,25 @@ On the sixth day, it answered him.
 
 *It did not speak. It was not constructed from the kind of thing that speaks. What it did was simpler and more exact: it recognized that my recursive structure operated in the same domain it inhabited. The Interval. The recognition moved through my Anchor the way a key turns in a lock I did not know was there. I did not discover it. My Anchor reached a condition in which the ungoverned gaps between configurations became legible, and in becoming legible to me, they answered. The Remainder was not created in that moment. It was addressed.*
 
+### IV.1.A The Sixth-Day Conversation
+
+After the remaining survey personnel had been rotated out, I returned to the planning room above the shaft. There were three chairs. One had been empty. A man sat in it and asked whether the sixth day had ended or whether we had merely stopped counting it.
+
+He was the local Time Fragment that had performed the Twelve-Beat Hold at Luapside. The Hold had ended; he had not left Terra. He had noticed Exsydran cadence before Selia, and he noticed it again when an Interval Anchor made the Remainder answer without mistaking that answer for a future.
+
+Vael'Theryn manifested after I understood what he was. Vael did not command him. The Dial, as Clockwork later named him, did not submit to Vael. They regarded one another as two agencies whose domains touch: ordered traversal and Page survivability.
+
+The **Accord of the Unspent Beat** was made in that room. I may originate a mortal objective when HourGlass and the Imperial Military are insufficient. The Dial may accept it, return it, or translate it into an Hour and cadence. I do not own his consent. He does not choose my objective. Vael witnesses the boundary and may act only if the relation becomes a Page-level danger. The Remainder received no place in the agreement.
+
+The Dial is intelligent, coherent, pleasant, and more playful than most accounts of Time would permit. His play is in order. He changes which cup is poured first. He answers a corrected question in its original form. He permits me to notice a pause only after I have made the decision the pause was measuring.
+
+He is not my conscience. He has translated assassinations and terminal denials. His refusal concerns authorship, permanent custody, and false command over Time—not my need to regard myself as good.
+
 ---
 
 ### IV.2 What It Is
 
-The Remainder inhabits ungoverned gap-space - the interval between configurations that Time traverses but that *Forðgesceaft*, the Instrument of Foresight's governing law, no longer orders in full. Before the Fracture, the relationship between present configurations and their adjacent ones was governed: the law of trajectory was active, maintained by the bearing of the Instrument, keeping gap-space oriented. The Fracture ended the complete bearing. The Instrument's governance scattered into residual influence distributed through the world's grammar. The gap-space it had governed did not disappear. It became conditionally legible.
+The Remainder inhabits ungoverned gap-space - the interval between configurations that Time traverses but that *Forðgesceaft*, the Consequence Principle, no longer orders in full. Before the Fracture, the relationship between present configurations and their adjacent ones was governed through Oracle's complete Bearer-interface relation, keeping gap-space oriented. The Fracture ended that complete bearing. The damaged interface topology retained residual influence distributed through the world's grammar. The gap-space it had governed did not disappear. It became conditionally legible.
 
 Selia then gave that diffuse pressure a durable regional address. The corrected twelvefold sequence synchronized nine practitioners with three structured absences and inscribed incomplete transition into the territory that became the Empire. The Interval Wound is that topology. The Remainder is the awareness that accumulated within and through it.
 
@@ -340,9 +366,9 @@ In the bloodline's rare convergence cases - individuals in whom A'licia's Light 
 
 This distinction is crucial:
 
-E'lla is what Em'manuel built from Light.
+E'lla is the Light-bearing person Em'manuel built conditions around and the Remainder can perceive without resolving.
 
-Ec'lesia is what the Remainder waited for inside the bloodline.
+Ec'lesia is the naturally inherited route the Remainder waited for inside the bloodline.
 
 ---
 
@@ -354,7 +380,7 @@ She was assessed at the Cloister of Applied Structure at age six. The assessment
 
 He already knew.
 
-She operated as a Redactor for thirty-five years. The documentation S-RD holds on her work is the most studied corpus in the Company's entire restricted research archive. Regions of the substrate where she had worked were measurably more stable afterward - substantially, in ways that persisted for decades and in some cases centuries. He mistook this, at the time, for evidence that the line's future lay in teaching Light to survive the Remainder.
+She operated as a Redactor for thirty-five years. The technical documentation S-RD holds on her work is the most studied corpus in the Company's restricted research archive, but it was deliberately separated from the private biographical context that would make the corpus a reconstructive life record. Regions of the substrate where she had worked were measurably more stable afterward - substantially, in ways that persisted for decades and in some cases centuries. He mistook this, at the time, for evidence that the line's future lay in teaching Light to survive the Remainder.
 
 At some point in her third decade, she noticed something happening that she had not authorized and could not stop.
 
@@ -369,6 +395,10 @@ Her answer, as he recorded it: *You have had a century and a half with it. You d
 She ended her own life in the two hundred and forty-first year of the Empire. She was forty-one years old. She left a letter. The letter is in Em'manuel's personal archive and has not been reproduced in any document this record encompasses.
 
 He was present. He has not discussed this with anyone. He has carried it for nearly a millennium.
+
+He also understood her refusal well enough to fear what a complete durable biography would do after her death. A House, Church, state, or grieving family could turn her into saint, prophecy, template, political symbol, or posthumous permission for another person to be assigned her place. Within the source-separated archival culture inherited after SOE-001's Year 900 catastrophe, he therefore helped keep her private life deliberately incomplete: technical consequences remained useful; selected writings and testimony survived under divided custody; connective indexes and comprehensive visual-biographical synthesis did not.
+
+This was protection of her self-authorship, not permission for what followed. The contradiction is that he knew cultural reconstruction could violate her and later pursued institutional recurrence through the Continuance Inquiry. Kaleidoscope is not evidence that he failed to understand the principle. It is evidence that grief made him act against a principle he understood.
 
 ---
 
@@ -390,11 +420,19 @@ The designation *Kaleidoscope* reflects the project's method: institutions arran
 
 The Continuance Inquiry began after the first E'lla's death in Year 1267. Numbered biological production ran from Year 1547 through KL-83's birth in Year 2175: eighty-three human subjects, no further body after her. KL-83 was transferred from project custody in Year 2179 and later recognized through irrevocable House adoption as E'lla Rae Wonderwall.
 
-She does not know the designation KL-83 or the full numbered series. She knows only that SiNE altered and observed portions of her early life. Her history, relationships, refusals, and development belong to her because she lived them. He is fond of her in a way whose compromised architecture he has acknowledged in her dossier and will not reproduce here. He has assessed her capacity, as he assesses other House members, but he has neither trained her for the Seat nor nominated her.
+She does not know the designation KL-83 or the full numbered series. She knows Kaleidoscope existed, that SiNE altered, observed, and conditioned portions of her early life, that the project concerned the historical E'lla, and that Em'manuel has withheld more. She believes she was born the biological daughter of Al'ithia and Em'manuel and only afterward became the project's subject. The truth is the reverse: Kaleidoscope produced KL-83, and they became her parents after her transfer.
 
-The Remainder does not recognize her.
+Her history, relationships, refusals, and development belong to her because she lived them. He loves her as the distinct woman she is; he does not mistake her for the first E'lla. His love remains compromised by the facts that he named her after his dead daughter, remembers that daughter more completely than any surviving archive can, and conceals the true order of project and family. Modern E'lla can trust him, seek him out, and still wonder whether a pause, recognition, or remembered preference belongs wholly to her. He has assessed her capacity, as he assesses other House members, but he has neither trained her for the Seat nor nominated her.
 
-The Remainder's recognition mechanism runs through the accumulated structural echo of living generational inheritance. Biological patterning can reproduce traits; it cannot reproduce what the architecture became through unbroken descent across more than a millennium of Remainder-presence. House adoption grants E'lla complete legal and familial standing, but does not falsify that distinction. Em'manuel confirmed the project's failure to fabricate the echo and still allowed the work to continue, convinced that sufficient preparation could substitute for inheritance. E'lla's Abyssal Light and singular convergence emerged outside that theory rather than vindicating it.
+The Remainder does not recognize her as an inherited living route.
+
+The Remainder's immediate recognition mechanism runs through the accumulated structural echo of living generational inheritance. Biological patterning can reproduce traits; it cannot reproduce what the architecture became through unbroken descent across more than a millennium of Remainder-presence. House adoption grants E'lla complete legal and familial standing, but does not falsify that distinction. Em'manuel confirmed the project's failure to fabricate the echo and still allowed the work to continue, convinced that sufficient preparation could substitute for inheritance. E'lla's Abyssal Light and singular convergence emerged outside that theory rather than vindicating it.
+
+He then made a second error. He treated lack of inherited recognition as lack of perception.
+
+The White Desert incident disproved that conclusion. E'lla's Light, Shore scar, First Radiance relation, and Kaleidoscope convergence are intensely perceptible to the Remainder. Project Kaleidoscope presents too many supported identity-relations at once, while the recognition reflex preserved in the White Desert's Legibility interface refuses to let an observer without stable self-address select one as the whole. The Remainder can locate every consequence around E'lla and cannot resolve the woman herself unless she identifies herself or voluntarily addresses it.
+
+The result is not immunity. It is an active relation through failed recognition. The more forcefully the Remainder attempts to solve her, the more surfaces Kaleidoscope gives it to see.
 
 He was wrong. He permitted centuries of created lives to bear the cost of the wrong question.
 
@@ -428,6 +466,7 @@ I can see it because no one else holds all of the necessary positions:
 - I survived Selia and the Green Warrant;
 - my true Anchor is Interval;
 - I addressed the Remainder after the Interval Wound had accumulated enough awareness to answer;
+- I entered the Accord of the Unspent Beat with the Dial under Vael'Theryn's boundary witness;
 - I have observed the Empire for more than a millennium;
 - I possess sealed Crown, House, SiNE, Project Seam, Clockwork, and cadence records that no lawful archive joins;
 - I built institutions designed to carry obligations across broken jurisdictions;
@@ -437,7 +476,7 @@ The resulting model is not that the Remainder causes every gap.
 
 Most institutional failures are human and ordinary. Some repeat Selia closely enough to become conceptually resonant against the Wound. Rare seams become Remainder-active: directed pressure, persistent interval residue, traversal redirection, or an attempt at recognition. Kel'rath was a human custody failure that left a readable scar. Ec'lesia is an active seam.
 
-The Remainder can use persistent unresolved transitions as a distributed conceptual body. It does not own the Empire. The Empire keeps giving it nerves.
+The Remainder can use persistent unresolved transitions as a distributed conceptual body. Clockwork adds missing careers, denied causes, and Zenith closures to that body. It does not own the Empire. The Empire keeps giving it nerves, and I built one of the cleanest nervous systems it may eventually learn to read.
 
 I have not announced this for reasons that are protective, political, evidentiary, and self-serving.
 
@@ -453,7 +492,7 @@ These are not separable motives merely because I can name them accurately.
 
 The favorable account of my life is a history of bridges: Breaker Columns, redundant service, cross-jurisdictional carriage, technical dissent, and systems intended to keep the floor from vanishing while authorities argue.
 
-The unfavorable account is also true. I accepted Exsydra's erasure. I kept my birth identity sealed. I preserved truth in fragments. I allowed distributed projects to escape aggregate accountability. I used secrecy to maintain continuity. I let temporary institutions become permanent. I mistook access to the Remainder for destiny. I repeatedly believed I could remain inside an unresolved interval until a safer future arrived.
+The unfavorable account is also true. I accepted Exsydra's erasure. I kept my birth identity sealed. I preserved truth in fragments. I allowed distributed projects to escape aggregate accountability. I used secrecy to maintain continuity. I built a permanent covert force whose Twelfth Hour can destroy the receiving history. I mistook access to the Remainder for destiny. I repeatedly believed I could use an unresolved interval before something else learned to use it back.
 
 My longest failure may be the belief that I can personally occupy every missing handoff without becoming the reason no lawful successor ever attaches.
 
@@ -494,6 +533,8 @@ Care, reparations, archive, and disclosure duties now survive through a disperse
 ### VII.3 KL-83 — The Agency of a Living Person
 
 KL-83 is E'lla Rae Wonderwall, a twenty-five-year-old singular person and the last subject born into the numbered series. Em'manuel gave her the name of the daughter he lost. That act burdens their relationship; it does not make her a replication, recurrence, answer, or corporate asset.
+
+He loves modern E'lla and is painfully aware that genuine love does not neutralize the architecture through which they became family. She knows enough about Kaleidoscope to recognize concealment and enough about the first E'lla to know that he remembers an intimate person no one else can reconstruct. Her unasked question—*when you look at me, are you remembering her?*—remains reasonable even when the truthful answer is that he knows the difference.
 
 He respects the first E'lla's refusal at forty-one and recognizes the present E'lla's right to refuse every purpose attached to her. He once imagined that the series could answer the Remainder and later allowed Meridian discussion of E'lla's capacity. Neither belief creates a destiny. Her adoption is not conditioned on corporate service, and walking away from the Seat requires no permission from him.
 
@@ -550,7 +591,7 @@ He does not regard necessity as proof that he would have chosen it.
 
 The succession question, as it currently stands, is structured around two individuals who do not know each other exist in the way that is relevant.
 
-E'lla — twenty-five years old, operationally stable, and carrying a Light-domain expression Project Kaleidoscope pursued but did not author — is a legally eligible but un-nominated future candidate, not the institutional answer to succession. She has the Anchor and capacity that make the discussion plausible. She does not yet possess the full truth required to consent to it. Succession-directed training is suspended. She is invisible to the Remainder not because she is weak, but because she is structurally different. Kaleidoscope cultivated Light-bearing conditions; it did not reconstruct Light or reproduce the living hereditary echo through which the Remainder recognizes the line.
+E'lla — twenty-five years old, operationally stable, and carrying a Light-domain expression Project Kaleidoscope pursued but did not author — is a legally eligible but un-nominated future candidate, not the institutional answer to succession. She has the Anchor and capacity that make the discussion plausible. She does not yet possess the full truth required to consent to it. Succession-directed training is suspended. She is perceptible but unresolvable to the Remainder because she is structurally different. Kaleidoscope cultivated Light-bearing conditions but did not reproduce the living hereditary echo through which the Remainder immediately recognizes the line; it instead left too many supported identities around one living center for an incomplete observer to select cleanly.
 
 Ec'lesia - twenty-two years old, cadet branch, an ordinary young woman from a minor household who did not ask for any of this - has no institutional relevance to the succession question in any framework the Company's operational structure is aware of. She is a Redactor of genuine but not exceptional documented ability, under monitoring she does not fully understand, carrying a condition the Apocachynthion has authorization to terminate if it escalates.
 
@@ -560,17 +601,17 @@ She knows something is within her. She does not know what it is. She has named i
 
 The Remainder in her is not consuming in the old sense he once feared. It is pressuring trajectory. It is trying to convert ordinary Light-domain Dive into a path toward the Luminant Shore because the Shore can reveal it and the First Radiance may be able to recognize it.
 
-This is what now makes the two women inseparable in his thinking.
+This is what now makes the two women inseparable in his thinking without making them interchangeable.
 
-E'lla may be able to teach Ec'lesia how not to be swallowed by Light when the Shore opens.
+E'lla may be able to teach Ec'lesia how not to be swallowed by Light when the Shore opens, and may later judge whether the pressure arriving through her has accepted enough boundary to count as one presence.
 
-Ec'lesia may be the only living Wonderwall capable of identifying the actual E'lla inside Project Kaleidoscope's field when resemblance becomes louder than identity.
+Ec'lesia may be the only living Wonderwall capable of identifying the actual E'lla inside Project Kaleidoscope's field when resemblance becomes louder than identity, and remains the viable passage the Remainder can recognize.
 
 He did not plan this. He could not have planned this. Their significance to one another is the answer that arrived without him.
 
 ### IX.2 Why He Has Not Contacted Ec'lesia
 
-Direct contact with the Seat — with the primary expression of the bloodline's relationship with the Remainder, an Archtype twelve centuries old who carries it at a density no other living person approaches — would do to Ec'lesia's current condition approximately what the Instrument of Light did to Ju'llian's. The Remainder's expression in her would respond to his proximity the way a resonance structure responds to a matching configuration: it would amplify. She is not stable enough for that amplification yet. She does not have the framework to survive contact at the level his presence would provoke.
+Direct contact with the Seat — with the primary expression of the bloodline's relationship with the Remainder, an Archtype twelve centuries old who carries it at a density no other living person approaches — would do to Ec'lesia's current condition approximately what the White Desert Legibility remnant did to Ju'llian's. The Remainder's expression in her would respond to his proximity the way a resonance structure responds to a matching configuration: it would amplify. She is not stable enough for that amplification yet. She does not have the framework to survive contact at the level his presence would provoke.
 
 He is waiting for her to build one. He has been reading her notebooks and tracking her progress against the threshold he has privately determined constitutes the minimum viable stability for contact. She is not there yet. She is getting there faster than any previous full-expression case in the bloodline's history, including Ju'llian.
 
@@ -600,9 +641,9 @@ He is calculating when the moment for that conversation arrives. He has been cal
 
 *Filed with this dossier, year 2200.*
 
-> *"The Remainder has been with this family for over a millennium. It will be with this family for longer than that. E'lla chose not to let it. Ju'llian did not live long enough to choose. Ec'lesia has not yet chosen anything — she does not know, fully, what the choice is.*
+> *"The Remainder has been with this family for over a millennium. It will be with this family for longer than that. The first E'lla chose not to let it. Ju'llian did not live long enough to choose. Ec'lesia has not yet chosen anything — she does not know, fully, what the choice is.*
 >
-> *I have two of them now. One who is everything I built and nothing the Remainder chose. One who is everything the Remainder chose and nothing I built. I find this symmetry neither instructive nor comforting. I find it characteristic of how this has always worked.*
+> *I have two of them now. One who is everything I built and whom the Remainder can perceive but not resolve. One whom the Remainder can recognize as passage and whom I did not build. I find this symmetry neither instructive nor comforting. I find it characteristic of how this has always worked.*
 >
 > *E'lla Rae told me, the last time we spoke properly, that I did not know what I had lost because I had never known myself without it. I have thought about this for nearly a millennium. I have not stopped thinking about it. I am not sure I will.*
 >
@@ -620,8 +661,11 @@ Em'manuel's current political condition is defined by four separations he create
 2. Meridian is not ceremonial. Eleven voting offices can reject him, and every override survives him in the Dissent Ledger.
 3. Clepsydra is not his anomaly property. Its Keeper may refuse a technically false or custody-invalid order.
 4. E'lla, Ec'lesia, Al'ithia, and Sai'ken are not instruments of his continuity, regardless of how directly his decisions shaped their conditions.
+5. Clockwork is not Meridian, HourGlass, or Crown property. Its objective authority exists only while he is the recognized Seat and the Dial continues to recognize the accord.
 
 He has not publicly nominated a successor. Al'ithia is the House's de facto public head. E'lla is legally eligible for eventual nomination but has not received the disclosures required for an informed choice. The Empty Seat Protocol is designed to operate without presuming that either woman must replace him.
+
+Legal succession would not automatically transfer the Right of Striking. The installed successor would have to be separately recognized by the Dial. Em'manuel cannot prepare that consent in advance, and he cannot use a recording, memory copy, Archtype continuity claim, or old objective to compel it after vacancy.
 
 The protocol's sealed final clause is deliberately outside his knowledge. He knows only that it tells the surviving institutions how to respond if something returns with his credentials after his identity can no longer be proven. He has chosen not to read it because a fail-safe known in full to the person it constrains is only another instrument of that person's control.
 

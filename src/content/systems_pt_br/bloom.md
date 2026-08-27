@@ -5,7 +5,7 @@ summary: "Ressonância biológica expressa por simbionte, biologia do hospedeiro
 tags: ["systems", "Bloom", "Rootline", "Abyssal Flower", "Murmuring", "Continuity", "Biological Resonance", "Symbiosis", "Lineage"]
 status: "public"
 created: "2026-06-25"
-updated: "2026-06-25"
+updated: "2026-08-14"
 image: ""
 ---
 
@@ -48,17 +48,17 @@ A pergunta central no Bloom Shorefall é: **o hospedeiro está caindo através d
 
 ## Bloom Shorewalking
 
-Bloom Shorewalking é a direção inversa na análise técnica do Bloom.
+Shorewalking estável de Bloom é **Symbiogenesis**.
 
-Algumas linhagens Bloom podem chamar um estado estável de **the Walking Root**, mas as tradições Bloom não são padronizadas. Uma dinastia ligada a uma flor, fungo, root-agent ou anomalia biológica específica pode construir seus próprios nomes em torno da experiência.
+Algumas linhagens Bloom chamam o mesmo endpoint de **the Walking Root**, mas as tradições Bloom não são padronizadas. Uma dinastia ligada a uma flor, fungo, root-agent ou anomalia biológica específica pode construir seus próprios nomes em torno da experiência.
 
-O hospedeiro não cai através da raiz. O hospedeiro internaliza a Rootline.
+O hospedeiro não cai através da raiz. Internaliza a Rootline até que a interface entre hospedeiro e simbionte deixe de ser interface.
 
-A Shore-root do Bloom cresce plenamente dentro do corpo, da continuidade e da proximidade recursiva do hospedeiro sem arrastar o hospedeiro para baixo, para dentro da Shore. O corpo se torna o jardim ambulante, a boca-raiz, o sangue-solo ou a abertura florida.
+Hospedeiro e simbionte tornam-se uma única estrutura viva portadora de sintaxe — um órgão que não nasceu com o hospedeiro, mas já não pode ser separado em usuário e ferramenta — sem arrastar o hospedeiro para dentro da Shore. O autoendereço do hospedeiro permanece. O corpo se torna jardim ambulante, boca-raiz, sangue-solo ou abertura florida.
 
-Bloom Shorewalking estável exige primazia do hospedeiro. Se o hospedeiro deixa de permanecer primário, o estado se torna Overbloom, consumo, tomada pelo Murmuring, Root-Stranding ou Shore-Breach biológica.
+Symbiogenesis carrega **autoridade temporária de abertura** dentro da jurisdição compatível de hospedeiro, simbionte, Rootline, lugar, relação e Shore. Não é soberania nativa. Shorewalking estável de Bloom exige primazia do hospedeiro. Se o hospedeiro deixa de permanecer primário, o estado se torna Overbloom, consumo, tomada pelo Murmuring, Root-Stranding ou Shore-Breach biológica.
 
-Rootfall é ser puxado para baixo pela raiz. The Walking Root é tornar-se a raiz sem tornar-se solo.
+Rootfall é ser puxado para baixo pela raiz. Symbiogenesis é tornar-se uma única gramática viva sem tornar-se solo.
 
 ---
 
@@ -86,4 +86,4 @@ Estados de falha Bloom incluem:
 
 ## Em Uma Frase
 
-Bloom cria raízes: é ressonância biológica carregando root-address através de tecido vivo, e seus estados mais altos de sobrevivência dependem de o hospedeiro tornar-se a raiz sem tornar-se solo.
+Bloom cria raízes: é ressonância biológica carregando root-address através de tecido vivo, e Symbiogenesis é o raro estado de abertura em que hospedeiro e simbionte tornam-se uma gramática viva enquanto o hospedeiro permanece. Consulte [[syntax-authority|Autoridade de Sintaxe e Soberania Recursiva]].

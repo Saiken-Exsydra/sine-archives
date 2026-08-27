@@ -1,5 +1,5 @@
 ---
-title: "Daniel Van Degurechaff"
+title: "Daniel Degurechaff"
 type: "Character"
 age: "98 (at time of filing, 2200); appears late twenties to early thirties"
 birth_year: "2102"
@@ -7,8 +7,8 @@ birthplace: "Kovansk, Western Furnace District, Ardeatus"
 affiliation: "Joint Custody Secretariat of the Marta Chord; Ardeatan diplomatic residence in the Empire"
 house: ""
 rank: "Confirmed Tempered - vessel of Vhaldr, the Tempering Witness"
-registry_status: "Non-Redactor; divine-fusion case repeatedly confirmed by imperial assessment"
-designation: "The Mercy Inside the Verdict"
+registry_status: "Unregistered with the Apocachynthion; confirmed non-Redactor divine-fusion case"
+designation: "Quenched Mercy"
 height: "183 cm"
 build: "Lean, disciplined, and economical; strength held in stillness before motion"
 complexion: "Pale by Ardeatan standards; severe features often mistaken for disapproval"
@@ -17,7 +17,7 @@ eyes: "Red-brown with a metallic cast, sharpening under active manifestation"
 dress: "Black-and-white Ardeatan diplomatic uniform with restrained brass detail; heat-resistant lining and black reinforced gloves"
 residence: "Sarn Pell diplomatic compound, Southern Region of Synus"
 occupation: "Senior Tempering Witness and chief transfer liaison for Ardeatan-born Redactor custody cases"
-summary: "A man trained to serve the sentence, altered by the sight of who burns beneath it; now every doctrine that misnames the innocent has reason to fear him."
+summary: "When judgment learned precision, mercy stopped looking like weakness."
 image: "../../assets/uploads/characters/char-daniel-degurechaff-portrait.webp"
 hero_image: "../../assets/uploads/characters/char-daniel-degurechaff-hero.png"
 portrait_gallery: []
@@ -33,7 +33,7 @@ tags:
   - "Diplomatic Liaison"
 status: "public"
 created: "2026-05-14"
-updated: "2026-06-11"
+updated: "2026-08-14"
 codex_file: "Daniel Degurechaff Dossier.md"
 ---
 
@@ -53,6 +53,8 @@ That makes him one of the setting's most important bureaucrats, which is exactly
 ## Identity
 
 **Public Identity:** A senior transfer liaison whose paperwork, diplomacy, and persistence keep vulnerable Redactors moving toward safer custody.
+
+**Formal Name:** Ardeatan records use **Daniel ker-Degurechaff**. Imperial usage suppresses the particle; "Van" is not part of his name.
 
 **Institutional Identity:** An external humanitarian assessor attached to the **Marta Chord**, operating beside systems he knows from the inside.
 
@@ -76,24 +78,20 @@ The turning point was **Marta Vesk**, an eleven-year-old child killed in **2154*
 
 Instead of walking away, he started collecting proof that Marta was not a one-time tragedy. That archive eventually helped force the political negotiations that produced the **Marta Chord**, ratified in **2171**.
 
-## Apocachynthion Registry
+## Apocachynthion Registry Position
 
-**[[leaf|Leaf Type]]:** No practitioner leaf issued  
-**Registry Status:** Non-Redactor; divine-fusion case repeatedly confirmed by imperial assessment  
-**Rank:** Not applicable  
+**Registry Status:** Unregistered  
+**Rank:** Unranked  
 **[[mark|Mark]]:** None  
 **[[open-mark|Open Mark]]:** None  
-**[[margins|Margins]]:** Civil  
-**Anchor:** Not applicable  
-**Anchor Reading:** Unassessed  
-**Depth Reading:** Not applicable  
-**Reach Reading:** Not applicable  
-**Registration Tenure:** Not applicable  
-**Academy Record:** None  
-**Practice Record:** Marta Chord transfer oversight, cross-border review, and humanitarian liaison work  
-**[[blots|Blots]]:** None  
-**Pager Note:** External assessor attached to Redactory abuse review  
-**[[seal|Current Seal]]:** Imperial assessment oversight only
+**Point:** Not applicable  
+**CAS Access:** Not applicable  
+**Leaf Permissions:** Not applicable  
+**Point Register:** Not applicable  
+**Anchor:** Unassessed; non-applicable  
+**Anchor Depth:** Not applicable  
+**Reach:** Not applicable  
+**Pager Note:** None
 
 ## Abilities
 

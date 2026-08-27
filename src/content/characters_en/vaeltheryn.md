@@ -8,7 +8,7 @@ affiliation: "Page Primordial (Terra) - not a mortal or Archtype-class entity"
 house: ""
 rank: "Page Primordial"
 registry_status: "Not registered - predates the concept of registration"
-designation: "The Grammar Beneath the World"
+designation: "Time's Old Friend"
 height: ""
 build: ""
 complexion: ""
@@ -17,7 +17,7 @@ eyes: ""
 dress: ""
 residence: ""
 occupation: "Witness - constrained observation and bounded intervention"
-summary: "The oldest mind on Terra, watching with a restraint severe enough to pass for mercy."
+summary: "He remembers the world before anyone else had words for it."
 image: "../../assets/uploads/characters/char-vaeltheryn-portrait.png"
 hero_image: "../../assets/uploads/characters/char-vaeltheryn-hero-main.png"
 portrait_gallery: []
@@ -33,7 +33,7 @@ tags:
   - "Skyphons"
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-11"
+updated: "2026-07-23"
 codex_file: ""
 ---
 
@@ -76,7 +76,7 @@ The entry also points back to the **Archtype War**, when unrestricted interventi
 
 ## Apocachynthion Registry
 
-**[[leaf|Leaf Type]]:** None  
+**File Type:** None  
 **Registry Status:** Page Primordial; not an ordinary practitioner case  
 **Rank:** Not applicable  
 **[[mark|Mark]]:** None  

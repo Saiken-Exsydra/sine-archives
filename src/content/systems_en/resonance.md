@@ -5,7 +5,7 @@ summary: "The Archive's passive coherence condition: not energy, not signal, but
 tags: ["systems", "Resonance", "Redactory", "Divination", "Shores", "Anchors", "Coherence", "Thinness", "Callings"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-06-26"
+updated: "2026-08-14"
 image: ""
 ---
 
@@ -115,7 +115,15 @@ Divination is fusion rather than routing. Host and fragment can only stabilize i
 
 ### Callings
 
-Callings are resonance conflict made periodic under Time. The Lunar Crown's containment struggle produces large-scale harmonic disturbance that propagates through Terra's substrate and is received as cyclical pressure.
+Callings are pressure made periodic under Time and filtered through Terra's damaged Twelvefold architecture. They propagate through the surviving seats, relays, interfaces, and Principle jurisdictions as cyclical harmonic disturbance. They are not messages from the vanished Obscurials and are not the conscious speech of the Lunar Crown.
+
+## Resonance Versus Concordance
+
+[[quiet-moon-concordance|Quiet Moon Concordance]] is a relational and interpretive process, not a subtype of Resonance.
+
+Resonance can make two structures mutually influential. Concordance begins when separated expressions become meaningfully joined through recognition, context, contradiction, and retention. BrightCrystal may conduct the recurrence that makes this contact possible without interpreting what the recurrence means.
+
+The [[quiet-moon|Quiet Moon]] can produce secondary resonance effects as its foreign grammar becomes locally expressed. Resonance is not the source of that grammar, its motive, or its assimilative relation to what it learns.
 
 ---
 

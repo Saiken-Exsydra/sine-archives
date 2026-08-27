@@ -11,7 +11,7 @@ summary: "Deus Vult"
 tags: ["Church", "Synus", "Faith", "Obsidian", "Demonic", "Institution", "Sovereign", "Twilight Band", "Divine Vessel", "Diviner", "Oracles"]
 status: "public"
 created: "2026-03-17"
-updated: "2026-07-13"
+updated: "2026-08-14"
 image: "../../assets/uploads/org-church.png"
 ---
 
@@ -55,7 +55,7 @@ O Ring acima — o arco disperso de destroços orbitando o mundo — é chamado 
 
 ## The Instruments of the Intact Seal
 
-Instituições técnicas classificam os Obscurials como endereços limitados de lei nativa, não como Redacteurs. A Igreja os chama de Instrumentos do Selo Intacto: doze núcleos-lei cujos títulos devocionais são Verdade, Ligação, Ordem, Atmosfera, Luz, Vida, Fogo, Morte, Entropia, Senciência, Previsão e Ascensão.
+A reconstrução técnica mais profunda distingue os [[obscurials|Obscurials]] reais — doze vestígios exteriores à gramática antes assentados na Lua — dos Princípios, interfaces e remanescentes pelos quais Terra os endereçava. Todos os doze Obscurials reais desapareceram da configuração lunar durante a Fratura. A Igreja não possui essa síntese completa. Ela chama os Doze de Instrumentos do Selo Intacto, com os títulos devocionais Verdade, Ligação, Ordem, Atmosfera, Luz, Vida, Fogo, Morte, Entropia, Senciência, Previsão e Ascensão.
 
 A Igreja sustenta uma interpretação diferente — e muito mais antiga.
 
@@ -63,15 +63,15 @@ Ela os chama de **the Relics of Before** ou, em linguagem teológica restrita, *
 
 Cada instrumento era completo dentro do próprio domínio e, juntos, compunham a arquitetura daquilo que o mundo deveria ser. Quando a rebelião atingiu o Intact Seal, os instrumentos se desprenderam dessa estrutura. *Os Instruments já não se encaixam no mundo quebrado porque foram feitos para o mundo como ele deveria existir.* Carregar um deles hoje significa portar algo que a realidade atual não consegue conter adequadamente. Isso não os torna malignos. Apenas perigosos — da mesma forma que uma chama levada para dentro de casa durante uma tempestade é perigosa: não por malícia, mas porque pode incendiar tudo ao redor.
 
-A posição da Igreja é que os Instruments não pertencem a nenhuma instituição mortal. Qualquer organização que reivindique posse deles — incluindo o Apocachynthion — está, no melhor dos casos, equivocada e, no pior, cometendo sacrilégio. A Igreja não exige publicamente sua devolução. Apenas registra a situação em cartas pastorais restritas... e espera.
+A posição da Igreja é que os Instruments não pertencem a nenhuma instituição mortal. Qualquer organização que reivindique posse deles — incluindo o Apocachynthion — está, no melhor dos casos, equivocada e, no pior, cometendo sacrilégio. Ela aplica essa reivindicação a objetos e locais que a doutrina técnica restrita identifica como núcleos de interface, remanescentes de endereço ou cicatrizes, não como os próprios Obscurials desaparecidos. A Igreja não exige publicamente sua devolução. Apenas registra a situação em cartas pastorais restritas... e espera.
 
 ---
 
 ## The First Bearers
 
-As entidades chamadas de Skyphons aparecem na tradição eclesiástica como **os Primeiros Portadores**. A reconstrução técnica os descreve como pessoas formadas por fragmentos da Página, corpos de contenção Precursores, núcleos-lei Obscurial e aceitação de Terra.
+As entidades chamadas de Skyphons aparecem na tradição eclesiástica como **os Primeiros Portadores**. A reconstrução técnica os descreve como pessoas formadas por sintaxe localizada da Página, corpos de contenção Precursores, uma relação Obscurial coendereçada através da interface lunar e a aceitação de Terra.
 
-O ensinamento afirma que leis exigem testemunhas. Os Primeiros Portadores eram interfaces vivas entre autoridade superior, forma construída, Instrumento lunar e mundo. A teologia restrita reconhece que eram limitados por Diretivas, mas capazes de interpretar, discordar e recusar. Sua fidelidade exigia julgamento; não eram marionetes.
+O ensinamento afirma que leis exigem testemunhas. Os Primeiros Portadores eram interfaces vivas entre autoridade superior, forma construída, uma relação lunar coendereçada e o mundo. A teologia restrita reconhece que eram limitados por Diretivas, mas capazes de interpretar, discordar e recusar. Sua fidelidade exigia julgamento; não eram marionetes.
 
 A Igreja não os condena nem venera. O ensino público os chama de **Corretamente Desfeitos** e diz: *eles completaram*. O registro restrito é menos certo: os doze fins foram diferentes, alguns Portadores sofreram, e talvez o que se completou tenha sido o dever, não a pessoa.
 

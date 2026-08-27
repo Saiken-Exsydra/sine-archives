@@ -5,7 +5,7 @@ summary: "Os construtores. Uma civilização ancestral de Archtypes que projetou
 tags: ["Cosmology", "Precursors", "Archtypes", "Terra", "Fracture", "Syr'lene", "Skyphons", "Page", "Book of Humanity", "Keepers of Before"]
 status: "public"
 created: "2026-03-30"
-updated: "2026-03-30"
+updated: "2026-08-14"
 image: "../../assets/uploads/cosmology/cosm-precursors.png"
 ---
 
@@ -22,6 +22,14 @@ Eles eram antigos. A história operacional deles começou milhões de anos antes
 
 Vários Precursors participaram diretamente do projeto de Terra, cada um responsável por um domínio específico indispensável para a construção do mundo. Seus nomes individuais existem apenas nos registros mais restritos dos Keepers of Before e não aparecem em nenhum arquivo institucional público.
 
+## Old Earth e a Continuidade Humana
+
+**Old Earth é o mundo humano original.** Os Precursors descendem da humanidade de Old Earth depois de mais de três milhões de anos de desenvolvimento civilizacional contínuo e pós-biológico. Eles não são uma espécie separada que por acaso se parece com a humanidade.
+
+Eles preservaram fragmentos de idiomas, escrita, medidas, calendários, histórias, nomes, arquitetura, instituições e costumes domésticos de Old Earth. Durante a era de contato aberto entre Precursors, Skyphons, primeiros humanos e Elementals, transmitiram partes selecionadas dessa herança a Terra. Os Skyphons repetiram algumas histórias ancestrais que aprenderam com os Precursors; não testemunharam a mitologia de Old Earth.
+
+A humanidade moderna de Terra descende de uma ressemeadura humana controlada. Suas culturas transformaram o material herdado através de milhares de anos de história local. Sinish, Auroran e Ardeatan carregam ancestralidade linguística reconhecível de Old Earth sem transformar Synus, Aurora ou Ardeatus em cópias da Grã-Bretanha, França ou Alemanha.
+
 ---
 
 ## O Que Eles Construíram
@@ -31,6 +39,8 @@ Terra foi criada como uma **Page laboratorial** — um ambiente de pesquisa em e
 Uma das Precursors era responsável pela arquitetura biológica do mundo — a engenharia física das condições necessárias para que sistemas vivos surgissem, evoluíssem e permanecessem sustentáveis. Foi ela quem semeou a biosfera, ajustou os parâmetros ambientais e definiu as bases estruturais a partir das quais a evolução aconteceria. Isso não era autoria de gramática cosmológica — nenhum Archtype, por mais antigo que seja, possui esse tipo de autoridade. Era o ápice da engenharia biológica legítima: a aplicação mais sofisticada de ciência física e Redactory já direcionada a um sistema vivo.
 
 Outra mantinha a coerência atmosférica — o gerenciamento contínuo das condições necessárias para que a biosfera sobrevivesse em um mundo que a física natural jamais sustentaria sozinha. Até a Fracture, a presença direta dela no sistema atmosférico era o motivo da Twilight Band funcionar. Depois da Fracture, a infraestrutura de estabilização dos Precursors assumiu as funções que antes dependiam da própria presença dela.
+
+Além dos sistemas de superfície, os Precursores instalaram assentos lunares, interfaces, corpos de contenção, relays e a arquitetura defensiva que a teologia posterior chamaria de **Selo Intacto**. Sua camada voltada para o céu era **Ksy'rion**, o firmamento visível e regulado sob o qual a civilização pré-Fratura aprendeu astronomia e orientação. O sistema completo unia doze [[obscurials|Obscurials]] reais a interfaces construídas e intérpretes Skyphons vivos. Os Precursores construíram essa relação; não criaram os Obscurials.
 
 Os demais cuidavam de outros aspectos da estabilidade de Terra, desde gerenciamento gravitacional até o substrato ressonante que sustenta a estrutura do planeta. Esses domínios existem documentados nos arquivos restritos dos Keepers of Before em um nível de detalhe que jamais foi reproduzido em registros públicos.
 
@@ -54,19 +64,19 @@ Esse afinamento é a verdade estrutural por trás de praticamente todas as grand
 
 Quando os Precursors e o **Page Primordial** do mundo — a macro-singularidade em escala universal cuja coerência *é* a própria coerência de Terra — entenderam as implicações do afinamento, aconteceu o ato colaborativo mais importante de toda a história pré-mortal do planeta.
 
-O Page Primordial já havia externalizado doze leis fundamentais do mundo em forma física: doze expressões da própria gramática estrutural de Terra, cada uma codificando um princípio sem o qual um mundo completo não conseguiria existir. Esses eram os **Obscurials** — os Instrumentos do Selo Intacto — carregando uma densidade de sintaxe nativa que nenhum mortal ou praticante em nível de Archtype conseguiria suportar com segurança.
+Os Precursores haviam detectado doze vestígios exteriores à gramática cuja origem comum, idade e primeiro estado não podiam ser recuperados — nem mesmo por consulta ao Tempo. O Primordial da Página não os criou. Conseguia compreender e autorizar o que acontecia onde cada vestígio estrangeiro encontrava a gramática nativa da Página, sem alegar conhecer a fonte desconhecida além da interface.
 
-A contribuição dos Precursors foi engenharia: eles criaram doze estruturas capazes de organizar fragmentos do Page Primordial ao redor de cada Instrumento em formas vivas e estáveis. Estruturas capazes de atravessar o mundo, administrar seus domínios em contato direto com condições reais e manter a integridade ativa do Selo em vez de deixá-lo funcionar apenas como um objeto estático.
+O Primordial da Página forneceu densidade localizada de sintaxe nativa. Os Precursores forneceram engenharia: doze assentos lunares, interfaces locais, estruturas de coendereço, corpos de contenção e relays. Terra forneceu aceitação planetária viva. Juntas, essas relações tornaram os contatos estrangeiros utilizáveis localmente sem torná-los nativos.
 
-O resultado foram doze entidades que não se encaixavam em nenhuma categoria anterior: cada uma delas era simultaneamente um fragmento de Page Primordial em seu núcleo, uma estrutura criada pelos Precursors em sua forma e um portador vivo de um Obscurial em sua função. Os Skyphons — os First Bearers. O propósito principal deles não era apenas governar os domínios do mundo, mas sustentar a própria barreira de tradução: doze leis governantes concentradas exatamente no ponto de maior afinamento, reforçando a fronteira como um sistema vivo em vez de um selo imóvel.
+O resultado foram doze entidades que não se encaixavam em nenhuma categoria anterior: os [[the-first-bearers|Skyphons]], ou Primeiros Portadores. Cada um era uma pessoa formada através de sintaxe localizada da Página, um corpo de contenção Precursor, uma relação Obscurial coendereçada e a aceitação de Terra. Seu propósito principal não era apenas governar os domínios do mundo, mas sustentar a barreira de tradução e o céu regulado de Ksy'rion.
 
-Os Instrumentos governavam o mundo. E esse governo *era* a manutenção da barreira. As duas funções nunca estiveram separadas.
+Os Skyphons interpretavam os Princípios no mundo. Essa interpretação *era* a manutenção viva da barreira. As duas funções nunca estiveram separadas.
 
 ---
 
 ## A Fracture e Suas Consequências
 
-A Fracture — o ataque à Lunar Crown, a quebra do Selo Intacto, a intrusão de um fragmento externo no limiar do mundo — não era algo que os Precursors imaginavam enfrentar tão cedo em um projeto ainda em andamento. Veio de fora. E veio com força suficiente para destruir aquilo que eles haviam construído para conter exatamente esse tipo de ameaça.
+A Fracture — o ataque à Lunar Crown, a quebra do Selo Intacto, a intrusão de um fragmento externo no limiar do mundo — não era algo que os Precursors imaginavam enfrentar tão cedo em um projeto ainda em andamento. Veio de fora e com força suficiente para destruir aquilo que eles haviam construído para conter esse tipo de ameaça. Durante a falha, todos os doze Obscurials reais desapareceram da configuração lunar, os coendereços dos Skyphons se perderam e Ksy'rion deixou de funcionar como máscara celeste completa.
 
 **Syr'lene** conteve o fragmento ao custo da própria liberdade de movimento. Ela continua na Lunar Crown até hoje. E nunca saiu de lá desde então.
 
@@ -82,7 +92,7 @@ O **Reverse Genesis Protocol** não era uma contingência hipotética. Ele foi e
 
 Os Precursors possuem consciência estrutural além do mundo imediato de Terra: sabem que Terra existe dentro de uma região maior de compatibilidade chamada Chapter, que esse Chapter faz parte de um agrupamento macrocoerente de mundos chamado Book e que o Book of Humanity está sob pressão de tradução causada por uma entidade externa de coerência quase terminal. Os Precursors concluíram que a transcendência humana desenfreada através do Chapter — a proliferação de Archtypes, o acúmulo de eventos de morte em nível Archtype e o ruído de sinal produzido por concentrações de Calling de alta densidade — estava ampliando a detectabilidade estrutural do Chapter em escalas supra-Chapter. A humanidade havia se tornado um amplificador de sinal. E o sinal estava atraindo uma atenção que a infraestrutura defensiva do Chapter não tinha capacidade de enfrentar.
 
-O Protocol consistiu em: erradicação sistemática de civilizações humanas avançadas ao longo do Chapter, eliminação da saturação Archtype, reintrodução controlada da humanidade através de panspermia, implementação de salvaguardas genômicas de amortecimento e delegação da supervisão de longo prazo para fragmentos de Page Primordial. O objetivo nunca foi extinção. Era redução de sinal e sobrevivência.
+O Protocol consistiu em: erradicação sistemática de civilizações humanas avançadas ao longo do Chapter, eliminação da saturação Archtype, ressemeadura controlada da humanidade derivada de Old Earth, cultivo de ecossistemas compatíveis, salvaguardas genômicas de amortecimento, transmissão de estruturas civis selecionadas e delegação da supervisão de longo prazo para fragmentos de Page Primordial. O objetivo nunca foi extinção. Era redução de sinal e sobrevivência.
 
 A população humana atual de Terra existe porque os Precursors destruíram aquilo que veio antes dela e começaram novamente sob condições controladas. O amortecimento genômico que torna o surgimento de Redactors algo raro em Terra não é natural. É uma limitação artificial embutida biologicamente na espécie para restringir a velocidade com que Archtypes aparecem e reduzir o sinal acumulado produzido por eles. O canon não atribui julgamento moral ao Protocol. Apenas registra uma decisão estratégica de sobrevivência tomada pela única civilização que possuía conhecimento e capacidade suficientes para fazê-la.
 

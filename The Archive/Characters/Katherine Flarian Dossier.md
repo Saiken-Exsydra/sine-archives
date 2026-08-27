@@ -1,6 +1,6 @@
 # PERSONNEL DOSSIER - RESTRICTED
 ## KATHERINE FLARIAN
-**SiNE Stasis (S-AE) - Continuity Architect - Type None - Post-Entry Resonance Scar - Meridian-tier internal clearance**
+**SiNE Stasis (S-AE) - Continuity Architect - Type None - Post-Entry Continuity Scar - Meridian-tier internal clearance**
 *Filed by: SiNE Anticipatory Evaluation branch, Continuity Office - Entropy hire 2185 - unauthorized Himmelreich contact event 2188 - Stasis transfer 2188 - permanent placement 2189 - file active, Year 2200*
 
 ---
@@ -23,11 +23,11 @@
 | **Type** | None |
 | **Continuity Classification** | Continuity-Sensitive, founding case |
 | **Principle** | Stability |
-| **Core Ability** | Continuity Mapping; instrument-assisted Local Continuity Lock |
+| **Core Ability** | Continuity Mapping; Local Continuity Lock; singular Continuity Severance |
 | **Institutional Position** | Former Entropy systems-security analyst; currently Continuity Architect of the Stasis Continuity Office |
 | **Current Residence** | Kalt'sen secure quarters, Pluribus Hill lower administrative ring; frequent rotation through Stasis field sites |
 | **Public Standing** | SiNE systems-security specialist credited with major relay-hardening and archive-resilience reforms; limited public association with Stasis |
-| **Private Standing (Stasis Assessment)** | Foundational Continuity-Sensitive case, irreplaceable in breach prediction and local continuity stabilization, physically deteriorated by sustained exposure and continued field use |
+| **Private Standing (Stasis Assessment)** | Foundational Continuity-Sensitive case; architect of modern lock doctrine; only confirmed severance operator; physically deteriorated by sustained exposure and continued field use |
 
 ---
 
@@ -122,7 +122,7 @@ Katherine did three things in that window that permanently altered her status:
 
 First, she identified that the relay sink itself was functioning as the contradiction amplifier. The security stack had been designed to protect data. She understood before site command did that the system was being used in reverse: the entity was learning the site's habits through the security lattice and answering through them.
 
-Second, she manually severed the facility's sync corridor to the wider Glass Threader backbone. This prevented the contradiction pattern from propagating into a live communications lattice with urban reach. Had she failed, the review board's later assessment is that the resulting contamination event could have produced multi-site continuity failure across northern infrastructure and, under worst-case expansion, a continuity emergency far beyond any single city or branch perimeter.
+Second, she manually isolated the facility's sync corridor from the wider Glass Threader backbone. This prevented the contradiction pattern from propagating into a live communications lattice with urban reach. Had she failed, the review board's later assessment is that the resulting contamination event could have produced multi-site continuity failure across northern infrastructure and, under worst-case expansion, a continuity emergency far beyond any single city or branch perimeter.
 
 Third, she remained inside long enough to finish the cut.
 
@@ -197,9 +197,9 @@ In practice, Continuity Mapping is used for:
 
 Her secondary capability is narrower and far more expensive: **Local Continuity Lock**.
 
-Katherine cannot impose order on a site by will. She is not a Redactor. What she can do, with prepared equipment, is use her own distorted readout as the human anchor for a containment array designed to force a location into short-term self-agreement.
+Katherine cannot impose order on a site by will. She is not a Redactor. What she can do, with prepared equipment, is use her own distorted readout as the human reference for a containment array designed to force a location into short-term self-agreement.
 
-The lock requires:
+Her field lock requires:
 
 - calibrated BrightCrystal lattice plates
 - analog isolation clocks that do not auto-correct against network time
@@ -210,7 +210,38 @@ When the lock holds, a room or relay chamber becomes temporarily harder for a tr
 
 The lock always costs her. Severe post-lock pain, vomiting, tremor, and concentration loss are standard. After two locks in a single day she is medically removed from the field whether she agrees with the decision or not.
 
-### VIII.3 Stabilistics
+Katherine is not the only trained lock operator. The Continuity Office maintains teams able to establish technology-assisted locks at prepared sites through fixed instrumentation, prior contradiction mapping, larger crews, and conservative operating envelopes. Katherine remains the most precise operator and the only one routinely able to improvise a lock while the event is still changing.
+
+### VIII.3 Continuity Severance
+
+**Continuity Severance** is separate from the Local Continuity Lock.
+
+A lock forces a room, body, system, or event-set to answer as itself for a bounded interval. A severance cuts or weakens the continuity relation by which one selected event sequence is claiming the affected people, actions, memories, records, and consequences as its exclusive continuation.
+
+The capability does not arise from equipment alone. Katherine perceives the relation through the same post-entry wound that makes contradiction bodily legible and acts directly upon that relation while it is exposed. No Redactory route occurs. She does not Dive, does not acquire an Anchor, and does not enter Divination. No other Continuity-Sensitive or trained lock operator has reproduced the act.
+
+Continuity Severance does not:
+
+- erase an event;
+- reverse an event;
+- select a new past;
+- remove information from the Archive;
+- rewrite Time;
+- reveal every possible future;
+- decide which competing experience is morally true;
+- force the affected person to make a particular choice.
+
+It weakens the monopoly of one bounded event-set. Where a hostile continuity has discarded, overwritten, or subordinated other locally reachable sequences, those bound to the infestation may begin remembering them. The contested victim receives the most complete return because their self-address is the center of the claim. Witnesses, family, responders, Redactors, and investigators may receive partial or differently ordered memories according to how deeply the event had incorporated them.
+
+The memory flood is overwhelming and can carry contradictory injuries, false escapes with genuine experience, actions the settled record denies, and knowledge of the terminal act the hostile sequence was narrowing toward. Katherine does not save a victim by choosing for them. She restores the conditions under which their next action can belong to them again.
+
+Operation **WHITE BED** remains the controlling restricted case. A technology-assisted lock prevented SOE-041 from substituting further events and made four incompatible room states, witness positions, injury histories, and Point records simultaneously legible. Katherine then identified the relation between the entity and the victim's repeated defensive threshold routine and severed that relation. The victim remembered the competing local sequences, recognized the fatal self-redaction as an authored necessity, and refused it. The entity withdrew after assessing the damaged scaffold and active containment pressure. The withdrawal was a decision by a malicious intelligence, not an automatic recoil law.
+
+The cut produced a severe resonance disturbance that became harmonically legible under Time. Katherine did not use Resonance. Supporting Redactors protected the operation, controlled the physical manifestations, stabilized the victim, and used established environmental and instrumental routes to damp, fragment, overlay, and redirect the detectable aftermath. The concealment reduced the clarity of outside records but did not erase them.
+
+Severance costs Katherine more than a lock. Immediate effects include loss of motor precision, memory contamination from the affected possibility cluster, acute pain, vomiting, tremor, transient uncertainty about which injuries belong to her, and periods in which completed actions do not feel personally attached. Every severance requires medical removal, source-separated debrief, discontinuous observation, and a prohibition against immediate reconciliation of her statements.
+
+### VIII.4 Stabilistics
 
 The discipline Katherine founded inside S-AE is now known internally as **Stabilistics**.
 
@@ -218,7 +249,7 @@ Stabilistics is not Redactory, Divination, or conventional engineering. It is th
 
 In Shore-adjacent terms, Stabilistics concerns prevention rather than expression. Katherine does not Shorewalk and does not Shorefall by default. Her work keeps rooms, systems, and people in forced self-agreement long enough that Shorefall-like collapse, aperture widening, or Shore-Breach conditions do not become locally available.
 
-She is still the branch's best practitioner. She has spent the last decade ensuring she is not the only one.
+She is still the branch's best Stabilistics practitioner and lock operator. She has spent the last decade ensuring those institutional skills do not depend on her alone. Continuity Severance remains hers alone.
 
 ---
 
@@ -242,9 +273,9 @@ Katherine's post-Himmelreich protocols are the reason S-AE traffic can travel ac
 
 S-AE's Continuity Office exists because Katherine insisted that incident review, systems security, and field containment could no longer remain separate conversations. She built the office into the branch as a permanent argument: that every serious breach is at once a field problem, a data problem, and a theory problem.
 
-The branch accepted that argument because Himmelreich proved the alternative intolerable. White Interval had nearly turned one dead sink into a lattice event. Katherine's severance of the backbone link is the reason the Company's first major contradiction-transmission attempt remained a black-site disaster instead of a civilizational one.
+The branch accepted that argument because Himmelreich proved the alternative intolerable. White Interval had nearly turned one dead sink into a lattice event. Katherine's manual isolation of the backbone link is the reason the Company's first major contradiction-transmission attempt remained a black-site disaster instead of a civilizational one. This systems cut was not the metaphysical capability later classified as Continuity Severance.
 
-The branch's older staff still occasionally write the division name as **StaSis** in internal notes. Katherine never corrected the styling. Her own view is that the older rendering usefully reminds people what the branch actually is: a set of emergency patches that learned, over time, how to pretend it had doctrine.
+The branch name is **Stasis** in all current operational records.
 
 Publicly, where public recognition could not be avoided, her work has been attributed to Entropy systems modernization, northern relay hardening, or routine resilience upgrades. She has received awards under those cover descriptions and accepted them with visible discomfort. Every official citation she has ever been handed has subsequently been redirected in conversation toward the teams who implemented it.
 

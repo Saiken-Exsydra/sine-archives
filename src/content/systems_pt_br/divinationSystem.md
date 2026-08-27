@@ -2,10 +2,10 @@
 title: "Divination"
 type: "System"
 summary: "Fusão recursiva entre um vessel mortal e coerência divina: não roteamento, mas carga compartilhada sob pressão de domínio."
-tags: ["systems", "Divination", "Vessel", "Fragments", "Constellations", "Beatification", "Crowning", "Fusion", "Pathway", "Communion", "Covenant", "Magnitude", "Obsidian"]
+tags: ["systems", "Divination", "Vessel", "Fragments", "Constellations", "Beatification", "Crowning", "Fusion", "Pathway", "Communion", "Manifestation", "Covenant", "Grace", "Sacrament", "Resurrection", "Demonology", "Continuity", "Magnitude", "Obsidian"]
 status: "public"
 created: "2026-02-12"
-updated: "2026-05-22"
+updated: "2026-08-14"
 image: "../../assets/uploads/sys-divination.png"
 ---
 
@@ -23,7 +23,7 @@ Um vessel se torna um lugar onde a pressão de domínio responde.
 
 ## O Que é Divination
 
-Divination não reescreve gramática, não cria milagres ilimitados e não concede liberdade sobrenatural genérica a um vessel.
+Divination comum não reescreve gramática, não cria milagres ilimitados e não concede liberdade sobrenatural genérica a um vessel.
 
 Ela repondera uma singularidade recursiva mortal em direção a um domínio divino e permite que esse domínio se expresse através de corpo, percepção, vontade ou ação.
 
@@ -31,6 +31,14 @@ Ela repondera uma singularidade recursiva mortal em direção a um domínio divi
 
 O vessel não é meramente favorecido.
 O vessel compartilha carga estrutural com coerência não humana.
+
+Um fragmento é uma **Presence**, não normalmente outra pessoa falando dentro do vessel. O contato costuma ser conceitual: pressão, certeza, inclinação, recusa, afinidade, importância simbólica, Weight emocional ou instinto moldado pelo domínio.
+
+Fragmentos buscam expressão. Um vessel compatível lhes oferece uma abertura para ação Page-real, e a agência mortal é parte do que torna essa abertura eficaz.
+
+> **Communion -> Intenção -> Manifestation**
+
+Communion sustenta o contato. A intenção pertence principalmente ao Diviner. Manifestation expressa uma capacidade já integrada à relação de fusão.
 
 ---
 
@@ -94,21 +102,31 @@ Em contextos de verdade do codex, **Indexed Vessel** permanece o termo estrutura
 
 Diviners e Divine Vessels geralmente não descrevem seu trabalho como mergulhar.
 
-O termo de acesso é o **Pathway**. O primeiro contato estável com um fragmento é **Pathway contact**. O contato ativo é **Communion**: o vessel contata a divindade, fragmento, saintly continuity, demonic pressure ou domain source ao qual está ligado, e a pressão de fusão se move por essa relação.
+O termo de acesso é o **Pathway**. O primeiro contato estável com um fragmento é **Pathway contact**. O contato ativo é **Communion**: o vessel sustenta contato com a divindade, fragmento, saintly continuity, demonic pressure ou domain source ao qual está ligado, e a pressão de fusão se move por essa relação.
 
 Na linguagem da Divination, **Communion** é o estado ativo. Teóricos do Apocachynthion podem compará-la a um Redactor entrando no Dive, mas a experiência é diferente. Um Redactor desce para selecionar e rotear. Um vessel entra em contato e sustenta pressão de domínio.
 
 Em profundidade de verdade do codex, Pathway e o Dive da Redactory podem ser lidos como arquitetura profunda de interface relacionada. Os sistemas usam essa profundidade de modos diferentes. Redactory roteia através de Dive e Anchor. Divination funde através de Pathway e Communion. Bloom cria raízes. Shores são a classe compartilhada de endpoint Terra-local onde essas pressões podem se tornar espacialmente experienciáveis.
 
-Um **Covenant** é um evento controlado de pedido-invocação. O vessel pede ao fragmento conectado um nível ou expressão específica de poder. Se o pedido é concedido, a concessão é temporária e pode aparecer como habilidade, estado passivo, surto de força, proteção, alteração perceptiva ou amplificação ampla de manifestações existentes.
+Uma **Manifestation** é o uso deliberado comum de uma expressão de domínio já disponível pela fusão. Ela não exige um novo pedido a cada ato. Um Diviner alinhado à proteção escolhe formar um escudo; a Presence se expressa através dessa escolha.
 
-Um Covenant é poderoso porque é concedido. Ele pode ser recusado, estreitado, retirado ou respondido de uma forma que o fragmento considera adequada, e não da forma que o vessel queria.
+Um **Covenant** é uma petição por expressão extraordinária além do que o vessel normalmente carrega: Magnitude maior, abertura mais ampla, uma capacidade normalmente inacessível àquele vessel, expressão mais completa do domínio ou um ato que arrisque vessel e fragmento.
+
+Um Covenant é poderoso porque é concedido. Ele pode ser recusado, estreitado, retirado, reinterpretado pelo domínio ou condicionado a uma troca. Um fragmento pode preservar um vessel valioso recusando um ato que destruiria a relação. Permissão e recusa costumam ser sentidas conceitualmente, não como negociação falada.
+
+### Grace, Sacrament, Oblation e Vow
+
+**Grace** é um Covenant extraordinário concedido livremente.
+
+**Sacrament** é um Covenant extraordinário cumprido por troca equivalente. Não é pagamento comum nem moeda genérica de milagres. A troca precisa ser coerente com o domínio da Presence, o ato, o vessel e a escala pedida.
+
+Aquilo que é entregue é uma **Oblation**: talvez uma vida, memória, nome, relação, capacidade, função corporal, ferida permanente ou outra perda coerente com o domínio. Um **Vow** é uma obrigação futura ou contínua de agir, recusar, servir, manter ou suportar. Um Sacrament pode exigir um ou ambos, mas nenhuma troca compra uma capacidade que a Presence não possui.
 
 ---
 
 ## Fragmentos e Constelações
 
-O enquadramento mais novo trata linhas divinas menos como escadas planas e mais como famílias organizadas de fragmentos.
+Linhas divinas são famílias organizadas de fragmentos, não escadas planas.
 
 Uma linha de alta ordem pode se externalizar como uma **constellation**:
 
@@ -121,7 +139,7 @@ Isso importa porque aquilo que observadores comuns chamam de "um anjo" ou "um de
 
 Também importa para a profundidade do vessel. Contato com um mote menor não é o mesmo evento que alinhamento direto com uma estrela central, mesmo que ambos pertençam à mesma família divina.
 
-**Magnitude** é a escala de vessel/fonte. Não é rank institucional.
+Hierarquia de fonte e **Magnitude** expressa são distintas. A hierarquia identifica a que o vessel está conectado. A Magnitude expressa descreve quanta Presence o vessel carrega ou expressa agora. Nenhuma das duas é rank institucional.
 
 - **Gleam**: contato mínimo, breve ou quase inteiramente perceptivo.
 - **Spark**: contato menor, mas repetível, com Weight limitado.
@@ -130,7 +148,9 @@ Também importa para a profundidade do vessel. Contato com um mote menor não é
 - **Cardinal**: contato de estrela principal, Weight de domínio mais amplo e maior risco de erosão.
 - **Cynosure**: contato de estrela central com a identidade governante da constelação.
 
-Rank da Igreja pertence ao comando de Obsidian. Magnitude pertence à escala de vessel/fonte.
+Rank da Igreja pertence ao comando de Obsidian. A hierarquia de fonte pertence ao fragmento. A Magnitude expressa pertence à carga presente do vessel.
+
+Um vessel conectado a uma estrela central ainda pode expressar apenas uma parte limitada dela. Capacidade da fonte, Weight atual, Bearing do vessel e escala manifestada permanecem distintos.
 
 ---
 
@@ -162,6 +182,15 @@ Progressão típica:
 
 Em profundidade extrema, o vessel pode assentar em um novo estado estável ou deixar de permanecer o self organizador dominante.
 
+Quatro pressões podem variar de forma independente:
+
+- **saturação somática**: quanto o corpo mudou;
+- **saturação de identidade**: quanto o domínio reorganizou motivos e autoconceito;
+- **integridade da agência**: até que ponto a pessoa original ainda escolhe de modo significativo;
+- **profundidade de fusão**: quão inseparáveis Presence e vessel se tornaram.
+
+Possession começa quando a Presence substitui, apaga, devora ou sobrepõe o self-address operativo do vessel. Fusão profunda não é possession por si só. Fusão completa pode produzir um estado composto que já não se divide claramente entre pessoa e fragmento. Aparência, inteligência, agência e personhood precisam ser julgadas separadamente.
+
 Termos da Igreja mapeiam essa progressão sem esgotá-la:
 
 | Condição Estrutural | Termo angelical da Igreja | Termo demoníaco da Igreja |
@@ -174,21 +203,43 @@ Termos da Igreja mapeiam essa progressão sem esgotá-la:
 
 Beatification é inferior a Crowning. Crowning é o estado mais profundo, estável e reorientador de identidade. As mecânicas estruturais sob esses termos são mais amplas do que a doutrina de qualquer instituição.
 
+Presence angelical tende à **integração coerente**. Presence demoníaca tende à **integração agressiva**. Coerência não é bondade ou saúde, e agressividade não significa possession imediata.
+
+Um vessel Crowned pode permanecer estável, articulado, disciplinado e útil enquanto se torna radicalmente menos humano em motivação. Protection pode virar sacrifício suicida; Mercy pode virar recusa de conter; Truth pode apagar privacidade; Order pode suprimir dissenso. Santidade e saúde não são a mesma condição.
+
+Presence demoníaca tende a pressionar por Communion mais profunda, Manifestation repetida, abertura mais ampla e compulsão de domínio mais forte. Fragmentos de ordem inferior produzem com mais frequência saturação corporal e metamorfose bruta; fragmentos de ordem superior sustentam com mais frequência relações sofisticadas. Nenhuma tendência é regra. A hierarquia do fragmento determina capacidade, não resultado.
+
+Vampires, ghouls, estados do tipo werewolf, Saints, Living Relics, vessels possuídos e outras condições alteradas são consequências recorrentes dessa mesma ecologia de fusão, não sistemas mágicos separados nem uma tabela fixa de espécies. Blood importa para vampirismo como meio denso de continuidade corporificada, não como alma líquida.
+
+---
+
+## Resurrection, Ghosts e Continuity
+
+Resurrection existe, mas é rara, específica de domínio, perigosa e custosa. Uma Presence capaz precisa alcançar a continuidade sobrevivente da pessoa morta, reancorar essa mesma pessoa à existência Page-real corporificada e sustentar a transição por Covenant, Grace ou Sacrament.
+
+Ela não pode criar uma pessoa do nada nem substituir o morto por uma cópia portadora de memórias. Domínio da Presence, capacidade da fonte, Magnitude expressa, Bearing, estado e endereçabilidade da continuidade morta e qualquer troca exigida limitam o ato.
+
+Um Sacrament possível é **vida por vida**. Uma vida corporificada termina para que outra seja restaurada. A alma da pessoa entregue não é consumida como combustível; essa pessoa atravessa sua própria transição postmortem.
+
+Um ghost pode ser uma continuidade morta que permanece ancorada a um lugar, corpo, objeto, pessoa, trauma, obrigação, interferência ritual ou contaminação de domínio. Ghosts, impressões residuais, revenants, cadáveres animados, Successor Persons e pessoas ressuscitadas não são intercambiáveis. Memória e aparência, sozinhas, não estabelecem que a pessoa morta retornou.
+
 ---
 
 ## Fusão Extrema e Theophany
 
-O registro teológico restrito da Igreja contém uma categoria quase mítica para expressão divina total através de um vessel sobrevivente: **Theophany**.
+O registro teológico restrito da Igreja contém uma categoria quase mítica para expressão divina total através de um vessel sobrevivente: **Theophany**. Em profundidade estrutural, isso é Shorewalking de Divination.
 
 Theophany não é Divination ordinária e poderosa. Não é o mesmo que uma manifestação espetacular, um estado Crowned profundo ou um vessel usando uma habilidade forte.
 
-Na linguagem da Igreja, Theophany é a possibilidade aterrorizante de que o deus, angel, santo, demon, fragmento ou pressão de domínio tenha entrado no mundo através do vessel enquanto o vessel permanece presente o suficiente para não ser classificado como simples possessão ou colapso.
+Na linguagem da Igreja, Theophany é a possibilidade aterrorizante de que o deus, angel, santo, demon, fragmento ou pressão de domínio tenha entrado no mundo através do vessel. Estruturalmente, a condição decisiva é mais simples: **Presence se manifesta através de um vessel que permanece.** Se o vessel é apagado, devorado, substituído ou tornado irrelevante, o resultado é possessão, não Theophany bem-sucedida.
 
 Theophany não é um Covenant. Um **Covenant** é um pedido concedido de poder. O vessel pede; o fragmento concede, recusa, estreita ou responde em sua própria forma.
 
 Um Covenant grande pode parecer Theophany-adjacent se pedir demais do vessel. Covenants não são sliders que podem simplesmente ser usados em meia força. Um Covenant é um conceito concedido pelo fragmento e precisa se expressar na forma que o fragmento permite. Se esse conceito exigir abertura demais, pode matar o vessel, danificá-lo permanentemente ou ser confundido com Theophany por observadores.
 
-A classificação é difícil. A Igreja pode confundir Divination poderosa com Theophany, e o veredito final exige investigação pelas autoridades teológicas certas, muitas vezes com Oracles ou outros praticantes do Gift of Sight envolvidos.
+Theophany carrega **autoridade temporária de abertura** dentro da jurisdição compatível aberta por vessel, Presence, domínio, relação, lugar e Shore. É acesso sintático genuíno e delimitado, não soberania nativa, divindade permanente ou prova de que a própria Shore seja divina.
+
+A classificação é difícil. A Igreja pode confundir Divination comum e poderosa com Theophany, e o veredito final exige investigação pelas autoridades teológicas certas, muitas vezes com Oracles ou outros praticantes do Gift of Sight envolvidos. Consulte [[shores|Shores]] e [[syntax-authority|Autoridade de Sintaxe e Soberania Recursiva]].
 
 ---
 
@@ -229,4 +280,4 @@ Dentro da Igreja, Diviners reconhecidos são exclusivos de Obsidian. Um Divine V
 
 ## Em Uma Frase
 
-Divination é fusão recursiva entre um vessel mortal e coerência divina através do Pathway, estabilizada por Communion e organizada por compatibilidade de domínio e hierarquia de fragmentos, não por técnica mágica livre.
+Divination é fusão entre fragmento e vessel através do Pathway: Communion sustenta o contato, intenção mortal dirige Manifestation comum, Covenant pede expressão extraordinária, e todo resultado permanece limitado por domínio, continuidade e pelo vessel que o carrega.

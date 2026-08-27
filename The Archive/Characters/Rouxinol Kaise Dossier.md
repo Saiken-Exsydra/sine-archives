@@ -62,7 +62,7 @@
 
 ## II. ORIGIN NOTE — VEL'HARA
 
-Vel'hara is a city-state in the western longitudinal extent of the Twilight Band, situated in the transitional territory between the Empire of Synus and the nation of Aurora — a strip of mid-band ground that neither state has historically sought to formally absorb. The city sustains itself as a free port and research enclave, tolerating institutions the Empire would regulate and activities Aurora would prohibit, drawing economic and intellectual traffic through the gap between two large states that prefer not to share a border.
+Vel'hara is a city-state in the western longitudinal extent of the Twilight Band, southwest of the northern highland border shared by the Empire of Synus and Aurora. It occupies mid-band free-port ground that neither state has historically sought to absorb. The city tolerates institutions the Empire would regulate and activities Aurora would prohibit, drawing economic and intellectual traffic from both powers without interrupting their actual land border farther north.
 
 Its governance is a council of commercial houses. No Redactory qualification is required for membership. The Apocachynthion holds no formal jurisdiction there. The Church maintains a pastoral presence with no operational authority.
 
@@ -266,7 +266,7 @@ At age fourteen, during an incident involving another subject in an adjacent fac
 
 Before the Apocachynthion, Rouxinol's operational formation was the work of a single individual.
 
-Aldric Vonn was, by the subject's account during intake documentation, a former officer of one of the Empire's Founding House militias — house identity not disclosed to this office, and not pressed — who had separated from that service under disputed circumstances and rebuilt himself over a decade as the most effective close-operations coordinator in Hora'veil's grey-space mercenary circuit. He was not a Redactor. He had, by her account, a more complete intuitive understanding of how Redactors operate than most Redactors develop of themselves.
+Aldric Vonn was, by the subject's account during intake documentation, a former officer in one of the Empire's licensed Founding House retainer formations — house identity not disclosed to this office, and not pressed — who had separated from that service under disputed circumstances and rebuilt himself over a decade as the most effective close-operations coordinator in Hora'veil's grey-space mercenary circuit. He was not a Redactor. The officer title belonged to lawful House security, not an independent House army. He had, by her account, a more complete intuitive understanding of how Redactors operate than most Redactors develop of themselves.
 
 He found her within weeks of her arrival in Hora'veil's outer district. She was fifteen. He made an offer framed as employment and structured, as she later understood it, as long-term investment. She accepted.
 
@@ -304,9 +304,11 @@ She produced what the training assessors required, met the certification criteri
 
 Stylus certification in the Mirror Anchor and Quill certification in the Threshold Anchor were issued concurrently in 2197. Mark 4 was sealed within the month under specialist Margin.
 
+Her close-operations competence did not come from the Academy's common defensive floor. It preceded intake through Corvel conditioning and Vonn's mercenary formation, then received five years of lawful hostile-condition assessment, release discipline, team procedure, and Mark-bound field supervision. The Academy regularized and constrained an existing combat specialist; it did not produce the specialist merely by certifying her.
+
 ### Present Condition — 2198 to 2200
 
-Rouxinol operates out of Hora'veil under her conditional Mark. Her contractor registry is current. She takes assignments. She completes them. She does not take assignments she has assessed as requiring her to function as an instrument for an institution she does not trust. She has declined two formal recruitment overtures since her Mark was sealed — one from a Founding House militia, one from a private contractor operating under SiNE's indirect corporate structure. The refusals were not hostile. They were precise.
+Rouxinol operates out of Hora'veil under her conditional Mark. Her contractor registry is current. She takes assignments. She completes them. She does not take assignments she has assessed as requiring her to function as an instrument for an institution she does not trust. She has declined two formal recruitment overtures since her Mark was sealed — one from a Founding House security office, one from a private contractor operating under SiNE's indirect corporate structure. The refusals were not hostile. They were precise.
 
 The secondary loop's impression count has not changed since 2197.
 

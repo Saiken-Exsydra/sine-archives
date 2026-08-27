@@ -13,7 +13,7 @@ point_profile:
   cas_access: ""
   leaf_permissions: ""
   register_access: ""
-designation: "Fundador da SiNE"
+designation: "Long Between"
 height: "185 cm"
 build: "Largo, sem pressa"
 complexion: "Pele morena; estabilidade incomum ao longo de uma vida muito longa"
@@ -22,7 +22,7 @@ eyes: "Âmbar escuro"
 dress: "Caro, discreto"
 residence: "Pluribus Hill, Kalt'sen"
 occupation: "Fundador e principal da SiNE; Wonderwall Seat; Senador hereditário"
-summary: "O fundador longevo no centro da SiNE e da House Wonderwall: paciente, exigente e publicamente responsável diante das instituições que ajudou a construir."
+summary: "He survived the age that made him and built the one that followed."
 image: "../../assets/uploads/char-emmanuel-wonderwall.png"
 hero_image: "../../assets/uploads/char-emmanuel-wonderwall-hero.png"
 portrait_gallery: []
@@ -37,7 +37,7 @@ tags:
   - "Founder"
 status: "public"
 created: "2026-03-30"
-updated: "2026-08-23"
+updated: "2026-08-26"
 codex_file: "Em'manuel Kael Wonderwall Dossier.md"
 ---
 

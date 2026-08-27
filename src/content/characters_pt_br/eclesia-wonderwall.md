@@ -13,7 +13,7 @@ point_profile:
   cas_access: ""
   leaf_permissions: ""
   register_access: ""
-designation: "Cadete Yalara"
+designation: "Stilllight"
 height: "164 cm"
 build: "Esguia"
 complexion: "Muito pálida"
@@ -22,7 +22,7 @@ eyes: "Castanhos com pontos âmbar"
 dress: "Amarelos quentes, creme, marrom suave, verde-pálido e lenços estampados; cinzas da Academy durante a prática"
 residence: "Propriedade Wonderwall em Kalt'sen; residência supervisionada da Academy em Lon'drina durante os termos ativos"
 occupation: "Estudante provisória da Academy e assistente de calibração"
-summary: "Brilhante, afetuosa e difícil de intimidar, Ec'lesia é uma jovem Redactor Yalara cuja expressão incomum de Radiance se desenvolve sob cuidadosa supervisão acadêmica."
+summary: "She inherited the weight. Not the meaning."
 image: "../../assets/uploads/characters/char-eclesia-wonderwall.png"
 hero_image: "../../assets/uploads/characters/char-eclesia-wonderwall-hero.png"
 portrait_gallery:
@@ -38,7 +38,7 @@ tags:
   - "Lon'drina"
 status: "public"
 created: "2026-02-12"
-updated: "2026-08-23"
+updated: "2026-08-26"
 codex_file: "Eclesia Wonderwall Dossier.md"
 ---
 

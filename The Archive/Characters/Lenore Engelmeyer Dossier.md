@@ -24,11 +24,11 @@
 | **Anchor Classification** | Deception — confirmed through specialist panel assessment, Year 2194. No Inkless designation. No outstanding classification review. Classification is not under contest. |
 | **House** | Engelmeyer — Voren cadet-branch origin; formally reintegrated to main-line recognition Year 2199 and registered as the current blood Seat under the House's standing Furnace Council. *Voren* is the branch identifier inherited through her mother's line; Al'tair adopted it upon marriage. Le'nore's civil documents used the two-name form before reintegration, while branch records used the full lineage form. |
 | **Current Residence** | Vel'hara, independent western-band city-state — relocated Year 2199 under House arrangement. Registered through the Vel'hara–Apocachynthion inter-registry compact, with Hora'veil Academy holding the imperial side of her file. |
-| **Occupation** | Independent practitioner — Marked for operational engagement under conditional terms |
+| **Occupation** | Independent practitioner — civic practice under conditional terms; no martial placement |
 | **Height** | 169 cm |
 | **Build** | Slight; compact without frailty; moves as though she has decided in advance how much space she intends to occupy and is not revising the estimate |
 | **Complexion** | Fair; even; no surface indicators during assessed ability expression — no vein shimmer, no atmospheric disturbance, no coherence bleed. Multiple assessors ***I*** have worked with noted the absence of these tells. The absence is itself a tell, to anyone looking for it. |
-| **Hair** | Blonde, near-white — the color of old linen in direct light, or of something that has been bleached by long proximity to something very bright. Cut short in an asymmetric side-parted bob; the longer side sweeps across the brow, the shorter side sits clean against the cheek. Deliberate and precise. |
+| **Hair** | Blonde, near-white — the color of old linen in direct light, or of something that has been bleached by long proximity to something very bright. Cut in a short, softly layered shaggy bob with sweeping curtain bangs and gently flipped-out ends. Deliberate and precise. |
 | **Eyes** | Grey, very light — reads as near-colorless in low illumination. Every assessor who has spent significant time across a table from her has noted the eyes and none have found a description that closes the subject. The first field assessor who saw her wrote: *the color is not the thing that registers.* He did not elaborate. |
 | **Typical Dress** | White by preference — pale linens, light wools, materials that don't announce themselves. The preference is consistent enough across five years of documented contact to be a signature without being a rule. |
 | **General Impression** | Notably attractive in a way that registers before anything else registers. People notice her face first. They notice something else second. By the time they are trying to name the second thing, they have usually already smiled back at her. |
@@ -69,9 +69,9 @@
 
 House Engelmeyer is one of the Fifteen Founding Houses and one of the surviving dynastic sources of the old Twelve. Its authority rests on foundry governance, metallurgy, pressure systems, armament work, and the repeated appearance of genuine Redactors with heat- and material-adjacent Anchors. The House does not inherit a single forge power. It inherits a high probability of useful routes through thermal and structural transformation.
 
-The Great Cisma divided this inheritance three ways. The recognized main line remained in Synus, accepted the First Charter of Inscription, and consolidated imperial foundry jurisdiction. Southern furnace lines migrated, married into local communities, and helped give the future Ardeatan federation enough industrial continuity to survive. The Voren line attempted armed neutrality from a contested forge-holding on the western edge of the future Central Region.
+The Great Cisma divided this inheritance three ways. The recognized main line remained in Synus, accepted the First Charter of Inscription, and consolidated imperial foundry jurisdiction. Southern furnace lines migrated east, married into existing communities, and helped give the future Ardeatan federation enough industrial continuity to survive. The Voren line attempted armed neutrality from a contested forge-holding on the western edge of the future Central Region.
 
-That holding — the Voren Works — was destroyed in Year 1043. The recognized line benefited from the loss. Southern survivors entered Ardeatus. Western survivors carried the name to Drevholt. House Engelmeyer's later silence therefore concealed more than embarrassing cousins: it concealed a disaster settlement, divided blood, and a contingent succession right that remained legally dormant until Le'nore.
+That holding — the Voren Works — was destroyed in Year 1043. The recognized line benefited from the loss. Twenty survivors traveled east from the southern furnace corridor into Ardeatan communities. Nineteen western survivors carried the name to Drevholt. House Engelmeyer's later silence therefore concealed more than embarrassing cousins: it concealed a disaster settlement, divided blood, and a contingent succession right that remained legally dormant until Le'nore.
 
 The full account is held in *The Engelmeyer Lineage Codex*. No current House faction possesses its codex-truth layer.
 
@@ -79,11 +79,11 @@ The full account is held in *The Engelmeyer Lineage Codex*. No current House fac
 
 ### II.2 The Cadet Branch — House Record and the Long Difficulty
 
-Voren was a place before it was a permanent branch name: a gorge, estate, worker settlement, and BrightCrystal-assisted forge complex standing where Central Region roads divided toward the south and the independent western ports. The Engelmeyers who administered it used *Voren* as a geographic branch marker before the Great Cisma.
+Voren was a place before it was a permanent branch name: a gorge, estate, worker settlement, and BrightCrystal-assisted forge complex standing where Central Region roads divided west toward the independent ports and east through the southern furnace network. The Engelmeyers who administered it used *Voren* as a geographic branch marker before the Great Cisma.
 
 During the Year 1043 siege, loyalist thermal denial, a separatist BrightCrystal modification, and the branch keeper's emergency family-keyed hold crossed the same control lattice. The Works exploded and the gorge collapsed. Forty-three people carrying active Voren family signatures survived inside the routed field. The lattice had used their recursive structures as continuity references while related people died through the network. It left those survivors able to retain partial family information and adjacent grammar without immediate rejection.
 
-Nineteen survivors went west and settled in or around Drevholt. Twenty entered the southern migration and became part of Ardeatan furnace communities. The Drevholt line retained the Engelmeyer name while losing property, ordinary House advancement, and any socially usable account of what had happened.
+Nineteen survivors went west and settled in or around Drevholt. Twenty traveled east from the southern furnace corridor and became part of Ardeatan furnace communities. The Drevholt line retained the Engelmeyer name while losing property, ordinary House advancement, and any socially usable account of what had happened.
 
 Across generations, descendants heard voices, recognized rooms they had never entered, carried sensory fragments belonging to the dead, and experienced interruption between self-address and inherited information. Some were genuine Redactors whose Dive interfaces rendered the same unreachable foundry. Others had no Redactory at all. The scar altered recursive handling; it did not grant an Anchor.
 
@@ -189,11 +189,11 @@ She understands that she is being protected, watched, underestimated, and used. 
 
 ### II.6 Ardeatus — Inherited Without Residence
 
-Le'nore has never lived in Ardeatus. She is nevertheless blood-related to the southern Voren survivors and to other Engelmeyer furnace lines absorbed into the federation. The sealed Vorn household register contains four survivor names absent from Synusian records and a genealogy that reaches living Ardeatan foundry families.
+Le'nore has never lived in Ardeatus. She is nevertheless blood-related to the eastbound Voren survivors and to other south-origin Engelmeyer furnace lines absorbed into the federation. The sealed Vorn household register contains four survivor names absent from Synusian records and a genealogy that reaches living Ardeatan foundry families.
 
 She knows the register exists. She has not seen it.
 
-If the genealogy became public, Ardeatan factions would not agree on her meaning. Covenant hardliners could call her the completed consequence of unlawful Redactory. Vorn descendants could call her stolen kin, a northern claimant, or the first House authority capable of opening records denied to both branches. Federal strategists could use her against the legitimacy of Engelmeyer war-industry jurisdiction. Marta Chord pragmatists could treat her as proof that Redactor inheritance has never obeyed national doctrine.
+If the genealogy became public, Ardeatan factions would not agree on her meaning. Covenant hardliners could call her the completed consequence of unlawful Redactory. Vorn descendants could call her stolen kin, a western Imperial claimant, or the first House authority capable of opening records denied to both branches. Federal strategists could use her against the legitimacy of Engelmeyer war-industry jurisdiction. Marta Chord pragmatists could treat her as proof that Redactor inheritance has never obeyed national doctrine.
 
 The political risk is not merely that Ardeatus might claim her. It is that living people on both sides might claim one another, and that twelve centuries of property, martyrdom, and war would then have to survive the discovery that the blood was never cleanly divided.
 
@@ -533,7 +533,7 @@ She will. She is the kind of person who eventually pulls every thread that is ha
 
 ## IX. VEL'HARA — CURRENT CONTEXT
 
-Le'nore relocated to Vel'hara in Year 2199 at the main house's arrangement. Vel'hara is the free-port city-state of the western band — administratively independent, tolerating institutions the Empire would regulate, drawing research and commercial traffic through the gap between two large states that prefer not to share a border. The Apocachynthion holds no unilateral jurisdiction there. The inter-registry compact allows Hora'veil Academy to maintain her certification and review file with Vel'haran consent. The Church maintains a pastoral presence with no operational authority.
+Le'nore relocated to Vel'hara in Year 2199 at the main house's arrangement. Vel'hara is the free-port city-state of the western band — administratively independent, southwest of the actual Imperial-Auroran highland border, tolerating institutions the Empire would regulate, and drawing research and commercial traffic from both states. The Apocachynthion holds no unilateral jurisdiction there. The inter-registry compact allows Hora'veil Academy to maintain her certification and review file with Vel'haran consent. The Church maintains a pastoral presence with no operational authority.
 
 The main house's choice of Vel'hara reflects several interests at once: distance from dense imperial monitoring, proximity to Drevholt, access to western trade, and the ability to observe Corvel without placing Le'nore inside the Institute. The protective faction calls this autonomy. The containment faction calls it a manageable perimeter. Le'nore calls it close enough to the records she wants.
 
@@ -585,7 +585,7 @@ The file does not know. She may not know. She is existing in the present tense, 
 
 ### XI.1 Knowledge Boundaries
 
-**She knows:** Voren was a forge-holding destroyed during the Great Cisma; western survivors settled at Drevholt; southern survivors entered Ardeatus; the main House profited from the branch's loss; Re'lha inherited the voices; Al'tair came through Corvel; the House reintegrated her through a sealed succession instrument.
+**She knows:** Voren was a forge-holding destroyed during the Great Cisma; western survivors settled at Drevholt; eastbound survivors entered Ardeatus from the southern furnace corridor; the main House profited from the branch's loss; Re'lha inherited the voices; Al'tair came through Corvel; the House reintegrated her through a sealed succession instrument.
 
 **She suspects:** her childhood event caused Re'lha's disappearance; Al'tair recognized what happened; Corvel holds an incomplete genealogy; the information inside her includes people older than Re'lha.
 
@@ -633,6 +633,8 @@ Registry status: active. Quill certification current. Mark 2 active and unmodifi
 
 Scheduled Depth assessments every eight months at Hora'veil, maintained through the western-band inter-registry compact. All mandatory disclosures compliant for the duration of the current Mark period.
 
+Reintegration as the Engelmeyer blood Seat created an immediate House expectation of further protective and martial formation. The current file records no completed House combat course, no martial apparatus permission, and no widening beyond Mark 2. The House may provide conventional instruction, lawful defensive drills, and a protective detail; it cannot treat succession as an Open Mark or convert her untested capability into military authority. Her late arrival to the House and her lack of formal high-tier battle doctrine remain material facts.
+
 **Anomalous findings on record:**
 
 The subject's coherence signatures have shown no developmental variation across five years of monitored practice. No progression. No degradation. Structurally identical in every assessment to intake presentation. This is inconsistent with any documented practitioner development pattern in the Apocachynthion's historical record. The panel has noted it as anomalous. No theoretical account has been offered.
@@ -671,13 +673,13 @@ Most opponents never get a fair fight because she does not believe in fair fight
 
 Direct Redactory against Le'nore's body, identity, or recursive singularity is unreliable. Especially weak are body-targeted reconfiguration, identity destabilization, forced biological alteration, attempts to sever or overwrite her recursive structure, Deception-based interference aimed at confusing her self-model, and containment fields keyed to ordinary human-recursive assumptions.
 
-The reason is structural. Her singularity is self-contained and reinforced by compatibility with the Quiet Moon's larger boundary-scar grammar. Directly redacting her is not like redacting a person. It is like trying to edit a word whose meaning is being held in place by a larger sentence outside the page margin.
+The reason is structural. Le'nore possesses unusually coherent mortal **recursive sovereignty**: her whole architecture answers "This is me" because Quiet Moon-derived grammar was integrated during development rather than added as a competing presence. Direct alteration must therefore overcome one self-address reinforced by genuine foreign syntax and still survive jurisdiction, compatible access, continuity, and Time. This is resistance, not immunity, and it does not give Le'nore native Page or planetary authority.
 
 This does not make her invincible. It means conventional person-targeted Redactory is usually the wrong tool.
 
 ### XIV.3 What Can Affect Her
 
-Le'nore can be defeated, contained, delayed, injured, or forced to retreat under exceptional circumstances: indirect structural collapse, terrain denial, environmental attacks that do not target her person-concept directly, extreme heat or pressure, vacuum, gravity, overwhelming kinetic force, artifact-class weapons, Obscurial-adjacent effects, specialized Redactory designed for Quiet Moon or boundary-scar grammar interaction, prepared Archtype-level opposition, or traps that exploit her inexperience rather than her durability.
+Le'nore can be defeated, contained, delayed, injured, or forced to retreat under exceptional circumstances: indirect structural collapse, terrain denial, environmental attacks that do not target her person-concept directly, extreme heat or pressure, vacuum, gravity, overwhelming kinetic force, artifact-class weapons, surviving Obscurial-interface effects, specialized Redactory designed for Quiet Moon or boundary-scar grammar interaction, prepared Archtype-level opposition, or traps that exploit her inexperience rather than her durability.
 
 You may not be able to redact Le'nore directly. You may still be able to drop the building on her, remove the air, collapse the street, blind the room, burn the environment, or force her into an unfavorable structural condition.
 

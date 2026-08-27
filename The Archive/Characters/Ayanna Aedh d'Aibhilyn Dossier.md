@@ -26,9 +26,9 @@
 
 ---
 
-## PROTOTYPE STATUS
+## PROVISIONAL RECORD LABELS
 
-The following names remain placeholders and may be revised without changing Ayanna's core canon:
+The originating records are sealed, internally inconsistent, or deliberately incomplete. This dossier therefore uses the following provisional labels for the same entities throughout; they may not be the official names used inside the program:
 
 - **Lyréne Pharmaceuticals** - originating organization.
 - **The Vitrified Wing** - hidden internal division.
@@ -36,7 +36,7 @@ The following names remain placeholders and may be revised without changing Ayan
 - **The Sibyl Fragment** - internal name for the Precursor diagnostic instrument.
 - Secondary personnel names and exact role titles.
 
-Stable canon:
+Established facts:
 
 - Ayanna Aedh d'Aibhilyn is Auroran.
 - She is the first and currently only successful engineered subject produced by the Vitrified Wing's coherence-substrate program.
@@ -252,7 +252,7 @@ Ayanna was engineered to be such a receiver.
 
 The Fragment was built for probabilistic site assessment: it returns structured information about coherence anomalies, thinness fluctuations, resonance events, and related structural conditions. Its output was meant for a Precursor-class observer. Ayanna's engineered substrate and Mechanism Anchor make her an accidental modern approximation of that role.
 
-At sustained coupling, she may eventually perceive more than the Wing expects: not just local anomaly data, but traces of the wider Precursor stabilization network, the Lunar Crown's containment work, Vael'Theryn's modeling activity, and Myehnai's expelled Instrument of Legibility in the White Desert.
+At sustained coupling, she may eventually perceive more than the Wing expects: not just local anomaly data, but traces of the wider Precursor stabilization network, the Lunar Crown's containment work, Vael'Theryn's modeling activity, and the expelled Legibility interface remnant in the White Desert that Auroran and Church tradition identifies as Myehnai's Instrument.
 
 She will not understand all of what she sees.
 
@@ -296,7 +296,7 @@ Lacroix is the senior researcher attached to the Sibyl Fragment. He has studied 
 
 Project Seam identified Ayanna as anomalous through the institutional pattern around her: intake irregularity, Lyréne proximity, developmental profile, and non-standard trajectory. A brief reached Em'manuel Wonderwall eleven months ago.
 
-Project Seam has not intervened. It is passively observing. The Vitrified Wing does not know this. Clockwork has no valid seam while competent Auroran and civil jurisdictions remain available.
+Project Seam has not intervened. It is passively observing. The Vitrified Wing does not know this. The Seat has not struck a Clockwork objective concerning Ayanna, and neither anomaly nor jurisdictional complexity would by itself authorize one.
 
 ---
 
