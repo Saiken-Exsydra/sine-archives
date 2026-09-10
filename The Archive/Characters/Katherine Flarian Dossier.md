@@ -1,7 +1,7 @@
 # PERSONNEL DOSSIER - RESTRICTED
 ## KATHERINE FLARIAN
 **SiNE Stasis (S-AE) - Continuity Architect - Type None - Post-Entry Continuity Scar - Meridian-tier internal clearance**
-*Filed by: SiNE Anticipatory Evaluation branch, Continuity Office - Entropy hire 2185 - unauthorized Himmelreich contact event 2188 - Stasis transfer 2188 - permanent placement 2189 - file active, Year 2200*
+*Filed by: SiNE Anticipatory Evaluation branch, Continuity Office - Entropy hire c. 2194 - unauthorized Himmelreich contact event 2195 - Stasis transfer 2195 - permanent placement 2196 - file active, Year 2200*
 
 ---
 
@@ -15,7 +15,7 @@
 | Field | Entry |
 |---|---|
 | **Full Name** | Katherine Flarian |
-| **Year of Birth** | 2165 (age 35 at time of filing, 2200) |
+| **Year of Birth** | c. Imperial Year 2185 (age 35 Lunar Years at time of filing, Imperial Year 2200) |
 | **Birth Status** | Vel'hara-born, no known House affiliation, no anomalous indicators recorded in childhood |
 | **House Status** | None |
 | **Redactory Status** | Non-practitioner |
@@ -61,7 +61,7 @@ Her intelligence does not read first as brilliance. It reads first as pressure. 
 
 ## IV. ORIGIN - VEL'HARA, PATTERN, AND THE HABIT OF NOTICING
 
-Katherine was born in Vel'hara in 2165, the elder child of a contract ledger-auditor and a bonded communications clerk whose professional lives were organized around one shared discipline: nothing in a working system is ever truly minor if it repeats.
+Katherine was born in Vel'hara c. Imperial Year 2185, the elder child of a contract ledger-auditor and a bonded communications clerk whose professional lives were organized around one shared discipline: nothing in a working system is ever truly minor if it repeats.
 
 Vel'hara suited the kind of mind she was from the beginning. It is a city-state that rewards the reading of gaps: contract language, shipping patterns, customs declarations, private routes hidden beneath public ones. The city runs on what people can get away with, what they can prove, and what they can notice before anyone else notices that they have noticed it.
 
@@ -71,7 +71,7 @@ She was not socially easy. She made acquaintances faster than friends and let mo
 
 The quality that later made her foundational to S-AE was visible then in civilian form: she did not stop at noticing that something was wrong. She wanted to know what shape the wrongness had.
 
-Entropy hired her in 2185 out of that Vel'haran reputation. The official recruitment logic was straightforward: SiNE wanted a systems-security analyst with proven intrusion skill, infrastructure literacy, and no sentimental attachment to old architecture that ought to have been retired years earlier. She joined Entropy on a research-security track and became, within three years, one of the more useful people in its internal hardening programme.
+Entropy hired her c. Imperial Year 2194 out of that Vel'haran reputation. The official recruitment logic was straightforward: SiNE wanted a systems-security analyst with proven intrusion skill, infrastructure literacy, and no sentimental attachment to old architecture that ought to have been retired years earlier. She joined Entropy on a research-security track and became, within three Lunar Years, one of the more useful people in its internal hardening programme.
 
 Her work inside Entropy was not glamorous. It was exactly the kind of work she was built for: penetration testing on buried relay systems, archive segmentation, credential-path analysis, and the ugly practical question of what a hostile intelligence would learn first if it ever got into a SiNE research lattice. She was good enough at it that senior staff tolerated her abrasiveness, and careful enough that they gave her more access each year.
 
@@ -85,7 +85,7 @@ The site called **Himmelreich** did not officially exist.
 
 In Evanote relay records it appeared only as an obsolete maintenance sink: HMR, decommissioned, no active staff assignment, no freight relevance, no budget signature worth following. In Glass Threader traffic it behaved differently. Dead routes touched it. Retired keys refreshed themselves against it. Diagnostic packets timestamped days in the future returned from it marked valid. A relay node that did not exist was acting, with quiet persistence, like the hidden center of a conversation.
 
-Katherine found that pattern in 2188 while performing an internal Entropy security review across logistics-adjacent relay architecture. She followed it because the behavior offended her professionally. Hidden infrastructure was common. Hidden infrastructure whose timing disagreed with itself in a stable way was not.
+Katherine found that pattern in Imperial Year 2195 while performing an internal Entropy security review across logistics-adjacent relay architecture. She followed it because the behavior offended her professionally. Hidden infrastructure was common. Hidden infrastructure whose timing disagreed with itself in a stable way was not.
 
 What Himmelreich actually was: an off-book buried relay-and-research complex beneath the Carendis Salt Flat complex in the North, built around a decommissioned Glass Threader sink and later repurposed jointly by Entropy and Stasis personnel as an observation well for non-sequential manifestation. By the time Katherine found it, the site had already accumulated the branch's worst habits: total compartmentalization, elegant security, and an operational confidence not yet supported by theory.
 
@@ -168,7 +168,7 @@ She manages the condition through a rotating medication schedule developed by En
 
 The psychological consequences are subtler and in some ways worse. She has difficulty trusting completion. Files must be closed twice. Doors are checked more than once. Unresolved conversations remain active in her mind long after they would have dissipated in other people. She has become extraordinarily good at tolerating ambiguity in theory and extraordinarily bad at tolerating it in process. People close to her learn quickly that if Katherine insists a thing is not stable yet, arguing abstractly will not move her. Her body has already started paying for the instability and she trusts that invoice more than reassurance.
 
-The cruel symmetry of the condition is that the pain is also her instrument. The same nervous-system damage that disabled her ordinary life made her capable of registering continuity stress before the machines could formalize it. She knows a site is beginning to fail because it hurts in a pattern she has spent twelve years teaching others to measure.
+The cruel symmetry of the condition is that the pain is also her instrument. The same nervous-system damage that disabled her ordinary life made her capable of registering continuity stress before the machines could formalize it. She knows a site is beginning to fail because it hurts in a pattern she has spent twelve Lunar Years teaching others to measure.
 
 Stasis did not bring her in out of gratitude. It brought her in because the branch immediately recognized that no existing sensor platform could do what her damaged body was already doing.
 
@@ -325,7 +325,7 @@ Maelin Voss, current S-AE field lead for northern continuity response, is the op
 
 Voss's position was pragmatic: anyone who had understood the site fast enough to save the relay lattice should not be wasted. The argument won.
 
-Across twelve years of joint work, Voss has become the nearest thing Katherine has to a durable friend inside SiNE. They do not speak sentimentally. They do trust each other in live breach conditions, which matters more. Voss is one of the few people permitted to tell Katherine to stand down without phrasing it as a request.
+Across twelve Lunar Years of joint work, Voss has become the nearest thing Katherine has to a durable friend inside SiNE. They do not speak sentimentally. They do trust each other in live breach conditions, which matters more. Voss is one of the few people permitted to tell Katherine to stand down without phrasing it as a request.
 
 ### XI.3 Rouxinol Kaise
 
@@ -387,7 +387,7 @@ That principle is the nearest thing she has to faith.
 
 *END OF FILE*
 
-*Katherine Flarian - b. 2165, Vel'hara - SiNE S-AE Continuity Architect - Type None - unauthorized Himmelreich contact 2188 - permanent S-AE placement 2189 - active file, Year 2200*
+*Katherine Flarian - b. c. Imperial Year 2185, Vel'hara - SiNE S-AE Continuity Architect - Type None - unauthorized Himmelreich contact 2195 - permanent S-AE placement 2196 - active file, Year 2200*
 
 ---
 

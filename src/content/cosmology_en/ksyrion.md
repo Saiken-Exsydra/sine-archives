@@ -48,7 +48,7 @@ When the Fracture broke Ksy'rion's completeness, discovery became possible gradu
 
 The Fracture broke more than stone.
 
-It ended the Skyphons' living maintenance, broke every complete Obscurial coupling, and broke Ksy'rion as a **complete explanatory sky**. All twelve actual Obscurials vanished from the lunar configuration; Ksy'rion's damaged, Page-native remnants remained part of the wounded Crown.
+It ended the Skyphons' living maintenance, broke every complete Obscurial coupling, and broke Ksy'rion as a **complete explanatory sky**. All twelve true Obscurial bodies were unseated from the lunar configuration, though the same Skyphon persons survived the initial failure beyond their lost addresses. Ksy'rion's damaged, Page-native remnants remained part of the wounded Crown.
 
 Post-Fracture observers still had heaven above them, but not the same governed agreement between appearance, measurement, inheritance, and meaning.
 
@@ -68,4 +68,4 @@ Without it, the Intact Seal is reduced to a threshold barrier only, the Fracture
 - the Fracture ended that completeness
 - post-Fracture science inherited a sky it could interrogate more dangerously than it could fully explain
 
-Ksy'rion is therefore not marginal lore. It is part of how the world above Terra used to work—and part of the [[lunar-crown|Lunar Crown]] that still keeps the wound survivable without containing the vanished Obscurials themselves.
+Ksy'rion is therefore not marginal lore. It is part of how the world above Terra used to work—and part of the [[lunar-crown|Lunar Crown]] that still keeps the wound survivable without containing the unseated Skyphons themselves.

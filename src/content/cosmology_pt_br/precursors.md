@@ -40,7 +40,7 @@ Uma das Precursors era responsável pela arquitetura biológica do mundo — a e
 
 Outra mantinha a coerência atmosférica — o gerenciamento contínuo das condições necessárias para que a biosfera sobrevivesse em um mundo que a física natural jamais sustentaria sozinha. Até a Fracture, a presença direta dela no sistema atmosférico era o motivo da Twilight Band funcionar. Depois da Fracture, a infraestrutura de estabilização dos Precursors assumiu as funções que antes dependiam da própria presença dela.
 
-Além dos sistemas de superfície, os Precursores instalaram assentos lunares, interfaces, corpos de contenção, relays e a arquitetura defensiva que a teologia posterior chamaria de **Selo Intacto**. Sua camada voltada para o céu era **Ksy'rion**, o firmamento visível e regulado sob o qual a civilização pré-Fratura aprendeu astronomia e orientação. O sistema completo unia doze [[obscurials|Obscurials]] reais a interfaces construídas e intérpretes Skyphons vivos. Os Precursores construíram essa relação; não criaram os Obscurials.
+Além dos sistemas de superfície, os Precursores instalaram Assentos lunares, interfaces, terminais humanoides, relays e a arquitetura defensiva que a teologia posterior chamaria de **Selo Intacto**. Sua camada voltada para o céu era **Ksy'rion**, o firmamento visível e regulado sob o qual a civilização pré-Fratura aprendeu astronomia e orientação. Cada Assento localizava um corpo verdadeiro [[obscurials|Obscurial]] e tornava legítima uma relação limitada com ele. Os Precursores construíram essa relação; não criaram os corpos nem fabricaram as pessoas que eles se tornaram.
 
 Os demais cuidavam de outros aspectos da estabilidade de Terra, desde gerenciamento gravitacional até o substrato ressonante que sustenta a estrutura do planeta. Esses domínios existem documentados nos arquivos restritos dos Keepers of Before em um nível de detalhe que jamais foi reproduzido em registros públicos.
 
@@ -64,11 +64,11 @@ Esse afinamento é a verdade estrutural por trás de praticamente todas as grand
 
 Quando os Precursors e o **Page Primordial** do mundo — a macro-singularidade em escala universal cuja coerência *é* a própria coerência de Terra — entenderam as implicações do afinamento, aconteceu o ato colaborativo mais importante de toda a história pré-mortal do planeta.
 
-Os Precursores haviam detectado doze vestígios exteriores à gramática cuja origem comum, idade e primeiro estado não podiam ser recuperados — nem mesmo por consulta ao Tempo. O Primordial da Página não os criou. Conseguia compreender e autorizar o que acontecia onde cada vestígio estrangeiro encontrava a gramática nativa da Página, sem alegar conhecer a fonte desconhecida além da interface.
+Os Precursores observaram doze corpos verdadeiros exteriores à gramática entrarem em Vael'Khar e depois os detectaram para estudo prolongado. Nem mesmo uma consulta ao Tempo recuperou sua origem, idade, criador ou primeiro estado antes da chegada. O Primordial da Página não os criou. Conseguia compreender e autorizar o que acontecia onde cada corpo estrangeiro encontrava a gramática nativa da Página, sem alegar conhecer a fonte desconhecida além da interface.
 
-O Primordial da Página forneceu densidade localizada de sintaxe nativa. Os Precursores forneceram engenharia: doze assentos lunares, interfaces locais, estruturas de coendereço, corpos de contenção e relays. Terra forneceu aceitação planetária viva. Juntas, essas relações tornaram os contatos estrangeiros utilizáveis localmente sem torná-los nativos.
+O Primordial da Página forneceu autorização gramatical local. Os Precursores forneceram engenharia: doze Assentos lunares, interfaces, estruturas de coendereço, terminais humanoides e relays. A All-Mother forneceu aceitação planetária viva. Juntas, essas relações tornaram os corpos estrangeiros localmente endereçáveis sem torná-los nativos.
 
-O resultado foram doze entidades que não se encaixavam em nenhuma categoria anterior: os [[the-first-bearers|Skyphons]], ou Primeiros Portadores. Cada um era uma pessoa formada através de sintaxe localizada da Página, um corpo de contenção Precursor, uma relação Obscurial coendereçada e a aceitação de Terra. Seu propósito principal não era apenas governar os domínios do mundo, mas sustentar a barreira de tradução e o céu regulado de Ksy'rion.
+Durante uma longa vida nessas relações, os doze Obscurials desenvolveram as pessoas chamadas [[the-first-bearers|Skyphons]], ou Primeiros Portadores. A personalidade pertencia ao Obscurial; a Jurisdição pertencia à relação local bem-sucedida com Terra. Seu trabalho unia governo dos domínios do mundo à manutenção da barreira de tradução e do céu regulado de Ksy'rion.
 
 Os Skyphons interpretavam os Princípios no mundo. Essa interpretação *era* a manutenção viva da barreira. As duas funções nunca estiveram separadas.
 
@@ -76,7 +76,7 @@ Os Skyphons interpretavam os Princípios no mundo. Essa interpretação *era* a 
 
 ## A Fracture e Suas Consequências
 
-A Fracture — o ataque à Lunar Crown, a quebra do Selo Intacto, a intrusão de um fragmento externo no limiar do mundo — não era algo que os Precursors imaginavam enfrentar tão cedo em um projeto ainda em andamento. Veio de fora e com força suficiente para destruir aquilo que eles haviam construído para conter esse tipo de ameaça. Durante a falha, todos os doze Obscurials reais desapareceram da configuração lunar, os coendereços dos Skyphons se perderam e Ksy'rion deixou de funcionar como máscara celeste completa.
+A Fracture — o ataque à Lunar Crown, a quebra do Selo Intacto, a intrusão de um fragmento externo no limiar do mundo — não era algo que os Precursors imaginavam enfrentar tão cedo em um projeto ainda em andamento. Veio de fora e com força suficiente para destruir aquilo que eles haviam construído para conter esse tipo de ameaça. Durante a falha, todos os doze corpos verdadeiros Obscurials foram desassentados da configuração lunar, os coendereços locais dos Skyphons se perderam e Ksy'rion deixou de funcionar como máscara celeste completa. As mesmas doze pessoas sobreviveram à falha inicial para além desses endereços.
 
 **Syr'lene** conteve o fragmento ao custo da própria liberdade de movimento. Ela continua na Lunar Crown até hoje. E nunca saiu de lá desde então.
 

@@ -60,7 +60,7 @@ Na [[redactorysystem|Redatória]], ela fornece gradientes e condições ambienta
 
 Na [[divinationsystem|Divinação]], compatibilidade de ressonância permite que a recursão mortal e a pressão de domínio de um fragmento encontrem uma fusão possível. Compatibilidade não elimina a necessidade de continuidade e consentimento.
 
-Os **Chamados** são pressão tornada periódica pelo Tempo e filtrada pela arquitetura danificada dos Doze de Terra. Propagam-se por assentos, relés, interfaces e jurisdições de Princípio sobreviventes como perturbação harmônica cíclica. Não são mensagens dos Obscuriais desaparecidos nem fala consciente da Coroa Lunar.
+Os **Chamados** são pressão tornada periódica pelo Tempo e filtrada pela arquitetura danificada dos Doze de Terra. Propagam-se por assentos, relés, interfaces e jurisdições de Princípio sobreviventes como perturbação harmônica cíclica. Não são mensagens das pessoas Skyphon desassentadas nem fala consciente da Coroa Lunar.
 
 ## Ressonância e Concordância
 

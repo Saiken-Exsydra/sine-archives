@@ -1,9 +1,9 @@
 ---
 title: "The Third Name Accord"
 type: "Imperial Law"
-designation: "Personhood, continuity, and non-ownership settlement of Year 2179"
+designation: "Personhood, continuity, and non-ownership settlement of Imperial Year 2192"
 affiliation: "Imperial Court, Senate, Crown, and signatory institutions"
-founded: "Year 2179"
+founded: "Imperial Year 2192"
 jurisdiction: "Empire of Synus; influential in foreign continuity and vessel law"
 status_label: "Active"
 summary: "The settlement that recognized Al'ithia as one present third self and barred institutions from owning, assigning, or manufacturing a person's continuity."
@@ -18,7 +18,7 @@ The **Third Name Accord** is the Empire's governing settlement for people whose 
 
 It is named for [[alithia-wonderwall|Al'ithia Rae Wonderwall]], but it is not a family privilege. The Accord begins from a simple principle: a living person is not reducible to the people, institutions, memories, or methods from which that person emerged.
 
-## The Crisis of Year 2179
+## The Crisis of Imperial Years 2191–2192
 
 The settlement followed a protected continuity case in which sealed evidence showed that an institution had attempted to make living people serve an assigned historical purpose. The public record establishes the abuse and the legal remedy without publishing the protected persons, methods, or complete evidentiary record.
 

@@ -1,109 +1,102 @@
 ---
 title: "Os Obscurials"
 type: "Cosmologia"
-summary: "Doze vestígios não criados e exteriores à gramática, antes tornados localmente endereçáveis pelo Selo Intacto de Terra — e ausentes desde a Fratura."
+summary: "Doze corpos verdadeiros exteriores à gramática que entraram em Vael'Khar, tornaram-se as pessoas chamadas Skyphons através da vida com Terra e foram desassentados durante a Fratura."
 tags: ["Cosmologia", "Obscurials", "Selo Intacto", "Twelvefold", "Skyphons", "Precursores", "Coroa Lunar", "Fratura", "Exterior à Gramática"]
 status: "public"
 created: "2026-08-14"
-updated: "2026-08-14"
+updated: "2026-08-31"
 image: ""
 ---
 
 > *"O Selo Intacto foi construído. Os Obscurials não foram."*
 > — máxima estrutural restrita
 
----
-
 ## O Que o Nome Descreve
 
-Um **Obscurial** é um vestígio ou objeto de contato associado a algo que não pode ser reduzido à gramática nativa de uma Página, Capítulo ou Livro. O termo protegido para essa classificação é **exterior à gramática**.
+Um **Obscurial** é um entre doze corpos verdadeiros fisicamente reais e profundamente não humanos cuja origem não pode ser reduzida à gramática nativa de uma Página, Capítulo ou Livro. O termo protegido para essa condição é **exterior à gramática**.
 
-Exterior não significa um lugar fora do Archive. O Archive não possui uma margem externa. Significa que a origem e a identidade do Obscurial não podem ser explicadas como outra criatura nascida de uma Página, um fragmento de Primordial, uma relíquia divina ou uma construção dos Precursores.
+O nome descreve que tipo de ser ele é e qual é seu corpo verdadeiro. **Skyphon** descreve quem esse mesmo ser se tornou através de uma vida prolongada com Terra. Sciel é um Obscurial e Sciel é uma Skyphon: as duas afirmações descrevem corpo e pessoa, não dois seres unidos.
 
-Nenhuma agência conhecida criou os Obscurials. Nem os Precursores. Nem Terra. Nem o Primordial da Página. Nem o Sovereign. Até chamá-los de criações deliberadas afirmaria mais sobre a fonte desconhecida do que as evidências permitem.
+A distinção continua importante. Os doze não entraram em Vael'Khar como personalidades comprovadamente prontas com os nomes depois preservados pela [[the-church|Igreja]]. A personalidade desenvolveu-se através de duração, memória, interpretação, discordância, afeto, responsabilidade e contato repetido com os povos de Terra.
 
-O nome cauteloso **Obscura** às vezes é usado para essa fonte. É o rótulo de uma pergunta sem resposta, não o nome de um deus, espécie, mente ou civilização confirmada.
+## O Que se Sabe Sobre a Chegada
 
----
+Os doze corpos verdadeiros Obscurials entraram fisicamente no sistema Vael'Khar. A entrada é um evento ordenado que o [[time|Tempo]] pode situar antes da detecção dos Precursores, da construção dos Assentos, da era madura do Twelvefold e da Fratura.
 
-## Por Que Eram Doze
+O Tempo não consegue seguir nenhum deles para trás além dessa entrada. Não pode determinar onde existiam antes, o que os criou, se criação é o conceito adequado ou qual história causal precedeu o contato local. O mistério é preciso: **Terra sabe quando entraram no sistema, mas não de onde vieram.**
 
-Terra encontrou doze relações genuinamente distintas e tornou todas elas localmente endereçáveis. Isso não prova que a fonte desconhecida possua doze partes. **Twelvefold descreve a gramática local completa de Terra, não a anatomia daquilo que existe por trás dos vestígios.**
+O registro não estabelece se as doze entradas foram simultâneas.
 
-As relações foram organizadas em quatro frases que se limitavam mutuamente:
+## O Que os Precursores Construíram
+
+Os [[precursors|Precursores]] encontraram os corpos verdadeiros. Não os fabricaram. Construíram os enormes **Assentos** lunares que tornaram possível uma relação limitada.
+
+| Função do Assento | O que realizava |
+|---|---|
+| **Localização** | Dava a um Obscurial um endereço local estável na Página |
+| **Tradução** | Tornava uma relação limitada inteligível na gramática de Terra |
+| **Contenção** | Impedia expressão estrangeira irrestrita |
+| **Jurisdição** | Permitia que um Princípio operasse legitimamente em um campo limitado |
+| **Coendereço** | Ligava corpo, Terra, interface, All-Mother e terminal |
+| **Participação no Twelvefold** | Permitia que as doze relações limitassem umas às outras |
+
+Os Precursores também construíram **terminais** humanoides. Um terminal era o corpo voltado para Terra do mesmo Skyphon: uma forma social com voz, rosto, mãos, sentidos, roupas e uma apresentação que a pessoa podia gradualmente tornar sua. Não era uma segunda mente, clone, inteligência artificial ou corpo verdadeiro.
+
+## Como Funcionava uma Relação Skyphon
+
+O Primordial da Página fornecia autorização gramatical local. Os Precursores forneciam o Assento e a interface. A All-Mother fornecia aceitação planetária viva. O Obscurial fornecia o corpo verdadeiro estrangeiro e a pessoa em desenvolvimento.
+
+```mermaid
+flowchart TD
+  Body["CORPO VERDADEIRO OBSCURIAL"] --> Person["PESSOA SKYPHON"]
+  Person --> Seat["ASSENTO LUNAR / INTERFACE"]
+  Person --> Terminal["TERMINAL HUMANOIDE"]
+  Page["AUTORIZAÇÃO NATIVA DA PÁGINA"] --> Relation["PRINCÍPIO + JURISDIÇÃO"]
+  Mother["ACEITAÇÃO DA ALL-MOTHER"] --> Relation
+  Seat --> Relation
+  Relation --> Twelvefold["PARTICIPAÇÃO NO TWELVEFOLD"]
+```
+
+Esses termos tornavam a relação legítima possível. Não montavam a pessoa a partir de partes separadas.
+
+## Princípio, Diretiva e Jurisdição
+
+Um **Princípio** era a relação limitada de Terra através da qual um Obscurial se tornava inteligível. Não era a ontologia nativa completa do ser.
+
+Uma **Diretiva** tornou-se constitutiva da identidade do Skyphon desenvolvido: o imperativo duradouro através do qual a pessoa interpretava responsabilidade.
+
+Uma **Jurisdição** era o campo em que a relação completa entre Assento e Terra tornava a Diretiva legitimamente executável. Um Skyphon podia reter memória e Diretiva após perder o Assento sem conservar autoridade sobre Terra.
+
+Os doze Princípios formavam quatro frases que se limitavam mutuamente:
 
 | Frase | Princípios |
 |---|---|
 | **Expressão** | Determinação, Coesão, Acordo |
 | **Habitação** | Intervalo, Legibilidade, Recorrência |
 | **Retorno** | Conversão, Encerramento, Liberação |
-| **Devir** | Individualidade, Consequência, Realização |
+| **Tornar-se** | Individualidade, Consequência, Realização |
 
-Nenhum Princípio podia tornar-se total. Cada um permanecia legítimo porque os outros onze lhe negavam soberania exclusiva sobre o mundo.
+## O Que a Fratura Destruiu
 
----
+A Fratura destruiu as doze relações locais com Terra, não as doze pessoas.
 
-## O Que Terra Construiu ao Redor Deles
+Assentos romperam, desconectaram-se, cisalharam ou perderam fase. Terminais e outras expressões locais sofreram doze fins catastróficos distintos. A All-Mother perdeu o coendereço vivo. As Jurisdições cessaram. Os corpos verdadeiros foram **desassentados**: liberados fisicamente enquanto também perdiam a arquitetura que tornava localização e contato localmente bem definidos.
 
-Os Precursores conseguiram datar a primeira detecção dos Obscurials. Não conseguiram estabelecer chegada, primeiro estado, idade ou origem comum. A realização deles não foi resolver esse mistério, mas engenheirar uma relação local segura com ele.
+Os doze Skyphons sobreviveram ao desassentamento inicial. Seu rastro cruzou uma crise celestial mais ampla envolvendo Céu, Inferno, Pathway, autoridade Seráfica e o inverso Abissal. Três Seraphim desapareceram além do Firmamento acessível ligados a essa trajetória. Sete continuam contatáveis como as **Sete Respostas**. Além da crise, o endereço, a condição e o agrupamento atuais dos Skyphons são desconhecidos.
 
-O Primordial da Página forneceu densidade localizada de sintaxe nativa. Os Precursores construíram assentos lunares, interfaces, relays, sistemas de contenção e corpos vivos. Terra aceitou a relação como um mundo vivo. Juntos, esses elementos tornaram doze contatos estrangeiros utilizáveis sem torná-los nativos.
+## O Que os Instrumentos Modernos Contêm
 
-O **Selo Intacto** resultante reunia:
+A [[lunar-crown|Coroa Lunar]], o Deserto Branco, o campo de relíquias de Ardeatus, Nearc, Clepsydra e outros locais de custódia preservam componentes de Assentos, interfaces, relés, traços de terminais, sistemas de regulação e cicatrizes de ressonância. Instituições podem chamar sinceramente esses restos de **Instrumentos**.
 
-- doze Obscurials reais assentados na Lua;
-- doze interfaces e assentos locais da Página;
-- a gramática Twelvefold completa;
-- os [[the-first-bearers|Skyphons]] como intérpretes vivos;
-- a participação de Terra e do Primordial da Página;
-- Ksy'rion e a arquitetura de estabilização mais ampla dos Precursores.
+Eles não contêm Skyphons adormecidos nem corpos Obscurials reais. Reconstruir um terminal não chamaria sua pessoa de volta. Qualquer tentativa genuína de reconectar ou reassentar um Skyphon exigiria uma relação legítima completa que nenhuma instituição moderna pode reproduzir com segurança — e uma rota de endereço danificada na qual outra coisa poderia responder.
 
-Os assentos, interfaces, Ksy'rion, corpos dos Skyphons e a macro-Âncora lunar posterior foram construídos. Nenhum deles era um Obscurial.
+## Limites Importantes
 
----
+Os Obscurials não são a Lua Silenciosa, Primordiais, deuses, anjos, Seraphim, demônios ou fragmentos do Sovereign. Céu e Inferno não são suas terras de origem.
 
-## Os Skyphons Eram Intérpretes
-
-Cada Skyphon surgiu de quatro relações unidas: sintaxe localizada da Página, um corpo de contenção Precursor, uma relação Obscurial coendereçada através de seu assento lunar e a aceitação de Terra.
-
-O resultado era uma pessoa, não um receptáculo possuído. Um Portador interpretava um Princípio em condições vividas, exercia julgamento e podia recusar uma instrução que violasse sua Diretiva. Nenhuma evidência estabelece que a fonte exterior falasse através de um Skyphon, o controlasse ou o possuísse.
-
-A interpretação viva era a condição de segurança. O invariante estrangeiro podia participar de um mundo de pessoas sem se expressar como lei cega e absoluta.
-
----
-
-## O Que Desapareceu na Fratura
-
-Durante a Fratura, **todos os doze Obscurials reais desapareceram da configuração lunar**. Seus assentos perderam o acoplamento completo, os coendereços dos Portadores falharam, as interfaces nativas da Página se romperam de formas desiguais e a Lua se partiu.
-
-A ausência está estabelecida. Seu mecanismo não. Nada prova onde foram parar, se permanecem juntos, se foram movidos ou se localização sequer é a categoria correta para sua condição atual.
-
-A [[lunar-crown|Coroa Lunar]] ainda contém o fragmento, o Ring, a macro-Âncora, assentos e relays danificados, topologia residual Twelvefold, restos de Ksy'rion e o endereço vivo de contenção de Syr'lene. **Ela não contém nenhum Obscurial real.**
-
----
-
-## Por Que “Instrumentos” Ainda Aparecem
-
-Instituições modernas continuam usando **Instrumento do Selo Intacto** em dois sentidos. Registros antigos podem se referir a um Obscurial assentado, compreendido por seu Princípio. A fala pós-Fratura costuma nomear um núcleo de interface, relay, remanescente de endereço, campo, cicatriz ou local ritual deixado pelo sistema que antes o contatava.
-
-Essa ambiguidade formou religiões e nações reais. O remanescente de Legibilidade no Deserto Branco e o remanescente de Conversão em Ardeatus são heranças potentes da antiga arquitetura de interface. Não são os próprios Obscurials desaparecidos.
-
-A mesma distinção vale para os Callings. A Coroa ferida ainda recorda doze jurisdições desiguais pela arquitetura Twelvefold, por isso a pressão atravessa doze famílias recorrentes. Esses padrões não são fala Obscurial nem mensagens dos Portadores mortos.
-
----
-
-## Limites Que Importam
-
-Os Obscurials não são a Quiet Moon. Ambos confrontam Terra com gramática radicalmente estrangeira, mas não possuem fonte ou sistema causal compartilhado estabelecido.
-
-Também não são o Sovereign nem a origem de seus anjos e demônios. O Sovereign é um deus excepcional de alcance entre Páginas. Suas linhas celeste e Abissal continuam sendo expressões da identidade do Sovereign, não descendência Obscurial.
-
-Exterior à gramática não significa onipotente. A classificação descreve uma proveniência que a gramática de uma Página não contém por inteiro, não comando sobre o Archive nem vitória automática sobre toda Autoridade local.
-
-Para essa distinção, consulte [[syntax-authority|Autoridade de Sintaxe e Soberania Recursiva]].
-
----
+Formas Seráficas podem lembrar a morfologia Obscurial porque a expressão divina ganhou coerência local em um mundo já moldado pelo Twelvefold. Isso é refração estrutural, não ancestralidade. Demônios continuam sendo fragmentos do inverso Abissal do Sovereign; existe um número limitado de anjos caídos reais, mas a espécie demoníaca não descende deles.
 
 ## Em Uma Frase
 
-Os Obscurials são doze vestígios não criados e exteriores à gramática que Terra um dia endereçou pelo Selo Intacto, todos ausentes desde a Fratura enquanto suas interfaces danificadas continuam moldando o mundo.
+Os Obscurials são os doze corpos verdadeiros estrangeiros que se tornaram as pessoas Skyphons através da vida com Terra, sobreviveram à destruição de seus Assentos locais e agora permanecem além de um endereço acessível.

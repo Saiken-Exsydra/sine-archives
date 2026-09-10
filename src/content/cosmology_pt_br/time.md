@@ -66,7 +66,7 @@ Tempo não é o membro mais alto de uma hierarquia de sintaxe. É uma agência o
 
 Uma reivindicação entra na jurisdição de Tempo quando tenta governar a própria travessia: sequência, parada, reversão, suspensão, entropia como passagem ordenada ou a ordem em que configuração se torna consequência. Tempo pode permitir ou recusar essa reivindicação sem que qualquer resposta a transforme em autoria de sintaxe.
 
-Essa distinção também explica a relação de Tempo com os [[obscurials|Obscurials]]. Tempo não consegue ler para trás através de um deles até uma origem, primeiro estado ou idade, porque a existência do próprio vestígio não pertence à travessia comum. Ainda assim, Tempo consegue ordenar toda interação nativa da Página ao redor dele: detecção, assentamento, interpretação, ruptura e o momento em que sua ausência se tornou evidente.
+Essa distinção também explica a relação do Tempo com os [[obscurials|Obscurials]]. O Tempo consegue ordenar a entrada física de cada corpo verdadeiro em Vael'Khar e todos os eventos posteriores: detecção, assentamento, desenvolvimento Skyphon, ação dos terminais, Fratura e desassentamento. Não consegue ler para trás além dessa entrada para determinar origem, criador, idade ou primeiro estado anteriores à chegada.
 
 Para o modelo jurisdicional mais amplo, consulte [[syntax-authority|Autoridade de Sintaxe e Soberania Recursiva]].
 

@@ -32,7 +32,7 @@ A Clepsydra mantém custódia exclusiva dos **GlassWatchers**, **GlassThreaders*
 
 ## Evolução Histórica
 
-A Clepsydra foi fundada no **Ano 1813**, um ano após a primeira abertura bem-sucedida de Thread, quando a liderança da SiNE concluiu que a lattice não poderia continuar dentro de nenhum ramo já existente sem se tornar perigosa demais.
+A Clepsydra foi fundada no **Imperial Year 1813**, um Imperial Year após a primeira abertura bem-sucedida de Thread, quando a liderança da SiNE concluiu que a lattice não poderia continuar dentro de nenhum ramo já existente sem se tornar perigosa demais.
 
 Seu núcleo administrativo e técnico inicial veio do **Programa Lattice Cradle** — o esforço de pesquisa e ocultação que primeiro conseguiu alinhar os GlassThreaders e sua infraestrutura de Sink associada em um estado funcional e utilizável. Quando o sistema provou ser reproduzível, ele deixou de ser uma curiosidade experimental e passou a ser infraestrutura estratégica — algo grande demais para pertencer a um ramo comum.
 

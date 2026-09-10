@@ -146,9 +146,15 @@ Pagers are not ordinary police. If Redactory is used in a crime, civil authoriti
 
 The same limit applies to containment. Pagers can order short Redactory-safe restraint and petition for longer measures. Permanent institutional containment requires unanimous Council approval, an Imperial Court order, and continuing civil review.
 
+## Instrument Remnants and Reconstruction
+
+The Apocachynthion uses **Instrument** as an operational label for several ancient interface and address artifacts. The label does not establish that an actual [[obscurials|Obscurial]] or Skyphon is present. The twelve true bodies became unseated during the Fracture; modern custody concerns damaged Seats, relays, terminal traces, regulation systems, and Principle imprints.
+
+Its prohibition on constructing a replacement Bearer is therefore also a prohibition on forced reconnection. A terminal cannot recreate a person who already exists elsewhere. A functioning call or Seat would require an address, Page-local translation, All-Motheric acceptance, consent, and the other eleven mutually limiting Jurisdictions. Without them, an attempt could become a beacon, produce an unbounded Principle, or receive the wrong answer.
+
 ## Governance and accountability
 
-Nine long-serving Styluses form the **Council of Volumes**. The elected **Folio** chairs it, represents the Association before the Crown, Senate, and SiNE, and may serve no more than two twelve-year terms. The Council meets in **the Binding**, the austere Kalt'sen complex that houses the central archive and the institution's most restricted records.
+Nine long-serving Styluses form the **Council of Volumes**. The elected **Folio** chairs it, represents the Association before the Crown, Senate, and SiNE, and may serve no more than two twelve-Imperial-Year terms. The Council meets in **the Binding**, the austere Kalt'sen complex that houses the central archive and the institution's most restricted records.
 
 The Apocachynthion's authority is strongest when it keeps danger, permission, and responsibility legible. Its recurring failures begin when technical truth is mistaken for total jurisdiction — or when secrecy leaves a correct warning isolated from the other institutions capable of acting on it.
 

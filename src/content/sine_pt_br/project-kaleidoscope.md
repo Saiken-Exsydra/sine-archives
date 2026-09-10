@@ -25,7 +25,7 @@ O Kaleidoscope produziu uma série numerada de oitenta e três pessoas ao longo 
 
 ## Encerramento e Cuidado
 
-A produção biológica terminou em 2179 e não pode ser retomada por autoridade corporativa comum. As obrigações restantes são cuidado, reparações, manutenção protegida dos registros, defesa independente e revelação controlada pelos sujeitos. O projeto continua sendo uma responsabilidade e um dever, não um ativo de pesquisa.
+A produção biológica terminou no Imperial Year 2191 e não pode ser retomada por autoridade corporativa comum. As obrigações restantes são cuidado, reparações, manutenção protegida dos registros, defesa independente e revelação controlada pelos sujeitos. O projeto continua sendo uma responsabilidade e um dever, não um ativo de pesquisa.
 
 ## E'lla Rae Wonderwall
 

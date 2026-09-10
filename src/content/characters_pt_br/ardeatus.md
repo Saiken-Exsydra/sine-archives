@@ -3,8 +3,8 @@ title: "Ardeatus"
 type: "Skyphon"
 rank: "Portador da Mudança Consequente"
 designation: "Portador da Mudança Consequente"
-affiliation: "Primeiro Portador — Selo Intacto (Concluído)"
-registry_status: "Pessoa concluída na Fratura; corpo vitrificado nos troncos térmicos; fragmento nos sistemas geotérmicos; Instrumento expulso para Ardeatus"
+affiliation: "Primeiro Portador — Selo Intacto (Desassentado)"
+registry_status: "Desassentado durante a Fratura; pessoa sobrevive além do endereço comum de Terra; terminal vitrificado; remanescente da Conversão expulso para Ardeatus"
 occupation: "Conversão material consequente"
 domain: "Mudança material mediada por energia, calor, combustão, fase e trabalho"
 church_name: "O Instrumento do Fogo"
@@ -21,6 +21,6 @@ updated: "2026-07-13"
 
 Ardeatus governava a **Conversão**: mudança produzida por energia, calor, combustão, transição de fase e trabalho. Não podia criar energia, apagar resíduos, iniciar a morte como jurisdição nem executar a liberação posterior de estruturas concluídas.
 
-No Ano 0, converteu um impacto esterilizante em cargas geotérmicas, atmosféricas e de regolito que o mundo podia sobreviver. Seu corpo vitrificou; seu fragmento seguiu as redes geotérmicas; o Instrumento da Conversão foi expulso para a região depois chamada Ardeatus.
+No Ano 0, converteu um impacto esterilizante em cargas geotérmicas, atmosféricas e de regolito às quais o mundo podia sobreviver. Seu terminal humanoide e sua expressão local de Conversão vitrificaram; a impressão da Conversão seguiu as redes geotérmicas; um remanescente de interface e relay térmico foi expulso para a região depois chamada Ardeatus. O corpo verdadeiro Obscurial de Ardeatus foi desassentado, levando a mesma pessoa além do endereço comum de Terra.
 
-O Covenant chama o Instrumento de **Blazehaven**. Esse é um nome devocional local, não o Princípio, e Vekrath não é Ardeatus retornado.
+O Covenant chama o remanescente de **Blazehaven**. Esse é um nome devocional local, não o Princípio, o Skyphon ausente ou prova de que Vekrath seja Ardeatus retornado.

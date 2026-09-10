@@ -1,13 +1,13 @@
 ---
 title: "Le'nore Voren Engelmeyer"
 type: "Personagem"
-age: "23 (na época do registro, 2200)"
-birth_year: "2177"
+age: "23 Lunar Years (na época do registro, Imperial Year 2200)"
+birth_year: "c. Imperial Year 2190"
 birthplace: "Drevholt, interior da faixa ocidental"
 affiliation: "Apocachynthion (licenciada); Casa Engelmeyer (blood Seat, administração pelo Furnace Council)"
 house: "Engelmeyer (origem Voren; blood Seat desde a reintegração em 2199)"
 rank: "Quill"
-registry_status: "Registrada — admissão em 2193; Quill desde 2195; prática cívica independente, sem colocação marcial"
+registry_status: "Registrada — admissão c. Imperial Year 2197; Quill desde c. Imperial Year 2198; prática cívica independente, sem colocação marcial"
 point_profile:
   status: "Emitido pela Academy; carregado"
   cas_access: "CAS básico; protocolos perceptivos restritos pela disclosure Margin"
@@ -45,7 +45,7 @@ A Casa Engelmeyer está entre as Quinze Casas originais da estrutura fundadora d
 
 O Great Cisma dividiu a herança Engelmeyer. Os Voren tentaram manter neutralidade armada nos Voren Works, destruídos em 1043. Sobreviventes do campo familiar foram para Drevholt e para Ardeatus, carregando uma cicatriz de lattice que preservava informação parcial da família. O ramo manteve o nome Engelmeyer depois de perder propriedade, avanço dentro da Casa e uma explicação socialmente utilizável do desastre.
 
-O que esse ramo carregava, geração após geração, era uma anomalia recorrente que nenhuma instituição conseguia explicar direito: fenômenos auditivos persistentes, distúrbios perceptivos e a experiência — descrita separadamente, mas de forma assustadoramente parecida por diferentes membros da família ao longo das gerações — de *algo observando de um lugar que eu não consigo ver*. O Apocachynthion avaliou o ramo quatro vezes ao longo de cento e sessenta anos. Todas as avaliações registraram os resultados como degradação hereditária de coerência e seguiram em frente. A Igreja avaliou o ramo três vezes. Nenhuma avaliação encontrou sinais de possessão, e todas recomendaram apenas acompanhamento pastoral.
+O que esse ramo carregava, geração após geração, era uma anomalia recorrente que nenhuma instituição conseguia explicar direito: fenômenos auditivos persistentes, distúrbios perceptivos e a experiência — descrita separadamente, mas de forma assustadoramente parecida por diferentes membros da família ao longo das gerações — de *algo observando de um lugar que eu não consigo ver*. O Apocachynthion avaliou o ramo quatro vezes ao longo de cento e sessenta Imperial Years. Todas as avaliações registraram os resultados como degradação hereditária de coerência e seguiram em frente. A Igreja avaliou o ramo três vezes. Nenhuma avaliação encontrou sinais de possessão, e todas recomendaram apenas acompanhamento pastoral.
 
 Nenhuma das duas instituições encontrou o que procurava porque nenhuma delas possuía estrutura conceitual para procurar o que realmente estava ali.
 
@@ -55,9 +55,9 @@ O Corvel Institute é um corpo de pesquisa operando sob licença comercial de Ve
 
 Dentro dessa lógica, o ramo Voren Engelmeyer se tornou um objeto de enorme interesse. O Instituto cruzou registros de avaliação do Apocachynthion com sua própria taxonomia interna de linhagens que apresentavam manifestações anômalas hereditárias. Geração após geração, os mesmos padrões reapareciam, com uma consistência alta demais para ser explicada de forma plausível por genética aleatória ou fatores ambientais.
 
-**Al'tair Aldhor** tinha vinte e dois anos quando o Instituto o escolheu para a operação em Drevholt — um médico da equipe de pesquisa enviado para abrir uma clínica provincial e, através da maquinaria social normal da medicina numa cidade pequena, estudar a família que havia sido enviado para documentar. Ele chegou em Drevholt no ano de 2168. Se apresentou exatamente como era: um médico qualificado abrindo uma clínica rural tranquila. O disfarce era genuíno. O propósito por trás dele não foi revelado a ninguém em Drevholt.
+**Al'tair Aldhor** tinha vinte e dois anos quando o Instituto o escolheu para a operação em Drevholt — um médico da equipe de pesquisa enviado para abrir uma clínica provincial e, através da maquinaria social normal da medicina numa cidade pequena, estudar a família que havia sido enviado para documentar. Ele chegou em Drevholt c. Imperial Year 2186. Se apresentou exatamente como era: um médico qualificado abrindo uma clínica rural tranquila. O disfarce era genuíno. O propósito por trás dele não foi revelado a ninguém em Drevholt.
 
-Ele se casou com **Re'lha Voren Engelmeyer** em 2174. Le'nore nasceu em 2177. Re'lha desapareceu em 2186, quando Le'nore tinha nove anos. Al'tair permaneceu em Drevholt por mais três anos e depois se transferiu para a principal instalação do Corvel Institute em Vel'hara, no ano de 2189. Ele permanece lá desde então.
+Ele se casou com **Re'lha Voren Engelmeyer** c. Imperial Year 2189. Le'nore nasceu c. Imperial Year 2190. Re'lha desapareceu c. Imperial Year 2194, quando Le'nore tinha nove Lunar Years. Al'tair permaneceu em Drevholt por aproximadamente mais cinco Lunar Years e depois se transferiu para a principal instalação do Corvel Institute em Vel'hara, c. Imperial Year 2196. Ele permanece lá desde então.
 
 ---
 
@@ -65,11 +65,11 @@ Ele se casou com **Re'lha Voren Engelmeyer** em 2174. Le'nore nasceu em 2177. Re
 
 ### Quill, Anchor de Deception
 
-A admissão de Le'nore foi motivada por dois incidentes em Drevholt, nos anos de 2191 e 2193, ambos envolvendo o mesmo efeito: uma ou mais pessoas sofrendo interrupção perceptiva simultânea — perdendo a linha do que estavam fazendo, deixando de perceber a presença de Le'nore — por três a quatro minutos. Nenhum ferimento. Nenhum vazamento de coerência. Nenhum precursor atmosférico de qualquer tipo. Ela simplesmente saiu andando em ritmo normal.
+A admissão de Le'nore foi motivada por dois incidentes em Drevholt, nos Imperial Years c. 2196 e 2197, ambos envolvendo o mesmo efeito: uma ou mais pessoas sofrendo interrupção perceptiva simultânea — perdendo a linha do que estavam fazendo, deixando de perceber a presença de Le'nore — por três a quatro minutos. Nenhum ferimento. Nenhum vazamento de coerência. Nenhum precursor atmosférico de qualquer tipo. Ela simplesmente saiu andando em ritmo normal.
 
 A Academia de Syr'lene enviou um avaliador de campo após o segundo incidente. Ele encontrou emissão anômala de coerência consistente com manifestação de Redactory, mas sem correspondência com qualquer Anchor primária da taxonomia padrão, além de uma garota de dezesseis anos respondendo todas as perguntas com uma calma que parecia existir nela naturalmente, em vez de ser mantida com esforço. Ele escalou o caso imediatamente.
 
-Um painel especializado composto por quatro avaliadores seniores conduziu três sessões ao longo de seis semanas em 2194 e chegou à classificação por eliminação: nenhuma Anchor primária padrão produzia um quadro consistente. Restou apenas uma categoria — a classificação de Anchor de Deception, aplicada a praticantes cuja Anchor não é um conteúdo específico, mas a própria alteração da percepção. Rara. Documentada em menos de uma dúzia de praticantes registrados em todo o histórico do Apocachynthion.
+Um painel especializado composto por quatro avaliadores seniores conduziu três sessões ao longo de seis semanas no Imperial Year 2198 e chegou à classificação por eliminação: nenhuma Anchor primária padrão produzia um quadro consistente. Restou apenas uma categoria — a classificação de Anchor de Deception, aplicada a praticantes cuja Anchor não é um conteúdo específico, mas a própria alteração da percepção. Rara. Documentada em menos de uma dúzia de praticantes registrados em todo o histórico do Apocachynthion.
 
 A classificação de Deception é genuína, confirmada e não está em revisão. Ela explica o roteamento perceptivo produzido pela Anchor, mas não a arquitetura biológica separada e integrada ao lado dela.
 
@@ -94,8 +94,8 @@ Os efeitos de Le'nore alteram entradas sensoriais roteadas em vez de construir u
 **Reach:** Wide Reach  
 **Overreach History:** Overreach biológico administrado; sem Blot formal  
 **Apparatus Permissions:** Ordinary Apparati; sem martial apparati  
-**Registration Tenure:** 7 anos  
-**Academy Record:** Intake de Hora'veil em 2193; confirmação do painel especialista em 2194; certificação Quill em 2195  
+**Registration Tenure:** 7 Lunar Years
+**Academy Record:** Intake de Hora'veil c. Imperial Year 2197; confirmação do painel especialista c. Imperial Year 2198; certificação Quill c. Imperial Year 2198
 **Practice Record:** Trabalho cívico e como contratada sob compacto inter-registro da faixa oeste  
 **[[blots|Blots]]:** Nenhum registro formal  
 **Pager Note:** None  
@@ -123,7 +123,7 @@ Os consumidos não desaparecem completamente. Seus padrões recursivos são abso
 
 Um sinal fraco, porém consistente, de ressonância aparece nos locais onde ocorreram os eventos de consumo — registrado em monitoramentos como fenômeno anômalo e normalmente atribuído a atividade geológica de fundo. O sinal é estruturalmente consistente entre todos os incidentes. Para alguém que sabe ler padrões, ele é reconhecível.
 
-**Ela nunca replicou a mãe.** Em quatorze anos, entre todas as reproduções casuais ou deliberadas de indivíduos absorvidos, Le'nore jamais acessou o padrão de Re'lha. Isso não é uma regra consciente. É simplesmente algo que ela não faz.
+**Ela nunca replicou a mãe.** Em quatorze Lunar Years, entre todas as reproduções casuais ou deliberadas de indivíduos absorvidos, Le'nore jamais acessou o padrão de Re'lha. Isso não é uma regra consciente. É simplesmente algo que ela não faz.
 
 ### A Fome
 
@@ -163,33 +163,33 @@ Le'nore é marcadamente atraente de um jeito que as pessoas percebem antes de qu
 
 Leve e compacta, se move com uma economia muito específica — como alguém que já decidiu previamente quanto espaço pretende ocupar e não vê motivo para revisar a estimativa. Seu cabelo é loiro ao ponto de quase branco, cortado em um bob shaggy curto e suavemente repicado, com curtain bangs amplas e pontas levemente viradas para fora. Seus olhos são cinza muito claros — quase sem cor em baixa iluminação. Todo avaliador que passou tempo suficiente sentado diante dela comentou sobre os olhos e nenhum conseguiu encerrar o assunto com uma descrição satisfatória.
 
-Ela prefere branco: linhos claros, lãs leves, materiais que não anunciam a própria presença. A preferência é consistente o bastante ao longo de cinco anos de registros para funcionar como assinatura, sem jamais virar regra explícita.
+Ela prefere branco: linhos claros, lãs leves, materiais que não anunciam a própria presença. A preferência é consistente o bastante ao longo de cinco Lunar Years de registros para funcionar como assinatura, sem jamais virar regra explícita.
 
 ---
 
 ## Biografia
 
-### Drevholt — 2177 a 2193
+### Drevholt — c. Imperial Years 2190 a 2197
 
 A infância de Le'nore em Drevholt não é muito documentada nos registros institucionais. Ela era incomum de maneiras que pareciam precocidade, não anomalia: aprendeu a ler cedo, era persistente nas próprias obsessões e possuía aquele tipo de atenção que faz as pessoas se sentirem observadas em vez de apenas acompanhadas. Era querida. Mas também existia ao redor dela um cuidado discreto que as outras crianças de Drevholt talvez nunca conseguissem explicar em palavras.
 
 A condição de sua mãe, Re'lha — as vozes, os distúrbios perceptivos, a sensação persistente de algo observando de um lugar gigantesco e sem nome — era um fato doméstico que Le'nore absorveu sem o nível de sofrimento que qualquer literatura clínica esperaria. Ela nunca enxergou Re'lha como alguém doente. Enxergava como alguém lidando com algo real para o qual simplesmente não existia linguagem adequada. Ela chegou perto da verdade pela convivência, não por instrução.
 
-Seu pai era atento do jeito específico de pesquisadores que encontram um caso que não conseguem parar de estudar. Ele foi embora quando ela tinha doze anos. Ela arquivou isso internamente.
+Seu pai era atento do jeito específico de pesquisadores que encontram um caso que não conseguem parar de estudar. Ele foi embora quando ela tinha quatorze anos. Ela arquivou isso internamente.
 
-Re'lha desapareceu em 2186, quando Le'nore tinha nove anos. O registro civil a mantém oficialmente como desaparecida. Nenhum corpo. Nenhum sangue. Nenhuma evidência concreta de nada. A investigação não encontrou absolutamente coisa alguma. O caso permanece aberto e inativo há quatorze anos. Le'nore não fala sobre a mãe em nenhum contexto documentado.
+Re'lha desapareceu c. Imperial Year 2194, quando Le'nore tinha nove Lunar Years. O registro civil a mantém oficialmente como desaparecida. Nenhum corpo. Nenhum sangue. Nenhuma evidência concreta de nada. A investigação não encontrou absolutamente coisa alguma. O caso permanece aberto e inativo há aproximadamente quatorze Lunar Years. Le'nore não fala sobre a mãe em nenhum contexto documentado.
 
-Entre os nove e os quatorze anos — com a atenção metódica do pai, a ausência da mãe e nenhuma estrutura para entender o que ela própria era — Le'nore construiu a arquitetura mental que governa seu autocontrole até hoje. Fez isso sozinha, em uma cidade pequena que conhecia sua família apenas como *aqueles Engelmeyer*, com dois anos de distância entre o momento em que nomeou a Hunger pela primeira vez e o primeiro momento em que outra pessoa testemunhou do que ela era capaz. Ela tinha quinze anos. A estrutura continua funcionando há oito anos.
+Entre os nove e os quatorze anos — com a atenção metódica do pai, a ausência da mãe e nenhuma estrutura para entender o que ela própria era — Le'nore construiu a arquitetura mental que governa seu autocontrole até hoje. Fez isso sozinha, em uma cidade pequena que conhecia sua família apenas como *aqueles Engelmeyer*, com dois Lunar Years de distância entre o momento em que nomeou a Hunger pela primeira vez e o primeiro momento em que outra pessoa testemunhou do que ela era capaz. Ela tinha quinze anos. A estrutura continua funcionando há oito Lunar Years.
 
-### A Academia e a Certificação — 2193 a 2196
+### A Academia e a Certificação — c. Imperial Years 2197 a 2198
 
-Admissão aos dezessete anos, após dois incidentes que o Apocachynthion não conseguiu ignorar. Três sessões com um painel especializado. Classificação como Anchor de Deception confirmada. Certificação Quill emitida em 2195.
+Admissão aos dezessete Lunar Years, após dois incidentes que o Apocachynthion não conseguiu ignorar. Três sessões com um painel especializado. Classificação como Anchor de Deception confirmada. Certificação Quill emitida c. Imperial Year 2198.
 
 Seu desempenho em todas as sessões foi registrado como consistente com as capacidades avaliadas — linguagem institucional para dizer que ela passou em um nível suficiente para confirmar a classificação sem produzir resultados inesperados. Ela mostrou exatamente aquilo que esperavam ver.
 
 Termos da licença condicional: divulgação obrigatória de qualquer uso de influência perceptiva em até quarenta e oito horas; avaliações de Depth a cada oito meses; proibição de atuação próxima a eventos diplomáticos monitorados pelo Apocachynthion sem notificação prévia. Ela aceitou todos os termos sem objeção, e rápido demais para alguém que não tivesse considerado tudo antes.
 
-Ela cumpriu todos os termos ao longo de cinco anos de licença.
+Ela cumpriu todos os termos ao longo de cinco Lunar Years de licença.
 
 ### Vel'hara — 2199 até o Presente
 
@@ -209,7 +209,7 @@ Le'nore não fez qualquer contato com o Instituto desde sua chegada. Não encont
 
 **Timidez e calor humano.** Tímida por natureza, calorosa por escolha. Isso não é performance — é simplesmente o jeito específico de alguém para quem a solidão é mais fácil do que para a maioria das pessoas, mas que valoriza conexão justamente porque ela exige esforço. Ela se aproxima deliberadamente dos outros em vez de esperar que os outros se aproximem dela. Ela tenta. As pessoas percebem que ela tenta. Isso é parte do que a torna agradável, e ela sabe disso, e ainda assim essa consciência não torna o gesto menos sincero.
 
-**O cômodo em que ela não entra.** Ela tinha nove anos. Não entendia o que estava fazendo. Entende há quatorze anos. Não existe estrutura teológica, institucional ou conceitual disponível para explicar o que aconteceu. Não existe ninguém para quem ela possa contar isso. Ela construiu toda a arquitetura que governa o resto da sua vida ao redor de um cômodo mental em que nunca entra. Isso não é compartmentalização. É a única resposta honesta possível para alguém que tinha nove anos quando fez algo sem nome e desde então continuou vivendo com isso.
+**O cômodo em que ela não entra.** Ela tinha nove anos. Não entendia o que estava fazendo. Entende há quatorze Lunar Years. Não existe estrutura teológica, institucional ou conceitual disponível para explicar o que aconteceu. Não existe ninguém para quem ela possa contar isso. Ela construiu toda a arquitetura que governa o resto da sua vida ao redor de um cômodo mental em que nunca entra. Isso não é compartmentalização. É a única resposta honesta possível para alguém que tinha nove anos quando fez algo sem nome e desde então continuou vivendo com isso.
 
 **A sensação no céu.** Desde a infância: a sensação de que algo imenso e distante olha especificamente para ela. Não para a região ao redor. Não para o mundo inteiro. Para ela. Ela não sente isso como medo. É familiar demais para parecer ameaça. É mais próximo da sensação de ser conhecida por algo que ela ainda não possui vocabulário suficiente para nomear.
 
@@ -217,11 +217,11 @@ Le'nore não fez qualquer contato com o Instituto desde sua chegada. Não encont
 
 ## Relacionamentos
 
-**Al'tair Voren Engelmeyer — Pai.** Presente através de correspondência. Ele está em Vel'hara. Ela está em Vel'hara. Não se encontram desde 2189. As cartas dele são precisas e calorosas — a atenção de um homem que passou trinta anos próximo de coisas que nunca conseguiu explicar completamente. As dela são cuidadosas, afetuosas e sempre carregam algo que ela nunca diz de forma direta. Ela não quer que ele tenha medo dela. Esse é o único relacionamento em qualquer registro documentado onde essa motivação específica aparece de maneira legível.
+**Al'tair Voren Engelmeyer — Pai.** Presente através de correspondência. Ele está em Vel'hara. Ela está em Vel'hara. Não se encontram desde 2189. As cartas dele são precisas e calorosas — a atenção de um homem que passou trinta Lunar Years próximo de coisas que nunca conseguiu explicar completamente. As dela são cuidadosas, afetuosas e sempre carregam algo que ela nunca diz de forma direta. Ela não quer que ele tenha medo dela. Esse é o único relacionamento em qualquer registro documentado onde essa motivação específica aparece de maneira legível.
 
 Ele nunca perguntou o que aconteceu na noite em que a mãe dela desapareceu. Ela nunca respondeu perguntas que ele não fez. Esse é o único fio da vida dela que permaneceu intocado.
 
-**Re'lha Voren Engelmeyer — Mãe.** Ausente do único jeito que Le'nore jamais conseguirá examinar completamente. Ela não fala sobre a mãe. Nenhum registro disponível alcança o interior disso. A ausência existe na vida dela como algo com forma e peso específicos — um silêncio que quatorze anos de correspondência com o pai nunca conseguiram romper.
+**Re'lha Voren Engelmeyer — Mãe.** Ausente do único jeito que Le'nore jamais conseguirá examinar completamente. Ela não fala sobre a mãe. Nenhum registro disponível alcança o interior disso. A ausência existe na vida dela como algo com forma e peso específicos — um silêncio que quatorze Lunar Years de correspondência com o pai nunca conseguiram romper.
 
 **Casa Engelmeyer — Linhagem Principal.** Um arranjo útil administrado com clareza. Ela não desgosta deles. Também não confia profundamente neles. Está aprendendo o que a Casa realmente é porque entende que vale a pena conhecer o peso daquilo que você carrega antes de decidir quanto disso pretende sustentar.
 

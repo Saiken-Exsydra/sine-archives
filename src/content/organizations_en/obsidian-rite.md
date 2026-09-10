@@ -238,6 +238,16 @@ Those labels overlap. They do not replace one another.
 
 ---
 
+## The Missing Firmament and the First Bearers
+
+Obsidian does not possess the complete [[obscurials|Obscurial–Skyphon synthesis]], but its operational record preserves part of the celestial consequence. Seven Seraphim remain available to stable Church contact. Three crossed beyond accessible Firmament during the post-Fracture crisis in connection with the twelve First Bearers and did not return.
+
+This is why Obsidian refuses to identify a person-shaped apparition near an Instrument remnant from name, iconography, or familiar effects alone. A true surviving Skyphon would be an existing unseated person in an Obscurial true body, not a spirit stored inside a relic. No case has established a restored co-address.
+
+The same record distinguishes genuine fallen angels from demonkind in general. Some Seraphic beings entered or were altered by Abyssal architecture. Ordinary demons remain expressions of the Sovereign's inverse and are not former Skyphons or Obscurials.
+
+---
+
 ## Why Obsidian Matters
 
 Obsidian is the Church's answer to a problem ordinary clergy cannot solve:

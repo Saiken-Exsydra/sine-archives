@@ -1,9 +1,9 @@
 ---
 title: "O Acordo do Terceiro Nome"
 type: "Lei Imperial"
-designation: "Acordo de personalidade, continuidade e não propriedade do Ano 2179"
+designation: "Acordo de personalidade, continuidade e não propriedade do Imperial Year 2192"
 affiliation: "Corte Imperial, Senado, Coroa e instituições signatárias"
-founded: "Ano 2179"
+founded: "Imperial Year 2192"
 jurisdiction: "Império de Synus; influente no direito estrangeiro de continuidade e receptáculos"
 status_label: "Ativo"
 summary: "O acordo que reconheceu Al'ithia como um terceiro eu presente e impediu instituições de possuir, atribuir ou fabricar a continuidade de uma pessoa."
@@ -18,7 +18,7 @@ O **Acordo do Terceiro Nome** é a solução jurídica do Império para pessoas 
 
 Ele recebe o nome de [[alithia-wonderwall|Al'ithia Rae Wonderwall]], mas não é um privilégio familiar. O Acordo parte de um princípio simples: uma pessoa viva não pode ser reduzida às pessoas, instituições, memórias ou métodos dos quais emergiu.
 
-## A Crise do Ano 2179
+## A Crise dos Imperial Years 2191–2192
 
 O acordo surgiu após um caso protegido de continuidade em que evidências seladas mostraram que uma instituição tentou fazer pessoas vivas servirem a uma finalidade histórica atribuída. O registro público estabelece o abuso e a solução jurídica sem publicar as pessoas protegidas, os métodos ou o conjunto completo de provas.
 

@@ -2,8 +2,8 @@
 title: "Halk'en Orveth"
 type: "Character"
 
-age: "399 (as of Year 2200)"
-birth_year: "1801"
+age: "399 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2025"
 birthplace: "Black Mere, Northern Region, Empire of Synus"
 
 affiliation: "The Church; Obsidian"
@@ -106,7 +106,7 @@ Halk'en knows exactly what a hand can do.
 
 ## Background
 
-Halk'en was born in Year 1801 in **Black Mere**, a cold village-parish in the Northern Region of the Empire. His father, Maren Orveth, worked as a ferryman and lay cantor. His mother, Selka Orveth, was a parish copyist. The surviving record contains no House lineage, noble inheritance, Redactory dynasty, or political connection waiting to explain what he became.
+Halk'en was born c. Imperial Year 2025 in **Black Mere**, a cold village-parish in the Northern Region of the Empire. His father, Maren Orveth, worked as a ferryman and lay cantor. His mother, Selka Orveth, was a parish copyist. The surviving record contains no House lineage, noble inheritance, Redactory dynasty, or political connection waiting to explain what he became.
 
 His childhood reputation was built less on holiness than on the Northern habit of doing the necessary thing before anyone has time to name it a virtue.
 
@@ -118,7 +118,7 @@ Halk'en kept the stiffness in his right foot and later refused several opportuni
 
 He entered minor seminary at sixteen. The records describe a large, quiet student with excellent memory, strong liturgical discipline, little interest in decorative theology, and a persistent habit of translating doctrine into practical questions. He was not fascinated by the abstract meaning of authority. He wanted to know who carried it, what they were responsible for, and whether they were standing where the responsibility required them to stand.
 
-That instinct became decisive in Year 1823.
+That instinct became decisive c. Imperial Year 2035.
 
 ### The Mornhallow Incident
 
@@ -146,13 +146,13 @@ Obsidian removed him from ordinary parish service within the month.
 
 ## Entry into Obsidian
 
-Halk'en entered formal Obsidian formation in Year 1824 under Rector-Ascendant **Mael Orison**.
+Halk'en entered formal Obsidian formation c. Imperial Year 2035 under Rector-Ascendant **Mael Orison**.
 
 He was not an unusually broad candidate. He was poor at radiance projection, merely adequate at formal ward geometry, and uninterested in demonstrating power for its own sake. His strengths were narrower and much more useful: vessel restraint, contested-threshold entry, post-expulsion stabilization, and remaining physically present when other people were becoming afraid of the thing in front of them.
 
 He repeatedly asked for practical containment work rather than prestigious study assignments.
 
-In Year 1831, during the attempted expulsion of a thirteen-year-old boy named **Anrek Voss**, the red hands became impossible to dismiss as an isolated anomaly.
+In Imperial Year 2038, during the attempted expulsion of a thirteen-year-old boy named **Anrek Voss**, the red hands became impossible to dismiss as an isolated anomaly.
 
 The possessing entity had learned to exploit the attending clergy's fear of injuring the child. Every attempt at restraint forced Anrek's body into a position where holding him risked breaking him. Halk'en removed his gauntlets and held the boy himself for nine minutes while the other priests prepared another exorcistic sequence.
 
@@ -160,7 +160,7 @@ Five independent witnesses described a large red hand appearing over Halk'en's s
 
 Anrek survived.
 
-His voice never fully recovered, but he lived long enough to become a hospital copyist. He wrote Halk'en once every year until his death in 1889.
+His voice never fully recovered, but he lived long enough to become a hospital copyist. He wrote Halk'en once every year until his death c. Imperial Year 2064.
 
 Halk'en kept all fifty-eight letters.
 
@@ -172,7 +172,7 @@ Halk'en did not rise quickly through Obsidian because he refused promotion twice
 
 He argued that his authority was more useful in the field than behind an administrative title. The Church accepted the first refusal and grew considerably less patient with the second.
 
-The matter stopped being optional after the **Red Choir Event** of Year 1877, when forty-three possessed singers formed a shared vessel network capable of completing one another's evasions whenever the Church attempted ordinary exorcism.
+The matter stopped being optional after the **Red Choir Event** of Imperial Year 2058, when forty-three possessed singers formed a shared vessel network capable of completing one another's evasions whenever the Church attempted ordinary exorcism.
 
 Halk'en entered the ruined nave alone for seven minutes.
 
@@ -180,7 +180,7 @@ When the doors opened, the possessing structure had been forced into a single an
 
 Halk'en was elevated to Rector-Ascendant the following year.
 
-Three years later, the Church entrusted him with Sundersaint.
+Three Lunar Years later, the Church entrusted him with Sundersaint.
 
 He did not ask for it.
 
@@ -332,7 +332,7 @@ Anrek Voss was thirteen when a possessing entity learned to use the clergy's fea
 
 Anrek survived with permanent damage to his voice and later became a hospital copyist.
 
-He wrote Halk'en once a year for fifty-eight years.
+He wrote Halk'en once each Lunar Year for fifty-eight Lunar Years.
 
 Halk'en kept every letter.
 
@@ -366,7 +366,7 @@ That was probably wise.
 
 **Civil Standing:** Consecrated priest of the Church; permanent member of Obsidian  
 **Obsidian Rank:** Rector-Ascendant  
-**Service Record:** Active Obsidian service since Year 1824  
+**Service Record:** Active Obsidian service since c. Imperial Year 2035
 **Vessel Status:** Confirmed Crowned Divine Vessel  
 **Primary Manifestation:** The Sevenfold Hand  
 **Greater Artifact:** Sundersaint, the Parting Mercy  

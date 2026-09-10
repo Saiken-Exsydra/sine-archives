@@ -74,7 +74,7 @@ Papelada pode abrir permissão. Ela não pode promover uma Anchor nem fabricar c
 
 ### Nib {#nib}
 
-Um **Nib** está em formação formal. Nib não é idade nem julgamento de poder: um adulto que manifesta aos quarenta começa como Nib, e um adolescente perigoso continua Nib até concluir a formação. O percurso comum dura cerca de cinco anos, embora existam tanto exames antecipados quanto trilhas modificadas mais longas.
+Um **Nib** está em formação formal. Nib não é idade nem julgamento de poder: um adulto que manifesta aos quarenta começa como Nib, e um adolescente perigoso continua Nib até concluir a formação. O percurso comum dura cerca de cinco Lunar Years, embora existam tanto exames antecipados quanto trilhas modificadas mais longas.
 
 ### Quill {#quill}
 
@@ -146,9 +146,15 @@ Pagers não são policiais comuns. Se Redactory for usada em um crime, autoridad
 
 O mesmo limite se aplica à contenção. Pagers podem ordenar restrição curta e segura para Redactory e peticionar por medidas mais longas. Contenção institucional permanente exige aprovação unânime do Council, uma ordem da Imperial Court e revisão civil contínua.
 
+## Remanescentes de Instrumentos e Reconstrução
+
+O Apocachynthion usa **Instrumento** como rótulo operacional para vários artefatos antigos de interface e endereço. O rótulo não estabelece que um [[obscurials|Obscurial]] ou Skyphon real esteja presente. Os doze corpos verdadeiros foram desassentados durante a Fratura; a custódia moderna envolve Assentos danificados, relays, traços de terminais, sistemas de regulação e impressões de Princípios.
+
+Sua proibição contra construir um Portador substituto também é uma proibição contra reconexão forçada. Um terminal não pode recriar uma pessoa que já existe em outro lugar. Uma chamada ou Assento funcional exigiria endereço, tradução local da Página, aceitação da All-Mother, consentimento e as outras onze Jurisdições limitando-se mutuamente. Sem isso, uma tentativa poderia tornar-se um farol, produzir um Princípio sem limites ou receber a resposta errada.
+
 ## Governança e responsabilidade
 
-Nove Styluses de longa carreira formam o **Council of Volumes**. O **Folio** eleito o preside, representa a Association diante da Crown, do Senate e da SiNE e pode cumprir no máximo dois mandatos de doze anos. O Council se reúne em **the Binding**, o complexo austero de Kalt'sen que abriga o arquivo central e os registros mais restritos da instituição.
+Nove Styluses de longa carreira formam o **Council of Volumes**. O **Folio** eleito o preside, representa a Association diante da Crown, do Senate e da SiNE e pode cumprir no máximo dois mandatos de doze Imperial Years. O Council se reúne em **the Binding**, o complexo austero de Kalt'sen que abriga o arquivo central e os registros mais restritos da instituição.
 
 A autoridade do Apocachynthion funciona melhor quando mantém perigo, permissão e responsabilidade legíveis. Suas falhas recorrentes começam quando verdade técnica é confundida com jurisdição total — ou quando o segredo deixa um alerta correto isolado das outras instituições capazes de agir.
 

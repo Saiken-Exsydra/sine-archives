@@ -1,8 +1,8 @@
 ---
 title: "Sai'ken Exsydra"
 type: "Personagem"
-age: "25 (em 2200)"
-birth_year: "2175"
+age: "25 Lunar Years (no Imperial Year 2200)"
+birth_year: "c. Imperial Year 2189"
 birthplace: "Ael'keth, fronteiras orientais, Regiao Norte"
 affiliation: "SiNE Integrated Forces (cobertura pública); serviço protegido KT-Exs sob mandado selado da Casa e do Compact"
 house: "Exsydra (restauração legal moderna da linhagem pré-Imperial Ex'sydra apagada)"
@@ -39,7 +39,7 @@ hero_image: "../../assets/uploads/characters/char-saiken-exsydra-hero.png"
 
 ## Visao Geral
 
-Sai'ken Exsydra nasceu como **Sai'ken Las'gall** nas fronteiras orientais de **Ael'keth** e depois entrou em serviço protegido sob um mandado selado da Casa e do Compact. Em **2194**, Em'manuel devolveu a ele o nome legal **Exsydra** sem explicar por inteiro o que significava. Essa grafia moderna restaura a linhagem pré-Imperial **Ex'sydra** sem reproduzir seu apóstrofo histórico. O nome não concede filiação automática à House Wonderwall, cargo corporativo ou reivindicação soberana.
+Sai'ken Exsydra nasceu como **Sai'ken Las'gall** nas fronteiras orientais de **Ael'keth** e depois entrou em serviço protegido sob um mandado selado da Casa e do Compact. C. Imperial Year **2197**, Em'manuel devolveu a ele o nome legal **Exsydra** sem explicar por inteiro o que significava. Essa grafia moderna restaura a linhagem pré-Imperial **Ex'sydra** sem reproduzir seu apóstrofo histórico. O nome não concede filiação automática à House Wonderwall, cargo corporativo ou reivindicação soberana.
 
 A verdade nao e pequena. Sai'ken e a ultima expressao ativa confirmada de uma antiga arquitetura Ex'sydra, destruida pela erasure historica e tambem pelo proprio erro catastrofico da linhagem.
 

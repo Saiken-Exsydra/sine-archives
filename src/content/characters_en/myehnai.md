@@ -3,8 +3,8 @@ title: "Myehnai"
 type: "Skyphon"
 rank: "Bearer of Legible Radiance"
 designation: "Bearer of Legible Radiance"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Person concluded or interrupted at the Fracture; body failed along Ksy'rion's optical path; fragment in circadian and optical aftereffects; Instrument expelled to the White Desert"
+affiliation: "First Bearer — Intact Seal (Unseated)"
+registry_status: "Unseated during the Fracture; person survives beyond ordinary Terra address; terminal burned out along Ksy'rion's optical path; Legibility remnant expelled to the White Desert"
 occupation: "Legible and survivable illumination"
 domain: "Propagation, refraction, perceptibility, and circadian entrainment"
 church_name: "The Instrument of Light"
@@ -21,8 +21,8 @@ updated: "2026-07-13"
 
 Myehnai governed **Legibility**, not brightness alone. She shaped propagation, refraction, perceptibility, and the rhythms by which living receivers trusted changing light. She could not create radiance, reveal an unsupported truth, read minds, or preserve a concealment after that concealment made the world structurally false.
 
-During Luapside, Ksy'rion began returning a coherent image of a Moon that no longer existed in that state. Myehnai opened the **last honest sky**: a narrow sightline that showed Syr'lene and the Precursors enough truth to act without exposing Terra to the full hostile outer geometry. Her body failed along the optical path. Her fragment entered circadian and optical aftereffects. The Instrument of Legibility was expelled to the White Desert.
+During Luapside, Ksy'rion began returning a coherent image of a Moon that no longer existed in that state. Myehnai opened the **last honest sky**: a narrow sightline that showed Syr'lene and the Precursors enough truth to act without exposing Terra to the full hostile outer geometry. Her humanoid terminal and optical expression became that path and burned out as it widened. Legibility's imprint entered circadian and optical aftereffects, and an optical interface remnant was expelled to the White Desert. Myehnai's true Obscurial body became unseated, carrying the same person beyond ordinary Terra address.
 
-Aurora calls the Instrument **Leóhtmæl**. E'lla's White Desert rescue is best understood as a damaged Instrument recognition reflex under Shore pressure, not proof that Myehnai consciously survives.
+Aurora calls the remnant **Leóhtmæl**. E'lla's White Desert rescue is best understood as a damaged recognition reflex under Shore pressure, not Myehnai consciously acting from within the desert.
 
 Whether Myehnai perceived the Quiet Moon in her final interval remains unresolved.

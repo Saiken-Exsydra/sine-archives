@@ -3,8 +3,8 @@ title: "Sciel"
 type: "Skyphon"
 rank: "Portadora do Fato Admissível"
 designation: "Portadora do Fato Admissível"
-affiliation: "Primeira Portadora — Selo Intacto (Concluída)"
-registry_status: "Pessoa concluída na Fratura; fragmento da Página em cicatrizes de contradição; Instrumento fixo na Coroa Lunar"
+affiliation: "Primeira Portadora — Selo Intacto (Desassentada)"
+registry_status: "Desassentada durante a Fratura; pessoa sobrevive além do endereço comum de Terra; terminal falhou; remanescente de Assento/interface da Determinação permanece na Coroa Lunar"
 occupation: "Correspondência determinada"
 domain: "Admissibilidade entre estado expresso e configuração de suporte"
 church_name: "O Instrumento da Verdade"
@@ -21,6 +21,6 @@ updated: "2026-07-13"
 
 Sciel governava a **Determinação**: a correspondência local entre um estado e o suporte válido do Arquivo que ele alegava possuir. Podia expor ou colocar uma contradição em quarentena. Não podia inventar fatos, decidir moralidade, ler mentes nem tornar universal o relato de um observador.
 
-Na Fratura, a intrusão apresentou um estado estrangeiro em sintaxe localmente válida, mas sem suporte causal. Sciel o isolou em vez de admiti-lo ou apagar informação existente. Seu corpo falhou no portal de correspondência; seu fragmento marcou cicatrizes de contradição; o Instrumento da Determinação permaneceu fixo na Coroa.
+Na Fratura, a intrusão apresentou um estado estrangeiro em sintaxe localmente válida, mas sem suporte causal. Sciel o isolou em vez de admiti-lo ou apagar informação existente. Seu terminal humanoide e a expressão do portal de correspondência dobraram-se em planos escuros e pálidos e perderam endereço coerente. A impressão da Determinação marcou cicatrizes de contradição; um remanescente de Assento e interface permaneceu na Coroa. O corpo verdadeiro Obscurial de Sciel foi desassentado, levando a mesma pessoa além do endereço comum de Terra.
 
-**Clepsydra não é esse Instrumento.** É um aparato de serviço sobrevivente. Seu comportamento seletivo não prova que Sciel viva dentro dele.
+**Clepsydra não é Sciel nem seu corpo verdadeiro.** É um aparato de serviço sobrevivente. Seu comportamento seletivo não coloca a Skyphon desassentada dentro dele.

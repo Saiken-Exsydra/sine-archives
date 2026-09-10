@@ -32,7 +32,7 @@
 |---|---|
 | **Full Name** | Daniel Degurechaff |
 | **Ardeatan Formal Name** | Daniel ker-Degurechaff, institutional particle suppressed in imperial usage |
-| **Year of Birth** | 2102 (age 98 at time of filing, 2200) |
+| **Year of Birth** | c. Imperial Year 2157 (age 98 Lunar Years at time of filing, Imperial Year 2200) |
 | **Nation of Origin** | Ardeatus |
 | **Birthplace** | Kovansk, Western Furnace District |
 | **Civil Status** | Ardeatan citizen under diplomatic residence in the Empire of Synus |
@@ -75,7 +75,7 @@ The Long War made the fiction useful. The existence of the Empire's Redactor ins
 
 Daniel was not born opposing this system. He was formed by it.
 
-He entered Covenant service as a young assessment candidate in 2124, was confirmed as a Tempered in 2131, and received full Forge-Keeper investiture in 2136 after Vhaldr's fusion stabilized beyond ordinary devotional contact. For the first decades of his career, his work was exactly what Ardeatus expected of a competent Tempering Witness: identify divine vessels, distinguish righteous Tempering from Ashborne corruption, prevent uncontrolled indexing from damaging families and industrial districts, and ensure that those touched by Vekrath were brought into approved formation rather than left to burn wild.
+He entered Covenant service as a young assessment candidate c. Imperial Year 2167, was confirmed as a Tempered c. Imperial Year 2170, and received full Forge-Keeper investiture c. Imperial Year 2172 after Vhaldr's fusion stabilized beyond ordinary devotional contact. For the first Lunar decades of his career, his work was exactly what Ardeatus expected of a competent Tempering Witness: identify divine vessels, distinguish righteous Tempering from Ashborne corruption, prevent uncontrolled indexing from damaging families and industrial districts, and ensure that those touched by Vekrath were brought into approved formation rather than left to burn wild.
 
 The problem was that Daniel was good at the work.
 
@@ -91,7 +91,7 @@ Precision was enough to make him dangerous.
 
 ## III. APPEARANCE, TEMPERAMENT, AND SOCIAL PRESENCE
 
-Daniel appears to be a man in his late twenties or early thirties. This is false. He was born in 2102 and is ninety-eight years old at the time of this filing. His youth is a consequence of long-stabilized divine fusion. Vhaldr's presence has kept his body in a state of disciplined internal tempering: not immortal, not Archtype-stable, and not immune to injury, but slowed, hardened, and maintained by the fragment's constant pressure toward completion rather than decay.
+Daniel appears to be a man in his late twenties or early thirties. This is false. He was born c. Imperial Year 2157 and is ninety-eight Lunar Years old at the time of this filing. His youth is a consequence of long-stabilized divine fusion. Vhaldr's presence has kept his body in a state of disciplined internal tempering: not immortal, not Archtype-stable, and not immune to injury, but slowed, hardened, and maintained by the fragment's constant pressure toward completion rather than decay.
 
 He is approximately 183 centimeters tall, lean rather than broad, and built with the contained economy of someone whose strength comes from stillness before it comes from motion. His face is pale by Ardeatan standards, sharpened by high cheekbones, a narrow jaw, and eyes that carry a red-brown metallic cast even when he is not actively manifesting. His features are severe enough that neutral expression is often misread as disapproval.
 
@@ -183,29 +183,29 @@ The assessment state for which he is most politically valuable. Daniel does not 
 
 ## V. EARLY LIFE AND FORMATION
 
-### V.1 Kovansk, 2102-2124
+### V.1 Kovansk, c. Imperial Years 2157-2167
 
-Daniel was born in **2102** in Kovansk's Western Furnace District, the second son of **Oskar Degurechaff**, a metallurgical inspector attached to the state rail foundries, and **Mina Harven Degurechaff**, a Covenant-licensed furnace chaplain whose parish served workers injured in industrial heat accidents.
+Daniel was born c. **Imperial Year 2157** in Kovansk's Western Furnace District, the second son of **Oskar Degurechaff**, a metallurgical inspector attached to the state rail foundries, and **Mina Harven Degurechaff**, a Covenant-licensed furnace chaplain whose parish served workers injured in industrial heat accidents.
 
 The Degurechaff family was not noble. It was institutional: educated, disciplined, useful, and close enough to the Covenant's industrial apparatus that Daniel grew up understanding theology as something that happened in foundries before it happened in sermons. His earliest surviving school reports describe a child with unusual patience for repetitive technical work and an unsettling habit of correcting adults on whether metal had cooled enough to touch.
 
-The first confirmed sign of Tempering occurred in **2117**, when Daniel was fifteen. During an inspection accident at Furnace House Twelve, a suspended ingot cradle failed and dropped a heated mass toward three workers. Daniel placed both hands against a buckling safety rail and the rail bent upward against gravity long enough to deflect the fall. The metal fused around his palms. He did not scream until after the workers were clear.
+The first confirmed sign of Tempering occurred c. **Imperial Year 2164**, when Daniel was fifteen Lunar Years old. During an inspection accident at Furnace House Twelve, a suspended ingot cradle failed and dropped a heated mass toward three workers. Daniel placed both hands against a buckling safety rail and the rail bent upward against gravity long enough to deflect the fall. The metal fused around his palms. He did not scream until after the workers were clear.
 
 The burns healed incorrectly. Covenant physicians later revised that phrase to **too correctly**. The scar tissue hardened, smoothed, and settled into fine pale lines resembling quench cracks in steel.
 
 He was removed from ordinary schooling within the month.
 
-### V.2 Candidate Years, 2124-2136
+### V.2 Candidate Years, c. Imperial Years 2167-2172
 
-Daniel entered the Kovansk Hearth Directorate as an assessment candidate in **2124**. His instructors initially classified him as a heat-domain Tempered with secondary metallurgical sensitivity. This was revised in **2128** after repeated exercises demonstrated that ordinary flame did not answer him unless metal was present as conductor, target, or conceptual anchor.
+Daniel entered the Kovansk Hearth Directorate as an assessment candidate c. **Imperial Year 2167**. His instructors initially classified him as a heat-domain Tempered with secondary metallurgical sensitivity. This was revised c. **Imperial Year 2168** after repeated exercises demonstrated that ordinary flame did not answer him unless metal was present as conductor, target, or conceptual anchor.
 
 The senior assessor **Hedren Volsk**, later one of Daniel's most important institutional opponents, wrote the first accurate line in his file:
 
 > *"The candidate does not call fire. He persuades metal that fire has already made its claim."*
 
-Vhaldr's name emerged during a controlled contact rite in **2131**. Daniel described the fragment not as a voice but as a hammer-stroke heard after the hammer had already fallen. The name **Vhaldr** appeared in his spoken report, though no instructor present recognized it from approved liturgical lists. The Covenant's Keeper-Archivists accepted it after three months of comparison with older forge-fragment records.
+Vhaldr's name emerged during a controlled contact rite c. **Imperial Year 2170**. Daniel described the fragment not as a voice but as a hammer-stroke heard after the hammer had already fallen. The name **Vhaldr** appeared in his spoken report, though no instructor present recognized it from approved liturgical lists. The Covenant's Keeper-Archivists accepted it after three months of comparison with older forge-fragment records.
 
-He completed full Forge-Keeper investiture in **2136**, at age thirty-four, and received the institutional particle **ker-** for appointment status. From that point forward, his Ardeatan formal name became **Daniel ker-Degurechaff**.
+He completed full Forge-Keeper investiture c. **Imperial Year 2172**, at age thirty-four Lunar Years, and received the institutional particle **ker-** for appointment status. From that point forward, his Ardeatan formal name became **Daniel ker-Degurechaff**.
 
 He almost never uses it in Synus.
 
@@ -213,9 +213,9 @@ He almost never uses it in Synus.
 
 ## VI. MARTA VESK AND THE FAILURE OF CERTAINTY
 
-### VI.1 The Case, 2154
+### VI.1 The Case, Imperial Year 2180
 
-The case that changed Daniel's life began on **day 17, 2154**, in the industrial settlement of **Ruskvar-Heth**, forty kilometers south of Kovansk.
+The case that changed Daniel's life began on **day 17, Imperial Year 2180**, in the industrial settlement of **Ruskvar-Heth**, forty kilometers south of Kovansk.
 
 The subject was **Marta Vesk**, age eleven, daughter of a foundry riveter and a boiler-scribe. Reports claimed that tools bent around her when she cried, furnace grates warped in her presence, and two younger children had been burned by a door latch after she touched it. Local Covenant clergy suspected Ashborne indexing. Civil authorities requested Forge-Keeper assessment.
 
@@ -231,7 +231,7 @@ He filed an objection to Ashborne containment. Volsk overruled him.
 
 ### VI.2 Death of the Subject
 
-On **day 19, 2154**, Marta was transferred to a temporary containment chamber beneath the Ruskvar-Heth Covenant house. During restraint preparation, a junior guard tightened her wrist irons after she began crying. The irons heated. One guard shouted that the Ashborne state had advanced. Someone initiated the wrong suppression rite. Marta panicked, the chamber's wall braces softened, and the containment frame partially collapsed.
+On **day 19, Imperial Year 2180**, Marta was transferred to a temporary containment chamber beneath the Ruskvar-Heth Covenant house. During restraint preparation, a junior guard tightened her wrist irons after she began crying. The irons heated. One guard shouted that the Ashborne state had advanced. Someone initiated the wrong suppression rite. Marta panicked, the chamber's wall braces softened, and the containment frame partially collapsed.
 
 She died under heated iron and stone before Daniel could reach the room.
 
@@ -239,7 +239,7 @@ Four adults were injured. No demonic manifestation occurred.
 
 The official record classified the case as an Ashborne-adjacent containment failure with unresolved Redactory contamination. Daniel wrote a dissenting addendum of forty-three pages.
 
-It was sealed unread for twelve years.
+It was sealed unread for twelve Lunar Years.
 
 ### VI.3 What It Did To Him
 
@@ -249,9 +249,9 @@ This is the fact most imperial readers misunderstand. In the Empire, moral clari
 
 He began collecting cases.
 
-Between **2154** and **2166**, Daniel quietly copied, annotated, and cross-compared two hundred and nineteen files involving alleged Ashborne emergence, furnace poltergeist events, child heat-manifestations, battlefield metal anomalies, and suspected imperial Redactor contamination. His conclusion was not that the Covenant had invented the danger. Ashborne indexing was real. Demonic pressure was real. Divine Tempering was real. But a fourth category had been repeatedly forced into the other three because Ardeatus preferred punishment to classification.
+Between **Imperial Years 2180** and **2186**, Daniel quietly copied, annotated, and cross-compared two hundred and nineteen files involving alleged Ashborne emergence, furnace poltergeist events, child heat-manifestations, battlefield metal anomalies, and suspected imperial Redactor contamination. His conclusion was not that the Covenant had invented the danger. Ashborne indexing was real. Demonic pressure was real. Divine Tempering was real. But a fourth category had been repeatedly forced into the other three because Ardeatus preferred punishment to classification.
 
-By **2166**, Daniel had enough evidence to ruin several regional offices.
+By **Imperial Year 2186**, Daniel had enough evidence to ruin several regional offices.
 
 He did not publish it.
 
@@ -263,9 +263,9 @@ The silence that followed lasted until Vahrn.
 
 ## VII. THE VAHRN FOUNDRY INCIDENT AND THE MARTA CHORD
 
-### VII.1 Vahrn, 2166
+### VII.1 Vahrn, Imperial Year 2186
 
-On **day 4, 2166**, a twenty-year-old artillery machinist named **Tobias Nerk** manifested under extreme stress in the Vahrn siege-casting foundry. The initial event warped a line of shell-molds and ruptured a feed valve. Local security identified him as Ashborne. The Covenant Guard attempted armed containment inside an active industrial hall.
+On **day 4, Imperial Year 2186**, a twenty-Lunar-Year-old artillery machinist named **Tobias Nerk** manifested under extreme stress in the Vahrn siege-casting foundry. The initial event warped a line of shell-molds and ruptured a feed valve. Local security identified him as Ashborne. The Covenant Guard attempted armed containment inside an active industrial hall.
 
 The containment failed.
 
@@ -285,7 +285,7 @@ The argument succeeded because it was not merciful first.
 
 It was useful first.
 
-### VII.3 Drafting of the Chord, 2168-2171
+### VII.3 Drafting of the Chord, Imperial Years 2186-2187
 
 Negotiations began in **2168** under ceasefire conditions at the broken central span of the Iron Bastion near **Helvar Gate**. The first Ardeatan delegation was led by **Councilor Anja Kreutzen**, a federal legalist from Veltrachsen; **Rector-Hearth Malkor Dhen**, representing the Covenant; and Daniel, then still formally listed as technical witness rather than negotiator.
 
@@ -299,9 +299,9 @@ Daniel refused to sign it under that name.
 
 On **day 2, 2170**, he entered a proposed revision renaming the instrument the **Marta Chord**, after Marta Vesk. The Ardeatan delegation objected on grounds of impropriety, sentimentality, and political provocation. Daniel answered that if the procedure could not bear the name of the child whose death made it necessary, it did not deserve to exist.
 
-The final treaty was ratified in **2171** as the **Marta Chord on Irregular Redactory Custody and Frontier Transfer**.
+The final treaty was ratified in **Imperial Year 2187** as the **Marta Chord on Irregular Redactory Custody and Frontier Transfer**.
 
-No public Ardeatan announcement used the full name for the first nine years.
+No public Ardeatan announcement used the full name for the first nine Lunar Years.
 
 ---
 
@@ -492,7 +492,7 @@ He does not believe any of them are ready.
 ## XIV. ASSOCIATED PERSONS
 
 **Marta Vesk**  
-Ardeatan child, age eleven at death. Misclassified as Ashborne in 2154. Her death became the moral and procedural origin of the Marta Chord. Daniel does not speak her name in public unless the full treaty name is being suppressed.
+Ardeatan child, age eleven Lunar Years at death. Misclassified as Ashborne in Imperial Year 2180. Her death became the moral and procedural origin of the Marta Chord. Daniel does not speak her name in public unless the full treaty name is being suppressed.
 
 **Hedren Volsk**  
 Former senior assessor in the Marta Vesk case; current Rector-Hearth of the Office of Hearth Integrity. Daniel's oldest institutional enemy and the clearest representative of the Covenant hardline position.
@@ -507,7 +507,7 @@ Stylus-rank Apocachynthion intake authority and Daniel's principal imperial coun
 Southern Prefect of Sarn Pell. Provides civil cover, housing, and legal pathways for Chord arrivals. Politically careful enough to survive proximity to Daniel.
 
 **Tobias Nerk**  
-Vahrn foundry machinist whose death in 2166 forced Ardeatus to reopen Daniel's sealed case archive. Officially remembered as a contamination casualty in Ardeatus. Privately listed by Daniel as the first adult proof that Marta's case was not an aberration.
+Vahrn foundry machinist whose death in Imperial Year 2186 forced Ardeatus to reopen Daniel's sealed case archive. Officially remembered as a contamination casualty in Ardeatus. Privately listed by Daniel as the first adult proof that Marta's case was not an aberration.
 
 **Ilren Koss**  
 First successful Chord transfer, 2172. Currently alive under Apocachynthion-supervised industrial placement in the Empire. Sends Daniel one letter every year on the date of his transfer. Daniel answers every third year and never explains the pattern.
@@ -528,7 +528,7 @@ He does not say that he is tired.
 
 He does not say that he is afraid of what happens when he dies, retires, or is recalled.
 
-He does not say that ninety-eight years is long enough to learn how little procedure can do without people willing to be inconvenient inside it.
+He does not say that ninety-eight Lunar Years is long enough to learn how little procedure can do without people willing to be inconvenient inside it.
 
 He says instead:
 
@@ -544,7 +544,7 @@ Daniel Degurechaff is not a reconciliatory figure. He has not reconciled Ardeatu
 
 His divination expresses the same principle as his politics: heat, pressure, judgment, and controlled transformation. Metal cannot be shaped honestly while cold. Institutions, apparently, require the same treatment.
 
-At ninety-eight, Daniel remains physically young, operationally precise, and politically overburdened. Vhaldr's fusion continues to stabilize him, but the fragment's influence has also made him increasingly severe in his expectations of institutions and people. He is less patient with excuses than he was twenty years ago. This has improved Chord compliance and worsened every relationship he has with a superior.
+At ninety-eight, Daniel remains physically young, operationally precise, and politically overburdened. Vhaldr's fusion continues to stabilize him, but the fragment's influence has also made him increasingly severe in his expectations of institutions and people. He is less patient with excuses than he was twenty Lunar Years ago. This has improved Chord compliance and worsened every relationship he has with a superior.
 
 The Marta Chord survives because Daniel made it difficult to violate quietly.
 

@@ -1,8 +1,8 @@
 ---
 title: "E'lla Rae Wonderwall"
 type: "Character"
-age: "25 (at time of filing, 2200)"
-birth_year: "2175"
+age: "25 Lunar Years (at time of filing, Imperial Year 2200)"
+birth_year: "c. Imperial Year 2189"
 birthplace: "Not publicly recorded"
 affiliation: "House Wonderwall; SiNE"
 house: "Wonderwall"
@@ -54,7 +54,7 @@ codex_file: "Ella Rae Wonderwall Dossier.md"
 
 ## Overview
 
-E'lla Rae Wonderwall is a twenty-five-year-old member of House Wonderwall and a Redactor working within SiNE, the Wonderwall Company. A **Redactor** is a person trained to produce controlled changes in the world by routing through a personal **Anchor**: the concept their practice most naturally connects to. E'lla's Anchor is **Light**.
+E'lla Rae Wonderwall is a twenty-five-Lunar-Year-old member of House Wonderwall and a Redactor working within SiNE, the Wonderwall Company. A **Redactor** is a person trained to produce controlled changes in the world by routing through a personal **Anchor**: the concept their practice most naturally connects to. E'lla's Anchor is **Light**.
 
 She is ranked as an **experienced Quill**. Quill is not the highest Redactory rank, but it marks a practitioner who has moved well beyond basic safety formation and can work with reliable independent competence. In E'lla's case, the important word is *experienced*. Much of what she does is not impressive because she forces enormous amounts of power through a room. It is impressive because she has made difficult control feel ordinary.
 
@@ -62,7 +62,7 @@ That control defines almost everything about her public presence. E'lla is preci
 
 That impression is incomplete.
 
-E'lla is, at her core, a warm person who learned to make warmth difficult to reach. At seventeen, a catastrophic Redactory incident in Aurora's White Desert killed eight people, injured sixty-eight, and carried her far deeper into her own Anchor than she intended to go. The woman people meet now was shaped by surviving that event and by the fear that losing control again could make proximity to her dangerous.
+E'lla is, at her core, a warm person who learned to make warmth difficult to reach. At seventeen Lunar Years, a catastrophic Redactory incident in Aurora's White Desert killed eight people, injured sixty-eight, and carried her far deeper into her own Anchor than she intended to go. The woman people meet now was shaped by surviving that event and by the fear that losing control again could make proximity to her dangerous.
 
 Her central problem is therefore not whether she is powerful enough. It is whether she can live as a person rather than as a risk, a House expectation, a technical curiosity, or an answer to questions other people began asking before she was old enough to refuse them.
 
@@ -82,7 +82,7 @@ It resembles illumination.
 
 ## The White Desert Incident
 
-The event that divided E'lla's life occurred in Year 2192, when she was seventeen.
+The event that divided E'lla's life occurred in Imperial Year 2197, when she was seventeen Lunar Years old.
 
 She was traveling on a Company-aligned observational passage near the northern edge of Aurora's southern **White Desert**, a high-radiance region where Light-related conditions are already unusually unstable. The convoy was supporting materials exchange and field observation when an abnormal photonic storm formed around it.
 
@@ -223,7 +223,7 @@ E'lla does not know the complete chronology. She knows Kaleidoscope existed, tha
 
 The sealed record says otherwise.
 
-Kaleidoscope produced KL-83 first. Al'ithia and Em'manuel became her parents afterward. Al'ithia forced an end to biological production, and E'lla was transferred out of project custody and irrevocably adopted into the House in Year 2179.
+Kaleidoscope produced KL-83 first. Al'ithia and Em'manuel became her parents afterward. Al'ithia forced an end to biological production, and E'lla was transferred out of project custody and irrevocably adopted into the House in Imperial Year 2191.
 
 The program's consequences did not end with its facilities.
 

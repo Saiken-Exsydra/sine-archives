@@ -218,6 +218,16 @@ Esses rótulos se sobrepõem. Eles não se substituem.
 
 ---
 
+## O Firmamento Ausente e os Primeiros Portadores
+
+O Obsidian não possui a síntese completa entre [[obscurials|Obscurial e Skyphon]], mas seu registro operacional preserva parte da consequência celestial. Sete Seraphim continuam disponíveis para contato estável com a Igreja. Três atravessaram além do Firmamento acessível durante a crise pós-Fratura ligados aos doze Primeiros Portadores e não retornaram.
+
+Por isso o Obsidian se recusa a identificar uma aparição em forma de pessoa perto de um remanescente de Instrumento apenas por nome, iconografia ou efeitos familiares. Um Skyphon sobrevivente real seria uma pessoa desassentada existente em um corpo verdadeiro Obscurial, não um espírito guardado dentro de uma relíquia. Nenhum caso estabeleceu um coendereço restaurado.
+
+O mesmo registro distingue anjos caídos reais da espécie demoníaca em geral. Alguns seres Seráficos entraram na arquitetura Abissal ou foram alterados por ela. Demônios comuns continuam sendo expressões do inverso do Sovereign e não são antigos Skyphons ou Obscurials.
+
+---
+
 ## Por que o Obsidian importa
 
 O Obsidian é a resposta da Igreja para um problema que o clero comum não consegue resolver:

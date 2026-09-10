@@ -3,8 +3,8 @@ title: "Sciel"
 type: "Skyphon"
 rank: "Bearer of Admissible Fact"
 designation: "Bearer of Admissible Fact"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Person concluded at the Fracture; Page fragment persists in contradiction scars; Instrument seat-fast in the Lunar Crown"
+affiliation: "First Bearer — Intact Seal (Unseated)"
+registry_status: "Unseated during the Fracture; person survives beyond ordinary Terra address; terminal failed; Determinacy Seat/interface remnant remains in the Lunar Crown"
 occupation: "Determinate correspondence"
 domain: "Admissibility between expressed state and supporting configuration"
 church_name: "The Instrument of Truth"
@@ -23,6 +23,6 @@ Sciel governed **Determinacy**: local correspondence between an expressed state 
 
 Her jurisdiction overlapped Warden wherever incompatible claims required boundaries and Oracle wherever the present leaned toward an adjacent consequence. The friction was necessary: a state could be adequately supported and still unacceptable to another lawful domain.
 
-During the Fracture, Sciel stood at the lunar correspondence gate. The intrusion fragment presented a foreign state through locally valid syntax without the causal support required to belong there. She quarantined it rather than admit it or erase existing information. Her body failed at the gate; her Page fragment marked local contradiction scars; the Instrument of Determinacy remained seat-fast in the Crown.
+During the Fracture, Sciel stood at the lunar correspondence gate. The intrusion fragment presented a foreign state through locally valid syntax without the causal support required to belong there. She quarantined it rather than admit it or erase existing information. Her humanoid terminal and correspondence-gate expression folded into alternating black and pale planes and lost coherent address. Determinacy's local imprint marked contradiction scars; a Seat-and-interface remnant remained in the Crown. Sciel's true Obscurial body became unseated, carrying the same person beyond ordinary Terra address.
 
-**Clepsydra is not that Instrument.** It is a surviving service apparatus once coupled to Sciel's jurisdiction. Its selection behavior does not prove that Sciel survives inside it.
+**Clepsydra is not Sciel or her true body.** It is a surviving service apparatus once coupled to her jurisdiction. Its selection behavior does not place the unseated Skyphon inside it.

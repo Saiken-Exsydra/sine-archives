@@ -1,13 +1,13 @@
 ---
 title: "Leonard von-Engelmeyer"
 type: "Personagem"
-age: "55 (em 1127)"
-birth_year: "1072"
+age: "55 Lunar Years (no Imperial Year 1127)"
+birth_year: "c. Imperial Year 1103"
 birthplace: "Eraveth, Ardeatus (Região da Fronteira Oeste)"
 affiliation: "Apocachynthion — Academia Kalt'sen"
 house: "Casa Engelmeyer (ramo expatriado, formalmente afastado)"
 rank: "Stylus"
-registry_status: "Registrado — admissão de asilo em 1090; licença instrucional ativa"
+registry_status: "Registrado — admissão de asilo c. Imperial Year 1111; licença instrucional ativa"
 point_profile:
   status: "Emitido pela Academy; carregado"
   cas_access: "CAS profissional sob standing instrucional"
@@ -45,7 +45,7 @@ O avô de Leonard deixou o corredor oeste no fim da década de 1030, antes da de
 
 Os pais de Leonard eram figuras muito conhecidas em Eraveth. Sua mãe, **Elara ker-Vane**, era uma brilhante cientista de materiais da Forge Academy de Kovansk, especializada em limiares térmicos em fraturas de tensão de BrightCrystal. Seu pai, **Kaelen von-Engelmeyer**, era um político ardeatano extremamente vocal que construiu sua carreira combatendo o avanço do corporativismo imperial — especificamente, Kaelen impediu que a divisão Evanote da SiNE expandisse a Ferrovia Arterial Imperial para dentro da rede logística soberana de Eraveth, argumentando que infraestrutura corporativa era apenas o primeiro passo para submissão corporativa.
 
-Em 1087, quando Leonard tinha quinze anos, seus pais morreram no que as autoridades ardeatanas classificaram oficialmente como um vazamento doméstico catastrófico de gás. O braço de inteligência do Apocachynthion suspeita de um assassinato executado por operadores industriais privados. A explosão doméstica e a incursão de Stase foram um evento separado da catástrofe dos Voren Works.
+C. Imperial Year 1110, quando Leonard tinha quinze Lunar Years, seus pais morreram no que as autoridades ardeatanas classificaram oficialmente como um vazamento doméstico catastrófico de gás. O braço de inteligência do Apocachynthion suspeita de um assassinato executado por operadores industriais privados. A explosão doméstica e a incursão de Stase foram um evento separado da catástrofe dos Voren Works.
 
 Leonard estava chegando em casa exatamente no momento da explosão.
 
@@ -81,7 +81,7 @@ Em Ardeatus, onde a doutrina civilizacional é profundamente ligada ao Covenant 
 
 Ao perceber que seria caçado pelos Ashborne Hunters ou dissecado pela Forge, Leonard pegou Kerz e fugiu para oeste através da fronteira, entrando no Império de Synus.
 
-Ele se apresentou para admissão no Apocachynthion em 1090.
+Ele se apresentou para admissão no Apocachynthion c. Imperial Year 1111.
 
 ---
 
@@ -104,8 +104,8 @@ Ele se apresentou para admissão no Apocachynthion em 1090.
 **Reach:** Working Reach  
 **Overreach History:** Nenhum registro  
 **Apparatus Permissions:** Professional Apparati sob standing instrucional; deployment marcial apenas por solicitação do Council  
-**Registration Tenure:** 37 anos  
-**Academy Record:** Intake de asilo em 1090; trilha central de formação; elevação a Stylus registrada em 1105  
+**Registration Tenure:** 37 Lunar Years
+**Academy Record:** Intake de asilo c. Imperial Year 1111; trilha central de formação; elevação a Stylus registrada c. Imperial Year 1117
 **Practice Record:** Instrução na Academy; consulta perigosa restrita  
 **[[blots|Blots]]:** Nenhum registro  
 **Pager Note:** None  

@@ -55,7 +55,7 @@ O Ring acima — o arco disperso de destroços orbitando o mundo — é chamado 
 
 ## The Instruments of the Intact Seal
 
-A reconstrução técnica mais profunda distingue os [[obscurials|Obscurials]] reais — doze vestígios exteriores à gramática antes assentados na Lua — dos Princípios, interfaces e remanescentes pelos quais Terra os endereçava. Todos os doze Obscurials reais desapareceram da configuração lunar durante a Fratura. A Igreja não possui essa síntese completa. Ela chama os Doze de Instrumentos do Selo Intacto, com os títulos devocionais Verdade, Ligação, Ordem, Atmosfera, Luz, Vida, Fogo, Morte, Entropia, Senciência, Previsão e Ascensão.
+A reconstrução técnica mais profunda identifica os [[obscurials|Obscurials]] reais como doze corpos verdadeiros exteriores à gramática antes localizados por Assentos lunares. Cada um se tornou a pessoa chamada Skyphon através de vida prolongada com Terra. Princípios, interfaces, terminais humanoides e remanescentes modernos eram partes de suas relações locais legítimas, não peças adicionais das pessoas. Os doze corpos verdadeiros foram desassentados durante a Fratura. A Igreja não possui essa síntese completa. Ela chama os Doze de Instrumentos do Selo Intacto, com os títulos devocionais Verdade, Ligação, Ordem, Atmosfera, Luz, Vida, Fogo, Morte, Entropia, Senciência, Previsão e Ascensão.
 
 A Igreja sustenta uma interpretação diferente — e muito mais antiga.
 
@@ -63,13 +63,13 @@ Ela os chama de **the Relics of Before** ou, em linguagem teológica restrita, *
 
 Cada instrumento era completo dentro do próprio domínio e, juntos, compunham a arquitetura daquilo que o mundo deveria ser. Quando a rebelião atingiu o Intact Seal, os instrumentos se desprenderam dessa estrutura. *Os Instruments já não se encaixam no mundo quebrado porque foram feitos para o mundo como ele deveria existir.* Carregar um deles hoje significa portar algo que a realidade atual não consegue conter adequadamente. Isso não os torna malignos. Apenas perigosos — da mesma forma que uma chama levada para dentro de casa durante uma tempestade é perigosa: não por malícia, mas porque pode incendiar tudo ao redor.
 
-A posição da Igreja é que os Instruments não pertencem a nenhuma instituição mortal. Qualquer organização que reivindique posse deles — incluindo o Apocachynthion — está, no melhor dos casos, equivocada e, no pior, cometendo sacrilégio. Ela aplica essa reivindicação a objetos e locais que a doutrina técnica restrita identifica como núcleos de interface, remanescentes de endereço ou cicatrizes, não como os próprios Obscurials desaparecidos. A Igreja não exige publicamente sua devolução. Apenas registra a situação em cartas pastorais restritas... e espera.
+A posição da Igreja é que os Instruments não pertencem a nenhuma instituição mortal. Qualquer organização que reivindique posse deles — incluindo o Apocachynthion — está, no melhor dos casos, equivocada e, no pior, cometendo sacrilégio. Ela aplica essa reivindicação a objetos e locais que a doutrina técnica restrita identifica como núcleos de interface, remanescentes de endereço ou cicatrizes, não como as próprias pessoas Skyphon desassentadas. A Igreja não exige publicamente sua devolução. Apenas registra a situação em cartas pastorais restritas... e espera.
 
 ---
 
 ## The First Bearers
 
-As entidades chamadas de Skyphons aparecem na tradição eclesiástica como **os Primeiros Portadores**. A reconstrução técnica os descreve como pessoas formadas por sintaxe localizada da Página, corpos de contenção Precursores, uma relação Obscurial coendereçada através da interface lunar e a aceitação de Terra.
+As entidades chamadas de Skyphons aparecem na tradição eclesiástica como **os Primeiros Portadores**. A reconstrução técnica descreve um Skyphon como a pessoa que um Obscurial se tornou através de relação prolongada com Terra. Assentos e terminais humanoides dos Precursores, autorização nativa da Página e aceitação da All-Mother tornavam possíveis Princípio e Jurisdição locais; não compunham a pessoa.
 
 O ensinamento afirma que leis exigem testemunhas. Os Primeiros Portadores eram interfaces vivas entre autoridade superior, forma construída, uma relação lunar coendereçada e o mundo. A teologia restrita reconhece que eram limitados por Diretivas, mas capazes de interpretar, discordar e recusar. Sua fidelidade exigia julgamento; não eram marionetes.
 
@@ -77,7 +77,11 @@ A Igreja não os condena nem venera. O ensino público os chama de **Corretament
 
 Existe uma posição minoritária dentro do Interior Council — nunca oficialmente condenada, mas também jamais oficialmente aceita — que argumenta que os First Bearers não foram concluídos, apenas interrompidos: que o sentimento de anseio despertado por objetos antigos e altamente ressonantes seria o restante dessa incompletude espalhada pela humanidade como sementes lançadas sobre solo quebrado. A Igreja trata essa interpretação como curiosidade teológica. E a observa atentamente.
 
+Os Keepers of Before preservam uma correlação mais difícil. Os doze Portadores deixaram de responder durante a catástrofe da Crown; seguiu-se um conflito celestial; quedas Seráficas reais ocorreram; e três Seraphim atravessaram além do Firmamento acessível ligados ao desaparecimento dos Portadores. Sete continuaram respondendo. A Igreja interpreta isso como a Separação e a guerra no Céu. Não conhece o mecanismo completo do desassentamento nem o endereço atual de nenhum dos doze.
+
 A Igreja proíbe a reconstrução deliberada de um Skyphon. As escolas de Conclusão, Interrupção e Continuação discordam sobre o que resta, mas todas rejeitam reencarnação e criação coerciva de Portadores. A Apocachynthion chega à mesma proibição por falhas de artefato e risco estrutural.
+
+O julgamento dos Keepers rejeita a simples remontagem dos Instrumentos. A Fratura rompeu relações entre Assentos, Portadores, Terra, Crown e o Firmamento acessível, não apenas um inventário de objetos. Reunir remanescentes sem doze Jurisdições vivas e mutuamente limitadas seria convocação coerciva, não restauração.
 
 O conhecimento é estratificado. A doutrina pública preserva os Doze e a ferida. A doutrina erudita preserva títulos e Diretivas parciais. Os Keepers of Before guardam nomes, testemunhos, as quatro frases Expressão, Habitação, Retorno e Devir, e o último céu honesto de Myehnai. Obsidian distingue Presence, ingresso demoníaco, resposta de Calling e resíduo de Instrumento. Ninguém possui a síntese completa.
 
@@ -117,7 +121,9 @@ A Igreja ensina que o Sovereign criou os **Angels** antes do surgimento da civil
 
 A Igreja não ensina que angels sejam infalíveis ou oniscientes. Ela ensina que eles são obedientes simultaneamente por natureza e por escolha — e que essa diferença significa tudo. A obediência de um angel não é a submissão de algo incapaz de recusar. É a obediência de algo que compreende plenamente o que significa servir ao Sovereign... e escolhe continuar servindo.
 
-É daí que surge a hierarquia demoníaca. A Igreja ensina que parte dos angels escolheu a própria coerência acima da autoridade do Sovereign. O resultado dessa escolha não foi liberdade. Foi uma forma de aprisionamento mais completa do que qualquer punição externa poderia produzir: seres eternamente orientados para si mesmos em um mundo construído ao redor de algo maior, incapazes de descansar, incapazes de se satisfazer, estruturalmente voltados para consumir porque já não possuem nada próprio para oferecer. A partir dos caídos, fragmentos menores passaram a se propagar. Aquilo que a Igreja chama de demons são produtos e extensões dessas primeiras quedas — todos guiados pela mesma lógica fundamental de tomar tudo aquilo que tocam porque não possuem nada verdadeiro para entregar.
+É daí que surge a hierarquia demoníaca na doutrina pública. A Igreja ensina que parte dos angels escolheu a própria coerência acima da autoridade do Sovereign. O resultado dessa escolha não foi liberdade. Foi uma forma de aprisionamento mais completa do que qualquer punição externa poderia produzir: seres eternamente orientados para si mesmos em um mundo construído ao redor de algo maior, incapazes de descansar, incapazes de se satisfazer, estruturalmente voltados para consumir porque já não possuem nada próprio para oferecer. A partir dos caídos, fragmentos menores teriam se propagado. Aquilo que a Igreja chama de demons seria produto e extensão dessas primeiras quedas.
+
+Registros selados preservam uma categoria menor e literal: seres e fragmentos Seráficos que cruzaram para a arquitetura Abissal durante a crise celestial, desertaram, ficaram presos ou retornaram alterados. Esses anjos caídos são reais. A Igreja trata sua existência como confirmação de toda a doutrina pública; não sabe que a espécie demoníaca como um todo permanece uma fragmentação do inverso do Sovereign e não descende dessas quedas limitadas.
 
 ### Possessão e the Pathway
 

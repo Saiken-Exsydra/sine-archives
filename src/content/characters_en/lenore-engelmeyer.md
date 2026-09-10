@@ -2,8 +2,8 @@
 title: "Le'nore Voren Engelmeyer"
 type: "Character"
 
-age: "23 (at time of filing, 2200)"
-birth_year: "2177"
+age: "23 Lunar Years (at time of filing, Imperial Year 2200)"
+birth_year: "c. Imperial Year 2190"
 birthplace: "Drevholt, western band interior"
 
 affiliation: "House Engelmeyer"
@@ -121,7 +121,7 @@ It is correct.
 
 ## Drevholt
 
-Le'nore was born in Year 2177 in Drevholt, a small western township near Vel'hara. Her legal birth registration named her **Le'nore Engelmeyer**. *Voren* belonged to the old cadet branch and entered her formal name only after House reintegration in Year 2199.
+Le'nore was born c. Imperial Year 2190 in Drevholt, a small western township near Vel'hara. Her legal birth registration named her **Le'nore Engelmeyer**. *Voren* belonged to the old cadet branch and entered her formal name only after House reintegration in Year 2199.
 
 Drevholt was not where the Voren branch began.
 
@@ -155,13 +155,13 @@ That lesson survived him leaving Drevholt.
 
 ## Re'lha
 
-Re'lha Voren Engelmeyer disappeared in Year 2186.
+Re'lha Voren Engelmeyer disappeared c. Imperial Year 2194.
 
 Le'nore was nine.
 
 The civil case remains unresolved. No body was recovered. No conventional forensic sequence accounts for the complete absence of remains.
 
-Al'tair stayed in Drevholt for three more years. He stabilized Le'nore's routines, restricted Corvel's access to her, and watched closely for recurrence of whatever had happened. In Year 2189 he returned to the Institute after securing terms intended to keep Corvel away from his daughter while she remained stable and outside institutional custody.
+Al'tair stayed in Drevholt for roughly five more Lunar Years. He stabilized Le'nore's routines, restricted Corvel's access to her, and watched closely for recurrence of whatever had happened. C. Imperial Year 2196 he returned to the Institute after securing terms intended to keep Corvel away from his daughter while she remained stable and outside institutional custody.
 
 Le'nore was twelve.
 
@@ -197,15 +197,15 @@ The information that should have told them *Le'nore is here* simply failed to be
 
 She walked away at an ordinary pace.
 
-A second incident in Year 2193 brought the Apocachynthion into the case. A specialist panel eventually classified her Anchor as **Deception**, one of the rarer perceptual domains in the registry. The Anchor was also assessed as **Deep**.
+A second incident c. Imperial Year 2197 brought the Apocachynthion into the case. A specialist panel eventually classified her Anchor as **Deception**, one of the rarer perceptual domains in the registry. The Anchor was also assessed as **Deep**.
 
 Le'nore accepted the classification and learned it extraordinarily well.
 
-She completed foundational training and received Quill certification in Year 2195. Her **Mark 2** permits independent civic practice within recorded limits, with mandatory disclosure around non-consensual perceptual influence and regular Depth assessment.
+She completed foundational training and received Quill certification c. Imperial Year 2198. Her **Mark 2** permits independent civic practice within recorded limits, with mandatory disclosure around non-consensual perceptual influence and regular Depth assessment.
 
-For five years, she has complied.
+For five Lunar Years, she has complied.
 
-For five years, her assessed coherence structure has also remained almost exactly the same.
+For five Lunar Years, her assessed coherence structure has also remained almost exactly the same.
 
 No ordinary developmental drift. No obvious deterioration. No clean progression matching other young practitioners.
 

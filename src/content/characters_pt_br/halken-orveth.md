@@ -1,8 +1,8 @@
 ---
 title: "Halk'en Orveth"
 type: "Character"
-age: "399 (em 2200)"
-birth_year: "1801"
+age: "399 Lunar Years (no Imperial Year 2200)"
+birth_year: "c. Imperial Year 2025"
 birthplace: "Black Mere, Região Norte"
 affiliation: "Igreja - Obsidian"
 rank: "Rector-Ascendant"
@@ -27,7 +27,7 @@ hero_image: "../../assets/uploads/characters/char-halken-orveth-hero.png"
 ---
 
 > *"Dominion é fácil de venerar quando existe só como palavra em liturgia. Difícil é suportar quando ela cria mãos."*
-> - Mother Salienne Karth, nota selada de formação, ano 2074
+> - Mother Salienne Karth, nota selada de formação, Imperial Year 2145
 
 ## O Que Ele É
 
@@ -49,21 +49,21 @@ Seu comportamento cotidiano é contido, direto e deliberado. Ele não toca as pe
 
 ## História
 
-Halk'en Orveth nasceu em 1801, em Black Mere, uma paróquia fluvial do norte sem qualquer prestígio nobre, sem linhagem Redactory registrada e sem nada nos registros sobreviventes que sugerisse que um dos maiores ativos vivos da Igreja começaria ali. O pai era balseiro e cantor leigo. A mãe era copista paroquial. O que chamou atenção nele cedo não foi misticismo, mas coragem prática: tirar crianças de enchentes, carregar membros do clero feridos através de estradas congeladas e caminhar em direção ao perigo antes mesmo de alguém decidir se aquilo era uma boa ideia.
+Halk'en Orveth nasceu c. Imperial Year 2025, em Black Mere, uma paróquia fluvial do norte sem qualquer prestígio nobre, sem linhagem Redactory registrada e sem nada nos registros sobreviventes que sugerisse que um dos maiores ativos vivos da Igreja começaria ali. O pai era balseiro e cantor leigo. A mãe era copista paroquial. O que chamou atenção nele cedo não foi misticismo, mas coragem prática: tirar crianças de enchentes, carregar membros do clero feridos através de estradas congeladas e caminhar em direção ao perigo antes mesmo de alguém decidir se aquilo era uma boa ideia.
 
 Entrou no seminário menor aos dezesseis anos. Os registros de formação não descrevem um prodígio. Descrevem um garoto grande, quieto, de memória excelente, disciplina litúrgica impecável, pouca paciência para teologia ornamental e uma tendência de enxergar doutrina como obrigação, não abstração. Se destacou em ritos funerários, cuidado de crise e preparação exorcística muito antes de qualquer suspeita de contato Seráfico direto.
 
-A mudança veio em **1823**, durante os **Motins de Possessão de Mornhallow**. Um evento de Weight demoníaco atravessou um hospital usando pacientes e atendentes tomados pelo luto como uma rede distribuída de vessels. Quando a ala se tornou contestada e membros experientes do clero não conseguiam entrar sem provocar mimetismo imediato e escalada, o recém-ordenado Orveth caminhou até as portas, colocou a mão nua sobre a verga e declarou que aquele lugar havia sido entregue aos doentes e que o invasor não recebera permissão para entrar. As vozes cessaram tempo suficiente para que a ala fosse retomada. Onze pacientes sobreviveram graças a isso. Revisões posteriores identificaram o episódio como a primeira manifestação documentada da mão.
+A mudança veio c. Imperial Year **2035**, durante os **Motins de Possessão de Mornhallow**. Um evento de Weight demoníaco atravessou um hospital usando pacientes e atendentes tomados pelo luto como uma rede distribuída de vessels. Quando a ala se tornou contestada e membros experientes do clero não conseguiam entrar sem provocar mimetismo imediato e escalada, o recém-ordenado Orveth caminhou até as portas, colocou a mão nua sobre a verga e declarou que aquele lugar havia sido entregue aos doentes e que o invasor não recebera permissão para entrar. As vozes cessaram tempo suficiente para que a ala fosse retomada. Onze pacientes sobreviveram graças a isso. Revisões posteriores identificaram o episódio como a primeira manifestação documentada da mão.
 
-[[obsidian-rite|O Obsidian]] o retirou das funções paroquiais comuns menos de um mês depois. Ele entrou formalmente na formação do Obsidian em 1824 e demonstrou muito menos interesse em poder do que em entender onde o poder precisava ser aplicado. Em **1831**, durante o exorcismo de um vessel de treze anos chamado Anrek Voss, manifestou visivelmente a **terceira mão** pela primeira vez, contendo o garoto e imobilizando a estrutura de possessão tempo suficiente para que o Naming acontecesse corretamente. O monitoramento de Cirurgiões Eclesiásticos começou naquele mesmo ano. Investigações teológicas restritas vieram logo depois. O nome **Auctoriel** aparece na própria caligrafia de Orveth já em **1836**.
+[[obsidian-rite|O Obsidian]] o retirou das funções paroquiais comuns menos de um mês depois. Ele entrou formalmente na formação do Obsidian c. Imperial Year 2035 e demonstrou muito menos interesse em poder do que em entender onde o poder precisava ser aplicado. No Imperial Year **2038**, durante o exorcismo de um vessel de treze anos chamado Anrek Voss, manifestou visivelmente a **terceira mão** pela primeira vez, contendo o garoto e imobilizando a estrutura de possessão tempo suficiente para que o Naming acontecesse corretamente. O monitoramento de Cirurgiões Eclesiásticos começou naquele mesmo ano. Investigações teológicas restritas vieram logo depois. O nome **Auctoriel** aparece na própria caligrafia de Orveth já c. Imperial Year **2041**.
 
-Ele não foi elevado rapidamente. Recusou promoção duas vezes, argumentando que sua utilidade estava no trabalho de campo direto, não em cargos institucionais. Essa posição se tornou impossível depois do **Evento do Coro Vermelho** de **1877**, quando manifestou cinco mãos simultaneamente dentro de um coro paroquial colapsado que havia se tornado uma rede harmônica de vessels. Entrou sozinho na nave. Quando as portas foram abertas, toda a estrutura havia sido forçada a responder como um único centro identificável. Foi elevado a **Rector-Ascendant** em **1878**.
+Ele não foi elevado rapidamente. Recusou promoção duas vezes, argumentando que sua utilidade estava no trabalho de campo direto, não em cargos institucionais. Essa posição se tornou impossível depois do **Evento do Coro Vermelho** do Imperial Year **2058**, quando manifestou cinco mãos simultaneamente dentro de um coro paroquial colapsado que havia se tornado uma rede harmônica de vessels. Entrou sozinho na nave. Quando as portas foram abertas, toda a estrutura havia sido forçada a responder como um único centro identificável. Foi elevado a **Rector-Ascendant** no Imperial Year **2059**.
 
-Em **1881**, recebeu **Sundersaint**, a espada artefato superior conhecida como *the Parting Mercy*. A combinação foi controversa desde o início: um homem capaz de impor autoridade não deveria, em teoria, também portar um artefato de Severance divina. A Igreja aceitou o risco porque quase ninguém conseguia primeiro tornar uma estrutura de possessão responsiva e depois separá-la de forma limpa.
+C. Imperial Year **2060**, recebeu **Sundersaint**, a espada artefato superior conhecida como *the Parting Mercy*. A combinação foi controversa desde o início: um homem capaz de impor autoridade não deveria, em teoria, também portar um artefato de Severance divina. A Igreja aceitou o risco porque quase ninguém conseguia primeiro tornar uma estrutura de possessão responsiva e depois separá-la de forma limpa.
 
-Em **1906**, após o **Julgamento do Portão de Saint Kaldrin** e a primeira manifestação tangível amplamente testemunhada da sexta mão, o Diaconato deixou de tratá-lo como apenas um Rector-Ascendant excepcional. Internamente, passou a ser reconhecido como um dos **Answered**: um dos raríssimos vessels mortais de contato Cynosure através dos quais um dos Seven Answers respondeu ao mundo.
+C. Imperial Year **2071**, após o **Julgamento do Portão de Saint Kaldrin** e a primeira manifestação tangível amplamente testemunhada da sexta mão, o Diaconato deixou de tratá-lo como apenas um Rector-Ascendant excepcional. Internamente, passou a ser reconhecido como um dos **Answered**: um dos raríssimos vessels mortais de contato Cynosure através dos quais um dos Seven Answers respondeu ao mundo.
 
-Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do [[obsidian-rite|Obsidian]]. Separou um estado ritualístico da Ponte Halvorn em 1968 sem derrubar a estrutura. Manifestou a **sétima mão** em **Vaul Mourne** em 2013 e transformou um desastre de possessão que havia tomado um hospice inteiro em um tribunal responsivo, pagando um custo enorme por isso. Mais tarde ajudou a moldar a ética moderna do Obsidian ao se opor à investidura forçada, defendendo que um fardo colocado sem consentimento legítimo não é ofício — é tomada à força. Em 2200, tornou-se ao mesmo tempo um dos pilares vivos da [[the-church|Igreja]] e uma das provas mais claras de que poder sagrado pode continuar perigoso sem necessariamente se corromper.
+Ao longo dos três séculos seguintes, tornou-se uma das figuras definitivas do [[obsidian-rite|Obsidian]]. Separou um estado ritualístico da Ponte Halvorn no Imperial Year 2098 sem derrubar a estrutura. Manifestou a **sétima mão** em **Vaul Mourne** c. Imperial Year 2118 e transformou um desastre de possessão que havia tomado um hospice inteiro em um tribunal responsivo, pagando um custo enorme por isso. Mais tarde ajudou a moldar a ética moderna do Obsidian ao se opor à investidura forçada, defendendo que um fardo colocado sem consentimento legítimo não é ofício — é tomada à força. Em 2200, tornou-se ao mesmo tempo um dos pilares vivos da [[the-church|Igreja]] e uma das provas mais claras de que poder sagrado pode continuar perigoso sem necessariamente se corromper.
 
 ## A Mão Sétupla
 

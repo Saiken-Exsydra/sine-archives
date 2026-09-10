@@ -1,13 +1,13 @@
 ---
 title: "Leonard von-Engelmeyer"
 type: "Character"
-age: "55 (as of 1127)"
-birth_year: "1072"
+age: "55 Lunar Years (as of Imperial Year 1127)"
+birth_year: "c. Imperial Year 1103"
 birthplace: "Eraveth, Ardeatus (Western Frontier Region)"
 affiliation: "Apocachynthion - Kalt'sen Academy"
 house: "House Engelmeyer (expatriate branch, formally estranged)"
 rank: "Stylus"
-registry_status: "Registered - Stylus, Mark 4; asylum intake 1090; instructional standing current"
+registry_status: "Registered - Stylus, Mark 4; asylum intake c. 1111; instructional standing current"
 point_profile:
   status: "Academy-issued; carried"
   cas_access: "Professional CAS under instructional standing"
@@ -75,7 +75,7 @@ He is one of the setting's clearest examples of catastrophe producing not a mons
 
 Leonard was born into the broader Engelmeyer migration in **Ardeatus**. His grandfather left the western corridor before the Voren Works disaster and carried a damaged route ledger east into Ardeatus. Leonard is related to that history, but he is not part of the direct hereditary sequence that later produced Re'lha and Le'nore.
 
-In **1087**, a suspected private-industrial attack killed his parents just as a Stase incursion froze the event in a suspended unfinished state. Leonard survived by awakening as a Redactor inside that separate rupture.
+C. Imperial Year **1110**, a suspected private-industrial attack killed his parents just as a Stase incursion froze the event in a suspended unfinished state. Leonard survived by awakening as a Redactor inside that separate rupture.
 
 An anomalous mechanical crow later named **Kerz** entered that same impossible moment and has remained tied to him ever since.
 
@@ -98,8 +98,8 @@ An anomalous mechanical crow later named **Kerz** entered that same impossible m
 **Reach:** Working Reach  
 **Overreach History:** None recorded  
 **Apparatus Permissions:** Professional Apparati under instructional standing; martial deployment only by Council request  
-**Registration Tenure:** 37 years  
-**Academy Record:** Asylum intake 1090; central formation track; Stylus elevation recorded 1105  
+**Registration Tenure:** 37 Lunar Years
+**Academy Record:** Asylum intake c. 1111; central formation track; Stylus elevation recorded c. 1117
 **Practice Record:** Academy instruction; restricted hazardous consultation  
 **[[blots|Blots]]:** None recorded  
 **Pager Note:** None  

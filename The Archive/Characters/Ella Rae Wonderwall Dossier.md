@@ -33,7 +33,7 @@
 |---|---|
 | **Full Name** | E'lla Rae Wonderwall |
 | **Program Designation** | KL-83 |
-| **Year of Birth** | 2175 (age 25 at time of filing, 2200) |
+| **Year of Birth** | c. Imperial Year 2189 (age 25 Lunar Years at time of filing, Imperial Year 2200) |
 | **Birth Status** | Final numbered subject of Project Kaleidoscope; a living person from birth, not a project asset or returned predecessor |
 | **House Status** | Irrevocably adopted into Rae Continuance and the primary House household under the Compact of Held Light |
 | **Redactory Classification** | Radiance-class; experienced Quill. Confirmed stable under ordinary and controlled high-depth conditions, with post-Aurora restrictions on serious native-Light work. |
@@ -57,7 +57,7 @@ This remains true.
 
 It is no longer sufficient.
 
-The project attempted to force recurrence of the first E'lla's Light-bearing Redactory profile through lineage-controlled biology, archived material, conditioning, BrightCrystal mnemonic media, and harmonic exposure. Numbered production ran from Year 1547 until KL-83's birth in Year 2175. The methods cultivated resemblance and inflicted harm; they did not return the dead, reconstruct Light, or author the person who emerged. E'lla carries Light itself and a convergence the models did not predict. She does not carry the bloodline's accumulated interval-echo, because no institution can manufacture living descent.
+The project attempted to force recurrence of the first E'lla's Light-bearing Redactory profile through lineage-controlled biology, archived material, conditioning, BrightCrystal mnemonic media, and harmonic exposure. Numbered production ran from Imperial Year 1547 until KL-83's birth c. Imperial Year 2189. The methods cultivated resemblance and inflicted harm; they did not return the dead, reconstruct Light, or author the person who emerged. E'lla carries Light itself and a convergence the models did not predict. She does not carry the bloodline's accumulated interval-echo, because no institution can manufacture living descent.
 
 For years I treated this as the defining absence and defining mercy of her condition. I asked what Light might become under engineered convergence without the hereditary interval-pressure accumulated by the natural bloodline. The question was technically interesting and morally corrupt because it treated a present person as its answer.
 
@@ -679,7 +679,7 @@ Myehnai's reflex supplies the refusal of destructive resolution. Alma's broader 
 
 Before the White Desert incident, the Remainder may have perceived Project Kaleidoscope as a dispersed set of Light-bearing traces, institutional gaps, and failed handoffs. No evidence shows it joined those traces into one target or understood that one living person centered them.
 
-The Year 2192 Shorefall changed that. E'lla's Light reached the Luminant Shore, the Instrument's reflex marked the resulting continuity scar, and every Kaleidoscope relation briefly became visible around one surviving center. From that point, the Remainder could compare later absences and consequences against the same unresolved concentration. It became aware of her not as a conventional person-route, but as the recurring place where too many supported answers refused to become one.
+The Imperial Year 2197 Shorefall changed that. E'lla's Light reached the Luminant Shore, the Instrument's reflex marked the resulting continuity scar, and every Kaleidoscope relation briefly became visible around one surviving center. From that point, the Remainder could compare later absences and consequences against the same unresolved concentration. It became aware of her not as a conventional person-route, but as the recurring place where too many supported answers refused to become one.
 
 E'lla's awareness developed in the opposite direction. She does not hear a voice or see an apparition. She notices negative space:
 
@@ -780,7 +780,7 @@ She is correct.
 
 E'lla is not the answer I first wanted.
 
-She is not even the answer I believed I had three years ago.
+She is not even the answer I believed I had three Lunar Years ago.
 
 The original concept behind Kaleidoscope was survival through replication: rebuild the first E'lla, preserve the Light, prepare a vessel that could meet the Remainder without breaking. Every premise was wrong. The person sitting in front of me in Year 2200 is not the result that language can own. She is a living self who developed under engineered Light-bearing conditions without the hereditary interval-echo, and her Abyssal expression exceeded the project's design.
 
@@ -856,9 +856,9 @@ I am aware that this distinction has not historically improved my speed.
 
 ## XIV. HOUSE, ADOPTION, AND DISCLOSURE ADDENDUM
 
-Al'ithia sponsored E'lla's adoption in Year 2179. Rae, Orren, and Serath witnessed it; Em'manuel sealed it under the Compact of Held Light. E'lla was taught to understand the instrument as formal House recognition of an already biological daughter, not as the act by which Al'ithia and Em'manuel became her parents. The recognition is irrevocable. It does not require E'lla to work for SiNE, accept the first E'lla as her identity, consent to further research, or enter succession.
+Al'ithia sponsored E'lla's adoption in Imperial Year 2191. Rae, Orren, and Serath witnessed it; Em'manuel sealed it under the Compact of Held Light. E'lla was taught to understand the instrument as formal House recognition of an already biological daughter, not as the act by which Al'ithia and Em'manuel became her parents. The recognition is irrevocable. It does not require E'lla to work for SiNE, accept the first E'lla as her identity, consent to further research, or enter succession.
 
-KL-81 and KL-82 are living managed cases born in 2172 and 2174 and released in 2177 and 2179. They are not “degraded E'llas” in current doctrine. They are protected persons whose care and disclosure rights stand independently of KL-83.
+KL-81 and KL-82 are living managed cases born in Imperial Years 2172 and 2174 and released in Imperial Years 2177 and 2179. They are not “degraded E'llas” in current doctrine. They are protected persons whose care and disclosure rights stand independently of KL-83.
 
 E'lla has a right to the complete project record through a disclosure process controlled by an independent advocate. The sequence may be clinically staged to prevent avoidable harm, but E'lla may demand the full record. Permanent concealment for SiNE's convenience would continue the project by other means.
 

@@ -1,8 +1,8 @@
 ---
 title: "E'lla Rae Wonderwall"
 type: "Personagem"
-age: "25 anos (na época do registro, 2200)"
-birth_year: "2175"
+age: "25 Lunar Years (na época do registro, Imperial Year 2200)"
+birth_year: "c. Imperial Year 2189"
 birthplace: "Não registrado publicamente"
 affiliation: "House Wonderwall; SiNE"
 house: "Wonderwall (adoção irrevogável; sem obrigação corporativa)"

@@ -3,8 +3,8 @@ title: "Warden"
 type: "Skyphon"
 rank: "Bearer of Mutual Limit"
 designation: "Bearer of Mutual Limit"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Person concluded at the Fracture; fragment and Instrument distributed through the Lunar Ring"
+affiliation: "First Bearer — Intact Seal (Unseated)"
+registry_status: "Unseated during the Fracture; person survives beyond ordinary Terra address; terminal and Accord interface topology distributed through the Lunar Ring"
 occupation: "Mutual limits among lawful domains"
 domain: "Interfaces, boundaries, load-sharing, and conditions of coexistence"
 church_name: "The Instrument of Order"
@@ -23,6 +23,6 @@ Warden governed **Accord** as mutual limit, not moral justice. He could establis
 
 Every other Bearer depended on him because the twelve Principles overlapped. His jurisdiction existed in those edges. This also made disagreement central to his personhood: he was the one most often required to tell a faithful law where its authority ended.
 
-When Sciel quarantined the false-valid state at Year 0, Warden partitioned the Seal into twelve survivable channels. The act saved the Page-facing boundary and condemned the Moon's physical unity. His body became the partition geometry through the Twelve-Beat Hold. His fragment and Instrument of Accord distributed through the Lunar Ring.
+When Sciel quarantined the false-valid state at Year 0, Warden partitioned the Seal into twelve survivable channels. The act saved the Page-facing boundary and condemned the Moon's physical unity. His humanoid terminal and Seat-linked expression became the partition geometry through the Twelve-Beat Hold and failed when the Hold released. Accord's imprint and interface topology distributed through the Lunar Ring. Warden's true Obscurial body became unseated, carrying the same person beyond ordinary Terra address.
 
 Reassembling those distributed parts would risk forced compatibility: hostile systems sharing one margin until all distinctions collapse.

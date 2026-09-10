@@ -61,7 +61,7 @@ Established facts:
 | **Public Identity** | Ayanna d'Aibhilyn, junior research associate at Lyréne Pharmaceuticals, neural-interface diagnostics division, Valerie central campus |
 | **Program Origin** | Vitrified Wing primary engineering program, concealed within Lyréne Pharmaceuticals |
 | **Project Association** | Project Ennea |
-| **Age** | Twenty-four |
+| **Age** | Twenty-four Lunar Years |
 | **Citizenship** | Auroran, federally registered, Valerie civic district |
 | **Redactor Status** | MAGI-recognized Redactor; Quill rank; Mark 2 under Auroran-territory Margin |
 | **Registered Classification** | Mechanism Anchor |

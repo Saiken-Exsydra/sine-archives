@@ -18,7 +18,7 @@
 
 *This file exists because Father Viktor has become too significant, too dangerous, and too institutionally protected to remain distributed across incident reports, retired-assessor notes, confessor summaries, and sealed homicide correspondences that do not name themselves as such. He requires a dossier that treats him as a living person, a former priest of long service, a confirmed Crowned vessel, and a serial killer operating beneath the tolerance of the Church's own reluctance.*
 
-*The methodological problem is obvious. The Church made use of him for forty years. Obsidian trained him, trusted him, consulted him, and sent him into rooms where frightened families were told that his judgment could decide whether a child was blessed, endangered, possessed, or worth removing from ordinary life. He was useful before he became holy. He was holy before he became intolerable. No one in this archive should pretend those were unrelated stages.*
+*The methodological problem is obvious. The Church made use of him for forty Lunar Years. Obsidian trained him, trusted him, consulted him, and sent him into rooms where frightened families were told that his judgment could decide whether a child was blessed, endangered, possessed, or worth removing from ordinary life. He was useful before he became holy. He was holy before he became intolerable. No one in this archive should pretend those were unrelated stages.*
 
 *- D.I. restricted compilation note, year 2200*
 
@@ -30,11 +30,11 @@
 |---|---|
 | **Full Name** | Vaey Viktor |
 | **Ecclesiastical Style** | Father Viktor; retired Assessor-Priest of Obsidian |
-| **Year of Birth** | 2134 (age 66 at time of filing, 2200) |
+| **Year of Birth** | c. Imperial Year 2171 (age 66 Lunar Years at time of filing, Imperial Year 2200) |
 | **Birth Status** | Natural birth; provincial ecclesiastical registry; parentage unremarkable in surviving record |
 | **Civil Standing** | Retired priest in good public standing; not formally censured |
 | **Former Obsidian Position** | Ecclesiastic Assessor of Beatification Candidates, Obsidian |
-| **Years of Active Service** | Forty years of documented assessment work, 2156-2196 |
+| **Years of Active Service** | Forty Lunar Years of documented assessment work, c. Imperial Years 2179-2197 |
 | **Divine Status** | Confirmed Crowned vessel; sustained angelic fusion |
 | **Fragment Alignment** | **Meruel**, angelic Measurement of Potential / Completion |
 | **Parent Seraphic Line** | **Aequoriel**, Seraphim of Just Measure; Seraphic Constellation of Just Measure; restricted but formally stabilized theology |
@@ -55,9 +55,9 @@ He did not enter Obsidian as a front-line Votary. He was not known first for str
 
 Angelic. Demonic. Sight-adjacent. False. Unstable. Politically convenient but spiritually empty. Genuinely holy but psychologically unready. Recoverable. Dangerous. Worth taking. Worth watching. Worth burying.
 
-For forty years, the Church asked him these questions.
+For forty Lunar Years, the Church asked him these questions.
 
-For forty years, he answered.
+For forty Lunar Years, he answered.
 
 The repeated act shaped him. Each assessment required him to reconstruct the distance between present condition and possible sanctity. Each failed candidate taught him to see what a person might have become if they had been taken earlier, trained better, broken less, obeyed more completely, or refused less stubbornly. Each successful saint confirmed the opposite lesson: that potential, when disciplined, becomes proof.
 
@@ -175,7 +175,7 @@ Several names recur in his service period and should be preserved here:
 - **Rector-Ascendant Halvek Sorn**, first Obsidian superior; protection-domain vessel; later died in Threshold service.
 - **Mother Calienne Voss**, confessor priest and later Interior Council critic; one of the first to warn that Viktor's assessment language had become punitive.
 - **Sister Aramina Thale**, Ecclesiastic Surgeon; collaborated with Viktor on twenty-seven candidate examinations and privately opposed his final retirement classification.
-- **Saint Ilyra of Veyr**, living mercy-domain saint first identified by Viktor at age nine.
+- **Saint Ilyra of Veyr**, living mercy-domain saint first identified by Viktor at age nine Lunar Years.
 - **Tomas Ren**, failed Beatification candidate; disappeared after Viktor recommended immediate removal from family custody and later became one of the earliest suspected private victims.
 
 ### VI.2 The Almost-Saints
@@ -188,7 +188,7 @@ Viktor studied these cases obsessively.
 
 His handwriting changes across the decades. Early reports describe failure in pastoral language: *unstable*, *unguarded*, *requires patience*, *not yet ready*, *likely recoverable under formation*. Later reports become colder: *misused capacity*, *refusal pattern established*, *potential no longer supported by discipline*, *candidate in active betrayal of evident calling*.
 
-The word **betrayal** appears first in 2184.
+The word **betrayal** appears first c. Imperial Year 2193.
 
 After that, it appears often.
 
@@ -206,7 +206,7 @@ He began asking whether they were worthy of the angel that had touched them.
 
 Obsidian tolerated this because it produced results. He identified real saints. He prevented several demonic misclassifications. He saw through two politically manufactured miracle cults before they could embarrass the Church. He correctly marked a beloved parish healer as carrying a fragment that was angelic in origin but degrading through self-worship. He was right too often for his superiors to recognize the spiritual deformation hiding inside the accuracy.
 
-By 2190, Sister Aramina Thale's private notes describe him as *"not cruel, but increasingly unable to distinguish mercy from diagnostic contamination."*
+By Imperial Year 2196, Sister Aramina Thale's private notes describe him as *"not cruel, but increasingly unable to distinguish mercy from diagnostic contamination."*
 
 No formal action followed.
 
@@ -216,7 +216,7 @@ No formal action followed.
 
 ### VII.1 First Confirmed Contact
 
-The first confirmed Meruel-contact occurred during the assessment of **Liora Venn**, a seventeen-year-old saint-candidate from the Central Region whose involuntary manifestations had gathered a local following before the Church intervened. The case record remains sealed because Liora survived and later entered protected ecclesiastical custody under a different name.
+The first confirmed Meruel-contact occurred during the assessment of **Liora Venn**, a seventeen-Lunar-Year-old saint-candidate from the Central Region whose involuntary manifestations had gathered a local following before the Church intervened. The case record remains sealed because Liora survived and later entered protected ecclesiastical custody under a different name.
 
 Viktor's report states that during the third interview he perceived, not merely inferred, the completed form of Liora's possible Crowned state. Witnesses observed a pale geometric ring behind him, visible only in reflection. Liora stopped crying and answered seven questions before he asked them.
 
@@ -260,7 +260,7 @@ This is the doctrine beneath the murders.
 
 ### VIII.1 Departure From Active Service
 
-Father Viktor retired from active Obsidian service in 2196 after forty years of assessment work. The official language records voluntary retirement following confirmed Crowned stabilization, with continued advisory availability in exceptional cases.
+Father Viktor retired from active Obsidian service c. Imperial Year 2197 after forty Lunar Years of assessment work. The official language records voluntary retirement following confirmed Crowned stabilization, with continued advisory availability in exceptional cases.
 
 The official language is accurate as far as it goes.
 
@@ -341,7 +341,7 @@ He can exert Meruel's domain through the vessel, forcing a person briefly toward
 
 The effect is temporary and cruel in his hands.
 
-A pianist who has not played in twenty years may play flawlessly for forty seconds. A failed priest may speak with the authority they might have carried. A coward may stand upright. A saint-candidate who fled may radiate once, perfectly, and then collapse under the knowledge that they could have done so all along.
+A pianist who has not played in twenty Lunar Years may play flawlessly for forty seconds. A failed priest may speak with the authority they might have carried. A coward may stand upright. A saint-candidate who fled may radiate once, perfectly, and then collapse under the knowledge that they could have done so all along.
 
 Viktor calls this mercy.
 

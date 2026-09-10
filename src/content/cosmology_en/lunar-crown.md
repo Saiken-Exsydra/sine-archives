@@ -18,6 +18,8 @@ image: "../../assets/uploads/cosm-lunar-crown.png"
 
 The **Lunar Crown** is Terra's primary moon in its current, post-Fracture state: a wounded central body surrounded by the **Lunar Ring**, visible in the night sky as a broad arc of scattered light.
 
+Its engineered daily orbit, its axial rotation, and Terra's orbit are separate motions. The daily orbit produces the roughly twenty-four-hour civil day. One axial rotation takes **365 days** and defines the human-scale **Lunar Year**. Terra's orbit around Vael'Khar takes **833 days** and defines the civil and historical **Imperial Year**.
+
 That name is historically important. Before the Fracture, ordinary people did not live under something commonly called the Lunar Crown. They lived under **the Moon**. In structural and theological truth, that Moon was the **Intact Seal** - Terra's complete lunar threshold architecture. It becomes the Lunar Crown only after the fracture makes its brokenness visible.
 
 The fracture was not the result of natural impact events. It was the permanent mark of an assault. Something of enormous power, from outside the Page boundary, pressed against the threshold of Terra's reality with sufficient force that the Moon - then functioning as the Intact Seal - shattered under the contact.
@@ -30,9 +32,9 @@ The assault was repelled. The would-be intruder did not enter fully. But a fragm
 
 Before the Fracture, the Moon was the **Intact Seal** - not a passive barrier, but an active governing system maintaining the threshold between Terra and what lay beyond it.
 
-The Seal's lunar body, twelve actual [[obscurials|Obscurials]], their Page-local seats and interfaces, the Skyphons, and the broader Precursor protection architecture participated in one complete function. The Moon was the load-bearing concentration of that skyward defense.
+The Seal's lunar body, twelve actual [[obscurials|Obscurial true bodies]], their Page-local Seats and interfaces, the Skyphon persons those bodies became, and the broader Precursor protection architecture participated in one complete function. The Moon was the load-bearing concentration of that skyward defense.
 
-The distinction inside that unity matters. The Precursors built the seats, relays, interfaces, Skyphon bodies, Ksy'rion, and later macro-Anchor. They did not make the Obscurials. The **Intact Seal was built; the Obscurials were not.**
+The distinction inside that unity matters. The Precursors built the Seats, relays, interfaces, humanoid terminals, Ksy'rion, and later macro-Anchor. They did not make the Obscurial bodies or manufacture Skyphon personhood outside them. The **Intact Seal was built; the Obscurials were not.**
 
 The Church's theology understands this correctly in its essential structure, even where its explanatory language differs. Their teaching that the Moon once held shut the threshold, that its fracture compromised that threshold, and that the world has lived beneath a wound ever since is structurally accurate.
 
@@ -68,7 +70,7 @@ She is still there. The containment is still active. The fragment presses outwar
 
 The Fracture was both a lunar catastrophe and a sky catastrophe.
 
-It broke the Moon physically. It also ended the **living maintenance** of the Skyphons, broke Ksy'rion's completeness as a sky-mask, and severed every complete Obscurial coupling. **All twelve actual Obscurials vanished from the lunar configuration.** Their present whereabouts and condition remain unknown.
+It broke the Moon physically. It also ended the **living maintenance** of the Skyphons, broke Ksy'rion's completeness as a sky-mask, and severed every complete Seat relation. **All twelve Obscurial true bodies became unseated.** The same twelve Skyphon persons survived initial address failure, but their present whereabouts and condition beyond the later celestial crisis remain unknown.
 
 What survived was the wounded native architecture around them: damaged seats, relays, interfaces, residual Twelvefold topology, the lunar macro-Anchor, Ksy'rion's remains, and Syr'lene's living containment address. The present Lunar Crown contains no actual Obscurial.
 
@@ -102,7 +104,7 @@ Post-Fracture institutions can prove this constraint indirectly. Routes do not s
 
 ## The Callings
 
-The **Callings** are periodic pressure events and harmonic disturbances originating from the Lunar Crown. They are not the fragment expressing itself freely into the world and not messages from the vanished Obscurials or ended Skyphons. They are the signature of ongoing conflict—the friction between containment and intrusion pressure—filtered through damaged seats, relays, and twelve unequal jurisdictions still remembered by the Crown.
+The **Callings** are periodic pressure events and harmonic disturbances originating from the Lunar Crown. They are not the fragment expressing itself freely into the world and not messages from the unseated Skyphon persons. They are the signature of ongoing conflict—the friction between containment and intrusion pressure—filtered through damaged Seats, relays, and twelve unequal jurisdictions still remembered by the Crown.
 
 They vary in intensity. The principal variable is Terra's orbital position around Vael'Khar: at **periapsis**, the gravitational geometry intensifies the Crown's internal stresses, and the Callings that reach Terra's surface are stronger. At apoapsis, they ease.
 

@@ -23,7 +23,7 @@ A’licia Rae Wonderwall is dead.
 
 The First Radiance is real.
 
-Athena Rae was born in Year 2111, lived fifteen years as herself before divine contact began, and remained herself through twenty-three years of progressive fusion before the process stabilized.
+Athena Rae was born c. Imperial Year 2161, lived fifteen Lunar Years as herself before divine contact began, and remained herself through twenty-three Lunar Years of progressive fusion before the process stabilized.
 
 Al’ithia is my wife.
 
@@ -58,14 +58,14 @@ I am writing the file anyway.
  Current Name                                  Al’ithia Rae Wonderwall
  Birth Name                                    Athena Rae
  Lineage                                       Rae branch of the Wonderwall family; same ancestral family branch from which A’licia Rae Wonderwall descended
- Year of Birth                                 2111
- Current Age                                   89 as of Year 2200
+ Year of Birth                                 c. Imperial Year 2161
+ Current Age                                   89 Lunar Years as of Imperial Year 2200
  Apparent Age                                  Early to mid-thirties; stabilized Redactory longevity and post-fusion reconfiguration have preserved a young adult presentation
  Redactory Classification                      Radiance-class
  Anchor                                        Revelation
  Anchor Type                                   Deep-derived Radiance-class Anchor; functionally intensified by divine fusion
  Divination Status                             Former Indexed Vessel of the First Radiance; now stable composite continuity
- Composite Identity Status                     Complete fusion achieved at age 38, Year 2150
+ Composite Identity Status                     Complete fusion achieved at age 38 Lunar Years, c. Imperial Year 2178
  Marital Status                                Wife of Em’manuel Kael Wonderwall
  Relationship to E’lla Rae Wonderwall  KL-83  Non-biological mother; primary maternal figure from E’lla’s transfer out of Project Kaleidoscope until approximately age 17, and continuing emotional confidante thereafter
  House Status                                  De facto political head of the Wonderwall family
@@ -192,7 +192,7 @@ The fusion that produced Al’ithia was therefore not ordinary possession, not r
 
 ### III.3 Athena Rae
 
-Athena Rae was born in Year 2111.
+Athena Rae was born c. Imperial Year 2161.
 
 That she was born a Rae matters.
 
@@ -208,7 +208,7 @@ Athena believed.
 
 This is a dangerous sentence. Faith is often treated as softness by those who have never studied its structural effects. Athena’s faith was not softness. It was orientation. Her developing recursive singularity formed around an unusually precise act of address not toward Wonderwall power in general, not toward Light as spectacle, not toward me, not toward the House’s public authority, but toward A’licia as source.
 
-At age fifteen, the contact began.
+At age fifteen Lunar Years, the contact began.
 
 ---
 
@@ -268,11 +268,11 @@ That was when I began refusing to see her.
 
 ### IV.3 The Fusion Period
 
-The fusion began in Year 2127, when Athena was fifteen.
+The fusion began c. Imperial Year 2168, when Athena was fifteen Lunar Years old.
 
-It completed in Year 2150, when she was thirty-eight.
+It completed c. Imperial Year 2178, when she was thirty-eight Lunar Years old.
 
-Twenty-three years is too long to call the process an event and too violent to call it development.
+Twenty-three Lunar Years is too long to call the process an event and too violent to call it development.
 
 The early stage was unstable duality. Athena remained herself, but A’licia’s memory surfaced as pressure, correction, dream, grief, and recognition. The First Radiance expressed through her in moments of emotional or devotional alignment. Athena did not become A’licia. A’licia did not possess Athena. They cohabited, badly, inside a structure not yet prepared to reconcile them.
 
@@ -466,7 +466,7 @@ Al'ithia caused the Third Name Accord to exist.
 
 This was not my plan.
 
-In Year 2179, after ending Kaleidoscope biological production and refusing the proposed disposal of its living subjects, she read project memoranda that treated her as feasibility evidence. The writers understood neither her formation nor the First Radiance. Their error did not reduce the danger. They had converted a person into a precedent and were already reasoning from precedent toward method.
+In Imperial Year 2191, after ending Kaleidoscope biological production and refusing the proposed disposal of its living subjects, she read project memoranda that treated her as feasibility evidence. The writers understood neither her formation nor the First Radiance. Their error did not reduce the danger. They had converted a person into a precedent and were already reasoning from precedent toward method.
 
 Al'ithia concluded that secrecy had stopped protecting her and begun protecting the right of institutions to define her later.
 
@@ -500,13 +500,13 @@ Not because the facts are unclear.
 
 Because they are not.
 
-E’lla Rae Wonderwall, KL-83, was transferred out of Project Kaleidoscope before age five and brought into the primary Wonderwall household. Existing records identify her as the eighty-third subject, born in Year 2175 after the project imposed an archived Light-bearing profile upon the conditions of her development. She is a singular living person with an Abyssal Anchor of Light and without the Remainder’s inherited recognition echo.
+E’lla Rae Wonderwall, KL-83, was transferred out of Project Kaleidoscope before age five Lunar Years and brought into the primary Wonderwall household. Existing records identify her as the eighty-third subject, born c. Imperial Year 2189 after the project imposed an archived Light-bearing profile upon the conditions of her development. She is a singular living person with an Abyssal Anchor of Light and without the Remainder’s inherited recognition echo.
 
 When E'lla came home, Al'ithia began withdrawing from active politics.
 
 The public explanation was domestic preference and health management after an unusually intense period of Senate representation. This was accepted because people accept convenient explanations from powerful families when the alternative is having to ask impolite questions.
 
-The withdrawal was interrupted by the Open Register Petition and the Year 2180 ratification of the Third Name Accord. After the settlement she left ordinary Senate and House work for roughly eleven years, returning only for protected-origin review, immediate family danger, and obligations the Accord required her to discharge personally.
+The withdrawal was interrupted by the Open Register Petition and the Imperial Year 2192 ratification of the Third Name Accord. After the settlement she left ordinary Senate and House work for roughly eighteen Lunar Years, returning only for protected-origin review, immediate family danger, and obligations the Accord required her to discharge personally.
 
 The truth beneath that withdrawal is simpler.
 
@@ -518,7 +518,7 @@ She became, for the next twelve years, what the public would have called a stay-
 
 E’lla was not easy.
 
-No child is easy. A child made by Project Kaleidoscope and placed inside a House built around a thousand years of grief is a more specific category of not easy.
+No child is easy. A child made by Project Kaleidoscope and placed inside a House built around nearly a thousand Imperial Years of grief is a more specific category of not easy.
 
 Al’ithia never treated her as a project.
 
@@ -568,7 +568,7 @@ At the Luminant Shore, however, the First Radiance is also A’licia: the origin
 
 This makes the First Radiance a mother to E’lla twice over, but not in a form E’lla has language for. E’lla experiences the pull before she understands the relationship.
 
-Al'ithia's ordinary motherhood remains as important as that Shore relation. She recognizes E'lla through breakfasts, arguments, illness, clothing, work, fear, and twenty-one years of chosen life rather than through one imposed resemblance. Those bounded relations are why Myehnai's White Desert condition does not obstruct her. She does not need to select one hidden E'lla from the whole Kaleidoscope field in order to know her daughter.
+Al'ithia's ordinary motherhood remains as important as that Shore relation. She recognizes E'lla through breakfasts, arguments, illness, clothing, work, fear, and twenty-one Lunar Years of chosen life rather than through one imposed resemblance. Those bounded relations are why Myehnai's White Desert condition does not obstruct her. She does not need to select one hidden E'lla from the whole Kaleidoscope field in order to know her daughter.
 
 Around Al'ithia, more of E'lla's pre-Aurora warmth survives in easy physical affection, private humor, fashion conversation, practical disagreement, and the freedom to be less guarded without becoming less adult. The later biological disclosure will injure this bond because the bond is real. Chosen motherhood answers whether Al'ithia is truly her mother; it does not excuse allowing her daughter to live inside a false origin story.
 
@@ -582,7 +582,7 @@ Our marriage is legally explicit and metaphysically indefensible to several exis
 
 The Third Name Accord made the controlling fact public: I am married to Al'ithia, not remarried to A'licia and not married to a surviving fragment called Athena. The public knows the basic continuity problem. It knows that the woman who attends the Senate in my stead carries Athena and the A'licia-linked First Radiance as one stable present person.
 
-It does not know the complete Luminant Shore structure, the twenty-three years of internal negotiation, the protected-origin record, or the exact relation between the Accord and Kaleidoscope.
+It does not know the complete Luminant Shore structure, the twenty-three Lunar Years of internal negotiation, the protected-origin record, or the exact relation between the Accord and Kaleidoscope.
 
 The Church knows more than the public and less than it suspects.
 
@@ -812,7 +812,7 @@ Under the Third Name Accord, Athena's memories and the First Radiance's A'licia-
 
 The Accord was not enacted to regularize a common condition. Al'ithia remains the only confirmed stable third-self. Its broader provisions exist because her singular case revealed how quickly Houses, churches, states, and corporations would turn an unprecedented person into permission to manufacture another.
 
-Her Year 2179 action ended Kaleidoscope biological production. She rejected both continuation and the proposed destruction of living subjects. The resulting duties are permanent care without compelled study, independent advocacy, preserved evidence, reparations, and subject-controlled disclosure.
+Her Imperial Year 2191 action ended Kaleidoscope biological production. She rejected both continuation and the proposed destruction of living subjects. The resulting duties are permanent care without compelled study, independent advocacy, preserved evidence, reparations, and subject-controlled disclosure.
 
 Al'ithia sponsored KL-83's adoption as E'lla Rae Wonderwall. Rae, Orren, and Serath witnessed it; Em'manuel sealed it. E'lla was taught to read that act as House recognition of an existing biological daughter rather than the beginning of the parentage she now remembers as natural. The adoption is irrevocable and gives E'lla family standing without corporate assignment. Al'ithia's motherhood is real. So is the injury created by withholding the full project record and allowing a false biological origin to organize her daughter's childhood.
 

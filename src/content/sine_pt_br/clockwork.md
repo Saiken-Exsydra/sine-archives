@@ -103,7 +103,7 @@ A maioria dos agentes da CLOCKWORK conhece o Dial apenas como um homem estranho 
 - **2186 - Orison Relay:** Solstice apreende um núcleo estratégico e um instrumento de continuidade de uma célula de aquisição hostil; Horizon extrai o técnico sobrevivente e depois posiciona a cena dividida dentro dos sistemas legais públicos.
 - **2196 - Nacre Third Fragment:** Solstice apreende três fragmentos; dois chegam anonimamente à Clepsydra, e Zenith destrói o terceiro instável e a cadeia de comissionamento.
 
-A First Refusal de 1841 e a retirada de E'lla do Kaleidoscope em 2179 são atribuições falsas à CLOCKWORK. Ação oculta não explica todo acontecimento sob o Seat.
+A First Refusal de 1841 e a retirada de E'lla do Kaleidoscope no Imperial Year 2191 são atribuições falsas à CLOCKWORK. Ação oculta não explica todo acontecimento sob o Seat.
 
 ## Limites
 

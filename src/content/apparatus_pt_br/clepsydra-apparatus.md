@@ -17,7 +17,7 @@ image: "../../assets/uploads/app-clepsydra-apparatus.png"
 
 ## Correção principal
 
-Clepsydra **não** é um [[obscurials|Obscurial]], o Instrumento de Sciel ou uma cópia portátil do Instrumento da Verdade. É um aparato de serviço construído pelos Precursores e antes acoplado à jurisdição da **Determinação**. O Obscurial real associado àquela relação desapareceu da configuração lunar durante a Fratura. O que sobrevive é a lógica de serviço de Clepsydra e sua relação danificada com a antiga interface de Determinação — não um núcleo-lei ainda assentado na Crown.
+Clepsydra **não** é um [[obscurials|Obscurial]], o Instrumento de Sciel ou uma cópia portátil do Instrumento da Verdade. É um aparato de serviço construído pelos Precursores e antes acoplado à jurisdição da **Determinação**. Durante a Fratura, o corpo verdadeiro de Sciel foi desassentado da Coroa Lunar; Sciel permaneceu a mesma pessoa Skyphon para além desse endereço perdido. O que sobrevive em Clepsydra é sua própria lógica de serviço e sua relação danificada com a antiga interface de Determinação — não Sciel nem um núcleo-lei ainda assentado na Coroa.
 
 ## Forma e função
 
@@ -37,6 +37,6 @@ São intertravamentos repetidos em cada uso:
 
 ## Depois da Fratura
 
-Clepsydra recusa muitas mãos e atravessa falhas de custódia para alcançar alguns operadores. Isso pode ser correspondência de intertravamento danificado, influência carregada pelas cicatrizes de coendereço de Sciel ou comportamento estreito de recusa preservado no antigo acoplamento de serviço. Nenhuma hipótese prova que Sciel sobreviva dentro do aparato ou coloca o Obscurial desaparecido dentro dele.
+Clepsydra recusa muitas mãos e atravessa falhas de custódia para alcançar alguns operadores. Isso pode ser correspondência de intertravamento danificado, influência carregada pelas cicatrizes de coendereço de Sciel ou comportamento estreito de recusa preservado no antigo acoplamento de serviço. Nenhuma hipótese coloca a pessoa sobrevivente de Sciel ou seu corpo verdadeiro desassentado dentro do aparato.
 
 Seu pior uso é a **correspondência forçada**: tratar o modelo de um operador como o único mundo admissível.

@@ -56,7 +56,7 @@ Time is not the highest member of a syntax hierarchy. It is an orthogonal agency
 
 A claim enters Time's jurisdiction when it attempts to govern traversal itself: sequence, arrest, reversal, suspension, entropy as ordered passage, or the order in which configuration becomes consequence. Time may permit or refuse that claim without either answer converting it into syntax authorship.
 
-This distinction also explains Time's relation to the [[obscurials|Obscurials]]. Time cannot read backward through one to an origin, first state, or age because the vestige's own existence does not belong to ordinary traversal. Time can still order every Page-native interaction around it: detection, seating, interpretation, breakage, and the moment its absence became evident.
+This distinction also explains Time's relation to the [[obscurials|Obscurials]]. Time can order each true body's physical entry into Vael'Khar and every later event: detection, seating, Skyphon development, terminal action, Fracture, and unseating. It cannot read backward beyond that entry to establish pre-arrival origin, creator, age, or first state.
 
 For the larger jurisdictional model, see [[syntax-authority|Syntax Authority and Recursive Sovereignty]].
 

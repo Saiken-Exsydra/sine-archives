@@ -2,8 +2,8 @@
 title: "Katherine Flarian"
 type: "Character"
 
-age: "35 (as of Year 2200)"
-birth_year: "2165"
+age: "35 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2185"
 birthplace: "Vel'hara"
 
 affiliation: "SiNE Stasis (S-AE); Continuity Office; formerly Entropy"
@@ -147,7 +147,7 @@ Stability, to Katherine, means preserving the conditions under which people can 
 
 ### Vel'hara and the Habit of Noticing
 
-Katherine was born in Vel'hara in 2165, the elder child of a contract ledger-auditor and a bonded communications clerk.
+Katherine was born in Vel'hara c. Imperial Year 2185, the elder child of a contract ledger-auditor and a bonded communications clerk.
 
 Neither parent belonged to a House. Neither carried a known Redactory inheritance. Nothing in Katherine's childhood records suggested that she would eventually become an anomalous case important enough for SiNE to invent new internal terminology around her.
 
@@ -181,7 +181,7 @@ That remained true after everything else changed.
 
 ### Entropy
 
-SiNE's Entropy branch hired Katherine in 2185 when she was twenty.
+SiNE's Entropy branch hired Katherine c. Imperial Year 2194 when she was twenty Lunar Years old.
 
 The recruitment logic was ordinary by Company standards. Entropy needed a security analyst with intrusion experience, infrastructure literacy, and enough disrespect for inherited architecture to say when an old system deserved to be dismantled rather than ceremonially maintained.
 
@@ -221,7 +221,7 @@ Katherine did what the later security review would have preferred she had not do
 
 She investigated personally.
 
-Using a ghosted maintenance credential and a northern freight cycle never intended to carry her, she entered the buried facility in 2188 before the people inside understood that their supposedly invisible site had already been breached.
+Using a ghosted maintenance credential and a northern freight cycle never intended to carry her, she entered the buried facility in Imperial Year 2195 before the people inside understood that their supposedly invisible site had already been breached.
 
 They detained her.
 
@@ -341,7 +341,13 @@ The answer is rarely one device.
 
 Sometimes it means isolating a relay before an anomaly can learn the wider network. Sometimes it means refusing to reconcile contradictory logs too quickly. Sometimes it means deliberately keeping records source-separated because forcing them into one clean narrative would destroy evidence about the disagreement. Sometimes it means changing observation schedules so an entity cannot learn the institution's rhythm. Sometimes it means evacuating people before the room's self-agreement becomes too expensive to trust.
 
-Katherine is the field's founding practitioner, but one of her most impor…830 tokens truncated…l rather than cured. Medication can make her drowsy. Heavy flare periods produce cognitive drag. Poor sleep compounds both. During active exposure, lights, speech, and background machinery become harder to process as separate streams.
+Katherine is the field's founding practitioner, but one of her most important contributions has been making the work teachable. Stabilistics is designed to outlive her: its instruments, source discipline, operating protocols, and stop conditions allow other specialists to act on evidence she can feel but cannot safely monopolize.
+
+## Limits and Risks
+
+### Sensory Overload
+
+Her post-Himmelreich sensitivity is managed rather than cured. Medication can make her drowsy. Heavy flare periods produce cognitive drag. Poor sleep compounds both. During active exposure, lights, speech, and background machinery become harder to process as separate streams.
 
 She hates depending on medication.
 
@@ -423,7 +429,7 @@ Voss's position was that someone who had understood the facility quickly enough 
 
 The argument won.
 
-Twelve years of shared work followed.
+Twelve Lunar Years of shared work followed.
 
 Neither woman appears interested in turning that history into emotional ceremony. Their friendship expresses itself in trust under bad conditions, in familiarity with one another's limits, and in the unusually small number of words required when something has gone wrong.
 
@@ -464,7 +470,7 @@ She keeps working anyway.
 | Field | Record |
 |---|---|
 | **Full Name** | Katherine Flarian |
-| **Born** | 2165, Vel'hara |
+| **Born** | c. Imperial Year 2185, Vel'hara |
 | **Age** | 35 in Year 2200 |
 | **House Status** | None |
 | **Redactory Status** | Non-practitioner; no Anchor; no Dive capacity |
@@ -498,7 +504,7 @@ Himmelreich had been constructed to observe and eventually develop defenses agai
 
 The site became vulnerable partly because the systems used to observe the entity were themselves highly repetitive.
 
-During the 2188 incident, White Interval stopped behaving like an isolated subject inside the facility and began aligning with the logic of the buried relay sink around it. The contradiction was no longer merely happening near the communications equipment.
+During the Imperial Year 2195 incident, White Interval stopped behaving like an isolated subject inside the facility and began aligning with the logic of the buried relay sink around it. The contradiction was no longer merely happening near the communications equipment.
 
 It was learning how the equipment connected states together.
 

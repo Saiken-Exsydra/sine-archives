@@ -124,6 +124,22 @@ The surrendered thing is an **Oblation**: perhaps a life, memory, name, relation
 
 ---
 
+## The Twelvefold, Firmament, and Abyssal Inverse
+
+Divination developed inside a Terra-local environment that was already organized by the [[obscurials|Twelvefold]]. The three structures are related by history without sharing an origin.
+
+| Structure | Shape | Source | Primary function |
+|---|---|---|---|
+| **Twelvefold** | Twelve horizontal, mutually limiting Jurisdictions | Obscurial relations made lawful through Terra | Pre-Fracture planetary governance and boundary maintenance |
+| **Tenfold Firmament** | Ten Seraphim distributing one identity vertically | Coherent refraction of the Sovereign | Seraphic ecology, Heaven, and ordered Divination lines |
+| **Abyssal inverse** | Descending demonic hierarchy | Inverse refraction of the Sovereign through an unresolved foreign term | Abyssal ecology, Hell, and demonic Divination lines |
+
+The Sovereign did not create the Twelvefold. The Tenfold formed later in a world already conditioned by it, which is why Seraphic morphology can rhyme with Skyphon true bodies without Seraphim descending from Skyphons. The Abyssal hierarchy has an affinity with the untranslated foreign term but remains Sovereign identity; demons are not Obscurials.
+
+When the twelve Skyphons became unseated during the Fracture, the failure propagated into Terra's connections with Heaven, Hell, Purgatory, and the Pathway. Those domain ecologies survived, but their local shells destabilized. The resulting celestial crisis produced a limited number of genuine fallen angels and carried three Seraphim beyond accessible contact in connection with the Skyphons. Demonkind as a whole did not originate from those falls.
+
+---
+
 ## Fragments and Constellations
 
 Divine lines are organized families of fragments rather than flat ladders.

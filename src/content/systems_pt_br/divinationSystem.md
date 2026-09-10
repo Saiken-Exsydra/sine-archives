@@ -124,6 +124,22 @@ Aquilo que é entregue é uma **Oblation**: talvez uma vida, memória, nome, rel
 
 ---
 
+## O Twelvefold, o Firmamento e o Inverso Abissal
+
+A Divination desenvolveu-se dentro de um ambiente local de Terra já organizado pelo [[obscurials|Twelvefold]]. As três estruturas estão ligadas pela história sem compartilhar uma origem.
+
+| Estrutura | Forma | Fonte | Função principal |
+|---|---|---|---|
+| **Twelvefold** | Doze Jurisdições horizontais que se limitavam mutuamente | Relações Obscurials tornadas legítimas através de Terra | Governo planetário pré-Fratura e manutenção da fronteira |
+| **Tenfold Firmament** | Dez Seraphim distribuindo uma identidade verticalmente | Refração coerente do Sovereign | Ecologia Seráfica, Céu e linhas ordenadas de Divination |
+| **Inverso Abissal** | Hierarquia demoníaca descendente | Refração inversa do Sovereign através de um termo estrangeiro não resolvido | Ecologia Abissal, Inferno e linhas demoníacas de Divination |
+
+O Sovereign não criou o Twelvefold. O Tenfold formou-se depois em um mundo já condicionado por ele, razão pela qual a morfologia Seráfica pode rimar com os corpos verdadeiros Skyphons sem que Seraphim descendam de Skyphons. A hierarquia Abissal possui afinidade com o termo estrangeiro não traduzido, mas continua sendo identidade do Sovereign; demônios não são Obscurials.
+
+Quando os doze Skyphons foram desassentados durante a Fratura, a falha propagou-se pelas conexões de Terra com Céu, Inferno, Purgatório e Pathway. Essas ecologias de domínio sobreviveram, mas suas estruturas locais ficaram instáveis. A crise celestial resultante produziu um número limitado de anjos caídos reais e levou três Seraphim além do contato acessível em ligação com os Skyphons. A espécie demoníaca como um todo não se originou dessas quedas.
+
+---
+
 ## Fragmentos e Constelações
 
 Linhas divinas são famílias organizadas de fragmentos, não escadas planas.

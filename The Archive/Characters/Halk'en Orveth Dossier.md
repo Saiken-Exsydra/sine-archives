@@ -6,7 +6,7 @@
 ---
 
 > *"Dominion is easiest to praise when it is a word in liturgy. It is harder to endure when it grows hands."*
-> — Mother Salienne Karth, sealed formation note, year 2074
+> — Mother Salienne Karth, sealed formation note, Imperial Year 2145
 
 ---
 
@@ -31,11 +31,11 @@
 | **Full Name** | Halk'en Orveth |
 | **Ecclesiastical Style** | Father Orveth; Rector-Ascendant Orveth |
 | **Common Titles** | **The Red-Handed Rector**; **Bearer of the Sevenfold Hand** |
-| **Year of Birth** | 1801 (age 399 at time of filing, 2200) |
+| **Year of Birth** | c. Imperial Year 2025 (age 399 Lunar Years at time of filing, Imperial Year 2200) |
 | **Birth Status** | Natural birth; Northern Region parish registry; parentage unremarkable in surviving record |
 | **Civil Standing** | Consecrated priest of the Church; permanent member of Obsidian |
 | **Obsidian Position** | Rector-Ascendant of Obsidian; one of the Answered |
-| **Years of Active Service** | 376 years of documented service, 1824-present |
+| **Years of Active Service** | Approximately 376 Lunar Years of documented service, c. Imperial Year 2035-present |
 | **Divine Status** | Confirmed Crowned vessel; central-star Seraphic fusion |
 | **Seraphic Alignment** | **Auctoriel**, Seraphim of Dominion; Cynosure of the Dominion Constellation |
 | **Operational Classification** | Authority-domain Seraphic vessel; severe-domain Crowned; maximum restricted deployment |
@@ -355,7 +355,7 @@ Sundersaint is a longsword of unusual brightness and unusual restraint.
 
 The blade is BrightCrystal-derived, though the material has been stabilized into a milky translucent state rather than the clear or radiant forms common in industrial refinement. Fine red-gold veins run through the crystal in irregular lines, visible only when the blade catches Moonlight or divine manifestation. The edge is not metallic. It is a maintained boundary-condition within the crystal itself, sharpened by the artifact's ongoing Severance alignment rather than by conventional grinding.
 
-The crossguard is plain black iron, later replacement, third Imperial century. The grip is dark leather over a narrow relic core. The pommel contains a sealed shard believed to be from the original forging matrix. No attempt to open it has been authorized since 1432, when the last examination caused three assisting priests to forget the final hour of the procedure and one Redactor to lose all sensation in his left hand for nine years.
+The crossguard is plain black iron, later replacement, third Imperial century. The grip is dark leather over a narrow relic core. The pommel contains a sealed shard believed to be from the original forging matrix. No attempt to open it has been authorized since Imperial Year 1432, when the last examination caused three assisting priests to forget the final hour of the procedure and one Redactor to lose all sensation in his left hand for nine Lunar Years.
 
 The sword is not beautiful in the ornamental sense.
 
@@ -401,11 +401,11 @@ His most repeated instruction regarding the artifact is preserved in formation r
 
 ## VII. EARLY LIFE
 
-Halk'en Orveth was born in 1801 in the village-parish of Black Mere, a cold settlement in the Empire's Northern Region, positioned along a river road used by timber convoys, minor pilgrims, and military supply traffic bound toward the Threshold stations. The region's records are incomplete due to later flooding, but the baptismal ledger survives in copy. It names his parents as **Maren Orveth**, a ferryman and lay cantor, and **Selka Orveth**, a parish copyist.
+Halk'en Orveth was born c. Imperial Year 2025 in the village-parish of Black Mere, a cold settlement in the Empire's Northern Region, positioned along a river road used by timber convoys, minor pilgrims, and military supply traffic bound toward the Threshold stations. The region's records are incomplete due to later flooding, but the baptismal ledger survives in copy. It names his parents as **Maren Orveth**, a ferryman and lay cantor, and **Selka Orveth**, a parish copyist.
 
 Nothing in the surviving record indicates noble standing, Redactory lineage, or unusual political connection.
 
-The apostrophe position in his first name is ordinary for the working population. This fact has been remarked upon by later commentators with more interest than it deserves. Halk'en Orveth did not come from a House. He did not need to. The Church has always preferred to remember this when it is useful and forget it when aristocratic donors are present.
+His name is ordinary Sinish: the apostrophe belongs to the inherited given-name convention and carries no class register. Later commentators have sometimes tried to read more social information into its position than the name actually contains. Halk'en Orveth did not come from a House. He did not need to. The Church has always preferred to remember this when it is useful and forget it when aristocratic donors are present.
 
 His earliest recorded distinction was physical courage, though this is less illuminating than later hagiographic sketches suggest. Northern children in Black Mere learned early that cold water, bad roads, injured animals, and frightened adults did not wait for courage to become spiritually meaningful. At twelve, he pulled a younger child from a millrace during Low Radiance flood. At fourteen, he struck a possessed horse with a shovel until it stopped trampling a priest. At fifteen, he carried an injured priest through snow to Saint Deyr's hospice and collapsed with frostbite in three toes.
 
@@ -419,7 +419,7 @@ At sixteen, he entered minor seminary.
 
 The formation notes do not describe a prodigy. They describe a large, quiet boy with strong memory, poor tolerance for ornate theological debate, excellent liturgical discipline, and a habit of interpreting doctrine through physical obligation. He struggled with speculative metaphysics. He excelled in pastoral crisis, funerary rites, and the practical mechanics of exorcistic preparation.
 
-A novice-master wrote in 1819:
+A novice-master wrote c. Imperial Year 2033:
 
 > *"He does not ask what authority means. He asks who is carrying it and whether they are standing where they should."*
 
@@ -433,7 +433,7 @@ It remains accurate.
 
 ### VIII.1 The Mornhallow Incident
 
-The event that brought Halk'en Orveth to Obsidian occurred in 1823, during what later became known as the **Mornhallow possession riots**.
+The event that brought Halk'en Orveth to Obsidian occurred c. Imperial Year 2035, during what later became known as the **Mornhallow possession riots**.
 
 Mornhallow was a market town built around three bridges and a small ecclesiastical hospital. Over thirteen days, a demonic pressure event moved through the town's sickrooms, attaching first to fever patients, then to attendants, then to family members keeping vigil. The local clergy misclassified the event as sequential possession. It was not. Later review determined that the pressure had formed a distributed vessel-network across multiple weakened bodies, using grief as the connective tissue.
 
@@ -455,7 +455,7 @@ Obsidian removed Orveth from ordinary parish assignment within the month.
 
 ### VIII.2 Early Warden Formation
 
-Orveth entered Obsidian formation in 1824 under **Rector-Ascendant Mael Orison**, a light-domain field commander whose patience for unusual candidates was famous and not always wise. Orison's early assessments repeatedly note that Orveth did not respond like a candidate seeking power. He responded like a man irritated by power until someone told him where to put it.
+Orveth entered Obsidian formation c. Imperial Year 2035 under **Rector-Ascendant Mael Orison**, a light-domain field commander whose patience for unusual candidates was famous and not always wise. Orison's early assessments repeatedly note that Orveth did not respond like a candidate seeking power. He responded like a man irritated by power until someone told him where to put it.
 
 He was poor at radiance projection. He was adequate in formal ward geometry. He was excellent in vessel restraint, contested-threshold entry, and post-expulsion stabilization. He showed no appetite for display and little interest in advancement. He repeatedly requested assignments to practical containment units rather than theological study houses.
 
@@ -463,7 +463,7 @@ This changed after first confirmed Auctoriel contact.
 
 ### VIII.3 First Confirmed Seraphic Contact
 
-In 1831, during the failed expulsion of **Anrek Voss**, a thirteen-year-old vessel in the Central Region, Orveth manifested the third hand in visible form.
+In Imperial Year 2038, during the failed expulsion of **Anrek Voss**, a thirteen-year-old vessel in the Central Region, Orveth manifested the third hand in visible form.
 
 Anrek's possession had reached a late stage but remained theoretically recoverable. The demon had learned to exploit the attending priests' fear of killing the boy and repeatedly forced the body into positions where restraint would cause injury. Orveth entered after two failed attempts, removed his gauntlets, and restrained the boy with his own hands for nine minutes while Obsidian prepared a third Naming sequence.
 
@@ -473,13 +473,13 @@ This phrase was dismissed as hysteria in the first report.
 
 It appears in five independent accounts.
 
-The expulsion succeeded. Anrek survived with permanent voice damage and later became a lay copyist attached to the same hospital that had treated him. He sent Father Orveth a letter every year until his death in 1889. Orveth kept all fifty-eight letters.
+The expulsion succeeded. Anrek survived with permanent voice damage and later became a lay copyist attached to the same hospital that had treated him. He sent Father Orveth a letter every Lunar Year until his death c. Imperial Year 2064. Orveth kept all fifty-eight letters.
 
-The Ecclesiastic Surgeons began special monitoring in 1831.
+The Ecclesiastic Surgeons began special monitoring in Imperial Year 2038.
 
-The Interior Council began restricted theological inquiry in 1834.
+The Interior Council began restricted theological inquiry c. Imperial Year 2040.
 
-The term **Auctoriel** first appears in Orveth's own handwriting in 1836.
+The term **Auctoriel** first appears in Orveth's own handwriting c. Imperial Year 2041.
 
 ---
 
@@ -491,13 +491,13 @@ Halk'en Orveth was not elevated quickly.
 
 This is sometimes explained as caution regarding his unusual manifestation. That is true, but incomplete. The other reason is simpler: he refused advancement twice.
 
-He argued in 1849 and again in 1862 that his authority was most useful in direct field work and that administrative elevation would waste him. The first refusal was accepted. The second was recorded with irritation by Bishop Pel Varas, who wrote:
+He argued c. Imperial Years 2046 and 2052 that his authority was most useful in direct field work and that administrative elevation would waste him. The first refusal was accepted. The second was recorded with irritation by Bishop Pel Varas, who wrote:
 
 > *"Father Orveth has mistaken humility for the right to decide where the Church requires him."*
 
 The remark reportedly amused him.
 
-In 1877, during the **Red Choir Event** in the Northern Region, Orveth manifested five hands simultaneously for the first time in confirmed record. The event involved forty-three possessed singers in a collapsed parish choir whose shared liturgical training had been inverted into a harmonic vessel network. Ordinary Naming failed because the voices completed each other's evasions.
+In Imperial Year 2058, during the **Red Choir Event** in the Northern Region, Orveth manifested five hands simultaneously for the first time in confirmed record. The event involved forty-three possessed singers in a collapsed parish choir whose shared liturgical training had been inverted into a harmonic vessel network. Ordinary Naming failed because the voices completed each other's evasions.
 
 Orveth entered the nave alone for seven minutes.
 
@@ -505,11 +505,11 @@ When the doors opened, seventeen choir members were alive, six were dead, and th
 
 The Interior Council stopped treating his elevation as optional.
 
-He was made Rector-Ascendant in 1878.
+He was made Rector-Ascendant in Imperial Year 2059.
 
 ### IX.2 Receiving Sundersaint
 
-Sundersaint was given to Father Orveth in 1881 after three years of review, two failed objections from the Keepers of Before, and one private meeting with the Primus whose record remains sealed.
+Sundersaint was given to Father Orveth c. Imperial Year 2060 after three Lunar Years of review, two failed objections from the Keepers of Before, and one private meeting with the Primus whose record remains sealed.
 
 The assignment was controversial.
 
@@ -527,7 +527,7 @@ The condition was recorded. It has never been tested openly.
 
 ### IX.3 Recognition as One of the Answered
 
-The title **one of the Answered** was not formally attached to him until 1906.
+The title **one of the Answered** was not formally attached to him until c. Imperial Year 2071.
 
 This date is later than the reality. By then the Interior Council already understood that Orveth was not merely a severe authority-domain vessel. Other Seraphic contacts had been identified across the Church in fragmentary fashion. The theology of the Answered was being consolidated, quietly and with substantial disagreement.
 
@@ -553,7 +553,7 @@ He was the vessel of Auctoriel.
 
 ### X.1 The Black Mere Return
 
-In 1912, Father Orveth returned to Black Mere for the first time in eighty-eight years after reports of a possession cluster near the old millrace. The village had changed little. The river had changed course. The parish registry still contained his birth entry, though the ink had faded badly enough that a younger priest initially misread his name.
+In Imperial Year 2074, Father Orveth returned to Black Mere for the first time in eighty-eight Lunar Years after reports of a possession cluster near the old millrace. The village had changed little. The river had changed course. The parish registry still contained his birth entry, though the ink had faded badly enough that a younger priest initially misread his name.
 
 The event itself was minor by Orveth's later standards. Three vessels, all recoverable. One demonic presence of moderate coherence. No casualties after his arrival.
 
@@ -569,7 +569,7 @@ This sentence is frequently cited by those who argue that his identity remains p
 
 ### X.2 The Severance of Halvorn Bridge
 
-In 1968, a demonic rite-state attached itself to the central suspension span of Halvorn Bridge, causing travelers who crossed after moonset to arrive without memories of the person they most loved. Civil authorities initially classified the event as Redactory sabotage.
+In Imperial Year 2098, a demonic rite-state attached itself to the central suspension span of Halvorn Bridge, causing travelers who crossed after moonset to arrive without memories of the person they most loved. Civil authorities initially classified the event as Redactory sabotage.
 
 Orveth identified the bridge itself as the claimed vessel.
 
@@ -585,7 +585,7 @@ It is also why the Imperial Bridge Authority requested, unsuccessfully, that Fat
 
 ### X.3 The Seventh Hand at Vaul Mourne
 
-The first confirmed manifestation of the Sovereign Palm occurred in 2013 at **Vaul Mourne**, a fortified hospice-priory on the northern approach to the Threshold.
+The first confirmed manifestation of the Sovereign Palm occurred c. Imperial Year 2118 at **Vaul Mourne**, a fortified hospice-priory on the northern approach to the Threshold.
 
 The event began as a standard evacuation during Dark-Side pressure escalation and became a multi-vessel possession when the lower wards failed to seal. A fragment-class presence entered through the dying and attempted to claim the hospice under the category of mercy, arguing through the mouths of patients that removal from suffering constituted rightful care.
 
@@ -607,7 +607,7 @@ Orveth did not speak for nine days afterward except in confession.
 
 ### X.4 The Orison Dispute
 
-In 2059, Father Orveth publicly contradicted Rector-Ascendant Delian Orison during an Interior Council review concerning the forced investiture of a protection-domain candidate who had repeatedly refused permanent Obsidian formation.
+In Imperial Year 2138, Father Orveth publicly contradicted Rector-Ascendant Delian Orison during an Interior Council review concerning the forced investiture of a protection-domain candidate who had repeatedly refused permanent Obsidian formation.
 
 Orison argued that the candidate's capacity created obligation.
 
@@ -621,11 +621,11 @@ The same review records that Orveth recommended the candidate be released to ord
 
 The candidate survived, never joined Obsidian, and later became a schoolmaster.
 
-Father Orveth visited him once, forty years later, and blessed his retirement.
+Father Orveth visited him once, forty Lunar Years later, and blessed his retirement.
 
 ### X.5 The Silent Procession
 
-In 2166, during a major ecclesiastical procession in Kalt'sen, all visible members of Obsidian within the route fell silent at the same moment. Civilians assumed this was ceremonial. It was not.
+In Imperial Year 2185, during a major ecclesiastical procession in Kalt'sen, all visible members of Obsidian within the route fell silent at the same moment. Civilians assumed this was ceremonial. It was not.
 
 A demonic mimic had entered the procession by wearing the grief of a woman whose son had died in Threshold service. The mimic carried no body of its own and moved through sympathetic attention. Speaking its presence aloud would have spread it.
 
@@ -641,7 +641,7 @@ The woman never learned the full nature of what occurred. Orveth arranged for he
 
 ### X.6 Consultation Regarding Father Viktor
 
-The Interior Council requested Father Orveth's private opinion on Vaey Viktor in 2198.
+The Interior Council requested Father Orveth's private opinion on Vaey Viktor in Imperial Year 2199.
 
 The meeting lasted sixteen minutes.
 
@@ -701,7 +701,7 @@ Privately, he is careful.
 
 Three holders of the office of Primus have held office during Orveth's service. He has served all three. He obeyed **Primus Soren IV** with visible ease, argued frequently with **Primus Melchis Vey**, and appears to regard the current Primus, **Caldrin II**, with a form of wary respect that neither side has attempted to warm into affection.
 
-In 2187, during a closed council concerning the Answered, Caldrin II reportedly asked Orveth whether Auctoriel recognized the papal office.
+In Imperial Year 2194, during a closed council concerning the Answered, Caldrin II reportedly asked Orveth whether Auctoriel recognized the papal office.
 
 Orveth answered:
 
@@ -792,5 +792,3 @@ He should never be mistaken for safe.
 *END OF RECORD*
 
 *Filed: Year 2200, fourth quarter.*
-
-

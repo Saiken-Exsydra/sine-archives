@@ -30,15 +30,15 @@
 |---|---|
 | **Full Name** | Em'manuel Kael Wonderwall |
 | **Birth Name** | Al'uxxios Exsydra |
-| **Approximate Year of Birth** | Approximately thirty years before the Rite of Selia; born Year 995 |
-| **Current Age** | Approximately 1,205 years (as of Year 2200) |
+| **Approximate Year of Birth** | Approximately thirty Imperial Years before the Rite of Selia; born c. Imperial Year 995 |
+| **Current Age** | Approximately 2,750 Lunar Years as of Imperial Year 2200; approximately 1,205 Imperial Years of history crossed |
 | **Birthplace** | Northern coastal region, pre-Empire; the settlement no longer exists under that name |
 | **Redactory Status** | Archtype. Spatial Coherence-domain, institutionally classified. True domain: Interval. This designation appears in no institutional record. |
 | **Biological Status** | Indefinite biological continuation, maintained through Archtype-class recursive self-modification. Not immortal in any cosmological sense. Not mortal in any practical one. |
 | **Institutional Affiliation** | Wonderwall Seat (dynastic head, primary line); Chief Executive, SiNE (the Wonderwall Company); Hereditary Senator, Empire of Synus. These three designations refer to the same position. |
-| **Additional Designation** | Remainder-bearer, primary expression. Over a millennium of sustained contact — 1,074 years. This designation does not appear in any institutional document. The name has never been spoken where another person could hear it. |
+| **Additional Designation** | Remainder-bearer, primary expression. Over a millennium of sustained contact — 1,074 Imperial Years. This designation does not appear in any institutional document. The name has never been spoken where another person could hear it. |
 | **CLOCKWORK Relationship** | Sole objective authority as the Wonderwall Seat under the Accord of the Unspent Beat. The Dial translates; twelve Hourhands execute 144 active Redactor seats. Meridian, Crown, HourGlass, Clepsydra, and Apoc hold no command. |
-| **Project Kaleidoscope** | Authorizing director and primary accountable sponsor. Biological production permanently ended in 2179; care, reparations, protected disclosure, and archive obligations remain active. |
+| **Project Kaleidoscope** | Authorizing director and primary accountable sponsor. Biological production permanently ended in Imperial Year 2191; care, reparations, protected disclosure, and archive obligations remain active. |
 | **House Government** | Wonderwall Seat. Al'ithia holds First Hearth and the Hearth Meridian; House recognition and family consequence do not reduce to his corporate command. |
 | **SiNE Government** | Chief executive above the Meridian Council. May issue a Forced Meridian Order but cannot manufacture technical truth, personhood consent, judicial capacity, or Crown sovereignty. |
 | **Shore Contact** | Confirmed private event. Em'manuel has walked a Shore once. He did not possess the Shores framework at the time and cannot identify which Shore it was. Current interpretation remains theoretical. |
@@ -117,7 +117,7 @@ He crossed it once, cleanly. He did not write about the experience. The Cloister
 
 ---
 
-### II.5 The Exsydra Line — Five Hundred Years Later
+### II.5 The Exsydra Line — Five Hundred Lunar Years Later
 
 In the four hundred and seventy-first year of the Empire, a Wonderwall predecessor survey of anomalous Northern thinness phenomena returned a recursive architecture profile from a family in Ael'keth that Em'manuel did not immediately understand. He read it twice. He set it aside. He did not pick it up again for three days. The record later entered Project Seam; it predates Clockwork's Year 1682 foundation.
 
@@ -374,13 +374,13 @@ Ec'lesia is the naturally inherited route the Remainder waited for inside the bl
 
 ### IV.5 E'lla Rae Wonderwall - The First Loss
 
-Born in the two hundredth year of the Empire. Her mother's name is private and remains private in this document. She was acknowledged immediately.
+Born c. Imperial Year 1249, in the Empire's third century. Her mother's name is private and remains private in this document. She was acknowledged immediately.
 
 She was assessed at the Cloister of Applied Structure at age six. The assessment produced three separate reports over two weeks, each drafted by a different faculty member, each failing in a different direction to describe what they had found. The final consolidated report: *We have assessed a Light-domain Anchor expression unlike anything previously documented. We do not have adequate framework to describe what this means for a practitioner her age. We have not encountered this before.*
 
 He already knew.
 
-She operated as a Redactor for thirty-five years. The technical documentation S-RD holds on her work is the most studied corpus in the Company's restricted research archive, but it was deliberately separated from the private biographical context that would make the corpus a reconstructive life record. Regions of the substrate where she had worked were measurably more stable afterward - substantially, in ways that persisted for decades and in some cases centuries. He mistook this, at the time, for evidence that the line's future lay in teaching Light to survive the Remainder.
+She operated as a Redactor for thirty-five Lunar Years. The technical documentation S-RD holds on her work is the most studied corpus in the Company's restricted research archive, but it was deliberately separated from the private biographical context that would make the corpus a reconstructive life record. Regions of the substrate where she had worked were measurably more stable afterward - substantially, in ways that persisted for Imperial decades and in some cases Imperial centuries. He mistook this, at the time, for evidence that the line's future lay in teaching Light to survive the Remainder.
 
 At some point in her third decade, she noticed something happening that she had not authorized and could not stop.
 
@@ -392,7 +392,7 @@ His argument: Archtype modification would slow the process. Give her the centuri
 
 Her answer, as he recorded it: *You have had a century and a half with it. You do not know what you were before it. Neither of us can determine whether that means you survived or whether you simply do not remember what you lost. I will not make that trade. I am sorry.*
 
-She ended her own life in the two hundred and forty-first year of the Empire. She was forty-one years old. She left a letter. The letter is in Em'manuel's personal archive and has not been reproduced in any document this record encompasses.
+She ended her own life in Imperial Year 1267. She was forty-one Lunar Years old. She left a letter. The letter is in Em'manuel's personal archive and has not been reproduced in any document this record encompasses.
 
 He was present. He has not discussed this with anyone. He has carried it for nearly a millennium.
 
@@ -418,7 +418,7 @@ This failure became Project Kaleidoscope. Its restricted administrative mandate 
 
 The designation *Kaleidoscope* reflects the project's method: institutions arranged fragments of a dead woman's archive around living subjects and mistook refraction for continuity. A kaleidoscope does not reproduce its source. It produces another arrangement, and in this case every arrangement was a person.
 
-The Continuance Inquiry began after the first E'lla's death in Year 1267. Numbered biological production ran from Year 1547 through KL-83's birth in Year 2175: eighty-three human subjects, no further body after her. KL-83 was transferred from project custody in Year 2179 and later recognized through irrevocable House adoption as E'lla Rae Wonderwall.
+The Continuance Inquiry began after the first E'lla's death in Imperial Year 1267. Numbered biological production ran from Imperial Year 1547 through KL-83's birth c. Imperial Year 2189: eighty-three human subjects, no further body after her. KL-83 was transferred from project custody in Imperial Year 2191 and later recognized through irrevocable House adoption as E'lla Rae Wonderwall.
 
 She does not know the designation KL-83 or the full numbered series. She knows Kaleidoscope existed, that SiNE altered, observed, and conditioned portions of her early life, that the project concerned the historical E'lla, and that Em'manuel has withheld more. She believes she was born the biological daughter of Al'ithia and Em'manuel and only afterward became the project's subject. The truth is the reverse: Kaleidoscope produced KL-83, and they became her parents after her transfer.
 
@@ -522,17 +522,17 @@ I continue to look without placing the two files in the same causal chain.
 
 ### VII.2 The Eighty-Two — Lives and Witness
 
-The numbered program produced eighty-three subjects between Years 1547 and 2175. Its records repeatedly classified divergence as failure and used termination, continued custody, or concealed release as administrative solutions. Em'manuel prohibited a final purge of the living series, but that refusal does not erase his authority over the system that created them.
+The numbered program produced eighty-three subjects between Imperial Year 1547 and KL-83's birth c. Imperial Year 2189. Its records repeatedly classified divergence as failure and used termination, continued custody, or concealed release as administrative solutions. Em'manuel prohibited a final purge of the living series, but that refusal does not erase his authority over the system that created them.
 
 The eighty-two subjects before E'lla did not share one outcome. Some died through age, illness, procedure, neglect, or containment failure. Some were released under protected identities. Some remained dependent upon undisclosed care; others built lives entirely outside direct custody. KL-81 and KL-82 remain living managed cases whose clinicians do not possess the full project history.
 
-Care, reparations, archive, and disclosure duties now survive through a dispersed chain that the Seat cannot end alone. Em'manuel bears responsibility for the names and outcomes, but he is not their sole witness or owner. Al'ithia's Year 2179 order stopped production, refused termination of the living subjects, and placed the surviving record behind independent care and Compact keys.
+Care, reparations, archive, and disclosure duties now survive through a dispersed chain that the Seat cannot end alone. Em'manuel bears responsibility for the names and outcomes, but he is not their sole witness or owner. Al'ithia's Imperial Year 2191 order stopped production, refused termination of the living subjects, and placed the surviving record behind independent care and Compact keys.
 
 ---
 
 ### VII.3 KL-83 — The Agency of a Living Person
 
-KL-83 is E'lla Rae Wonderwall, a twenty-five-year-old singular person and the last subject born into the numbered series. Em'manuel gave her the name of the daughter he lost. That act burdens their relationship; it does not make her a replication, recurrence, answer, or corporate asset.
+KL-83 is E'lla Rae Wonderwall, a twenty-five-Lunar-Year-old singular person and the last subject born into the numbered series. Em'manuel gave her the name of the daughter he lost. That act burdens their relationship; it does not make her a replication, recurrence, answer, or corporate asset.
 
 He loves modern E'lla and is painfully aware that genuine love does not neutralize the architecture through which they became family. She knows enough about Kaleidoscope to recognize concealment and enough about the first E'lla to know that he remembers an intimate person no one else can reconstruct. Her unasked question—*when you look at me, are you remembering her?*—remains reasonable even when the truthful answer is that he knows the difference.
 
@@ -562,7 +562,7 @@ The hereditary Senate seat has been occupied continuously for the full span of t
 
 ### VIII.4 The Third Name Accord
 
-Em'manuel opposed Al'ithia's Open Register Petition in Year 2179.
+Em'manuel opposed Al'ithia's Open Register Petition in Imperial Year 2191.
 
 He feared, correctly, that public confirmation of the First Radiance would turn A'licia into Church argument, foreign intelligence target, succession weapon, and public myth. He feared that a Crown route into protected-origin evidence would expose Kaleidoscope subjects. He also feared a judgment he did not control.
 
@@ -621,7 +621,7 @@ He has had twelve centuries to prepare for this conversation. He does not feel p
 
 ### IX.3 The Exsydra File
 
-Em'manuel identified Sai'ken through Project Seam anomaly review, followed the Las'gall continuation line for twelve years, recruited him into KT-Exs in 2194, and returned the name Exsydra to him without providing an explanation proportionate to what the restoration meant. The most recent entry in the operational record is dated year 2197. The subject has been posted to the Yalara household in Kalt'sen's eastern residential quarter under the language of close protection and proximate observation. The posting serves multiple purposes. The ones recorded in the KT-Exs file are the operational ones. The ones recorded here are the others.
+Em'manuel identified Sai'ken through Project Seam anomaly review, followed the Las'gall continuation line for twelve Lunar Years, recruited him into KT-Exs c. Imperial Year 2197, and returned the name Exsydra to him without providing an explanation proportionate to what the restoration meant. The most recent entry in the operational record is dated Imperial Year 2197. The subject has been posted to the Yalara household in Kalt'sen's eastern residential quarter under the language of close protection and proximate observation. The posting serves multiple purposes. The ones recorded in the KT-Exs file are the operational ones. The ones recorded here are the others.
 
 Sai'ken Exsydra represents one of Em'manuel's most carefully controlled living risks. The Seat did not merely recruit a talented operative from the Ael'keth borderlands. He recovered the last active expression of an erased recursive architecture that the old Exsydra house catastrophically misidentified as temporal foresight and that he now understands as cadence perception under Time's tolerance. Sai'ken is not a conventional Redactor. He is a threshold-bearing recursion that can perceive local sequence-pressure before the event it implies becomes fully readable.
 
@@ -633,7 +633,7 @@ He has not placed a savior beside Ec'lesia. He has placed a man who may know fir
 
 He has not told Sai'ken what his name means. He has not told Sai'ken what the Exsydra were. He has not told Sai'ken why his lineage survived when everything else about that name was erased.
 
-He is calculating when the moment for that conversation arrives. He has been calculating for three years. This is either patience or cowardice dressed as patience, and he is still determining which.
+He is calculating when the moment for that conversation arrives. He has been calculating for three Lunar Years. This is either patience or cowardice dressed as patience, and he is still determining which.
 
 ---
 
@@ -651,7 +651,7 @@ He is calculating when the moment for that conversation arrives. He has been cal
 > — E.W., private notation appended to this document, 2200
 
 > *“I am aware of what Kaleidoscope makes me. The vocabulary of violation is adequate. Al'ithia ended production because I had made continued harm into a condition of being prepared. The Remainder is not a metaphor, but neither is necessity absolution. I am not permitted another subject. I am permitted the record, the care, the debt, and whatever judgment follows when the people I concealed from can finally speak.”*
-> — E.W., unfiled private notation, amended after the Year 2179 refusal
+> — E.W., unfiled private notation, amended after the Imperial Year 2191 refusal
 
 ## YEAR 2200 GOVERNANCE ADDENDUM
 

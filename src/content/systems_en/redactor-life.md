@@ -45,7 +45,7 @@ The Point normally carries the ten-Leaf [[common-apparatus-set|Common Apparatus 
 
 A **Nib** is a Redactor in formal formation. Nib is Rank One, not a synonym for child, weak practitioner, or low potential.
 
-Ordinary formation lasts about five years and combines:
+Ordinary formation lasts about five Lunar Years and combines:
 
 - Dive entry, interruption, ascent, and recovery;
 - Anchor literacy, Reach, Anchor Depth, and Overreach;

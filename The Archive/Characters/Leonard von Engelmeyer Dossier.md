@@ -3,9 +3,9 @@
 **LEONARD VON-ENGELMEYER**
 
 Registered Practitioner · Stylus · Mark 4 · Thermodynamic Anchor (Confirmed) · Expatriate Branch, House Engelmeyer · Apocachynthion Senior Instructor  
-Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus elevation recorded 1105 · Mark 4 current · file active
+Filed by: Apocachynthion, Central Registry — intake completed c. 1111 · Stylus elevation recorded c. 1117 · Mark 4 current · file active
 
-*"Most practitioners impose their will upon the world like a hammer. Master von-Engelmeyer imposes it like a hearth. I have stood next to him when he demonstrates what he calls the 'Kalorian Nova.' The air does not just burn. It forgets that it was ever permitted to be cold. He does this without raising his voice, without breaking his sentence, and with an empathy that makes the raw violence of the mathematics almost gentle."* — Senior Assessor Vel'omis, Central Academy, private notation appended to the Year 1120 instructional review.
+*"Most practitioners impose their will upon the world like a hammer. Master von-Engelmeyer imposes it like a hearth. I have stood next to him when he demonstrates what he calls the 'Kalorian Nova.' The air does not just burn. It forgets that it was ever permitted to be cold. He does this without raising his voice, without breaking his sentence, and with an empathy that makes the raw violence of the mathematics almost gentle."* — Senior Assessor Vel'omis, Central Academy, private notation appended to the Imperial Year 1124 instructional review.
 
 ---
 
@@ -14,9 +14,9 @@ Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus e
 | Field | Entry |
 | :--- | :--- |
 | **Full Name** | Leonard von-Engelmeyer |
-| **Year of Birth** | 1072 (age 55 at time of filing, 1127) |
+| **Year of Birth** | c. Imperial Year 1103 (age 55 Lunar Years at time of filing, Imperial Year 1127) |
 | **Birthplace** | Eraveth, Ardeatus (Western Frontier Region) |
-| **Registry Status** | Registered — asylum intake 1090; Sealed instructional file current |
+| **Registry Status** | Registered — asylum intake c. Imperial Year 1111; Sealed instructional file current |
 | **Rank** | Stylus (Thermodynamic Anchor) |
 | **Designation** | STASE-SURVIVOR (Restricted Classification) |
 | **House** | House Engelmeyer (Imperial lineage; western band origin. His branch is expatriate and formally estranged from the main line) |
@@ -45,8 +45,8 @@ Filed by: Apocachynthion, Central Registry — intake completed 1090 · Stylus e
 **Reach:** Working Reach  
 **Overreach History:** None recorded  
 **Apparatus Permissions:** Professional Apparati under instructional standing; martial deployment only by Council request  
-**Registration Tenure:** 37 years  
-**Academy Record:** Asylum intake 1090; central formation track; Stylus elevation recorded 1105  
+**Registration Tenure:** 37 Lunar Years
+**Academy Record:** Asylum intake c. Imperial Year 1111; central formation track; Stylus elevation recorded c. Imperial Year 1117
 **Practice Record:** Academy instruction; restricted hazardous consultation  
 **Blots:** None recorded  
 **Pager Note:** None  
@@ -60,15 +60,15 @@ House Engelmeyer held foundry jurisdictions across the old kingdom and western i
 
 This distinction matters. Leonard descends from the broader Engelmeyer migration into Ardeatus. He is not descended from one of the forty-three people scarred inside the Works lattice and is not part of the direct hereditary sequence that later produced Re'lha and Le'nore.
 
-His family adopted the Ardeatan *von-* particle and established itself in the western frontier city of Eraveth. Leonard's grandfather also carried copies of Engelmeyer furnace shipment records east into Ardeatus. One damaged route ledger passed into Leonard's effects and returned west with him to Synus in Year 1090. It proves that the Voren Works' south casting channel had been modified before the catastrophe. The Apocachynthion archived the document with Leonard's asylum material and never joined it to later Drevholt assessments.
+His family adopted the Ardeatan *von-* particle and established itself in the western frontier city of Eraveth. Leonard's grandfather also carried copies of Engelmeyer furnace shipment records east into Ardeatus. One damaged route ledger passed into Leonard's effects and returned west with him to Synus c. Imperial Year 1111. It proves that the Voren Works' south casting channel had been modified before the catastrophe. The Apocachynthion archived the document with Leonard's asylum material and never joined it to later Drevholt assessments.
 
 Leonard’s parents were highly visible figures in Eraveth. His mother, **Elara ker-Vane**, was a brilliant material scientist at the Forge Academy of Kovansk, researching thermal thresholds in BrightCrystal stress fractures. His father, **Kaelen von-Engelmeyer**, was a fiercely vocal Ardeatan politician who built his career fighting the encroachment of imperial corporatism. Specifically, Kaelen successfully blocked an Evanote-backed extension of the public Imperial Arterial Railway into Eraveth’s sovereign logistics network, arguing that a nominally public corridor built around SiNE standards was a prelude to corporate subjugation.
 
-In 1087, when Leonard was fifteen, his parents were killed in what the Ardeatan authorities officially classified as a catastrophic domestic gas leak. The Apocachynthion Intelligence Branch has long held, but never formally pursued, the hypothesis that the explosion was a targeted assassination—possibly orchestrated by private industrial operators—to simultaneously remove a political obstacle and silence Elara’s Forge research. Clockwork did not yet exist; attributing the killing to it is chronologically impossible.
+C. Imperial Year 1110, when Leonard was fifteen Lunar Years old, his parents were killed in what the Ardeatan authorities officially classified as a catastrophic domestic gas leak. The Apocachynthion Intelligence Branch has long held, but never formally pursued, the hypothesis that the explosion was a targeted assassination—possibly orchestrated by private industrial operators—to simultaneously remove a political obstacle and silence Elara’s Forge research. Clockwork did not yet exist; attributing the killing to it is chronologically impossible.
 
 Leonard was arriving home the moment the explosion occurred. He should have died. He did not.
 
-The Year 1087 household explosion is a separate Stase event. It did not destroy an Engelmeyer branch, did not create the Voren recursive scar, and did not produce Le'nore's lineage condition.
+The Imperial Year 1110 household explosion is a separate Stase event. It did not destroy an Engelmeyer branch, did not create the Voren recursive scar, and did not produce Le'nore's lineage condition.
 
 ---
 
@@ -92,7 +92,7 @@ Time *authorized* a local, micro-scale resumption of traversal. It allowed the h
 
 In Ardeatus, where civilizational doctrine is tightly bound to the Covenant and the mechanical orthodoxy of the Forge-Keepers, an unregistered Redactor capable of anomalous, Stase-breaking thermal generation is considered a theological and structural blasphemy. Realizing he would be hunted by the Ashborne Hunters or dissected by the Forge, Leonard took Kerz and fled west across the border into the Empire of Synus.
 
-He presented himself for intake at the Apocachynthion in 1090.
+He presented himself for intake at the Apocachynthion c. Imperial Year 1111.
 
 ---
 

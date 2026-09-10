@@ -45,7 +45,7 @@ O Point normalmente carrega o [[common-apparatus-set|Conjunto Comum de Aparatos]
 
 Um **Nib** é um Redactor em formação formal. Nib é Rank Um, não sinônimo de criança, praticante fraco ou baixo potencial.
 
-A formação comum dura cerca de cinco anos e combina:
+A formação comum dura cerca de cinco Lunar Years e combina:
 
 - entrada, interrupção, ascensão e recuperação do Dive;
 - alfabetização de Anchor, Reach, Anchor Depth e Overreach;

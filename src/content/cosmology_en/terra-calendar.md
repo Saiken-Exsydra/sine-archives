@@ -1,7 +1,7 @@
 ---
 title: "Terra's Calendar and Civil Sky"
 type: "Cosmology"
-summary: "How an engineered lunar day, an 833-day orbit, inherited months, and six unequal seasons organize life beneath the Lunar Crown."
+summary: "How an engineered lunar day, a 365-day Lunar Year, an 833-day Imperial Year, inherited months, and six unequal seasons organize life beneath the Lunar Crown."
 tags: ["Cosmology", "Terra", "Calendar", "Lunar Crown", "Imperial Calendar", "Civil Sky", "Seasons", "Kalt'sen"]
 status: "public"
 created: "2026-08-14"
@@ -21,6 +21,8 @@ The daily Crown orbit is not a month, and the Crown does not show an Old Earth-s
 
 ## The Fixed Civil Year
 
+Terra keeps three independent clocks. The Crown's engineered orbit across the sky produces the approximately twenty-four-hour **civil day**. The Crown's axial rotation takes exactly **365 days** and defines the **Lunar Year (LY)** used for human age, birthdays, biological development, and personal anniversaries. Terra's orbit around Vael'Khar takes exactly **833 days** and defines the **Imperial Year (IY)** used by the civil and historical calendar.
+
 The Imperial Calendar contains exactly:
 
 - **833 civil days**;
@@ -29,6 +31,8 @@ The Imperial Calendar contains exactly:
 - **six unequal orbital seasons**.
 
 The year begins at midnight before **1 Janvar**, the anniversary boundary assigned to the Fracture. The Fracture is Year 0; Selia is Year 1025; the Empire's foundation is Year 1026. A formal date is written **17 Marten 2200 IC**, where IC means Imperial Calendar.
+
+A numbered **Year ####** is Imperial unless another unit is stated. An ordinary personal age is Lunar unless expressly qualified. Birth moments are recorded by Imperial civil date, but birthdays recur every 365 days and therefore move across Imperial month and day positions. No second set of lunar months is used.
 
 ## Week and Months
 

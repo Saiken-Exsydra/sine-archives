@@ -2,8 +2,8 @@
 title: "Al'ithia Rae Wonderwall"
 type: "Character"
 
-age: "89 (as of Year 2200)"
-birth_year: "2111"
+age: "89 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2161"
 
 affiliation: "House Wonderwall; Empire of Synus"
 house: "Wonderwall"
@@ -46,7 +46,7 @@ codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 ---
 
 > *"You may call Athena dead, A'licia returned, or the First Radiance incarnate. You may call me dangerous. You may not make any of those descriptions my owner."*
-> — Al'ithia Rae Wonderwall, open testimony, Year 2179
+> — Al'ithia Rae Wonderwall, open testimony, Imperial Year 2191
 
 ---
 
@@ -54,7 +54,7 @@ codex_file: "Al'ithia Rae Wonderwall Dossier.md"
 
 Al'ithia Rae Wonderwall is the practical political head of House Wonderwall, one of the Empire's Founding Houses. She represents the House in the Senate, receives petitions, manages inter-House negotiations, appears at state functions, and handles the quiet political work that keeps promises, grievances, obligations, and people from being lost between institutions.
 
-She is eighty-nine years old and looks several decades younger. The effect is partly the result of advanced Redactory — the disciplined practice of altering how reality is expressed — and partly the consequence of a life whose biology and identity were changed far more deeply than ordinary longevity work would explain.
+She is eighty-nine Lunar Years old and looks several human decades younger. The effect is partly the result of advanced Redactory — the disciplined practice of altering how reality is expressed — and partly the consequence of a life whose biology and identity were changed far more deeply than ordinary longevity work would explain.
 
 Most people first read Al'ithia as composed, severe, and almost unnaturally certain of herself. She rarely needs to dominate a room by volume. Attention tends to settle around her because she behaves as though the important part of the conversation can be found, named, and dealt with if everyone stops pretending not to see it.
 
@@ -96,7 +96,7 @@ The woman in the room is not merely the sum of the records that explain her.
 
 ## Background
 
-Athena Rae was born in Year 2111 into the Rae branch of the Wonderwall family.
+Athena Rae was born c. Imperial Year 2161 into the Rae branch of the Wonderwall family.
 
 She grew up far from the primary political center of the House but close to one of its oldest private traditions: reverence for **A'licia Rae Wonderwall**, the early Wonderwall founder whose Light-domain Redactory helped make the House politically and technically indispensable after the old order collapsed.
 
@@ -122,7 +122,7 @@ It was also not ultimately correct.
 
 ## Becoming Al'ithia
 
-The integration lasted twenty-three years.
+The integration lasted twenty-three Lunar Years.
 
 Its early stages were unstable. Athena experienced memories, reactions, grief, and recognition that did not originate within the ordinary boundaries of her own biography. The First Radiance pressed closer. The distinction between inherited continuity and present identity became increasingly difficult to draw from the outside.
 
@@ -130,7 +130,7 @@ The process did not resolve by one consciousness defeating the other.
 
 Nor did Athena simply surrender herself to a more powerful historical identity.
 
-Over time, the relation became reciprocal. Athena's fear, faith, patience, and mortal life changed what the First Radiance could become in embodiment. A'licia's continuity changed Athena in return. By Year 2150, when Athena was thirty-eight, the process stabilized into a single present self whose memories and continuity could not be honestly reduced to either origin alone.
+Over time, the relation became reciprocal. Athena's fear, faith, patience, and mortal life changed what the First Radiance could become in embodiment. A'licia's continuity changed Athena in return. By c. Imperial Year 2178, when Athena was thirty-eight Lunar Years old, the process stabilized into a single present self whose memories and continuity could not be honestly reduced to either origin alone.
 
 She chose the name **Al'ithia**.
 
@@ -146,7 +146,7 @@ She did not claim A'licia's old estate merely because she remembered it. She did
 
 Eventually she forced that distinction into imperial law.
 
-In Year 2179, Al'ithia filed the petition that produced the **Third Name Accord**. Her argument was simple enough to survive the metaphysics around it: origin, memory, sacred status, continuity, and research history may describe a person, but none of them creates ownership over the person who presently exists.
+In Imperial Year 2191, Al'ithia filed the petition that produced the **Third Name Accord** in Imperial Year 2192. Her argument was simple enough to survive the metaphysics around it: origin, memory, sacred status, continuity, and research history may describe a person, but none of them creates ownership over the person who presently exists.
 
 The Accord recognized Al'ithia as one present legal person.
 
@@ -285,7 +285,7 @@ The First Radiance mattered because A'licia was extraordinary. Al'ithia insists 
 **Registry Status:** Recognized stable third-self under the Third Name Accord; former Indexed Vessel of the First Radiance.  
 **Redactory Classification:** Radiance-class.  
 **Anchor:** Revelation.  
-**Divination Status:** Former divine vessel; complete integration stabilized in Year 2150.  
+**Divination Status:** Former divine vessel; complete integration stabilized c. Imperial Year 2178.
 **Current Institutional Role:** First Hearth, Hearth Meridian, Senate representative, and principal state-facing authority of House Wonderwall.  
 **House Standing:** De facto public political head of House Wonderwall; not the Wonderwall Seat and not an automatic successor to it.
 
@@ -329,7 +329,7 @@ The Third Name Accord was not only a philosophical act.
 
 It was also a weapon aimed at a living institutional problem.
 
-In Year 2179, Al'ithia discovered that **Project Kaleidoscope**, a long-running SiNE continuity program, had used her existence as evidence that multiple origins could be forced toward a desired person-pattern through sufficient control. If Athena and the First Radiance could become Al'ithia, the project's logic suggested, perhaps another desired identity could be engineered by accumulating enough resemblance, memory, lineage, and pressure.
+In Imperial Year 2191, Al'ithia discovered that **Project Kaleidoscope**, a long-running SiNE continuity program, had used her existence as evidence that multiple origins could be forced toward a desired person-pattern through sufficient control. If Athena and the First Radiance could become Al'ithia, the project's logic suggested, perhaps another desired identity could be engineered by accumulating enough resemblance, memory, lineage, and pressure.
 
 Al'ithia rejected the analogy violently.
 

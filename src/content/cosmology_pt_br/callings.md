@@ -9,7 +9,7 @@ updated: "2026-03-30"
 image: ""
 ---
 
-> *"Pergunte para qualquer Redactor que esteja ativo há mais de três anos. Eles sabem. Você não precisa explicar. Basta dizer 'temporada forte de Callings' e eles fazem aquele aceno que carrega uma compreensão muito específica."*
+> *"Pergunte para qualquer Redactor que esteja ativo há mais de três Lunar Years. Eles sabem. Você não precisa explicar. Basta dizer 'temporada forte de Callings' e eles fazem aquele aceno que carrega uma compreensão muito específica."*
 > — Anotação de uma Senior Assessor, mesa de monitoramento do Apocachynthion
 
 ---

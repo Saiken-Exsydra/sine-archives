@@ -70,7 +70,7 @@ That makes Vael'Theryn less comforting than a benevolent god and more unsettling
 
 ## Background
 
-Vael'Theryn predates nearly every institution that matters to later history. The **Precursors** understood Vael'Theryn well enough to collaborate rather than trying to treat the Page Primordial like a resource. That collaboration helped make the **Skyphons** possible, because their creation required a density of native world-grammar only Terra's own primordial mind could provide.
+Vael'Theryn predates nearly every institution that matters to later history. The **Precursors** understood Vael'Theryn well enough to collaborate rather than trying to treat the Page Primordial like a resource. That collaboration helped make the **Skyphons' Terra-local relations** possible: Vael'Theryn supplied grammatical authorization through which the twelve foreign true bodies could bear bounded Principles inside the Page. Vael'Theryn did not create the Obscurials, supply pieces of their personhood, or manufacture the people they became.
 
 The entry also points back to the **Archtype War**, when unrestricted intervention at this kind of scale helped produce consequences severe enough to leave a permanent lesson behind. That lesson became the principle usually summarized as **Do not overstep**.
 

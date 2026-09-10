@@ -1,8 +1,8 @@
 ---
 title: "Vaey Viktor"
 type: "Character"
-age: "66 (na data do registro, 2200)"
-birth_year: "2134"
+age: "66 Lunar Years (na data do registro, Imperial Year 2200)"
+birth_year: "c. Imperial Year 2171"
 birthplace: "Distrito fluvial menor ao nordeste de Kalt'sen, Região Central, Império de Synus"
 affiliation: "Igreja do Soberano; Obsidian (assessor-sacerdote aposentado)"
 rank: "Crowned confirmado - vessel de Meruel, Measurement of Potential / Completion"
@@ -32,7 +32,7 @@ hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
 
 ## Identidade
 
-Vaey Viktor é um sacerdote aposentado do [[obsidian-rite|Obsidian]], ex-avaliador de candidatos à santidade e um Crowned confirmado — vessel de Meruel, uma das seis Cardinal Stars sob **Aequoriel, Seraphim of Just Measure**. Durante quarenta anos, a [[the-church|Igreja]] o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a Presence dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
+Vaey Viktor é um sacerdote aposentado do [[obsidian-rite|Obsidian]], ex-avaliador de candidatos à santidade e um Crowned confirmado — vessel de Meruel, uma das seis Cardinal Stars sob **Aequoriel, Seraphim of Just Measure**. Durante quarenta Lunar Years, a [[the-church|Igreja]] o enviou para salas onde milagres haviam dado errado, onde famílias assustadas começavam a suspeitar de contato divino e onde membros do clero local precisavam de alguém capaz de determinar se a Presence dentro de um vessel era angelical, demoníaca, falsa, instável, recuperável ou já além de qualquer cuidado pastoral comum.
 
 Ele era extraordinariamente bom nesse trabalho. E esse fato é justamente o começo do problema.
 
@@ -74,9 +74,9 @@ Vaey entrou cedo na formação da [[the-church|Igreja]] e rapidamente chamou ate
 
 Durante quatro décadas percorreu as consequências de pequenos milagres, Crownings fracassados, suspeitas de santidade, mimetismos demoníacos e rumores paroquiais. Descobriu santos verdadeiros ainda vivos. Expôs cultos falsos. Evitou diversas classificações incorretas graves. Também desenvolveu uma obsessão crescente pelas pessoas que quase se tornaram algo maior — e então falharam, recuaram, quebraram ou desistiram.
 
-Esses quase-santos o moldaram mais profundamente do que os bem-sucedidos. Com o tempo, seus relatórios endureceram. Fracasso deixou de aparecer em sua linguagem como instabilidade, medo ou dano recuperável e começou a surgir como traição. A Igreja tolerou essa mudança porque ela vinha acompanhada de precisão profissional. Ele continuava acertando. Quando seus superiores finalmente perceberam que precisão e deformação espiritual estavam avançando juntas, Meruel já havia encontrado um vessel ideal na mente construída por Viktor ao longo de quarenta anos de julgamento comparativo.
+Esses quase-santos o moldaram mais profundamente do que os bem-sucedidos. Com o tempo, seus relatórios endureceram. Fracasso deixou de aparecer em sua linguagem como instabilidade, medo ou dano recuperável e começou a surgir como traição. A Igreja tolerou essa mudança porque ela vinha acompanhada de precisão profissional. Ele continuava acertando. Quando seus superiores finalmente perceberam que precisão e deformação espiritual estavam avançando juntas, Meruel já havia encontrado um vessel ideal na mente construída por Viktor ao longo de quarenta Lunar Years de julgamento comparativo.
 
-Sua aposentadoria em 2196 foi oficialmente voluntária. Na prática, foi um acordo. Parte de seus superiores estava alarmada com o tom punitivo de suas recomendações; outra parte temia as consequências políticas e teológicas de romper abertamente com um vessel angelical confirmado que havia descoberto santos hoje venerados pela própria instituição. A aposentadoria removeu sua autoridade formal sem obrigar a Igreja a pronunciar a frase que mais queria evitar: que um Crowned genuíno pode se tornar uma atrocidade sem deixar de ser angelical.
+Sua aposentadoria c. Imperial Year 2197 foi oficialmente voluntária. Na prática, foi um acordo. Parte de seus superiores estava alarmada com o tom punitivo de suas recomendações; outra parte temia as consequências políticas e teológicas de romper abertamente com um vessel angelical confirmado que havia descoberto santos hoje venerados pela própria instituição. A aposentadoria removeu sua autoridade formal sem obrigar a Igreja a pronunciar a frase que mais queria evitar: que um Crowned genuíno pode se tornar uma atrocidade sem deixar de ser angelical.
 
 ---
 
@@ -110,7 +110,7 @@ Ele entrega morte nos lugares onde misericórdia exigiria contenção. A origem 
 
 ## Estado Atual
 
-Publicamente, Padre Vaey Viktor continua sendo um assessor-sacerdote aposentado honrado e em boa posição institucional. Descobriu santos. Serviu Obsidian por quarenta anos. Ainda mantém o respeito de membros do clero e Beatificados que acreditam ter sido salvos por ele de classificações incorretas ou do caos de manifestações descontroladas. Continua podendo ser chamado para consultas em casos difíceis. Ainda viaja usando o próprio nome.
+Publicamente, Padre Vaey Viktor continua sendo um assessor-sacerdote aposentado honrado e em boa posição institucional. Descobriu santos. Serviu Obsidian por quarenta Lunar Years. Ainda mantém o respeito de membros do clero e Beatificados que acreditam ter sido salvos por ele de classificações incorretas ou do caos de manifestações descontroladas. Continua podendo ser chamado para consultas em casos difíceis. Ainda viaja usando o próprio nome.
 
 Privadamente, a Igreja sabe muito mais do que admite. Registros restritos o descrevem como um Crowned de domínio severo passando por reponderação avançada e o conectam a múltiplas mortes envolvendo candidatos talentosos, fracassados ou afastados. Mesmo assim, nenhum departamento escolheu agir de maneira decisiva. Sua proteção surgiu da vergonha institucional, covardia teológica, cautela política, gratidão pelo trabalho passado e da conveniência de tratar vítimas comprometidas como administrativamente descartáveis.
 

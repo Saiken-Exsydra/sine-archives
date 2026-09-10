@@ -59,6 +59,12 @@ flowchart TD
 
 The Church does not understand this as fragment ecology. It understands it as ordered heavenly attendance.
 
+The Tenfold did not precede the Twelvefold and does not duplicate it. The [[obscurials|Twelvefold]] distributed twelve Terra-local Jurisdictions horizontally. The Tenfold distributes one Sovereign identity vertically through ten Seraphim and their descending constellations. There is no one-to-one Skyphon–Seraphim map.
+
+The Sovereign achieved durable local coherence in a world already shaped by the Twelvefold. That inherited environment influenced how Seraphic identity became legible: rings, halos, suspended structures, radiant geometry, impossible symmetry, and other forms that can resemble Obscurial morphology. The resemblance is structural refraction, not descent. Skyphons were not angels, and Seraphim are not Obscurials.
+
+The Fracture destabilized Terra's domain-shell connection to Heaven, Hell, and the Pathway when all twelve Skyphons became unseated at once. Three Seraphim crossed beyond the accessible Firmament in connection with the Skyphons' unresolved trajectory and did not return. Seven remained contactable. Their destination and motive are not established.
+
 ---
 
 ## Seraphic Constellations
@@ -93,7 +99,7 @@ The **Cynosure** is the central star. **Cardinal Stars** are major descending fr
 
 ## Abyssal Constellations
 
-An **Abyssal Constellation** is the corrupted or demonic counterpart to Seraphic ordering.
+An **Abyssal Constellation** is a descending expression of the Sovereign's Abyssal inverse. The inverse formed where Sovereign identity refracted through a local environment that still contained an unresolved foreign term. Structural affinity with the Obscurial relation does not make demons Obscurials or pieces of the exterior source.
 
 ```mermaid
 flowchart TD
@@ -118,6 +124,8 @@ flowchart TD
 ```
 
 Demons proper are demonic presences or infernal entities. Demonic creatures are mortal, postmortem, bodily, or residual structures altered by demonic Presence or saturation. Vampires, ghouls, ghosts, werewolves, Hollowed, Worn, and Consumed cases are derivative afterstates or haunt-states, not automatically demons proper.
+
+Some Seraphic beings or fragments genuinely crossed into Abyssal architecture during the post-Fracture celestial crisis, defected, became trapped, or returned altered. These are real **fallen angels**, but they are a limited historical category. Demonkind as a whole did not descend from them.
 
 Divination can drive stable reconfiguration into such states. It does not create new species ex nihilo.
 

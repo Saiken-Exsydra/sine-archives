@@ -1,8 +1,8 @@
 ---
 title: "Hisui Kirasagi"
 type: "Personagem"
-age: "24 (em 2200)"
-birth_year: "2176"
+age: "24 Lunar Years (no Imperial Year 2200)"
+birth_year: "c. Imperial Year 2189"
 birthplace: "Tsukimiya, Hikari (costa de Darkmargin)"
 affiliation: "propriedade Wonderwall (equipe doméstica, Kalt'sen)"
 house: ""
@@ -29,7 +29,7 @@ portrait_gallery: []
 hero_gallery: []
 ---
 
-> *"A flor deveria ter matado ela. Não matou. O que ela fez no lugar é algo para o qual o Index Theorem simplesmente não tem linguagem, e que a Igreja chamaria de abominação. Não tenho certeza se qualquer um dos dois estaria errado. Tenho certeza apenas de que ela está na minha casa há dois anos e ninguém aqui dorme menos seguro por causa disso."*
+> *"A flor deveria ter matado ela. Não matou. O que ela fez no lugar é algo para o qual o Index Theorem simplesmente não tem linguagem, e que a Igreja chamaria de abominação. Não tenho certeza se qualquer um dos dois estaria errado. Tenho certeza apenas de que ela está na minha casa há dois Imperial Years e ninguém aqui dorme menos seguro por causa disso."*
 > — E.W., anotação privada, ano 2199
 
 ---
@@ -118,11 +118,11 @@ Ela carrega um grampo preto laqueado fabricado em Hikari — uma haste fina de l
 
 ### Tsukimiya — 2176 a 2197
 
-A infância de Hisui no complexo Kirasagi, adjacente à propriedade Shinzui, foi construída sobre duas disciplinas que a família nunca separou: treinamento de serviço doméstico — culinária, limpeza, protocolo, administração residencial e todas as técnicas necessárias para manter uma grande casa funcionando segundo cinco séculos de tradição — e a disciplina do Bloom. Aos doze anos ela já conseguia projetar pétalas com precisão suficiente para cortar papel à distância. Aos quinze estabilizou um Bloom Field em raio operacional. O Renewal Weave veio mais tarde; ela só demonstrou domínio consistente da técnica aos dezenove.
+A infância de Hisui no complexo Kirasagi, adjacente à propriedade Shinzui, foi construída sobre duas disciplinas que a família nunca separou: treinamento de serviço doméstico — culinária, limpeza, protocolo, administração residencial e todas as técnicas necessárias para manter uma grande casa funcionando segundo cinco séculos de Imperial Years — e a disciplina do Bloom. Aos doze anos ela já conseguia projetar pétalas com precisão suficiente para cortar papel à distância. Aos quinze estabilizou um Bloom Field em raio operacional. O Renewal Weave veio mais tarde; ela só demonstrou domínio consistente da técnica aos dezenove.
 
 Ela foi informada sobre a Flower antes mesmo de conseguir entender plenamente o que aquilo significava. Os Kirasagi não escondem a herança de seus filhos — o Murmuring começa desde o nascimento, e uma criança que escuta vozes inevitavelmente fará perguntas. Ela aprendeu cedo, da mesma maneira que os Kirasagi ensinam tudo aos seus filhos: como fato, não como aviso. Avisos existem para pessoas que têm escolha.
 
-Em 2191, um evento de Calling de intensidade incomum atingiu o corredor comprimido de Hikari. Hi'sui tinha quinze anos. O que os registros domésticos dos Kirasagi descrevem como um grave evento de instabilidade Bloom foi, na prática, uma crise estrutural de amplificação: as propriedades condutivas de Resonance da Flower reagindo às flutuações do Calling e produzindo uma descarga que o corpo da hospedeira não conseguia conter. As pétalas explodiram involuntariamente de seus antebraços, rasgando a pele durante a manifestação. Ela não perdeu a consciência. Permaneceu em confinamento controlado dentro do complexo Kirasagi por onze dias após o incidente. As cicatrizes permanecem.
+No Imperial Year 2196, um evento de Calling de intensidade incomum atingiu o corredor comprimido de Hikari. Hi'sui tinha quinze anos. O que os registros domésticos dos Kirasagi descrevem como um grave evento de instabilidade Bloom foi, na prática, uma crise estrutural de amplificação: as propriedades condutivas de Resonance da Flower reagindo às flutuações do Calling e produzindo uma descarga que o corpo da hospedeira não conseguia conter. As pétalas explodiram involuntariamente de seus antebraços, rasgando a pele durante a manifestação. Ela não perdeu a consciência. Permaneceu em confinamento controlado dentro do complexo Kirasagi por onze dias após o incidente. As cicatrizes permanecem.
 
 A explicação dos Kirasagi — desagrado da Flower diante do confinamento — é culturalmente coerente e mecanicamente errada. O mecanismo é estrutural, não emocional.
 
@@ -154,7 +154,7 @@ A Flower não se manifestou externamente nenhuma vez desde sua chegada. Nos regi
 
 **Ec'lesia Yalara Wonderwall** — Formalmente, a pessoa sob seus cuidados. Na prática: a pessoa que ela decidiu proteger sem qualquer requisito, ordem ou conhecimento do que Ec'lesia realmente é. Ela mantém o grampo sempre ao alcance enquanto serve chá. A tradição Kirasagi ensina que quem você serve é quem você protege.
 
-**Sai'ken Exsydra** — O operador de segurança da propriedade. A relação entre os dois desenvolveu ao longo de dois anos uma intimidade silenciosa que nenhum deles nomeou: o conforto de duas pessoas que reconhecem condições herdadas que não precisam ser explicadas.
+**Sai'ken Exsydra** — O operador de segurança da propriedade. A relação entre os dois desenvolveu ao longo de dois Imperial Years uma intimidade silenciosa que nenhum deles nomeou: o conforto de duas pessoas que reconhecem condições herdadas que não precisam ser explicadas.
 
 **Renya Kirasagi** — Seu irmão mais velho, ainda em Tsukimiya, ainda se recuperando da crise de Overbloom que tornou sua partida necessária. Ela não sabe seu estado atual além das informações transmitidas nas correspondências anteriores à viagem.
 
@@ -176,7 +176,7 @@ Se a Flower for identificada, Hisui continua sendo residente estrangeira protegi
 
 ## Condição Atual — 2200
 
-Hi'sui está em Kalt'sen há dois anos. A Flower não se manifestou externamente nenhuma vez. O Murmuring está, segundo ela mesma e também segundo inferências feitas a partir de seu comportamento, mais silencioso do que jamais esteve. Ela não sabe o motivo. Apenas sabe que é verdade.
+Hi'sui está em Kalt'sen há dois Imperial Years. A Flower não se manifestou externamente nenhuma vez. O Murmuring está, segundo ela mesma e também segundo inferências feitas a partir de seu comportamento, mais silencioso do que jamais esteve. Ela não sabe o motivo. Apenas sabe que é verdade.
 
 Ela não está procurando nada. Está servindo uma casa na qual entrou através de canais muito mais complexos do que aparentam, cuidando de alguém cuja condição ela não entende completamente, mas cuja presença — por motivos que ela não consegue nomear — faz o organismo vivendo dentro dela sentir algo semelhante à sensação de permanecer imóvel dentro de água parada.
 

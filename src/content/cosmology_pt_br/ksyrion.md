@@ -48,8 +48,8 @@ Quando a Fracture rompeu essa completude, a descoberta passou a ser possível de
 
 A Fracture quebrou mais do que pedra lunar.
 
-Ela encerrou a manutenção viva dos Skyphons, rompeu todos os acoplamentos Obscurials completos e quebrou Ksy'rion como **céu explicativo completo**. Todos os doze Obscurials reais desapareceram da configuração lunar; os restos danificados e nativos da Página de Ksy'rion continuaram integrando a Crown ferida.
+Ela encerrou a manutenção viva dos Skyphons, rompeu todos os acoplamentos Obscurials completos e quebrou Ksy'rion como **céu explicativo completo**. Todos os doze corpos verdadeiros Obscurials foram desassentados da configuração lunar, embora as mesmas pessoas Skyphon tenham sobrevivido à falha inicial para além de seus endereços perdidos. Os restos danificados e nativos da Página de Ksy'rion continuaram integrando a Crown ferida.
 
 O mundo não perdeu apenas uma máquina defensiva. Perdeu também o céu que, até então, ensinava o que o próprio céu era.
 
-É por isso que a astronomia antiga se tornou instável em um sentido muito mais profundo do que simples dano instrumental: o céu deixou de devolver as respostas antigas. Ksy'rion continua sendo parte da [[lunar-crown|Lunar Crown]] que torna a ferida sobrevivível, sem conter os Obscurials desaparecidos.
+É por isso que a astronomia antiga se tornou instável em um sentido muito mais profundo do que simples dano instrumental: o céu deixou de devolver as respostas antigas. Ksy'rion continua sendo parte da [[lunar-crown|Lunar Crown]] que torna a ferida sobrevivível, sem conter os próprios Skyphons desassentados.

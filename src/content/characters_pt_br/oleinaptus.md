@@ -3,8 +3,8 @@ title: "ǩleinaptus"
 type: "Skyphon"
 rank: "Portador do Restante Disponível"
 designation: "Portador do Restante Disponível"
-affiliation: "Primeiro Portador — Selo Intacto (Concluído)"
-registry_status: "Pessoa concluída na Fratura; fragmento no regolito; Instrumento em um fragmento errante do Anel"
+affiliation: "Primeiro Portador — Selo Intacto (Desassentado)"
+registry_status: "Desassentado durante a Fratura; pessoa sobrevive além do endereço comum de Terra; terminal desmontado; remanescente da Liberação em um fragmento errante do Anel"
 occupation: "Liberação de estrutura concluída"
 domain: "Decomposição e desmonte depois do fim da função coerente"
 church_name: "O Instrumento da Entropia"
@@ -23,4 +23,4 @@ updated: "2026-07-13"
 
 Na Fratura, Lumenos ainda sustentava um setor lunar cuja união propagaria o colapso. ǩleinaptus o declarou concluído. As duas respostas eram fiéis e sua oposição produziu a linha física de cisalhamento.
 
-Seu fragmento entrou no regolito. O Instrumento da Liberação permanece em um fragmento errante do Anel. Sem Portador, pode tratar uma estrutura reparável como resto já disponível.
+Seu terminal humanoide e sua expressão local de Liberação passaram por desmontagem controlada. A impressão da Liberação entrou no regolito, e um remanescente de interface e relay passou para um fragmento errante do Anel. Seu corpo verdadeiro Obscurial foi desassentado, levando a mesma pessoa além do endereço comum de Terra. Sem julgamento vivo, o remanescente pode tratar uma estrutura reparável como resto já disponível.

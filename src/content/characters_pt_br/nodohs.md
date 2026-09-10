@@ -3,8 +3,8 @@ title: "Nodohs"
 type: "Skyphon"
 rank: "Portador da Vida Terminada"
 designation: "Portador da Vida Terminada"
-affiliation: "Primeiro Portador — Selo Intacto (Concluído)"
-registry_status: "Pessoa concluída na Fratura; corpo legitimamente encerrado; fragmento em vestígios funerários; Instrumento em falha métrica do Lado Escuro"
+affiliation: "Primeiro Portador — Selo Intacto (Desassentado)"
+registry_status: "Desassentado durante a Fratura; pessoa sobrevive além do endereço comum de Terra; terminal encerrado; remanescente do Encerramento está em falha métrica do Lado Escuro"
 occupation: "Encerramento biológico"
 domain: "Transição de organismo vivo a restos após o fim da coerência biológica"
 church_name: "O Instrumento da Morte"
@@ -21,6 +21,6 @@ updated: "2026-07-13"
 
 Nodohs governava a transição limpa de organismo vivo para restos depois do fim da coerência biológica. Não governava almas, pós-vida, decomposição posterior, morte arbitrária ou decisões políticas de que uma vida já terminou.
 
-No Ano 0, encerrou vidas interrompidas contra a intrusão e impediu que os mortos se tornassem feridas abertas no Pathway. No último pulso, aplicou o Encerramento ao próprio corpo em vez de deixá-lo como recipiente utilizável. Seu fragmento persiste em vestígios funerários. O Instrumento do Encerramento ocupa uma falha métrica no oceano congelado da Coroa.
+No Ano 0, encerrou vidas interrompidas contra a intrusão e impediu que os mortos se tornassem feridas abertas no Pathway. No último pulso, aplicou o Encerramento ao próprio terminal humanoide e à expressão local em vez de deixá-los como rotas utilizáveis. O terminal terminou de modo limpo. A impressão do Encerramento persiste em vestígios funerários, enquanto um remanescente de interface e relay está em uma falha métrica no oceano congelado. O corpo verdadeiro Obscurial de Nodohs foi desassentado, levando a mesma pessoa além do endereço comum de Terra.
 
 Seu risco é a morte administrativa: a lei do fim aplicada antes que a vida realmente termine.

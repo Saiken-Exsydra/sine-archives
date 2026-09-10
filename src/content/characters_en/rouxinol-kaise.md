@@ -2,14 +2,14 @@
 title: "Rouxinol Kaise"
 type: "Character"
 
-age: "27 (as of Year 2200)"
-birth_year: "2173"
+age: "27 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2188"
 birthplace: "Vel'hara"
 
 affiliation: "Independent; registered with the Apocachynthion"
 house: "None"
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
-registry_status: "Registered — compelled intake 2192; dual certification issued 2197; Mark 4 active under sealed Margins"
+registry_status: "Registered — compelled intake c. 2197; dual certification issued c. 2199; Mark 4 active under sealed Margins"
 
 point_profile:
   status: "Academy-issued; carried"
@@ -65,7 +65,7 @@ She is twenty-seven, unaffiliated with any House, and unusually difficult to rec
 
 The distinction matters.
 
-She was born inside an institution that considered her useful before it considered her free. She later spent years in a mercenary circuit, was forcibly brought into the imperial Redactor registry, and then completed five years of formal training under an Academy programme built specifically because the existing system had no category for what she was doing.
+She was born inside an institution that considered her useful before it considered her free. She later spent years in a mercenary circuit, was forcibly brought into the imperial Redactor registry, and then completed five Lunar Years of formal training under an Academy programme built specifically because the existing system had no category for what she was doing.
 
 What emerged from that history is not an anti-institutional romantic. Rouxinol keeps her registration current. She reports her contracts. She attends required assessments. She follows agreements she has actually accepted.
 
@@ -115,7 +115,7 @@ There are subjects around which her discipline visibly tightens rather than rela
 
 ## Background
 
-Rouxinol was born in Year 2173 within the custody of the **Corvel Institute**, a private research organization operating under Vel'haran commercial charter beyond Apocachynthion jurisdiction.
+Rouxinol was born c. Imperial Year 2188 within the custody of the **Corvel Institute**, a private research organization operating under Vel'haran commercial charter beyond Apocachynthion jurisdiction.
 
 Vel'hara is an independent western city-state positioned between larger political powers and useful partly because neither has historically wanted the complications of absorbing it. Corvel exploited that freedom. Publicly, it studied unusual Redactory phenomena in structurally thin regions. Privately, it retained subjects without ordinary legal process and conducted research outside recognized academic oversight.
 
@@ -131,7 +131,7 @@ For the next decade, Corvel studied her.
 
 The distinction between study and overt physical abuse matters to the record and did very little to make the arrangement humane. Rouxinol grew up under observation, testing, controlled Redactory exercises, and institutional interest in an internal structure Corvel could detect but could not fully reproduce or explain.
 
-At fourteen, during an incident involving another subject in an adjacent facility, she escaped. Corvel's primary outer-plateau research building sustained extensive structural damage. The surviving records do not establish a clean account of exactly what happened, and Rouxinol does not provide one.
+At fourteen Lunar Years, during an incident involving another subject in an adjacent facility, she escaped. Corvel's primary outer-plateau research building sustained extensive structural damage. The surviving records do not establish a clean account of exactly what happened, and Rouxinol does not provide one.
 
 By fifteen, she had reached Hora'veil's outer district and entered the grey-space contractor world.
 
@@ -139,19 +139,19 @@ There she met **Aldric Vonn**, a former House security officer who had rebuilt h
 
 It was lack of a life in which power belonged to her.
 
-Over four years, Vonn trained her in operational discipline, threat assessment, contract judgment, and close combat. He also gave her the long-bladed artifact she still carries.
+Over four Lunar Years, Vonn trained her in operational discipline, threat assessment, contract judgment, and close combat. He also gave her the long-bladed artifact she still carries.
 
-In Year 2191, Rouxinol's unregistered work finally attracted the Pagers, the Apocachynthion's internal enforcement arm. A field incident in Hora'veil involved one civilian death, localized structural thinness, and two simultaneous Redactory signatures apparently originating from one person.
+C. Imperial Year 2196, Rouxinol's unregistered work finally attracted the Pagers, the Apocachynthion's internal enforcement arm. A field incident in Hora'veil involved one civilian death, localized structural thinness, and two simultaneous Redactory signatures apparently originating from one person.
 
 That last detail made the case impossible to file as ordinary illegal practice.
 
 The Pagers located her within six weeks. The apprehension injured two of them, one through an effect the incident system did not possess a category for. After the initial confrontation, Rouxinol cooperated. She spent forty-one days in holding while the Academy tried to determine what, exactly, it had apprehended.
 
-Formal intake followed in 2192.
+Formal intake followed c. Imperial Year 2197.
 
-Five years of training followed that.
+Five Lunar Years of training followed that.
 
-In 2197, the Council of Volumes certified her as a Stylus through Mirror and a Quill through Threshold, not because the institution believed this completely explained her, but because leaving one confirmed Anchor legally unranked created an even worse problem.
+C. Imperial Year 2199, the Council of Volumes certified her as a Stylus through Mirror and a Quill through Threshold, not because the institution believed this completely explained her, but because leaving one confirmed Anchor legally unranked created an even worse problem.
 
 Since certification, Rouxinol has worked independently under a conditional Mark. She takes contracts, completes them, and declines recruitment that would convert useful cooperation into permanent institutional claim.
 
@@ -207,7 +207,7 @@ That difference is technically enormous and emotionally rather less comforting.
 
 Rouxinol was a close-operations specialist before the Academy ever certified her.
 
-Her combat training began under Corvel's controlled programmes, became practical under Aldric Vonn, and was later regularized through five years of lawful Academy hostile-condition assessment. The result is a fighting style built less around overwhelming force than around reading what a situation is becoming before everyone else has finished reacting to what it was.
+Her combat training began under Corvel's controlled programmes, became practical under Aldric Vonn, and was later regularized through five Lunar Years of lawful Academy hostile-condition assessment. The result is a fighting style built less around overwhelming force than around reading what a situation is becoming before everyone else has finished reacting to what it was.
 
 Threshold gives her unusually good environmental warning. Active Dive, resonance disturbance, structural instability, and thinness can announce themselves to her before they become obvious to an ordinary combatant.
 
@@ -249,7 +249,7 @@ The secondary structure currently holds eleven.
 
 No known mechanism can release one.
 
-Continued accumulation is expected eventually to degrade the coherence of the secondary loop, but the rate and failure state cannot be predicted. Rouxinol has not added to the count since 2197.
+Continued accumulation is expected eventually to degrade the coherence of the secondary loop, but the rate and failure state cannot be predicted. Rouxinol has not added to the count since Imperial Year 2199.
 
 The record does not establish why.
 
@@ -301,7 +301,7 @@ Rouxinol is aware that it may.
 
 Aldric Vonn is the person who taught Rouxinol how to turn capability into choice.
 
-He found her as a teenager in the grey-space contractor world and trained her for four years. He taught threat assessment, contract judgment, close operations, and the practical limits of Redactors from the perspective of a man who was not one himself.
+He found her as a teenager in the grey-space contractor world and trained her for four Lunar Years. He taught threat assessment, contract judgment, close operations, and the practical limits of Redactors from the perspective of a man who was not one himself.
 
 He also gave her the blade that became inseparable from the most dangerous part of her later Redactory.
 
@@ -323,8 +323,8 @@ The uncertainty remains one of several unresolved absences Rouxinol carries with
 
 ## Registry Summary
 
-**Registry Status:** Registered; compelled intake completed in 2192.  
-**Rank:** Stylus through Mirror / Quill through Threshold; concurrent dual certification issued in 2197.  
+**Registry Status:** Registered; compelled intake completed c. Imperial Year 2197.
+**Rank:** Stylus through Mirror / Quill through Threshold; concurrent dual certification issued c. Imperial Year 2199.
 **Anchor:** Mirror / Threshold.  
 **Anchor Depth:** Mirror confirmed Deep; Threshold under formal Abyssal review.  
 **Mark:** Mark 4 under sealed Margins.  
@@ -380,7 +380,7 @@ It also means every retained impression is permanent by all methods currently kn
 
 No release procedure exists.
 
-The secondary loop has carried eleven since 2197.
+The secondary loop has carried eleven since Imperial Year 2199.
 
 Specialists expect further accumulation eventually to damage its coherence, but they cannot say at what number, how quickly, or what failure would look like. Rouxinol has therefore lived for three years with a weapon capable of adding to a library she may never be able to subtract from.
 

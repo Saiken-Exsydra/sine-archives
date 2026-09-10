@@ -1,7 +1,7 @@
 ---
 title: "O Calendário e o Céu Civil de Terra"
 type: "Cosmologia"
-summary: "Como um dia lunar projetado, uma órbita de 833 dias, meses herdados e seis estações desiguais organizam a vida sob a Lunar Crown."
+summary: "Como um dia lunar projetado, um Lunar Year de 365 dias, um Imperial Year de 833 dias, meses herdados e seis estações desiguais organizam a vida sob a Lunar Crown."
 tags: ["Cosmology", "Terra", "Calendar", "Lunar Crown", "Imperial Calendar", "Civil Sky", "Seasons", "Kalt'sen"]
 status: "public"
 created: "2026-08-14"
@@ -21,6 +21,8 @@ A órbita diária da Crown não é um mês, e a Crown não exibe uma sequência 
 
 ## O ano civil fixo
 
+Terra mantém três relógios independentes. A órbita projetada da Crown pelo céu produz o **dia civil** de aproximadamente vinte e quatro horas. A rotação axial da Crown leva exatamente **365 dias** e define o **Lunar Year (LY)** usado para idade humana, aniversários, desenvolvimento biológico e datas pessoais. A órbita de Terra ao redor de Vael'Khar leva exatamente **833 dias** e define o **Imperial Year (IY)** usado pelo calendário civil e histórico.
+
 O Imperial Calendar contém exatamente:
 
 - **833 dias civis**;
@@ -29,6 +31,8 @@ O Imperial Calendar contém exatamente:
 - **seis estações orbitais desiguais**.
 
 O ano começa à meia-noite antes de **1 Janvar**, o limite de aniversário atribuído à Fracture. A Fracture é o Ano 0; Selia é o Ano 1025; a fundação do Império é o Ano 1026. Uma data formal é escrita **17 Marten 2200 IC**, onde IC significa Imperial Calendar.
+
+Um **Ano ####** numerado é Imperial, salvo indicação de outra unidade. Uma idade pessoal comum é Lunar, salvo qualificação expressa. O momento do nascimento é registrado por data civil Imperial, mas aniversários se repetem a cada 365 dias e por isso mudam de posição entre os meses e dias Imperiais. Não existe um segundo conjunto de meses lunares.
 
 ## Semana e meses
 

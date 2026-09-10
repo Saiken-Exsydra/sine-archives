@@ -1,8 +1,8 @@
 ---
 title: "Daniel Degurechaff"
 type: "Character"
-age: "98 (at time of filing, 2200); appears late twenties to early thirties"
-birth_year: "2102"
+age: "98 Lunar Years (at time of filing, Imperial Year 2200); appears late twenties to early thirties"
+birth_year: "c. Imperial Year 2157"
 birthplace: "Kovansk, Western Furnace District, Ardeatus"
 affiliation: "Joint Custody Secretariat of the Marta Chord; Ardeatan diplomatic residence in the Empire"
 house: ""
@@ -74,9 +74,9 @@ He is also one of those rare officials whose attention is a form of care. He kno
 
 Daniel was trained inside the Ardeatan system he now spends much of his life correcting. He did not begin as a rebel. He became dangerous to that system by becoming too accurate inside it.
 
-The turning point was **Marta Vesk**, an eleven-year-old child killed in **2154** after officials used the wrong doctrine and the wrong containment response on a Redactory emergence. Daniel protested. The protest was buried.
+The turning point was **Marta Vesk**, an eleven-Lunar-Year-old child killed in **Imperial Year 2180** after officials used the wrong doctrine and the wrong containment response on a Redactory emergence. Daniel protested. The protest was buried.
 
-Instead of walking away, he started collecting proof that Marta was not a one-time tragedy. That archive eventually helped force the political negotiations that produced the **Marta Chord**, ratified in **2171**.
+Instead of walking away, he started collecting proof that Marta was not a one-time tragedy. That archive eventually helped force the political negotiations that produced the **Marta Chord**, ratified in **Imperial Year 2187**.
 
 ## Apocachynthion Registry Position
 

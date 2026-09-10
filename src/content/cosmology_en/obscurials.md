@@ -1,36 +1,74 @@
 ---
 title: "The Obscurials"
 type: "Cosmology"
-summary: "Twelve unmade, grammar-exterior vestiges once made locally addressable within Terra's Intact Seal—and absent since the Fracture."
+summary: "Twelve grammar-exterior true bodies that entered Vael'Khar, became the persons called Skyphons through life with Terra, and were unseated during the Fracture."
 tags: ["Cosmology", "Obscurials", "Intact Seal", "Twelvefold Grammar", "Skyphons", "Precursors", "Lunar Crown", "Fracture", "Grammar-Exterior"]
 status: "public"
 created: "2026-08-14"
-updated: "2026-08-14"
+updated: "2026-08-31"
 image: ""
 ---
 
 > *"The Intact Seal was built. The Obscurials were not."*
 > — restricted structural maxim
 
----
-
 ## What the Name Describes
 
-An **Obscurial** is a vestige or contact-object associated with something that cannot be reduced to the native grammar of a Page, Chapter, or Book. The protected term for that classification is **grammar-exterior**.
+An **Obscurial** is one of twelve physically real, profoundly nonhuman true bodies whose origin cannot be reduced to the native grammar of a Page, Chapter, or Book. The protected term for that condition is **grammar-exterior**.
 
-Exterior does not mean a place outside the Archive. The Archive has no outer shore. It means that the Obscurial's origin and identity cannot be explained as another Page-born creature, a Primordial fragment, a divine relic, or a Precursor construction.
+The name describes what kind of being it is and what its true body is. **Skyphon** describes who that same being became through sustained life with Terra. Sciel is an Obscurial and Sciel is a Skyphon: those statements describe body and person, not two beings joined together.
 
-No known agency made the Obscurials. Not the Precursors. Not Terra. Not the Page Primordial. Not the Sovereign. Even calling them deliberate creations would claim more about their unknown source than the evidence permits.
+The distinction still matters. The twelve did not enter Vael'Khar as demonstrably finished personalities with the names later preserved by the [[the-church|Church]]. Personhood developed through duration, memory, interpretation, disagreement, affection, responsibility, and repeated contact with Terra's peoples.
 
-The guarded name **Obscura** is sometimes used for that source. It is a label for an unanswered question, not the name of a confirmed god, species, mind, or civilization.
+## What Is Known About Their Arrival
 
----
+The twelve Obscurial true bodies physically entered the Vael'Khar system. Their entry is an ordered event that [[time|Time]] can place before Precursor detection, Seat construction, the mature Twelvefold era, and the Fracture.
 
-## Why There Were Twelve
+Time cannot follow any of them backward beyond that entry. It cannot establish where they existed before arrival, what created them, whether creation is the right concept, or what causal history preceded local contact. The surviving mystery is therefore precise: **Terra knows when they entered the system, but not where they came from.**
 
-Terra encountered twelve genuinely distinct relations and made all twelve locally addressable. That does not prove that the unknown source has twelve parts. **Twelve describes Terra's complete local grammar, not the anatomy of whatever lies behind the vestiges.**
+The record does not establish whether all twelve entries were simultaneous.
 
-The relations were arranged as four mutually limiting phrases:
+## What the Precursors Built
+
+The [[precursors|Precursors]] encountered the true bodies. They did not manufacture them. They built the enormous lunar **Seats** that made a bounded relationship possible.
+
+| Seat function | What it accomplished |
+|---|---|
+| **Localization** | Gave one Obscurial a stable Page-local address |
+| **Translation** | Made a limited relation intelligible inside Terra's grammar |
+| **Constraint** | Prevented unrestricted foreign expression |
+| **Jurisdiction** | Allowed one Principle to operate lawfully within a bounded field |
+| **Co-address** | Joined body, Terra, interface, All-Mother, and terminal |
+| **Twelvefold participation** | Let all twelve relations limit one another |
+
+The Precursors also built humanoid **terminals**. A terminal was the same Skyphon's Terra-facing body: a social form with voice, face, hands, senses, clothing, and a presentation the person could gradually make their own. It was not a second mind, a clone, an artificial intelligence, or the true body.
+
+## How a Skyphon Relation Worked
+
+The Page Primordial supplied local grammatical authorization. The Precursors supplied the Seat and interface. The All-Mother supplied living planetary acceptance. The Obscurial supplied the foreign true body and the developing person.
+
+```mermaid
+flowchart TD
+  Body["OBSCURIAL TRUE BODY"] --> Person["SKYPHON PERSON"]
+  Person --> Seat["LUNAR SEAT / INTERFACE"]
+  Person --> Terminal["HUMANOID TERMINAL"]
+  Page["PAGE-NATIVE AUTHORIZATION"] --> Relation["PRINCIPLE + JURISDICTION"]
+  Mother["ALL-MOTHER ACCEPTANCE"] --> Relation
+  Seat --> Relation
+  Relation --> Twelvefold["TWELVEFOLD PARTICIPATION"]
+```
+
+These terms made lawful relationship possible. They did not assemble the person from separate parts.
+
+## Principle, Directive, and Jurisdiction
+
+A **Principle** was the bounded Terra-local relation through which one Obscurial became intelligible. It was not the being's complete native ontology.
+
+A **Directive** became constitutive of the developed Skyphon's identity: the enduring imperative through which the person interpreted responsibility.
+
+A **Jurisdiction** was the field in which the complete Seat–Terra relation made that Directive lawfully executable. A Skyphon could retain memory and Directive after losing the Seat without retaining authority over Terra.
+
+The twelve Principles formed four mutually limiting phrases:
 
 | Phrase | Principles |
 |---|---|
@@ -39,71 +77,26 @@ The relations were arranged as four mutually limiting phrases:
 | **Return** | Conversion, Closure, Release |
 | **Becoming** | Selfhood, Consequence, Attainment |
 
-No Principle was allowed to become total. Each remained lawful because the other eleven denied it sole sovereignty over the world.
+## What the Fracture Destroyed
 
----
+The Fracture destroyed the twelve Terra-local relationships, not the twelve people.
 
-## What Terra Built Around Them
+Seats ruptured, disconnected, sheared, or lost phase. Terminals and other local expressions suffered twelve distinct catastrophic endings. The All-Mother lost living co-address. Jurisdictions ceased. The true bodies became **unseated**: physically released while also losing the architecture that made their location and contact locally well-behaved.
 
-The Precursors could date their first detection of the Obscurials. They could not establish an arrival, first state, age, or ordinary origin. Their achievement was not solving that mystery. It was engineering a safe local relationship with it.
+All twelve Skyphons survived initial unseating. Their trail crossed a wider celestial crisis involving Heaven, Hell, the Pathway, Seraphic authority, and the Abyssal inverse. Three Seraphim disappeared beyond the accessible Firmament in connection with that trajectory. Seven remain contactable as the **Seven Answers**. Beyond the crisis, the Skyphons' present address, condition, and grouping are unknown.
 
-The Page Primordial supplied localized native-syntax density. The Precursors built lunar seats, interfaces, relays, constraint systems, and living bodies. Terra accepted the relation as a living world. Together, those elements made twelve foreign contacts usable without making them native.
+## What Modern Instruments Contain
 
-The resulting **Intact Seal** joined:
+The [[lunar-crown|Lunar Crown]], White Desert, Ardeatan relic field, Nearc, Clepsydra, and other custodial sites preserve real Seat components, interfaces, relays, terminal traces, regulation systems, and resonance scars. Institutions may sincerely call these remains **Instruments**.
 
-- twelve actual Obscurials seated within the Moon;
-- twelve Page-local interfaces and seats;
-- the complete Twelvefold grammar;
-- the [[the-first-bearers|Skyphons]] as living interpreters;
-- Terra and Page-Primordial participation;
-- Ksy'rion and the wider Precursor stabilization architecture.
-
-The seats, interfaces, Ksy'rion, Skyphon bodies, and later lunar macro-Anchor were engineered. None of them was an Obscurial.
-
----
-
-## The Skyphons Were Interpreters
-
-Each Skyphon emerged through four joined relations: localized Page syntax, a Precursor constraint body, one co-addressed Obscurial relation through its lunar seat, and Terra's acceptance.
-
-The result was a person, not a possessed shell. A Bearer interpreted a Principle inside lived conditions, exercised judgment, and could refuse an instruction that violated the Directive. No evidence establishes that the unknown exterior source spoke through, controlled, or possessed any Skyphon.
-
-Living interpretation was the safety condition. The foreign invariant could participate in a world of persons without expressing itself as blind and absolute law.
-
----
-
-## What Vanished at the Fracture
-
-During the Fracture, **all twelve actual Obscurials vanished from the lunar configuration**. Their seats lost complete coupling, the Bearer co-addresses failed, the Page-native interfaces broke in unequal ways, and the Moon sheared.
-
-Their absence is established. Its mechanism is not. Nothing currently proves where they went, whether they remain together, whether they were moved, or whether location is even the right category for their present condition.
-
-The [[lunar-crown|Lunar Crown]] still contains the fragment, Ring, macro-Anchor, damaged seats and relays, residual Twelvefold topology, Ksy'rion's remains, and Syr'lene's living containment address. **It contains no actual Obscurial.**
-
----
-
-## Why “Instruments” Still Appear
-
-Modern institutions continue to use **Instrument of the Intact Seal** in two different senses. Older records may mean a seated Obscurial understood through its Principle. Post-Fracture speech often means an interface core, relay, address remnant, field, scar, or ritual site left by the system that once contacted it.
-
-That ambiguity shaped real religions and nations. The White Desert's Legibility remnant and Ardeatus's Conversion remnant are potent inheritances of the old interface architecture. They are not the vanished Obscurials themselves.
-
-The same distinction applies to the Callings. The wounded Crown still remembers twelve unequal jurisdictions, so pressure passes through twelve recurring families. Those patterns are neither Obscurial speech nor messages from the dead Bearers.
-
----
+They do not contain sleeping Skyphons or actual Obscurial bodies. Rebuilding a terminal would not call its person back. Any genuine attempt to reconnect or re-seat a Skyphon would require a complete lawful relation that no modern institution can safely reproduce—and a damaged address path on which something else might answer.
 
 ## Boundaries That Matter
 
-The Obscurials are not the Quiet Moon. Both confront Terra with radically foreign grammar, but they have no established shared source or causal system.
+The Obscurials are not the Quiet Moon, Primordials, gods, angels, Seraphim, demons, or fragments of the Sovereign. Heaven and Hell are not their homelands.
 
-They are also not the Sovereign or the origin of His angels and demons. The Sovereign is an exceptional cross-Page god. His celestial and Abyssal lines remain expressions of Sovereign identity, not Obscurial descent.
-
-Grammar-exterior does not mean omnipotent. It describes provenance that Page grammar cannot fully contain, not command over the Archive or automatic victory over every local Authority.
-
-For that distinction, see [[syntax-authority|Syntax Authority and Recursive Sovereignty]].
-
----
+The Sovereign's Seraphic forms can resemble Obscurial morphology because divine expression became locally coherent in a world already shaped by the Twelvefold. This is structural refraction, not ancestry. Demons remain fragments of the Sovereign's Abyssal inverse; a limited number of genuine fallen angels exist, but demonkind did not descend from them.
 
 ## In One Sentence
 
-The Obscurials are twelve unmade, grammar-exterior vestiges that Terra once addressed through the Intact Seal, all absent since the Fracture while their damaged interfaces continue to shape the world.
+The Obscurials are the twelve foreign true bodies that became the Skyphon persons through life with Terra, survived the destruction of their local Seats, and now remain beyond accessible address.

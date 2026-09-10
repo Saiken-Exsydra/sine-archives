@@ -127,8 +127,8 @@ This distinction is the spine of the character.
 | Field | Canonical Entry |
 |---|---|
 | **Full Name** | Ec'lesia Yalara Wonderwall |
-| **Year of Birth** | 2178 |
-| **Age in 2200** | 22 |
+| **Year of Birth** | c. Imperial Year 2190 |
+| **Age in Imperial Year 2200** | 22 Lunar Years |
 | **Birthplace** | Kalt'sen, Central Region, Empire of Synus |
 | **House** | House Wonderwall, Yalara cadet branch |
 | **Branch Status** | Full Wonderwall descent; no automatic primary-line office or executive authority |
@@ -1452,4 +1452,3 @@ For future development, the following statements are controlling:
 - The circumstances can be arranged without determining what the relationships become.
 - Ec'lesia's mature position is voluntary integration: she may accept the role while rejecting anyone else's claim to own it.
 - Her identity/interval/Archive material supports the character theme; it is not a substitute for the character theme.
-

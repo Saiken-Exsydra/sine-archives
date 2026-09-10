@@ -1,13 +1,13 @@
 ---
 title: "Rouxinol Kaise"
 type: "Personagem"
-age: "27 (na época do registro, 2200)"
-birth_year: "2173"
+age: "27 Lunar Years (na época do registro, Imperial Year 2200)"
+birth_year: "c. Imperial Year 2188"
 birthplace: "Vel'hara, faixa oeste (custódia do Corvel Institute)"
 affiliation: "Contratada independente (licenciada pelo Apocachynthion)"
 house: ""
 rank: "Stylus (Mirror Anchor) / Quill (Threshold Anchor)"
-registry_status: "Registrada — intake compulsório em 2192; certificação dupla em 2197; licença condicional ativa"
+registry_status: "Registrada — intake compulsório c. Imperial Year 2197; certificação dupla c. Imperial Year 2199; licença condicional ativa"
 point_profile:
   status: "Emitido pela Academy; carregado; interface de artefato restrita registrada separadamente"
   cas_access: "CAS básico; CAS profissional e marcial sob Margins seladas de Mark 4"
@@ -44,7 +44,7 @@ Dentro de Vel'hara, operando sob uma carta comercial vel'harana, existe uma orga
 
 Rouxinol Kaise nasceu sob custódia do Corvel Institute. Sua mãe — registrada nos arquivos do instituto como Sael Kaise, origem não verificada — foi identificada durante uma triagem de sensibilidade estrutural próxima de um evento de Thinness no planalto externo e mantida como sujeito de interesse. Ela já estava grávida naquele momento.
 
-Sael Kaise morreu quando Rouxinol tinha quatro anos. O registro do instituto lista falência respiratória. Rouxinol não acredita nisso. Ela não possui provas do contrário. Carrega essa dúvida há vinte e três anos.
+Sael Kaise morreu quando Rouxinol tinha quatro anos. O registro do instituto lista falência respiratória. Rouxinol não acredita nisso. Ela não possui provas do contrário. Carrega essa dúvida há vinte e três Lunar Years.
 
 ---
 
@@ -54,11 +54,11 @@ Sael Kaise morreu quando Rouxinol tinha quatro anos. O registro do instituto lis
 
 Rouxinol Kaise possui duas certificações de rank ativas ao mesmo tempo — Stylus em sua Mirror Anchor e Quill em sua Threshold Anchor. Não existe precedente registrado disso nos arquivos do Apocachynthion.
 
-A progressão normal de rank assume uma única Anchor estabilizadora, aprofundada ao longo de anos de prática. Uma Redactor com dois caminhos de Anchor independentes e funcionais — ambos capazes de sustentar um Dive sem entrar em Overreach, ambos estabilizados em torno de âncoras conceituais distintas — simplesmente não se encaixa no modelo atual. O Council of Volumes, após a revisão formal de certificação em 2197, adicionou uma observação oficial reconhecendo que a certificação dupla foi atribuída apenas como a representação institucional mais próxima disponível para uma condição estrutural anômala, e não como prova de que o sistema atual realmente consegue descrever o que essa indivíduo é.
+A progressão normal de rank assume uma única Anchor estabilizadora, aprofundada ao longo de anos de prática. Uma Redactor com dois caminhos de Anchor independentes e funcionais — ambos capazes de sustentar um Dive sem entrar em Overreach, ambos estabilizados em torno de âncoras conceituais distintas — simplesmente não se encaixa no modelo atual. O Council of Volumes, após a revisão formal de certificação c. Imperial Year 2199, adicionou uma observação oficial reconhecendo que a certificação dupla foi atribuída apenas como a representação institucional mais próxima disponível para uma condição estrutural anômala, e não como prova de que o sistema atual realmente consegue descrever o que essa indivíduo é.
 
 ### Stylus (Mirror Anchor)
 
-Sua elevação ao rank de Stylus na Mirror Anchor foi concedida em 2197, após uma revisão formal de todo o histórico operacional da indivíduo desde o intake compulsório em 2192, cinco anos de treinamento estruturado na Academia e o testemunho acumulado de quatro membros rank Stylus que observaram seu trabalho de Mirror Anchor em condições reais de operação.
+Sua elevação ao rank de Stylus na Mirror Anchor foi concedida c. Imperial Year 2199, após uma revisão formal de todo o histórico operacional da indivíduo desde o intake compulsório c. Imperial Year 2197, cinco Lunar Years de treinamento estruturado na Academia e o testemunho acumulado de quatro membros rank Stylus que observaram seu trabalho de Mirror Anchor em condições reais de operação.
 
 A revisão não ocorreu sem oposição. Dois membros do Conselho votaram contra a promoção sob o argumento de que a interação entre as operações profundas da Mirror Anchor e o roteamento simultâneo da Threshold Anchor cria instabilidades que a certificação padrão de Stylus não cobre. A posição majoritária concluiu que, analisado isoladamente, o desempenho de sua Mirror Anchor atendia — ou superava — os critérios do Conselho.
 
@@ -66,7 +66,7 @@ Ela carrega a insígnia de Stylus modificada com a marca de certificação dupla
 
 ### Quill (Threshold Anchor)
 
-A certificação da Threshold Anchor foi emitida simultaneamente à promoção para Stylus em 2197. A Threshold Anchor foi identificada durante o intake em 2192, mas não foi completamente mapeada até 2195 — três anos após o início de seu programa de treinamento. Isolar sua atividade da interferência simultânea da Mirror Anchor foi o principal desafio metodológico daquele período inicial. O protocolo de isolamento criado pela Academia para este caso não possui precedente metodológico anterior.
+A certificação da Threshold Anchor foi emitida simultaneamente à promoção para Stylus c. Imperial Year 2199. A Threshold Anchor foi identificada durante o intake c. Imperial Year 2197, mas não foi completamente mapeada até c. Imperial Year 2198 — três Lunar Years após o início de seu programa de treinamento. Isolar sua atividade da interferência simultânea da Mirror Anchor foi o principal desafio metodológico daquele período inicial. O protocolo de isolamento criado pela Academia para este caso não possui precedente metodológico anterior.
 
 ---
 
@@ -89,8 +89,8 @@ A certificação da Threshold Anchor foi emitida simultaneamente à promoção p
 **Reach:** Wide Reach  
 **Overreach History:** Risco de Overreach simultâneo nas duas Anchors sob revisão  
 **Apparatus Permissions:** Martial Apparati sob Margins seladas de Mark 4; artefato restrito registrado separadamente  
-**Registration Tenure:** 8 anos  
-**Academy Record:** Intake compulsório em 2192; formação de trilha dupla; certificação dupla em 2197  
+**Registration Tenure:** 8 Lunar Years
+**Academy Record:** Intake compulsório c. Imperial Year 2197; formação de trilha dupla; certificação dupla c. Imperial Year 2199
 **Practice Record:** Trabalho de campo como contratada sob revisão especialista  
 **[[blots|Blots]]:** Intake compulsório iniciado após incidente de dual-routing pré-registro; uma morte civil no relatório original de campo  
 **Pager Note:** Review  
@@ -110,7 +110,7 @@ Segundo o Index Theorem, a Redactory classe Mirror é entendida como uma Redacto
 
 ### Threshold Anchor
 
-A Threshold Anchor não corresponde a nenhuma classe nomeada no registro padrão do Index Theorem. A classificação provisória “Threshold” foi atribuída pelo painel de intake de 2192 apenas para fins descritivos internos e registrada formalmente em 2195. Dentro das estruturas teóricas disponíveis do Index Theorem, essa Anchor aparenta se estabilizar através de alinhamento conceitual com condições de fronteira — propriedades estruturais de estados em transição, margens entre configurações estáveis.
+A Threshold Anchor não corresponde a nenhuma classe nomeada no registro padrão do Index Theorem. A classificação provisória “Threshold” foi atribuída pelo painel de intake c. Imperial Year 2197 apenas para fins descritivos internos e registrada formalmente c. Imperial Year 2198. Dentro das estruturas teóricas disponíveis do Index Theorem, essa Anchor aparenta se estabilizar através de alinhamento conceitual com condições de fronteira — propriedades estruturais de estados em transição, margens entre configurações estáveis.
 
 **Sensibilidade Estrutural** — Rouxinol percebe Thinness localizada, perturbações de Resonance causadas por Callings, proximidade de Dives ativos e condições de instabilidade ambiental através dessa Anchor como sinais perceptivos que surgem sem necessidade de iniciar deliberadamente um Dive. Em regiões rarefeitas, isso oferece percepção antecipada extremamente útil. Durante Callings, segundo o próprio relato dela, a experiência é significativamente desagradável.
 
@@ -124,19 +124,19 @@ O modelo padrão do Index Theorem descreve um Redactor com uma única estrutura 
 
 O que os registros de avaliação descrevem é uma estrutura recursiva que aparentemente se desenvolveu em dois loops internos simultâneos — ambos alcançando coerência independente, ambos estabilizados ao redor de Anchors distintas e ambos capazes de atividade de Dive independente. Os dois loops compartilham o mesmo substrato biológico e não conseguem operar em independência total um do outro. Ainda assim, são estruturalmente distinguíveis durante condições de Dive e comprovadamente roteiam através de Anchors de configuração diferentes mesmo quando ativos ao mesmo tempo.
 
-O termo provisório proposto na observação do painel em 2195 — *bifurcação natural* — é usado neste arquivo como designação descritiva dessa arquitetura. O termo não aparece em nenhum material atual do Index Theorem.
+O termo provisório proposto na observação do painel c. Imperial Year 2198 — *bifurcação natural* — é usado neste arquivo como designação descritiva dessa arquitetura. O termo não aparece em nenhum material atual do Index Theorem.
 
 ---
 
 ## A Lâmina Kaise
 
-Registrada durante o intake compulsório em 2192. Mantida sob revisão restrita por dois anos até a classificação definitiva. Liberada para custódia condicional da indivíduo em 2194 após a conclusão de que a função de retenção da lâmina era parte integral do funcionamento documentado da Threshold Anchor.
+Registrada durante o intake compulsório c. Imperial Year 2197. Mantida sob revisão restrita por dois Lunar Years até a classificação definitiva. Liberada para custódia condicional da indivíduo c. Imperial Year 2198 após a conclusão de que a função de retenção da lâmina era parte integral do funcionamento documentado da Threshold Anchor.
 
 **Classificação provisória de registro: artefato de retenção mnemônica — procedência não verificada.**
 
 O material da construção da lâmina não pôde ser completamente caracterizado através das análises padrão de intake. Classificação provisória: liga composta de BrightCrystal de alta pureza, anterior à era de extração padronizada. A composição da liga sugere uma origem de fabricação consideravelmente mais antiga do que os processos industriais conhecidos conseguem explicar e não corresponde a nenhum material presente no banco de artefatos atual do Apocachynthion.
 
-A lâmina foi entregue à indivíduo por Aldric Vonn. Sua origem anterior a essa transação permanece desconhecida. A contagem atual de impressões é onze. O número permanece inalterado desde 2197.
+A lâmina foi entregue à indivíduo por Aldric Vonn. Sua origem anterior a essa transação permanece desconhecida. A contagem atual de impressões é onze. O número permanece inalterado desde Imperial Year 2199.
 
 ---
 
@@ -152,29 +152,29 @@ Ela veste roupas escuras ajustadas ao corpo, reforçadas com painéis protetivos
 
 ## Biografia
 
-### Formação Inicial — 2173 a 2187
+### Formação Inicial — c. Imperial Years 2188 a 2194
 
 Nasceu dentro da instalação de planalto externo do Corvel Institute. Não existe registro civil de nascimento. O ano de nascimento foi obtido através dos arquivos de custódia do instituto adquiridos por inteligência terceirizada.
 
-A anomalia detectada pelo instituto não era de sua mãe — era de Rouxinol, perceptível antes mesmo do nascimento porque uma arquitetura bifurcada dessa densidade produz perturbações ambientais de Resonance que os instrumentos do instituto haviam sido calibrados para detectar. Sael Kaise morreu em 2177. Dez anos de observação estruturada e sessões controladas de avaliação vieram depois disso. Ela não sofreu maus-tratos físicos explícitos. Ela foi estudada. Naquelas condições, e naquela idade, essa diferença não oferecia muito conforto.
+A anomalia detectada pelo instituto não era de sua mãe — era de Rouxinol, perceptível antes mesmo do nascimento porque uma arquitetura bifurcada dessa densidade produz perturbações ambientais de Resonance que os instrumentos do instituto haviam sido calibrados para detectar. Sael Kaise morreu c. Imperial Year 2190. Dez Lunar Years de observação estruturada e sessões controladas de avaliação vieram depois disso. Ela não sofreu maus-tratos físicos explícitos. Ela foi estudada. Naquelas condições, e naquela idade, essa diferença não oferecia muito conforto.
 
-### Vel'hara e o Circuito Cinza — 2187 a 2192
+### Vel'hara e o Circuito Cinza — c. Imperial Years 2194 a 2197
 
 Aos quatorze anos, durante um incidente envolvendo outro sujeito em uma instalação vizinha, ela fugiu. A análise pós-incidente do instituto descreve o evento como uma falha de contenção causada por uma interação de Resonance descontrolada entre dois sujeitos; os danos estruturais ao prédio principal de pesquisa foram classificados como extensos. Em menos de um mês ela já estava nos distritos externos de Vel'hara.
 
 Aldric Vonn a encontrou poucas semanas depois. Ela tinha quinze anos. Ele fez uma proposta apresentada como trabalho e estruturada — como ela entenderia mais tarde — como um investimento de longo prazo. Ela aceitou.
 
-Vonn havia sido oficial de uma formação licenciada de retentores de uma Founding House: segurança legal da House, não Redactor nem exército independente. Durante quatro anos ele ensinou disciplina operacional, avaliação de ameaças, leitura de contratos e, principalmente, uma compreensão prática do que sua arquitetura realmente produzia. Entregou a lâmina no terceiro ano com uma única explicação:
+Vonn havia sido oficial de uma formação licenciada de retentores de uma Founding House: segurança legal da House, não Redactor nem exército independente. Durante quatro Lunar Years ele ensinou disciplina operacional, avaliação de ameaças, leitura de contratos e, principalmente, uma compreensão prática do que sua arquitetura realmente produzia. Entregou a lâmina no terceiro Lunar Year com uma única explicação:
 
 *"Isso foi feito para carregar aquilo que ele toma. Eu não sei o que ele toma. Você vai descobrir."*
 
-### Intake Compulsório e Treinamento — 2192 a 2197
+### Intake Compulsório e Treinamento — c. Imperial Years 2197 a 2199
 
 Um Pager de campo operando no distrito industrial inferior de Vrenne registrou um relatório após uma operação em que uma contratada do circuito cinza produziu manifestações de Redactory compatíveis com atividade simultânea de Dive em duas Anchors, em uma Depth muito acima do que alguém nível Quill deveria ser capaz de demonstrar — e sem qualquer registro no sistema imperial. A observação da assinatura dupla elevou imediatamente o relatório para revisão interna.
 
 Quarenta e um dias na instalação de retenção de Vrenne. Ela começou a cooperar no segundo dia. Revelou voluntariamente a existência da lâmina e sua função de retenção já na primeira semana — antes mesmo de os avaliadores identificarem o mecanismo de retenção de impressões por conta própria.
 
-Cinco anos de treinamento estruturado vieram em seguida, dentro de um programa desenvolvido especificamente para este caso. A Academy não criou sua competência de combate; regularizou, limitou e documentou uma especialista de operações próximas já formada por Corvel e Vonn. A certificação de Stylus na Mirror Anchor e de Quill na Threshold Anchor foram emitidas simultaneamente em 2197.
+Cinco Lunar Years de treinamento estruturado vieram em seguida, dentro de um programa desenvolvido especificamente para este caso. A Academy não criou sua competência de combate; regularizou, limitou e documentou uma especialista de operações próximas já formada por Corvel e Vonn. A certificação de Stylus na Mirror Anchor e de Quill na Threshold Anchor foram emitidas simultaneamente c. Imperial Year 2199.
 
 ### Condição Atual — 2198 a 2200
 
@@ -188,9 +188,9 @@ A contagem de impressões do loop secundário permanece inalterada desde 2197.
 
 ## Psicologia & Caracterização
 
-**Conflito central.** Ela carrega onze ecos estruturais no loop secundário da Threshold Anchor e não adiciona novos nomes à contagem há três anos. Se isso representa uma posição moral, uma decisão estratégica ou o reconhecimento de que o acúmulo contínuo está se aproximando do limite que o loop secundário consegue sustentar antes de perder coerência — ela nunca declarou isso para nenhum contato registrado neste arquivo.
+**Conflito central.** Ela carrega onze ecos estruturais no loop secundário da Threshold Anchor e não adiciona novos nomes à contagem há três Lunar Years. Se isso representa uma posição moral, uma decisão estratégica ou o reconhecimento de que o acúmulo contínuo está se aproximando do limite que o loop secundário consegue sustentar antes de perder coerência — ela nunca declarou isso para nenhum contato registrado neste arquivo.
 
-**Inteligência.** Extremamente alta e precisa. Ela compreendeu sua própria arquitetura sem qualquer estrutura teórica formal e chegou sozinha a conclusões que os especialistas da Academia levaram meses para confirmar. Durante a documentação de intake, a líder do painel descreveu seus relatos pessoais como o registro espontâneo mais preciso de uma condição inédita de Redactory visto em trinta anos de trabalho classificatório.
+**Inteligência.** Extremamente alta e precisa. Ela compreendeu sua própria arquitetura sem qualquer estrutura teórica formal e chegou sozinha a conclusões que os especialistas da Academia levaram meses para confirmar. Durante a documentação de intake, a líder do painel descreveu seus relatos pessoais como o registro espontâneo mais preciso de uma condição inédita de Redactory visto em trinta Lunar Years de trabalho classificatório.
 
 **Registro emocional.** Contido na superfície. A calma que transmite parece construída através de disciplina, não natural. Pessoas familiarizadas com o circuito cinza descrevem isso como algo treinado ao longo dos anos. As fissuras aparecem sob condições específicas: quando ela percebe alguém sendo usado como ferramenta, e quando o loop secundário se manifesta involuntariamente perto de pessoas que não foram preparadas para vê-lo.
 
@@ -202,12 +202,12 @@ A contagem de impressões do loop secundário permanece inalterada desde 2197.
 
 **Aldric Vonn** — Ex-oficial de uma formação licenciada de retentores de Founding House, isto é, segurança legal da House e não exército independente. Não era Redactor. Rouxinol deve a ele a lâmina e parte de sua disciplina operacional, mas sua competência de operações próximas já existia antes da Academy e suas escolhas nunca pertenceram a Vonn.
 
-**Corvel Institute** — Ela não voltou para Vel'hara desde que fugiu em 2187. Se o instituto ainda está operando, se a pesquisa envolvendo ela continua através de outros sujeitos, ou se ainda estão procurando por ela — são perguntas que ela considera regularmente. Nenhuma das respostas possíveis a tranquiliza.
+**Corvel Institute** — Ela não voltou para Vel'hara desde que fugiu c. Imperial Year 2194. Se o instituto ainda está operando, se a pesquisa envolvendo ela continua através de outros sujeitos, ou se ainda estão procurando por ela — são perguntas que ela considera regularmente. Nenhuma das respostas possíveis a tranquiliza.
 
 **O Loop Secundário** — Não é uma relação no sentido convencional. É uma condição interna com a textura fenomenológica de uma relação — presente durante toda sua vida, responsiva a experiências e com propriedades consistentes que ela consegue distinguir do processamento do loop principal. Em dois comentários incidentais registrados durante a avaliação de intake, ela se referiu a ele como *“o outro lado da linha.”*
 
 **O Apocachynthion** — Ela registra seus contratos. Mantém sua licença ativa. Comparece às avaliações programadas de Depth. Não oferece informações além do estritamente necessário. A relação é funcional e carrega a tensão específica de qualquer acordo iniciado no momento em que alguém é levado à força para um lugar onde nunca escolheu estar.
 
-**A Igreja — Diocese de Vrenne** — Um relatório pastoral de inteligência sinalizou Rouxinol ao Arcediago de Vrenne em 2191, antes do intake no Apocachynthion. A classificação inicial da Igreja era vessel-abomination — duas presenças em um único corpo, interpretadas como um caso avançado de coabitação demoníaca multifragmentada. Nenhuma revisão oficial dessa classificação foi comunicada a este escritório. Não há confirmação se a designação Condemned ainda permanece ativa nos registros pastorais restritos da Diocese de Vrenne. Rouxinol sabe que essa possibilidade existe.
+**A Igreja — Diocese de Vrenne** — Um relatório pastoral de inteligência sinalizou Rouxinol ao Arcediago de Vrenne c. Imperial Year 2196, antes do intake no Apocachynthion. A classificação inicial da Igreja era vessel-abomination — duas presenças em um único corpo, interpretadas como um caso avançado de coabitação demoníaca multifragmentada. Nenhuma revisão oficial dessa classificação foi comunicada a este escritório. Não há confirmação se a designação Condemned ainda permanece ativa nos registros pastorais restritos da Diocese de Vrenne. Rouxinol sabe que essa possibilidade existe.
 
 **Ec'lesia Wonderwall** — Um único contato documentado, ocorrido no distrito externo de trânsito de Kalt'sen aproximadamente quatro meses antes da data deste registro (início de 2200). Ambas sobreviveram. O Pager responsável pela análise das perturbações estruturais observou que as assinaturas de coerência produzidas durante o encontro não correspondem ao resultado esperado de nenhuma das duas operando individualmente, e que a interação gerou um padrão de roteamento combinado para o qual o avaliador não possuía precedentes registrados. A anotação termina ali.

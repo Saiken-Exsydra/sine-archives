@@ -1,8 +1,8 @@
 ---
 title: "Al'ithia Rae Wonderwall"
 type: "Personagem"
-age: "89 anos (em 2200); aparenta ter entre trinta e poucos anos"
-birth_year: "2111"
+age: "89 Lunar Years (no Imperial Year 2200); aparenta ter entre trinta e poucos anos"
+birth_year: "c. Imperial Year 2161"
 birthplace: "Territórios costeiros do norte do ramo Rae, Império de Synus"
 affiliation: "House Wonderwall (First Hearth; Hearth Meridian); Império de Synus"
 house: "Wonderwall (origem no ramo Rae; linha principal por casamento)"

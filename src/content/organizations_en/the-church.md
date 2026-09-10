@@ -73,7 +73,7 @@ This teaching extends upward into the sky itself. In Church language, the heaven
 
 ### I.3 The Obscurials — The Instruments of the Intact Seal
 
-The deepest technical reconstruction distinguishes the actual [[obscurials|Obscurials]]—twelve grammar-exterior vestiges once seated in the Moon—from the Principles, interfaces, and remnants through which Terra addressed them. All twelve actual Obscurials vanished from the lunar configuration during the Fracture. The Church does not possess that complete synthesis. It calls the Twelve the Instruments of the Intact Seal, with the devotional titles Truth, Binding, Order, Atmosphere, Light, Life, Fire, Death, Entropy, Sentience, Foresight, and Ascension.
+The deepest technical reconstruction identifies the actual [[obscurials|Obscurials]] as twelve grammar-exterior true bodies once localized by lunar Seats. Each became the person called a Skyphon through sustained life with Terra. The Principles, interfaces, humanoid terminals, and modern remnants were parts of their lawful local relationships, not additional pieces of the people. All twelve true bodies became unseated during the Fracture. The Church does not possess that complete synthesis. It calls the Twelve the Instruments of the Intact Seal, with the devotional titles Truth, Binding, Order, Atmosphere, Light, Life, Fire, Death, Entropy, Sentience, Foresight, and Ascension.
 
 The Church holds a different account. It is not merely a misunderstanding of the technical one. It is an older interpretation with deeper roots.
 
@@ -87,13 +87,13 @@ He counted twelve of them. This number is not coincidence, and the Church does n
 
 Each instrument was complete in its domain, and together they composed the architecture of what the world was made to be. When the rebellion struck the Intact Seal, the instruments were unmoored. The Church teaches: *the Instruments no longer fit the broken world, because they were made for the world as it was meant to be.* To hold one now is to carry something the world cannot currently contain. This does not make them evil. It makes them dangerous in the way that a flame brought indoors during a storm is dangerous — not malicious, but capable of burning down everything around it.
 
-The Church's position is that the Instruments belong to no mortal institution. Any who claim custody—including the Apocachynthion—do so in error at best and in sacrilege at worst. It applies that claim to objects and sites that restricted technical doctrine identifies as interface cores, address remnants, or scars rather than the vanished Obscurials themselves. The Church does not publicly demand their return. It notes the situation in restricted pastoral letters and waits.
+The Church's position is that the Instruments belong to no mortal institution. Any who claim custody—including the Apocachynthion—do so in error at best and in sacrilege at worst. It applies that claim to objects and sites that restricted technical doctrine identifies as interface cores, address remnants, or scars rather than the unseated Skyphon persons themselves. The Church does not publicly demand their return. It notes the situation in restricted pastoral letters and waits.
 
 ---
 
 ### I.4 The Skyphons — The First Bearers
 
-Technical reconstruction describes the Skyphons as persons formed through localized Page syntax, Precursor constraint bodies, a co-addressed Obscurial relation through the lunar interface, and Terra's acceptance. The Church preserves them as the **First Bearers**.
+Technical reconstruction describes a Skyphon as the person one Obscurial became through long relationship with Terra. Precursor Seats and humanoid terminals, Page-native authorization, and All-Motheric acceptance made Terra-local Principle and Jurisdiction possible; they did not compose the person. The Church preserves the twelve as the **First Bearers**.
 
 The Church does not use this language. The Skyphons appear in ecclesiastical tradition as **the First Bearers**, and their treatment is one of the Church's most carefully held theological positions.
 
@@ -106,6 +106,8 @@ The Church holds the Skyphons with a peculiar sorrow.
 They are not condemned and not venerated. Open teaching calls them **the Rightly Unmade** and says *they completed*. Restricted record is less certain: the twelve endings differed, several Bearers suffered, and what completed may have been duty rather than person.
 
 A minority position within the Interior Council — never officially condemned but never officially blessed — argues that the First Bearers were not concluded but interrupted. That the longing felt in the presence of ancient and resonant objects — that pull, that sense of something half-remembered — is what remains of the Bearers' incompletion, distributed into the human species like seed scattered on broken ground. This is considered a theological curiosity. It is watched.
+
+The Keepers of Before preserve a more difficult correlation. The twelve Bearers ceased answering during the Crown catastrophe; a celestial conflict followed; genuine Seraphic falls occurred; and three Seraphim crossed beyond the accessible Firmament in connection with the Bearers' disappearance. Seven continued to answer. The Church reads this as the Severance and the war in Heaven. It does not know the complete mechanism of unseating or the present address of any of the twelve.
 
 The Church does not permit deliberate reconstruction of a Skyphon. Its Completion, Interruption, and Continuance schools disagree about what remains, but all reject reincarnation claims and coercive Bearer-making. The Apocachynthion reaches the same prohibition through artifact failures and structural risk.
 
@@ -501,9 +503,11 @@ And a small number of entities at the boundary that the Church, through decades 
 
 *The following positions are maintained in the Church's restricted archive and are not communicated in open teaching.*
 
-**On the Intact Seal and its restoration:** The Church does not teach that the Seal can be restored by mortal action. Senior theological record includes speculation that the twelve Instruments must be reassembled as a precondition of any restoration. This is not doctrine. It is documented.
+**On the Intact Seal and its restoration:** The Church does not teach that the Seal can be restored by mortal action. Keeper judgment rejects simple reassembly: the Fracture broke relationships among Seats, Bearers, Terra, the Crown, and the accessible Firmament, not merely an inventory of objects. Reassembly without twelve mutually limiting living Jurisdictions would be coercive recall, not restoration.
 
 **On the Skyphons:** Completion, Interruption, and Continuance remain lawful schools. None permits reconstruction, worship of an Instrument, or claims that Sol'ytra is a returned Bearer.
+
+**On fallen angels:** Public doctrine teaches that demons descend from angelic refusal. Sealed records preserve a smaller literal category of Seraphic beings and fragments that crossed into Abyssal architecture, defected, became trapped, or returned altered during the celestial crisis. Their falls were real. The Church does not know that demonkind as a whole has a separate Sovereign-fragment origin.
 
 **On the Apocachynthion:** The Church's private assessment is that the Apocachynthion's greatest long-term risk is selective memory. The more completely it buries the account of what the twelve houses did at Selia and why, the less equipped it becomes to recognize when that pattern begins to reconstitute. The Church considers itself the institutional memory the Apocachynthion has chosen not to keep.
 

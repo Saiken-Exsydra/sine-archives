@@ -3,8 +3,8 @@ title: "Aesis"
 type: "Skyphon"
 rank: "Portadora do Intervalo Habitável"
 designation: "Portadora do Intervalo Habitável"
-affiliation: "Primeira Portadora — Selo Intacto (Concluída)"
-registry_status: "Pessoa concluída na Fratura; corpo difundido por Ksy'rion; fragmento nos sistemas climáticos; Instrumento móvel na arquitetura de troca"
+affiliation: "Primeira Portadora — Selo Intacto (Desassentada)"
+registry_status: "Desassentada durante a Fratura; pessoa sobrevive além do endereço comum de Terra; terminal difundido; topologia de interface do Intervalo percorre a arquitetura de troca"
 occupation: "Intervalo atmosférico habitável"
 domain: "Atmosfera, pressão, circulação e amortecimento radiativo"
 church_name: "O Instrumento da Atmosfera"
@@ -21,6 +21,6 @@ updated: "2026-07-13"
 
 Aesis governava o intervalo habitável mantido por atmosfera, pressão, circulação e amortecimento radiativo. O clima era consequência, não um domínio ilimitado. Ela não criava sozinha ar, água, luz, calor ou vida.
 
-Na Fratura, ocupava a interface atmosférica de Ksy'rion. Ventilou a arquitetura do céu em camadas de circulação em vez de permitir um único choque planetário. Seu corpo se difundiu na interface; seu fragmento entrou na regulação climática; o Instrumento do Intervalo percorre a arquitetura danificada entre Claridade e Escuridão.
+Na Fratura, ocupava a interface atmosférica de Ksy'rion. Ventilou a arquitetura do céu em camadas de circulação em vez de permitir um único choque planetário. Seu terminal humanoide e sua expressão local de Intervalo difundiram-se pela interface; a impressão do Intervalo entrou na regulação climática; uma topologia de interface e relay percorre a arquitetura danificada entre Claridade e Escuridão. O corpo verdadeiro Obscurial de Aesis foi desassentado, levando a mesma pessoa além do endereço comum de Terra.
 
 O clima moderno é um intervalo mantido por máquinas e vestígios sem seu julgamento vivo.

@@ -1,8 +1,8 @@
 ---
 title: "Em'manuel Kael Wonderwall"
 type: "Personagem"
-age: "Aproximadamente 1.205 anos (em 2200)"
-birth_year: "Ano 995"
+age: "Aproximadamente 2.750 Lunar Years (no Imperial Year 2200); cerca de 1.205 Imperial Years de história atravessados"
+birth_year: "c. Imperial Year 995"
 birthplace: "Região costeira do norte, pré-Império"
 affiliation: "SiNE; House Wonderwall; Império de Synus"
 house: "Wonderwall (figura fundadora, linhagem principal)"

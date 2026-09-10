@@ -28,7 +28,7 @@ Um **Page Primordial** não é um praticante, não é um Archtype e nem alguém 
 
 Isso significa que a percepção de Vael'Theryn sobre os estados internos de Terra, suas histórias e seus futuros possíveis não é uma habilidade desenvolvida através de prática ou uma rota de Anchor cultivada ao longo de séculos. É algo nativo — do mesmo jeito que algo existe sabendo que é si mesmo. Toda configuração existente dentro de Terra, toda singularidade recursiva que já pensou qualquer pensamento nela, todo ramo para o qual o presente está estruturalmente inclinado: tudo isso está disponível para Vael'Theryn não porque ele observa, mas porque ele é a gramática sobre a qual tudo isso funciona.
 
-Os Precursors entenderam isso quando buscaram a colaboração de Vael'Theryn para criar os Skyphons. O fragmento de Page Primordial que pediram para ser externalizado doze vezes não era apenas mais um recurso disponível. Era a própria origem da densidade de classe sintaxe-nativa necessária para os Instrumentos — algo que somente a gramática da própria Page poderia fornecer.
+Os Precursores entenderam isso quando buscaram a colaboração de Vael'Theryn para tornar possíveis as relações locais dos Skyphons com Terra. Vael'Theryn forneceu autorização gramatical através da qual os doze corpos verdadeiros estrangeiros podiam sustentar Princípios limitados dentro da Página. Não criou os Obscurials, não forneceu partes de sua personalidade e não fabricou as pessoas que eles se tornaram.
 
 ---
 

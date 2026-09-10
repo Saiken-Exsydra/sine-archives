@@ -103,7 +103,7 @@ Most CLOCKWORK operatives know the Dial only as a strange, consistent man. Hourh
 - **2186 - Orison Relay:** Solstice seizes a strategic core and continuity instrument from a hostile procurement cell; Horizon extracts the surviving technician and later places the divided scene inside public legal systems.
 - **2196 - Nacre Third Fragment:** Solstice seizes three fragments; two reach Clepsydra anonymously and Zenith destroys the unstable third and its commissioning chain.
 
-The 1841 First Refusal and the 2179 removal of E'lla from Kaleidoscope are false CLOCKWORK attributions. Hidden action is not the explanation for every event beneath the Seat.
+The Imperial Year 1841 First Refusal and the Imperial Year 2191 removal of E'lla from Kaleidoscope are false CLOCKWORK attributions. Hidden action is not the explanation for every event beneath the Seat.
 
 ## Limits
 

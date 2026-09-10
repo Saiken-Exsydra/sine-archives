@@ -1,8 +1,8 @@
 ---
 title: "Sai'ken Exsydra"
 type: "Character"
-age: "25 (as of 2200)"
-birth_year: "2175"
+age: "25 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2189"
 birthplace: "Ael'keth, eastern borderlands, Northern Region"
 affiliation: "SiNE Integrated Forces (cover); protected service under sealed House and Compact warrant"
 house: "Exsydra (modern legal restoration of the erased pre-Imperial Ex'sydra lineage)"
@@ -45,7 +45,7 @@ Publicly, he is a quiet security specialist assigned to the Wonderwall cadet-bra
 
 Privately, he is much more significant than he knows.
 
-He was born **Sai'ken Las'gall** in the eastern borderlands near Ael'keth. In 2194, Em'manuel Wonderwall brought him into protected service under a sealed House and Compact warrant and restored the lineage name **Exsydra**. The name grants no automatic Wonderwall membership, corporate title, or sovereign claim. Sai'ken was never told its full history.
+He was born **Sai'ken Las'gall** in the eastern borderlands near Ael'keth. C. Imperial Year 2197, Em'manuel Wonderwall brought him into protected service under a sealed House and Compact warrant and restored the lineage name **Exsydra**. The name grants no automatic Wonderwall membership, corporate title, or sovereign claim. Sai'ken was never told its full history.
 
 That missing explanation matters because **Exsydra** is not just a formal label. It is the modern legal restoration of **Ex'sydra**, the erased name of a pre-Imperial theoretical house whose work helped make the Rite of Selia possible and helped make its collapse catastrophic. Sai'ken does not know that he is one of the bloodline's surviving expressions.
 

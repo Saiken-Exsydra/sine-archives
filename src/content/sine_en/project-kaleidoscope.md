@@ -25,7 +25,7 @@ Kaleidoscope produced a numbered series of eighty-three persons across its histo
 
 ## Termination and Care
 
-Biological production ended in Year 2179 and cannot be resumed through ordinary corporate authority. The remaining obligations are care, reparations, protected recordkeeping, independent advocacy, and subject-controlled disclosure. The project remains a liability and a duty, not a research asset.
+Biological production ended in Imperial Year 2191 and cannot be resumed through ordinary corporate authority. The remaining obligations are care, reparations, protected recordkeeping, independent advocacy, and subject-controlled disclosure. The project remains a liability and a duty, not a research asset.
 
 ## E'lla Rae Wonderwall
 

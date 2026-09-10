@@ -17,7 +17,7 @@ image: "../../assets/uploads/app-clepsydra-apparatus.png"
 
 ## Primary Correction
 
-Clepsydra is **not** an [[obscurials|Obscurial]], Sciel's Instrument, or a portable copy of the Instrument of Truth. It is a Precursor-built service apparatus once coupled to Sciel's jurisdiction of **Determinacy**. The actual Obscurial associated with that relation vanished from the lunar configuration during the Fracture. What survives is Clepsydra's service logic and its damaged relation to the old Determinacy interface—not a law-core still seated in the Crown.
+Clepsydra is **not** an [[obscurials|Obscurial]], Sciel's Instrument, or a portable copy of the Instrument of Truth. It is a Precursor-built service apparatus once coupled to Sciel's jurisdiction of **Determinacy**. During the Fracture, Sciel's true body was unseated from the Lunar Crown; Sciel remained the same Skyphon person beyond that lost address. What survives in Clepsydra is its own service logic and damaged relation to the old Determinacy interface—not Sciel and not a law-core still seated in the Crown.
 
 ## Form and Purpose
 
@@ -37,6 +37,6 @@ The Five Oaths are recurring interlocks, not stages of permanent unsealing:
 
 ## Post-Fracture Behavior
 
-Clepsydra refuses many hands and has crossed failed custody boundaries to reach selected operators. Three explanations remain viable: damaged interlock matching, bias carried by Sciel's co-address scars, or narrow refusal behavior preserved in the old service coupling. None proves that Sciel survives as a person inside the apparatus, and none places the vanished Obscurial inside it.
+Clepsydra refuses many hands and has crossed failed custody boundaries to reach selected operators. Three explanations remain viable: damaged interlock matching, bias carried by Sciel's co-address scars, or narrow refusal behavior preserved in the old service coupling. None places Sciel's surviving person or unseated true body inside the apparatus.
 
 Its greatest misuse is **forced correspondence**: treating one operator's model as the only admissible world. This would invert Sciel's Directive and is prohibited by the Church, the Apocachynthion, and imperial compact.

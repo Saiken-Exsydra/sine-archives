@@ -5,7 +5,7 @@
 
 ---
 
-> *"The flower should have killed her. It does not kill her. What it does instead is something the Index Theorem has no vocabulary for and the Church would call an abomination. I am not certain either of them is wrong. I am certain that she has been in my household for two years and no one in it sleeps less safely for her presence."*
+> *"The flower should have killed her. It does not kill her. What it does instead is something the Index Theorem has no vocabulary for and the Church would call an abomination. I am not certain either of them is wrong. I am certain that she has been in my household for two Imperial Years and no one in it sleeps less safely for her presence."*
 > — E.W., private notation, year 2199
 
 ---
@@ -32,7 +32,7 @@
 
 *The mechanism: the placement agency maintains a working relationship with a commercial-contact office the Company operates under a subsidiary name in Tsukimiya's harbor district. The office does not conduct recruitment. It does not interact with applicants. What it does, through a series of ordinary commercial introductions, is ensure that the agencies it works with develop positive impressions of candidates the Company finds interesting. The household administrator who hired Hisui believes he found an excellent candidate through normal channels. He is correct. I made normal channels deliver her here.*
 
-*The Flower's behavior in proximity to Ec'lesia's topology — the structural dampening effect I suspected but could not confirm without direct observation — has been confirmed across two years of passive monitoring. She is calmer here than any Kirasagi household record shows her to have been anywhere else in her life. This is, I note, a good outcome for a woman who did not ask for what she carries and has managed it alone since childhood.*
+*The Flower's behavior in proximity to Ec'lesia's topology — the structural dampening effect I suspected but could not confirm without direct observation — has been confirmed across two Imperial Years of passive monitoring. She is calmer here than any Kirasagi household record shows her to have been anywhere else in her life. This is, I note, a good outcome for a woman who did not ask for what she carries and has managed it alone since childhood.*
 
 *She does not know I placed her. Sai'ken does not know I placed her. Ec'lesia certainly does not know. This is the architecture as I built it.*
 
@@ -45,8 +45,8 @@
 | Field | Entry |
 |---|---|
 | **Full Name** | Hisui Kirasagi |
-| **Year of Birth** | 2176 |
-| **Current Age** | 24 (as of year 2200) |
+| **Year of Birth** | c. Imperial Year 2189 |
+| **Current Age** | 24 Lunar Years (as of Imperial Year 2200) |
 | **Birthplace** | Tsukimiya, a harbor city on the Darkmargin coast of Hikari |
 | **Nationality** | Hikari (foreign national; imperial residential permit, domestic-services classification) |
 | **Redactory Status** | Non-practitioner. No Anchor. No Dive capacity. No coherence loop consistent with Redactory output. |
@@ -109,7 +109,7 @@ The organism manifests through the host's resonance signature as projections of 
 
 **Murmuring.** The organism retains resonance impressions of previous hosts — structural echoes from prior generations that persist within its own coherence architecture. The host perceives these as whispered voices, fragmentary images, and emotional textures without originating context. Constant and low-level under normal conditions. Under stress, Overbloom, or coherence deficit, the Murmuring intensifies. In extreme cases the host's recursive identity becomes difficult to distinguish from the accumulated echo-impressions of the dead.
 
-**Consumption Risk.** If the host's recursive coherence falls below the threshold required to contain the organism's growth, the Flower expands unchecked. The host's body becomes substrate. The result is structural dissolution — the person is consumed as the organism colonizes their architecture. What remains is petals. The Kirasagi household records document seven such instances across five hundred years.
+**Consumption Risk.** If the host's recursive coherence falls below the threshold required to contain the organism's growth, the Flower expands unchecked. The host's body becomes substrate. The result is structural dissolution — the person is consumed as the organism colonizes their architecture. What remains is petals. The Kirasagi household records document seven such instances across five hundred Imperial Years.
 
 ### III.5 Origin — Working Theory
 
@@ -125,15 +125,15 @@ The Kirasagi believe the Flower is ancestral — a gift from a figure their trad
 
 ### IV.1 Early Life
 
-Hisui Kirasagi was born in 2176 in Tsukimiya, second child of the Kirasagi branch then serving in the Shinzui household's harbor-district residence. She was seeded with the Flower in infancy. She survived.
+Hisui Kirasagi was born c. Imperial Year 2189 in Tsukimiya, second child of the Kirasagi branch then serving in the Shinzui household's harbor-district residence. She was seeded with the Flower in infancy. She survived.
 
 She was told about the Flower before she could fully understand what she was being told. The Kirasagi do not conceal the inheritance from their children — the Murmuring begins at birth, and a child who hears voices no one else hears will ask eventually. She was told young, in the manner the Kirasagi give their children information: as fact, not as warning. Warnings are for people who have a choice.
 
 She trained in the Kirasagi household tradition from early childhood — domestic service and household management alongside close-quarters and concealed-blade work, embedded in the curriculum without being separated from it. The Kirasagi do not distinguish between service and protection. The person you serve is the person you guard.
 
-### IV.2 The 2191 Event
+### IV.2 The Imperial Year 2196 Event
 
-In year 2191, a Calling event of unusual intensity struck Hikari's compressed corridor. Hisui was fifteen.
+In Imperial Year 2196, a Calling event of unusual intensity struck Hikari's compressed corridor. Hisui was fifteen.
 
 What the Kirasagi household records describe as a severe Bloom instability event was, in my assessment, a structural amplification crisis: the Flower's resonance-conductive properties interacting with the Calling's gradient fluctuation and producing output the host's body could not contain. The petals erupted from her forearms involuntarily, lacerating the surface tissue in their emergence. She did not lose consciousness. She was in controlled confinement within the Kirasagi compound for eleven days afterward. The scars are still visible.
 
@@ -159,7 +159,7 @@ Height: tall for a Hikari woman. Build: lean and precise — the kind of economy
 
 **Eyes:** Deep, near-black under passive conditions — the trained stillness of someone who learned that household staff does not show its thoughts on its face. Under Flower activation or acute stress: violet-crimson, with fractal flares at the iris margin that bloom outward. She has not activated the Flower's external manifestation in Kalt'sen. The eye-change has occurred twice in the observation period — both times during sleep, both times transient. She does not know I observed it.
 
-**Scars:** Both forearms carry the healed lacerations from the 2191 event — thin, pale, numerous, arranged in a pattern that follows the Flower's petal-eruption trajectories. She wears long sleeves consistently. In Hikari's service tradition, this is standard dress. In the Empire, it reads as personal preference. She has not been asked about the scars.
+**Scars:** Both forearms carry the healed lacerations from the Imperial Year 2196 event — thin, pale, numerous, arranged in a pattern that follows the Flower's petal-eruption trajectories. She wears long sleeves consistently. In Hikari's service tradition, this is standard dress. In the Empire, it reads as personal preference. She has not been asked about the scars.
 
 **Notable Object:** A lacquered black hairpin of Hikari manufacture — a narrow spike of compressed lacquerwork over a steel core, decorated with a single inlaid crimson bead. A resonance trigger: a material object whose structural properties reduce the coherence cost of initiating the Flower's combat-ready externalization sequence. Drawing it from her hair initiates that sequence.
 
@@ -207,9 +207,9 @@ I placed Hisui Kirasagi in Ec'lesia's household for three reasons, which I recor
 
 **First:** diagnostic. The Flower's resonance conductivity makes Hisui a passive sensor for the topology around Ec'lesia. What I learn from the Flower's behavior in proximity to the Remainder is data I cannot obtain from any other source, including Sai'ken, whose own anomalous profile produces a different category of interaction.
 
-**Second:** containment. If proximity to the Remainder's density genuinely dampens the Flower's volatility — and two years of monitoring suggest it does — then Hisui is safer here than anywhere else she could be. I have placed someone in a position where their condition is measurably improved by their assignment. This is not altruism. It is efficient architecture. But it is also a good outcome for a woman who did not ask for what she carries.
+**Second:** containment. If proximity to the Remainder's density genuinely dampens the Flower's volatility — and two Imperial Years of monitoring suggest it does — then Hisui is safer here than anywhere else she could be. I have placed someone in a position where their condition is measurably improved by their assignment. This is not altruism. It is efficient architecture. But it is also a good outcome for a woman who did not ask for what she carries.
 
-**Third:** the one I am least comfortable stating. Ec'lesia lives in a household where her mother manages without understanding, her sister is too young to be involved, and Sai'ken is assigned protective function. No one occupies the role of someone who is simply present, without agenda, without mandate, without the weight of what they were placed there to observe. What I have observed over two years is that Hisui's service has become something else — something that functions, operationally, as care. She attends to Ec'lesia with an attention that exceeds professional obligation. She has noticed things about Ec'lesia's routines, her stress patterns, her quiet moments of difficulty, that the household administrator's notes do not record.
+**Third:** the one I am least comfortable stating. Ec'lesia lives in a household where her mother manages without understanding, her sister is too young to be involved, and Sai'ken is assigned protective function. No one occupies the role of someone who is simply present, without agenda, without mandate, without the weight of what they were placed there to observe. What I have observed over two Imperial Years is that Hisui's service has become something else — something that functions, operationally, as care. She attends to Ec'lesia with an attention that exceeds professional obligation. She has noticed things about Ec'lesia's routines, her stress patterns, her quiet moments of difficulty, that the household administrator's notes do not record.
 
 Whether this is the Flower responding to the Remainder's field, or whether it is simply what happens when a kind person serves someone who needs kindness, I cannot determine. I suspect both. I do not consider the distinction urgent.
 
@@ -249,7 +249,7 @@ I have had this conversation with myself before. I have not resolved it. I do no
 
 *I have made decisions about these people. I am continuing to make them. The decisions are defensible. They are not comfortable. I am recording them honestly because the version of this file that exists in ten years will be judged by someone — myself, or whoever reads this after me — and that person deserves an honest account of what was done and why.*
 
-*She keeps the hairpin in her left hand when she serves tea. I noticed this. It is a combat-readiness behavior disguised as a personal habit. She has been carrying a weapon within arm's reach of Ec'lesia every day for two years, not because she was asked to, but because the Kirasagi tradition teaches that the one you serve is the one you protect, and she has decided — without briefing, without mandate, without knowing what Ec'lesia is — that Ec'lesia Yalara Wonderwall is the one she serves.*
+*She keeps the hairpin in her left hand when she serves tea. I noticed this. It is a combat-readiness behavior disguised as a personal habit. She has been carrying a weapon within arm's reach of Ec'lesia every day for two Imperial Years, not because she was asked to, but because the Kirasagi tradition teaches that the one you serve is the one you protect, and she has decided — without briefing, without mandate, without knowing what Ec'lesia is — that Ec'lesia Yalara Wonderwall is the one she serves.*
 
 *I find this reassuring. I am aware that I want to find it reassuring, which is why I am writing both states down rather than collapsing them into one.*
 

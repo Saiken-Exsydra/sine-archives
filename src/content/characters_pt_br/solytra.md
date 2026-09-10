@@ -169,7 +169,7 @@ Ela também parece relutante em depender totalmente de seu repertório elemental
 Outras limitações continuam relevantes:
 
 - a Wound Crown Authority é autoridade local de contenção em Terra;
-- ela não comanda Syr'lene, não endereça as doze relações Obscurial desaparecidas, não repara o Selo Intacto e não abre a Salvaguarda Métrica;
+- ela não comanda Syr'lene, não alcança as doze pessoas Skyphons desassentadas, não repara o Selo Intacto e não abre a Salvaguarda Métrica;
 - pode suprimir a condição local de ferida por onde ocorre Shorefall, mas não possui nem comanda as Shores;
 
 - sua autoridade é local, não universal;

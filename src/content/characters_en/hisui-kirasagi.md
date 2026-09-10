@@ -1,8 +1,8 @@
 ---
 title: "Hisui Kirasagi"
 type: "Character"
-age: 24
-birth_year: 2176
+age: "24 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2189"
 birthplace: "Tsukimiya, Darkmargin coast, Hikari"
 affiliation: "Wonderwall cadet-branch household, Kalt'sen"
 registry_status: "Unregistered — non-practitioner"
@@ -133,7 +133,7 @@ So the family continues carrying it.
 
 ### A Childhood Without the Illusion of Choice
 
-Hisui was born in 2176 as the second child of the Kirasagi branch serving the Shinzui household in Tsukimiya.
+Hisui was born c. Imperial Year 2189 as the second child of the Kirasagi branch serving the Shinzui household in Tsukimiya.
 
 She was exposed to the previous host's resonance signature during infancy in the process the family calls **seeding**. If the newborn's developing recursive structure is compatible, the Abyssal Flower takes root. If it is not, the child dies.
 
@@ -197,7 +197,7 @@ Every visible step of that process was legitimate.
 
 Hisui accepted the posting.
 
-By 2200, she has lived there for two years.
+By Imperial Year 2200, she has lived there for two Imperial Years.
 
 For reasons she cannot explain, the Flower has never been calmer.
 
@@ -351,7 +351,7 @@ She grew up knowing.
 
 The Flower is unusually conductive to large resonance-gradient fluctuations.
 
-That makes Calling events particularly dangerous. The 2191 crisis demonstrated what can happen when an external disturbance amplifies the organism faster than Hisui can regulate it.
+That makes Calling events particularly dangerous. The Imperial Year 2196 crisis demonstrated what can happen when an external disturbance amplifies the organism faster than Hisui can regulate it.
 
 Her current condition is stable, but stability does not remove the vulnerability.
 
@@ -419,7 +419,7 @@ Hisui did not arrive knowing anything about the deeper circumstances surrounding
 
 Hisui notices.
 
-Over two years, her attention has become more personal than professional routine requires. She tracks Ec'lesia's habits, fatigue, shifts in mood, and moments when the ordinary brightness of her personality begins to cost more effort than usual. The care is unobtrusive enough that it can still look like excellent service from the outside.
+Over two Imperial Years, her attention has become more personal than professional routine requires. She tracks Ec'lesia's habits, fatigue, shifts in mood, and moments when the ordinary brightness of her personality begins to cost more effort than usual. The care is unobtrusive enough that it can still look like excellent service from the outside.
 
 It is more than that.
 
@@ -474,7 +474,7 @@ That answer has been enough for her so far.
 | Field | Record |
 |---|---|
 | **Full Name** | Hisui Kirasagi |
-| **Born** | 2176, Tsukimiya, Hikari |
+| **Born** | c. Imperial Year 2189, Tsukimiya, Hikari |
 | **Age** | 24 in year 2200 |
 | **Nationality** | Hikari |
 | **Current Residence** | Wonderwall cadet-branch estate, Kalt'sen |
@@ -564,7 +564,7 @@ He suspected that the unusual topology around Ec'lesia might suppress the Flower
 
 He was correct.
 
-Across two years, the Flower has remained calmer near Ec'lesia than the Kirasagi records indicate it has ever been elsewhere in Hisui's life.
+Across two Imperial Years, the Flower has remained calmer near Ec'lesia than the Kirasagi records indicate it has ever been elsewhere in Hisui's life.
 
 This creates the uncomfortable reality at the center of the arrangement:
 

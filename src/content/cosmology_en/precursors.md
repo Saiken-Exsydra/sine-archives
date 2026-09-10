@@ -40,7 +40,7 @@ They did not only build a planet and biosphere. They also built the world's **sk
 
 One Precursor was responsible for the biological architecture of the world - the physical engineering of the conditions under which living systems could arise, develop, and sustain themselves. Another managed atmospheric coherence - the ongoing maintenance of conditions that allowed the biosphere to persist on a world natural physics would not sustain unaided.
 
-Beyond Terra's surface systems, the Precursors installed the lunar seats, interfaces, constraint bodies, relays, and defensive architecture that later theology would remember as the **Intact Seal**. Its sky-facing layer was **Ksy'rion**, the curated visible heaven beneath which pre-Fracture civilization learned astronomy, orientation, and inherited cosmology. The complete system joined twelve actual [[obscurials|Obscurials]] to engineered interfaces and living Skyphon interpreters. The Precursors built that relationship; they did not make the Obscurials.
+Beyond Terra's surface systems, the Precursors installed the lunar Seats, interfaces, humanoid terminals, relays, and defensive architecture that later theology would remember as the **Intact Seal**. Its sky-facing layer was **Ksy'rion**, the curated visible heaven beneath which pre-Fracture civilization learned astronomy, orientation, and inherited cosmology. Each Seat localized one actual [[obscurials|Obscurial]] true body and made a bounded relation with it lawful. The Precursors built that relationship; they did not make the bodies or manufacture the persons they became.
 
 The others maintained different aspects of Terra's stability, from gravitational management to the resonance substrate underlying the planet's structure. Their domains are documented in the Keepers of Before's restricted archive at a level of detail not reproduced in public records.
 
@@ -62,11 +62,11 @@ This thinning is the structural fact underlying every significant threat the wor
 
 When the Precursors and Terra's **Page Primordial** understood the thinning's implications, their response was the most significant collaborative act in Terra's pre-mortal history.
 
-The Precursors had detected twelve grammar-exterior vestiges whose ordinary origin, age, and first state could not be recovered—even through consultation with Time. The Page Primordial did not create them. It could understand and authorize what happened where each foreign vestige met Page-native grammar without claiming knowledge of the unknown source beyond that interface.
+The Precursors observed twelve grammar-exterior true bodies enter Vael'Khar and later detected them for sustained study. Even consultation with Time could not recover their pre-arrival origin, age, creator, or first state. The Page Primordial did not create them. It could understand and authorize what happened where each foreign body met Page-native grammar without claiming knowledge of the unknown source beyond that interface.
 
-The Page Primordial supplied localized native-syntax density. The Precursors supplied engineering: twelve lunar seats, local interfaces, co-address structures, constraint bodies, and relays. Terra supplied living planetary acceptance. Together, those relations made the foreign contacts locally usable without making them native.
+The Page Primordial supplied local grammatical authorization. The Precursors supplied engineering: twelve lunar Seats, interfaces, co-address structures, humanoid terminals, and relays. The All-Mother supplied living planetary acceptance. Together, those relations made the foreign bodies locally addressable without making them native.
 
-The result was twelve entities that existed in no prior category: the [[the-first-bearers|Skyphons]]—the First Bearers. Each was a person formed through localized Page syntax, a Precursor constraint body, one co-addressed Obscurial relation, and Terra's acceptance. Their primary purpose was not only governance of the world's domains but maintenance of the translation barrier and of **Ksy'rion's regulated sky**. The governance they performed and the barrier maintenance they performed were the same act.
+Through long life within those relations, the twelve Obscurials developed the persons called the [[the-first-bearers|Skyphons]]—the First Bearers. Personhood belonged to the Obscurial; Jurisdiction belonged to the successful Terra-local relation. Their work joined governance of the world's domains to maintenance of the translation barrier and **Ksy'rion's regulated sky**. The governance they performed and the barrier maintenance they performed were the same act.
 
 ---
 
@@ -74,7 +74,7 @@ The result was twelve entities that existed in no prior category: the [[the-firs
 
 The Fracture was not only the shattering of the Moon. It was the collapse of a complete skyward regime.
 
-When the Lunar Crown was struck, the Intact Seal broke, the Skyphons' living maintenance ended, **all twelve actual Obscurials vanished from the lunar configuration**, and Ksy'rion ceased to function as a complete sky-mask. The Quiet Moon was not created at that moment. The conditions under which it could eventually be discovered were.
+When the Lunar Crown was struck, the Intact Seal broke, the Skyphons' living maintenance ended, **all twelve true Obscurial bodies were unseated from the lunar configuration**, and Ksy'rion ceased to function as a complete sky-mask. The same twelve Skyphon persons survived the initial failure beyond their lost local addresses. The Quiet Moon was not created at that moment. The conditions under which it could eventually be discovered were.
 
 **Syr'lene** contained the intruding fragment at the cost of her freedom of movement. She is still in the Lunar Crown. She has been there since.
 

@@ -2,8 +2,8 @@
 title: "Ec'lesia Yalara Wonderwall"
 type: "Character"
 
-age: "22 (at the beginning of the principal 2200 period)"
-birth_year: "2178"
+age: "22 Lunar Years (at the beginning of the principal Imperial Year 2200 period)"
+birth_year: "c. Imperial Year 2190"
 birthplace: "Kalt'sen, Central Region, Empire of Synus"
 
 affiliation: "House Wonderwall; Apocachynthion, Academy of Lon'drina"
@@ -40,7 +40,7 @@ codex_file: "Ec'lesia Yalara Wonderwall Codex.md"
 
 ## Overview
 
-Ec'lesia Yalara Wonderwall is twenty-two, a member of House Wonderwall's Yalara cadet branch, and a young Redactor studying under specialist restriction at the Academy of Lon'drina. A **Redactor** is someone trained to produce controlled changes in the world through a personal conceptual affinity called an **Anchor**. Ec'lesia's Anchor is known as **Stilllight**.
+Ec'lesia Yalara Wonderwall is twenty-two Lunar Years old, a member of House Wonderwall's Yalara cadet branch, and a young Redactor studying under specialist restriction at the Academy of Lon'drina. A **Redactor** is someone trained to produce controlled changes in the world through a personal conceptual affinity called an **Anchor**. Ec'lesia's Anchor is known as **Stilllight**.
 
 The easiest way to notice Ec'lesia, however, has nothing to do with Redactory.
 
@@ -110,7 +110,7 @@ and finally:
 
 ## Background
 
-Ec'lesia was born in Kalt'sen in Year 2178 to **Al'yana Yalara Wonderwall-Kjackter**, a competent practicing Redactor, and **Gal'ahad Kjackter**, a non-Redactor civil engineer.
+Ec'lesia was born in Kalt'sen c. Imperial Year 2190 to **Al'yana Yalara Wonderwall-Kjackter**, a competent practicing Redactor, and **Gal'ahad Kjackter**, a non-Redactor civil engineer.
 
 The Yalara branch is a genuine cadet branch of House Wonderwall, but Ec'lesia did not grow up at the center of the House's political or corporate machinery. The branch had spent generations living comparatively ordinary lives: marrying, working, producing Redactors and non-Redactors, inheriting bits of family culture, and changing in ways nobody was attempting to control as part of a larger plan.
 

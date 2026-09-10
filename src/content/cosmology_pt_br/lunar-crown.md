@@ -18,6 +18,8 @@ image: "../../assets/uploads/cosm-lunar-crown.png"
 
 A Lunar Crown é a principal lua de Terra. Ela está fraturada. O campo de destroços ao redor de sua massa quebrada — o **Lunar Ring** — aparece no céu noturno como um enorme arco de luz dispersa, permanente e impossível de ignorar.
 
+Sua órbita diária projetada, sua rotação axial e a órbita de Terra são movimentos separados. A órbita diária produz o dia civil de aproximadamente vinte e quatro horas. Uma rotação axial leva **365 dias** e define o **Lunar Year** em escala humana. A órbita de Terra ao redor de Vael'Khar leva **833 dias** e define o **Imperial Year** civil e histórico.
+
 A fratura não foi causada por impacto natural. Ela é a cicatriz permanente de um ataque.
 
 Algo de poder colossal, vindo de fora da fronteira da Page, pressionou o limiar da realidade de Terra com força suficiente para quebrar a lua — que naquela época funcionava como o **Selo Intacto**, a manifestação ancorada pelos Precursors da integridade limiar do mundo.
@@ -38,7 +40,7 @@ Era uma presença governante ativa.
 
 A teologia da Igreja entende isso corretamente em sua estrutura essencial, mesmo sem compreender todos os detalhes técnicos. O ensinamento de que a Lua já foi uma lâmpada guardiã, que ela mantinha o limiar fechado e que sua fratura comprometeu essa proteção descreve corretamente o que aconteceu. A interpretação teológica e a realidade técnica divergem em terminologia e mecanismo explicativo, mas o evento central é o mesmo.
 
-O sistema unia doze [[obscurials|Obscurials]] reais, assentos e interfaces locais da Página, os Skyphons como intérpretes vivos, a participação de Terra e do Primordial da Página, Ksy'rion e a estabilização dos Precursores. Os Precursores construíram os assentos, relays, interfaces, corpos e reforços. Não criaram os Obscurials.
+O sistema unia doze [[obscurials|corpos verdadeiros Obscurials]], Assentos e interfaces locais da Página, as pessoas Skyphons que esses corpos se tornaram, a participação de Terra e do Primordial da Página, Ksy'rion e a estabilização dos Precursores. Os Precursores construíram os Assentos, relays, interfaces, terminais humanoides e reforços. Não criaram os corpos Obscurials nem fabricaram a personalidade Skyphon fora deles.
 
 O Selo Intacto não era infinito. O ataque contra ele foi forte o bastante para quebrá-lo. E desde então o limiar permanece comprometido.
 
@@ -78,7 +80,7 @@ Ela nunca corrigiu nenhuma das interpretações.
 
 A Fratura quebrou tanto a Lua quanto o céu regulado.
 
-Ela encerrou a manutenção viva dos Skyphons, rompeu Ksy'rion como máscara celeste completa e separou todos os acoplamentos Obscurials. **Todos os doze Obscurials reais desapareceram da configuração lunar.** Sua condição e seu paradeiro atuais permanecem desconhecidos.
+Ela encerrou a manutenção viva dos Skyphons, rompeu Ksy'rion como máscara celeste completa e separou todas as relações completas dos Assentos. **Todos os doze corpos verdadeiros Obscurials foram desassentados.** As mesmas doze pessoas Skyphons sobreviveram à falha inicial de endereço, mas sua condição e seu paradeiro além da crise celestial posterior permanecem desconhecidos.
 
 O que sobreviveu foi a arquitetura nativa ferida ao redor deles: assentos, relays e interfaces danificados, topologia residual Twelvefold, a macro-Âncora lunar, restos de Ksy'rion e o endereço vivo de contenção de Syr'lene. A Lunar Crown atual não contém nenhum Obscurial real.
 
@@ -92,13 +94,13 @@ Sem o anel, as perturbações harmônicas geradas pela contenção atingiriam a 
 
 Os **Callings** — os eventos de Resonance sentidos por toda a Twilight Band — são justamente aquilo que atravessa o anel: pressão de contenção e intrusão filtrada pela memória Twelvefold da Crown ferida.
 
-Eles são o conflito de contenção, ouvido à distância, não mensagens dos Obscurials desaparecidos nem dos Skyphons encerrados.
+Eles são o conflito de contenção ouvido à distância, não mensagens das pessoas Skyphon desassentadas.
 
 ---
 
 ## Os Callings
 
-Os **Callings** são eventos periódicos de pressão e perturbação harmônica vindos da Lunar Crown. Eles não são o fragmento se manifestando diretamente no mundo nem mensagens dos Obscurials desaparecidos ou dos Skyphons encerrados. São a assinatura do conflito contínuo — o atrito entre contenção e pressão de intrusão — filtrada por assentos, relays e doze jurisdições desiguais que a Crown ainda recorda.
+Os **Callings** são eventos periódicos de pressão e perturbação harmônica vindos da Lunar Crown. Eles não são o fragmento se manifestando diretamente no mundo nem mensagens das pessoas Skyphon desassentadas. São a assinatura do conflito contínuo — o atrito entre contenção e pressão de intrusão — filtrada por Assentos, relays e doze jurisdições desiguais que a Crown ainda recorda.
 
 A intensidade varia.
 

@@ -115,7 +115,7 @@ Divination is fusion rather than routing. Host and fragment can only stabilize i
 
 ### Callings
 
-Callings are pressure made periodic under Time and filtered through Terra's damaged Twelvefold architecture. They propagate through the surviving seats, relays, interfaces, and Principle jurisdictions as cyclical harmonic disturbance. They are not messages from the vanished Obscurials and are not the conscious speech of the Lunar Crown.
+Callings are pressure made periodic under Time and filtered through Terra's damaged Twelvefold architecture. They propagate through the surviving seats, relays, interfaces, and Principle jurisdictions as cyclical harmonic disturbance. They are not messages from the unseated Skyphon persons and are not the conscious speech of the Lunar Crown.
 
 ## Resonance Versus Concordance
 

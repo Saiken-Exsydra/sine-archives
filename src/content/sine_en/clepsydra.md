@@ -32,7 +32,7 @@ Clepsydra holds sole custody of the **GlassWatchers**, **GlassThreaders**, **Gla
 
 ## Historical Evolution
 
-Clepsydra was founded in **Year 1813**, one year after the first successful Thread opening, when SiNE's leadership concluded that the lattice could not remain inside any existing branch without becoming more dangerous.
+Clepsydra was founded in **Imperial Year 1813**, one Imperial Year after the first successful Thread opening, when SiNE's leadership concluded that the lattice could not remain inside any existing branch without becoming more dangerous.
 
 Its earliest administrative and technical core came from the **Lattice Cradle Program**. Once the system proved repeatable, it stopped being a research curiosity and became strategic infrastructure no ordinary branch was fit to own.
 

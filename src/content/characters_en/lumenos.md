@@ -3,8 +3,8 @@ title: "Lumenos"
 type: "Skyphon"
 rank: "Bearer of Mutual Weight"
 designation: "Bearer of Mutual Weight"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Person concluded at the Fracture; body within Lunar Fragment; fragment in gravity grids; Instrument seat-fast near Syr'lene"
+affiliation: "First Bearer — Intact Seal (Unseated)"
+registry_status: "Unseated during the Fracture; person survives beyond ordinary Terra address; terminal compressed; Cohesion Seat/interface remnant remains near Syr'lene"
 occupation: "Physical cohesion"
 domain: "Gravity, load, and physical adjacency among separated masses"
 church_name: "The Instrument of Binding"
@@ -23,6 +23,6 @@ Lumenos governed physical cohesion: gravity, load, and the adjacency that lets m
 
 His dependence on Warden defined what could share load. His friction with ǩleinaptus defined when holding had become harmful. During the Fracture he remained inside the lunar mass, keeping the Fragment, the first Ring trajectories, and Terra's atmospheric retention in one field until Syr'lene acquired the lattice.
 
-His constraint body compressed into the Lunar Fragment. His Page fragment dispersed through gravitational moderation grids and the Metric Safeguard. The Instrument of Cohesion remains seat-fast near Syr'lene's living Anchor.
+His humanoid terminal and local Cohesion expression compressed into the Lunar Fragment. Cohesion's imprint dispersed through gravitational moderation grids and the Metric Safeguard. A Seat-and-interface remnant remains near Syr'lene's living Anchor. Lumenos's true Obscurial body became unseated, carrying the same person beyond ordinary Terra address.
 
 Removing it would not grant control over gravity. It would alter the relation among Fragment, Ring, Terra, and the metric exclusions that keep the Moon inaccessible.

@@ -58,8 +58,8 @@ And cadence is Time's tolerance of an Exsydra recursion perceiving the margin be
 | **Full Name** | Sai'ken Exsydra |
 | **Birth Name** | Sai'ken Las'gall |
 | **Archival Lineage Name** | Exsydra. Earlier pre-Imperial orthography appears in sealed records as Ex'sydra; modern restored legal spelling follows current Synus family-name convention and removes the apostrophe from the family name. |
-| **Name Conferred** | Exsydra — assigned by Em'manuel Kael Wonderwall upon formal entry into the Seat's service, year 2194. Presented to the subject as a procedural house-designation. This explanation was incomplete by design. |
-| **Approximate Year of Birth** | Year 2175; age twenty-five as of Year 2200. |
+| **Name Conferred** | Exsydra — assigned by Em'manuel Kael Wonderwall upon formal entry into the Seat's service, c. Imperial Year 2197. Presented to the subject as a procedural house-designation. This explanation was incomplete by design. |
+| **Approximate Year of Birth** | c. Imperial Year 2189; age twenty-five Lunar Years as of Imperial Year 2200. |
 | **Birthplace** | Ael'keth, eastern borderlands, Northern Region. |
 | **Parents** | Tae'ven Las'gall, structural engineer attached to municipal bridgework and tunnel inspection; Cor'ren Las'gall, regional schoolteacher and informal historical archivist. Both currently alive, both partially aware that the Wonderwall Seat's apparatus has influenced their family's institutional trajectory, neither aware of the Exsydra designation in full. |
 | **Redactory Status** | Registered under practicing classification, pending full assessment. Official profile remains Traverse-sensitive / Interval-adjacent. Private profile: Time-tolerated cadence-sensitive threshold bearer with gap-space traversal capacity. |
@@ -69,7 +69,7 @@ And cadence is Time's tolerance of an Exsydra recursion perceiving the margin be
 | **Institutional Affiliation** | KT-Exs protected-service officer under a sealed House and Compact warrant. Current posting: protective and terminal-contingency function, Yalara household, Kalt'sen eastern residential quarter. He is not a general intelligence asset. |
 | **Current Assignment** | Protect Ec'lesia Yalara Wonderwall, identify cadence escalation, support evacuation and rescue, and act as terminal contingency only after verified catastrophic loss of agency and failure or impossibility of less destructive intervention. He cannot stabilize her condition or privately adjudicate her life. |
 | **Lineage Designation** | Exsydra by blood — surviving expression of the erased theoretical lineage, seven generations from the executed architect, carrying the cadence-sensitive recursive architecture that survived under the Las'gall name. |
-| **Project Seam Relationship** | Subject of Project Seam structural review, year 2182. Anomaly flag escalated to Seat access. Subsequent monitoring, years 2182–present. Clockwork has no standing claim over him. |
+| **Project Seam Relationship** | Subject of Project Seam structural review, c. Imperial Year 2192. Anomaly flag escalated to Seat access. Subsequent monitoring, c. Imperial Year 2192–present. Clockwork has no standing claim over him. |
 | **House Standing** | Exsydra is a restored lineage name, not automatic Wonderwall membership, corporate title, or sovereign claim. |
 | **Time Relationship** | No fusion, no vessel-state, no worship contract, no direct command. Subject is readable to Time while briefly off-sequence. This constitutes tolerance, not empowerment. |
 | **Remainder Relationship** | No known Remainder attachment. High risk of notice. His traversal enters the habitat in which the Remainder persists. His presence near Ec'lesia may become catalytic under stress. |
@@ -78,7 +78,7 @@ And cadence is Time's tolerance of an Exsydra recursion perceiving the margin be
 
 # II. ESSENTIAL SUMMARY
 
-Sai'ken Exsydra is a twenty-five-year-old KT-Exs operative born in Ael'keth under the name Sai'ken Las'gall. He is the last confirmed living active expression of the Exsydra lineage: a pre-Imperial theoretical house erased after the Sundering of Selia for its role in developing the Sequence Doctrine and the timing-array framework that misidentified cadence perception as temporal foresight.
+Sai'ken Exsydra is a twenty-five-Lunar-Year-old KT-Exs operative born in Ael'keth under the name Sai'ken Las'gall. He is the last confirmed living active expression of the Exsydra lineage: a pre-Imperial theoretical house erased after the Sundering of Selia for its role in developing the Sequence Doctrine and the timing-array framework that misidentified cadence perception as temporal foresight.
 
 His apparent abilities are threefold.
 
@@ -691,7 +691,7 @@ He had felt something counting.
 
 ## VIII.3 First Violence
 
-The first documented violent expression of Sai'ken's cadence sense occurred at age fourteen.
+The first documented violent expression of Sai'ken's cadence sense occurred at age fourteen Lunar Years.
 
 A local smuggling group attempted to use a school storage wing during Low Radiance closure, believing the building empty. Sai'ken had returned for a forgotten notebook. He entered the corridor, stopped before the corner, and stepped backward without knowing why. A thrown hook-blade struck the wall at face height where he would have been.
 
@@ -750,13 +750,13 @@ Em'manuel later copied that sentence into the KT-Exs private annex.
 
 ## IX.1 The Approach
 
-Sai'ken was recruited in year 2194.
+Sai'ken was recruited c. Imperial Year 2197.
 
 He believes this was the result of standard talent identification.
 
 This is an acceptable public explanation.
 
-The private chain began twelve years earlier, when Project Seam flagged the Las'gall family profile. The initial survey did not identify Sai'ken as the singular point of interest. He was seven. What it identified was a household architecture carrying an interval-sensitive signature with lineage consistency too precise to be environmental alone.
+The private chain began twelve Lunar Years earlier, when Project Seam flagged the Las'gall family profile. The initial survey did not identify Sai'ken as the singular point of interest. He was seven Lunar Years old. What it identified was a household architecture carrying an interval-sensitive signature with lineage consistency too precise to be environmental alone.
 
 The result reached my desk because the older Ael'keth survey record had been transferred into Project Seam's cross-jurisdictional archive. My Year 1895 Clockwork strike, the Glass Measure, mapped Clepsydra against hostile capture; it did not concern the Las'gall family. Using the later Seam apparatus to observe the line was a separate choice.
 
@@ -766,7 +766,7 @@ Then it produced the Las'gall file.
 
 Sai'ken was monitored without contact through adolescence. Intervention was limited to removing obstructive institutional errors, permitting scholarships to remain open, redirecting one Apocachynthion assessment request away from public classification, and ensuring that no House genealogist with more curiosity than discretion connected the Las'gall family to pre-Imperial erasure records.
 
-When he reached nineteen, I interviewed him personally.
+When he reached nineteen Lunar Years, I interviewed him personally.
 
 He still believes this was unusual but not important.
 

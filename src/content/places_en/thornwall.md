@@ -28,7 +28,7 @@ The result is a landscape of extraordinary visual drama: tall, narrow ridges of 
 
 The major passes through the Thornwall are fewer and narrower than those of the Hal'vorn Ridge System further north, and their approaches are more dramatic.
 
-The **Imperial Spine** crosses the Thornwall through the **Krel Tunnel** — an 18-kilometer bored passage that took over twenty years to complete and remains one of the great engineering achievements of imperial rail construction. The tunnel carries the full freight and passenger volume of the Empire's primary rail artery through the ridge system, connecting the Central lowlands to the Northern Region without requiring the rail line to climb the ridges themselves.
+The **Imperial Spine** crosses the Thornwall through the **Krel Tunnel** — an 18-kilometer bored passage that took over twenty Imperial Years to complete and remains one of the great engineering achievements of imperial rail construction. The tunnel carries the full freight and passenger volume of the Empire's primary rail artery through the ridge system, connecting the Central lowlands to the Northern Region without requiring the rail line to climb the ridges themselves.
 
 Travellers crossing via surface road use the **Thornwall Pass** — a winding route through the widest gap in the system. On clear High Radiance days, the pass provides one of the most cited scenic views in the Empire: the red-and-grey fins of the Thornwall above, and the green Central lowlands spread below as far as the eye can reach.
 

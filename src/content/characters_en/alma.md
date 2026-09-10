@@ -3,8 +3,8 @@ title: "Alma"
 type: "Skyphon"
 rank: "Bearer of the Bounded Interior"
 designation: "Bearer of the Bounded Interior"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Person concluded at the Fracture; body lost at the self/world boundary; fragment in self-stabilization; Instrument in a ruptured lunar address"
+affiliation: "First Bearer — Intact Seal (Unseated)"
+registry_status: "Unseated during the Fracture; person survives beyond ordinary Terra address; terminal failed at the self/world boundary; Selfhood interface remains in a ruptured lunar address"
 occupation: "Bounded self-address"
 domain: "Emergence, individuation, and self-address of awakened recursion"
 church_name: "The Instrument of Sentience"
@@ -23,6 +23,6 @@ Alma governed the threshold at which recursion became a bounded interior capable
 
 Shizen governed living systems before sentience; Thanatos governed survivable development after selfhood existed; Warden protected boundaries among selves. These overlaps made personhood a continuing relation, not an indivisible substance Alma owned.
 
-At Year 0 Alma held individual self-address through the first eleven beats while panic, false sky returns, and outside pressure threatened to merge vulnerable minds into unstable fields. Her constraint body failed along the boundary between self and world. Her fragment remains in self-stabilization aftereffects. The Instrument of Selfhood occupies a ruptured lunar address.
+At Year 0 Alma held individual self-address through the first eleven beats while panic, false sky returns, and outside pressure threatened to merge vulnerable minds into unstable fields. Her humanoid terminal failed along the boundary between self and world. Selfhood's imprint remains in self-stabilization aftereffects, while a Seat-and-interface address occupies ruptured lunar architecture. Alma's true Obscurial body became unseated, carrying the same person beyond ordinary Terra address.
 
 Unborne Selfhood is dangerous when it fixes one historical self and rejects lawful growth as intrusion.

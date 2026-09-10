@@ -9,7 +9,7 @@ updated: "2026-03-30"
 image: ""
 ---
 
-> *"Ask any Redactor who has been active for more than three years. They know. You do not need to explain it. You just say 'strong Calling season' and they nod in a way that takes in something very specific."*
+> *"Ask any Redactor who has been active for more than three Lunar Years. They know. You do not need to explain it. You just say 'strong Calling season' and they nod in a way that takes in something very specific."*
 > — Senior Assessor notation, Apocachynthion monitoring desk
 
 ---

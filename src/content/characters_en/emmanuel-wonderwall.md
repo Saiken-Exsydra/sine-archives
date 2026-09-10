@@ -2,8 +2,8 @@
 title: "Em'manuel Kael Wonderwall"
 type: "Character"
 
-age: "Approximately 1,205 (as of Year 2200)"
-birth_year: "995"
+age: "Approximately 2,750 Lunar Years (as of Imperial Year 2200); approximately 1,205 Imperial Years of history crossed"
+birth_year: "c. Imperial Year 995"
 birthplace: "Northern coastal region, pre-Empire; original settlement no longer survives under that name"
 
 affiliation: "House Wonderwall; SiNE; Empire of Synus"
@@ -99,7 +99,7 @@ The discomfort is part of the point.
 
 ## Before the Empire
 
-Em'manuel was born in Year 995, thirty years before the Rite of Selia destroyed the political order in which he grew up.
+Em'manuel was born c. Imperial Year 995, thirty Imperial Years before the Rite of Selia destroyed the political order in which he grew up.
 
 His birth family belonged to the northern scholarly world rather than to the great ruling dynasties. Their work centered on the relation between a thing's present configuration and the adjacent state toward which it appeared to be developing. They believed they were studying sequence in a temporal sense: a disciplined method for reading what came next.
 
@@ -265,7 +265,11 @@ He cannot command Time.
 
 His highest Interval expression may resemble stasis to an observer, but it does not stop the temporal reading of the world. Any phenomenon that genuinely belongs to Time remains categorically distinct from his Anchor.
 
-His biological continuati…628 tokens truncated…to answer a question Em'manuel's existence made unavoidable:
+His biological continuation is maintained, not guaranteed. Archtype-class self-modification prevents ordinary aging from deciding his lifespan, but it does not make him cosmologically immortal or immune to destruction, continuity failure, hostile interference, or the consequences of a mistake made while rewriting himself.
+
+His longest-running risk is institutional. SiNE, House Wonderwall, and a hereditary Senate office have all developed around a founder who remains personally present across generations. His competence can delay succession pressure without solving it. Every structure that depends on his continued judgment becomes harder to inherit, challenge, or outlive.
+
+That leaves the people around him to answer a question Em'manuel's existence made unavoidable:
 
 How do you build an institution capable of surviving its founder when the founder has never had to leave?
 
@@ -309,7 +313,7 @@ She is also one of the people who has been most willing to tell him that love do
 
 The first E'lla was Em'manuel's daughter.
 
-She was born in Year 1226 with an extraordinary Light-domain Anchor and grew into a Redactor whose work repeatedly left the world around it unusually legible and stable. She also inherited a pressure Em'manuel did not yet understand correctly.
+She was born c. Imperial Year 1249 with an extraordinary Light-domain Anchor and grew into a Redactor whose work repeatedly left the world around it unusually legible and stable. She also inherited a pressure Em'manuel did not yet understand correctly.
 
 By adulthood, E'lla concluded that the path forming around her threatened something more important to her than survival: authorship over who she would become.
 
@@ -317,7 +321,7 @@ Em'manuel offered her more time.
 
 She refused the premise.
 
-In Year 1267, at forty-one, she chose death rather than continue toward a state she believed she might no longer be able to recognize as her own.
+In Imperial Year 1267, at forty-one Lunar Years, she chose death rather than continue toward a state she believed she might no longer be able to recognize as her own.
 
 Em'manuel was present.
 
@@ -489,7 +493,7 @@ It was a continuity program that succeeded at producing people and then judged t
 
 Numbered biological production began in Year 1547.
 
-It ended with the birth of KL-83 in Year 2175.
+It ended with the birth of KL-83 c. Imperial Year 2189.
 
 Eighty-three human subjects were produced.
 
@@ -513,7 +517,7 @@ Both statements are true.
 
 The second does not erase the first.
 
-In Year 2179, Al'ithia ended biological production permanently, refused termination of the surviving subjects, and forced the remaining system toward care, reparations, protected disclosure, and independent oversight.
+In Imperial Year 2191, Al'ithia ended biological production permanently, refused termination of the surviving subjects, and forced the remaining system toward care, reparations, protected disclosure, and independent oversight.
 
 Modern E'lla was KL-83.
 

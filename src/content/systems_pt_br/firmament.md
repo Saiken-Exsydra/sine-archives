@@ -59,6 +59,12 @@ flowchart TD
 
 A Igreja não entende isso como ecologia de fragmentos. Ela entende como assistência celestial ordenada.
 
+O Tenfold não precedeu o Twelvefold e não o duplica. O [[obscurials|Twelvefold]] distribuía doze Jurisdições locais de Terra horizontalmente. O Tenfold distribui uma identidade do Sovereign verticalmente através de dez Seraphim e suas constelações descendentes. Não existe um mapa individual entre Skyphons e Seraphim.
+
+O Sovereign alcançou coerência local durável em um mundo já moldado pelo Twelvefold. Esse ambiente herdado influenciou a forma como a identidade Seráfica se tornou legível: anéis, halos, estruturas suspensas, geometria radiante, simetria impossível e outras formas que podem lembrar a morfologia Obscurial. A semelhança é refração estrutural, não descendência. Skyphons não eram anjos, e Seraphim não são Obscurials.
+
+A Fratura desestabilizou a conexão de Terra com as estruturas de domínio do Céu, Inferno e Pathway quando os doze Skyphons foram desassentados ao mesmo tempo. Três Seraphim atravessaram além do Firmamento acessível ligados à trajetória não resolvida dos Skyphons e não retornaram. Sete permaneceram contatáveis. Seu destino e motivo não estão estabelecidos.
+
 ---
 
 ## Seraphic Constellations
@@ -93,7 +99,7 @@ O **Cynosure** é a estrela central. **Cardinal Stars** são fragmentos descende
 
 ## Abyssal Constellations
 
-Uma **Abyssal Constellation** é a contraparte corrompida ou demoníaca da ordenação Seraphic.
+Uma **Abyssal Constellation** é uma expressão descendente do inverso Abissal do Sovereign. O inverso se formou onde a identidade do Sovereign refratou através de um ambiente local que ainda continha um termo estrangeiro não resolvido. Afinidade estrutural com a relação Obscurial não torna demônios Obscurials nem partes da fonte exterior.
 
 ```mermaid
 flowchart TD
@@ -118,6 +124,8 @@ flowchart TD
 ```
 
 Demons propriamente ditos são presenças demoníacas ou entidades infernais. Criaturas demoníacas são estruturas mortais, pós-morte, corporais ou residuais alteradas por Presence demoníaca ou saturação. Vampiros, ghouls, ghosts, werewolves, casos Hollowed, Worn e Consumed são afterstates derivados ou haunt-states, não automaticamente demons propriamente ditos.
+
+Alguns seres ou fragmentos Seráficos realmente cruzaram para a arquitetura Abissal durante a crise celestial pós-Fratura, desertaram, ficaram presos ou retornaram alterados. Esses são **anjos caídos** reais, mas formam uma categoria histórica limitada. A espécie demoníaca como um todo não descende deles.
 
 Divination pode conduzir reconfiguração estável para esses estados. Ela não cria novas espécies ex nihilo.
 

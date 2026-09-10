@@ -1,8 +1,8 @@
 ---
 title: "Ec'lesia Yalara Wonderwall"
 type: "Personagem"
-age: "22 anos (na época do registro, 2200)"
-birth_year: "2178"
+age: "22 Lunar Years (na época do registro, Imperial Year 2200)"
+birth_year: "c. Imperial Year 2190"
 birthplace: "Kalt'sen, Região Central, Império de Synus"
 affiliation: "Apocachynthion; House Wonderwall"
 house: "Wonderwall (ramo cadete Yalara; posição plena na House, sem cargo corporativo)"

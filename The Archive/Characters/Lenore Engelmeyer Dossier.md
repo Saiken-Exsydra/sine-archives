@@ -1,7 +1,7 @@
 # PERSONAL DOSSIER — RESTRICTED
 ## LE'NORE VOREN ENGELMEYER
 **Registered Practitioner · Quill · Mark 2 · Deception-Anchor (Confirmed Classification) · House Engelmeyer Blood Seat (Reintegrated, Furnace Council Administration) · Sealed Practice File**
-*Filed by: Apocachynthion, Hora'veil Regional Academy — initial intake completed 2193 · Quill certification issued 2195 · file active and open*
+*Filed by: Apocachynthion, Hora'veil Regional Academy — initial intake completed c. 2197 · Quill certification issued c. 2198 · file active and open*
 *Secondary cross-reference filed: SiNE S-AE Branch, Central Region analytical registry — western-band liaison incidents, no formal classification, monitoring status*
 
 ---
@@ -16,12 +16,12 @@
 | Field | Entry |
 |---|---|
 | **Full Name** | Le'nore Voren Engelmeyer — formal name since reintegration in 2199; legal birth registration: Le'nore Engelmeyer; *Voren* used within the branch and applied retrospectively in lineage records |
-| **Secondary Name Note** | *Maris* belonged to an eleven-year-old Voren child killed in the Year 1043 Works catastrophe. The damaged ancestral label recurs in compromised lineage, poetic, and astronomical records touched by Quiet Moon saturation. It is not Le'nore's name and has no current legal or House standing. |
-| **Year of Birth** | 2177 (age 23 at time of filing, 2200) |
+| **Secondary Name Note** | *Maris* belonged to an eleven-Lunar-Year-old Voren child killed in the Imperial Year 1043 Works catastrophe. The damaged ancestral label recurs in compromised lineage, poetic, and astronomical records touched by Quiet Moon saturation. It is not Le'nore's name and has no current legal or House standing. |
+| **Year of Birth** | c. Imperial Year 2190 (age 23 Lunar Years at time of filing, Imperial Year 2200) |
 | **Birthplace** | Drevholt, a small township in the western band interior, approximately forty kilometers east of the Vel'hara city-state |
-| **Registry Status** | Registered — intake 2193; Quill certification issued 2195; Mark 2 active and unmodified through five annual reviews |
+| **Registry Status** | Registered — intake c. 2197; Quill certification issued c. 2198; Mark 2 active and unmodified through five annual reviews |
 | **Rank** | Quill |
-| **Anchor Classification** | Deception — confirmed through specialist panel assessment, Year 2194. No Inkless designation. No outstanding classification review. Classification is not under contest. |
+| **Anchor Classification** | Deception — confirmed through specialist panel assessment, c. Imperial Year 2198. No Inkless designation. No outstanding classification review. Classification is not under contest. |
 | **House** | Engelmeyer — Voren cadet-branch origin; formally reintegrated to main-line recognition Year 2199 and registered as the current blood Seat under the House's standing Furnace Council. *Voren* is the branch identifier inherited through her mother's line; Al'tair adopted it upon marriage. Le'nore's civil documents used the two-name form before reintegration, while branch records used the full lineage form. |
 | **Current Residence** | Vel'hara, independent western-band city-state — relocated Year 2199 under House arrangement. Registered through the Vel'hara–Apocachynthion inter-registry compact, with Hora'veil Academy holding the imperial side of her file. |
 | **Occupation** | Independent practitioner — civic practice under conditional terms; no martial placement |
@@ -30,7 +30,7 @@
 | **Complexion** | Fair; even; no surface indicators during assessed ability expression — no vein shimmer, no atmospheric disturbance, no coherence bleed. Multiple assessors ***I*** have worked with noted the absence of these tells. The absence is itself a tell, to anyone looking for it. |
 | **Hair** | Blonde, near-white — the color of old linen in direct light, or of something that has been bleached by long proximity to something very bright. Cut in a short, softly layered shaggy bob with sweeping curtain bangs and gently flipped-out ends. Deliberate and precise. |
 | **Eyes** | Grey, very light — reads as near-colorless in low illumination. Every assessor who has spent significant time across a table from her has noted the eyes and none have found a description that closes the subject. The first field assessor who saw her wrote: *the color is not the thing that registers.* He did not elaborate. |
-| **Typical Dress** | White by preference — pale linens, light wools, materials that don't announce themselves. The preference is consistent enough across five years of documented contact to be a signature without being a rule. |
+| **Typical Dress** | White by preference — pale linens, light wools, materials that don't announce themselves. The preference is consistent enough across five Lunar Years of documented contact to be a signature without being a rule. |
 | **General Impression** | Notably attractive in a way that registers before anything else registers. People notice her face first. They notice something else second. By the time they are trying to name the second thing, they have usually already smiled back at her. |
 
 ---
@@ -54,8 +54,8 @@
 **Reach:** Wide Reach  
 **Overreach History:** Managed biological Overreach; no formal Blot  
 **Apparatus Permissions:** Ordinary Apparati; no martial apparati  
-**Registration Tenure:** 7 years  
-**Academy Record:** Hora'veil intake 2193; specialist panel confirmation 2194; Quill certification 2195  
+**Registration Tenure:** 7 Lunar Years
+**Academy Record:** Hora'veil intake c. 2197; specialist panel confirmation c. 2198; Quill certification c. 2198
 **Practice Record:** Independent civic and contractor work under western-band inter-registry compact  
 **Blots:** None formally recorded  
 **Pager Note:** None  
@@ -105,43 +105,43 @@ The Institute had identified the branch through cross-referencing Apocachynthion
 
 Corvel also possessed an incomplete pre-Cisma genealogy and a fragment of the Voren Works casualty pattern. It knew that Drevholt was a refuge rather than the branch's original seat. It did not possess the loyalist denial order, the complete lattice record, or any concept of Quiet Moon grammar. Its research model therefore began from a correct observation — the condition followed a specific survivor line — and a false hope that one transmissible biological cause would explain it.
 
-Al'tair Aldhor was twenty-two years old when the Institute selected him for the Drevholt engagement. He was a physician on the Institute's research staff — trained in both conventional medicine and in the Institute's own methodology for the study of anomalous biological conditions. He was selected for this assignment because he was competent, because he was young enough to sustain a long-term placement, and because he had requested it.
+Al'tair Aldhor was twenty-two Lunar Years old when the Institute selected him for the Drevholt engagement. He was a physician on the Institute's research staff — trained in both conventional medicine and in the Institute's own methodology for the study of anomalous biological conditions. He was selected for this assignment because he was competent, because he was young enough to sustain a long-term placement, and because he had requested it.
 
 He was also selected because Corvel's assessments described his recursive profile as unusually stable and low in expressive noise. The Institute did not tell him that it considered his possible intimacy with the lineage a useful variable. It told him he was being sent to observe one.
 
-The Institute's interest was institutional. Al'tair's interest was also personal: he had been studying the documentation on the Voren Engelmeyer branch for two years before the assignment was formalized and had developed, in that time, the specific investment of a researcher who has found a case that does not resolve the way cases are supposed to resolve. He wanted to go. The Institute sent him because wanting to go made him more useful for the kind of long-term observational work the assignment required.
+The Institute's interest was institutional. Al'tair's interest was also personal: he had been studying the documentation on the Voren Engelmeyer branch for two Lunar Years before the assignment was formalized and had developed, in that time, the specific investment of a researcher who has found a case that does not resolve the way cases are supposed to resolve. He wanted to go. The Institute sent him because wanting to go made him more useful for the kind of long-term observational work the assignment required.
 
-He arrived in Drevholt in Year 2168. He presented as a physician establishing a quiet provincial practice — which was true, as cover goes. He was qualified. He opened a small practice. He began seeing patients. He began, through the ordinary social machinery of a small town's medical life, meeting the family he had come to study.
+He arrived in Drevholt c. Imperial Year 2186. He presented as a physician establishing a quiet provincial practice — which was true, as cover goes. He was qualified. He opened a small practice. He began seeing patients. He began, through the ordinary social machinery of a small town's medical life, meeting the family he had come to study.
 
-Re'lha learned the truth in Year 2171 when she found a duplicated symptom ledger carrying Corvel marks. Al'tair admitted the assignment. He did not disclose the incomplete Works genealogy, the Institute's interest in his own stability, or the extent to which Corvel treated a future child as a possible continuation of the study.
+Re'lha learned the truth c. Imperial Year 2187 when she found a duplicated symptom ledger carrying Corvel marks. Al'tair admitted the assignment. He did not disclose the incomplete Works genealogy, the Institute's interest in his own stability, or the extent to which Corvel treated a future child as a possible continuation of the study.
 
 ---
 
 ### II.4 Parents
 
-**Al'tair Aldhor** — Le'nore's father. Born Year 2146. Living. Currently resident at the Corvel Institute's primary facility in Vel'hara, where he has been a senior research physician since Year 2189.
+**Al'tair Aldhor** — Le'nore's father. Born c. Imperial Year 2176. Living. Currently resident at the Corvel Institute's primary facility in Vel'hara, where he has been a senior research physician since c. Imperial Year 2196.
 
-He arrived in Drevholt as Al'tair Aldhor, physician and researcher, with no House affiliation and no middle name. He married Re'lha Voren Engelmeyer in Year 2174, in the provincial fashion, without a formal House ceremony. By marriage, he adopted the Voren branch-identifier name, becoming Al'tair Voren Engelmeyer in all subsequent institutional documentation.
+He arrived in Drevholt as Al'tair Aldhor, physician and researcher, with no House affiliation and no middle name. He married Re'lha Voren Engelmeyer c. Imperial Year 2189, in the provincial fashion, without a formal House ceremony. By marriage, he adopted the Voren branch-identifier name, becoming Al'tair Voren Engelmeyer in all subsequent institutional documentation.
 
-He spent twenty-one years in Drevholt. He loved Re'lha. He continued studying her. He loved Le'nore. He kept developmental notes on her. These statements are all supported by the surviving correspondence and do not resolve one another. The Institute's complete Drevholt record is not available to the Apocachynthion. Al'tair maintains a separate set of notebooks that Corvel has never received in full.
+He spent roughly twenty-three Lunar Years in Drevholt. He loved Re'lha. He continued studying her. He loved Le'nore. He kept developmental notes on her. These statements are all supported by the surviving correspondence and do not resolve one another. The Institute's complete Drevholt record is not available to the Apocachynthion. Al'tair maintains a separate set of notebooks that Corvel has never received in full.
 
-What is in the record: he was present for Le'nore's birth. He was present for her early childhood. He was present when Re'lha disappeared in Year 2186 — when Le'nore was nine — and he remained in Drevholt for three more years. During those years he stabilized Le'nore's routines, restricted Corvel access, and studied whether the event would recur. He returned in Year 2189 after negotiating that Corvel would not approach Le'nore directly while she remained stable and outside institutional custody.
+What is in the record: he was present for Le'nore's birth. He was present for her early childhood. He was present when Re'lha disappeared c. Imperial Year 2194 — when Le'nore was nine Lunar Years old — and he remained in Drevholt for roughly five more Lunar Years. During those years he stabilized Le'nore's routines, restricted Corvel access, and studied whether the event would recur. He returned c. Imperial Year 2196 after negotiating that Corvel would not approach Le'nore directly while she remained stable and outside institutional custody.
 
-He writes to Le'nore. She writes back. The correspondence is not in any institutional file. He is fifty-four years old. He is in Vel'hara, where his daughter has been living since Year 2199. They have not met because Corvel can observe a visit more easily than a private letter, because he fears what she may read in him at close range, and because she will not enter the Institute on terms she did not set. She is being very still. So is he.
+He writes to Le'nore. She writes back. The correspondence is not in any institutional file. He is fifty-four Lunar Years old. He is in Vel'hara, where his daughter has been living since Year 2199. They have not met because Corvel can observe a visit more easily than a private letter, because he fears what she may read in him at close range, and because she will not enter the Institute on terms she did not set. She is being very still. So is he.
 
 ---
 
-**Re'lha Voren Engelmeyer** — Le'nore's mother. Born Year 2149. Disappeared Year 2186. Listed in the Drevholt civil register as a missing person, case unresolved.
+**Re'lha Voren Engelmeyer** — Le'nore's mother. Born c. Imperial Year 2178. Disappeared c. Imperial Year 2194. Listed in the Drevholt civil register as a missing person, case unresolved.
 
-She was the carrier of the Voren branch's anomalous presentation in its most developed documented form at the time of Al'tair's arrival. The Apocachynthion's assessment of her, conducted Year 2167, correctly identified genuine low-output Redactory and a recursive architecture showing periodic interruption. It incorrectly treated the interruption as an ordinary property of unstable low-tier manifestation. The Redactory finding was sound. The causal account was not.
+She was the carrier of the Voren branch's anomalous presentation in its most developed documented form at the time of Al'tair's arrival. The Apocachynthion's assessment of her, conducted c. Imperial Year 2186, correctly identified genuine low-output Redactory and a recursive architecture showing periodic interruption. It incorrectly treated the interruption as an ordinary property of unstable low-tier manifestation. The Redactory finding was sound. The causal account was not.
 
 She experienced the voices. She experienced the perceptual disturbances. She experienced, with greater frequency and clarity than most documented branch members before her, the persistent sense of something attending to her from somewhere enormous and unnamed. Her grandmother, Isolde Voren Engelmeyer, taught her to treat voices as weather: record useful information, refuse commands, and address exhaustion before theology. Re'lha feared the interruptions in her own self-address. She also loved some inherited impressions — a weaving rhythm, the warmth of a destroyed room, a dead relative's correction of her hands at the loom.
 
 She was a weaver. The work appears in the family record as occupation and as genuine skill. She had a market reach extending beyond Drevholt. By all available account, she was someone who had built a life around a clear knowledge of herself rather than in spite of it.
 
-She discovered Al'tair's Corvel assignment in Year 2171 and remained after confronting him. Love, anger, intellectual need, and the fact that he kept looking after other institutions had stopped were all part of that decision. She married him in Year 2174. She had Le'nore in Year 2177. She disappeared in Year 2186 when Le'nore was nine years old.
+She discovered Al'tair's Corvel assignment c. Imperial Year 2187 and remained after confronting him. Love, anger, intellectual need, and the fact that he kept looking after other institutions had stopped were all part of that decision. She married him c. Imperial Year 2189. She had Le'nore c. Imperial Year 2190. She disappeared c. Imperial Year 2194 when Le'nore was nine Lunar Years old.
 
-The civil register records her as a missing person. There was no body. There was no blood. There was no evidence of violence, no evidence of flight, no evidence of anything. She was present in the household in the evening. She was not present in the morning. The investigation produced nothing. The case has remained open and inactive for fourteen years.
+The civil register records her as a missing person. There was no body. There was no blood. There was no evidence of violence, no evidence of flight, no evidence of anything. She was present in the household in the evening. She was not present in the morning. The investigation produced nothing. The case has remained open and inactive for fourteen Lunar Years.
 
 ---
 
@@ -149,7 +149,7 @@ The civil register records her as a missing person. There was no body. There was
 
 Re'lha Voren Engelmeyer did not disappear. She was consumed by her daughter.
 
-Le'nore was nine years old. The hunger had not yet developed the legible character it would take on in adolescence — it was not yet something she could name or recognize or manage. What she experienced on that night in Year 2186 was not appetite in the sense she would later understand. It was something earlier and more fundamental: a drive without a frame, without context, without the architecture to hold it at a distance and examine it. It overwhelmed her completely. It was the first and only time in her life that something operating through her did so without any capacity for resistance on her part.
+Le'nore was nine Lunar Years old. The hunger had not yet developed the legible character it would take on in adolescence — it was not yet something she could name or recognize or manage. What she experienced on that night c. Imperial Year 2194 was not appetite in the sense she would later understand. It was something earlier and more fundamental: a drive without a frame, without context, without the architecture to hold it at a distance and examine it. It overwhelmed her completely. It was the first and only time in her life that something operating through her did so without any capacity for resistance on her part.
 
 The Quiet Moon's pressure on her coherence architecture was, at age nine, at its most structurally disruptive. The integration process that would complete across her adolescence was in its most volatile phase, and her genuine Redactory emergence was beginning inside the same developing singularity. The hunger expressed through her before she possessed a stable framework for choice around it. It was hers as part of the person becoming Le'nore, but not yet governable by the adult self that would later hold hunger, affection, and restraint together.
 
@@ -161,7 +161,7 @@ Le'nore has never imitated her mother. She can distinguish Re'lha-shaped informa
 
 She was nine. She did not understand what she was doing. Afterward she understood that something irreversible had occurred and that information belonging to Re'lha was available inside her. She suspects the complete answer. She has spent fourteen years refusing to convert that suspicion into a fully opened memory.
 
-No one in Drevholt connected Le'nore to her mother's disappearance. She was a child. She was present in the household. She was, in the days after, the grieving nine-year-old daughter of a woman who had vanished without explanation, and the town read her accordingly. Al'tair was present. He conducted himself as a man whose wife had disappeared. He remained in Drevholt for three more years.
+No one in Drevholt connected Le'nore to her mother's disappearance. She was a child. She was present in the household. She was, in the days after, the grieving nine-year-old daughter of a woman who had vanished without explanation, and the town read her accordingly. Al'tair was present. He conducted himself as a man whose wife had disappeared. He remained in Drevholt for roughly five more Lunar Years.
 
 Al'tair concluded within weeks that Re'lha had not fled. Le'nore used a phrase Re'lha had spoken only during their private confrontation about Corvel. She did not present it as quotation and did not understand his reaction. He inferred that his daughter contained information that had belonged to his wife. He withheld the conclusion from the Institute.
 
@@ -175,7 +175,7 @@ Le'nore was named with a two-letter prefix by a cadet-branch craftsperson and a 
 
 The main line heard about it within months. They noted it, remembered it, and added it to the existing file of things the Voren branch had done that required no immediate response and some eventual one.
 
-The eventual response began when Le'nore's Apocachynthion intake reached the registry in Year 2193 and a House-connected contact flagged it. A representative met her in Hora'veil in Year 2194 and reported that the naming was not presumptuous. The report alone did not cause reintegration. It made Le'nore legible when the House's succession later failed.
+The eventual response began when Le'nore's Apocachynthion intake reached the registry c. Imperial Year 2197 and a House-connected contact flagged it. A representative met her in Hora'veil c. Imperial Year 2198 and reported that the naming was not presumptuous. The report alone did not cause reintegration. It made Le'nore legible when the House's succession later failed.
 
 The recognized blood Seat became vacant in Year 2197. House counsel reopened the **Voren Reserve**, a sealed Year 1051 instrument preserving the western survivors' contingent right to re-enter the line if the main succession failed. Reintegration proceedings began in Year 2198 and concluded in Year 2199. The legal three-name structure was conferred: Le'nore Voren Engelmeyer.
 
@@ -219,13 +219,13 @@ She managed the years between nine and fourteen with the particular quality of s
 
 She had two years between naming the hunger and the first external observation of her abilities. In those two years, she produced the framework that has governed her management of herself ever since. She produced it alone, in a small town that knew her family as *those Engelmeyers*, with her father gone and her mother absent in the only way she will never fully examine.
 
-She was fifteen. The framework has held for eight years. This is not a small thing.
+She was fifteen. The framework has held for eight Lunar Years. This is not a small thing.
 
 ---
 
-### III.2 First Manifestation — Year 2191
+### III.2 First Manifestation — c. Imperial Year 2196
 
-The incident occurred in Drevholt's market district in Year 2191. Le'nore was fourteen.
+The incident occurred in Drevholt's market district c. Imperial Year 2196. Le'nore was fourteen Lunar Years old.
 
 A witness report filed with the local constabulary and eventually forwarded to the Hora'veil regional registry describes three older adolescents confronting Le'nore in a public space — though if ***you*** had been there, you would not have been able to say precisely when the confrontation ended and the silence began. The confrontation was aggressive; Le'nore was its target. The report documents the aftermath: all three became simultaneously disoriented, losing both the thread of what they were doing and their awareness of Le'nore's presence for an estimated three to four minutes. They remained standing, physically unharmed, and resumed normal function after Le'nore had left the area.
 
@@ -233,17 +233,17 @@ Le'nore left at a normal walking pace.
 
 What she did not ***know*** — what she would not understand until she had developed the vocabulary to examine it — was that she had not suggested anything to the three of them. She had not produced an impression or a fog or a false image. She had read the precise shape of their sensory fields, identified the exact configuration of what each of them was registering, and quietly closed the aperture. She had not edited what they saw. She had identified that they were seeing her, and she had removed that fact from what their nervous systems delivered forward. What they lost was not three minutes of time. It was the specific piece of data that contained her.
 
-A second incident in Year 2193 — similar context, similar effect — accelerated the Apocachynthion's assessment timeline. The Hora'veil Academy dispatched a field assessor.
+A second incident c. Imperial Year 2197 — similar context, similar effect — accelerated the Apocachynthion's assessment timeline. The Hora'veil Academy dispatched a field assessor.
 
 ---
 
-### III.3 Academy Assessment and Specialist Panel — Years 2193 and 2194
+### III.3 Academy Assessment and Specialist Panel — c. Imperial Years 2197 and 2198
 
-The Stylus-rank field assessor assigned to Drevholt conducted two sessions with Le'nore in Year 2193. He found anomalous coherence output consistent with Redactory manifestation, no correspondence to any primary Anchor domain in the standard taxonomy, a genuine but unusually muted Dive signature whose quietness was not explained by low-tier manifestation given the output's potency, and a sixteen-year-old girl who answered every question with the kind of calm that rests in by default rather than being maintained.
+The Stylus-rank field assessor assigned to Drevholt conducted two sessions with Le'nore c. Imperial Year 2197. He found anomalous coherence output consistent with Redactory manifestation, no correspondence to any primary Anchor domain in the standard taxonomy, a genuine but unusually muted Dive signature whose quietness was not explained by low-tier manifestation given the output's potency, and a sixteen-Lunar-Year-old girl who answered every question with the kind of calm that rests in by default rather than being maintained.
 
 He escalated immediately.
 
-The specialist panel — four senior assessors, one holding a theoretical research appointment — conducted three sessions across six weeks of Year 2194. Their classification was reached through elimination: every standard primary Anchor domain produced no consistent picture. One category remained: the deception-anchor classification, applicable to practitioners whose Anchor domain is not any specific content but the alteration of perception itself. Rare. Imprecisely understood. Documented in fewer than a dozen registered practitioners across the Apocachynthion's complete historical record.
+The specialist panel — four senior assessors, one holding a theoretical research appointment — conducted three sessions across six weeks of Imperial Year 2198. Their classification was reached through elimination: every standard primary Anchor domain produced no consistent picture. One category remained: the deception-anchor classification, applicable to practitioners whose Anchor domain is not any specific content but the alteration of perception itself. Rare. Imprecisely understood. Documented in fewer than a dozen registered practitioners across the Apocachynthion's complete historical record.
 
 The classification accounts for the unusually muted Dive signature on the grounds that deception-anchored practice can suppress the legibility of its own coherence output as an expression of the domain itself. It accounts for the perceptual disruption effects as the Anchor's primary expression. It accounts for Le'nore's unusual coherence architecture as an atypical but not unprecedented manifestation pathway consistent with a rare domain type.
 
@@ -251,21 +251,21 @@ The classification accounts for the unusually muted Dive signature on the ground
 
 She does not contest it because she built it. From the first session in which the deception-anchor framework was proposed, she recognized what the panel was reaching toward and performed exactly what that framework predicted. She gave them the box. She lives inside it. She knows its theoretical foundations better than most practitioners know their own domain taxonomy, because the box only works if you know where its walls are.
 
-Senior Assessor Vel'omis, reviewing the file four years later, wrote in a private notation not included in the formal record: *She knows this classification better than most practitioners know their own.* The notation does not draw a conclusion from this. The conclusion is present between the lines.
+Senior Assessor Vel'omis, reviewing the file four Lunar Years later, wrote in a private notation not included in the formal record: *She knows this classification better than most practitioners know their own.* The notation does not draw a conclusion from this. The conclusion is present between the lines.
 
 ---
 
-### III.4 Quill Certification and Mark 2 Seal — Year 2195
+### III.4 Quill Certification and Mark 2 Seal — c. Imperial Year 2198
 
 Quill certification followed panel assessment and completion of foundational training. Mark 2 sealing followed because the subject's observed stability supported independent civic practice within recorded limits.
 
-Le'nore passed the certification examination in Year 2195. Performance noted as consistent with assessed capability — institutional language for passing at a level that confirms the classification without producing unexpected results. She gave them what they expected to see.
+Le'nore passed the certification examination c. Imperial Year 2198. Performance noted as consistent with assessed capability — institutional language for passing at a level that confirms the classification without producing unexpected results. She gave them what they expected to see.
 
 Recorded Margins: all operational engagements involving application of perceptual influence on non-consenting parties disclosed to the regional registry within forty-eight hours; Depth assessments every eight months at Hora'veil; no operational engagement in proximity to Apocachynthion-monitored diplomatic or Senate events without prior registry notification.
 
 She accepted the terms without objection, and faster than acceptance without prior consideration would have required.
 
-She has complied with all recorded Margins across five years of practice.
+She has complied with all recorded Margins across five Lunar Years of practice.
 
 ---
 
@@ -325,7 +325,7 @@ This is what the Deception classification describes, correctly, as an unusual ab
 
 At shallow Depth, the hijacking is broad — she can suppress awareness of her presence, bias attention away from something, produce the general impression that a situation is calm when it is not. At medium Depth, the precision increases: she can edit a specific sensory channel while leaving others intact, or introduce a specific piece of information that the person's own senses did not deliver but that their nervous system accepts as native signal. At full operative Depth, she can rebuild what a person perceives from the substrate upward — not by replacing their senses but by rewriting every input simultaneously with sufficient precision that the resulting experience is entirely of her construction while originating, structurally, inside the person's own architecture.
 
-She uses a fraction of this. She is twenty-three years old and she is a Quill and she has no training partner and no institutional framework adequate to her actual capability. What she has produced, working alone, is the management layer: the precise, economical editing that the Apocachynthion's assessors have described as characteristic economy of expression. She gives each situation exactly what it requires and nothing in excess. This is not restraint born from ethics. It is the practice of someone who learned by doing and chose early to apply only what she had tested.
+She uses a fraction of this. She is twenty-three Lunar Years old and she is a Quill and she has no training partner and no institutional framework adequate to her actual capability. What she has produced, working alone, is the management layer: the precise, economical editing that the Apocachynthion's assessors have described as characteristic economy of expression. She gives each situation exactly what it requires and nothing in excess. This is not restraint born from ethics. It is the practice of someone who learned by doing and chose early to apply only what she had tested.
 
 ---
 
@@ -423,7 +423,7 @@ She uses this rarely. The casual reproduction she applies in social contexts —
 
 When she does actually become someone she has consumed — when she restructures her biological substrate to produce not an impression of them but their physical reality, reproduced through her own flesh with precision the original possessed — it means something. It means she has decided that deception of this depth is required. It means someone is going to believe, completely, that they are looking at a specific person who is not Le'nore. It means, almost always, that someone else is not going to survive the belief.
 
-She does not reproduce her mother. In fourteen years, through all her casual and practiced reproduction of absorbed individuals, she has never once accessed Re'lha's pattern. This is not a rule she has stated. It is something she does not do.
+She does not reproduce her mother. In fourteen Lunar Years, through all her casual and practiced reproduction of absorbed individuals, she has never once accessed Re'lha's pattern. This is not a rule she has stated. It is something she does not do.
 
 The weak resonance signal that appears at the sites of her consumption events — identified as anomalous in SiNE's S-AE operational record and attributed by most analysts to geological background activity — is the structural trace of incorporation: the moment when a recursive singularity's coherence pattern resolves into her architecture rather than dispersing normally through the substrate. The signal is consistent. It is identifiable as a pattern, to someone who knows how to read patterns. One person does.
 
@@ -467,7 +467,7 @@ The biological Layer one of her Dive gives her complete readout of what she is w
 
 The effect of this, when she applies it to end something: she does not strike. She does not produce visible damage. She reaches into the biological readout she has been holding since she first entered the Dive and she begins rewriting it. Organs express configurations they were not built to express. Systems route against their own function. The body becomes, in the specific and total sense, something other than what it was — not dead from external damage but reorganized from the inside into a configuration that does not support the continued operation of the recursive singularity it was housing.
 
-She does not use this. It is the capability she holds at the greatest distance from her ordinary practice — not because it disturbs her, but because it is the one thing she does that would, if observed, make the deception-anchor classification impossible to sustain. She is twenty-three years old. She is being very careful about what she shows and what she holds. The distance between what she has shown and what she has is the largest gap in the institutional record of any living practitioner.
+She does not use this. It is the capability she holds at the greatest distance from her ordinary practice — not because it disturbs her, but because it is the one thing she does that would, if observed, make the deception-anchor classification impossible to sustain. She is twenty-three Lunar Years old. She is being very careful about what she shows and what she holds. The distance between what she has shown and what she has is the largest gap in the institutional record of any living practitioner.
 
 It is also the gap she tends most carefully.
 
@@ -521,7 +521,7 @@ Whether this human capacity can affect the larger grammar is unknown. Le'nore is
 
 ## VIII. THE FEELING IN THE SKY
 
-Le'nore does not discuss this in assessment contexts. It appears in this file because it has emerged indirectly across five years of documented contact: she has been observed, during sessions that extended into open conversation, pausing to look toward the window — not out of distraction, but with a specific quality of attention directed at a specific part of the sky. She returns to the conversation without noting what happened. She has done this in four documented sessions. The assessors noted it. None of them asked.
+Le'nore does not discuss this in assessment contexts. It appears in this file because it has emerged indirectly across five Lunar Years of documented contact: she has been observed, during sessions that extended into open conversation, pausing to look toward the window — not out of distraction, but with a specific quality of attention directed at a specific part of the sky. She returns to the conversation without noting what happened. She has done this in four documented sessions. The assessors noted it. None of them asked.
 
 ***She*** has experienced this feeling since childhood. The sense that something large and far away is looking in her direction specifically — not at the general area, not at the world, at her. That whatever attends to her in this way has been doing so for as long as she can remember. She does not experience it as frightening. It is too familiar for fear. It is more like the feeling of being known.
 
@@ -541,7 +541,7 @@ The Corvel Institute's primary facility ***is*** in Vel'hara.
 
 Al'tair Voren Engelmeyer is in Vel'hara.
 
-Le'nore has not visited the Institute since her arrival. She has not made contact with her father beyond the correspondence that predates the relocation. She has not done anything that would draw the Institute's attention, or his. She is twenty-three years old, and she is in the same city as the man who came to study her family and stayed long enough to father her, and she is being very still about both facts. No one in Vel'hara knows her well enough yet to recognize when she is being very still. When they do, they will find it meaningful.
+Le'nore has not visited the Institute since her arrival. She has not made contact with her father beyond the correspondence that predates the relocation. She has not done anything that would draw the Institute's attention, or his. She is twenty-three Lunar Years old, and she is in the same city as the man who came to study her family and stayed long enough to father her, and she is being very still about both facts. No one in Vel'hara knows her well enough yet to recognize when she is being very still. When they do, they will find it meaningful.
 
 ---
 
@@ -578,7 +578,7 @@ Shy by default, cheerful by intention. This is not performance — it is the spe
 What changes when the hunger is engaged is not her personality. It is her attention: a consolidation that produces, in those who have been near it and survived, the retrospective sense of something looking at them from inside a human face. The face does not change. The warmth does not disappear. It becomes, briefly, the warmth of something that has decided what it is looking at. Then it passes. The people who have experienced this moment do not discuss it, mostly because they do not have the vocabulary and partly because they are not certain what they saw.
 
 **The weight she carries**
-She was nine. She did not understand what she was doing. For fourteen years she has known that Re'lha's disappearance, the uncontrolled hunger, and the presence of her mother's information inside her belong to one answer. She has not forced that knowledge into a complete memory. There is no framework available to her for what occurred — no theology, no Index Theorem account, no institutional vocabulary — and no resolution promised at the end of examination. It is the one place in her intellectual life where her systematic rigor stops by choice. Everything she is and does has been built around a room she does not enter.
+She was nine. She did not understand what she was doing. For fourteen Lunar Years she has known that Re'lha's disappearance, the uncontrolled hunger, and the presence of her mother's information inside her belong to one answer. She has not forced that knowledge into a complete memory. There is no framework available to her for what occurred — no theology, no Index Theorem account, no institutional vocabulary — and no resolution promised at the end of examination. It is the one place in her intellectual life where her systematic rigor stops by choice. Everything she is and does has been built around a room she does not enter.
 
 **What she is looking for**
 The file does not know. She may not know. She is existing in the present tense, which she does with a quality of presence that most people achieve only intermittently. Whether this is contentment, or the patience of something that knows it has time, or simply what she is — the file does not resolve it.
@@ -600,12 +600,12 @@ The file does not know. She may not know. She is existing in the present tense, 
 ## XII. RELATIONSHIPS
 
 **Al'tair Voren Engelmeyer — Father**
-Present by correspondence. He is in Vel'hara. She is in Vel'hara. They have not met since Year 2189. The correspondence is not in any institutional file. On his side: precise, warm, the attention of a man who has spent thirty years in proximity to things he cannot fully explain. On hers: careful, affectionate, and containing in every letter something she is not quite saying. She does not want him to be afraid of her. This is the only relationship in the documented record where this specific motivation is legible. It tells you something about the relationship and something about her.
+Present by correspondence. He is in Vel'hara. She is in Vel'hara. They have not met since c. Imperial Year 2196. The correspondence is not in any institutional file. On his side: precise, warm, the attention of a man who has spent thirty Lunar Years in proximity to things he cannot fully explain. On hers: careful, affectionate, and containing in every letter something she is not quite saying. She does not want him to be afraid of her. This is the only relationship in the documented record where this specific motivation is legible. It tells you something about the relationship and something about her.
 
 The question of whether he loved her mother or studied her — whether those were separate things or the same thing — is a question Le'nore has. She has not asked it. He has not answered it. This is the only thread in her life she has not pulled.
 
 **Re'lha Voren Engelmeyer — Mother**
-She does not discuss her mother in any documented context. The available record does not reach the interior of this. It is present in the file as an absence with a specific shape and a specific weight, and a specific silence that fourteen years of correspondence with her father has not broken.
+She does not discuss her mother in any documented context. The available record does not reach the interior of this. It is present in the file as an absence with a specific shape and a specific weight, and a specific silence that fourteen Lunar Years of correspondence with her father has not broken.
 
 **House Engelmeyer — Main Line**
 A useful arrangement navigated with clarity. She is their registered blood Seat and not yet their daily industrial governor. She does not dislike them. She does not trust them in any depth. She is learning which relatives want protection, containment, restitution, succession, or obedience before she decides how much of the House to carry.
@@ -637,9 +637,9 @@ Reintegration as the Engelmeyer blood Seat created an immediate House expectatio
 
 **Anomalous findings on record:**
 
-The subject's coherence signatures have shown no developmental variation across five years of monitored practice. No progression. No degradation. Structurally identical in every assessment to intake presentation. This is inconsistent with any documented practitioner development pattern in the Apocachynthion's historical record. The panel has noted it as anomalous. No theoretical account has been offered.
+The subject's coherence signatures have shown no developmental variation across five Lunar Years of monitored practice. No progression. No degradation. Structurally identical in every assessment to intake presentation. This is inconsistent with any documented practitioner development pattern in the Apocachynthion's historical record. The panel has noted it as anomalous. No theoretical account has been offered.
 
-The complete absence of external expression tells — simultaneously, consistently, across five years of assessed practice — is not fully accounted for by the deception-anchor classification's theoretical framework.
+The complete absence of external expression tells — simultaneously, consistently, across five Lunar Years of assessed practice — is not fully accounted for by the deception-anchor classification's theoretical framework.
 
 Physical capability profile exceeds what the classification's framework predicts at Quill rank. No ceiling has been found in assessment contexts.
 
@@ -709,7 +709,7 @@ The first belongs to the cosmological layer: contamination, invitation, and the 
 
 *END OF FILE*
 
-*Le'nore Voren Engelmeyer · b. 2177, Drevholt, western band interior · Quill, Deception-Anchor (confirmed) · Mark 2 active · intake 2193, certification 2195 · reintegrated to House Engelmeyer main line 2199 · currently resident Vel'hara, western band · file open*
+*Le'nore Voren Engelmeyer · b. c. Imperial Year 2190, Drevholt, western band interior · Quill, Deception-Anchor (confirmed) · Mark 2 active · intake c. 2197, certification c. 2198 · reintegrated to House Engelmeyer main line 2199 · currently resident Vel'hara, western band · file open*
 
 ---
 

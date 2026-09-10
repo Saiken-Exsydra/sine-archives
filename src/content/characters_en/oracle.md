@@ -3,8 +3,8 @@ title: "Oracle"
 type: "Skyphon"
 rank: "Bearer of Adjacent Consequence"
 designation: "Bearer of Adjacent Consequence"
-affiliation: "First Bearer — Intact Seal (Concluded)"
-registry_status: "Person concluded at the Fracture; body fixed across failing frames; fragment in cadence scars; Instrument phase-lost in Ksy'rion timing"
+affiliation: "First Bearer — Intact Seal (Unseated)"
+registry_status: "Unseated during the Fracture; person survives beyond ordinary Terra address; terminal fixed across failing frames; Consequence interface phase-lost in Ksy'rion timing"
 occupation: "Immediately adjacent consequence"
 domain: "Relation between a current state and its next traversable states"
 church_name: "The Instrument of Foresight"
@@ -23,6 +23,6 @@ Oracle governed the relation between the present configuration and its immediate
 
 Her work depended on Sciel for accurate present support, Warden for bounded branches, and Time for ordered traversal. That dependency is why her Principle is **Consequence**, not prophecy.
 
-When the twelve clauses lost simultaneity at Year 0, Oracle identified one adjacent survivable order. A Time Fragment independently preserved that order as the Twelve-Beat Hold. Oracle did not summon or direct it. Her body fixed across the failing cadence frames; her fragment remains in timing scars; the Instrument of Consequence is phase-lost within Ksy'rion's damaged cadence lattice.
+When the twelve clauses lost simultaneity at Year 0, Oracle identified one adjacent survivable order. A Time Fragment independently preserved that order as the Twelve-Beat Hold. Oracle did not summon or direct it. Her humanoid terminal and local Consequence expression fixed across the failing cadence frames and lost coherent sequence when traversal resumed. Consequence's imprint remains in timing scars, while an interface address is phase-lost within Ksy'rion's damaged cadence lattice. Oracle's true Obscurial body became unseated, carrying the same person beyond ordinary Terra address.
 
 Oracle is not the origin of Divination, Church Oracles, the Pathway, or human foresight traditions.

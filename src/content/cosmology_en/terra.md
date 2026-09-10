@@ -54,7 +54,7 @@ Terra's habitable surface was not prepared only from below. The world was also p
 
 Before the Fracture, the Moon was not merely a moon. In structural terms it was the **Intact Seal**: the complete lunar threshold architecture built to protect Terra at the point where its translation boundary was thinnest. Its sky-facing layer was **Ksy'rion**—not a separate false dome, but the outward-facing expression of the Seal as experienced from the world below.
 
-The Seal made twelve [[obscurials|grammar-exterior vestiges]] locally addressable through engineered seats, interfaces, relays, and living Skyphon interpreters. The Precursors built that architecture, not the Obscurials. All twelve actual Obscurials vanished from the lunar configuration during the Fracture; the present Crown contains only the wounded native systems left around their absence.
+The Seal localized twelve [[obscurials|grammar-exterior true bodies]] through engineered Seats, interfaces, relays, and humanoid terminals. Through sustained life with Terra, those bodies became the Skyphon persons who interpreted the twelve Principles. The Precursors built the architecture, not the Obscurials. During the Fracture all twelve became unseated and passed beyond ordinary Terra address; the present Crown contains only the wounded local systems left around their absence.
 
 This matters because pre-Fracture civilization did not study the farther heaven directly. It studied **Ksy'rion's curated sky**: a bounded, regulated visible cosmos through which the world could be measured safely. The heavens people inherited were real as experience and lawful as environment, but they were not a neutral window onto everything beyond Terra. They were part of the protection system.
 

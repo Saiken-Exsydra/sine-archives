@@ -2,8 +2,8 @@
 title: "Vaey Viktor"
 type: "Character"
 
-age: "66 (as of Year 2200)"
-birth_year: "2134"
+age: "66 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2171"
 birthplace: "Minor river district north-east of Kalt'sen, Central Region"
 
 affiliation: "The Church; Obsidian"
@@ -20,7 +20,7 @@ dress: "Meticulously maintained black clerical clothing; narrow silver measuring
 residence: "Private ecclesiastical lodging in Kalt'sen; frequent travel throughout the Central Region and select Northern districts"
 occupation: "Retired Assessor-Priest of Obsidian; former Ecclesiastic Assessor of Beatification Candidates; occasional consultant"
 
-summary: "Vaey spent forty years measuring what people might become. Now every abandoned future looks to him like a debt, and he has made himself the collector."
+summary: "Vaey spent forty Lunar Years measuring what people might become. Now every abandoned future looks to him like a debt, and he has made himself the collector."
 
 image: "../../assets/uploads/char-vaey-viktor.png"
 hero_image: "../../assets/uploads/char-vaey-viktor-hero.jpg"
@@ -54,7 +54,7 @@ image_position: "center top"
 
 ## Overview
 
-Vaey Viktor is a retired priest of Obsidian who spent forty years deciding what the Church should do when something extraordinary happened to an ordinary person.
+Vaey Viktor is a retired priest of Obsidian who spent forty Lunar Years deciding what the Church should do when something extraordinary happened to an ordinary person.
 
 A child speaks with a voice that does not belong to them. A frightened adolescent begins performing miracles. A soldier survives what should have killed them. A local congregation decides a healer must be a saint before anyone has established what is actually happening.
 
@@ -132,7 +132,7 @@ He is wrong about what follows from it.
 
 ## Background
 
-Vaey Viktor was born in Year 2134 in a minor river district north-east of Kalt'sen.
+Vaey Viktor was born c. Imperial Year 2171 in a minor river district north-east of Kalt'sen.
 
 His surviving family record is ordinary. His parents, Revan and Maela Viktor, were literate, devout, economically stable, and unconnected to the Great Houses. The family name had entered the Central Region through a non-imperial line several generations earlier, which is the likely reason his recorded name never acquired the apostrophe common to many Synus names.
 
@@ -160,7 +160,7 @@ That success is part of why nobody stopped what the work was doing to him.
 
 ## The Measuring Mind
 
-For forty years, Vaey repeatedly performed the same mental act.
+For forty Lunar Years, Vaey repeatedly performed the same mental act.
 
 He held two versions of a person in mind at once.
 
@@ -180,7 +180,7 @@ The language of his reports changed slowly.
 
 *Recoverable under formation* became *potential no longer supported by discipline*.
 
-In Year 2184, the word **betrayal** first appeared in his assessment writing.
+C. Imperial Year 2193, the word **betrayal** first appeared in his assessment writing.
 
 After that, it appeared often.
 
@@ -350,11 +350,11 @@ That fact is not evidence of innocence.
 
 It is evidence of institutional failure.
 
-By the end of Vaey's active career, some colleagues had become deeply concerned by the way his language and recommendations were changing. Retirement in Year 2196 removed his formal assessment authority while preserving his honor, housing, and limited consultative role.
+By the end of Vaey's active career, some colleagues had become deeply concerned by the way his language and recommendations were changing. Retirement c. Imperial Year 2197 removed his formal assessment authority while preserving his honor, housing, and limited consultative role.
 
 The arrangement allowed everyone involved to say something technically true.
 
-His supporters could say forty years of service had earned rest.
+His supporters could say forty Lunar Years of service had earned rest.
 
 His critics could say he had been removed from the work.
 
@@ -396,7 +396,7 @@ Sister Aramina Thale, an Ecclesiastic Surgeon, worked alongside Vaey across twen
 
 She knew the assessor before Meruel fully stabilized through him and watched the distinction between diagnosis and moral sentence become increasingly thin.
 
-By Year 2190, she described him as not cruel but progressively unable to distinguish mercy from contamination of the assessment itself.
+By Imperial Year 2196, she described him as not cruel but progressively unable to distinguish mercy from contamination of the assessment itself.
 
 She later opposed the conditions under which he was allowed to retire with continued consultative access.
 
@@ -440,7 +440,7 @@ The case represents the moment his life's method became something more than meth
 
 **Civil Standing:** Retired priest in good public standing; not formally censured  
 **Former Office:** Ecclesiastic Assessor of Beatification Candidates, Obsidian  
-**Active Service:** Forty documented years, 2156–2196  
+**Active Service:** Forty documented Lunar Years, c. Imperial Years 2179–2197
 **Vessel Status:** Confirmed Crowned Diviner; sustained angelic fusion  
 **Fragment Alignment:** Meruel — Potential / Completion  
 **Operational Classification:** Saint-adjacent; uncanonized; internally treated as severe-domain Crowned  

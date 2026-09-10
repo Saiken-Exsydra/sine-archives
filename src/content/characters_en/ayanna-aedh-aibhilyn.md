@@ -1,8 +1,8 @@
 ---
 title: "Ayanna Aedh d'Aibhilyn"
 type: "Character"
-age: "24 (as of 2200)"
-birth_year: "2176"
+age: "24 Lunar Years (as of Imperial Year 2200)"
+birth_year: "c. Imperial Year 2189"
 birthplace: "Valerie, Aurora"
 affiliation: "Lyréne Pharmaceuticals; Vitrified Wing (provisional record label for a secret program)"
 house: ""

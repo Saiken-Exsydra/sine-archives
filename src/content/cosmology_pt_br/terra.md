@@ -52,7 +52,7 @@ Depois de moonset, a luz civil direta termina. Noites de baixa radiância ficam 
 
 Antes da Fratura, a Lua era o **Selo Intacto**: a arquitetura lunar completa construída para proteger Terra onde sua fronteira de tradução era mais fina. Sua camada voltada para o céu era **Ksy'rion**, não uma cúpula falsa separada, mas a expressão exterior do Selo vista pelo mundo abaixo.
 
-O Selo tornava doze [[obscurials|vestígios exteriores à gramática]] localmente endereçáveis através de assentos, interfaces, relays e intérpretes Skyphons vivos. Os Precursores construíram essa arquitetura, não os Obscurials. Todos os doze Obscurials reais desapareceram da configuração lunar durante a Fratura; a Crown atual contém apenas os sistemas nativos feridos deixados ao redor da ausência deles.
+O Selo localizava doze [[obscurials|corpos verdadeiros exteriores à gramática]] através de Assentos, interfaces, relays e terminais humanoides. Durante uma vida prolongada com Terra, esses corpos se tornaram as pessoas Skyphons que interpretavam os doze Princípios. Os Precursores construíram a arquitetura, não os Obscurials. Durante a Fratura, os doze foram desassentados e passaram além do endereço comum de Terra; a Coroa atual contém apenas os sistemas locais feridos deixados ao redor da ausência deles.
 
 A civilização pré-Fratura estudava o céu regulado de Ksy'rion, não todo o firmamento distante de modo direto. A Quiet Moon já existia, mas só se tornou progressivamente descobrível depois que a Fratura rompeu a completude daquela máscara celeste.
 

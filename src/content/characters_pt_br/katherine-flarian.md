@@ -1,8 +1,8 @@
 ---
 title: "Katherine Flarian"
 type: "Personagem"
-age: "35 (em 2200)"
-birth_year: "2165"
+age: "35 Lunar Years (no Imperial Year 2200)"
+birth_year: "c. Imperial Year 2185"
 birthplace: "Vel'hara"
 affiliation: "SiNE Stasis — Escritório de Continuidade (S-AE)"
 house: ""
@@ -52,7 +52,7 @@ Isso não é magia. Não é um dom.
 
 ### Vel'hara e o Hábito de Perceber
 
-Katherine nasceu em Vel'hara em 2165, filha mais velha de um auditor de contratos e de uma funcionária vinculada ao setor de comunicações. A vida profissional dos dois girava em torno da mesma ideia: nada em um sistema funcional é realmente pequeno se aquilo continua se repetindo.
+Katherine nasceu em Vel'hara c. Imperial Year 2185, filha mais velha de um auditor de contratos e de uma funcionária vinculada ao setor de comunicações. A vida profissional dos dois girava em torno da mesma ideia: nada em um sistema funcional é realmente pequeno se aquilo continua se repetindo.
 
 Vel'hara combinava perfeitamente com o tipo de mente que Katherine demonstrava desde cedo. É uma cidade-estado que recompensa quem sabe ler lacunas — linguagem contratual, padrões de transporte, declarações alfandegárias, rotas privadas escondidas sob rotas públicas. Ela não tinha nome de House, herança de Redactory, alinhamento divino nem qualquer motivo para que grandes instituições a classificassem como alguém importante antecipadamente. O que ela tinha era uma atenção extremamente precisa que acabou se tornando vocação.
 
@@ -60,7 +60,7 @@ Ainda adolescente, lia registros municipais de roteamento por diversão. Já no 
 
 A característica que mais tarde tornaria Katherine fundamental para a S-AE já era visível ali, ainda em contexto civil: ela nunca parava no momento em que percebia algo errado. Ela precisava entender qual formato aquele erro tinha.
 
-A Entropy a contratou em 2185. Katherine entrou em uma trilha de pesquisa e segurança e, em menos de três anos, se tornou uma das pessoas mais úteis do programa interno de endurecimento da companhia — testes de penetração em sistemas de retransmissão enterrados, segmentação de arquivos, análise de rotas de credenciais. Foi esse nível de acesso que acabou levando ela até Himmelreich. Katherine não tropeçou na instalação vindo de fora da Company. Ela encontrou Himmelreich de dentro da própria SiNE, ainda como funcionária da Entropy, ao identificar um padrão que simplesmente não deveria existir em nenhum sistema oficialmente considerado limpo.
+A Entropy a contratou c. Imperial Year 2194. Katherine entrou em uma trilha de pesquisa e segurança e, em menos de três Lunar Years, se tornou uma das pessoas mais úteis do programa interno de endurecimento da companhia — testes de penetração em sistemas de retransmissão enterrados, segmentação de arquivos, análise de rotas de credenciais. Foi esse nível de acesso que acabou levando ela até Himmelreich. Katherine não tropeçou na instalação vindo de fora da Company. Ela encontrou Himmelreich de dentro da própria SiNE, ainda como funcionária da Entropy, ao identificar um padrão que simplesmente não deveria existir em nenhum sistema oficialmente considerado limpo.
 
 ---
 
@@ -72,7 +72,7 @@ O local chamado **Himmelreich** oficialmente não existia.
 
 Nos registros de retransmissão da Evanote, aparecia apenas como um centro de manutenção obsoleto: HMR, desativado, sem equipe ativa, sem relevância logística, sem qualquer assinatura orçamentária que valesse investigação. Já no tráfego de lattice da Clepsydra, o comportamento era diferente. Rotas mortas tocavam o local. Chaves aposentadas se atualizavam através dele. Pacotes de diagnóstico com marcações de tempo de dias futuros retornavam dele como válidos. Um nó de retransmissão que não existia estava se comportando, de forma persistente e silenciosa, como o centro oculto de uma conversa.
 
-Katherine encontrou esse padrão em 2188 durante uma revisão interna de segurança da Entropy. Ela seguiu o rastro porque aquilo a ofendia profissionalmente. Infraestrutura escondida era comum. Infraestrutura escondida cuja própria marcação temporal discordava de si mesma de maneira estável não era.
+Katherine encontrou esse padrão no Imperial Year 2195 durante uma revisão interna de segurança da Entropy. Ela seguiu o rastro porque aquilo a ofendia profissionalmente. Infraestrutura escondida era comum. Infraestrutura escondida cuja própria marcação temporal discordava de si mesma de maneira estável não era.
 
 Himmelreich era um complexo subterrâneo clandestino de retransmissão e pesquisa sob as salinas de Carendis, no Norte, construído em torno de um Glass Sink desativado e reaproveitado em conjunto por equipes da Entropy e da Stasis como um poço de observação para manifestações não sequenciais. Katherine conseguiu acesso graças a paciência, arrogância técnica e ao fato de estar certa sobre onde as verdadeiras fechaduras estavam.
 
@@ -220,7 +220,7 @@ Anotação privada dele:
 
 *Ela está errada de formas que eu consigo tolerar e certa de formas que o setor não pode se permitir ignorar.*
 
-**Maelin Voss** — Atual líder de campo da S-AE para resposta de continuidade no Norte. Foi a operativa que retirou Katherine de Himmelreich e argumentou contra apagar as memórias dela. Depois de doze anos trabalhando juntas, Voss se tornou a coisa mais próxima que Katherine possui de uma amizade duradoura dentro da SiNE. É uma das poucas pessoas autorizadas a mandar Katherine recuar sem precisar formular aquilo como pedido.
+**Maelin Voss** — Atual líder de campo da S-AE para resposta de continuidade no Norte. Foi a operativa que retirou Katherine de Himmelreich e argumentou contra apagar as memórias dela. Depois de doze Lunar Years trabalhando juntas, Voss se tornou a coisa mais próxima que Katherine possui de uma amizade duradoura dentro da SiNE. É uma das poucas pessoas autorizadas a mandar Katherine recuar sem precisar formular aquilo como pedido.
 
 **Rouxinol Kaise** — O arquivo de Katherine sobre Rouxinol possui um volume incomum de observações. O comportamento da Threshold Anchor de Rouxinol interage com bordas de ruptura de uma maneira que Katherine descreve como *semelhante a uma agulha* — enquanto Katherine lê o estresse de continuidade e tenta estabilizá-lo através de sistemas, Rouxinol aparentemente consegue tocar a própria transição com consequência direta da Redactory. Katherine queria mantê-la em contrato recorrente com a S-AE. Rouxinol recusou. O que surgiu depois foi um respeito mútuo mantido a distância cautelosa.
 
@@ -232,7 +232,7 @@ E é justamente isso que faz Katherine continuar observando.
 
 ## Condição Atual — 2200
 
-Katherine Flarian tem trinta e cinco anos e vem se deteriorando fisicamente há doze anos de uma maneira que ela entende perfeitamente, documenta meticulosamente e se recusa a aceitar como motivo para parar.
+Katherine Flarian tem trinta e cinco Lunar Years e vem se deteriorando fisicamente há doze Lunar Years de uma maneira que ela entende perfeitamente, documenta meticulosamente e se recusa a aceitar como motivo para parar.
 
 Ela ainda é a melhor praticante de uma disciplina que nasceu do próprio dano dela.
 

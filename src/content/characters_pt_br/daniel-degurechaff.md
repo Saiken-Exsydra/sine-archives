@@ -1,8 +1,8 @@
 ---
 title: "Daniel Degurechaff"
 type: "Personagem"
-age: "98 (na época do registro, 2200); aparenta ter entre o fim dos vinte e começo dos trinta anos"
-birth_year: "2102"
+age: "98 Lunar Years (na época do registro, Imperial Year 2200); aparenta ter entre o fim dos vinte e começo dos trinta anos"
+birth_year: "c. Imperial Year 2157"
 birthplace: "Kovansk, Distrito Ocidental das Fornalhas, Ardeatus"
 affiliation: "Secretariado de Custódia Conjunta da Marta Chord; residência diplomática ardeatana no Império"
 rank: "Tempered Confirmado - vessel de Vhaldr, a Tempering Witness"
@@ -55,9 +55,9 @@ Sua manifestação politicamente mais valiosa não é combate, mas o **Witness H
 
 ## A Marta Chord
 
-A vida de Daniel mudou por causa da morte de **Marta Vesk**, uma criança ardeatana de onze anos classificada incorretamente em 2154 e morta sob ferro aquecido e pedra colapsando depois que autoridades responderam a uma emergência descontrolada de Redactory usando a doutrina errada e o protocolo de contenção errado. Daniel registrou uma contestação formal. Ela foi selada. Mesmo assim, ele permaneceu dentro do sistema e começou a reunir casos.
+A vida de Daniel mudou por causa da morte de **Marta Vesk**, uma criança ardeatana de onze Lunar Years classificada incorretamente no Imperial Year 2180 e morta sob ferro aquecido e pedra colapsando depois que autoridades responderam a uma emergência descontrolada de Redactory usando a doutrina errada e o protocolo de contenção errado. Daniel registrou uma contestação formal. Ela foi selada. Mesmo assim, ele permaneceu dentro do sistema e começou a reunir casos.
 
-Durante doze anos, construiu o arquivo que provava que Marta não era um caso isolado. Crianças e adultos eram repetidamente forçados para categorias Ashborne ou divinas porque Ardeatus preferia punição a classificação correta. Depois que o desastre da fundição de Vahrn em 2166 transformou esse arquivo em algo politicamente útil, Daniel forçou a discussão a subir na hierarquia. As negociações resultantes produziram a **Marta Chord**, ratificada em 2171.
+Durante doze Lunar Years, construiu o arquivo que provava que Marta não era um caso isolado. Crianças e adultos eram repetidamente forçados para categorias Ashborne ou divinas porque Ardeatus preferia punição a classificação correta. Depois que o desastre da fundição de Vahrn no Imperial Year 2186 transformou esse arquivo em algo politicamente útil, Daniel forçou a discussão a subir na hierarquia. As negociações resultantes produziram a **Marta Chord**, ratificada no Imperial Year 2187.
 
 A Chord não reconciliou Ardeatus e Synus. Ela não resolveu a disputa teológica sobre a Redactory. Ela faz uma única coisa brutal e necessária: remove Redactors nascidos em Ardeatus de sistemas punitivos domésticos antes que esses sistemas consigam matá-los. Daniel insistiu que o procedimento carregasse o nome de Marta. Até hoje ele continua funcionando como a testemunha, auditor e força de pressão mais confiável da Chord.
 
@@ -84,7 +84,7 @@ Até 2200, a Chord já transferiu milhares de pessoas para custódia imperial. D
 
 ## Aparência e Presença
 
-Daniel aparenta ser um homem entre o fim dos vinte e começo dos trinta anos. Isso é falso. Ele nasceu em 2102 e tem noventa e oito anos no momento deste registro. A fusão com Vhaldr desacelerou seu envelhecimento sem torná-lo imortal, estável como um Archtype ou impossível de quebrar. Ele permanece fisicamente jovem porque o fragmento mantém seu corpo em um estado constante de temperamento interno disciplinado.
+Daniel aparenta ser um homem entre o fim dos vinte e começo dos trinta anos. Isso é falso. Ele nasceu c. Imperial Year 2157 e tem noventa e oito Lunar Years no momento deste registro. A fusão com Vhaldr desacelerou seu envelhecimento sem torná-lo imortal, estável como um Archtype ou impossível de quebrar. Ele permanece fisicamente jovem porque o fragmento mantém seu corpo em um estado constante de temperamento interno disciplinado.
 
 Ele é alto, magro, pálido e tem traços severos, com cabelo vermelho-escuro longo e olhos castanho-avermelhados com brilho metálico mesmo em repouso. Seu uniforme diplomático é preto e branco, com detalhes discretos em latão, construído para suportar as exigências térmicas do próprio trabalho dele. Daniel usa luvas pretas reforçadas quase o tempo inteiro. Não são ornamentais. Funcionam como aparato condutor, ferramenta de contenção e sinal de aviso. Pessoas que entendem quem ele é param de falar quando ele as remove.
 
