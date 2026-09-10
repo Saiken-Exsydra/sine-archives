@@ -62,18 +62,13 @@ const TARGETS = [
   "src",
   "scripts",
   "docs",
-  "skills",
-  "design-systems",
   "The Archive",
   "public",
   "AGENTS.md",
-  "CONTENT_IMAGE_WORKFLOW.md",
-  "DESIGN_SYSTEM.md",
-  "OPEN_DESIGN.md",
-  "brand-spec.md",
+  "README.md",
+  "tests",
   "package.json",
   "playwright.config.mjs",
-  "translation-glossary-pt-BR.md",
   "tsconfig.json",
 ];
 
@@ -95,7 +90,7 @@ const LEGACY_TARGETS = [
   path.join("src", "layouts"),
   path.join("src", "pages"),
   path.join("src", "data"),
-  "translation-glossary-pt-BR.md",
+  "docs/translation-glossary-pt-BR.md",
 ];
 
 const CONTENT_ALLOWED_LOCALES = ["_pt_br", "pt-br-translation-guide"];

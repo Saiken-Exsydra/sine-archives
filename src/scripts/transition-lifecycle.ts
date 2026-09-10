@@ -89,7 +89,6 @@ type TransitionRuntimeState = {
   } | null;
   pendingIntent: TransitionIntent | null;
   navigationId: number;
-  warmedRoutes: Set<string>;
 };
 
 declare global {
@@ -102,10 +101,6 @@ declare global {
 }
 
 const DEBUG_PREFIX = "[sine-transitions]";
-const SEARCH_TRANSITION_DURATION = 1050;
-const SEARCH_TRANSITION_EASING = "cubic-bezier(0.2, 0.82, 0.22, 1)";
-const TRANSITION_PREPARE_TIMEOUT = 700;
-const ROUTE_WARMUP_TIMEOUT = 900;
 const HANDLE_INTENT_CLEAR_DELAY = 950;
 const OBSERVATORY_SYMBOL_RESET_DELAY = 1100;
 const STATE_CLASSES = [
@@ -128,7 +123,6 @@ function getRuntimeState(): TransitionRuntimeState {
       lastNavigation: null,
       pendingIntent: null,
       navigationId: 0,
-      warmedRoutes: new Set(),
     };
   }
 
@@ -416,175 +410,6 @@ function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-function shouldWarmTransitionResources() {
-  const connection = navigator as Navigator & {
-    connection?: { saveData?: boolean };
-  };
-
-  return !connection.connection?.saveData;
-}
-
-function scheduleIdleTask(callback: () => void) {
-  const idleWindow = window as Window & {
-    requestIdleCallback?: (task: () => void, options?: { timeout?: number }) => number;
-  };
-
-  if (typeof idleWindow.requestIdleCallback === "function") {
-    idleWindow.requestIdleCallback(callback, { timeout: ROUTE_WARMUP_TIMEOUT });
-    return;
-  }
-
-  window.setTimeout(callback, 120);
-}
-
-function waitForTimeout(ms: number, signal?: AbortSignal) {
-  return new Promise<void>((resolve) => {
-    if (signal?.aborted) {
-      resolve();
-      return;
-    }
-
-    const timer = window.setTimeout(resolve, ms);
-    signal?.addEventListener("abort", () => {
-      window.clearTimeout(timer);
-      resolve();
-    }, { once: true });
-  });
-}
-
-function normalizeWarmupUrl(src: string, base = location.href) {
-  try {
-    const url = new URL(src, base);
-    if (url.origin !== location.origin) return null;
-    if (url.protocol !== "http:" && url.protocol !== "https:") return null;
-    return url.href;
-  } catch {
-    return null;
-  }
-}
-
-function addWarmupSource(sources: Set<string>, src: string | null | undefined, base?: string) {
-  if (!src || src.startsWith("data:") || src.startsWith("blob:")) return;
-
-  const normalized = normalizeWarmupUrl(src, base);
-  if (normalized) sources.add(normalized);
-}
-
-function collectWarmupImageSources(doc: Document, max = 4) {
-  const sources = new Set<string>();
-  const selectors = [
-    "main img[fetchpriority=\"high\"]",
-    "main img[loading=\"eager\"]",
-    "main picture source[srcset]",
-    "main img[src]",
-    "#page-content img[src]",
-    "aside img[src]",
-    "img[fetchpriority=\"high\"]",
-    "img[loading=\"eager\"]",
-  ];
-
-  for (const selector of selectors) {
-    for (const element of doc.querySelectorAll(selector)) {
-      if (sources.size >= max) return [...sources];
-
-      if (element instanceof HTMLImageElement) {
-        addWarmupSource(sources, element.currentSrc || element.src || element.getAttribute("src"));
-        continue;
-      }
-
-      if (element instanceof HTMLSourceElement) {
-        const firstCandidate = element.srcset.split(",")[0]?.trim().split(/\s+/)[0];
-        addWarmupSource(sources, firstCandidate);
-      }
-    }
-  }
-
-  return [...sources];
-}
-
-async function warmImageSource(src: string, signal?: AbortSignal) {
-  if (signal?.aborted) return;
-
-  await Promise.race([
-    new Promise<void>((resolve) => {
-      const image = new Image();
-      const finish = () => resolve();
-      image.decoding = "async";
-      image.onload = finish;
-      image.onerror = finish;
-      signal?.addEventListener("abort", finish, { once: true });
-      image.src = src;
-      if (image.complete) finish();
-      void image.decode?.().then(finish, finish);
-    }),
-    waitForTimeout(TRANSITION_PREPARE_TIMEOUT, signal),
-  ]);
-}
-
-async function warmDocumentImages(doc: Document, signal?: AbortSignal) {
-  if (!shouldWarmTransitionResources()) return;
-
-  const sources = collectWarmupImageSources(doc);
-  if (!sources.length) return;
-
-  await Promise.race([
-    Promise.allSettled(sources.map((src) => warmImageSource(src, signal))),
-    waitForTimeout(TRANSITION_PREPARE_TIMEOUT, signal),
-  ]);
-}
-
-function getWarmupRouteLinks() {
-  const links = new Set<string>();
-
-  for (const link of document.querySelectorAll<HTMLAnchorElement>("a[data-astro-prefetch=\"load\"][href]")) {
-    const href = normalizeWarmupUrl(link.href);
-    if (!href) continue;
-
-    const url = new URL(href);
-    if (url.pathname === location.pathname) continue;
-    links.add(url.href);
-  }
-
-  return [...links].slice(0, 3);
-}
-
-async function warmRouteDocument(href: string) {
-  const state = getRuntimeState();
-  if (state.warmedRoutes.has(href) || !shouldWarmTransitionResources()) return;
-  state.warmedRoutes.add(href);
-
-  try {
-    const response = await fetch(href, {
-      cache: "force-cache",
-      credentials: "same-origin",
-      priority: "low",
-    } as RequestInit & { priority?: "low" });
-    if (!response.ok) return;
-
-    const html = await response.text();
-    const doc = new DOMParser().parseFromString(html, "text/html");
-    await Promise.race([
-      warmDocumentImages(doc),
-      waitForTimeout(ROUTE_WARMUP_TIMEOUT),
-    ]);
-    logTransitionEvent("route:warm", { to: new URL(href).pathname });
-  } catch (error) {
-    if (import.meta.env.DEV) {
-      console.debug(DEBUG_PREFIX, "route warm failed", href, error);
-    }
-  }
-}
-
-function scheduleRouteWarmup() {
-  if (!shouldWarmTransitionResources()) return;
-
-  scheduleIdleTask(() => {
-    for (const href of getWarmupRouteLinks()) {
-      void warmRouteDocument(href);
-    }
-  });
-}
-
 function getRevealRadius(x: number, y: number) {
   const topLeft = Math.hypot(x, y);
   const topRight = Math.hypot(window.innerWidth - x, y);
@@ -595,6 +420,9 @@ function getRevealRadius(x: number, y: number) {
 }
 
 function animateSearchReveal(intent: SearchIntent) {
+  const styles = getComputedStyle(document.documentElement);
+  const duration = parseFloat(styles.getPropertyValue("--search-vt-duration")) || 1050;
+  const easing = styles.getPropertyValue("--search-vt-ease").trim() || "ease-out";
   const radius = getRevealRadius(intent.x, intent.y);
   const origin = `${intent.x}px ${intent.y}px`;
 
@@ -608,8 +436,8 @@ function animateSearchReveal(intent: SearchIntent) {
       opacity: [0.86, 1, 1],
     },
     {
-      duration: SEARCH_TRANSITION_DURATION,
-      easing: SEARCH_TRANSITION_EASING,
+      duration,
+      easing,
       fill: "both",
       pseudoElement: "::view-transition-new(root)",
     },
@@ -621,8 +449,8 @@ function animateSearchReveal(intent: SearchIntent) {
       transform: ["scale(1)", "scale(0.995)", "scale(0.985)"],
     },
     {
-      duration: SEARCH_TRANSITION_DURATION,
-      easing: SEARCH_TRANSITION_EASING,
+      duration,
+      easing,
       fill: "both",
       pseudoElement: "::view-transition-old(root)",
     },
@@ -808,30 +636,30 @@ function handleBeforeSwap(event: Event) {
 
   const state = getRuntimeState();
   const activeIntent = state.activeIntent;
+  const navigationId = state.navigationId;
+  const clearCurrentIntent = () => {
+    if (getRuntimeState().navigationId === navigationId) clearTransitionIntent(document);
+  };
   setLifecycleClasses(["is-swapping", "is-transitioning"], ["is-preparing-transition", "is-swap-pending", "is-page-ready"]);
   applyTransitionIntent(document, activeIntent);
   applyTransitionIntent(event.newDocument, activeIntent);
   cleanupInitializers();
 
   if (activeIntent?.type === "search") {
-    const clearSearchIntent = () => {
-      clearTransitionIntent(document);
-    };
+    const clearSearchIntent = clearCurrentIntent;
     void event.viewTransition.finished.then(clearSearchIntent, clearSearchIntent);
 
     event.viewTransition.ready.then(() => {
-      if (prefersReducedMotion()) return;
+      if (prefersReducedMotion() || getRuntimeState().navigationId !== navigationId) return;
       animateSearchReveal(activeIntent);
-    }).catch(() => {
-      clearTransitionIntent(document);
-    });
+    }).catch(clearCurrentIntent);
   } else if (
     activeIntent?.type === "observatory-handle"
     || activeIntent?.type === "search-handle"
     || activeIntent?.type === "character-dossier"
     || activeIntent?.type === "observatory-system"
   ) {
-    const clearHandleIntent = () => clearTransitionIntent(document);
+    const clearHandleIntent = clearCurrentIntent;
     void event.viewTransition.finished.then(clearHandleIntent, clearHandleIntent);
     window.setTimeout(clearHandleIntent, HANDLE_INTENT_CLEAR_DELAY);
   }
@@ -910,7 +738,7 @@ function handlePageShow(event: PageTransitionEvent) {
 }
 
 function installSearchIntentCapture() {
-  document.addEventListener("pointerdown", (event) => {
+  const captureIntent = (event: MouseEvent | PointerEvent) => {
     const link = getSearchTriggerLink(event.target);
     if (link && isPlainLeftClick(event)) {
       getRuntimeState().pendingIntent = buildSearchIntentFromLink(link);
@@ -933,32 +761,9 @@ function installSearchIntentCapture() {
     const searchHandleLink = getSearchHandleTriggerLink(event.target);
     if (!searchHandleLink || !isPlainLeftClick(event)) return;
     getRuntimeState().pendingIntent = buildSearchHandleIntentFromLink(searchHandleLink);
-  }, true);
-
-  document.addEventListener("click", (event) => {
-    const link = getSearchTriggerLink(event.target);
-    if (link && isPlainLeftClick(event)) {
-      getRuntimeState().pendingIntent = buildSearchIntentFromLink(link);
-      return;
-    }
-
-    const observatoryLink = getObservatoryTriggerLink(event.target);
-    if (observatoryLink && isPlainLeftClick(event)) {
-      getRuntimeState().pendingIntent = buildObservatoryIntentFromLink(observatoryLink);
-      return;
-    }
-
-    const observatorySystemLink = getObservatorySystemTriggerLink(event.target);
-    if (observatorySystemLink && isPlainLeftClick(event)) {
-      prepareObservatorySystemSymbol(observatorySystemLink);
-      getRuntimeState().pendingIntent = buildObservatorySystemIntentFromLink(observatorySystemLink);
-      return;
-    }
-
-    const searchHandleLink = getSearchHandleTriggerLink(event.target);
-    if (!searchHandleLink || !isPlainLeftClick(event)) return;
-    getRuntimeState().pendingIntent = buildSearchHandleIntentFromLink(searchHandleLink);
-  }, true);
+  };
+  document.addEventListener("pointerdown", captureIntent, true);
+  document.addEventListener("click", captureIntent, true);
 }
 
 function installLifecycle() {

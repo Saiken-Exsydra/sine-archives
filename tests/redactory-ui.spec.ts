@@ -1,3 +1,4 @@
+import { gotoReady } from "./helpers/navigation";
 import { expect, test, type Page } from "@playwright/test";
 
 const routes = [
@@ -24,7 +25,7 @@ function trackClientErrors(page: Page) {
 }
 
 async function expectHealthyPage(page: Page, path: string) {
-  await page.goto(path, { waitUntil: "networkidle" });
+  await gotoReady(page, path);
   await expect(page.locator("main")).toBeVisible();
   await expect(page.locator("body")).not.toHaveCSS("overflow-x", "scroll");
 }
@@ -36,7 +37,7 @@ test.describe("Redactory desktop flow", () => {
     const errors = trackClientErrors(page);
 
     await expectHealthyPage(page, routes[0]);
-    await page.screenshot({ path: "test-results/redactory-desk-1440.png", fullPage: true });
+    await page.screenshot({ path: "test-results/redactory-desk-1440.png", fullPage: false });
 
     const papers = page.getByRole("link", { name: "Open the Index Theorem entry" });
     const quill = page.getByRole("link", { name: "Open the Redactor profile" });
@@ -55,7 +56,7 @@ test.describe("Redactory desktop flow", () => {
     await papers.click();
     await page.waitForURL(/\/systems\/redactory\/index-theorem\/$/);
     await expect(page.getByText("Index Theorem", { exact: true }).last()).toBeVisible();
-    await page.screenshot({ path: "test-results/redactory-theorem-1440.png", fullPage: true });
+    await page.screenshot({ path: "test-results/redactory-theorem-1440.png", fullPage: false });
     await expect(page.getByRole("link", { name: /Meet the Redactor/i })).toHaveAttribute(
       "href",
       "/systems/redactory/redactor/",
@@ -73,7 +74,7 @@ test.describe("Redactory desktop flow", () => {
     await quill.click();
     await page.waitForURL(/\/systems\/redactory\/redactor\/$/);
     await expect(page.getByText("Redactor", { exact: true }).last()).toBeVisible();
-    await page.screenshot({ path: "test-results/redactory-redactor-1440.png", fullPage: true });
+    await page.screenshot({ path: "test-results/redactory-redactor-1440.png", fullPage: false });
     await page.getByRole("link", { name: /Study the Anchor/i }).click();
     await expect(page).toHaveURL(/\/systems\/redactory\/redactor\/#anchor$/);
     await expect(page.locator("#anchor")).toBeInViewport();
@@ -82,7 +83,7 @@ test.describe("Redactory desktop flow", () => {
     await inkpot.click();
     await page.waitForURL(/\/systems\/redactory\/dive\/$/);
     await expect(page.getByText("Dive", { exact: true }).last()).toBeVisible();
-    await page.screenshot({ path: "test-results/redactory-dive-1440.png", fullPage: true });
+    await page.screenshot({ path: "test-results/redactory-dive-1440.png", fullPage: false });
 
     expect(errors).toEqual([]);
   });
@@ -106,7 +107,7 @@ for (const viewport of [
       const slug = path === routes[0] ? "desk" : path.split("/").filter(Boolean).at(-1);
       await page.screenshot({
         path: `test-results/redactory-${slug}-${viewport.width}.png`,
-        fullPage: true,
+        fullPage: false,
       });
     }
 

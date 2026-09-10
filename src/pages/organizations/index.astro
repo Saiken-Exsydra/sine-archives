@@ -42,9 +42,6 @@ const copy = locale === "pt-br"
       openDossier: "Abrir Dossiê",
       footerLabel: "Registro Institucional",
       returnToIndex: "← Voltar ao Índice do Arquivo",
-      closeEntry: "Fechar entrada",
-      classificationData: "Dados de Classificação",
-      loadingEntry: "Carregando entrada…",
       fieldDesignation: "Designação",
       fieldAffiliation: "Afiliação",
       fieldHeadquarters: "Sede",
@@ -53,7 +50,6 @@ const copy = locale === "pt-br"
       fieldStatus: "Estado",
       fieldFiled: "Arquivado",
       filedValue: "Organizações",
-      defaultType: "Organização",
     }
   : {
       pageTitle: "Organizations — SiNE Archives",
@@ -66,9 +62,6 @@ const copy = locale === "pt-br"
       openDossier: "Open Dossier",
       footerLabel: "Institutional Registry",
       returnToIndex: "← Return to Archives Index",
-      closeEntry: "Close entry",
-      classificationData: "Classification Data",
-      loadingEntry: "Loading entry…",
       fieldDesignation: "Designation",
       fieldAffiliation: "Affiliation",
       fieldHeadquarters: "Headquarters",
@@ -77,7 +70,6 @@ const copy = locale === "pt-br"
       fieldStatus: "Status",
       fieldFiled: "Filed",
       filedValue: "Organizations",
-      defaultType: "Organization",
     };
 
 type Entry = (typeof publicEntries)[number];
@@ -112,7 +104,7 @@ const buildPanel = async (e: Entry, idx: number): Promise<Panel> => {
   return {
     slug:           e.slug,
     title:          d.title,
-    type:           d.type || copy.defaultType,
+    type:           d.type || (locale === "pt-br" ? "Organização" : "Organization"),
     designation:    d.designation || "",
     summary:        d.summary || "",
     image:          getImageUrl(d.image ?? null),
@@ -139,7 +131,6 @@ const spreadFields = publicEntries.map((e) => {
   return f;
 });
 
-const entryBasePath = localizedPath(locale, "/organizations/");
 ---
 
 <MainLayout
@@ -270,208 +261,13 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     </footer>
   </div>
 
-  <!-- Modal overlay (unchanged from previous implementation) -->
-  <div class="org-overlay" id="org-overlay" aria-hidden="true">
-    <div class="org-modal" id="org-modal" role="dialog" aria-modal="true">
-      <button class="org-modal__close" id="org-modal-close" aria-label={copy.closeEntry}>
-        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-          <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="10" y1="1" x2="1" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </button>
-
-      <aside class="org-modal__hero" id="org-modal-hero">
-        <picture id="org-modal-picture">
-          <img class="org-modal__hero-img" id="org-modal-img" src="" alt="" />
-        </picture>
-        <div class="org-modal__hero-fade"></div>
-        <div class="org-modal__hero-accent" id="org-modal-accent"></div>
-        <div class="org-grain"></div>
-        <div class="org-modal__hero-bar" id="org-modal-bar"></div>
-        <div class="org-modal__hero-tags" id="org-modal-tags"></div>
-        <div class="org-modal__hero-content">
-          <div class="org-modal__hero-type" id="org-modal-type"></div>
-          <div class="org-modal__hero-title" id="org-modal-title"></div>
-          <div class="org-modal__hero-designation" id="org-modal-designation"></div>
-        </div>
-      </aside>
-
-      <div class="org-modal__pane" id="org-modal-pane">
-        <div class="org-modal__pane-inner">
-          <div class="org-modal__fields-card">
-            <div class="org-modal__fields-title" id="org-modal-fields-title">{copy.classificationData}</div>
-            <div id="org-modal-fields"></div>
-          </div>
-
-          <p class="org-modal__lead" id="org-modal-lead"></p>
-
-          <div class="org-modal__divider"></div>
-
-          <div class="org-modal__body" id="org-modal-body">
-            <p class="org-modal__loading">{copy.loadingEntry}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </MainLayout>
 
-<script define:vars={{ panels, entryBasePath, copy }} is:inline>
+<script>
+  import { revealOnScroll } from "../../scripts/reveal-on-scroll";
   window.registerPageInit?.("organizations-index-interactions", () => {
-  const root = document.querySelector(".orgs-root");
-  if (!(root instanceof HTMLElement)) return;
-
-  const PANELS = panels;
-  const byId = (id) => document.getElementById(id);
-
-  const overlay          = byId("org-overlay");
-  const modal            = byId("org-modal");
-  const modalImg         = byId("org-modal-img");
-  const modalAccent      = byId("org-modal-accent");
-  const modalBar         = byId("org-modal-bar");
-  const modalType        = byId("org-modal-type");
-  const modalTitle       = byId("org-modal-title");
-  const modalDes         = byId("org-modal-designation");
-  const modalTags        = byId("org-modal-tags");
-  const modalFieldsTitle = byId("org-modal-fields-title");
-  const modalFields      = byId("org-modal-fields");
-  const modalLead        = byId("org-modal-lead");
-  const modalBody        = byId("org-modal-body");
-  const closeBtn         = byId("org-modal-close");
-  if (!overlay || !modal || !modalImg || !modalAccent || !modalBar || !modalType || !modalTitle || !modalDes || !modalTags || !modalFieldsTitle || !modalFields || !modalLead || !modalBody || !closeBtn) return;
-
-  const controller = new AbortController();
-  const listenerOptions = { signal: controller.signal };
-  const observers = [];
-  let closeTimer = 0;
-  let closing = false;
-
-  function syncModalImage(img, image) {
-    if (!image) {
-      img.removeAttribute("src");
-      return;
-    }
-    img.src = image;
-  }
-
-  function openModal(slug) {
-    const p = PANELS.find((x) => x.slug === slug);
-    if (!p) return;
-
-    if (p.image) {
-      syncModalImage(modalImg, p.image);
-      modalImg.style.display = "";
-    } else {
-      syncModalImage(modalImg, null);
-      modalImg.removeAttribute("src");
-      modalImg.style.display = "none";
-    }
-
-    modalAccent.style.background = `linear-gradient(to top, ${p.accent}33, transparent 55%)`;
-    modalBar.style.background = `linear-gradient(to bottom, transparent, ${p.accent}aa, transparent)`;
-
-    modalType.textContent = (p.type || copy.defaultType).toUpperCase();
-    modalType.style.color = p.accent;
-    modalTitle.textContent = p.title;
-    modalDes.textContent = p.designation || "";
-    modalDes.style.color = p.accent;
-
-    modalFieldsTitle.style.color = p.accent;
-    modalFields.innerHTML = Object.entries(p.fields || {}).map(([k, v]) => `
-      <div class="org-field-row">
-        <div class="org-field-key">${k}</div>
-        <div class="org-field-val">${v}</div>
-      </div>
-    `).join("");
-
-    modalTags.innerHTML = (p.tags || []).map((t) => `
-      <span class="org-modal__tag" style="border-color: ${p.accent}55">${t}</span>
-    `).join("");
-
-    modalLead.textContent = p.summary || "";
-
-    modalBody.innerHTML = `<p class="org-modal__loading">${copy.loadingEntry}</p>`;
-    fetch(`${entryBasePath}${p.slug}/`, { signal: controller.signal })
-      .then((r) => r.text())
-      .then((html) => {
-        const doc = new DOMParser().parseFromString(html, "text/html");
-        const content =
-          doc.querySelector("[data-entry-body]") ||
-          doc.querySelector(".entry-body") ||
-          doc.querySelector("article");
-        if (content) {
-          modalBody.innerHTML = content.innerHTML;
-        } else {
-          modalBody.innerHTML = `<p class="org-modal__para">${p.summary || ""}</p>`;
-        }
-      })
-      .catch(() => {
-        if (controller.signal.aborted) return;
-        modalBody.innerHTML = `<p class="org-modal__para">${p.summary || ""}</p>`;
-      });
-
-    overlay.classList.add("is-open");
-    overlay.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-    const pane = byId("org-modal-pane");
-    if (pane) pane.scrollTop = 0;
-  }
-
-  function closeModal() {
-    if (closing) return;
-    closing = true;
-    modal.classList.add("is-closing");
-    closeTimer = window.setTimeout(() => {
-      overlay.classList.remove("is-open");
-      overlay.setAttribute("aria-hidden", "true");
-      modal.classList.remove("is-closing");
-      document.body.style.overflow = "";
-      closing = false;
-    }, 380);
-  }
-
-  root.querySelectorAll("[data-open-entry]").forEach((el) => {
-    el.addEventListener("click", () => {
-      const slug = el.getAttribute("data-open-entry");
-      openModal(slug);
-    }, listenerOptions);
-  });
-
-  closeBtn.addEventListener("click", closeModal, listenerOptions);
-  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); }, listenerOptions);
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal();
-  }, listenerOptions);
-
-  // Reveal-on-scroll for spreads
-  const spreadEls = root.querySelectorAll(".org-spread");
-  spreadEls.forEach((el, i) => {
-    if (i === 0) {
-      requestAnimationFrame(() => el.classList.add("in-view"));
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            el.classList.add("in-view");
-            io.disconnect();
-          }
-        });
-      },
-      { threshold: 0.08 }
-    );
-    observers.push(io);
-    io.observe(el);
-  });
-  return () => {
-    controller.abort();
-    observers.forEach((observer) => observer.disconnect());
-    window.clearTimeout(closeTimer);
-    overlay.classList.remove("is-open");
-    modal.classList.remove("is-closing");
-    document.body.style.overflow = "";
-  };
+    const root = document.querySelector(".orgs-root");
+    if (root) return revealOnScroll(root.querySelectorAll(".org-spread"), 0.08);
   });
 </script>
 
@@ -956,202 +752,6 @@ const entryBasePath = localizedPath(locale, "/organizations/");
   }
   .orgs-footer__back:hover { color: var(--text-muted); }
 
-  /* ── modal overlay ── */
-  .org-overlay {
-    position: fixed; inset: 0; z-index: 300;
-    background: rgba(2, 2, 6, 0.93);
-    backdrop-filter: blur(16px);
-    display: flex; align-items: center; justify-content: center;
-    padding: 20px 24px;
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.35s ease;
-  }
-  .org-overlay.is-open {
-    opacity: 1; pointer-events: all;
-  }
-
-  .org-modal {
-    position: relative;
-    width: 100%; max-width: 1080px;
-    height: min(82vh, 720px);
-    display: flex;
-    background: rgba(7, 7, 13, 0.99);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 4px;
-    overflow: hidden;
-    min-height: 0;
-    box-shadow: 0 48px 120px rgba(0, 0, 0, 0.85);
-    transform: translateY(16px) scale(0.99); opacity: 0;
-    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
-  }
-  .org-overlay.is-open .org-modal {
-    transform: none; opacity: 1;
-  }
-  .org-modal.is-closing {
-    transform: translateY(16px) scale(0.99); opacity: 0;
-  }
-
-  .org-modal__close {
-    position: absolute; top: 16px; right: 16px; z-index: 10;
-    width: 30px; height: 30px; border-radius: 3px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(232, 228, 220, 0.5);
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-  }
-  .org-modal__close:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text);
-  }
-
-  .org-modal__hero {
-    width: 36%; flex-shrink: 0;
-    position: relative; overflow: hidden;
-    background: #06060b;
-  }
-  .org-modal__hero-img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: center 40%;
-    filter: saturate(0.45) brightness(0.22);
-  }
-  .org-modal__hero-fade {
-    position: absolute; inset: 0;
-    background: linear-gradient(to bottom, rgba(7, 7, 13, 0.3) 0%, transparent 30%, rgba(7, 7, 13, 0.75) 75%);
-  }
-  .org-modal__hero-accent { position: absolute; inset: 0; }
-  .org-modal__hero-bar {
-    position: absolute; left: 0; top: 8%; bottom: 8%; width: 1px;
-  }
-  .org-modal__hero-tags {
-    position: absolute; top: 20px; left: 16px; right: 60px;
-    display: flex; gap: 4px; flex-wrap: wrap; z-index: 3;
-  }
-  :global(.org-modal__tag) {
-    padding: 3px 7px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.45);
-  }
-  .org-modal__hero-content {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    padding: 44px 28px 28px;
-    background: linear-gradient(to top, rgba(7, 7, 13, 0.98) 0%, rgba(7, 7, 13, 0.7) 65%, transparent);
-    z-index: 3;
-  }
-  .org-modal__hero-type {
-    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
-    letter-spacing: 0.24em; text-transform: uppercase;
-    margin-bottom: 9px; opacity: 0.9;
-  }
-  .org-modal__hero-title {
-    font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700;
-    color: var(--text); line-height: 1.06; margin-bottom: 7px;
-    letter-spacing: -0.01em;
-  }
-  .org-modal__hero-designation {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 13px; opacity: 0.8; line-height: 1.5;
-  }
-
-  .org-modal__pane {
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  .org-modal__pane-inner {
-    padding: 32px 36px 48px;
-    display: flex; flex-direction: column; gap: 22px;
-  }
-
-  .org-modal__fields-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 3px;
-    overflow: hidden;
-  }
-  .org-modal__fields-title {
-    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    padding: 11px 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  :global(.org-field-row) {
-    padding: 8px 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    display: flex; flex-direction: column; gap: 1px;
-  }
-  :global(.org-field-row:last-child) { border-bottom: none; }
-  :global(.org-field-key) {
-    font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 600;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-dim);
-  }
-  :global(.org-field-val) {
-    font-family: 'DM Sans', sans-serif; font-size: 12px;
-    color: var(--text-muted); line-height: 1.5;
-  }
-
-  .org-modal__lead {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px; color: rgba(232, 228, 220, 0.68);
-    line-height: 1.78; font-style: italic;
-    letter-spacing: 0.01em; margin: 0;
-  }
-
-  .org-modal__divider {
-    height: 1px; background: rgba(255, 255, 255, 0.06);
-  }
-
-  .org-modal__loading {
-    font-family: 'DM Sans', sans-serif; font-size: 13px;
-    color: var(--text-dim);
-  }
-
-  :global(.org-modal__body p),
-  :global(.org-modal__body .org-modal__para) {
-    font-family: 'DM Sans', sans-serif; font-size: 14px;
-    color: var(--text-muted); line-height: 1.85;
-    margin: 0 0 18px;
-  }
-  :global(.org-modal__body h1),
-  :global(.org-modal__body h2),
-  :global(.org-modal__body h3) {
-    font-family: 'Cormorant Garamond', serif; font-weight: 700;
-    color: var(--text); margin: 24px 0 10px;
-    letter-spacing: 0.02em;
-  }
-  :global(.org-modal__body h2) { font-size: 26px; }
-  :global(.org-modal__body h3) { font-size: 20px; }
-  :global(.org-modal__body blockquote) {
-    border-left: 2px solid var(--crimson);
-    padding-left: 16px; margin: 0 0 18px;
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 16px; color: rgba(232, 228, 220, 0.6);
-  }
-  :global(.org-modal__body strong) {
-    color: var(--text); font-weight: 600;
-  }
-  :global(.org-modal__body hr) {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-    margin: 24px 0;
-  }
-  :global(.org-modal__body ul),
-  :global(.org-modal__body ol) {
-    padding-left: 22px; margin: 0 0 18px;
-    color: var(--text-muted); line-height: 1.8;
-    font-family: 'DM Sans', sans-serif; font-size: 14px;
-  }
-  :global(.org-modal__body li) { margin-bottom: 6px; }
-
   /* ── responsive ── */
   @media (max-width: 900px) {
     .org-spread, .org-spread--flip {
@@ -1178,15 +778,6 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     .org-spread__content { padding: 36px 32px 48px; }
     .org-spread__content-inner { max-width: 100%; }
 
-    .org-modal {
-      flex-direction: column;
-      height: min(92dvh, 760px);
-    }
-    .org-modal__hero {
-      width: 100%;
-      height: 200px; flex-shrink: 0;
-    }
-    .org-modal__pane { border-left: none; border-top: 1px solid rgba(255, 255, 255, 0.05); }
   }
 
   @media (max-width: 640px) {
@@ -1201,15 +792,12 @@ const entryBasePath = localizedPath(locale, "/organizations/");
     .org-spread__img-tags { display: none; }
 
     .orgs-footer__inner { padding: 0 24px; }
-    .org-overlay { padding: 0; align-items: stretch; }
-    .org-modal {
-      height: 100dvh;
-      max-height: none;
-      border-radius: 0;
-      border: none;
-    }
-    .org-modal__hero { height: clamp(150px, 30svh, 210px); }
-    .org-modal__pane-inner { padding: 24px 20px calc(42px + env(safe-area-inset-bottom)); }
-    .org-modal__hero-content { padding: 28px 20px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(.org-grain), .org-spread__img-grain { animation: none; }
+    .org-spread__img-wrap, .org-spread__img, .org-spread__content-inner,
+    .org-spread.in-view .org-spread__rule { transition: none; }
+    .org-spread.in-view :is(.org-spread__eyebrow, .org-spread__title, .org-spread__designation,
+      .org-spread__meta, .org-spread__summary, .org-spread__cta) { transition: none; }
   }
 </style>

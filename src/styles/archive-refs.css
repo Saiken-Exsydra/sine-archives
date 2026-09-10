@@ -22,6 +22,7 @@
 }
 
 .archive-ref__preview {
+  display: none;
   position: absolute;
   left: 0;
   top: calc(100% + 0.65rem);
@@ -70,9 +71,23 @@
 
 .archive-ref:hover .archive-ref__preview,
 .archive-ref:focus-within .archive-ref__preview {
+  display: block;
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+}
+
+/* A narrow reading pane uses a viewport-bound footnote instead of an off-edge popover. */
+@media (max-width: 700px) {
+  .archive-ref__preview {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    width: auto;
+  }
+  .archive-ref__preview::before { display: none; }
 }
 
 @media (hover: none), (pointer: coarse) {

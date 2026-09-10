@@ -1,3 +1,4 @@
+import { gotoReady } from "./helpers/navigation";
 import { expect, test, type Page } from "@playwright/test";
 
 type CharacterRuntimeSnapshot = {
@@ -10,6 +11,7 @@ type CharacterRuntimeSnapshot = {
 
 function isExpectedTransitionCancellation(message: string) {
   return message === "Skipped ViewTransition due to skipTransition() call"
+    || message === "Transition was skipped"
     || message === "AbortError: Skipping view transition because skipTransition() was called.";
 }
 
@@ -84,7 +86,7 @@ test("character selection survives repeated routes, dossier returns, and history
     }
   });
 
-  await page.goto("/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/");
   await openCharacterIndex(page);
 
   for (const index of [1, 2, 3, 4, 5]) {
@@ -139,7 +141,7 @@ test("character selection survives repeated routes, dossier returns, and history
 });
 
 test("character selection recovers when URL synchronization throws", async ({ page }) => {
-  await page.goto("/characters/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/characters/");
   await expectCharacterControllerReady(page);
 
   await page.evaluate(() => {

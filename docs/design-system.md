@@ -2,7 +2,6 @@
 
 This file is the design source of truth for future SiNE Archives UI edits. Before changing visual structure, tokens, layout chrome, page motion, or reusable cards, check this file first, then verify against the referenced source files.
 
-Last audited from `src/` on 2026-06-17.
 
 ## Stack And Scope
 
@@ -11,17 +10,6 @@ Last audited from `src/` on 2026-06-17.
 - Global shell: `src/layouts/SiteShell.astro` imports `src/styles/global.css` and `src/styles/transition-system.css`.
 - Default page chrome: `src/layouts/MainLayout.astro` wraps normal pages with fixed navigation, music player, locale switch, search, fullscreen control, `<main id="page-content">`, and footer.
 - Special full-screen experiences may use `SiteShell.astro` directly, most notably `src/pages/characters/index.astro` and `src/layouts/CharacterEntryLayout.astro`.
-
-## Tailwind Configuration
-
-Tailwind is not currently part of this project.
-
-- No `tailwind.config.*` file exists.
-- No `postcss.config.*` file exists.
-- `package.json` has no `tailwindcss`, `@tailwindcss/*`, or Tailwind integration dependency.
-- No `@tailwind` directives are present in `src/`.
-
-Do not introduce Tailwind utilities or config unless that is an explicit project decision. Future design edits should preserve the existing CSS/token approach.
 
 ## Global CSS Variables
 
@@ -50,9 +38,9 @@ Canonical transition variables live in `src/styles/transition-system.css`.
 ```css
 :root {
   --page-transition-duration: 480ms;
-  --page-transition-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --page-transition-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
   --search-vt-duration: 1050ms;
-  --search-vt-ease: cubic-bezier(.16, 1, .3, 1);
+  --search-vt-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
   --transition-bg: #050407;
 }
 ```
@@ -61,10 +49,10 @@ Canonical transition variables live in `src/styles/transition-system.css`.
 
 ## Layout Variables
 
-`src/layouts/MainLayout.astro` defines the shared navigation height:
+`src/styles/global.css` defines the shared navigation height:
 
 ```css
-:global(:root) {
+:root {
   --nav-height: 56px;
 }
 ```
@@ -161,7 +149,7 @@ The prose style uses DM Sans body text, Cormorant headings, crimson blockquote b
 Source: `src/pages/characters/index.astro`
 
 - Uses `SiteShell` directly, not `MainLayout`.
-- Re-declares the global tokens with `--bg: #06060b`.
+- Overrides only the canvas token with `--bg: #06060b`; other tokens are inherited.
 - Fixed custom nav, left `.sidebar`, and full-screen `.stage`.
 - The stage owns hero art, watermark, tags, dossier CTA, overlay hide/show, filmstrip/dots, gallery switching, and search.
 - Body is intentionally `overflow: hidden` on desktop.
@@ -276,7 +264,7 @@ Source: `src/pages/organizations/index.astro`
 - `.orgs-hdr`: typographic header.
 - `.orgs-index`: anchor index using per-entry `--accent`.
 - `.orgs-registry`: stacked `.org-spread` editorial spreads with image pane and content pane.
-- `.org-overlay`/`.org-modal`: fixed modal with hero aside, tags, fields card, divider, and body.
+- Dossier links open the dedicated `OrganizationDossierLayout.astro` route.
 
 ### Cosmology Index
 
@@ -287,7 +275,7 @@ Source: `src/pages/cosmology/index.astro`
 - `.cosmo-identity`: centered identity strip.
 - `.cosmo-panels`: primary image panels with accent variables, grain, scanlines, numerals, chapter markers, stamps, and scroll hint.
 - `.cosmo-others`: additional entries list.
-- `.cosmo-overlay`/`.cosmo-modal`: fixed modal matching the organizations modal structure.
+- `.cosmo-overlay`/`.cosmo-modal`: fixed entry modal with a hero aside and reading pane.
 
 ### Systems Index And Observatory
 
@@ -334,7 +322,7 @@ Source: `src/pages/soundtracks/index.astro`
 
 ## Reusable Interaction Rules
 
-- Page scripts that must survive Astro navigation should register with `window.registerPageInit?.("stable-key", initFn)` and return cleanup functions.
+- See `docs/architecture.md` for the single page initialization and teardown convention.
 - Do not add scattered `DOMContentLoaded`, `astro:page-load`, or `astro:before-swap` listeners for normal page setup.
 - Use `data-transition-trigger` and route/profile metadata for navigation motion.
 - Use `data-astro-prefetch="load"` only where the route is meant to be warmed aggressively, such as Search and Observatory handles.
@@ -366,4 +354,18 @@ When changing design, start here:
 - Basic section index lists: `src/components/SectionList.astro`
 - Music UI: `src/components/MusicPlayer.astro`
 
-`src/styles/cards.css` is only a legacy compatibility import; the real card styles live in `EntryCard.astro`.
+Standard card styling is owned by `EntryCard.astro`; there is no compatibility stylesheet.
+
+## Spacing, accessibility, and diegetic controls
+
+Use the existing 4/8px spacing rhythm, constrained prose measure, and page-family breakpoints instead of a new utility framework. Thin translucent borders, modest radii, and restrained shadows separate panes; extra nested cards are rarely useful. Metadata remains subordinate but readable. Use `--text-dim` for decoration, not essential instructions.
+
+Navigation objects are links; in-place actions are buttons with accessible names. Every hover cue needs a visible keyboard-focus equivalent. Modal dialogs need a name, focus containment, Escape/backdrop dismissal, and focus return. Their hidden state must be inert. Focus rings use the gold token. Preserve touch access and safe-area padding at 320, 390, 768, 1440, and 1920px; allow internal scroll where a diagram or instrument needs it.
+
+Object feedback generally takes 140–360ms. Route profiles own longer cinematic movement. The shared modal motion token is 380ms; reduced motion closes immediately. Grain is static under reduced motion. Prefer transform/opacity to layout changes, and avoid continuous motion merely to attract attention.
+
+Use archive vocabulary (Registry, Dossier, File, Seal, Observation) and project objects. Avoid generic product copy, neon, excessive blur, unrelated icon sets, and rounded card walls.
+
+## Markdown diagrams
+
+Use `mermaid` for public visual hierarchies, relationships, flows, and doctrine maps. Use `diagram` only for raw textual maps whose monospace alignment matters. Do not use `text`, `txt`, or unlabeled fences for archive maps. The visual template is a flat black stage, plain white Mermaid label, charcoal rectangular nodes, pale gray connectors, and sparse labels. Preserve canonical terminology. Ordinary code blocks remain plain; long raw maps scroll horizontally. Check diagram routes in dark mode and at phone widths.

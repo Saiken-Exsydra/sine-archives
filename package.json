@@ -8,7 +8,7 @@
     "check:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs --check",
     "check:text-encoding": "node scripts/pt-br-encoding-guard.mjs --check",
     "dev": "astro dev",
-    "build": "npm run songs:generate && npm run check:pt-br-fallbacks && npm run check:text-encoding && npm run check:archive-refs && astro build",
+    "build": "npm run songs:generate && npm run check:content && astro build",
     "check": "astro check",
     "fix:text-encoding": "node scripts/pt-br-encoding-guard.mjs --fix",
     "seed:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs",
@@ -17,7 +17,12 @@
     "test:characters": "playwright test tests/character-navigation.spec.ts",
     "test:transitions": "playwright test tests/transition-smoke.spec.ts",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "playwright test",
+    "test:modals": "playwright test tests/entry-modal.spec.ts",
+    "check:content": "npm run check:pt-br-fallbacks && npm run check:text-encoding && npm run check:archive-refs",
+    "predev": "npm run songs:generate",
+    "precheck": "npm run songs:generate"
   },
   "dependencies": {
     "astro": "^5.18.1",

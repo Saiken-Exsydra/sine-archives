@@ -127,24 +127,9 @@ const copy = locale === "pt-br"
 </div>
 
 <script define:vars={{ tracks, copy, defaultTrackId: DEFAULT_MUSIC_TRACK_ID }} is:inline>
-  const scriptElement = document.currentScript;
   const controllerKey = "__sineMusicController";
-  const initKey = "__sineMusicInit";
 
-  const resolveMusicRoot = () => {
-    if (scriptElement instanceof HTMLScriptElement) {
-      const previous = scriptElement.previousElementSibling;
-      if (
-        previous instanceof HTMLElement
-        && previous.isConnected
-        && previous.matches("[data-music-player]")
-      ) {
-        return previous;
-      }
-    }
-
-    return document.querySelector("[data-music-player]");
-  };
+  const resolveMusicRoot = () => document.querySelector("[data-music-player]");
 
   const createController = () => {
     const iconWave = "/uploads/waveform.svg";
@@ -206,6 +191,7 @@ const copy = locale === "pt-br"
       pendingTime: null,
       autoplayBlocked: false,
       queuedGestureAutoplay: false,
+      removeQueuedGestureAutoplay: null,
       initialized: false,
       shouldResumePlayback: true,
       musicRoot: null,
@@ -228,21 +214,12 @@ const copy = locale === "pt-br"
       panelAnimating: false,
       copy,
       cleanupDom: null,
-      onDocumentClick: null,
-      onDocumentKeydown: null,
-      onMusicSelect: null,
-      onMusicCommand: null,
-      onRequestState: null,
-      onPersistSession: null,
-    };
-
-    controller.resolveTrack = (trackId) =>
+      resolveTrack: (trackId) =>
       controller.trackMap.get(trackId)
       || controller.trackMap.get(controller.defaultTrackId)
       || tracks[0]
-      || null;
-
-      controller.restoreSessionState = () => {
+      || null,
+      restoreSessionState: () => {
         const raw = controller.session.get(controller.sessionStateKey);
 
         if (!raw) return null;
@@ -266,16 +243,14 @@ const copy = locale === "pt-br"
         } catch {
           return null;
         }
-      };
-
-      controller.persist = () => {
+      },
+      persist: () => {
         if (!controller.currentTrack) return;
         controller.storage.set(controller.trackKey, controller.currentTrack.id);
         controller.storage.set(controller.volumeKey, String(controller.currentVolume));
         controller.storage.set(controller.muteKey, String(controller.isMuted));
-      };
-
-      controller.persistSession = () => {
+      },
+      persistSession: () => {
         if (!controller.currentTrack) return;
         controller.session.set(controller.sessionStateKey, JSON.stringify({
           trackId: controller.currentTrack.id,
@@ -284,9 +259,8 @@ const copy = locale === "pt-br"
           currentTime: Number.isFinite(controller.audio.currentTime) ? controller.audio.currentTime : 0,
           wasPlaying: !controller.audio.paused && !controller.audio.ended,
         }));
-      };
-
-      controller.getState = () => {
+      },
+      getState: () => {
         if (!controller.currentTrack) return;
         const trackIndex = Math.max(0, controller.trackOrder.indexOf(controller.currentTrack.id));
         return {
@@ -301,24 +275,21 @@ const copy = locale === "pt-br"
           hasNext: trackIndex < controller.trackOrder.length - 1,
           volume: controller.currentVolume,
         };
-      };
-
-      controller.emitState = () => {
+      },
+      emitState: () => {
         const detail = controller.getState();
         if (!detail) return;
 
         window.dispatchEvent(new CustomEvent("sine:music-state", { detail }));
-      };
-
-      controller.clearQueuedGestureAutoplay = () => {
+      },
+      clearQueuedGestureAutoplay: () => {
         if (typeof controller.removeQueuedGestureAutoplay === "function") {
           controller.removeQueuedGestureAutoplay();
         }
         controller.removeQueuedGestureAutoplay = null;
         controller.queuedGestureAutoplay = false;
-      };
-
-      controller.queueGestureAutoplay = () => {
+      },
+      queueGestureAutoplay: () => {
         if (controller.queuedGestureAutoplay) return;
         controller.queuedGestureAutoplay = true;
 
@@ -339,27 +310,23 @@ const copy = locale === "pt-br"
           document.removeEventListener("keydown", resumeOnGesture, options);
           document.removeEventListener("touchstart", resumeOnGesture, options);
         };
-      };
-
-      controller.applyPendingTime = () => {
+      },
+      applyPendingTime: () => {
         if (controller.pendingTime == null) return;
         if (!Number.isFinite(controller.audio.duration) || controller.audio.duration <= 0) return;
         controller.audio.currentTime = Math.min(controller.audio.duration, Math.max(0, controller.pendingTime));
         controller.pendingTime = null;
-      };
-
-      controller.syncSource = () => {
+      },
+      syncSource: () => {
         if (!controller.currentTrack?.audioSrc) return;
         if (controller.audio.dataset.trackId === controller.currentTrack.id) return;
         controller.audio.src = controller.currentTrack.audioSrc;
         controller.audio.dataset.trackId = controller.currentTrack.id;
         controller.applyPendingTime();
-      };
-
-      controller.isWaveformSlashed = () => controller.isMuted || controller.currentVolume <= 0;
-      controller.isVisuallyPlaying = () => !controller.isWaveformSlashed();
-
-      controller.render = () => {
+      },
+      isWaveformSlashed: () => controller.isMuted || controller.currentVolume <= 0,
+      isVisuallyPlaying: () => !controller.isWaveformSlashed(),
+      render: () => {
         if (!controller.currentTrack) return;
 
         const playText = controller.audio.paused ? controller.copy.play : controller.copy.pause;
@@ -401,9 +368,8 @@ const copy = locale === "pt-br"
 
         controller.persistSession();
         controller.emitState();
-      };
-
-      controller.setPanel = (open) => {
+      },
+      setPanel: (open) => {
         if (!controller.panel || !controller.musicRoot) return;
 
         controller.panelOpen = open;
@@ -426,9 +392,8 @@ const copy = locale === "pt-br"
           controller.toggleButton.setAttribute("aria-expanded", String(open));
           controller.toggleButton.setAttribute("aria-label", open ? controller.copy.closePlayer : controller.copy.openPlayer);
         }
-      };
-
-      controller.playCurrent = async () => {
+      },
+      playCurrent: async () => {
         if (!controller.currentTrack?.audioSrc) {
           controller.render();
           return false;
@@ -450,23 +415,20 @@ const copy = locale === "pt-br"
           controller.render();
           return false;
         }
-      };
-
-      controller.pauseCurrent = () => {
+      },
+      pauseCurrent: () => {
         controller.shouldResumePlayback = false;
         controller.clearQueuedGestureAutoplay();
         controller.audio.pause();
         controller.render();
-      };
-
-      controller.setMuted = (nextMuted) => {
+      },
+      setMuted: (nextMuted) => {
         controller.isMuted = nextMuted;
         controller.audio.volume = controller.isMuted ? 0 : controller.currentVolume;
         controller.persist();
         controller.render();
-      };
-
-      controller.setVolume = (nextValue) => {
+      },
+      setVolume: (nextValue) => {
         controller.currentVolume = Math.min(1, Math.max(0, nextValue));
         if (controller.currentVolume > 0 && controller.isMuted) {
           controller.isMuted = false;
@@ -474,9 +436,8 @@ const copy = locale === "pt-br"
         controller.audio.volume = controller.isMuted ? 0 : controller.currentVolume;
         controller.persist();
         controller.render();
-      };
-
-      controller.setTrack = async (trackId, options = {}) => {
+      },
+      setTrack: async (trackId, options = {}) => {
         const nextTrack = controller.resolveTrack(trackId);
 
         if (!nextTrack) return;
@@ -508,9 +469,8 @@ const copy = locale === "pt-br"
         if (autoplay) {
           await controller.playCurrent();
         }
-      };
-
-      controller.stepTrack = async (direction) => {
+      },
+      stepTrack: async (direction) => {
         if (!controller.currentTrack) return false;
         const currentIndex = controller.trackOrder.indexOf(controller.currentTrack.id);
         if (currentIndex < 0) return false;
@@ -518,15 +478,13 @@ const copy = locale === "pt-br"
         if (nextIndex === currentIndex) return false;
         await controller.setTrack(controller.trackOrder[nextIndex], { autoplay: true, openPanel: false });
         return true;
-      };
-
-      controller.seekTo = (nextTime) => {
+      },
+      seekTo: (nextTime) => {
         if (!Number.isFinite(controller.audio.duration)) return;
         controller.audio.currentTime = Math.min(controller.audio.duration, Math.max(0, nextTime));
         controller.render();
-      };
-
-      controller.setCatalog = (nextTracks, nextDefaultTrackId) => {
+      },
+      setCatalog: (nextTracks, nextDefaultTrackId) => {
         controller.trackMap = new Map(nextTracks.map((track) => [track.id, track]));
         controller.trackOrder = nextTracks.map((track) => track.id);
         controller.defaultTrackId = nextDefaultTrackId;
@@ -557,9 +515,8 @@ const copy = locale === "pt-br"
         } else {
           controller.currentTrack = controller.resolveTrack(nextDefaultTrackId);
         }
-      };
-
-      controller.bind = (root, nextCopy) => {
+      },
+      bind: (root, nextCopy) => {
         if (typeof controller.cleanupDom === "function") {
           controller.cleanupDom();
         }
@@ -634,29 +591,25 @@ const copy = locale === "pt-br"
         };
 
         controller.render();
-      };
-
-      controller.onDocumentClick = (event) => {
+      },
+      onDocumentClick: (event) => {
         if (!controller.panelOpen || controller.panelAnimating || !controller.musicRoot) return;
         if (controller.musicRoot.contains(event.target)) return;
         controller.setPanel(false);
-      };
-
-      controller.onDocumentKeydown = (event) => {
+      },
+      onDocumentKeydown: (event) => {
         if (event.key === "Escape" && controller.panelOpen && !controller.panelAnimating) {
           controller.setPanel(false);
         }
-      };
-
-      controller.onMusicSelect = async (event) => {
+      },
+      onMusicSelect: async (event) => {
         const detail = event.detail || {};
         await controller.setTrack(detail.trackId, {
           autoplay: detail.autoplay !== false,
           openPanel: !!detail.openPanel,
         });
-      };
-
-      controller.onMusicCommand = async (event) => {
+      },
+      onMusicCommand: async (event) => {
         const detail = event.detail || {};
 
         switch (detail.command) {
@@ -695,10 +648,10 @@ const copy = locale === "pt-br"
           default:
             break;
         }
-      };
-
-      controller.onRequestState = () => controller.emitState();
-      controller.onPersistSession = () => controller.persistSession();
+      },
+      onRequestState: () => controller.emitState(),
+      onPersistSession: () => controller.persistSession(),
+    };
 
       controller.audio.addEventListener("play", () => controller.render());
       controller.audio.addEventListener("pause", () => controller.render());
@@ -750,14 +703,14 @@ const copy = locale === "pt-br"
     } else if (!controller.shouldResumePlayback) {
       controller.clearQueuedGestureAutoplay();
     }
+
+    return () => {
+      controller.cleanupDom?.();
+      controller.clearQueuedGestureAutoplay();
+    };
   };
 
-  if (!window[initKey]) {
-    window[initKey] = initializeMusicPlayer;
-    window.addEventListener("pageshow", window[initKey]);
-  }
-
-  window.registerPageInit?.("music-player", window[initKey] || initializeMusicPlayer, { persistent: true });
+  window.registerPageInit?.("music-player", initializeMusicPlayer, { persistent: true });
 </script>
 
 <style>

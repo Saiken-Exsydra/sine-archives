@@ -75,6 +75,6 @@ Character codex files can use the same explicit heading-id syntax:
   - missing explicit heading id for a codex target
   - duplicate override id or alias
 
-## Rollout Planning
+## Editorial maintenance
 
-- See `docs/archive-reference-rollout.md` for the curated term list and recommended expansion order.
+`npm run report:archive-refs` prints a fresh candidate report to stdout. Counts are editorial opportunities, not automatic replacements. Prefer direct public entries/explicit sections, then a codex section when disclosure is appropriate. Defer terms without a canon-grounded target. Current overrides live in `src/data/archiveRefs.mjs`; do not keep a second target table in documentation.

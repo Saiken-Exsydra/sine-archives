@@ -37,6 +37,9 @@ html.is-transitioning body {
   background: var(--transition-bg);
 }
 
+/* Snapshots are visual only; a settled page remains operable during the reveal. */
+::view-transition { pointer-events: none; }
+
 ::view-transition-old(page-content) {
   animation: pageContentOut var(--page-transition-duration) var(--page-transition-ease) both;
 }

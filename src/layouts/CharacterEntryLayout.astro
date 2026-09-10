@@ -372,15 +372,15 @@ const characterIndexHref = localizedPath(locale, `/characters/?char=${encodeURIC
       --char-bg: #06060b;
       --char-surface: rgba(10, 10, 18, 0.76);
       --char-surface-strong: rgba(9, 9, 16, 0.92);
-      --char-border: rgba(255, 255, 255, 0.07);
+      --char-border: var(--border);
       --char-border-strong: rgba(255, 255, 255, 0.12);
-      --char-crimson: #b13a34;
-      --char-gold: #b08d3c;
-      --char-text: #e8e4dc;
+      --char-crimson: var(--crimson);
+      --char-gold: var(--gold);
+      --char-text: var(--text);
       --char-text-muted: rgba(232, 228, 220, 0.64);
       --char-text-dim: rgba(232, 228, 220, 0.36);
       --char-shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
-      --char-nav-height: 56px;
+      --char-nav-height: var(--nav-height);
     }
 
     html, body {

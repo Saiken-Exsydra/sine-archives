@@ -1,18 +1,38 @@
+# Build and dependency output
 node_modules/
 dist/
 .astro/
-.DS_Store
-.env
+src/data/songs.json
+public/music/covers/
+
+# Local tooling and disposable reports
+.tmp/
 playwright-report/
 test-results/
+coverage/
+*.log
+*.artifact.json
+.agents/
+.codex/
+.od-skills/
 open-design/
 open design prototypes/
 tmp-layout-check/
-preview-test*.log
-*.artifact.json
-.agents/
-.od-skills/
-src/content/config.ts
+
+# OS/editor metadata and local credentials
+*.swp
+*.swo
+*~
+.env
+.env.*
+!.env.example
+
+# Local Archive material is separate from tracked website character records
 The Archive/*
 !The Archive/Characters/
 !The Archive/Characters/**
+
+# Keep OS metadata excluded even inside the tracked canon exception.
+.DS_Store
+desktop.ini
+Thumbs.db

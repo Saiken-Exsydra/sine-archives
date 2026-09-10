@@ -1,3 +1,4 @@
+import { gotoReady } from "./helpers/navigation";
 import { expect, test } from "@playwright/test";
 
 const states = [
@@ -16,7 +17,7 @@ test("character dossier composes continuously from compact to ultrawide", async 
 
   for (const state of states) {
     await page.setViewportSize({ width: state.width, height: state.height });
-    await page.goto("/characters/ella-wonderwall/", { waitUntil: "networkidle" });
+    await gotoReady(page, "/characters/ella-wonderwall/");
 
     const metrics = await page.evaluate(() => {
       const rect = (selector: string) => {
@@ -76,7 +77,7 @@ test("character dossier composes continuously from compact to ultrawide", async 
 
 test("metadata modules replace File Data without entering the prose hierarchy", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/characters/ella-wonderwall/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/characters/ella-wonderwall/");
 
   const metadata = page.locator("[data-character-metadata]");
   await expect(metadata).toHaveCount(1);
@@ -91,7 +92,7 @@ test("metadata modules replace File Data without entering the prose hierarchy", 
   await expect(metadata.locator(".dossier-module--registry")).toContainText("Registered experienced Quill");
   await expect(metadata.locator(".dossier-module--registry")).toContainText("House Wonderwall; SiNE");
   await expect(metadata.locator(".dossier-module--registry")).toContainText("SiNE technical apprentice and Redactor");
-  await expect(metadata.locator(".dossier-module--personal")).toContainText("2175");
+  await expect(metadata.locator(".dossier-module--personal")).toContainText("c. Imperial Year 2189");
   await expect(metadata.locator(".dossier-module--personal")).toContainText("170 cm");
   await expect(metadata.locator(".dossier-module--personal")).toContainText("Not publicly recorded");
 
@@ -116,7 +117,7 @@ test("metadata modules replace File Data without entering the prose hierarchy", 
 
 test("characters without structured classification omit only that module", async ({ page }) => {
   await page.setViewportSize({ width: 1920, height: 1080 });
-  await page.goto("/characters/hisui-kirasagi/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/characters/hisui-kirasagi/");
 
   await expect(page.locator(".dossier-module--classification")).toHaveCount(0);
   await expect(page.locator(".dossier-module--registry")).toHaveCount(1);
@@ -126,7 +127,7 @@ test("characters without structured classification omit only that module", async
 
 test("portrait gallery behavior remains intact", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/characters/ella-wonderwall/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/characters/ella-wonderwall/");
 
   const slides = page.locator("[data-portrait-slide]");
   await expect(slides).toHaveCount(2);
@@ -137,7 +138,7 @@ test("portrait gallery behavior remains intact", async ({ page }) => {
 
 test("one TOC follows the active scroll root in document and pane modes", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/characters/ella-wonderwall/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/characters/ella-wonderwall/");
 
   const details = page.locator(".char-toc");
   await expect(details).not.toHaveAttribute("open", "");
@@ -147,7 +148,7 @@ test("one TOC follows the active scroll root in document and pane modes", async 
   await expect(details.locator("[data-toc-item]").nth(1)).toHaveClass(/is-active/);
 
   await page.setViewportSize({ width: 1920, height: 1080 });
-  await page.goto("/characters/ella-wonderwall/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/characters/ella-wonderwall/");
   await expect(details).toHaveAttribute("open", "");
   await details.locator("[data-toc-item]").nth(1).getByRole("link").click();
   await expect.poll(() => page.locator("[data-character-main]").evaluate((node) => node.scrollTop)).toBeGreaterThan(0);

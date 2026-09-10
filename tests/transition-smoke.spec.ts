@@ -1,3 +1,4 @@
+import { gotoReady } from "./helpers/navigation";
 import { expect, test } from "@playwright/test";
 
 const EXPECTED_EVENTS = [
@@ -51,7 +52,10 @@ async function waitForTransitionSequence(page: import("@playwright/test").Page, 
 }
 
 async function openSearch(page: import("@playwright/test").Page, path: string) {
-  await page.goto(path, { waitUntil: "networkidle" });
+  if (page.url() === "about:blank" || new URL(path, page.url()).href !== page.url()) {
+    await page.goto(path, { waitUntil: "domcontentloaded" });
+  }
+  await expect(page.locator("html")).toHaveClass(/is-page-ready/);
   await expect(page.locator(".nav__search-btn").first()).toBeVisible();
 
   const previousNavigationId = await getNavigationId(page);
@@ -76,7 +80,7 @@ test("home to search first click and repeat stay healthy", async ({ page }) => {
 
   await openSearch(page, "/");
 
-  await page.goBack({ waitUntil: "networkidle" });
+  await page.goBack({ waitUntil: "domcontentloaded" });
   await expect(page).toHaveURL(/\/$/);
 
   await openSearch(page, page.url());
@@ -119,7 +123,7 @@ test("sine panels stay interactive across client navigation", async ({ page }) =
   const errors = trackClientErrors(page);
   await disableBrowserCache(page);
 
-  await page.goto("/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/");
   await page.locator('a[href="/sine/"]').first().click();
   await expect(page).toHaveURL(/\/sine\/?$/);
   await expect(page.locator(".sine-panel").first()).toBeVisible();
@@ -155,7 +159,7 @@ test("character dossier opens and returns smoothly", async ({ page }) => {
   const errors = trackClientErrors(page);
   await disableBrowserCache(page);
 
-  await page.goto("/characters/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/characters/");
   await expect(page.locator("#stage-cta")).toBeVisible();
 
   await page.locator("#stage-cta").click();
@@ -175,7 +179,7 @@ test("character dossier opens and returns smoothly", async ({ page }) => {
 test("systems panels navigate directly and stay interactive after returning", async ({ page }) => {
   const errors = trackClientErrors(page);
 
-  await page.goto("/systems/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/systems/");
   await expect(page.locator("a.sys-panel")).toHaveCount(3);
   await page.locator("a.sys-panel--redactory").click();
   await expect(page).toHaveURL(/\/systems\/redactorysystem\/?$/);
@@ -205,7 +209,7 @@ test("observatory launches system interfaces", async ({ page }) => {
   const errors = trackClientErrors(page);
   await disableBrowserCache(page);
 
-  await page.goto("/systems/observatory/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/systems/observatory/");
   await expect(page.locator("[data-system-node='redactory']")).toBeVisible();
 
   await page.locator("[data-system-node='redactory']").click();
@@ -221,7 +225,7 @@ test("observatory launches system interfaces", async ({ page }) => {
   await expect(page).toHaveURL(/\/systems\/harmonics\/?$/);
   await expect(page.locator("[data-system-interface='harmonics']")).toBeVisible();
 
-  await page.goto("/systems/observatory/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/systems/observatory/");
   await page.locator("[data-system-node='resonance']").click();
   await expect(page).toHaveURL(/\/systems\/resonance-field\/?$/);
   await expect(page.locator("[data-system-interface='resonance']")).toBeVisible();
@@ -232,7 +236,7 @@ test("observatory launches system interfaces", async ({ page }) => {
 test("apparatus filters survive return navigation", async ({ page }) => {
   const errors = trackClientErrors(page);
 
-  await page.goto("/apparatus/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/apparatus/");
   await page.locator(".reg-entry").first().click();
   await expect(page).toHaveURL(/\/apparatus\/[^/]+\/?$/);
   await page.getByRole("link", { name: "Apparatus", exact: true }).click();
@@ -248,15 +252,17 @@ test("apparatus filters survive return navigation", async ({ page }) => {
 test("section index controls survive leaving and returning", async ({ page }) => {
   const errors = trackClientErrors(page);
 
-  await page.goto("/cosmology/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/cosmology/");
   await page.locator(".nav__logo").click();
+  await expect(page).toHaveURL("/");
   await page.locator('a[href="/cosmology/"]').first().click();
   await page.locator("[data-open-entry]").first().click();
   await expect(page.locator("#cosmo-overlay")).toHaveClass(/is-open/);
   await page.locator("#cosmo-modal-close").click();
 
-  await page.goto("/organizations/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/organizations/");
   await page.locator(".nav__logo").click();
+  await expect(page).toHaveURL("/");
   await page.locator('a[href="/organizations/"]').first().click();
   await page.locator('a.org-spread__cta[href="/organizations/apocachynthion/"]').click();
   await expect(page).toHaveURL(/\/organizations\/apocachynthion\/?$/);
@@ -266,14 +272,16 @@ test("section index controls survive leaving and returning", async ({ page }) =>
   await page.locator(".org-dossier__back").click();
   await expect(page).toHaveURL(/\/organizations\/?$/);
 
-  await page.goto("/places/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/places/");
   await page.locator(".nav__logo").click();
+  await expect(page).toHaveURL("/");
   await page.locator('a[href="/places/"]').first().click();
   await page.locator("#places-search-btn").click();
   await expect(page.locator("#places-search-panel")).toHaveClass(/is-open/);
 
-  await page.goto("/places/map/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/places/map/");
   await page.locator(".nav__logo").click();
+  await expect(page).toHaveURL("/");
   await page.locator('a[href="/places/"]').first().click();
   await page.locator('a[href="/places/map/"]').click();
   await page.locator(".handle").first().click();

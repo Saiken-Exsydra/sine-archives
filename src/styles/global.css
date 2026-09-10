@@ -1,6 +1,8 @@
 /* ── SiNE Archives · Global Styles ── */
 
 :root {
+  --nav-height: 56px;
+  --modal-motion-duration: 380ms;
   --bg:         #050407;
   --surface:    #0a0a14;
   --border:     rgba(255, 255, 255, 0.07);
@@ -91,4 +93,14 @@ button { font-family: inherit; }
     rgba(0, 0, 0, 0.03) 3px,
     rgba(0, 0, 0, 0.03) 4px
   );
+}
+
+/* Shared keyboard baseline; page-specific treatments may add detail. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sine-grain { animation: none; }
 }

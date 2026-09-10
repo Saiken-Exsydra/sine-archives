@@ -70,13 +70,13 @@ function renderError(viewport: HTMLElement, message: string) {
   viewport.append(error);
 }
 
-async function renderFigure(figure: HTMLElement, mermaid: MermaidApi) {
+async function renderFigure(figure: HTMLElement, mermaid: MermaidApi, signal: AbortSignal) {
   const viewport = figure.querySelector<HTMLElement>(".mermaid-diagram__viewport");
   if (!viewport) return;
 
   const source = sourceFor(figure).trim();
   if (!source) return;
-  if (figure.dataset.renderedSource === source && figure.dataset.state === "rendered") return;
+  if (figure.dataset.renderedSource === source && ["loading", "rendered", "error"].includes(figure.dataset.state ?? "")) return;
 
   const baseId = figure.dataset.mermaidId || figure.id || "mermaid-diagram";
   const renderId = `${baseId}-${renderSequence += 1}`;
@@ -86,8 +86,9 @@ async function renderFigure(figure: HTMLElement, mermaid: MermaidApi) {
 
   try {
     await mermaid.parse(source);
+    if (signal.aborted || !figure.isConnected) return;
     const { svg, bindFunctions } = await mermaid.render(renderId, source);
-
+    if (signal.aborted || !figure.isConnected) return;
     viewport.innerHTML = svg;
     const svgElement = viewport.querySelector("svg");
     svgElement?.setAttribute("role", "img");
@@ -95,35 +96,52 @@ async function renderFigure(figure: HTMLElement, mermaid: MermaidApi) {
     bindFunctions?.(viewport);
     figure.dataset.state = "rendered";
   } catch {
+    if (signal.aborted || !figure.isConnected) return;
     figure.dataset.state = "error";
     renderError(viewport, "This Mermaid diagram could not be rendered. Open the source below to inspect the diagram text.");
   }
 }
 
-async function renderMermaidDiagrams(root: ParentNode = document) {
-  const figures = Array.from(root.querySelectorAll<HTMLElement>("[data-mermaid-diagram]"));
+async function renderMermaidDiagrams(root: ParentNode, signal: AbortSignal) {
+  const figures = Array.from(root.querySelectorAll<HTMLElement>("[data-mermaid-diagram]"))
+    .filter((figure) => figure.dataset.renderedSource !== sourceFor(figure).trim() || !figure.dataset.state);
   if (figures.length === 0) return;
 
   const mermaid = await loadMermaid();
+  if (signal.aborted) return;
   mermaid.initialize(mermaidConfig());
 
-  await Promise.all(figures.map((figure) => renderFigure(figure, mermaid)));
-}
-
-function scheduleRender(root: ParentNode = document) {
-  window.requestAnimationFrame(() => {
-    void renderMermaidDiagrams(root);
-  });
+  await Promise.all(figures.map((figure) => renderFigure(figure, mermaid, signal)));
 }
 
 window.registerPageInit?.("codex-diagrams", () => {
+  const controller = new AbortController();
+  let frame = 0;
+  const scheduleRender = () => {
+    if (frame || controller.signal.aborted) return;
+    frame = window.requestAnimationFrame(() => {
+      frame = 0;
+      void renderMermaidDiagrams(document, controller.signal).catch(() => {
+        // Permit a later navigation to retry a failed dynamic import.
+        mermaidPromise = null;
+      });
+    });
+  };
   scheduleRender();
-
   const shell = document.getElementById("site-shell");
   const observer = new MutationObserver(() => scheduleRender());
   if (shell) {
     observer.observe(shell, { childList: true, subtree: true });
   }
 
-  return () => observer.disconnect();
+  return () => {
+    controller.abort();
+    observer.disconnect();
+    window.cancelAnimationFrame(frame);
+    shell?.querySelectorAll<HTMLElement>('[data-mermaid-diagram][data-state="loading"]')
+      .forEach((figure) => {
+        delete figure.dataset.state;
+        delete figure.dataset.renderedSource;
+      });
+  };
 }, { persistent: true });

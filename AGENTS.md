@@ -1,154 +1,27 @@
-# AGENTS.md
+# Contributor instructions
 
-## Project Context
+SiNE Archives is a deployed Astro site. Make reviewable changes on a dedicated branch; preserve uncommitted work. Explain target files and purpose before editing. Use npm and the lockfile; adding packages requires approval of exact names.
 
-SiNE Archives is an existing deployed Astro website. Treat it as production-adjacent even when working locally. Avoid large rewrites unless the user explicitly asks for them.
+## Authorities
 
-Use npm for project commands because this repository has `package-lock.json`.
+- [docs/architecture.md](docs/architecture.md): ownership, routes, lifecycle, and content pipeline.
+- [docs/design-system.md](docs/design-system.md): the single visual authority. Read it and target source before visual/motion edits; explain conflicts before changing the design.
+- [docs/content-workflow.md](docs/content-workflow.md): content, images, translations, and maintenance.
+- [docs/character-entry-model.md](docs/character-entry-model.md): public character authoring contract.
+- [docs/archive-cross-references.md](docs/archive-cross-references.md): reference syntax and integrity.
 
-## Safety Rules
+## Invariants
 
-- Prefer small, reversible changes.
-- Before editing, explain which files you plan to change and why.
-- Do not install new packages unless the user explicitly approves the exact package name.
-- Do not change deployment, Cloudflare, DNS, environment variables, or secrets unless the user explicitly asks.
-- Never deploy automatically.
-- Do not edit generated output folders or build artifacts, including `dist/`, `.astro/`, `node_modules/`, `test-results/`, and similar generated files.
-- Do not rewrite routing, layouts, or shared systems unless the user clearly asks for that scope.
+- `The Archive/` is canon. Do not invent lore, restyle its prose, rename fictional terms, or alter disclosure boundaries. Preserve slugs, anchors, frontmatter, collection names, and locales unless requested.
+- Keep Astro routes in `src/pages/`, layouts in `src/layouts/`, and reusable UI in `src/components/`. Preserve bespoke page families; refactor where ownership or actual duplication warrants it.
+- Use plain CSS and existing tokens. Route transition CSS belongs in `src/styles/transition-system.css`; page setup/teardown uses `window.registerPageInit`. Return cleanup for listeners, timers, observers, requests, and animation frames.
+- Public hierarchy diagrams use `mermaid`; raw alignment-sensitive maps use `diagram`. Ordinary code blocks remain ordinary code. See the design system for the black-stage treatment.
+- Do not hand-edit generated files (`dist/`, `.astro/`, `node_modules/`, `test-results/`, soundtrack metadata or extracted covers). Use their owning generators when needed.
 
-## Astro Structure
+## Validation
 
-- Preserve Astro routing and component structure.
-- Routes live in `src/pages/`.
-- Shared layouts live in `src/layouts/`.
-- Reusable UI lives in `src/components/`.
-- Content collections live in `src/content/`.
-- Shared scripts and helpers live in `src/scripts/` and `src/utils/`.
-- Static public assets live in `public/`.
+Run `npm run check` and `npm run build` after source changes. Run `npm run test:transitions` for navigation/lifecycle changes and `npm run test:characters` for character behavior. `npm test` runs every browser regression. Rebuild before testing the preview server. Inspect representative desktop/mobile routes, keyboard behavior, and reduced motion after frontend changes. Explain failed checks and fix patch-caused failures.
 
-## Styling
+## Deployment safety
 
-- Always read `DESIGN_SYSTEM.md` before making visual, layout, CSS, animation, typography, spacing, color, or component changes.
-- Treat `DESIGN_SYSTEM.md` as the main source of truth for visual decisions.
-- If a requested design change conflicts with `DESIGN_SYSTEM.md`, explain the conflict before editing.
-- Prefer matching the existing CSS/style system instead of introducing a new one.
-- Prefer improving the existing design system instead of inventing a new one.
-- Use the existing plain CSS and Astro component styles.
-- Shared styles live in `src/styles/`, especially `global.css`, `transition-system.css`, `cards.css`, and `archive-refs.css`.
-- Use existing CSS custom properties and design tokens before adding new colors or layout patterns.
-- Do not install packages, UI libraries, animation libraries, icon libraries, CSS frameworks, Tailwind, CSS modules, or another styling framework unless explicitly approved.
-
-## Content And Canon
-
-- Treat `The Archive/` as canon source material.
-- Do not invent lore.
-- Preserve existing slugs, frontmatter, routes, anchors, collection names, and locale structure unless the user asks for a change.
-- Prefer moving or reconciling existing material over deleting meaningful content.
-
-## Markdown Diagram System
-
-The site supports two special Markdown fenced block languages for lore diagrams. Do not use plain `txt`, `text`, or unlabeled code fences for doctrine trees, rank structures, cosmology maps, or other archive diagrams.
-
-The canonical visual template is the Mermaid black-stage diagram style: a flat black canvas, plain white `Mermaid` label, charcoal rectangular nodes, pale gray connectors, sparse text, and restrained archive chrome. Public lore hierarchy maps should normally use `mermaid` so they render in that style.
-
-### Supported fenced blocks
-
-Use `diagram` only for small raw textual maps where exact monospace alignment matters more than visual nodes:
-
-````md
-```diagram
-THE SOVEREIGN
-|
-`-- THE TENFOLD FIRMAMENT
-    |
-    |-- THE SEVEN ANSWERS
-    |   `-- known, contacted Seraphim
-    |
-    `-- THE MISSING FIRMAMENT
-        `-- Seraphim named in scripture but not answering
-```
-````
-
-Use `mermaid` for visual graph diagrams, hierarchy diagrams, flowcharts, system relationships, cosmology layers, institutional structures, branching mechanics, or diagrams with arrows and clusters:
-
-````md
-```mermaid
-flowchart TD
-  Sovereign["THE SOVEREIGN"]
-  Tenfold["THE TENFOLD FIRMAMENT"]
-  Sovereign --> Tenfold
-```
-````
-
-### Rules
-
-- Use `mermaid` as the default for public visual diagrams and doctrine maps.
-- Use `diagram` only for intentionally raw archival text blocks where ASCII spacing is the point.
-- Follow the black-stage visual template: black canvas, gray lines, charcoal nodes, pale text, and sparse labels.
-- Keep diagram language clean and sparse.
-- Do not globally restyle ordinary code blocks.
-- Keep ordinary code blocks plain and readable.
-- Make diagrams readable on mobile; long `diagram` blocks should rely on horizontal scroll.
-- Test diagram pages in dark mode.
-- Do not invent lore or rename canonical terms while converting diagrams.
-
-### Example conversion
-
-Before:
-
-````md
-```text
-THE SOVEREIGN
-|
-`-- THE TENFOLD FIRMAMENT
-```
-````
-
-After, for a raw archival text map:
-
-````md
-```diagram
-THE SOVEREIGN
-|
-`-- THE TENFOLD FIRMAMENT
-```
-````
-
-Preferred Mermaid version:
-
-````md
-```mermaid
-flowchart TD
-  Sovereign["THE SOVEREIGN"]
-  Tenfold["THE TENFOLD FIRMAMENT"]
-  Sovereign --> Tenfold
-```
-````
-
-## Local Checks
-
-After changes, run the safest available local checks based on `package.json` scripts.
-
-Common checks in this project:
-
-- `npm run build` for the main site validation.
-- `npm run check` for Astro checks.
-- `npm run test:transitions` for transition smoke tests when navigation or transition behavior changes.
-
-If a command fails, explain the failure in plain English before trying fixes. Do not hide failed checks.
-
-## Deployment
-
-- Do not deploy.
-- Do not connect to Cloudflare.
-- Do not change Cloudflare Pages, Workers, DNS, secrets, environment variables, or production settings unless explicitly asked.
-- Deployment-related files such as `public/_headers`, `public/robots.txt`, `astro.config.mjs`, `package.json`, and `package-lock.json` require extra care and a clear reason before editing.
-
-## Open Design
-
-- This repo supports Open Design through project-local skills in `skills/`.
-- The Open Design design system lives at `design-systems/redactory/DESIGN.md`; `DESIGN_SYSTEM.md` remains the project source of truth.
-- Do not assume a root `DESIGN.md` exists; this repository uses root `DESIGN_SYSTEM.md`.
-- Before visual edits, Codex should read this file, `DESIGN_SYSTEM.md`, the active Open Design skill, and the target route/component.
-- Use browser or Playwright inspection when visual changes affect layout, motion, responsiveness, or interaction.
-- Keep Open Design work scoped; do not rewrite unrelated files, routes, layouts, assets, or deployment settings.
+Never deploy automatically. Changes to deployment, Cloudflare, DNS, secrets, credentials, or environment settings require separate explicit authorization. Treat `astro.config.mjs`, `public/_headers`, `public/robots.txt`, and package manifests carefully and explain why an edit is needed. Do not remove local authoring data or media merely because it is untracked.

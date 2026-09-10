@@ -1,7 +1,7 @@
 # Character entry model
 
 Public character entries are reader-guided articles, not abbreviated private dossiers.
-The canonical authoring template is `src/templates/character-entry-template.md`.
+The canonical authoring template is `docs/templates/character-entry-template.md`.
 
 ## Reading order
 

@@ -10,7 +10,7 @@ const navLabels = getArchiveNavLabels(locale);
 const all = await getLocalizedCollection("sine", locale);
 const publicEntries = all.filter((e) => e.data.status === "public");
 
-// Build panel data from content entries, mapping to the prototype's structure
+// Ordered division panels backed by public content entries.
 const panelOrder = ["sine", "hourglass", "clepsydra", "stasis", "clockwork"];
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
@@ -169,8 +169,8 @@ const entryBasePath = localizedPath(locale, "/sine/");
   </div>
 
   <!-- Modal -->
-  <div class="sine-overlay" id="sine-overlay" aria-hidden="true">
-    <div class="sine-modal" id="sine-modal" role="dialog" aria-modal="true">
+  <div class="sine-overlay" id="sine-overlay" aria-hidden="true" inert data-entry-modal="sine" data-panels={JSON.stringify(panelsResolved)} data-entry-base={entryBasePath}>
+    <div class="sine-modal" id="sine-modal" role="dialog" aria-modal="true" aria-labelledby="sine-modal-title">
 
       <div class="sine-modal__hero" id="sine-modal-hero">
         <picture id="sine-modal-picture">
@@ -225,281 +225,8 @@ const entryBasePath = localizedPath(locale, "/sine/");
 </MainLayout>
 
 <!-- Pass panel data to client script -->
-<script define:vars={{ panels: panelsResolved, entryBasePath }} is:inline>
-  const PANELS = panels;
-
-  const panelsEl = document.getElementById("sine-panels");
-  const overlay   = document.getElementById("sine-overlay");
-  const modal     = document.getElementById("sine-modal");
-  const modalPicture = document.getElementById("sine-modal-picture");
-  const modalImg  = document.getElementById("sine-modal-img");
-  const modalAccent    = document.getElementById("sine-modal-accent");
-  const modalSubtitle  = document.getElementById("sine-modal-subtitle");
-  const modalTitle     = document.getElementById("sine-modal-title");
-  const modalTagline   = document.getElementById("sine-modal-tagline");
-  const modalSideTitle = document.getElementById("sine-modal-sidebar-title");
-  const modalFields    = document.getElementById("sine-modal-fields");
-  const modalDivider   = document.getElementById("sine-modal-divider");
-  const modalMain      = document.getElementById("sine-modal-main");
-  const modalBody      = document.querySelector(".sine-modal__body");
-  const closeBtn       = document.getElementById("sine-modal-close");
-  const fullscreenBtn  = document.getElementById("sine-modal-fullscreen");
-
-  let closing = false;
-  let closeTimer = 0;
-
-  function syncModalImage(img, image) {
-    if (!image) {
-      img.removeAttribute("src");
-      return;
-    }
-    img.src = image;
-  }
-
-  function openModal(branch) {
-    if (!branch) return;
-
-    // Populate hero
-    syncModalImage(modalImg, branch.image);
-    modalImg.style.display = branch.image ? "" : "none";
-    modalAccent.style.background = `linear-gradient(135deg, ${branch.accentColor}33, transparent)`;
-    modalSubtitle.textContent = branch.subtitle;
-    modalSubtitle.style.color = branch.accentColor;
-    modalTitle.textContent = branch.label;
-    modalTagline.textContent = `"${branch.tagline}"`;
-
-    // Sidebar
-    modalSideTitle.style.color = branch.accentColor;
-    modalDivider.style.background = branch.accentColor;
-    modalFields.innerHTML = Object.entries(branch.fields || {}).map(([k, v]) => `
-      <div class="sine-field-row">
-        <div class="sine-field-key">${k}</div>
-        <div class="sine-field-val">${v}</div>
-      </div>
-    `).join("");
-
-    // Main body — fetch rendered entry content via slug
-    modalMain.innerHTML = `<p class="sine-modal__loading">Loading…</p>`;
-    modalBody?.scrollTo({ top: 0 });
-    modalMain?.scrollTo({ top: 0 });
-    fetch(`${entryBasePath}${branch.slug}/`)
-      .then(r => r.text())
-      .then(html => {
-        const doc = new DOMParser().parseFromString(html, "text/html");
-        // Extract the entry body content
-        const content =
-          doc.querySelector("[data-entry-body]") ||
-          doc.querySelector(".entry-body") ||
-          doc.querySelector("article") ||
-          doc.querySelector("main");
-        if (content) {
-          modalMain.innerHTML = content.innerHTML;
-        } else {
-          // Fallback: show summary
-          modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
-        }
-        modalBody?.scrollTo({ top: 0 });
-        modalMain?.scrollTo({ top: 0 });
-      })
-      .catch(() => {
-        modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
-      });
-
-    overlay.setAttribute("aria-hidden", "false");
-    overlay.classList.add("is-open");
-    modal.classList.remove("is-closing");
-    document.body.style.overflow = "hidden";
-    closeBtn?.focus();
-  }
-
-  function closeModal() {
-    if (closing) return;
-    closing = true;
-    modal.classList.add("is-closing");
-    closeTimer = window.setTimeout(() => {
-      overlay.classList.remove("is-open");
-      overlay.setAttribute("aria-hidden", "true");
-      modal.classList.remove("is-closing");
-      document.body.style.overflow = "";
-      if (document.fullscreenElement === modal) document.exitFullscreen?.();
-      closing = false;
-    }, 380);
-  }
-
-  function initializeSinePage() {
-    const overlay = document.getElementById("sine-overlay");
-    const modal = document.getElementById("sine-modal");
-    const modalImg = document.getElementById("sine-modal-img");
-    const modalAccent = document.getElementById("sine-modal-accent");
-    const modalSubtitle = document.getElementById("sine-modal-subtitle");
-    const modalTitle = document.getElementById("sine-modal-title");
-    const modalTagline = document.getElementById("sine-modal-tagline");
-    const modalSideTitle = document.getElementById("sine-modal-sidebar-title");
-    const modalFields = document.getElementById("sine-modal-fields");
-    const modalDivider = document.getElementById("sine-modal-divider");
-    const modalMain = document.getElementById("sine-modal-main");
-    const modalBody = document.querySelector(".sine-modal__body");
-    const closeBtn = document.getElementById("sine-modal-close");
-    const fullscreenBtn = document.getElementById("sine-modal-fullscreen");
-    const controller = new AbortController();
-    const { signal } = controller;
-    const panelButtons = Array.from(document.querySelectorAll(".sine-panel"));
-    let closing = false;
-    let closeTimer = 0;
-
-    if (
-      !overlay
-      || !modal
-      || !modalImg
-      || !modalAccent
-      || !modalSubtitle
-      || !modalTitle
-      || !modalTagline
-      || !modalSideTitle
-      || !modalFields
-      || !modalDivider
-      || !modalMain
-      || !closeBtn
-      || panelButtons.length === 0
-    ) {
-      return;
-    }
-
-    function syncModalImage(img, image) {
-      if (!image) {
-        img.removeAttribute("src");
-        return;
-      }
-      img.src = image;
-    }
-
-    function openModal(branch) {
-      if (!branch) return;
-
-      syncModalImage(modalImg, branch.image);
-      modalImg.style.display = branch.image ? "" : "none";
-      modalAccent.style.background = `linear-gradient(135deg, ${branch.accentColor}33, transparent)`;
-      modalSubtitle.textContent = branch.subtitle;
-      modalSubtitle.style.color = branch.accentColor;
-      modalTitle.textContent = branch.label;
-      modalTagline.textContent = `"${branch.tagline}"`;
-
-      modalSideTitle.style.color = branch.accentColor;
-      modalDivider.style.background = branch.accentColor;
-      modalFields.innerHTML = Object.entries(branch.fields || {}).map(([k, v]) => `
-        <div class="sine-field-row">
-          <div class="sine-field-key">${k}</div>
-          <div class="sine-field-val">${v}</div>
-        </div>
-      `).join("");
-
-      modalMain.innerHTML = `<p class="sine-modal__loading">Loading...</p>`;
-      modalBody?.scrollTo({ top: 0 });
-      modalMain.scrollTo({ top: 0 });
-      fetch(`${entryBasePath}${branch.slug}/`)
-        .then(r => r.text())
-        .then(html => {
-          const doc = new DOMParser().parseFromString(html, "text/html");
-          const content =
-            doc.querySelector("[data-entry-body]") ||
-            doc.querySelector(".entry-body") ||
-            doc.querySelector("article") ||
-            doc.querySelector("main");
-          if (content) {
-            modalMain.innerHTML = content.innerHTML;
-          } else {
-            modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
-          }
-          modalBody?.scrollTo({ top: 0 });
-          modalMain.scrollTo({ top: 0 });
-        })
-        .catch(() => {
-          modalMain.innerHTML = `<p class="sine-modal__para">${branch.tagline}</p>`;
-        });
-
-      overlay.setAttribute("aria-hidden", "false");
-      overlay.classList.add("is-open");
-      modal.classList.remove("is-closing");
-      document.body.style.overflow = "hidden";
-      closeBtn.focus();
-    }
-
-    function closeModal() {
-      if (closing) return;
-      closing = true;
-      modal.classList.add("is-closing");
-      closeTimer = window.setTimeout(() => {
-        overlay.classList.remove("is-open");
-        overlay.setAttribute("aria-hidden", "true");
-        modal.classList.remove("is-closing");
-        document.body.style.overflow = "";
-        if (document.fullscreenElement === modal) document.exitFullscreen?.();
-        closing = false;
-      }, 380);
-    }
-
-    if (fullscreenBtn) {
-      const enterLabel = fullscreenBtn.dataset.enterLabel || "Full screen";
-      const exitLabel = fullscreenBtn.dataset.exitLabel || "Exit full screen";
-
-      if (!modal?.requestFullscreen) {
-        fullscreenBtn.hidden = true;
-      } else {
-        const syncFullscreen = () => {
-          const active = document.fullscreenElement === modal;
-          const label = active ? exitLabel : enterLabel;
-          fullscreenBtn.setAttribute("aria-label", label);
-          fullscreenBtn.setAttribute("title", label);
-          fullscreenBtn.classList.toggle("is-active", active);
-        };
-
-        fullscreenBtn.addEventListener("click", async () => {
-          try {
-            if (document.fullscreenElement === modal) {
-              await document.exitFullscreen();
-            } else {
-              await modal.requestFullscreen();
-            }
-          } catch {
-            syncFullscreen();
-          }
-        }, { signal });
-
-        document.addEventListener("fullscreenchange", syncFullscreen, { signal });
-        syncFullscreen();
-      }
-    }
-
-    panelButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const slug = btn.dataset.slug;
-        const branch = PANELS.find((p) => p.slug === slug);
-        openModal(branch);
-      }, { signal });
-    });
-
-    closeBtn?.addEventListener("click", closeModal, { signal });
-    overlay?.addEventListener("click", (e) => {
-      if (e.target === overlay) closeModal();
-    }, { signal });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && overlay?.classList.contains("is-open")) closeModal();
-    }, { signal });
-
-    return () => {
-      controller.abort();
-      window.clearTimeout(closeTimer);
-      overlay?.classList.remove("is-open");
-      overlay?.setAttribute("aria-hidden", "true");
-      modal?.classList.remove("is-closing");
-      document.body.style.overflow = "";
-      if (document.fullscreenElement === modal) {
-        document.exitFullscreen?.().catch(() => {});
-      }
-    };
-  }
-
-  window.registerPageInit?.("sine-page", initializeSinePage);
+<script>
+  import "../../scripts/entry-index";
 </script>
 
 <style>
@@ -784,7 +511,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
     padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: opacity var(--modal-motion-duration) ease;
   }
 
   .sine-overlay.is-open {
@@ -807,7 +534,7 @@ const entryBasePath = localizedPath(locale, "/sine/");
     min-height: 0;
     box-shadow: 0 32px 80px rgba(0,0,0,0.7);
     transform: translateY(24px);
-    transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.38s ease;
+    transition: transform var(--modal-motion-duration) cubic-bezier(0.16,1,0.3,1), opacity 0.38s ease;
     opacity: 0;
   }
 
@@ -1183,5 +910,9 @@ const entryBasePath = localizedPath(locale, "/sine/");
     }
     :global(.sine-field-row) { padding: 8px 12px; }
     :global(.sine-field-val) { font-size: 11px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sine-overlay, .sine-modal { transition: none; }
   }
 </style>

@@ -1,8 +1,9 @@
+import { gotoReady } from "./helpers/navigation";
 import { expect, test } from "@playwright/test";
 
 test("home edge gates reveal by proximity without blocking page content", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
-  await page.goto("/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/");
 
   const viewport = await page.evaluate(() => ({ width: window.innerWidth, height: window.innerHeight }));
   const probeY = viewport.height / 2;

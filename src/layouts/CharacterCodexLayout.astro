@@ -348,6 +348,12 @@ const entryHref = localizedPath(locale, `/characters/${entry.slug}/`);
     font-size: 14px;
   }
 
+  .codex-prose :global([data-codex-table]) {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
   .codex-prose :global(th),
   .codex-prose :global(td) {
     padding: 10px 12px;
@@ -408,9 +414,21 @@ const entryHref = localizedPath(locale, `/characters/${entry.slug}/`);
 </style>
 
 <script>
+  window.registerPageInit?.("character-codex", () => {
   const codexBody = document.querySelector("[data-codex-body]");
 
   if (codexBody) {
+    codexBody.querySelectorAll("table").forEach((table) => {
+      if (table.parentElement?.hasAttribute("data-codex-table")) return;
+      const scroll = document.createElement("div");
+      scroll.setAttribute("data-codex-table", "");
+      scroll.tabIndex = 0;
+      scroll.setAttribute("role", "region");
+      scroll.setAttribute("aria-label", document.documentElement.lang === "pt-BR"
+        ? "Tabela do arquivo com rolagem horizontal" : "Scrollable archive table");
+      table.before(scroll);
+      scroll.append(table);
+    });
     codexBody.querySelectorAll("h1, h2, h3").forEach((heading) => {
       if (!heading.id) {
         const slug = (heading.textContent || "")
@@ -424,4 +442,5 @@ const entryHref = localizedPath(locale, `/characters/${entry.slug}/`);
       }
     });
   }
+  });
 </script>

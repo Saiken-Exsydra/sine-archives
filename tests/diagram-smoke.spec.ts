@@ -1,3 +1,4 @@
+import { gotoReady } from "./helpers/navigation";
 import { expect, test } from "@playwright/test";
 
 function trackClientErrors(page: import("@playwright/test").Page) {
@@ -14,7 +15,7 @@ function trackClientErrors(page: import("@playwright/test").Page) {
 test("Markdown diagrams render as black-stage Mermaid panels", async ({ page }) => {
   const errors = trackClientErrors(page);
 
-  await page.goto("/systems/firmament/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/systems/firmament/");
 
   await expect(page.locator(".mermaid-diagram").first()).toBeVisible();
   await expect(page.locator(".mermaid-diagram__label").first()).toHaveText("Mermaid");
@@ -39,7 +40,7 @@ test("Markdown diagrams render as black-stage Mermaid panels", async ({ page }) 
 test("Obsidian ladder renders as a diagram instead of Mermaid source", async ({ page }) => {
   const errors = trackClientErrors(page);
 
-  await page.goto("/organizations/obsidian-rite/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/organizations/obsidian-rite/");
 
   const diagram = page.locator(".mermaid-diagram").first();
   await expect(diagram).toBeVisible();
@@ -59,7 +60,7 @@ test("Markdown diagrams contain overflow on mobile", async ({ browser }) => {
   const page = await context.newPage();
   const errors = trackClientErrors(page);
 
-  await page.goto("/systems/firmament/", { waitUntil: "networkidle" });
+  await gotoReady(page, "/systems/firmament/");
   await expect(page.locator(".mermaid-diagram svg").first()).toBeVisible();
 
   const bodyOverflows = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);

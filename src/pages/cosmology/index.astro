@@ -288,8 +288,8 @@ const copy = {
   </div>
 
   <!-- Modal -->
-  <div class="cosmo-overlay" id="cosmo-overlay" aria-hidden="true">
-    <div class="cosmo-modal" id="cosmo-modal" role="dialog" aria-modal="true">
+  <div class="cosmo-overlay" id="cosmo-overlay" aria-hidden="true" inert data-entry-modal="cosmo" data-panels={JSON.stringify([...featuredPanels, ...otherPanels])} data-entry-base={entryBasePath}>
+    <div class="cosmo-modal" id="cosmo-modal" role="dialog" aria-modal="true" aria-labelledby="cosmo-modal-title">
       <button class="cosmo-modal__close" id="cosmo-modal-close" aria-label="Close">
         <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
           <line x1="1" y1="1" x2="10" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -333,132 +333,15 @@ const copy = {
   </div>
 </MainLayout>
 
-<script define:vars={{ panels: [...featuredPanels, ...otherPanels], entryBasePath }} is:inline>
+<script>
+  import "../../scripts/entry-index";
+  import { revealOnScroll } from "../../scripts/reveal-on-scroll";
   window.registerPageInit?.("cosmology-index-interactions", () => {
-  const root = document.querySelector(".cosmo-root");
-  if (!(root instanceof HTMLElement)) return;
-
-  const PANELS = panels;
-  const byId = (id) => document.getElementById(id);
-  const overlay     = byId("cosmo-overlay");
-  const modal       = byId("cosmo-modal");
-  const modalImg    = byId("cosmo-modal-img");
-  const modalAccent = byId("cosmo-modal-accent");
-  const modalBar    = byId("cosmo-modal-bar");
-  const modalType   = byId("cosmo-modal-type");
-  const modalTitle  = byId("cosmo-modal-title");
-  const modalDes    = byId("cosmo-modal-designation");
-  const modalTags   = byId("cosmo-modal-tags");
-  const modalFieldsTitle = byId("cosmo-modal-fields-title");
-  const modalFields = byId("cosmo-modal-fields");
-  const modalLead   = byId("cosmo-modal-lead");
-  const modalBody   = byId("cosmo-modal-body");
-  const closeBtn    = byId("cosmo-modal-close");
-  if (!overlay || !modal || !modalImg || !modalAccent || !modalBar || !modalType || !modalTitle || !modalDes || !modalTags || !modalFieldsTitle || !modalFields || !modalLead || !modalBody || !closeBtn) return;
-
-  const controller = new AbortController();
-  const listenerOptions = { signal: controller.signal };
-  const observers = [];
-  let closeTimer = 0;
-  let closing = false;
-
-  function syncModalImage(img, image) {
-    if (!image) {
-      img.removeAttribute("src");
-      return;
-    }
-    img.src = image;
-  }
-
-  function openModal(slug) {
-    const p = PANELS.find((x) => x.slug === slug);
-    if (!p) return;
-
-    if (p.image) {
-      syncModalImage(modalImg, p.image);
-      modalImg.style.display = "";
-    } else {
-      syncModalImage(modalImg, null);
-      modalImg.removeAttribute("src");
-      modalImg.style.display = "none";
-    }
-    modalAccent.style.background = `linear-gradient(to top, ${p.accent}33, transparent 55%)`;
-    modalBar.style.background = `linear-gradient(to bottom, transparent, ${p.accent}aa, transparent)`;
-
-    modalType.textContent = (p.type || "Cosmology").toUpperCase();
-    modalType.style.color = p.accent;
-    modalTitle.textContent = p.title;
-    modalDes.textContent = p.designation || "";
-    modalDes.style.color = p.accent;
-
-    modalFieldsTitle.style.color = p.accent;
-    modalFields.innerHTML = Object.entries(p.fields || {}).map(([k, v]) => `
-      <div class="cosmo-field-row">
-        <div class="cosmo-field-key">${k}</div>
-        <div class="cosmo-field-val">${v}</div>
-      </div>
-    `).join("");
-
-    modalTags.innerHTML = (p.tags || []).map((t) => `
-      <span class="cosmo-modal__tag" style="border-color: ${p.accent}55">${t}</span>
-    `).join("");
-
-    modalLead.textContent = p.summary || "";
-
-    modalBody.innerHTML = `<p class="cosmo-modal__loading">Loading…</p>`;
-    fetch(`${entryBasePath}${p.slug}/`, { signal: controller.signal })
-      .then((r) => r.text())
-      .then((html) => {
-        const doc = new DOMParser().parseFromString(html, "text/html");
-        const content =
-          doc.querySelector("[data-entry-body]") ||
-          doc.querySelector(".entry-body") ||
-          doc.querySelector("article");
-        if (content) {
-          modalBody.innerHTML = content.innerHTML;
-        } else {
-          modalBody.innerHTML = `<p class="cosmo-modal__para">${p.summary || ""}</p>`;
-        }
-      })
-      .catch(() => {
-        if (controller.signal.aborted) return;
-        modalBody.innerHTML = `<p class="cosmo-modal__para">${p.summary || ""}</p>`;
-      });
-
-    overlay.classList.add("is-open");
-    overlay.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-    // reset scroll
-    const pane = byId("cosmo-modal-pane");
-    if (pane) pane.scrollTop = 0;
-  }
-
-  function closeModal() {
-    if (closing) return;
-    closing = true;
-    modal.classList.add("is-closing");
-    closeTimer = window.setTimeout(() => {
-      overlay.classList.remove("is-open");
-      overlay.setAttribute("aria-hidden", "true");
-      modal.classList.remove("is-closing");
-      document.body.style.overflow = "";
-      closing = false;
-    }, 380);
-  }
-
-  root.querySelectorAll("[data-open-entry]").forEach((el) => {
-    el.addEventListener("click", () => {
-      const slug = el.getAttribute("data-open-entry");
-      openModal(slug);
-    }, listenerOptions);
-  });
-
-  closeBtn.addEventListener("click", closeModal, listenerOptions);
-  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); }, listenerOptions);
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && overlay.classList.contains("is-open")) closeModal();
-  }, listenerOptions);
-
+    const root = document.querySelector(".cosmo-root");
+    if (!root) return;
+    const controller = new AbortController();
+    const listenerOptions = { signal: controller.signal };
+    const byId = (id: string) => document.getElementById(id);
   // Others toggle
   const toggle = byId("cosmo-others-toggle");
   const list   = byId("cosmo-others-list");
@@ -469,47 +352,21 @@ const copy = {
         list.setAttribute("data-open", "false");
         list.setAttribute("hidden", "");
         toggle.setAttribute("aria-expanded", "false");
-        toggle.querySelector(".cosmo-others__toggle-label").textContent = "View All Secondary Entries";
+        toggle.querySelector(".cosmo-others__toggle-label")!.textContent = "View All Secondary Entries";
         toggle.classList.remove("is-open");
       } else {
         list.removeAttribute("hidden");
         list.setAttribute("data-open", "true");
         toggle.setAttribute("aria-expanded", "true");
-        toggle.querySelector(".cosmo-others__toggle-label").textContent = "Collapse";
+        toggle.querySelector(".cosmo-others__toggle-label")!.textContent = "Collapse";
         toggle.classList.add("is-open");
       }
     }, listenerOptions);
   }
 
-  // Reveal-on-scroll for featured panels (after first)
-  const panelsEls = root.querySelectorAll(".cosmo-panel");
-  panelsEls.forEach((el, i) => {
-    if (i === 0) {
-      requestAnimationFrame(() => el.classList.add("in-view"));
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            el.classList.add("in-view");
-            io.disconnect();
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    observers.push(io);
-    io.observe(el);
-  });
-  return () => {
-    controller.abort();
-    observers.forEach((observer) => observer.disconnect());
-    window.clearTimeout(closeTimer);
-    overlay.classList.remove("is-open");
-    modal.classList.remove("is-closing");
-    document.body.style.overflow = "";
-  };
+
+    const stopReveals = revealOnScroll(root.querySelectorAll(".cosmo-panel"), 0.15);
+    return () => { controller.abort(); stopReveals(); };
   });
 </script>
 
@@ -855,7 +712,7 @@ const copy = {
     display: flex; align-items: center; justify-content: center;
     padding: 20px 24px;
     opacity: 0; pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: opacity var(--modal-motion-duration) ease;
   }
   .cosmo-overlay.is-open {
     opacity: 1; pointer-events: all;
@@ -873,7 +730,7 @@ const copy = {
     min-height: 0;
     box-shadow: 0 48px 120px rgba(0,0,0,0.85);
     transform: translateY(16px) scale(0.99); opacity: 0;
-    transition: transform 0.38s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+    transition: transform var(--modal-motion-duration) cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
   }
   .cosmo-overlay.is-open .cosmo-modal {
     transform: none; opacity: 1;
@@ -1089,5 +946,10 @@ const copy = {
     .cosmo-modal__pane-inner { padding: 24px 22px calc(48px + env(safe-area-inset-bottom)); }
     .cosmo-modal__hero-content { padding: 36px 22px 22px; }
     .cosmo-modal__hero-title { font-size: 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cosmo-overlay, .cosmo-modal { transition: none; }
+    .cosmo-grain, .cosmo-panel__bar, .cosmo-panel__scroll-hint { animation: none; }
   }
 </style>
