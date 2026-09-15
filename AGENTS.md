@@ -24,4 +24,6 @@ Run `npm run check` and `npm run build` after source changes. Run `npm run test:
 
 ## Deployment safety
 
+When the user says "commit and push", integrate the completed changes into `main` and push to `origin/main`, not only to a feature branch. Preserve unrelated work and use a normal push; do not force-push. This is the user's standing repository preference.
+
 Never deploy automatically. Changes to deployment, Cloudflare, DNS, secrets, credentials, or environment settings require separate explicit authorization. Treat `astro.config.mjs`, `public/_headers`, `public/robots.txt`, and package manifests carefully and explain why an edit is needed. Do not remove local authoring data or media merely because it is untracked.
