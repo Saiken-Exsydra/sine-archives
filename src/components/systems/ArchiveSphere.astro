@@ -1,4 +1,7 @@
-<div class="archive-sphere" data-archive-sphere>
+---
+const { compact = false } = Astro.props;
+---
+<div class:list={["archive-sphere", compact && "archive-sphere--compact"]} data-archive-sphere={compact ? undefined : true} aria-hidden="true">
   <canvas
     class="archive-sphere__canvas"
     data-archive-sphere-canvas
@@ -367,6 +370,9 @@
     height: 100%;
     display: block;
   }
+
+  .archive-sphere--compact { width: 120px; pointer-events: none; box-shadow: none; }
+  .archive-sphere--compact .archive-sphere__canvas { display: none; }
 
   .archive-sphere__veil {
     position: absolute;

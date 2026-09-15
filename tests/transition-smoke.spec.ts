@@ -213,6 +213,7 @@ test("observatory launches system interfaces", async ({ page }) => {
   await expect(page.locator("[data-system-node='redactory']")).toBeVisible();
 
   await page.locator("[data-system-node='redactory']").click();
+  await page.locator("[data-system-panel-link]").click();
   await expect(page).toHaveURL(/\/systems\/redactory\/?$/);
   await expect(page.locator(".redactory-desk")).toBeVisible();
   await waitForTransitionSequence(page, 0);
@@ -222,11 +223,13 @@ test("observatory launches system interfaces", async ({ page }) => {
   await expect(page.locator("[data-system-node='harmonics']")).toBeVisible();
 
   await page.locator("[data-system-node='harmonics']").click();
+  await page.locator("[data-system-panel-link]").click();
   await expect(page).toHaveURL(/\/systems\/harmonics\/?$/);
   await expect(page.locator("[data-system-interface='harmonics']")).toBeVisible();
 
   await gotoReady(page, "/systems/observatory/");
   await page.locator("[data-system-node='resonance']").click();
+  await page.locator("[data-system-panel-link]").click();
   await expect(page).toHaveURL(/\/systems\/resonance-field\/?$/);
   await expect(page.locator("[data-system-interface='resonance']")).toBeVisible();
 

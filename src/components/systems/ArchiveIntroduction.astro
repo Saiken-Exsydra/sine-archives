@@ -1,0 +1,7 @@
+---
+const { archive, read } = Astro.props;
+---
+<p class="observatory-kicker">Archive</p>
+<h2 id="observatory-page-title" tabindex="-1">{archive.summary}</h2>
+<p class="observatory-explanation">{archive.explanation}</p>
+<footer class="observatory-page__footer"><a href={archive.source}>{read} ↗</a></footer>

@@ -1,0 +1,20 @@
+---
+import type { ObservatoryData, ObservatorySystem } from '../../data/observatory';
+import type { SiteLocale } from '../../i18n/config';
+const { system: s, data, locale } = Astro.props as { system: ObservatorySystem; data: ObservatoryData; locale: SiteLocale };
+const { systems, relationships, ui } = data;
+---
+      <p class="observatory-kicker">{s.title}</p>
+      <h2 id="observatory-page-title" tabindex="-1">{s.summary}</h2>
+      {s.id === 'redactory' && locale === 'en' ? <p class="observatory-explanation">A Redactor enters the <a href="#redactory/dive" data-observatory-link data-concept-ref="dive">Dive</a> through their <a href="#redactory/anchor" data-observatory-link data-concept-ref="anchor">Anchor</a> and establishes a <a href="#redactory/route" data-observatory-link data-concept-ref="route">route</a> toward an Archive-valid result. <a href="#redactory/anchor/reach" data-observatory-link data-concept-ref="reach">Reach</a> measures how far that route moves from the Anchor’s natural territory.</p> : s.id === 'redactory' ? <p class="observatory-explanation">Um Redactor entra no <a href="#redactory/dive" data-observatory-link data-concept-ref="dive">Dive</a> por seu <a href="#redactory/anchor" data-observatory-link data-concept-ref="anchor">Anchor</a> e estabelece uma <a href="#redactory/route" data-observatory-link data-concept-ref="route">rota</a> até um resultado permitido pelo Archive. <a href="#redactory/anchor/reach" data-observatory-link data-concept-ref="reach">Reach</a> mede quanto essa rota se afasta do território natural da Anchor.</p> : <p class="observatory-explanation">{s.explanation}</p>}
+      {s.image && <figure class="observatory-image"><img src={s.image.src} alt={s.image.alt} loading="lazy" decoding="async" />{s.image.caption && <figcaption>{s.image.caption}</figcaption>}</figure>}
+      <div class="observatory-concepts" data-concept-nodes aria-label={ui.concepts}></div>
+      <div class="observatory-system-references">
+        {relationships.filter(r => r.source === s.id || r.target === s.id).map(r => {
+          const other = systems.find(n => n.id === (r.source === s.id ? r.target : r.source))!;
+          return <p><span>{r.summary}</span> <a href={`#${other.id}`} data-observatory-link data-related-system={other.id}>{other.title} <span aria-hidden="true">↗</span></a></p>;
+        })}
+      </div>
+      <footer class="observatory-page__footer"><a href={s.source}>{ui.read} ↗</a>{s.destination !== s.source && <a href={s.destination} data-system-panel-link data-system-launch={s.id} data-transition-trigger="observatory-system">{ui.explore} ↗</a>}</footer>
+
+

@@ -2,9 +2,11 @@ import type {
   TransitionBeforePreparationEvent,
 } from "astro:transitions/client";
 import {
+  navigate,
   isTransitionBeforePreparationEvent,
   isTransitionBeforeSwapEvent,
 } from "astro:transitions/client";
+
 import {
   isCharacterDetailPath,
   isCharacterIndexPath,
@@ -13,6 +15,14 @@ import {
   isSearchPath,
   isSystemInteractivePath,
 } from "../utils/transition-routes";
+
+/** Astro owns the history entry, including its index and scroll restoration. */
+export async function navigateObservatory(href: string) {
+  await navigate(href);
+  if (isObservatoryPath(location.pathname)) {
+    document.dispatchEvent(new CustomEvent("sine:observatory-state"));
+  }
+}
 
 type PageCleanup = () => void;
 type PageInit = () => void | PageCleanup;
