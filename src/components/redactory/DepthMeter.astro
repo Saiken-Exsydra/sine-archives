@@ -1,13 +1,14 @@
 ---
 interface Props {
   items: Array<{ id: string; label: string }>;
+  locale?: 'en' | 'pt-br';
 }
 
-const { items } = Astro.props;
+const { items, locale = 'en' } = Astro.props;
 ---
 
-<nav class="depth-meter" aria-label="Dive depth">
-  <span class="depth-meter__title">Depth</span>
+<nav class="depth-meter" aria-label={locale === 'en' ? 'Dive guide sections' : 'Seções do guia do Dive'}>
+  <span class="depth-meter__title">{locale === 'en' ? 'Guide' : 'Guia'}</span>
   <ol>
     {items.map((item, index) => (
       <li data-depth-marker={index}>
@@ -126,7 +127,10 @@ const { items } = Astro.props;
 
     a {
       display: grid;
+      gap: 8px;
+      min-height: 44px;
     }
+    .depth-meter__label { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; clip-path: none; font-size: 11px; color: var(--text); }
   }
 
   @media (prefers-reduced-motion: reduce) {

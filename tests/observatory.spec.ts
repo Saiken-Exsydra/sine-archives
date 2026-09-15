@@ -44,7 +44,7 @@ test('relationships travel across systems and full interfaces remain reachable',
   await expect(page).toHaveURL(/#resonance$/);
   await page.locator('[data-relationships-toggle]').click();
   await page.locator('button[data-relationship="redactory-resonance"]').click();
-  await expect(page.locator('[data-relationship-detail]')).toContainText('passive mutual pressure');
+  await expect(page.locator('[data-relationship-detail]')).toContainText('without anyone directing it');
   await page.locator('[data-system-panel-link]').click();
   await expect(page.locator('[data-system-interface="resonance"]')).toBeVisible();
   await page.goBack();
@@ -63,7 +63,7 @@ test('deep links, rapid selection, archive and comparison', async ({ page }) => 
   await page.locator(node('redactory')).focus(); await page.keyboard.press('Space');
   await expect(page.locator(node('redactory'))).toHaveAttribute('aria-pressed', 'true');
   await page.locator(node('resonance')).click();
-  await expect(page.locator('[data-relationship-detail]')).toContainText('Redactory is directed routing');
+  await expect(page.locator('[data-relationship-detail]')).toContainText('A Redactor deliberately finds a way');
 });
 
 test('repeated client entry maintains one controller and canvas loop', async ({ page }) => {
@@ -121,7 +121,7 @@ for (const width of [320, 390, 768, 1440, 1920]) {
 test('Portuguese uses localized controls and destinations', async ({ page }) => {
   await gotoReady(page, '/pt-br/systems/observatory/#redactory/anchor');
   await expect(page.locator('.observatory-return')).toContainText('Voltar');
-  await expect(page.locator('[data-page-body]')).toContainText('rota conceitual');
+  await expect(page.locator('[data-page-body]')).toContainText('entrada mais confiável');
   await expect(page.locator('[data-page-body] .observatory-page__footer a')).toHaveAttribute('href', '/pt-br/systems/redactorysystem/');
 });
 
@@ -157,7 +157,7 @@ test('guided tracing, optional art and comparison keep their context', async ({ 
   await page.locator('[data-follow-toggle]').click();
   await expect(page.locator('[data-follow-guide]')).toContainText('Choose a system');
   await page.locator(node('redactory')).click();
-  await expect(page.locator('[data-follow-guide]')).toContainText('Follow a concept');
+  await expect(page.locator('[data-follow-guide]')).toContainText('Choose a term below');
   await expect(page.locator('[data-page-body] .observatory-image img')).toHaveAttribute('alt', /ornate pen/);
   await page.locator('[data-concept-nodes] [data-concept-ref="anchor"]').click();
   await expect(page.locator('[data-page-body] .observatory-image')).toHaveCount(0);
@@ -193,5 +193,5 @@ test('reduced motion suppresses new travel and proximity while retaining relatio
   await page.locator('[data-relationships-toggle]').click();
   await page.locator('button[data-relationship="bloom-shores"]').focus();
   await page.keyboard.press('Enter');
-  await expect(page.locator('[data-relationship-detail]')).toContainText('root-address');
+  await expect(page.locator('[data-relationship-detail]')).toContainText('living connection to a Shore');
 });

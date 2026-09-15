@@ -1,6 +1,7 @@
 ---
 import type { SiteLocale } from "../../i18n/config";
 import { getRedactoryDiveContent } from "../../data/redactory-dive";
+import { localizedPath } from "../../i18n/config";
 import DepthMeter from "./DepthMeter.astro";
 import DepthSection from "./DepthSection.astro";
 import InkFlowBackground from "./InkFlowBackground.astro";
@@ -34,18 +35,30 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
   <aside class="redactory-dive__legend" aria-labelledby="dive-legend-title">
     <h2 id="dive-legend-title">{content.legendTitle}</h2>
     <ol>
-      {content.legend.map((item) => (
+      {content.sections.map((item) => (
         <li>
-          <strong>{item.term}</strong>
-          <span>{item.explanation}</span>
+          <a href={`#${item.id}`}><strong>{item.depthLabel}</strong><span>{item.title}</span></a>
         </li>
       ))}
     </ol>
   </aside>
 
+  <div class="redactory-dive__layout">
+    <DepthMeter items={depthItems} locale={locale} />
+    <div class="redactory-dive__sections">
+      {content.sections.map((section, index) => (
+        <DepthSection
+          {...section}
+          depthIndex={index}
+          shoresStatus={content.returnLabel}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
   <section class="redactory-dive__seals" aria-labelledby="dive-seals-title">
     <div class="redactory-dive__seals-copy">
-      <span class="redactory-dive__eyebrow">Anchor notation</span>
+      <span class="redactory-dive__eyebrow">{locale === "en" ? "Quick reference" : "Referência rápida"}</span>
       <h2 id="dive-seals-title">{content.sealTitle}</h2>
       <p>{content.sealIntro}</p>
     </div>
@@ -64,19 +77,14 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
     </ol>
   </section>
 
-  <div class="redactory-dive__layout">
-    <DepthMeter items={depthItems} />
-    <div class="redactory-dive__sections">
-      {content.sections.map((section, index) => (
-        <DepthSection
-          {...section}
-          depthIndex={index}
-          shoresStatus={content.returnLabel}
-          locale={locale}
-        />
-      ))}
+  <footer class="redactory-dive__reading">
+    <h2>{locale === 'en' ? 'Ready for the full entry?' : 'Quer ler o registro completo?'}</h2>
+    <p>{locale === 'en' ? 'Keep this guide as your starting point. The full entries explain the finer details.' : 'Use este guia como ponto de partida. Os registros completos explicam os detalhes.'}</p>
+    <div>
+      <a href={localizedPath(locale, '/systems/redactorysystem/')}>{locale === 'en' ? 'Read the full Redactory entry' : 'Ler o registro completo de Redactory'} ↗</a>
+      <a href={localizedPath(locale, '/systems/shores/')}>{locale === 'en' ? 'Read about Shores' : 'Ler sobre Shores'} ↗</a>
     </div>
-  </div>
+  </footer>
 </article>
 
 <script is:inline>
@@ -211,7 +219,7 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
 
   .redactory-dive__hero {
     display: flex;
-    min-height: calc(100svh - var(--nav-height, 56px));
+    min-height: min(720px, calc(100svh - var(--nav-height)));
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -279,7 +287,7 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
     font-family: "DM Sans", sans-serif;
     font-size: clamp(13px, 1.8vw, 16px);
     line-height: 1.75;
-    color: rgba(232, 228, 220, 0.62);
+    color: var(--text);
   }
 
   .redactory-dive__scroll {
@@ -347,7 +355,7 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
 
   .redactory-dive__legend ol {
     display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1px;
     margin: 0;
     padding: 0;
@@ -375,8 +383,19 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
   .redactory-dive__legend span {
     font-size: 11px;
     line-height: 1.45;
-    color: rgba(239, 236, 229, 0.52);
+    color: var(--text-muted);
   }
+
+  .redactory-dive__legend a { display: grid; gap: 8px; min-height: 44px; text-decoration: none; }
+  .redactory-dive__legend a:hover strong { color: var(--gold); }
+  .redactory-dive__legend a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+  .redactory-dive__reading { position: relative; z-index: 2; max-width: 1120px; margin: 0 auto; padding: 32px 24px 80px; border-top: 1px solid var(--border); }
+  .redactory-dive__reading h2 { font: 500 clamp(32px, 4vw, 48px)/1.1 'Cormorant Garamond', serif; margin-bottom: 16px; }
+  .redactory-dive__reading p { max-width: 60ch; line-height: 1.8; color: var(--text-muted); }
+  .redactory-dive__reading div { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+  .redactory-dive__reading a { display: inline-flex; align-items: center; min-height: 48px; padding: 12px 20px; border: 1px solid var(--crimson); background: color-mix(in srgb, var(--crimson) 22%, var(--bg)); color: var(--text); font-size: 14px; text-decoration: none; }
+  .redactory-dive__reading a:hover { background: color-mix(in srgb, var(--crimson) 40%, var(--bg)); }
+  .redactory-dive__reading a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 
   .redactory-dive__seals {
     display: grid;
@@ -551,7 +570,7 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
     }
 
     .redactory-dive__legend ol {
-      grid-template-columns: repeat(7, minmax(150px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .redactory-dive__seals {
@@ -573,6 +592,7 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
   }
 
   @media (max-width: 520px) {
+    .redactory-dive__legend ol { grid-template-columns: 1fr; }
     .redactory-dive__seal-list {
       grid-template-columns: 1fr;
       overflow-x: visible;

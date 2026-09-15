@@ -77,6 +77,18 @@
 .observatory-definition h3 { font: 30px 'Cormorant Garamond', serif; margin-bottom: 12px; }
 .observatory-definition p { font-size: 13px; line-height: 1.8; }
 .observatory-definition button, .observatory-definition a { color: var(--text); background: none; border: 0; cursor: pointer; min-height: 44px; font-size: 11px; display: inline-flex; align-items: center; margin: 12px 16px 0 0; }
+.observatory-root :is(.observatory-page__footer a:first-child, [data-definition-source], .observatory-comparison a, [data-relationship-detail] a:not([data-observatory-link])) {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+  padding: 12px 20px; border: 1px solid var(--crimson); border-radius: 2px;
+  background: color-mix(in srgb, var(--crimson) 22%, var(--bg)); color: var(--text);
+  font-size: 14px; font-weight: 600; line-height: 1.5; text-decoration: none;
+}
+.observatory-root :is(.observatory-page__footer a:first-child, [data-definition-source], .observatory-comparison a, [data-relationship-detail] a:not([data-observatory-link])):hover {
+  background: color-mix(in srgb, var(--crimson) 40%, var(--bg));
+}
+.observatory-root :is(.observatory-page__footer a:first-child, [data-definition-source], .observatory-comparison a, [data-relationship-detail] a:not([data-observatory-link])):focus-visible {
+  outline: 2px solid var(--gold); outline-offset: 4px;
+}
 .observatory-entrance { --opening: 0%; position: fixed; inset: 0; z-index: 120; background: var(--bg); pointer-events: none; mask-image: linear-gradient(to bottom, #000 calc(50% - var(--opening)), transparent calc(50% - var(--opening)), transparent calc(50% + var(--opening)), #000 calc(50% + var(--opening))); }
 .observatory-entrance__line { position: absolute; left: 8%; right: 8%; top: 50%; height: 1px; background: var(--text); }
 .observatory-entrance__point { position: absolute; left: 50%; top: 50%; width: 5px; height: 5px; border-radius: 50%; background: var(--text); box-shadow: 0 0 18px var(--text); }
