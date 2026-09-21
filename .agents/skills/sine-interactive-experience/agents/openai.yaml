@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiNE Interactive Experience"
+  short_description: "Design and validate immersive editorial interfaces"
+  default_prompt: "Use $sine-interactive-experience to design, implement, and validate this SiNE interactive experience."
