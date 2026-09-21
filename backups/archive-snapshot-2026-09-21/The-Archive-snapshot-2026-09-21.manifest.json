@@ -1,0 +1,1556 @@
+{
+  "snapshot_time": "2026-09-21T14:05:27.902358-03:00",
+  "zip_name": "The-Archive-snapshot-2026-09-21.zip",
+  "zip_bytes": 582818753,
+  "zip_sha256": "f4b549862675b7bea8fb158b851aaac84c909d445753f964347c8ec22ca57be6",
+  "file_count": 309,
+  "uncompressed_bytes": 596598751,
+  "directory_count": 50,
+  "files": [
+    {
+      "path": "The Archive/.agents/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/.codex/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/.git/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Apparatus/Clepsydra Apparatus.md",
+      "bytes": 10182,
+      "sha256": "22f3bc7de689aaa48062dbb8beb09b9941dbedce401a3a8a30563ff4dd07caf0"
+    },
+    {
+      "path": "The Archive/Apparatus/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Characters/Al'ithia Rae Wonderwall Dossier.md",
+      "bytes": 53244,
+      "sha256": "6c7547763a2f0711100244cc493635b4d538476f68d2388f9e538770c0fe01d3"
+    },
+    {
+      "path": "The Archive/Characters/Apocachynthion Registry Guide.md",
+      "bytes": 4371,
+      "sha256": "155a9a41a79d765313c9af92469a971706741e05a264aa2325ff8e8a320a2a43"
+    },
+    {
+      "path": "The Archive/Characters/Ayanna Aedh d'Aibhilyn Dossier.md",
+      "bytes": 30061,
+      "sha256": "fb49f4dc218ba775f1cc72e1e0f7038bd1bd9b312ce0178e2cfe32e28b833af1"
+    },
+    {
+      "path": "The Archive/Characters/Daniel Degurechaff Dossier.md",
+      "bytes": 44888,
+      "sha256": "9c2ed89431c1e3c057f5200185114c3c3264c92ee6f079ec3f9489a4a2ee7635"
+    },
+    {
+      "path": "The Archive/Characters/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Characters/Ec'lesia Yalara Wonderwall Codex.md",
+      "bytes": 53575,
+      "sha256": "92c49d9a7f4db8b5b60833c92b0b6687e4000f6d4d626e9309dad56cf3bf49a2"
+    },
+    {
+      "path": "The Archive/Characters/Ella Rae Wonderwall Dossier.md",
+      "bytes": 72805,
+      "sha256": "01af9a119b26b4cef7649b72e731c1cf3a0fd0708ee6a957de4831e26c2bee87"
+    },
+    {
+      "path": "The Archive/Characters/Eloi du Corvane Dossier.md",
+      "bytes": 49942,
+      "sha256": "d3704ee34b2a1c5b0443fb78c53969b3038a246a710a0e9b18d11319a584e15b"
+    },
+    {
+      "path": "The Archive/Characters/Em'manuel Kael Wonderwall Dossier.md",
+      "bytes": 81141,
+      "sha256": "6468e9a6c53465453dda7797dfcf815a3a73c9285796b4f6def20497c310ba76"
+    },
+    {
+      "path": "The Archive/Characters/Halk'en Orveth Dossier.md",
+      "bytes": 51572,
+      "sha256": "9c59576ac3a4e8011685aeb0db5256a50b417f04d80df9809613369e252fd68e"
+    },
+    {
+      "path": "The Archive/Characters/Hisui Kirasagi Dossier.md",
+      "bytes": 33021,
+      "sha256": "c4c74401aecf429a0ca0313149656d996f9216389b0ee872dd87bee40b619551"
+    },
+    {
+      "path": "The Archive/Characters/Katherine Flarian Dossier.md",
+      "bytes": 39129,
+      "sha256": "81b8d929a8a2a046bec5eba4d65ac38e42206951ab7a788813b3a8fe46eed8a1"
+    },
+    {
+      "path": "The Archive/Characters/Lenore Engelmeyer Dossier.md",
+      "bytes": 95316,
+      "sha256": "7ec281afca2781a0a98460fd68e2fe66347f27e6fe66e21afc2c4f448632f0de"
+    },
+    {
+      "path": "The Archive/Characters/Leonard von Engelmeyer Dossier.md",
+      "bytes": 10928,
+      "sha256": "47c3d2935c51af3eba16b1e3dca34722db0debf96270d0ca7a8b5a6f50876ff6"
+    },
+    {
+      "path": "The Archive/Characters/README.md",
+      "bytes": 288,
+      "sha256": "45f4ebce3e74f05147416b922a7aa9ab5c8a4ca690c089018d9bf5f3100107a3"
+    },
+    {
+      "path": "The Archive/Characters/Rouxinol Kaise Dossier.md",
+      "bytes": 53992,
+      "sha256": "9b5c7e159758776248768f5e02facf69829b8d93c5490fc2ce89f24d9bc08e8d"
+    },
+    {
+      "path": "The Archive/Characters/Sai'ken Exsydra Dossier.md",
+      "bytes": 70096,
+      "sha256": "f6f256525a3e6243269e5d1a08b0eba54f640c67262eafc8e79e4be657aa0a33"
+    },
+    {
+      "path": "The Archive/Characters/Sol'ytra Dossier.md",
+      "bytes": 23650,
+      "sha256": "6edd95eeea62dfcafabeb05187d77cb6df27eae4de0de67c41f4c1ae638ac763"
+    },
+    {
+      "path": "The Archive/Characters/Syr'lene Dossier.md",
+      "bytes": 8302,
+      "sha256": "27776ef153d3712ef453e1d9868b0c45fece1da2bae485ca1deab6cc36d738ff"
+    },
+    {
+      "path": "The Archive/Characters/Vaey Viktor Dossier.md",
+      "bytes": 36605,
+      "sha256": "f42ccc24f121d18ab9bec8caa0a3bd450afab1a0f3049523f204495e9dd95baf"
+    },
+    {
+      "path": "The Archive/Chronology & Networks/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Chronology & Networks/The Fracture Causal Web.md",
+      "bytes": 10233,
+      "sha256": "2a26ef25f0e0ea97420f0da195f06b27e4531486e794d48a2029377845e017b0"
+    },
+    {
+      "path": "The Archive/Chronology & Networks/The SiNE Historical Causal Web.md",
+      "bytes": 28352,
+      "sha256": "37a9f287350e2563b8561c814b6ae4360e3bca655087fb470ca9384b1049f6ae"
+    },
+    {
+      "path": "The Archive/Chronology & Networks/The Skyphon Knowledge Web.md",
+      "bytes": 12876,
+      "sha256": "84cff3316980d7a4077229d3e5e900435d976fd6988c70e31db07178659ca7cc"
+    },
+    {
+      "path": "The Archive/Chronology & Networks/The Wonderwall Political Web.md",
+      "bytes": 17285,
+      "sha256": "70a19c07d22d9fac95c6bce2af4ee732a590f3f6e59c5af89e88d6d61da7a0bd"
+    },
+    {
+      "path": "The Archive/Chronology & Networks/Timeline.md",
+      "bytes": 42967,
+      "sha256": "4f8eac1934f3b2748f1f5b15674fd08687c1958022cf3f5128bb662d23f68343"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The All-Mother Codex.md",
+      "bytes": 50762,
+      "sha256": "1d8fc843dc452a3a8c03862b9125af1655ba9b1b7c3a8520af49d1e7932b7e00"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Archive Codex.md",
+      "bytes": 18259,
+      "sha256": "f85c4309eaed153f951bda29c0ce9166787e4daf8912961ce15801b28d958126"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Bloom Codex.md",
+      "bytes": 52559,
+      "sha256": "afef6c86e72e76578502a4a637d3d999a0e6aef80e9a2512ea590b04a8f8311c"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Book of Humanity Codex.md",
+      "bytes": 11011,
+      "sha256": "d7b3ed73665608ebd33fd6392a59731f9e34797fd46885e2bb5054217b1a1f60"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Dark Ends Codex.md",
+      "bytes": 37264,
+      "sha256": "ca18968e42f3f94b21145842e04b3dffe154ce676360138a01cefd5ac951cac0"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Dial Codex.md",
+      "bytes": 26643,
+      "sha256": "e8cd316d56504fd90a41c16c1b2f825fb27daa1ac14ae662c2200ab7fc2e447a"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Elementals and Living Accords Codex.md",
+      "bytes": 22218,
+      "sha256": "9e065e3e55e7b4c7780a0b9e2ba3f1d07f68abdf5c8cd29332f5823c6ec87e76"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Lunar Crown Codex.md",
+      "bytes": 37197,
+      "sha256": "f40525bc14210362fd59ea2327617f418921d41a6c6fa3498c7e95751f147fd3"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Obscurials Codex.md",
+      "bytes": 28012,
+      "sha256": "4f3d56268942ac61272978b43e6eff45d5dffcc7d77eecd6bbe66c10b13a8841"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Precursors Codex.md",
+      "bytes": 29672,
+      "sha256": "537a7b4303ed2e1a0eeb94c3457d0a04028bbe91bba54924c43f9356c6146956"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Primordials Codex.md",
+      "bytes": 18953,
+      "sha256": "ab24fc2c8d369e9456ca2552241190626b35ce74db5e9158102fe7c7daf94d7f"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Quiet Moon Codex.md",
+      "bytes": 48003,
+      "sha256": "f7643c4dd27a3b4f3c823684836f8aff1b28f8640567a5694c9bd01ee1ba3aa4"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Remainder Codex.md",
+      "bytes": 30830,
+      "sha256": "7d0cd4533607711993a111bdbf13852b5aebe8f03c1de1c3fa23878c0a967945"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Stase Codex.md",
+      "bytes": 43308,
+      "sha256": "6140b097186c6332427207bec648e90978f29ca0b831bb3b532d4786c366e241"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Syntax Authority and Recursive Sovereignty Codex.md",
+      "bytes": 15863,
+      "sha256": "7ddc490063ca7879ca17bf05534f90b6cb490d9d5d0083ee16002ff45c89a5a3"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Terra Calendar and Civil Sky Codex.md",
+      "bytes": 30843,
+      "sha256": "f6642f5f739391c2c5b2f772a7b27cf9ac3a410e03178e852aa37aa32ebc7483"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Terra Codex.md",
+      "bytes": 70056,
+      "sha256": "e19332b14ad6f6d012604de98ad482eb3e861cb685e91764d97da0d661f1ec00"
+    },
+    {
+      "path": "The Archive/Codices/Cosmology & Foundational Systems/The Time Codex.md",
+      "bytes": 22812,
+      "sha256": "9312dd5db3c003368afa82822cff14f9397e774beb7156349d1273a516dab9bb"
+    },
+    {
+      "path": "The Archive/Codices/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Corporate History of SiNE.md",
+      "bytes": 27970,
+      "sha256": "0b3923af1075f4829b43c47dd1117247af35e37a9fe0e7381dcda9053ea09a7f"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Crown and SiNE Compact History.md",
+      "bytes": 38269,
+      "sha256": "c8a33a5eb2ed47c53016b3bc2cc3dcba790e459c2f5fa3cecc623deddf6f3c9c"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Engelmeyer Lineage Codex.md",
+      "bytes": 50627,
+      "sha256": "68da7cdd41a0bc7f0fe60d51685384281f1afe59262b913f2b65731612b5bf52"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Faldryn Dynasty and Imperial Succession Codex.md",
+      "bytes": 55500,
+      "sha256": "69bd30535bf2c1466b3e82a8e0f73214c3b7a274357fed69315e8082b2167848"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Imperial History of Synus.md",
+      "bytes": 97286,
+      "sha256": "0ce905abac8895c143d2afb4ec70fb1181b455990d56d32fbfba7af385192edb"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Living Systems Historical Register.md",
+      "bytes": 20605,
+      "sha256": "1921703970b558a822270cd98347f4691f270ec9110d1ee36827c136c9d7d826"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The War of the Threshold Historical Codex.md",
+      "bytes": 59344,
+      "sha256": "29dfaad7eb3ea082076903e622990dc47ccf31ae661202f3a885d87225269d76"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Wonderwall Cadet Branches Codex.md",
+      "bytes": 31079,
+      "sha256": "527b20fb2e9484ad481054430033478b21a1e5000b8c73db719071b9479128fc"
+    },
+    {
+      "path": "The Archive/Codices/Histories & Lineages/The Wonderwall Lineage Codex.md",
+      "bytes": 25509,
+      "sha256": "f6558f16f6a56dce7f6d426d7bf8a9a948d322474c59d71e5eacadf6d9cb6b02"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/Apocachynthion Codex.md",
+      "bytes": 73565,
+      "sha256": "196a1f1b1b5373374b11ee51cead937984d2aa978ea5710197f686818b7e2f9c"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Ardeatus Codex.md",
+      "bytes": 53235,
+      "sha256": "d92ef737414af71d3c97603f8b544b3a438adedc0acb70b914accc3ba16b5ea6"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Church Codex.md",
+      "bytes": 83318,
+      "sha256": "c0755fb79d9278b2bd3a24bf434a20f93c5680209faf106bc481d4f59c7266b7"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Clepsydra Codex.md",
+      "bytes": 50423,
+      "sha256": "a69532174fd30e3cc19e54b3be756c987b931bf6e18742ba6d9c09af3b235597"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The CLOCKWORK.md",
+      "bytes": 49258,
+      "sha256": "264975505ab6e3678029b03cb65aaf03c4e26b60d5135978a9fde896e286a09b"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Continuity Codex.md",
+      "bytes": 51063,
+      "sha256": "baf3207fcb443fbc7693c27fa744f660b8f47b359a3b9fc279acf9abee4b8b99"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The HourGlass-SIF Codex.md",
+      "bytes": 85017,
+      "sha256": "25b17ebbd77df7a75f7f51ac3d608373988480c011324b226b08fee3bcb5fe25"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Kaleidoscope Project Codex.md",
+      "bytes": 20961,
+      "sha256": "593f96a29dbdec6d2bbe4c4b1707ed65c1a92815db892753fb2d45fda1bd0f46"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Meridian Council Codex.md",
+      "bytes": 16526,
+      "sha256": "c9e71254a7cd48237621c1f210c919e43c8f9d81afe9471a8e0dfdfe8cf712c5"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Northern Naval Doctrine Codex.md",
+      "bytes": 40013,
+      "sha256": "e33f67dac82b9cd6c385df5c0eff3b1f428b39a933cf983d28bd8c5f8461b4a1"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Obsidian Codex.md",
+      "bytes": 122378,
+      "sha256": "45c9165df067317aaa1e827c0bd41e67401aad2a4c6d7070c4e2349cba17e173"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The Redactor Life and Academy Codex.md",
+      "bytes": 77884,
+      "sha256": "90310409ce15984b87e276d483ad3a51ef0461a852a24058ee5731a1080646c5"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The SiNE Codex.md",
+      "bytes": 53884,
+      "sha256": "aa20a607b3083c835515c86f2446333a644b3e6c459acac9368fbd032325d7c8"
+    },
+    {
+      "path": "The Archive/Codices/Institutions & Organizations/The War of the Threshold Operational Codex.md",
+      "bytes": 55255,
+      "sha256": "b36c2586654a6272351d7acf6e09ad8a4db7d815f4becfc10b58100e985acfa2"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The Empire Houses.md",
+      "bytes": 50956,
+      "sha256": "cbb88f8617287a7e88bc3df836044418f7d82c24b1256e00eb5f8ef24694f9fa"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The Imperial Bloom Registry.md",
+      "bytes": 17078,
+      "sha256": "7cac2c98cb248185fcfbc13c80fd248f874aee78a8a7d54959099d73939cc5de"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The Imperial Calling Law Codex.md",
+      "bytes": 38399,
+      "sha256": "10530db60e60eefadf78fe1e9e206b360178fdc5898609082f69d7f36423ccde"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The Imperial Civic Safeguard Codex.md",
+      "bytes": 40831,
+      "sha256": "3f30f9c9133ea06d7f10968b90b35c5e2b4c68bf7fe2f4ce5a55055acffc9a23"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The Imperial Economy and Material Exchange Codex.md",
+      "bytes": 36261,
+      "sha256": "6298f62281d3fd8d15f4dce1cc5bf712136c57eda63d3cc62c49f71821ecc026"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The Imperial Personhood and Altered Conditions Codex.md",
+      "bytes": 38492,
+      "sha256": "87d0b425fb2f5cf133df503627bc4c1f8fd0c2b2a3b11ff1e48f2688dc79686e"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The SiNE Anomaly Register.md",
+      "bytes": 11415,
+      "sha256": "c40ccfae5f09fceae06cc5c62fbc225eeb7390a0d5a4c080844b33c4f836f3cc"
+    },
+    {
+      "path": "The Archive/Codices/Law, Governance & Registers/The Third Name Accord Codex.md",
+      "bytes": 40146,
+      "sha256": "ee1dbf19468db92d6faa215e56cf5f4975a664d044b17bc873e2a15d3804ccfa"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/Magic-System Architecture Map.md",
+      "bytes": 35599,
+      "sha256": "53dc0e985d65979ee41605fffaddecebb755d85a1ed6f56d4514500fe650a20c"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Black Cores Codex.md",
+      "bytes": 28837,
+      "sha256": "360dc401057ac4ef5a42a7e5fa17b24ab75515ca0619b8f2a7448483a6155c2d"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Black Line Systems Codex.md",
+      "bytes": 50120,
+      "sha256": "8bf50bc3a00edf786f582efbf1fb6bc9c4a0e9f4def3fd7ba9c61af2e4d073a1"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The BrightCrystal Industrial Codex.md",
+      "bytes": 31443,
+      "sha256": "f22c9ee953db1890326cab92738350ec6474a5cb16e1223a144cac4619b8bc03"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Divination Codex.md",
+      "bytes": 70448,
+      "sha256": "b6f44cca943d8b576b048bea0243163a87e1ee77d4909a30b9cb71ce3561154e"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Glass Lattice Codex.md",
+      "bytes": 38228,
+      "sha256": "b629236cf63cc6327665739f88db6e53a6345ce01702c5c9fbbcf1c9663865e8"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The GlassNeedles Codex.md",
+      "bytes": 13686,
+      "sha256": "dc02cf720fd575eb598545ffbd3c539da70d16f55bca3e0338b5992dd11c89c9"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Harmonic Systems Codex.md",
+      "bytes": 25407,
+      "sha256": "08436b8f0414180087a054d544d15176ddd88c85abd1dab62d62849aa119a108"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Imperial Harmonic Safety Codex.md",
+      "bytes": 23942,
+      "sha256": "2ebad49a9290ff1d106e0907c28cdf25c39619d0a9e256dd3bcde70843ae2481"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Interface Doctrine.md",
+      "bytes": 10416,
+      "sha256": "fc2d783bfa8a79bd029d41ef508621552401f3effd0a4714569a284f551ec87c"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Medical and Material Reconfiguration Codex.md",
+      "bytes": 27766,
+      "sha256": "ee4994ec512723c61921d4f3e323a8f8fc9c602eee2f9647a931d897b87795e0"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Quiet Moon Concordance Codex.md",
+      "bytes": 32880,
+      "sha256": "8d3f8e9582629e812ebb7daa9e817983e18e87e10c0949fbd8df1ff13793bf03"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Redactory Codex.md",
+      "bytes": 121180,
+      "sha256": "87de538b09e1ca584c2f714370360ebcda09e80258c29047e5c117c1cb63287e"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Resonance Codex.md",
+      "bytes": 14222,
+      "sha256": "65fee742e4940112a344adb312a0b4cac9da9509676b7436021f7382d5472fb7"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Schematic and Leaf Codex.md",
+      "bytes": 56859,
+      "sha256": "e2a605deee04442cabf01597b15e6ba7d03c66186e94e891382157a28ea0b5ed"
+    },
+    {
+      "path": "The Archive/Codices/Magic & Applied Systems/The Shores Codex.md",
+      "bytes": 56438,
+      "sha256": "89a0b30dd84bec636650d640e4d5920fa729aef70ac6f7b556368a804e485d29"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/The Aurora Codex.md",
+      "bytes": 53508,
+      "sha256": "0eb9667618c0be7d4bbd85cedbc24842746b2b80818b397939f155c73c67b666"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/The Empire of Synus Codex.md",
+      "bytes": 86473,
+      "sha256": "4d94842afe3326c8b30c67ef90151073483e4ae133e4dac4c5e3affa409e8f0b"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/The Imperial Civil Life Codex.md",
+      "bytes": 41611,
+      "sha256": "197b8741f04146f319f66a192968abd7eb9b88eeca1ccce69229f24dff2b4cbd"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/The Kalt'sen Capital Codex.md",
+      "bytes": 71353,
+      "sha256": "735661a4d6c8b4a83630ae007c7d6f7f83969df10b692e2018d27660a42edc42"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/The Skyphons Codex.md",
+      "bytes": 68841,
+      "sha256": "1c511f01644064ce082bec718d96a5064a2466fd8a6651366bb91b6c86f02324"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/The Synus Geographical Codex.md",
+      "bytes": 57978,
+      "sha256": "7d3be70dd72d7c59aab7a0adf73bb6ce5053c6b04e72520682999862241e48d3"
+    },
+    {
+      "path": "The Archive/Codices/Nations, Places & Peoples/The Synus Technological-Urban Codex - Condensed.md",
+      "bytes": 38500,
+      "sha256": "155156fd87e839123338f62852a4f5497ec0b6de8326c2827c25352a375860ae"
+    },
+    {
+      "path": "The Archive/Codices/README.md",
+      "bytes": 3320,
+      "sha256": "fe789229e0e96f236f3e907dabeafadc1e72e5dc9af2b287362300c01f5f71b3"
+    },
+    {
+      "path": "The Archive/Codices/Reference & Indexes/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Codices/Reference & Indexes/The Naming Conventions Codex.md",
+      "bytes": 37980,
+      "sha256": "3aef2401694e42d3c8f59a57ecf67a30b426eeee537eb68d64eb44d264ad8ebf"
+    },
+    {
+      "path": "The Archive/Codices/Reference & Indexes/The Recognized Presences Index.md",
+      "bytes": 14749,
+      "sha256": "3d9871c265df37e5a5fd2cfa2fd90f29ca9a9c3b591bf924f9ed939b3c410209"
+    },
+    {
+      "path": "The Archive/Codices/Reference & Indexes/The Synus Civilizational Terms Index.md",
+      "bytes": 16668,
+      "sha256": "a13e2e7fd6d0227659289694724f4aad6bac9aae5ca482af794db70d5688cf03"
+    },
+    {
+      "path": "The Archive/Codices/The Civic Skyline and Skyhook Codex.md",
+      "bytes": 31631,
+      "sha256": "2780157180b2b0719ed5613ce0fb9e813d02919f5d80f16c6aade59c3ffb88ef"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Al'ithia Rae Wonderwall/Al'ithia-HERO.png",
+      "bytes": 3871532,
+      "sha256": "273f7b688890d38d564fea29cd29987f5ae74a7cd63f5413caee285727492705"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Al'ithia Rae Wonderwall/Al'ithia.webp",
+      "bytes": 1465070,
+      "sha256": "83c07e3a13e25129d7006e5760b4c38c82bb0c337227e388756a019b0fbbc8cf"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Al'ithia Rae Wonderwall/Ascendant Hero.png",
+      "bytes": 3667737,
+      "sha256": "fabfba467e8b02eb717b2bfffc76d33e71c868626d205b597fea48d5d4de2a84"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Al'ithia Rae Wonderwall/Ascendant Portrait.png",
+      "bytes": 2459599,
+      "sha256": "2852464ec69debdfb3582be918e77eeb283bce0a01a2ee1787c2c52541eb8f2b"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Al'ithia Rae Wonderwall/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ayanna Aedh d'Aibhilyn/char-ayanna-aedh-aibhilyn-hero.png",
+      "bytes": 5391240,
+      "sha256": "ee4db962fbd317c1515f4a6f46c1bb5966ed850a3bb6e47fadac101bb564fbf7"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ayanna Aedh d'Aibhilyn/char-ayanna-aedh-aibhilyn.webp",
+      "bytes": 14496056,
+      "sha256": "8771925fcc92d5bd973d6a80dfebeabbdb2e220623f14b9e98f0f19ca230922b"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ayanna Aedh d'Aibhilyn/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Daniel Degurechaff/char-daniel-degurechaff-hero.webp",
+      "bytes": 1197614,
+      "sha256": "bdc1945017957d04f6efa3e1f747d43ff2714bdeb6358be4940b8f125fbc5b5e"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Daniel Degurechaff/char-daniel-degurechaff.png",
+      "bytes": 4310850,
+      "sha256": "4489f38a722fcf03e9fde9593aab40be1711afae2ef63573db09318a2315a2d3"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Daniel Degurechaff/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/E'lla Wonderwall/Ascendant Hero.png",
+      "bytes": 3352729,
+      "sha256": "4e68a3ec71a5164bd8e6b871ac7835d41bca122087c2c766425e1c50763346d0"
+    },
+    {
+      "path": "The Archive/Icons/Characters/E'lla Wonderwall/Ascendant Portrait.png",
+      "bytes": 2384471,
+      "sha256": "1289a654a017110cbfcec18fccd2cb829ca6cdadad5c93fa8f4d775ff12c2522"
+    },
+    {
+      "path": "The Archive/Icons/Characters/E'lla Wonderwall/char-ella-wonderwall-hero-legacy.png",
+      "bytes": 3886969,
+      "sha256": "adfa903d6068fe656ac47070fc51988d8db76e77fe3f0ba5c096addd50cccfcd"
+    },
+    {
+      "path": "The Archive/Icons/Characters/E'lla Wonderwall/char-ella-wonderwall-hero.png",
+      "bytes": 10976239,
+      "sha256": "c3f29dedc7d07581a52e39eb65871e996df7e2841536db81e86e8b1f5e5e88e2"
+    },
+    {
+      "path": "The Archive/Icons/Characters/E'lla Wonderwall/char-ella-wonderwall.png",
+      "bytes": 15268141,
+      "sha256": "ee6fcdfaf2510402586c76605080cd7ce4044163726a7803fa36645f7f630694"
+    },
+    {
+      "path": "The Archive/Icons/Characters/E'lla Wonderwall/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/E'lla Wonderwall/Portrait.png",
+      "bytes": 1597603,
+      "sha256": "2553be3389a3063dfa8e6a2ee911012f63594f57744bf40d8bf39f86f5be5c04"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/Arc Hero.png",
+      "bytes": 2792658,
+      "sha256": "c07cd342f9717cd5eb25e9bdcd4b712462d48b811595c404b2a4edb102f5cf3a"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/Arc Portrait.png",
+      "bytes": 14078922,
+      "sha256": "d5cbfaf47972bd0881a2a10c386d97da3cee22156e787937298de509c0cb58a0"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/char-eclesia-wonderwall-hero-legacy-2026-05-14.png",
+      "bytes": 2795141,
+      "sha256": "73902c0a45c1e7b4dc40d65452ea5a6b34f94c9365fba46ac584218c6103bdc4"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/char-eclesia-wonderwall-hero-legacy.png",
+      "bytes": 3802667,
+      "sha256": "56991dc5d2c129557ffb4128a1b87ec4200d62fe7c0efab98a649f4ce583340d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/char-eclesia-wonderwall-hero.png",
+      "bytes": 20257606,
+      "sha256": "7d12e798c14e49bd2194fa00ccc76eb0ce043fbc8efefbb6a2968dcac8f12068"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/char-eclesia-wonderwall-legacy-2026-05-14.png",
+      "bytes": 3014720,
+      "sha256": "a97934d1407675e437b6c9bc6d5aef16fa19cb053f023228937672c12e135a48"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/char-eclesia-wonderwall.png",
+      "bytes": 19179885,
+      "sha256": "d261d9d0e875320eed08c0341c35c0880bcfd1df599fcfd4ea092ba58e03485b"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/Final Portrait.png",
+      "bytes": 4226321,
+      "sha256": "3e99bb104e06c3372d408c06ab4c0242711c504932730609299403486828bb59"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Ec'lesia Wonderwall/Variant 2.png",
+      "bytes": 2234846,
+      "sha256": "dd8b8cd0f08eccc58549ccabde2752756cca83cac23d6ec6f64d5718c17047d4"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Eloi du Corvane/char-eloi-du-corvane-hero.png",
+      "bytes": 4263253,
+      "sha256": "826c941d8feb4e574dd7bc3524c3b550a6f7dacb02d23d56440714e221ba3ab5"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Eloi du Corvane/char-eloi-du-corvane.webp",
+      "bytes": 1567252,
+      "sha256": "c06f53e1a264f29c93fc572f17442b731edccc6d7e7fb02e60ead49fee014e30"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Eloi du Corvane/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Em'manuel Kael Wonderwall/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Em'manuel Kael Wonderwall/Hero.png",
+      "bytes": 3710716,
+      "sha256": "5cd3112f28c3550729ef9ab4383ab8e3997938e42abd97fd9f23ae1459b53e95"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Em'manuel Kael Wonderwall/Portrait.png",
+      "bytes": 1778859,
+      "sha256": "d2e5fb1e7b78b52415f3ad715ce795cd33afff406cdbe0f186cc75d728df86aa"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Halk'en Orveth/char-halken-orveth-hero.png",
+      "bytes": 3767798,
+      "sha256": "dc4b05c9d7b26346ce08c63fba75d45eef3121616f9080c25ec9345b3910a3cb"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Halk'en Orveth/char-halken-orveth.png",
+      "bytes": 2277532,
+      "sha256": "c6963e4fe26176c2069921d9b5c51bbbc8b6cec1e355ecc73d873fc1d6002d67"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Halk'en Orveth/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Hisui Kirasagi/char-hisui-kirasagi-hero-legacy.png",
+      "bytes": 4821452,
+      "sha256": "4e540a19fb258fc2f3628e070fc5ebf7a680e4a36c63b3592f547183ca7f16e1"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Hisui Kirasagi/char-hisui-kirasagi-hero.png",
+      "bytes": 4660225,
+      "sha256": "9bf9b1ee17d4241956e3001d17d581932357dfa7ebecb0ad261ea1577116c15b"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Hisui Kirasagi/char-hisui-kirasagi-legacy.png",
+      "bytes": 679374,
+      "sha256": "93700e1c80e9b5a446eebd531eeca48ea57274a2158ddaab1d8a52512e32f102"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Hisui Kirasagi/char-hisui-kirasagi.png",
+      "bytes": 2147001,
+      "sha256": "198127adc6b817782b9c413fdedf2ad7264710cd4d6d1d66805b1b524ce532f8"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Hisui Kirasagi/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Katherine Flarian/char-katherine-flarian-hero.png",
+      "bytes": 4297307,
+      "sha256": "e6a4a90e0f3a5675cb26d64041ea015fa05fb07bc3ea24f45ec51b551402cf89"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Katherine Flarian/char-katherine-flarian.webp",
+      "bytes": 848212,
+      "sha256": "ff8ffc76e5153dd4e3a4f1b2630f4e835c46d05f009e5ff68aeb24295f7636e4"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Katherine Flarian/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Lenore Engelmeyer/char-lenore-engelmeyer (2).png",
+      "bytes": 1545685,
+      "sha256": "2c8eb5960b84b0c65a34424d70388377f12eb7d0fb9e7b38a9bd4e1a90870f9a"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Lenore Engelmeyer/char-lenore-engelmeyer-hero (2).png",
+      "bytes": 3503460,
+      "sha256": "0e51b7799b14fba72b400ca68e5f3ada046fa70a6118dd5e6da63302866f8f82"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Lenore Engelmeyer/char-lenore-engelmeyer-hero.png",
+      "bytes": 4936911,
+      "sha256": "1a4b30c923f250e3d946c4d2ffdadbec144c765e1554953fe593bad0513b9bfa"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Lenore Engelmeyer/char-lenore-engelmeyer.png",
+      "bytes": 4140931,
+      "sha256": "a579a473425d9489b39f698ad9b675f67c1141d07551297081862745aa53387b"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Lenore Engelmeyer/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Leonard von Engelmeyer/char-leonard-von-engelmeyer-hero.png",
+      "bytes": 2683691,
+      "sha256": "3708fb0bc68c097cfc7758db16bb9d3b428284d1e6aa9c925ea29c80883aa7e1"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Leonard von Engelmeyer/char-leonard-von-engelmeyer.jpg",
+      "bytes": 86877,
+      "sha256": "97c2223a4649e215211459d194e74506d25b70e18569809e395c20009f8f3ea9"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Leonard von Engelmeyer/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Rouxinol Kaise/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Rouxinol Kaise/Hero.png",
+      "bytes": 2371604,
+      "sha256": "7d1ad42e16898756376dc51065b4c8c001ec4f0a0c1e7f750d5a18c66981abe9"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Rouxinol Kaise/Portrait.png",
+      "bytes": 1545319,
+      "sha256": "3569c876c5c95278c8f740a36a43c06598e18d05232e9fc4fe011d01c91a9498"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sai'ken Ex'sydra/char-saiken-exsydra-hero-legacy.png",
+      "bytes": 1451971,
+      "sha256": "86ed0f437faf26462cbd68faaebb22acaecf4ec92a2a5d938800e33b6b59bb91"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sai'ken Ex'sydra/char-saiken-exsydra-hero.png",
+      "bytes": 3824609,
+      "sha256": "8fc448a2aeb975a058ba4e5514c106d59e97b78b5eaf5ecfa30c32ed49f7a170"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sai'ken Ex'sydra/char-saiken-exsydra.webp",
+      "bytes": 1359846,
+      "sha256": "71ebda543a7c442dae2f37fe92fb1124e600daa888480a9d3f55579396062145"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sai'ken Ex'sydra/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sol'ytra/Alternate Hero.png",
+      "bytes": 3266929,
+      "sha256": "589cda9145db1ba645995f4eb8ec52c02ca52d7cbfc9165bed3d9604b0a31bce"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sol'ytra/Alternate Portrait.png",
+      "bytes": 1755971,
+      "sha256": "18c0a3021a943a2c49a0dc11030d4e83459908f39c93adbae5cf0567d59a8f3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sol'ytra/char-solytra-hero.png",
+      "bytes": 25392861,
+      "sha256": "fcbf3f58718bd42b6e0f275715889dafc9def9092898a5321a18c943cb5e82e6"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sol'ytra/char-solytra.jpg",
+      "bytes": 1558452,
+      "sha256": "cf3a299fab63b1d7d7fefe1d996c4f14acabf4d1ce1a51e427064a23fa4e2048"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Sol'ytra/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Syr'lene/char-syralene-hero.png",
+      "bytes": 3593383,
+      "sha256": "593eebf2952ac2a402c48493dddeebfc734b5dc6c4d9054f590da8fdda338c5b"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Syr'lene/char-syralene.png",
+      "bytes": 1618944,
+      "sha256": "ebff4918c69999030a2244d5e0f20077115f7b871d53ae0e1fc18dadac67576f"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Syr'lene/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/ui-characters-bg.png",
+      "bytes": 1365248,
+      "sha256": "335d84b744c50260b2bef9dfa16c5f4731b49ce1677b0d3b1e571b0efd7a570b"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Vael'Theryn/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Vael'Theryn/Hero.png",
+      "bytes": 1985410,
+      "sha256": "83f67401807ef360a29e51955ea550e6a3d5834279e39c076c83d27f83912cec"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Vael'Theryn/Portrait.png",
+      "bytes": 2090930,
+      "sha256": "1f9d74a3f818b77c7ea82532ffc6ba1995699180f88a34ae76bc3b8aa82dacb2"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Vaey Viktor/char-vaey-viktor-hero.jpg",
+      "bytes": 290839,
+      "sha256": "96cdeff35367b9ae71bd4452454699d9cc348cfc9d1fcc4f572585f3d07a68e4"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Vaey Viktor/char-vaey-viktor.png",
+      "bytes": 1266069,
+      "sha256": "786fc2e23936f2bfcc9ec3ab3ba63637f10bd850b0a67e698713d8fd6fc667a5"
+    },
+    {
+      "path": "The Archive/Icons/Characters/Vaey Viktor/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Abyssal Anchor.png",
+      "bytes": 1145984,
+      "sha256": "87b1cbff326de6ae0d6c115fcda2505be6d60a0f0e4f9894e3a228f5649e177f"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/app-clepsydra-apparatus.png",
+      "bytes": 2578265,
+      "sha256": "9ed1b4647ffc2d159dae97b9df8703b27787a884ed4d71b05f0c21a7f1710bbd"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Bloom Logo.png",
+      "bytes": 1263135,
+      "sha256": "506929676e26160002fd1f0748aebc1047dafd21c4b1a727ddc0daa16841358a"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Bright Margin.png",
+      "bytes": 2438182,
+      "sha256": "298d172bcd44d9a4482cbc7e9e70e67323e141d77df6764c4d6e0f46767be0f5"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/BrightCrystal.png",
+      "bytes": 2215361,
+      "sha256": "3f469e5b68dd7be931a8bdd4f45128d18d66b5dcbaa4a9b8114ff8bc3bbc89f6"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/cosm-archive.png",
+      "bytes": 2129065,
+      "sha256": "78e3685fab1bee380af85b5ea35acca10b01b28e85e41c52a2d43535ec19ccca"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/cosm-lunar-crown.png",
+      "bytes": 1972702,
+      "sha256": "6b4694ae9b8e96d7bd3356de9dc8eba418de83e8c9356c8311ea08f81bf1f3ec"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/cosm-terra.png",
+      "bytes": 2993043,
+      "sha256": "4046c942ec256dea920f34d6665d7e63f7050f22469ccdc8f7f4379f8e63451e"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/cosm-twilight-band-balance.png",
+      "bytes": 554114,
+      "sha256": "24139f78c2c5dfcdb1442c4eeefb053f085f6cb32131f18648f983611f974fdf"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/cosm-twilight-band-diagram.png",
+      "bytes": 1815636,
+      "sha256": "e6c427de11de2ae161d60ee7aea3e8fdba846d14b6c9d19a0214a83bb6eb1ced"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/cosm-twilight-band.png",
+      "bytes": 7871884,
+      "sha256": "c53f50794ff1b7224b068a5bf430f432eb7c4a183e1dc14f17923bd911603406"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Dark Margin.png",
+      "bytes": 2109330,
+      "sha256": "c17082a1c248038dcc40fb0dc44a3af9e1fa59c72f86d7bc26e1ea190aa4fade"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Deep Anchor.png",
+      "bytes": 1112437,
+      "sha256": "467ed384cb7672c128f9c1f23c5bbbbfe18a5568de7d5e4936cf3bdcc999f944"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Divination Logo.png",
+      "bytes": 1579410,
+      "sha256": "6accab1743d8a06a00b2ad06a8d1e47b3bcb27af7329c3c4d1e72949eb895765"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Harmonics Logo.png",
+      "bytes": 1601020,
+      "sha256": "43a84126d855d96e97e6ddc9372021a4c02472b7b043efe2eee1a7aacaff9305"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Index Theorem.png",
+      "bytes": 2181742,
+      "sha256": "5dfe810b570da1d38bbae8eb35b2642479aa41abc81d88828c81fbebb8656ee3"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Lunar Crown.png",
+      "bytes": 9009631,
+      "sha256": "7f525b8463ce9bb4ffd587c5efa71e9e48a7c23241c740b13d4aed55f5851752"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Precursors.png",
+      "bytes": 7623884,
+      "sha256": "e3d62bd3d9efba5948ff51a6a76e15eb649d2ed8490bd50de29910d1b8b6defa"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Redactor.png",
+      "bytes": 1330502,
+      "sha256": "45400e1f9629b7657b6f9642a04dbb974dfab144998a6b840aee0666803c0ea8"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Redactory Logo.png",
+      "bytes": 1642573,
+      "sha256": "c2592b7cf7d7ddef1e7520a1a5c50f77b9a91e182c4acb1b4389ead34997b4fa"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Redactory.png",
+      "bytes": 1795408,
+      "sha256": "5da1d1ae3af422e641e3c925bfd89b106e741261670fe3c1790d6a05c4b22d9f"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Resonance Logo.png",
+      "bytes": 1509540,
+      "sha256": "e65be5c5747538df0df2d2346425f565a5b55d8c8b5a3b3670671c9d47e80b3a"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Shallow Anchor.png",
+      "bytes": 1005806,
+      "sha256": "3346a223f86ed225766691e08f32c78dde562410e20bf6c0ef0aeddebce9d34c"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Shores Logo.png",
+      "bytes": 1673721,
+      "sha256": "99a8955c75b6954eed99faadfea9bb0acb84f60962c6f6db8452c67f105bd179"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Stase.png",
+      "bytes": 8922883,
+      "sha256": "70cbb0639fa92d79ac1fd4db7eb0c8e35aba49292c724ee64837dd3018172e78"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/sys-divination-panel.png",
+      "bytes": 8796319,
+      "sha256": "7a0143288fe2a6e194def50fe02bbfb8eff16e0f4975a5479257f144243ee8df"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/sys-divination.png",
+      "bytes": 1880397,
+      "sha256": "d9a6037058255d2bebbc5a47ab1fc2f41f3717e7ea7fbca62e811bdcc5c67efe"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/sys-redactory-panel.png",
+      "bytes": 8025800,
+      "sha256": "010a0fc965665b90ba9175292d927d0ab0ccd202f4b8df87808a5a4fa8aa25cf"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/Time.png",
+      "bytes": 8941294,
+      "sha256": "2c864ce507f705acb814baac914b15d77506cb7278e9dc5923c3a567126189eb"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/ui-cosmology-bg.png",
+      "bytes": 595193,
+      "sha256": "455f89c77b9e6ee402d99a575d63364ae7ff1d742cb9cb41dfdbcbea22ac81a2"
+    },
+    {
+      "path": "The Archive/Icons/Concepts & Systems/ui-cosmology-label.png",
+      "bytes": 2336647,
+      "sha256": "0274588bcc2587afbdaf44d883e13bf383e69368af1219f2301fa7d86ce06018"
+    },
+    {
+      "path": "The Archive/Icons/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/Apocachynthion.png",
+      "bytes": 3058259,
+      "sha256": "b25ea6197e2a23ef252c4cf5774d8d911338e898e43b7f1d1ddf37602b9cf665"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/Ardeatus.png",
+      "bytes": 8278084,
+      "sha256": "a5ab644d959520fec61ce3101f9e81a42567b3028e0e24730a2f5210f48c68a2"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/Aurora.png",
+      "bytes": 7630854,
+      "sha256": "9ac71f284c013fc2e183308c29100ffe6c391b0402e5de90654841e8cf5ae90e"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/Church.png",
+      "bytes": 2416302,
+      "sha256": "1a3074b5a2eade24f73edd54795d6ce0ba1fdbaeee4d8ca8a4626b4c872bb377"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/Clepsydra.png",
+      "bytes": 2578265,
+      "sha256": "9ed1b4647ffc2d159dae97b9df8703b27787a884ed4d71b05f0c21a7f1710bbd"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/CLOCKWORK.png",
+      "bytes": 951648,
+      "sha256": "a908a772b4bb6159d0b48f8af5cc63f3730ae416e16df14a41db87f85140dad1"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/HourGlass.png",
+      "bytes": 322709,
+      "sha256": "a367a43c49a09f6175deb6ddd8729bc3cf465d5abc634549650406700e034c21"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/org-obsidian-rite.png",
+      "bytes": 2499994,
+      "sha256": "5e3be76e5afe10abeb2f8f174c9181b3229028d78783e6d833f3f21eb6e723e1"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/SiNE Large.png",
+      "bytes": 435130,
+      "sha256": "981df8a591f9f7fc17ca8096dfd9e7463898bf71bb0385efea904d0a3ce4784a"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/sine-clepsydra.png",
+      "bytes": 897445,
+      "sha256": "d494b1cc4d6deed36560fbacfa85d4fcf1ce04d7b94c4e28c12873e8988d56ab"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/sine-clockwork.png",
+      "bytes": 813202,
+      "sha256": "f72202aea4617a58b1e06b05b2a60ae4b9552acf45dc3772ec5da1f27e9fc5c2"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/StaSis Large Variant 2.png",
+      "bytes": 802717,
+      "sha256": "daf0f39960b529a72c3789947d5ee37e8d80db997d03a8bf5c2bb3a9e82e7dd1"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/StaSis Large.png",
+      "bytes": 888975,
+      "sha256": "59ade79783b094dab8af27660f1680675a03fcb5b166750417d95ba012d64e3f"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/ui-sine-logo-home.png",
+      "bytes": 131076,
+      "sha256": "70de0e80519400b250eedc42a418c0a22ffe6493693316e088e5381f52f5e916"
+    },
+    {
+      "path": "The Archive/Icons/Institutions & Organizations/ui-sine-logo.png",
+      "bytes": 38632,
+      "sha256": "a8fc9ca4d9c1a1b2aecf55b805b7dd5d21e36777690ac2439cfde51004c75d98"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Aelrath.png",
+      "bytes": 8491778,
+      "sha256": "054d29f1636446ac5b88b31ea810b00e2e6bff570949195f38b809a52b8f0575"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Calthas.png",
+      "bytes": 8636756,
+      "sha256": "7d8996263395cc24030c4b11486d3415d826bbe96d7d2c441c2a96a0414798dc"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Halvorn.png",
+      "bytes": 8971124,
+      "sha256": "10adf36e2babbbbac57b745a6fddc6c4eec3b2e28c802252dc5ef90405ebe94f"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Kalt'sen.png",
+      "bytes": 8544051,
+      "sha256": "0b6aa2eb6d2463e485ef1372be074d142c621e1e3b249b17208bd9edd50cdce5"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Kor'rath.png",
+      "bytes": 9718543,
+      "sha256": "aecc392a20ebad187710e3148b3f72f5c855c352e20f9acb722f73223dc8ebd2"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Lon'drina.png",
+      "bytes": 8183373,
+      "sha256": "bef7fa9107dfdc84cdcfcba52e1045b04f8f2ba7fc664f9961c5a6128d11c89e"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/map-empire.png",
+      "bytes": 2580402,
+      "sha256": "7e8f70d64ea75b1204994e2b20701e16d1fc89162295cb8f808503eaf1722d16"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/map-places-index.png",
+      "bytes": 2924986,
+      "sha256": "c703096a5fa2298b5ef5514aceb2f5f4c60e93a378a7c9210784b951a9d15402"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Mire'thian.png",
+      "bytes": 9847565,
+      "sha256": "f34dc11dbb52f8e2e54b1ecd9e9f69e04c83007ed1cde97b93d3eaa20210324e"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Sarn Pell.png",
+      "bytes": 8269152,
+      "sha256": "71bd6bcd890b5175a14b03cb4f0daa5dccad5bfb99aadcd907e2044f52b9177c"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Thornwall.png",
+      "bytes": 9603017,
+      "sha256": "0eed7d006e5276c1171ab9d77bb2ab6932764a982319ca7c8a4a22cf3a6a9196"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Vael Mouth.png",
+      "bytes": 7775860,
+      "sha256": "853fa88b1b41061e7e080c82ddffc8c5887640241fb16ca080073c4eaa4ccad0"
+    },
+    {
+      "path": "The Archive/Icons/Places & Regions/Vrenne.png",
+      "bytes": 8339258,
+      "sha256": "c3d52ab87df561589b26ceb7e8b89610ca8c2168d9e99a26b9b7f85464a7d3cf"
+    },
+    {
+      "path": "The Archive/Icons/README.md",
+      "bytes": 735,
+      "sha256": "bec4b72bcc78a5a46629a4db80bb63de812fe85cd7e1f42f93a3b06a90c28f8d"
+    },
+    {
+      "path": "The Archive/Icons/UI & Site Assets/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Icons/UI & Site Assets/ui-banner.png",
+      "bytes": 1979477,
+      "sha256": "a5dea8611130834807138d6f5ba09f867ce5abd77a0c6fb32492326834709252"
+    },
+    {
+      "path": "The Archive/Icons/UI & Site Assets/ui-stars-fallback.jpg",
+      "bytes": 2262165,
+      "sha256": "2a400e67e8abb01ba988abfe055cdd53fe0dd47a013eb2b4ebcfb5c613a7109b"
+    },
+    {
+      "path": "The Archive/Master Questionnaire.md",
+      "bytes": 212058,
+      "sha256": "9309d43345156a6df227d5c2e654d4238c275ff7d5c33546d5386addee5fc44b"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Gravitas.png",
+      "bytes": 2215367,
+      "sha256": "c69f6b4017b3973a5c8fa4217c82ac48c73da044c5f7529b3a78f98ada1a3fa1"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Le'nore Is Here.png",
+      "bytes": 3045280,
+      "sha256": "767cbf558c1851791eb1fbbaf2303d5c00b4cf857d7459b8e726faa1ae5f70b7"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Le'nore.png",
+      "bytes": 3013955,
+      "sha256": "2cf4753b1ce8b7a9f983cdaacd2a4ed66917d08f75ac9de5f94cadea82b86c46"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Left Unsaid.png",
+      "bytes": 2773480,
+      "sha256": "8d374e65a8423bdbe463d91baa4c18a81932f0dbc4cd9b7f83f13f762b355285"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Sistera No. 1.png",
+      "bytes": 2616741,
+      "sha256": "35665fa67bff79bb12804675c75b9facc1534763406cad9cce41f8d5a06db654"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Sol'ytra.png",
+      "bytes": 2995179,
+      "sha256": "5450adac4f8d6ff5032035335888714d937780f01df616da68fb18fd38620c2f"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Tacet Lapis.png",
+      "bytes": 1986143,
+      "sha256": "dadc97df051260a917c687ac05a4ccbdb25e3c50f3237599a7d5e904938fcb46"
+    },
+    {
+      "path": "The Archive/Media/Audio/Covers/Wounded Crown Authority.png",
+      "bytes": 3000800,
+      "sha256": "32481f0678070001c25e7b0a20350fc3176472b8703156d139e00359aa989583"
+    },
+    {
+      "path": "The Archive/Media/Audio/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Audio/README.md",
+      "bytes": 373,
+      "sha256": "2d86039d5d55621b5837534d1a92cc7ba9f597cc6589e8379167c3727f135548"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Glass Server Archive.mp3",
+      "bytes": 4592301,
+      "sha256": "f252fd6474071a50d815fbdefd31080e631746e9cffc83bf14f6158e0a79ad48"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Le'nore Is Here.mp3",
+      "bytes": 3680878,
+      "sha256": "779fbd472c35e61783ee0a83ba78cefe94e319919408f6d4480f66605af63599"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Le'nore.mp3",
+      "bytes": 2657753,
+      "sha256": "15d319e816d76f4b0229ce35cd8af2dfdc3b1144c595273041e728857fde9983"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Left Unsaid (Lenore's Memoir).mp3",
+      "bytes": 2901429,
+      "sha256": "9347bfd345cbbe84557f1a8f2617761e38b9ec6f6b6972bba898b93a9ca78e9a"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Midnight Ledger.mp3",
+      "bytes": 4215968,
+      "sha256": "cef6859ea253bd538a1913337f0fce497adba52078ba3debd2d871464d266c86"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Moonsick.mp3",
+      "bytes": 6304754,
+      "sha256": "8e44b36ae56b44e021a322020d252b7620eb261ad66f0d90a8020df6927e1c4c"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Sistera No. 1.mp3",
+      "bytes": 5473514,
+      "sha256": "c66ccfb05243836ccb87b6f209046742a32ea59a6f65299b459f58b955993518"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Sol'ytra.mp3",
+      "bytes": 7039133,
+      "sha256": "7ac9344cacf363f63a8cfab65d58c048a64e552c64e36ee1911b24a4e8a7a63a"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Tacet Lapis.mp3",
+      "bytes": 6511888,
+      "sha256": "832e5bfefbfb17579d76927c3705013cbf4ceec63de047b4c3f7e98c4dd8d833"
+    },
+    {
+      "path": "The Archive/Media/Audio/Tracks/Wounded Crown Authority.mp3",
+      "bytes": 4311680,
+      "sha256": "b346bdd98ed1f9aa31185c443f3a0282915b2de89c8703c33db9f2aa7f90699f"
+    },
+    {
+      "path": "The Archive/Media/Audio/Variants/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Audio/Variants/Glass Server Archive (0.75x Variant).mp3",
+      "bytes": 4847925,
+      "sha256": "a4a519dce45f73f81d467a579b2a1ae752ea810a5314f2074161a637f2a3918a"
+    },
+    {
+      "path": "The Archive/Media/Audio/Variants/Sistera No. 1 (Alternate).mp3",
+      "bytes": 5594919,
+      "sha256": "c7fc0340785aef01df86b1fdc51121be78cb20c9590b775791a4bf82d7e406ec"
+    },
+    {
+      "path": "The Archive/Media/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/Kalt'sen/Civic Skyline Network Blueprint.png",
+      "bytes": 5419630,
+      "sha256": "7a73b240636274743703549b176657cebb57edcfbf353a4cc020077cb25e04c8"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/Kalt'sen/Civic Skyline Skyhook Apparatus Blueprint.png",
+      "bytes": 5829071,
+      "sha256": "06f4ef0b68fcf68b7fd8182721c21651720f8cb47f89f2ecf84ead56ca7a023d"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/Kalt'sen/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/Kalt'sen/Kalt'sen City Concept 01.png",
+      "bytes": 2549041,
+      "sha256": "cec68d6fe1503f3e6b981d57fa82f9d233da1b33c0fa9b34617f114de1fd93de"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/Kalt'sen/Kalt'sen City Concept 02.png",
+      "bytes": 2897164,
+      "sha256": "50eafedde54e92e24e4af8fa24bfd0762af61355605f186d89dd9710655aa288"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/Kalt'sen/Kalt'sen City Concept 03.png",
+      "bytes": 2589088,
+      "sha256": "c75d3bad3781b1cbbf666664d9f7be1b1dd708c9943f16f5aa28423769fca657"
+    },
+    {
+      "path": "The Archive/Media/Illustrations/Quiet Moon.png",
+      "bytes": 153590,
+      "sha256": "66809b12ea7c4cc59e3f3186ce8bc1ee73a7d0c6e9370d9aae0253f315991659"
+    },
+    {
+      "path": "The Archive/Media/Maps/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Media/Maps/Empire Map.jpg",
+      "bytes": 463027,
+      "sha256": "2007f85ba6bf58f7b05640bb0d412d347424767f5bfc1572647703d64614bdd4"
+    },
+    {
+      "path": "The Archive/Media/README.md",
+      "bytes": 580,
+      "sha256": "c882e03a0f03254f623fcf57300980175903e1d6deec6300e38b73c054984a8f"
+    },
+    {
+      "path": "The Archive/Places/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Places/Places Reference.md",
+      "bytes": 11186,
+      "sha256": "bfd625fcb27accdeb3d5d522bc54f7b37c2af73cdbe46f35e0d70cb0d761e90b"
+    },
+    {
+      "path": "The Archive/README.md",
+      "bytes": 5912,
+      "sha256": "28a4290afcea8db1d1aa63d0927106961b0f00824f4c7da95b1ccb1e6c0a8c6f"
+    },
+    {
+      "path": "The Archive/Reports/Current God-Angel-Fragment Hierarchy Report.md",
+      "bytes": 8263,
+      "sha256": "a261eae14f2f7915f892b7034f3644ec687e5536a62320e869206d52c67c2a95"
+    },
+    {
+      "path": "The Archive/Reports/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/Reports/Magic System Consolidation Report.md",
+      "bytes": 714216,
+      "sha256": "2237b78668aad06716fb9a64b666d7c93ff502dc4281809ffa7e712c9af26600"
+    },
+    {
+      "path": "The Archive/Reports/README.md",
+      "bytes": 267,
+      "sha256": "1e0ed3af4206ea2df517522ecffc39aea8560090ad7518183da56db4aee57e7f"
+    },
+    {
+      "path": "The Archive/Reports/Skyphon Apparatus Prototypes.md",
+      "bytes": 21256,
+      "sha256": "db58e05b8ce9544f7a54ef73d0067fda20c14ff0333827a3f2760f269d9258cd"
+    },
+    {
+      "path": "The Archive/SOE Dossiers/desktop.ini",
+      "bytes": 106,
+      "sha256": "08610ca6879c683ff30db24fee22b1040e6150db7ab0d0d92b51cb41ae415a3d"
+    },
+    {
+      "path": "The Archive/SOE Dossiers/README.md",
+      "bytes": 9713,
+      "sha256": "d0ac8da2913729adac11ffd8b228968a66f2815bcbea801f49dd93f77912e585"
+    },
+    {
+      "path": "The Archive/SOE Dossiers/SOE-001 - That Which Gives Chase.md",
+      "bytes": 11489,
+      "sha256": "9d1158264e15fbad315f997f16feb5fba2d7561e4fec0bb46865d8abff6d3ef9"
+    },
+    {
+      "path": "The Archive/SOE Dossiers/SOE-041 - The Resident.md",
+      "bytes": 30851,
+      "sha256": "fb663c2affcb77dd8241c68521cce7ed91afad8eb89e70ce6837ed122d6911d0"
+    }
+  ]
+}
