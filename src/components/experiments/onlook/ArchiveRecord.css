@@ -1,0 +1,53 @@
+/* This stylesheet is loaded only by the lab island. All rules stay within its root. */
+.onlook-record {
+  width: min(100% - 2rem, 68rem);
+  margin: 3rem auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  --record-space: clamp(1.25rem, 4vw, 3rem);
+}
+.onlook-record[data-compact="true"] { --record-space: 1.25rem; }
+.onlook-record .onlook-record__header { padding: var(--record-space); border-bottom: 1px solid var(--border); }
+.onlook-record .onlook-record__eyebrow,
+.onlook-record dt,
+.onlook-record button {
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.onlook-record .onlook-record__eyebrow { color: var(--gold); margin-bottom: 1rem; }
+.onlook-record h1,
+.onlook-record h2 { font-family: "Cormorant Garamond", serif; line-height: 1.1; }
+.onlook-record h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 600; }
+.onlook-record .onlook-record__notice { margin-top: 1rem; color: var(--text-muted); font-size: .85rem; line-height: 1.7; }
+.onlook-record .onlook-record__grid { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); }
+.onlook-record .onlook-record__metadata { padding: var(--record-space); border-right: 1px solid var(--border); }
+.onlook-record dl { display: grid; gap: 1.75rem; }
+.onlook-record dt { color: var(--text-muted); margin-bottom: .5rem; }
+.onlook-record dd { font-size: .9rem; line-height: 1.6; overflow-wrap: anywhere; }
+.onlook-record .onlook-record__status { color: var(--gold); }
+.onlook-record .onlook-record__reading { padding: var(--record-space); min-width: 0; }
+.onlook-record .onlook-record__controls { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; }
+.onlook-record button { cursor: pointer; min-height: 44px; padding: .7rem .85rem; background: transparent; border: 1px solid var(--border); color: var(--text); line-height: 1.5; }
+.onlook-record button:hover { border-color: var(--gold); }
+.onlook-record button[aria-pressed="true"] { border-color: var(--crimson); box-shadow: inset 0 -2px var(--crimson); }
+.onlook-record :is(button, input, a):focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.onlook-record .onlook-record__density { display: flex; align-items: center; gap: .5rem; min-height: 44px; font-size: .75rem; color: var(--text-muted); cursor: pointer; }
+.onlook-record input { accent-color: var(--crimson); width: 1rem; height: 1rem; }
+.onlook-record .onlook-record__panel { margin: 2rem 0; padding-left: 1.25rem; border-left: 2px solid var(--crimson); }
+.onlook-record .onlook-record__number { color: var(--gold); font-size: .7rem; letter-spacing: .15em; margin-bottom: .75rem; }
+.onlook-record h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+.onlook-record .onlook-record__panel > p:last-child { max-width: 55ch; color: var(--text-muted); font-size: .95rem; line-height: 1.8; }
+.onlook-record .onlook-record__disclosure { width: 100%; text-align: left; }
+.onlook-record .onlook-record__checklist { padding: 1.25rem 1.25rem 0; font-size: .85rem; color: var(--text-muted); line-height: 2; }
+.onlook-record .onlook-record__footer { padding: 1.25rem var(--record-space); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; border-top: 1px solid var(--border); font-size: .7rem; line-height: 1.7; color: var(--text-muted); }
+.onlook-record a { color: var(--text); text-decoration-color: var(--crimson); text-underline-offset: .3em; }
+@media (max-width: 640px) {
+  .onlook-record { width: calc(100% - 1.5rem); margin: 1.5rem auto; }
+  .onlook-record .onlook-record__grid { grid-template-columns: minmax(0, 1fr); }
+  .onlook-record .onlook-record__metadata { border-right: 0; border-bottom: 1px solid var(--border); }
+  .onlook-record dl { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+}

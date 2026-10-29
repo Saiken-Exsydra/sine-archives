@@ -1,12 +1,14 @@
 // @ts-check
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 import remarkArchiveHeadingIds from "./src/utils/remark-archive-heading-ids.mjs";
 import remarkArchiveWikiLinks from "./src/utils/remark-archive-wiki-links.mjs";
 import rehypeCodexDiagrams from "./src/utils/rehype-codex-diagrams.mjs";
 
 // https://astro.build/config
 export default defineConfig({
+  integrations: [react()],
   devToolbar: {
     enabled: false,
   },
