@@ -33,9 +33,9 @@ if (action === 'capture') {
   async function visit(urlPath) {
     const response = await page.goto(new URL(urlPath, base).href, {waitUntil:'domcontentloaded'});
     if (response?.status() !== 200) throw new Error(`${urlPath}: HTTP ${response?.status()}`);
-    await expect(page.locator('html')).toHaveClass(/is-page-ready/);
+    await expect(page.locator('html')).toHaveClass(/is-page-ready/, {timeout:30_000});
     await page.evaluate(() => document.fonts.ready);
-    await expect(page.locator('astro-island[ssr]')).toHaveCount(0);
+    await expect(page.locator('astro-island[ssr]')).toHaveCount(0, {timeout:30_000});
     if (await page.locator('astro-island').count()) {
       // Astro removes its SSR marker before React's transition necessarily commits.
       // Exercise a real state change before screenshot's temporary caret styles run.
