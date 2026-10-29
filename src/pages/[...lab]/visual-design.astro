@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import ArchiveRecord from "../../components/experiments/onlook/ArchiveRecord";
+import ArchiveRecord from "../../components/experiments/visual-design/fixtures/ArchiveRecord";
 
 // Astro ignores directories beginning with "_". Emit these explicit lab paths instead.
 export function getStaticPaths() {
@@ -11,7 +11,7 @@ export function getStaticPaths() {
 }
 const { locale } = Astro.props;
 ---
-<MainLayout pageTitle="Onlook Lab · SiNE Archives" locale={locale} active="systems" routeKind="generic" hideFooter>
+<MainLayout pageTitle="Visual Design Lab · SiNE Archives" locale={locale} active="systems" routeKind="generic" hideFooter>
   <meta slot="head" name="robots" content="noindex, nofollow, noarchive" />
   <ArchiveRecord locale={locale} client:load />
 </MainLayout>

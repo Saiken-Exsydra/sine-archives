@@ -1,5 +1,5 @@
-import { useState } from "react";
-import type { SiteLocale } from "../../../i18n/config";
+import { useId, useState } from "react";
+import type { SiteLocale } from "../../../../i18n/config";
 import "./ArchiveRecord.css";
 
 const copy = {
@@ -25,47 +25,49 @@ const copy = {
 
 export default function ArchiveRecord({ locale = "en" }: { locale?: SiteLocale }) {
   const text = copy[locale];
+  const titleId = useId();
+  const checklistId = useId();
   const [view, setView] = useState<"overview" | "notes">("overview");
   const [compact, setCompact] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <article className="onlook-record" data-compact={compact} aria-labelledby="lab-title">
-      <header className="onlook-record__header">
-        <p className="onlook-record__eyebrow">{text.eyebrow}</p>
-        <h1 id="lab-title">{text.title}</h1>
-        <p className="onlook-record__notice">{text.notice}</p>
+    <article className="visual-lab-record" data-compact={compact} aria-labelledby={titleId}>
+      <header className="visual-lab-record__header">
+        <p className="visual-lab-record__eyebrow">{text.eyebrow}</p>
+        <h1 id={titleId}>{text.title}</h1>
+        <p className="visual-lab-record__notice">{text.notice}</p>
       </header>
-      <div className="onlook-record__grid">
-        <aside className="onlook-record__metadata" aria-label={text.record}>
+      <div className="visual-lab-record__grid">
+        <aside className="visual-lab-record__metadata" aria-label={text.record}>
           <dl>
             <div><dt>{text.record}</dt><dd>{text.reference}</dd></div>
             <div><dt>{text.category}</dt><dd>{text.categoryValue}</dd></div>
-            <div><dt>{text.status}</dt><dd className="onlook-record__status">{text.statusValue}</dd></div>
+            <div><dt>{text.status}</dt><dd className="visual-lab-record__status">{text.statusValue}</dd></div>
           </dl>
         </aside>
-        <div className="onlook-record__reading">
-          <div className="onlook-record__controls" role="group" aria-label={text.controls}>
+        <div className="visual-lab-record__reading">
+          <div className="visual-lab-record__controls" role="group" aria-label={text.controls}>
             <button type="button" aria-pressed={view === "overview"} onClick={() => setView("overview")}>{text.overview}</button>
             <button type="button" aria-pressed={view === "notes"} onClick={() => setView("notes")}>{text.notes}</button>
-            <label className="onlook-record__density">
+            <label className="visual-lab-record__density">
               <input type="checkbox" checked={compact} onChange={(event) => setCompact(event.target.checked)} />{text.compact}
             </label>
           </div>
-          <section className="onlook-record__panel" aria-live="polite" aria-atomic="true">
-            <p className="onlook-record__number" aria-hidden="true">{view === "overview" ? "01" : "02"}</p>
+          <section className="visual-lab-record__panel" aria-live="polite" aria-atomic="true">
+            <p className="visual-lab-record__number" aria-hidden="true">{view === "overview" ? "01" : "02"}</p>
             <h2>{view === "overview" ? text.overviewTitle : text.notesTitle}</h2>
             <p>{view === "overview" ? text.overviewText : text.notesText}</p>
           </section>
-          <button type="button" className="onlook-record__disclosure" aria-expanded={expanded} aria-controls="lab-checklist" onClick={() => setExpanded(!expanded)}>
+          <button type="button" className="visual-lab-record__disclosure" aria-expanded={expanded} aria-controls={checklistId} onClick={() => setExpanded(!expanded)}>
             <span aria-hidden="true">{expanded ? "−" : "+"}</span> {text.detail}
           </button>
-          <ul id="lab-checklist" className="onlook-record__checklist" hidden={!expanded}>
+          <ul id={checklistId} className="visual-lab-record__checklist" hidden={!expanded}>
             {text.checklist.map((item) => <li key={item}>{item}</li>)}
           </ul>
         </div>
       </div>
-      <footer className="onlook-record__footer">
+      <footer className="visual-lab-record__footer">
         <p>{text.footer}</p>
         <a href={locale === "en" ? "/" : "/pt-br/"}>{text.returnLabel} <span aria-hidden="true">↗</span></a>
       </footer>
