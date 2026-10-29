@@ -6,7 +6,7 @@ Updated 2026-10-29. This is the existing Astro + React experiment repurposed as 
 
 - Repository: https://github.com/Saiken-Exsydra/sine-archives
 - Branch: `experiment/visual-design-lab`. Its history retains the original experiment commit `69be92641a6171a49cdf231dd61f4f2bc29ccb80`, based on production commit `bdfc843b7967da7e1fb4cc22ebcd0f3de4976234`. No history is rewritten.
-- Intended local managed checkout: `C:\Users\saike\.codex\worktrees\visual-design-lab\SiNE Archives REPO`. The final transfer/retirement verification appears below.
+- Local managed checkout: `C:\Users\saike\.codex\worktrees\visual-design-lab\SiNE Archives REPO`. Transfer/retirement verification is recorded below.
 - `main` deploys automatically through Cloudflare when pushed. Keep this experiment unmerged. No deployment, hosting, DNS, credentials, production navigation or production source changes are part of this cleanup.
 - The original authoring checkout and its unrelated uncommitted content/media remain separate and untouched.
 - Onlook was never installed or connected. There is no application, SDK, bridge, account or Onlook package to uninstall. Its obsolete naming, route and setup guidance have been replaced. Historical commits and local validation evidence are retained rather than rewritten or deleted.
@@ -124,7 +124,7 @@ Reload the agent afterward. This manual method deliberately skips automatic hook
 - Desktop/mobile capture and comparison: 12 images captured with no browser exceptions or console errors. All six lab images are byte-identical before/after cleanup; five of six production references also match. The remaining image is the Observatory's variable background at 390px. Lab views were visually reviewed at 390 and 1440px; browser tests also cover 320px, keyboard controls, reduced motion, history return and locale switching.
 - Old lab URL: HTTP 404. New lab routes build successfully, keep noindex metadata and do not appear in public search. The public search index contains no lab URLs.
 - Package manifests/lockfile, Astro/TypeScript configuration, production layouts/styles, content and assets are unchanged. This cleanup does not rerun or claim a passing complete all-browser suite.
-- Final-path rebuild and transfer verification will be recorded after the replacement checkout is ready.
+- Final neutral checkout: source check passed again with zero diagnostics, build passed again with 295 pages, and all 8 Chromium/WebKit lab cases passed again (31.2s). Firefox was not rerun after the move because its launch failure had already been confirmed in this cleanup. No new regression was found in the exercised cleanup surfaces.
 
 The earlier experiment's full-suite result remains historical evidence: 102 passed, 58 failed, 5 unfinished at the 15-minute limit. That included 55 Firefox startup errors, three completed WebKit failures and incomplete transition coverage. The old WebKit TOC failure was reproduced on unchanged main; modal/Observatory failures passed on isolated reruns; a separate WebKit transition run passed seven and failed character-return and map-to-home navigation, consistent with existing repository notes. These are not reported as successes by this cleanup. No system-runtime repair or production navigation refactor is included.
 
@@ -132,7 +132,16 @@ Local historical logs/screenshots are preserved separately from new captures. Th
 
 ## Retirement and transfer verification
 
-The replacement branch will be pushed and its retained history verified before retiring the old remote and checkout. Final verification is recorded in the follow-up handoff commit.
+- Replacement code commit `f098cac36bad7e71ec6193ad6c45ffd46269d439` was pushed and verified before any obsolete remote deletion. Git confirmed that original experiment commit `69be92641a6171a49cdf231dd61f4f2bc29ccb80` is its ancestor. This documentation follow-up remains on the same branch.
+- The old local branch name was removed by renaming the existing branch, preserving history. Only `experiment/visual-design-lab` remains among local experimental branches.
+- The old checkout had no uncommitted/untracked work, no unpushed commits relative to the replacement remote, and no ignored files left after transfer. Its ignored dependencies, generated caches/media, local Impeccable skill, screenshots and logs were transferred without overwriting destination files. An inventory found no unexpected ignored user files outside those transferred paths.
+- Both initial and final GitHub checks found no pull request associated with the obsolete branch, so there was no discussion/status to migrate.
+- The old Astro server was stopped. Two orphaned Playwright WebKit network workers from the earlier test run were verified by executable and old working directory and stopped to release Windows' lock on the emptied folder.
+- The obsolete Git worktree was archived through Codex's managed operation and unregistered from Git. Its actual checkout directory `C:\Users\saike\.codex\worktrees\onlook-astro\SiNE Archives REPO` no longer exists. Recoverable Codex archive metadata is retained; it is not a second active checkout.
+- After the replacement had rebuilt and passed its final lab checks, remote `experiment/onlook-astro` was deleted with a normal branch deletion. Its local ref is absent as well. No force-push or force-deletion was used.
+- `git worktree list` shows the original authoring checkout and exactly one experimental checkout at `C:\Users\saike\.codex\worktrees\visual-design-lab\SiNE Archives REPO`, on `experiment/visual-design-lab`.
+- Production `main` remains at `bdfc843b7967da7e1fb4cc22ebcd0f3de4976234`. The original author's branch and local content/media edits are preserved. No merge or production deployment was performed.
+- Current evidence is under `.tmp/visual-design-lab/`; older evaluation evidence was preserved under `.tmp/previous-evaluation/`. The comparison report is `.tmp/visual-design-lab/compare-pre-cleanup-verified-neutral-lab.html`. These files and the optional local skill remain ignored and are not prerequisites for building a fresh clone.
 
 ## Keep or discard a design iteration
 
