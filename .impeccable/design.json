@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T00:36:48.530066+00:00",
+  "title": "Design System: SiNE Archives",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "panel",
+        "value": "0 14px 40px rgba(0, 0, 0, 0.35)",
+        "purpose": "Existing global --shadow token."
+      }
+    ],
+    "motion": [
+      {
+        "name": "modal",
+        "value": "380ms",
+        "purpose": "Shared modal feedback; preserve reduced motion."
+      },
+      {
+        "name": "route",
+        "value": "480ms",
+        "purpose": "Owned exclusively by transition-system.css."
+      },
+      {
+        "name": "search-route",
+        "value": "1050ms",
+        "purpose": "Existing search reveal profile."
+      },
+      {
+        "name": "route-ease",
+        "value": "cubic-bezier(0.2, 0.82, 0.22, 1)",
+        "purpose": "Existing shared route easing."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "lab-collapse",
+        "value": "640px"
+      },
+      {
+        "name": "nav-mobile",
+        "value": "768px"
+      },
+      {
+        "name": "entry-collapse",
+        "value": "860px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Record control",
+      "kind": "button",
+      "refersTo": "record-control",
+      "description": "Lab reading action; selected state uses the existing crimson rule.",
+      "html": "<button class=\"ds-record-control\" aria-pressed=\"true\">OVERVIEW</button>",
+      "css": ".ds-record-control{font:500 .7rem \"DM Sans\",sans-serif;letter-spacing:.1em;text-transform:uppercase;min-height:44px;padding:.7rem .85rem;background:transparent;border:1px solid var(--border);color:var(--text);cursor:pointer;line-height:1.5}.ds-record-control:hover{border-color:var(--gold)}.ds-record-control[aria-pressed=\"true\"]{border-color:var(--crimson);box-shadow:inset 0 -2px var(--crimson)}.ds-record-control:focus-visible{outline:2px solid var(--gold);outline-offset:4px}"
+    },
+    {
+      "name": "Record disclosure",
+      "kind": "button",
+      "refersTo": "record-control",
+      "description": "Full-width checklist action; content behavior stays in the React fixture.",
+      "html": "<button class=\"ds-disclosure\" aria-expanded=\"false\">+ SHOW EVALUATION CHECKLIST</button>",
+      "css": ".ds-disclosure{width:100%;text-align:left;font:500 .7rem \"DM Sans\",sans-serif;letter-spacing:.1em;min-height:44px;padding:.7rem .85rem;background:transparent;border:1px solid var(--border);color:var(--text);cursor:pointer}.ds-disclosure:hover{border-color:var(--gold)}.ds-disclosure:focus-visible{outline:2px solid var(--gold);outline-offset:4px}"
+    },
+    {
+      "name": "Section search",
+      "kind": "input",
+      "refersTo": "section-search",
+      "description": "Observed SectionList input shell.",
+      "html": "<label class=\"ds-search\">SEARCH <input class=\"ds-search-input\" aria-label=\"Search records\" placeholder=\"Search\" /></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:4px;color:var(--text-muted);font:13px \"DM Sans\",sans-serif;transition:border-color .2s}.ds-search:focus-within{border-color:rgba(177,58,52,.4);color:var(--text)}.ds-search-input{appearance:none;border:0;outline:0;background:transparent;color:inherit;min-width:0;font:inherit}.ds-search-input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}"
+    },
+    {
+      "name": "Entry card",
+      "kind": "card",
+      "description": "EntryCard title/metadata/border treatment, without duplicating authored records.",
+      "html": "<a class=\"ds-entry\" href=\"#\"><span class=\"ds-entry-type\">INTERFACE FIXTURE</span><strong class=\"ds-entry-title\">Archive record</strong><span class=\"ds-entry-summary\">Non-canonical sample data for visual evaluation.</span></a>",
+      "css": ".ds-entry{display:grid;gap:4px;padding:20px 24px;text-decoration:none;color:var(--text);border:1px solid rgba(255,255,255,.07);border-radius:6px;background:linear-gradient(135deg,rgba(10,10,18,.9),rgba(8,8,14,.95));transition:border-color .25s,background .25s}.ds-entry:hover{border-color:rgba(177,58,52,.4);background:linear-gradient(135deg,rgba(12,12,20,.95),rgba(10,10,18,.98))}.ds-entry:focus-visible{outline:2px solid var(--gold);outline-offset:4px}.ds-entry-type{font:600 10px \"DM Sans\",sans-serif;letter-spacing:.18em;color:var(--crimson)}.ds-entry-title{font:700 26px/1.1 \"Cormorant Garamond\",serif;letter-spacing:.01em}.ds-entry-summary{font:13px/1.8 \"DM Sans\",sans-serif;color:var(--text-muted)}"
+    },
+    {
+      "name": "Navigation icon control",
+      "kind": "nav",
+      "description": "MainLayout icon-button sizing and hover surface; inline SVG requires no icon dependency.",
+      "html": "<nav aria-label=\"Archive tools\"><button class=\"ds-nav-button\" aria-label=\"Search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m16 16 4.5 4.5\"/></svg></button></nav>",
+      "css": ".ds-nav-button{display:flex;align-items:center;justify-content:center;width:38px;height:38px;color:rgba(232,228,220,.5);background:transparent;border:0;border-radius:4px;cursor:pointer;transition:color .2s,background .2s}.ds-nav-button:hover{color:rgba(232,228,220,.9);background:rgba(255,255,255,.04)}.ds-nav-button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "overview": "An institutional archive with an accessible encyclopedia reading layer: restrained, cinematic and editorial. This document merges the previous laboratory brief with tokens and patterns extracted from current source. It applies to native Astro UI and React islands. It records the incumbent system; it does not redesign it.",
+    "keyCharacteristics": [
+      "dark canvas",
+      "thin rules",
+      "serif record titles",
+      "spaced uppercase metadata",
+      "reading panes",
+      "restrained crimson/gold accents"
+    ],
+    "rules": [
+      {
+        "name": "Canvas continuity",
+        "body": "Preserve the dark document and transition backgrounds, including navigation, to prevent white flashes.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do read the visual authority and target source before visual/motion edits; explain conflicts.",
+      "Do preserve English/Portuguese text, diacritics, functionality and institutional identity."
+    ],
+    "donts": [
+      "Don't invent lore, replace archive prose, alter disclosure boundaries or duplicate production content to fill an interface.",
+      "Don't impose a generic SaaS dashboard, arbitrary sci-fi styling, excessive futuristic ornament or meaningless motion."
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+# Keep the upstream skill portable; retain its shipped Markdown whitespace.
+.agents/skills/impeccable/** text eol=lf whitespace=-blank-at-eol,-blank-at-eof
+.agents/skills/impeccable/scripts/impeccable.cmd text eol=crlf
+# These two launchers are Windows entry points.
+/Setup-Visual-Design-Lab.cmd text eol=crlf
+/Start-Visual-Design-Lab.cmd text eol=crlf

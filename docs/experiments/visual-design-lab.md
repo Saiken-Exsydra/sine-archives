@@ -1,6 +1,6 @@
 # SiNE Archives — Visual Design Lab
 
-Updated 2026-10-29. This is the existing Astro + React experiment repurposed as a tool-neutral laboratory. It requires Node/npm and a browser, not a design-service account. The record fixture remains non-canonical sample data; production design and content are unchanged.
+Updated 2026-10-29 (local time). This is the existing Astro + React experiment repurposed as a tool-neutral laboratory, with project-local Impeccable prepared for Codex. It requires Node/npm and a browser, not a design-service account. The record fixture remains non-canonical sample data; production design and content are unchanged.
 
 ## Branch, ownership and preserved work
 
@@ -17,7 +17,13 @@ Astro still owns routing, layouts, content collections and locale URLs; one Reac
 
 | File | Role |
 | --- | --- |
-| `DESIGN.md` | Experimental brief summarizing typography, tokens, spacing, CSS, components, motion, assets, responsiveness and accessibility. It explicitly defers to `docs/design-system.md`. |
+| `DESIGN.md` | Merged source-derived design record, canonical token frontmatter and eight sections, preserving the prior lab brief and deferring to `docs/design-system.md`. |
+| `PRODUCT.md` | Confirmed product context using Impeccable product-schema 1. |
+| `.impeccable/design.json` | Supported schemaVersion 2 metadata: shadows, motion, breakpoints and five previews extracted from existing components. |
+| `.agents/skills/impeccable/` | Official compiled Codex skill 4.8.0, tracked without its platform engine binary. |
+| `.codex/hooks.json` | Official portable PostToolUse/Stop commands, including Windows overrides; user trust required. |
+| `.impeccable/config.json` | Hook enabled, plus supported `.mjs` detector extension; no suppressions. |
+| `Setup-Visual-Design-Lab.cmd`, `Start-Visual-Design-Lab.cmd` | Pinned reproducible setup and quoted Windows development launcher. |
 | `src/components/experiments/visual-design/AGENTS.md` | Bounds coding-agent edits to lab fixtures. |
 | `src/components/experiments/visual-design/fixtures/ArchiveRecord.tsx` | Preserved bilingual record fixture, with generated accessible IDs so instances can be reused without duplicate IDs. |
 | `src/components/experiments/visual-design/fixtures/ArchiveRecord.css` | Preserved styles under the neutral `.visual-lab-record` namespace. |
@@ -36,10 +42,10 @@ In PowerShell, with Node.js 22 LTS, npm and Git available:
 
 ```powershell
 Set-Location 'C:\Users\saike\.codex\worktrees\visual-design-lab\SiNE Archives REPO'
-npm run dev -- --host 127.0.0.1 --port 4321
+& .\Start-Visual-Design-Lab.cmd
 ```
 
-Open http://127.0.0.1:4321/_lab/visual-design/ and use the existing language switch for Portuguese. Ctrl+C stops the server. The prepared checkout already has dependencies. In a fresh clone of this branch, run `npm ci` first. No environment file, API key, waitlist or design-service account is needed. Existing Google Fonts are loaded by the shared shell; offline/font-blocked captures can differ.
+Open http://127.0.0.1:4321/_lab/visual-design/ and use the existing language switch for Portuguese. Ctrl+C stops the server. The prepared checkout already has dependencies and Impeccable. In a fresh clone of this branch, run `Setup-Visual-Design-Lab.cmd` first; it runs `npm ci` if dependencies are absent and the pinned official Impeccable installer. The start launcher checks that port 4321 is free and refuses to silently create a second server. No environment file, API key, waitlist or design-service account is needed. Existing Google Fonts are loaded by the shared shell; offline/font-blocked captures can differ.
 
 ## Immediate edit, inspect and compare workflow
 
@@ -89,7 +95,7 @@ The local edit/build/browser workflow is tested here. The external tools below h
 | --- | --- | --- |
 | [Cursor Agent / Design Mode](https://cursor.com/docs/agent/design-mode) | Open the checkout, read the brief, run the Astro server and ask the agent to edit fixture TSX/CSS. Its browser annotation workflow supplies visual context to code edits. | Source editing by an agent, not a native `.astro` visual parser. Browser/annotation availability depends on the installed Cursor version. No Cursor integration was installed or tested here. |
 | [Claude Code with frontend-design](https://github.com/anthropics/claude-code/tree/main/plugins/frontend-design) | A source-editing agent can inspect Astro/TSX/CSS, apply its design guidance and use the existing terminal/browser checks. | The optional design skill provides guidance, not an Astro migration or guaranteed browser connection. No Claude plugin or account was configured here. |
-| [Codex with Impeccable](https://github.com/pbakaus/impeccable) | An optional local skill can guide critique and code edits against DESIGN.md. Its skill files and Windows launcher were smoke-tested as described below. | This is agent guidance plus optional tooling, not a required app dependency or a demonstrated full design session. |
+| [Codex with Impeccable](https://github.com/pbakaus/impeccable) | The official project-local skill, context files, diagnostics, detector and Windows hook commands were verified as described below. | Codex discovers the skill; automatic dispatch awaits project/hook trust. No redesign or optional Live Mode session was run. It adds no app runtime dependency. |
 | [v0 / React generators](https://v0.app/docs/faqs) | Request a self-contained React/TypeScript component and plain CSS, then adapt it into a fixture. | Review exports: remove Next-specific imports/server features, replace utility classes with scoped CSS/tokens, and use only approved installed dependencies. Generated code is input to implementation, not automatic compatibility. Do not replace the Astro app with an exported project. |
 | [pen.dev](https://www.pen.dev/) | Use screenshots, available code exports or visual specifications as references for an agent to implement in this fixture. | Its canvas/import/MCP features do not establish a direct Astro round trip. Export formats and any connectors must be evaluated separately; none were connected here. |
 | [Google Stitch](https://developers.googleblog.com/stitch-a-new-way-to-design-uis/) | Bring its exported frontend code or design images into a bounded fixture implementation. | Exported code needs review and adaptation to existing CSS, typography and Astro ownership. No automatic link to this site is configured. |
@@ -97,24 +103,79 @@ The local edit/build/browser workflow is tested here. The external tools below h
 
 Use the tools and accounts you already have. No subscription, paid request or proprietary design tool is necessary for the laboratory itself. The simplest path is an existing coding agent, local Astro server, browser and the committed screenshot helper.
 
-## Optional Impeccable setup
+## Impeccable installed for Codex
 
-A project-local manual copy of the official Codex skill is installed at `.agents/skills/impeccable/`, pinned to upstream commit `02523aec3e4c4580102d996d1b6a71fbe062e03f` (skill 4.8.0). The Windows launcher `impeccable.cmd --version` returned `4.8.0`. This verifies installation/launch, not an AI design session or browser Live Mode.
-
-The skill is ignored local tooling and will be carried into the renamed worktree. No global coding-agent configuration, automatic hook, submodule, site dependency or subscription was added. Its launcher may keep a verified engine cache in the user's normal Impeccable cache directory. Reload the coding tool; the installed skill is available on the next turn after discovery. For a first use, ask for a critique limited to the fixture, keeping this brief and the existing design authority. Do not let optional tool defaults redesign production or overwrite established guidance.
-
-For another clean clone, the [official manual-copy workflow](https://github.com/pbakaus/impeccable#installation) can be reproduced without adding an npm package:
+The official npm release is **4.8.0**, requiring Node >=18.19.0. This Windows worktree was verified with Node 22.23.2, npm 10.9.8 and Codex CLI `0.162.0-alpha.17.2`. The installer was actually run here:
 
 ```powershell
-git clone --filter=blob:none --no-checkout https://github.com/pbakaus/impeccable.git .tmp/impeccable-source
-git -C .tmp/impeccable-source checkout 02523aec3e4c4580102d996d1b6a71fbe062e03f
-if (Test-Path '.agents/skills/impeccable') { throw 'Review the existing skill; do not overwrite it.' }
-New-Item -ItemType Directory -Force .agents/skills | Out-Null
-Copy-Item -LiteralPath .tmp/impeccable-source/.agents/skills/impeccable -Destination .agents/skills/impeccable -Recurse
-& ./.agents/skills/impeccable/scripts/impeccable.cmd --version
+npx --yes impeccable@4.8.0 install --providers=codex --scope=project --yes
+& ./.agents/skills/impeccable/scripts/impeccable.cmd hooks on
+& ./.agents/skills/impeccable/scripts/impeccable.cmd doctor --json
 ```
 
-Reload the agent afterward. This manual method deliberately skips automatic hooks. The upstream installer is an alternative if hooks are later wanted; review its changes separately rather than modifying this site's package manifest. The skill can be omitted entirely: DESIGN.md, source editing and screenshot comparison remain useful.
+This replaces the previous manual-copy setup. Skill version `4.8.0` and engine release `0.1.18` are different labels used by upstream, not a version mismatch. The compiled skill/references/Windows launcher/checksums/data are tracked under `.agents/skills/impeccable/`, and the upstream license is retained at `.impeccable/LICENSE`. Platform binaries, local hook consent, caches, sessions and reports are ignored. `package.json` and the lockfile are unchanged. No global skill, subscription or API key was added. The installer also does not install Cursor support in this setup.
+
+The `init` and `document` commands are agent workflows, not claims that a terminal command generated prose automatically. Their installed playbooks were followed to create PRODUCT.md, merge the existing DESIGN.md with actual source and write the supported sidecar. Confirmed product purpose, archive/encyclopedia dual perspective, bilingual behavior, constraints and source ownership are recorded. Audience priority and the optional future mockup-first workflow default are deliberately undecided; neither is required to refine reading UI. Existing design guidance is retained and the original visual authority is unchanged.
+
+Codex's actual read-only `skills/list` API returned Impeccable with `scope: repo`, `enabled: true`, the correct worktree path and no skill errors. Doctor returned `findings: []` with the rule registry available. The Windows setup script was rerun successfully, proving installation is reproducible without a site dependency.
+
+Official references: [getting started](https://impeccable.style/tutorials/getting-started/), [hook setup](https://impeccable.style/docs/hooks/), [upstream source](https://github.com/pbakaus/impeccable), [Codex skill discovery](https://learn.chatgpt.com/docs/build-skills), [Codex hook trust](https://learn.chatgpt.com/docs/hooks).
+
+### Required Codex approval before automatic feedback
+
+1. Open **this exact folder** in Codex: `C:\Users\saike\.codex\worktrees\visual-design-lab\SiNE Archives REPO`. Accept the normal project-trust prompt if shown. The original authoring checkout is a separate, dirty workspace and is not the lab.
+2. Open **Settings → Hooks**, or enter **`/hooks`** in a Codex CLI launched from this folder.
+3. Review and trust Impeccable's **PostToolUse** and **Stop** definitions from this worktree's `.codex/hooks.json`. Changed definitions require review again. Do not disable trust checks or use a bypass option.
+4. Start a new turn and type `$impeccable` (or select it from `/skills` in the CLI). Codex detects skills automatically; restart Codex only if it does not appear.
+
+Impeccable reports its shared hook state as enabled. Both manifest command handlers were exercised directly with simulated Codex events, without modifying source. PostToolUse returned valid JSON feedback for TSX/CSS and an ordinary Astro path; TypeScript and JavaScript/module paths were recorded by the hook, with quiet success appropriate for non-UI code. `.astro`, `.css`, `.tsx`, `.ts` and `.js` are built in; `.mjs`, used by this repository, is added through the documented `detector.extensions` mechanism. Stop returned success. Commands use project-relative paths and Windows overrides and were verified in this folder containing spaces. They inspect source; they do not rewrite website components or start another server.
+
+**Automatic Codex dispatch is not yet verified or operating in this session.** The read-only `hooks/list` API returned no loaded project hooks before the project's trust review. We did not modify persisted project/hook trust. Direct handler success and Impeccable's enabled flag are not evidence that Codex has approved or dispatched them. Approval is an unavoidable user action under Codex's trust model.
+
+**Known upstream path limitation:** a simulated edit to `src/pages/[...lab]/visual-design.astro` was skipped by the handler even though an ordinary `.astro` path was scanned. The fixture's main TSX/CSS edit surface works. If the bracket-named route wrapper changes, run the explicit directory scan below; do not assume its edit hook ran. Shell-written changes may also fall outside the manifest's Edit/Write/apply_patch matcher. Use Codex's normal file-edit tools and inspect hook feedback.
+
+```powershell
+& ./.agents/skills/impeccable/scripts/impeccable.cmd hooks status
+& ./.agents/skills/impeccable/scripts/impeccable.cmd doctor --json
+npx --yes impeccable@4.8.0 detect src/ --json
+```
+
+Until approval, these manual scans provide the same mechanical detector. Hooks execute with the agent environment; the checksum-verifying launcher and user review are the controls, not a claim that the hook itself is sandboxed. Optional Impeccable Live Mode (browser injection and another helper server) is not enabled or tested: normal source editing, the Astro server, browser review and screenshots already work without changing production layouts or CSP.
+
+## First session in Codex
+
+Open the exact worktree folder above. Run `Start-Visual-Design-Lab.cmd` (or double-click it), then open **http://127.0.0.1:4321/_lab/visual-design/**. The Portuguese URL is **http://127.0.0.1:4321/pt-br/_lab/visual-design/**. Keep the terminal open; Ctrl+C stops the server. For the CLI alternative, run `codex` from this directory. No application settings were changed to repoint the original authoring project: opening this folder is the one workspace-selection step.
+
+Use `$impeccable` for its contextual menu, or the explicit subcommands below. These are Codex prompts, not PowerShell commands.
+
+**Example A — Design audit**
+
+```text
+$impeccable audit /_lab/visual-design/
+Inspect the existing visual-design laboratory. Read PRODUCT.md, DESIGN.md, docs/design-system.md and the fixture source. Identify weaknesses in hierarchy, spacing, typography, responsiveness and design-system consistency. Do not modify anything yet. Present the most meaningful improvements first. Separate genuine accessibility issues from intentional archive conventions and existing detector warnings. Keep production outside this audit's edit scope.
+```
+
+**Example B — Visual refinement**
+
+```text
+$impeccable polish /_lab/visual-design/
+Improve the laboratory's archive interface. Read PRODUCT.md, DESIGN.md, docs/design-system.md and src/components/experiments/visual-design/AGENTS.md. Preserve its existing content, functionality, English/Portuguese behavior and institutional aesthetic. Improve visual hierarchy, layout, typography and subtle motion only in ArchiveRecord.tsx and ArchiveRecord.css. Capture a baseline and candidate with scripts/visual-design-lab.mjs, inspect desktop and mobile sizes, fix detected issues within this scope and show what changed. Respect reduced motion and keyboard access. Run source/build/relevant tests and separate existing failures. Do not modify production components, canon, dependencies or deployment.
+```
+
+For a narrower task use `$impeccable typeset /_lab/visual-design/`, `$impeccable layout /_lab/visual-design/` or `$impeccable animate /_lab/visual-design/`, followed by the requested improvement and the same fixture-only scope. Read the rendered result at both sizes rather than accepting source edits alone. Retain native Astro ownership and the existing React island; artwork can be evaluated later using existing asset conventions.
+
+Review the Git diff, screenshot comparison, keyboard/locale/interactive states and detector feedback before asking the agent to commit. Automatic feedback becomes available only after the hook approval above and an actual supported edit. To discard an uncommitted attempt, inspect `git diff` first, then restore **only the two fixture files** if their changes are all unwanted; do not reset the whole worktree. For a committed attempt, use `git revert <that-iteration-commit>` on this branch. Preserve unrelated work. See the capture commands and discard guidance elsewhere in this guide.
+
+## Impeccable setup validation
+
+- **Installation:** official pinned installer and Windows setup launcher passed; skill 4.8.0 and engine 0.1.18 launch. Codex discovers the enabled repository skill without errors. Final doctor has zero findings; hooks status is enabled with no ignored rules/files/values. Codex automatic hook approval/dispatch remains pending as described above.
+- **No redesign:** website source, React integration, routes, CSS, content, translations, assets, runtime dependencies, lockfile and deployment remain unchanged by this setup. New files are local design tooling/context, metadata and launchers; `.gitignore` selectively tracks these while excluding machine state.
+- **Source/build:** `npm run check` passed (142 files; zero errors, warnings or hints); `npm run build` passed (295 pages and content guards).
+- **Browser regression:** all 8 lab tests passed in Chromium/WebKit on the freshly built preview (21.1 seconds). They cover 320/390/1440px, hydration, keyboard interactions, reduced-motion mode, locale switching and history return. Firefox and the full suite were not rerun; their existing failures below remain unresolved.
+- **Detectors:** `npx impeccable@4.8.0 detect src/ --json` completed, exit 2: 9 primary findings and 880 advisories in unchanged source. The targeted TSX/CSS/Astro lab scan completed with **zero findings**, exit 0, after its existing typography was accurately documented. No detector rule was suppressed and no component was redesigned to clear warnings.
+- **Rendered detector at 1440×1000:** 6 primary findings: two contrast issues and three undersized-text findings in existing shared logo/locale navigation, plus one heuristic eyebrow-label finding in the lab. At 390×844: 2 primary findings for existing 8px locale labels and one advisory for a single-word paragraph ending. Both URL scans completed with exit 2 (findings, not operational failure). The eyebrow/ruled-pane conventions are established archive patterns to review in context; contrast/small functional text deserves a separately scoped accessibility review.
+- **Source finding context:** six accent-side-border warnings reflect existing archival rules; one rounded accent warning is in the bespoke Redactory desk. Two static broken-image reports point to initially empty modal images populated by their controllers. The advisories largely flag page-family typography/colors/radii beyond the deliberately bounded shared snapshot. They are a baseline for review, not proof of regressions or permission to homogenize the site.
+- **Local evidence:** `.tmp/impeccable-setup/` contains doctor/discovery JSON, direct hook checks, detector results, source/build/test logs and capture logs; it is intentionally ignored. The first capture attempt encountered two Vite `504 Outdated Optimize Dep` requests while dev and build shared the dependency cache. The server was stopped, the build completed, and the launcher was used to start a fresh dev session before repeating captures. The repeated capture succeeded with 12 images and zero browser errors at `.tmp/visual-design-lab/captures/impeccable-ready/`. The comparison report is `.tmp/visual-design-lab/compare-final-development-impeccable-ready.html`. Ten images are byte-identical to the previous clean development capture; the Portuguese mobile image differs only in the persisted audio icon state, and the mobile Observatory reference differs in its variable background. Desktop/mobile and Portuguese lab images were visually inspected; no source or layout change was introduced.
 
 ## Validation and known failures
 
