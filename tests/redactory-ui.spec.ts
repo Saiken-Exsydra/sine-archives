@@ -1,5 +1,5 @@
 import { gotoReady } from "./helpers/navigation";
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Page } from "./helpers/test";
 
 const routes = [
   "/systems/redactory/",

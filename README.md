@@ -23,7 +23,20 @@ npm run test:characters
 npm test
 ```
 
-Build generates soundtrack metadata, checks locale partners and text encoding, validates archive references, then builds all routes. `npm test` runs the complete Playwright suite in Chromium, Firefox, and WebKit. Browser binaries must be installed for those engines (`npx playwright install` on a new test machine).
+Build generates soundtrack metadata, checks locale partners and text encoding, validates archive references, then builds all routes. `npm test` runs the complete Playwright suite in Chromium, Firefox, and WebKit. The serial matrix has a 45-minute overall budget; per-test and worker-shutdown timeouts are unchanged. Browser binaries must be installed for those engines (`npx playwright install` on a new test machine).
+
+If Windows rejects Firefox at startup with a `mozglue`/SideBySide error, install its official test build into the ignored project cache:
+
+```powershell
+$env:PLAYWRIGHT_BROWSERS_PATH = "$PWD\.impeccable\playwright-browsers"
+npx playwright install firefox
+Remove-Item Env:PLAYWRIGHT_BROWSERS_PATH
+npx playwright test --project=firefox
+```
+
+The test configuration automatically uses that copy on Windows when its revision matches the locked Playwright version. Other engines keep their normal cache. This does not change the default browser or an existing Firefox/Zen profile. See the [verification record](docs/animation-framework-verification.md) for the diagnosed host issue and results.
+
+Test files import `test` and `expect` from `tests/helpers/test.ts`. On Windows, its local WebKit fixture uses Playwright's public browser-server API to track the browser process. After that process exits, it removes only matching orphaned WebKit children and releases its own remaining pipes. This addresses a Windows WebKit shutdown hang without suppressing assertion failures, browser crashes, or cleanup errors. Chromium, Firefox, non-Windows hosts and externally connected browsers retain the standard fixture. Recheck this compatibility code when upgrading Playwright/WebKit.
 
 Individual integrity commands: `check:archive-refs`, `check:pt-br-fallbacks`, and `check:text-encoding`. `report:archive-refs` prints editorial candidates to stdout. `seed:pt-br-fallbacks`, `fix:text-encoding`, and `songs:update` write files: inspect their changes before committing.
 

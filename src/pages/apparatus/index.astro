@@ -383,7 +383,7 @@ const filingYear = (() => {
   }
   .reg-header__eyebrow {
     font-size: 9px; font-weight: 600; letter-spacing: 0.28em;
-    color: var(--crimson); text-transform: uppercase; margin-bottom: 10px;
+    color: var(--crimson-text); text-transform: uppercase; margin-bottom: 10px;
     animation: regFadeSlideUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.3s both;
   }
   .reg-header__title {
@@ -405,11 +405,11 @@ const filingYear = (() => {
   .reg-header__count-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 48px; font-weight: 700; line-height: 1;
-    color: rgba(232,228,220,0.1); letter-spacing: -0.02em;
+    color: var(--text-muted); letter-spacing: -0.02em;
   }
   .reg-header__access {
     font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(232,228,220,0.15);
+    color: var(--text-muted);
   }
   .reg-header__rule {
     width: 32px; height: 1px; background: var(--crimson);
@@ -434,30 +434,32 @@ const filingYear = (() => {
     background: none; border: none; border-bottom: 2px solid transparent;
     padding: 13px 18px 11px;
     font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-    color: rgba(232,228,220,0.28); white-space: nowrap;
+    color: var(--text-muted); white-space: nowrap;
     cursor: pointer;
     transition: color 0.2s, border-color 0.2s;
   }
-  .reg-filter-btn:hover { color: rgba(232,228,220,0.6); }
+  .reg-filter-btn:hover { color: var(--text-muted); }
   .reg-filter-btn.is-active { color: var(--text); border-bottom-color: var(--crimson); }
 
   .reg-search-wrap {
     display: flex; align-items: center; gap: 8px;
-    padding: 10px 0 10px 20px;
+    padding: 0 0 0 20px;
     border-left: 1px solid rgba(255,255,255,0.05);
     flex-shrink: 0;
   }
-  .reg-search-wrap svg { color: rgba(232,228,220,0.2); flex-shrink: 0; }
+  .reg-search-wrap svg { color: var(--text-muted); flex-shrink: 0; }
   .reg-search-input {
+    min-height: 44px;
     background: none; border: none; outline: none;
     color: var(--text); font-size: 12px; letter-spacing: 0.04em;
     width: 160px; caret-color: var(--crimson);
     font-family: inherit;
   }
   .reg-search-input::placeholder {
-    color: rgba(232,228,220,0.2); font-size: 10px;
+    color: var(--text-muted); font-size: 10px;
     letter-spacing: 0.12em; text-transform: uppercase;
   }
+  .reg-search-wrap:focus-within { outline: 2px solid var(--gold); outline-offset: -2px; }
 
   .reg-body { padding: 36px 48px 100px; }
   .reg-status-bar {
@@ -473,7 +475,7 @@ const filingYear = (() => {
   }
   .reg-status-stamp {
     font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(232,228,220,0.1);
+    color: var(--text-muted);
   }
 
   .reg-grid {
@@ -496,14 +498,14 @@ const filingYear = (() => {
     border-radius: 2px; overflow: hidden;
     text-decoration: none; color: inherit;
     transition: border-color 0.25s, transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s;
-    opacity: 0;
+    opacity: 1;
   }
   .reg-entry.is-visible {
-    animation: regFadeSlideUp 0.55s cubic-bezier(0.16,1,0.3,1) both;
+    animation: none;
   }
-  .reg-entry:hover {
+  .reg-entry:hover, .reg-entry:focus-visible {
     border-color: rgba(177,58,52,0.3);
-    transform: translateY(-5px);
+    transform: none;
     box-shadow: 0 20px 50px rgba(0,0,0,0.45);
   }
 
@@ -536,7 +538,7 @@ const filingYear = (() => {
   .reg-entry__catnum {
     position: absolute; top: 11px; left: 13px; z-index: 6;
     font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
-    color: rgba(232,228,220,0.55);
+    color: var(--text-muted);
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
   }
 
@@ -561,7 +563,7 @@ const filingYear = (() => {
     background: rgba(6,6,11,0.75);
     backdrop-filter: blur(8px);
     font-size: 8px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(232,228,220,0.55);
+    color: var(--text-muted);
   }
   .reg-entry__seal-dot {
     width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0;
@@ -579,7 +581,7 @@ const filingYear = (() => {
   }
   .reg-entry__type {
     font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--crimson); margin-bottom: 7px;
+    color: var(--crimson-text); margin-bottom: 7px;
   }
   .reg-entry__name {
     font-family: 'Cormorant Garamond', serif;
@@ -609,7 +611,7 @@ const filingYear = (() => {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
     font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(232,228,220,0.45);
+    color: var(--text-muted);
   }
   .reg-entry__updated {
     font-size: 10px; color: var(--text-dim); letter-spacing: 0.03em; white-space: nowrap;
@@ -641,8 +643,8 @@ const filingYear = (() => {
     }
     .reg-search-wrap {
       width: 100%;
-      min-height: 42px;
-      padding: 8px 12px;
+      min-height: 44px;
+      padding: 0 12px;
       border-left: none;
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 4px;
@@ -658,5 +660,11 @@ const filingYear = (() => {
       gap: 8px;
     }
     .reg-status-line { display: none; }
+  }
+</style>
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    .reg-root *, .reg-root *::before, .reg-root *::after { animation: none !important; transition: none !important; }
+    .reg-entry { opacity: 1; transform: none; }
   }
 </style>

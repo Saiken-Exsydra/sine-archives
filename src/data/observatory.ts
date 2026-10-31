@@ -1,7 +1,7 @@
 import { localizedPath, type SiteLocale } from '../i18n/config';
 
 /** Explanatory layer only. References point to the public editions of the controlling codices. */
-export type ObservatoryImage = { src: string; alt: string; caption?: string };
+export type ObservatoryImage = { src: string; alt: string; caption?: string; srcset?: string; sizes?: string; width?: number; height?: number };
 export type ObservatoryMotionProfile = 'branch' | 'echo' | 'interval' | 'thread' | 'unfold' | 'horizon';
 export type ObservatoryConcept = {
   id: string; label: string; summary: string; interaction: 'concept' | 'definition';

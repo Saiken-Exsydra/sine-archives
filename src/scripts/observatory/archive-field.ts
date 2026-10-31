@@ -43,34 +43,35 @@ export function createArchiveField(root: HTMLElement) {
   function draw(now: number) {
     frame = 0;
     if (document.hidden || !visible) return;
-    if (!motion.matches && now - last < 32) { request(); return; }
+    const still = motion.matches || root.dataset.engaged === 'true';
+    if (!still && now - last < 32) { request(); return; }
     const dt = Math.min(now - last, 50); last = now;
-    if (!motion.matches) time += dt;
-    const t = motion.matches ? 0 : time;
-    focusStrength += (wantedStrength - focusStrength) * (motion.matches ? 1 : .045);
+    if (!still) time += dt;
+    const t = still ? 0 : time;
+    focusStrength += (wantedStrength - focusStrength) * (still ? 1 : .045);
     waves = waves.filter(w => time - w.born < 1500);
-    if (!motion.matches && fine.matches && time - lastWave > 500 && Math.hypot(pointer.x - waveX, pointer.y - waveY) > 65 && pointer.x > 0) {
+    if (!still && fine.matches && time - lastWave > 500 && Math.hypot(pointer.x - waveX, pointer.y - waveY) > 65 && pointer.x > 0) {
       waves.push({ ...pointer, born: time }); waves = waves.slice(-3);
       lastWave = time; waveX = pointer.x; waveY = pointer.y;
     }
     context.clearRect(0, 0, width, height);
     context.fillStyle = ink; context.strokeStyle = ink;
     points.forEach(p => {
-      const near = motion.matches || !fine.matches || mobile() ? 0 : Math.max(0, 1 - Math.hypot(p.x - pointer.x, p.y - pointer.y) / 190);
+      const near = still || !fine.matches || mobile() ? 0 : Math.max(0, 1 - Math.hypot(p.x - pointer.x, p.y - pointer.y) / 190);
       let wave = 0;
-      if (!motion.matches) for (const w of waves) {
+      if (!still) for (const w of waves) {
         const age = (time - w.born) / 1500;
         wave += Math.max(0, 1 - Math.abs(Math.hypot(p.x - w.x, p.y - w.y) - age * 260) / 42) * (1 - age);
       }
       const tx = target.x * width, ty = target.y * height;
       const affinity = Math.max(0, 1 - Math.hypot(p.x - tx, p.y - ty) / (behavior ? 280 : 460)) * focusStrength;
-      p.light += ((near * .75 + wave * .3 + affinity * .32) - p.light) * (motion.matches ? 1 : .16);
+      p.light += ((near * .75 + wave * .3 + affinity * .32) - p.light) * (still ? 1 : .16);
       const coherent = behavior === 'coherence' || behavior === 'fusion';
       const phase = coherent ? p.group : p.phase;
       const travel = behavior === 'routes' ? 3 : behavior === 'roots' ? 8 : 5;
       const lateral = emphasis === 'reach' || emphasis === 'overreach' ? 10 : 0;
-      p.px = p.x + (motion.matches ? 0 : Math.cos(t * .00013 + phase) * (travel + wave * 1.5) + (pointer.x - p.x) * near * .025 + (tx - p.x) * affinity * .025 + lateral * affinity);
-      p.py = p.y + (motion.matches ? 0 : Math.sin(t * .0001 + phase) * 4 + (pointer.y - p.y) * near * .025 + (ty - p.y) * affinity * .025);
+      p.px = p.x + (still ? 0 : Math.cos(t * .00013 + phase) * (travel + wave * 1.5) + (pointer.x - p.x) * near * .025 + (tx - p.x) * affinity * .025 + lateral * affinity);
+      p.py = p.y + (still ? 0 : Math.sin(t * .0001 + phase) * 4 + (pointer.y - p.y) * near * .025 + (ty - p.y) * affinity * .025);
     });
     links.forEach(([ai, bi], index) => {
       const a = points[ai], b = points[bi];
@@ -88,7 +89,7 @@ export function createArchiveField(root: HTMLElement) {
       context.beginPath(); context.arc(p.px, p.py, p.group === 0 ? 1.5 : .8, 0, Math.PI * 2); context.fill();
     });
     context.globalAlpha = 1;
-    if (!motion.matches) request();
+    if (!still) request();
   }
   root.addEventListener('pointermove', e => { if (!motion.matches && e.pointerType !== 'touch' && fine.matches && !mobile()) pointer = { x: e.clientX, y: e.clientY }; }, { signal: abort.signal, passive: true });
   root.addEventListener('pointerleave', () => { pointer = { x: -9999, y: -9999 }; }, { signal: abort.signal });
@@ -98,6 +99,8 @@ export function createArchiveField(root: HTMLElement) {
   window.addEventListener('resize', resize, { signal: abort.signal });
   const observer = new IntersectionObserver(entries => { visible = entries.some(e => e.isIntersecting); if (visible) request(); else stop(); });
   observer.observe(root);
+  const stateObserver = new MutationObserver(request);
+  stateObserver.observe(root, { attributes: true, attributeFilter: ['data-engaged'] });
   resize();
   root.dataset.canvasLoops = '1';
   return {
@@ -107,6 +110,6 @@ export function createArchiveField(root: HTMLElement) {
       request();
     },
     emphasize(id: string) { emphasis = id; request(); },
-    destroy() { abort.abort(); observer.disconnect(); stop(); root.dataset.canvasLoops = '0'; },
+    destroy() { abort.abort(); observer.disconnect(); stateObserver.disconnect(); stop(); root.dataset.canvasLoops = '0'; },
   };
 }

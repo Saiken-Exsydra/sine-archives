@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './helpers/test';
 import { gotoReady } from './helpers/navigation';
 
 const map = '/systems/observatory/';
@@ -102,11 +102,16 @@ test('all six systems expose sourced concepts and the entrance settles unaided',
   }
 });
 
-for (const width of [320, 390, 768, 1440, 1920]) {
+for (const width of [320, 390, 768, 800, 1000, 1001, 1440, 1920]) {
   test(`responsive reduced-motion exploration at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 }); await page.emulateMedia({ reducedMotion: 'reduce' });
     await gotoReady(page, map);
     await page.locator(node('redactory')).click();
+    const overlaps = await page.locator('[data-system-node], [data-archive-node]').evaluateAll(elements => {
+      const boxes = elements.map(el => el.getBoundingClientRect());
+      return boxes.some((a, i) => boxes.slice(i + 1).some(b => Math.min(a.right, b.right) > Math.max(a.left, b.left) && Math.min(a.bottom, b.bottom) > Math.max(a.top, b.top)));
+    });
+    expect(overlaps).toBe(false);
     await page.locator('[data-concept-nodes] [data-concept-ref="anchor"]').click();
     await expect(page.locator('#observatory-page-title')).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
@@ -143,13 +148,14 @@ test('observation isolates sourced relationships and Archive answers across the 
   await page.locator(node('redactory')).focus();
   await expect(page.locator('[data-svg-connector="redactory"]')).toHaveCSS('opacity', '0.85');
   await expect(page.locator('[data-relationship-path="redactory-resonance"]')).toHaveCSS('opacity', '0.32');
-  await expect(page.locator(node('bloom'))).toHaveCSS('opacity', '0.32');
+  await expect(page.locator(`${node('bloom')} .observatory-node__mark`)).toHaveCSS('opacity', '0.32');
+  await expect(page.locator(node('bloom'))).toHaveCSS('opacity', '1');
   await page.locator('[data-archive-node]').focus();
   await expect(page.locator('[data-svg-connector].is-hovered')).toHaveCount(6);
   await expect(page.locator('[data-relation-pulses] path')).toHaveCount(6);
   await expect(page.locator('[data-relation-pulses] path')).toHaveCount(0);
   await page.locator('[data-follow-toggle]').focus();
-  await expect(page.locator(node('bloom'))).toHaveCSS('opacity', '1');
+  await expect(page.locator(`${node('bloom')} .observatory-node__mark`)).toHaveCSS('opacity', '0.86');
 });
 
 test('guided tracing, optional art and comparison keep their context', async ({ page }) => {
@@ -167,7 +173,8 @@ test('guided tracing, optional art and comparison keep their context', async ({ 
   await expect(page.locator('[data-comparison-plates] h2')).toHaveText(['Redactory', 'Resonance']);
   await expect(page.locator(node('redactory'))).toHaveCSS('opacity', '1');
   await expect(page.locator(node('resonance'))).toHaveCSS('opacity', '1');
-  await expect.poll(() => page.locator(node('bloom')).evaluate(el => Number(getComputedStyle(el).opacity))).toBeLessThan(.4);
+  await expect.poll(() => page.locator(`${node('bloom')} .observatory-node__mark`).evaluate(el => Number(getComputedStyle(el).opacity))).toBeLessThan(.4);
+  await expect(page.locator(node('bloom'))).toHaveCSS('opacity', '1');
   await page.locator(node('resonance')).click();
   await expect(page.locator('[data-comparison-plates] h2')).toHaveCount(1);
   await expect(page.locator('[data-relationship-detail]')).toBeEmpty();
@@ -194,4 +201,84 @@ test('reduced motion suppresses new travel and proximity while retaining relatio
   await page.locator('button[data-relationship="bloom-shores"]').focus();
   await page.keyboard.press('Enter');
   await expect(page.locator('[data-relationship-detail]')).toContainText('living connection to a Shore');
+});
+
+test('available system labels remain readable through observation and comparison', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await gotoReady(page, map + '#map');
+  const checkLabels = async () => {
+    const ratios = await page.locator('.observatory-node__label').evaluateAll(labels => {
+      const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
+      const ctx = canvas.getContext('2d')!;
+      const luminance = (rgb: number[]) => rgb.map(c => { c /= 255; return c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; }).reduce((sum, c, i) => sum + c * [.2126, .7152, .0722][i], 0);
+      return labels.map(label => {
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = getComputedStyle(label.closest('[data-observatory-root]')!).backgroundColor;
+        ctx.fillRect(0, 0, 1, 1);
+        const background = luminance([...ctx.getImageData(0, 0, 1, 1).data].slice(0, 3));
+        let opacity = 1;
+        for (let parent: Element | null = label; parent; parent = parent.parentElement) opacity *= Number(getComputedStyle(parent).opacity);
+        ctx.globalAlpha = opacity; ctx.fillStyle = getComputedStyle(label).color; ctx.fillRect(0, 0, 1, 1);
+        const foreground = luminance([...ctx.getImageData(0, 0, 1, 1).data].slice(0, 3));
+        return (Math.max(foreground, background) + .05) / (Math.min(foreground, background) + .05);
+      });
+    });
+    expect(Math.min(...ratios)).toBeGreaterThanOrEqual(4.5);
+  };
+  await checkLabels();
+  await page.locator(node('redactory')).focus(); await checkLabels();
+  await page.keyboard.press('Enter'); await checkLabels();
+  await page.locator('[data-compare-toggle]').click();
+  await page.locator(node('redactory')).click(); await checkLabels();
+  await page.locator(node('resonance')).click(); await checkLabels();
+});
+
+test('enlarged definitions stay inside the viewport with keyboard-reachable controls', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await gotoReady(page, map + '#redactory/anchor');
+  await page.evaluate(() => {
+    const sizes = [...document.querySelectorAll<HTMLElement>('body *')].map(el => [el, getComputedStyle(el).fontSize] as const);
+    sizes.forEach(([el, size]) => { el.style.fontSize = `${parseFloat(size) * 2}px`; });
+  });
+  await page.locator('[data-definition-id="point"]').click();
+  const definition = page.locator('[data-definition]');
+  const box = (await definition.boundingBox())!;
+  expect(box.y).toBeGreaterThanOrEqual(16); expect(box.y + box.height).toBeLessThanOrEqual(552);
+  expect(await definition.evaluate(el => el.scrollHeight > el.clientHeight)).toBe(true);
+  await expect(page.locator('#observatory-definition-title')).toBeFocused();
+  // Native WebKit settings skip links in the tab sequence; Chromium includes them.
+  for (let step = 0; step < 3 && !(await page.locator('[data-definition-close]').evaluate(el => el === document.activeElement)); step++) {
+    await page.keyboard.press('Tab');
+  }
+  await expect(page.locator('[data-definition-close]')).toBeFocused();
+  await expect(page.locator('[data-definition-close]')).toBeInViewport();
+  await page.setViewportSize({ width: 568, height: 320 });
+  await expect.poll(async () => { const r = (await definition.boundingBox())!; return r.y + r.height; }).toBeLessThanOrEqual(304);
+  await page.keyboard.press('Escape');
+  await expect(page.locator('[data-definition-id="point"]')).toBeFocused();
+});
+
+test('Redactory reading art uses responsive generated assets', async ({ page }) => {
+  await gotoReady(page, map + '#redactory');
+  const image = page.locator('.observatory-image img');
+  await expect(image).toHaveAttribute('srcset', /320w.*640w.*960w/);
+  await image.scrollIntoViewIfNeeded();
+  await expect.poll(() => image.evaluate((el: HTMLImageElement) => el.complete && el.naturalWidth > 0)).toBe(true);
+  expect(await image.evaluate((el: HTMLImageElement) => el.currentSrc)).toMatch(/\/_astro\/.*\.webp/);
+  const dimensions = await image.evaluate((el: HTMLImageElement) => ({ width: el.width, height: el.height }));
+  expect(dimensions.width).toBeGreaterThan(0); expect(dimensions.height).toBeGreaterThan(0);
+});
+
+test('compact entry navigation keeps breadcrumbs clear of player and locale controls', async ({ page }) => {
+  await page.setViewportSize({ width: 800, height: 900 });
+  for (const locale of ['', '/pt-br']) {
+    await gotoReady(page, `${locale}/systems/redactorysystem/`);
+    const overlap = await page.locator('.nav a, .nav button').evaluateAll(elements => {
+      const boxes = elements.filter(el => (el as HTMLElement).checkVisibility()).map(el => el.getBoundingClientRect());
+      return boxes.some((a, i) => boxes.slice(i + 1).some(b => Math.min(a.right, b.right) - Math.max(a.left, b.left) > 1 && Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 1));
+    });
+    expect(overlap).toBe(false);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(800);
+  }
 });

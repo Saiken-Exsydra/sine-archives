@@ -37,6 +37,10 @@ export function initObservatory() {
   function imagePlate(media: ObservatoryImage) {
     const figure = document.createElement('figure'); figure.className = 'observatory-image';
     const image = document.createElement('img'); image.src = media.src; image.alt = media.alt;
+    if (media.srcset) image.srcset = media.srcset;
+    if (media.sizes) image.sizes = media.sizes;
+    if (media.width) image.width = media.width;
+    if (media.height) image.height = media.height;
     image.loading = 'lazy'; image.decoding = 'async'; figure.append(image);
     if (media.caption) { const caption = document.createElement('figcaption'); caption.textContent = media.caption; figure.append(caption); }
     return figure;
@@ -75,24 +79,30 @@ export function initObservatory() {
     guide.hidden = mode !== 'follow'; guide.textContent = selected ? data.ui.followNext : data.ui.followPrompt;
   }
   function updateTether() {
+    const updates: { node: Element; name: string; value: string }[] = [];
     root.querySelectorAll<HTMLElement>('[data-concept-nodes]').forEach(container => {
       const svg = container.querySelector('svg'); if (!svg) return;
       const rect = container.getBoundingClientRect();
-      svg.setAttribute('viewBox', ` 0 0 ${rect.width} ${rect.height}`);
+      updates.push({ node: svg, name: 'viewBox', value: `0 0 ${rect.width} ${rect.height}` });
       const nodes = container.querySelectorAll<HTMLElement>('.observatory-concept');
       svg.querySelectorAll('path').forEach((path, index) => {
         const node = nodes[index]?.getBoundingClientRect(); if (!node) return;
         const x = node.x + node.width / 2 - rect.x, y = node.y - rect.y - 3;
-        path.setAttribute('d', `M${rect.width / 2} 0 Q${x} 8 ${x} ${y}`);
+        updates.push({ node: path, name: 'd', value: `M${rect.width / 2} 0 Q${x} 8 ${x} ${y}` });
       });
     });
     const tether = root.querySelector('[data-page-tether]')!;
     const node = selected ? nodeFor(selected) : root.querySelector<HTMLElement>('[data-archive-node]');
-    if (page.hidden || mode === 'compare' || !node || innerWidth <= 720) { tether.setAttribute('d', ''); return; }
-    const a = node.getBoundingClientRect(), b = page.getBoundingClientRect(), base = stage.getBoundingClientRect();
-    const x = a.x + a.width / 2 - base.x, y = a.y + a.height / 2 - base.y;
-    const endX = b.x - base.x, endY = b.y - base.y;
-    tether.setAttribute('d', `M${x} ${y} C${x + 100} ${y},${endX - 80} ${endY},${endX} ${endY}`);
+    let tetherPath = '';
+    if (!page.hidden && mode !== 'compare' && node && innerWidth > 1000) {
+      const a = node.getBoundingClientRect(), b = page.getBoundingClientRect(), base = stage.getBoundingClientRect();
+      const x = a.x + a.width / 2 - base.x, y = a.y + a.height / 2 - base.y;
+      const endX = b.x - base.x, endY = b.y - base.y;
+      tetherPath = `M${x} ${y} C${x + 100} ${y},${endX - 80} ${endY},${endX} ${endY}`;
+    }
+    updates.push({ node: tether, name: 'd', value: tetherPath });
+    // Read all geometry before touching SVG; unchanged attributes need no write.
+    updates.forEach(({ node, name, value }) => { if (node.getAttribute(name) !== value) node.setAttribute(name, value); });
   }
   function conceptHref(system: string, c: ObservatoryConcept) {
     return `#${system}/${c.parent ? `${c.parent}/` : ''}${c.id}`;
@@ -101,6 +111,17 @@ export function initObservatory() {
     if (popover.matches(':popover-open')) popover.hidePopover();
     popoverOpener?.setAttribute('aria-expanded', 'false');
     if (restore && popoverOpener?.isConnected) popoverOpener.focus({ preventScroll: true });
+  }
+  function positionDefinition() {
+    if (!popover.matches(':popover-open') || !popoverOpener?.isConnected) return;
+    const viewport = window.visualViewport;
+    const left = viewport?.offsetLeft || 0, top = viewport?.offsetTop || 0;
+    const width = viewport?.width || innerWidth, height = viewport?.height || innerHeight;
+    popover.style.maxWidth = `${Math.max(0, width - 32)}px`;
+    popover.style.maxHeight = `${Math.max(0, height - 32)}px`;
+    const rect = popoverOpener.getBoundingClientRect();
+    popover.style.left = `${Math.max(left + 16, Math.min(rect.left, left + width - popover.offsetWidth - 16))}px`;
+    popover.style.top = `${Math.max(top + 16, Math.min(rect.bottom + 12, top + height - popover.offsetHeight - 16))}px`;
   }
   function emphasize(id = '') {
     root.dataset.emphasis = id;
@@ -180,7 +201,7 @@ export function initObservatory() {
     syncGraph(true); updateTether();
     if (hadOrigin || previous) {
       if (page.hidden) nodeFor(previous)?.focus({ preventScroll: true });
-      else body.querySelector<HTMLElement>('h2')?.focus({ preventScroll: innerWidth > 720 });
+      else body.querySelector<HTMLElement>('h2')?.focus({ preventScroll: innerWidth > 1000 });
     }
     origin = undefined;
   }
@@ -197,7 +218,7 @@ export function initObservatory() {
     stage.dataset.comparing = String(mode === 'compare');
     page.hidden = mode === 'compare' || current === 'map';
     root.querySelectorAll('[data-relationship-edge]').forEach(el => {
-      const interactive = mode === 'relationships' && innerWidth > 720;
+      const interactive = mode === 'relationships' && innerWidth > 1000;
       el.setAttribute('tabindex', interactive ? '0' : '-1'); el.setAttribute('aria-hidden', String(!interactive));
     });
     root.querySelector('[data-follow-toggle]')!.setAttribute('aria-pressed', String(mode === 'follow'));
@@ -210,7 +231,7 @@ export function initObservatory() {
       if (mode === 'compare') { el.setAttribute('role', 'button'); el.setAttribute('aria-pressed', 'false'); }
       else { el.removeAttribute('role'); el.removeAttribute('aria-pressed'); }
     });
-    if (mode === 'relationships' && innerWidth <= 720) relationPanel.querySelector<HTMLButtonElement>('button')?.focus();
+    if (mode === 'relationships' && innerWidth <= 1000) relationPanel.querySelector<HTMLButtonElement>('button')?.focus();
     motion.transition(undefined, undefined, false, updateTether);
     if (closing) root.querySelector<HTMLButtonElement>(next === 'relationships' ? '[data-relationships-toggle]' : next === 'follow' ? '[data-follow-toggle]' : '[data-compare-toggle]')?.focus({ preventScroll: true });
   }
@@ -225,7 +246,7 @@ export function initObservatory() {
     root.querySelectorAll('[data-relationship-path]').forEach(el => el.classList.toggle('is-selected', el.getAttribute('data-relationship-path') === id));
     root.querySelectorAll('[data-relationship]').forEach(el => el.setAttribute('aria-pressed', String(el.getAttribute('data-relationship') === id)));
     syncGraph(true);
-    if (mode === 'compare' && innerWidth <= 720) relationDetail.scrollIntoView({ block: 'nearest' });
+    if (mode === 'compare' && innerWidth <= 1000) relationDetail.scrollIntoView({ block: 'nearest' });
   }
   root.addEventListener('click', event => {
     if (!(event.target instanceof Element)) return;
@@ -244,10 +265,8 @@ export function initObservatory() {
       popover.querySelector('[data-definition-body]')!.textContent = c.summary;
       popover.querySelector<HTMLAnchorElement>('[data-definition-source]')!.href = c.source;
       popover.showPopover();
-      const rect = target.getBoundingClientRect();
-      popover.style.left = `${Math.max(16, Math.min(rect.left, innerWidth - popover.offsetWidth - 16))}px`;
-      popover.style.top = `${Math.max(16, Math.min(rect.bottom + 12, innerHeight - popover.offsetHeight - 16))}px`;
-      popover.querySelector<HTMLButtonElement>('button')!.focus({ preventScroll: true }); emphasize(c.id); return;
+      popover.scrollTop = 0; positionDefinition();
+      popover.querySelector<HTMLHeadingElement>('h3')!.focus({ preventScroll: true }); emphasize(c.id); return;
     }
     if (!target.matches('[data-observatory-link]') || !(target instanceof HTMLAnchorElement) || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault(); motion.finishEntrance();
@@ -322,14 +341,18 @@ export function initObservatory() {
   document.addEventListener('pointerdown', motion.finishEntrance, { signal, capture: true });
   document.addEventListener('sine:observatory-state', render, { signal });
   window.addEventListener('popstate', render, { signal }); window.addEventListener('hashchange', render, { signal });
+  window.addEventListener('resize', positionDefinition, { signal });
+  window.visualViewport?.addEventListener('resize', positionDefinition, { signal });
+  window.visualViewport?.addEventListener('scroll', positionDefinition, { signal });
+  const definitionGeometry = new ResizeObserver(positionDefinition); definitionGeometry.observe(popover);
   matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', motion.stopMotion, { signal });
   const geometry = new ResizeObserver(() => {
     updateTether();
     root.querySelectorAll('[data-relationship-edge]').forEach(el => {
-      const interactive = mode === 'relationships' && innerWidth > 720;
+      const interactive = mode === 'relationships' && innerWidth > 1000;
       el.setAttribute('tabindex', interactive ? '0' : '-1'); el.setAttribute('aria-hidden', String(!interactive));
     });
   }); geometry.observe(stage); geometry.observe(page);
   render(); root.dataset.controller = 'ready';
-  return () => { abort.abort(); geometry.disconnect(); closeDefinition(); field.destroy(); motion.destroy(); root.dataset.controller = 'stopped'; };
+  return () => { abort.abort(); geometry.disconnect(); definitionGeometry.disconnect(); closeDefinition(); field.destroy(); motion.destroy(); root.dataset.controller = 'stopped'; };
 }

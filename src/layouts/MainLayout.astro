@@ -96,9 +96,11 @@ const showNavTrail = resolvedNavTrail.length > 0;
               class={`nav__locale-pill${targetLocale === siteLocale ? " is-active" : ""}`}
               href={localizeCurrentPath(currentPath, targetLocale)}
               hreflang={getHtmlLang(targetLocale)}
+              aria-label={`${LOCALE_LABELS[targetLocale]} (${targetLocale === 'en' ? 'EN' : 'PT-BR'})`}
               aria-current={targetLocale === siteLocale ? "page" : undefined}
             >
-              {LOCALE_LABELS[targetLocale]}
+              <span class="nav__locale-label">{LOCALE_LABELS[targetLocale]}</span>
+              <span class="nav__locale-short" aria-hidden="true">{targetLocale === 'en' ? 'EN' : 'PT-BR'}</span>
             </a>
           ))}
         </div>
@@ -239,10 +241,10 @@ const showNavTrail = resolvedNavTrail.length > 0;
 
   .nav__logo-text {
     font-family: "DM Sans", sans-serif;
-    font-size: 10px;
+    font-size: .6875rem;
     font-weight: 600;
     letter-spacing: 0.22em;
-    color: rgba(232, 228, 220, 0.45);
+    color: var(--text-muted);
     text-transform: uppercase;
   }
 
@@ -252,7 +254,7 @@ const showNavTrail = resolvedNavTrail.length > 0;
     justify-content: center;
     width: 38px;
     height: 38px;
-    color: rgba(232, 228, 220, 0.5);
+    color: var(--text-muted);
     text-decoration: none;
     background: transparent;
     border: 0;
@@ -300,7 +302,7 @@ const showNavTrail = resolvedNavTrail.length > 0;
   }
 
   .nav__crumb-link {
-    color: rgba(232, 228, 220, 0.48);
+    color: var(--text-muted);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -316,7 +318,7 @@ const showNavTrail = resolvedNavTrail.length > 0;
   }
 
   .nav__crumb-cur {
-    color: rgba(232, 228, 220, 0.3);
+    color: var(--text);
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -335,14 +337,14 @@ const showNavTrail = resolvedNavTrail.length > 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 26px;
+    min-height: 32px;
     padding: 0 10px;
     font-family: "DM Sans", sans-serif;
-    font-size: 9px;
+    font-size: .6875rem;
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.42);
+    color: color-mix(in srgb, var(--text) 65%, transparent);
     text-decoration: none;
     border-radius: 999px;
     transition: color 0.2s, background 0.2s;
@@ -351,6 +353,8 @@ const showNavTrail = resolvedNavTrail.length > 0;
   .nav__locale-pill:hover {
     color: rgba(232, 228, 220, 0.9);
   }
+
+  .nav__locale-short { display: none; }
 
   .nav__locale-pill.is-active {
     color: rgba(232, 228, 220, 0.96);
@@ -378,14 +382,14 @@ const showNavTrail = resolvedNavTrail.length > 0;
 
   .footer__text {
     font-family: "DM Sans", sans-serif;
-    font-size: 10px;
+    font-size: .6875rem;
     letter-spacing: 0.18em;
-    color: rgba(232, 228, 220, 0.15);
+    color: var(--text-muted);
     text-transform: uppercase;
     text-align: center;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .nav {
       padding: env(safe-area-inset-top) max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
     }
@@ -404,9 +408,13 @@ const showNavTrail = resolvedNavTrail.length > 0;
 
     .nav__locale-pill {
       padding: 0 8px;
-      font-size: 8px;
+      min-width: 44px;
+      min-height: 44px;
       letter-spacing: 0.12em;
     }
+
+    .nav__locale-label { display: none; }
+    .nav__locale-short { display: inline; }
 
     .nav__actions {
       gap: 6px;

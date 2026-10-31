@@ -179,7 +179,7 @@
 }
 
 .mermaid-diagram__viewport > .mermaid-diagram__source-pre {
-  color: rgba(232, 228, 220, 0.62) !important;
+  color: var(--text-muted) !important;
   font-size: 0.82rem;
   line-height: 1.65;
 }
@@ -203,7 +203,7 @@
   max-width: 68ch;
   padding: 0.85rem 1rem;
   border: 1px solid rgba(177, 58, 52, 0.35);
-  border-left: 2px solid rgba(177, 58, 52, 0.72);
+  border-left: 1px solid rgba(177, 58, 52, 0.72);
   border-radius: 6px;
   background: rgba(177, 58, 52, 0.08);
   color: rgba(232, 228, 220, 0.76);

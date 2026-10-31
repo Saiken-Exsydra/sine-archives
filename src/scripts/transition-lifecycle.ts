@@ -34,8 +34,6 @@ type SearchIntent = {
   type: "search";
   fromPath: string;
   href: string;
-  x: number;
-  y: number;
 };
 
 type ObservatoryHandleIntent = {
@@ -113,6 +111,10 @@ declare global {
 const DEBUG_PREFIX = "[sine-transitions]";
 const HANDLE_INTENT_CLEAR_DELAY = 950;
 const OBSERVATORY_SYMBOL_RESET_DELAY = 1100;
+let activeViewTransition: ViewTransition | undefined;
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const navigationContexts = new WeakMap<AbortSignal, { navigationId: number; intent: TransitionIntent | null }>();
+let styleFlightId = 0;
 const STATE_CLASSES = [
   "is-preparing-transition",
   "is-swap-pending",
@@ -191,8 +193,6 @@ function clearTransitionIntent(doc: Document = document) {
   root.removeAttribute("data-observatory-system");
   root.removeAttribute("data-search-handle-transition");
   root.removeAttribute("data-character-dossier-transition");
-  root.style.removeProperty("--search-vt-x");
-  root.style.removeProperty("--search-vt-y");
 }
 
 function applyTransitionIntent(doc: Document, intent: TransitionIntent | null) {
@@ -201,11 +201,7 @@ function applyTransitionIntent(doc: Document, intent: TransitionIntent | null) {
 
   const root = doc.documentElement;
   root.dataset.transitionIntent = intent.type;
-  if (intent.type === "search") {
-    root.style.setProperty("--search-vt-x", `${intent.x}px`);
-    root.style.setProperty("--search-vt-y", `${intent.y}px`);
-    return;
-  }
+  if (intent.type === 'search') return;
   if (intent.type === "observatory-handle") {
     root.dataset.observatoryTransition = intent.direction;
     return;
@@ -359,13 +355,10 @@ function getSearchHandleTriggerLink(target: EventTarget | null) {
 }
 
 function buildSearchIntentFromLink(link: HTMLAnchorElement): SearchIntent {
-  const rect = link.getBoundingClientRect();
   return {
     type: "search",
     fromPath: location.pathname,
     href: link.href,
-    x: rect.left + rect.width / 2,
-    y: rect.top + rect.height / 2,
   };
 }
 
@@ -417,54 +410,7 @@ function prepareObservatorySystemSymbol(link: HTMLAnchorElement) {
 }
 
 function prefersReducedMotion() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
-function getRevealRadius(x: number, y: number) {
-  const topLeft = Math.hypot(x, y);
-  const topRight = Math.hypot(window.innerWidth - x, y);
-  const bottomLeft = Math.hypot(x, window.innerHeight - y);
-  const bottomRight = Math.hypot(window.innerWidth - x, window.innerHeight - y);
-
-  return Math.max(topLeft, topRight, bottomLeft, bottomRight) + 80;
-}
-
-function animateSearchReveal(intent: SearchIntent) {
-  const styles = getComputedStyle(document.documentElement);
-  const duration = parseFloat(styles.getPropertyValue("--search-vt-duration")) || 1050;
-  const easing = styles.getPropertyValue("--search-vt-ease").trim() || "ease-out";
-  const radius = getRevealRadius(intent.x, intent.y);
-  const origin = `${intent.x}px ${intent.y}px`;
-
-  document.documentElement.animate(
-    {
-      clipPath: [
-        `circle(0px at ${origin})`,
-        `circle(${radius * 0.42}px at ${origin})`,
-        `circle(${radius}px at ${origin})`,
-      ],
-      opacity: [0.86, 1, 1],
-    },
-    {
-      duration,
-      easing,
-      fill: "both",
-      pseudoElement: "::view-transition-new(root)",
-    },
-  );
-
-  document.documentElement.animate(
-    {
-      opacity: [1, 0.62, 0.18],
-      transform: ["scale(1)", "scale(0.995)", "scale(0.985)"],
-    },
-    {
-      duration,
-      easing,
-      fill: "both",
-      pseudoElement: "::view-transition-old(root)",
-    },
-  );
+  return motionPreference.matches;
 }
 
 function pendingIntentMatches(intent: TransitionIntent | null, destination: URL) {
@@ -616,6 +562,7 @@ function handleBeforePreparation(event: Event) {
   state.navigationId += 1;
   state.isPageReady = false;
   state.activeIntent = resolveNavigationIntent(event);
+  navigationContexts.set(event.signal, { navigationId: state.navigationId, intent: state.activeIntent });
   state.pendingIntent = null;
   state.lastIntent = state.activeIntent;
   state.lastNavigation = {
@@ -643,10 +590,37 @@ function handleAfterPreparation() {
 
 function handleBeforeSwap(event: Event) {
   if (!isTransitionBeforeSwapEvent(event)) return;
+  // Astro awaits these existing preloads during preparation. A superseded swap
+  // must not detach the newer navigation's link before its load/error fires.
+  if (event.signal.aborted) {
+    document.head.querySelectorAll<HTMLLinkElement>('link[rel="preload"][as="style"]').forEach(link => {
+      const attribute = 'data-astro-transition-persist';
+      const id = link.getAttribute(attribute) || `sine-style-flight-${++styleFlightId}`;
+      link.setAttribute(attribute, id);
+      if (!event.newDocument.head.querySelector(`[${attribute}="${CSS.escape(id)}"]`)) {
+        const placeholder = event.newDocument.createElement('meta');
+        placeholder.setAttribute(attribute, id);
+        event.newDocument.head.append(placeholder);
+      }
+    });
+  }
+  activeViewTransition = event.viewTransition;
+  if (prefersReducedMotion()) activeViewTransition.skipTransition();
+  const transition = activeViewTransition;
+  const context = navigationContexts.get(event.signal);
+  const transitionNavigationId = context?.navigationId ?? getRuntimeState().navigationId;
+  // A deliberate skip rejects native `ready`; consume that expected abort while
+  // retaining diagnostics for failures such as duplicate snapshot names.
+  void transition.ready.catch(error => {
+    if (error?.name === 'AbortError' || error?.name === 'TimeoutError') {
+      logTransitionEvent('view-transition-canceled', { navigationId: transitionNavigationId });
+    } else console.error(DEBUG_PREFIX, 'transition snapshot failed', error);
+  });
+  const clearActiveTransition = () => { if (activeViewTransition === transition) activeViewTransition = undefined; };
+  void transition.finished.then(clearActiveTransition, clearActiveTransition);
 
-  const state = getRuntimeState();
-  const activeIntent = state.activeIntent;
-  const navigationId = state.navigationId;
+  const activeIntent = context?.intent ?? null;
+  const navigationId = transitionNavigationId;
   const clearCurrentIntent = () => {
     if (getRuntimeState().navigationId === navigationId) clearTransitionIntent(document);
   };
@@ -659,10 +633,6 @@ function handleBeforeSwap(event: Event) {
     const clearSearchIntent = clearCurrentIntent;
     void event.viewTransition.finished.then(clearSearchIntent, clearSearchIntent);
 
-    event.viewTransition.ready.then(() => {
-      if (prefersReducedMotion() || getRuntimeState().navigationId !== navigationId) return;
-      animateSearchReveal(activeIntent);
-    }).catch(clearCurrentIntent);
   } else if (
     activeIntent?.type === "observatory-handle"
     || activeIntent?.type === "search-handle"
@@ -674,7 +644,7 @@ function handleBeforeSwap(event: Event) {
     window.setTimeout(clearHandleIntent, HANDLE_INTENT_CLEAR_DELAY);
   }
 
-  logTransitionEvent("astro:before-swap");
+  logTransitionEvent("astro:before-swap", { navigationId, from: event.from.pathname, to: event.to.pathname });
 }
 
 function handleAfterSwap() {
@@ -783,6 +753,10 @@ function installLifecycle() {
   window.registerPageInit = registerPageInit;
   flushPendingRegistrations();
   installSearchIntentCapture();
+  motionPreference.addEventListener('change', () => {
+    if (!prefersReducedMotion()) return;
+    activeViewTransition?.skipTransition();
+  });
 
   document.addEventListener("astro:before-preparation", handleBeforePreparation);
   document.addEventListener("astro:after-preparation", handleAfterPreparation);

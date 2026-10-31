@@ -44,7 +44,7 @@ export function createObservatoryMotion(root: HTMLElement) {
   // Relational: one finite, interruptible family of path highlights per intent.
   const pulse = (paths: SVGPathElement[], outward = true) => {
     clearPulse();
-    if (reduced.matches || innerWidth <= 720) return;
+    if (reduced.matches || innerWidth <= 1000) return;
     pulseContext = gsap.context(() => {
       travel = gsap.timeline({ onComplete: () => pulses.replaceChildren() });
       paths.slice(0, 6).forEach((path, index) => {
@@ -111,6 +111,7 @@ export function createObservatoryMotion(root: HTMLElement) {
       .to(nodes, { opacity: 1, duration: .35, stagger: .1 }, 2.4)
       .to(hero, { opacity: 1, duration: .4 }, 3)
       .set(connectors, { clearProps: 'strokeDasharray,strokeDashoffset' }).set(nodes, { clearProps: 'opacity' });
+    entrance.timeScale(4.5);
   });
   return {
     finishEntrance, pulse, react,
@@ -152,11 +153,15 @@ export function createObservatoryMotion(root: HTMLElement) {
         if (path) {
           const point = root.querySelector('[data-travel-point]');
           const progress = { value: backwards ? 1 : 0 };
+          const length = path.getTotalLength();
+          const samples = Array.from({ length: 65 }, (_, index) => path.getPointAtLength(length * index / 64));
           gsap.set(point, { opacity: 1 });
           focus.fromTo(path, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 1 }, { strokeDashoffset: 0, duration: .35 })
             .to(progress, { value: backwards ? 0 : 1, duration: .45, ease: 'power2.inOut', onUpdate() {
-              const p = path.getPointAtLength(path.getTotalLength() * progress.value);
-              gsap.set(point, { attr: { cx: p.x, cy: p.y } });
+              const position = Math.max(0, Math.min(64, progress.value * 64));
+              const index = Math.min(63, Math.floor(position)), blend = position - index;
+              const a = samples[index], b = samples[index + 1];
+              gsap.set(point, { attr: { cx: a.x + (b.x - a.x) * blend, cy: a.y + (b.y - a.y) * blend } });
             } }, .1).set(point, { opacity: 0 }).set(path, { clearProps: 'strokeDasharray,strokeDashoffset,opacity' });
         }
         const nextBox = aperture!.getBoundingClientRect();
@@ -172,9 +177,7 @@ export function createObservatoryMotion(root: HTMLElement) {
             onComplete: () => gsap.set(fixedSymbols, { clearProps: 'transform' }) }, 0);
         keepSilhouettes();
         previousAperture = undefined;
-        const concepts = page.querySelectorAll('.observatory-concept');
-        if (concepts.length) focus.fromTo(concepts, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .45, stagger: .07, clearProps: 'transform,opacity' }, .4);
-        if (!page.hidden) focus.fromTo(page, { scale: .94, opacity: 0, y: backwards ? -8 : 12 }, { scale: 1, opacity: 1, y: 0, duration: .5, ease: 'power3.out', clearProps: 'transform,opacity' }, path ? .4 : .2);
+        if (!page.hidden) focus.fromTo(page, { scale: .985, opacity: .72, y: backwards ? -4 : 4 }, { scale: 1, opacity: 1, y: 0, duration: .4, ease: 'power3.out', clearProps: 'transform,opacity' }, .25);
       });
     },
     stopMotion() {

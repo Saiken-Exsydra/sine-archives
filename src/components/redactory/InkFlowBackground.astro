@@ -136,10 +136,8 @@ const noiseAsset = hasRedactoryAsset(redactoryAssets.inkNoise) ? redactoryAssets
     width: 72vw;
     height: 72vw;
     border-radius: 45% 55% 62% 38%;
-    filter: blur(70px);
     opacity: var(--depth-blue-wash, 0.12);
     mix-blend-mode: screen;
-    animation: inkDrift 24s ease-in-out infinite alternate;
   }
 
   .ink-flow__wash--one {
@@ -153,8 +151,6 @@ const noiseAsset = hasRedactoryAsset(redactoryAssets.inkNoise) ? redactoryAssets
     top: 28vh;
     background: radial-gradient(circle, rgba(140, 39, 42, 0.18), transparent 66%);
     opacity: var(--depth-red-wash, 0.08);
-    animation-delay: -8s;
-    animation-duration: 31s;
   }
 
   .ink-flow__wash--three {
@@ -162,8 +158,6 @@ const noiseAsset = hasRedactoryAsset(redactoryAssets.inkNoise) ? redactoryAssets
     bottom: -45vw;
     background: radial-gradient(circle, rgba(61, 77, 119, 0.22), transparent 65%);
     opacity: calc(var(--depth-blue-wash, 0.12) * 0.65);
-    animation-delay: -15s;
-    animation-duration: 36s;
   }
 
   .ink-flow__canvas,
@@ -192,11 +186,6 @@ const noiseAsset = hasRedactoryAsset(redactoryAssets.inkNoise) ? redactoryAssets
       radial-gradient(ellipse at center, transparent var(--depth-compression, 34%), rgba(0, 0, 0, var(--depth-vignette, 0.62)) 100%),
       linear-gradient(90deg, rgba(0, 0, 0, var(--depth-vignette, 0.36)), transparent 20%, transparent 80%, rgba(0, 0, 0, var(--depth-vignette, 0.42)));
     transition: background 900ms ease;
-  }
-
-  @keyframes inkDrift {
-    from { transform: translate3d(-2%, -1%, 0) rotate(-5deg) scale(0.96); }
-    to { transform: translate3d(8%, 6%, 0) rotate(8deg) scale(1.08); }
   }
 
   @keyframes inkNoiseShift {

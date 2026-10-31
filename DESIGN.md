@@ -8,8 +8,10 @@ colors:
   surface: "#0a0a14"
   border: "rgba(255, 255, 255, 0.07)"
   text: "#e8e4dc"
-  text-muted: "rgba(232, 228, 220, 0.55)"
-  text-dim: "rgba(232, 228, 220, 0.3)"
+  text-muted: "rgba(232, 228, 220, 0.72)"
+  text-dim: "rgba(232, 228, 220, 0.6)"
+  crimson-text: "#e58c84"
+  gold-text: "#d9ba70"
 typography:
   display:
     fontFamily: '"Cormorant Garamond", serif'
@@ -124,7 +126,7 @@ Use rules, stamps, metadata rails, panes and editorial spreads. Entry cards use 
 - **EntryCard and SectionList:** the existing reusable content-index baseline with thumbnail, serif title, summary, tags, updated metadata and crimson accent. Inputs, cards and navigation snippets in `.impeccable/design.json` are previews of actual patterns, not replacement production components.
 - **Shell and page families:** MainLayout owns normal chrome; EntryLayout owns general article reading; CharacterEntryLayout/CharacterCodexLayout own dossiers/codices; SystemsObservatoryPage with ArchiveSphere/ArchiveField/SystemNode/DestinationPanel owns system exploration. Preserve these boundaries instead of rebuilding them as generic dashboards.
 - **CSS ownership:** Astro scoped styles and imported global tokens remain the architecture. React CSS stays under `.visual-lab-record`; every experimental selector must stay within its root. No Tailwind, utility framework or new global stylesheet is needed.
-- **Motion/lifecycle:** object feedback generally takes 140â€“360ms; the shared modal token is 380ms. Prefer opacity/transform and provide reduced-motion alternatives. `src/styles/transition-system.css` exclusively owns route motion (480ms standard, 1050ms search, existing easing). React effects own island cleanup. Astro controllers use `window.registerPageInit` and return cleanup for listeners, timers, observers, requests and animation frames; no parallel global navigation listeners.
+- **Motion/lifecycle:** local feedback uses 140ms, state changes 220ms, pane continuity 320ms, and artwork 450ms. The shared modal token is 320ms. `src/styles/transition-system.css` exclusively owns route motion (280ms standard/search; authored passages retain their own profiles). Reduced motion preserves the selected state without spatial choreography. Galleries start manually and offer explicit playback. React effects own island cleanup. Astro controllers use `window.registerPageInit`, page-owned `window.sineMotion` helpers, and cleanup for listeners, timers, observers, requests and frames; no parallel global navigation listeners. Decorative loops pause while hidden, offscreen, or reduced.
 - **Assets:** authored processed artwork belongs in `src/assets/uploads/`; stable public URLs live in `public/uploads/`. The shared logo uses `/uploads/ui-sine-logo.png`. Preserve authored media and translations; generated soundtrack metadata/covers use their generators. This fixture needs no new images during setup.
 - **Accessibility:** keep gold focus rings and focus equivalents for hover. Preserve heading order, readable contrast, keyboard operation, localized labels and reduced motion. New dialogs require a name, focus containment, Escape handling, inert hidden/background states and focus return. Existing dim metadata is a review concern, not evidence of guaranteed conformance.
 

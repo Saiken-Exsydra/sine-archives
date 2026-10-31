@@ -31,6 +31,8 @@ const copy = locale === "pt-br"
       dossierOnFile: "Dossie em Arquivo",
       swipeToNavigate: "Deslize para navegar",
       nextImage: "Proxima imagem",
+      playGallery: "Reproduzir galeria",
+      pauseGallery: "Pausar galeria",
     }
   : {
       pageTitle: "Characters - SiNE Archives",
@@ -56,6 +58,8 @@ const copy = locale === "pt-br"
       dossierOnFile: "Dossier On File",
       swipeToNavigate: "Swipe to navigate",
       nextImage: "Next image",
+      playGallery: "Play gallery",
+      pauseGallery: "Pause gallery",
     };
 const all = await getLocalizedCollection("characters", locale);
 const characters = all
@@ -174,7 +178,7 @@ const sectionEyebrow = locale === "pt-br"
         font-family: 'DM Sans', sans-serif;
         font-size: 10px; font-weight: 600;
         letter-spacing: 0.22em;
-        color: rgba(232, 228, 220, 0.45);
+        color: var(--text-muted);
         text-transform: uppercase;
       }
       .nav__right {
@@ -200,13 +204,13 @@ const sectionEyebrow = locale === "pt-br"
         text-transform: uppercase;
       }
       .nav__crumb-link:hover { color: var(--text-muted); }
-      .nav__crumb-sep { color: var(--crimson); font-size: 14px; }
+      .nav__crumb-sep { color: var(--crimson-text); font-size: 14px; }
       .nav__crumb-cur { color: var(--text-dim); font-size: 12px; }
       .nav__fullscreen-btn,
       .nav__search-btn {
         display: flex; align-items: center; justify-content: center;
         width: 34px; height: 34px;
-        color: rgba(232, 228, 220, 0.5);
+        color: var(--text-muted);
         text-decoration: none; transition: color 0.2s, background 0.2s;
         background: transparent;
         border: 0;
@@ -251,7 +255,7 @@ const sectionEyebrow = locale === "pt-br"
         font-family: 'DM Sans', sans-serif;
         font-size: 9px; font-weight: 600;
         letter-spacing: 0.28em;
-        color: var(--crimson);
+        color: var(--crimson-text);
         text-transform: uppercase;
         margin-bottom: 10px;
       }
@@ -278,14 +282,14 @@ const sectionEyebrow = locale === "pt-br"
       }
       .sidebar__search-icon {
         flex-shrink: 0;
-        color: rgba(232, 228, 220, 0.18);
+        color: var(--text-muted);
         pointer-events: none;
         display: flex;
         transition: color 0.3s;
       }
       .sidebar__search:hover .sidebar__search-icon,
       .sidebar__search:focus-within .sidebar__search-icon {
-        color: rgba(232, 228, 220, 0.35);
+        color: var(--text-muted);
       }
       .sidebar__search-input {
         flex: 1;
@@ -302,7 +306,7 @@ const sectionEyebrow = locale === "pt-br"
         caret-color: var(--crimson);
       }
       .sidebar__search-input::placeholder {
-        color: transparent;
+        color: var(--text-muted);
         transition: color 0.3s;
         letter-spacing: 0.12em;
         font-size: 10px;
@@ -310,7 +314,7 @@ const sectionEyebrow = locale === "pt-br"
       }
       .sidebar__search:hover .sidebar__search-input::placeholder,
       .sidebar__search:focus-within .sidebar__search-input::placeholder {
-        color: rgba(232, 228, 220, 0.2);
+        color: var(--text-muted);
       }
       .sidebar__search:hover .sidebar__search-input,
       .sidebar__search-input:focus {
@@ -319,12 +323,13 @@ const sectionEyebrow = locale === "pt-br"
       .sidebar__search-input:focus {
         border-bottom-color: rgba(177, 58, 52, 0.4);
       }
+      .sidebar__search-input:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
       .sidebar__search-clear {
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        color: rgba(232, 228, 220, 0.25);
+        color: var(--text-muted);
         background: none;
         border: none;
         cursor: pointer;
@@ -335,7 +340,7 @@ const sectionEyebrow = locale === "pt-br"
         font-size: 14px;
         transition: color 0.2s;
       }
-      .sidebar__search-clear:hover { color: var(--crimson); }
+      .sidebar__search-clear:hover { color: var(--crimson-text); }
       .sidebar__search-clear.is-visible { display: flex; }
 
       .sidebar__no-results {
@@ -344,7 +349,7 @@ const sectionEyebrow = locale === "pt-br"
         font-size: 10px;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: rgba(232, 228, 220, 0.18);
+        color: var(--text-muted);
         display: none;
       }
       .sidebar__no-results.is-visible { display: block; }
@@ -384,12 +389,12 @@ const sectionEyebrow = locale === "pt-br"
         font-family: 'DM Sans', sans-serif;
         font-size: 9px; font-weight: 600;
         letter-spacing: 0.24em;
-        color: rgba(232, 228, 220, 0.2);
+        color: var(--text-muted);
         text-transform: uppercase;
         transition: color 0.22s;
         display: flex; align-items: center; gap: 8px;
       }
-      .sidebar__item.is-active .sidebar__item-num { color: var(--crimson); }
+      .sidebar__item.is-active .sidebar__item-num { color: var(--crimson-text); }
 
       .sidebar__item-num-line {
         display: inline-block;
@@ -401,7 +406,7 @@ const sectionEyebrow = locale === "pt-br"
       .sidebar__item-name {
         font-family: 'Cormorant Garamond', serif;
         font-size: 22px; font-weight: 700;
-        color: rgba(232, 228, 220, 0.42);
+        color: var(--text-muted);
         line-height: 1.1; letter-spacing: 0.01em;
         transition: color 0.22s;
       }
@@ -410,11 +415,11 @@ const sectionEyebrow = locale === "pt-br"
       .sidebar__item-des {
         font-family: 'DM Sans', sans-serif;
         font-size: 10px;
-        color: rgba(232, 228, 220, 0.18);
+        color: var(--text-dim);
         letter-spacing: 0.04em; line-height: 1.4;
         transition: color 0.22s;
       }
-      .sidebar__item.is-active .sidebar__item-des { color: rgba(176, 141, 60, 0.8); }
+      .sidebar__item.is-active .sidebar__item-des { color: var(--gold-text); }
 
       .sidebar__footer {
         padding: 18px 32px;
@@ -424,10 +429,10 @@ const sectionEyebrow = locale === "pt-br"
       .sidebar__stamp {
         font-family: 'DM Sans', sans-serif;
         font-size: 9px; letter-spacing: 0.16em;
-        color: rgba(232, 228, 220, 0.1);
+        color: var(--text-muted);
         text-transform: uppercase; line-height: 1.7;
       }
-      .sidebar__stamp-accent { color: rgba(177, 58, 52, 0.3); }
+      .sidebar__stamp-accent { color: var(--crimson-text); }
 
       /* ── STAGE ── */
       .stage {
@@ -440,8 +445,8 @@ const sectionEyebrow = locale === "pt-br"
 
       .stage__portrait {
         position: absolute; inset: 0;
-        transition: opacity 1s ease;
       }
+      .stage__portrait > picture { position: absolute; inset: 0; }
       .stage__portrait.is-out { opacity: 0; }
       .stage__portrait.is-in  { opacity: 1; }
 
@@ -450,7 +455,6 @@ const sectionEyebrow = locale === "pt-br"
         object-fit: cover;
         object-position: center 18%;
         filter: saturate(1.08) brightness(1.1) contrast(1.02);
-        will-change: transform;
       }
 
       .stage__placeholder {
@@ -508,7 +512,7 @@ const sectionEyebrow = locale === "pt-br"
       .stage__counter {
         font-family: 'DM Sans', sans-serif;
         font-size: 11px; letter-spacing: 0.22em;
-        color: rgba(232, 228, 220, 0.18);
+        color: var(--text-muted);
         display: flex; align-items: baseline; gap: 8px;
         transition: opacity 0.4s ease 0.2s;
       }
@@ -517,7 +521,7 @@ const sectionEyebrow = locale === "pt-br"
       .stage__counter-num {
         font-family: 'Cormorant Garamond', serif;
         font-size: 28px; font-weight: 700;
-        color: var(--crimson); line-height: 1;
+        color: var(--crimson-text); line-height: 1;
       }
 
       .stage__tags {
@@ -533,7 +537,7 @@ const sectionEyebrow = locale === "pt-br"
         font-family: 'DM Sans', sans-serif;
         font-size: 9px; letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: rgba(232,228,220,0.4);
+        color: var(--text-muted);
         backdrop-filter: blur(10px);
       }
 
@@ -555,7 +559,7 @@ const sectionEyebrow = locale === "pt-br"
       .stage__type-label {
         font-family: 'DM Sans', sans-serif;
         font-size: 9px; letter-spacing: 0.3em;
-        color: var(--crimson); text-transform: uppercase; font-weight: 600;
+        color: var(--crimson-text); text-transform: uppercase; font-weight: 600;
         margin-bottom: 12px;
         transition: opacity 0.5s ease 0.12s, transform 0.5s ease 0.12s;
       }
@@ -580,7 +584,7 @@ const sectionEyebrow = locale === "pt-br"
         font-size: clamp(1.8rem, 2.25vw, 2.6rem);
         font-style: italic;
         font-weight: 600;
-        color: var(--gold);
+        color: var(--gold-text);
         letter-spacing: -0.012em;
         line-height: 1.02;
         text-wrap: balance;
@@ -593,7 +597,7 @@ const sectionEyebrow = locale === "pt-br"
 
       .stage__summary {
         font-family: 'DM Sans', sans-serif;
-        font-size: 16px; color: rgba(232,228,220,0.58);
+        font-size: 16px; color: var(--text-muted);
         line-height: 1.75; margin: 0 0 30px 0; max-width: 500px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -637,7 +641,7 @@ const sectionEyebrow = locale === "pt-br"
         justify-content: center;
         background: rgba(255,255,255,0.05);
         border: 1px solid rgba(255,255,255,0.1);
-        color: rgba(232,228,220,0.55);
+        color: var(--text-muted);
         font-family: 'DM Sans', sans-serif;
         font-size: 9px;
         font-weight: 600;
@@ -646,15 +650,15 @@ const sectionEyebrow = locale === "pt-br"
         border-radius: 2px;
       }
       .stage__gallery-btn {
-        min-width: 38px;
-        height: 38px;
+        min-width: 44px;
+        height: 44px;
         padding: 0 12px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         background: rgba(255,255,255,0.05);
         border: 1px solid rgba(255,255,255,0.1);
-        color: rgba(232,228,220,0.5);
+        color: var(--text-muted);
         cursor: pointer;
         border-radius: 2px;
         transition: background 0.2s, color 0.2s, border-color 0.2s;
@@ -669,10 +673,14 @@ const sectionEyebrow = locale === "pt-br"
       }
 
       .stage__view-btn {
+        position: absolute;
+        right: 22px;
+        bottom: 22px;
+        z-index: 12;
         background: rgba(255,255,255,0.05);
         border: 1px solid rgba(255,255,255,0.1);
-        color: rgba(232,228,220,0.5);
-        width: 38px; height: 38px;
+        color: var(--text-muted);
+        width: 44px; height: 44px;
         display: flex; align-items: center; justify-content: center;
         cursor: pointer; border-radius: 2px;
         transition: background 0.2s, color 0.2s, border-color 0.2s;
@@ -680,6 +688,11 @@ const sectionEyebrow = locale === "pt-br"
       .stage__view-btn svg {
         width: 16px;
         height: 16px;
+      }
+      .stage__view-btn:focus-visible {
+        outline: 2px solid var(--gold-text);
+        outline-offset: 3px;
+        box-shadow: 0 0 0 5px var(--bg);
       }
       .stage__view-btn:hover,
       .stage__view-btn[aria-pressed="true"] {
@@ -786,7 +799,8 @@ const sectionEyebrow = locale === "pt-br"
         }
         .stage__actions { gap: 8px; flex-wrap: wrap; }
         .stage__cta { flex: 1; padding: 11px 16px; min-width: 140px; text-align: center; }
-        .stage__view-btn { width: 40px; height: 40px; }
+        .stage__view-btn { top: 10px; left: 88px; right: auto; bottom: auto; background: rgba(6,6,11,.72); }
+        .stage__grad-b { background: linear-gradient(to top, rgba(6,6,11,.94), rgba(6,6,11,.76) 32%, transparent 76%); }
         .stage__dots { display: none; }
         .stage__watermark { display: none; }
         .stage__stamp { display: none; }
@@ -795,6 +809,8 @@ const sectionEyebrow = locale === "pt-br"
         /* Filmstrip thumbnail row */
         .filmstrip {
           display: flex;
+          touch-action: pan-x;
+          overscroll-behavior-x: contain;
           gap: 6px;
           padding: 10px 12px calc(14px + env(safe-area-inset-bottom));
           overflow-x: auto;
@@ -840,6 +856,10 @@ const sectionEyebrow = locale === "pt-br"
           height: 2px; background: var(--crimson);
         }
 
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .stage *, .stage *::before, .stage *::after, .filmstrip * { transition: none !important; animation: none !important; }
+        .stage__portrait-img { transform: none !important; }
       }
   </style>
 
@@ -1084,6 +1104,13 @@ const sectionEyebrow = locale === "pt-br"
               </div>
               <button
                 class="stage__gallery-btn"
+                id="stage-gallery-play"
+                type="button"
+                aria-pressed="false"
+                aria-label={copy.playGallery}
+              >{copy.playGallery}</button>
+              <button
+                class="stage__gallery-btn"
                 id="stage-gallery-next"
                 type="button"
                 aria-label={copy.nextImage}
@@ -1094,20 +1121,21 @@ const sectionEyebrow = locale === "pt-br"
                 </svg>
               </button>
             </div>
-            <button
-              class="stage__view-btn"
-              id="btn-stage-ui-toggle"
-              type="button"
-              aria-pressed="false"
-              aria-label={copy.hideOverlay}
-              title={copy.hideOverlay}
-            >
-              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
           </div>
         </div>
+
+        <button
+          class="stage__view-btn"
+          id="btn-stage-ui-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label={copy.hideOverlay}
+          title={copy.hideOverlay}
+        >
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
 
         <!-- Dot navigator -->
         <div class="stage__dots" id="stage-dots">
@@ -1164,6 +1192,18 @@ const sectionEyebrow = locale === "pt-br"
     </div>
   </main>
 
+  <noscript>
+    <style>
+      #chars-root { display: none; }
+      .characters-fallback { padding: 100px 24px 48px; max-width: 70ch; margin: auto; }
+      .characters-fallback a { display: block; padding: 16px 0; color: var(--text); text-underline-offset: .25em; }
+    </style>
+    <nav class="characters-fallback" aria-label={copy.section}>
+      <h1>{copy.section}</h1>
+      {charData.map(character => <a href={character.href}>{character.title}</a>)}
+    </nav>
+  </noscript>
+
   <script define:vars={{ charData, copy, serverInitialCharacterIndex: initialCharacterIndex }} is:inline>
       const chars = charData;
 
@@ -1189,32 +1229,33 @@ const sectionEyebrow = locale === "pt-br"
 
         let activeIdx = initialIdx;
         let activeGalleryIdx = 0;
-        let switchTimer = 0;
         let galleryTimer = 0;
-        let galleryTransitionTimer = 0;
-        let phaseTimer = 0;
         let filmstripObserver = null;
         let touchStartX = null;
         let touchStartY = null;
         let isOverlayHidden = false;
+        let galleryPlaying = false;
+        let galleryActive = false;
+        let artVersion = 0;
+        let pointerFrame = 0;
+        const artAnimations = new Set();
+        const tasks = window.sineMotion.createTasks(signal);
 
         const cleanup = () => {
           listenerScope.abort();
-          window.clearTimeout(switchTimer);
           window.clearTimeout(galleryTimer);
-          window.clearTimeout(galleryTransitionTimer);
-          window.clearTimeout(phaseTimer);
           filmstripObserver?.disconnect();
           filmstripObserver = null;
           charsRoot.removeAttribute("data-character-controller");
+          artVersion += 1;
+          artAnimations.forEach(animation => animation.cancel());
+          artAnimations.clear();
         };
 
         const stagePortrait = charsRoot.querySelector("#stage-portrait");
         const stageWatermark = charsRoot.querySelector("#stage-watermark");
-        const stageCounter = charsRoot.querySelector("#stage-counter");
         const stageCounterNum = charsRoot.querySelector("#stage-counter-num");
         const stageTags = charsRoot.querySelector("#stage-tags");
-        const stageRule = charsRoot.querySelector("#stage-rule");
         const stageType = charsRoot.querySelector("#stage-type");
         const stageName = charsRoot.querySelector("#stage-name");
         const stageDesignation = charsRoot.querySelector("#stage-designation");
@@ -1225,7 +1266,7 @@ const sectionEyebrow = locale === "pt-br"
         const stageGalleryCurrent = charsRoot.querySelector("#stage-gallery-current");
         const stageGalleryTotal = charsRoot.querySelector("#stage-gallery-total");
         const stageGalleryNext = charsRoot.querySelector("#stage-gallery-next");
-        const stageStamp = charsRoot.querySelector("#stage-stamp");
+        const stageGalleryPlay = charsRoot.querySelector("#stage-gallery-play");
         const stageRoot = charsRoot.querySelector("#stage");
         const stageUiToggle = charsRoot.querySelector("#btn-stage-ui-toggle");
         const sidebarList = charsRoot.querySelector("#sidebar-list");
@@ -1235,9 +1276,15 @@ const sectionEyebrow = locale === "pt-br"
         const noResults = charsRoot.querySelector("#sidebar-no-results");
         const filmstrip = charsRoot.querySelector("#filmstrip");
         const fullscreenBtn = document.getElementById("nav-fullscreen");
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const motionPreference = window.sineMotion.watchPreference(signal, reduced => {
+          if (reduced) {
+            artAnimations.forEach(animation => animation.finish());
+            galleryPlaying = false;
+            stagePortrait?.querySelectorAll('img').forEach(img => img.style.transform = 'none');
+          }
+          syncGalleryUi(); scheduleGallery();
+        });
         const sidebarItems = Array.from(charsRoot.querySelectorAll(".sidebar__item"));
-        const allAnimated = [stageCounter, stageTags, stageRule, stageType, stageName, stageDesignation, stageSummary, stageActions, stageWatermark, stageStamp, stagePortrait];
 
         if (!(stageRoot instanceof HTMLElement) || !(stagePortrait instanceof HTMLElement)) {
           cleanup();
@@ -1276,21 +1323,6 @@ const sectionEyebrow = locale === "pt-br"
           }
         }
 
-        function setPhase(phase) {
-          const inClass = "is-in";
-          const outClass = "is-out";
-          allAnimated.forEach((el) => {
-            if (!el) return;
-            if (phase === "in") {
-              el.classList.remove(outClass);
-              el.classList.add(inClass);
-            } else {
-              el.classList.remove(inClass);
-              el.classList.add(outClass);
-            }
-          });
-        }
-
         function syncOverlayToggle() {
           if (!stageUiToggle) return;
           const label = isOverlayHidden ? copy.showOverlay : copy.hideOverlay;
@@ -1298,6 +1330,7 @@ const sectionEyebrow = locale === "pt-br"
           stageUiToggle.setAttribute("aria-label", label);
           stageUiToggle.setAttribute("title", label);
           stageRoot.classList.toggle("stage--ui-hidden", isOverlayHidden);
+          [stageActions, dotsEl, stageGallery].forEach(element => { if (element) element.inert = isOverlayHidden; });
           stageRoot.setAttribute("title", isOverlayHidden ? copy.restoreOverlay : "");
         }
 
@@ -1371,7 +1404,7 @@ const sectionEyebrow = locale === "pt-br"
           if (image.height) img.height = image.height;
           img.alt = "";
           img.decoding = "async";
-          img.style.transform = "scale(1.07) translate(0%, 0%)";
+          img.style.transform = motionPreference.matches ? "none" : "scale(1.03)";
           picture.appendChild(img);
 
           return picture;
@@ -1386,47 +1419,54 @@ const sectionEyebrow = locale === "pt-br"
           if (stageGalleryTotal) {
             stageGalleryTotal.textContent = String(Math.max(total, 1)).padStart(2, "0");
           }
+          if (stageGalleryPlay) {
+            const label = galleryPlaying ? copy.pauseGallery : copy.playGallery;
+            stageGalleryPlay.textContent = label;
+            stageGalleryPlay.setAttribute('aria-label', label);
+            stageGalleryPlay.setAttribute('aria-pressed', String(galleryPlaying));
+            stageGalleryPlay.disabled = motionPreference.matches;
+          }
         }
 
         function scheduleGallery() {
           window.clearTimeout(galleryTimer);
           const char = chars[activeIdx];
-          if (!char || reducedMotion || char.images.length < 2) return;
-          galleryTimer = window.setTimeout(() => {
+          if (!char || !galleryPlaying || !galleryActive || motionPreference.matches || (stageRoot.matches(':focus-within') && document.activeElement !== stageGalleryPlay) || char.images.length < 2) return;
+          galleryTimer = tasks.delay(() => {
             cycleGalleryImage();
           }, 5000);
         }
 
         function renderGalleryImage(image) {
-          const existing = stagePortrait.querySelector("picture, svg");
-          if (existing) existing.remove();
-          if (image) {
-            stagePortrait.appendChild(buildStagePicture(image));
-          } else {
-            stagePortrait.appendChild(buildPlaceholderSVG());
-          }
+          const version = ++artVersion;
+          const next = image ? buildStagePicture(image) : buildPlaceholderSVG();
+          const reveal = () => {
+            if (signal.aborted || version !== artVersion) return;
+            artAnimations.forEach(animation => animation.cancel()); artAnimations.clear();
+            const previous = [...stagePortrait.children];
+            previous.forEach(node => node.removeAttribute('id'));
+            stagePortrait.appendChild(next);
+            if (motionPreference.matches) { previous.forEach(node => node.remove()); return; }
+            const animation = next.animate([{ opacity: .15 }, { opacity: 1 }], { duration: 450, easing: 'cubic-bezier(0.16,1,0.3,1)' });
+            artAnimations.add(animation);
+            animation.finished.then(() => previous.forEach(node => node.remove()), () => previous.forEach(node => node.remove()))
+              .finally(() => artAnimations.delete(animation));
+          };
+          const img = next.querySelector('img');
+          if (img && !img.complete) img.decode().then(reveal, reveal);
+          else reveal();
         }
 
         function cycleGalleryImage(nextIdx) {
           const char = chars[activeIdx];
           if (!char || char.images.length < 2) return;
           window.clearTimeout(galleryTimer);
-          window.clearTimeout(galleryTransitionTimer);
           activeGalleryIdx = typeof nextIdx === "number"
             ? ((nextIdx % char.images.length) + char.images.length) % char.images.length
             : (activeGalleryIdx + 1) % char.images.length;
-          stagePortrait.classList.remove("is-in");
-          stagePortrait.classList.add("is-out");
-          galleryTransitionTimer = window.setTimeout(() => {
-            renderGalleryImage(char.images[activeGalleryIdx]);
-            syncGalleryUi(char);
-            requestAnimationFrame(() => {
-              if (signal.aborted) return;
-              stagePortrait.classList.remove("is-out");
-              stagePortrait.classList.add("is-in");
-            });
-            scheduleGallery();
-          }, 320);
+          renderGalleryImage(char.images[activeGalleryIdx]);
+          syncGalleryUi(char);
+          scheduleGallery();
         }
 
         function updateContent(idx) {
@@ -1436,7 +1476,6 @@ const sectionEyebrow = locale === "pt-br"
           activeIdx = idx;
           activeGalleryIdx = 0;
           window.clearTimeout(galleryTimer);
-          window.clearTimeout(galleryTransitionTimer);
 
           renderGalleryImage(c.images[activeGalleryIdx]);
           syncGalleryUi(c);
@@ -1509,20 +1548,7 @@ const sectionEyebrow = locale === "pt-br"
 
         function switchTo(idx) {
           if (!Number.isInteger(idx) || idx < 0 || idx >= chars.length || idx === activeIdx) return;
-          window.clearTimeout(switchTimer);
-          window.clearTimeout(phaseTimer);
-          setPhase("out");
-          switchTimer = window.setTimeout(() => {
-            try {
-              updateContent(idx);
-            } catch (error) {
-              console.error("[characters-page] Character selection failed", error);
-            } finally {
-              phaseTimer = window.setTimeout(() => {
-                setPhase("in");
-              }, 60);
-            }
-          }, 360);
+          updateContent(idx);
         }
 
         function applySearch(query) {
@@ -1544,14 +1570,15 @@ const sectionEyebrow = locale === "pt-br"
         }
 
         stageRoot.addEventListener("mousemove", (event) => {
-          if (document.documentElement.classList.contains("is-transitioning")) return;
+          if (motionPreference.matches || !matchMedia('(hover:hover) and (pointer:fine)').matches || document.documentElement.classList.contains("is-transitioning")) return;
           const rect = stageRoot.getBoundingClientRect();
           const x = (event.clientX - rect.left) / rect.width - 0.5;
           const y = (event.clientY - rect.top) / rect.height - 0.5;
           const img = stagePortrait.querySelector("img");
-          if (img) {
-            img.style.transform = `scale(1.07) translate(${x * -3.5}%, ${y * -2.5}%)`;
-          }
+          tasks.cancelFrame(pointerFrame);
+          pointerFrame = tasks.frame(() => {
+            if (img && !motionPreference.matches) img.style.transform = `scale(1.03) translate(${x * -1.6}%, ${y * -1.2}%)`;
+          });
         }, { signal });
 
         stageUiToggle?.addEventListener("click", (event) => {
@@ -1569,6 +1596,13 @@ const sectionEyebrow = locale === "pt-br"
           event.stopPropagation();
           cycleGalleryImage();
         }, { signal });
+        stageGalleryPlay?.addEventListener('click', () => {
+          galleryPlaying = !galleryPlaying && !motionPreference.matches;
+          syncGalleryUi(); scheduleGallery();
+        }, { signal });
+        stageRoot.addEventListener('focusin', () => clearTimeout(galleryTimer), { signal });
+        stageRoot.addEventListener('focusout', () => tasks.frame(scheduleGallery), { signal });
+        window.sineMotion.watchActivity(stageRoot, signal, active => { galleryActive = active; scheduleGallery(); });
 
         sidebarList?.addEventListener("click", (event) => {
           const btn = event.target instanceof Element ? event.target.closest(".sidebar__item") : null;
@@ -1610,15 +1644,18 @@ const sectionEyebrow = locale === "pt-br"
               el.classList.toggle("is-active", itemIdx === idx);
             });
             const active = filmstrip.querySelector(".filmstrip__item.is-active");
-            active?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+            active?.scrollIntoView({ behavior: motionPreference.matches ? "instant" : "smooth", block: "nearest", inline: "center" });
           });
           filmstripObserver.observe(dotsEl, { subtree: true, attributes: true, attributeFilter: ["class"] });
         }
 
         stageRoot.addEventListener("touchstart", (event) => {
+          if (event.touches.length !== 1) { touchStartX = touchStartY = null; return; }
           touchStartX = event.touches[0].clientX;
           touchStartY = event.touches[0].clientY;
         }, { passive: true, signal });
+        stageRoot.addEventListener('touchcancel', () => { touchStartX = touchStartY = null; }, { signal });
+        window.addEventListener('blur', () => { touchStartX = touchStartY = null; }, { signal });
 
         stageRoot.addEventListener("touchend", (event) => {
           if (touchStartX === null) return;

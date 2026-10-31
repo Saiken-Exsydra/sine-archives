@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./helpers/test";
 
 const routes = [
   "/", "/apparatus/", "/apparatus/clepsydra-apparatus/", "/characters/",
@@ -22,6 +22,7 @@ for (const width of [320, 390, 768, 1440, 1920]) {
       expect([200, 304], route).toContain(response?.status());
       await expect(page.locator("html"), route).toHaveClass(/is-page-ready/);
       await expect(page.locator("main").first(), route).toBeVisible();
+      expect(await page.getByRole('heading', { level: 1 }).count(), `Main heading at ${route}`).toBeGreaterThan(0);
       await expect.poll(() => page.evaluate(() =>
         document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1,
       ), { message: `Document overflow at ${route} (${width}px)` }).toBe(true);

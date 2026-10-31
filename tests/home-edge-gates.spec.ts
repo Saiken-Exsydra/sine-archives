@@ -1,5 +1,40 @@
 import { gotoReady } from "./helpers/navigation";
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./helpers/test";
+
+for (const locale of ['', '/pt-br']) {
+  for (const javaScriptEnabled of [true, false]) {
+    test(`${locale || 'en'} home section names remain readable with JavaScript ${javaScriptEnabled ? 'on' : 'off'}`, async ({ browser }) => {
+      const context = await browser.newContext({ javaScriptEnabled });
+      const page = await context.newPage();
+      try {
+        for (const width of [1440, 390]) {
+          await page.setViewportSize({ width, height: 900 });
+          await page.goto(`${locale}/`);
+          const rows = page.locator('.list-row');
+          await expect(rows).toHaveCount(8);
+          for (const reducedMotion of ['no-preference', 'reduce'] as const) {
+            await page.emulateMedia({ reducedMotion });
+            for (const row of await rows.all()) {
+              // Playwright visibility alone deliberately allows opacity: 0.
+              await expect(row).toHaveCSS('opacity', '1');
+              await expect(row.locator('.list-row__label')).toHaveText(/\S/);
+              await expect(row.locator('.list-row__count')).toHaveCSS('opacity', '1');
+            }
+          }
+        }
+        if (javaScriptEnabled) {
+          await page.setViewportSize({ width: 1440, height: 900 });
+          const first = page.locator('.list-row').first();
+          await first.hover();
+          await expect(page.locator('.preview-layer.is-active')).toHaveAttribute('data-key', 'characters');
+          const second = page.locator('.list-row').nth(1);
+          await second.focus();
+          await expect(page.locator('.preview-layer.is-active')).toHaveAttribute('data-key', 'organizations');
+        }
+      } finally { await context.close(); }
+    });
+  }
+}
 
 test("home edge gates reveal by proximity without blocking page content", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });

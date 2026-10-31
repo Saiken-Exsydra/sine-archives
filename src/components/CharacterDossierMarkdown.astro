@@ -61,7 +61,7 @@ const { html } = Astro.props as { html: string };
     line-height: 1.5;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.5);
+    color: var(--text-muted);
     max-width: 76ch;
   }
 
@@ -182,7 +182,7 @@ const { html } = Astro.props as { html: string };
     margin: 1.8rem 0 2rem;
     padding: 1.1rem 1.25rem 1.15rem 1.3rem;
     border: 1px solid rgba(177, 58, 52, 0.16);
-    border-left: 2px solid rgba(177, 58, 52, 0.58);
+    border-left: 1px solid rgba(177, 58, 52, 0.58);
     border-radius: 0 0.9rem 0.9rem 0;
     background:
       radial-gradient(circle at 100% 0%, rgba(176, 141, 60, 0.07), transparent 24%),
@@ -220,7 +220,7 @@ const { html } = Astro.props as { html: string };
     font-style: normal;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.44);
+    color: var(--text-muted);
   }
 
   .dossier-prose :global(ul),
@@ -332,7 +332,7 @@ const { html } = Astro.props as { html: string };
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.52);
+    color: var(--text-muted);
   }
 
   .dossier-prose :global(td) {

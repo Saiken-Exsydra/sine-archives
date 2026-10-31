@@ -1,5 +1,5 @@
 import { gotoReady } from "./helpers/navigation";
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./helpers/test";
 
 function trackClientErrors(page: import("@playwright/test").Page) {
   const errors: string[] = [];

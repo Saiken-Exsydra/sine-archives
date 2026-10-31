@@ -6,11 +6,10 @@ const { systems, relationships, ui } = data;
 const termPaths: Record<string, string> = { Dive: 'dive', Anchor: 'anchor', Reach: 'anchor/reach' };
 const explanationParts = s.id === 'redactory' ? s.explanation.split(/\b(Dive|Anchor|Reach)\b/g) : [s.explanation];
 ---
-      <p class="observatory-kicker">{s.title}</p>
       <h2 id="observatory-page-title" tabindex="-1">{s.summary}</h2>
       <p class="observatory-explanation">{explanationParts.map(part => s.id === 'redactory' && termPaths[part] ? <a href={`#redactory/${termPaths[part]}`} data-observatory-link data-concept-ref={part.toLowerCase()}>{part}</a> : part)}</p>
       <footer class="observatory-page__footer"><a href={s.source}>{ui.read} ↗</a>{s.destination !== s.source && <a href={s.destination} data-system-panel-link data-system-launch={s.id} data-transition-trigger="observatory-system">{ui.explore} ↗</a>}</footer>
-      {s.image && <figure class="observatory-image"><img src={s.image.src} alt={s.image.alt} loading="lazy" decoding="async" />{s.image.caption && <figcaption>{s.image.caption}</figcaption>}</figure>}
+      {s.image && <figure class="observatory-image"><img src={s.image.src} srcset={s.image.srcset} sizes={s.image.sizes} width={s.image.width} height={s.image.height} alt={s.image.alt} loading="lazy" decoding="async" />{s.image.caption && <figcaption>{s.image.caption}</figcaption>}</figure>}
       <div class="observatory-concepts" data-concept-nodes aria-label={ui.concepts}></div>
       <div class="observatory-system-references">
         {relationships.filter(r => r.source === s.id || r.target === s.id).map(r => {

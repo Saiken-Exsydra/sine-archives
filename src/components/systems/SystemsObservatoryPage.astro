@@ -1,5 +1,7 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import { getImage } from 'astro:assets';
+import redactoryArt from '../../assets/uploads/sys-redactory.png';
 import { localizedPath, type SiteLocale } from '../../i18n/config';
 import { getArchiveNavLabels, sectionLabel } from '../../i18n/ui';
 import { getObservatory } from '../../data/observatory';
@@ -12,6 +14,15 @@ import DestinationPanel from './DestinationPanel.astro';
 import '../../styles/observatory.css';
 const { locale = 'en' } = Astro.props as { locale?: SiteLocale };
 const data = getObservatory(locale);
+const redactory = data.systems.find(system => system.id === 'redactory');
+if (redactory?.image) {
+  const preview = await getImage({ src: redactoryArt, width: 640, widths: [320, 640, 960], format: 'webp', quality: 82 });
+  redactory.image = {
+    ...redactory.image, src: preview.src, srcset: preview.srcSet.attribute,
+    sizes: '(max-width: 1000px) calc(100vw - 48px), (max-width: 1440px) calc(50vw - 104px), 548px',
+    width: Number(preview.attributes.width), height: Number(preview.attributes.height),
+  };
+}
 const { systems, relationships, archive, ui } = data;
 const nav = getArchiveNavLabels(locale);
 ---
@@ -23,7 +34,6 @@ const nav = getArchiveNavLabels(locale);
   <section class="observatory-root" data-observatory-root data-locale={locale}>
     <ArchiveField />
     <header class="observatory-hero">
-      <p class="observatory-kicker">{ui.kicker}</p>
       <h1>{ui.title}</h1>
       <p class="observatory-subtitle">{ui.subtitle}</p>
     </header>
@@ -72,13 +82,13 @@ const nav = getArchiveNavLabels(locale);
       <div data-relationship-detail aria-live="polite"></div>
     </section>
     <details class="observatory-destinations">
-      <summary>{ui.destinations}</summary>
+      <summary><h2 class="observatory-destinations__title">{ui.destinations}</h2></summary>
       <div class="observatory-destinations__grid">
         {systems.map(s => <DestinationPanel title={s.title} subtitle={s.summary} status="" cta={ui.explore} href={s.destination} systemId={s.id} transitionTrigger="observatory-system" active />)}
       </div>
     </details>
     <div class="observatory-definition" id="observatory-definition" data-definition popover="auto" role="dialog" aria-labelledby="observatory-definition-title">
-      <h3 id="observatory-definition-title"></h3><p data-definition-body></p>
+      <h3 id="observatory-definition-title" tabindex="-1"></h3><p data-definition-body></p>
       <a data-definition-source>{ui.read}</a>
       <button type="button" data-definition-close>{ui.close} ×</button>
     </div>

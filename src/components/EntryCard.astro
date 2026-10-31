@@ -89,12 +89,12 @@ const thumbImage = getImageUrl(entry.data.image ?? null);
     min-height: 160px;
   }
 
-  .ecard:hover {
+  .ecard:hover, .ecard:focus-visible {
     border-color: rgba(177, 58, 52, 0.4);
     background: linear-gradient(135deg, rgba(12, 12, 20, 0.95), rgba(10, 10, 18, 0.98));
   }
 
-  .ecard:hover .ecard__accent {
+  .ecard:hover .ecard__accent, .ecard:focus-visible .ecard__accent {
     opacity: 1;
   }
 
@@ -114,7 +114,9 @@ const thumbImage = getImageUrl(entry.data.image ?? null);
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: filter var(--motion-state);
   }
+  .ecard:is(:hover, :focus-visible) .ecard__img { filter: brightness(1.08); }
 
   .ecard__img-empty {
     position: absolute;
@@ -139,7 +141,7 @@ const thumbImage = getImageUrl(entry.data.image ?? null);
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--crimson);
+    color: var(--crimson-text);
     margin-bottom: 2px;
   }
 
@@ -155,7 +157,7 @@ const thumbImage = getImageUrl(entry.data.image ?? null);
   .ecard__designation {
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
-    color: var(--gold);
+    color: var(--gold-text);
     letter-spacing: 0.06em;
     margin-top: 2px;
     opacity: 0.8;

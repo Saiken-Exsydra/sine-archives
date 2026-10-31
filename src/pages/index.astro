@@ -100,6 +100,7 @@ const searchHref = localizedPath(locale, "/search/");
 ---
 
 <MainLayout active="home" pageTitle="SiNE Archives" locale={locale}>
+  <h1 class="sine-visually-hidden">SiNE Archives</h1>
   <Fragment slot="head">
     <link rel="prefetch" href={observatoryHref} as="document" />
     <link rel="prerender" href={observatoryHref} />
@@ -206,7 +207,6 @@ const searchHref = localizedPath(locale, "/search/");
             data-img={meta.image || FALLBACK_IMG}
             data-desc={meta.desc}
             data-label={s.label}
-            style={`--row-delay: ${i * 0.07 + 0.2}s;`}
           >
             <div class="list-row__bar"></div>
             <span class="list-row__num">{String(i + 1).padStart(2, "0")}</span>
@@ -255,6 +255,22 @@ const searchHref = localizedPath(locale, "/search/");
 </MainLayout>
 
 <script is:inline>
+  window.registerPageInit?.("home-threshold", () => {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    try {
+      hero.dataset.returning = sessionStorage.getItem('sine:home:entered') === 'true' ? 'true' : 'false';
+      sessionStorage.setItem('sine:home:entered', 'true');
+    } catch { /* Storage is optional; the entrance remains finite. */ }
+    const controller = new AbortController();
+    const settle = () => hero.querySelectorAll('.hero__bg-wrap, .hero__logo, .hero__scroll').forEach(element => {
+      element.getAnimations().forEach(animation => animation.finish());
+    });
+    hero.addEventListener('pointerdown', settle, { once: true, signal: controller.signal });
+    hero.addEventListener('keydown', settle, { once: true, signal: controller.signal });
+    return () => controller.abort();
+  });
+
   window.registerPageInit?.("home-preview-panel", () => {
     const panel = document.getElementById("preview-panel");
     if (!panel) return;
@@ -377,7 +393,7 @@ const searchHref = localizedPath(locale, "/search/");
     display: flex;
     align-items: center;
     width: 124px;
-    color: rgba(232, 228, 220, 0.62);
+    color: var(--text-muted);
     text-decoration: none;
     cursor: pointer;
   }
@@ -593,7 +609,7 @@ const searchHref = localizedPath(locale, "/search/");
     position: absolute;
     inset: 0;
     overflow: hidden;
-    animation: kenburns 28s ease-out forwards;
+    animation: archiveThreshold 760ms var(--motion-ease-out) both;
   }
 
   .hero__bg-img {
@@ -633,35 +649,32 @@ const searchHref = localizedPath(locale, "/search/");
     width: clamp(188px, 24vw, 270px);
     max-width: 64vw;
     filter: drop-shadow(0 0 52px rgba(177, 58, 52, 0.28));
-    animation: fadeSlideUp 1.3s 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: archiveMark 760ms var(--motion-ease-out) both;
   }
 
   .hero__sub {
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
-    color: rgba(232, 228, 220, 0.5);
+    color: var(--text-muted);
     line-height: 1.8;
     letter-spacing: 0.01em;
     margin: 0;
     max-width: 490px;
-    animation: fadeSlideUp 1.1s 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .hero__divider {
     width: 52px;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--crimson), transparent);
-    animation: fadeSlideUp 0.9s 1.4s ease both, pulseRule 4s 2.5s ease-in-out infinite;
   }
 
   .hero__meta {
     font-family: 'DM Sans', sans-serif;
     font-size: 10px;
     letter-spacing: 0.26em;
-    color: rgba(232, 228, 220, 0.2);
+    color: var(--text-dim);
     text-transform: uppercase;
     margin: 0;
-    animation: fadeSlideUp 0.8s 1.8s ease both;
   }
 
   .hero-notebook {
@@ -685,7 +698,6 @@ const searchHref = localizedPath(locale, "/search/");
       inset 0 0 0 1px rgba(255, 255, 255, 0.025),
       0 18px 48px rgba(0, 0, 0, 0.24);
     overflow: hidden;
-    animation: fadeSlideUp 0.8s 2.05s ease both;
     transition:
       border-color 0.28s ease,
       background 0.28s ease,
@@ -734,7 +746,7 @@ const searchHref = localizedPath(locale, "/search/");
     height: 42px;
     border: 1px solid rgba(176, 141, 60, 0.42);
     border-radius: 50%;
-    color: rgba(232, 228, 220, 0.64);
+    color: var(--text-muted);
     font-family: 'DM Sans', sans-serif;
     font-size: 10px;
     font-weight: 800;
@@ -776,7 +788,7 @@ const searchHref = localizedPath(locale, "/search/");
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     line-height: 1.45;
-    color: rgba(232, 228, 220, 0.48);
+    color: var(--text-muted);
   }
 
   .hero-notebook__action {
@@ -817,14 +829,14 @@ const searchHref = localizedPath(locale, "/search/");
     flex-direction: column;
     align-items: center;
     gap: 9px;
-    animation: scrollBounce 2.8s 2.5s ease-in-out infinite;
+    animation: scrollBounce 2.8s 0.8s ease-in-out 2;
   }
 
   .hero__scroll-text {
     font-family: 'DM Sans', sans-serif;
     font-size: 9px;
     letter-spacing: 0.24em;
-    color: rgba(232, 228, 220, 0.2);
+    color: var(--text-muted);
     text-transform: uppercase;
   }
 
@@ -862,7 +874,7 @@ const searchHref = localizedPath(locale, "/search/");
     font-family: 'DM Sans', sans-serif;
     font-size: 9px;
     letter-spacing: 0.28em;
-    color: rgba(232, 228, 220, 0.28);
+    color: var(--text-muted);
     text-transform: uppercase;
   }
 
@@ -884,9 +896,7 @@ const searchHref = localizedPath(locale, "/search/");
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    opacity: 0;
-    transform: translateY(14px);
-    animation: fadeSlideUp 0.65s var(--row-delay, 0.2s) cubic-bezier(0.16, 1, 0.3, 1) both;
+    opacity: 1;
   }
 
   .list-row__bar {
@@ -908,7 +918,7 @@ const searchHref = localizedPath(locale, "/search/");
     font-size: 10px;
     font-weight: 500;
     letter-spacing: 0.18em;
-    color: rgba(255, 255, 255, 0.16);
+    color: var(--text-muted);
     flex-shrink: 0;
     width: 30px;
     text-align: right;
@@ -917,13 +927,13 @@ const searchHref = localizedPath(locale, "/search/");
   }
 
   .list-row:hover .list-row__num,
-  .list-row:focus-visible .list-row__num { color: var(--crimson); }
+  .list-row:focus-visible .list-row__num { color: var(--crimson-text); }
 
   .list-row__label {
     font-family: 'Cormorant Garamond', serif;
     font-size: 46px;
     font-weight: 700;
-    color: rgba(232, 228, 220, 0.6);
+    color: var(--text-muted);
     line-height: 1;
     flex: 1;
     letter-spacing: 0.01em;
@@ -942,7 +952,7 @@ const searchHref = localizedPath(locale, "/search/");
     letter-spacing: 0.14em;
     color: var(--text-dim);
     text-transform: uppercase;
-    opacity: 0.4;
+    opacity: 1;
     transition: opacity 0.25s ease;
     white-space: nowrap;
     flex-shrink: 0;
@@ -952,7 +962,7 @@ const searchHref = localizedPath(locale, "/search/");
   .list-row:focus-visible .list-row__count { opacity: 1; }
 
   .list-row__arrow {
-    color: var(--crimson);
+    color: var(--crimson-text);
     font-size: 22px;
     opacity: 0;
     transform: translateX(-10px);
@@ -1075,7 +1085,7 @@ const searchHref = localizedPath(locale, "/search/");
     font-weight: 600;
     letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: var(--crimson);
+    color: var(--crimson-text);
     margin-bottom: 10px;
   }
 
@@ -1110,7 +1120,7 @@ const searchHref = localizedPath(locale, "/search/");
     font-family: 'DM Sans', sans-serif;
     font-size: 8px;
     letter-spacing: 0.2em;
-    color: rgba(232, 228, 220, 0.15);
+    color: var(--text-muted);
     text-transform: uppercase;
   }
 
@@ -1195,7 +1205,13 @@ const searchHref = localizedPath(locale, "/search/");
     .list-row__count { display: none; }
   }
 
+  .hero[data-returning="true"] .hero__bg-wrap,
+  .hero[data-returning="true"] .hero__logo,
+  .hero[data-returning="true"] .hero__scroll { animation: none; }
+
   @media (prefers-reduced-motion: reduce) {
+    .hero__bg-wrap, .hero__logo, .hero__scroll { animation: none; }
+    .preview-layer__img, .preview-layer, .preview-info, .list-row__label { transition: none; }
     .observatory-gate,
     .observatory-gate::before,
     .observatory-gate::after,
@@ -1210,4 +1226,6 @@ const searchHref = localizedPath(locale, "/search/");
     }
 
   }
+  @keyframes archiveThreshold { from { opacity: .65; transform: scale(1.018); } to { opacity: 1; transform: none; } }
+  @keyframes archiveMark { from { opacity: .85; filter: none; } to { opacity: 1; } }
 </style>

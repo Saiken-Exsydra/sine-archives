@@ -34,6 +34,7 @@ window.registerPageInit?.("entry-index-modal", () => {
 
   function openPanel(panel: Panel) {
     const accent = panel.accent ?? panel.accentColor ?? "#b13a34";
+    const accentText = `color-mix(in srgb, ${accent} 52%, var(--text))`;
     const img = byId<HTMLImageElement>("img");
     if (panel.image) img.src = panel.image;
     else img.removeAttribute("src");
@@ -44,19 +45,19 @@ window.registerPageInit?.("entry-index-modal", () => {
     if (prefix === "sine") {
       byId("accent").style.background = `linear-gradient(135deg, ${accent}33, transparent)`;
       byId("subtitle").textContent = panel.subtitle ?? "";
-      byId("subtitle").style.color = accent;
+      byId("subtitle").style.color = accentText;
       byId("tagline").textContent = `"${panel.tagline ?? ""}"`;
-      byId("sidebar-title").style.color = accent;
+      byId("sidebar-title").style.color = accentText;
       byId("divider").style.background = accent;
       modal.querySelector(".sine-modal__body")?.scrollTo({ top: 0 });
     } else {
       byId("accent").style.background = `linear-gradient(to top, ${accent}33, transparent 55%)`;
       byId("bar").style.background = `linear-gradient(to bottom, transparent, ${accent}aa, transparent)`;
       byId("type").textContent = (panel.type || "Cosmology").toUpperCase();
-      byId("type").style.color = accent;
+      byId("type").style.color = accentText;
       byId("designation").textContent = panel.designation ?? "";
-      byId("designation").style.color = accent;
-      byId("fields-title").style.color = accent;
+      byId("designation").style.color = accentText;
+      byId("fields-title").style.color = accentText;
       byId("lead").textContent = panel.summary ?? "";
       byId("tags").replaceChildren(...(panel.tags ?? []).map((text) => {
         const tag = document.createElement("span");
@@ -74,9 +75,11 @@ window.registerPageInit?.("entry-index-modal", () => {
 
   const triggerSelector = prefix === "sine" ? ".sine-panel[data-slug]" : ".cosmo-root [data-open-entry]";
   document.querySelectorAll<HTMLElement>(triggerSelector).forEach((trigger) => {
-    trigger.addEventListener("click", () => {
+    trigger.addEventListener("click", event => {
+      if (event instanceof MouseEvent && (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) return;
       const panel = panels.find((item) => item.slug === (trigger.dataset.slug ?? trigger.dataset.openEntry));
       if (!panel) return;
+      event.preventDefault();
       // Safari does not focus buttons on pointer activation; retain a concrete return target.
       trigger.focus({ preventScroll: true });
       openPanel(panel);

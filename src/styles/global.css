@@ -2,19 +2,41 @@
 
 :root {
   --nav-height: 56px;
-  --modal-motion-duration: 380ms;
+  --modal-motion-duration: 320ms;
+  --motion-feedback: 140ms;
+  --motion-state: 220ms;
+  --motion-pane: 320ms;
+  --motion-artwork: 450ms;
+  --motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --bg:         #050407;
   --surface:    #0a0a14;
   --border:     rgba(255, 255, 255, 0.07);
   --crimson:    #b13a34;
   --gold:       #b08d3c;
   --text:       #e8e4dc;
-  --text-muted: rgba(232, 228, 220, 0.55);
-  --text-dim:   rgba(232, 228, 220, 0.3);
+  --text-muted: rgba(232, 228, 220, 0.72);
+  --text-dim:   rgba(232, 228, 220, 0.6);
+  --crimson-text: #e58c84;
+  --gold-text: #d9ba70;
   --shadow:     0 14px 40px rgba(0, 0, 0, 0.35);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Component display rules must not expose a concealed control or result state. */
+:where([hidden]:not([hidden="until-found"])) { display: none !important; }
+
+.sine-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 
 html,
 body {
@@ -104,3 +126,11 @@ button { font-family: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .sine-grain { animation: none; }
 }
+
+/* Page-owned activity policy also covers pseudo-element ambient effects. */
+[data-motion-paused],
+[data-motion-paused]::before,
+[data-motion-paused]::after { animation-play-state: paused !important; }
+
+input, textarea { caret-color: var(--gold); }
+:where(time, progress, [data-portrait-current]) { font-variant-numeric: tabular-nums; }

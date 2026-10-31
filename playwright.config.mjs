@@ -1,12 +1,27 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices, firefox } from "@playwright/test";
+import { existsSync } from "node:fs";
+import { basename, dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const PORT = 4321;
+const PORT = Number(process.env.PLAYWRIGHT_PORT || 4321);
 const baseURL = `http://127.0.0.1:${PORT}`;
+// Some Windows hosts cannot resolve Firefox's private DLL assembly in AppData.
+// An unchanged project-local copy works; match the locked Playwright revision.
+const localFirefox = join(
+  fileURLToPath(new URL(".", import.meta.url)), ".impeccable", "playwright-browsers",
+  basename(dirname(dirname(firefox.executablePath()))), "firefox", "firefox.exe",
+);
+const firefoxLaunchOptions = process.platform === "win32"
+  && !process.env.PLAYWRIGHT_BROWSERS_PATH && existsSync(localFirefox)
+  ? { executablePath: localFirefox }
+  : {};
 
 export default defineConfig({
   testDir: "./tests",
   timeout: 45_000,
-  globalTimeout: 15 * 60_000,
+  // The serial three-engine matrix needs three 15-minute engine budgets.
+  // Individual assertions and worker shutdown keep their normal timeouts.
+  globalTimeout: 45 * 60_000,
   expect: {
     timeout: 10_000,
   },
@@ -38,6 +53,7 @@ export default defineConfig({
       use: {
         ...devices["Desktop Firefox"],
         browserName: "firefox",
+        launchOptions: firefoxLaunchOptions,
       },
     },
     {

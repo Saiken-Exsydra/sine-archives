@@ -83,3 +83,22 @@ All new interaction remains keyboard-accessible. Reduced motion keeps semantic v
 - Firefox could not create pages inside the filesystem sandbox. An isolated homepage check succeeded outside it, after which the regression runs used that environment. No dependencies or browser packages were changed.
 - Review evidence is local in .tmp/observatory-depth/. Existing uncommitted work was preserved on codex/observatory-visual-depth. No deployment was performed.
 - The final guided/comparison/relationship-reset case also passed on Chromium and Firefox after the last accessibility edit (2 of 2); WebKit includes that edit in its full 15-case passing rerun.
+
+## Accessibility and responsive quality pass — 2026-10-30
+
+The Impeccable workflow followed Harden, Adapt, Typeset, Optimize and Polish. Available system names no longer inherit artwork fading. Shared navigation and secondary reading text have stronger contrast. System names use 0.75rem, main reading copy 1rem and supporting prose 0.875rem, retaining the established fonts and 54ch reading measure. Duplicate labels above titles were removed; lineage retains the selected system identity. The destinations disclosure now supplies an H2 before destination H3 headings.
+
+The stable selector layout starts at 1000px, avoiding compressed tablet hit areas. Shared navigation becomes compact at the same threshold; its language controls show EN/PT-BR while accessible names retain both the full language and visible abbreviation. Definition popovers are bounded to the visual viewport, scroll internally, initially focus their heading, reposition on geometry/viewport changes and return focus on Escape. Added viewport listeners and the definition observer are disposed through the existing page cleanup.
+
+Redactory artwork uses the existing source asset through Astro's image pipeline, with 320/640/960px WebP candidates, responsive sizes and explicit dimensions. The original public/source artwork remains intact. Image metadata also carries responsive fields through dynamically rendered concept plates. The 640px candidate is 66,804 bytes, compared with the 1,795,408-byte public PNG (about 96% smaller).
+
+Validation:
+
+- Source check: 142 files, zero errors, warnings or hints. Production build: 295 pages; content, encoding and archive-reference guards pass.
+- Observatory regressions: all 44 Chromium/WebKit cases pass. Coverage includes 320/390/768/800/1000/1001/1440/1920px, label contrast across modes, target separation, enlarged definitions in both orientations, responsive image loading and compact entry navigation in both locales.
+- After the final accessible-language-name attribute refinement, all six targeted bilingual/navigation/definition cases pass. Final measured system labels are 12px with approximately 11.75:1 contrast against the plain canvas at 390px and 1440px.
+- Additional rendered inspection covers map/reading/comparison, English and Portuguese, neighboring Systems/entry routes, keyboard focus and synthesized Chromium phone taps. A 320×568 viewport with doubled text keeps the definition within a 536px scroll region and its Close control reachable. Physical-device and assistive-technology sessions were not performed.
+- Final phone and focused desktop detector scans report only the established scanline-texture advisory. Generic type-ramp, mask-color and texture advisories are evaluated against the visual authority rather than treated as reasons to replace the identity.
+- Navigation regressions: 16/18 Chromium/WebKit cases pass. WebKit's character-dossier return and Places-map-to-home failures match the pre-existing failures documented above; the Observatory launch case passes in both engines. Firefox cannot launch in the current environment (`spawn UNKNOWN`), so no new Firefox pass is claimed.
+
+Changes remain reviewable on `codex/observatory-quality`; no packages, canonical prose, routes or deployment settings changed.

@@ -23,13 +23,19 @@ Canonical variables live in `src/styles/global.css`.
   --crimson: #b13a34;
   --gold: #b08d3c;
   --text: #e8e4dc;
-  --text-muted: rgba(232, 228, 220, 0.55);
-  --text-dim: rgba(232, 228, 220, 0.3);
+  --text-muted: rgba(232, 228, 220, 0.72);
+  --text-dim: rgba(232, 228, 220, 0.6);
+  --crimson-text: #e58c84;
+  --gold-text: #d9ba70;
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
 }
 ```
 
 Use these names before adding page-local colors. `--crimson` is the primary active/accent color; `--gold` is a secondary metadata/seal accent; `--bg` must cover `html`, `body`, and transition backgrounds to prevent white flashes.
+
+Use `--crimson-text` and `--gold-text` for readable accent text; the original colors remain material/border signals. Bespoke family accents tint their text with `color-mix(in srgb, var(--accent) 52%, var(--text))`, including entry overlays, while artwork, map marks, and decorative numerals keep their authored accents. Verify contrast on the rendered backdrop.
+
+Systems subtitles use a lighter 25% accent mix over their image stage. Do not multiply muted text by another low opacity: SiNE/System subtitles and readable taglines keep full element opacity. The artwork-only character view uses a dark-backed, dual-tone focus indicator so its restore button stays visible over bright portraits.
 
 ## Transition Variables
 
@@ -37,9 +43,9 @@ Canonical transition variables live in `src/styles/transition-system.css`.
 
 ```css
 :root {
-  --page-transition-duration: 480ms;
+  --page-transition-duration: 280ms;
   --page-transition-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
-  --search-vt-duration: 1050ms;
+  --search-vt-duration: 280ms;
   --search-vt-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
   --transition-bg: #050407;
 }
@@ -115,7 +121,7 @@ Use `MainLayout` for ordinary page additions. Use `SiteShell` directly only when
 
 Source: `src/pages/index.astro`
 
-- Full-viewport cinematic `.hero` with background image, logo, grain, scanlines, scroll cue, and fade/kenburns animation.
+- Full-viewport cinematic `.hero` with background image, logo, grain, scanlines, and a finite 760ms artwork exposure. Text is available immediately. The entrance settles on interaction and is skipped on subsequent visits in the same session; the scroll cue runs twice.
 - Edge gates: `.observatory-gate` on the left and `.search-gate` on the right. They trigger the observatory/search handle transitions.
 - Index body: `.index-wrap` split layout with typographic `.list-panel` and sticky visual `.preview-panel`.
 - Hovering/focusing a section row swaps the sticky preview image and metadata.
@@ -210,6 +216,8 @@ Source: `src/pages/search/index.astro`
 - `.search-hero` contains decorative glow/grain/scanlines, title, search console, autocomplete overlay, clear button, status line, and section chips.
 - `.search-results-shell` contains result state, active filter status, primary featured card, secondary grid, remaining rows, empty state, and noscript fallback.
 - Layout uses stable image dimensions, loading overlays, card/row variants, and state restoration through client script.
+- At 920px and below, the primary result's text precedes its bounded artwork. A tall portrait must not push the record identity behind a full-height image.
+- Initial artwork cards and ordinary links are server-rendered. Two inert card patterns supply later selected results; offscreen rows reserve their block size until needed.
 
 Preserve Search return-state continuity and the shared transition architecture when editing this page.
 
@@ -296,6 +304,8 @@ Observatory:
 - `.observatory-stage`: aperture/sphere/nodes plus active panel.
 - `.observatory-destinations`: grid of destination panels.
 - Related components: `ArchiveSphere.astro`, `ArchiveField.astro`, `SystemNode.astro`, `DestinationPanel.astro`.
+- System labels stay readable in observation and comparison; de-emphasis affects symbol artwork only. Reading copy is 1rem, supporting prose 0.875rem, and system labels 0.75rem. The secondary text role derives from the shared foreground and canvas tokens.
+- At 1000px and below, the chart becomes a stable selector above the reading surface. Definition popovers stay within the visual viewport and scroll internally under text enlargement. Reading images use generated responsive assets with explicit dimensions.
 
 ### Redactory Pages
 
@@ -362,7 +372,15 @@ Use the existing 4/8px spacing rhythm, constrained prose measure, and page-famil
 
 Navigation objects are links; in-place actions are buttons with accessible names. Every hover cue needs a visible keyboard-focus equivalent. Modal dialogs need a name, focus containment, Escape/backdrop dismissal, and focus return. Their hidden state must be inert. Focus rings use the gold token. Preserve touch access and safe-area padding at 320, 390, 768, 1440, and 1920px; allow internal scroll where a diagram or instrument needs it.
 
-Object feedback generally takes 140–360ms. Route profiles own longer cinematic movement. The shared modal motion token is 380ms; reduced motion closes immediately. Grain is static under reduced motion. Prefer transform/opacity to layout changes, and avoid continuous motion merely to attract attention.
+Every cinematic index still exposes a main heading to assistive technology; use `.sine-visually-hidden` when the visible composition already carries the identity. Field focus must remain visible when a component resets the input outline, and keyboard focus must differ from an already-selected filter state.
+
+Motion expresses access, selection, and relationships; records stay steady. Shared local roles are `--motion-feedback` (140ms), `--motion-state` (220ms), `--motion-pane` (320ms), and `--motion-artwork` (450ms), with `--motion-ease-out`. Ordinary routes and Search take 280ms. Named character, edge-handle, and Redactory passages retain bounded 600–760ms profiles; their total authored sequence should stay near 800ms. The shared modal token is 320ms; reduced motion closes immediately.
+
+Search does not rasterize its full reading surface into a route snapshot; selected result artwork can expose locally while the tool becomes available. Redactory carries its named quill, papers, and inkpot without moving a full-page reading snapshot. Its wash gradients stay still; the bounded ink canvas and depth state supply the atmosphere. Preserve these performance boundaries when adding effects.
+
+Keep copy and actions visible by default, including failed enhancement. Character selection commits its text and destination immediately while artwork dissolves. Galleries start manually and offer named playback controls; explicit pause persists while reading. Live reduced-motion changes stop spatial movement and autoplay while retaining selected-state feedback. Grain is static in reduced motion, and ambient CSS/JavaScript activity pauses when hidden or offscreen. `src/scripts/motion.ts` supplies page-owned timing, preference, and visibility helpers through `window.sineMotion`; it uses the shared initializer lifecycle and never owns route events.
+
+Use `--crimson`/`--gold` for material and border accents and the brighter `--crimson-text`/`--gold-text` for small colored labels. Text roles must remain readable on the actual local backdrop. Prefer transform/opacity to layout changes, and avoid continuous motion merely to attract attention.
 
 Use archive vocabulary (Registry, Dossier, File, Seal, Observation) and project objects. Avoid generic product copy, neon, excessive blur, unrelated icon sets, and rounded card walls.
 

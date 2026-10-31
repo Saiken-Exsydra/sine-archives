@@ -301,7 +301,7 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.4);
+    color: var(--text-muted);
     text-decoration: none;
   }
 
@@ -387,7 +387,7 @@ const depthItems = content.sections.map((section) => ({ id: section.id, label: s
   }
 
   .redactory-dive__legend a { display: grid; gap: 8px; min-height: 44px; text-decoration: none; }
-  .redactory-dive__legend a:hover strong { color: var(--gold); }
+  .redactory-dive__legend a:hover strong { color: var(--gold-text); }
   .redactory-dive__legend a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
   .redactory-dive__reading { position: relative; z-index: 2; max-width: 1120px; margin: 0 auto; padding: 32px 24px 80px; border-top: 1px solid var(--border); }
   .redactory-dive__reading h2 { font: 500 clamp(32px, 4vw, 48px)/1.1 'Cormorant Garamond', serif; margin-bottom: 16px; }

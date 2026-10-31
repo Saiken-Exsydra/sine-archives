@@ -43,7 +43,7 @@ const { items, locale = 'en' } = Astro.props;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.3);
+    color: var(--text-muted);
     writing-mode: vertical-rl;
   }
 
@@ -59,7 +59,7 @@ const { items, locale = 'en' } = Astro.props;
     display: grid;
     align-items: center;
     justify-content: center;
-    color: rgba(232, 228, 220, 0.26);
+    color: var(--text-muted);
     text-decoration: none;
     transition: color 240ms ease;
   }

@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./helpers/test";
 
 for (const locale of ["", "/pt-br"]) {
   for (const [section, prefix, trigger] of [

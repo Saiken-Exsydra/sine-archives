@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./helpers/test";
 import { gotoReady } from "./helpers/navigation";
 
 for (const width of [320, 390, 1440]) {

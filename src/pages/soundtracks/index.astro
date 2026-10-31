@@ -411,6 +411,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
       const listenerScope = new AbortController();
       const { signal } = listenerScope;
+      const tasks = window.sineMotion.createTasks(signal);
 
       const featuredTrackId = soundPage.dataset.featuredTrackId || cards[0]?.dataset.trackId || '';
       const searchBase = soundPage.dataset.searchBase || '/search/';
@@ -760,7 +761,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       }
 
       window.dispatchEvent(new CustomEvent('sine:music-request-state'));
-      requestAnimationFrame(() => {
+      tasks.frame(() => {
         if (signal.aborted) return;
         syncFromKnownState();
         window.dispatchEvent(new CustomEvent('sine:music-request-state'));
@@ -823,7 +824,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       padding: 0 22px;
       border-radius: 0;
       border-right: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(232, 228, 220, 0.52);
+      color: var(--text-muted);
       letter-spacing: 0.2em;
     }
 
@@ -889,7 +890,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       top: calc(var(--nav-height) + 18px);
       overflow: hidden;
       box-shadow: 0 32px 80px rgba(0, 0, 0, 0.38);
-      animation: soundFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation: soundDeckExpose var(--motion-artwork) var(--motion-ease-out) both;
     }
 
     .sound-feature__header,
@@ -977,7 +978,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
     .sound-feature__summary,
     .sound-row__summary {
-      color: rgba(232, 228, 220, 0.6);
+      color: var(--text-muted);
       font-size: 14px;
       line-height: 1.55;
     }
@@ -998,7 +999,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      color: rgba(232, 228, 220, 0.64);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 11px;
       letter-spacing: 0.1em;
@@ -1079,7 +1080,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
     .sound-feature__volume-value {
       min-width: 22px;
-      color: rgba(232, 228, 220, 0.62);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 12px;
       letter-spacing: 0.14em;
@@ -1095,7 +1096,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
     }
 
     .sound-feature__status {
-      color: rgba(232, 228, 220, 0.42);
+      color: var(--text-muted);
     }
 
     .sound-catalog {
@@ -1111,7 +1112,6 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       align-items: start;
       gap: 26px;
       padding: 12px 8px 22px;
-      animation: soundFadeSlideUp 0.7s 0.08s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
 
     .sound-catalog__lead {
@@ -1169,7 +1169,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.85fr) 190px;
       gap: 22px;
       padding: 18px 14px;
-      color: rgba(232, 228, 220, 0.42);
+      color: var(--text-muted);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -1186,7 +1186,6 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       min-height: 146px;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01);
-      animation: soundFadeSlideUp 0.62s var(--sound-delay, 0s) cubic-bezier(0.16, 1, 0.3, 1) both;
       transition: border-color 0.24s ease, background 0.24s ease, transform 0.24s ease;
     }
 
@@ -1260,7 +1259,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
     }
 
     .sound-row__album {
-      color: rgba(232, 228, 220, 0.5);
+      color: var(--text-muted);
     }
 
     .sound-row__actions {
@@ -1279,7 +1278,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
     }
 
     .sound-row__duration {
-      color: rgba(232, 228, 220, 0.64);
+      color: var(--text-muted);
       justify-self: center;
     }
 
@@ -1301,7 +1300,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
     .sound-empty {
       padding: 42px 12px 0;
-      color: rgba(232, 228, 220, 0.44);
+      color: var(--text-muted);
       text-align: center;
       font-family: "DM Sans", sans-serif;
       font-size: 11px;
@@ -1317,7 +1316,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
     }
 
     .sound-pagination__count {
-      color: rgba(232, 228, 220, 0.52);
+      color: var(--text-muted);
     }
 
     .sound-pagination__controls {
@@ -1858,7 +1857,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      color: rgba(232, 228, 220, 0.52);
+      color: var(--text-muted);
       text-transform: uppercase;
     }
 
@@ -1882,7 +1881,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
 
     .sound-table__head {
       padding: 13px 16px;
-      color: rgba(232, 228, 220, 0.4);
+      color: var(--text-muted);
     }
 
     .sound-row {
@@ -1923,7 +1922,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       min-height: 56px;
       display: grid;
       place-items: center;
-      color: rgba(232, 228, 220, 0.36);
+      color: var(--text-muted);
       font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
       font-size: 11px;
       letter-spacing: 0.08em;
@@ -1994,7 +1993,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
     .sound-row__album,
     .sound-row__duration,
     .sound-row__classification {
-      color: rgba(232, 228, 220, 0.58);
+      color: var(--text-muted);
     }
 
     .sound-row__classification span {
@@ -2003,7 +2002,7 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
       max-width: 100%;
       padding: 6px 9px;
       border: 1px solid rgba(176, 141, 60, 0.2);
-      color: rgba(232, 228, 220, 0.62);
+      color: var(--text-muted);
       background: rgba(176, 141, 60, 0.055);
     }
 
@@ -2153,3 +2152,6 @@ const featuredEntry = catalogEntries.find((entry) => (entry.trackId ?? entry.id)
     }
   </style>
 </MainLayout>
+<style>
+  @keyframes soundDeckExpose { from { opacity: .8; } to { opacity: 1; } }
+</style>

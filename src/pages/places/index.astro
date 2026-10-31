@@ -116,7 +116,7 @@ const regionsJson = JSON.stringify(
     <div class="places-header">
       <div class="places-header__rule"></div>
       <div class="places-header__center">
-        <span class="places-header__label">Places</span>
+        <h1 class="places-header__label">{sectionLabel(locale, 'places')}</h1>
         <span class="places-header__sub">Territories, cities &amp; geographies of the known world</span>
       </div>
       <div class="places-header__rule places-header__rule--right"></div>
@@ -133,7 +133,7 @@ const regionsJson = JSON.stringify(
           <line x1="10" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
         </svg>
       </button>
-      <div class="places-search__panel" id="places-search-panel">
+      <div class="places-search__panel" id="places-search-panel" inert>
         <label class="places-search__field">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
@@ -157,10 +157,11 @@ const regionsJson = JSON.stringify(
           data-region={region.key}
           data-accent={region.accentColor}
           style={`background:${region.gradient}; ${idx < regionsData.length - 1 ? "border-right:1px solid rgba(255,255,255,0.04);" : ""}`}
-          role="button"
-          tabindex="0"
-          aria-label={`Open ${region.label}`}
+          role="region"
+          aria-label={region.label}
         >
+          <button type="button" class="region-toggle" data-region-toggle aria-expanded="false"
+            aria-controls={`region-details-${region.key}`} aria-label={`Open ${region.label}`}></button>
           {region.backgroundImage && (
             <div class="region-bgwrap">
               <img
@@ -190,20 +191,20 @@ const regionsJson = JSON.stringify(
 
           <div class="region-vertical">
             <span class="region-vertical__label" style={`--accent:${region.accentColor};`}>{region.label}</span>
-            <span class="region-vertical__count" style={`color:${region.accentColor};`}>
+            <span class="region-vertical__count" style={`color:color-mix(in srgb, ${region.accentColor} 52%, var(--text));`}>
               {region.entries.length} {region.entries.length === 1 ? "entry" : "entries"}
             </span>
           </div>
 
-          <div class="region-cta" style={`color:${region.accentColor}; border-color:${region.accentColor}44;`}>
+          <div class="region-cta" style={`color:color-mix(in srgb, ${region.accentColor} 52%, var(--text)); border-color:${region.accentColor}44;`}>
             Open ›
           </div>
 
-          <div class="region-expanded">
+          <div class="region-expanded" id={`region-details-${region.key}`} inert>
             <div class="region-exp__header">
               <div class="region-exp__top">
                 <div>
-                  <div class="region-exp__numtag" style={`color:${region.accentColor};`}>
+                  <div class="region-exp__numtag" style={`color:color-mix(in srgb, ${region.accentColor} 52%, var(--text));`}>
                     REGION {region.numeral}
                   </div>
                   <h2 class="region-exp__title">{region.label}</h2>
@@ -217,7 +218,7 @@ const regionsJson = JSON.stringify(
                 </button>
               </div>
               <div class="region-exp__divider" style={`background:${region.accentColor};`}></div>
-              <div class="region-exp__count" style={`color:${region.accentColor};`}>
+              <div class="region-exp__count" style={`color:color-mix(in srgb, ${region.accentColor} 52%, var(--text));`}>
                 {region.entries.length} {region.entries.length === 1 ? "ENTRY" : "ENTRIES"} FILED
               </div>
             </div>
@@ -279,6 +280,13 @@ const regionsJson = JSON.stringify(
       </span>
     </div>
   </div>
+  <noscript>
+    <style is:inline>.places-root { display: none; }</style>
+    <nav class="places-fallback" aria-label={sectionLabel(locale, 'places')}>
+      <h1>{sectionLabel(locale, 'places')}</h1>
+      {regionsData.map(region => <section><h2>{region.label}</h2><ul>{region.entries.map(entry => <li><a href={`${placesEntryBase}${entry.slug}/`}>{entry.title}</a></li>)}</ul></section>)}
+    </nav>
+  </noscript>
 </MainLayout>
 
 <style>
@@ -289,6 +297,9 @@ const regionsJson = JSON.stringify(
     flex-direction: column;
     overflow: hidden;
   }
+  .places-fallback { max-width: 70ch; padding: 48px 24px; margin: auto; }
+  .places-fallback h2 { margin-top: 24px; }
+  .places-fallback a { color: var(--text); line-height: 2; }
 
   .places-header {
     display: flex;
@@ -317,13 +328,13 @@ const regionsJson = JSON.stringify(
     font-weight: 700;
     letter-spacing: 0.42em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.4);
+    color: var(--text-muted);
   }
   .places-header__sub {
     font-family: 'DM Sans', sans-serif;
     font-size: 10px;
     letter-spacing: 0.14em;
-    color: rgba(232, 228, 220, 0.18);
+    color: var(--text-muted);
     text-transform: uppercase;
     text-align: center;
   }
@@ -363,7 +374,7 @@ const regionsJson = JSON.stringify(
     color: var(--text);
   }
   .places-map-link__icon {
-    color: var(--crimson);
+    color: var(--crimson-text);
     font-size: 12px;
     line-height: 1;
   }
@@ -376,7 +387,7 @@ const regionsJson = JSON.stringify(
     background: transparent;
     border: none;
     padding: 0;
-    color: rgba(232, 228, 220, 0.55);
+    color: var(--text-muted);
     cursor: pointer;
     transition: color 0.2s;
   }
@@ -411,11 +422,12 @@ const regionsJson = JSON.stringify(
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 14px;
+    padding: 0 14px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    color: rgba(232, 228, 220, 0.55);
+    color: var(--text-muted);
   }
   .places-search__field input {
+    min-height: 44px;
     appearance: none;
     border: none;
     outline: none;
@@ -426,7 +438,8 @@ const regionsJson = JSON.stringify(
     flex: 1;
     min-width: 0;
   }
-  .places-search__field input::placeholder { color: rgba(232, 228, 220, 0.3); }
+  .places-search__field input::placeholder { color: var(--text-muted); }
+  .places-search__field:focus-within { outline: 2px solid var(--gold); outline-offset: -2px; }
   .places-search__results {
     list-style: none;
     margin: 0;
@@ -488,7 +501,7 @@ const regionsJson = JSON.stringify(
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--accent, var(--crimson));
+    color: color-mix(in srgb, var(--accent, var(--crimson)) 52%, var(--text));
   }
   .places-search__results :global(.places-search__item-title) {
     font-family: 'Cormorant Garamond', serif;
@@ -534,12 +547,16 @@ const regionsJson = JSON.stringify(
     justify-content: center;
     align-items: center;
     user-select: none;
-    transition: flex 0.72s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: flex 320ms var(--motion-ease-out);
     outline: none;
   }
   .region-panel:focus-visible {
     box-shadow: inset 0 0 0 2px var(--crimson, #b13a34);
   }
+  .region-toggle { position: absolute; inset: 0; z-index: 8; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; }
+  .region-toggle[hidden] { display: none !important; }
+  .region-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: -6px; }
+  .region-panel:has(.region-toggle:focus-visible) .region-vertical__label { color: var(--text); }
   .places-row[data-active] .region-panel { flex: 0.28; }
   .places-row[data-active] .region-panel.is-active { flex: 3.4; cursor: default; }
 
@@ -644,13 +661,13 @@ const regionsJson = JSON.stringify(
     text-orientation: mixed;
     transform: rotate(180deg);
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.4);
+    color: var(--text-muted);
     transition: color 0.35s, letter-spacing 0.4s;
     white-space: nowrap;
   }
   .region-panel:hover .region-vertical__label {
     letter-spacing: 0.24em;
-    color: var(--accent, rgba(232, 228, 220, 0.7));
+    color: color-mix(in srgb, var(--accent, rgba(232, 228, 220, 0.7)) 52%, var(--text));
   }
   .region-vertical__count {
     font-family: 'DM Sans', sans-serif;
@@ -694,8 +711,7 @@ const regionsJson = JSON.stringify(
     display: flex;
     flex-direction: column;
     opacity: 0;
-    transform: translateX(-16px);
-    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity var(--motion-pane) var(--motion-ease-out);
     pointer-events: none;
   }
   .region-panel.is-active .region-expanded {
@@ -734,7 +750,7 @@ const regionsJson = JSON.stringify(
     font-family: 'Cormorant Garamond', serif;
     font-size: 14px;
     font-style: italic;
-    color: rgba(232, 228, 220, 0.38);
+    color: var(--text-muted);
     margin: 0;
     line-height: 1.5;
   }
@@ -742,13 +758,13 @@ const regionsJson = JSON.stringify(
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: rgba(232, 228, 220, 0.5);
+    color: var(--text-muted);
     flex-shrink: 0;
     margin-top: 2px;
     transition: background 0.2s, color 0.2s;
@@ -812,14 +828,7 @@ const regionsJson = JSON.stringify(
     background: rgba(255, 255, 255, 0.015);
     min-height: 76px;
     align-items: stretch;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: border-color 0.25s, background 0.25s, opacity 0.45s, transform 0.45s;
-  }
-  .region-panel.is-active .place-card {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: calc(var(--i, 0) * 55ms + 80ms);
+    transition: border-color var(--motion-feedback), background var(--motion-feedback);
   }
   .place-card:hover {
     border-color: var(--accent-soft);
@@ -860,7 +869,7 @@ const regionsJson = JSON.stringify(
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: color-mix(in srgb, var(--accent) 52%, var(--text));
     margin-bottom: 1px;
   }
   .place-card__title {
@@ -888,7 +897,7 @@ const regionsJson = JSON.stringify(
     display: flex;
     align-items: center;
     font-size: 18px;
-    color: var(--accent);
+    color: color-mix(in srgb, var(--accent) 52%, var(--text));
     opacity: 0;
     transform: translateX(-4px);
     transition: opacity 0.2s, transform 0.2s;
@@ -912,7 +921,7 @@ const regionsJson = JSON.stringify(
     font-family: 'DM Sans', sans-serif;
     font-size: 9px;
     letter-spacing: 0.18em;
-    color: rgba(232, 228, 220, 0.18);
+    color: var(--text-muted);
     text-transform: uppercase;
     border-top: 1px solid rgba(255, 255, 255, 0.04);
     flex-shrink: 0;
@@ -924,7 +933,7 @@ const regionsJson = JSON.stringify(
     gap: 12px;
   }
   .places-footer__active[hidden] { display: none; }
-  .places-footer__sep { color: rgba(255, 255, 255, 0.12); }
+  .places-footer__sep { color: var(--text-muted); }
   .places-footer kbd {
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1031,6 +1040,11 @@ const regionsJson = JSON.stringify(
     }
   }
 </style>
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    .places-root *, .places-root *::before, .places-root *::after { transition: none !important; animation: none !important; }
+  }
+</style>
 
 <script>
   window.registerPageInit?.("places-index-interactions", () => {
@@ -1038,6 +1052,7 @@ const regionsJson = JSON.stringify(
   if (!(root instanceof HTMLElement)) return;
 
   const controller = new AbortController();
+  const tasks = window.sineMotion.createTasks(controller.signal);
   const listenerOptions = { signal: controller.signal };
   const row = document.getElementById("places-row");
   const footer = document.getElementById("places-footer");
@@ -1053,6 +1068,12 @@ const regionsJson = JSON.stringify(
       panels.forEach((p) => {
         const isActive = p.dataset.region === key;
         p.classList.toggle("is-active", isActive);
+        const toggle = p.querySelector<HTMLButtonElement>('[data-region-toggle]');
+        const content = p.querySelector<HTMLElement>('.region-expanded');
+        const moveFocus = document.activeElement === toggle;
+        if (content) content.inert = !isActive;
+        if (toggle) { toggle.hidden = isActive; toggle.setAttribute('aria-expanded', String(isActive)); }
+        if (isActive && moveFocus) p.querySelector<HTMLButtonElement>('[data-close]')?.focus({ preventScroll: true });
         if (isActive) {
           const label = p.querySelector<HTMLElement>(".region-exp__title")?.textContent ?? "";
           const accent = p.dataset.accent ?? "";
@@ -1069,7 +1090,14 @@ const regionsJson = JSON.stringify(
 
     const close = () => {
       row.removeAttribute("data-active");
-      panels.forEach((p) => p.classList.remove("is-active"));
+      panels.forEach((p) => {
+        p.classList.remove("is-active");
+        const toggle = p.querySelector<HTMLButtonElement>('[data-region-toggle]');
+        const content = p.querySelector<HTMLElement>('.region-expanded');
+        if (toggle) { toggle.hidden = false; toggle.setAttribute('aria-expanded', 'false'); }
+        if (content?.contains(document.activeElement)) toggle?.focus({ preventScroll: true });
+        if (content) content.inert = true;
+      });
       if (footerIdle) footerIdle.hidden = false;
       if (footerActive) footerActive.hidden = true;
     };
@@ -1081,13 +1109,6 @@ const regionsJson = JSON.stringify(
         const target = e.target as HTMLElement;
         if (target.closest("[data-close]") || target.closest(".place-card")) return;
         open(key);
-      }, listenerOptions);
-      panel.addEventListener("keydown", (e) => {
-        if (panel.classList.contains("is-active")) return;
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          open(key);
-        }
       }, listenerOptions);
       panel.querySelector("[data-close]")?.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -1218,13 +1239,16 @@ const regionsJson = JSON.stringify(
     const isOpen = () => searchPanel.classList.contains("is-open");
 
     const openSearch = () => {
+      searchPanel.inert = false;
       searchPanel.classList.add("is-open");
       searchBtn.setAttribute("aria-expanded", "true");
       render("");
-      setTimeout(() => searchInput.focus(), 0);
+      tasks.frame(() => { if (isOpen()) searchInput.focus(); });
     };
 
     const closeSearch = () => {
+      if (searchPanel.contains(document.activeElement)) searchBtn.focus({ preventScroll: true });
+      searchPanel.inert = true;
       searchPanel.classList.remove("is-open");
       searchBtn.setAttribute("aria-expanded", "false");
       searchInput.value = "";

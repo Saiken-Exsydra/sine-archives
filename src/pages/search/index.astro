@@ -116,6 +116,9 @@ const groupCounts = filterGroups.map((group) => ({
 
 const clientItems = items.map((item) => ({
   id: item.id,
+  href: item.href,
+  image: item.image,
+  imagePosition: item.imagePosition,
   title: item.title,
   summary: item.summary,
   designation: item.designation,
@@ -131,6 +134,14 @@ const clientItems = items.map((item) => ({
   searchText: item.searchText,
 }));
 const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
+// Two inert patterns replace a duplicate artwork layout for every record.
+const cardPattern = items[0] ? { ...items[0], image: null } : null;
+const primaryEntries = items.slice(0, 1).map(item => ({ item, initial: true }));
+const featuredEntries = items.slice(1, 5).map(item => ({ item, initial: true }));
+if (cardPattern) {
+  primaryEntries.push({ item: cardPattern, initial: false });
+  featuredEntries.push({ item: cardPattern, initial: false });
+}
 ---
 
 <MainLayout
@@ -249,13 +260,16 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 
       <div class="search-results-state" id="archive-search-results-state">
         <div class="search-primary" id="archive-search-primary">
-          {items.map((item, index) => (
+          {primaryEntries.map(({ item, initial }) => {
+            const Container = initial ? 'div' : 'template';
+            return (
+            <Container data-primary-template={!initial ? '' : undefined} style={initial ? 'display: contents' : undefined}>
             <article
               class="search-primary-card"
               data-search-primary-card
               data-item-id={item.id}
               data-section={item.section}
-              hidden={index > 0}
+              hidden={!initial}
             >
               <a class="search-primary-card__surface" href={item.href} data-search-link>
                 <div class:list={["search-primary-card__visual", { "is-loaded": !item.image }]}>
@@ -283,8 +297,8 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
                         width={item.image.width || undefined}
                         height={item.image.height || undefined}
                         alt=""
-                        loading={index === 0 ? "eager" : "lazy"}
-                        fetchpriority={index === 0 ? "high" : "auto"}
+                        loading={initial ? "eager" : "lazy"}
+                        fetchpriority={initial ? "high" : "auto"}
                         decoding="async"
                         style={item.imagePosition ? `--search-primary-object-position:${item.imagePosition};` : undefined}
                       />
@@ -315,7 +329,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
                   <div class="search-primary-card__eyebrow" data-search-primary-kicker>{copy.featuredRecord}</div>
                   <div class="search-primary-card__type">{item.type}</div>
                   <h2 class="search-primary-card__title">{item.title}</h2>
-                  {item.designation && <div class="search-primary-card__designation">{item.designation}</div>}
+                  <div class="search-primary-card__designation" hidden={!item.designation}>{item.designation}</div>
                   <p class="search-primary-card__summary">{item.summary}</p>
                   <div class="search-primary-card__footer">
                     <div class="search-primary-card__tags">
@@ -325,13 +339,14 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
                     </div>
                     <div class="search-primary-card__trail">
                       <span class="search-primary-card__access">{copy.publicRecord}</span>
-                      {getYear(item.updated) && <span class="search-primary-card__year">YR {getYear(item.updated)}</span>}
+                      <span class="search-primary-card__year" hidden={!getYear(item.updated)}>YR {getYear(item.updated)}</span>
                     </div>
                   </div>
                 </div>
               </a>
             </article>
-          ))}
+            </Container>
+          ); })}
         </div>
 
         <section class="search-secondary" id="archive-search-secondary" hidden={items.length <= 1}>
@@ -341,12 +356,15 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
           </div>
 
           <div class="search-featured-grid" id="archive-search-featured-grid" data-featured-count={Math.max(Math.min(items.length - 1, 4), 0)}>
-          {items.map((item, index) => (
+          {featuredEntries.map(({ item, initial }, index) => {
+            const Container = initial ? 'div' : 'template';
+            return (
+            <Container data-featured-template={!initial ? '' : undefined} style={initial ? 'display: contents' : undefined}>
             <article
               class="search-card"
               data-search-featured-card
               data-item-id={item.id}
-              hidden={index === 0 || index >= 5}
+              hidden={!initial}
             >
               <a class="search-card__surface" href={item.href} data-search-link>
                 <div class:list={["search-card__visual", { "is-loaded": !item.image }]}>
@@ -374,8 +392,8 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
                         width={item.image.width || undefined}
                         height={item.image.height || undefined}
                         alt=""
-                        loading={index > 0 && index < 3 ? "eager" : "lazy"}
-                        fetchpriority={index === 1 ? "high" : "auto"}
+                        loading={initial && index < 2 ? "eager" : "lazy"}
+                        fetchpriority={initial && index === 0 ? "high" : "auto"}
                         decoding="async"
                         style={item.imagePosition ? `object-position:${item.imagePosition};` : undefined}
                       />
@@ -411,7 +429,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
                   <div class="search-card__heading">
                     <div class="search-card__type">{item.type}</div>
                     <h2 class="search-card__title">{item.title}</h2>
-                    {item.designation && <div class="search-card__designation">{item.designation}</div>}
+                    <div class="search-card__designation" hidden={!item.designation}>{item.designation}</div>
                   </div>
                   <p class="search-card__summary">{item.summary}</p>
                   <div class="search-card__footer">
@@ -421,7 +439,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
                       ))}
                     </div>
                     <div class="search-card__trail">
-                      {getYear(item.updated) && <span class="search-card__year">YR {getYear(item.updated)}</span>}
+                      <span class="search-card__year" hidden={!getYear(item.updated)}>YR {getYear(item.updated)}</span>
                       <span class="search-card__action">{copy.openEntry}</span>
                       <span class="search-card__chevron" aria-hidden="true">
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -433,7 +451,8 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
                 </div>
               </a>
             </article>
-          ))}
+            </Container>
+          ); })}
         </div>
         </section>
 
@@ -582,6 +601,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 
       const controller = new AbortController();
       const { signal } = controller;
+      const tasks = window.sineMotion.createTasks(signal);
       const runtimeState = window.__sineTransitionState || null;
       const shouldFocusInput = runtimeState?.lastIntent?.type === "search"
         && /^\/(?:pt-br\/)?search\/?$/i.test(window.location.pathname);
@@ -603,8 +623,13 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       const primaryCardsById = new Map(primaryCards.map((card) => [card.getAttribute("data-item-id"), card]));
       const featuredCardsById = new Map(featuredCards.map((card) => [card.getAttribute("data-item-id"), card]));
       const remainingRowsById = new Map(remainingRows.map((row) => [row.getAttribute("data-item-id"), row]));
-      const searchLinks = Array.from(root.querySelectorAll("[data-search-link]"));
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const primaryTemplate = root.querySelector('[data-primary-template]');
+      const featuredTemplate = root.querySelector('[data-featured-template]');
+      const animations = new Set();
+      const motionPreference = window.sineMotion.watchPreference(signal, reduced => {
+        if (reduced) animations.forEach(animation => animation.finish());
+      });
+      signal.addEventListener('abort', () => { animations.forEach(animation => animation.cancel()); animations.clear(); }, { once: true });
 
       const CONCEPT_GROUPS = [
         ["church", "igreja"],
@@ -859,22 +884,94 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 
       function setNodeVisibility(node, visible, order) {
         if (!(node instanceof HTMLElement)) return;
-        node.hidden = !visible;
-        node.style.order = visible ? String(order) : "";
+        if (node.hidden === visible) node.hidden = !visible;
+        const nextOrder = visible ? String(order) : '';
+        if (node.style.order !== nextOrder) node.style.order = nextOrder;
+      }
+
+      function ensureCard(item, cards, template, section, primary = false) {
+        let card = cards.get(item.id);
+        if (!card) {
+          if (!(template instanceof HTMLTemplateElement)) return;
+          card = template.content.firstElementChild?.cloneNode(true);
+          if (!(card instanceof HTMLElement)) return;
+          const prefix = primary ? 'search-primary-card' : 'search-card';
+          card.dataset.itemId = item.id;
+          card.dataset.section = item.section;
+          card.querySelector('[data-search-link]').href = item.href;
+          for (const field of ['title', 'type', 'designation', 'summary']) {
+            const node = card.querySelector(`.${prefix}__${field}`);
+            node.textContent = item[field];
+            if (field === 'designation') node.hidden = !item[field];
+          }
+          const year = item.updated.match(/(\d{4})/)?.[1] || '';
+          const yearNode = card.querySelector(`.${prefix}__year`);
+          yearNode.textContent = year ? `YR ${year}` : '';
+          yearNode.hidden = !year;
+          const sectionLabel = card.querySelector(`.${prefix}__section`);
+          if (sectionLabel) sectionLabel.textContent = item.sectionLabel;
+          const tags = card.querySelector(`.${prefix}__tags`);
+          tags.replaceChildren(...item.tags.slice(0, primary ? 4 : 3).map(tag => {
+            const node = document.createElement('span');
+            // Copy Astro's scoped style attribute from the authored pattern.
+            for (const attr of tags.attributes) if (attr.name.startsWith('data-astro-')) node.setAttribute(attr.name, attr.value);
+            node.className = `${prefix}__tag`;
+            node.textContent = tag.label;
+            return node;
+          }));
+          const placeholder = card.querySelector(`.${prefix}__placeholder`);
+          if (item.image) {
+            const picture = document.createElement('picture');
+            for (const attr of placeholder.attributes) if (attr.name.startsWith('data-astro-')) picture.setAttribute(attr.name, attr.value);
+            const sizes = primary ? '(max-width: 900px) 100vw, 44vw' : item.image.sizes;
+            for (const [format, srcset] of [['avif', item.image.avifSrcset], ['webp', item.image.webpSrcset]]) {
+              if (!srcset) continue;
+              const source = document.createElement('source');
+              source.type = `image/${format}`; source.srcset = srcset; source.sizes = sizes;
+              picture.append(source);
+            }
+            const image = document.createElement('img');
+            for (const attr of placeholder.attributes) if (attr.name.startsWith('data-astro-')) image.setAttribute(attr.name, attr.value);
+            image.className = `${prefix}__img`;
+            image.alt = ''; image.loading = 'lazy'; image.decoding = 'async';
+            image.sizes = sizes;
+            if (item.image.width) image.width = item.image.width;
+            if (item.image.height) image.height = item.image.height;
+            if (item.imagePosition) {
+              if (primary) image.style.setProperty('--search-primary-object-position', item.imagePosition);
+              else image.style.objectPosition = item.imagePosition;
+            }
+            if (item.image.fallbackSrcset) image.srcset = item.image.fallbackSrcset;
+            image.src = item.image.fallbackSrc;
+            picture.append(image); placeholder.replaceWith(picture);
+            card.querySelector(`.${prefix}__visual`).classList.remove('is-loaded');
+          } else {
+            const gradient = placeholder.querySelector('radialGradient');
+            const oldId = gradient.id;
+            gradient.id = `${oldId}-${item.id.replace(/[^a-z0-9]+/gi, '-')}`;
+            placeholder.querySelector(`[fill="url(#${oldId})"]`).setAttribute('fill', `url(#${gradient.id})`);
+          }
+          cards.set(item.id, card);
+          primaryKickers.push(...card.querySelectorAll('[data-search-primary-kicker]'));
+        }
+        if (!card.isConnected) { section.append(card); syncImageLoading(card); }
       }
 
       function animatePrimary(primaryCard) {
-        if (!(primaryCard instanceof HTMLElement) || reducedMotion) return;
-        primaryCard.animate(
+        if (!(primaryCard instanceof HTMLElement) || motionPreference.matches) return;
+        animations.forEach(animation => animation.cancel()); animations.clear();
+        const animation = primaryCard.animate(
           [
-            { opacity: 0.56, transform: "translateY(8px)" },
-            { opacity: 1, transform: "translateY(0)" },
+            { opacity: 0.72 },
+            { opacity: 1 },
           ],
           {
             duration: 220,
             easing: "cubic-bezier(0.16, 1, 0.3, 1)",
           }
         );
+        animations.add(animation);
+        animation.finished.catch(() => {}).finally(() => animations.delete(animation));
       }
 
       function updateResultVisibility(nextItems) {
@@ -884,13 +981,19 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
         const primaryId = primaryItem?.id ?? null;
         const featuredIds = new Set(secondaryItems.map((item) => item.id));
         const remainingIds = new Set(remainingItems.map((item) => item.id));
+        const secondaryOrder = new Map(secondaryItems.map((item, index) => [item.id, index]));
+        const remainingOrder = new Map(remainingItems.map((item, index) => [item.id, index]));
+        if (primaryItem) ensureCard(primaryItem, primaryCardsById, primaryTemplate, primarySection, true);
+        secondaryItems.forEach(item => ensureCard(item, featuredCardsById, featuredTemplate, featuredGrid));
 
         featuredGrid.dataset.featuredCount = String(secondaryItems.length);
 
         items.forEach((item) => {
           setNodeVisibility(primaryCardsById.get(item.id), primaryId === item.id, 0);
-          setNodeVisibility(featuredCardsById.get(item.id), featuredIds.has(item.id), secondaryItems.findIndex((entry) => entry.id === item.id));
-          setNodeVisibility(remainingRowsById.get(item.id), remainingIds.has(item.id), remainingItems.findIndex((entry) => entry.id === item.id));
+          setNodeVisibility(featuredCardsById.get(item.id), featuredIds.has(item.id), secondaryOrder.get(item.id));
+          setNodeVisibility(remainingRowsById.get(item.id), remainingIds.has(item.id), remainingOrder.get(item.id));
+          if (item.id !== primaryId) primaryCardsById.get(item.id)?.remove();
+          if (!featuredIds.has(item.id)) featuredCardsById.get(item.id)?.remove();
         });
 
         if (primaryId) {
@@ -951,9 +1054,9 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
         persistState();
       }
 
-      function syncImageLoading() {
+      function syncImageLoading(container = root) {
         const imageSelectors = ".search-primary-card__img, .search-card__img, .search-row__img";
-        const images = Array.from(root.querySelectorAll(imageSelectors));
+        const images = Array.from(container.querySelectorAll(imageSelectors));
         images.forEach((image) => {
           if (!(image instanceof HTMLImageElement)) return;
           const visual = image.closest(".search-primary-card__visual, .search-card__visual, .search-row__thumb");
@@ -974,14 +1077,18 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       input.value = initialState.query;
 
       syncImageLoading();
-      applyFilters();
+      // The unfiltered server render already has the correct cards, row order,
+      // labels and selected filter. Rebuilding it forces another layout during
+      // arrival and replays feedback for a selection the visitor never made.
+      if (state.query || state.group !== "all") applyFilters();
+      else persistState();
 
       const rerunSearch = debounce(() => {
         applyFilters();
       }, 80);
 
       if (shouldFocusInput) {
-        requestAnimationFrame(() => {
+        tasks.frame(() => {
           if (!signal.aborted) {
             input.focus({ preventScroll: true });
           }
@@ -1037,19 +1144,16 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 
       window.addEventListener("pagehide", persistState, { signal });
 
-      searchLinks.forEach((link) => {
-        if (!(link instanceof HTMLAnchorElement)) return;
-
-        const surface = link.closest(".search-primary-card, .search-card, .search-row");
-        link.addEventListener("pointerdown", () => {
-          surface?.classList.add("is-opening");
-        }, { signal });
-
-        link.addEventListener("pointerleave", () => {
-          surface?.classList.remove("is-opening");
-        }, { signal });
-
-        link.addEventListener("click", (event) => {
+      const linkSurface = target => target instanceof Element
+        ? target.closest('[data-search-link]')?.closest('.search-primary-card, .search-card, .search-row') : null;
+      root.addEventListener('pointerdown', event => linkSurface(event.target)?.classList.add('is-opening'), { signal });
+      root.addEventListener('pointerout', event => {
+        const surface = linkSurface(event.target);
+        if (surface && !surface.contains(event.relatedTarget)) surface.classList.remove('is-opening');
+      }, { signal });
+      root.addEventListener('click', (event) => {
+          const surface = linkSurface(event.target);
+          if (!surface) return;
           if (
             event.defaultPrevented ||
             event.button !== 0 ||
@@ -1062,14 +1166,14 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
           }
           persistState();
           surface?.classList.add("is-opening");
-        }, { signal });
-      });
+      }, { signal });
 
       function debounce(fn, delay) {
         let timeoutId = 0;
+        signal.addEventListener("abort", () => window.clearTimeout(timeoutId), { once: true });
         return () => {
           window.clearTimeout(timeoutId);
-          timeoutId = window.setTimeout(() => fn(), delay);
+          timeoutId = window.setTimeout(() => { if (!signal.aborted && root.isConnected) fn(); }, delay);
         };
       }
 
@@ -1198,7 +1302,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-hero__eyebrow {
-      color: var(--crimson);
+      color: var(--crimson-text);
     }
 
     .search-hero__title {
@@ -1264,7 +1368,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     .search-console__icon {
       display: inline-flex;
       align-items: center;
-      color: rgba(232, 228, 220, 0.38);
+      color: var(--text-muted);
     }
 
     .search-console__field {
@@ -1299,7 +1403,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-console__autocomplete-rest {
-      color: rgba(232, 228, 220, 0.22);
+      color: var(--text-muted);
       user-select: none;
     }
 
@@ -1317,7 +1421,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-console__input::placeholder {
-      color: rgba(232, 228, 220, 0.22);
+      color: var(--text-muted);
     }
 
     .search-console__input::-webkit-search-decoration,
@@ -1333,7 +1437,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       justify-content: center;
       border: 1px solid rgba(177, 58, 52, 0.32);
       background: rgba(177, 58, 52, 0.05);
-      color: rgba(232, 228, 220, 0.54);
+      color: var(--text-muted);
       cursor: pointer;
       transition: border-color 0.22s, color 0.22s, background 0.22s, transform 0.22s;
     }
@@ -1363,7 +1467,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      color: rgba(232, 228, 220, 0.52);
+      color: var(--text-muted);
     }
 
     .search-console__statusdot {
@@ -1375,11 +1479,11 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-console__hint {
-      color: rgba(232, 228, 220, 0.34);
+      color: var(--text-muted);
     }
 
     .search-console__count {
-      color: rgba(232, 228, 220, 0.62);
+      color: var(--text-muted);
     }
 
     .search-filters {
@@ -1413,8 +1517,10 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       outline: none;
     }
 
+    .search-chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
     .search-chip__count {
-      color: rgba(232, 228, 220, 0.42);
+      color: var(--text-muted);
     }
 
     .search-results-shell {
@@ -1437,7 +1543,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-results-shell__eyebrow {
-      color: rgba(232, 228, 220, 0.34);
+      color: var(--text-muted);
     }
 
     .search-results-shell__active {
@@ -1448,7 +1554,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-results-shell__status {
-      color: rgba(232, 228, 220, 0.42);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 10px;
       letter-spacing: 0.2em;
@@ -1539,7 +1645,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-primary-card[data-section="characters"] .search-primary-card__img {
-      object-position: var(--search-primary-object-position, center 12%);
+      object-position: var(--search-primary-object-position, center 35%);
       transform: scale(1.08);
     }
 
@@ -1589,7 +1695,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-primary-card__eyebrow {
-      color: rgba(232, 228, 220, 0.52);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 10px;
       font-weight: 600;
@@ -1598,7 +1704,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-primary-card__type {
-      color: var(--crimson);
+      color: var(--crimson-text);
     }
 
     .search-primary-card__title {
@@ -1652,7 +1758,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       padding: 6px 10px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(255, 255, 255, 0.025);
-      color: rgba(232, 228, 220, 0.6);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 10px;
       font-weight: 600;
@@ -1670,7 +1776,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       min-width: fit-content;
       text-align: right;
       align-self: flex-end;
-      color: rgba(232, 228, 220, 0.56);
+      color: var(--text-muted);
     }
 
     .search-primary-card__access,
@@ -1679,7 +1785,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-primary-card__year {
-      color: rgba(232, 228, 220, 0.34);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 10px;
       letter-spacing: 0.16em;
@@ -1698,7 +1804,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-secondary__label {
-      color: rgba(232, 228, 220, 0.62);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 10px;
       font-weight: 600;
@@ -1743,6 +1849,12 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       transition: transform 0.18s ease, opacity 0.18s ease;
     }
 
+    .search-card {
+      content-visibility: auto;
+      contain-intrinsic-block-size: auto 760px;
+      overflow-clip-margin: 8px;
+    }
+
     .search-card.is-opening,
     .search-row.is-opening {
       transform: scale(0.992);
@@ -1776,6 +1888,13 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     .search-card__surface:hover,
     .search-card__surface:focus-visible {
       transform: translateY(-4px);
+    }
+
+    .search-primary-card__surface:focus-visible,
+    .search-card__surface:focus-visible,
+    .search-row__surface:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
     }
 
     .search-card__visual {
@@ -1860,7 +1979,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 
     .search-card__section {
       top: 16px;
-      color: rgba(232, 228, 220, 0.48);
+      color: var(--text-muted);
     }
 
     .search-card__seal {
@@ -1911,7 +2030,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-card__type {
-      color: var(--crimson);
+      color: var(--crimson-text);
     }
 
     .search-card__title {
@@ -1964,7 +2083,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       padding: 5px 8px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(255, 255, 255, 0.025);
-      color: rgba(232, 228, 220, 0.56);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 9px;
       font-weight: 600;
@@ -1978,7 +2097,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       gap: 12px;
       justify-content: flex-end;
       min-width: fit-content;
-      color: rgba(232, 228, 220, 0.54);
+      color: var(--text-muted);
     }
 
     .search-card__year {
@@ -1987,11 +2106,11 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       white-space: nowrap;
-      color: rgba(232, 228, 220, 0.34);
+      color: var(--text-muted);
     }
 
     .search-card__action {
-      color: rgba(232, 228, 220, 0.6);
+      color: var(--text-muted);
       transition: color 0.22s, transform 0.22s;
     }
 
@@ -2025,7 +2144,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-remaining__label {
-      color: rgba(232, 228, 220, 0.62);
+      color: var(--text-muted);
       font-family: "DM Sans", sans-serif;
       font-size: 10px;
       font-weight: 600;
@@ -2043,6 +2162,12 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     .search-remaining__list {
       display: grid;
       gap: 10px;
+    }
+
+    .search-row {
+      content-visibility: auto;
+      contain-intrinsic-block-size: auto 110px;
+      overflow-clip-margin: 8px;
     }
 
     .search-row__surface {
@@ -2087,7 +2212,7 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
     }
 
     .search-row__category {
-      color: rgba(232, 228, 220, 0.44);
+      color: var(--text-muted);
     }
 
     .search-row__title {
@@ -2117,16 +2242,16 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
       align-items: center;
       gap: 14px;
       justify-content: flex-end;
-      color: rgba(232, 228, 220, 0.54);
+      color: var(--text-muted);
       white-space: nowrap;
     }
 
     .search-row__access {
-      color: rgba(232, 228, 220, 0.62);
+      color: var(--text-muted);
     }
 
     .search-row__year {
-      color: rgba(232, 228, 220, 0.34);
+      color: var(--text-muted);
     }
 
     .search-empty {
@@ -2198,7 +2323,11 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 
       .search-primary-card__visual {
         min-height: 260px;
+        height: clamp(220px, 56vw, 340px);
+        grid-row: 2;
       }
+
+      .search-primary-card__body { grid-row: 1; }
 
       .search-row__surface {
         grid-template-columns: 72px minmax(0, 1fr);
@@ -2278,6 +2407,10 @@ const searchPreloadImage = items.find((item) => item.image)?.image ?? null;
 
       .search-row__surface {
         grid-template-columns: 1fr;
+      }
+
+      .search-row {
+        contain-intrinsic-block-size: auto 266px;
       }
 
       .search-row__thumb {

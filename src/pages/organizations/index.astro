@@ -319,10 +319,10 @@ const spreadFields = publicEntries.map((e) => {
     font-weight: 600;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.2);
+    color: var(--text-muted);
   }
   .orgs-hdr__sep {
-    color: rgba(232, 228, 220, 0.1);
+    color: var(--text-muted);
     font-size: 8px;
   }
   .orgs-hdr__count {
@@ -330,7 +330,7 @@ const spreadFields = publicEntries.map((e) => {
     font-size: 8px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.13);
+    color: var(--text-muted);
   }
   .orgs-hdr__title {
     font-family: 'Cormorant Garamond', serif;
@@ -387,7 +387,7 @@ const spreadFields = publicEntries.map((e) => {
     font-family: 'Cormorant Garamond', serif;
     font-size: 11px;
     font-weight: 600;
-    color: var(--accent);
+    color: color-mix(in srgb, var(--accent) 52%, var(--text));
     opacity: 0.7;
     letter-spacing: 0.1em;
   }
@@ -408,7 +408,7 @@ const spreadFields = publicEntries.map((e) => {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.2);
+    color: var(--text-muted);
   }
 
   /* ── registry ── */
@@ -431,8 +431,8 @@ const spreadFields = publicEntries.map((e) => {
     position: relative;
     overflow: hidden;
     background: #030308;
-    opacity: 0;
-    transition: opacity 1.2s ease;
+    opacity: 1;
+    transition: opacity 0.4s ease;
   }
   .org-spread.in-view .org-spread__img-wrap {
     opacity: 1;
@@ -506,7 +506,7 @@ const spreadFields = publicEntries.map((e) => {
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.38);
+    color: var(--text-muted);
     background: rgba(6, 6, 11, 0.55);
     border: 1px solid color-mix(in srgb, var(--accent) 22%, rgba(255, 255, 255, 0.06));
     padding: 3px 7px;
@@ -552,22 +552,14 @@ const spreadFields = publicEntries.map((e) => {
   .org-spread .org-spread__meta,
   .org-spread .org-spread__summary,
   .org-spread .org-spread__cta {
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 1;
+    transform: none;
   }
   .org-spread .org-spread__rule {
-    transform: scaleX(0);
+    transform: scaleX(1);
     transform-origin: left;
   }
-  .org-spread.in-view .org-spread__eyebrow     { opacity: 1; transform: none; transition-delay: 0.08s; }
-  .org-spread.in-view .org-spread__title       { opacity: 1; transform: none; transition-delay: 0.20s; }
-  .org-spread.in-view .org-spread__designation { opacity: 1; transform: none; transition-delay: 0.31s; }
-  .org-spread.in-view .org-spread__rule        { opacity: 1; transform: scaleX(1); transition-delay: 0.40s; transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.40s, opacity 0.4s ease 0.40s; }
-  .org-spread.in-view .org-spread__meta        { opacity: 1; transform: none; transition-delay: 0.50s; }
-  .org-spread.in-view .org-spread__summary     { opacity: 1; transform: none; transition-delay: 0.60s; }
-  .org-spread.in-view .org-spread__cta         { opacity: 1; transform: none; transition-delay: 0.72s; }
+  .org-spread.in-view .org-spread__rule { animation: orgRuleIn 400ms var(--motion-ease-out) both; }
 
   /* eyebrow */
   .org-spread__eyebrow {
@@ -581,18 +573,18 @@ const spreadFields = publicEntries.map((e) => {
     font-size: 8px;
     font-weight: 600;
     letter-spacing: 0.28em;
-    color: var(--accent);
+    color: color-mix(in srgb, var(--accent) 52%, var(--text));
     opacity: 0.85;
   }
   .org-spread__eye-dot {
-    color: rgba(232, 228, 220, 0.15);
+    color: var(--text-muted);
     font-size: 8px;
   }
   .org-spread__eye-ord {
     font-family: 'DM Sans', sans-serif;
     font-size: 8px;
     letter-spacing: 0.2em;
-    color: rgba(232, 228, 220, 0.2);
+    color: var(--text-muted);
   }
 
   /* title */
@@ -611,7 +603,7 @@ const spreadFields = publicEntries.map((e) => {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: clamp(14px, 1.4vw, 17px);
-    color: var(--accent);
+    color: color-mix(in srgb, var(--accent) 52%, var(--text));
     opacity: 0.82;
     letter-spacing: 0.02em;
     margin-bottom: 22px;
@@ -641,14 +633,14 @@ const spreadFields = publicEntries.map((e) => {
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.25);
+    color: var(--text-muted);
     padding-top: 1px;
     white-space: nowrap;
   }
   .org-spread__meta-val {
     font-family: 'DM Sans', sans-serif;
     font-size: 11.5px;
-    color: rgba(232, 228, 220, 0.6);
+    color: var(--text-muted);
     line-height: 1.55;
   }
 
@@ -670,7 +662,7 @@ const spreadFields = publicEntries.map((e) => {
     width: fit-content;
     background: none;
     border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-    color: var(--accent);
+    color: color-mix(in srgb, var(--accent) 52%, var(--text));
     font-family: 'DM Sans', sans-serif;
     font-size: 9px;
     font-weight: 600;
@@ -721,13 +713,13 @@ const spreadFields = publicEntries.map((e) => {
     font-weight: 600;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: rgba(232, 228, 220, 0.2);
+    color: var(--text-muted);
   }
   .orgs-footer__count {
     font-family: 'DM Sans', sans-serif;
     font-size: 9px;
     letter-spacing: 0.12em;
-    color: rgba(232, 228, 220, 0.1);
+    color: var(--text-muted);
   }
   .orgs-footer__nav {
     display: flex;
@@ -760,8 +752,8 @@ const spreadFields = publicEntries.map((e) => {
     .org-spread__img-wrap {
       flex: 0 0 auto;
       height: min(52vw, 380px);
-      opacity: 0;
-      transition: opacity 1.2s ease;
+      opacity: 1;
+      transition: opacity 0.4s ease;
     }
     .org-spread.in-view .org-spread__img-wrap { opacity: 1; }
     .org-spread:not(.org-spread--flip) .org-spread__img-vignette {
@@ -796,7 +788,7 @@ const spreadFields = publicEntries.map((e) => {
   @media (prefers-reduced-motion: reduce) {
     :global(.org-grain), .org-spread__img-grain { animation: none; }
     .org-spread__img-wrap, .org-spread__img, .org-spread__content-inner,
-    .org-spread.in-view .org-spread__rule { transition: none; }
+    .org-spread.in-view .org-spread__rule { transition: none; animation: none; }
     .org-spread.in-view :is(.org-spread__eyebrow, .org-spread__title, .org-spread__designation,
       .org-spread__meta, .org-spread__summary, .org-spread__cta) { transition: none; }
   }

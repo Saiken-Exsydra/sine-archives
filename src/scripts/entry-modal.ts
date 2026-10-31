@@ -52,7 +52,7 @@ export function createEntryModal({ overlay, modal, closeButton, body }: EntryMod
       return;
     }
     modal.classList.add("is-closing");
-    const duration = parseFloat(getComputedStyle(overlay).getPropertyValue("--modal-motion-duration")) || 380;
+    const duration = parseFloat(getComputedStyle(overlay).getPropertyValue("--modal-motion-duration")) || 320;
     closeTimer = window.setTimeout(() => finishClose(true), duration);
   }
 

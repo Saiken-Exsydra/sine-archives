@@ -1,12 +1,12 @@
 :root {
-  --page-transition-duration: 480ms;
+  --page-transition-duration: 280ms;
   --page-transition-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
   --handle-transition-duration: 720ms;
   --handle-transition-return-duration: 640ms;
-  --character-dossier-transition-duration: 680ms;
-  --observatory-system-transition-duration: 820ms;
-  --redactory-transition-duration: 760ms;
-  --search-vt-duration: 1050ms;
+  --character-dossier-transition-duration: 600ms;
+  --observatory-system-transition-duration: 700ms;
+  --redactory-transition-duration: 640ms;
+  --search-vt-duration: 280ms;
   --search-vt-ease: cubic-bezier(0.2, 0.82, 0.22, 1);
   --transition-bg: #050407;
 }
@@ -30,6 +30,15 @@ html.is-transitioning {
 
 html.is-transitioning body {
   overflow-x: clip;
+}
+
+/* Tool access keeps records live. Authored Redactory passages carry the named
+   objects without rasterizing a full reading surface into a moving snapshot. */
+html[data-transition-intent="search"],
+html[data-transition-intent="search"] #page-content,
+html[data-transition-profile^="redactory-"],
+html[data-transition-profile^="redactory-"] #page-content {
+  view-transition-name: none !important;
 }
 
 ::view-transition-old(root),
@@ -93,8 +102,6 @@ html[data-transition-intent="character-dossier"][data-character-dossier-transiti
 
 html[data-transition-intent="search"]::view-transition-old(root),
 html[data-transition-intent="search"]::view-transition-new(root),
-html[data-transition-intent="search"]::view-transition-old(page-content),
-html[data-transition-intent="search"]::view-transition-new(page-content),
 html[data-transition-intent="search"]::view-transition-group(root) {
   animation: none !important;
   mix-blend-mode: normal !important;
@@ -105,14 +112,17 @@ html[data-transition-intent="search"]::view-transition-image-pair(root) {
 }
 
 html[data-transition-intent="search"]::view-transition {
-  background:
-    radial-gradient(
-      circle at var(--search-vt-x, 100vw) var(--search-vt-y, 0px),
-      rgba(145, 34, 34, 0.28),
-      rgba(5, 4, 7, 0.98) 42%,
-      #050407 100%
-    );
+  background: var(--transition-bg);
 }
+
+html[data-transition-intent="search"]::view-transition-old(page-content) {
+  animation: searchAccessOut 140ms var(--search-vt-ease) both;
+}
+html[data-transition-intent="search"]::view-transition-new(page-content) {
+  animation: searchAccessIn var(--search-vt-duration) var(--search-vt-ease) both;
+}
+@keyframes searchAccessOut { to { opacity: 0; } }
+@keyframes searchAccessIn { from { opacity: .72; } to { opacity: 1; } }
 
 html[data-transition-intent="observatory-system"]::view-transition {
   background:
@@ -321,7 +331,6 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   0% {
     opacity: 0;
     transform: translateX(7vw) scale(1.006);
-    filter: brightness(0.76) saturate(0.92);
   }
   24% {
     opacity: 1;
@@ -330,7 +339,6 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   100% {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -338,13 +346,11 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   0% {
     opacity: 1;
     transform: none;
-    filter: none;
   }
   72%,
   100% {
     opacity: 0;
     transform: translateX(6vw) scale(0.992);
-    filter: brightness(0.5) saturate(0.8);
   }
 }
 
@@ -352,13 +358,11 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   0% {
     opacity: 1;
     transform: none;
-    filter: none;
   }
   72%,
   100% {
     opacity: 0;
     transform: translateX(-6vw) scale(0.992);
-    filter: brightness(0.52) saturate(0.8);
   }
 }
 
@@ -366,7 +370,6 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   0% {
     opacity: 0;
     transform: translateX(-7vw) scale(1.006);
-    filter: brightness(0.72) saturate(0.9);
   }
   24% {
     opacity: 1;
@@ -375,7 +378,6 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   100% {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -383,17 +385,14 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   0% {
     opacity: 1;
     transform: scale(1);
-    filter: brightness(1) saturate(1);
   }
   44% {
     opacity: 0.9;
     transform: scale(1.035);
-    filter: brightness(1.08) saturate(1.06);
   }
   100% {
     opacity: 0;
     transform: scale(1.22);
-    filter: brightness(0.38) saturate(0.72) blur(2px);
   }
 }
 
@@ -401,7 +400,6 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   0% {
     opacity: 0;
     transform: scale(0.84) translateY(20px);
-    filter: brightness(0.42) saturate(0.76);
   }
   34% {
     opacity: 1;
@@ -409,12 +407,10 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   76% {
     opacity: 1;
     transform: scale(1.008) translateY(0);
-    filter: brightness(1.08) saturate(1.04);
   }
   100% {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -445,16 +441,13 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   34% {
     opacity: 0;
     transform: translateX(-30vw) scale(0.88);
-    filter: brightness(0.42) saturate(0.76) blur(1px);
   }
   58% {
     opacity: 0.42;
-    filter: brightness(0.72) saturate(0.9) blur(0.4px);
   }
   100% {
     opacity: 1;
     transform: none;
-    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.28));
   }
 }
 
@@ -462,12 +455,10 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   from {
     opacity: 1;
     transform: none;
-    filter: drop-shadow(0 0 18px rgba(232, 228, 220, 0.28));
   }
   to {
     opacity: 0;
     transform: translateX(-22vw) scale(0.92);
-    filter: brightness(0.4) saturate(0.72) blur(1px);
   }
 }
 
@@ -541,12 +532,10 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   from {
     opacity: 0;
     transform: scale(1.018) translateY(12px);
-    filter: brightness(0.62);
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -554,12 +543,10 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   from {
     opacity: 0;
     transform: scale(1.035);
-    filter: brightness(0.38) saturate(0.72);
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -567,12 +554,10 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   from {
     opacity: 0;
     transform: translateY(10px);
-    filter: brightness(0.7);
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 
@@ -580,12 +565,10 @@ html[data-transition-profile="redactory-theorem"]::view-transition-new(page-cont
   from {
     opacity: 0;
     transform: translateY(12px) rotate(-0.2deg);
-    filter: brightness(0.62) sepia(0.08);
   }
   to {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 

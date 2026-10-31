@@ -50,6 +50,17 @@ const siteLocale = locale as SiteLocale;
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <slot name="head" />
+    <script is:inline>
+      // Windows WebKit's native snapshot renderer crashes on large return swaps
+      // (verified with build 2287, including static CSS). Use Astro's existing
+      // animated fallback there; Chromium and Apple WebKit keep native motion.
+      if ((/^Win/.test(navigator.platform) || /Windows/.test(navigator.userAgent))
+        && /AppleWebKit/.test(navigator.userAgent)
+        && !/Chrome|Chromium|Edg|OPR/.test(navigator.userAgent)
+        && document.startViewTransition) {
+        document.startViewTransition = undefined;
+      }
+    </script>
     <ClientRouter />
     <script is:inline>
       window.__sinePendingPageInits = window.__sinePendingPageInits || [];
@@ -59,6 +70,8 @@ const siteLocale = locale as SiteLocale;
     </script>
     <script>
       import "../scripts/transition-lifecycle";
+      import "../scripts/motion";
+      import "../scripts/archive-ref-previews";
       import "../scripts/codex-diagrams";
     </script>
   </head>
