@@ -63,9 +63,9 @@ npm run test:react
 
 The production React build goes to ignored `dist-react/`; preview runs at
 `http://127.0.0.1:4174`. The test server always serves a prior production build.
-The browser suite uses standard Playwright fixtures. On Windows it can reuse an
-official Firefox build placed in the existing ignored project browser cache when
-the host's AppData copy cannot launch; the cache path is tied to the locked revision.
+The browser suite uses standard Playwright fixtures and Chromium only. That is
+the agreed validation scope for this experiment; do not add other browser engines
+or a cross-browser release requirement unless the user requests it.
 Inspect desktop/mobile composition and keyboard/reduced-motion behavior before
 extending the experience. Do not claim the legacy Astro suite covers this app.
 
@@ -81,19 +81,6 @@ experimental commits until preview hosting is explicitly authorized.
 - The final Chromium run passed all six tests in 19.3 seconds, including settled
   portal geometry at 320, 390, 768, 1440, and 1920 px. Desktop and mobile captures
   were inspected after the transitions completed.
-- Firefox is blocked by this session's Windows environment: the normal binary
-  exits with access denied; an official local copy reaches startup but fails on
-  `nsIWindowsRegKey.create`. No registry/security settings were changed.
-- WebKit passed the six interaction assertions in the preceding cross-browser
-  runs, but worker shutdown could not complete reliably in this environment.
-  The legacy cleanup helper also requires unavailable CIM access. The full
-  three-browser suite is therefore not reported as green.
-
-On this sandbox host, Playwright's default AppData location is redirected. Local
-verification explicitly selected the already-installed official browser cache.
-Chromium was run against an explicitly owned preview process to avoid the host's
-shell-process shutdown problem. These are verification limitations, not suppressed
-test failures or changes to the site's runtime.
 
 ## Next migration boundary
 

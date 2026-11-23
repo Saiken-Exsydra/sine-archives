@@ -13,4 +13,7 @@ experience. React owns the document UI and GSAP owns coordinated spatial motion.
 - Avoid porting Astro's page initializer system into React. Use React effects.
 - Use existing locked packages. Any additional dependency needs justification.
 - Run `npm run check`, `npm run build`, and `npm run test:react`.
+- Browser validation for this experiment uses Chromium only. Do not run other
+  browser engines, add cross-browser requirements, or carry old host-browser
+  troubleshooting into project notes unless the user explicitly requests it.
 - Prefix experimental commits with `[CF-Pages-Skip]` to avoid a Pages build.

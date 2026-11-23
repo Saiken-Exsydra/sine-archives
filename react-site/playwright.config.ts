@@ -1,10 +1,5 @@
-import { defineConfig, devices, firefox } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 import { fileURLToPath } from 'node:url';
-import { existsSync } from 'node:fs';
-import { basename, dirname, join } from 'node:path';
-
-const localFirefox = join(fileURLToPath(new URL('../', import.meta.url)), '.impeccable',
-  'playwright-browsers', basename(dirname(dirname(firefox.executablePath()))), 'firefox', 'firefox.exe');
 
 export default defineConfig({
   testDir: './tests',
@@ -24,7 +19,5 @@ export default defineConfig({
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    { name: 'firefox', use: { ...devices['Desktop Firefox'], launchOptions: process.platform === 'win32' && existsSync(localFirefox) ? { executablePath: localFirefox } : {} } },
-    { name: 'webkit', use: { ...devices['Desktop Safari'] } },
   ],
 });
