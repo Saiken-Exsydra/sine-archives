@@ -18,7 +18,11 @@ There is currently **no fixed launch date, cutover schedule, or commitment to me
 
 This branch began as the **React Systems experiment**. Its present experience lets visitors explore Redactory, Divination, and Bloom in English or Brazilian Portuguese. Select Redactory and then **Examine the Anchor** to follow the first concept.
 
-This experiment is an initial working area within the larger reconstruction, **not the finished replacement website**.
+Systems is the first part of the full-site reconstruction.
+
+## Source material
+
+The [Google Drive source folder](https://drive.google.com/drive/folders/1FE6HmV2ajz02Or79rc95Nyd-A8wmICrN) is a source of truth for the text used in the reconstructed site. As a design develops, bring in the passages it needs. An extract can live in Markdown, structured data, or directly in a React component, whichever suits the interface.
 
 ## Run locally
 
@@ -38,6 +42,6 @@ Run `npm run build` to type-check and build. Run `npx playwright install chromiu
 ## Branch relationship
 
 - **`main`** — current SiNE Archives website; continues independently during reconstruction.
-- **`experiment/react-systems`** — evolving React-based successor website; experimental and under gradual development.
+- **`experiment/react-systems`** — React successor website under active, incremental development.
 
 This README describes the intended role of the branch, not an assertion that the migration has already occurred.
