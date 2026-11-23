@@ -33,7 +33,7 @@ export default defineConfig({
     screenshot: "only-on-failure",
   },
   webServer: {
-    command: `npm run preview -- --host 127.0.0.1 --port ${PORT}`,
+    command: `npm run legacy:preview -- --host 127.0.0.1 --port ${PORT}`,
     url: baseURL,
     reuseExistingServer: !process.env.CI,
     stdout: "pipe",

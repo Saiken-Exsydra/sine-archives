@@ -47,3 +47,7 @@ The Archive/*
 .DS_Store
 desktop.ini
 Thumbs.db
+
+# Standalone React experiment
+dist-react/
+react-site/.generated/
