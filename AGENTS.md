@@ -2,6 +2,8 @@
 
 SiNE Archives is a deployed Astro site. Make reviewable changes on a dedicated branch; preserve uncommitted work. Explain target files and purpose before editing. Use npm and the lockfile; adding packages requires approval of exact names.
 
+The Astro workspace supports the current live site. Work on the full-site React reconstruction belongs in the [React successor branch](https://github.com/Saiken-Exsydra/sine-archives/tree/experiment/react-systems), checked out locally in `React-Systems/`. See [the README](README.md#transition-to-react) for the transition status.
+
 ## Authorities
 
 - [docs/architecture.md](docs/architecture.md): ownership, routes, lifecycle, and content pipeline.

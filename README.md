@@ -2,6 +2,12 @@
 
 A bilingual, cinematic archive of characters, places, institutions, and systems from the SiNE setting. Built with Astro 5, TypeScript, plain CSS, and Markdown; dossiers, the atlas, Observatory, Redactory, and soundtrack player retain their own interfaces.
 
+## Transition to React
+
+The Astro site on `main` serves the current SiNE Archives. Its React successor is being built in stages on [`experiment/react-systems`](https://github.com/Saiken-Exsydra/sine-archives/tree/experiment/react-systems), starting with the Systems area and expanding to the full site. The local workspace keeps the React checkout in `React-Systems/`.
+
+Use the Astro site as a reference for public routes, content, and behavior as the React site takes shape. The Astro site remains live until the React successor is ready and a cutover is explicitly approved.
+
 ## Development
 
 Use Node.js 22 LTS and npm with the committed lockfile. On a fresh checkout:
