@@ -1,53 +1,7 @@
-# Build and dependency output
 node_modules/
 dist/
-.astro/
-src/data/songs.json
-public/music/covers/
-
-# Local tooling and disposable reports
-.tmp/
-playwright-report/
 test-results/
-coverage/
+playwright-report/
 *.log
-*.artifact.json
-# Track only the official project skill and hook manifest; keep machine state private.
-.agents/*
-!.agents/skills/
-.agents/skills/*
-!.agents/skills/impeccable/
-.agents/skills/impeccable/scripts/bin/
-.codex/*
-!.codex/hooks.json
-.impeccable/*
-!.impeccable/config.json
-!.impeccable/design.json
-!.impeccable/INSTALLATION.md
-!.impeccable/LICENSE
-.od-skills/
-open-design/
-open design prototypes/
-tmp-layout-check/
-
-# OS/editor metadata and local credentials
-*.swp
-*.swo
-*~
 .env
 .env.*
-!.env.example
-
-# Local Archive material is separate from tracked website character records
-The Archive/*
-!The Archive/Characters/
-!The Archive/Characters/**
-
-# Keep OS metadata excluded even inside the tracked canon exception.
-.DS_Store
-desktop.ini
-Thumbs.db
-
-# Standalone React experiment
-dist-react/
-react-site/.generated/

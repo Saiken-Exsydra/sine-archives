@@ -1,50 +1,26 @@
 {
-  "name": "sine-archives",
-  "type": "module",
+  "name": "sine-react-systems",
   "version": "0.0.1",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "node scripts/react-site.mjs dev",
-    "check": "tsc --project react-site/tsconfig.json",
-    "build": "npm run check && node scripts/react-site.mjs build",
-    "preview": "node scripts/react-site.mjs preview",
-    "test": "playwright test --config react-site/playwright.config.ts",
-    "test:react": "playwright test --config react-site/playwright.config.ts",
-    "legacy:dev": "npm run songs:generate && astro dev",
-    "legacy:check": "npm run songs:generate && astro check",
-    "legacy:build": "npm run songs:generate && npm run check:content && astro build",
-    "legacy:preview": "astro preview",
-    "legacy:test": "playwright test",
-    "check:archive-refs": "node scripts/check-archive-refs.mjs",
-    "report:archive-refs": "node scripts/report-archive-ref-candidates.mjs",
-    "check:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs --check",
-    "check:text-encoding": "node scripts/pt-br-encoding-guard.mjs --check",
-    "fix:text-encoding": "node scripts/pt-br-encoding-guard.mjs --fix",
-    "seed:pt-br-fallbacks": "node scripts/create-pt-br-fallbacks.mjs",
-    "songs:generate": "node scripts/generate-song-metadata.mjs",
-    "songs:update": "node scripts/update-song-metadata.mjs",
-    "test:characters": "playwright test tests/character-navigation.spec.ts",
-    "test:transitions": "playwright test tests/transition-smoke.spec.ts",
-    "astro": "astro",
-    "test:modals": "playwright test tests/entry-modal.spec.ts",
-    "check:content": "npm run check:pt-br-fallbacks && npm run check:text-encoding && npm run check:archive-refs"
+    "dev": "vite",
+    "check": "tsc --noEmit",
+    "build": "npm run check && vite build",
+    "preview": "vite preview",
+    "test": "playwright test"
   },
   "dependencies": {
-    "@astrojs/react": "4.4.2",
-    "astro": "^5.18.1",
-    "fast-glob": "^3.3.3",
     "gsap": "^3.15.0",
-    "mermaid": "^11.16.0",
-    "music-metadata": "^11.12.3",
-    "node-id3": "^0.2.9",
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.3",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "6.4.2"
   }
 }
