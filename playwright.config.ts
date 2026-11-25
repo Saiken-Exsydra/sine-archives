@@ -8,7 +8,7 @@ export default defineConfig({
   reporter: 'list',
   outputDir: 'test-results/react',
   use: { baseURL: 'http://127.0.0.1:4175', trace: 'retain-on-failure' },
-  webServer: {
+  webServer: process.env.SINE_TEST_DIST ? undefined : {
     command: 'npm run preview -- --host 127.0.0.1 --port 4175',
     url: 'http://127.0.0.1:4175',
     reuseExistingServer: !process.env.CI,

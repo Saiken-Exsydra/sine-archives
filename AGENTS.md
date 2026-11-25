@@ -1,6 +1,10 @@
 # SiNE Archives React Reconstruction
 
 Build the React successor to the full SiNE Archives site on `experiment/react-systems`. Use the live Astro site on `main` as a reference during the gradual reconstruction. Prefix commits on this branch with `[CF-Pages-Skip]`.
+Make reconstruction changes in this checkout (`React-Systems`). The sibling `../SiNE Archives REPO/` is a separate clone of the same repository. Read its local files for context. For the exact committed version on `main`, use the Git command in the README, regardless of which branch the sibling has checked out.
+Read and follow the [Imperial Obsidian design philosophy](DESIGN_PHILOSOPHY.md) before changing the interface. Apply it incrementally within the current task and React checkout.
+For animation work, start with the [motion architecture and source map](MOTION_ARCHITECTURE.md). Reuse the global Motion provider and shared tokens. When changing the landing ripple, review both the WebGL crest and its CSS fallback against the same single-wave composition. Keep the timing score and replay instructions current when behavior changes.
+Find current logo masters and House specifications in `C:\Users\saike\OneDrive\Documents\SiNE Archives REPO\The Archive\Artworks\Design Systems`. Use approved copies in `src/art/` for runtime assets. See README.md for digital palette roles.
 Use the [Google Drive source folder](https://drive.google.com/drive/folders/1FE6HmV2ajz02Or79rc95Nyd-A8wmICrN) when extracting text for new designs. Check the original passage when revising an extract.
-Preserve public canon and locale-specific wording. Use addressable routes, keyboard focus, reduced-motion support and effect cleanup.
-Validate with `npm run build` and the Chromium suite (`npm test`).
+Preserve public canon and locale-specific wording. Use addressable routes, keyboard focus, full-motion transitions with reduced-motion support, and effect cleanup.
+Use the root `Start-React-Systems.cmd` launcher and Zen Browser for live local verification. Validate the build and automated Chromium regressions with `npm run build` and `npm test`.

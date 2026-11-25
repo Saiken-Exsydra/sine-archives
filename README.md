@@ -6,6 +6,8 @@ The intention is for this website to **eventually replace the current website on
 
 ## Direction
 
+The [Imperial Obsidian design philosophy](DESIGN_PHILOSOPHY.md) governs visual and interaction decisions for the React reconstruction. Apply it incrementally as each part of the site is developed.
+
 - **Reconstruct, rather than immediately port, the website.** Existing content and functionality can inform the redesign without requiring a one-to-one technical migration.
 - **Use React as the primary interface technology.** The implementation may evolve as the new site develops.
 - **Migrate gradually.** Pages, systems, navigation, and presentation can be rebuilt in stages instead of moving everything at once.
@@ -14,11 +16,11 @@ The intention is for this website to **eventually replace the current website on
 
 There is currently **no fixed launch date, cutover schedule, or commitment to merge this branch into `main`**. The eventual replacement should happen only after the reconstructed website is ready and an explicit transition decision is made.
 
-## Current starting point: React Systems
+## Current React experience
 
 This branch began as the **React Systems experiment**. Its present experience lets visitors explore Redactory, Divination, and Bloom in English or Brazilian Portuguese. Select Redactory and then **Examine the Anchor** to follow the first concept.
 
-Systems is the first part of the full-site reconstruction.
+Visitors enter through Obsidian Awakening. A single ripple crosses the obsidian from the central emblem, followed by the wordmark, navigation and Index link. The Grand Index opens below the entrance with Characters at its center, Systems to the left and History to the right.
 
 ## Source material
 
@@ -26,7 +28,9 @@ The [Google Drive source folder](https://drive.google.com/drive/folders/1FE6HmV2
 
 ## Run locally
 
-On Windows, double-click **Start-React-Systems.cmd** and leave its window open. The launcher installs dependencies on first use. It opens http://localhost:5174/#/systems in your default browser when Vite is ready.
+On Windows, double-click **Start-React-Systems.cmd** and leave its window open. The launcher installs dependencies on first use. It opens http://localhost:5174/#/ in your default browser when Vite is ready.
+
+For visual review, open the [development replay](http://localhost:5174/?replay=1#/) in Zen Browser. Wait for the emblem, then move the pointer. A completed visit is remembered on refresh. The replay link resets that visit, and the browser’s reduced-motion preference still takes precedence.
 
 From a terminal with Node.js 22 and npm, run:
 
@@ -35,13 +39,44 @@ npm ci
 npm run dev
 ```
 
-Edit components, navigation, and styles in `src/`. The six Markdown records in `src/content/` and three illustrations in `src/art/` supply the current experience. The full existing website lives on `main`.
+Edit components, navigation, and styles in `src/`. The six Markdown records in `src/content/` supply the Systems study. Runtime artwork lives in `src/art/`. The full existing website lives on `main`.
 
 Run `npm run build` to type-check and build. Run `npx playwright install chromium` once for browser tests, then `npm test` after building. Tests use a separate local port.
 
-## Branch relationship
+## Local workspace
 
-- **`main`** — current SiNE Archives website; continues independently during reconstruction.
-- **`experiment/react-systems`** — React successor website under active, incremental development.
+The two sibling folders are separate clones of `Saiken-Exsydra/sine-archives`. Open **React-Systems** to work on the successor.
 
-This README describes the intended role of the branch, not an assertion that the migration has already occurred.
+| Folder | Branch | Role |
+| --- | --- | --- |
+| `React-Systems/` | `experiment/react-systems` | Implement the React site in `src/` and validate its behavior in `tests/`. |
+| `../SiNE Archives REPO/` | `main` is the reference branch | Consult the Astro routes in `src/pages/`, localized records in `src/content/`, and illustrations in `src/assets/uploads/` and `public/uploads/`. |
+
+The Astro checkout can have another branch active. To read the Systems page as committed on its local `main` branch, run this from the React folder in PowerShell. Both checkouts stay on their current branches.
+
+```powershell
+$archiveGit = (Resolve-Path '../SiNE Archives REPO/.git').Path
+git --git-dir="$archiveGit" show main:src/pages/systems/index.astro
+```
+
+The [Redactory asset inventory](Redactory%20Asset%20Production/Planning/Asset%20Inventory.md) and [production roadmap](Redactory%20Asset%20Production/Planning/SiNE_Redactory_Asset_Production_Roadmap.md) support the Experience Lab. The inventory links to local reference artwork in the sibling checkout. The React app keeps its own runtime illustrations in `src/art/`.
+
+## Archive index and visual identity
+
+The root URL and `#/` open Obsidian Awakening. Move the pointer, touch the surface, or scroll to awaken the Circular Emblem. Keyboard navigation and reduced motion give immediate access. Select **Index** or **Índice** to reach the Grand Index. Hover at an edge to see the adjacent domain. Select its name, swipe horizontally, or use the arrow keys within the index to move across. Follow a domain link to open its reading page.
+
+`#archive-index` opens the exhibition directly. The ordered registry in `src/grand-index/domains.ts` pairs each independent showcase with its reading route. `#/systems` retains all three system records. `#/characters` expands the featured record in place and `#/history` opens two entries in the imperial chronology. The character summary follows the public Le’nore record. Classification and dates follow the [current dossier](https://drive.google.com/file/d/17Z3xRUi6Q8EOQuxfunQM7CXM2DTmXJDH/view) and [Timeline](https://drive.google.com/file/d/1BAVfjlo4wEWzo_htMq8sIX7kK9jwA92J/view).
+
+The [motion architecture](MOTION_ARCHITECTURE.md) documents the shared React motion system, the material renderer and the development replay URL. Keep the central seal, serif record titles, original illustrations and approved full-color marks when extending the index.
+
+| SVG paint inventory | Exact sRGB values |
+| --- | --- |
+| Both corporate marks, shared with the named Pearl Spectrum | Pearl White `#F8F7F4`, Soft Ivory `#F5E9D0`, Pale Platinum `#CDD2DE`, Opaline Lilac `#E2CBEF`, Ice Aqua `#BDEEF0` |
+| Additional values in both marks | `#C2EFF0`, `#DDE0E6`, `#E3CEEF`, `#F6ECD6`, `#F6EFDE` |
+| Additional principal lockup values | `#E0F3F2`, `#EEE3F2`, `#F1E9F2`, `#F3F6F4`, `#F5F2F3`, `#F7F3E8`, `#F8F6F0` |
+
+The global stylesheet uses pearl for primary type, platinum for supporting text, ivory for primary actions and aqua for keyboard focus. The three Systems reading accents reuse ivory, lilac and aqua as interface cues. These assignments carry no lore meaning.
+
+House Wonderwall’s structured specification, CSS palette and design brief reside under `Design Systems/House Wonderwall/`. They prescribe pearl dominance, restrained refraction and an Obsidian display field (`#101115`). The site borrows this field for legibility. The approved corporate SVGs retain their own optical gradients. The House’s interwoven quill and hidden W belong to Wonderwall material.
+
+The Characters exhibition uses the bilingual records in `src/grand-index/characters.ts`. Each supplies its artwork, portrait, focal position and four reading sections. The editorial selection defaults to Le'nore. Hisui's chronology follows the [current dossier](https://drive.google.com/file/d/1tYgkDrXlvJ4OU_mV1h0Adq_H-kWNY9e-/view). Link to a record and section with a route such as `#/characters/hisui-kirasagi/abilities`.

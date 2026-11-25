@@ -1,0 +1,70 @@
+.archive-app.archive-home { display: block; padding: 0; background: var(--bg); }
+.archive-home { --gutter: clamp(22px, 5vw, 96px); }
+.archive-home .home-masthead {
+  position: absolute; z-index: 2; top: env(safe-area-inset-top, 0px);
+  inset-inline: var(--gutter);
+  border-bottom: 0;
+}
+.awakening-hero {
+  --emblem-size: clamp(100px, min(9.4vw, 19vh), 180px);
+  position: relative; isolation: isolate; height: 100vh; height: 100dvh; min-height: 320px;
+}
+.hero-origin {
+  position: absolute; left: 50%; top: 50%; width: var(--emblem-size); aspect-ratio: 716 / 1004;
+  transform: translate(-50%, -50%);
+}
+.hero-emblem { width: 100%; height: 100%; display: block; }
+.awaken-access { position: absolute; inset: 0; border: 0; padding: 0; background: transparent; color: inherit; cursor: pointer; }
+.awaken-access:focus-visible { outline: 2px solid var(--focus); outline-offset: 8px; }
+.archive-inscription {
+  position: absolute; inset-inline: 0; top: calc(50% + var(--emblem-size)*.26 + clamp(14px, 2vh, 26px));
+  text-align: center;
+}
+.archive-title {
+  max-width: none; margin: 0; padding-inline-start: .19em;
+  font: 400 clamp(36px, min(5.8vw, 9vh), 100px)/1 Georgia, 'Times New Roman', serif;
+  letter-spacing: .19em; color: var(--sine-pearl);
+}
+.archive-motto {
+  margin: clamp(12px, 2.1vh, 23px) 0 0;
+  padding-inline: calc(var(--gutter) + .15em) var(--gutter);
+  color: var(--sine-platinum);
+  font: 400 clamp(13px, 1.25vw, 19px)/1.3 Georgia, 'Times New Roman', serif;
+  letter-spacing: .15em;
+  text-wrap: balance;
+}
+.index-indicator {
+  position: absolute; left: 50%; bottom: max(clamp(15px, 4.2vh, 54px), env(safe-area-inset-bottom));
+  transform: translateX(-50%); min-width: 78px; min-height: 44px;
+  display: flex; flex-direction: column; align-items: center; padding: 8px;
+  color: var(--sine-platinum); font-size: 10px; line-height: 1.3; letter-spacing: .32em; text-indent: .32em;
+}
+.indicator-line { width: 1px; height: clamp(17px, 3.6vh, 42px); margin-top: 10px; background: var(--border); overflow: hidden; }
+.indicator-line::after { content: ''; display: block; height: 65%; background: linear-gradient(transparent, var(--sine-pearl)); animation: descend 2.8s infinite; animation-play-state: paused; }
+.index-indicator[data-pulse='true'] .indicator-line::after { animation-play-state: running; }
+.index-indicator i { width: 6px; height: 6px; margin-top: -6px; border: solid currentColor; border-width: 0 1px 1px 0; transform: rotate(45deg); }
+@keyframes descend { 0%, 23% { transform: translateY(-110%); opacity: 0; } 40% { opacity: .85; } 83%, 100% { transform: translateY(180%); opacity: 0; } }
+.awakening-hero .obsidian { mask-image: linear-gradient(black 90%, transparent); }
+.archive-home .footnote { margin-inline: var(--gutter); }
+@media (max-width: 560px) {
+  .awakening-hero { --emblem-size: clamp(100px, 27vw, 132px); }
+  .archive-title { font-size: clamp(30px, 8.7vw, 44px); }
+}
+@media (max-width: 360px) { .archive-home .home-masthead { inset-inline: 16px; } }
+@media (max-height: 500px) {
+  .awakening-hero { --emblem-size: 66px; }
+  .archive-inscription { top: calc(50% + 24px); }
+  .archive-title { font-size: 28px; }
+  .index-indicator { bottom: max(2px, env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .indicator-line::after { animation: none; opacity: 0; }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.archive-home) { scroll-behavior: smooth; }
+}
+
+.archive-home[data-phase='dormant'] :is(.archive-inscription, .index-indicator, .grand-index, .footnote) { visibility: hidden; }
+.index-indicator:focus-visible { opacity: 1 !important; }

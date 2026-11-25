@@ -4,9 +4,7 @@ import divinationEn from './content/en/divinationSystem.md?raw';
 import divinationPt from './content/pt-br/divinationSystem.md?raw';
 import bloomEn from './content/en/bloom.md?raw';
 import bloomPt from './content/pt-br/bloom.md?raw';
-import redactoryArt from './art/redactory.webp';
-import divinationArt from './art/divination.webp';
-import bloomArt from './art/bloom.webp';
+import { directory } from './directory';
 
 export type Locale = 'en' | 'pt-br';
 export type SystemId = 'redactory' | 'divination' | 'bloom';
@@ -27,9 +25,9 @@ function record(raw: string) {
 export function getSystems(locale: Locale) {
   const pt = locale === 'pt-br';
   return [
-    { id: 'redactory' as const, number: '01', name: 'Redactory', action: pt ? 'Rotear' : 'Route', color: '#d88a7b', art: redactoryArt, ...record(pt ? redactoryPt : redactoryEn) },
-    { id: 'divination' as const, number: '02', name: 'Divination', action: pt ? 'Fundir' : 'Fuse', color: '#9cabe5', art: divinationArt, ...record(pt ? divinationPt : divinationEn) },
-    { id: 'bloom' as const, number: '03', name: 'Bloom', action: pt ? 'Enraizar' : 'Root', color: '#b3bd85', art: bloomArt, ...record(pt ? bloomPt : bloomEn) },
+    { ...directory[0], number: '01', action: pt ? 'Rotear' : 'Route', color: 'var(--sine-ivory)', ...record(pt ? redactoryPt : redactoryEn) },
+    { ...directory[1], number: '02', action: pt ? 'Fundir' : 'Fuse', color: 'var(--sine-lilac)', ...record(pt ? divinationPt : divinationEn) },
+    { ...directory[2], number: '03', action: pt ? 'Enraizar' : 'Root', color: 'var(--sine-aqua)', ...record(pt ? bloomPt : bloomEn) },
   ];
 }
 

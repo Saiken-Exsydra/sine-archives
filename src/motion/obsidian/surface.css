@@ -1,0 +1,19 @@
+.obsidian {
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 49% 48%, #24262b52, transparent 48%),
+    linear-gradient(157deg, #090a0d 3%, #131519 25%, #1d1f24 40%, #191b20 44%, #101115 54%, #0c0d10 74%, #151619 100%);
+}
+.obsidian::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 31%, #0506097a 100%);
+}
+.obsidian canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.obsidian-reflection {
+  position: absolute; aspect-ratio: 1; opacity: 0;
+  background: radial-gradient(closest-side, transparent 69%, #07080b77 75%, #d6d8df66 81%, transparent 89%);
+  mask-image: linear-gradient(135deg, #000, #0002 56%, #000b);
+}
+.obsidian[data-renderer='webgl'] .obsidian-reflection,
+.obsidian[data-renderer='fallback'] canvas { visibility: hidden; }
+
