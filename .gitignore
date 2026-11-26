@@ -9,3 +9,4 @@ playwright-report/
 !.env.example
 .asset-pipeline/
 .asset-sources.local.json
+.character-sources.local.json

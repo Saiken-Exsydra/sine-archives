@@ -6,9 +6,13 @@
   "scripts": {
     "dev": "vite",
     "check": "tsc --noEmit",
-    "build": "npm run assets:check && npm run check && vite build",
+    "build": "npm run assets:check && npm run content:check && npm run check && vite build",
     "preview": "vite preview",
     "test": "playwright test",
+    "content:check": "node tools/content/characters.mjs",
+    "content:test": "node --test tools/content/characters.test.mjs",
+    "archive:check": "node tools/archive/check.mjs",
+    "archive:test": "node --test tools/archive/sources.test.mjs",
     "assets:sync": "node tools/assets/cli.mjs sync",
     "assets:dry-run": "node tools/assets/cli.mjs dry-run",
     "assets:check": "node tools/assets/cli.mjs check",
@@ -20,7 +24,8 @@
     "gsap": "^3.15.0",
     "motion": "^14.14.0",
     "react": "19.3.1",
-    "react-dom": "19.3.1"
+    "react-dom": "19.3.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",

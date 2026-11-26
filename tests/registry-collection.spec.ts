@@ -1,18 +1,29 @@
 import { test, expect } from './browser';
 import { build } from 'vite';
+import { cp, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-test('a static subdirectory build browses 64 records with finite boundaries and supersedes a delayed choice', async ({page}) => {
+test('a static subdirectory build discovers 64 records and supersedes a delayed choice', async ({page}, testInfo) => {
+  const root = testInfo.outputPath('publication');
+  await cp('src', path.join(root, 'src'), { recursive: true });
+  await cp('index.html', path.join(root, 'index.html'));
+  const publication = path.join(root, 'src/content/characters');
+  const examples = ['lenore-engelmeyer', 'hisui-kirasagi'];
+  for (let i = 2; i < 64; i++) {
+    const fixture = path.join(publication, 'fixture-' + i);
+    await cp(path.join(publication, examples[i % 2]), fixture, { recursive: true });
+    const file = path.join(fixture, 'record.json');
+    const { hero, portrait } = JSON.parse(await readFile(file, 'utf8'));
+    await writeFile(file, JSON.stringify({
+      name: 'Study ' + i, shortName: 'Study ' + i,
+      designation: { en: 'Fixture', 'pt-BR': 'Exemplo' },
+      summary: 'Test record', hero, portrait, overview: {},
+      order: (i + 1) * 10, portraitFocal: '40% 30%',
+    }));
+  }
   const result = await build({
-    base:'/exhibit/', publicDir:false, logLevel:'silent', build:{write:false},
-    plugins:[{name:'isolated-registry-records', transform(code,id) {
-      if (!id.endsWith('/grand-index/characters.ts')) return;
-      return code + `
-        for (let i = 2; i < 64; i++) {
-          const source = characters[i % 2];
-          characters.push({...source, id:'fixture-'+i, name:'Study '+i, portraitFocal:'40% 30%'});
-        }`;
-    }}],
+    root, configFile: path.resolve('vite.config.ts'), base:'/exhibit/',
+    publicDir:false, logLevel:'silent', build:{write:false},
   });
   const output = (Array.isArray(result) ? result[0] : result).output;
   await page.route('**/exhibit/**', async route => {
@@ -67,5 +78,8 @@ test('a static subdirectory build browses 64 records with finite boundaries and 
   await expect(page.locator('.character-caption h3')).toHaveText('Study 2');
   release();
   await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.getByRole('link', { name: 'Português (BR)' }).click();
+  await expect(page.locator('.character-rank')).toHaveText('Exemplo');
+  await expect(page).toHaveURL(/\/exhibit\/\?lang=pt-br#\/characters\/fixture-2$/);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(2400);
 });

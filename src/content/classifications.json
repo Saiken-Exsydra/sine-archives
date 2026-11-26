@@ -1,0 +1,19 @@
+{
+  "systems": {
+    "redactory": { "name": "Redactory" },
+    "divination": { "name": "Divination" },
+    "bloom": { "name": "Bloom" }
+  },
+  "anchorTypes": {
+    "deception": { "name": "Deception" }
+  },
+  "anchorDepths": {
+    "shallow": { "name": { "en": "Shallow Anchor", "pt-BR": "Âncora rasa" } },
+    "deep": { "name": { "en": "Deep Anchor", "pt-BR": "Âncora profunda" } },
+    "abyssal": { "name": { "en": "Abyssal Anchor", "pt-BR": "Âncora abissal" } }
+  },
+  "redactorRanks": {
+    "quill": { "name": "Quill" }
+  },
+  "other": {}
+}

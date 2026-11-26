@@ -69,7 +69,7 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
     {layers.map(person => <m.img key={person.id} className="scene-art" {...imageProps(person.art, '100vw', '')}
         ref={pending && person === requested ? incoming : undefined}
         loading={expanded || pending ? 'eager' : 'lazy'} fetchPriority={expanded ? 'high' : 'auto'}
-        style={{ '--focal': person.focal, '--mobile-focal': person.mobileFocal } as CSSProperties}
+        style={{ '--focal': person.focal ?? 'center', '--mobile-focal': person.mobileFocal ?? person.focal ?? 'center' } as CSSProperties}
         initial={false} animate={{ opacity: pending && person === requested ? 0 : 1 }}
         transition={{ duration: reduced || aperture.current || (pending && person === requested) ? 0 : motionTokens.selection, ease: motionTokens.ease }}
         onError={() => { if (person === character) setPresentation({ character, failed: true }); }}
@@ -82,7 +82,7 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
       {expanded ? <h1 className="catalog-label" tabIndex={-1} ref={title}>{domain}</h1>
         : <p className="catalog-label">{pt ? 'Pessoa em destaque' : 'Featured individual'}</p>}
       <h3 aria-level={expanded ? 2 : 3}>{character.name}</h3>
-      <p className="character-rank">{character.designation}</p>
+      <p className="character-rank">{character.designation[locale]}</p>
       {failed && <p role="status">{pt ? 'Ilustração indisponível.' : 'Artwork unavailable.'}</p>}
       {!expanded && <p className="character-summary">{character.summary[locale]}</p>}
       {route && <>
@@ -101,8 +101,8 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
         <div key={character.id+section} className="character-reading" id="character-reading" role="tabpanel" aria-labelledby={'tab-'+section} tabIndex={0}>
           {section === 'overview' ? <dl>{character.overview.map(([label,value]) =>
             <div key={label.en}><dt>{label[locale]}</dt><dd>{value[locale]}</dd></div>)}</dl>
-          : character[section].map((passage,i) => <div key={i}>
-              {passage.title && <h4>{passage.title[locale]}</h4>}<p>{passage.text[locale]}</p>
+          : character[section][locale].map((passage,i) => <div key={i}>
+              {passage.title && <h4>{passage.title}</h4>}<p>{passage.text}</p>
               {passage.link && <a className="system-reference" href={passage.link.href}>{passage.link.label} ↗</a>}
             </div>)}
         </div>

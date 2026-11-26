@@ -40,7 +40,8 @@ export function IndividualRegistry({ current, pending, onSelect, collection = ch
   current: Character; pending?: Character; collection?: readonly Character[];
   onSelect: (character: Character, frame: HTMLElement) => void;
 }) {
-  const pt = useLocale() === 'pt-br';
+  const locale = useLocale();
+  const pt = locale === 'pt-br';
   const reduced = useMotionPreference();
   const present = useIsPresent();
   const dialog = useRef<HTMLDialogElement>(null);
@@ -153,7 +154,7 @@ export function IndividualRegistry({ current, pending, onSelect, collection = ch
           }}>
           <span className="registry-frame"><PublicationImage asset={person.portrait} alt="" sizes="auto, (max-height: 440px) min(72vw, 29dvh, 420px), min(72vw, 38dvh, 420px)"
             fit="cover" focalPoint={person.portraitFocal ?? 'center'}/></span>
-          <span className="registry-name">{person.name}<span className="registry-designation">{person.designation}</span></span>
+          <span className="registry-name">{person.name}<span className="registry-designation">{person.designation[locale]}</span></span>
         </a>)}
       </div>
       <footer className="registry-footer">

@@ -3,6 +3,7 @@ import * as fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 import { profiles, widthsFor } from './profiles.mjs';
+import { inside, resolveSource } from '../archive/sources.mjs';
 
 export const digest = data => createHash('sha256').update(data).digest('hex');
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -11,10 +12,6 @@ const serialize = value => JSON.stringify(value, null, 2) + '\n';
 const readJSON = async file => JSON.parse(await fs.readFile(file, 'utf8'));
 const engineHash = digest(await fs.readFile(new URL(import.meta.url)));
 const approvalStamp = record => digest(JSON.stringify([record, profiles[record.profile]]));
-function inside(root, target) {
-  const relative = path.relative(root, target);
-  return relative && relative !== '..' && !relative.startsWith('..' + path.sep) && !path.isAbsolute(relative);
-}
 
 function validateRecords(records) {
   const ids = new Set();
@@ -87,7 +84,7 @@ export async function inventory({ records, dir, manifest }) {
 
 export async function generate({ records, sources, root, dir, manifest, cache, dry = false, rebuild = false, log = console.log }) {
   validateRecords(records);
-  if (!root) throw Error('Set SINE_ARTWORKS to the local Artworks directory.');
+  if (!root) throw Error('Set SINE_ARCHIVE_ROOT or SINE_ARTWORKS to locate the local Artworks directory.');
   root = await fs.realpath(root);
   for (const destination of [dir, manifest, cache]) {
     const physical = await physicalPath(path.resolve(destination));
@@ -100,11 +97,7 @@ export async function generate({ records, sources, root, dir, manifest, cache, d
   const next = {}, entries = {}, seen = new Set();
   for (const record of records) {
     const { id, profile, category } = record;
-    const relative = typeof sources[id] === 'string' ? sources[id].replaceAll('\\', '/') : '';
-    if (relative.includes(':') || relative.split('/').some(p => !p || p === '.' || p === '..'))
-      throw Error('Expected one relative source path for ' + id);
-    const file = await fs.realpath(path.resolve(root, relative));
-    if (!inside(root, file)) throw Error('Source outside Artworks: ' + id);
+    const file = await resolveSource(root, sources[id], id);
     const identity = (process.platform === 'win32' ? file.toLowerCase() : file) + ':' + profile;
     if (seen.has(identity)) throw Error('Duplicate source/profile: ' + id);
     seen.add(identity);

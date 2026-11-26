@@ -1,0 +1,23 @@
+{
+  "name": "Hisui Kirasagi",
+  "shortName": "Hisui",
+  "designation": "Far Bloom",
+  "summary": "Far from home, duty bloomed teeth.",
+  "hero": "hisui-kirasagi-hero",
+  "portrait": "hisui-kirasagi-portrait",
+  "focal": "45% 35%",
+  "mobileFocal": "46% 20%",
+  "order": 20,
+  "overview": {
+    "age": { "lunarYears": 24, "asOfImperialYear": 1568 },
+    "birth": { "imperialYear": 1557, "approximate": true },
+    "birthplace": "Tsukimiya, Hikari",
+    "residence": "Kalt'sen"
+  },
+  "affiliations": [
+    { "institution": "wonderwall-cadet-household", "kind": "service", "primary": true }
+  ],
+  "classifications": {
+    "systems": [{ "system": "bloom", "kind": "capability" }]
+  }
+}

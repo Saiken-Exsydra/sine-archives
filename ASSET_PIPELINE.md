@@ -4,14 +4,14 @@ The Archive owns the originals. Sharp prepares publication copies. Git distribut
 
 ## First-time setup
 
-For development, builds, tests and deployment, install Node.js 22 and run `npm ci`. The repository includes the delivery manifest and every responsive image. Sharp is a development dependency with native binaries installed by npm. Keep optional dependencies enabled on the build machine. The deployed site serves static files.
+For development, builds, tests and deployment, install Node.js 22.18 or later and run `npm ci`. The repository includes the delivery manifest and every responsive image. Sharp is a development dependency with native binaries installed by npm. Keep optional dependencies enabled on the build machine. The deployed site serves static files.
 
 Only the person generating artwork needs two additional files at the project root. Both are ignored by Git.
 
-1. Copy `.env.example` to `.env.local`. Set `SINE_ARTWORKS` to the **Artworks** directory containing the character, place and institutional collections. Quote the value. Paths with spaces and Windows drive letters work. Keep this variable private and omit the Vite public-variable prefix.
+1. Copy `.env.example` to `.env.local`. Set `SINE_ARCHIVE_ROOT` to the Dy’Aspora Archive root. The artwork pipeline uses its **Artworks** directory. An explicit `SINE_ARTWORKS` still works by itself and takes precedence when both variables are set. Quote the values and keep them private. See the [publication recovery procedure](CHARACTER_PUBLICATION.md#private-source-mappings-and-recovery).
 2. Transfer the private `.asset-sources.local.json` mapping from your artwork workstation, or create it using exact filenames relative to Artworks. Each approved ID needs one entry. JSON strings support Unicode and apostrophes. Forward slashes work on Windows.
 
-The local Archive happens to live under **The Archive/Artworks** in the sibling Astro checkout. The two checkouts use the same Git remote and can have different branches checked out. A directory’s presence there grants no publication rights. The first eight registrations match standard portrait and hero image blobs from the sibling’s committed `main`. This excludes alternate, legacy and duplicate files.
+The first eight registrations match standard portrait and hero image blobs from the Astro site’s committed `main`. Verify the exact source against the approved checksum. The private Archive and artwork directory can live anywhere the workstation can access.
 
 ## Publish or replace an illustration
 
@@ -55,7 +55,7 @@ Use the [shared React API](src/images/publication.tsx) wherever a domain display
 
 | API | Use |
 | --- | --- |
-| `AssetId` | Type record fields from manifest keys. Removing a referenced ID fails type checking. |
+| `AssetId` | Type component fields from manifest keys. TypeScript checks typed references, and `npm run content:check` checks character JSON references. |
 | `isAssetId(value)` | Narrow an unknown external value before lookup. Show a localized unavailable message or omit an optional reference when it fails. |
 | `PublicationImage` | Render an ordinary image with required ID, slot size and alt text. Defaults to lazy loading and asynchronous decoding. Accepts native image attributes, fit and focal position. |
 | `imageProps(id, sizes, alt)` | Supply the same URL, width descriptors, dimensions and decoding hint directly to an image or Motion element. The caller controls loading and priority. |

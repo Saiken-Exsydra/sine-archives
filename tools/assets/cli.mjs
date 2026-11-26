@@ -1,6 +1,7 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
 import { generate, inventory } from './engine.mjs';
+import { artworkRoot, loadLocalEnvironment } from '../archive/sources.mjs';
 
 const cmd = process.argv[2];
 const dir = path.resolve('public/media');
@@ -24,9 +25,9 @@ async function main() {
     return;
   }
   if (!['sync', 'dry-run', 'rebuild'].includes(cmd)) throw Error('Unknown asset command.');
-  try { process.loadEnvFile('.env.local'); } catch (e) { if (e.code !== 'ENOENT') throw e; }
+  loadLocalEnvironment();
   const sources = await json('.asset-sources.local.json');
-  const run = () => generate({ ...options, root: process.env.SINE_ARTWORKS, sources, dry: cmd === 'dry-run', rebuild: cmd === 'rebuild' });
+  const run = () => generate({ ...options, root: artworkRoot(), sources, dry: cmd === 'dry-run', rebuild: cmd === 'rebuild' });
   if (cmd === 'dry-run') return run();
   await fs.mkdir(path.dirname(cache), { recursive: true });
   const lock = cache + '.lock';

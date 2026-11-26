@@ -24,7 +24,7 @@ Visitors enter through Obsidian Awakening. A single ripple crosses the obsidian 
 
 ## Source material
 
-The [Google Drive source folder](https://drive.google.com/drive/folders/1FE6HmV2ajz02Or79rc95Nyd-A8wmICrN) is a source of truth for the text used in the reconstructed site. As a design develops, bring in the passages it needs. An extract can live in Markdown, structured data, or directly in a React component, whichever suits the interface.
+The [Dy’Aspora Archive](https://drive.google.com/drive/folders/1FE6HmV2ajz02Or79rc95Nyd-A8wmICrN) contains the current canonical dossiers and governing sources. The [character publication guide](CHARACTER_PUBLICATION.md) covers approved editions, local Archive configuration and recovery. The site runs from checked-in publication files.
 
 ## Run locally
 
@@ -32,14 +32,14 @@ On Windows, double-click **Start-React-Systems.cmd** and leave its window open. 
 
 For visual review, open the [development replay](http://localhost:5174/?replay=1#/) in Zen Browser. Wait for the emblem, then move the pointer. A completed visit is remembered on refresh. The replay link resets that visit, and the browser’s reduced-motion preference still takes precedence.
 
-From a terminal with Node.js 22 and npm, run:
+From a terminal with Node.js 22.18 or later and npm, run:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Edit components, navigation, and styles in `src/`. The six Markdown records in `src/content/` supply the Systems study. Runtime artwork lives in `src/art/`. The full existing website lives on `main`.
+Edit components, navigation, and styles in `src/`. The six System Markdown records in `src/content/en/` and `src/content/pt-br/` supply the Systems study. Character editions live in `src/content/characters/`. Bundled artwork lives in `src/art/` and responsive publication derivatives in `public/media/`. The full existing website lives on `main`.
 
 Run `npm run build` to type-check and build. Run `npx playwright install chromium` once for browser tests, then `npm test` after building. Tests use a separate local port.
 
@@ -81,12 +81,12 @@ The global stylesheet uses pearl for primary type, platinum for supporting text,
 
 House Wonderwall’s structured specification, CSS palette and design brief reside under `Design Systems/House Wonderwall/`. They prescribe pearl dominance, restrained refraction and an Obsidian display field (`#101115`). The site borrows this field for legibility. The approved corporate SVGs retain their own optical gradients. The House’s interwoven quill and hidden W belong to Wonderwall material.
 
-The Characters exhibition uses the bilingual records in `src/grand-index/characters.ts`. Each supplies its artwork, portrait, focal position and four reading sections. The editorial selection defaults to Le'nore. Hisui's chronology follows the [current dossier](https://drive.google.com/file/d/1tYgkDrXlvJ4OU_mV1h0Adq_H-kWNY9e-/view). Link to a record and section with a route such as `#/characters/hisui-kirasagi/abilities`.
+The Characters exhibition discovers bilingual records in `src/content/characters/`. Each supplies its artwork, portrait, focal position and four reading sections. Le’nore is the featured record. Link to a record and section with a route such as `#/characters/hisui-kirasagi/abilities`.
 
 ## Registry of Individuals
 
 Examination keeps one individual’s hero and four reading sections in view. The bottom control opens discovery. [IndividualRegistry](src/grand-index/IndividualRegistry.tsx) owns the fullscreen dialog, native horizontal track, focus and finite directional controls. [Registry styles](src/grand-index/registry.css) construct the stationary ceiling light, obsidian wall, floor and titanium frames. A short collection centers itself. On narrower screens, swipe, use a trackpad, wheel over the track, or use the directional controls. Left, Right, Home and End move keyboard focus between portraits. The modal isolates the underlying interface and dismissal returns focus to the opener.
 
-To exhibit an individual, add a complete bilingual public record to [characters.ts](src/grand-index/characters.ts) with a stable ID and approved portrait and hero asset IDs. The gallery follows record order. Frames measure `min(72vw, 38dvh, 420px)` wide and maintain a 2:3 aspect ratio. At viewport heights of 440px or less, the height-based width limit drops to 29dvh to clear the heading and controls. A beveled outer frame surrounds a recessed 2:3 image. The separate satin placard aligns with the frame and carries the published designation when vertical space permits. Portraits use centered cover cropping. Set optional `portraitFocal` for an individual composition. The separate `focal` and `mobileFocal` values apply to the hero.
+To exhibit an individual, add a bilingual directory using the [character publication template](CHARACTER_PUBLICATION.md#record-template). The gallery follows the editorial order in the records. Frames measure `min(72vw, 38dvh, 420px)` wide and maintain a 2:3 aspect ratio. At viewport heights of 440px or less, the height-based width limit drops to 29dvh to clear the heading and controls. A beveled outer frame surrounds a recessed 2:3 image. The separate satin placard aligns with the frame and carries the published designation when vertical space permits. Portraits use centered cover cropping. Set optional `portraitFocal` for an individual composition. The separate `focal` and `mobileFocal` values apply to the hero.
 
 Portraits mount on opening and use browser-managed lazy loading. The [64-record test](tests/registry-collection.spec.ts) exercises a finite collection at a nested static deployment base. All links stay in the DOM for keyboard navigation. Rendering cost therefore grows with the collection. Reassess with representative assets if the published catalogue grows substantially. See the [motion score](MOTION_ARCHITECTURE.md#characters-exhibition) for timing, history and image handoff.

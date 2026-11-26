@@ -1,0 +1,15 @@
+{
+  "house-engelmeyer": {
+    "name": { "en": "House Engelmeyer", "pt-BR": "Casa Engelmeyer" },
+    "category": "house"
+  },
+  "house-wonderwall": {
+    "name": { "en": "House Wonderwall", "pt-BR": "Casa Wonderwall" },
+    "category": "house"
+  },
+  "wonderwall-cadet-household": {
+    "name": { "en": "Wonderwall household", "pt-BR": "Casa Wonderwall" },
+    "category": "household",
+    "parent": "house-wonderwall"
+  }
+}

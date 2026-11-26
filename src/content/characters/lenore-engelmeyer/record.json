@@ -1,0 +1,33 @@
+{
+  "name": "Le’nore Voren Engelmeyer",
+  "shortName": "Le’nore",
+  "designation": "Quill · Mark 2",
+  "summary": {
+    "en": "Her kindness is real. So is what she keeps hungry.",
+    "pt-BR": "Sua gentileza é real. Assim como aquilo que ela mantém faminto."
+  },
+  "hero": "lenore-engelmeyer-hero",
+  "portrait": "lenore-engelmeyer-portrait",
+  "focal": "42% 28%",
+  "mobileFocal": "39% 20%",
+  "order": 10,
+  "featured": true,
+  "overview": {
+    "age": { "lunarYears": 23, "asOfImperialYear": 1568 },
+    "birth": { "imperialYear": 1558, "approximate": true },
+    "birthplace": "Drevholt",
+    "heightCm": 169,
+    "residence": "Vel’hara"
+  },
+  "affiliations": [
+    { "institution": "house-engelmeyer", "kind": "blood-lineage", "primary": true }
+  ],
+  "classifications": {
+    "systems": [{ "system": "redactory", "kind": "capability" }],
+    "redactory": {
+      "anchor": { "type": "deception", "depth": "deep" },
+      "rank": "quill",
+      "mark": 2
+    }
+  }
+}
