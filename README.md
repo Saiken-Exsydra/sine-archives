@@ -45,7 +45,7 @@ Run `npm run build` to type-check and build. Run `npx playwright install chromiu
 
 ## Local workspace
 
-The [SiNE Asset Pipeline](ASSET_PIPELINE.md) manages approved responsive imagery. It includes the author workflow, private workstation setup, image commands and React examples. A fresh clone includes the public derivatives needed to run and build the site.
+The [SiNE Asset Pipeline](ASSET_PIPELINE.md) manages approved responsive imagery. Its [React delivery guide](ASSET_PIPELINE.md#react-delivery) covers ordinary illustrations, responsive slots, Motion environments, and preparing artwork for an imminent selection. A fresh clone includes the public derivatives needed to run and build the site.
 
 The two sibling folders are separate clones of `Saiken-Exsydra/sine-archives`. Open **React-Systems** to work on the successor.
 

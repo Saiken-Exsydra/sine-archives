@@ -61,6 +61,8 @@ async function verifyEntry(dir, record, entry) {
       widths.length !== entry.variants.length) throw Error('Invalid variants: ' + record.id);
   for (const [i, variant] of entry.variants.entries()) {
     const { file, width, height, sha256, bytes } = variant;
+    if (entry.format === 'svg' && sha256 !== record.approvedSha256)
+      throw Error('SVG differs from approved original: ' + record.id);
     if (!checksum.test(sha256) || width !== widths[i] || file !== variantName(record.id, width, sha256, entry.format))
       throw Error('Invalid variant: ' + record.id);
     const buffer = await fs.readFile(path.join(dir, file));

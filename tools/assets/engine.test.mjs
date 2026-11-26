@@ -49,6 +49,9 @@ test('registered raster and vector variants retain composition and strip raster 
   assert.deepEqual([rotated.width, rotated.height, rotated.exif], [80, 230, undefined]);
   assert.deepEqual(await fs.readFile(path.join(f.dir, entries.vector.variants[0].file)), svg);
   assert.doesNotMatch(await fs.readFile(f.manifest, 'utf8'), /Aïda|Places|unregistered/);
+  entries.vector.variants[0].sha256 = digest('a different original');
+  await fs.writeFile(f.manifest, JSON.stringify(entries));
+  await assert.rejects(inventory(f.options), /SVG differs from approved original/);
 });
 
 test('incremental sync verifies files, repairs damage and preserves the previous manifest on failure', async t => {

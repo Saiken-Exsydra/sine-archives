@@ -27,7 +27,6 @@ function App() {
   }, [home, domain]);
   useLayoutEffect(() => { document.documentElement.lang = locale; }, [locale]);
   const character = domain === 'characters' ? characterRoute(characterId, section) : undefined;
-  useLayoutEffect(() => { if (character) document.title = character.character.name + ' · SiNE Archives'; }, [character?.character]);
   return home || domain === 'characters' ? <ArchiveHome character={character} atIndex={hash === '#archive-index' || Boolean(character)} returning={hasLeft.current} returnDomain={returnDomain.current} />
     : domain ? <DomainPage domain={domain} />
     : <Suspense fallback={<main aria-busy="true" />}><Systems fromHome={firstHome.current} /></Suspense>;
