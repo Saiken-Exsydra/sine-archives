@@ -3,7 +3,9 @@ import type { SystemId } from './content';
 
 export type Location = { characterId?: string; section?: string; domain?: 'characters' | 'history'; home: boolean; system: SystemId | null; anchor: boolean; valid: boolean };
 export function parseLocation(hash: string): Location {
-  const path = hash.replace(/^#/, '').replace(/\/$/, '') || '/';
+  // A dossier can carry one document-local heading inside its hash route.
+  const routeHash = hash.replace(/(\/dossier)\?heading=[^#]*$/, '$1');
+  const path = routeHash.replace(/^#/, '').replace(/\/$/, '') || '/';
   if (path === '/' || path === 'archive-index') return { home: true, system: null, anchor: false, valid: true };
   const character = path.match(/^\/characters(?:\/([a-z0-9-]+)(?:\/([a-z]+))?)?$/);
   if (character) return { domain: 'characters', characterId: character[1], section: character[2], home: false, system: null, anchor: false, valid: true };

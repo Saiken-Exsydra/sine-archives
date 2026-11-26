@@ -151,9 +151,13 @@ test('an interrupted visit replays and native fullscreen follows its actual stat
   await expect(toggle).toHaveAttribute('aria-pressed','true');
   await expect(icon).not.toHaveAttribute('d', enterPath!);
   expect(await page.evaluate(() => Boolean(document.fullscreenElement))).toBe(true);
-  await toggle.click();
+  await page.keyboard.press('PageDown');
+  const index = page.locator('#archive-index');
+  await expect(index).toBeInViewport({ ratio: 1 });
+  await page.evaluate(() => document.exitFullscreen());
   await expect(toggle).toHaveAttribute('aria-pressed','false');
   await expect(icon).toHaveAttribute('d', enterPath!);
+  await expect(index).toBeInViewport({ ratio: 1 });
 });
 
 async function sampleLanguageSelection(option: Locator) {

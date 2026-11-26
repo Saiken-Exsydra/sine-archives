@@ -49,7 +49,7 @@ function selectLocale(event: MouseEvent<HTMLAnchorElement>, locale: Locale) {
   event.preventDefault();
   try { localStorage.setItem(localeKey, locale); } catch { /* The URL still carries the selection. */ }
   if (locale === getLocale()) return;
-  history.pushState(null, '', localeUrl(locale));
+  history.pushState(history.state?.dossierSection ? { dossierSection: history.state.dossierSection } : null, '', localeUrl(locale));
   window.dispatchEvent(new Event(localeChange));
 }
 

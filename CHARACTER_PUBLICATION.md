@@ -38,7 +38,17 @@ src/content/
 
 Use blank lines between paragraphs in Biography, Abilities and Relations. An optional `## Heading` labels the following paragraph. An optional link on its own, after a blank line, attaches to the preceding paragraph. For example, `[Bloom](#/systems/bloom)`. These sections currently display plain paragraph and heading text, with a separate link to Redactory, Divination or Bloom. Write each locale for its own readers and preserve the same published facts and disclosures.
 
-Complete Dossier Markdown supports its own document structure. List each explicitly approved language under `"dossier"` in `record.json` and add the corresponding file. A declared language requires a file, and a dossier file requires a declaration. Omit the field until an edition is approved. Each approved locale is available to React as native Markdown for a future reader.
+Complete Dossier Markdown supports its own document structure. List each explicitly approved language under `"dossier"` in `record.json` and add the corresponding file. A declared language requires a file, and a dossier file requires a declaration. Omit the field until an edition is approved. The reader requests the approved Markdown for the active locale when the visitor opens Complete Dossier. An unavailable edition has no entry control. Opening its dossier URL returns to the examination section saved in that history entry, or Overview on a direct visit.
+
+### Complete Dossier reader
+
+Keep the approved document's headings, paragraphs, emphasis, lists, quotations, rules and tables in their original order. The examination summaries serve a different editorial purpose. An author may approve a verbatim complete dossier for one language independently of the other. For Le’nore and Hisui the English and Brazilian Portuguese editions each still require explicit approval.
+
+[DossierSurface](src/grand-index/DossierSurface.tsx) requests the localized module from the record. [The document renderer](src/grand-index/dossierDocument.tsx) uses the Marked lexer and renders React elements. HTML is displayed as text. Images display their alternative text. Published links may point to HTTP(S), email, archive hash routes or local headings. Wide tables can scroll horizontally. The two source dossiers reviewed for this phase use no Markdown footnote definitions. Review any new syntax against the proposed edition before publication.
+
+Contents follow the parsed headings in source order. Anchor names retain Unicode letters and numbers and gain numeric suffixes on collision. For example, a second heading named Memória can be linked from the document as `[Memória](#memória-2)`. A contents selection updates the current hash route with `?heading=mem%C3%B3ria-2`. Scrolling updates the highlighted heading without writing history. A shared dossier URL such as `#/characters/<id>/dossier` returns to Overview when opened directly.
+
+The [dossier regression](tests/dossier.spec.ts) builds a separate bilingual specimen at a nested base, exercises touch and keyboard navigation, and saves settled screenshots in `test-results/react-review/`.
 
 ## Record template
 

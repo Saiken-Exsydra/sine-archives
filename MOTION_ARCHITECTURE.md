@@ -35,6 +35,8 @@ For a new interaction, define its settled, keyboard-accessible state first. Reus
 
 At 3.5 s the interface is manifested and the canvas unmounts. Scrolling 22% of the hero height enters exploration and can finish the introduction early. Returning above that threshold restores the manifested composition. The Index link focuses the directory and uses native scrolling. Its hairline pulse pauses offscreen and while the document is hidden.
 
+The homepage uses native vertical scroll snap for the entrance and Grand Index. Both sections follow the dynamic viewport height. If a viewport resize displaces an already aligned Grand Index, the existing scroll observer restores its position immediately. The document ends at the Grand Index, and its horizontal domain track uses that same height throughout selection. On short displays, exhibit text and links can scroll within their own regions. Scroll down and back up in Zen, then resize or toggle fullscreen with the Grand Index in view to check that the current section stays aligned.
+
 Keyboard input releases the controls before the browser processes the original keystroke. Dormant visitors using assistive technology can activate “Open the archive.” Reduced motion gives immediate access, skips the canvas, disables the pulse and uses immediate index scrolling. Direct routes also bypass the introduction.
 
 A completed or intentionally skipped introduction sets `sine.awakening.v1` in session storage. An interrupted introduction can replay on refresh. When storage is unavailable, the current document remembers completion during navigation. For a fresh development preview, open [Replay in Zen](http://localhost:5174/?replay=1#/). The development build consumes the query parameter on load.
@@ -63,7 +65,7 @@ For visual changes, inspect the impact and propagation captures for one readable
 
 ## Individual examination
 
-Open the [examination replay](http://localhost:5174/#/characters/lenore-engelmeyer) and move between Overview and Biography. The right reading edge stays anchored. On desktop its inner edge extends up to 80px over the 300ms selection interval. The name, navigation and decoded hero keep their positions. Prose enters once from 5px below as the outgoing content fades over 180ms. The outgoing layer immediately becomes inert. The panel resets its own scroll on a record, section or locale change. The tab receiving keyboard activation keeps focus.
+Open the [examination replay](http://localhost:5174/#/characters/lenore-engelmeyer) and move between Overview and Biography. The right reading edge stays anchored. On desktop the common caption container widens inward by up to 80px over the 300ms selection interval. Its category, name, designation, divider and section content move together. The name retains its wrapping, the phone layout keeps its fixed gutters, and the navigation and decoded hero stay stationary. Prose enters once from 5px below as the outgoing content fades over 180ms. The outgoing layer immediately becomes inert. The panel resets its own scroll on a record, section or locale change. The tab receiving keyboard activation keeps focus.
 
 The upward Registry chevron reserves a centered 54px-high touch target. Pointer attention and visible keyboard focus reveal the label and optical floor reflection over 180ms. Coarse pointers see the label at rest. Reduced motion settles the apparatus immediately. Exercise rapid arrow navigation, browser Back and Registry dismissal in both languages. The [examination regressions](tests/examination.spec.ts) capture all four settled sections for both records at three viewport sizes in `test-results/phase-v/`.
 
@@ -76,3 +78,9 @@ Open [Characters](http://localhost:5174/#/characters/lenore-engelmeyer/biography
 Replay both directions between Le’nore and Hisui. Review the gallery, selection mask and reading state at desktop and phone sizes. [Character regressions](tests/characters.spec.ts) write captures under `test-results/react-review/`. For deliberate network and decode waits, see [publication regressions](tests/publication.spec.ts).
 
 The centered floor chevron reveals its localized return label on hover or keyboard focus. Touch shows the label at rest. The frame and placard rise together by 3px over the 300ms selection interval. Edge, shadow and threshold feedback use the 180ms control interval. One wall reflection follows the attended exhibit and settles over 400ms. Scrolling updates its horizontal position directly. Activation holds the visible frame transform for the measured reveal. Reduced motion retains optical feedback with immediate placement.
+
+### Complete Dossier expansion
+
+Dossier Mode retains the mounted individual, its decoded hero and the examination section. The existing `settle` token (650 ms) coordinates the artwork translation and the inward reveal of the obsidian reading surface. The navigation, caption and Registry threshold become inert and fade with the control timing. Return reverses the geometry and restores focus to the dossier entry. Ordinary section changes retain their 300 ms transition.
+
+On desktop the reader starts at 32% of the environment width. The artwork translates left within its original image slot. At narrower widths the contents fold into a disclosure. Phones use a full-width reading plane beneath a cropped view of the individual. Reduced motion settles the composition immediately and uses instant heading navigation. Replay both directions, including a reversal before settling, with the bilingual publication fixture in `tests/dossier.spec.ts`.

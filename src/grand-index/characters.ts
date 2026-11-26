@@ -11,13 +11,14 @@ export const sectionNames = {
   relations: { en: 'Relations', 'pt-br': 'Relações' },
 };
 
-export interface CharacterRoute { character: Character; section: Section }
+export interface CharacterRoute { character: Character; section: Section; dossier?: boolean }
 export function characterRoute(id?: string, section?: string): CharacterRoute {
   return {
     character: characters.find(record => record.id === id) ?? featuredCharacter,
-    section: sections.find(item => item === section) ?? 'overview',
+    dossier: section === 'dossier' && characters.some(record => record.id === id),
+    section: sections.find(item => item === (section === 'dossier' ? history.state?.dossierSection : section)) ?? 'overview',
   };
 }
-export function characterHref(id: string, section: Section = 'overview') {
+export function characterHref(id: string, section: Section | 'dossier' = 'overview') {
   return '#/characters/' + id + (section === 'overview' ? '' : '/' + section);
 }

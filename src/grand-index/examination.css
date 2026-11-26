@@ -24,10 +24,16 @@
 .examination-nav [role=tab][aria-selected=true] { color: var(--sine-pearl); }
 .examination-nav [role=tab][aria-selected=true]::before { opacity: 1; }
 .character-exhibit[data-expanded=true] .character-caption {
-  top: clamp(68px, 15dvh, 160px); right: 5vw; left: max(59%, calc(95% - 680px)); bottom: var(--reader-bottom);
-  transition: none; overflow-wrap: anywhere; min-height: 0;
+  --overview-width: min(36vw, 680px);
+  top: clamp(68px, 15dvh, 160px); right: 5vw; left: auto; bottom: var(--reader-bottom);
+  width: calc(var(--overview-width) + var(--reading-extension, 0px));
+  transition: width var(--selection) var(--ease); overflow-wrap: anywhere; min-height: 0;
 }
-.character-exhibit:not([data-section=overview]) .examination-reading { margin-left: max(-4vw, -80px); }
+@media (min-width: 701px) {
+  .character-exhibit:not([data-section=overview]) .character-caption { --reading-extension: min(4vw, 80px); }
+  /* Keep a multiline name's wrapping stable as the common leading edge moves. */
+  .character-exhibit[data-expanded=true] .character-caption h3 { width: var(--overview-width); }
+}
 .character-exhibit[data-expanded=true] .character-caption h3 {
   max-width: 18ch; font-size: clamp(38px, min(4.6vw, 8dvh), 88px); line-height: .98; margin: 10px 0 6px;
   max-height: 29dvh; overflow: auto; scrollbar-width: thin; padding-bottom: .13em;
@@ -36,7 +42,6 @@
   min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin;
   scrollbar-color: var(--border) transparent; position: relative; margin-top: clamp(14px, 3dvh, 36px);
   border-top: 1px solid var(--border); padding: 0 clamp(8px, 1vw, 16px) 0 0;
-  transition: margin-left var(--selection) var(--ease);
 }
 .examination-content { padding-block: 16px; }
 .examination-content[inert] { position: absolute; inset: 0 clamp(8px, 1vw, 16px) auto 0; pointer-events: none; }
@@ -76,7 +81,7 @@
 @media (max-width: 700px) {
   .character-exhibit[data-expanded=true]::before { background: linear-gradient(0deg, var(--bg) 8%, rgb(16 17 21 / .94) 41%, rgb(16 17 21 / .7) 62%, transparent 83%); }
   .character-exhibit[data-expanded=true] .character-caption {
-    inset: clamp(64px, 33dvh, 320px) 5vw calc(108px + env(safe-area-inset-bottom)); transition: none;
+    inset: clamp(64px, 33dvh, 320px) 5vw calc(108px + env(safe-area-inset-bottom)); width: auto; transition: none;
   }
   .character-exhibit[data-expanded=true] .character-caption h3 { font-size: clamp(32px, 8.4vw, 50px); max-height: 17dvh; margin-block: 5px; }
   .examination-nav { inset: auto 4vw calc(54px + env(safe-area-inset-bottom)); width: auto; max-height: none; }
@@ -86,7 +91,6 @@
   .examination-nav [role=tab] { justify-content: center; padding-inline: 2px; font-size: clamp(12px, 3.1vw, 15px); }
   .examination-nav [role=tab]::before { border: 0; border-top: 1px solid var(--sine-ivory); background: linear-gradient(rgb(245 233 208 / .15), transparent); }
   .examination-reading { margin-top: 10px; }
-  .character-exhibit:not([data-section=overview]) .examination-reading { margin-left: 0; }
   .examination-content { padding-block: 12px; }
   .personal-particulars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

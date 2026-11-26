@@ -1,5 +1,22 @@
 .archive-app.archive-home { display: block; padding: 0; background: var(--bg); }
-.archive-home { --gutter: clamp(22px, 5vw, 96px); }
+.archive-home {
+  --gutter: clamp(22px, 5vw, 96px);
+  overflow-x: clip;
+}
+html:has(.archive-home[data-character-domain='false']) {
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: none;
+  scrollbar-width: none;
+}
+html:has(.archive-home[data-character-domain='false'])::-webkit-scrollbar { display: none; }
+.archive-home[data-character-domain='false'] :is(.awakening-hero, .grand-index) { scroll-snap-align: start; }
+.archive-home :is(.awakening-hero, .grand-index) { block-size: 100vh; block-size: 100dvh; }
+.archive-home[data-character-domain='false'] :is(.systems-catalog, .history-caption, .character-caption) {
+  overflow-y: auto;
+  scrollbar-width: none;
+  touch-action: pan-y pinch-zoom;
+}
+.archive-home[data-character-domain='false'] :is(.systems-catalog, .history-caption, .character-caption)::-webkit-scrollbar { display: none; }
 .archive-home .home-masthead {
   position: absolute; z-index: 2; top: env(safe-area-inset-top, 0px);
   inset-inline: var(--gutter);
@@ -7,7 +24,7 @@
 }
 .awakening-hero {
   --emblem-size: clamp(100px, min(9.4vw, 19vh), 180px);
-  position: relative; isolation: isolate; height: 100vh; height: 100dvh; min-height: 320px;
+  position: relative; isolation: isolate;
 }
 .hero-origin {
   position: absolute; left: 50%; top: 50%; width: var(--emblem-size); aspect-ratio: 716 / 1004;
@@ -45,7 +62,6 @@
 .index-indicator i { width: 6px; height: 6px; margin-top: -6px; border: solid currentColor; border-width: 0 1px 1px 0; transform: rotate(45deg); }
 @keyframes descend { 0%, 23% { transform: translateY(-110%); opacity: 0; } 40% { opacity: .85; } 83%, 100% { transform: translateY(180%); opacity: 0; } }
 .awakening-hero .obsidian { mask-image: linear-gradient(black 90%, transparent); }
-.archive-home .footnote { margin-inline: var(--gutter); }
 @media (max-width: 560px) {
   .awakening-hero { --emblem-size: clamp(100px, 27vw, 132px); }
   .archive-title { font-size: clamp(30px, 8.7vw, 44px); }
@@ -57,14 +73,18 @@
   .archive-title { font-size: 28px; }
   .index-indicator { bottom: max(2px, env(safe-area-inset-bottom)); }
 }
+@media (max-height: 320px) {
+  .archive-motto { margin-top: 6px; }
+  .indicator-line { margin-top: 4px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .indicator-line::after { animation: none; opacity: 0; }
 }
 
 
 @media (prefers-reduced-motion: no-preference) {
-  html:has(.archive-home) { scroll-behavior: smooth; }
+  html:has(.archive-home[data-character-domain='false']) { scroll-behavior: smooth; }
 }
 
-.archive-home[data-phase='dormant'] :is(.archive-inscription, .index-indicator, .grand-index, .footnote) { visibility: hidden; }
+.archive-home[data-phase='dormant'] :is(.archive-inscription, .index-indicator, .grand-index) { visibility: hidden; }
 .index-indicator:focus-visible { opacity: 1 !important; }

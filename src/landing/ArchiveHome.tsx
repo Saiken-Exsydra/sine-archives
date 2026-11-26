@@ -5,7 +5,7 @@ import { cubicBezier, m as motion, useMotionValue, useTransform, type MotionValu
 import { Fullscreen } from './Fullscreen';
 import type { CharacterRoute } from '../grand-index/characters';
 import { GrandIndex } from '../grand-index/GrandIndex';
-import { Footer, HeaderContents, SkipLink, useLocale } from '../site';
+import { HeaderContents, SkipLink, useLocale } from '../site';
 import emblem from '../art/SiNE-Circular-Emblem.svg';
 import { ObsidianSurface } from '../motion/obsidian/ObsidianSurface';
 import { score, useAwakening } from './sequence';
@@ -45,13 +45,24 @@ export function ArchiveHome({ atIndex, returning, returnDomain, character }: { c
     if (viewingCharacter) { window.scrollTo({top:0,behavior:'instant'}); return; }
     if (atIndex || restore) {
       shelf.current?.focus({ preventScroll: true });
-      shelf.current?.scrollIntoView({ behavior: restore || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
-    } else if (returning) { window.scrollTo(0,0); title.current?.focus({ preventScroll: true }); }
+      shelf.current?.scrollIntoView({ block: 'start', behavior: restore ? 'instant' : 'auto' });
+    } else if (returning) { window.scrollTo({ top: 0, behavior: 'instant' }); title.current?.focus({ preventScroll: true }); }
   }, [atIndex, returning, viewingCharacter]);
   useEffect(() => {
     if (viewingCharacter) return;
+    const entrance = hero.current!;
+    let height = 0;
+    let indexWasAligned = false;
     const update = () => {
-      const fraction = Math.max(0, window.scrollY / Math.max(1, hero.current!.offsetHeight));
+      const previousHeight = height;
+      height = Math.max(1, entrance.offsetHeight);
+      // WebKit can lose the current snap target when the viewport shrinks.
+      if (height !== previousHeight && indexWasAligned && Math.abs(window.scrollY - height) > 1
+        && (window.visualViewport?.scale ?? 1) === 1) {
+        window.scrollTo({ top: height, behavior: 'instant' });
+      }
+      indexWasAligned = Math.abs(window.scrollY - height) <= 1;
+      const fraction = Math.max(0, window.scrollY / height);
       scroll.set(fraction);
       if (fraction >= .22 && phase !== 'exploration') finish(true);
       else if (fraction < .22 && phase === 'exploration') setPhase('manifested');
@@ -84,7 +95,6 @@ export function ArchiveHome({ atIndex, returning, returnDomain, character }: { c
       </section>
       <GrandIndex character={character} section={shelf} ready={ready} returnDomain={returnDomain} />
     </main>
-    <Footer />
   </div>;
 }
 

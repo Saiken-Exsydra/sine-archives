@@ -14,10 +14,10 @@ function onCompactChange(callback: () => void) {
   return () => compact.removeEventListener('change', callback);
 }
 
-export function ExaminationNavigation({ character, section, locale }: Props) {
+export function ExaminationNavigation({ character, section, locale, dossier }: Props) {
   const horizontal = useSyncExternalStore(onCompactChange, () => compact.matches);
   const primary = character.affiliations?.find(entry => entry.primary);
-  return <div className="examination-nav">
+  return <div className="examination-nav" inert={dossier} aria-hidden={dossier}>
     {primary && <AffiliationInsignia affiliation={primary} locale={locale}/>}
     <div role="tablist" aria-label={locale === 'en' ? 'Record sections' : 'Seções do registro'}
       aria-orientation={horizontal ? 'horizontal' : 'vertical'}>
@@ -37,6 +37,13 @@ export function ExaminationNavigation({ character, section, locale }: Props) {
           tab?.click();
         }}>{sectionNames[item][locale]}</a>)}
     </div>
+    {character.dossier?.[locale] && <a className="dossier-entry" href={characterHref(character.id, 'dossier')}
+      onClick={event => {
+        if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+        event.preventDefault();
+        history.pushState({ dossierSection: section }, '', event.currentTarget.href);
+        window.dispatchEvent(new HashChangeEvent('hashchange'));
+      }}>{locale === 'en' ? 'Complete Dossier' : 'Dossiê completo'} <span aria-hidden="true">→</span></a>}
   </div>;
 }
 

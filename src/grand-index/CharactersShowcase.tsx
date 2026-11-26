@@ -6,8 +6,10 @@ import { motionTokens, useMotionPreference } from '../motion/system';
 import { characterHref, featuredCharacter, type Character, type CharacterRoute } from './characters';
 import { IndividualRegistry, dismissRegistry, openRegistry, registryOpen, revealFrom, useRegistryOpen } from './IndividualRegistry';
 import { ExaminationNavigation, ExaminationReading } from './Examination';
+import { DossierSurface } from './DossierSurface';
 import './characters.css';
 import './examination.css';
+import './dossier.css';
 
 export function CharactersShowcase({ route }: { href: string; route?: CharacterRoute }) {
   const locale = useLocale();
@@ -62,13 +64,28 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
   useLayoutEffect(() => {
     if (expanded) title.current?.focus({ preventScroll: true });
   }, [expanded]);
+  const edition = character.dossier?.[locale];
+  const dossier = Boolean(route?.dossier && edition && !pending);
+  const wasReading = useRef(false);
+  useLayoutEffect(() => {
+    if (route?.dossier && !pending && !edition) {
+      history.replaceState(null, '', characterHref(character.id, section));
+      window.dispatchEvent(new HashChangeEvent('hashchange'));
+    }
+    if (dossier) document.querySelector<HTMLElement>('.dossier-surface:not([inert]) .dossier-return')?.focus({ preventScroll: true });
+    else if (wasReading.current && route) {
+      const target = document.querySelector<HTMLElement>('.dossier-entry') ?? title.current;
+      target?.focus({ preventScroll: true });
+    }
+    wasReading.current = dossier;
+  }, [dossier, route?.dossier, pending, edition, character.id, section]);
   const domain = pt ? 'Personagens' : 'Characters';
   const layers = [];
   if (previous && previous !== requested) layers.push(previous);
   if (!failed) layers.push(character);
   if (pending) layers.push(requested);
-  return <div className="exhibition character-exhibit" data-expanded={expanded} data-section={section}
-    style={{ '--selection': motionTokens.selection + 's', '--control': motionTokens.control + 's' } as CSSProperties}>
+  return <div className="exhibition character-exhibit" data-expanded={expanded} data-dossier={dossier} data-section={section}
+    style={{ '--settle': motionTokens.settle + 's', '--selection': motionTokens.selection + 's', '--control': motionTokens.control + 's' } as CSSProperties}>
     {layers.map(person => <m.img key={person.id} className="scene-art" {...imageProps(person.art, '100vw', '')}
         ref={pending && person === requested ? incoming : undefined}
         loading={expanded || pending ? 'eager' : 'lazy'} fetchPriority={expanded ? 'high' : 'auto'}
@@ -81,10 +98,11 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
             current === presentation ? { character } : current);
         }}/>)}
     {expanded && <a className="character-return catalog-label" href="#archive-index">← {pt ? 'Grande índice' : 'Grand Index'}</a>}
-    {route && <ExaminationNavigation character={character} section={section} locale={locale}/>}
-    <div className="character-caption">
+    {route && <ExaminationNavigation dossier={dossier} character={character} section={section} locale={locale}/>}
+    <div className="character-caption" inert={dossier} tabIndex={expanded ? undefined : 0}
+      role={expanded ? undefined : 'region'} aria-labelledby={expanded ? undefined : 'featured-individual'}>
       {expanded ? <h1 className="catalog-label" tabIndex={-1} ref={title}>{domain}</h1>
-        : <p className="catalog-label">{pt ? 'Pessoa em destaque' : 'Featured individual'}</p>}
+        : <p className="catalog-label" id="featured-individual">{pt ? 'Pessoa em destaque' : 'Featured individual'}</p>}
       <h3 aria-level={expanded ? 2 : 3}>{character.name}</h3>
       <p className="character-rank">{character.designation[locale]}</p>
       {failed && <p role="status">{pt ? 'Ilustração indisponível.' : 'Artwork unavailable.'}</p>}
@@ -95,7 +113,10 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
       <h2>{domain}</h2>
       <a className="domain-entry" href={characterHref(character.id)}>{pt ? 'Explorar personagens' : 'Open Characters'} <span aria-hidden="true">↗</span></a>
     </div>
-    {route && <button ref={trigger} className="registry-trigger" aria-haspopup="dialog" aria-expanded={open}
+    <AnimatePresence initial={false}>
+      {dossier && edition && <DossierSurface key={character.id} character={character} section={section} locale={locale} load={edition}/>}
+    </AnimatePresence>
+    {route && <button inert={dossier} ref={trigger} className="registry-trigger" aria-haspopup="dialog" aria-expanded={open}
       onClick={openRegistry}><i aria-hidden="true"/><span>{pt ? 'Registro de indivíduos' : 'Registry of Individuals'}</span></button>}
     <AnimatePresence custom={aperture.current} onExitComplete={() => {
       aperture.current = undefined;

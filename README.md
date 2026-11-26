@@ -83,6 +83,8 @@ House Wonderwall’s structured specification, CSS palette and design brief resi
 
 The Characters exhibition discovers bilingual records in `src/content/characters/`. Each supplies its artwork, portrait, focal position and four reading sections. Le’nore is the featured record. Link to a record and section with a route such as `#/characters/hisui-kirasagi/abilities`.
 
+When the selected language has an approved Complete Dossier, a link below the examination tabs expands the reading surface in place. Follow the generated contents or scroll the document. Return to Examination restores the section that opened it. Publication permissions, file names and direct links are described in the [character publication guide](CHARACTER_PUBLICATION.md#complete-dossier-reader).
+
 ## Registry of Individuals
 
 Examination keeps one individual’s hero and four reading sections in view. The bottom control opens discovery. [IndividualRegistry](src/grand-index/IndividualRegistry.tsx) owns the fullscreen dialog, native horizontal track, focus and finite directional controls. [Registry styles](src/grand-index/registry.css) construct the stationary ceiling light, obsidian wall, floor and titanium frames. A short collection centers itself. On narrower screens, swipe, use a trackpad, wheel over the track, or use the directional controls. Left, Right, Home and End move keyboard focus between portraits. The modal isolates the underlying interface and dismissal returns focus to the opener.

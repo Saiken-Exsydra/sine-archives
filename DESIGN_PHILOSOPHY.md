@@ -61,7 +61,7 @@ Compose pages like an institutional publication. Use a clear hierarchy, legible 
 
 ## Examining an individual
 
-Keep the fullscreen illustration stationary. Set the primary institution and its relationship above the vertical navigation at the left. Anchor the individual's name and designation on the right and let the reading surface extend inward underneath. The open space between them belongs to the illustration. The published crop and focal point belong to the character record.
+Keep the fullscreen illustration stationary. Set the primary institution and its relationship above the vertical navigation at the left. Give the category, name, designation, divider and section content one leading edge. The entire information territory extends inward from a stable right boundary. The open space between them belongs to the illustration. The published crop and focal point belong to the character record.
 
 On a phone, place the section choices within thumb reach above the Registry threshold. Let the primary affiliation travel with the Overview facts and give prose its own native scroll. Institutional marks identify an organization. Classification inscriptions pair the published concept with a precise label and may disclose a short public explanation.
 
