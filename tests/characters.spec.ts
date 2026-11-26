@@ -5,12 +5,15 @@ test('entry keeps the artwork mounted and the reading region grows independently
   await page.goto('/#archive-index');
   const art = page.locator('.character-exhibit .scene-art');
   const original = await art.elementHandle();
+  await expect.poll(() => art.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0 && img.currentSrc.includes('/media/lenore-engelmeyer-hero-'))).toBe(true);
   await page.getByRole('link',{name:'Open Characters'}).click();
   const rail = page.locator('.individual-rail');
   const reading = page.getByRole('tabpanel');
   await expect(rail).toHaveAttribute('data-open','true');
   await expect(page.getByRole('tab',{name:'Overview'})).toHaveAttribute('aria-selected','true');
   await expect(reading).toContainText('169 cm');
+  const portrait = rail.locator('img').first();
+  await expect.poll(() => portrait.evaluate((img: HTMLImageElement) => img.complete && img.currentSrc.includes('portrait-96-') && img.naturalWidth > 0)).toBe(true);
   const box = await art.boundingBox();
   expect(await art.evaluate((el, previous) => el === previous, original)).toBe(true);
   await page.screenshot({path:'test-results/react-review/characters-overview.png',animations:'disabled'});

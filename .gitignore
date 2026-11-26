@@ -5,3 +5,7 @@ playwright-report/
 *.log
 .env
 .env.*
+
+!.env.example
+.asset-pipeline/
+.asset-sources.local.json

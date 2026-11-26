@@ -6,6 +6,6 @@ export default defineConfig({
   esbuild: { jsx: 'automatic' },
   resolve: { preserveSymlinks: true },
   build: { rollupOptions: { preserveSymlinks: true } },
-  server: localServer,
+  server: { ...localServer, fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/.asset-sources.local.json', '**/.asset-pipeline/**'] } },
   preview: localServer,
 });

@@ -1,7 +1,4 @@
-import lenoreArt from '../art/lenore.webp';
-import hisuiArt from '../art/hisui.webp';
-import lenorePortrait from '../art/lenore-portrait.webp';
-import hisuiPortrait from '../art/hisui-portrait.webp';
+import type { AssetId } from '../images/publication';
 import type { Locale } from '../content';
 
 type Copy = Record<Locale, string>;
@@ -15,7 +12,7 @@ export const sectionNames = {
 interface Passage { title?: Copy; text: Copy; link?: { href: string; label: string } }
 interface Character {
   id: string; name: string; shortName: string; designation: string; summary: Copy;
-  art: string; portrait: string; focal: string; mobileFocal: string;
+  art: AssetId; portrait: AssetId; focal: string; mobileFocal: string;
   overview: [Copy, Copy][]; biography: Passage[]; abilities: Passage[]; relations: Passage[];
   dossierHref?: string;
 }
@@ -31,7 +28,7 @@ export const characters: Character[] = [
   {
     id: 'lenore-engelmeyer', name: "Le’nore Voren Engelmeyer", shortName: "Le’nore", designation: 'Quill · Mark 2',
     summary: t('Her kindness is real. So is what she keeps hungry.', 'Sua gentileza é real. Assim como aquilo que ela mantém faminto.'),
-    art: lenoreArt, portrait: lenorePortrait, focal: '42% 28%', mobileFocal: '39% 20%',
+    art: 'lenore-engelmeyer-hero', portrait: 'lenore-engelmeyer-portrait', focal: '42% 28%', mobileFocal: '39% 20%',
     overview: [[age,t('23 lunar years','23 anos lunares')],[birth,t('c. IY 1558','c. AI 1558')],
       [origin,same('Drevholt')],[t('Height','Altura'),same('169 cm')],
       [residence,same("Vel’hara")],[house,t('House Engelmeyer','Casa Engelmeyer')]],
@@ -50,7 +47,7 @@ export const characters: Character[] = [
   },
   {
     id:'hisui-kirasagi', name:'Hisui Kirasagi', shortName:'Hisui', designation:'Far Bloom',
-    summary:same('Far from home, duty bloomed teeth.'), art:hisuiArt, portrait:hisuiPortrait, focal:'45% 35%', mobileFocal:'46% 20%',
+    summary:same('Far from home, duty bloomed teeth.'), art:'hisui-kirasagi-hero', portrait:'hisui-kirasagi-portrait', focal:'45% 35%', mobileFocal:'46% 20%',
     overview:[[age,t('24 lunar years','24 anos lunares')],[birth,t('c. IY 1557','c. AI 1557')],
       [origin,same('Tsukimiya, Hikari')],[residence,same("Kalt'sen")],[house,t('Wonderwall household','Casa Wonderwall')]],
     biography:[{text:t("Hisui grew up in the harbor city of Tsukimiya. In her family, setting a table and keeping watch at it belong to the same education. A retainer is responsible for the safety of the people in her care.",

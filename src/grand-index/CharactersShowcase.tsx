@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { AnimatePresence, m } from 'motion/react';
 import { useLocale } from '../site';
+import { imageProps, PublicationImage } from '../images/publication';
 import { motionTokens, useMotionPreference } from '../motion/system';
 import { characters, characterHref, featuredCharacter, sectionNames, sections, type CharacterRoute } from './characters';
 import './characters.css';
@@ -31,7 +32,7 @@ function CharacterRail({ character, section }: CharacterRoute) {
     <div id="individuals" className="individuals" inert={!expanded} onFocus={() => setInside(true)}>
       {characters.map(person => <a key={person.id} href={characterHref(person.id, section)}
         aria-current={person.id === character.id ? 'true' : undefined} aria-label={person.name}>
-        <img src={person.portrait} alt="" width="60" height="72"/><span>{person.shortName}</span>
+        <PublicationImage asset={person.portrait} alt="" sizes="60px"/><span>{person.shortName}</span>
       </a>)}
     </div>
   </nav>;
@@ -50,7 +51,8 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
   }, [expanded]);
   const domain = pt ? 'Personagens' : 'Characters';
   return <div className="exhibition character-exhibit" data-expanded={expanded} data-section={section}>
-    <AnimatePresence initial={false}><m.img key={character.id} className="scene-art" src={character.art} alt=""
+    <AnimatePresence initial={false}><m.img key={character.id} className="scene-art" {...imageProps(character.art, '100vw', '')}
+      loading={expanded ? 'eager' : 'lazy'} fetchPriority={expanded ? 'high' : 'auto'}
       style={{ '--focal': character.focal, '--mobile-focal': character.mobileFocal } as CSSProperties}
       initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       transition={{ duration: reduced ? 0 : motionTokens.selection, ease: motionTokens.ease }}/>

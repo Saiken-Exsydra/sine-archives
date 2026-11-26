@@ -1,0 +1,50 @@
+[
+  {
+    "id": "alithia-wonderwall-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "273f7b688890d38d564fea29cd29987f5ae74a7cd63f5413caee285727492705"
+  },
+  {
+    "id": "alithia-wonderwall-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "83c07e3a13e25129d7006e5760b4c38c82bb0c337227e388756a019b0fbbc8cf"
+  },
+  {
+    "id": "hisui-kirasagi-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "9bf9b1ee17d4241956e3001d17d581932357dfa7ebecb0ad261ea1577116c15b"
+  },
+  {
+    "id": "hisui-kirasagi-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "198127adc6b817782b9c413fdedf2ad7264710cd4d6d1d66805b1b524ce532f8"
+  },
+  {
+    "id": "lenore-engelmeyer-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "1a4b30c923f250e3d946c4d2ffdadbec144c765e1554953fe593bad0513b9bfa"
+  },
+  {
+    "id": "lenore-engelmeyer-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "a579a473425d9489b39f698ad9b675f67c1141d07551297081862745aa53387b"
+  },
+  {
+    "id": "leonard-von-engelmeyer-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "3708fb0bc68c097cfc7758db16bb9d3b428284d1e6aa9c925ea29c80883aa7e1"
+  },
+  {
+    "id": "leonard-von-engelmeyer-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "97c2223a4649e215211459d194e74506d25b70e18569809e395c20009f8f3ea9"
+  }
+]

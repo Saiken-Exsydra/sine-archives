@@ -1,3 +1,4 @@
 * text=auto
 *.cmd text eol=crlf
 *.webp binary
+public/media/*.svg -text

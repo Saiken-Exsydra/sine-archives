@@ -1,0 +1,278 @@
+{
+  "alithia-wonderwall-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "85edce9586492cb58630e64602ec7bc0296550bc9f223648f470f292186dc134",
+    "sourceBytes": 3871532,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "alithia-wonderwall-hero-1280-4f8da66e44f65c91.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 176864,
+        "sha256": "4f8da66e44f65c91db78a2bd05b4be31949092934d5be035d8a6d1ae8e0da1fe"
+      },
+      {
+        "file": "alithia-wonderwall-hero-1920-ffe6d4907cc99688.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 347588,
+        "sha256": "ffe6d4907cc99688ffb085f598382490ab948171aa64ab21e72636c0b319301d"
+      },
+      {
+        "file": "alithia-wonderwall-hero-2048-b96f5200ccbfcd51.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 389236,
+        "sha256": "b96f5200ccbfcd51160e865b8ab75c7912a37a6bdde5ce622d3ec685f2ff9168"
+      }
+    ]
+  },
+  "alithia-wonderwall-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "dce971b5b72f6fe8e5b964a3925c94b5ce051f51c79640281eddc8307ac00c67",
+    "sourceBytes": 1465070,
+    "sourceWidth": 1152,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "alithia-wonderwall-portrait-96-89c28d01ac189b51.webp",
+        "width": 96,
+        "height": 128,
+        "bytes": 5014,
+        "sha256": "89c28d01ac189b51e4800161f67f8a3b69beeb93db64d81a2f334a1e64e85b5f"
+      },
+      {
+        "file": "alithia-wonderwall-portrait-320-e55dd7592181b7a2.webp",
+        "width": 320,
+        "height": 427,
+        "bytes": 37490,
+        "sha256": "e55dd7592181b7a2376a74573ca8ac8ff58f32128c01c4c0516febbc29a7a889"
+      },
+      {
+        "file": "alithia-wonderwall-portrait-640-3e6e2971c33cd1de.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 108926,
+        "sha256": "3e6e2971c33cd1dec2554a0abb6fadea724f1c7ea1da874500ff65027961e3e2"
+      },
+      {
+        "file": "alithia-wonderwall-portrait-960-5f932ad505bc808e.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 193822,
+        "sha256": "5f932ad505bc808ec4d0f839bf9cef5711f11f474fa30ffaff3e485e161d6b05"
+      }
+    ]
+  },
+  "hisui-kirasagi-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "f106ae37e72691887249130951001774f04cb913c63aa99d8df590e0779a7d81",
+    "sourceBytes": 4660225,
+    "sourceWidth": 2730,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "hisui-kirasagi-hero-1280-468cfd4f54ffee85.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 164740,
+        "sha256": "468cfd4f54ffee8589f3eb535de9aba6e9aa384e82454ff1780fc31500d8b355"
+      },
+      {
+        "file": "hisui-kirasagi-hero-1920-307e71d0ac95ca35.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 290794,
+        "sha256": "307e71d0ac95ca358a2238ee1b2000f76ce7fdd5cfd2d9d2baf0fb38e3f48885"
+      },
+      {
+        "file": "hisui-kirasagi-hero-2560-7f59aa47c8a67eb9.webp",
+        "width": 2560,
+        "height": 1440,
+        "bytes": 414318,
+        "sha256": "7f59aa47c8a67eb9a7eb4fc2476928f1eefaf7a3a86738e952ee60ab5c559526"
+      }
+    ]
+  },
+  "hisui-kirasagi-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "ea2457b67a49f542da25f4cce426387604e9990afe5f7aae46cccea0d610bf4b",
+    "sourceBytes": 2147001,
+    "sourceWidth": 1152,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "hisui-kirasagi-portrait-96-73c68a63e19d7fe6.webp",
+        "width": 96,
+        "height": 128,
+        "bytes": 6024,
+        "sha256": "73c68a63e19d7fe6c5520d7ca9f8a3697eb5b4b9f2b0592de77b7437b957021b"
+      },
+      {
+        "file": "hisui-kirasagi-portrait-320-a821acfe0c16ab69.webp",
+        "width": 320,
+        "height": 427,
+        "bytes": 40528,
+        "sha256": "a821acfe0c16ab69f30328c4555b373adc7e8888d59676f16ddeca1742ce777f"
+      },
+      {
+        "file": "hisui-kirasagi-portrait-640-6c6629b9b5d6d524.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 121816,
+        "sha256": "6c6629b9b5d6d524dbe510931c15251a5c66293bf0eef4f1428801f41149c3ff"
+      },
+      {
+        "file": "hisui-kirasagi-portrait-960-fb90724324bcbd2d.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 216278,
+        "sha256": "fb90724324bcbd2d05a1925ac438e082648c0e595a660fbb13a282025809bf12"
+      }
+    ]
+  },
+  "lenore-engelmeyer-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "6ecf78679a7fb07c0c1030beb2c388c6dd3cb4a09ce84aa6f486e93ea51086c5",
+    "sourceBytes": 4936911,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "lenore-engelmeyer-hero-1280-8eb2b0b02ec1712f.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 259894,
+        "sha256": "8eb2b0b02ec1712f12cee5e659cf410395037b60264e5c006ffd1ea05e628d82"
+      },
+      {
+        "file": "lenore-engelmeyer-hero-1920-a5357c2ca8efd1db.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 481350,
+        "sha256": "a5357c2ca8efd1dbf946631bed23ac7e0ea53e841426b96cf494fa8753d40ed0"
+      },
+      {
+        "file": "lenore-engelmeyer-hero-2048-60d56ce221674c40.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 538440,
+        "sha256": "60d56ce221674c401a18837dec2bcf791484a47503a7b345a9ebb27f8ded5424"
+      }
+    ]
+  },
+  "lenore-engelmeyer-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "2331da437d1e6b70f1d51143605a83e7e16b9c76eca7711960cadd36c38cb9f7",
+    "sourceBytes": 4140931,
+    "sourceWidth": 1228,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "lenore-engelmeyer-portrait-96-6a0d4e8d091c5ad1.webp",
+        "width": 96,
+        "height": 160,
+        "bytes": 5816,
+        "sha256": "6a0d4e8d091c5ad1e07786fe63433ac1ad48800480c03486512c5857a0851bc3"
+      },
+      {
+        "file": "lenore-engelmeyer-portrait-320-72280c8ea02baaa2.webp",
+        "width": 320,
+        "height": 534,
+        "bytes": 47340,
+        "sha256": "72280c8ea02baaa2f0fb3a64c7d9f19a43d91fab25c791d3059633eb05804082"
+      },
+      {
+        "file": "lenore-engelmeyer-portrait-640-bbedb85a208c64ce.webp",
+        "width": 640,
+        "height": 1067,
+        "bytes": 158830,
+        "sha256": "bbedb85a208c64ce4925f721f710c108bd3214068d6281e5372c0833e2e36d71"
+      },
+      {
+        "file": "lenore-engelmeyer-portrait-960-4189dc11cc70b2e5.webp",
+        "width": 960,
+        "height": 1601,
+        "bytes": 316514,
+        "sha256": "4189dc11cc70b2e5cb48a8d6d9ce204e9b97434f86c4c535a98a5962108eeb70"
+      }
+    ]
+  },
+  "leonard-von-engelmeyer-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "a89ba7ecea82ab1fa9dd612626b3adfc16de3f464f48931bbbac25462e0e812e",
+    "sourceBytes": 2683691,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "leonard-von-engelmeyer-hero-1280-8eee1625d57409eb.webp",
+        "width": 1280,
+        "height": 729,
+        "bytes": 65092,
+        "sha256": "8eee1625d57409eb0daa69e09f0f862812bebbfb2d23555e5ec66837a27e35ae"
+      },
+      {
+        "file": "leonard-von-engelmeyer-hero-1920-2f628806630b65b3.webp",
+        "width": 1920,
+        "height": 1094,
+        "bytes": 121068,
+        "sha256": "2f628806630b65b3870bb3a75af5effcba4eba580697c9b622b362f985537f8e"
+      },
+      {
+        "file": "leonard-von-engelmeyer-hero-2048-d4b5c1192f6eaa3e.webp",
+        "width": 2048,
+        "height": 1167,
+        "bytes": 134996,
+        "sha256": "d4b5c1192f6eaa3e0bc17bad32134e8e902c5494116f51e6f0b09d0b2de55532"
+      }
+    ]
+  },
+  "leonard-von-engelmeyer-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "a72fb9c84916baf9a5f5c2f840b46a3b6d0cdc545603d84d1aabb9d5093763bb",
+    "sourceBytes": 86877,
+    "sourceWidth": 720,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "leonard-von-engelmeyer-portrait-96-af4d5bb0a1edac07.webp",
+        "width": 96,
+        "height": 120,
+        "bytes": 3242,
+        "sha256": "af4d5bb0a1edac0740afdbae53bf762bd6c4c5f056f43e560d688d83a35f5b2f"
+      },
+      {
+        "file": "leonard-von-engelmeyer-portrait-320-a98bc53cadfb7a45.webp",
+        "width": 320,
+        "height": 400,
+        "bytes": 24492,
+        "sha256": "a98bc53cadfb7a450651b319ec578f116b593bcb61abf381ed462a0327b01974"
+      },
+      {
+        "file": "leonard-von-engelmeyer-portrait-640-acb6cde18daf41d0.webp",
+        "width": 640,
+        "height": 800,
+        "bytes": 81824,
+        "sha256": "acb6cde18daf41d0d7771f522092d7487d5873fcffbd5ff85b85366aaa32d398"
+      },
+      {
+        "file": "leonard-von-engelmeyer-portrait-720-01418f6299b70299.webp",
+        "width": 720,
+        "height": 900,
+        "bytes": 100964,
+        "sha256": "01418f6299b7029965d37d067843ffed54fefbf6e35ade688be5d28551033c6f"
+      }
+    ]
+  }
+}
