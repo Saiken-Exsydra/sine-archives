@@ -20,8 +20,15 @@ test('examination, discovery and the measured hero reveal share one environment'
   await expect(portraits).toHaveCount(2);
   await expect(portraits.first()).toBeFocused();
   await expect(page.locator('.registry-frame img').first()).toHaveCSS('object-position','50% 50%');
+  await expect(page.locator('dialog')).toHaveCSS('transform','none');
   for (const frame of await page.locator('.registry-frame').all()) {
     const rect = (await frame.boundingBox())!;
+    const art = (await frame.locator('img').boundingBox())!;
+    const plate = (await frame.locator('..').locator('.registry-name').boundingBox())!;
+    expect(art.width / art.height).toBeCloseTo(2/3, 2);
+    expect(art.width).toBeLessThan(rect.width);
+    expect(plate.width).toBeCloseTo(rect.width, 1);
+    expect(plate.y).toBeGreaterThan(rect.y + rect.height);
     expect(rect.width / rect.height).toBeCloseTo(2/3,3);
   }
   const left = (await portraits.first().boundingBox())!;
@@ -111,4 +118,32 @@ test('Back and resize during the reveal restore the originating record and relea
   await expect(page.locator('.character-exhibit .scene-art')).toHaveCount(1);
   await page.goForward();
   await expect(page).toHaveTitle('Hisui Kirasagi · SiNE Archives');
+});
+
+test('floor threshold and portrait attention follow pointer and keyboard independently of the record', async ({page}) => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto('/#/characters/lenore-engelmeyer/relations');
+  await page.locator('.registry-trigger').click();
+  const portraits = page.locator('.registry-portrait');
+  const light = page.locator('.registry-wall-light');
+  const threshold = page.getByRole('button',{name:'Return to record'});
+  const bounds = (await threshold.boundingBox())!;
+  expect(bounds.x + bounds.width/2).toBeCloseTo(720);
+  await expect(threshold.locator('span')).toHaveCSS('opacity','0');
+  for (const i of [1,0,1]) {
+    await portraits.nth(i).locator('.registry-name').hover();
+    await expect(portraits.nth(i)).toHaveAttribute('data-attended','true');
+    await expect(light).toHaveAttribute('data-lit','true');
+  }
+  await expect(portraits.first()).toHaveAttribute('aria-current','true');
+  await expect(portraits.last().locator('.registry-frame')).toHaveCSS('transform','matrix(1, 0, 0, 1, 0, -3)');
+  await threshold.hover();
+  await expect(light).toHaveAttribute('data-lit','false');
+  await expect(threshold.locator('span')).toHaveCSS('opacity','1');
+  await portraits.last().focus();
+  await page.keyboard.press('Tab');
+  await expect(threshold).toBeFocused();
+  await page.keyboard.press('Space');
+  await expect(page.locator('.registry-trigger')).toBeFocused();
+  await expect(page).toHaveURL(/relations$/);
 });

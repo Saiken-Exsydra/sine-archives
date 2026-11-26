@@ -22,7 +22,7 @@ async function sectionGeometry(page: Page) {
 }
 
 for (const [width, height, dpr, heroWidth, portraitWidth] of [
-  [1440, 900, 1, 1920, 320], [390, 844, 2, 1280, 640],
+  [1440, 900, 1, 1920, 640], [390, 844, 2, 1280, 640],
 ]) {
   test.describe(`publication at ${width}px and DPR ${dpr}`, () => {
     test.use({ viewport: { width, height }, deviceScaleFactor: dpr });

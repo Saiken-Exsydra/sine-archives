@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useLayoutEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from 'react';
 import { m, useIsPresent } from 'motion/react';
 import { PublicationImage } from '../images/publication';
 import { motionTokens, useMotionPreference } from '../motion/system';
@@ -45,6 +45,28 @@ export function IndividualRegistry({ current, pending, onSelect, collection = ch
   const present = useIsPresent();
   const dialog = useRef<HTMLDialogElement>(null);
   const track = useRef<HTMLDivElement>(null);
+  const [attention, setAttention] = useState<HTMLAnchorElement | null>(null);
+  const pointer = useRef<{x:number; y:number} | null>(null);
+  const light = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    const surface = light.current!;
+    const rail = track.current!;
+    if (!attention || !present || pending) {
+      surface.dataset.lit = 'false';
+      return;
+    }
+    function place(event?: Event) {
+      const rect = attention!.getBoundingClientRect();
+      surface.style.setProperty('--light-x', rect.left + rect.width / 2 + 'px');
+      surface.dataset.tracking = String(event?.type === 'scroll');
+      surface.dataset.lit = String(rect.right > 0 && rect.left < rail.clientWidth);
+    }
+    place();
+    const observer = new ResizeObserver(() => place());
+    observer.observe(rail);
+    rail.addEventListener('scroll', place, {passive:true});
+    return () => { observer.disconnect(); rail.removeEventListener('scroll', place); };
+  }, [attention, present, pending]);
   const [edges, setEdges] = useState({ left: false, right: false });
   useLayoutEffect(() => {
     const modal = dialog.current!;
@@ -88,7 +110,22 @@ export function IndividualRegistry({ current, pending, onSelect, collection = ch
     exit="depart" variants={{ depart: (opening?: string[]) => opening && !reduced
       ? { clipPath: opening, transition: { duration: motionTokens.settle, times: [0,.23,1], ease: motionTokens.ease } }
       : { y: reduced ? '0%' : '100%', transition: { duration: reduced ? 0 : motionTokens.settle, ease: motionTokens.ease } } }}>
-    <div className="registry-room" inert={!present}>
+    <div className="registry-room" inert={!present}
+      onPointerMove={e => {
+        // Scroll can move another frame under a stationary mouse during keyboard navigation.
+        if (e.pointerType === 'touch' || (pointer.current?.x === e.clientX && pointer.current.y === e.clientY)) return;
+        pointer.current = {x:e.clientX, y:e.clientY};
+        setAttention((e.target as Element).closest<HTMLAnchorElement>('.registry-portrait'));
+      }}
+      onPointerLeave={() => {
+        pointer.current = null;
+        setAttention(track.current?.querySelector<HTMLAnchorElement>('a:focus-visible') ?? null);
+      }}
+      style={{
+      '--response': motionTokens.control + 's', '--shift': motionTokens.selection + 's',
+      '--response-ease': 'cubic-bezier(' + motionTokens.ease.join(',') + ')'
+    } as CSSProperties}>
+      <div className="registry-wall-light" ref={light} aria-hidden="true"/>
       <header className="registry-heading">
         <h2 id="registry-title">{pt ? 'Registro de indivíduos' : 'Registry of Individuals'}</h2>
       </header>
@@ -102,19 +139,27 @@ export function IndividualRegistry({ current, pending, onSelect, collection = ch
         links[next]?.scrollIntoView({inline:'center',block:'nearest',behavior:reduced ? 'instant' : 'smooth'});
       }}>
         {collection.map(person => <a key={person.id} href={characterHref(person.id)}
-          className="registry-portrait" aria-current={current.id === person.id ? 'true' : undefined}
+          className="registry-portrait" aria-label={person.name} aria-current={current.id === person.id ? 'true' : undefined}
+          data-attended={present && !pending && attention?.dataset.person === person.id}
+          data-person={person.id}
+          onFocus={e => { if (e.currentTarget.matches(':focus-visible')) setAttention(e.currentTarget); }}
+          onBlur={e => { const link = e.currentTarget; setAttention(value => value === link ? null : value); }}
           data-pending={pending?.id === person.id} onClick={event => {
             if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
-            onSelect(person, event.currentTarget.querySelector('.registry-frame')!);
+            const frame = event.currentTarget.querySelector<HTMLElement>('.registry-frame')!;
+            event.currentTarget.style.setProperty('--activated-transform', getComputedStyle(frame).transform);
+            onSelect(person, frame);
           }}>
-          <span className="registry-frame"><PublicationImage asset={person.portrait} alt="" sizes="auto, (max-height: 440px) min(68vw, 29dvh, 380px), min(68vw, 34dvh, 380px)"
+          <span className="registry-frame"><PublicationImage asset={person.portrait} alt="" sizes="auto, (max-height: 440px) min(72vw, 29dvh, 420px), min(72vw, 38dvh, 420px)"
             fit="cover" focalPoint={person.portraitFocal ?? 'center'}/></span>
-          <span className="registry-name">{person.name}</span>
+          <span className="registry-name">{person.name}<span className="registry-designation">{person.designation}</span></span>
         </a>)}
       </div>
       <footer className="registry-footer">
-        <button onClick={dismissRegistry}>{pt ? 'Voltar ao registro' : 'Return to record'} <span aria-hidden="true">↓</span></button>
+        <button type="button" className="registry-threshold" onClick={dismissRegistry}>
+          <span>{pt ? 'Voltar ao registro' : 'Return to record'}</span><i aria-hidden="true"/>
+        </button>
         <span role="status">{pending && (pt ? 'Abrindo ' : 'Opening ') + pending.name + '…'}</span>
         {(edges.left || edges.right) && <div className="registry-directions">
           <button disabled={!edges.left} onClick={() => browse(-1)} aria-label={pt ? 'Rolar para a esquerda' : 'Scroll left'}>←</button>

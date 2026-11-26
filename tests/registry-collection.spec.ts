@@ -44,6 +44,15 @@ test('a static subdirectory build browses 64 records with finite boundaries and 
   await page.keyboard.press('End');
   await expect(links.last()).toBeFocused();
   await expect(next).toBeDisabled();
+  const wallLight = page.locator('.registry-wall-light');
+  await expect(wallLight).toHaveAttribute('data-lit','true');
+  const center = await links.last().evaluate(el => {
+    const bounds = el.getBoundingClientRect();
+    return bounds.left + bounds.width / 2;
+  });
+  await expect.poll(() => wallLight.evaluate(el => parseFloat((el as HTMLElement).style.getPropertyValue('--light-x')))).toBeCloseTo(center, 0);
+  await track.evaluate(el => el.scrollTo({left:0, behavior:'instant'}));
+  await expect(wallLight).toHaveAttribute('data-lit','false');
   await expect(links.last().locator('img')).toHaveCSS('object-position','40% 30%');
   await page.keyboard.press('Home');
   await expect(prev).toBeDisabled();
