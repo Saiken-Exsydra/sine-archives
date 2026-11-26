@@ -1,0 +1,104 @@
+/* The environment retains the exhibition's original image slot and focal positions. */
+.character-exhibit[data-expanded=true]::before {
+  background: linear-gradient(90deg, rgb(16 17 21 / .82), transparent 25%, transparent 39%, rgb(16 17 21 / .68) 60%, rgb(16 17 21 / .94) 83%);
+}
+.examination-nav {
+  position: absolute; inset: auto auto 16% 4vw; width: min(18vw, 250px);
+  max-height: calc(100% - 90px - 16%); overflow: auto; scrollbar-width: thin;
+  color: var(--sine-pearl); text-shadow: 0 1px 5px var(--bg);
+}
+.affiliation-insignia { display: flex; align-items: center; gap: 12px; margin-bottom: clamp(16px, 3vh, 32px); }
+.affiliation-insignia strong { display: block; font: 400 clamp(18px, 1.5vw, 26px)/1.12 'Cormorant Garamond', Georgia, serif; }
+.exam-label { display: block; margin: 0 0 4px; font: 500 10px/1.35 'DM Sans', sans-serif; letter-spacing: .13em; text-transform: uppercase; color: var(--sine-platinum); }
+.examination-nav [role=tablist] { display: grid; border-left: 1px solid var(--border); }
+.examination-nav [role=tab] {
+  display: flex; align-items: center; padding: 0 14px; min-height: 44px; position: relative;
+  font: 500 14px/1.4 'DM Sans', sans-serif; color: var(--sine-platinum);
+  background: linear-gradient(90deg, rgb(16 17 21 / .57), transparent);
+}
+.examination-nav [role=tab]::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; border-left: 2px solid var(--sine-ivory);
+  background: linear-gradient(90deg, rgb(245 233 208 / .17), transparent 88%); transition: opacity var(--control) var(--ease);
+}
+.examination-nav [role=tab]:is(:hover,:focus-visible)::before { opacity: .55; }
+.examination-nav [role=tab][aria-selected=true] { color: var(--sine-pearl); }
+.examination-nav [role=tab][aria-selected=true]::before { opacity: 1; }
+.character-exhibit[data-expanded=true] .character-caption {
+  top: clamp(68px, 15dvh, 160px); right: 5vw; left: max(59%, calc(95% - 680px)); bottom: var(--reader-bottom);
+  transition: none; overflow-wrap: anywhere; min-height: 0;
+}
+.character-exhibit:not([data-section=overview]) .examination-reading { margin-left: max(-4vw, -80px); }
+.character-exhibit[data-expanded=true] .character-caption h3 {
+  max-width: 18ch; font-size: clamp(38px, min(4.6vw, 8dvh), 88px); line-height: .98; margin: 10px 0 6px;
+  max-height: 29dvh; overflow: auto; scrollbar-width: thin; padding-bottom: .13em;
+}
+.examination-reading {
+  min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent; position: relative; margin-top: clamp(14px, 3dvh, 36px);
+  border-top: 1px solid var(--border); padding: 0 clamp(8px, 1vw, 16px) 0 0;
+  transition: margin-left var(--selection) var(--ease);
+}
+.examination-content { padding-block: 16px; }
+.examination-content[inert] { position: absolute; inset: 0 clamp(8px, 1vw, 16px) auto 0; pointer-events: none; }
+.compact-affiliation { display: none; }
+.personal-particulars { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 18px 14px; margin: 0; }
+.personal-particulars dd, .archival-insignia strong { margin: 0; font: 400 clamp(18px, 1.45vw, 26px)/1.2 'Cormorant Garamond', Georgia, serif; }
+.archival-insignia { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin: 0; padding: 0; }
+.personal-particulars:not(:empty) + .archival-insignia { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); }
+.archival-insignia li { min-width: min(100%, 92px); max-width: 100%; }
+.archival-insignia :is(summary,li > div) { display: flex; align-items: center; gap: 8px; padding: 5px 0; }
+.archival-insignia summary { cursor: pointer; min-height: 44px; list-style: none; }
+.archival-insignia summary::-webkit-details-marker { display: none; }
+.archival-insignia summary::after { content: '+'; font: 16px Georgia, serif; color: var(--sine-ivory); }
+.archival-insignia details[open] summary::after { content: '−'; }
+.archival-insignia summary:is(:hover,:focus-visible), .archival-insignia details[open] summary { color: var(--sine-ivory); background: linear-gradient(90deg, transparent, rgb(245 233 208 / .09)); }
+.archival-insignia p { max-width: 54ch; margin: 4px 0 8px; font-size: 14px; line-height: 1.55; }
+.examination-passage { max-width: 62ch; }
+.examination-passage + .examination-passage, .archival-insignia + .examination-passage { margin-top: 1.15em; }
+.examination-passage p { margin: 0; font: 400 clamp(16px, 1.25vw, 21px)/1.6 Georgia, serif; color: var(--sine-pearl); }
+.examination-passage h4 { margin: 0 0 .35em; font: 400 clamp(22px, 2vw, 32px)/1.12 'Cormorant Garamond', Georgia, serif; }
+.examination-content .system-reference { margin-top: .55em; font-size: 14px; }
+.related-individual { display: flex; align-items: center; gap: 12px; margin-block: 12px; }
+.related-individual img { width: 40px; height: 54px; }
+.character-exhibit .registry-trigger {
+  bottom: max(2px, env(safe-area-inset-bottom)); width: min(72vw, 300px); height: 54px;
+  flex-direction: column; gap: 3px; background: transparent; border: 0;
+}
+.registry-trigger::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgb(245 233 208 / .15), transparent 70%);
+  transition: opacity var(--control) var(--ease);
+}
+.registry-trigger i { width: 11px; height: 11px; border: solid currentColor; border-width: 1px 0 0 1px; transform: rotate(45deg); }
+.registry-trigger span { opacity: 0; transition: opacity var(--control) var(--ease); }
+.registry-trigger:is(:hover,:focus-visible) span, .registry-trigger:is(:hover,:focus-visible)::before { opacity: 1; }
+@media (hover: none), (pointer: coarse) { .registry-trigger span { opacity: 1; } }
+@media (max-width: 700px) {
+  .character-exhibit[data-expanded=true]::before { background: linear-gradient(0deg, var(--bg) 8%, rgb(16 17 21 / .94) 41%, rgb(16 17 21 / .7) 62%, transparent 83%); }
+  .character-exhibit[data-expanded=true] .character-caption {
+    inset: clamp(64px, 33dvh, 320px) 5vw calc(108px + env(safe-area-inset-bottom)); transition: none;
+  }
+  .character-exhibit[data-expanded=true] .character-caption h3 { font-size: clamp(32px, 8.4vw, 50px); max-height: 17dvh; margin-block: 5px; }
+  .examination-nav { inset: auto 4vw calc(54px + env(safe-area-inset-bottom)); width: auto; max-height: none; }
+  .examination-nav > .affiliation-insignia { display: none; }
+  .compact-affiliation { display: block; }
+  .examination-nav [role=tablist] { grid-template-columns: repeat(4, 1fr); border: 0; border-block: 1px solid var(--border); }
+  .examination-nav [role=tab] { justify-content: center; padding-inline: 2px; font-size: clamp(12px, 3.1vw, 15px); }
+  .examination-nav [role=tab]::before { border: 0; border-top: 1px solid var(--sine-ivory); background: linear-gradient(rgb(245 233 208 / .15), transparent); }
+  .examination-reading { margin-top: 10px; }
+  .character-exhibit:not([data-section=overview]) .examination-reading { margin-left: 0; }
+  .examination-content { padding-block: 12px; }
+  .personal-particulars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-height: 560px) {
+  .character-exhibit[data-expanded=true] .character-caption { top: 54px; }
+  .character-exhibit[data-expanded=true] .character-caption h3 { font-size: 28px; margin-block: 2px; }
+  .examination-reading { margin-top: 6px; }
+  .examination-nav { bottom: max(6%, 16px); }
+}
+@media (max-width: 700px) and (max-height: 560px) {
+  .examination-nav { bottom: calc(54px + env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .examination-nav [role=tab]::before, .registry-trigger::before { transition: none; }
+}

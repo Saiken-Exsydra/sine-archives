@@ -5,7 +5,8 @@
   },
   "house-wonderwall": {
     "name": { "en": "House Wonderwall", "pt-BR": "Casa Wonderwall" },
-    "category": "house"
+    "category": "house",
+    "emblem": "house-wonderwall-quill"
   },
   "wonderwall-cadet-household": {
     "name": { "en": "Wonderwall household", "pt-BR": "Casa Wonderwall" },

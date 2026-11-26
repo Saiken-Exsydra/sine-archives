@@ -61,6 +61,12 @@ Use the root Windows launcher for the live preview and check it in Zen Browser. 
 
 For visual changes, inspect the impact and propagation captures for one readable crest, then compare the fallback capture. In Zen, use the development replay with the pointer still until the emblem appears. Watch the wave pass the corners and the Index link arrive last. [Awakening tests](tests/awakening.spec.ts) cover sequencing, resizing, context loss, session behavior and keyboard access. [Systems tests](tests/systems.spec.ts) cover locale switching and navigation from the directory into the records.
 
+## Individual examination
+
+Open the [examination replay](http://localhost:5174/#/characters/lenore-engelmeyer) and move between Overview and Biography. The right reading edge stays anchored. On desktop its inner edge extends up to 80px over the 300ms selection interval. The name, navigation and decoded hero keep their positions. Prose enters once from 5px below as the outgoing content fades over 180ms. The outgoing layer immediately becomes inert. The panel resets its own scroll on a record, section or locale change. The tab receiving keyboard activation keeps focus.
+
+The upward Registry chevron reserves a centered 54px-high touch target. Pointer attention and visible keyboard focus reveal the label and optical floor reflection over 180ms. Coarse pointers see the label at rest. Reduced motion settles the apparatus immediately. Exercise rapid arrow navigation, browser Back and Registry dismissal in both languages. The [examination regressions](tests/examination.spec.ts) capture all four settled sections for both records at three viewport sizes in `test-results/phase-v/`.
+
 ## Characters exhibition
 
 Open [Characters](http://localhost:5174/#/characters/lenore-engelmeyer/biography) and activate **Registry of Individuals**. The native modal rises one viewport over the shared 650 ms settle curve. The hero and reading surface stay mounted beneath it. Escape, Return to record, Back, or selecting the current subject lowers the same surface. Opening adds a same-URL history entry so Back and Forward can dismiss and reopen discovery.

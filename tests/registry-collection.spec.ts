@@ -8,6 +8,19 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
   await cp('src', path.join(root, 'src'), { recursive: true });
   await cp('index.html', path.join(root, 'index.html'));
   const publication = path.join(root, 'src/content/characters');
+  const registryFile = path.join(root, 'src/content/institutions.json');
+  const institutions = JSON.parse(await readFile(registryFile, 'utf8'));
+  institutions.company = { category: 'company', name: 'Example company' };
+  institutions.order = { category: 'religious', name: 'Example order' };
+  await writeFile(registryFile, JSON.stringify(institutions));
+  const symbolsFile = path.join(root, 'src/content/classifications.json');
+  const symbols = JSON.parse(await readFile(symbolsFile, 'utf8'));
+  symbols.other.study = { name: 'Example classification', insignia: 'fixture-symbol' };
+  await writeFile(symbolsFile, JSON.stringify(symbols));
+  const manifestFile = path.join(root, 'src/images/manifest.json');
+  const manifest = JSON.parse(await readFile(manifestFile, 'utf8'));
+  manifest['fixture-symbol'] = { profile: 'symbol', variants: [{ file: 'fixture.svg', width: 32, height: 32 }] };
+  await writeFile(manifestFile, JSON.stringify(manifest));
   const examples = ['lenore-engelmeyer', 'hisui-kirasagi'];
   for (let i = 2; i < 64; i++) {
     const fixture = path.join(publication, 'fixture-' + i);
@@ -19,7 +32,17 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
       designation: { en: 'Fixture', 'pt-BR': 'Exemplo' },
       summary: 'Test record', hero, portrait, overview: {},
       order: (i + 1) * 10, portraitFocal: '40% 30%',
+      ...(i === 3 && {
+        name: 'Study of a very long individual name with several published family names',
+        affiliations: [
+          { institution: 'house-wonderwall', kind: 'membership', primary: true },
+          { institution: 'company', kind: 'employment' }, { institution: 'order', kind: 'association' },
+        ],
+        classifications: { systems: [{ system: 'divination', kind: 'affiliation' }], other: ['study'] },
+        relationships: [{ character: 'fixture-2', kind: 'family' }],
+      }),
     }));
+    if (i === 3) await writeFile(path.join(fixture, 'biography.pt-BR.md'), 'Parágrafo de verificação. '.repeat(30).trim().concat('\n\n').repeat(20));
   }
   const result = await build({
     root, configFile: path.resolve('vite.config.ts'), base:'/exhibit/',
@@ -28,6 +51,8 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
   const output = (Array.isArray(result) ? result[0] : result).output;
   await page.route('**/exhibit/**', async route => {
     const file = new URL(route.request().url()).pathname.slice('/exhibit/'.length) || 'index.html';
+    if (file === 'media/fixture.svg') return route.fulfill({contentType:'image/svg+xml',
+      body:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M2 2h28v28H2z"/></svg>'});
     if (file.startsWith('media/')) return route.fulfill({path:path.resolve('public',file)});
     const asset = output.find(item => item.fileName === file)!;
     const body = asset.type === 'chunk' ? asset.code : asset.source;
@@ -82,4 +107,25 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
   await expect(page.locator('.character-rank')).toHaveText('Exemplo');
   await expect(page).toHaveURL(/\/exhibit\/\?lang=pt-br#\/characters\/fixture-2$/);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(2400);
+  await expect(page.locator('.affiliation-insignia, .archival-insignia')).toHaveCount(0);
+  await page.goto('/exhibit/?lang=pt-br#/characters/fixture-3');
+  const primary = page.locator('.examination-nav .affiliation-insignia');
+  await expect(primary).toContainText('Membro');
+  await expect(primary.locator('img')).toHaveAttribute('src', /\/exhibit\/media\/house-wonderwall-quill/);
+  await primary.locator('img').evaluate((img: HTMLImageElement) => img.decode());
+  await expect(page.getByRole('tabpanel')).toContainText('Vínculo empregatício');
+  await expect(page.getByRole('tabpanel')).toContainText('Example order');
+  await expect(page.locator('.archival-insignia')).toContainText('AfiliaçãoDivination');
+  const symbol = page.locator('.archival-insignia img');
+  await symbol.evaluate((img: HTMLImageElement) => img.decode());
+  await page.setViewportSize({width:320, height:568});
+  await page.getByRole('tab', {name:'Biografia'}).click();
+  const reading = page.getByRole('tabpanel');
+  await reading.focus();
+  await page.keyboard.press('End');
+  await expect.poll(() => reading.evaluate(el => el.scrollTop)).toBeGreaterThan(0);
+  await page.getByRole('tab', {name:'Relações'}).click();
+  await expect(reading.getByRole('link', {name:/Study 2/})).toHaveAttribute('href', '#/characters/fixture-2');
+  await expect.poll(() => reading.evaluate(el => el.scrollTop)).toBe(0);
+  expect(await reading.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true);
 });

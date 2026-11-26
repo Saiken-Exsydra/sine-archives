@@ -67,7 +67,7 @@ test('resolves affiliations, insignia, structured facts and only the approved do
   const { featuredCharacter: person, institutions, insignia } = f.load();
   assert.equal(person.designation['pt-br'], 'Exemplo');
   assert.deepEqual(person.facts.birth, { imperialYear: 1557, approximate: true });
-  assert.deepEqual(person.overview.map(([, value]) => value['pt-br']), ['c. AI 1557', 'Demo household']);
+  assert.deepEqual(person.overview.map(([, value]) => value['pt-br']), ['c. AI 1557']);
   assert.deepEqual(person.abilities.en[0].link, { label: 'Bloom', href: '#/systems/bloom' });
   assert.equal(person.classifications.redactory, undefined);
   assert.equal(institutions.get('demo-household').emblem, undefined);

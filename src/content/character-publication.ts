@@ -86,7 +86,7 @@ export type Character = Omit<RecordData, 'hero' | 'portrait' | 'overview' | 'des
 } & Record<ProseSection, Record<Locale, Passage[]>>;
 
 const copy = (en: string, pt: string): Copy => ({ en, 'pt-br': pt });
-function localize(value: Localized): Copy {
+export function localize(value: Localized): Copy {
   return typeof value === 'string' ? copy(value, value) : copy(value.en, value['pt-BR']);
 }
 
@@ -139,7 +139,7 @@ function readPassages(raw: string | undefined, file: string): Passage[] {
   return passages;
 }
 
-function overviewFacts(overview: RecordData['overview'], primary: Institution | undefined): Character['overview'] {
+function overviewFacts(overview: RecordData['overview']): Character['overview'] {
   const { age, birth, birthplace, heightCm, residence } = overview;
   const facts: Character['overview'] = [];
   if (age) facts.push([
@@ -156,7 +156,6 @@ function overviewFacts(overview: RecordData['overview'], primary: Institution | 
     copy(`${heightCm} cm`, `${heightCm.toString().replace('.', ',')} cm`),
   ]);
   if (residence) facts.push([copy('Residence', 'Residência'), localize(residence)]);
-  if (primary) facts.push([copy('Affiliation', 'Afiliação'), localize(primary.name)]);
   return facts;
 }
 
@@ -255,7 +254,7 @@ export function loadCharacterPublication(
       designation: localize(designation),
       summary: localize(summary),
       facts: overview,
-      overview: overviewFacts(overview, primary[0] && institutions.get(primary[0].institution)),
+      overview: overviewFacts(overview),
       biography: prose('biography'),
       abilities: prose('abilities'),
       relations: prose('relations'),

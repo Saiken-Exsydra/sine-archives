@@ -59,6 +59,12 @@ In Obsidian Awakening, the first interaction sends one broad ripple from beneath
 
 Compose pages like an institutional publication. Use a clear hierarchy, legible reading type, refined display type, disciplined alignment, generous negative space, fine dividers, and consistently placed metadata. Choose layouts that fit the structure of the records, especially where dense or connected information would lose clarity in oversized cards. The archive's content should command the reader's attention.
 
+## Examining an individual
+
+Keep the fullscreen illustration stationary. Set the primary institution and its relationship above the vertical navigation at the left. Anchor the individual's name and designation on the right and let the reading surface extend inward underneath. The open space between them belongs to the illustration. The published crop and focal point belong to the character record.
+
+On a phone, place the section choices within thumb reach above the Registry threshold. Let the primary affiliation travel with the Overview facts and give prose its own native scroll. Institutional marks identify an organization. Classification inscriptions pair the published concept with a precise label and may disclose a short public explanation.
+
 ## Implementation and development
 
 Choose techniques for visual fidelity, readability, accessibility, maintenance, browser compatibility, and performance. CSS custom properties and reusable React components can carry common treatments. Backdrop filters, procedural textures, pointer-responsive reflections, SVG displacement, and WebGL refraction or chromatic dispersion are available options. Keep ordinary components lightweight and use heavier optical effects only where they materially improve the experience. Provide readable fallbacks, keyboard access, touch support, and reduced-motion behavior. Clean up effects when their components unmount.

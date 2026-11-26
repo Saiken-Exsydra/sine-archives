@@ -3,9 +3,11 @@ import { AnimatePresence, m } from 'motion/react';
 import { useLocale } from '../site';
 import { imageProps, imageReady } from '../images/publication';
 import { motionTokens, useMotionPreference } from '../motion/system';
-import { characterHref, featuredCharacter, sectionNames, sections, type Character, type CharacterRoute } from './characters';
+import { characterHref, featuredCharacter, type Character, type CharacterRoute } from './characters';
 import { IndividualRegistry, dismissRegistry, openRegistry, registryOpen, revealFrom, useRegistryOpen } from './IndividualRegistry';
+import { ExaminationNavigation, ExaminationReading } from './Examination';
 import './characters.css';
+import './examination.css';
 
 export function CharactersShowcase({ route }: { href: string; route?: CharacterRoute }) {
   const locale = useLocale();
@@ -65,7 +67,8 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
   if (previous && previous !== requested) layers.push(previous);
   if (!failed) layers.push(character);
   if (pending) layers.push(requested);
-  return <div className="exhibition character-exhibit" data-expanded={expanded} data-section={section}>
+  return <div className="exhibition character-exhibit" data-expanded={expanded} data-section={section}
+    style={{ '--selection': motionTokens.selection + 's', '--control': motionTokens.control + 's' } as CSSProperties}>
     {layers.map(person => <m.img key={person.id} className="scene-art" {...imageProps(person.art, '100vw', '')}
         ref={pending && person === requested ? incoming : undefined}
         loading={expanded || pending ? 'eager' : 'lazy'} fetchPriority={expanded ? 'high' : 'auto'}
@@ -78,6 +81,7 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
             current === presentation ? { character } : current);
         }}/>)}
     {expanded && <a className="character-return catalog-label" href="#archive-index">← {pt ? 'Grande índice' : 'Grand Index'}</a>}
+    {route && <ExaminationNavigation character={character} section={section} locale={locale}/>}
     <div className="character-caption">
       {expanded ? <h1 className="catalog-label" tabIndex={-1} ref={title}>{domain}</h1>
         : <p className="catalog-label">{pt ? 'Pessoa em destaque' : 'Featured individual'}</p>}
@@ -85,35 +89,14 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
       <p className="character-rank">{character.designation[locale]}</p>
       {failed && <p role="status">{pt ? 'Ilustração indisponível.' : 'Artwork unavailable.'}</p>}
       {!expanded && <p className="character-summary">{character.summary[locale]}</p>}
-      {route && <>
-        <div className="character-tabs" role="tablist" aria-label={pt ? 'Seções do registro' : 'Record sections'}>
-          {sections.map((item,i) => <a href={characterHref(character.id,item)} key={item} role="tab"
-            id={'tab-'+item} aria-selected={item === section} tabIndex={item === section ? 0 : -1} aria-controls="character-reading"
-            onKeyDown={e => {
-              if (e.key === ' ') { e.preventDefault(); e.currentTarget.click(); return; }
-              const next = {ArrowRight:(i+1)%4,ArrowLeft:(i+3)%4,Home:0,End:3}[e.key];
-              if (next === undefined) return;
-              e.preventDefault();
-              const tab = document.getElementById('tab-'+sections[next]);
-              tab?.focus(); tab?.click();
-            }}>{sectionNames[item][locale]}</a>)}
-        </div>
-        <div key={character.id+section} className="character-reading" id="character-reading" role="tabpanel" aria-labelledby={'tab-'+section} tabIndex={0}>
-          {section === 'overview' ? <dl>{character.overview.map(([label,value]) =>
-            <div key={label.en}><dt>{label[locale]}</dt><dd>{value[locale]}</dd></div>)}</dl>
-          : character[section][locale].map((passage,i) => <div key={i}>
-              {passage.title && <h4>{passage.title}</h4>}<p>{passage.text}</p>
-              {passage.link && <a className="system-reference" href={passage.link.href}>{passage.link.label} ↗</a>}
-            </div>)}
-        </div>
-      </>}
+      {route && <ExaminationReading character={character} section={section} locale={locale}/>}
     </div>
     <div className="character-domain" inert={expanded} aria-hidden={expanded}>
       <h2>{domain}</h2>
       <a className="domain-entry" href={characterHref(character.id)}>{pt ? 'Explorar personagens' : 'Open Characters'} <span aria-hidden="true">↗</span></a>
     </div>
     {route && <button ref={trigger} className="registry-trigger" aria-haspopup="dialog" aria-expanded={open}
-      onClick={openRegistry}>{pt ? 'Registro de indivíduos' : 'Registry of Individuals'} <span aria-hidden="true">↑</span></button>}
+      onClick={openRegistry}><i aria-hidden="true"/><span>{pt ? 'Registro de indivíduos' : 'Registry of Individuals'}</span></button>}
     <AnimatePresence custom={aperture.current} onExitComplete={() => {
       aperture.current = undefined;
       trigger.current?.focus({ preventScroll: true });

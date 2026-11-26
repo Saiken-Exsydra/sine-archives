@@ -274,5 +274,22 @@
         "sha256": "01418f6299b7029965d37d067843ffed54fefbf6e35ade688be5d28551033c6f"
       }
     ]
+  },
+  "house-wonderwall-quill": {
+    "category": "institution",
+    "profile": "symbol",
+    "approval": "6829e3ae64ea855aa5e700f26402c31bf136f0dacee10b25f7a937c5082c3817",
+    "sourceBytes": 17946,
+    "sourceWidth": 1254,
+    "format": "svg",
+    "variants": [
+      {
+        "file": "house-wonderwall-quill-1254-c4dcb49b42b42ca3.svg",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 17946,
+        "sha256": "c4dcb49b42b42ca386a22f26897dcad3a0bf540fa07046117a27b903b4441c05"
+      }
+    ]
   }
 }

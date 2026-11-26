@@ -46,5 +46,12 @@
     "category": "character",
     "profile": "portrait",
     "approvedSha256": "97c2223a4649e215211459d194e74506d25b70e18569809e395c20009f8f3ea9"
+  },
+  {
+    "id": "house-wonderwall-quill",
+    "category": "institution",
+    "profile": "symbol",
+    "approvedSha256": "c4dcb49b42b42ca386a22f26897dcad3a0bf540fa07046117a27b903b4441c05",
+    "publishOriginalSvg": true
   }
 ]
