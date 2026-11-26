@@ -22,7 +22,7 @@ async function sectionGeometry(page: Page) {
 }
 
 for (const [width, height, dpr, heroWidth, portraitWidth] of [
-  [1440, 900, 1, 1920, 96], [390, 844, 2, 1280, 320],
+  [1440, 900, 1, 1920, 320], [390, 844, 2, 1280, 640],
 ]) {
   test.describe(`publication at ${width}px and DPR ${dpr}`, () => {
     test.use({ viewport: { width, height }, deviceScaleFactor: dpr });
@@ -34,10 +34,13 @@ for (const [width, height, dpr, heroWidth, portraitWidth] of [
       await page.goto('/#/characters');
       const art = page.locator(hero);
       await art.evaluate((img: HTMLImageElement) => img.decode());
-      const portrait = page.locator('.individuals img').first();
+      await page.locator('.registry-trigger').click();
+      const portrait = page.locator('.registry-frame img').first();
       await expect.poll(() => portrait.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
       expect(await portrait.evaluate((img: HTMLImageElement) => img.currentSrc)).toContain('portrait-' + portraitWidth + '-');
       expect(await portrait.getAttribute('loading')).toBe('lazy');
+      await page.keyboard.press('Escape');
+      await expect(page.getByRole('dialog')).toHaveCount(0);
       const geometry = await sectionGeometry(page);
       expect(geometry.source).toContain('hero-' + heroWidth + '-');
       expect(geometry.fit).toBe('cover');
@@ -64,6 +67,7 @@ test('keeps the presented subject through network and decode waits and releases 
   await page.goto('/#/characters');
   await page.locator(hero).evaluate((img: HTMLImageElement) => img.decode());
   const requested = page.waitForRequest(hisui);
+  await page.locator('.registry-trigger').click();
   await page.getByRole('link', { name: 'Hisui Kirasagi' }).click();
   await requested;
   const name = page.locator('.character-caption h3');
@@ -94,6 +98,7 @@ test('back and leaving the exhibition supersede a pending selection', async ({ p
   });
   await page.goto('/#/characters');
   for (const leave of [false, true]) {
+    await page.locator('.registry-trigger').click();
     await page.getByRole('link', { name: 'Hisui Kirasagi' }).click();
     await page.waitForFunction(() => 'finishPending' in window);
     if (leave) await page.evaluate(() => { location.hash = '/history'; });
@@ -124,6 +129,7 @@ test('a resize during decode waits for the newly selected hero variant', async (
     };
   });
   await page.goto('/#/characters');
+  await page.locator('.registry-trigger').click();
   await page.getByRole('link', { name: 'Hisui Kirasagi' }).click();
   await page.waitForFunction(() => (window as any).gates.size === 1);
   await page.setViewportSize({ width: 2000, height: 900 });
@@ -139,6 +145,7 @@ test('a resize during decode waits for the newly selected hero variant', async (
 test('failed selected and direct heroes leave a readable localized record', async ({ page }) => {
   await page.route(hisui, route => route.abort());
   await page.goto('/?lang=pt-br#/characters');
+  await page.locator('.registry-trigger').click();
   await page.getByRole('link', { name: 'Hisui Kirasagi' }).click();
   for (const reload of [false, true]) {
     if (reload) await page.reload();
@@ -148,4 +155,44 @@ test('failed selected and direct heroes leave a readable localized record', asyn
     await page.getByRole('tab', { name: 'Biografia' }).click();
     await expect(page.getByRole('tabpanel')).toContainText('Tsukimiya');
   }
+});
+
+test('failed portrait and hero decode retain accessible names and a readable selection', async ({page}) => {
+  await page.route('**/hisui-kirasagi-portrait-*.webp', route => route.abort());
+  await page.addInitScript(() => {
+    const native = HTMLImageElement.prototype.decode;
+    HTMLImageElement.prototype.decode = function () {
+      if (this.currentSrc.includes('hisui-kirasagi-hero')) return Promise.reject(new Error('Decode failed'));
+      return native.call(this);
+    };
+  });
+  await page.goto('/#/characters');
+  await page.locator('.registry-trigger').click();
+  await page.getByRole('link', {name:'Hisui Kirasagi'}).click();
+  await expect(page.getByText('Artwork unavailable.')).toBeVisible();
+  await expect(page.locator(hero)).toHaveCount(0);
+  await expect(page.getByRole('tabpanel')).toContainText('Tsukimiya');
+});
+
+test('Escape during preparation keeps the original route and ignores a late decode', async ({page}) => {
+  await page.addInitScript(() => {
+    const native = HTMLImageElement.prototype.decode;
+    HTMLImageElement.prototype.decode = async function () {
+      await native.call(this);
+      if (this.currentSrc.includes('hisui-kirasagi-hero')) await new Promise<void>(resolve => {
+        Object.assign(window, {finishDecode:resolve});
+      });
+    };
+  });
+  await page.goto('/#/characters/lenore-engelmeyer/abilities');
+  await page.locator('.registry-trigger').click();
+  await page.getByRole('link',{name:'Hisui Kirasagi'}).click();
+  await page.waitForFunction(()=>'finishDecode' in window);
+  await expect(page.getByRole('dialog').getByRole('status')).toContainText('Opening Hisui');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.registry-trigger')).toBeFocused();
+  await page.evaluate(()=>(window as any).finishDecode());
+  await expect(page).toHaveURL(/lenore-engelmeyer\/abilities$/);
+  await expect(page.getByRole('tabpanel')).toContainText('Deception');
+  await expect(page.locator(hero)).toHaveCount(1);
 });

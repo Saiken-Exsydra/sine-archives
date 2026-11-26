@@ -1,79 +1,114 @@
 import { test, expect } from './browser';
 
-test('entry keeps the artwork mounted and the reading region grows independently of the rail', async ({page}) => {
+const review = 'test-results/react-review/';
+test('examination, discovery and the measured hero reveal share one environment', async ({page}) => {
   await page.setViewportSize({width:1440,height:900});
   await page.goto('/#archive-index');
   const art = page.locator('.character-exhibit .scene-art');
   const original = await art.elementHandle();
-  await expect.poll(() => art.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0 && img.currentSrc.includes('/media/lenore-engelmeyer-hero-'))).toBe(true);
   await page.getByRole('link',{name:'Open Characters'}).click();
-  const rail = page.locator('.individual-rail');
-  const reading = page.getByRole('tabpanel');
-  await expect(rail).toHaveAttribute('data-open','true');
-  await expect(page.getByRole('tab',{name:'Overview'})).toHaveAttribute('aria-selected','true');
-  await expect(reading).toContainText('169 cm');
-  const portrait = rail.locator('img').first();
-  await expect.poll(() => portrait.evaluate((img: HTMLImageElement) => img.complete && img.currentSrc.includes('portrait-96-') && img.naturalWidth > 0)).toBe(true);
-  const box = await art.boundingBox();
+  await expect(page.getByRole('tabpanel')).toContainText('169 cm');
   expect(await art.evaluate((el, previous) => el === previous, original)).toBe(true);
-  await page.screenshot({path:'test-results/react-review/characters-overview.png',animations:'disabled'});
-  const bottom = () => reading.evaluate(el=>el.getBoundingClientRect().bottom);
-  const overviewBottom = await bottom();
   await page.getByRole('tab',{name:'Biography'}).click();
-  await expect(rail).toHaveAttribute('data-open','false');
-  await expect.poll(bottom).toBeGreaterThan(overviewBottom+40);
-  await page.getByRole('button',{name:'Browse individuals'}).hover();
-  await expect(rail).toHaveAttribute('data-open','true');
+  const trigger = page.getByRole('button',{name:'Registry of Individuals'});
+  await page.screenshot({path:review+'examination.png'});
+  const box = await art.boundingBox();
+  await trigger.click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page.locator('.individual-rail')).toHaveCount(0);
+  const portraits = page.locator('.registry-portrait');
+  await expect(portraits).toHaveCount(2);
+  await expect(portraits.first()).toBeFocused();
+  await expect(page.locator('.registry-frame img').first()).toHaveCSS('object-position','50% 50%');
+  for (const frame of await page.locator('.registry-frame').all()) {
+    const rect = (await frame.boundingBox())!;
+    expect(rect.width / rect.height).toBeCloseTo(2/3,3);
+  }
+  const left = (await portraits.first().boundingBox())!;
+  const right = (await portraits.last().boundingBox())!;
+  expect(left.x).toBeCloseTo(1440 - right.x - right.width, 1);
   expect(await art.boundingBox()).toEqual(box);
-  await page.getByRole('link',{name:'Hisui Kirasagi'}).click();
-  await expect(reading).toContainText('Tsukimiya');
-  await expect(page).toHaveURL(/hisui-kirasagi\/biography$/);
-  await page.getByRole('tab',{name:'Biography'}).focus();
   await page.keyboard.press('ArrowRight');
-  await expect(reading).toContainText('Abyssal Flower');
-  await page.reload();
-  await expect(page.getByRole('heading',{name:'Hisui Kirasagi'})).toBeVisible();
+  await expect(portraits.last()).toBeFocused();
+  await expect(page.locator('dialog')).toHaveCSS('transform','none');
+  await page.screenshot({path:review+'registry-focused.png'});
+  await page.keyboard.press('Escape');
+  await expect(trigger).toBeFocused();
+  await expect(page.getByRole('tab',{name:'Biography'})).toHaveAttribute('aria-selected','true');
+  await page.goForward();
+  await expect(portraits.first()).toBeFocused();
+  await portraits.first().click();
+  await expect(trigger).toBeFocused();
+  await trigger.click();
+  await portraits.last().click();
+  const dialog = page.locator('dialog');
+  await expect.poll(()=>dialog.evaluate(el=>getComputedStyle(el).clipPath)).toContain('polygon');
+  await page.screenshot({path:review+'registry-reveal.png'});
+  await expect(dialog).toHaveCount(0);
+  await expect(page).toHaveURL(/hisui-kirasagi$/);
+  await expect(page.getByRole('tabpanel')).toContainText('Tsukimiya');
+  await page.screenshot({path:review+'hisui-overview.png'});
   await page.goBack();
   await expect(page.getByRole('tab',{name:'Biography'})).toHaveAttribute('aria-selected','true');
-  await page.getByRole('tab',{name:'Overview'}).click();
-  await expect(rail).toHaveAttribute('data-open','true');
+  await page.keyboard.press('Tab');
+  await page.getByRole('tab',{name:'Biography'}).focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.getByRole('tabpanel')).toContainText('Deception');
+  await page.reload();
+  await expect(page.getByRole('tab',{name:'Abilities'})).toHaveAttribute('aria-selected','true');
   await page.getByRole('link',{name:'Grand Index'}).click();
   await expect(page.locator('#archive-index')).toBeInViewport({ratio:.99});
 });
 
-test('small screen supports explicit rail control and reading scroll',async ({page})=>{
-  await page.setViewportSize({width:360,height:640});
-  await page.emulateMedia({reducedMotion:'reduce'});
-  await page.goto('/?lang=pt-br#/characters/hisui-kirasagi/relations');
-  const handle=page.getByRole('button',{name:'Explorar personagens'});
-  await handle.focus();
-  await page.keyboard.press('Enter');
-  await expect(handle).toHaveAttribute('aria-expanded','true');
-  await page.keyboard.press('Tab');
-  await expect(page.getByRole('link',{name:"Le’nore Voren Engelmeyer"})).toBeFocused();
-  await page.keyboard.press('Escape');
-  await expect(handle).toBeFocused();
-  await expect(handle).toHaveAttribute('aria-expanded','false');
-  await page.getByRole('tab',{name:'Visão geral'}).click();
-  await expect(page.getByRole('tabpanel')).toContainText('1557');
-  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(360);
-  await page.screenshot({path:'test-results/react-review/characters-phone.png',animations:'disabled'});
+test.describe('touch browsing', () => {
+  test.use({hasTouch:true, viewport:{width:360,height:640}, reducedMotion:'reduce'});
+  test('Portuguese discovery scrolls internally and keeps a cancelled section',async ({page})=>{
+    await page.emulateMedia({ reducedMotion:'reduce' });
+    await page.goto('/?lang=pt-br#/characters/lenore-engelmeyer/relations');
+    const trigger=page.getByRole('button',{name:'Registro de indivíduos'});
+    await trigger.tap();
+    await expect(page.getByRole('dialog')).toHaveAccessibleName('Registro de indivíduos');
+    const track=page.locator('.registry-track');
+    await page.screenshot({path:review+'registry-phone.png'});
+    await expect(page.locator('dialog')).toHaveCSS('transform','none');
+    await page.getByRole('button',{name:'Voltar ao registro'}).tap();
+    await expect(trigger).toBeFocused();
+    await expect(page.getByRole('tab',{name:'Relações'})).toHaveAttribute('aria-selected','true');
+    await trigger.tap();
+    await page.getByRole('link',{name:'Hisui Kirasagi'}).tap();
+    await expect(page.getByRole('tab',{name:'Visão geral'})).toHaveAttribute('aria-selected','true');
+    await expect(page.getByRole('tabpanel')).toContainText('1557');
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(360);
+    await page.setViewportSize({width:320,height:568});
+    await page.getByRole('tab',{name:'Habilidades'}).tap();
+    await expect(page.getByRole('tabpanel')).toContainText('Abyssal Flower');
+    const panel=page.getByRole('tabpanel');
+    await panel.evaluate(el=>el.scrollTo({top:el.scrollHeight,behavior:'instant'}));
+    await expect.poll(()=>panel.evaluate(el=>el.scrollTop)).toBeGreaterThan(0);
+    await trigger.tap();
+    const before = await track.evaluate(el=>el.scrollLeft);
+    expect(before).toBeGreaterThan(30);
+    const cdp=await page.context().newCDPSession(page);
+    const rect=(await track.boundingBox())!;
+    const y=rect.y+rect.height/2;
+    for (const [type,x] of [['touchStart',50],['touchMove',110],['touchMove',240],['touchEnd',0]] as const) {
+      await cdp.send('Input.dispatchTouchEvent',{type,touchPoints:type==='touchEnd'?[]:[{x,y}]});
+    }
+    await expect.poll(()=>track.evaluate(el=>el.scrollLeft)).toBeLessThan(before-30);
+  });
 });
 
-
-test.describe('touch browsing', () => {
-  test.use({hasTouch:true, viewport:{width:320,height:568}, reducedMotion:'reduce'});
-  test('tap reveals the rail, preserves the section, and releases it again',async ({page})=>{
-    await page.goto('/#/characters/lenore-engelmeyer/abilities');
-    const handle=page.getByRole('button',{name:'Browse individuals'});
-    await handle.tap();
-    await expect(handle).toHaveAttribute('aria-expanded','true');
-    await page.getByRole('link',{name:'Hisui Kirasagi'}).tap();
-    await expect(page.getByRole('tabpanel')).toContainText('Abyssal Flower');
-    await handle.tap();
-    await expect(handle).toHaveAttribute('aria-expanded','false');
-    const panel=page.getByRole('tabpanel');
-    await panel.evaluate(el=>el.scrollTo(0,el.scrollHeight));
-    expect(await panel.evaluate(el=>el.scrollTop)).toBeGreaterThan(0);
-  });
+test('Back and resize during the reveal restore the originating record and release the dialog', async ({page}) => {
+  await page.goto('/#/characters/lenore-engelmeyer/relations');
+  await page.locator('.registry-trigger').click();
+  await page.getByRole('link',{name:'Hisui Kirasagi'}).click();
+  await page.waitForFunction(()=>getComputedStyle(document.querySelector('dialog')!).clipPath.startsWith('polygon'));
+  await page.setViewportSize({width:780,height:540});
+  await page.goBack();
+  await expect(page.locator('dialog')).toHaveCount(0);
+  await expect(page).toHaveTitle('Le’nore Voren Engelmeyer · SiNE Archives');
+  await expect(page.getByRole('tab',{name:'Relations'})).toHaveAttribute('aria-selected','true');
+  await expect(page.locator('.character-exhibit .scene-art')).toHaveCount(1);
+  await page.goForward();
+  await expect(page).toHaveTitle('Hisui Kirasagi · SiNE Archives');
 });

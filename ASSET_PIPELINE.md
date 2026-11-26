@@ -43,7 +43,7 @@ The local Archive happens to live under **The Archive/Artworks** in the sibling 
 | `assets:check` | Verify registrations, dimensions, formats, filenames, lengths and SHA-256 digests. Reject additional publication files. Also runs during build. | No |
 | `assets:test` | Exercise the processor on temporary synthetic artwork. | No |
 
-[Profiles](tools/assets/profiles.mjs) define the target widths and WebP quality. Initial values are thumbnail 96/192/320 at 86, portrait 96/320/640/960 at 90, hero 1280/1920/2560 at 90, illustration 640/1280/1920 at 90, symbol 96/256/512 at 94 and background 960/1600/2560 at 88. Choose the profile the interface actually uses. The 96-pixel portrait serves the small navigation rail. Widths clamp to the oriented original and repeated sizes collapse into one.
+[Profiles](tools/assets/profiles.mjs) define the target widths and WebP quality. Initial values are thumbnail 96/192/320 at 86, portrait 96/320/640/960 at 90, hero 1280/1920/2560 at 90, illustration 640/1280/1920 at 90, symbol 96/256/512 at 94 and background 960/1600/2560 at 88. Choose the profile the interface actually uses. The 96-pixel portrait remains available for compact references. Widths clamp to the oriented original and repeated sizes collapse into one.
 
 The engine processes one image and one width at a time. PNG, JPEG and WebP inputs yield WebP in sRGB with source orientation applied, full composition, alpha preserved and embedded metadata removed. Animated images are outside the initial scope. For SVG, review the entire original including metadata, links and active content, then explicitly set `"publishOriginalSvg": true` on its approval. The exact reviewed SVG bytes are copied once. The pipeline does not sanitize vector originals. Existing corporate SVG masters continue through their established Vite imports.
 
@@ -76,7 +76,7 @@ For a natural-proportion editorial illustration, pass the localized description 
 
 Use empty alt for decorative environments and portraits in already-named links. Preserve meaningful localized descriptions for informative content, including a nearby text equivalent for a complex diagram. Native alt and intrinsic dimensions remain available on an ordinary failed request. Use the native `onError` prop for a domain-specific unavailable treatment. Never substitute another subject’s image.
 
-The rail reserves its frame in CSS and uses native lazy-image auto-sizing with an 80-pixel fallback. Search and relationship references can use an explicit small CSS slot or the thumbnail profile. A collection may load nearby portraits progressively. Hero preparation belongs to a specific intended selection. The active expanded hero uses eager loading, high fetch priority and `100vw`. The collapsed exhibition uses lazy loading and normal priority. Inline assignment of responsive sources on the display element already initiates its request.
+The Registry reserves a 2:3 frame in CSS and uses lazy-image auto-sizing with a fallback matching its responsive frame width. Search and relationship references can use an explicit small CSS slot or the thumbnail profile. A collection may load nearby portraits progressively. Hero preparation belongs to a specific intended selection. The active expanded hero uses eager loading, high fetch priority and `100vw`. The collapsed exhibition uses lazy loading and normal priority. Inline assignment of responsive sources on the display element already initiates its request.
 
 ### Persistent environments and readiness
 
@@ -84,17 +84,7 @@ The [character exhibition](src/grand-index/CharactersShowcase.tsx) stages the re
 
 A superseding selection or unmount invalidates the pending result. When a hero fails, the requested record and its navigation stay usable with an EN/PT-BR unavailable message on the underlying obsidian field. Selecting it again after another record, or reloading the route, retries. On a first direct visit the record can be read while the browser paints its initial artwork.
 
-A future registry may prepare one selection while its gallery covers the environment:
-
-```tsx
-const controller = new AbortController();
-const ready = prepareImage(person.art, '100vw', controller.signal);
-// The owner calls controller.abort() when superseded or unmounted.
-const decoded = await ready;
-if (!controller.signal.aborted) revealSelection(person, decoded);
-```
-
-Handle a rejected promise in the owner’s error path. The registry controls its reveal and the lifetime of the returned image. For a mounted hero, await `imageReady` on the actual element, especially after a viewport or DPR change. The browser chooses candidates and manages its own cache. No application-wide image cache or preload queue is necessary.
+The Registry uses the mounted-element path above. Discovery remains visible during preparation. See the [Characters motion score](MOTION_ARCHITECTURE.md#characters-exhibition) for the portrait-origin handoff, cancellation and failure paths.
 
 ### Existing artwork and verification
 

@@ -10,9 +10,9 @@ export const sectionNames = {
   abilities: t('Abilities', 'Habilidades'), relations: t('Relations', 'Relações'),
 };
 interface Passage { title?: Copy; text: Copy; link?: { href: string; label: string } }
-interface Character {
+export interface Character {
   id: string; name: string; shortName: string; designation: string; summary: Copy;
-  art: AssetId; portrait: AssetId; focal: string; mobileFocal: string;
+  art: AssetId; portrait: AssetId; portraitFocal?: string; focal: string; mobileFocal: string;
   overview: [Copy, Copy][]; biography: Passage[]; abilities: Passage[]; relations: Passage[];
   dossierHref?: string;
 }
