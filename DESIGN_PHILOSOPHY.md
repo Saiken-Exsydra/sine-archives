@@ -17,6 +17,25 @@ The archive should feel like an exceptionally sophisticated institution in an ad
 
 The logo masters and the [Design Systems index](<../SiNE Archives REPO/The Archive/Artworks/Design Systems/README.md>) are in the sibling checkout under `The Archive/Artworks/Design Systems/`. Consult the corporate masters and the Wonderwall [structured specification](<../SiNE Archives REPO/The Archive/Artworks/Design Systems/House Wonderwall/Wonderwall.json>), [CSS palette](<../SiNE Archives REPO/The Archive/Artworks/Design Systems/House Wonderwall/Wonderwall.css>), and [design brief](<../SiNE Archives REPO/The Archive/Artworks/Design Systems/House Wonderwall/Wonderwall.txt>) before adding or changing color tokens. Reuse an approved color when it meets the need. Pearl accents should support SiNE's identity and remain selective even where the two palettes share tones.
 
+Imperial Obsidian sets the material and lighting environment. The five approved Pearl Spectrum colors supply the digital palette. Pearl White anchors character names and reading values, Pale Platinum supports metadata, and Ice Aqua outlines visible keyboard focus. Soft Ivory also serves as the Redactory reading accent. [Shared digital tokens](src/styles.css)
+
+## Pearl Spectrum in practice
+
+Use this design language as a standing reference whenever an interface enters development. Pearl Spectrum Phase V was cancelled. Work on the dedicated Redactory and other Systems pages is deferred. Phase IV covers their entries inside the Grand Index.
+
+Compose the approved colors as light on a single material. Begin with a broad area of Pearl White, warm it to Soft Ivory, then pass through Pale Platinum and Ice Aqua to an Opaline Lilac tip. Choose where a reader would see that light on the particular object. It can sit in the strokes of a display title, catch a cut in glass, or run beneath a disclosure. A quiet control may need only its ordinary label. Reserve sustained color for deliberate details and keep faces, heraldry and long passages clear.
+
+| Implemented surface | Where the light belongs |
+| --- | --- |
+| I · Character examination | Redactory keeps its white value while a fine edge appears beneath it. Section tabs catch a shallow wash. The Grand Index return carries the reflection in its letters. A persistent rail identifies the selected section. |
+| II · Registry of Individuals | A portrait name rests in Pearl White. Interaction reveals the spectrum in the letters and on the lower glass bevel. The upper seam identifies the current record. |
+| III · Complete Dossier | The current contents entry carries spectral lettering and a pearl rail. Other entries reveal the lettering on interaction. The tapered glass seam brightens beside the portrait on desktop and beneath it on phones. Reading type stays steady. |
+| IV · Grand Index | Domain titles hold a stationary spectrum. Edge labels, domain links and individual Systems entries reveal it in their lettering. Follow the vertical labels on desktop and the horizontal labels on phones. The illustrations retain their authored color. |
+
+For a new control, start with the closest example above. Share the same color stops and reveal a fixed gradient in the reading direction. Let it hold under sustained attention and withdraw on departure. Keep selection legible after the pointer leaves, give keyboard focus a distinct outline, and let reduced motion show the settled state immediately. In forced colors, use system text and structural cues. Review the result over the actual artwork at desktop and phone sizes. [Palette and gradient](src/styles.css) · [Shared interaction styles](src/grand-index/pearl-interaction.css) · [Motion score and replay](MOTION_ARCHITECTURE.md#shared-motion)
+
+Keep the interface palette consistent across subjects. Artwork, heraldry, maps and published illustrations keep their authored colors. Use local contrast gradients to make the interface legible over the artwork. Functional colors for status, warnings and other established meanings retain their role and have a textual or structural cue when the distinction matters.
+
 ## Geometry
 
 **Every interface component has sharp, 90-degree corners. The design system uses zero border radius.** Apply this to buttons, navigation, language selectors, cards, search fields, dropdowns, dialogs, tooltips, sidebars, tabs, document containers, notifications, scrollbars, and other interactive controls. Preserve this geometry across all states, including focus and press.

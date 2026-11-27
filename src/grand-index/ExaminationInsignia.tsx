@@ -59,8 +59,8 @@ export function ArchivalInsignia({ character, locale }: { character: Character; 
     {rows.map(({ key, label, value, asset, detail, href }) => {
       const identity = <>{asset && <SymbolImage asset={asset} size={28}/>}
         <span><small className="exam-label">{label}</small><strong>{value}</strong></span></>;
-      return <li key={key}>{detail ? <details><summary>{identity}</summary><p>{detail}</p>
-        {href && <a className="system-reference" href={href}>{pt ? 'Consultar registro' : 'Read record'} ↗</a>}
+      return <li key={key}>{detail ? <details><summary className="pearl-interaction">{identity}</summary><p>{detail}</p>
+        {href && <a className="system-reference pearl-interaction pearl-text" href={href}>{pt ? 'Consultar registro' : 'Read record'} ↗</a>}
       </details> : <div>{identity}</div>}</li>;
     })}
   </ul>;

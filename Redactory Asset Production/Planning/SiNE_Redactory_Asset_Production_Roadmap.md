@@ -1,6 +1,7 @@
 # SiNE Archives — Redactory Asset Production Roadmap
 
-**Status:** Working production guide, not a canonical Dy’Aspora document  
+**Status:** Planning reference for possible future work. Dedicated Redactory page development is deferred. This guide is noncanonical.
+
 **Created:** 24 November 2026  
 **Scope:** Asset research, acquisition, creation, preparation, and first interactive Redactory prototype  
 **Project:** The Redactory Academy — Experience Lab
@@ -46,7 +47,7 @@ SiNE Archives is conceived as a **public-facing website produced by SiNE inside 
 - **Contrast and legibility:** ornamental surfaces should never obscure diagrams or reading text.
 - **Motion:** purposeful: paper unfolding, lines being routed, instrument pointers shifting, overlays revealing—not movement merely to impress.
 
-Choose an **initial** color palette from existing project assets rather than canonizing invented hex codes. Create a one-page collage with roughly 10–15 references and note what each reference teaches. Keep *Path to Nowhere* screenshots in a **reference-only** folder; use them to study composition and density, not to extract production artwork.
+For Academy artwork and lesson props, derive the local palette from existing project assets. For SiNE navigation, lettering and glass, follow the [project design philosophy](../../DESIGN_PHILOSOPHY.md#pearl-spectrum-in-practice). Create a one-page collage with roughly 10–15 references and note what each reference teaches. Keep *Path to Nowhere* screenshots in a **reference-only** folder; use them to study composition and density, not to extract production artwork.
 
 **Deliverable:** `Redactory Art Direction.md` with a palette, materials, typography references, and 3–5 visual rules.  
 **Exit test:** You can tell whether a newly generated texture “belongs” to Redactory without relying on taste alone.

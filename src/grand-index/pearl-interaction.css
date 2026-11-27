@@ -1,0 +1,74 @@
+/* Opt-in character controls share a stationary spectrum. Only its cover moves. */
+.pearl-interaction, .examination-tools :is(.locale-option, .fullscreen-control) {
+  --pearl-cover: 100%;
+  --pearl-time: var(--control);
+}
+@media (hover: hover) {
+  :is(.pearl-interaction, .examination-tools :is(.locale-option, .fullscreen-control)):hover {
+    --pearl-cover: 0%;
+    --pearl-time: var(--selection);
+  }
+}
+:is(.pearl-interaction, .examination-tools :is(.locale-option, .fullscreen-control)):is(:focus-visible, :active) {
+  --pearl-cover: 0%;
+  --pearl-time: var(--selection);
+}
+:where(.archival-insignia summary, .examination-nav [role=tab], .dossier-control,
+  .related-individual > span, .examination-tools :is(.locale-option, .fullscreen-control))::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  pointer-events: none;
+  background: var(--sine-pearl-spectrum);
+  clip-path: inset(0 var(--pearl-cover) 0 0);
+  transition: clip-path var(--pearl-time) var(--ease);
+}
+/* Cover the fixed spectral lettering with its resting ink, withdrawing from the left. */
+@supports (background-clip: text) {
+  .pearl-text {
+    background-image: linear-gradient(var(--pearl-ink, var(--sine-pearl)) 0 0), var(--sine-pearl-spectrum);
+    background-size: var(--pearl-cover) 100%, 100% 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    transition: background-size var(--pearl-time) var(--ease);
+  }
+}
+.examination-tools :is(.locale-option, .fullscreen-control) { position: relative; isolation: isolate; }
+.examination-tools :is(.locale-option, .fullscreen-control)::before {
+  inset: 0; height: auto; opacity: .19; z-index: -1;
+  --pearl-falloff: linear-gradient(155deg, transparent 12%, black);
+}
+/* A broad surface needs a soft leading edge as the light crosses the artwork. */
+.examination-nav [role=tab]::before, .examination-tools :is(.locale-option, .fullscreen-control)::before {
+  mask-image: var(--pearl-falloff);
+}
+@supports (mask-composite: intersect) {
+  .examination-nav [role=tab]::before, .examination-tools :is(.locale-option, .fullscreen-control)::before {
+    clip-path: none;
+    mask-image: var(--pearl-falloff), linear-gradient(90deg, black 42%, transparent 58%);
+    mask-size: 100% 100%, 240% 100%;
+    mask-position: center, var(--pearl-cover) center;
+    mask-repeat: no-repeat;
+    mask-composite: intersect;
+    transition: mask-position var(--pearl-time) var(--ease);
+  }
+}
+.examination-tools :is(.locale-option, .fullscreen-control):is(:hover, :focus-visible, :active) {
+  color: var(--sine-pearl); background-color: transparent; box-shadow: none;
+}
+.examination-tools .fullscreen-control:is(:hover, :focus-visible, :active) { background-color: var(--control-surface); }
+.examination-tools .locale-selection, .examination-tools .fullscreen-control[aria-pressed=true] {
+  background: linear-gradient(var(--sine-pearl) 0 0) bottom / 100% 1px no-repeat, var(--wash-selected);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pearl-interaction, .examination-tools :is(.locale-option, .fullscreen-control) { --pearl-time: 0s !important; }
+}
+@media (forced-colors: active) {
+  .pearl-text { background: none; -webkit-text-fill-color: LinkText; }
+  button .pearl-text { -webkit-text-fill-color: ButtonText; }
+  .examination-nav [role=tab][aria-selected=true] { text-decoration: underline; }
+}

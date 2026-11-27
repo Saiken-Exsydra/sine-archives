@@ -6,6 +6,7 @@ import { motionTokens, useMotionPreference } from '../motion/system';
 import { featuredCharacter, type Character, type CharacterRoute } from './characters';
 import { domains } from './domains';
 import './grand-index.css';
+import './pearl-interaction.css';
 
 function ExaminationTools() {
   const pt = useLocale() === 'pt-br';
@@ -15,7 +16,7 @@ function ExaminationTools() {
     initial={reduced ? false : { opacity: 0 }} animate={{ opacity: 1 }}
     exit={{ opacity: 0, transition: { duration: reduced ? 0 : motionTokens.control } }}
     transition={{ duration: reduced ? 0 : motionTokens.selection, delay: reduced ? 0 : .07, ease: motionTokens.ease }}>
-    <a className="character-return catalog-label" href="#archive-index">← {pt ? 'Grande índice' : 'Grand Index'}</a>
+    <a className="character-return catalog-label pearl-interaction" href="#archive-index"><span className="pearl-text">← {pt ? 'Grande índice' : 'Grand Index'}</span></a>
     <nav className="masthead-controls" aria-label={pt ? 'Navegação' : 'Navigation'}><LanguageSelector/><Fullscreen/></nav>
   </m.div>;
 }
@@ -84,11 +85,11 @@ export function GrandIndex({ section, ready, returnDomain, character, featured =
     {[-1, 1].map(step => {
       const neighbor = domains[active + step];
       return neighbor && <button type="button" key={step} inert={examining} aria-hidden={examining}
-        className={'domain-edge index-chrome ' + (step < 0 ? 'west' : 'east')}
+        className={'domain-edge pearl-interaction index-chrome ' + (step < 0 ? 'west' : 'east')}
         aria-label={(pt ? 'Mostrar ' : 'Show ') + neighbor.label[locale]}
         onPointerMove={event => { if (event.pointerType === 'mouse') setPreview(step); }}
         onPointerLeave={() => setPreview(0)} onClick={() => select(active + step)}>
-        <span aria-hidden="true">{step < 0 ? '←' : '→'}</span><b>{neighbor.label[locale]}</b>
+        <span aria-hidden="true">{step < 0 ? '←' : '→'}</span><b className="pearl-text">{neighbor.label[locale]}</b>
       </button>;
     })}
     <span className="domain-status" role="status">{domains[active].label[locale]}</span>

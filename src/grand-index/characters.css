@@ -39,24 +39,24 @@
 }
 :is(.character-caption, .featured-caption) h3 {
   margin: 10px 0; font-size: clamp(40px,min(4.7vw,8vh),92px); line-height: .99;
-  letter-spacing: -.045em; text-wrap: balance; overflow-wrap: anywhere;
+  color: var(--sine-pearl); letter-spacing: -.045em; text-wrap: balance; overflow-wrap: anywhere;
 }
 .featured-caption h3 { max-width: 14ch; }
 .character-exhibit h3 [data-identity-travel] { display: inline-block; max-inline-size: 100%; }
 .character-exhibit :is(h3, [data-identity-travel]) { transform-origin: top left; }
-:is(.character-rank, .featured-rank) { margin: 5px 0; color: var(--sine-ivory); }
+:is(.character-rank, .featured-rank) { margin: 5px 0; color: var(--sine-platinum); }
 .character-summary { margin: 20px 0 0; max-width: 29ch; color: var(--sine-platinum); font: 400 clamp(16px,1.45vw,23px)/1.45 Georgia,serif; }
 .character-domain { --rest-offset: 0 8px; position: absolute; bottom: 8%; right: var(--margin); display: flex; align-items: center; gap: 24px; }
 .character-exhibit .character-domain h2 { font-size: clamp(23px,2vw,36px); letter-spacing: -.025em; }
 .character-domain .domain-entry {
-  margin: 0; min-height: 54px; padding: 0 24px; gap: 28px; background: linear-gradient(115deg,#cdd2de14,transparent 55%),rgb(16 17 21 / .76);
-  border: 1px solid var(--border); border-image: linear-gradient(115deg,#cdd2de88,#e2cbef44,#bdeef077) 1;
-  transition: background-color .18s, box-shadow .18s;
+  margin: 0; min-height: 54px; padding: 0 24px; gap: 28px;
+  background: linear-gradient(115deg, color-mix(in srgb, var(--sine-platinum) 8%, transparent), transparent 55%), color-mix(in srgb, var(--bg) 76%, transparent);
+  border: 1px solid var(--border);
+  transition: background-color var(--control) var(--ease), box-shadow var(--control) var(--ease), border-color var(--control) var(--ease);
 }
-.character-domain .domain-entry:hover { background-color: #292930; box-shadow: inset 0 -1px var(--sine-ivory); }
 .character-caption h1.catalog-label { font: 500 11px/1.5 'DM Sans',sans-serif; letter-spacing: .18em; }
 .character-exhibit :focus-visible:not(h1) { outline: 2px solid var(--focus); outline-offset: -2px; }
-.system-reference { display: inline-block; color: var(--sine-ivory); border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+.system-reference { display: inline-block; color: var(--sine-pearl); border-bottom: 1px solid var(--border); margin-bottom: 8px; }
 @media (max-width:700px) {
   .character-exhibit.exhibition { --caption-bottom: 170px; }
   .character-exhibit .scene-art { object-position: var(--mobile-focal); }

@@ -12,6 +12,16 @@
   --text-muted: var(--sine-platinum);
   --border: color-mix(in srgb, var(--sine-platinum) 25%, transparent);
   --focus: var(--sine-aqua);
+  --accent-hover: var(--sine-lilac);
+  --accent-selected: var(--sine-pearl);
+  --wash-hover: color-mix(in srgb, var(--accent-hover) 16%, transparent);
+  --wash-selected: color-mix(in srgb, var(--sine-platinum) 19%, transparent);
+  --wash-pressed: color-mix(in srgb, var(--sine-aqua) 22%, transparent);
+  --pearl-edge: linear-gradient(90deg, var(--sine-platinum), var(--sine-pearl) 42%, var(--sine-aqua) 73%, var(--sine-lilac));
+  --sine-pearl-stops: var(--sine-pearl) 0% 27%, var(--sine-ivory) 43%,
+    var(--sine-platinum) 60%, var(--sine-aqua) 78%, var(--sine-lilac) 100%;
+  --sine-pearl-spectrum: linear-gradient(90deg, var(--sine-pearl-stops));
+  --scroll-thumb: color-mix(in srgb, var(--sine-platinum) 50%, var(--bg));
   background: var(--bg);
   color: var(--sine-pearl);
 }

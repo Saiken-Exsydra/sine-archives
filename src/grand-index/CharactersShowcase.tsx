@@ -5,7 +5,7 @@ import { imageProps, imageReady } from '../images/publication';
 import { motionTokens, useMotionPreference } from '../motion/system';
 import { parseLocation } from '../navigation';
 import { characterHref, type Character, type CharacterRoute } from './characters';
-import { IndividualRegistry, dismissRegistry, openRegistry, registryOpen, revealFrom, useRegistryOpen } from './IndividualRegistry';
+import { IndividualRegistry, dismissRegistry, openRegistry, selectRegistryCharacter, useRegistryOpen, type RegistryPosition } from './IndividualRegistry';
 import { ExaminationNavigation, ExaminationReading } from './Examination';
 import { DossierSurface } from './DossierSurface';
 import { CharacterName, CharacterThreshold } from './CharacterThreshold';
@@ -18,15 +18,16 @@ export function CharactersShowcase({ route, featured }: { href: string; route?: 
   const pt = locale === 'pt-br';
   const expanded = Boolean(route);
   const open = useRegistryOpen();
+  const reduced = useMotionPreference();
   const trigger = useRef<HTMLButtonElement>(null);
-  const frame = useRef<HTMLElement | null>(null);
-  const [selection, setSelection] = useState<Character>();
-  const aperture = useRef<string[] | undefined>(undefined);
+  const registryPosition = useRef<RegistryPosition | null>(null);
+  const registryReveal = useRef<string[] | undefined>(undefined);
+  const [selection, setSelection] = useState<{ person: Character; reveal: () => string[] | undefined }>();
   const intended = open ? selection : undefined;
-  const requested = intended ?? route?.character ?? featured;
+  const requested = intended?.person ?? route?.character ?? featured;
   useLayoutEffect(() => {
-    if (!open) { setSelection(undefined); frame.current = null; }
-    else aperture.current = undefined;
+    if (!open) setSelection(undefined);
+    else registryReveal.current = undefined;
   }, [open]);
   const requestedSection = intended ? 'overview' : route?.section ?? 'overview';
   const [presentation, setPresentation] = useState<{
@@ -51,20 +52,20 @@ export function CharactersShowcase({ route, featured }: { href: string; route?: 
     const controller = new AbortController();
     function settle(unavailable: boolean) {
       if (controller.signal.aborted || (!expanded && parseLocation(location.hash).domain === 'characters')) return;
+      const reveal = intended && !unavailable && !reduced ? intended.reveal() : undefined;
       if (intended) {
-        if (!registryOpen() || !frame.current) return;
-        aperture.current = unavailable ? undefined : revealFrom(frame.current.getBoundingClientRect());
-        const { individualRegistry, ...state } = history.state;
-        history.replaceState(state, '', characterHref(intended.id));
-        window.dispatchEvent(new HashChangeEvent('hashchange'));
+        registryReveal.current = reveal;
+        if (!selectRegistryCharacter(characterHref(intended.person.id))) {
+          registryReveal.current = undefined;
+          return;
+        }
       }
       setPresentation({ character: requested, failed: unavailable,
-        previous: intended || failed || unavailable ? undefined : character });
+        previous: reveal || failed || unavailable ? undefined : character });
     }
     imageReady(incoming.current, controller.signal).then(() => settle(false), () => settle(true));
     return () => controller.abort();
-  }, [requested, character, failed, pending, intended, expanded]);
-  const reduced = useMotionPreference();
+  }, [requested, character, failed, pending, intended, expanded, reduced]);
   const title = useRef<HTMLHeadingElement>(null);
   const caption = useRef<HTMLDivElement>(null);
   const identity = useRef<HTMLDivElement>(null);
@@ -116,14 +117,14 @@ export function CharactersShowcase({ route, featured }: { href: string; route?: 
   if (pending) layers.push(requested);
   return <CharacterThreshold className="exhibition character-exhibit" expanded={expanded} reduced={reduced}
     subject={dossier || featuredHandoff || (expanded && pending) ? undefined : character.id}
-    data-dossier={dossier} data-section={section}
+    data-dossier={dossier} data-section={section} data-registry={open && expanded}
     data-featured-pending={featuredPending} data-featured-handoff={featuredHandoff}>
     {layers.map(person => <m.img key={person.id} className="scene-art" {...imageProps(person.art, '100vw', '')}
         ref={pending && person === requested ? incoming : undefined}
         loading={expanded || pending ? 'eager' : 'lazy'} fetchPriority={expanded ? 'high' : 'auto'}
         style={{ '--focal': person.focal ?? 'center', '--mobile-focal': person.mobileFocal ?? person.focal ?? 'center' } as CSSProperties}
         initial={false} animate={{ opacity: pending && person === requested ? 0 : 1 }}
-        transition={{ duration: reduced || aperture.current || (pending && person === requested) ? 0 : motionTokens.selection, ease: motionTokens.ease }}
+        transition={{ duration: reduced || registryReveal.current || (pending && person === requested) ? 0 : motionTokens.selection, ease: motionTokens.ease }}
         onError={() => { if (person === character) setPresentation({ character, failed: true }); }}
         onAnimationComplete={() => {
           if (person === character && previous) setPresentation(current =>
@@ -151,28 +152,27 @@ export function CharactersShowcase({ route, featured }: { href: string; route?: 
       <p className="character-summary index-chrome">{character.summary[locale]}</p>
     </div>
     <div className="character-domain index-chrome" inert={expanded} aria-hidden={expanded}>
-      <h2>{domain}</h2>
-      <a className="domain-entry" href={characterHref(character.id)}>{pt ? 'Explorar personagens' : 'Open Characters'} <span aria-hidden="true">↗</span></a>
+      <h2><span className="pearl-text">{domain}</span></h2>
+      <a className="domain-entry pearl-interaction" href={characterHref(character.id)}><span className="pearl-text">{pt ? 'Explorar personagens' : 'Open Characters'}</span> <span aria-hidden="true">↗</span></a>
     </div>
     <AnimatePresence initial={false}>
       {dossier && edition && <DossierSurface key={character.id} character={character} section={section} locale={locale}
         load={edition} documentLocale={documentLocale} closeRef={dossierClose}/>}
     </AnimatePresence>
-    <button inert={!expanded || dossier} aria-hidden={!expanded || dossier} ref={trigger} className="registry-trigger examination-chrome" aria-haspopup="dialog" aria-expanded={open && expanded}
+    <button inert={!expanded || dossier} aria-hidden={!expanded || dossier} ref={trigger} className="registry-trigger examination-chrome pearl-interaction" aria-haspopup="dialog" aria-expanded={open && expanded}
       onClick={openRegistry}>
       <span className="registry-threshold-mark">
-        <i aria-hidden="true"/><span>{pt ? 'Registro de indivíduos' : 'Registry of Individuals'}</span>
+        <i aria-hidden="true"/><span className="pearl-text">{pt ? 'Registro de indivíduos' : 'Registry of Individuals'}</span>
       </span>
     </button>
-    <AnimatePresence custom={aperture.current} onExitComplete={() => {
-      aperture.current = undefined;
+    <AnimatePresence custom={registryReveal.current} onExitComplete={() => {
+      registryReveal.current = undefined;
       trigger.current?.focus({ preventScroll: true });
     }}>
-      {route && open && <IndividualRegistry key="registry" current={character} pending={intended}
-        onSelect={(person, origin) => {
+      {route && open && <IndividualRegistry key="registry" current={character} pending={intended?.person} position={registryPosition}
+        onSelect={(person, reveal) => {
           if (person === character) { setSelection(undefined); dismissRegistry(); return; }
-          frame.current = origin;
-          setSelection(person);
+          setSelection(current => current?.person === person ? current : { person, reveal });
         }}/>}
     </AnimatePresence>
   </CharacterThreshold>;

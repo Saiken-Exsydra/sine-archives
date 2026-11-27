@@ -17,6 +17,73 @@ function territoryGeometry(caption: Element) {
 }
 
 const viewports = [[1440, 900], [2400, 900], [390, 844]];
+test('disclosures reveal one stationary Pearl Spectrum across portraits and input modes', async ({ page }) => {
+  const pearl = 'rgb(248, 247, 244)';
+  const aqua = 'rgb(189, 238, 240)';
+  const spectrum = /rgb\(248, 247, 244\).*rgb\(245, 233, 208\).*rgb\(205, 210, 222\).*rgb\(189, 238, 240\).*rgb\(226, 203, 239\)/;
+  await page.setViewportSize({ width: 1440, height: 900 });
+  for (const [id, name] of [['lenore-engelmeyer', 'Engelmeyer'], ['eclesia-wonderwall', 'Wonderwall']]) {
+    await page.goto('/?lang=en#/characters/' + id);
+    await page.mouse.move(0, 0);
+    const heading = page.locator('.character-caption h3');
+    await expect(heading).toContainText(name);
+    const capability = page.locator('.examination-content:not([inert]) .archival-insignia summary').filter({ hasText: 'Redactory' });
+    const edge = () => capability.evaluate(el => getComputedStyle(el, '::before').clipPath);
+    await expect(heading).toHaveCSS('color', pearl);
+    await expect(capability.locator('strong')).toHaveCSS('color', pearl);
+    await expect.poll(edge).toBe('inset(0px 100% 0px 0px)');
+    // Layout coordinates exclude the independent entrance travel of the reading panel.
+    const layout = () => capability.evaluate(el => [el.offsetLeft, el.offsetTop, el.offsetWidth, el.offsetHeight]);
+    const restingLayout = await layout();
+    await capability.hover();
+    await expect.poll(edge).toBe('inset(0px 0% 0px 0px)');
+    const reflection = await capability.evaluate(el => getComputedStyle(el, '::before').backgroundImage);
+    expect(reflection).toMatch(spectrum);
+    expect(await layout()).toEqual(restingLayout);
+    await expect(capability.locator('strong')).toHaveCSS('color', pearl);
+    await page.mouse.move(0, 0);
+    await expect.poll(edge).toBe('inset(0px 100% 0px 0px)');
+    await capability.press('Tab');
+    await page.keyboard.press('Shift+Tab');
+    await expect(capability).toBeFocused();
+    await expect(capability).toHaveCSS('outline-color', aqua);
+    await expect(capability).toHaveCSS('outline-style', 'solid');
+    await expect.poll(edge).toBe('inset(0px 0% 0px 0px)');
+    await page.keyboard.press('Enter');
+    await expect(capability.locator('..')).toHaveAttribute('open', '');
+    expect(await capability.evaluate(el => getComputedStyle(el, '::after').content)).toBe('"−"');
+    await expect(capability.locator('strong')).toHaveCSS('color', pearl);
+  }
+});
+
+test.describe('touch and keyboard reflection', () => {
+  test.use({ hasTouch: true, isMobile: true, viewport: { width: 390, height: 844 } });
+  test('a tap releases the optical edge and keyboard selection retains its focus cue', async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto('/?lang=pt-br#/characters/eclesia-wonderwall');
+    const disclosure = page.locator('.archival-insignia summary').first();
+    await disclosure.tap();
+    await expect(disclosure.locator('..')).toHaveAttribute('open', '');
+    await expect.poll(() => disclosure.evaluate(el => getComputedStyle(el, '::before').clipPath))
+      .toBe('inset(0px 100% 0px 0px)');
+    await disclosure.tap();
+    await expect(disclosure.locator('..')).not.toHaveAttribute('open');
+    await page.getByRole('tab', { name: 'Biografia' }).tap();
+    await page.keyboard.press('ArrowRight');
+    const selected = page.getByRole('tab', { name: 'Habilidades' });
+    await expect(selected).toHaveAttribute('aria-selected', 'true');
+    await expect(selected).toBeFocused();
+    await expect(selected).toHaveCSS('outline-style', 'solid');
+    expect(await selected.evaluate(el => getComputedStyle(el, '::before').transitionDuration)).toBe('0s');
+    await page.emulateMedia({ forcedColors: 'active' });
+    const ink = await page.locator('.character-return .pearl-text').evaluate(el => {
+      const style = getComputedStyle(el);
+      return { fill: style.webkitTextFillColor, color: style.color };
+    });
+    expect(ink.fill).toBe(ink.color);
+  });
+});
+
 for (const { width, height, locale } of viewports.flatMap(([width, height]) =>
   ['en', 'pt-br'].map(locale => ({ width, height, locale })))) {
   test(`both individuals retain their environment through examination at ${width}px in ${locale}`, async ({ page }) => {

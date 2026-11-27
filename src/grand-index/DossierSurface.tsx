@@ -9,7 +9,7 @@ type Edition = ReturnType<typeof parseDossier>;
 type ReaderProps = { load: () => Promise<string>; locale: Locale; documentLocale: Locale };
 
 export function DossierControl({ children, className, ...props }: ComponentProps<'a'>) {
-  return <a {...props} className={'dossier-control ' + className}>
+  return <a {...props} className={'dossier-control pearl-interaction ' + className}>
     <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true">
       <path d="M4.5 1.5h7l4 4v13h-11z M11.5 1.5v4h4 M7 9h6 M7 12h6 M7 15h4"/>
     </svg>
@@ -111,13 +111,13 @@ function DossierReader({ load, locale, documentLocale }: ReaderProps) {
       onKeyDown={event => {
         if (expanded && event.key === 'Escape') { setExpanded(false); toggle.current?.focus(); }
       }}>
-      <button className="contents-toggle" ref={toggle} aria-expanded={expanded} aria-controls="dossier-contents"
-        onClick={() => setExpanded(!expanded)}>{label} <span aria-hidden="true">{expanded ? '−' : '+'}</span></button>
+      <button className="contents-toggle pearl-interaction" ref={toggle} aria-expanded={expanded} aria-controls="dossier-contents"
+        onClick={() => setExpanded(!expanded)}><span className="pearl-text">{label}</span> <span aria-hidden="true">{expanded ? '−' : '+'}</span></button>
       <span className="contents-title exam-label">{label}</span>
       <nav id="dossier-contents" aria-label={label} ref={contents}>
-        {edition!.headings.map(({ id, depth, label }) => <a key={id} lang={documentLocale} href={dossierPath + '?heading=' + encodeURIComponent(id)}
+        {edition!.headings.map(({ id, depth, label }) => <a key={id} className="pearl-interaction" lang={documentLocale} href={dossierPath + '?heading=' + encodeURIComponent(id)}
           style={{ paddingInlineStart: Math.min(depth - 1, 4) * .55 + .6 + 'em' }}
-          aria-current={active === id ? 'location' : undefined} onClick={event => go(event, id)}>{label}</a>)}
+          aria-current={active === id ? 'location' : undefined} onClick={event => go(event, id)}><span className="pearl-text">{label}</span></a>)}
       </nav>
     </aside>}
   </div>;

@@ -24,7 +24,7 @@ export function ExaminationNavigation({ character, section, locale, inert, entry
     {primary && <AffiliationInsignia affiliation={primary} locale={locale}/>}
     <div role="tablist" aria-label={locale === 'en' ? 'Record sections' : 'Seções do registro'}
       aria-orientation={horizontal ? 'horizontal' : 'vertical'}>
-      {sections.map((item, index) => <a key={item} href={characterHref(character.id, item)} role="tab"
+      {sections.map((item, index) => <a key={item} href={characterHref(character.id, item)} role="tab" className="pearl-interaction"
         id={'tab-' + item} aria-selected={item === section} tabIndex={item === section ? 0 : -1}
         aria-controls="character-reading" onKeyDown={event => {
           if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
@@ -69,13 +69,13 @@ function ReadingContent({ character, section, locale }: Props) {
     {section !== 'overview' && character[section][locale].map((passage, index) =>
       <div className="examination-passage" key={index}>
         {passage.title && <h4>{passage.title}</h4>}<p>{passage.text}</p>
-        {passage.link && <a className="system-reference" href={passage.link.href}>{passage.link.label} ↗</a>}
+        {passage.link && <a className="system-reference pearl-interaction pearl-text" href={passage.link.href}>{passage.link.label} ↗</a>}
       </div>)}
     {section === 'relations' && character.relationships?.map(relation => {
       const person = characters.find(entry => entry.id === relation.character);
-      return person && <a className="related-individual" key={person.id + relation.kind} href={characterHref(person.id)}>
+      return person && <a className="related-individual pearl-interaction" key={person.id + relation.kind} href={characterHref(person.id)}>
         <PublicationImage asset={person.portrait} sizes="40px" fit="cover" focalPoint={person.portraitFocal} alt=""/>
-        {person.name} ↗</a>;
+        <span>{person.name} <span aria-hidden="true" className="pearl-text">↗</span></span></a>;
     })}
   </m.div>;
 }

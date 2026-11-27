@@ -7,11 +7,11 @@ export function SystemsShowcase({ href }: { href: string }) {
   return <div className="exhibition systems-exhibit">
     <img className="scene-art" src={scene} alt="" width="1400" height="764" decoding="async" />
     <div className="systems-catalog">
-      <h2>{pt ? 'Sistemas' : 'Systems'}</h2>
+      <h2><span className="pearl-text">{pt ? 'Sistemas' : 'Systems'}</span></h2>
       <div className="system-register">{directory.map(system =>
-        <a key={system.id} href={href + '/' + system.id}><img src={system.art} width="56" height="56" alt=""/>{system.name}<span aria-hidden="true">↗</span></a>
+        <a className="pearl-interaction" key={system.id} href={href + '/' + system.id}><img src={system.art} width="56" height="56" alt=""/><span className="pearl-text">{system.name}</span><span aria-hidden="true">↗</span></a>
       )}</div>
-      <a className="domain-entry" href={href}>{pt ? 'Explorar os sistemas' : 'Explore the systems'} <span aria-hidden="true">↗</span></a>
+      <a className="domain-entry pearl-interaction" href={href}><span className="pearl-text">{pt ? 'Explorar os sistemas' : 'Explore the systems'}</span> <span aria-hidden="true">↗</span></a>
     </div>
   </div>;
 }
