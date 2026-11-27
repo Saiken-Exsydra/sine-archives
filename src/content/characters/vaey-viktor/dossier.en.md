@@ -32,6 +32,9 @@
 | **Ecclesiastical Style** | Father Viktor; retired Assessor-Priest of Obsidian |
 | **Year of Birth** | c. Imperial Year 1539 (age 66 Lunar Years at time of filing, Imperial Year 1568) |
 | **Birth Status** | Natural birth; provincial ecclesiastical registry; parentage unremarkable in surviving record |
+| **Birthplace** | Ube'lius, Central Region, Empire of Synus |
+| **Height** | Approximately 185 cm |
+| **Nationality** | Synesian |
 | **Civil Standing** | Retired priest in good public standing; not formally censured |
 | **Former Obsidian Position** | Ecclesiastic Assessor of Beatification Candidates, Obsidian |
 | **Years of Active Service** | Forty Lunar Years of documented assessment work, c. Imperial Years 1547-1565 |
@@ -140,7 +143,7 @@ When he decides it is not, someone dies.
 
 ## V. EARLY LIFE AND ORDINATION
 
-The surviving birth record places Vaey Viktor in a minor river district north-east of Kalt'sen, in a community too small to preserve much more than parish ledgers, flood records, and the names of priests who passed through. His parents, Revan Viktor and Maela Viktor, appear in those ledgers as ordinary people: literate, devout, economically stable enough to send a child into Church education, not prominent enough to draw House attention.
+The surviving birth record places Vaey Viktor in Ube'lius, in the Central Region. His parents, Revan Viktor and Maela Viktor, appear in the parish ledgers as ordinary people: literate, devout, economically stable enough to send a child into Church education, not prominent enough to draw House attention.
 
 The absence of an apostrophe in his recorded name has produced occasional administrative comment. The original parish documents preserve it as **Vaey Viktor**, with no Synus-style alteration. Later ecclesiastical copies retain the form. No correction was ever made. The best explanation is clerical inheritance from a non-imperial family line absorbed into the Central Region two generations prior. Father Viktor himself has never treated the matter as interesting.
 

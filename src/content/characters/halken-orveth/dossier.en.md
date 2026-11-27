@@ -33,6 +33,9 @@
 | **Common Titles** | **The Red-Handed Rector**; **Bearer of the Sevenfold Hand** |
 | **Year of Birth** | c. Imperial Year 1393 (age 399 Lunar Years at time of filing, Imperial Year 1568) |
 | **Birth Status** | Natural birth; Northern Region parish registry; parentage unremarkable in surviving record |
+| **Birthplace** | Black Mere, Northern Region, Empire of Synus |
+| **Height** | Approximately 190 cm |
+| **Nationality** | Synesian |
 | **Civil Standing** | Consecrated priest of the Church; permanent member of Obsidian |
 | **Obsidian Position** | Rector-Ascendant of Obsidian; one of the Answered |
 | **Years of Active Service** | Approximately 376 Lunar Years of documented service, c. Imperial Year 1404-present |

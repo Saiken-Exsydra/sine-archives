@@ -60,10 +60,16 @@ I am writing the file anyway.
  Lineage                                       Rae branch of the Wonderwall family; same ancestral family branch from which A’licia Rae Wonderwall descended
  Year of Birth                                 c. Imperial Year 1529
  Current Age                                   89 Lunar Years as of Imperial Year 1568
+ Birthplace                                    Lu'mia, Southern Region, Empire of Synus (Athena Rae's birth)
+ Height                                        175 cm
+ Nationality                                   Synesian
+ Current Residence                             Kalt'sen, imperial capital
  Apparent Age                                  Early to mid-thirties; stabilized Redactory longevity and post-fusion reconfiguration have preserved a young adult presentation
  Redactory Classification                      Radiance-class
  Anchor                                        Revelation
- Anchor Type                                   Deep-derived Radiance-class Anchor; functionally intensified by divine fusion
+ Anchor Depth                                  Deep Anchor; Radiance-class expression functionally intensified by divine fusion
+ Rank                                          Stylus
+ Mark                                          Mark 3
  Divination Status                             Former Indexed Vessel of the First Radiance; now stable composite continuity
  Composite Identity Status                     Complete fusion achieved at age 38 Lunar Years, c. Imperial Year 1546
  Marital Status                                Wife of Em’manuel Kael Wonderwall
@@ -186,7 +192,7 @@ The fusion that produced Al’ithia was therefore not ordinary possession, not r
 
 ### III.3 Athena Rae
 
-Athena Rae was born c. Imperial Year 1529.
+Athena Rae was born c. Imperial Year 1529 in Lu'mia, in the Southern Region of Synus.
 
 That she was born a Rae matters.
 
@@ -730,7 +736,7 @@ The simplest inaccurate way to describe her would be tyrannical. The simplest ac
 
 ## XIV. CURRENT STATUS — YEAR 1568
 
-Al’ithia resides primarily within the Wonderwall holdings, with regular presence in Kalt’sen for Senate and state functions.
+Al’ithia resides primarily in Kalt’sen, where she conducts Senate and state functions.
 
 She directs much of House Wonderwall’s public political work.
 

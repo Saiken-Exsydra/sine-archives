@@ -3,7 +3,7 @@ import { build } from 'vite';
 import { cp, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-test('approved bilingual dossier expands in place and restores examination under a nested base', async ({ page, browser, baseURL }, info) => {
+test('the English dossier opens in both interfaces and restores examination under a nested base', async ({ page, browser, baseURL }, info) => {
   test.setTimeout(120_000);
   const root = info.outputPath('publication');
   await cp('src', path.join(root, 'src'), { recursive: true });
@@ -11,19 +11,16 @@ test('approved bilingual dossier expands in place and restores examination under
   const id = 'lenore-engelmeyer';
   const folder = path.join(root, 'src/content/characters', id);
   const record = path.join(folder, 'record.json');
-  await writeFile(record, JSON.stringify({ ...JSON.parse(await readFile(record, 'utf8')), dossier: ['en', 'pt-BR'] }));
-  for (const locale of ['en', 'pt-BR']) {
-    const pt = locale === 'pt-BR';
-    const paragraph = pt ? 'Esta edição de estudo demonstra a leitura de um registro longo. ' : 'This study edition demonstrates how a long archival record reads. ';
-    const sections = Array.from({length: 18}, (_, i) => '## ' + (pt ? 'Registro ' : 'Record ') + (i + 1) + '\n\n' + paragraph.repeat(18));
-    await writeFile(path.join(folder, 'dossier.' + locale + '.md'), [
-      '# ' + (pt ? 'Edição de estudo' : 'Study edition'), paragraph,
-      '> ' + (pt ? 'Documento de demonstração para revisão de leitura.' : 'A specimen document for review of the reading environment.'),
-      '## Memória', pt ? '- *Transcrição*\n- **Nota editorial**' : '- *Transcription*\n- **Editorial note**', '### Memória',
-      '| Catalogue | Classification | Jurisdiction | Designation | Identification | Chronology |\n|---|---|---|---|---|---|\n| I | II | III | IV | V | VI |',
-      '### Memória-2', '---', ...sections, '<img src=x onerror="window.unsafe=true">', '[unsafe](javascript:void(0))'
-    ].join('\n\n'));
-  }
+  await writeFile(record, JSON.stringify({ ...JSON.parse(await readFile(record, 'utf8')), dossier: ['en'] }));
+  const paragraph = 'This study edition demonstrates how a long archival record reads. ';
+  const sections = Array.from({length: 18}, (_, i) => '## Record ' + (i + 1) + '\n\n' + paragraph.repeat(18));
+  await writeFile(path.join(folder, 'dossier.en.md'), [
+    '# Study edition', paragraph,
+    '> A specimen document for review of the reading environment.',
+    '## Memória', '- *Transcription*\n- **Editorial note**', '### Memória',
+    '| Catalogue | Classification | Jurisdiction | Designation | Identification | Chronology |\n|---|---|---|---|---|---|\n| I | II | III | IV | V | VI |',
+    '### Memória-2', '---', ...sections, '<img src=x onerror="window.unsafe=true">', '[unsafe](javascript:void(0))'
+  ].join('\n\n'));
   const single = path.join(root,'src/content/characters/hisui-kirasagi');
   const singleRecord = path.join(single,'record.json');
   await writeFile(singleRecord, JSON.stringify({...JSON.parse(await readFile(singleRecord,'utf8')), dossier:['en']}));
@@ -86,7 +83,11 @@ test('approved bilingual dossier expands in place and restores examination under
   await page.goForward();
   await expect(reader.getByRole('heading',{name:'Record 12',exact:true})).toBeFocused();
   await page.getByRole('link',{name:'Português (BR)'}).click();
-  await expect(reader.getByRole('heading',{name:'Edição de estudo'})).toBeVisible();
+  await expect(reader.getByRole('heading',{name:'Study edition'})).toBeVisible();
+  await expect(reader.locator('article')).toHaveAttribute('lang','en');
+  await expect(page.getByRole('navigation',{name:'Sumário'})).toBeVisible();
+  await expect(rail.getByRole('link',{name:'Record 12',exact:true})).toHaveAttribute('lang','en');
+  await expect(rail.locator('[aria-current]')).toHaveText('Record 12');
   await expect(close).toHaveText('Fechar Dossiê');
   async function settled() {
     await page.evaluate(async () => {
@@ -126,7 +127,7 @@ test('approved bilingual dossier expands in place and restores examination under
   await expect.poll(() => table.evaluate(el=>el.scrollLeft)).toBeGreaterThan(0);
   const closeBeforeScroll = await close.boundingBox();
   await page.locator('.contents-toggle').click();
-  await rail.getByRole('link',{name:'Registro 7',exact:true}).click();
+  await rail.getByRole('link',{name:'Record 7',exact:true}).click();
   await expect(page.locator('.contents-toggle')).toHaveAttribute('aria-expanded','false');
   expect(await close.boundingBox()).toEqual(closeBeforeScroll);
   await close.focus();

@@ -1,19 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { publicationId } from '../../src/content/character-publication.ts';
 import { readCharacterPublication } from '../content/characters.mjs';
-import { checkDossierSources, loadLocalEnvironment, verifyArtworkSources } from './sources.mjs';
+import { checkDossierSources, loadLocalEnvironment, readSourceMap, verifyArtworkSources } from './sources.mjs';
 import { overviewEvidence } from './overview-evidence.mjs';
-
-async function readMap(file) {
-  let raw;
-  try { raw = await readFile(file, 'utf8'); }
-  catch (error) { throw new Error(`${file}: Could not read mapping (${error.code})`); }
-  let map;
-  try { map = JSON.parse(raw.replace(/^\uFEFF/, '')); }
-  catch { throw new Error(`${file}: Invalid JSON`); }
-  if (!map || typeof map !== 'object' || Array.isArray(map)) throw new Error(`${file}: Expected a JSON object`);
-  return map;
-}
 
 try {
   loadLocalEnvironment();
@@ -28,7 +17,7 @@ try {
   let revisions;
   try {
     revisions = await checkDossierSources({
-      characters, characterSources: await readMap('.character-sources.local.json'),
+      characters, characterSources: await readSourceMap('.character-sources.local.json'),
       inspect: evidence ? overviewEvidence : undefined,
     });
   } catch (error) {
@@ -44,7 +33,7 @@ try {
 
   if (!requested.length) {
     const artwork = JSON.parse(await readFile(new URL('../assets/approved.json', import.meta.url), 'utf8'));
-    await verifyArtworkSources({ artwork: artwork.map(({ id }) => id), assetSources: await readMap('.asset-sources.local.json') });
+    await verifyArtworkSources({ artwork: artwork.map(({ id }) => id), assetSources: await readSourceMap('.asset-sources.local.json') });
     console.log(`Resolved ${artwork.length} artwork sources. Use assets:dry-run to verify their approved bytes.`);
   }
 } catch (error) {

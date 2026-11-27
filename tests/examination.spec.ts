@@ -178,9 +178,9 @@ test('long Unicode identities wrap within the examination and dossier reading te
   await writeFile(originalFeature, JSON.stringify({ ...JSON.parse(await readFile(originalFeature, 'utf8')), featured: false }));
   const record = path.join(fixture, 'record.json');
   await writeFile(record, JSON.stringify({
-    ...JSON.parse(await readFile(record, 'utf8')), name, shortName: 'Íðunn', featured: true, dossier: ['en', 'pt-BR'],
+    ...JSON.parse(await readFile(record, 'utf8')), name, shortName: 'Íðunn', featured: true, dossier: ['en'],
   }));
-  for (const lang of ['en', 'pt-BR']) await writeFile(path.join(fixture, 'dossier.' + lang + '.md'), '## Specimen\n\nStudy text.');
+  await writeFile(path.join(fixture, 'dossier.en.md'), '## Specimen\n\nStudy text.');
   const dist = path.join(root, 'dist');
   await build({ root, configFile: path.resolve('vite.config.ts'), publicDir: path.resolve('public'),
     base: '/identity/', logLevel: 'silent', build: {outDir:dist} });

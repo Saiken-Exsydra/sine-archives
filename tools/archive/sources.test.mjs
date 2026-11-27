@@ -10,6 +10,7 @@ import { build } from 'vite';
 import { artworkRoot, checkDossierSources, verifyArtworkSources } from './sources.mjs';
 
 const check = fileURLToPath(new URL('./check.mjs', import.meta.url));
+const dossier = fileURLToPath(new URL('./dossier.mjs', import.meta.url));
 
 async function fixture(t) {
   const tempParent = await realpath(tmpdir());
@@ -94,6 +95,42 @@ test('reports unavailable and pending dossiers together, without requiring artwo
   assert.match(mixed.stdout, /draft: unreviewed/);
   assert.equal(await readFile(map, 'utf8'), bytes);
   assert.equal((await checkDossierSources({ ...options, env: {} }))[0].status, 'unavailable');
+});
+
+test('stages the original English dossier bytes only in a private site', async t => {
+  const { options, root, source, temp } = await fixture(t);
+  const map = path.join(temp, '.character-sources.local.json');
+  const original = Buffer.from('\uFEFF# Léa\r\n\r\n## Annex\r\nFull text.\r\n');
+  await writeFile(path.join(root, source), original);
+  const mapping = JSON.stringify(options.characterSources);
+  await writeFile(map, mapping);
+
+  const site = path.join(temp, 'review');
+  const folder = path.join(site, 'src/content/characters/lea');
+  const recordFile = path.join(folder, 'record.json');
+  const record = { name: 'Léa' };
+  await mkdir(folder, { recursive: true });
+  await writeFile(recordFile, JSON.stringify(record));
+
+  const run = (...args) => spawnSync(process.execPath, [dossier, ...args], {
+    cwd: temp, env: { ...process.env, ...options.env }, encoding: 'utf8',
+  });
+  const before = run('lea');
+  assert.equal(before.status, 2, before.stderr);
+  assert.match(before.stdout, /no published English dossier/);
+  assert.equal(run('--stage', root, 'en', 'lea').status, 1);
+  assert.equal(run('--stage', path.resolve('.'), 'en', 'lea').status, 1);
+  assert.equal(run('--stage', site, 'pt-BR', 'lea').status, 1);
+  assert.equal(run('--stage', site, 'en', 'lea', 'unmapped').status, 1);
+  const staged = path.join(folder, 'dossier.en.md');
+  await assert.rejects(readFile(staged), { code: 'ENOENT' });
+
+  const prepared = run('--stage', site, 'en', 'lea');
+  assert.equal(prepared.status, 0, prepared.stderr);
+  assert.match(prepared.stdout, /lea: en copied for review \(SHA-256 [a-f0-9]{64}\)/);
+  assert.deepEqual(await readFile(staged), original);
+  assert.deepEqual(JSON.parse(await readFile(recordFile, 'utf8')), { ...record, dossier: ['en'] });
+  assert.equal(await readFile(map, 'utf8'), mapping);
 });
 
 test('only an explicitly promoted edition changes the ordinary build', async t => {

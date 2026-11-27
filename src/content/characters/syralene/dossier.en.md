@@ -1,6 +1,9 @@
 # SYR'LENE DOSSIER
 
 **Type:** Precursor Archtype
+**Age:** Undefined
+**Origin:** The Stars
+**Original Embodied Height:** 181 cm
 **Native Anchor:** Projection
 **Current State:** Living Anchor of the Lunar Fragment
 **Temporal Status:** Conscious; experiences ordered traversal normally
@@ -9,6 +12,8 @@
 ---
 
 ## I. Essential Identity
+
+Syr'lene's age is undefined. Her individual provenance is known only in the broadest terms: the stars. Before her binding to the Lunar Fragment, her embodied form stood 181 cm tall.
 
 Syr'lene was one of the five Precursors operating on Terra during the last intact period of the lunar system. She specialized in integration: the relation among local Anchors, planetary infrastructure, the twelve-seat Seal, and the failure loads those systems could carry together.
 

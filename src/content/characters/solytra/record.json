@@ -65,8 +65,7 @@
   "hero": "solytra-hero",
   "portrait": "solytra-portrait",
   "dossier": [
-    "en",
-    "pt-BR"
+    "en"
   ],
   "order": 170
 }

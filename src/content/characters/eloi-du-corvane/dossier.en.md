@@ -31,7 +31,11 @@
 | **Full Name** | Éloi du Corvane |
 | **Common Epithet** | The Painter of the Night |
 | **Secondary Designations** | The Nevermore Diviner; Black Refrain Case; Corvane Vessel |
+| **Year of Birth** | c. Imperial Year 1554 (age 31 Lunar Years at time of filing, Imperial Year 1568) |
+| **Birthplace** | Aurora |
+| **Height** | 165 cm |
 | **Nationality** | Auroran |
+| **Current Residence** | Valerie, capital of Aurora |
 | **Family Status** | Sole surviving direct heir of the Corvane family after the death of his mother |
 | **Civil Register** | Auroran particle-form name; Corvane family formerly attached to old-canton civic politics and cultural patronage |
 | **Known Profession** | Painter; former gallery exhibitor; private portraitist; cultural salon participant prior to disappearance from ordinary public life |
@@ -67,7 +71,7 @@ This is not mitigation. It is motive.
 
 ## III. APPEARANCE, TEMPERAMENT, AND SOCIAL PRESENCE
 
-Éloi is physically memorable without being ostentatious. He is tall, narrow-framed, and refined in the manner often mistaken for fragility by those who have not seen him work. His complexion is cool-toned and faintly bloodless under ordinary light, though not unhealthy in the simple medical sense. His face is long and fine-boned, with a stillness that reads as elegance until it persists too long and becomes discomforting.
+Éloi is physically memorable without being ostentatious. At 165 cm, he is narrow-framed and refined in the manner often mistaken for fragility by those who have not seen him work. His complexion is cool-toned and faintly bloodless under ordinary light, though not unhealthy in the simple medical sense. His face is long and fine-boned, with a stillness that reads as elegance until it persists too long and becomes discomforting.
 
 His hair is black with a subdued blue-violet sheen under Moon-light, usually worn somewhat long and controlled without appearing carefully arranged. The style gives the impression that he has considered every aspect of his presentation and then chosen to let one or two details remain almost careless. This is likely deliberate. He understands the value of a visual flaw inside an otherwise composed image.
 

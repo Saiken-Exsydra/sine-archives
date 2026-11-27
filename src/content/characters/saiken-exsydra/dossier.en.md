@@ -61,6 +61,9 @@ And cadence is Time's tolerance of an Exsydra recursion perceiving the margin be
 | **Name Conferred** | Exsydra — assigned by Em'manuel Kael Wonderwall upon formal entry into the Seat's service, c. Imperial Year 1565. Presented to the subject as a procedural house-designation. This explanation was incomplete by design. |
 | **Approximate Year of Birth** | c. Imperial Year 1557; age twenty-five Lunar Years as of Imperial Year 1568. |
 | **Birthplace** | Ael'keth, eastern borderlands, Northern Region. |
+| **Height** | 180 cm |
+| **Nationality** | Synesian |
+| **Current Residence** | Kalt'sen |
 | **Parents** | Tae'ven Las'gall, structural engineer attached to municipal bridgework and tunnel inspection; Cor'ren Las'gall, regional schoolteacher and informal historical archivist. Both currently alive, both partially aware that the Wonderwall Seat's apparatus has influenced their family's institutional trajectory, neither aware of the Exsydra designation in full. |
 | **Redactory Status** | Registered under practicing classification, pending full assessment. Official profile remains Traverse-sensitive / Interval-adjacent. Private profile: Time-tolerated cadence-sensitive threshold bearer with gap-space traversal capacity. |
 | **Anchor Status** | No conventional Anchor has been confirmed. Subject is not an Interval Anchor in the manner of Em'manuel Kael Wonderwall. Subject's architecture is better described as cadence-authorized traversal architecture: a recursive singularity able to perceive and enter the unread margin produced by Time's ordered traversal. |

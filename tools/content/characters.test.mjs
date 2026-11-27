@@ -48,11 +48,11 @@ test('discovers and orders records independently of the featured choice', () => 
   assert.equal(characters[0].dossier, undefined);
 });
 
-test('resolves affiliations, insignia, structured facts and only the approved dossier language', async () => {
+test('resolves affiliations, insignia, structured facts and the English dossier', async () => {
   const f = fixture();
   f.register('friend');
   f.register('subject', {
-    featured: true, dossier: ['pt-BR'],
+    featured: true, dossier: ['en'],
     overview: { birth: { imperialYear: 1557, approximate: true } },
     affiliations: [
       { institution: 'demo-house', kind: 'association' },
@@ -61,8 +61,8 @@ test('resolves affiliations, insignia, structured facts and only the approved do
     relationships: [{ character: 'friend', kind: 'family' }],
     classifications: { systems: [{ system: 'bloom', kind: 'capability' }] },
   });
-  const file = './characters/subject/dossier.pt-BR.md';
-  f.dossiers[file] = async () => '# Edição pública';
+  const file = './characters/subject/dossier.en.md';
+  f.dossiers[file] = async () => '# Public dossier';
   f.files['./characters/subject/abilities.en.md'] = '## Example\n\nA short passage.\n\n[Bloom](#/systems/bloom)';
   const { featuredCharacter: person, institutions, insignia } = f.load();
   assert.equal(person.designation['pt-br'], 'Exemplo');
@@ -73,10 +73,9 @@ test('resolves affiliations, insignia, structured facts and only the approved do
   assert.equal(institutions.get('demo-household').emblem, undefined);
   assert.equal(institutions.get('demo-house').emblem, 'demo-symbol');
   assert.equal(insignia.get('systems').get('bloom').insignia, 'demo-symbol');
-  assert.equal(person.dossier.en, undefined);
-  assert.equal(await person.dossier['pt-br'](), '# Edição pública');
+  assert.equal(await person.dossier(), '# Public dossier');
   delete f.dossiers[file];
-  assert.throws(f.load, /dossier.pt-BR.md: Missing declared dossier/);
+  assert.throws(f.load, /dossier.en.md: Missing declared dossier/);
 });
 
 test('rejects publication errors with the affected record or file', () => {
@@ -86,6 +85,8 @@ test('rejects publication errors with the affected record or file', () => {
     [{ hero: 'demo-portrait' }, /record.json: hero must reference a published hero asset/],
     [{ summary: { en: 'Missing translation' } }, /record.json: summary:/],
     [{ source: 'private-file.md' }, /record.json: Unrecognized key: "source"/],
+    [{ dossier: ['pt-BR'] }, /record.json: dossier/],
+    [{ dossier: ['en', 'pt-BR'] }, /record.json: dossier/],
     [{ relationships: [{ character: 'missing', kind: 'family' }] }, /record.json: Relationship must reference another published character/],
     [{ affiliations: [{ institution: 'missing', kind: 'service' }] }, /record.json: Unknown affiliation institution/],
     [{ affiliations: [ { institution: 'demo-house', kind: 'membership', primary: true },
@@ -98,7 +99,7 @@ test('rejects publication errors with the affected record or file', () => {
   }
   f.register('subject', { featured: true });
   f.dossiers['./characters/subject/dossier.en.md'] = async () => 'Unlisted';
-  assert.throws(f.load, /dossier.en.md: List the approved dossier language/);
+  assert.throws(f.load, /dossier.en.md: Declare the approved English dossier/);
   delete f.dossiers['./characters/subject/dossier.en.md'];
   f.files['./characters/subject/abilities.en.md'] += '\n\n[Unknown](#/systems/unknown)';
   assert.throws(f.load, /abilities.en.md: Place one link to a published system/);

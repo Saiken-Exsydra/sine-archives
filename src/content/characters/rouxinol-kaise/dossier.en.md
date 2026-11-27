@@ -17,6 +17,8 @@
 | **Full Name** | Rouxinol Kaise |
 | **Year of Birth** | c. Imperial Year 1556 (age 27 Lunar Years at time of filing, Imperial Year 1568) |
 | **Birthplace** | Vel'hara (city-state, western band — see Section II) |
+| **Height** | 189 cm |
+| **Nationality** | Auroran |
 | **Registry Status** | Registered — compelled intake c. 1565; dual certification issued c. 1567; Mark 4 active under sealed Margins |
 | **Rank** | Stylus (Mirror Anchor) / Quill (Threshold Anchor) — dual concurrent certification; no prior registry precedent |
 | **Designation** | None — Inkless designation considered and rejected; both Anchors identified, but the architecture producing them has no existing classification framework |

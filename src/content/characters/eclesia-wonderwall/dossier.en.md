@@ -128,6 +128,9 @@ This distinction is central to her understanding of herself.
 | **Year of Birth** | c. Imperial Year 1558 |
 | **Age in Imperial Year 1568** | 22 Lunar Years |
 | **Birthplace** | Kalt'sen, Central Region, Empire of Synus |
+| **Height** | 162 cm |
+| **Nationality** | Synesian |
+| **Current Residence** | Hora'veil, Southern Region |
 | **House** | House Wonderwall, Yalara cadet branch |
 | **Branch Status** | Full Wonderwall descent; no automatic primary-line office or executive authority |
 | **Mother** | Al'yana Yalara Wonderwall-Kjackter |
@@ -136,6 +139,8 @@ This distinction is central to her understanding of herself.
 | **Institutional Affiliation** | Apocachynthion, Academy of Lon'drina |
 | **Redactory Standing** | Quill-level development under specialist restriction at the beginning of the principal 1568 period |
 | **Anchor** | Stilllight |
+| **Anchor Depth** | Abyssal Anchor |
+| **Mark** | Mark 1 |
 | **Technical Institutional Label** | Photonic Quiescence, useful but incomplete |
 | **Structural Characterization** | Persistence-sensitive Radiance expression; interval-adjacent through function, not temporal manipulation |
 | **Wonderwall Condition** | Natural descendant carrying a meaningful recognition echo |
@@ -435,6 +440,7 @@ She resists:
 ### VIII.1 Canonical Name
 
 **Anchor:** Stilllight  
+**Anchor Depth:** Abyssal Anchor  
 **Institutional Technical Label:** Photonic Quiescence
 
 Photonic Quiescence describes the most obvious physical behavior of the Anchor but does not exhaust its deeper principle.

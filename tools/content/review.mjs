@@ -36,8 +36,8 @@ async function main([directory, character, ...extra]) {
     const ordinaryRecord = path.join(checkout, ...characterDirectory, entry.name, 'record.json');
     if (entry.name !== character && existsSync(ordinaryRecord)) continue;
     const record = JSON.parse(readFileSync(path.join(collection, entry.name, 'record.json'), 'utf8'));
-    if (!Array.isArray(record.dossier) || record.dossier.length === 0) {
-      throw new Error(`Attach a Complete Dossier before reviewing ${entry.name}.`);
+    if (!Array.isArray(record.dossier) || record.dossier.length !== 1 || record.dossier[0] !== 'en') {
+      throw new Error(`Attach the English Complete Dossier before reviewing ${entry.name}.`);
     }
   }
 

@@ -16,6 +16,8 @@ Filed by: Apocachynthion, Central Registry — intake completed c. 1111 · Stylu
 | **Full Name** | Leonard von-Engelmeyer |
 | **Year of Birth** | c. Imperial Year 1103 (age 55 Lunar Years at time of filing, Imperial Year 1127) |
 | **Birthplace** | Eraveth, Ardeatus (Western Frontier Region) |
+| **Height** | 189 cm |
+| **Nationality** | Ardeatan and Synesian (exceptional dual citizenship) |
 | **Registry Status** | Registered — asylum intake c. Imperial Year 1111; Sealed instructional file current |
 | **Rank** | Stylus (Thermodynamic Anchor) |
 | **Designation** | STASE-SURVIVOR (Restricted Classification) |
@@ -92,7 +94,7 @@ Time *authorized* a local, micro-scale resumption of traversal. It allowed the h
 
 In Ardeatus, where civilizational doctrine is tightly bound to the Covenant and the mechanical orthodoxy of the Forge-Keepers, an unregistered Redactor capable of anomalous, Stase-breaking thermal generation is considered a theological and structural blasphemy. Realizing he would be hunted by the Ashborne Hunters or dissected by the Forge, Leonard took Kerz and fled west across the border into the Empire of Synus.
 
-He presented himself for intake at the Apocachynthion c. Imperial Year 1111.
+He presented himself for intake at the Apocachynthion c. Imperial Year 1111. As of this filing, he holds both Ardeatan and Synesian citizenship, an exceptional civil status.
 
 ---
 

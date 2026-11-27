@@ -7,7 +7,7 @@ const records = import.meta.glob<string>([
   './institutions.json',
   './classifications.json',
 ], { query: '?raw', import: 'default', eager: true });
-const dossiers = import.meta.glob<string>('./characters/*/dossier.{en,pt-BR}.md', { query: '?raw', import: 'default' });
+const dossiers = import.meta.glob<string>('./characters/*/dossier.en.md', { query: '?raw', import: 'default' });
 
 export const { characters, featuredCharacter, institutions, insignia } = loadCharacterPublication(records, dossiers, manifest);
 export type { Character } from './character-publication';

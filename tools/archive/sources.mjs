@@ -8,6 +8,17 @@ export function loadLocalEnvironment() {
   catch (error) { if (error.code !== 'ENOENT') throw error; }
 }
 
+export async function readSourceMap(file) {
+  let raw;
+  try { raw = await readFile(file, 'utf8'); }
+  catch (error) { throw new Error(`${file}: Could not read mapping (${error.code})`); }
+  let map;
+  try { map = JSON.parse(raw.replace(/^\uFEFF/, '')); }
+  catch { throw new Error(`${file}: Invalid JSON`); }
+  if (!map || typeof map !== 'object' || Array.isArray(map)) throw new Error(`${file}: Expected a JSON object`);
+  return map;
+}
+
 export function artworkRoot(env = process.env) {
   return env.SINE_ARTWORKS || (env.SINE_ARCHIVE_ROOT && path.join(env.SINE_ARCHIVE_ROOT, 'Artworks'));
 }
@@ -39,7 +50,7 @@ async function directory(location, label) {
   return resolved;
 }
 
-export async function checkDossierSources({ env = process.env, characters, characterSources, inspect }) {
+export async function checkDossierSources({ env = process.env, characters, characterSources, inspect, includeBytes = false }) {
   let root, dossiers;
   try {
     if (!env.SINE_ARCHIVE_ROOT) throw new Error('Set SINE_ARCHIVE_ROOT to the local Dy’Aspora Archive directory.');
@@ -71,6 +82,7 @@ export async function checkDossierSources({ env = process.env, characters, chara
         : reviewOutcome === 'no-public-change' ? 'reviewed-no-public-change' : 'reviewed';
       const result = { id, sha256, status };
       if (inspect) result.overview = inspect(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+      if (includeBytes) result.bytes = bytes;
       return result;
     } catch (error) {
       return unavailable(id, error);

@@ -33,7 +33,11 @@
 | **Approximate Year of Birth** | Approximately thirty Imperial Years before the Rite of Selia; born c. Imperial Year 995 |
 | **Current Age** | Approximately 1,308 Lunar Years as of Imperial Year 1568. Approximately 573 Imperial Years of life and 542 Imperial Years in the Wonderwall Seat |
 | **Birthplace** | Northern coastal region, pre-Empire; the settlement no longer exists under that name |
+| **Height** | 190 cm |
+| **Nationality** | Synesian |
+| **Current Residence** | Kalt'sen, imperial capital |
 | **Redactory Status** | Archtype. Spatial Coherence-domain, institutionally classified. True domain: Interval. This designation appears in no institutional record. |
+| **Mark** | No numbered Mark |
 | **Biological Status** | Indefinite biological continuation, maintained through Archtype-class recursive self-modification. Not immortal in any cosmological sense. Not mortal in any practical one. |
 | **Institutional Affiliation** | Wonderwall Seat, head of the primary line and hereditary senator for the House. He also holds the distinct corporate office of Chief Executive of SiNE. |
 | **Additional Designation** | Remainder-bearer, primary expression. Over a Lunar millennium of sustained contact — 442 Imperial Years. This designation does not appear in any institutional document. The name has never been spoken where another person could hear it. |

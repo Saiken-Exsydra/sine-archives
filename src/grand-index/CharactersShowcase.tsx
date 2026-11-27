@@ -90,8 +90,7 @@ export function CharactersShowcase({ route, featured }: { href: string; route?: 
   useLayoutEffect(() => {
     if (expanded) title.current?.focus({ preventScroll: true });
   }, [expanded]);
-  const documentLocale = character.dossier?.[locale] ? locale : locale === 'en' ? 'pt-br' : 'en';
-  const edition = character.dossier?.[documentLocale];
+  const edition = character.dossier;
   const dossier = Boolean(route?.dossier && edition && !pending);
   const dossierEntry = useRef<HTMLAnchorElement>(null);
   const dossierClose = useRef<HTMLAnchorElement>(null);
@@ -157,7 +156,7 @@ export function CharactersShowcase({ route, featured }: { href: string; route?: 
     </div>
     <AnimatePresence initial={false}>
       {dossier && edition && <DossierSurface key={character.id} character={character} section={section} locale={locale}
-        load={edition} documentLocale={documentLocale} closeRef={dossierClose}/>}
+        load={edition} closeRef={dossierClose}/>}
     </AnimatePresence>
     <button inert={!expanded || dossier} aria-hidden={!expanded || dossier} ref={trigger} className="registry-trigger examination-chrome pearl-interaction" aria-haspopup="dialog" aria-expanded={open && expanded}
       onClick={openRegistry}>

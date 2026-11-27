@@ -17,6 +17,9 @@
 | **Full Name** | Katherine Flarian |
 | **Year of Birth** | c. Imperial Year 1553 (age 35 Lunar Years at time of filing, Imperial Year 1568) |
 | **Birth Status** | Vel'hara-born, no known House affiliation, no anomalous indicators recorded in childhood |
+| **Birthplace** | Vel'hara |
+| **Height** | 163 cm |
+| **Nationality** | Ardeatan |
 | **House Status** | None |
 | **Redactory Status** | Non-practitioner |
 | **Divination Status** | None detected |

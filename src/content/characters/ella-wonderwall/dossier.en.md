@@ -35,15 +35,21 @@
 | **Program Designation** | KL-83 |
 | **Year of Birth** | c. Imperial Year 1557 (age 25 Lunar Years at time of filing, Imperial Year 1568) |
 | **Birth Status** | Final numbered subject of Project Kaleidoscope; a living person from birth, not a project asset or returned predecessor |
+| **Registered Birthplace** | Kalt'sen, imperial capital |
+| **Actual Birthplace** | Project Kaleidoscope facility |
+| **Height** | 170 cm |
+| **Nationality** | Synesian |
 | **House Status** | Irrevocably adopted into Rae Continuance and the primary House household under the Compact of Held Light |
 | **Redactory Classification** | Radiance-class; experienced Quill. Confirmed stable under ordinary and controlled high-depth conditions, with post-Aurora restrictions on serious native-Light work. |
 | **Anchor Classification** | **Light**. Abyssal Anchor. |
+| **Rank** | Quill |
+| **Mark** | Mark 2 |
 | **Shore Relevance** | Catastrophic premature Luminant Shorefall during the White Desert incident. Current status: latent Shorewalking potential under strict continuity risk. |
 | **Kaleidoscope Status** | **Active singular convergence.** Project Kaleidoscope is not merely her origin record; it is a continuing resonance condition uniquely centered on her. |
 | **Remainder Status** | Perceptible but unresolved. She lacks the living Wonderwall interval-echo that would make her an immediately recognized hereditary route, yet her Light, White Desert scar, Shore contact, First Radiance relation, and Kaleidoscope convergence make her intensely legible to the Remainder without giving it one stable address for the living woman. |
 | **Institutional Position** | Legally eligible for future nomination to the Wonderwall Seat. No public nomination, completed House vote, Meridian vote, or court recognition exists. |
 | **Point Status** | Cloister-issued Point carried under Company custody; Point register access restricted by Seat authority and applicable Apocachynthion compact process. |
-| **Current Residence** | Primary Wonderwall holdings, with extended operational presence in Kalt'sen and Hora'veil as required by Company work. |
+| **Current Residence** | Hora'veil; Company work also takes her to Kalt'sen. |
 | **Public Standing** | Recognized young member of House Wonderwall and a gifted practitioner; no public status as heiress or SiNE executive. |
 | **Private Standing (Seat's Assessment)** | Extraordinary person with an Abyssal Anchor of Light; living convergence of unresolved Project Kaleidoscope relations; latent Luminant Shorewalker; entitled to the truth, independent care, ordinary refusal, and a life not conditioned on institutional usefulness. |
 
@@ -107,7 +113,7 @@ She is striking in the uncomplicated way that attracts attention before people h
 
 Her fundamental temperament is warm. Before Aurora she was cheerful, affectionate, playful, aesthetically expressive, quick to seek closeness, and unusually responsive to another person's pain. The White Desert did not reveal a colder nature. It injured an open person until openness began to feel dangerous. Her later severity, guardedness, and seclusion are acquired defenses around the same capacity for love.
 
-She is approximately 170 centimeters tall, very thin in build, pale-skinned, long-fingered, and delicate-featured in a way that gives the superficial impression of fragility. This impression is inaccurate. Her face is fine-boned and unnervingly composed. She looks, at first glance, like a princess from a story told by people who have never had to survive anything themselves.
+She is 170 centimeters tall, very thin in build, pale-skinned, long-fingered, and delicate-featured in a way that gives the superficial impression of fragility. This impression is inaccurate. Her face is fine-boned and unnervingly composed. She looks, at first glance, like a princess from a story told by people who have never had to survive anything themselves.
 
 Her hair is naturally black. Since Aurora, she uses her own Redactory continuously to suppress its reflectivity to near-total absorption. The result is not merely dark hair. It is a black so complete that it appears to swallow surrounding light rather than receive it. Her clothing is treated the same way. She dresses almost entirely in black, usually at or above the threshold where the fabric is absorbing the overwhelming majority of visible light. The only persistent white on her person is the sclera of her eyes and her skin.
 
@@ -503,7 +509,7 @@ E'lla fights like a tailor controlling a problem rather than an artillery Redact
 
 Her compassion changes the order of escalation. It does not make the Needles harmless. Precision makes a warning credible because she can place a point through a coat and stop before skin—and because she is capable of not stopping when protection genuinely requires it.
 
-This precision is personal formation beyond the Academy's common defensive floor, shaped by Wonderwall protection culture, Company resources, trauma, and her own craft. It does not make her a soldier or grant military authority. The dossier does not disclose her full Rank, Mark, or Margins; weapon use remains governed by the protected practice record rather than by her House name, Abyssal Anchor, or strategic value.
+This precision is personal formation beyond the Academy's common defensive floor, shaped by Wonderwall protection culture, Company resources, trauma, and her own craft. It does not make her a soldier or grant military authority. Her full Margins and weapon-use permissions remain governed by the protected practice record rather than by her House name, Abyssal Anchor, or strategic value.
 
 ### VII.5 Emergency Shears
 

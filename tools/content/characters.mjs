@@ -4,7 +4,6 @@ import { loadCharacterPublication, publicationId } from '../../src/content/chara
 
 const content = new URL('../../src/content/', import.meta.url);
 const proseName = /^(biography|abilities|relations)\.(en|pt-BR)\.md$/;
-const dossierName = /^dossier\.(en|pt-BR)\.md$/;
 
 async function readText(file) {
   const bytes = await readFile(new URL(file, content));
@@ -31,7 +30,7 @@ export async function readCharacterPublication() {
       if (!entry.isFile()) throw new Error(`${file}: Expected a regular publication file`);
       if (entry.name === 'record.json' || proseName.test(entry.name)) {
         files[file] = await readText(file);
-      } else if (dossierName.test(entry.name)) {
+      } else if (entry.name === 'dossier.en.md') {
         const value = await readText(file);
         if (!value.trim()) throw new Error(`${file}: Dossier is empty`);
         dossiers[file] = async () => value;

@@ -61,8 +61,12 @@ Established facts:
 | **Public Identity** | Ayanna d'Aibhilyn, junior research associate at Lyréne Pharmaceuticals, neural-interface diagnostics division, Valerie central campus |
 | **Program Origin** | Vitrified Wing primary engineering program, concealed within Lyréne Pharmaceuticals |
 | **Project Association** | Project Ennea |
-| **Age** | Twenty-four Lunar Years |
+| **Age** | Twenty-four Lunar Years as of Imperial Year 1568 |
+| **Year of Birth** | c. Imperial Year 1557 |
+| **Registered Birthplace** | Valerie, capital of Aurora |
+| **Height** | 167 cm |
 | **Citizenship** | Auroran, federally registered, Valerie civic district |
+| **Current Residence** | Valerie, capital of Aurora |
 | **Redactor Status** | MAGI-recognized Redactor; Quill rank; Mark 2 under Auroran-territory Margin |
 | **Registered Classification** | Mechanism Anchor |
 | **Actual Status** | Engineered biological coherence interface; sentient legal person; unaware of her true purpose |

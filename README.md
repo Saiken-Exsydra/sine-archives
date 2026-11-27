@@ -85,7 +85,7 @@ House Wonderwall’s structured specification, CSS palette and design brief resi
 
 The Characters exhibition discovers bilingual records in `src/content/characters/`. Each supplies its artwork, portrait, focal position and four reading sections. Le’nore is the featured record. Link to a record and section with a route such as `#/characters/hisui-kirasagi/abilities`.
 
-Every new character entry includes a Complete Dossier. The link below the examination tabs expands it in place. If there is one approved language, both interfaces offer that edition and label its language in the reader. Follow the generated contents or scroll the document. Close Dossier restores the section that opened it. [Dossier publication guide](CHARACTER_PUBLICATION.md#complete-dossier-reader)
+The Complete Dossier opens in place from the link below the examination tabs. Both interfaces open the English edition, and the Portuguese reader labels the document “Texto em inglês”. Follow the generated contents or scroll the document. Close Dossier restores the section that opened it. To update an edition after an Archive change, use the [dossier refresh workflow](CHARACTER_PUBLICATION.md#refreshing-a-complete-dossier-from-the-archive).
 
 ## Registry of Individuals
 

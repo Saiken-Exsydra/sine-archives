@@ -12,6 +12,7 @@
     "content:check": "node tools/content/characters.mjs",
     "content:test": "node --test tools/content/characters.test.mjs tools/content/review-preview.test.mjs",
     "archive:check": "node tools/archive/check.mjs",
+    "archive:dossier": "node tools/archive/dossier.mjs",
     "archive:test": "node --test tools/archive/sources.test.mjs",
     "assets:sync": "node tools/assets/cli.mjs sync",
     "assets:dry-run": "node tools/assets/cli.mjs dry-run",

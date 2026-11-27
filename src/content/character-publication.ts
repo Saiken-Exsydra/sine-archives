@@ -82,8 +82,7 @@ const capabilityProfiles = z.array(z.discriminatedUnion('kind', [
     state: z.optional(localized),
   }),
 ]));
-const languages = ['en', 'pt-BR'] as const;
-type Language = typeof languages[number];
+type Language = 'en' | 'pt-BR';
 export type Localized = z.infer<typeof localized>;
 type Copy = Record<Locale, string>;
 
@@ -164,7 +163,7 @@ const characterRecord = z.strictObject({
     other: z.optional(z.array(slug)),
     profiles: z.optional(capabilityProfiles),
   })),
-  dossier: z.optional(z.array(z.enum(languages)).check(z.minLength(1))),
+  dossier: z.optional(z.tuple([z.literal('en')])),
 });
 
 type RecordData = z.infer<typeof characterRecord>;
@@ -180,7 +179,7 @@ export type Character = Omit<RecordData, 'hero' | 'portrait' | 'overview' | 'des
   summary: Copy;
   facts: RecordData['overview'];
   overview: [Copy, Copy][];
-  dossier?: Partial<Record<Locale, DossierLoader>>;
+  dossier?: DossierLoader;
 } & Record<ProseSection, Record<Locale, Passage[]>>;
 
 const copy = (en: string, pt: string): Copy => ({ en, 'pt-br': pt });
@@ -385,16 +384,11 @@ export function loadCharacterPublication(
         if (value && !insignia.get(group)?.has(value)) fail(file, `Unknown ${group} classification "${value}"`);
       }
     }
-    const documents: NonNullable<Character['dossier']> = {};
-    for (const language of languages) {
-      const document = `${folder}/dossier.${language}.md`;
-      const load = dossiers[document];
-      if (Boolean(load) !== Boolean(dossier?.includes(language))) {
-        fail(document, load ? 'List the approved dossier language in record.json before publishing' : 'Missing declared dossier');
-      }
-      if (load) documents[localeKey(language)] = load;
+    const document = folder + '/dossier.en.md';
+    const loadDossier = dossiers[document];
+    if (Boolean(loadDossier) !== Boolean(dossier)) {
+      fail(document, loadDossier ? 'Declare the approved English dossier in record.json before publishing' : 'Missing declared dossier');
     }
-    if (dossier && new Set(dossier).size !== dossier.length) fail(file, 'List each dossier language only once');
     const read = (section: ProseSection, language: Language) => {
       const article = `${folder}/${section}.${language}.md`;
       return readPassages(files[article], article);
@@ -412,15 +406,11 @@ export function loadCharacterPublication(
       biography: prose('biography'),
       abilities: prose('abilities'),
       relations: prose('relations'),
-      dossier: dossier && documents,
+      dossier: loadDossier,
     });
   }
   characters.sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity) || a.id.localeCompare(b.id, 'en'));
   const featured = characters.filter(character => character.featured);
   if (featured.length !== 1) fail('./characters', 'Set "featured": true on exactly one character record');
   return { characters, featuredCharacter: featured[0], institutions, insignia };
-}
-
-function localeKey(language: Language): Locale {
-  return language === 'en' ? 'en' : 'pt-br';
 }

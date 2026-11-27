@@ -48,6 +48,8 @@
 | **Year of Birth** | c. Imperial Year 1557 |
 | **Current Age** | 24 Lunar Years (as of Imperial Year 1568) |
 | **Birthplace** | Tsukimiya, a harbor city on the Darkmargin coast of Hikari |
+| **Height** | 175 cm |
+| **Current Residence** | Kalt'sen |
 | **Nationality** | Hikari (foreign national; imperial residential permit, domestic-services classification) |
 | **Redactory Status** | Non-practitioner. No Anchor. No Dive capacity. No coherence loop consistent with Redactory output. |
 | **Anomalous Classification** | Unregistered Bloom-bearer, Kirasagi succession of the Abyssal Flower |
@@ -127,7 +129,7 @@ She entered the empire through Kalt'sen's northern immigration processing center
 
 ## V. PHYSICAL RECORD
 
-Height: tall for a Hikari woman. Build: lean and precise — the kind of economy of movement that is trained rather than natural, visible in the way she occupies space even when still.
+Height: 175 cm; tall for a Hikari woman. Build: lean and precise — the kind of economy of movement that is trained rather than natural, visible in the way she occupies space even when still.
 
 **Skin:** Pale with faint warmth. Under strain — physical exertion, emotional duress, or Flower activation — a subtle marbling of fine crimson veins becomes visible along the forearms and backs of the hands: vascular integration expressing through the surface tissue. Not visible under normal conditions.
 
