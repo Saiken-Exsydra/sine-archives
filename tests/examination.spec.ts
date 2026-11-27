@@ -90,7 +90,7 @@ for (const { width, height, locale } of viewports.flatMap(([width, height]) =>
     await page.setViewportSize({ width, height });
     for (const id of ['lenore-engelmeyer', 'hisui-kirasagi']) {
       const hisui = id === 'hisui-kirasagi';
-      const affiliation = hisui ? ['Household service', 'Serviço doméstico'] : ['Blood lineage', 'Linhagem de sangue'];
+      const affiliation = hisui ? ['Household service', 'Serviço doméstico'] : ['OfficeHouse Seat of Engelmeyer', 'CargoSeat da Casa Engelmeyer'];
       await page.goto('/?lang=' + locale + '#/characters/' + id);
       const hero = page.locator('.character-exhibit .scene-art');
       await expect(page.locator('.character-caption h3')).toContainText(hisui ? 'Hisui' : 'Engelmeyer');

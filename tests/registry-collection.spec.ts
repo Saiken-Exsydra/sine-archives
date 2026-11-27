@@ -114,7 +114,7 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
   await expect(page.getByRole('tabpanel')).not.toContainText('Example company');
   await expect(page.getByRole('tabpanel')).not.toContainText('Example order');
   await expect(page.locator('.affiliation-insignia:visible')).toHaveCount(1);
-  await expect(page.locator('.archival-insignia')).toContainText('AfiliaçãoDivination');
+  await expect(page.locator('.archival-insignia')).toContainText('AfiliaçãoDivinação');
   const symbol = page.locator('.archival-insignia img');
   await symbol.evaluate((img: HTMLImageElement) => img.decode());
   await page.setViewportSize({width:320, height:568});
