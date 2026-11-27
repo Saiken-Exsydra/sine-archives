@@ -1,9 +1,9 @@
-import { expect, test } from './browser';
+import { expect, serveBuild, test } from './browser';
 import { build } from 'vite';
 import { cp, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-test('approved bilingual dossier expands in place and restores examination under a nested base', async ({ page, browser }, info) => {
+test('approved bilingual dossier expands in place and restores examination under a nested base', async ({ page, browser, baseURL }, info) => {
   test.setTimeout(120_000);
   const root = info.outputPath('publication');
   await cp('src', path.join(root, 'src'), { recursive: true });
@@ -161,8 +161,9 @@ test('approved bilingual dossier expands in place and restores examination under
   await expect(close).toHaveCount(0);
   await page.getByRole('link',{name:'Dossiê completo',exact:true}).click();
   await expect(reader.getByRole('heading')).toHaveText(['Study edition']);
-  const touch = await browser.newContext({baseURL:'http://127.0.0.1:4175',hasTouch:true, viewport:{width:390,height:844},reducedMotion:'reduce'});
+  const touch = await browser.newContext({baseURL,hasTouch:true, viewport:{width:390,height:844},reducedMotion:'reduce'});
   try {
+    await serveBuild(touch, baseURL!);
     const mobile = await touch.newPage();
     await serve(mobile);
     await mobile.goto(url);

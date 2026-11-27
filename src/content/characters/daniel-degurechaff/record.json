@@ -21,7 +21,58 @@
       "imperialYear": 1525,
       "approximate": true
     },
-    "birthplace": "Kovansk, Ardeatus"
+    "birthplace": "Kovansk",
+    "residence": "Sarn Pell",
+    "nationality": [
+      {
+        "en": "Ardeatan",
+        "pt-BR": "ardeatana"
+      }
+    ],
+    "occupation": {
+      "en": "Chief Ardeatan Liaison to the Marta Chord",
+      "pt-BR": "Principal representante ardeatano junto ao Acorde de Marta"
+    },
+    "height": {
+      "cm": 183,
+      "approximate": true
+    },
+    "formalName": {
+      "en": "Daniel ker-Degurechaff (Ardeatan use)",
+      "pt-BR": "Daniel ker-Degurechaff (uso ardeatano)"
+    }
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ],
+  "classifications": {
+    "profiles": [
+      {
+        "kind": "divination",
+        "classification": {
+          "en": "Tempered",
+          "pt-BR": "Temperado"
+        },
+        "alignment": {
+          "en": "Vhaldr, the Tempering Witness",
+          "pt-BR": "Vhaldr, a Testemunha da Têmpera"
+        },
+        "domain": {
+          "en": "Forge, heated metal, quenching and structural judgment",
+          "pt-BR": "Forja, metal aquecido, têmpera e julgamento estrutural"
+        }
+      }
+    ]
+  },
+  "affiliations": [
+    {
+      "institution": "marta-chord",
+      "kind": "service",
+      "primary": true
+    },
+    {
+      "institution": "the-covenant",
+      "kind": "association"
+    }
+  ]
 }

@@ -1,0 +1,1 @@
+Sol’ytra percebe quando a terra sofre e pode influenciar o clima, a vegetação e o terreno. Sua Autoridade da Coroa Ferida se expressa plenamente pelo Espelho da Coroa Ferida, que faz uma área limitada assumir propriedades da superfície lunar ferida.

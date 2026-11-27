@@ -84,13 +84,13 @@ The [character exhibition](src/grand-index/CharactersShowcase.tsx) stages the re
 
 A superseding selection or unmount invalidates the pending result. When a hero fails, the requested record and its navigation stay usable with an EN/PT-BR unavailable message on the underlying obsidian field. Selecting it again after another record, or reloading the route, retries. On a first direct visit the record can be read while the browser paints its initial artwork.
 
-The Registry uses the mounted-element path above. Discovery remains visible during preparation. See the [Characters motion score](MOTION_ARCHITECTURE.md#characters-exhibition) for the portrait-origin handoff, cancellation and failure paths.
+The Registry uses the mounted-element path above. Discovery remains visible during preparation. See the [Characters motion score](MOTION_ARCHITECTURE.md#characters-exhibition) for the portrait-origin reveal, cancellation and failure paths.
 
 ### Existing artwork and verification
 
 The published inventory currently contains character images and the original Master Wonderwall Quill, approved for explicit House Wonderwall affiliations. The History landscape, Systems study backdrop and three Systems portal images retain their existing bundled WebPs pending explicit source approvals. The corporate emblem and lockup retain their approved SVG imports. The landing reflection, CSS overlays and WebGL wave are procedural materials. New environmental artwork can use a positioned publication image behind the foreground. An approved SVG uses the same delivery API and retains its original bytes. The editorial regression uses a synthetic diagram in a test-only manifest.
 
-Run `npm run assets:test`, `npm run build`, then `npm test`. The publication regressions exercise request and decode waits independently, request failure, rapid navigation and persistent geometry. The editorial fixture exercises intrinsic dimensions, natural and contained presentation, external ID validation, readiness and nested-base delivery. For a deployment check, build with `npm run build -- --base=/archive/` and serve with `npm run preview -- --base=/archive/`. Open a direct hash route below that prefix.
+Run `npm run assets:test`, `npm run build`, then `npm test`. The publication regressions exercise request and decode waits independently, request failure, rapid navigation and persistent geometry. The editorial fixture exercises intrinsic dimensions, natural and contained presentation, external ID validation, readiness and nested-base delivery. The Chromium fixture builds and opens a direct hash route under its nested base without starting a local server.
 
 For network measurements, use a fresh browser context per viewport and DPR against the actual HTTP preview. Inspect image `currentSrc`, CSS slot width, and Resource Timing’s `encodedBodySize`, `transferSize` and duration. Record network throttling and cache state. Compare network entries after changing sections, then selecting an individual. Inspect layout-shift entries and the image’s rectangle, fit and focal position. Playwright’s intercepted-dist mode is useful for deterministic regressions, while the real server is needed for cache and transfer measurements.
 
@@ -100,7 +100,7 @@ At the Phase II baseline, eight approved originals for Al’ithia, Hisui, Le’n
 
 Phase II sampled a cold direct Characters visit per viewport on Windows using Chromium 148.0.7778.96 and the production preview under `/archive/`. Network emulation used 100 ms latency, 256,000 bytes/s downstream and 128,000 bytes/s upstream. Values below are Resource Timing transfer bytes, including browser-accounted response overhead.
 
-| Viewport and DPR | Rail slot | Le’nore hero | Le’nore portrait | Hisui hero after selection |
+| Viewport and DPR | Original rail slot | Le'nore hero | Le'nore portrait | Hisui hero after selection |
 | --- | ---: | ---: | ---: | ---: |
 | 1440 × 900, 1× | 76.5 px | 1920w · 481,650 B · 4.06 s | 96w · 6,116 B | 1920w · 291,094 B · 1.26 s |
 | 390 × 844, 2× | 49.3 px | 1280w · 260,194 B · 3.46 s | 320w · 47,640 B | 1280w · 165,040 B · 0.76 s |

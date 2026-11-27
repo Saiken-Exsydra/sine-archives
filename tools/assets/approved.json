@@ -197,5 +197,17 @@
     "category": "character",
     "profile": "hero",
     "approvedSha256": "96cdeff35367b9ae71bd4452454699d9cc348cfc9d1fcc4f572585f3d07a68e4"
+  },
+  {
+    "id": "solytra-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "fcbf3f58718bd42b6e0f275715889dafc9def9092898a5321a18c943cb5e82e6"
+  },
+  {
+    "id": "solytra-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "cf3a299fab63b1d7d7fefe1d996c4f14acabf4d1ce1a51e427064a23fa4e2048"
   }
 ]

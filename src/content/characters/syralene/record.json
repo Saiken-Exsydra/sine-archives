@@ -2,8 +2,8 @@
   "name": "Syr’lene",
   "shortName": "Syr’lene",
   "designation": {
-    "en": "Crownless Queen",
-    "pt-BR": "Rainha sem Coroa"
+    "en": "Precursor Archtype",
+    "pt-BR": "Archtype Precursora"
   },
   "summary": {
     "en": "Syr’lene was a Precursor who helped keep Terra’s lunar systems working together. During the Fracture she bound herself to the surviving Lunar Fragment, where her work continues.",
@@ -13,18 +13,46 @@
   "portrait": "syralene-portrait",
   "order": 150,
   "overview": {
-    "residence": {
+    "age": {
+      "status": "undefined"
+    },
+    "origin": {
+      "en": "The Stars",
+      "pt-BR": "As Estrelas"
+    },
+    "height": {
+      "cm": 181,
+      "context": {
+        "en": "original embodied form",
+        "pt-BR": "forma corpórea original"
+      }
+    },
+    "location": {
       "en": "Lunar Fragment",
       "pt-BR": "Fragmento Lunar"
+    },
+    "state": {
+      "en": "Living Anchor",
+      "pt-BR": "Anchor viva"
     }
   },
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "projection"
+          }
+        ],
+        "tradition": {
+          "en": "Precursor",
+          "pt-BR": "Precursora"
+        }
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }

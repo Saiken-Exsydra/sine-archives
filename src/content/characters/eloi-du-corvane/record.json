@@ -12,15 +12,57 @@
   "hero": "eloi-du-corvane-hero",
   "portrait": "eloi-du-corvane-portrait",
   "order": 80,
-  "overview": {},
-  "classifications": {
-    "systems": [
+  "overview": {
+    "age": {
+      "lunarYears": 31,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1554,
+      "approximate": true
+    },
+    "birthplace": "Aurora",
+    "heightCm": 165,
+    "residence": "Valerie",
+    "nationality": [
       {
-        "system": "divination",
-        "kind": "capability"
+        "en": "Auroran",
+        "pt-BR": "aurorana"
+      }
+    ],
+    "occupation": {
+      "en": "Painter",
+      "pt-BR": "Pintor"
+    }
+  },
+  "classifications": {
+    "profiles": [
+      {
+        "kind": "divination",
+        "classification": {
+          "en": "Indexed Vessel",
+          "pt-BR": "Receptáculo Indexado"
+        },
+        "alignment": {
+          "en": "The Nevermore (non-Sovereign attractor)",
+          "pt-BR": "The Nevermore (atrator não Soberano)"
+        },
+        "domain": {
+          "en": "Grief, absence, finality, dread, non-return, raven-witness and painted night",
+          "pt-BR": "Luto, ausência, fim, pavor, não retorno, testemunho do corvo e noite pintada"
+        }
       }
     ]
   },
   "portraitFocal": "center top",
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ],
+  "affiliations": [
+    {
+      "institution": "corvane-family",
+      "kind": "family",
+      "primary": true
+    }
+  ]
 }

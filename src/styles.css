@@ -36,9 +36,6 @@ h1:focus { outline: none; }
   --control-height: 36px;
   --control-transition: 180ms cubic-bezier(.22, .68, .22, 1);
   --control-surface: color-mix(in srgb, var(--bg) 74%, transparent);
-  --control-hover: color-mix(in srgb, var(--sine-platinum) 9%, transparent);
-  --control-pressed: color-mix(in srgb, var(--sine-platinum) 23%, transparent);
-  --control-selected: color-mix(in srgb, var(--sine-platinum) 16%, transparent);
   min-height: 56px;
   display: flex;
   align-items: center;
@@ -93,16 +90,16 @@ h1:focus { outline: none; }
 .fullscreen-control svg { display: block; }
 :is(.locale-option, .fullscreen-control):is(:hover, :focus-visible) {
   color: var(--sine-pearl);
-  background-color: var(--control-hover);
+  background-color: var(--wash-hover);
+  box-shadow: inset 0 -1px var(--accent-hover);
 }
 .locale-selection, .fullscreen-control[aria-pressed='true'] {
-  background-color: var(--control-selected);
-  box-shadow: inset 0 -1px color-mix(in srgb, var(--sine-pearl) 65%, transparent);
+  background: var(--pearl-edge) left bottom / 100% 1px no-repeat, var(--wash-selected);
 }
 .locale-option[aria-current], .fullscreen-control[aria-pressed='true'] {
   color: var(--sine-pearl);
 }
-:is(.locale-option, .fullscreen-control):active { background-color: var(--control-pressed); }
+:is(.locale-option, .fullscreen-control):active { background-color: var(--wash-pressed); }
 :is(.locale-option, .fullscreen-control):focus-visible { outline: 2px solid var(--focus); outline-offset: -4px; }
 @media (forced-colors: active) {
   .locale-option[aria-current] { text-decoration: underline; }
@@ -112,6 +109,7 @@ h1:focus { outline: none; }
 .breadcrumbs { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 26px 0; font-size: 12px; color: var(--text-muted); min-height: 70px; }
 .breadcrumbs [aria-current] { color: var(--sine-pearl); }
 .breadcrumbs > span:not([aria-current]) { opacity: .5; }
+.breadcrumbs a:not([aria-current]):hover, .return-link:hover { color: var(--accent-hover); }
 .experience { flex: 1; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.5fr); gap: clamp(28px, 5vw, 90px); align-items: center; padding: 35px 0 70px; }
 .reading-pane { min-width: 0; max-width: 540px; align-self: center; }
 .eyebrow { color: var(--accent); font-size: 10px; line-height: 1.8; margin: 0 0 30px; }
@@ -124,7 +122,8 @@ h1 { font: 500 clamp(48px, 5.2vw, 86px)/.98 'Cormorant Garamond', serif; letter-
 .system-portal { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; overflow: hidden; border: 1px solid var(--border); background: var(--bg); isolation: isolate; transition: border-color .22s ease; }
 .system-portal::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #101115d9 0%, transparent 35%, #101115e6 67%, #101115 100%); pointer-events: none; }
 .portal-art { position: absolute; inset: 0; z-index: -2; background: var(--system-image) center/cover; transition: transform .65s cubic-bezier(.2,.82,.22,1); }
-.system-portal:hover, .system-portal:focus-visible, .system-portal.is-selected { border-color: var(--system-accent); }
+.system-portal:is(:hover, :focus-visible) { border-color: var(--accent-hover); }
+.system-portal.is-selected { border-color: var(--accent-selected); }
 .system-portal:hover .portal-art, .system-portal:focus-visible .portal-art { transform: scale(1.035); }
 .portal-top { display: flex; justify-content: space-between; align-items: center; color: var(--sine-pearl); padding: 22px 18px; }
 .portal-mark { font-family: Georgia, serif; font-size: 27px; font-weight: 400; color: var(--system-accent); }
@@ -147,7 +146,8 @@ h1 { font: 500 clamp(48px, 5.2vw, 86px)/.98 'Cormorant Garamond', serif; letter-
 .anchor-door > span:nth-child(2) { flex: 1; }
 .anchor-door strong { display: block; font-size: 14px; font-weight: 500; }
 .anchor-door small { display: block; margin-top: 7px; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
-.anchor-door:hover strong { color: var(--accent); }
+.anchor-door:is(:hover, :focus-visible) { background: linear-gradient(90deg, var(--wash-hover), transparent); }
+.anchor-door:is(:hover, :focus-visible) strong { text-decoration: underline; text-decoration-color: var(--accent-hover); text-underline-offset: .25em; }
 .return-link { display: inline-block; font-size: 12px; color: var(--text-muted); padding: 15px 0; margin-top: 18px; }
 .measures { margin: 30px 0; }
 .measures > div { padding: 15px 0; border-top: 1px solid var(--border); }

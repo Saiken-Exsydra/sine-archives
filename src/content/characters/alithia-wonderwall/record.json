@@ -13,22 +13,72 @@
     "age": {
       "lunarYears": 89,
       "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1529,
+      "approximate": true
+    },
+    "birthplace": {
+      "en": "Lu’mia (Athena Rae’s birth)",
+      "pt-BR": "Lu’mia (nascimento de Athena Rae)"
+    },
+    "heightCm": 175,
+    "residence": "Kalt’sen",
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ],
+    "occupation": {
+      "en": "House representative at the Senate",
+      "pt-BR": "Representante da Casa no Senado"
+    },
+    "birthName": "Athena Rae",
+    "apparentAge": {
+      "en": "Early to mid-thirties",
+      "pt-BR": "Início a meados dos 30 anos"
     }
   },
   "affiliations": [
     {
       "institution": "house-wonderwall",
-      "kind": "membership",
-      "primary": true
+      "kind": "office",
+      "primary": true,
+      "role": {
+        "en": "First Hearth of House Wonderwall",
+        "pt-BR": "First Hearth da Casa Wonderwall"
+      }
+    },
+    {
+      "institution": "house-wonderwall",
+      "kind": "blood-lineage",
+      "branch": "Rae"
     }
   ],
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "revelation",
+            "depth": "deep"
+          }
+        ],
+        "rank": "stylus",
+        "mark": 3
+      },
+      {
+        "kind": "exceptional",
+        "classification": {
+          "en": "Stable composite continuity",
+          "pt-BR": "Continuidade composta estável"
+        }
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }

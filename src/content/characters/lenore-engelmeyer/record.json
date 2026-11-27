@@ -13,22 +13,88 @@
   "order": 10,
   "featured": true,
   "overview": {
-    "age": { "lunarYears": 23, "asOfImperialYear": 1568 },
-    "birth": { "imperialYear": 1558, "approximate": true },
+    "age": {
+      "lunarYears": 23,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1558,
+      "approximate": true
+    },
     "birthplace": "Drevholt",
     "heightCm": 169,
-    "residence": "Vel’hara"
+    "residence": "Vel’hara",
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ],
+    "occupation": {
+      "en": "Independent practitioner",
+      "pt-BR": "Praticante independente"
+    },
+    "birthName": "Le’nore Engelmeyer"
   },
   "affiliations": [
-    { "institution": "house-engelmeyer", "kind": "blood-lineage", "primary": true }
+    {
+      "institution": "house-engelmeyer",
+      "kind": "office",
+      "primary": true,
+      "role": {
+        "en": "House Seat of Engelmeyer",
+        "pt-BR": "Seat da Casa Engelmeyer"
+      }
+    },
+    {
+      "institution": "house-engelmeyer",
+      "kind": "membership"
+    },
+    {
+      "institution": "house-engelmeyer",
+      "kind": "blood-lineage",
+      "branch": {
+        "en": "Voren cadet branch",
+        "pt-BR": "Ramo cadete Voren"
+      }
+    },
+    {
+      "institution": "furnace-council",
+      "kind": "association",
+      "role": {
+        "en": "House administration",
+        "pt-BR": "Administração da Casa"
+      }
+    }
   ],
   "classifications": {
-    "systems": [{ "system": "redactory", "kind": "capability" }],
-    "redactory": {
-      "anchor": { "type": "deception", "depth": "deep" },
-      "rank": "quill",
-      "mark": 2
-    }
+    "profiles": [
+      {
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "deception",
+            "depth": "deep",
+            "reading": {
+              "en": "Confirmed",
+              "pt-BR": "Confirmada"
+            }
+          }
+        ],
+        "rank": "quill",
+        "mark": 2
+      },
+      {
+        "kind": "bloom",
+        "inheritance": {
+          "en": "Vodden’s prototype Flower",
+          "pt-BR": "Flor protótipo de Vodden"
+        }
+      }
+    ]
   },
-  "dossier": ["en", "pt-BR"]
+  "dossier": [
+    "en",
+    "pt-BR"
+  ]
 }

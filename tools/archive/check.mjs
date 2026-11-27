@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { publicationId } from '../../src/content/character-publication.ts';
 import { readCharacterPublication } from '../content/characters.mjs';
 import { checkDossierSources, loadLocalEnvironment, verifyArtworkSources } from './sources.mjs';
+import { overviewEvidence } from './overview-evidence.mjs';
 
 async function readMap(file) {
   let raw;
@@ -16,18 +17,25 @@ async function readMap(file) {
 
 try {
   loadLocalEnvironment();
-  const requested = [...new Set(process.argv.slice(2))];
+  const args = process.argv.slice(2);
+  const evidence = args[0] === '--overview';
+  const requested = [...new Set(evidence ? args.slice(1) : args)];
+  if (evidence && !requested.length) throw new Error('Pass at least one exact character ID after --overview.');
   if (requested.some(id => !publicationId.test(id))) {
     throw new Error('Pass exact lowercase character IDs, or omit IDs to check all published characters and artwork.');
   }
   const characters = requested.length ? requested : (await readCharacterPublication()).characters.map(({ id }) => id);
   let revisions;
   try {
-    revisions = await checkDossierSources({ characters, characterSources: await readMap('.character-sources.local.json') });
+    revisions = await checkDossierSources({
+      characters, characterSources: await readMap('.character-sources.local.json'),
+      inspect: evidence ? overviewEvidence : undefined,
+    });
   } catch (error) {
     revisions = characters.map(id => ({ id, status: 'unavailable', reason: error.message }));
   }
-  for (const { id, sha256, status, reason } of revisions) {
+  if (evidence) process.stdout.write(JSON.stringify(revisions, null, 2) + '\n');
+  else for (const { id, sha256, status, reason } of revisions) {
     console.log(`${id}: ${status} (${sha256 ?? reason})`);
   }
   const unavailable = revisions.some(({ status }) => status === 'unavailable');

@@ -2,8 +2,8 @@
   "name": "Em’manuel Kael Wonderwall",
   "shortName": "Em’manuel",
   "designation": {
-    "en": "Long Between",
-    "pt-BR": "O Longo Intervalo"
+    "en": "Archtype · Chief executive of SiNE",
+    "pt-BR": "Archtype · Diretor-executivo da SiNE"
   },
   "summary": {
     "en": "Em’manuel holds the Wonderwall Seat and runs SiNE. He helped build the institutions of the new Empire and now has to govern within institutions that can refuse him.",
@@ -13,25 +13,59 @@
   "portrait": "emmanuel-wonderwall-portrait",
   "order": 90,
   "overview": {
+    "age": {
+      "lunarYears": 1308,
+      "asOfImperialYear": 1568,
+      "approximate": true
+    },
     "birth": {
       "imperialYear": 995,
       "approximate": true
-    }
+    },
+    "birthplace": {
+      "en": "Northern coastal region, pre-Empire",
+      "pt-BR": "Região costeira setentrional, anterior ao Império"
+    },
+    "heightCm": 190,
+    "residence": "Kalt’sen",
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ]
   },
   "affiliations": [
     {
       "institution": "house-wonderwall",
-      "kind": "membership",
-      "primary": true
+      "kind": "office",
+      "primary": true,
+      "role": "Wonderwall Seat"
+    },
+    {
+      "institution": "sine",
+      "kind": "office",
+      "role": {
+        "en": "Chief executive of SiNE",
+        "pt-BR": "Diretor-executivo da SiNE"
+      }
     }
   ],
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "spatial-coherence"
+          }
+        ],
+        "rank": "archtype",
+        "mark": "open"
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }

@@ -9,16 +9,55 @@
   "mobileFocal": "46% 20%",
   "order": 20,
   "overview": {
-    "age": { "lunarYears": 24, "asOfImperialYear": 1568 },
-    "birth": { "imperialYear": 1557, "approximate": true },
+    "age": {
+      "lunarYears": 24,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1557,
+      "approximate": true
+    },
     "birthplace": "Tsukimiya, Hikari",
-    "residence": "Kalt'sen"
+    "heightCm": 175,
+    "residence": "Kalt’sen",
+    "nationality": [
+      {
+        "en": "Hikari",
+        "pt-BR": "Hikari"
+      }
+    ],
+    "occupation": {
+      "en": "Domestic service",
+      "pt-BR": "Serviço doméstico"
+    }
   },
   "affiliations": [
-    { "institution": "wonderwall-cadet-household", "kind": "service", "primary": true }
+    {
+      "institution": "wonderwall-cadet-household",
+      "kind": "service",
+      "primary": true
+    },
+    {
+      "institution": "kirasagi-family",
+      "kind": "family"
+    }
   ],
   "classifications": {
-    "systems": [{ "system": "bloom", "kind": "capability" }]
+    "profiles": [
+      {
+        "kind": "bloom",
+        "classification": {
+          "en": "Bloom-bearer",
+          "pt-BR": "Portadora de Bloom"
+        },
+        "inheritance": {
+          "en": "Abyssal Flower",
+          "pt-BR": "Flor Abissal"
+        }
+      }
+    ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }

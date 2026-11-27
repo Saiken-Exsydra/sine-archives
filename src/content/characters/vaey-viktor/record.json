@@ -20,16 +20,49 @@
     "birth": {
       "imperialYear": 1539,
       "approximate": true
+    },
+    "birthplace": "Ube’lius",
+    "residence": "Kalt’sen",
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ],
+    "occupation": {
+      "en": "Retired Obsidian Assessor-Priest",
+      "pt-BR": "Sacerdote Avaliador aposentado da Obsidian"
+    },
+    "height": {
+      "cm": 185,
+      "approximate": true
     }
   },
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "divination",
-        "kind": "capability"
+        "kind": "divination",
+        "classification": {
+          "en": "Crowned",
+          "pt-BR": "Coroado"
+        },
+        "alignment": "Meruel",
+        "domain": {
+          "en": "Measurement of Potential / Completion",
+          "pt-BR": "Mensuração do Potencial / Completude"
+        }
       }
     ]
   },
   "portraitFocal": "center top",
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ],
+  "affiliations": [
+    {
+      "institution": "obsidian",
+      "kind": "former-service",
+      "primary": true
+    }
+  ]
 }

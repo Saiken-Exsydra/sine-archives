@@ -111,8 +111,9 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
   await expect(primary).toContainText('Membro');
   await expect(primary.locator('img')).toHaveAttribute('src', /\/exhibit\/media\/house-wonderwall-quill/);
   await primary.locator('img').evaluate((img: HTMLImageElement) => img.decode());
-  await expect(page.getByRole('tabpanel')).toContainText('Vínculo empregatício');
-  await expect(page.getByRole('tabpanel')).toContainText('Example order');
+  await expect(page.getByRole('tabpanel')).not.toContainText('Example company');
+  await expect(page.getByRole('tabpanel')).not.toContainText('Example order');
+  await expect(page.locator('.affiliation-insignia:visible')).toHaveCount(1);
   await expect(page.locator('.archival-insignia')).toContainText('AfiliaçãoDivination');
   const symbol = page.locator('.archival-insignia img');
   await symbol.evaluate((img: HTMLImageElement) => img.decode());

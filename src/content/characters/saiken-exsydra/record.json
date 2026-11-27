@@ -18,15 +18,47 @@
       "imperialYear": 1557,
       "approximate": true
     },
-    "birthplace": "Ael’keth"
+    "birthplace": "Ael’keth",
+    "heightCm": 180,
+    "residence": "Kalt’sen",
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ],
+    "occupation": {
+      "en": "Protective service",
+      "pt-BR": "Serviço de proteção"
+    }
   },
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "exceptional",
+        "classification": {
+          "en": "Traverse-sensitive / Interval-adjacent",
+          "pt-BR": "Sensível à Travessia / adjacente ao Intervalo"
+        },
+        "assessment": {
+          "en": "Registered for practice. Full assessment pending.",
+          "pt-BR": "Registrado para prática. Avaliação completa pendente."
+        },
+        "expression": {
+          "en": "Brief gap-space traversal",
+          "pt-BR": "Travessia breve pelo espaço intersticial"
+        }
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ],
+  "affiliations": [
+    {
+      "institution": "yalara-household",
+      "kind": "service",
+      "primary": true
+    }
+  ]
 }

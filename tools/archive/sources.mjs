@@ -39,7 +39,7 @@ async function directory(location, label) {
   return resolved;
 }
 
-export async function checkDossierSources({ env = process.env, characters, characterSources }) {
+export async function checkDossierSources({ env = process.env, characters, characterSources, inspect }) {
   let root, dossiers;
   try {
     if (!env.SINE_ARCHIVE_ROOT) throw new Error('Set SINE_ARCHIVE_ROOT to the local Dy’Aspora Archive directory.');
@@ -65,11 +65,13 @@ export async function checkDossierSources({ env = process.env, characters, chara
       if (!inside(dossiers, file) || path.extname(file).toLowerCase() !== '.md') {
         throw new Error('Map to a Markdown dossier under Archive Characters');
       }
-      const sha256 = createHash('sha256').update(await readFile(file)).digest('hex');
-      if (!reviewedSha256) return { id, sha256, status: 'unreviewed' };
-      if (reviewedSha256 !== sha256) return { id, sha256, status: 'changed' };
-      const status = reviewOutcome === 'no-public-change' ? 'reviewed-no-public-change' : 'reviewed';
-      return { id, sha256, status };
+      const bytes = await readFile(file);
+      const sha256 = createHash('sha256').update(bytes).digest('hex');
+      const status = !reviewedSha256 ? 'unreviewed' : reviewedSha256 !== sha256 ? 'changed'
+        : reviewOutcome === 'no-public-change' ? 'reviewed-no-public-change' : 'reviewed';
+      const result = { id, sha256, status };
+      if (inspect) result.overview = inspect(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
+      return result;
     } catch (error) {
       return unavailable(id, error);
     }

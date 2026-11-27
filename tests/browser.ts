@@ -1,19 +1,22 @@
-import { test as base, expect } from '@playwright/test';
+import { test as base, expect, type BrowserContext } from '@playwright/test';
 import path from 'node:path';
 
-// Serve the real Vite output in Chromium when the host disallows loopback sockets.
+// Chromium reads the built site without starting or contacting a development server.
+export async function serveBuild(context: BrowserContext, baseURL: string) {
+  const dist = path.resolve('dist');
+  await context.route(`${baseURL}/**`, async route => {
+    const pathname = new URL(route.request().url()).pathname;
+    const file = path.resolve(dist, '.' + (pathname === '/' ? '/index.html' : pathname));
+    if (!file.startsWith(dist + path.sep)) return route.abort();
+    await route.fulfill({ path: file });
+  });
+}
+
 export const test = base.extend({
-  page: async ({ page }, use) => {
-    if (process.env.SINE_TEST_DIST) {
-      await page.route('http://127.0.0.1:4175/**', async route => {
-        const pathname = new URL(route.request().url()).pathname;
-        const dist = path.resolve('dist');
-        const file = path.resolve(dist, '.' + (pathname === '/' ? '/index.html' : pathname));
-        if (!file.startsWith(dist + path.sep)) return route.abort();
-        await route.fulfill({ path: file });
-      });
-    }
-    await use(page);
+  context: async ({ context, baseURL }, use) => {
+    if (!baseURL) throw new Error('Set Playwright baseURL before serving the build.');
+    await serveBuild(context, baseURL);
+    await use(context);
   },
 });
 export { expect };

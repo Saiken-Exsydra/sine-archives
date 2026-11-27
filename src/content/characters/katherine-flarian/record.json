@@ -21,7 +21,49 @@
       "imperialYear": 1553,
       "approximate": true
     },
-    "birthplace": "Vel’hara"
+    "birthplace": "Vel’hara",
+    "heightCm": 163,
+    "residence": "Kalt’sen",
+    "nationality": [
+      {
+        "en": "Ardeatan",
+        "pt-BR": "ardeatana"
+      }
+    ],
+    "occupation": {
+      "en": "Continuity Architect",
+      "pt-BR": "Arquiteta de Continuidade"
+    }
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ],
+  "classifications": {
+    "profiles": [
+      {
+        "kind": "continuity",
+        "classification": {
+          "en": "Continuity-Sensitive",
+          "pt-BR": "Sensível à Continuidade"
+        },
+        "principle": {
+          "en": "Stability",
+          "pt-BR": "Estabilidade"
+        },
+        "abilities": [
+          {
+            "en": "Continuity Mapping",
+            "pt-BR": "Mapeamento de Continuidade"
+          }
+        ]
+      }
+    ]
+  },
+  "affiliations": [
+    {
+      "institution": "sine",
+      "kind": "employment",
+      "primary": true
+    }
+  ]
 }

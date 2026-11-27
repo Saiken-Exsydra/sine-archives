@@ -21,22 +21,51 @@
       "imperialYear": 1557,
       "approximate": true
     },
-    "heightCm": 170
+    "birthplace": "Kalt’sen",
+    "heightCm": 170,
+    "residence": "Hora’veil",
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ],
+    "occupation": {
+      "en": "Garment construction and material design",
+      "pt-BR": "Confecção de roupas e design de materiais"
+    }
   },
   "affiliations": [
     {
       "institution": "house-wonderwall",
       "kind": "membership",
-      "primary": true
+      "primary": true,
+      "branch": {
+        "en": "Rae Continuance",
+        "pt-BR": "Continuância Rae"
+      }
+    },
+    {
+      "institution": "sine",
+      "kind": "association"
     }
   ],
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "light",
+            "depth": "abyssal"
+          }
+        ],
+        "rank": "quill",
+        "mark": 2
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }

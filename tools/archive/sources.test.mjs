@@ -4,6 +4,7 @@ import { cp, mkdir, mkdtemp, readFile, realpath, rename, rm, symlink, writeFile 
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { test } from 'node:test';
+import { overviewEvidence } from './overview-evidence.mjs';
 import { fileURLToPath } from 'node:url';
 import { build } from 'vite';
 import { artworkRoot, checkDossierSources, verifyArtworkSources } from './sources.mjs';
@@ -141,4 +142,25 @@ test('only an explicitly promoted edition changes the ordinary build', async t =
   const approvedText = Object.values(await bundle()).join('\n');
   assert.match(approvedText, /Prepared public fixture/);
   assert.doesNotMatch(approvedText, /Private canon fixture/);
+});
+test('indexes different dossier formats and keeps potentially competing values for review', () => {
+  const result = overviewEvidence([
+    '# Vital record',
+    '| **Year of Birth** | c. Imperial Year 1103 (age 55 Lunar Years at filing, IY 1127) |',
+    '| **Actual Birthplace** | A sealed site |',
+    '| **Registered Birthplace** | A country |',
+    ' Nationality               Ardeatan and Synesian',
+    '**Anchor Depth:** Deep Anchor / Abyssal review pending',
+    'Chronological Age Approximately 1,296 Lunar Years',
+    'She has no fixed residence and usually dwells in the forests.',
+  ].join('\n'));
+  assert.deepEqual(result.age.labeled.map(({line}) => line), [2, 7]);
+  assert.deepEqual(result.birthplace.labeled.map(({label}) => label), ['Actual Birthplace', 'Registered Birthplace']);
+  assert.equal(result.birthplace.labeled[0].indication, 'restricted-candidate');
+  assert.equal(result.birthplace.labeled[1].indication, undefined);
+  assert.equal(result.nationality.labeled[0].value, 'Ardeatan and Synesian');
+  assert.equal(result.capability.labeled[0].value, 'Deep Anchor / Abyssal review pending');
+  assert.equal(result.capability.labeled[0].indication, 'in-world-uncertainty');
+  assert.equal(result.residence.prose[0].section, 'Vital record');
+  assert.equal(result.residence.needsReading, true);
 });

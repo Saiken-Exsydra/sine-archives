@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useSyncExternalStore, type Ref } from 'react';
+import { useLayoutEffect, useRef, useState, useSyncExternalStore, type Ref } from 'react';
 import { AnimatePresence, m, useIsPresent } from 'motion/react';
 import type { Locale } from '../content';
 import { PublicationImage } from '../images/publication';
@@ -60,7 +60,8 @@ function ReadingContent({ character, section, locale }: Props) {
     exit={{ opacity: 0, transition: { duration: reduced ? 0 : motionTokens.control } }}
     transition={{ duration: reduced ? 0 : motionTokens.selection, ease: motionTokens.ease }}>
     {section === 'overview' && <>
-      {character.affiliations?.map(entry => <div key={entry.institution + entry.kind} className={entry.primary ? 'compact-affiliation' : undefined}>
+      {character.affiliations?.filter(entry => entry.primary).map(entry =>
+        <div key={entry.institution + entry.kind} className="compact-affiliation">
         <AffiliationInsignia affiliation={entry} locale={locale}/></div>)}
       <dl className="personal-particulars">{character.overview.map(([label, value]) =>
         <div key={label.en}><dt className="exam-label">{label[locale]}</dt><dd>{value[locale]}</dd></div>)}</dl>
@@ -82,6 +83,14 @@ function ReadingContent({ character, section, locale }: Props) {
 
 export function ExaminationReading({ active, ...props }: Props & { active: boolean }) {
   const panel = useRef<HTMLDivElement>(null);
+  const end = useRef<HTMLDivElement>(null);
+  const [moreBelow, setMoreBelow] = useState(false);
+  useLayoutEffect(() => {
+    if (!active || props.section !== 'overview' || !end.current) return;
+    const observer = new IntersectionObserver(([entry]) => setMoreBelow(!entry.isIntersecting));
+    observer.observe(end.current);
+    return () => observer.disconnect();
+  }, [active, props.section, props.character, props.locale]);
   useLayoutEffect(() => {
     if (!active) return;
     const reader = panel.current;
@@ -97,7 +106,7 @@ export function ExaminationReading({ active, ...props }: Props & { active: boole
     const frame = requestAnimationFrame(reset);
     return () => cancelAnimationFrame(frame);
   }, [active, props.character, props.section, props.locale]);
-  return <div ref={panel} className="examination-reading examination-chrome" id="character-reading" role="tabpanel"
+  return <><div ref={panel} className="examination-reading examination-chrome" id="character-reading" role="tabpanel"
     aria-labelledby={'tab-' + props.section} tabIndex={0}
     onKeyDown={event => {
       if (event.target !== event.currentTarget || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
@@ -109,5 +118,8 @@ export function ExaminationReading({ active, ...props }: Props & { active: boole
       surface.scrollTo({ top: event.key === 'Home' ? 0 : surface.scrollHeight, behavior: 'instant' });
     }}>
     <AnimatePresence initial={false}><ReadingContent key={[props.character.id, props.section, props.locale].join('/')} {...props}/></AnimatePresence>
-  </div>;
+    {props.section === 'overview' && <div ref={end} className="overview-end" aria-hidden="true"/>}
+  </div>
+    {active && props.section === 'overview' && moreBelow && <div aria-hidden="true" className="overview-scroll-cue"/>}
+  </>;
 }

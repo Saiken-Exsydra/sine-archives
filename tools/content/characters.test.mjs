@@ -109,3 +109,45 @@ test('rejects publication errors with the affected record or file', () => {
   f.set('./institutions.json', { house: { name: 'Demo', category: 'house', emblem: 'missing' } });
   assert.throws(f.load, /institutions.json: house.emblem must reference a published symbol/);
 });
+
+test('loads one bilingual fact record with historical dates, multiple ages and adaptive capabilities', () => {
+  const f = fixture();
+  f.set('./classifications.json', {
+    systems: {}, anchorTypes: { mirror: { name: 'Mirror' }, threshold: { name: 'Threshold' } },
+    anchorDepths: { deep: { name: 'Deep Anchor' }, pending: { name: 'Review pending' } },
+    redactorRanks: { quill: { name: 'Quill' }, stylus: { name: 'Stylus' } }, other: {},
+  });
+  const profiles = [
+    { kind: 'redactory', anchors: [
+      { type: 'mirror', depth: 'deep', rank: 'stylus' },
+      { type: 'threshold', depth: 'pending', rank: 'quill' },
+    ], mark: 4 },
+    { kind: 'bloom', inheritance: { en: 'Example Flower', 'pt-BR': 'Flor Exemplo' } },
+  ];
+  f.register('subject', {
+    featured: true,
+    overview: {
+      referenceImperialYear: 1127,
+      age: { lunarYears: 1296, asOfImperialYear: 1127, approximate: true },
+      livedAge: { lunarYears: 40, asOfImperialYear: 1127, approximate: true },
+      birth: { imperialYear: 559, approximate: true, kind: 'creation' },
+      height: { cm: [150.5, 152], approximate: true },
+      nationality: [{ en: 'Ardeatan', 'pt-BR': 'ardeatana' }, { en: 'Synesian', 'pt-BR': 'sinesiana' }],
+    },
+    classifications: { profiles },
+  });
+  const person = f.load().featuredCharacter;
+  assert.deepEqual(person.overview.map(([, value]) => value['pt-br']), [
+    'AI 1127', 'c. 1.296 anos lunares', 'c. 40 anos lunares', 'c. AI 559', 'c. 150,5–152 cm', 'ardeatana e sinesiana',
+  ]);
+  assert.deepEqual(person.classifications.profiles, profiles);
+  profiles[0].rank = 'stylus';
+  const subject = './characters/subject/record.json';
+  f.set(subject, { ...JSON.parse(f.files[subject]), classifications: { profiles } });
+  assert.throws(f.load, /Put rank on each Anchor/);
+  f.register('subject', {
+    featured: true, overview: { age: { status: 'undefined' }, origin: 'The Stars' },
+    classifications: { profiles: [] },
+  });
+  assert.deepEqual(f.load().featuredCharacter.overview.map(([, value]) => value.en), ['Undefined', 'The Stars']);
+});

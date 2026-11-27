@@ -1,0 +1,72 @@
+{
+  "overview": {
+    "age": {
+      "lunarYears": 1296,
+      "asOfImperialYear": 1568,
+      "approximate": true
+    },
+    "livedAge": {
+      "lunarYears": 40,
+      "asOfImperialYear": 1568,
+      "approximate": true
+    },
+    "birth": {
+      "imperialYear": 1000,
+      "approximate": true,
+      "kind": "creation"
+    },
+    "creator": {
+      "en": "The All-Mother",
+      "pt-BR": "A Mãe de Todos"
+    },
+    "height": {
+      "cm": 150,
+      "approximate": true
+    },
+    "residence": {
+      "en": "Forests of the Central Region (no fixed residence)",
+      "pt-BR": "Florestas da Região Central (sem residência fixa)"
+    },
+    "livedAgeContext": {
+      "en": "accumulated wakefulness",
+      "pt-BR": "tempo acumulado em vigília"
+    }
+  },
+  "classifications": {
+    "profiles": [
+      {
+        "kind": "elemental",
+        "classification": "Crownborn",
+        "domain": {
+          "en": "Crown-Wound Sympathy, Planetary Nature and Lunar Reflection",
+          "pt-BR": "Simpatia com a Ferida da Coroa, Natureza Planetária e Reflexo Lunar"
+        },
+        "authority": {
+          "en": "Wound Crown Authority",
+          "pt-BR": "Autoridade da Coroa Ferida"
+        },
+        "expression": {
+          "en": "The Mirror of the Wounded Crown",
+          "pt-BR": "O Espelho da Coroa Ferida"
+        }
+      }
+    ]
+  },
+  "name": "Sol’ytra",
+  "shortName": "Sol’ytra",
+  "designation": {
+    "en": "Crownborn Elemental",
+    "pt-BR": "Elemental Crownborn"
+  },
+  "summary": {
+    "en": "A Crownborn Elemental created by the All-Mother, Sol’ytra spends long intervals dormant and usually dwells in the forests of the Central Region.",
+    "pt-BR": "Elemental Crownborn criada pela Mãe de Todos, Sol’ytra passa longos períodos em dormência e costuma habitar as florestas da Região Central."
+  },
+  "hero": "solytra-hero",
+  "portrait": "solytra-portrait",
+  "dossier": [
+    "en",
+    "pt-BR"
+  ],
+  "order": 170
+}

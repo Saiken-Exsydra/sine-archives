@@ -1,19 +1,104 @@
 {
   "systems": {
-    "redactory": { "name": "Redactory" },
-    "divination": { "name": "Divination" },
-    "bloom": { "name": "Bloom" }
+    "redactory": {
+      "name": "Redactory"
+    },
+    "divination": {
+      "name": {
+        "en": "Divination",
+        "pt-BR": "Divinação"
+      }
+    },
+    "bloom": {
+      "name": "Bloom"
+    }
   },
   "anchorTypes": {
-    "deception": { "name": "Deception" }
+    "deception": {
+      "name": "Deception"
+    },
+    "stilllight": {
+      "name": "Stilllight"
+    },
+    "spatial-coherence": {
+      "name": {
+        "en": "Spatial Coherence",
+        "pt-BR": "Coerência Espacial"
+      }
+    },
+    "revelation": {
+      "name": "Revelation"
+    },
+    "light": {
+      "name": "Light"
+    },
+    "mirror": {
+      "name": {
+        "en": "Mirror",
+        "pt-BR": "Espelho"
+      }
+    },
+    "threshold": {
+      "name": {
+        "en": "Threshold",
+        "pt-BR": "Limiar"
+      }
+    },
+    "mechanism": {
+      "name": {
+        "en": "Mechanism",
+        "pt-BR": "Mecanismo"
+      }
+    },
+    "thermodynamic": {
+      "name": {
+        "en": "Thermodynamic",
+        "pt-BR": "Termodinâmica"
+      }
+    },
+    "projection": {
+      "name": {
+        "en": "Projection",
+        "pt-BR": "Projeção"
+      }
+    }
   },
   "anchorDepths": {
-    "shallow": { "name": { "en": "Shallow Anchor", "pt-BR": "Âncora rasa" } },
-    "deep": { "name": { "en": "Deep Anchor", "pt-BR": "Âncora profunda" } },
-    "abyssal": { "name": { "en": "Abyssal Anchor", "pt-BR": "Âncora abissal" } }
+    "shallow": {
+      "name": {
+        "en": "Shallow Anchor",
+        "pt-BR": "Âncora rasa"
+      }
+    },
+    "deep": {
+      "name": {
+        "en": "Deep Anchor",
+        "pt-BR": "Âncora profunda"
+      }
+    },
+    "abyssal": {
+      "name": {
+        "en": "Abyssal Anchor",
+        "pt-BR": "Âncora abissal"
+      }
+    },
+    "abyssal-review-pending": {
+      "name": {
+        "en": "Abyssal review pending",
+        "pt-BR": "Avaliação abissal pendente"
+      }
+    }
   },
   "redactorRanks": {
-    "quill": { "name": "Quill" }
+    "quill": {
+      "name": "Quill"
+    },
+    "stylus": {
+      "name": "Stylus"
+    },
+    "archtype": {
+      "name": "Archtype"
+    }
   },
   "other": {}
 }

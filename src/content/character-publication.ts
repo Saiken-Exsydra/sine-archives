@@ -8,9 +8,83 @@ const slug = z.string().check(z.regex(publicationId, 'Use a lowercase hyphenated
 const count = z.int().check(z.nonnegative());
 const parseOptions = { error: z.locales.en().localeError };
 const localized = z.union([text, z.strictObject({ en: text, 'pt-BR': text })]);
+const localizedList = z.array(localized).check(z.minLength(1));
+const positive = z.number().check(z.positive());
+const datedAge = z.strictObject({
+  lunarYears: z.number().check(z.nonnegative()),
+  asOfImperialYear: z.int(),
+  approximate: z.optional(z.boolean()),
+});
+const publishedAge = z.union([datedAge, z.strictObject({ status: z.literal('undefined') }),
+  z.strictObject({ wording: localized, asOfImperialYear: z.optional(z.int()) })]);
+const height = z.strictObject({
+  cm: z.union([positive, z.tuple([positive, positive])]),
+  approximate: z.optional(z.boolean()),
+  context: z.optional(localized),
+});
+const mark = z.union([count, z.literal('open')]);
+const anchor = z.strictObject({
+  type: slug,
+  depth: z.optional(slug),
+  reading: z.optional(localized),
+  rank: z.optional(slug),
+});
+const capabilityProfiles = z.array(z.discriminatedUnion('kind', [
+  z.strictObject({
+    kind: z.literal('redactory'),
+    anchors: z.optional(z.array(anchor).check(z.minLength(1))),
+    tradition: z.optional(localized),
+    rank: z.optional(slug),
+    training: z.optional(localized),
+    mark: z.optional(mark),
+    reach: z.optional(localized),
+    status: z.optional(localized),
+    restrictions: z.optional(localized),
+  }),
+  z.strictObject({
+    kind: z.literal('divination'),
+    classification: localized,
+    alignment: z.optional(localized),
+    domain: z.optional(localized),
+    manifestation: z.optional(localized),
+    seraphicLine: z.optional(localized),
+    constellation: z.optional(localized),
+    fragmentClassification: z.optional(localized),
+    fusionStatus: z.optional(localized),
+  }),
+  z.strictObject({
+    kind: z.literal('bloom'),
+    classification: z.optional(localized),
+    inheritance: z.optional(localized),
+    expression: z.optional(localized),
+    succession: z.optional(localized),
+    lineage: z.optional(localized),
+  }),
+  z.strictObject({
+    kind: z.literal('elemental'),
+    classification: localized,
+    domain: z.optional(localized),
+    authority: z.optional(localized),
+    expression: z.optional(localized),
+    state: z.optional(localized),
+  }),
+  z.strictObject({
+    kind: z.literal('continuity'),
+    classification: localized,
+    principle: z.optional(localized),
+    abilities: z.optional(localizedList),
+  }),
+  z.strictObject({
+    kind: z.literal('exceptional'),
+    classification: localized,
+    assessment: z.optional(localized),
+    expression: z.optional(localized),
+    state: z.optional(localized),
+  }),
+]));
 const languages = ['en', 'pt-BR'] as const;
 type Language = typeof languages[number];
-type Localized = z.infer<typeof localized>;
+export type Localized = z.infer<typeof localized>;
 type Copy = Record<Locale, string>;
 
 export const proseSections = ['biography', 'abilities', 'relations'] as const;
@@ -45,15 +119,38 @@ const characterRecord = z.strictObject({
   order: z.optional(count),
   featured: z.optional(z.boolean()),
   overview: z.strictObject({
-    age: z.optional(z.strictObject({ lunarYears: count, asOfImperialYear: z.int() })),
-    birth: z.optional(z.strictObject({ imperialYear: z.int(), approximate: z.optional(z.boolean()) })),
+    referenceImperialYear: z.optional(z.int()),
+    age: z.optional(publishedAge),
+    livedAge: z.optional(datedAge),
+    apparentAge: z.optional(localized),
+    birth: z.optional(z.strictObject({
+      imperialYear: z.int(),
+      date: z.optional(localized),
+      approximate: z.optional(z.boolean()),
+      kind: z.optional(z.literal('creation')),
+    })),
+    ageContext: z.optional(localized),
+    livedAgeContext: z.optional(localized),
     birthplace: z.optional(localized),
-    heightCm: z.optional(z.number().check(z.positive())),
-    residence: z.optional(localized),
+    origin: z.optional(localized),
+    creator: z.optional(localized),
+    heightCm: z.optional(positive),
+    height: z.optional(height),
+    residence: z.optional(z.union([localized, localizedList])),
+    location: z.optional(localized),
+    nationality: z.optional(localizedList),
+    occupation: z.optional(localized),
+    birthName: z.optional(localized),
+    formerName: z.optional(localized),
+    formalName: z.optional(localized),
+    aliases: z.optional(localizedList),
+    state: z.optional(localized),
   }),
   affiliations: z.optional(z.array(z.strictObject({
     institution: slug,
-    kind: z.enum(['membership', 'blood-lineage', 'service', 'employment', 'association']),
+    kind: z.enum(['membership', 'blood-lineage', 'family', 'office', 'service', 'employment', 'association', 'former-service']),
+    branch: z.optional(localized),
+    role: z.optional(localized),
     primary: z.optional(z.boolean()),
   }))),
   relationships: z.optional(z.array(z.strictObject({ character: slug, kind: slug }))),
@@ -65,6 +162,7 @@ const characterRecord = z.strictObject({
       mark: z.optional(count),
     })),
     other: z.optional(z.array(slug)),
+    profiles: z.optional(capabilityProfiles),
   })),
   dossier: z.optional(z.array(z.enum(languages)).check(z.minLength(1))),
 });
@@ -88,6 +186,13 @@ export type Character = Omit<RecordData, 'hero' | 'portrait' | 'overview' | 'des
 const copy = (en: string, pt: string): Copy => ({ en, 'pt-br': pt });
 export function localize(value: Localized): Copy {
   return typeof value === 'string' ? copy(value, value) : copy(value.en, value['pt-BR']);
+}
+export function localizeList(values: Localized[]): Copy {
+  const entries = values.map(localize);
+  return copy(
+    new Intl.ListFormat('en').format(entries.map(value => value.en)),
+    new Intl.ListFormat('pt-BR').format(entries.map(value => value['pt-br'])),
+  );
 }
 
 function fail(file: string, message: string): never {
@@ -140,22 +245,59 @@ function readPassages(raw: string | undefined, file: string): Passage[] {
 }
 
 function overviewFacts(overview: RecordData['overview']): Character['overview'] {
-  const { age, birth, birthplace, heightCm, residence } = overview;
+  const { age, livedAge, birth, referenceImperialYear, height, heightCm, residence, nationality, aliases } = overview;
   const facts: Character['overview'] = [];
-  if (age) facts.push([
-    copy(`Age in IY ${age.asOfImperialYear}`, `Idade no AI ${age.asOfImperialYear}`),
-    copy(`${age.lunarYears} lunar years`, `${age.lunarYears} anos lunares`),
+  const add = (label: Copy, value: Localized | undefined) => {
+    if (value !== undefined) facts.push([label, localize(value)]);
+  };
+  const enNumber = new Intl.NumberFormat('en');
+  const ptNumber = new Intl.NumberFormat('pt-BR');
+  const asOf = (label: Copy, year?: number) => year === undefined ? label
+    : copy(`${label.en} in IY ${year}`, `${label['pt-br']} no AI ${year}`);
+  const years = ({ lunarYears, approximate }: z.infer<typeof datedAge>, qualification?: Localized) => {
+    const prefix = approximate ? 'c. ' : '';
+    const context = qualification === undefined ? undefined : localize(qualification);
+    return copy(`${prefix}${enNumber.format(lunarYears)} lunar years` + (context ? ` (${context.en})` : ''),
+      `${prefix}${ptNumber.format(lunarYears)} anos lunares` + (context ? ` (${context['pt-br']})` : ''));
+  };
+  if (referenceImperialYear !== undefined) facts.push([
+    copy('Record date', 'Data do registro'), copy(`IY ${referenceImperialYear}`, `AI ${referenceImperialYear}`),
   ]);
+  if (age) {
+    const label = livedAge ? copy('Chronological age', 'Idade cronológica') : copy('Age', 'Idade');
+    if ('status' in age) facts.push([label, copy('Undefined', 'Indefinida')]);
+    else facts.push([asOf(label, age.asOfImperialYear), 'wording' in age ? localize(age.wording) : years(age, overview.ageContext)]);
+  }
+  if (livedAge) facts.push([asOf(copy('Lived age', 'Idade vivida'), livedAge.asOfImperialYear), years(livedAge, overview.livedAgeContext)]);
+  add(copy('Apparent age', 'Idade aparente'), overview.apparentAge);
   if (birth) {
     const prefix = birth.approximate ? 'c. ' : '';
-    facts.push([copy('Born', 'Nascimento'), copy(`${prefix}IY ${birth.imperialYear}`, `${prefix}AI ${birth.imperialYear}`)]);
+    facts.push([birth.kind === 'creation' ? copy('Created', 'Criação') : copy('Born', 'Nascimento'),
+      birth.date ? localize(birth.date) : copy(`${prefix}IY ${birth.imperialYear}`, `${prefix}AI ${birth.imperialYear}`)]);
   }
-  if (birthplace) facts.push([copy('Birthplace', 'Naturalidade'), localize(birthplace)]);
-  if (heightCm !== undefined) facts.push([
-    copy('Height', 'Altura'),
-    copy(`${heightCm} cm`, `${heightCm.toString().replace('.', ',')} cm`),
-  ]);
-  if (residence) facts.push([copy('Residence', 'Residência'), localize(residence)]);
+  add(copy('Birthplace', 'Naturalidade'), overview.birthplace);
+  add(copy('Origin', 'Origem'), overview.origin);
+  add(copy('Creator', 'Criação por'), overview.creator);
+  const cm = height?.cm ?? heightCm;
+  if (cm !== undefined) {
+    const prefix = height?.approximate ? 'c. ' : '';
+    const measure = (format: Intl.NumberFormat) =>
+      `${prefix}${(Array.isArray(cm) ? cm : [cm]).map(value => format.format(value)).join('–')} cm`;
+    const context = height?.context && localize(height.context);
+    facts.push([copy('Height', 'Altura'), copy(
+      measure(enNumber) + (context ? ` (${context.en})` : ''),
+      measure(ptNumber) + (context ? ` (${context['pt-br']})` : ''),
+    )]);
+  }
+  if (residence) facts.push([copy('Residence', 'Residência'), Array.isArray(residence) ? localizeList(residence) : localize(residence)]);
+  add(copy('Location', 'Localização'), overview.location);
+  if (nationality) facts.push([copy('Nationality', 'Nacionalidade'), localizeList(nationality)]);
+  add(copy('Occupation', 'Ocupação'), overview.occupation);
+  add(copy('Birth name', 'Nome de nascimento'), overview.birthName);
+  add(copy('Former name', 'Nome anterior'), overview.formerName);
+  add(copy('Formal name', 'Nome formal'), overview.formalName);
+  if (aliases) facts.push([copy('Aliases', 'Nomes alternativos'), localizeList(aliases)]);
+  add(copy('State', 'Estado'), overview.state);
   return facts;
 }
 
@@ -218,12 +360,24 @@ export function loadCharacterPublication(
     for (const { character } of record.relationships ?? []) {
       if (character === id || !ids.has(character)) fail(file, `Relationship must reference another published character ("${character}")`);
     }
-    const { systems, redactory, other } = record.classifications ?? {};
+    if (overview.height && overview.heightCm !== undefined) fail(file, 'Use one height field');
+    if (Array.isArray(overview.height?.cm) && overview.height.cm[0] > overview.height.cm[1]) {
+      fail(file, 'Height range must run from lowest to highest');
+    }
+    const { systems, redactory, other, profiles } = record.classifications ?? {};
+    if (profiles && (systems || redactory || other)) fail(file, 'Use either capability profiles or legacy classifications');
+    const redactors = profiles?.filter(profile => profile.kind === 'redactory') ?? [];
+    const anchors = redactors.flatMap(profile => profile.anchors ?? []);
+    for (const profile of redactors) {
+      const types = profile.anchors?.map(entry => entry.type) ?? [];
+      if (new Set(types).size !== types.length) fail(file, 'Redactory profile repeats an Anchor');
+      if (types.length > 1 && profile.rank) fail(file, 'Put rank on each Anchor in a multi-Anchor profile');
+    }
     const references = {
       systems: systems?.map(entry => entry.system) ?? [],
-      anchorTypes: [redactory?.anchor?.type],
-      anchorDepths: [redactory?.anchor?.depth],
-      redactorRanks: [redactory?.rank],
+      anchorTypes: [redactory?.anchor?.type, ...anchors.map(entry => entry.type)],
+      anchorDepths: [redactory?.anchor?.depth, ...anchors.map(entry => entry.depth)],
+      redactorRanks: [redactory?.rank, ...redactors.map(profile => profile.rank), ...anchors.map(entry => entry.rank)],
       other: other ?? [],
     };
     for (const group of Object.keys(references) as (keyof typeof references)[]) {

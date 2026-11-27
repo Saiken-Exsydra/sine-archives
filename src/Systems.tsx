@@ -68,7 +68,7 @@ export default function Systems({ fromHome }: { fromHome: boolean }) {
     return () => { animation.progress(1).kill(); };
   }, [path, reduced]);
 
-  return <div ref={root} className="archive-app" data-depth={depth} style={{ '--accent': active?.color ?? 'var(--sine-ivory)' } as CSSProperties}>
+  return <div ref={root} className="archive-app" data-depth={depth} style={{ '--accent': active?.color ?? 'var(--sine-platinum)' } as CSSProperties}>
     <SkipLink />
     <header className="masthead"><HeaderContents /></header>
     <nav className="breadcrumbs" aria-label={pt ? 'Localização' : 'Breadcrumb'}>

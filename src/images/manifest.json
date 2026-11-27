@@ -1119,5 +1119,74 @@
         "sha256": "09f465772a8ad4cca760eb7d16c8ba6ca6c409a704d26d59d967b14349e8b994"
       }
     ]
+  },
+  "solytra-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "f997acc0a85f0e44218200a0284cceb59eb8f510b6efa539c55af5ddd4fc87a6",
+    "sourceBytes": 25392861,
+    "sourceWidth": 5016,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "solytra-hero-1280-0fdbd41c2927bf03.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 387676,
+        "sha256": "0fdbd41c2927bf0302d1f94bc88d1829fdf0730f22d81b017d2df48df44e0ced"
+      },
+      {
+        "file": "solytra-hero-1920-a61be0349aed1f71.webp",
+        "width": 1920,
+        "height": 1081,
+        "bytes": 688716,
+        "sha256": "a61be0349aed1f7121319ca8b738732e87d5fc55c2434edaaeaf77cb7c41e429"
+      },
+      {
+        "file": "solytra-hero-2560-3c5739253aaae8d7.webp",
+        "width": 2560,
+        "height": 1441,
+        "bytes": 1015644,
+        "sha256": "3c5739253aaae8d70d91601b03907c5fb6dc12ce130973fc920563ea9f1e2403"
+      }
+    ]
+  },
+  "solytra-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "ce367116ce22e2192f49c0f805dcf32c04d2c70fca9fa73aedf62b05bad7d0e9",
+    "sourceBytes": 1558452,
+    "sourceWidth": 2944,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "solytra-portrait-96-5077822a7c9c343b.webp",
+        "width": 96,
+        "height": 118,
+        "bytes": 4748,
+        "sha256": "5077822a7c9c343bf3ced3b40c30cd21cbe1f1a1443565eb979dd1e5a46dc3ca"
+      },
+      {
+        "file": "solytra-portrait-320-c93fce0c97802520.webp",
+        "width": 320,
+        "height": 393,
+        "bytes": 36232,
+        "sha256": "c93fce0c97802520cd8a4ad14fc68136110449bfdc12c9a681e78f03b6216365"
+      },
+      {
+        "file": "solytra-portrait-640-e5bd7356b037b7c0.webp",
+        "width": 640,
+        "height": 787,
+        "bytes": 110318,
+        "sha256": "e5bd7356b037b7c06c3e17b647af5c23ea697f39096308ab047502e63d41a295"
+      },
+      {
+        "file": "solytra-portrait-960-62e7d2caa2a7a987.webp",
+        "width": 960,
+        "height": 1181,
+        "bytes": 193602,
+        "sha256": "62e7d2caa2a7a9875a8e8d8c631df9efc429d4b0da1d31adfca24b37e8615480"
+      }
+    ]
   }
 }

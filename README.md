@@ -28,7 +28,9 @@ The private Dy’Aspora Archive contains the canonical dossiers and governing so
 
 ## Run locally
 
-On Windows, double-click **Start-React-Systems.cmd** and leave its window open. The launcher installs dependencies on first use. It opens http://localhost:5174/#/ in your default browser when Vite is ready.
+On Windows, double-click **Start-React-Systems.cmd** and leave the first server window open. The launcher installs dependencies on first use and opens SiNE Archives in Zen when available. Starting it again reuses the running server for this checkout. The launcher reports a port conflict if another application owns port 5174.
+
+Use `http://localhost:5174` for all local review. Interface, motion and checked-in publication edits update through Vite. [Staged character editions](CHARACTER_PUBLICATION.md#validation-and-preview) open under `/__review/` on the same server. Reload that tab after staging a revision.
 
 For visual review, open the [development replay](http://localhost:5174/?replay=1#/) in Zen Browser. Wait for the emblem, then move the pointer. A completed visit is remembered on refresh. The replay link resets that visit, and the browser’s reduced-motion preference still takes precedence.
 
@@ -41,7 +43,7 @@ npm run dev
 
 Edit components, navigation, and styles in `src/`. The six System Markdown records in `src/content/en/` and `src/content/pt-br/` supply the Systems study. Character editions live in `src/content/characters/`. Bundled artwork lives in `src/art/` and responsive publication derivatives in `public/media/`. The full existing website lives on `main`.
 
-Run `npm run build` to type-check and build. Run `npx playwright install chromium` once for browser tests, then `npm test` after building. Tests use a separate local port.
+Run `npm run build` to type-check and build. Run `npx playwright install chromium` once for browser tests, then `npm test` after building. Playwright loads the build directly into Chromium without opening a listening port.
 
 ## Local workspace
 

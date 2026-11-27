@@ -18,22 +18,54 @@
       "imperialYear": 1558,
       "approximate": true
     },
-    "birthplace": "Kalt’sen"
+    "birthplace": "Kalt’sen",
+    "heightCm": 162,
+    "residence": "Hora’veil",
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ]
   },
   "affiliations": [
     {
       "institution": "house-wonderwall",
       "kind": "membership",
-      "primary": true
+      "primary": true,
+      "branch": {
+        "en": "Yalara cadet branch",
+        "pt-BR": "Ramo cadete Yalara"
+      }
+    },
+    {
+      "institution": "academy-londrina",
+      "kind": "association",
+      "role": {
+        "en": "Academy formation",
+        "pt-BR": "Formação acadêmica"
+      }
     }
   ],
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "stilllight",
+            "depth": "abyssal"
+          }
+        ],
+        "training": {
+          "en": "Quill-level development under specialist restriction",
+          "pt-BR": "Formação em nível Quill sob restrição especializada"
+        },
+        "mark": 1
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }

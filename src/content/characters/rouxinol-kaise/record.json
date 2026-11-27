@@ -21,15 +21,52 @@
       "imperialYear": 1556,
       "approximate": true
     },
-    "birthplace": "Vel’hara"
+    "birthplace": "Vel’hara",
+    "heightCm": 189,
+    "residence": {
+      "en": "Hora’veil (no fixed address on file)",
+      "pt-BR": "Hora’veil (sem endereço fixo no registro)"
+    },
+    "nationality": [
+      {
+        "en": "Auroran",
+        "pt-BR": "aurorana"
+      }
+    ],
+    "occupation": {
+      "en": "Independent contractor",
+      "pt-BR": "Prestadora de serviços independente"
+    }
   },
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "mirror",
+            "depth": "deep",
+            "rank": "stylus",
+            "reading": {
+              "en": "Confirmed",
+              "pt-BR": "Confirmada"
+            }
+          },
+          {
+            "type": "threshold",
+            "depth": "abyssal-review-pending",
+            "rank": "quill",
+            "reading": {
+              "en": "Confirmed",
+              "pt-BR": "Confirmada"
+            }
+          }
+        ],
+        "mark": 4
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }

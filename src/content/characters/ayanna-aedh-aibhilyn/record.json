@@ -17,15 +17,51 @@
       "lunarYears": 24,
       "asOfImperialYear": 1568
     },
-    "birthplace": "Valerie, Aurora"
+    "birth": {
+      "imperialYear": 1557,
+      "approximate": true
+    },
+    "birthplace": "Valerie",
+    "heightCm": 167,
+    "residence": "Valerie",
+    "nationality": [
+      {
+        "en": "Auroran",
+        "pt-BR": "aurorana"
+      }
+    ],
+    "occupation": {
+      "en": "Junior research associate",
+      "pt-BR": "Pesquisadora associada júnior"
+    }
   },
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "mechanism",
+            "depth": "deep",
+            "reading": {
+              "en": "Confirmed",
+              "pt-BR": "Confirmada"
+            }
+          }
+        ],
+        "rank": "quill",
+        "mark": 2
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ],
+  "affiliations": [
+    {
+      "institution": "lyrene-pharmaceuticals",
+      "kind": "employment",
+      "primary": true
+    }
+  ]
 }

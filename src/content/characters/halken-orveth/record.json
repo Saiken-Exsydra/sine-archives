@@ -20,15 +20,51 @@
     "birth": {
       "imperialYear": 1393,
       "approximate": true
+    },
+    "birthplace": "Black Mere",
+    "residence": {
+      "en": "Kalt’sen (variable)",
+      "pt-BR": "Kalt’sen (variável)"
+    },
+    "nationality": [
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ],
+    "occupation": {
+      "en": "Obsidian Rector-Ascendant",
+      "pt-BR": "Reitor-Ascendente da Obsidian"
+    },
+    "height": {
+      "cm": 190,
+      "approximate": true
     }
   },
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "divination",
-        "kind": "capability"
+        "kind": "divination",
+        "classification": {
+          "en": "Crowned",
+          "pt-BR": "Coroado"
+        },
+        "alignment": "Auctoriel",
+        "domain": {
+          "en": "Dominion",
+          "pt-BR": "Domínio"
+        }
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ],
+  "affiliations": [
+    {
+      "institution": "obsidian",
+      "kind": "membership",
+      "primary": true
+    }
+  ]
 }

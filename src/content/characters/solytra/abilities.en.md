@@ -1,0 +1,1 @@
+Sol’ytra senses distress in the land and can influence weather, vegetation and terrain. Her Wound Crown Authority is expressed most fully through the Mirror of the Wounded Crown, which makes a local area take on properties of the wounded lunar surface.

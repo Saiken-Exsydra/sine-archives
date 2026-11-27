@@ -60,6 +60,8 @@ html:has(.archive-home[data-character-domain='false'])::-webkit-scrollbar { disp
 .indicator-line::after { content: ''; display: block; height: 65%; background: linear-gradient(transparent, var(--sine-pearl)); animation: descend 2.8s infinite; animation-play-state: paused; }
 .index-indicator[data-pulse='true'] .indicator-line::after { animation-play-state: running; }
 .index-indicator i { width: 6px; height: 6px; margin-top: -6px; border: solid currentColor; border-width: 0 1px 1px 0; transform: rotate(45deg); }
+.index-indicator:is(:hover, :focus-visible) { color: var(--sine-pearl); }
+.index-indicator:is(:hover, :focus-visible) i { color: var(--sine-aqua); }
 @keyframes descend { 0%, 23% { transform: translateY(-110%); opacity: 0; } 40% { opacity: .85; } 83%, 100% { transform: translateY(180%); opacity: 0; } }
 .awakening-hero .obsidian { mask-image: linear-gradient(black 90%, transparent); }
 @media (max-width: 560px) {

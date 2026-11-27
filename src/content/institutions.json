@@ -1,15 +1,91 @@
 {
   "house-engelmeyer": {
-    "name": { "en": "House Engelmeyer", "pt-BR": "Casa Engelmeyer" },
+    "name": {
+      "en": "House Engelmeyer",
+      "pt-BR": "Casa Engelmeyer"
+    },
     "category": "house"
   },
   "house-wonderwall": {
-    "name": { "en": "House Wonderwall", "pt-BR": "Casa Wonderwall" },
+    "name": {
+      "en": "House Wonderwall",
+      "pt-BR": "Casa Wonderwall"
+    },
     "category": "house",
     "emblem": "house-wonderwall-quill"
   },
   "wonderwall-cadet-household": {
-    "name": { "en": "Wonderwall household", "pt-BR": "Casa Wonderwall" },
+    "name": {
+      "en": "Wonderwall household",
+      "pt-BR": "Casa Wonderwall"
+    },
+    "category": "household",
+    "parent": "house-wonderwall"
+  },
+  "furnace-council": {
+    "name": {
+      "en": "Furnace Council",
+      "pt-BR": "Conselho das Fornalhas"
+    },
+    "category": "other"
+  },
+  "apocachynthion": {
+    "name": "Apocachynthion",
+    "category": "other"
+  },
+  "academy-londrina": {
+    "name": {
+      "en": "Academy of Lon’drina",
+      "pt-BR": "Academia de Lon’drina"
+    },
+    "category": "other",
+    "parent": "apocachynthion"
+  },
+  "kirasagi-family": {
+    "name": {
+      "en": "Kirasagi family",
+      "pt-BR": "Família Kirasagi"
+    },
+    "category": "other"
+  },
+  "sine": {
+    "name": "SiNE",
+    "category": "company"
+  },
+  "lyrene-pharmaceuticals": {
+    "name": {
+      "en": "Lyréne Pharmaceuticals",
+      "pt-BR": "Lyréne Farmacêutica"
+    },
+    "category": "company"
+  },
+  "obsidian": {
+    "name": "Obsidian",
+    "category": "religious"
+  },
+  "marta-chord": {
+    "name": {
+      "en": "Marta Chord",
+      "pt-BR": "Acorde de Marta"
+    },
+    "category": "other"
+  },
+  "the-covenant": {
+    "name": {
+      "en": "The Covenant",
+      "pt-BR": "O Pacto"
+    },
+    "category": "religious"
+  },
+  "corvane-family": {
+    "name": "Corvane",
+    "category": "other"
+  },
+  "yalara-household": {
+    "name": {
+      "en": "Yalara household",
+      "pt-BR": "Residência Yalara"
+    },
     "category": "household",
     "parent": "house-wonderwall"
   }

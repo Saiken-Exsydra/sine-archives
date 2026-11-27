@@ -1,20 +1,25 @@
 import { spawnSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, realpathSync } from 'node:fs';
+import { mkdir, mkdtemp, rename, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { preview } from 'vite';
 import { publicationId } from '../../src/content/character-publication.ts';
+import { reviewDirectory, reviewMarker, reviewPath } from './review-preview.mjs';
 
-const host = '127.0.0.1';
-const port = 5176;
+const checkout = realpathSync(fileURLToPath(new URL('../../', import.meta.url)));
+const staging = reviewDirectory(checkout);
 
-try {
-  const [directory, character, ...extra] = process.argv.slice(2);
+async function main([directory, character, ...extra]) {
+  const active = path.join(staging, reviewMarker);
+  if (directory === '--clear' && !character) {
+    await rm(active, { force: true });
+    console.log('Character review cleared.');
+    return;
+  }
   if (!directory || !publicationId.test(character ?? '') || extra.length) {
-    throw new Error('Usage: npm run review -- "<private site directory>" <character-id>');
+    throw new Error('Usage: npm run review -- "<private site directory>" <character-id> or npm run review -- --clear');
   }
 
-  const checkout = realpathSync(fileURLToPath(new URL('../../', import.meta.url)));
   const root = realpathSync(directory);
   const relative = path.relative(checkout, root);
   const outsideCheckout = path.isAbsolute(relative) || relative.startsWith(`..${path.sep}`);
@@ -36,17 +41,26 @@ try {
     }
   }
 
-  const build = spawnSync(process.execPath, [process.env.npm_execpath, 'run', 'build'], {
+  await mkdir(staging, { recursive: true, mode: 0o700 });
+  const output = await mkdtemp(path.join(staging, 'build-'));
+  const build = spawnSync(process.execPath, [process.env.npm_execpath, 'run', 'build', '--',
+    '--base', reviewPath, '--outDir', output], {
     cwd: root,
     stdio: 'inherit',
   });
   if (build.error) throw build.error;
-  if (build.status !== 0) throw new Error('The private site failed its build. No preview was started.');
+  if (build.status !== 0 || !existsSync(path.join(output, 'index.html'))) {
+    throw new Error('The private site failed its build. The active review was left in place.');
+  }
 
-  await preview({ root, configFile: false, appType: 'mpa', preview: { host, port, strictPort: true } });
-  console.log(`Character review: http://${host}:${port}/?lang=en#/characters/${character}`);
-  console.log('Leave this process running during review. Stop it when the review is complete.');
-} catch (error) {
+  // Switch the active review only after the full build finishes.
+  const marker = path.join(output, reviewMarker);
+  await writeFile(marker, path.basename(output));
+  await rename(marker, active);
+  console.log(`Character review: http://localhost:5174${reviewPath}?lang=en#/characters/${character}`);
+}
+
+main(process.argv.slice(2)).catch(error => {
   console.error(`Character review: ${error.message}`);
   process.exitCode = 1;
-}
+});

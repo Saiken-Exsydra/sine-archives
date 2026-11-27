@@ -21,22 +21,60 @@
       "imperialYear": 1103,
       "approximate": true
     },
-    "birthplace": "Eraveth, Ardeatus"
+    "birthplace": "Eraveth",
+    "heightCm": 189,
+    "residence": "Kalt’sen",
+    "nationality": [
+      {
+        "en": "Ardeatan",
+        "pt-BR": "ardeatana"
+      },
+      {
+        "en": "Synesian",
+        "pt-BR": "sinesiana"
+      }
+    ],
+    "occupation": {
+      "en": "Senior Instructor of Kinetic and Thermodynamic Redactory",
+      "pt-BR": "Instrutor sênior de Redactory Cinética e Termodinâmica"
+    },
+    "referenceImperialYear": 1127
   },
   "affiliations": [
     {
       "institution": "house-engelmeyer",
       "kind": "blood-lineage",
-      "primary": true
+      "primary": true,
+      "branch": {
+        "en": "Estranged expatriate branch",
+        "pt-BR": "Ramo expatriado, separado da linha principal"
+      }
+    },
+    {
+      "institution": "apocachynthion",
+      "kind": "service"
     }
   ],
   "classifications": {
-    "systems": [
+    "profiles": [
       {
-        "system": "redactory",
-        "kind": "capability"
+        "kind": "redactory",
+        "anchors": [
+          {
+            "type": "thermodynamic",
+            "depth": "deep",
+            "reading": {
+              "en": "Confirmed",
+              "pt-BR": "Confirmada"
+            }
+          }
+        ],
+        "rank": "stylus",
+        "mark": 4
       }
     ]
   },
-  "dossier": ["en"]
+  "dossier": [
+    "en"
+  ]
 }
