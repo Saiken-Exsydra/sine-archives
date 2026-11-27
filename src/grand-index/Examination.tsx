@@ -15,12 +15,12 @@ function onCompactChange(callback: () => void) {
   return () => compact.removeEventListener('change', callback);
 }
 
-export function ExaminationNavigation({ character, section, locale, dossier, entryRef }: Props & {
-  dossier: boolean; entryRef: Ref<HTMLAnchorElement>;
+export function ExaminationNavigation({ character, section, locale, inert, entryRef }: Props & {
+  inert: boolean; entryRef: Ref<HTMLAnchorElement>;
 }) {
   const horizontal = useSyncExternalStore(onCompactChange, () => compact.matches);
   const primary = character.affiliations?.find(entry => entry.primary);
-  return <div className="examination-nav" inert={dossier} aria-hidden={dossier}>
+  return <div className="examination-nav examination-chrome" inert={inert} aria-hidden={inert}>
     {primary && <AffiliationInsignia affiliation={primary} locale={locale}/>}
     <div role="tablist" aria-label={locale === 'en' ? 'Record sections' : 'Seções do registro'}
       aria-orientation={horizontal ? 'horizontal' : 'vertical'}>
@@ -80,9 +80,10 @@ function ReadingContent({ character, section, locale }: Props) {
   </m.div>;
 }
 
-export function ExaminationReading(props: Props) {
+export function ExaminationReading({ active, ...props }: Props & { active: boolean }) {
   const panel = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
+    if (!active) return;
     const reader = panel.current;
     if (reader?.contains(document.activeElement) && document.activeElement?.closest('[inert]')) {
       reader.focus({ preventScroll: true });
@@ -95,9 +96,18 @@ export function ExaminationReading(props: Props) {
     // A native scroll already in flight can settle after the fragment change.
     const frame = requestAnimationFrame(reset);
     return () => cancelAnimationFrame(frame);
-  }, [props.character, props.section, props.locale]);
-  return <div ref={panel} className="examination-reading" id="character-reading" role="tabpanel"
-    aria-labelledby={'tab-' + props.section} tabIndex={0}>
+  }, [active, props.character, props.section, props.locale]);
+  return <div ref={panel} className="examination-reading examination-chrome" id="character-reading" role="tabpanel"
+    aria-labelledby={'tab-' + props.section} tabIndex={0}
+    onKeyDown={event => {
+      if (event.target !== event.currentTarget || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      if (event.key !== 'Home' && event.key !== 'End') return;
+      event.preventDefault();
+      // A keyboard jump should finish before a reader moves to another section.
+      const reader = event.currentTarget;
+      const surface = reader.closest<HTMLElement>('.character-caption[data-scroll-all]') ?? reader;
+      surface.scrollTo({ top: event.key === 'Home' ? 0 : surface.scrollHeight, behavior: 'instant' });
+    }}>
     <AnimatePresence initial={false}><ReadingContent key={[props.character.id, props.section, props.locale].join('/')} {...props}/></AnimatePresence>
   </div>;
 }

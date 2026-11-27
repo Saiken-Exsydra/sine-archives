@@ -75,9 +75,9 @@ export function ArchiveHome({ atIndex, returning, returnDomain, character }: { c
 
   return <div className="archive-app archive-home" data-character-domain={viewingCharacter} data-depth="home" data-phase={phase} data-motion={ready ? 'settled' : phase}>
     <SkipLink inert={!ready} />
-    <motion.header className="masthead home-masthead" inert={phase === 'dormant'} style={{ opacity: header, visibility: headerVisibility }}>
+    {!viewingCharacter && <motion.header className="masthead home-masthead" inert={phase === 'dormant'} style={{ opacity: header, visibility: headerVisibility }}>
       <HeaderContents controls={languageSelector => <motion.nav className="masthead-controls" aria-label={pt ? 'Navegação' : 'Navigation'} style={{ opacity: controls, visibility: controlsVisibility }}>{languageSelector}<Fullscreen /></motion.nav>} />
-    </motion.header>
+    </motion.header>}
     <main id="reading" tabIndex={-1}>
       <section ref={hero} className="awakening-hero" aria-label="SiNE Archives">
         <ObsidianSurface start={start} />

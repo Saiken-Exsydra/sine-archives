@@ -107,9 +107,11 @@ test('long Unicode identities wrap within the examination and dossier reading te
   await cp(path.join(characters, 'hisui-kirasagi'), fixture, { recursive: true });
   const name = 'Íðunn D’Arçant Cósmica Łucja Zéphyrine Éléonore Ó Briain N’Diaye Çelik Żółć ' +
     'Magnúsdóttir'.repeat(7);
+  const originalFeature = path.join(characters, 'lenore-engelmeyer', 'record.json');
+  await writeFile(originalFeature, JSON.stringify({ ...JSON.parse(await readFile(originalFeature, 'utf8')), featured: false }));
   const record = path.join(fixture, 'record.json');
   await writeFile(record, JSON.stringify({
-    ...JSON.parse(await readFile(record, 'utf8')), name, shortName: 'Íðunn', featured: false, dossier: ['en', 'pt-BR'],
+    ...JSON.parse(await readFile(record, 'utf8')), name, shortName: 'Íðunn', featured: true, dossier: ['en', 'pt-BR'],
   }));
   for (const lang of ['en', 'pt-BR']) await writeFile(path.join(fixture, 'dossier.' + lang + '.md'), '## Specimen\n\nStudy text.');
   const dist = path.join(root, 'dist');
@@ -174,4 +176,20 @@ test('long Unicode identities wrap within the examination and dossier reading te
   await expect(dossierText).toBeInViewport();
   await expect.poll(() => layout.evaluate(el => el.scrollTop)).toBeGreaterThan(0);
   expect(await close.boundingBox()).toEqual(closePosition);
+
+  await page.setViewportSize({ width: 390, height: 565 });
+  await page.goto('/identity/?lang=en#archive-index');
+  const featured = page.locator('.featured-caption');
+  await expect(featured.locator('h3')).toHaveText(name);
+  await page.getByRole('link', { name: 'Open Characters' }).click();
+  await expect(caption).toHaveAttribute('data-identity-travelling', '');
+  expect(await heading.evaluate(el => el.getAnimations().length)).toBe(1);
+  await expect(caption).toHaveCSS('clip-path', /^inset\(/);
+  await expect(caption).not.toHaveAttribute('data-identity-travelling', '');
+  await expect(caption).toHaveAttribute('data-scroll-all', '');
+  expect(await heading.evaluate(nameGeometry)).toMatchObject({ wraps: true, fitsWidth: true, fitsHeight: true, overflow: 'visible' });
+  await page.getByRole('link', { name: 'Grand Index' }).click();
+  await expect(featured).toHaveAttribute('data-identity-travelling', '');
+  await expect(featured).not.toHaveAttribute('data-identity-travelling', '');
+  expect(await featured.locator('h3').evaluate(nameGeometry)).toMatchObject({ wraps: true, fitsWidth: true, overflow: 'visible' });
 });

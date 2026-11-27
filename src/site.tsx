@@ -59,7 +59,7 @@ export function SkipLink({ inert = false }: { inert?: boolean }) {
     e.preventDefault(); document.getElementById('reading')?.focus();
   }}>{pt ? 'Ir para o conteúdo' : 'Skip to content'}</a>;
 }
-function LanguageSelector() {
+export function LanguageSelector() {
   const locale = useLocale();
   const reduced = useMotionPreference();
   const selector = useRef<HTMLDivElement>(null);

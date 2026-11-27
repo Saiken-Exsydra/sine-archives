@@ -65,13 +65,31 @@ For visual changes, inspect the impact and propagation captures for one readable
 
 ## Individual examination
 
-Open the [examination replay](http://localhost:5174/#/characters/lenore-engelmeyer) and move between Overview and Biography. The right reading edge stays anchored. On desktop the common caption container widens inward by up to 80px over the 300 ms selection interval. Its category, name, designation, divider and section content move together. The name uses a stable measure drawn from the Overview territory, while the phone layout keeps fixed gutters. Navigation and the decoded hero stay stationary. Prose enters from 5px below. The outgoing layer becomes inert immediately and fades over 180 ms. When the identity leaves less than 112px, the complete examination territory becomes the scroll surface. The active reading surface resets its scroll on a record, section or locale change. The tab receiving keyboard activation keeps focus.
+Open the [examination replay](http://localhost:5174/#/characters/lenore-engelmeyer) and move between Overview and Biography. The right reading edge stays anchored. On desktop the common caption container widens inward by up to 80px over the 300 ms selection interval. Its category, name, designation, divider and section content move together. The name uses a stable measure drawn from the Overview territory, while the phone layout keeps fixed gutters. Navigation and the decoded hero stay stationary. Prose enters from 5px below. The outgoing layer becomes inert immediately and fades over 180 ms. When the identity leaves less than 112px, the complete examination territory becomes the scroll surface. With the reading panel focused, Home and End jump to the bounds of that surface. The active reading surface resets its scroll on a record, section or locale change. The tab receiving keyboard activation keeps focus.
 
 The upward Registry chevron and its localized label are visible at rest. The centered desktop target spans 280–360px by 66–80px. The phone target is 64px high, clears the bottom safe area and reserves space beneath the examination tabs. The chevron’s highlight varies in opacity over a 5.2-second cycle. Attention across the target strengthens the floor reflection over 180 ms, and direct hover or visible keyboard focus gives it its strongest reflection. Activation still opens the Registry. The highlight rests at a fixed intensity under reduced motion and pauses while the Registry or dossier is open.
 
 Replay the threshold in Zen over both Le’nore’s and Hisui’s artwork. Move the pointer into the outer area, across the chevron, then away. Use Tab and Enter to open the Registry and Escape to return focus to the threshold. Check narrow or short layouts with a long name and confirm that the entire heading follows the reading territory. [Examination regressions](tests/examination.spec.ts) cover all four sections and an isolated long-name publication.
 
 ## Characters exhibition
+
+### Grand Index threshold
+
+Open the [Grand Index in Zen](http://localhost:5174/#archive-index), choose **Open Characters**, then return through **Grand Index**. Browser Back and Forward can replay the crossing. The featured hero keeps its responsive source, crop and mounted image element. Its desktop and phone lighting layers blend over the shared 650 ms settle. [CharacterThreshold](src/grand-index/CharacterThreshold.tsx) measures the name and designation in both layouts. Matching lines travel word by word. When the name wraps differently or fills the reading area, the heading travels as a block with the designation beneath it. The layout keeps its native wrapping and scrolling. An interrupted crossing starts from the visible position. A viewport resize settles the text in the new layout.
+
+| Interface | Opening | Returning |
+| --- | --- | --- |
+| Name, designation and lighting | 0–650 ms | 0–650 ms |
+| Index breadcrumb, arrows, featured note and entry | Withdraw over 180 ms | Reappear over 180 ms. The featured label waits until 380 ms to clear the returning name. |
+| Examination label, left navigation, return and top controls | 70–370 ms | Withdraw over 180 ms |
+| Reading panel | 235–535 ms on desktop and 280–580 ms on phones | Withdraws over 105 ms to clear the moving name |
+| Registry threshold | 145–445 ms | Withdraws over 180 ms |
+
+The Grand Index supplies the featured record to the Characters exhibition. A change to that selection stages the new hero in the Index. The visible name, entry link and examination route continue to identify the current portrait until the new hero decodes. Selecting **Open Characters** uses the displayed record, and the shared movement follows its identity. An Index selection change alone does not start the examination transition.
+
+Try the return again after selecting another Registry portrait. The Index restores its current featured selection. The outgoing portrait and identity hold until the featured image decodes, then dissolve into the featured composition over 300 ms. Index navigation and keyboard focus follow the route immediately. Direct examination links and reloads settle in place. Reduced motion removes travel and fades. Repeat on a phone and in Portuguese, then check keyboard focus and the name on a short viewport. [Threshold regressions](tests/character-threshold.spec.ts) capture the crossing in `test-results/react-review/`.
+
+### Registry handoff
 
 Open [Characters](http://localhost:5174/#/characters/lenore-engelmeyer/biography) and activate **Registry of Individuals**. The native modal rises one viewport over the shared 650 ms settle curve. The hero and reading surface stay mounted beneath it. Escape, Return to record, Back, or selecting the current subject lowers the same surface. Opening adds a same-URL history entry so Back and Forward can dismiss and reopen discovery.
 

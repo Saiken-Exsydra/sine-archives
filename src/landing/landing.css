@@ -11,12 +11,12 @@ html:has(.archive-home[data-character-domain='false']) {
 html:has(.archive-home[data-character-domain='false'])::-webkit-scrollbar { display: none; }
 .archive-home[data-character-domain='false'] :is(.awakening-hero, .grand-index) { scroll-snap-align: start; }
 .archive-home :is(.awakening-hero, .grand-index) { block-size: 100vh; block-size: 100dvh; }
-.archive-home[data-character-domain='false'] :is(.systems-catalog, .history-caption, .character-caption) {
+.archive-home[data-character-domain='false'] :is(.systems-catalog, .history-caption, .featured-caption) {
   overflow-y: auto;
   scrollbar-width: none;
   touch-action: pan-y pinch-zoom;
 }
-.archive-home[data-character-domain='false'] :is(.systems-catalog, .history-caption, .character-caption)::-webkit-scrollbar { display: none; }
+.archive-home[data-character-domain='false'] :is(.systems-catalog, .history-caption, .featured-caption)::-webkit-scrollbar { display: none; }
 .archive-home .home-masthead {
   position: absolute; z-index: 2; top: env(safe-area-inset-top, 0px);
   inset-inline: var(--gutter);
