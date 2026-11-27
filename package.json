@@ -8,6 +8,7 @@
     "check": "tsc --noEmit",
     "build": "npm run assets:check && npm run content:check && npm run check && vite build",
     "preview": "vite preview",
+    "review": "node tools/content/review.mjs",
     "test": "playwright test",
     "content:check": "node tools/content/characters.mjs",
     "content:test": "node --test tools/content/characters.test.mjs",

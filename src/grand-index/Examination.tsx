@@ -40,7 +40,7 @@ export function ExaminationNavigation({ character, section, locale, dossier, ent
           tab?.click();
         }}>{sectionNames[item][locale]}</a>)}
     </div>
-    {character.dossier?.[locale] && <div className="dossier-threshold">
+    {character.dossier && <div className="dossier-threshold">
       <DossierControl className="dossier-entry" ref={entryRef} href={characterHref(character.id, 'dossier')}
         onClick={event => {
           if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;

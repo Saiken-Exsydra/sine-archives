@@ -1,0 +1,1 @@
+A fault in sequence can register for Katherine as pain, pressure or a lag in timing. She compares those impressions against logs and physical evidence to locate where a system began to disagree with itself. Reading the fault leaves the work of repair to other procedures.

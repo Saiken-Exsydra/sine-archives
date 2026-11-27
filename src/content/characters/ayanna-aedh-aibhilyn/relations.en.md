@@ -1,0 +1,1 @@
+Her family raised her in Valerie. Mireille du Vauclain, a senior researcher at Lyréne, has been close to the family for years. Ayanna knows her both as a scientist and as someone she has trusted since childhood.

@@ -1,0 +1,1 @@
+O trabalho de Katherine ajuda investigadores a reconstruir registros danificados. Seu método combina impressões e evidências, permitindo que outras pessoas verifiquem suas conclusões e ajam a partir delas.

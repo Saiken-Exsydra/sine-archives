@@ -1,0 +1,1 @@
+Antes da Fratura, Syr’lene estudava a malha lunar como um conjunto de estruturas interligadas. Quando o sistema falhou no Ano 0, usou sua Anchor para se tornar o ponto vivo de contenção no Fragmento sobrevivente. Ela permanece consciente em seu interior.

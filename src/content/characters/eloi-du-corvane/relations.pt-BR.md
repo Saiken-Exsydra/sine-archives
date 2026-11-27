@@ -1,0 +1,1 @@
+A ausência da mãe se tornou central em seu trabalho. As galerias e os círculos privados que antes admiravam sua pintura contida passaram a encontrar nela algo mais inquietante. Éloi trata o Nevermore como uma presença com quem compartilha esse trabalho.

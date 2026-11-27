@@ -6,7 +6,7 @@ import { characterHref, type CharacterRoute } from './characters';
 import type { parseDossier } from './dossierDocument';
 
 type Edition = ReturnType<typeof parseDossier>;
-type ReaderProps = { load: () => Promise<string>; locale: Locale };
+type ReaderProps = { load: () => Promise<string>; locale: Locale; documentLocale: Locale };
 
 export function DossierControl({ children, className, ...props }: ComponentProps<'a'>) {
   return <a {...props} className={'dossier-control ' + className}>
@@ -18,7 +18,7 @@ export function DossierControl({ children, className, ...props }: ComponentProps
   </a>;
 }
 
-function DossierReader({ load, locale }: ReaderProps) {
+function DossierReader({ load, locale, documentLocale }: ReaderProps) {
   const pt = locale === 'pt-br';
   const reduced = useMotionPreference();
   const reader = useRef<HTMLElement>(null);
@@ -100,7 +100,7 @@ function DossierReader({ load, locale }: ReaderProps) {
   const label = pt ? 'Sumário' : 'Contents';
   return <div className="dossier-columns" data-contents={Boolean(edition?.headings.length)}>
     <section className="dossier-scroll" ref={reader} tabIndex={0} aria-label={pt ? 'Documento' : 'Document'}>
-      {edition ? <article onClick={event => {
+      {edition ? <article lang={documentLocale} onClick={event => {
         const link = (event.target as Element).closest('a[data-document-link]');
         if (link) go(event, link.getAttribute('data-document-link')!);
       }}>{edition.body}</article> : <p role="status">{failed
@@ -115,7 +115,7 @@ function DossierReader({ load, locale }: ReaderProps) {
         onClick={() => setExpanded(!expanded)}>{label} <span aria-hidden="true">{expanded ? '−' : '+'}</span></button>
       <span className="contents-title exam-label">{label}</span>
       <nav id="dossier-contents" aria-label={label} ref={contents}>
-        {edition!.headings.map(({ id, depth, label }) => <a key={id} href={dossierPath + '?heading=' + encodeURIComponent(id)}
+        {edition!.headings.map(({ id, depth, label }) => <a key={id} lang={documentLocale} href={dossierPath + '?heading=' + encodeURIComponent(id)}
           style={{ paddingInlineStart: Math.min(depth - 1, 4) * .55 + .6 + 'em' }}
           aria-current={active === id ? 'location' : undefined} onClick={event => go(event, id)}>{label}</a>)}
       </nav>
@@ -123,7 +123,7 @@ function DossierReader({ load, locale }: ReaderProps) {
   </div>;
 }
 
-export function DossierSurface({ character, section, locale, load, closeRef }: CharacterRoute & ReaderProps & {
+export function DossierSurface({ character, section, locale, documentLocale, load, closeRef }: CharacterRoute & ReaderProps & {
   closeRef: Ref<HTMLAnchorElement>;
 }) {
   const pt = locale === 'pt-br';
@@ -143,10 +143,12 @@ export function DossierSurface({ character, section, locale, load, closeRef }: C
       transition={{ duration: reduced ? 0 : motionTokens.settle, ease: motionTokens.ease }}>
       <div className="dossier-layout">
         <header className="dossier-mast">
-          <span className="exam-label">{pt ? 'Dossiê completo' : 'Complete Dossier'}</span>
+          <span className="exam-label">{pt ? 'Dossiê completo' : 'Complete Dossier'}
+            {locale !== documentLocale && (pt ? ' · Texto em inglês' : ' · Text in Brazilian Portuguese')}
+          </span>
           <h1 id="dossier-name">{character.name}</h1>
         </header>
-        <DossierReader key={locale} locale={locale} load={load}/>
+        <DossierReader key={documentLocale} locale={locale} documentLocale={documentLocale} load={load}/>
       </div>
     </m.section>
   </>;

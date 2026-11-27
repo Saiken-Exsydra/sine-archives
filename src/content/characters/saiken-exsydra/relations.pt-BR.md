@@ -1,0 +1,1 @@
+Sai’ken atua no serviço de proteção ligado à residência Yalara. Suas funções junto a Ec’lesia o tornam responsável pela segurança dela. As decisões sobre a vida e o futuro dela cabem à própria Ec’lesia.

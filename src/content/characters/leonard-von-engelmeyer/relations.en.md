@@ -1,0 +1,1 @@
+The record describes his branch of House Engelmeyer as expatriate and formally estranged from the main line. His teaching appointment is with the Apocachynthion at Kalt’sen. His quiet attention to students is part of what makes his classes so well attended.

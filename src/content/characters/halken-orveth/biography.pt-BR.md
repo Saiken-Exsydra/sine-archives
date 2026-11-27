@@ -1,0 +1,1 @@
+Halk’en havia acabado de ser ordenado quando um surto em Mornhallow o aproximou do trabalho de Obsidian. Com o tempo, tornou-se Rector-Ascendant. A vida paroquial ainda serve de referência, e ele aceita correções de quem conhece melhor um caso específico.

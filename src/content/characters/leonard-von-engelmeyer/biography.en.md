@@ -1,0 +1,1 @@
+Leonard was born in Eraveth to a branch of the Engelmeyer family that had settled in Ardeatus. He crossed into Synus and entered the Apocachynthion around 1111. The Academy later made him a senior instructor in kinetic and thermodynamic Redactory.

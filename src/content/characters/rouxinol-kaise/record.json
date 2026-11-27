@@ -1,0 +1,35 @@
+{
+  "name": "Rouxinol Kaise",
+  "shortName": "Rouxinol",
+  "designation": {
+    "en": "Ghostglass",
+    "pt-BR": "Vidro Espectral"
+  },
+  "summary": {
+    "en": "Rouxinol works independently in Hora’veil. Her case forced the registering authority to find a way to certify one practitioner with two distinct Anchors.",
+    "pt-BR": "Rouxinol trabalha por conta própria em Hora’veil. Seu caso levou a autoridade responsável pelo registro a encontrar uma forma de certificar uma praticante com duas Anchors distintas."
+  },
+  "hero": "rouxinol-kaise-hero",
+  "portrait": "rouxinol-kaise-portrait",
+  "order": 130,
+  "overview": {
+    "age": {
+      "lunarYears": 27,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1556,
+      "approximate": true
+    },
+    "birthplace": "Vel’hara"
+  },
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

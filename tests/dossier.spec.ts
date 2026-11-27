@@ -153,9 +153,14 @@ test('approved bilingual dossier expands in place and restores examination under
   await expect(page.locator('.dossier-surface:not([inert]) .dossier-mast h1')).toHaveText('Hisui Kirasagi');
   await expect(reader.getByRole('heading')).toHaveText(['Study edition']);
   await page.getByRole('link',{name:'Português (BR)'}).click();
-  await expect(page).toHaveURL(/hisui-kirasagi$/);
-  await expect(page.locator('.dossier-entry')).toHaveCount(0);
+  await expect(page).toHaveURL(/lang=pt-br#\/characters\/hisui-kirasagi\/dossier$/);
+  await expect(surface.locator('.dossier-mast')).toContainText('Texto em inglês');
+  await expect(reader.locator('article')).toHaveAttribute('lang','en');
+  await expect(reader.getByRole('heading')).toHaveText(['Study edition']);
+  await page.getByRole('link',{name:'Fechar Dossiê',exact:true}).click();
   await expect(close).toHaveCount(0);
+  await page.getByRole('link',{name:'Dossiê completo',exact:true}).click();
+  await expect(reader.getByRole('heading')).toHaveText(['Study edition']);
   const touch = await browser.newContext({baseURL:'http://127.0.0.1:4175',hasTouch:true, viewport:{width:390,height:844},reducedMotion:'reduce'});
   try {
     const mobile = await touch.newPage();

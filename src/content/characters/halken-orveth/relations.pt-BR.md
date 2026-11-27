@@ -1,0 +1,1 @@
+Obsidian define os deveres de Halk’en e os limites para exercê-los. Ele conta com vínculos estáveis com seus confessores e com o discernimento dos colegas. Parte de sua disciplina é perceber quando a ordem atenderia à sua própria vontade de mandá-la.

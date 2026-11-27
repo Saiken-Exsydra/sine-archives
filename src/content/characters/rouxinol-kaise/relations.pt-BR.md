@@ -1,0 +1,1 @@
+Rouxinol aceita contratos por conta própria, dentro dos limites de seu registro. Sua relação com o Apocachynthion passa pela avaliação e pela certificação. Ela já compreendia sua prática com precisão antes que a Academia encontrasse termos para descrevê-la.

@@ -1,0 +1,31 @@
+{
+  "name": "Ayanna Aedh d’Aibhilyn",
+  "shortName": "Ayanna",
+  "designation": {
+    "en": "First Glass",
+    "pt-BR": "Primeiro Vidro"
+  },
+  "summary": {
+    "en": "Ayanna is a young Auroran Redactor who reads how a machine carries its load. Her work is teaching her to ask harder questions of the people who brought her into the laboratory.",
+    "pt-BR": "Ayanna é uma jovem Redactor de Aurora que percebe como uma máquina distribui sua carga. O trabalho a leva a fazer perguntas mais difíceis às pessoas que a trouxeram para o laboratório."
+  },
+  "hero": "ayanna-aedh-aibhilyn-hero",
+  "portrait": "ayanna-aedh-aibhilyn-portrait",
+  "order": 40,
+  "overview": {
+    "age": {
+      "lunarYears": 24,
+      "asOfImperialYear": 1568
+    },
+    "birthplace": "Valerie, Aurora"
+  },
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

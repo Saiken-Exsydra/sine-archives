@@ -1,0 +1,34 @@
+{
+  "name": "Halk’en Orveth",
+  "shortName": "Halk’en",
+  "designation": {
+    "en": "Seven Red Hands",
+    "pt-BR": "Sete Mãos Rubras"
+  },
+  "summary": {
+    "en": "Halk’en is a priest whose commands can take visible form. Centuries of service have taught him to treat authority as a responsibility for what happens after he speaks.",
+    "pt-BR": "Halk’en é um sacerdote cujas ordens podem ganhar forma visível. Séculos de serviço o ensinaram a assumir responsabilidade pelo que acontece depois que ele fala."
+  },
+  "hero": "halken-orveth-hero",
+  "portrait": "halken-orveth-portrait",
+  "order": 100,
+  "overview": {
+    "age": {
+      "lunarYears": 399,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1393,
+      "approximate": true
+    }
+  },
+  "classifications": {
+    "systems": [
+      {
+        "system": "divination",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

@@ -81,7 +81,8 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
   useLayoutEffect(() => {
     if (expanded) title.current?.focus({ preventScroll: true });
   }, [expanded]);
-  const edition = character.dossier?.[locale];
+  const documentLocale = character.dossier?.[locale] ? locale : locale === 'en' ? 'pt-br' : 'en';
+  const edition = character.dossier?.[documentLocale];
   const dossier = Boolean(route?.dossier && edition && !pending);
   const dossierEntry = useRef<HTMLAnchorElement>(null);
   const dossierClose = useRef<HTMLAnchorElement>(null);
@@ -136,7 +137,7 @@ export function CharactersShowcase({ route }: { href: string; route?: CharacterR
     </div>
     <AnimatePresence initial={false}>
       {dossier && edition && <DossierSurface key={character.id} character={character} section={section} locale={locale}
-        load={edition} closeRef={dossierClose}/>}
+        load={edition} documentLocale={documentLocale} closeRef={dossierClose}/>}
     </AnimatePresence>
     {route && <button inert={dossier} aria-hidden={dossier} ref={trigger} className="registry-trigger" aria-haspopup="dialog" aria-expanded={open}
       onClick={openRegistry}>

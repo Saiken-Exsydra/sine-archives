@@ -1,0 +1,35 @@
+{
+  "name": "Vaey Viktor",
+  "shortName": "Vaey",
+  "designation": {
+    "en": "Grave of Tomorrows",
+    "pt-BR": "Sepultura dos Amanhãs"
+  },
+  "summary": {
+    "en": "Vaey spent decades assessing people whose lives changed after a miracle. In retirement he still sees what they could become, and can mistake the distance between that possibility and their lives for a moral failing.",
+    "pt-BR": "Vaey passou décadas avaliando pessoas cuja vida mudou depois de um milagre. Aposentado, ainda enxerga o que elas poderiam se tornar e às vezes confunde a distância entre essa possibilidade e a vida real com uma falha moral."
+  },
+  "hero": "vaey-viktor-hero",
+  "portrait": "vaey-viktor-portrait",
+  "order": 160,
+  "overview": {
+    "age": {
+      "lunarYears": 66,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1539,
+      "approximate": true
+    }
+  },
+  "classifications": {
+    "systems": [
+      {
+        "system": "divination",
+        "kind": "capability"
+      }
+    ]
+  },
+  "portraitFocal": "center top",
+  "dossier": ["en"]
+}

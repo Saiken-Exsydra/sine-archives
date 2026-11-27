@@ -1,0 +1,1 @@
+Éloi grew up with his mother after violence devastated the Corvane family. He began painting interiors early, and won notice for his control of shadow and empty space. After her death, the bond that answered his grief began to change both his work and his life.

@@ -1,0 +1,32 @@
+{
+  "name": "Sai’ken Exsydra",
+  "shortName": "Sai’ken",
+  "designation": "Edgerunner",
+  "summary": {
+    "en": "Sai’ken grew up in the eastern borderlands of Ael’keth. He senses pressure just before an event becomes apparent, often moving before he can explain what alerted him.",
+    "pt-BR": "Sai’ken cresceu nas fronteiras orientais de Ael’keth. Ele sente uma pressão instantes antes que um acontecimento fique perceptível e muitas vezes se move antes de saber explicar o que o alertou."
+  },
+  "hero": "saiken-exsydra-hero",
+  "portrait": "saiken-exsydra-portrait",
+  "order": 140,
+  "overview": {
+    "age": {
+      "lunarYears": 25,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1557,
+      "approximate": true
+    },
+    "birthplace": "Ael’keth"
+  },
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

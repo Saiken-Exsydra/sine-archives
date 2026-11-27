@@ -1,0 +1,1 @@
+Daniel atua entre o Covenant e as autoridades que recebem os transferidos em Synus. O Marta Chord permite que cooperem nessas transferências mesmo com divergências políticas e religiosas. A avaliação dele pode definir o próximo passo.

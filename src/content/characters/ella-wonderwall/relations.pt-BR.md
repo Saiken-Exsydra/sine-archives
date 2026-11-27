@@ -1,0 +1,1 @@
+E’lla integra a Casa Wonderwall e trabalha com a SiNE. Seu lugar na família é pleno, assim como sua autonomia sobre o próprio trabalho e suas escolhas. A proximidade com Ec’lesia e a relação com Al’ithia têm importância própria em sua vida.

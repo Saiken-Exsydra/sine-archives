@@ -1,0 +1,1 @@
+Early training exposed a mismatch between what Sai’ken could sense and what he could report. Instructors saw a young man reacting without a visible cue. Explaining his uncertainty became as important as learning to trust his reflexes.

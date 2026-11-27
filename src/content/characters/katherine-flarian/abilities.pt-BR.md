@@ -1,0 +1,1 @@
+Uma falha na sequência pode se manifestar como dor, pressão ou um atraso na percepção do tempo. Katherine cruza essas impressões com registros e vestígios físicos para localizar onde o sistema começou a se contradizer. O reparo exige outros procedimentos.

@@ -1,0 +1,1 @@
+Obsidian gives Halk’en his duties and places limits on how he exercises them. He depends on a stable relationship with his confessors and on the judgment of colleagues. Part of his discipline is recognizing when a command would serve his own desire to give it.

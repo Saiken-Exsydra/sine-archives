@@ -1,0 +1,1 @@
+His mother’s absence became central to his work. The galleries and private circles that once prized his restrained painting came to encounter something more alarming in it. Éloi treats the Nevermore as a presence with whom he shares the work.

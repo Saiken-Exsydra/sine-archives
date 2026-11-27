@@ -1,0 +1,1 @@
+Os antigos colegas lembram um sacerdote capaz de distinguir formas muito diferentes de contato com uma Presence. Seu prestígio faz com que ainda o escutem na aposentadoria. A importância que ele dá ao potencial não realizado é mais difícil de conciliar com a liberdade das pessoas que avalia.

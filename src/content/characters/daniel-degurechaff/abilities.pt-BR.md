@@ -1,0 +1,1 @@
+Daniel é um vessel Tempered de Vhaldr. Seu vínculo lhe permite avaliar o comportamento do metal aquecido e remodelá-lo. O trabalho mais preciso exige proximidade ou um meio condutor. O calor continua a se espalhar pelo ambiente e pode pôr outras pessoas em risco.

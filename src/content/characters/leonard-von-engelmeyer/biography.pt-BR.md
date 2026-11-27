@@ -1,0 +1,1 @@
+Leonard nasceu em Eraveth, num ramo dos Engelmeyer que se estabeleceu em Ardeatus. Cruzou a fronteira para Synus e ingressou no Apocachynthion por volta de 1111. Mais tarde, tornou-se instrutor sênior de Redactory cinética e termodinâmica na Academia.

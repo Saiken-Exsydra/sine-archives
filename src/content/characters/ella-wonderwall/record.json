@@ -1,0 +1,42 @@
+{
+  "name": "E’lla Rae Wonderwall",
+  "shortName": "E’lla",
+  "designation": {
+    "en": "Ataraxia in Black",
+    "pt-BR": "Ataraxia em Preto"
+  },
+  "summary": {
+    "en": "E’lla is a Quill whose work with Light reaches from Redactory practice to the cutting table. She uses fabric and fit to decide how much of herself a room gets to see.",
+    "pt-BR": "E’lla é uma Quill cujo trabalho com Light vai da prática de Redactory à mesa de corte. Com tecidos e modelagem, ela decide quanto de si quer mostrar a quem está por perto."
+  },
+  "hero": "ella-wonderwall-hero",
+  "portrait": "ella-wonderwall-portrait",
+  "order": 70,
+  "overview": {
+    "age": {
+      "lunarYears": 25,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1557,
+      "approximate": true
+    },
+    "heightCm": 170
+  },
+  "affiliations": [
+    {
+      "institution": "house-wonderwall",
+      "kind": "membership",
+      "primary": true
+    }
+  ],
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

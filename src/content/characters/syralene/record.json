@@ -1,0 +1,30 @@
+{
+  "name": "Syr’lene",
+  "shortName": "Syr’lene",
+  "designation": {
+    "en": "Crownless Queen",
+    "pt-BR": "Rainha sem Coroa"
+  },
+  "summary": {
+    "en": "Syr’lene was a Precursor who helped keep Terra’s lunar systems working together. During the Fracture she bound herself to the surviving Lunar Fragment, where her work continues.",
+    "pt-BR": "Syr’lene foi uma Precursora que ajudava a manter os sistemas lunares de Terra em funcionamento conjunto. Durante a Fratura, vinculou-se ao Fragmento Lunar sobrevivente, onde seu trabalho continua."
+  },
+  "hero": "syralene-hero",
+  "portrait": "syralene-portrait",
+  "order": 150,
+  "overview": {
+    "residence": {
+      "en": "Lunar Fragment",
+      "pt-BR": "Fragmento Lunar"
+    }
+  },
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

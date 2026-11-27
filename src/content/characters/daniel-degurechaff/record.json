@@ -1,0 +1,27 @@
+{
+  "name": "Daniel Degurechaff",
+  "shortName": "Daniel",
+  "designation": {
+    "en": "Quenched Mercy",
+    "pt-BR": "Misericórdia Temperada"
+  },
+  "summary": {
+    "en": "Raised among the furnaces of Kovansk, Daniel now assesses people caught between Ardeatus and Synus. What he calls a case can determine where a person is allowed to live.",
+    "pt-BR": "Criado entre as fornalhas de Kovansk, Daniel hoje avalia pessoas que ficaram entre Ardeatus e Synus. A forma como ele classifica um caso pode decidir onde alguém terá permissão para viver."
+  },
+  "hero": "daniel-degurechaff-hero",
+  "portrait": "daniel-degurechaff-portrait",
+  "order": 50,
+  "overview": {
+    "age": {
+      "lunarYears": 98,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1525,
+      "approximate": true
+    },
+    "birthplace": "Kovansk, Ardeatus"
+  },
+  "dossier": ["en"]
+}

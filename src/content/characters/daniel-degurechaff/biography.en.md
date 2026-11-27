@@ -1,0 +1,1 @@
+Daniel grew up in Kovansk’s furnace district, where his father inspected metalwork and his mother served as a furnace chaplain. Years of assessing cases for Ardeatus put him at the center of the Marta Chord, the arrangement that transfers some Ardeatan-born practitioners into imperial custody.

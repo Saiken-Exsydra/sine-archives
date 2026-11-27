@@ -53,5 +53,149 @@
     "profile": "symbol",
     "approvedSha256": "c4dcb49b42b42ca386a22f26897dcad3a0bf540fa07046117a27b903b4441c05",
     "publishOriginalSvg": true
+  },
+  {
+    "id": "ayanna-aedh-aibhilyn-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "8771925fcc92d5bd973d6a80dfebeabbdb2e220623f14b9e98f0f19ca230922b"
+  },
+  {
+    "id": "ayanna-aedh-aibhilyn-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "ee4db962fbd317c1515f4a6f46c1bb5966ed850a3bb6e47fadac101bb564fbf7"
+  },
+  {
+    "id": "daniel-degurechaff-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "bdc1945017957d04f6efa3e1f747d43ff2714bdeb6358be4940b8f125fbc5b5e"
+  },
+  {
+    "id": "daniel-degurechaff-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "4489f38a722fcf03e9fde9593aab40be1711afae2ef63573db09318a2315a2d3"
+  },
+  {
+    "id": "eclesia-wonderwall-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "d261d9d0e875320eed08c0341c35c0880bcfd1df599fcfd4ea092ba58e03485b"
+  },
+  {
+    "id": "eclesia-wonderwall-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "7d12e798c14e49bd2194fa00ccc76eb0ce043fbc8efefbb6a2968dcac8f12068"
+  },
+  {
+    "id": "ella-wonderwall-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "ee6fcdfaf2510402586c76605080cd7ce4044163726a7803fa36645f7f630694"
+  },
+  {
+    "id": "ella-wonderwall-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "c3f29dedc7d07581a52e39eb65871e996df7e2841536db81e86e8b1f5e5e88e2"
+  },
+  {
+    "id": "eloi-du-corvane-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "c06f53e1a264f29c93fc572f17442b731edccc6d7e7fb02e60ead49fee014e30"
+  },
+  {
+    "id": "eloi-du-corvane-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "826c941d8feb4e574dd7bc3524c3b550a6f7dacb02d23d56440714e221ba3ab5"
+  },
+  {
+    "id": "emmanuel-wonderwall-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "d2e5fb1e7b78b52415f3ad715ce795cd33afff406cdbe0f186cc75d728df86aa"
+  },
+  {
+    "id": "emmanuel-wonderwall-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "5cd3112f28c3550729ef9ab4383ab8e3997938e42abd97fd9f23ae1459b53e95"
+  },
+  {
+    "id": "halken-orveth-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "c6963e4fe26176c2069921d9b5c51bbbc8b6cec1e355ecc73d873fc1d6002d67"
+  },
+  {
+    "id": "halken-orveth-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "dc4b05c9d7b26346ce08c63fba75d45eef3121616f9080c25ec9345b3910a3cb"
+  },
+  {
+    "id": "katherine-flarian-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "ff8ffc76e5153dd4e3a4f1b2630f4e835c46d05f009e5ff68aeb24295f7636e4"
+  },
+  {
+    "id": "katherine-flarian-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "e6a4a90e0f3a5675cb26d64041ea015fa05fb07bc3ea24f45ec51b551402cf89"
+  },
+  {
+    "id": "rouxinol-kaise-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "3569c876c5c95278c8f740a36a43c06598e18d05232e9fc4fe011d01c91a9498"
+  },
+  {
+    "id": "rouxinol-kaise-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "7d1ad42e16898756376dc51065b4c8c001ec4f0a0c1e7f750d5a18c66981abe9"
+  },
+  {
+    "id": "saiken-exsydra-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "71ebda543a7c442dae2f37fe92fb1124e600daa888480a9d3f55579396062145"
+  },
+  {
+    "id": "saiken-exsydra-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "8fc448a2aeb975a058ba4e5514c106d59e97b78b5eaf5ecfa30c32ed49f7a170"
+  },
+  {
+    "id": "syralene-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "ebff4918c69999030a2244d5e0f20077115f7b871d53ae0e1fc18dadac67576f"
+  },
+  {
+    "id": "syralene-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "593eebf2952ac2a402c48493dddeebfc734b5dc6c4d9054f590da8fdda338c5b"
+  },
+  {
+    "id": "vaey-viktor-portrait",
+    "category": "character",
+    "profile": "portrait",
+    "approvedSha256": "786fc2e23936f2bfcc9ec3ab3ba63637f10bd850b0a67e698713d8fd6fc667a5"
+  },
+  {
+    "id": "vaey-viktor-hero",
+    "category": "character",
+    "profile": "hero",
+    "approvedSha256": "96cdeff35367b9ae71bd4452454699d9cc348cfc9d1fcc4f572585f3d07a68e4"
   }
 ]

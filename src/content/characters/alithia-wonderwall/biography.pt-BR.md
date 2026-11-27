@@ -1,0 +1,1 @@
+Al’ithia assumiu boa parte da atuação pública da Casa Wonderwall, da escuta de petições à negociação com outras Casas. Em 1559, apresentou em nome próprio a Petição de Registro Aberto. O Acordo do Terceiro Nome, firmado em 1560, reconheceu sua condição de pessoa por direito próprio.

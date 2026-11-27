@@ -5,7 +5,12 @@ import path from 'node:path';
 
 test('a static subdirectory build discovers 64 records and supersedes a delayed choice', async ({page}, testInfo) => {
   const root = testInfo.outputPath('publication');
-  await cp('src', path.join(root, 'src'), { recursive: true });
+  const examples = ['lenore-engelmeyer', 'hisui-kirasagi'];
+  const published = path.resolve('src/content/characters');
+  await cp('src', path.join(root, 'src'), { recursive: true, filter: source => {
+    const [character] = path.relative(published, path.resolve(source)).split(path.sep);
+    return !character || character === '..' || examples.includes(character);
+  } });
   await cp('index.html', path.join(root, 'index.html'));
   const publication = path.join(root, 'src/content/characters');
   const registryFile = path.join(root, 'src/content/institutions.json');
@@ -21,10 +26,11 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
   const manifest = JSON.parse(await readFile(manifestFile, 'utf8'));
   manifest['fixture-symbol'] = { profile: 'symbol', variants: [{ file: 'fixture.svg', width: 32, height: 32 }] };
   await writeFile(manifestFile, JSON.stringify(manifest));
-  const examples = ['lenore-engelmeyer', 'hisui-kirasagi'];
   for (let i = 2; i < 64; i++) {
     const fixture = path.join(publication, 'fixture-' + i);
-    await cp(path.join(publication, examples[i % 2]), fixture, { recursive: true });
+    await cp(path.join(publication, examples[i % 2]), fixture, {
+      recursive: true, filter: source => !path.basename(source).startsWith('dossier.'),
+    });
     const file = path.join(fixture, 'record.json');
     const { hero, portrait } = JSON.parse(await readFile(file, 'utf8'));
     await writeFile(file, JSON.stringify({

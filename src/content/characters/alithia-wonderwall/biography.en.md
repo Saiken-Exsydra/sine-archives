@@ -1,0 +1,1 @@
+Al’ithia took on much of Wonderwall’s public work, from hearing petitions to negotiating with other Houses. In 1559 she brought the Open Register Petition in her own name. The Third Name Accord that followed in 1560 recognized her as a person in her own right.

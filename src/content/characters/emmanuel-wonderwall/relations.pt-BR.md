@@ -1,0 +1,1 @@
+O Wonderwall Seat e a direção executiva da SiNE lhe atribuem responsabilidades distintas. Al’ithia conduz boa parte da atuação pública da Casa. Nos assuntos da Companhia, o Conselho Meridian pode contestar suas decisões e deixar essa divergência registrada.

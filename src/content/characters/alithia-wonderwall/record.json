@@ -1,0 +1,34 @@
+{
+  "name": "Al’ithia Rae Wonderwall",
+  "shortName": "Al’ithia",
+  "designation": "Afterlight",
+  "summary": {
+    "en": "Al’ithia is the public face of House Wonderwall. She hears petitions and negotiates on the House’s behalf, and made the right to define one’s own identity a question of imperial law.",
+    "pt-BR": "Al’ithia é o rosto público da Casa Wonderwall. Ela ouve petições, negocia em nome da Casa e levou ao direito imperial a questão de quem pode definir a própria identidade."
+  },
+  "hero": "alithia-wonderwall-hero",
+  "portrait": "alithia-wonderwall-portrait",
+  "order": 30,
+  "overview": {
+    "age": {
+      "lunarYears": 89,
+      "asOfImperialYear": 1568
+    }
+  },
+  "affiliations": [
+    {
+      "institution": "house-wonderwall",
+      "kind": "membership",
+      "primary": true
+    }
+  ],
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

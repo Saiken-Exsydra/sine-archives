@@ -1,0 +1,1 @@
+Rouxinol takes contracts on her own terms within the limits of her registration. Her ties to the Apocachynthion run through assessment and certification. She had already developed a precise understanding of her own practice before the Academy had terms for it.

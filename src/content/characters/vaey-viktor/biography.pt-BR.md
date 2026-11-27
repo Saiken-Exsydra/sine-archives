@@ -1,0 +1,1 @@
+Vaey veio de um distrito ribeirinho a nordeste de Kalt’sen e se formou na Igreja. Como avaliador de Obsidian, estudou casos em que uma Presence parecia responder a alguém. Aposentou-se após quarenta anos lunares de avaliações, conservando a reputação de sacerdote criterioso.

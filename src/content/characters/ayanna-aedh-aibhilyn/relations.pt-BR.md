@@ -1,0 +1,1 @@
+Sua família a criou em Valerie. Mireille du Vauclain, pesquisadora sênior da Lyréne, é próxima da família há anos. Para Ayanna, ela é ao mesmo tempo uma cientista e alguém em quem confia desde a infância.

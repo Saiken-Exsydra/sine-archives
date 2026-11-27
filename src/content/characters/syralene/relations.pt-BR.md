@@ -1,0 +1,1 @@
+Syr’lene trabalhava com os Skyphons e respeitava a autonomia deles. Seu papel contínuo na Coroa Lunar é um compromisso com Terra e seus habitantes. A mesma estrutura que ela mantém delimita as formas pelas quais pode entrar em contato com eles.

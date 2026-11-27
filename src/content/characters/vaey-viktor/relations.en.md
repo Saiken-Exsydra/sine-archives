@@ -1,0 +1,1 @@
+Former colleagues remember a priest capable of distinguishing very different kinds of contact with a Presence. His standing gives him a hearing even in retirement. The weight he gives to unrealized potential is harder to reconcile with the freedom of the people he assesses.

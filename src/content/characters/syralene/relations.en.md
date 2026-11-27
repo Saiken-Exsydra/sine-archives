@@ -1,0 +1,1 @@
+Syr’lene worked with the Skyphons as collaborators whose choices remained their own. Her continuing part in the Lunar Crown is a commitment to Terra and its inhabitants. The architecture she maintains is also what sets the limits of her contact with them.

@@ -1,0 +1,1 @@
+Before the Fracture, Syr’lene studied the lunar lattice as a set of connected structures. When the system failed at Year 0, she used her Anchor to become the living point of containment in the surviving Fragment. She remains conscious within it.

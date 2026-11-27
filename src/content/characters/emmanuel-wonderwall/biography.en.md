@@ -1,0 +1,1 @@
+Em’manuel came from the coastal north and took the Wonderwall name after joining A’licia. He helped build the Company in the unsettled years after Selia. His long tenure links the founding settlement to the current House and Company.

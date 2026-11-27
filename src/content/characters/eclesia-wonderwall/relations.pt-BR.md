@@ -1,0 +1,1 @@
+Hisui chegou à residência de Ec’lesia pelo serviço doméstico. O convívio fez nascer um vínculo pessoal entre as duas. A formação de Ec’lesia em Lon’drina é uma responsabilidade distinta de sua posição no ramo Yalara.

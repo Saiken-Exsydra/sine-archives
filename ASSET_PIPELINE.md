@@ -15,7 +15,7 @@ The first eight registrations match standard portrait and hero image blobs from 
 
 ## Publish or replace an illustration
 
-1. Resolve the exact original in its established Archive folder and obtain approval for that image. A canonical edit or a change to Archive contents requires separate authorization. Use the existing character slug for a portrait or hero. For other subjects, choose a stable descriptive ID and category. For character text, follow the separate [editorial approval workflow](CHARACTER_PUBLICATION.md#editorial-preparation-and-approval).
+1. Resolve the exact original in its established Archive folder. Obtain approval before registering an image in the publication checkout. For a private character preview, register proposed artwork in the isolated site and prepare its derivatives there. Treat the registration as a candidate until the author approves the exact image and its intended use. The author can approve it in the same reply as the examination. Promote only the approved registration and derivatives. A canonical edit or a change to Archive contents requires separate authorization. Use the existing character slug for a portrait or hero. For other subjects, choose a stable descriptive ID and category. Follow the [editorial approval workflow](CHARACTER_PUBLICATION.md#editorial-preparation-and-approval).
 2. Add a private mapping entry. For example, an approved place illustration could use `"north-garden-view": "Places & Regions/North Garden/View.png"`. Changing the Archive location later only requires updating local configuration.
 3. In PowerShell, run `(Get-FileHash -Algorithm SHA256 -LiteralPath "D:/your-archive/Artworks/Places & Regions/North Garden/View.png").Hash.ToLowerInvariant()`. Add an object to the array in [approved.json](tools/assets/approved.json) using that value:
 
@@ -96,7 +96,7 @@ For network measurements, use a fresh browser context per viewport and DPR again
 
 ## Baseline and maintenance
 
-Eight approved originals for Al’ithia, Hisui, Le’nore and Leonard occupy 23,992,238 bytes. Their 28 responsive WebPs occupy 4,853,300 bytes in Git before repository compression. Selecting only the largest variant of each totals 2,304,568 bytes. These are file sizes, not a page-load benchmark. The current character routes use Hisui and Le’nore. Al’ithia and Leonard are ready for future records.
+At the Phase II baseline, eight approved originals for Al’ithia, Hisui, Le’nore and Leonard occupied 23,992,238 bytes. Their 28 responsive WebPs occupied 4,853,300 bytes in Git before repository compression. The largest variant of each totaled 2,304,568 bytes. The baseline measured only Hisui and Le’nore in the character routes. The expanded Registry uses the same pipeline for all sixteen portrait and hero pairs.
 
 Phase II sampled a cold direct Characters visit per viewport on Windows using Chromium 148.0.7778.96 and the production preview under `/archive/`. Network emulation used 100 ms latency, 256,000 bytes/s downstream and 128,000 bytes/s upstream. Values below are Resource Timing transfer bytes, including browser-accounted response overhead.
 

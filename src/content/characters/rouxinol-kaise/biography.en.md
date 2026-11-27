@@ -1,0 +1,1 @@
+Rouxinol came from Vel’hara and worked outside normal imperial registration before the Apocachynthion brought her in for assessment. Her examiners eventually issued two certifications. The arrangement let her continue to take work without pretending both abilities fit a single rank.

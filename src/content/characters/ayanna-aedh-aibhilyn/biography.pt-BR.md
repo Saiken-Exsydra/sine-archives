@@ -1,0 +1,1 @@
+Ayanna cresceu em Valerie e descobriu sua Redactory durante um exercício de mecânica estrutural. Uma bancada de ensaio de torção resistiu quando deveria ter cedido. Ela entendeu o que havia feito antes que os instrumentos confirmassem. Foi avaliada pelo sistema de registro de Aurora e certificada como Quill.

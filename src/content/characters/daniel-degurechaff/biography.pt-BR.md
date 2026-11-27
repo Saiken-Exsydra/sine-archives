@@ -1,0 +1,1 @@
+Daniel cresceu no distrito das fornalhas de Kovansk, onde o pai inspecionava trabalhos em metal e a mãe servia como capelã. Depois de anos avaliando casos para Ardeatus, tornou-se uma figura central do Marta Chord, o acordo que permite transferir certos praticantes nascidos em Ardeatus para a custódia imperial.

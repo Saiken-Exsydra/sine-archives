@@ -1,0 +1,42 @@
+{
+  "name": "Leonard von-Engelmeyer",
+  "shortName": "Leonard",
+  "designation": {
+    "en": "Gentle Nova",
+    "pt-BR": "Nova Serena"
+  },
+  "summary": {
+    "en": "In his Year 1127 record, Leonard teaches heat and motion at Kalt’sen. He is known for bringing the patience of a good instructor to demonstrations of formidable power.",
+    "pt-BR": "No registro do ano 1127, Leonard ensina calor e movimento em Kalt’sen. É conhecido por demonstrar uma força formidável com a paciência de quem sabe ensinar."
+  },
+  "hero": "leonard-von-engelmeyer-hero",
+  "portrait": "leonard-von-engelmeyer-portrait",
+  "order": 120,
+  "overview": {
+    "age": {
+      "lunarYears": 55,
+      "asOfImperialYear": 1127
+    },
+    "birth": {
+      "imperialYear": 1103,
+      "approximate": true
+    },
+    "birthplace": "Eraveth, Ardeatus"
+  },
+  "affiliations": [
+    {
+      "institution": "house-engelmeyer",
+      "kind": "blood-lineage",
+      "primary": true
+    }
+  ],
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

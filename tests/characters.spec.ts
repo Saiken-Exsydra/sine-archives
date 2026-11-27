@@ -1,4 +1,5 @@
 import { test, expect } from './browser';
+import { readdir } from 'node:fs/promises';
 
 const review = 'test-results/react-review/';
 test('examination, discovery and the measured hero reveal share one environment', async ({page}) => {
@@ -17,7 +18,9 @@ test('examination, discovery and the measured hero reveal share one environment'
   await expect(page.getByRole('dialog')).toBeVisible();
   await expect(page.locator('.individual-rail')).toHaveCount(0);
   const portraits = page.locator('.registry-portrait');
-  await expect(portraits).toHaveCount(2);
+  const collection = await readdir('src/content/characters', { withFileTypes: true });
+  await expect(portraits).toHaveCount(collection.filter(entry => entry.isDirectory()).length);
+  const hisuiPortrait = page.getByRole('link', { name: 'Hisui Kirasagi', exact: true });
   await expect(portraits.first()).toBeFocused();
   await expect(page.locator('.registry-frame img').first()).toHaveCSS('object-position','50% 50%');
   await expect(page.locator('dialog')).toHaveCSS('transform','none');
@@ -31,12 +34,17 @@ test('examination, discovery and the measured hero reveal share one environment'
     expect(plate.y).toBeGreaterThan(rect.y + rect.height);
     expect(rect.width / rect.height).toBeCloseTo(2/3,3);
   }
-  const left = (await portraits.first().boundingBox())!;
-  const right = (await portraits.last().boundingBox())!;
-  expect(left.x).toBeCloseTo(1440 - right.x - right.width, 1);
+  const trackFits = await page.locator('.registry-track').evaluate(track => track.scrollWidth <= track.clientWidth);
+  if (trackFits) {
+    const left = (await portraits.first().boundingBox())!;
+    const right = (await portraits.last().boundingBox())!;
+    expect(left.x).toBeCloseTo(1440 - right.x - right.width, 1);
+  } else {
+    await expect(page.getByRole('button', { name: 'Scroll right' })).toBeEnabled();
+  }
   expect(await art.boundingBox()).toEqual(box);
   await page.keyboard.press('ArrowRight');
-  await expect(portraits.last()).toBeFocused();
+  await expect(hisuiPortrait).toBeFocused();
   await expect(page.locator('dialog')).toHaveCSS('transform','none');
   await page.screenshot({path:review+'registry-focused.png'});
   await page.keyboard.press('Escape');
@@ -47,7 +55,7 @@ test('examination, discovery and the measured hero reveal share one environment'
   await portraits.first().click();
   await expect(trigger).toBeFocused();
   await trigger.click();
-  await portraits.last().click();
+  await hisuiPortrait.click();
   const dialog = page.locator('dialog');
   await expect.poll(()=>dialog.evaluate(el=>getComputedStyle(el).clipPath)).toContain('polygon');
   await page.screenshot({path:review+'registry-reveal.png'});
@@ -178,7 +186,7 @@ test('floor threshold and portrait attention follow pointer and keyboard indepen
     await expect(light).toHaveAttribute('data-lit','true');
   }
   await expect(portraits.first()).toHaveAttribute('aria-current','true');
-  await expect(portraits.last().locator('.registry-frame')).toHaveCSS('transform','matrix(1, 0, 0, 1, 0, -3)');
+  await expect(portraits.nth(1).locator('.registry-frame')).toHaveCSS('transform','matrix(1, 0, 0, 1, 0, -3)');
   await threshold.hover();
   await expect(light).toHaveAttribute('data-lit','false');
   await expect(threshold.locator('span')).toHaveCSS('opacity','1');

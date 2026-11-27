@@ -1,0 +1,39 @@
+{
+  "name": "Ec’lesia Yalara Wonderwall",
+  "shortName": "Ec’lesia",
+  "designation": "Stilllight",
+  "summary": {
+    "en": "Ec’lesia notices who has been left out of a conversation. At Lon’drina, she studies an unusual Redactory that lets light linger where its source has already moved on.",
+    "pt-BR": "Ec’lesia percebe quem ficou de fora da conversa. Em Lon’drina, estuda uma forma incomum de Redactory que prolonga a presença da luz mesmo depois que sua fonte se afasta."
+  },
+  "hero": "eclesia-wonderwall-hero",
+  "portrait": "eclesia-wonderwall-portrait",
+  "order": 60,
+  "overview": {
+    "age": {
+      "lunarYears": 22,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1558,
+      "approximate": true
+    },
+    "birthplace": "Kalt’sen"
+  },
+  "affiliations": [
+    {
+      "institution": "house-wonderwall",
+      "kind": "membership",
+      "primary": true
+    }
+  ],
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

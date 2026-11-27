@@ -1,0 +1,27 @@
+{
+  "name": "Katherine Flarian",
+  "shortName": "Katherine",
+  "designation": {
+    "en": "World Nerve",
+    "pt-BR": "Nervo do Mundo"
+  },
+  "summary": {
+    "en": "Katherine is an analyst from Vel’hara who can feel when the sequence of events at a site stops holding together. She turns that distress into evidence other investigators can use.",
+    "pt-BR": "Katherine é uma analista de Vel’hara que sente quando a sequência de eventos de um local começa a perder a coerência. Ela transforma esse mal-estar em evidência que outros investigadores podem usar."
+  },
+  "hero": "katherine-flarian-hero",
+  "portrait": "katherine-flarian-portrait",
+  "order": 110,
+  "overview": {
+    "age": {
+      "lunarYears": 35,
+      "asOfImperialYear": 1568
+    },
+    "birth": {
+      "imperialYear": 1553,
+      "approximate": true
+    },
+    "birthplace": "Vel’hara"
+  },
+  "dossier": ["en"]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Éloi du Corvane",
+  "shortName": "Éloi",
+  "designation": {
+    "en": "Painter of the Night",
+    "pt-BR": "Pintor da Noite"
+  },
+  "summary": {
+    "en": "Éloi made his name in Aurora painting the rooms people leave behind. His bond with the Nevermore has given those studies in absence a presence of their own.",
+    "pt-BR": "Éloi ganhou reputação em Aurora pintando os cômodos que as pessoas deixam para trás. Seu vínculo com o Nevermore deu presença própria a esses estudos sobre a ausência."
+  },
+  "hero": "eloi-du-corvane-hero",
+  "portrait": "eloi-du-corvane-portrait",
+  "order": 80,
+  "overview": {},
+  "classifications": {
+    "systems": [
+      {
+        "system": "divination",
+        "kind": "capability"
+      }
+    ]
+  },
+  "portraitFocal": "center top",
+  "dossier": ["en"]
+}

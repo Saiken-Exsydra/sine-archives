@@ -1,0 +1,1 @@
+O registro descreve seu ramo da Casa Engelmeyer como expatriado e formalmente afastado da linhagem principal. Seu cargo de ensino é no Apocachynthion, em Kalt’sen. A atenção discreta que dedica aos alunos ajuda a explicar por que suas aulas são tão procuradas.

@@ -1,0 +1,1 @@
+O incidente do Deserto Branco, em Aurora, deixou E’lla mais reservada. Durante a recuperação, dedicou boa parte do tempo à confecção de roupas e à criação de materiais. Uma ocupação particular tornou-se uma linha de trabalho com tecidos sensíveis à luz.

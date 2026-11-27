@@ -1,0 +1,1 @@
+The White Desert incident in Aurora left E’lla more guarded. During her recovery, she put much of her attention into making clothes and designing materials. What started as a private occupation became a practical line of work with light-responsive fabrics.

@@ -1,0 +1,1 @@
+Katherine grew up reading patterns in a city that ran on routes, ledgers and exceptions. At Himmelreich, a continuity incident changed her perception. She built an investigative practice around what her body registered and what the records could independently establish.

@@ -1,0 +1,1 @@
+Vaey came from a river district northeast of Kalt’sen and entered Church training. As an Obsidian assessor he studied cases in which a Presence seemed to answer a person. He retired after forty lunar years of assessments, with his reputation as a discerning priest intact.

@@ -1,0 +1,1 @@
+As First Hearth, Al’ithia takes responsibility for the people who come before the House. Em’manuel holds its Senate vote as Seat, while she does much of the work of hearing people and building agreements. Her relationship with E’lla is that of a mother to her daughter.

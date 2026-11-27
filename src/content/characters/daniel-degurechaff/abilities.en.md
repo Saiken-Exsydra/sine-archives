@@ -1,0 +1,1 @@
+Daniel is a Tempered vessel of Vhaldr. He can judge how heated metal will behave and reshape it through that bond. His finest work depends on proximity or a conductive path. Heat still travels through a room and can put bystanders at risk.

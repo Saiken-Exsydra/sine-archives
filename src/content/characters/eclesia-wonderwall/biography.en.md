@@ -1,0 +1,1 @@
+Ec’lesia grew up in the Yalara branch of House Wonderwall. She is quick to approach strangers, remembers names, and readily asks questions others leave alone. At the Academy of Lon’drina she trains under specialist supervision while the Academy studies the limits of her practice.

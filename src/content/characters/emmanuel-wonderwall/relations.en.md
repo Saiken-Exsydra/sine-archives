@@ -1,0 +1,1 @@
+The Wonderwall Seat and the chief executive role at SiNE give him different responsibilities. Al’ithia conducts much of the House’s public work. In Company affairs, the Meridian Council can oppose his decisions and preserve its dissent.

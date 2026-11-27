@@ -1,0 +1,1 @@
+Ec’lesia cresceu no ramo Yalara da Casa Wonderwall. Aproxima-se de desconhecidos com facilidade, lembra nomes e faz as perguntas que os outros evitam. Na Academia de Lon’drina, treina sob supervisão especializada enquanto a instituição estuda os limites de sua prática.

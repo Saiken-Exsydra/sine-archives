@@ -1,0 +1,1 @@
+Ayanna grew up in Valerie and discovered her Redactory during a structural mechanics exercise. A torsion rig held when it should have failed. She understood what she had done before the instruments confirmed it. She was assessed through Aurora’s registration framework and certified as a Quill.

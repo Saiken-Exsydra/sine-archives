@@ -1,0 +1,1 @@
+Os primeiros treinos revelaram uma diferença entre o que Sai’ken percebia e o que conseguia comunicar. Os instrutores viam um jovem reagir sem um sinal visível. Explicar a própria incerteza se tornou tão importante quanto aprender a confiar nos reflexos.

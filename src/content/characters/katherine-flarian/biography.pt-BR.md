@@ -1,0 +1,1 @@
+Katherine cresceu observando padrões numa cidade movida por rotas, registros e exceções. Um incidente de continuidade em Himmelreich alterou sua percepção. Ela desenvolveu um método de investigação que cruza o que seu corpo registra com o que os documentos permitem comprovar.

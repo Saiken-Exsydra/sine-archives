@@ -1,0 +1,1 @@
+Katherine’s work is useful to investigators who have to reconstruct damaged records. Her judgment comes from comparing impressions with evidence, a discipline that makes it possible for other people to check and act on what she finds.

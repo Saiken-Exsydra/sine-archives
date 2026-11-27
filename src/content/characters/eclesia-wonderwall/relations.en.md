@@ -1,0 +1,1 @@
+Hisui came into Ec’lesia’s household through domestic service. The two developed a personal bond through daily life together. Ec’lesia’s training at Lon’drina is a separate responsibility from her place in the Yalara branch.

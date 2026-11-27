@@ -1,0 +1,1 @@
+Em’manuel veio do litoral norte e adotou o nome Wonderwall depois de se unir a A’licia. Ajudou a construir a Companhia nos anos instáveis que se seguiram a Selia. Sua longa permanência no cargo liga o acordo fundador à Casa e à Companhia atuais.

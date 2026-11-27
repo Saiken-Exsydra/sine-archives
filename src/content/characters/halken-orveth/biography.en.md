@@ -1,0 +1,1 @@
+Halk’en was newly ordained when an outbreak at Mornhallow drew him into the work of Obsidian. He eventually became a Rector-Ascendant. He still measures his work against his earlier parish life and accepts correction from people who know a particular case better than he does.

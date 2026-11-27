@@ -1,0 +1,1 @@
+E’lla belongs to House Wonderwall and works with SiNE. She has a full place in the family, with her own work and choices. Her closeness with Ec’lesia and her relationship with Al’ithia matter to her apart from her work with the Company.

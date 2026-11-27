@@ -291,5 +291,833 @@
         "sha256": "c4dcb49b42b42ca386a22f26897dcad3a0bf540fa07046117a27b903b4441c05"
       }
     ]
+  },
+  "ayanna-aedh-aibhilyn-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "74a18d08e89df248cb38c02e23d391863f914ad76bad3987e3b81ca8d66751d7",
+    "sourceBytes": 14496056,
+    "sourceWidth": 2736,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "ayanna-aedh-aibhilyn-portrait-96-461ef33d5643254d.webp",
+        "width": 96,
+        "height": 162,
+        "bytes": 5312,
+        "sha256": "461ef33d5643254d31315d4085e8cf4dbe56260b7b61581e06b360dd6ec0738d"
+      },
+      {
+        "file": "ayanna-aedh-aibhilyn-portrait-320-5215abadfff2e1b6.webp",
+        "width": 320,
+        "height": 539,
+        "bytes": 35310,
+        "sha256": "5215abadfff2e1b622fce60f803c6ba34a932c086d9896b90a3ebf4a7702342d"
+      },
+      {
+        "file": "ayanna-aedh-aibhilyn-portrait-640-6b0166727c27b4b5.webp",
+        "width": 640,
+        "height": 1078,
+        "bytes": 98596,
+        "sha256": "6b0166727c27b4b58e88e1cb71181eb4ff8ad646d1596f4be582430d75b4bd65"
+      },
+      {
+        "file": "ayanna-aedh-aibhilyn-portrait-960-3724264d68ceb800.webp",
+        "width": 960,
+        "height": 1617,
+        "bytes": 158740,
+        "sha256": "3724264d68ceb800693f0414a63ef6c55866923c228ee5bc1b40292609ea580f"
+      }
+    ]
+  },
+  "ayanna-aedh-aibhilyn-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "a4e7d5a2f48509bf496fdb7ca574e21b08bc611eaa607e4c08fea1fa6554a9e1",
+    "sourceBytes": 5391240,
+    "sourceWidth": 2731,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "ayanna-aedh-aibhilyn-hero-1280-882f2ee5ca9b9243.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 63116,
+        "sha256": "882f2ee5ca9b9243d56dd9bdf73492558c15be0c8b7e748a868f280fc59a3f3f"
+      },
+      {
+        "file": "ayanna-aedh-aibhilyn-hero-1920-48217aba38fc0668.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 110966,
+        "sha256": "48217aba38fc066853e633493d65120f7515372b2c60dcc1ba10b6be43a485ff"
+      },
+      {
+        "file": "ayanna-aedh-aibhilyn-hero-2560-e4f9018c77ad3807.webp",
+        "width": 2560,
+        "height": 1440,
+        "bytes": 162518,
+        "sha256": "e4f9018c77ad380742e25b180e10c30dee6d73e0e506e83b0228dbe430bf5d06"
+      }
+    ]
+  },
+  "daniel-degurechaff-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "1edc7cd8bd54740ccb92225c693e28afbb205236849781bd904c80b4278aab66",
+    "sourceBytes": 1197614,
+    "sourceWidth": 912,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "daniel-degurechaff-portrait-96-eaca83b8d5b96094.webp",
+        "width": 96,
+        "height": 162,
+        "bytes": 5854,
+        "sha256": "eaca83b8d5b96094c5b368382687fd676a57af880eb7bea35968a70f3060074c"
+      },
+      {
+        "file": "daniel-degurechaff-portrait-320-46de9d0303415305.webp",
+        "width": 320,
+        "height": 539,
+        "bytes": 40384,
+        "sha256": "46de9d0303415305e7a0d724ab5ef3a89ea439a8e5d4f727a9c26e285fe74465"
+      },
+      {
+        "file": "daniel-degurechaff-portrait-640-5c2de8ec24c42fbf.webp",
+        "width": 640,
+        "height": 1078,
+        "bytes": 117172,
+        "sha256": "5c2de8ec24c42fbf9b696ed5ae4117556953889a2568fadc5fc65d761bc747fd"
+      },
+      {
+        "file": "daniel-degurechaff-portrait-912-c31c8d3808a1d30a.webp",
+        "width": 912,
+        "height": 1536,
+        "bytes": 213900,
+        "sha256": "c31c8d3808a1d30ab91f0d9b47b828a5e7ff53c25f55383e79ac30cc6f39720a"
+      }
+    ]
+  },
+  "daniel-degurechaff-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "04f613ec2e547aec155e5a10e8add45044973c754c3075a40befa63edd5db709",
+    "sourceBytes": 4310850,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "daniel-degurechaff-hero-1280-4a2365b5a4543c7e.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 144684,
+        "sha256": "4a2365b5a4543c7e7ba294d232fe6763c2eb1c221c5745f1223492b662c65b5a"
+      },
+      {
+        "file": "daniel-degurechaff-hero-1920-c8b9720ddc078ccc.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 265442,
+        "sha256": "c8b9720ddc078cccd57254732fb587c66cf1ddff8288ff9c12b0d4828929d2f2"
+      },
+      {
+        "file": "daniel-degurechaff-hero-2048-7fca58ba672be8dd.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 279002,
+        "sha256": "7fca58ba672be8dd31fb9d0304b7dc884132b97d200b8113921c0b2f971b4658"
+      }
+    ]
+  },
+  "eclesia-wonderwall-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "c67cbececf79db2cb1d08614506cb58a61b4b3b616f87fd2d02e239a745c0645",
+    "sourceBytes": 19179885,
+    "sourceWidth": 2880,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "eclesia-wonderwall-portrait-96-c0dfdcd309e0099a.webp",
+        "width": 96,
+        "height": 171,
+        "bytes": 5698,
+        "sha256": "c0dfdcd309e0099ac2eaa508ee78454aec82e8ec7be1aec18ecd458dfe43c7aa"
+      },
+      {
+        "file": "eclesia-wonderwall-portrait-320-c2f6ccfe4a5e7f12.webp",
+        "width": 320,
+        "height": 569,
+        "bytes": 41368,
+        "sha256": "c2f6ccfe4a5e7f12c6e3b7ea899591f9259577b88a2343c35cb1e276003acf30"
+      },
+      {
+        "file": "eclesia-wonderwall-portrait-640-c76b87a4cc13e553.webp",
+        "width": 640,
+        "height": 1138,
+        "bytes": 119208,
+        "sha256": "c76b87a4cc13e5536fe79d4ba02267350039e242b3969fea3d305a50eb5c4df2"
+      },
+      {
+        "file": "eclesia-wonderwall-portrait-960-accdf49a0ceb2410.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 207210,
+        "sha256": "accdf49a0ceb24103c8d03a43fcef6d018d8b144f718c35f09d306f26a1381f0"
+      }
+    ]
+  },
+  "eclesia-wonderwall-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "dd927a9586e9a5a89376153814e90d8177368e736d0f1bfe5b0f3684f9bc15b3",
+    "sourceBytes": 20257606,
+    "sourceWidth": 5016,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "eclesia-wonderwall-hero-1280-ed26dc79190fab96.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 123210,
+        "sha256": "ed26dc79190fab96b3652e5e258e6266e988fc5689084dd455b6ebb7f0dbfc5c"
+      },
+      {
+        "file": "eclesia-wonderwall-hero-1920-6a57233439e3b2a7.webp",
+        "width": 1920,
+        "height": 1081,
+        "bytes": 205818,
+        "sha256": "6a57233439e3b2a75ae627e1dca0d79b5302d21244dcc31fd800003a667ed439"
+      },
+      {
+        "file": "eclesia-wonderwall-hero-2560-03c53002f3e1066a.webp",
+        "width": 2560,
+        "height": 1441,
+        "bytes": 305612,
+        "sha256": "03c53002f3e1066ae2773b627c7696e9b0d3ef8c77a587e7e825e1930cdeff4f"
+      }
+    ]
+  },
+  "ella-wonderwall-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "a68617a56586333a2a36af813d7504656d094bbcbe0061a32ee1d1a17f5c554e",
+    "sourceBytes": 15268141,
+    "sourceWidth": 2592,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "ella-wonderwall-portrait-96-b553dff52f4a68df.webp",
+        "width": 96,
+        "height": 171,
+        "bytes": 5412,
+        "sha256": "b553dff52f4a68dfaa3066e410dd27079a184310c85105046847b9b9a68c207f"
+      },
+      {
+        "file": "ella-wonderwall-portrait-320-312888140cdc2494.webp",
+        "width": 320,
+        "height": 569,
+        "bytes": 39074,
+        "sha256": "312888140cdc2494cfcb541db600dc40dd69677520484fb8b478ff29c68a4990"
+      },
+      {
+        "file": "ella-wonderwall-portrait-640-0681885fc5c96fbb.webp",
+        "width": 640,
+        "height": 1138,
+        "bytes": 122408,
+        "sha256": "0681885fc5c96fbb4ef77ebe558fb1bc5f8c0193a46d493004dabf33f50604e4"
+      },
+      {
+        "file": "ella-wonderwall-portrait-960-65439fa7b5cd927b.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 216266,
+        "sha256": "65439fa7b5cd927b850ff73ce871aaebb268dede16ddafa217d34b2738fd0de2"
+      }
+    ]
+  },
+  "ella-wonderwall-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "b4e51c898b234ddd5e2da336aac2d8977501a2424244f61cc8a509c8f956b657",
+    "sourceBytes": 10976239,
+    "sourceWidth": 4096,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "ella-wonderwall-hero-1280-345b62325ab1e6a6.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 107890,
+        "sha256": "345b62325ab1e6a623695a65d87c5cbaecd4920f0deed8aab70c68f49cf1e702"
+      },
+      {
+        "file": "ella-wonderwall-hero-1920-674a8f74a55da36e.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 210938,
+        "sha256": "674a8f74a55da36ebf8519352ed402edd71d905b7a7c3380b1e8e6d9f0871cc5"
+      },
+      {
+        "file": "ella-wonderwall-hero-2560-46a4d9109ce79987.webp",
+        "width": 2560,
+        "height": 1440,
+        "bytes": 344338,
+        "sha256": "46a4d9109ce799871f75b4cd7b04a238d6372e159f95e28ac8e3d3a5f40214be"
+      }
+    ]
+  },
+  "eloi-du-corvane-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "87a6864ccfa90c81bc7141f60f5fcaba7e39a3433dba1d34ff879201dd1b37b5",
+    "sourceBytes": 1567252,
+    "sourceWidth": 1152,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "eloi-du-corvane-portrait-96-8b825e4bf205fe39.webp",
+        "width": 96,
+        "height": 128,
+        "bytes": 5366,
+        "sha256": "8b825e4bf205fe39727a89e97aa1f9258ff8dda3970b3debefe6ddf41a0c7500"
+      },
+      {
+        "file": "eloi-du-corvane-portrait-320-121e15d1d93c80b5.webp",
+        "width": 320,
+        "height": 427,
+        "bytes": 35952,
+        "sha256": "121e15d1d93c80b5e6e2b13c59fd5e383814f589bf30a50e4ae42580809fee5d"
+      },
+      {
+        "file": "eloi-du-corvane-portrait-640-18d2b894a0f6026c.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 102986,
+        "sha256": "18d2b894a0f6026ca07a2f4421dff0220f9e579f93ed8847662b4242127fbbfa"
+      },
+      {
+        "file": "eloi-du-corvane-portrait-960-592d559532ce91d3.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 185598,
+        "sha256": "592d559532ce91d3e4321a209a5e6c79da64d4350940f0d5981fa1f7e6b01983"
+      }
+    ]
+  },
+  "eloi-du-corvane-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "d964d98665e74e4358490458284c7527dcc6eaa05e20ed492cef2a0f77bce0e4",
+    "sourceBytes": 4263253,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "eloi-du-corvane-hero-1280-50083bcbe0feca17.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 163970,
+        "sha256": "50083bcbe0feca17880e9c9c30b84797df641918c14a18c3e27c0737402ec526"
+      },
+      {
+        "file": "eloi-du-corvane-hero-1920-63e2207289fc449d.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 295710,
+        "sha256": "63e2207289fc449d80a534b078b4fa2b9c840fb6cefada05700fc151aabd51b2"
+      },
+      {
+        "file": "eloi-du-corvane-hero-2048-8d533c5a1831cf74.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 322124,
+        "sha256": "8d533c5a1831cf740b0844e6be1a66cba13d2727448bd81f6b990cdd13ec818e"
+      }
+    ]
+  },
+  "emmanuel-wonderwall-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "7b5f45a03f3ec253bb85b170ce55057b4fd6994b7ed08a77b559e548cb7fbb62",
+    "sourceBytes": 1778859,
+    "sourceWidth": 912,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "emmanuel-wonderwall-portrait-96-066613616ee682f5.webp",
+        "width": 96,
+        "height": 162,
+        "bytes": 6300,
+        "sha256": "066613616ee682f51cfd061ad005ee859073ea6ebf3d104c890f9a2f1e970570"
+      },
+      {
+        "file": "emmanuel-wonderwall-portrait-320-da593f8f9aa57f1b.webp",
+        "width": 320,
+        "height": 539,
+        "bytes": 46400,
+        "sha256": "da593f8f9aa57f1be084894c23f563d22a4f657b1cbd37196f95679fef1b2e52"
+      },
+      {
+        "file": "emmanuel-wonderwall-portrait-640-1894ff08dd97c974.webp",
+        "width": 640,
+        "height": 1078,
+        "bytes": 135092,
+        "sha256": "1894ff08dd97c9740bf952055e79aef0664541ddfb2a37a8872241a322f7408d"
+      },
+      {
+        "file": "emmanuel-wonderwall-portrait-912-58eec81ddd7deda6.webp",
+        "width": 912,
+        "height": 1536,
+        "bytes": 229290,
+        "sha256": "58eec81ddd7deda64e9a5944f1533a26e88e212d700b8c07020ffbef7bfcd30d"
+      }
+    ]
+  },
+  "emmanuel-wonderwall-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "ba78fc07cd7c39c5904149f2998fa4ad69f196c175fe40e1fa19935a9d2f46e7",
+    "sourceBytes": 3710716,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "emmanuel-wonderwall-hero-1280-4eade840264e28df.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 105546,
+        "sha256": "4eade840264e28df374ce3a392d45e91cd92b174b33e31352ecf1858f184a186"
+      },
+      {
+        "file": "emmanuel-wonderwall-hero-1920-af77331ae313d51d.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 192838,
+        "sha256": "af77331ae313d51dd1e5907a24c9dd1652db84a08b547e034362c3de5cfd3279"
+      },
+      {
+        "file": "emmanuel-wonderwall-hero-2048-1d1ac246493ee64e.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 213394,
+        "sha256": "1d1ac246493ee64e0035337399706c7e456295988c299bccf545e90caf5be171"
+      }
+    ]
+  },
+  "halken-orveth-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "0c987d63a7d9ec237a56aed61035ca441a4f23f1ce474f31b85f5fc7446ace72",
+    "sourceBytes": 2277532,
+    "sourceWidth": 941,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "halken-orveth-portrait-96-35635d5bfc32953e.webp",
+        "width": 96,
+        "height": 171,
+        "bytes": 4864,
+        "sha256": "35635d5bfc32953e309db64db41de89c2764cf2b9bd011a307f9d8236db909de"
+      },
+      {
+        "file": "halken-orveth-portrait-320-e6e9731cf9cbb60b.webp",
+        "width": 320,
+        "height": 569,
+        "bytes": 46000,
+        "sha256": "e6e9731cf9cbb60b289375d6f621e1545497412a6390871f759b61dd55da16ae"
+      },
+      {
+        "file": "halken-orveth-portrait-640-cfdd31d92eb4cab4.webp",
+        "width": 640,
+        "height": 1137,
+        "bytes": 150154,
+        "sha256": "cfdd31d92eb4cab4ecd4015b801fb2849aa62d6ce79589442e9727fa46f5187e"
+      },
+      {
+        "file": "halken-orveth-portrait-941-729f66a5da597a35.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 265574,
+        "sha256": "729f66a5da597a35de9a3f26cdcce249a8875b1febf8dd10749e4434383ce3c2"
+      }
+    ]
+  },
+  "halken-orveth-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "a54f64457952c7a4d1ae7ff20f1edbbed70fd3b7b61782a6c2cc7e439d91e7b6",
+    "sourceBytes": 3767798,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "halken-orveth-hero-1280-2b6acf0a6ddb2b40.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 121842,
+        "sha256": "2b6acf0a6ddb2b40fd9d4b55801580552c88096affd88a1dff5d2b9228092cfb"
+      },
+      {
+        "file": "halken-orveth-hero-1920-aeed4b7a6159170e.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 239250,
+        "sha256": "aeed4b7a6159170ea2725ed2e1233692ed9037db3c34e6c0ed2c03b91316ab32"
+      },
+      {
+        "file": "halken-orveth-hero-2048-a5d300f104df8693.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 261124,
+        "sha256": "a5d300f104df8693f73aa49491bd9d1446af0e4f3a7cd20609daac29c5a10bf9"
+      }
+    ]
+  },
+  "katherine-flarian-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "d039ab3e240881d466dc4e640fe8bd19310dd5d028d9c37c6d3886c9d294752e",
+    "sourceBytes": 848212,
+    "sourceWidth": 864,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "katherine-flarian-portrait-96-75f332e1172a0993.webp",
+        "width": 96,
+        "height": 171,
+        "bytes": 5088,
+        "sha256": "75f332e1172a09935d34e7fa329e81ae42ef0228bbd7736f069c0ba6f1cd247d"
+      },
+      {
+        "file": "katherine-flarian-portrait-320-04e4acd95932295e.webp",
+        "width": 320,
+        "height": 569,
+        "bytes": 32826,
+        "sha256": "04e4acd95932295ed3df309f9a8b9c960c9ee876fed9b996f5362bbb3d9438bc"
+      },
+      {
+        "file": "katherine-flarian-portrait-640-a903f8d4dbeed7dd.webp",
+        "width": 640,
+        "height": 1138,
+        "bytes": 92006,
+        "sha256": "a903f8d4dbeed7dd6769cbe282d5668958704368f08b036d144dae60b5432edd"
+      },
+      {
+        "file": "katherine-flarian-portrait-864-9eec28e34252a4c8.webp",
+        "width": 864,
+        "height": 1536,
+        "bytes": 152380,
+        "sha256": "9eec28e34252a4c8dfa244cafb5993af6819310bbc8fa301da7862beaaf2b406"
+      }
+    ]
+  },
+  "katherine-flarian-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "ed49344833b320b22e9d72977b5b32691f2bc0ae4ed449b28fc6b0fc7194c4dd",
+    "sourceBytes": 4297307,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "katherine-flarian-hero-1280-d1dfa8e1f4ee334b.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 169430,
+        "sha256": "d1dfa8e1f4ee334b86f79cee1dfe43fb992c7df50214682964ac6e60df461c96"
+      },
+      {
+        "file": "katherine-flarian-hero-1920-5c5d0c305584dc4f.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 313144,
+        "sha256": "5c5d0c305584dc4f2cd2e66ada419aa6cd335638ae6df94299068731ff1dc1c0"
+      },
+      {
+        "file": "katherine-flarian-hero-2048-5d2e4205e4be6539.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 332810,
+        "sha256": "5d2e4205e4be65396263ee56e082c8b317795abf416eb5262933d1a5a6059f06"
+      }
+    ]
+  },
+  "rouxinol-kaise-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "54dc2870a9913764d862712fcd5910d365ba05467f9aa248ac9e8cd95c2130fb",
+    "sourceBytes": 1545319,
+    "sourceWidth": 720,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "rouxinol-kaise-portrait-96-b371737a5902bc67.webp",
+        "width": 96,
+        "height": 171,
+        "bytes": 5066,
+        "sha256": "b371737a5902bc67ec9729e0402d1f6d93a7c25438d3ba3d9238b2797a1dede9"
+      },
+      {
+        "file": "rouxinol-kaise-portrait-320-0092676b1b339e63.webp",
+        "width": 320,
+        "height": 569,
+        "bytes": 35648,
+        "sha256": "0092676b1b339e637a10bae11d3bab9d5f8f8d2a749d214bad88e00cda883ad9"
+      },
+      {
+        "file": "rouxinol-kaise-portrait-640-02802e5840dee991.webp",
+        "width": 640,
+        "height": 1138,
+        "bytes": 95744,
+        "sha256": "02802e5840dee9919a245cda9ff00340c151834eae647a83fcacaa590304aecc"
+      },
+      {
+        "file": "rouxinol-kaise-portrait-720-d35fcb2f2aa6f499.webp",
+        "width": 720,
+        "height": 1280,
+        "bytes": 111474,
+        "sha256": "d35fcb2f2aa6f499aaedcb2a0034fbaa88549287f4c36a1eb16fd855facf5273"
+      }
+    ]
+  },
+  "rouxinol-kaise-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "fd63ee44c1de6dda82d2d7540f0bafd1b18222fbc315918be77e06f447ea217d",
+    "sourceBytes": 2371604,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "rouxinol-kaise-hero-1280-f9cf337c3a251be0.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 62202,
+        "sha256": "f9cf337c3a251be0dd1ababe9548388203e60be570b54d751de8d536edaf5e6c"
+      },
+      {
+        "file": "rouxinol-kaise-hero-1920-5a3fa151c99c74b6.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 112304,
+        "sha256": "5a3fa151c99c74b6bc3c5758fa5575611fe52e186771581a852e1d059a0ce665"
+      },
+      {
+        "file": "rouxinol-kaise-hero-2048-3b1c3ac5333ba05f.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 123186,
+        "sha256": "3b1c3ac5333ba05f4d067e879464aab7dc488ce747c614ac136a6ebdc952b484"
+      }
+    ]
+  },
+  "saiken-exsydra-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "56bc0c0680c11912d68b126279cdd4d3d879779749a71e925d2197a1817b96b4",
+    "sourceBytes": 1359846,
+    "sourceWidth": 1152,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "saiken-exsydra-portrait-96-e2620af19b4db4c8.webp",
+        "width": 96,
+        "height": 128,
+        "bytes": 5202,
+        "sha256": "e2620af19b4db4c861f4bd1f5e63ac51877ca04808a75ea5b8b8909fe1c0c6e7"
+      },
+      {
+        "file": "saiken-exsydra-portrait-320-9346a1bf9c6eb53b.webp",
+        "width": 320,
+        "height": 427,
+        "bytes": 35760,
+        "sha256": "9346a1bf9c6eb53b1a5363608a19a4b2f6dda009f7b84790bdb8afea39138433"
+      },
+      {
+        "file": "saiken-exsydra-portrait-640-d1a1b9defc8d80cf.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 100228,
+        "sha256": "d1a1b9defc8d80cfa2da7b99cb3c22797d6d575a12e6baab6d66e51e9967b1a6"
+      },
+      {
+        "file": "saiken-exsydra-portrait-960-44ce895cd6b953bf.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 175110,
+        "sha256": "44ce895cd6b953bffc8677858d5ad3f5c45ad49a8435de94f312c2fef429836a"
+      }
+    ]
+  },
+  "saiken-exsydra-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "1fb44b0805691318743aa43af5e0e353c881ad2b97f022e422483f111a666a88",
+    "sourceBytes": 3824609,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "saiken-exsydra-hero-1280-be2d429f9cd7a445.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 165752,
+        "sha256": "be2d429f9cd7a4458fcbf894c227c381bb7cfa0a9caef66c562fd595b834a7a6"
+      },
+      {
+        "file": "saiken-exsydra-hero-1920-17b08191718c9414.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 320972,
+        "sha256": "17b08191718c94144b573892c9f735c0cb7040a1a7807b5a98631e7139d13519"
+      },
+      {
+        "file": "saiken-exsydra-hero-2048-a7b262d213e9774b.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 355366,
+        "sha256": "a7b262d213e9774bc88e4650a2f387da6d912a39688067ca16d58cd2b66e3eab"
+      }
+    ]
+  },
+  "syralene-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "c1e6c926b81e5c2551ec30ce379205e98fc9fb84bc54a81e300faa3827a12bb7",
+    "sourceBytes": 1618944,
+    "sourceWidth": 768,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "syralene-portrait-96-477a1df95d9d0add.webp",
+        "width": 96,
+        "height": 160,
+        "bytes": 5680,
+        "sha256": "477a1df95d9d0addc5d2273be88d4c4e07d23ed74d6e630623ba01eac7c954a8"
+      },
+      {
+        "file": "syralene-portrait-320-01ac3cd2fed7751f.webp",
+        "width": 320,
+        "height": 533,
+        "bytes": 41674,
+        "sha256": "01ac3cd2fed7751f4dcd577869bdba6c19a3dba9c3239cc47de320ab1ffa4eef"
+      },
+      {
+        "file": "syralene-portrait-640-61f14b7a71b80990.webp",
+        "width": 640,
+        "height": 1067,
+        "bytes": 121968,
+        "sha256": "61f14b7a71b80990502e073059464187c1a9806a4351eca14c82bbdd783150e8"
+      },
+      {
+        "file": "syralene-portrait-768-64abf62f9e4da401.webp",
+        "width": 768,
+        "height": 1280,
+        "bytes": 160568,
+        "sha256": "64abf62f9e4da40171e2575e9bc10eb1f3ff059305e4cf66075125d3135a9f84"
+      }
+    ]
+  },
+  "syralene-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "465dd35417ce243fd62c75a2495c298e0d14225e74a1634ab6a213af30c5fd51",
+    "sourceBytes": 3593383,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "syralene-hero-1280-fae98e94b29dea10.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 139024,
+        "sha256": "fae98e94b29dea10a7bbf1c4525921aa358af9bceb89179495fc1c7cbf1aeb52"
+      },
+      {
+        "file": "syralene-hero-1920-d1976814505ce328.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 265054,
+        "sha256": "d1976814505ce3285863dd3730e158cf244f22f79fcc501f993a066c80522602"
+      },
+      {
+        "file": "syralene-hero-2048-ace79f3c27401677.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 294756,
+        "sha256": "ace79f3c274016773815374b04b398a2ccfe1e6dfed2e884f88575346583f6e6"
+      }
+    ]
+  },
+  "vaey-viktor-portrait": {
+    "category": "character",
+    "profile": "portrait",
+    "approval": "eafc2d3397daee0eabf317405a8b2f09caea63f509de0aed7ed9074d30d06fd0",
+    "sourceBytes": 1266069,
+    "sourceWidth": 864,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "vaey-viktor-portrait-96-7260f1d8c5fc8ee2.webp",
+        "width": 96,
+        "height": 171,
+        "bytes": 4662,
+        "sha256": "7260f1d8c5fc8ee2ed29f4df46c2088c0f52e392555a4f68d4ea4502ffb7b08f"
+      },
+      {
+        "file": "vaey-viktor-portrait-320-1d3b982dc3a00ab7.webp",
+        "width": 320,
+        "height": 569,
+        "bytes": 30558,
+        "sha256": "1d3b982dc3a00ab7bb707f90836c90e43304433b40f57661b19e4b83a658d9f1"
+      },
+      {
+        "file": "vaey-viktor-portrait-640-6204021aecd951ce.webp",
+        "width": 640,
+        "height": 1138,
+        "bytes": 84514,
+        "sha256": "6204021aecd951ceeccb0bbfb173b885a5f423aa31158cfbeb947ddaf9ae07d8"
+      },
+      {
+        "file": "vaey-viktor-portrait-864-498d2dea94448bd7.webp",
+        "width": 864,
+        "height": 1536,
+        "bytes": 125708,
+        "sha256": "498d2dea94448bd7031609a7b1079bcd0fe18d186f4c21e3c059e9c971d3ec43"
+      }
+    ]
+  },
+  "vaey-viktor-hero": {
+    "category": "character",
+    "profile": "hero",
+    "approval": "328d1487a7018669ff7262c33b543bc932d880e87308d23ccc0f039f1e92ffcd",
+    "sourceBytes": 290839,
+    "sourceWidth": 2048,
+    "format": "webp",
+    "variants": [
+      {
+        "file": "vaey-viktor-hero-1280-5d39ecf957c00093.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 90580,
+        "sha256": "5d39ecf957c000932c4a40fdb0bdceaa7dc30317882bd5ace8cf8f9d722670d0"
+      },
+      {
+        "file": "vaey-viktor-hero-1920-98925575bd24bd7e.webp",
+        "width": 1920,
+        "height": 1080,
+        "bytes": 156670,
+        "sha256": "98925575bd24bd7ea5859de84360b57aa7a6dfa5934a7c5fcf7000f94b034c30"
+      },
+      {
+        "file": "vaey-viktor-hero-2048-09f465772a8ad4cc.webp",
+        "width": 2048,
+        "height": 1152,
+        "bytes": 173702,
+        "sha256": "09f465772a8ad4cca760eb7d16c8ba6ca6c409a704d26d59d967b14349e8b994"
+      }
+    ]
   }
 }

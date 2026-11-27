@@ -1,0 +1,37 @@
+{
+  "name": "Em’manuel Kael Wonderwall",
+  "shortName": "Em’manuel",
+  "designation": {
+    "en": "Long Between",
+    "pt-BR": "O Longo Intervalo"
+  },
+  "summary": {
+    "en": "Em’manuel holds the Wonderwall Seat and runs SiNE. He helped build the institutions of the new Empire and now has to govern within institutions that can refuse him.",
+    "pt-BR": "Em’manuel ocupa o Wonderwall Seat e dirige a SiNE. Ajudou a construir as instituições do novo Império e hoje governa dentro de instituições que podem contrariá-lo."
+  },
+  "hero": "emmanuel-wonderwall-hero",
+  "portrait": "emmanuel-wonderwall-portrait",
+  "order": 90,
+  "overview": {
+    "birth": {
+      "imperialYear": 995,
+      "approximate": true
+    }
+  },
+  "affiliations": [
+    {
+      "institution": "house-wonderwall",
+      "kind": "membership",
+      "primary": true
+    }
+  ],
+  "classifications": {
+    "systems": [
+      {
+        "system": "redactory",
+        "kind": "capability"
+      }
+    ]
+  },
+  "dossier": ["en"]
+}

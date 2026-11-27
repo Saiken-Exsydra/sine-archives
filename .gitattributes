@@ -2,3 +2,4 @@
 *.cmd text eol=crlf
 *.webp binary
 public/media/*.svg -text
+src/content/characters/*/dossier.*.md -text

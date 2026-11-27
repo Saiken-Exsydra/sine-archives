@@ -19,5 +19,6 @@
   ],
   "classifications": {
     "systems": [{ "system": "bloom", "kind": "capability" }]
-  }
+  },
+  "dossier": ["en"]
 }
