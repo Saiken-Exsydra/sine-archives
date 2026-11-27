@@ -1,4 +1,7 @@
 import { expect, test } from './browser';
+import { build } from 'vite';
+import { cp, readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
 
 // Sample the actual boxes, including the panel's top border and visible text blocks.
 function territoryGeometry(caption: Element) {
@@ -38,9 +41,9 @@ for (const { width, height, locale } of viewports.flatMap(([width, height]) =>
       await tabs.first().focus();
       for (const key of ['ArrowDown', 'ArrowDown', 'End', 'Home']) await page.keyboard.press(key);
       await expect(tabs.first()).toBeFocused();
-      const summary = page.locator('.archival-insignia summary').first();
-      await summary.focus();
-      await page.keyboard.press('Enter');
+      await expect(tabs.first()).toHaveAttribute('aria-selected', 'true');
+      const summary = page.locator('.examination-content:not([inert]) .archival-insignia summary').first();
+      await summary.press('Enter');
       await expect(page.locator('details[open] a')).toHaveAttribute('href', '#/systems/' + (hisui ? 'bloom' : 'redactory'));
       await page.keyboard.press('Space');
       for (const [index, section] of ['overview', 'biography', 'abilities', 'relations'].entries()) {
@@ -93,3 +96,82 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     await expect.poll(async () => Math.abs((await caption.evaluate(territoryGeometry)).left - initial.left)).toBeLessThanOrEqual(0.5);
   });
 }
+
+test('long Unicode identities wrap within the examination and dossier reading territories', async ({page}, info) => {
+  test.setTimeout(90_000);
+  const root = info.outputPath('publication');
+  await cp('src', path.join(root, 'src'), { recursive: true });
+  await cp('index.html', path.join(root, 'index.html'));
+  const characters = path.join(root, 'src/content/characters');
+  const fixture = path.join(characters, 'long-identity');
+  await cp(path.join(characters, 'hisui-kirasagi'), fixture, { recursive: true });
+  const name = 'Íðunn D’Arçant Cósmica Łucja Zéphyrine Éléonore Ó Briain N’Diaye Çelik Żółć ' +
+    'Magnúsdóttir'.repeat(7);
+  const record = path.join(fixture, 'record.json');
+  await writeFile(record, JSON.stringify({
+    ...JSON.parse(await readFile(record, 'utf8')), name, shortName: 'Íðunn', featured: false, dossier: ['en', 'pt-BR'],
+  }));
+  for (const lang of ['en', 'pt-BR']) await writeFile(path.join(fixture, 'dossier.' + lang + '.md'), '## Specimen\n\nStudy text.');
+  const dist = path.join(root, 'dist');
+  await build({ root, configFile: path.resolve('vite.config.ts'), publicDir: path.resolve('public'),
+    base: '/identity/', logLevel: 'silent', build: {outDir:dist} });
+  await page.route('**/identity/**', route => {
+    const asset = new URL(route.request().url()).pathname.slice('/identity/'.length) || 'index.html';
+    return route.fulfill({path:path.join(dist, asset)});
+  });
+  const caption = page.locator('.character-caption');
+  const heading = caption.locator('h3');
+  const dossierHeading = page.locator('.dossier-mast h1');
+  function nameGeometry(el: HTMLElement) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const box = el.getBoundingClientRect();
+    const lines = [...range.getClientRects()];
+    return {
+      wraps: new Set(lines.map(line => line.top)).size > 1,
+      fitsWidth: lines.every(line => line.left >= box.left - 1 && line.right <= box.right + 1),
+      fitsHeight: el.scrollHeight <= el.clientHeight + 1,
+      overflow: getComputedStyle(el).overflowY,
+      lastLine: lines.at(-1)!.bottom,
+    };
+  }
+  for (const [locale, width, height] of [['en',1440,900], ['pt-br',2560,1080], ['pt-br',820,720],
+    ['en',390,844], ['pt-br',390,565]] as const) {
+    await page.setViewportSize({width,height});
+    await page.goto('/identity/?lang=' + locale + '#/characters/long-identity/biography');
+    await expect(heading).toHaveText(name);
+    await page.evaluate(() => document.fonts.ready);
+    const geometry = await heading.evaluate(nameGeometry);
+    expect(geometry).toMatchObject({wraps:true, fitsWidth:true, fitsHeight:true, overflow:'visible'});
+    const rank = (await caption.locator('.character-rank').boundingBox())!;
+    const reader = page.getByRole('tabpanel');
+    expect(rank.y).toBeGreaterThan(geometry.lastLine - 1);
+    expect((await reader.boundingBox())!.y).toBeGreaterThan(rank.y + rank.height);
+    expect((await caption.evaluate(territoryGeometry)).error).toBeLessThanOrEqual(.5);
+    expect(await heading.evaluate(el => { el.scrollTop = 30; return el.scrollTop; })).toBe(0);
+    if (width === 390 && height === 565) {
+      await expect(caption).toHaveAttribute('data-scroll-all', '');
+      await expect(reader).toHaveCSS('overflow-y', 'visible');
+      await heading.hover();
+      await page.mouse.wheel(0,220);
+      await expect.poll(() => caption.evaluate(el => el.scrollTop)).toBeGreaterThan(0);
+      await page.getByRole('tab', {name:'Habilidades'}).click();
+      await expect.poll(() => caption.evaluate(el => el.scrollTop)).toBe(0);
+      await page.setViewportSize({width:1440,height:1250});
+      await expect(caption).not.toHaveAttribute('data-scroll-all', '');
+    }
+    await page.getByRole('link', { name:/^(Complete Dossier|Dossiê completo)$/ }).click();
+    await expect(dossierHeading).toHaveText(name);
+    expect(await dossierHeading.evaluate(nameGeometry)).toMatchObject({fitsWidth:true, fitsHeight:true, overflow:'visible'});
+    await expect(page.locator('.dossier-scroll').getByText('Study text.')).toBeVisible();
+  }
+  await page.setViewportSize({width:320,height:340});
+  const layout = page.locator('.dossier-layout');
+  const dossierText = page.locator('.dossier-scroll').getByText('Study text.');
+  const close = page.getByRole('link', {name:'Fechar Dossiê'});
+  const closePosition = await close.boundingBox();
+  await dossierText.scrollIntoViewIfNeeded();
+  await expect(dossierText).toBeInViewport();
+  await expect.poll(() => layout.evaluate(el => el.scrollTop)).toBeGreaterThan(0);
+  expect(await close.boundingBox()).toEqual(closePosition);
+});

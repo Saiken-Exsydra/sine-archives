@@ -1,14 +1,30 @@
 # Character publication
 
-The Dy’Aspora Archive owns the canon. The publication workflow prepares approved content. GitHub distributes it. React presents it.
+The private Dy’Aspora Archive governs canon. Google Drive and its synchronized workstation copy represent the same Archive. The React checkout holds approved public editions. The author decides which editions may be released. A canonical change, relocation or outage leaves the site serving the checked-in publication. Canonical reads, interpretation and translation belong to the authoring session. React builds and serves the published files as a static site.
 
-## Prepare a record
+## Operating permissions
 
-1. Read the Archive’s root README, `CANON_AUTHORING_STANDARD.md`, the Characters README and the individual’s current dossier. Check the governing passages and relevant references. The Astro records on committed `main` can help with reader orientation and terminology. Confirm their dates, claims and disclosure boundaries against the dossier.
-2. Draft the public edition outside the website build, with human or AI editorial assistance as appropriate. Review the exact text and art for publication in both languages. Keep uncertainty, point of view and capability limits explicit where the source calls for them. Keep restricted material in the Archive.
-3. Create a lowercase, hyphenated directory under `src/content/characters/`. The directory name is the stable ID used by links and private mappings. Add the record and six UTF-8 Markdown files below. Match spelling and case, including `pt-BR`.
-4. Reference the approved `hero` and `portrait` IDs in the [asset manifest](src/images/manifest.json). Follow the [asset pipeline](ASSET_PIPELINE.md) for a new image or replacement.
-5. Check the canonical revision, validate the public files and preview the proposed publication. Commit the approved edition and any associated artwork changes on the React branch with the `[CF-Pages-Skip]` prefix.
+| Permission | Agent action |
+| --- | --- |
+| Investigate | Read canonical and publication material and report findings. Run read-only checks. |
+| Prepare | Write proposed editions and make a loopback-only preview in a private directory outside the checkout, the Archive and any shared or synchronized location. Present exact review files and disclosure questions to the author. |
+| Publish | After explicit approval of the exact material, promote only the approved files into the React checkout, validate and record the approved review. Obtain separate authorization for committing, pushing or deploying. Canonical edits require separate explicit authorization. |
+
+Ordinary requests are enough to start. The agent runs the checks and prepares the local files. The author reviews the editorial decisions.
+
+- “Check which published characters are outdated compared with the Archive” requests investigation and reports changed, unresolved and unreviewed sources distinctly.
+- “I’ve reorganized the Imperial Houses. Investigate which published records are affected” requests a read-only review of the governing sources, shared institution definitions and affected records, even if dossier fingerprints match.
+- “Prepare Al’ithia for publication from her current dossier and approved artwork” requests a private bilingual examination preview.
+- “I’ve retconned Hisui’s abilities. Update her published record according to current canon” requests preparation of a proposed revision and review of its related facts. Present the edition for approval before promotion.
+- “Update Le’nore’s Complete Dossier and both localized editions” requests private drafts. Ask the author to approve the named edition in each language and separately approve any examination revisions.
+
+## Editorial preparation and approval
+
+1. Check branch, working tree and affected files. Read the Archive’s root README, `CANON_AUTHORING_STANDARD.md`, the Characters README, the current authoritative dossier and any governing passages. Resolve exact sources using the [private mappings](#private-source-mappings-and-recovery). Use [committed Astro references](README.md#local-workspace) for editorial history. The Legacy Character Publication Audit is a historical reference whose React inventory predates the per-character publication architecture. The durable method is to lead with the person, show practical effects and limits, then explain the relationships that matter.
+2. Compare the current source with the existing edition in both languages. Use an earlier canonical revision only when you can verify its provenance. Otherwise compare current canon with the current publication and state that limitation. Inspect the shared institutions and classifications, related published records and approved artwork. Search relevant IDs, terms and relationships in the existing content when governing facts change. Record observed facts, institutional positions, hypotheses and unresolved questions separately in the private review notes.
+3. Write the proposed files using the existing record format. Preserve stable character IDs and let shared facts live in JSON once. Use the approved `hero` and `portrait` IDs in the [asset manifest](src/images/manifest.json). Use the [asset pipeline](ASSET_PIPELINE.md) for new or replacement artwork. Follow the editorial standard below for both languages.
+4. [Validate and preview](#validation-and-preview) the isolated edition. Present the exact candidates, an editorial change summary, source revision, disclosure choices, shared-file impacts and open decisions. Identify the examination scope and each Complete Dossier language separately. Artwork approval applies to the image. Each text language and each Complete Dossier need explicit approval of their own content. If a shared field changes both languages, obtain approval for both before promoting that field. A new examination requires both languages because the existing schema requires both.
+5. Before promotion, compare the current publication files with the review base, recheck the reviewed source fingerprint and resolve any intervening changes. Verify that the candidates still match the approved bytes. A preview may declare a candidate Complete Dossier in its isolated record. Prepare the exact release selection in the isolated copy, with only the approved additions, replacements, removals and dossier declarations, and validate it there before copying it into the publication checkout. Copy each approved dossier with its matching language declaration. Verify the checkout after promotion, then record the approved review in the private map. If part of an affected publication is still awaiting a decision, leave the previous character-wide baseline in place until that review is resolved. A confirmed no-change review updates only the private map. Review the Git diff and use explicit paths for staging if authorized. Use `[CF-Pages-Skip]` on this React branch. Production is governed by separate authorization.
 
 ```text
 src/content/
@@ -30,11 +46,15 @@ src/content/
 | Material | Editorial purpose |
 | --- | --- |
 | Canonical dossier | Read the authoritative account in the Archive and check referenced material when a claim depends on it. |
-| Overview | Publish accessible identity and factual information through structured fields. |
-| Biography | Select events that explain the individual’s development and present circumstances. |
-| Abilities | Describe what a capability does, which system it relates to and where the meaningful limits lie. |
-| Relations | Explain the personal stakes of relevant associations, institutions and lineages. |
-| Complete Dossier | Prepare the entire approved public edition separately. It can match the canonical text when approved in full, or be an approved edition with different disclosure boundaries. |
+| Overview | Lead with identity, personality, current circumstances and a defining tension. Use designation for the public title, classification for established capabilities and summary for orientation. Introduce only the institutions the reader needs. |
+| Biography | Select formative experiences and show how they shaped decisions, habits and present circumstances. Order events for understanding and preserve established chronology. |
+| Abilities | Start with an observable effect before its mechanism. Explain manifestations, conditions, costs, limits and risks. Attribute theories and open questions. Leave unsupported classifications absent and describe relevant non-practitioner skills. |
+| Relations | Explain what each relationship means in practice. Distinguish affection, kinship, House membership, employment, service, allegiance and legal standing. |
+| Complete Dossier | Prepare an independently readable edition directly from governing sources. An exact full canonical text requires explicit approval of that material. An editorial edition needs an agreed disclosure boundary and its own full review. Examination summaries serve the shorter entry. |
+
+### English and Brazilian Portuguese
+
+Review both editions against the same canon, chronology, degree of certainty and disclosure boundary. Read each as natural prose, then compare claims, names, numbers and relationships across the pair. Preserve established public React wording and consult the current terminology policy. The [Astro reference checkout](README.md#local-workspace) has `docs/translation-glossary-pt-BR.md` on `main` for protected terms, gender and agreement. Where prior glossary guidance and a current React label differ, keep unrelated published labels in place and flag the conflict for the author. Use one shared string for genuinely shared wording such as a proper name. Translate reader-facing prose in full. Passage counts and file checks do not establish equivalence.
 
 Use blank lines between paragraphs in Biography, Abilities and Relations. An optional `## Heading` labels the following paragraph. An optional link on its own, after a blank line, attaches to the preceding paragraph. For example, `[Bloom](#/systems/bloom)`. These sections currently display plain paragraph and heading text, with a separate link to Redactory, Divination or Bloom. Write each locale for its own readers and preserve the same published facts and disclosures.
 
@@ -42,7 +62,7 @@ Complete Dossier Markdown supports its own document structure. List each explici
 
 ### Complete Dossier reader
 
-Keep the approved document's headings, paragraphs, emphasis, lists, quotations, rules and tables in their original order. The examination summaries serve a different editorial purpose. An author may approve a verbatim complete dossier for one language independently of the other. For Le’nore and Hisui the English and Brazilian Portuguese editions each still require explicit approval.
+Keep the approved document's headings, paragraphs, emphasis, lists, quotations, rules and tables in their original order. An author may approve a verbatim complete dossier for one language independently of the other. A translation has its own exact-text approval. Keep private source links, sensitive annexes and any knowledge beyond the approved scope out of the published files.
 
 [DossierSurface](src/grand-index/DossierSurface.tsx) requests the localized module from the record. [The document renderer](src/grand-index/dossierDocument.tsx) uses the Marked lexer and renders React elements. HTML is displayed as text. Images display their alternative text. Published links may point to HTTP(S), email, archive hash routes or local headings. Wide tables can scroll horizontally. The two source dossiers reviewed for this phase use no Markdown footnote definitions. Review any new syntax against the proposed edition before publication.
 
@@ -98,7 +118,7 @@ Ordinary development and deployment use the checked-in publication. Set up the s
 
 1. Copy [.env.example](.env.example) to `.env.local`. Set `SINE_ARCHIVE_ROOT` to the actual Dy’Aspora Archive directory that contains `Characters/` and `Artworks/`. Quote the value and use forward slashes on Windows, for example `"D:/Dy’Aspora Archive"`. macOS and Linux can use their native absolute paths. Environment variables already set in the shell take precedence over the file values.
 2. Restore `.asset-sources.local.json` and `.character-sources.local.json` into the React project root from an access-controlled backup. Keep the existing artwork map relative to `Artworks/`. An explicit `SINE_ARTWORKS` overrides the derived artwork directory and continues to work by itself for the artwork pipeline.
-3. If the maps were lost, reconstruct the character map using exact paths relative to the Archive root. Confirm each original by its title and the Characters index. Rebuild the artwork map from the approved IDs and SHA-256 values in [approved.json](tools/assets/approved.json). On Windows, `Get-FileHash -Algorithm SHA256 -LiteralPath` works with exact filenames. Verify assets by matching the approved checksum.
+3. If the maps were lost, reconstruct the character map using exact paths relative to the Archive root. Confirm the title, active parent directory and authority against the Archive index and governing documentation. Verify the Drive identity and parent when available, especially if same-name copies exist. Historical snapshots, reports and the Experience Lab are reference material. Fully read the synchronized file to confirm availability. If it is missing or moved, verify the exact new location before remapping. If local synchronization is stale or offline, use the verified active Drive file for private editorial reading, report the limitation and resolve the local mapping before recording the review. Rebuild the artwork map from the IDs and SHA-256 values in [approved.json](tools/assets/approved.json). `Get-FileHash -Algorithm SHA256 -LiteralPath` works with exact filenames on Windows.
 
 ```json
 {
@@ -108,10 +128,26 @@ Ordinary development and deployment use the checked-in publication. Set up the s
 }
 ```
 
-Run `npm run archive:check` to verify both sets of mappings and identify exact dossier revisions. If a dossier is `unreviewed` or `changed`, compare its current wording and relevant references with both public editions. Decide what to retain, revise or withhold. After the editorial review, add or update that entry’s `reviewedSha256` with the printed hash. This records the reviewed source revision. Public approval applies separately to the actual text and images selected for distribution. The command reads sources and writes nothing. Exit status 1 indicates a configuration or source error, and status 2 indicates pending editorial review.
+### Freshness and approved review
+
+`npm run archive:check` checks all published dossiers and the configured artwork paths. `npm run archive:check -- hisui-kirasagi` checks exact dossier IDs only. Pass more IDs as needed, including a privately mapped candidate for an unpublished character. A missing source is reported beside the results for accessible dossiers.
+
+| Status | Meaning |
+| --- | --- |
+| `reviewed` | The source bytes match the last approved review. |
+| `changed` | The bytes differ. Investigate whether the public edition is affected. |
+| `unreviewed` | The source is readable and has no recorded baseline. |
+| `unavailable` | Verify the source, restore configuration or check local access and synchronization. |
+| `reviewed-no-public-change` | The bytes match an approved decision to keep the current edition. |
+
+The checker reads source bytes and writes nothing. Exit status `1` signals unavailable input or invalid configuration, `2` signals pending review and `0` means each requested check passed. A dossier checksum is a change signal for that file. Institutional sources, rules and the timeline can change independently. Review the governing sources named in each task even if the dossier checksum matches.
+
+After the author approves the review, the agent re-runs the targeted check and compares its hash with the source actually reviewed. Update `reviewedSha256` in `.character-sources.local.json` to that exact hash and set `reviewOutcome` to `publication-updated` after validated promotion, or `no-public-change` for an explicitly approved decision to retain the edition. Older hash-only entries still work. Preserve other mapping entries and verify the result with the targeted check. Keep approval notes and source identity details in private storage. The private map is a lightweight review baseline for a character, while Git records the approved public bytes.
 
 Back up the relative maps privately after each update. Keep a separate recoverable backup of the synchronized Archive as appropriate. On a new machine, clone the React branch, install Node.js 22.18 or later and run `npm ci`. Point the new `.env.local` at the synchronized location and restore the two maps. Run `npm run archive:check` and `npm run assets:dry-run` to verify the mappings and exact approved art. With the derived artwork location, relocating the Archive only requires changing `SINE_ARCHIVE_ROOT`. If you use `SINE_ARTWORKS` and move that directory too, update or remove the override. Leave `reviewedSha256` absent if its previously reviewed value is unavailable.
 
 ## Validation and preview
 
-Run `npm run content:check` for publication validation and `npm run content:test` for the isolated content fixtures. Run `npm run archive:test` when changing private source resolution and `npm run assets:test` when changing the artwork processor. Run `npm run build` and `npm test` before committing. Review Overview, all three reading sections and the Registry in Zen with the root Windows launcher. Check both languages, direct routes, keyboard focus and transitions. Keep private configuration, canonical sources, review hashes and working drafts outside the publication files.
+For a private preview, export the approved base with `git archive --format=zip --output="path/to/private/base.zip" HEAD`, then extract it into a new local directory outside the checkout. Include any already-approved local publication changes relevant to the preview through an explicit file list. Copy the proposed edition files and any changed shared registries into the isolated copy. Keep canonical source files, source mappings and private editorial notes outside the isolated site tree. Run `npm ci` there. Run `npm run assets:check` and `npm run content:check`, then `npm run build`. Serve with `npm run preview -- --host 127.0.0.1 --port 5176 --strictPort` or another free local port. Use only loopback and keep any preview build in private storage. Stop the server and remove disposable copies when review is done, subject to the author's retention instructions. The Windows launcher in the principal checkout serves the current publication on port 5174. Use it with Zen to compare the baseline.
+
+Review Overview, the three prose sections, the Registry and any selected Complete Dossier in both languages. Check direct routes, artwork, keyboard focus, reduced motion and the absence of unapproved locale controls. The same `record.json` schema, asset manifests and Phase VI loader govern the approved checkout. `npm run content:test`, `npm run archive:test` and `npm run assets:test` exercise the authoring checks. `npm run build` runs asset checks, content checks and TypeScript verification before Vite. Run `npm test` after building for the Chromium regressions. Validate the approved checkout again after promotion before any authorized distribution. Keep all private material outside `src/`, `public/` and Git.

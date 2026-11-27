@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, type ComponentProps, type MouseEvent, type Ref } from 'react';
 import { m, useIsPresent } from 'motion/react';
 import type { Locale } from '../content';
 import { motionTokens, useMotionPreference } from '../motion/system';
@@ -7,6 +7,16 @@ import type { parseDossier } from './dossierDocument';
 
 type Edition = ReturnType<typeof parseDossier>;
 type ReaderProps = { load: () => Promise<string>; locale: Locale };
+
+export function DossierControl({ children, className, ...props }: ComponentProps<'a'>) {
+  return <a {...props} className={'dossier-control ' + className}>
+    <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" aria-hidden="true">
+      <path d="M4.5 1.5h7l4 4v13h-11z M11.5 1.5v4h4 M7 9h6 M7 12h6 M7 15h4"/>
+    </svg>
+    <span>{children}</span>
+    <i aria-hidden="true"/>
+  </a>;
+}
 
 function DossierReader({ load, locale }: ReaderProps) {
   const pt = locale === 'pt-br';
@@ -113,19 +123,31 @@ function DossierReader({ load, locale }: ReaderProps) {
   </div>;
 }
 
-export function DossierSurface({ character, section, locale, load }: CharacterRoute & ReaderProps) {
+export function DossierSurface({ character, section, locale, load, closeRef }: CharacterRoute & ReaderProps & {
+  closeRef: Ref<HTMLAnchorElement>;
+}) {
   const pt = locale === 'pt-br';
   const present = useIsPresent();
   const reduced = useMotionPreference();
-  const closed = { opacity: 0, clipPath: 'inset(0 0 0 35%)' };
-  return <m.section className="dossier-surface" aria-labelledby="dossier-name" inert={!present}
-    initial={closed} animate={{ opacity: 1, clipPath: 'inset(0 0 0 0%)' }} exit={closed}
-    transition={{ duration: reduced ? 0 : motionTokens.settle, ease: motionTokens.ease }}>
-    <header className="dossier-mast">
-      <div><span className="exam-label">{pt ? 'Dossiê completo' : 'Complete Dossier'}</span>
-        <h1 id="dossier-name">{character.name}</h1></div>
-      <a className="dossier-return" href={characterHref(character.id, section)}>‹ {pt ? 'Voltar ao exame' : 'Return to Examination'}</a>
-    </header>
-    <DossierReader key={locale} locale={locale} load={load}/>
-  </m.section>;
+  const retracted = { '--dossier-cut': '100%' };
+  return <>
+    <m.div className="dossier-close-station" inert={!present}
+      initial={reduced ? false : { opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+      transition={{ duration: reduced ? 0 : motionTokens.control, ease: motionTokens.ease }}>
+      <DossierControl className="dossier-close" ref={closeRef} href={characterHref(character.id, section)}>
+        {pt ? 'Fechar Dossiê' : 'Close Dossier'}
+      </DossierControl>
+    </m.div>
+    <m.section className="dossier-surface" aria-labelledby="dossier-name" inert={!present}
+      initial={reduced ? false : retracted} animate={{ '--dossier-cut': '0%' }} exit={retracted}
+      transition={{ duration: reduced ? 0 : motionTokens.settle, ease: motionTokens.ease }}>
+      <div className="dossier-layout">
+        <header className="dossier-mast">
+          <span className="exam-label">{pt ? 'Dossiê completo' : 'Complete Dossier'}</span>
+          <h1 id="dossier-name">{character.name}</h1>
+        </header>
+        <DossierReader key={locale} locale={locale} load={load}/>
+      </div>
+    </m.section>
+  </>;
 }

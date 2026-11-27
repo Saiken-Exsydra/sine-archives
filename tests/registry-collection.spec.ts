@@ -121,11 +121,12 @@ test('a static subdirectory build discovers 64 records and supersedes a delayed 
   await page.setViewportSize({width:320, height:568});
   await page.getByRole('tab', {name:'Biografia'}).click();
   const reading = page.getByRole('tabpanel');
+  const scrollPosition = () => reading.evaluate(el => (el.closest('.character-caption[data-scroll-all]') ?? el).scrollTop);
   await reading.focus();
   await page.keyboard.press('End');
-  await expect.poll(() => reading.evaluate(el => el.scrollTop)).toBeGreaterThan(0);
+  await expect.poll(scrollPosition).toBeGreaterThan(0);
   await page.getByRole('tab', {name:'Relações'}).click();
   await expect(reading.getByRole('link', {name:/Study 2/})).toHaveAttribute('href', '#/characters/fixture-2');
-  await expect.poll(() => reading.evaluate(el => el.scrollTop)).toBe(0);
+  await expect.poll(scrollPosition).toBe(0);
   expect(await reading.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true);
 });

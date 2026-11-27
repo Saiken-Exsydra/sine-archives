@@ -15,7 +15,7 @@ The first eight registrations match standard portrait and hero image blobs from 
 
 ## Publish or replace an illustration
 
-1. Update the canonical record, place the original in its established Archive folder, and review that exact image for public distribution. Use the existing character slug for a portrait or hero. For other subjects, choose a stable descriptive ID and category.
+1. Resolve the exact original in its established Archive folder and obtain approval for that image. A canonical edit or a change to Archive contents requires separate authorization. Use the existing character slug for a portrait or hero. For other subjects, choose a stable descriptive ID and category. For character text, follow the separate [editorial approval workflow](CHARACTER_PUBLICATION.md#editorial-preparation-and-approval).
 2. Add a private mapping entry. For example, an approved place illustration could use `"north-garden-view": "Places & Regions/North Garden/View.png"`. Changing the Archive location later only requires updating local configuration.
 3. In PowerShell, run `(Get-FileHash -Algorithm SHA256 -LiteralPath "D:/your-archive/Artworks/Places & Regions/North Garden/View.png").Hash.ToLowerInvariant()`. Add an object to the array in [approved.json](tools/assets/approved.json) using that value:
 
@@ -30,7 +30,7 @@ The first eight registrations match standard portrait and hero image blobs from 
 
    For a character, register the two images separately, e.g. `hisui-kirasagi-portrait` and `hisui-kirasagi-hero`. Replacing an illustration keeps its ID and requires approval of the new file’s hash. A changed file cannot silently inherit an earlier approval.
 4. Run `npm run assets:dry-run`, then `npm run assets:sync`. Review the inventory with `npm run assets:report`. If it lists obsolete files, inspect them and move confirmed obsolete copies outside `public/` before building. Generation never deletes publication files.
-5. Reference the ID in the appropriate component or character record. Open the root launcher and preview in Zen. Run `npm run assets:test`, `npm run build` and `npm test`. Commit the approvals, derivatives, manifest and consuming code together on the React branch with the required commit prefix.
+5. Reference the ID in the appropriate component or character record. For a character draft, use the private preview in the [character publication guide](CHARACTER_PUBLICATION.md#validation-and-preview). Use the root launcher in Zen for the approved checkout. Run `npm run assets:test`, `npm run build` and `npm test`. After explicit Git authorization, commit the approvals, derivatives, manifest and consuming code together on the React branch with the required commit prefix.
 
 ## Generation and verification
 

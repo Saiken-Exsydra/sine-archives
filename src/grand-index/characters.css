@@ -5,7 +5,6 @@
 .archive-home[data-character-domain=true] .home-masthead { left: auto; right: 4vw; min-height: 52px; }
 .archive-home[data-character-domain=true] .grand-index { touch-action: auto; }
 .character-exhibit.exhibition { overflow: clip;
-  --reader-bottom: calc(66px + env(safe-area-inset-bottom));
   padding: 0;
 }
 .character-exhibit .scene-art { object-position: var(--focal); }
@@ -15,6 +14,7 @@
 .character-exhibit.exhibition::after { background: linear-gradient(180deg,var(--bg),transparent 12%,transparent 85%,rgba(16,17,21,.62)); }
 .character-caption { position: absolute; left: 55%; right: var(--margin); top: 34%; bottom: 18%;
   display: flex; flex-direction: column; align-items: stretch; transition: top var(--travel) var(--ease), bottom var(--travel) var(--ease); }
+.character-identity { display: contents; }
 .character-caption h3 { margin: 10px 0; max-width: 14ch; font-size: clamp(40px,min(4.7vw,8vh),92px); line-height: .99; letter-spacing: -.045em; text-wrap: balance; }
 .character-rank { margin: 5px 0; color: var(--sine-ivory); }
 .character-summary { margin: 20px 0 0; max-width: 29ch; color: var(--sine-platinum); font: 400 clamp(16px,1.45vw,23px)/1.45 Georgia,serif; }

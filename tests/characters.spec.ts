@@ -73,7 +73,9 @@ test.describe('touch browsing', () => {
     await page.emulateMedia({ reducedMotion:'reduce' });
     await page.goto('/?lang=pt-br#/characters/lenore-engelmeyer/relations');
     const trigger=page.getByRole('button',{name:'Registro de indivíduos'});
-    await trigger.tap();
+    await expect(trigger.locator('.registry-threshold-mark > span')).toHaveCSS('opacity', '1');
+    await expect.poll(() => trigger.locator('i').evaluate(el => getComputedStyle(el, '::after').animationName)).toBe('none');
+    await trigger.tap({position:{x:10,y:20}});
     await expect(page.getByRole('dialog')).toHaveAccessibleName('Registro de indivíduos');
     const track=page.locator('.registry-track');
     await page.screenshot({path:review+'registry-phone.png'});
@@ -103,6 +105,46 @@ test.describe('touch browsing', () => {
     }
     await expect.poll(()=>track.evaluate(el=>el.scrollLeft)).toBeLessThan(before-30);
   });
+});
+
+test('the examination threshold is visible at rest and responds across its activation territory', async ({page}) => {
+  for (const [id, width] of [['lenore-engelmeyer', 1440], ['hisui-kirasagi', 2560], ['hisui-kirasagi', 820]] as const) {
+    await page.setViewportSize({width,height:900});
+    await page.goto('/?lang=en#/characters/' + id);
+    const trigger = page.getByRole('button',{name:'Registry of Individuals'});
+    const mark = trigger.locator('.registry-threshold-mark');
+    await page.mouse.click(width - 10, 80);
+    await expect(mark.getByText('Registry of Individuals')).toHaveCSS('opacity','1');
+    await expect(mark.locator('i')).toBeVisible();
+    await expect.poll(() => mark.locator('i').evaluate(el => getComputedStyle(el, '::after').animationDuration)).toBe('5.2s');
+    const bounds = (await trigger.boundingBox())!;
+    expect(bounds.x + bounds.width / 2).toBeCloseTo(width / 2);
+    expect(bounds.width).toBeGreaterThanOrEqual(280);
+    expect(bounds.height).toBeGreaterThanOrEqual(65);
+    const reading = (await page.getByRole('tabpanel').boundingBox())!;
+    expect(reading.y + reading.height).toBeLessThanOrEqual(bounds.y);
+    const optical = () => trigger.evaluate(el => Number(getComputedStyle(el, '::after').opacity));
+    await expect.poll(optical).toBe(.45);
+    for (const offset of [10, bounds.width - 10]) {
+      await page.mouse.move(bounds.x + offset, bounds.y + 15);
+      await expect.poll(optical).toBe(.8);
+      await expect(trigger).toHaveCSS('cursor', 'pointer');
+      await expect(page.getByRole('dialog')).toHaveCount(0);
+      await page.mouse.click(bounds.x + offset, bounds.y + 15);
+      await expect(page.getByRole('dialog')).toBeVisible();
+      await page.keyboard.press('Escape');
+      await expect(trigger).toBeFocused();
+      await page.mouse.click(width - 10, 80);
+    }
+    await page.keyboard.press('Tab');
+    await trigger.focus();
+    await expect(trigger).toBeFocused();
+    await expect(trigger).toHaveCSS('outline-style','solid');
+    await page.keyboard.press('Enter');
+    await expect(page.getByRole('dialog')).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(trigger).toBeFocused();
+  }
 });
 
 test('Back and resize during the reveal restore the originating record and release the dialog', async ({page}) => {

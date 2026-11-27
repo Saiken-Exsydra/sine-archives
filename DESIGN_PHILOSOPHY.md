@@ -47,11 +47,15 @@ Use microscopic grain or subtle procedural noise, directional reflections, inter
 
 Give touch users clear activation feedback without relying on hover. Keep essential state changes understandable when optional effects are disabled.
 
+Discretion must never become concealment. Minimalism must never compromise usability. Keep principal navigation discoverable at rest. An architectural threshold may offer an activation area larger than its visible mark when that area clears neighboring controls and reading surfaces.
+
 ## Motion
 
-Use fluid, restrained motion to communicate hierarchy, continuity, or the response of a surface. Let transitions settle deliberately and keep reading surfaces stable. Avoid constant pulsing, excessive parallax, aggressive scaling, and decorative movement that interrupts reading. Provide a reduced-motion path that preserves state and navigation cues.
+Use fluid, restrained motion to communicate hierarchy, continuity, or the response of a surface. Let transitions settle deliberately and keep reading surfaces stable. Avoid conspicuous pulsing, excessive parallax, aggressive scaling, and decorative movement that interrupts reading. Provide a reduced-motion path that preserves state and navigation cues.
 
 Use the scale and weight of a surface to choose its timing. Input and navigation should respond immediately.
+
+Passive optical motion can signal availability through a slow, low-contrast change in illumination. Keep the indicator stationary and give reduced-motion users a steady illuminated state.
 
 In Obsidian Awakening, the first interaction sends one broad ripple from beneath the centered Circular Emblem to the farthest corner of the landing viewport. A soft highlight catches one face of the crest and a shadow defines the other. The wave should be easy to follow across the dark glass. As it passes, the emblem rises, ARCHIVES appears, and the surrounding interface settles into place. The [motion architecture](MOTION_ARCHITECTURE.md) documents the timing and both rendering paths.
 
@@ -62,6 +66,8 @@ Compose pages like an institutional publication. Use a clear hierarchy, legible 
 ## Examining an individual
 
 Keep the fullscreen illustration stationary. Set the primary institution and its relationship above the vertical navigation at the left. Give the category, name, designation, divider and section content one leading edge. The entire information territory extends inward from a stable right boundary. The open space between them belongs to the illustration. The published crop and focal point belong to the character record.
+
+Size principal identity typography to the available reading width. Let the authored name wrap and occupy its natural height, and keep the designation and divider in the same flow. When vertical space is exceptionally limited, the complete examination territory can scroll as one. An identity heading must never scroll independently. Apply this behavior to future publications through the shared layout.
 
 On a phone, place the section choices within thumb reach above the Registry threshold. Let the primary affiliation travel with the Overview facts and give prose its own native scroll. Institutional marks identify an organization. Classification inscriptions pair the published concept with a precise label and may disclose a short public explanation.
 

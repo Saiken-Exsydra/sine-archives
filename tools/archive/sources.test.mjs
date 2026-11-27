@@ -1,9 +1,14 @@
 import assert from 'node:assert/strict';
-import { mkdir, mkdtemp, realpath, rename, rm, symlink, writeFile } from 'node:fs/promises';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { cp, mkdir, mkdtemp, readFile, realpath, rename, rm, symlink, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { test } from 'node:test';
-import { artworkRoot, verifyArchive } from './sources.mjs';
+import { fileURLToPath } from 'node:url';
+import { build } from 'vite';
+import { artworkRoot, checkDossierSources, verifyArtworkSources } from './sources.mjs';
+
+const check = fileURLToPath(new URL('./check.mjs', import.meta.url));
 
 async function fixture(t) {
   const tempParent = await realpath(tmpdir());
@@ -28,7 +33,7 @@ async function fixture(t) {
 
 test('reports exact dossier revisions and resolves Unicode files after relocation', async t => {
   const { options, root, source, temp } = await fixture(t);
-  const [initial] = await verifyArchive(options);
+  const [initial] = await checkDossierSources(options);
   assert.equal(initial.status, 'unreviewed');
   options.characterSources.lea.reviewedSha256 = initial.sha256;
   const relocated = path.join(temp, 'Moved Archive — Recife');
@@ -36,11 +41,11 @@ test('reports exact dossier revisions and resolves Unicode files after relocatio
   assert.equal(path.dirname(relocated), temp);
   await rename(root, relocated);
   options.env.SINE_ARCHIVE_ROOT = relocated;
-  const [same] = await verifyArchive(options);
+  const [same] = await checkDossierSources(options);
   assert.equal(same.status, 'reviewed');
   assert.equal(same.sha256, initial.sha256);
   await writeFile(path.join(relocated, source), '# Changed canonical source\n');
-  const [changed] = await verifyArchive(options);
+  const [changed] = await checkDossierSources(options);
   assert.equal(changed.status, 'changed');
   assert.notEqual(changed.sha256, initial.sha256);
   assert.equal(options.characterSources.lea.reviewedSha256, initial.sha256);
@@ -53,13 +58,87 @@ test('keeps the legacy artwork override and rejects unsafe or broken mappings', 
   assert.equal(artworkRoot({ SINE_ARTWORKS: legacy }), legacy);
   await rename(path.join(root, 'Artworks'), legacy);
   options.env.SINE_ARTWORKS = legacy;
-  assert.equal((await verifyArchive(options)).length, 1);
+  await verifyArtworkSources(options);
   options.characterSources.lea.source = '../outside.md';
-  await assert.rejects(verifyArchive(options), /lea dossier: Expected one relative source path/);
+  assert.match((await checkDossierSources(options))[0].reason, /Expected one relative source path/);
   options.characterSources.lea.source = source.replace('Léa', 'Missing');
-  await assert.rejects(verifyArchive(options), /lea dossier: Source could not be resolved/);
+  assert.match((await checkDossierSources(options))[0].reason, /Source could not be resolved/);
   options.characterSources.lea.source = source;
+  await symlink(legacy, path.join(root, 'Characters', 'outside'), 'junction');
+  options.characterSources.lea.source = 'Characters/outside/' + options.assetSources.study.replaceAll('\\', '/');
+  assert.match((await checkDossierSources(options))[0].reason, /Source resolves outside/);
   await symlink(path.join(root, 'Characters'), path.join(legacy, 'outside'), 'junction');
   options.assetSources.study = 'outside/' + path.basename(source);
-  await assert.rejects(verifyArchive(options), /study artwork: Source resolves outside/);
+  await assert.rejects(verifyArtworkSources(options), /study artwork: Source resolves outside/);
+});
+
+test('reports unavailable and pending dossiers together, without requiring artwork for targeted checks', async t => {
+  const { options, temp } = await fixture(t);
+  const map = path.join(temp, '.character-sources.local.json');
+  const [initial] = await checkDossierSources(options);
+  options.characterSources.lea.reviewedSha256 = initial.sha256;
+  options.characterSources.lea.reviewOutcome = 'no-public-change';
+  options.characterSources.draft = { source: options.characterSources.lea.source };
+  const bytes = JSON.stringify(options.characterSources);
+  await writeFile(map, bytes);
+  const run = (...ids) => spawnSync(process.execPath, [check, ...ids], {
+    cwd: temp, env: { ...process.env, ...options.env, SINE_ARTWORKS: path.join(temp, 'missing-artwork') }, encoding: 'utf8',
+  });
+  assert.equal(run('lea').status, 0);
+  assert.equal(run('draft').status, 2);
+  const mixed = run('unmapped', 'lea', 'draft');
+  assert.equal(mixed.status, 1);
+  assert.match(mixed.stdout, /unmapped: unavailable/);
+  assert.match(mixed.stdout, /lea: reviewed-no-public-change/);
+  assert.match(mixed.stdout, /draft: unreviewed/);
+  assert.equal(await readFile(map, 'utf8'), bytes);
+  assert.equal((await checkDossierSources({ ...options, env: {} }))[0].status, 'unavailable');
+});
+
+test('only an explicitly promoted edition changes the ordinary build', async t => {
+  const { options, root, source, temp } = await fixture(t);
+  const app = path.join(temp, 'site');
+  await cp('src', path.join(app, 'src'), { recursive: true });
+  await cp('index.html', path.join(app, 'index.html'));
+  await symlink(path.resolve('node_modules'), path.join(app, 'node_modules'), 'junction');
+  const folder = path.join(app, 'src/content/characters/lenore-engelmeyer');
+  const publication = path.join(folder, 'biography.en.md');
+  const original = await readFile(publication, 'utf8');
+  const map = path.join(temp, '.character-sources.local.json');
+  const fixtureSource = path.join(root, source);
+  const [baseline] = await checkDossierSources(options);
+  options.characterSources['lenore-engelmeyer'] = { source, reviewedSha256: baseline.sha256 };
+  const savedMap = JSON.stringify(options.characterSources);
+  await writeFile(map, savedMap);
+  const checkOptions = { cwd: temp, env: { ...process.env, ...options.env }, encoding: 'utf8' };
+  const id = 'lenore-engelmeyer';
+  assert.match(execFileSync(process.execPath, [check, id], checkOptions), /lenore-engelmeyer: reviewed \(/);
+
+  async function bundle() {
+    const result = await build({ root: app, configFile: path.resolve('vite.config.ts'), envDir: false,
+      publicDir: false, logLevel: 'silent', build: { write: false } });
+    return Object.fromEntries(result.output.map(file => [file.fileName, file.type === 'chunk' ? file.code : file.source]));
+  }
+
+  const approvedBuild = await bundle();
+  await writeFile(fixtureSource, 'Private canon fixture');
+  const changed = spawnSync(process.execPath, [check, id], checkOptions);
+  assert.equal(changed.status, 2);
+  assert.match(changed.stdout, /lenore-engelmeyer: changed/);
+  const draft = path.join(temp, 'biography.en.md');
+  await writeFile(draft, 'Prepared public fixture');
+  assert.equal(await readFile(publication, 'utf8'), original);
+  assert.equal(await readFile(map, 'utf8'), savedMap);
+  assert.deepEqual(await bundle(), approvedBuild);
+
+  // Simulate the agent's explicit handoff after editorial approval of these bytes.
+  await cp(draft, publication);
+  const [revision] = await checkDossierSources({ ...options, characters: [id] });
+  options.characterSources[id].reviewedSha256 = revision.sha256;
+  options.characterSources[id].reviewOutcome = 'publication-updated';
+  await writeFile(map, JSON.stringify(options.characterSources));
+  assert.match(execFileSync(process.execPath, [check, id], checkOptions), /lenore-engelmeyer: reviewed \(/);
+  const approvedText = Object.values(await bundle()).join('\n');
+  assert.match(approvedText, /Prepared public fixture/);
+  assert.doesNotMatch(approvedText, /Private canon fixture/);
 });

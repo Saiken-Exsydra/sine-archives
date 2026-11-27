@@ -39,32 +39,55 @@ async function directory(location, label) {
   return resolved;
 }
 
-export async function verifyArchive({ env = process.env, characters, artwork, characterSources, assetSources }) {
-  if (!env.SINE_ARCHIVE_ROOT) throw new Error('Set SINE_ARCHIVE_ROOT to the local Dy’Aspora Archive directory.');
-  const root = await directory(env.SINE_ARCHIVE_ROOT, 'SINE_ARCHIVE_ROOT');
-  const dossiers = await directory(path.join(root, 'Characters'), 'Archive Characters');
-  const artworks = await directory(artworkRoot(env), 'Configured Artworks');
-  if (!inside(root, dossiers)) throw new Error('Archive Characters resolves outside the Archive');
-  if (!env.SINE_ARTWORKS && !inside(root, artworks)) throw new Error('Archive Artworks resolves outside the Archive');
+export async function checkDossierSources({ env = process.env, characters, characterSources }) {
+  let root, dossiers;
+  try {
+    if (!env.SINE_ARCHIVE_ROOT) throw new Error('Set SINE_ARCHIVE_ROOT to the local Dy’Aspora Archive directory.');
+    root = await directory(env.SINE_ARCHIVE_ROOT, 'SINE_ARCHIVE_ROOT');
+    dossiers = await directory(path.join(root, 'Characters'), 'Archive Characters');
+    if (!inside(root, dossiers)) throw new Error('Archive Characters resolves outside the Archive');
+  } catch (error) {
+    return characters.map(id => unavailable(id, error));
+  }
 
-  const revisions = [];
-  for (const id of characters) {
-    const entry = Object.hasOwn(characterSources, id) && characterSources[id];
-    if (!entry) throw new Error(`${id}: Add a dossier entry to .character-sources.local.json`);
-    const { source, reviewedSha256 } = entry;
-    if (reviewedSha256 !== undefined && (typeof reviewedSha256 !== 'string' || !/^[0-9a-f]{64}$/.test(reviewedSha256))) {
-      throw new Error(`${id}: reviewedSha256 must be a lowercase SHA-256 or omitted`);
+  return Promise.all(characters.map(async id => {
+    try {
+      const entry = Object.hasOwn(characterSources, id) && characterSources[id];
+      if (!entry) throw new Error('Add a dossier entry to .character-sources.local.json');
+      const { source, reviewedSha256, reviewOutcome } = entry;
+      if (reviewedSha256 !== undefined && (typeof reviewedSha256 !== 'string' || !/^[0-9a-f]{64}$/.test(reviewedSha256))) {
+        throw new Error('reviewedSha256 must be a lowercase SHA-256 or omitted');
+      }
+      if (reviewOutcome !== undefined && (!reviewedSha256 || !['publication-updated', 'no-public-change'].includes(reviewOutcome))) {
+        throw new Error('reviewOutcome requires a reviewedSha256 and must be publication-updated or no-public-change');
+      }
+      const file = await resolveSource(root, source, 'Dossier');
+      if (!inside(dossiers, file) || path.extname(file).toLowerCase() !== '.md') {
+        throw new Error('Map to a Markdown dossier under Archive Characters');
+      }
+      const sha256 = createHash('sha256').update(await readFile(file)).digest('hex');
+      if (!reviewedSha256) return { id, sha256, status: 'unreviewed' };
+      if (reviewedSha256 !== sha256) return { id, sha256, status: 'changed' };
+      const status = reviewOutcome === 'no-public-change' ? 'reviewed-no-public-change' : 'reviewed';
+      return { id, sha256, status };
+    } catch (error) {
+      return unavailable(id, error);
     }
-    const file = await resolveSource(root, source, id + ' dossier');
-    if (!inside(dossiers, file) || path.extname(file).toLowerCase() !== '.md') {
-      throw new Error(`${id}: Map to a Markdown dossier under Archive Characters`);
-    }
-    const sha256 = createHash('sha256').update(await readFile(file)).digest('hex');
-    const status = !reviewedSha256 ? 'unreviewed' : reviewedSha256 === sha256 ? 'reviewed' : 'changed';
-    revisions.push({ id, sha256, status });
+  }));
+}
+
+function unavailable(id, error) {
+  return { id, status: 'unavailable', reason: error.code ? `Source could not be read (${error.code})` : error.message };
+}
+
+export async function verifyArtworkSources({ env = process.env, artwork, assetSources }) {
+  const location = artworkRoot(env);
+  if (!location) throw new Error('Set SINE_ARCHIVE_ROOT or SINE_ARTWORKS to resolve artwork sources.');
+  const artworks = await directory(location, 'Configured Artworks');
+  if (!env.SINE_ARTWORKS && !inside(await directory(env.SINE_ARCHIVE_ROOT, 'SINE_ARCHIVE_ROOT'), artworks)) {
+    throw new Error('Archive Artworks resolves outside the Archive');
   }
   for (const id of artwork) {
     await resolveSource(artworks, Object.hasOwn(assetSources, id) && assetSources[id], id + ' artwork');
   }
-  return revisions;
 }

@@ -1,10 +1,11 @@
-import { useLayoutEffect, useRef, useSyncExternalStore } from 'react';
+import { useLayoutEffect, useRef, useSyncExternalStore, type Ref } from 'react';
 import { AnimatePresence, m, useIsPresent } from 'motion/react';
 import type { Locale } from '../content';
 import { PublicationImage } from '../images/publication';
 import { motionTokens, useMotionPreference } from '../motion/system';
 import { characterHref, characters, sections, sectionNames, type CharacterRoute } from './characters';
 import { AffiliationInsignia, ArchivalInsignia } from './ExaminationInsignia';
+import { DossierControl } from './DossierSurface';
 
 type Props = CharacterRoute & { locale: Locale };
 
@@ -14,7 +15,9 @@ function onCompactChange(callback: () => void) {
   return () => compact.removeEventListener('change', callback);
 }
 
-export function ExaminationNavigation({ character, section, locale, dossier }: Props) {
+export function ExaminationNavigation({ character, section, locale, dossier, entryRef }: Props & {
+  dossier: boolean; entryRef: Ref<HTMLAnchorElement>;
+}) {
   const horizontal = useSyncExternalStore(onCompactChange, () => compact.matches);
   const primary = character.affiliations?.find(entry => entry.primary);
   return <div className="examination-nav" inert={dossier} aria-hidden={dossier}>
@@ -37,13 +40,15 @@ export function ExaminationNavigation({ character, section, locale, dossier }: P
           tab?.click();
         }}>{sectionNames[item][locale]}</a>)}
     </div>
-    {character.dossier?.[locale] && <a className="dossier-entry" href={characterHref(character.id, 'dossier')}
-      onClick={event => {
-        if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
-        event.preventDefault();
-        history.pushState({ dossierSection: section }, '', event.currentTarget.href);
-        window.dispatchEvent(new HashChangeEvent('hashchange'));
-      }}>{locale === 'en' ? 'Complete Dossier' : 'Dossiê completo'} <span aria-hidden="true">→</span></a>}
+    {character.dossier?.[locale] && <div className="dossier-threshold">
+      <DossierControl className="dossier-entry" ref={entryRef} href={characterHref(character.id, 'dossier')}
+        onClick={event => {
+          if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+          event.preventDefault();
+          history.pushState({ dossierSection: section }, '', event.currentTarget.href);
+          window.dispatchEvent(new HashChangeEvent('hashchange'));
+        }}>{locale === 'en' ? 'Complete Dossier' : 'Dossiê completo'}</DossierControl>
+    </div>}
   </div>;
 }
 
@@ -83,6 +88,13 @@ export function ExaminationReading(props: Props) {
       reader.focus({ preventScroll: true });
     }
     reader?.scrollTo({ top: 0, behavior: 'instant' });
+    const territory = reader?.closest('.character-caption[data-scroll-all]');
+    if (!territory) return;
+    const reset = () => territory.scrollTo({ top: 0, behavior: 'instant' });
+    reset();
+    // A native scroll already in flight can settle after the fragment change.
+    const frame = requestAnimationFrame(reset);
+    return () => cancelAnimationFrame(frame);
   }, [props.character, props.section, props.locale]);
   return <div ref={panel} className="examination-reading" id="character-reading" role="tabpanel"
     aria-labelledby={'tab-' + props.section} tabIndex={0}>
